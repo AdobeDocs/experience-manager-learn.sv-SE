@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,8 @@ ht-degree: 1%
    + [Konfigurera adaptiv form för att aktivera AEM arbetsflöde - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [PTO AEM Workflow](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [Anpassa meddelande om tilldelning av uppgift](handling-form-submissions/customize-assign-task-notification.md)
-
++ Användbara integreringar{#some-useful-integrations}
+   + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
