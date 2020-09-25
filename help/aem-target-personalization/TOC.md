@@ -1,0 +1,32 @@
+---
+user-guide-title: 'Komma igång med AEM och Adobe Target '
+user-guide-description: An end-to-end tutorial showing how to deliver personalized experiences using Experience Manager and Target.
+product: experience-manager, target
+version: 6.5
+sub-product: platser
+audience: author, marketer, administrator, architect, developer
+doc-type: tutorial
+feature: experience-fragments
+topics: personalization, activities, experiences, integrations, offers
+activity: develop, understand
+index: y
+kt: 2214
+translation-type: tm+mt
+source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 3%
+
+---
+
+
+# Komma igång med AEM och mål {#aem-target-tutorial}
+
++ [Översikt](./overview.md)
++ [Personalisering med AEM Experience Fragments](./personalization-use-case-1.md)
++ [Personalisering med Visual Experience Composer](./personalization-use-case-3.md)
++ [Personalisering av fullständiga webbsidesupplevelser](./personalization-use-case-2.md)
++ Implementering {#aem-target-implementation}
+   + [Onboarding](./implementation.md)
+   + [AEM och Adobe Target med Launch och Adobe I/O](./using-launch-adobe-io.md)
+   + [AEM och Adobe Target med äldre Cloud Services](./using-aem-cloud-services.md)
