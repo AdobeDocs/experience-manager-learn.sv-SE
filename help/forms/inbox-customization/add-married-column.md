@@ -1,0 +1,95 @@
+---
+title: Anpassning av inkorgen
+description: Lägg till anpassade kolumner för att visa ytterligare data i arbetsflödet
+feature: adaptive-forms
+topics: development
+audience: developer
+doc-type: article
+activity: implement
+version: 6.5.5
+kt: 5830
+translation-type: tm+mt
+source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
+
+---
+
+
+# Lägg till anpassade kolumner
+
+Om du vill visa arbetsflödesdata i en inkorg måste vi definiera och fylla i variabler i arbetsflödet. Värdet för variabeln måste anges innan en uppgift tilldelas en användare. Vi har tagit fram ett exempelarbetsflöde som är klart att distribueras på AEM.
+
+* [Logga in på AEM](http://localhost:4502/crx/de/index.jsp)
+* [Importera granskningsarbetsflödet](assets/review-workflow.zip)
+* [Granska arbetsflödet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
+
+Det här arbetsflödet har två definierade variabler (isGift och Inkomst) och dess värden ställs in med den angivna variabelkomponenten. Dessa variabler blir tillgängliga som kolumner som ska läggas till i AEM inkorg
+
+## Skapa tjänst
+
+För varje kolumn som ska visas i inkorgen måste vi skriva en tjänst. Med följande tjänst kan vi lägga till en kolumn som visar värdet för variabeln isMarry
+
+```java
+import com.adobe.cq.inbox.ui.column.Column;
+import com.adobe.cq.inbox.ui.column.provider.ColumnProvider;
+
+import com.adobe.cq.inbox.ui.InboxItem;
+import org.osgi.service.component.annotations.Component;
+
+import java.util.Map;
+
+/**
+ * This provider does not require any sightly template to be defined.
+ * It is used to display the value of 'ismarried' workflow variable as a column in inbox
+ */
+@Component(service = ColumnProvider.class, immediate = true)
+public class MaritalStatusProvider implements ColumnProvider {@Override
+public Column getColumn() {
+return new Column("married", "Married", Boolean.class.getName());
+}
+
+// Return True or False if 'ismarried' is set. Else returns null
+private Boolean isMarried(InboxItem inboxItem) {
+Boolean ismarried = null;
+
+Map metaDataMap = inboxItem.getWorkflowMetadata();
+if (metaDataMap != null) {
+if (metaDataMap.containsKey("isMarried")) {
+    ismarried = (Boolean) metaDataMap.get("isMarried");
+}
+}
+
+return ismarried;
+}
+
+@Override
+public Object getValue(InboxItem inboxItem) {
+return isMarried(inboxItem);
+}
+}
+```
+
+>[!NOTE]
+>
+>Du måste inkludera AEM 6.5.5 Uber.jar i projektet för att ovanstående kod ska fungera
+
+![uber-jar](assets/uber-jar.PNG)
+
+## Testa på servern
+
+* [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
+* [Distribuera och starta anpassningspaketet för inkorgen](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
+* [Öppna din inkorg](http://localhost:4502/aem/inbox)
+* Öppna Admin Control genom att klicka på ikonen _Listvy_ bredvid knappen _Skapa_
+* Lägg till en gift kolumn i Inkorgen och spara ändringarna
+* [Gå till användargränssnittet för FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Importera exempelformuläret](assets/snap-form.zip) genom att välja _Filöverföring_ på menyn _Skapa_
+* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
+* Välj _civilstånd_ och skicka formuläret
+   [visa inkorg](http://localhost:4502/aem/inbox)
+
+Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se ett värde under kolumnen Gift, vilket visas i den här skärmbilden
+
+![gift-kolumn](assets/married-column.PNG)
