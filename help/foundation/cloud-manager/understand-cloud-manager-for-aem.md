@@ -1,0 +1,86 @@
+---
+title: Förstå Adobe Cloud Manager
+description: Adobe Cloud Manager är en enkel, men robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM miljöer.
+sub-product: cloud-manager, grund
+feature: pipelines, programs, projects, quality-gates, reports
+topics: best-practices, cicd, development, operations, governance
+doc-type: feature video
+activity: understand
+audience: developer, implementer, administrator, architect
+translation-type: tm+mt
+source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+workflow-type: tm+mt
+source-wordcount: '531'
+ht-degree: 2%
+
+---
+
+
+# Förstå Adobe Cloud Manager
+
+Adobe Cloud Manager är en enkel, men robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM miljöer.
+
+## Översikt över Cloud Manager
+
+I den här videoserien utforskas de viktigaste funktionerna i Cloud Managers för AEM:
+
+* [Program](#programs)
+* [Miljöer](#environments)
+* [Rapporter](#reports)
+* [CI/CD Production Pipeline](#cicd-production-pipeline)
+* [Icke-produktionsförlopp för CI/CD](#cicd-non-production-pipeline)
+* [Aktivitet](#activity)
+
+En fullständig översikt finns i användarhandboken för [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+
+## Program {#programs}
+
+[Cloud Manager-program](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) representerar uppsättningar AEM miljöer som stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
+
+## Miljöer {#environments}
+
+[Cloud Manager-miljöer](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) består av instanser av AEM Author, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipelines (beskrivs nedan). Cloud Manager-miljöer har vanligtvis en produktionsmiljö och en scenmiljö.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on)
+
+## Rapporter {#reports}
+
+[Cloud Manager-rapporter](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/monitor-your-environments.html) ger en inblick i programmets miljöer och AEM genom en uppsättning diagram som rapporterar och håller reda på en mängd mätvärden för varje AEM.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?quality=12&learn=on)
+
+## CI/CD Production Pipeline {#cicd-production-pipeline}
+
+*[Med CI/CD Pipeline i Adobe Cloud Manager](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md)-videoserien får du en djupdykning i körningen av produktionspipelinen, bland annat utforskande av misslyckade och lyckade distributioner.*
+
+>[!NOTE]
+>
+> I alla dessa videor har tiden för att skapa, testa och distribuera videon ökat för att minska tiden. En fullständig pipeline-körning tar normalt 45 minuter eller mer (inklusive den obligatoriska 30-minuters prestandatestningen), beroende på projektstorlek, antal AEM och UAT-processer.
+
+### Konfiguration
+
+Konfigurationen [CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) definierar den utlösare som initierar pipelinen, parametrar som styr produktionsdistributionen och prestandatestparametrar.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
+
+### Körning av pipeline
+
+Produktionspipelinen [CI/CD används](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar tiden till värde.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
+
+## Icke-produktionsförlopp för CI/CD {#cicd-non-production-pipeline}
+
+[Rörledningar](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html#non-production--code-quality-only-pipelines) för CI/CD-produktion är indelade i två kategorier: Kodkvalitetsrörledningar och distributionsrörledningar. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Managers skanning av kodkvalitet. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?quality=12&learn=on)
+
+## Activity {#activity}
+
+Cloud Manager ger en samlad vy över en aktivitet i ett program, med en lista över alla CI/CD Pipeline-körningar, både produktion och icke-produktion, som ger insyn i den tidigare och nuvarande aktiviteten och alla aktiviteters detaljer kan granskas.
+
+Cloud Manager integreras också på användarnivå med [Adobe Experience Cloud Notifications](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/notifications.html), vilket ger en helhetsbild av händelser och intressanta åtgärder.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26319/?quality=12&learn=on)
