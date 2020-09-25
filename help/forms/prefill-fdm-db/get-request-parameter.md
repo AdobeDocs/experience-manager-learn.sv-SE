@@ -1,0 +1,53 @@
+---
+title: Hämta begäranparameter
+description: Åtkomst till begärandeparametern för en formulärdatamodell förifyllningstjänst
+feature: adaptive-forms
+topics: development
+audience: developer
+doc-type: article
+activity: implement
+version: 6.4,6.5
+kt: 5815
+thumbnail: kt-5815.jpg
+translation-type: tm+mt
+source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
+
+---
+
+# Hämta begäranparameter
+
+## Hämta empID-parameter
+
+Nästa steg är att få åtkomst till parametern empID från URL:en. Värdet på parametern empID-begäran skickas sedan till åtgärden **_get_** service i formulärdatamodellen.
+För kursen har vi skapat och tillhandahållit följande
+
+* Adaptiv formulärmall som kallas **_FDMDemo_**
+* Page Component called **_fdmdemo_**
+* Inkluderade vårt anpassade jsp med sidkomponenten
+* Kopplade den adaptiva formulärmallen till sidkomponenten
+
+Genom att göra detta kommer vår kod i den anpassade jsp endast att köras när anpassningsbara formulär som är baserade på den här anpassade mallen återges
+
+* [Importera paketet](assets/template-page-component.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Öppna fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
+* Avkommentera kommentarsraderna.
+* Spara ändringarna
+
+```java
+if(request.getParameter("empID")!=null)
+    {
+      //System.out.println("Adobe !!!There is a empID parameter in the request "+request.getParameter("empID"));
+      //java.util.Map paraMap = new java.util.HashMap();
+      //paraMap.put("empID",request.getParameter("empID"));
+      //slingRequest.setAttribute("paramMap",paraMap);
+    }
+```
+
+Värdet för empID är associerat med nyckeln empID i paraMap. Mappningen skickas sedan till slingRequest
+
+>[!NOTE]
+>
+>Nyckeln empID måste matcha bindningsvärdet för de entiteter som hämtar tjänsten
