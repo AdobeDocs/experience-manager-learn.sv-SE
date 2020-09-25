@@ -1,0 +1,126 @@
+---
+title: Developing for Page Difference in AEM Sites
+description: I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
+feature: page-diff
+topics: development
+audience: developer
+doc-type: technical video
+activity: develop
+version: 6.3, 6.4, 6.5
+translation-type: tm+mt
+source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
+
+---
+
+
+# Utveckla för sidskillnader {#developing-for-page-difference}
+
+I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
+
+## Anpassa siddifferensformat {#customizing-page-difference-styles}
+
+>[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
+
+>[!NOTE]
+>
+>I den här videon läggs anpassad CSS till i webbbiblioteket.Butiksklientbiblioteket, där dessa ändringar bör göras i anpassarens AEM Sites-projekt. i exempelkoden nedan: `my-project`.
+
+AEM sidskillnad hämtar OTB-CSS via en direkt inläsning av `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+
+På grund av den här direkta inläsningen av CSS i stället för att använda en klientbibliotekskategori, måste vi hitta en annan inmatningspunkt för de anpassade formaten, och den här anpassade inmatningspunkten är projektets redigeringsklient.
+
+Fördelen med detta är att dessa anpassade åsidosättningar av stilar kan vara klientspecifika.
+
+### Förbered redigeringsklientlib {#prepare-the-authoring-clientlib}
+
+Kontrollera att det finns en `authoring` klientlib för ditt projekt på `/apps/my-project/clientlib/authoring.`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="cq:ClientLibraryFolder"
+        categories="[my-project.authoring]"/>
+```
+
+### Ange anpassad CSS {#provide-the-custom-css}
+
+Lägg till i projektets `authoring` clientlib-a `css.txt` som pekar på den mindre filen som innehåller de åsidosättande formaten. [Mindre](https://lesscss.org/) är att föredra på grund av dess många praktiska funktioner, bland annat klassomslutning, som används i det här exemplet.
+
+```shell
+base=./css
+
+htmldiff.less
+```
+
+Skapa den `less` fil som innehåller formatåsidosättningarna i `/apps/my-project/clientlibs/authoring/css/htmldiff.less`och ange önskade format.
+
+```css
+/* Wrap with body to gives these rules more specificity than the OOTB */
+body {
+
+    /* .html-XXXX are the styles that wrap text that has been added or removed */
+
+    .html-added {
+        background-color: transparent;
+     color: initial;
+        text-decoration: none;
+     border-bottom: solid 2px limegreen;
+    }
+
+    .html-removed {
+        background-color: transparent;
+     color: initial;
+        text-decoration: none;
+     border-bottom: solid 2px red;
+    }
+
+    /* .cq-component-XXXX require !important as the class these are overriding uses it. */
+
+    .cq-component-changed {
+        border: 2px dashed #B9DAFF !important;
+        border-radius: 8px;
+    }
+    
+    .cq-component-moved {
+        border: 2px solid #B9DAFF !important;
+        border-radius: 8px;
+    }
+
+    .cq-component-added {
+        border: 2px solid #CCEBB8 !important;
+        border-radius: 8px;
+    }
+
+    .cq-component-removed {
+        border: 2px solid #FFCCCC !important;
+        border-radius: 8px;
+    }
+}
+```
+
+### Inkludera redigeringsklientlib-CSS via sidkomponenten {#include-the-authoring-clientlib-css-via-the-page-component}
+
+Inkludera kategorin för redigeringsklienter i projektets bassidas `/apps/my-project/components/structure/page/customheaderlibs.html` direkt före `</head>` -taggen för att säkerställa att formaten läses in.
+
+Dessa format bör begränsas till [!UICONTROL Edit] - och [!UICONTROL preview] WCM-lägen.
+
+```xml
+<head>
+  ...
+  <sly data-sly-test="${wcmmode.preview || wcmmode.edit}" 
+       data-sly-call="${clientLib.css @ categories='my-project.authoring'}"/>
+</head>
+```
+
+Slutresultatet av en annan d-sida med formaten ovan tillämpade skulle se ut så här (HTML-tillägg och komponent ändrat).
+
+![Sidskillnad](assets/page-diff.png)
+
+## Ytterligare resurser {#additional-resources}
+
+* [Ladda ned exempelwebbplatsen för web.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [Använda AEM Client Libraries](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Mindre CSS-dokumentation](https://lesscss.org/)
