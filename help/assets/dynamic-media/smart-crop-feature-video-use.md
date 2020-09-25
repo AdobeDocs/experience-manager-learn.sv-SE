@@ -1,0 +1,44 @@
+---
+title: Använda Smart Crop med AEM Assets Dynamic Media
+seo-title: Använda Smart Crop med AEM Assets Dynamic Media
+description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
+seo-description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
+uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
+discoiquuid: e4b8534c-fa64-491f-86ec-4dbe50cd6bf7
+sub-product: dynamiska medier
+feature: smart-crop, image-profiles
+topics: images, renditions, authoring
+doc-type: feature video
+audience: all
+activity: use
+version: 6.4, 6.5
+translation-type: tm+mt
+source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 0%
+
+---
+
+
+# Använda Smart Crop med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+
+Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
+
+>[!VIDEO](https://video.tv.adobe.com/v/21519/)
+
+>[!NOTE]
+>
+>I videon antas att AEM körs i Dynamic Media S7-läge. [Instruktioner om hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+
+## Adobe Experience Manager Dynamic Media Smart Crop innehåller
+
+* AEM kan enkelt skapa bildprofiler för smart beskärning baserat på enhetens bredd och höjd.
+* Smart beskärning kan utföras för en enskild resurs eller för alla resurser i en mapp.
+* Du kan ändra storlek på redigeringslayouten för smart beskärning så att den blir synligare.
+* AEM Sites Dynamic Media-komponent har stöd för Smart Crop.
+* Publicerad URL för den smarta beskurna resursen är tillgänglig för användning med program från tredje part som accepterar värdbaserade resurser.
+
+>[!NOTE]
+>
+>Koordinaterna för smart beskärning är proportionellt. Det vill säga, för de olika inställningarna för smart beskärning i en bildprofil, skickas samma proportioner till Dynamic Media om proportionerna är desamma för de nya måtten i bildprofilen. På grund av detta föreslås samma beskärningsområde i redigeraren för smart beskärning. En beskärningsinställning på 100x100 och 200x200 resulterar exempelvis i att samma smarta beskärning genereras av systemet.
