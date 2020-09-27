@@ -10,7 +10,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -26,5 +26,5 @@ Rad1 är konfigurerad att växa beroende på vilka data som returneras av servic
 
 ## Distribuera detta på servern
 
-[Installera Tomcat enligt anvisningarna här](/help/forms/ic-print-channel-tutorial/partone.md)[Distribuera filen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)SampleRest.war[Installera resurserna ](assets/amortizationschedule.zip) med AEM pakethanterare[Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)för amorteringsschema Ange lämpligt värde och klicka på calculateAmortization Schedule ska fyllas i i formuläret
+[Installera Tomcat enligt anvisningarna här](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)[Distribuera filen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)SampleRest.war[Installera resurserna ](assets/amortizationschedule.zip) med AEM pakethanterare[Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)för amorteringsschema Ange lämpligt värde och klicka på calculateAmortization Schedule ska fyllas i i formuläret
 
