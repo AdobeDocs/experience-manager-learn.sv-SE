@@ -10,9 +10,9 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -37,18 +37,4 @@ När du är klar med den här självstudiekursen har du lärt dig följande:
 * Skapa dokumentfragment
 * Konfigurera tabeller och diagram
 * Använd Bevakade mappar för att generera dokument i gruppläge
-
-## Självstudiekurs
-
-* [Konfigurera Tomcat](partone.md)
-* [Skapa datakälla](parttwo.md)
-* [Skapa formulärdatamodell](partthree.md)
-* [Skapa XDP-layout med Forms Designer](partfour.md)
-* [Skapa dokumentfragment](partfive.md)
-* [Skapa dokument för utskriftskanal](partsix.md)
-* [Lägga till innehåll i målområden](partseven.md)
-* [Konfigurera linjediagram](parteight.md)
-* [Lägger till tabell i utskriftskanalen](partnine.md)
-* [Använda bevakad mapp för att generera utskriftsdokument](partten.md)
-* [Öppnar användargränssnittet för agenten vid formuläröverföring](parteleven.md)
 
