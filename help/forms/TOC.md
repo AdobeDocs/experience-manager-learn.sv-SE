@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '836'
 ht-degree: 1%
 
 ---
@@ -30,16 +30,17 @@ ht-degree: 1%
    + [Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + Hantera inskickning av formulär {#handling-af-form-submissions}
-   + [Skapa ett granskningsarbetsflöde](handling-form-submissions/create-workflow-to-review.md)
-   + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/trigger-workflow-on-form-submission.md)
+   + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
+   + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Visar sidan Tack](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [Skicka till extern slutpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Skickar e-post](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+   + [Betalningstid för begärandearbetsflöde](handling-form-submissions/paid-time-off-request-workflow.md)
    + [Konfigurera adaptiv form för att aktivera AEM arbetsflöde - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
-   + [PTO AEM Workflow](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [Anpassa meddelande om tilldelning av uppgift](handling-form-submissions/customize-assign-task-notification.md)
 + Användbara integreringar{#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
+
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -169,17 +170,17 @@ ht-degree: 1%
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
 + Interaktiv kommunikation för tryckkanaler {#ic-print-channel-tutorial}
    + [Onboarding](ic-print-channel-tutorial/introduction.md)
-   + [Konfigurera Tomcat](ic-print-channel-tutorial/partone.md)
-   + [Skapa datakälla](ic-print-channel-tutorial/parttwo.md)
-   + [Skapa formulärdatamodell](ic-print-channel-tutorial/partthree.md)
-   + [Skapa XDP-layout med Forms Designer](ic-print-channel-tutorial/partfour.md)
-   + [Skapa dokumentfragment](ic-print-channel-tutorial/partfive.md)
-   + [Skapa dokument för utskriftskanal](ic-print-channel-tutorial/partsix.md)
-   + [Lägga till innehåll i målområden](ic-print-channel-tutorial/partseven.md)
-   + [Konfigurera linjediagram](ic-print-channel-tutorial/parteight.md)
-   + [Lägger till tabell i utskriftskanalen](ic-print-channel-tutorial/partnine.md)
-   + [Använda bevakad mapp för att generera utskriftsdokument](ic-print-channel-tutorial/partten.md)
-   + [Öppnar användargränssnittet för agenten vid formuläröverföring](ic-print-channel-tutorial/parteleven.md)
+   + [Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [Skapa datakälla](ic-print-channel-tutorial/create-data-source.md)
+   + [Skapa formulärdatamodell](ic-print-channel-tutorial/create-form-data-model.md)
+   + [Skapa XDP-layout med Forms Designer](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [Skapa dokumentfragment](ic-print-channel-tutorial/create-document-fragment.md)
+   + [Skapa dokument för utskriftskanal](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [Lägga till innehåll i målområden](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [Konfigurera linjediagram](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [Lägger till tabell i utskriftskanalen](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [Använda bevakad mapp för att generera dokument](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [Öppnar användargränssnittet för agenten vid formuläröverföring](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + Interaktiv kommunikation {#interactive-communications}
    + [Använda batch-API](interactive-communications/batch-generation-interactive-communications.md)
    + [MultiSeries-diagram](interactive-communications/multiseriescharts.md)
