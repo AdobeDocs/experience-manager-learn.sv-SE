@@ -10,9 +10,9 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -20,19 +20,17 @@ ht-degree: 0%
 # Variabler av typen JSON i AEM
 
 Från och med AEM Forms 6.5 kan vi nu skapa variabler av typen JSON i AEM. Vanligtvis skapar du variabler av typen JSON om du skickar Adaptive Forms baserat på JSON-schema till ett AEM arbetsflöde eller om du vill lagra resultatet av en anropsåtgärd för formulärdatamodell. I följande videofilm får du hjälp med att skapa och använda en variabel av typen JSON i AEM arbetsflöde
->[!NOTE]
 
 **Om du använder AEM Forms 6.5.0**
 
 När du skapar en variabel av typen JSON för att hämta inskickade data i arbetsflödesmodellen ska du inte associera JSON-schemat med variabeln. Detta beror på att inskickade data inte är kompatibla med JSON-schemabildet när du skickar ett anpassat JSON-schema. JSON-schemaklagodata omsluts av elementet afData.afBoundData.data.
 
+>[!VIDEO](https://video.tv.adobe.com/v/26444?quality=12&learn=on)
+
+
 **Om du använder AEM Forms 6.5.1 och senare**
 
 Du kan mappa schemat med variabeln av typen JSON i arbetsflödesmodellen. Du kan sedan använda schemaläsaren för att mappa schemaelementen med dina sträng-/talvariabler i arbetsflödesmodellen
-
->[!VIDEO](https://video.tv.adobe.com/v/26444?quality=12&learn=on)
-
-**Möjligheten att detaljgranska schemaelement och mappa schemaelementet till arbetsflödesvariabeln är endast tillgänglig med och från AEM Forms 6.5.1.**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
 
