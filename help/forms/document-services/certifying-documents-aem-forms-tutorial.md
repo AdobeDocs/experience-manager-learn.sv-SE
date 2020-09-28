@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Exempelpaketet använder alias &quot;ares&quot; för att certifiera dokumenten. 
    **DevelopingWithServiceUser.core:getformsresouresolver=fd-service** enligt skärmbilden nedan
    ![User-Mapper](assets/user-mapper-service.PNG)
 * [Importera anpassat exempelformulär](assets/certify-pdf-af.zip)
-* [Importera klientbibliotek och anpassad sändning](assets/certify-document-assets.zip)
+* [Importera och installera den anpassade överföringen](assets/custom-submit-certify.zip)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * Ladda upp PDF-dokument som behöver certifieras
    **valfritt** - Ange det signaturfält som du vill använda för att certifiera dokumentet
