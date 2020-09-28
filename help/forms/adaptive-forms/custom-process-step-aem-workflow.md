@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -133,7 +133,7 @@ Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen här](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:450/system/console/bundles)
+[Bygg paketet enligt beskrivningen här](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.
 
