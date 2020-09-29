@@ -10,9 +10,9 @@ audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
 translation-type: tm+mt
-source-git-commit: 1eb15af3d9d2904856218aaad4d5c52233603a71
+source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '990'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,12 @@ Pod-ID:n anges i varje loggsats och tillåter filtrering eller sortering av logg
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
 + Exempel: `cm-p12345-e56789-aem-author-abcdefabde-98765`
+
+## Egna loggfiler
+
+AEM som en Cloud Services stöder inte anpassade loggfiler, men det stöder anpassad loggning.
+
+För att Java-loggar ska vara tillgängliga i AEM som Cloud Service (via [Cloud Manager](#cloud-manager) eller [Adobe I/O CLI](#aio)) måste anpassade loggsatser skrivas i `error.log`. Loggar som skrivits till anpassade namngivna loggar, till exempel `example.log`, kommer inte att vara tillgängliga från AEM som en Cloud Service.
 
 ## AEM Author and Publish service logs
 
@@ -54,7 +60,7 @@ Endast AEM Publish Dispatcher tillhandahåller Apache-webbserver och Dispatcher-
    + Scen: `WARN`
    + Produktion: `ERROR`
 
-## Cloud Manager
+## Cloud Manager{#cloud-manager}
 
 I Adobe Cloud Manager kan du ladda ned loggar per dag via en miljös hämtningsloggåtgärd.
 
@@ -62,7 +68,7 @@ I Adobe Cloud Manager kan du ladda ned loggar per dag via en miljös hämtningsl
 
 Loggarna kan laddas ned och inspekteras via alla logganalysverktyg.
 
-## Adobe I/O CLI med plugin-programmet Cloud Manager
+## Adobe I/O CLI med plugin-programmet Cloud Manager{#aio}
 
 Adobe Cloud Manager har stöd för åtkomst av AEM som Cloud Service-loggar via [Adobe I/O CLI](https://github.com/adobe/aio-cli) med plugin-programmet [Cloud Manager för Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
