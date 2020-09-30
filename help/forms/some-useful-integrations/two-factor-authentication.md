@@ -9,7 +9,7 @@ activity: use
 version: 6.4,6.5
 kt: 6317
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -67,7 +67,9 @@ Om du vill använda exempelresurserna med dina API-nycklar följer du följande 
 * Hämta exempelformuläret som kan [hämtas här](assets/sms-2fa-verification-af.zip). Det här exempelformuläret använder tjänsteanropen för den formulärdatamodell som tillhandahålls som en del av den här artikeln.
 * Importera formuläret till AEM från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Öppna formuläret i redigeringsläge. Öppna regelredigeraren för följande fält
-   ![sms-send](assets/check-sms.PNG)
+
+![sms-send](assets/check-sms.PNG)
+
 * Redigera regeln som är associerad med fältet. Ange lämpliga API-nycklar
 * Spara formuläret
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) och testa funktionaliteten
