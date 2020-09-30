@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
@@ -119,6 +119,7 @@ ht-degree: 1%
    + [JSON-variabler](variables-aem-workflow/part2.md)
    + [Dokumentvariabler](variables-aem-workflow/part3.md)
    + [ArrayList-variabel](variables-aem-workflow/part4.md)
+   + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Onboarding](storing-retrieving-form-data/introduction.md)
