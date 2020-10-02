@@ -1,0 +1,84 @@
+{
+	"organization": {
+		"Funds": [{
+				"Name": "weFinanceFund",
+				"Performances": [{
+						"Year": "2014",
+						"Amount": 10000
+					},
+					{
+						"Year": "2015",
+						"Amount": 22000
+					},
+					{
+						"Year": "2016",
+						"Amount": 27000
+					},
+					{
+						"Year": "2017",
+						"Amount": 32000
+					},
+					{
+						"Year": "2018",
+						"Amount": 34000
+					}
+				]
+			},
+			{
+				"Name": "SPY",
+				"Performances": [{
+						"Year": "2014",
+						"Amount": 10000
+					},
+					{
+						"Year": "2015",
+						"Amount": 15000
+					},
+					{
+						"Year": "2016",
+						"Amount": 19000
+					},
+					{
+						"Year": "2017",
+						"Amount": 22000
+					},
+					{
+						"Year": "2018",
+						"Amount": 23000
+					}
+
+				]
+			},
+			{
+				"Name": "VGIX",
+				"Performances": [{
+						"Year": "2014",
+						"Amount": 10000
+					},
+					{
+						"Year": "2015",
+						"Amount": 12000
+					},
+					{
+						"Year": "2016",
+						"Amount": 18000
+					},
+					{
+						"Year": "2017",
+						"Amount": 12000
+					},
+					{
+						"Year": "2018",
+						"Amount": 8000
+					}
+
+				]
+			}
+
+
+
+
+		]
+	}
+
+}

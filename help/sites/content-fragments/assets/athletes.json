@@ -1,0 +1,99 @@
+{
+    "designPath": "/libs/settings/wcm/designs/default",
+    "title": "Athletes",
+    "lastModifiedDate": 1526393049606,
+    "templateName": "api-page",
+    "cssClassNames": "page basicpage",
+    "language": "en-US",
+    ":items": {
+        "root": {
+            "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+            "columnCount": 12,
+            ":items": {
+                "contentfragment": {
+                    "columnClassNames": "aem-GridColumn aem-GridColumn--default--12",
+                    "description": "We.Retail featured athlete for skiing",
+                    "title": "Daniel Schreder",
+                    "model": "we-retail/models/athlete",
+                    "elements": {
+                        "fullName": {
+                            "value": "Daniel Schreder",
+                            "title": "Full name",
+                            "dataType": "string",
+                            ":type": "string"
+                        },
+                        "biographyText": {
+                            "value": "\u003Cp\u003EDaniel Schreder, born April 1, 1980 is an American skier who competed for the United Sates in the 2016 Winter Unlympics in the Apline Skiing and Ski Jump events. seconds. Daniel then finished second in the Skip Jump event with a score of 9.6, losing to Jean-Claude Jagger of Germany.\u003C/p\u003E\n\u003Cp\u003EDaniel was the speediest kid on the team and helped the the City High team win the state championship. Coaches from St. Augustiners University offered him a scholarship to join their downhill ski team.&nbsp;\u003C/p\u003E\n\u003Cp\u003EAt St. Augustiners, Daniel won three consecutive collegiate titles and led the team to two inter-varisty titles. At age 20, Daniel turned pro with We.Retail awarding him one of the largest endorsement contracts in professional Skiing history.\u003C/p\u003E\n",
+                            "title": "Biography",
+                            "dataType": "string",
+                            "paragraphs": [
+                                ""
+                            ],
+                            ":type": "text/html"
+                        },
+                        "pictureReference": {
+                            "value": "/content/dam/we-retail/en/activities/skiing/skiing-winter.jpg",
+                            "title": "Picture",
+                            "dataType": "string",
+                            ":type": "string"
+                        }
+                    },
+                    ":type": "weretail/components/content/contentfragment",
+                    ":items": {},
+                    ":itemsOrder": [],
+                    "elementsOrder": [
+                        "fullName",
+                        "biographyText",
+                        "pictureReference"
+                    ]
+                },
+                "contentfragment_2046749297": {
+                    "columnClassNames": "aem-GridColumn aem-GridColumn--default--12",
+                    "description": "",
+                    "title": "Sandra Sprient",
+                    "model": "we-retail/models/athlete",
+                    "elements": {
+                        "fullName": {
+                            "value": "Sandra Sprient",
+                            "title": "Full name",
+                            "dataType": "string",
+                            ":type": "string"
+                        },
+                        "biographyText": {
+                            "value": "\u003Cp\u003ESandra Sprient was the first Canadian woman to win 3 gold medals in the 2016 World Track Championship.\u003C/p\u003E\n\u003Cp\u003ESprient's hard work paid off at the 2016 World Track Championship, held in New York City, USA. She took home three gold medals, in the 50 meter relay, and the 100 and 200 meter sprints; as well as a silver medal in the 400 meter relay.\u003Cbr\u003E\n\u003C/p\u003E\n",
+                            "title": "Biography",
+                            "dataType": "string",
+                            "paragraphs": [
+                                ""
+                            ],
+                            ":type": "text/html"
+                        },
+                        "pictureReference": {
+                            "value": "/content/dam/we-retail/en/activities/running/running_1.jpg",
+                            "title": "Picture",
+                            "dataType": "string",
+                            ":type": "string"
+                        }
+                    },
+                    ":type": "weretail/components/content/contentfragment",
+                    ":items": {},
+                    ":itemsOrder": [],
+                    "elementsOrder": [
+                        "fullName",
+                        "biographyText",
+                        "pictureReference"
+                    ]
+                }
+            },
+            ":itemsOrder": [
+                "contentfragment",
+                "contentfragment_2046749297"
+            ],
+            ":type": "wcm/foundation/components/responsivegrid"
+        }
+    },
+    ":itemsOrder": [
+        "root"
+    ],
+    ":type": "weretail/components/structure/page"
+}

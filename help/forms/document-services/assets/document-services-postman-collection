@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "6ca1d85a-6077-4e0b-93a2-68d609a1bd4f",
+		"name": "DocumentServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mergedata",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdffile",
+							"type": "file",
+							"src": "/C:/scrap/eoir27.pdf"
+						},
+						{
+							"key": "saveLocation",
+							"value": "c:\\\\scrap\\\\updatedpdf.pdf",
+							"type": "text"
+						},
+						{
+							"key": "xmlfile",
+							"type": "file",
+							"src": "/C:/scrap/eoirdata.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/AemFormsSamples/mergedata.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"AemFormsSamples",
+						"mergedata.html"
+					]
+				},
+				"description": "Exports data from pdf file"
+			},
+			"response": []
+		},
+		{
+			"name": "ExportData",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdffile",
+							"value": null,
+							"type": "file"
+						},
+						{
+							"key": "saveLocation",
+							"value": "c:\\\\scrap\\\\eoirdata.xml",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/AemFormsSamples/exportdata.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"AemFormsSamples",
+						"exportdata.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlattenPdf",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "xdp_or_pdf_file",
+							"value": null,
+							"type": "file"
+						},
+						{
+							"key": "saveLocation",
+							"value": "c:\\\\scrap\\\\flattenedeoir.pdf",
+							"type": "text"
+						},
+						{
+							"key": "xmlfile",
+							"value": null,
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/AemFormsSamples/outputservice.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"AemFormsSamples",
+						"outputservice.html"
+					]
+				},
+				"description": "merge data and flatten pdf"
+			},
+			"response": []
+		}
+	]
+}
