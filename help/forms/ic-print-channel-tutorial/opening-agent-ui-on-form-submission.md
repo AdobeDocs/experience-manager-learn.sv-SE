@@ -11,9 +11,9 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 kt: 6168
-thumbnail: 40122
+thumbnail: 40122.jpg
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 824efde8d90dd77d41dce093998b4215db2532ae
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
