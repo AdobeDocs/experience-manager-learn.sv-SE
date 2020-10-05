@@ -10,7 +10,7 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -30,45 +30,45 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
 1. Logga in på Adobe Target och navigera till aktivitetsfliken
-2. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B-testaktivitet**
+1. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B-testaktivitet**
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
 
-3. Välj alternativet **Visual Experience Composer** , ange aktivitets-URL:en och klicka sedan på **Nästa**
+1. Välj alternativet **Visual Experience Composer** , ange aktivitets-URL:en och klicka sedan på **Nästa**
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-4. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplev A* och *Experience B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda knappen **Lägg till upplevelse** .
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplev A* och *Experience B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda knappen **Lägg till upplevelse** .
 
    ![Upplevelse A](assets/experience.png)
 
-5. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda HTML-element.
+1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda HTML-element.
 
    ![Element](assets/select-element.png)
 
-6. Ändra texten från *Camping i västra Australien* till *Australiens*&#x200B;äventyr. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
+1. Ändra texten från *Camping i västra Australien* till *Australiens*&#x200B;äventyr. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
 
    ![Annonser](assets/adventures.png)
 
-7. Byt namn på *upplevelse A* till *Adventure*
-8. Uppdatera på samma sätt texten om *Experience B* från *Camping i västra Australien* för att *utforska Australiens vildhet*.
+1. Byt namn på *upplevelse A* till *Adventure*
+1. Uppdatera på samma sätt texten om *Experience B* från *Camping i västra Australien* för att *utforska Australiens vildhet*.
 
    ![Utforska](assets/explore.png)
 
-9. Klicka på **Nästa** för att gå över till Riktning och låt oss behålla en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
+1. Klicka på **Nästa** för att gå över till Riktning och låt oss behålla en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
 
    ![Målinriktning](assets/targeting.png)
 
-10. För Mål och inställningar väljer du Rapporteringskällan som Adobe Target och väljer Mått som konvertering med en sidvisningsåtgärd.
+1. För Mål och inställningar väljer du Rapporteringskällan som Adobe Target och väljer Mått som konvertering med en sidvisningsåtgärd.
 
    ![Mål](assets/goals.png)
 
-11. Ange ett namn för aktiviteten och Spara.
-12. Aktivera den sparade aktiviteten för att göra ändringarna tillgängliga.
+1. Ange ett namn för aktiviteten och Spara.
+1. Aktivera den sparade aktiviteten för att göra ändringarna tillgängliga.
 
    ![Mål](assets/activate.png)
 
-13. Öppna din webbplatssida (Aktivitets-URL från steg 3) på en ny flik och du bör kunna visa någon av upplevelserna (Adventure eller Explore) från vår A/B-testaktivitet.
+1. Öppna din webbplatssida (Aktivitets-URL från steg 3) på en ny flik och du bör kunna visa någon av upplevelserna (Adventure eller Explore) från vår A/B-testaktivitet.
 
    ![Mål](assets/publish.png)
 
