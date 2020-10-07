@@ -5,9 +5,9 @@ description: En samling videor och självstudiekurser för Adobe Experience Mana
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Assets
 sub-product: resurser, dynamiska medier
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 3%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 3%
 Adobe Experience Manager Assets är ett verktyg för digital resurshantering på AEM Platform som gör att användare kan skapa, hantera och dela sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
 ## Nyheter
+
+* **[Vattenstämplar (video)](./advanced/watermarks.md)**
+
+   <br>
+   *Lär dig hur du vattenstämplar resursåtergivningar i AEM som en Cloud Service*
 
 * **[Baslinjebehörigheter (video)](./configuring/baseline-permissions.md)**
 
@@ -38,12 +43,6 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 
    <br>
    *Se hur Collections i AEM Assets ger nya sätt att ordna och upptäcka material*
-
-* **[Använda granskningsuppgift (video)](./collaboration/review-task.md)**
-
-   <br>
-   *Använd arbetsflödet Granska uppgift för att snabbt och enkelt godkänna (eller avvisa) resurser*
-
 
 ## Personalval
 
@@ -91,7 +90,7 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 
 ## Ytterligare resurser
 
-* [Experience League - utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets Documentation](https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html)
 * [AEM som Cloud Service Tutorials](/help/cloud-service/overview.md)
 * [AEM Sites Tutorials](/help/sites/overview.md)
