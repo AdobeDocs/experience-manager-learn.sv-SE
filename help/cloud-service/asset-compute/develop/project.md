@@ -1,6 +1,6 @@
 ---
 title: Skapa ett tillgångsberäkningsprojekt för resursberäkningens utbyggbarhet
-description: Beräkningsapplikationer för tillgångar är Node.js-projekt, som genereras med Adobe I/O CLI, som följer en viss struktur som gör att de kan driftsättas i Adobe I/O Runtime och integreras med AEM som Cloud Service.
+description: Beräkningsprojekt för tillgångar är Node.js-projekt, som genereras med Adobe I/O CLI, som följer en viss struktur som gör att de kan distribueras till Adobe I/O Runtime och integreras med AEM som en Cloud Service.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa ett tillgångsberäkningsprojekt
 
-Beräkningsapplikationer för tillgångar är Node.js-projekt, som genereras med Adobe I/O CLI, som följer en viss struktur som gör att de kan distribueras till Adobe I/O Runtime och integreras med AEM som en Cloud Service. Ett enskilt tillgångsberäkningsprojekt kan innehålla en eller flera tillgångsberäkningarbetare, där var och en har en separat HTTP-slutpunktsreferens från en AEM som en Cloud Service Processing Profile.
+Beräkningsprojekt för tillgångar är Node.js-projekt, som genereras med Adobe I/O CLI, som följer en viss struktur som gör att de kan distribueras till Adobe I/O Runtime och integreras med AEM som en Cloud Service. Ett enskilt tillgångsberäkningsprojekt kan innehålla en eller flera tillgångsberäkningarbetare, där var och en har en separat HTTP-slutpunktsreferens från en AEM som en Cloud Service Processing Profile.
 
 ## Generera ett projekt
 
@@ -51,7 +51,7 @@ Använd plugin-programmet [för beräkning av CLI-tillgångar i](../set-up/devel
 
 ## Granska projektets status
 
-Det genererade projektet Asset Compute är ett Node.js-projekt för ett specialiserat Adobe Project Firefly-program. Följande är idiosynkratiskt för Asset Compute-projektet:
+Det genererade projektet Asset Compute är ett Node.js-projekt för ett specialiserat projekt i Adobe Project Fire. Följande är idiosynkratiskt med projektet Asset Compute:
 
 + `/actions` innehåller undermappar och varje undermapp definierar en Asset Compute-arbetare.
    + `/actions/<worker-name>/index.js` definierar det JavaScript som körs för att utföra arbetarens arbete.
@@ -65,6 +65,14 @@ Det genererade projektet Asset Compute är ett Node.js-projekt för ett speciali
 + `/.env` definierar miljövariabler i en `key=value` syntax och innehåller hemligheter som inte ska delas. För att skydda dessa hemligheter bör den här filen INTE checkas in i Git och ignoreras via projektets standardfil `.gitignore` .
    + Variabler som definieras i den här filen kan åsidosättas genom [att variabler](../deploy/runtime.md) exporteras på kommandoraden.
 
-Mer information om granskning av projektstruktur finns i [Anatomin för programmet](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)Adobe Project Fire.
+Mer information om granskning av projektstruktur finns i [Anatomin för ett projekt](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)i Adobe Project Firefoly.
 
 Största delen av utvecklingen sker i mappen där arbetarna implementeras och i `/actions` `/test/asset-compute` skrivtest för de anpassade resurshanteringspersonerna.
+
+## Resursberäkningsprojekt på Github
+
+Det slutliga projektet Asset Compute finns på Github:
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex.`.env`,`.config.json`eller`.aio`._
