@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: ecee5f83dc778b016b6d236c1e3bcc4919ee55a7
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I den här självstudiekursen går du igenom hur du skapar en enkel resursåterg
 
 Lär dig hur du förbereder dig för att utöka tillgångsberäkningspersonal och hur du förstår vilka tjänster och konton som måste etableras och konfigureras samt vilken programvara som ska installeras lokalt för utveckling.
 
-### Konto- och tjänsteetablering
+### Konto- och tjänsteetablering{#accounts-and-services}
 
 Följande konton och tjänster kräver etablering och åtkomst för att kunna slutföra självstudiekursen, AEM som en Cloud Service Dev-miljö eller sandlådeprogram, tillgång till Adobe Project Fire och Microsoft Azure Blob Storage.
 
@@ -50,13 +50,13 @@ Följande konton och tjänster kräver etablering och åtkomst för att kunna sl
 
 ### Lokal utvecklingsmiljö
 
-Lokal utveckling av applikationer för Asset Compute kräver en särskild uppsättning utvecklingsverktyg, som skiljer sig från traditionell AEM, som: Microsoft Visual Studio Code, Docker Desktop, Node.js och tillhörande npm-moduler.
+Lokal utveckling av Asset Compute-projekt kräver en särskild verktygsuppsättning för utvecklare, som skiljer sig från traditionell AEM, som: Microsoft Visual Studio Code, Docker Desktop, Node.js och tillhörande npm-moduler.
 
 + [Konfigurera lokal utvecklingsmiljö](./set-up/development-environment.md)
 
 ### Adobe Project Fire
 
-Resursberäkningsprojekt är särskilt definierade Adobe Project Fire-program, och därför krävs åtkomst till Adobe Project Fire i Adobe Developer Console för att de ska kunna installeras och distribueras.
+Resursberäkningsprojekt är särskilt definierade projekt i Adobe Project Fire, och därför måste du ha tillgång till Adobe Project Fire i Adobe Developer Console för att kunna konfigurera och driftsätta dem.
 
 + [Konfigurera Adobe Project Fire](./set-up/firefly.md)
 
@@ -66,7 +66,7 @@ Lär dig hur du skapar och konfigurerar ett tillgångsberäkningsprojekt och sed
 
 ### Skapa ett nytt tillgångsberäkningsprojekt
 
-Resursberäkningsprojekt, som innehåller en eller flera tillgångsberäkningspersonal, genereras med den interaktiva Adobe I/O CLI. Resursberäkningsprogram är särskilt strukturerade Adobe Project Fire-program, som i sin tur är Node.js-program.
+Resursberäkningsprojekt, som innehåller en eller flera tillgångsberäkningspersonal, genereras med den interaktiva Adobe I/O CLI. Resursberäkningsprojekt är särskilt strukturerade projekt i Adobe Project Fire, som i sin tur är Node.js-projekt.
 
 + [Skapa ett nytt tillgångsberäkningsprojekt](./develop/project.md)
 
@@ -78,7 +78,7 @@ Miljövariabler lagras i filen för lokal utveckling och används för att ange 
 
 ### Konfigurera manifest.yml
 
-Programmen för tillgångsberäkning innehåller manifest som definierar alla tillgångsberäkningspersonal som finns i projektet, samt vilka resurser de har tillgängliga när de distribueras till Adobe I/O Runtime för körning.
+Resursberäkningsprojekt innehåller manifest som definierar alla tillgångsberäkningspersonal som finns i projektet, samt vilka resurser de har tillgängliga när de distribueras till Adobe I/O Runtime för utförande.
 
 + [Konfigurera manifest.yml](./develop/manifest.md)
 
@@ -106,7 +106,7 @@ Asset Compute är ett testramverk för att skapa testsviter för arbetare, vilke
 
 ### Felsöka en arbetare
 
-Programmen för tillgångsberäkning erbjuder olika nivåer av felsökning, från traditionella `console.log(..)` utdata till integreringar med __VS-kod__ och __wskdebug__, vilket gör att utvecklare kan stega igenom arbetskoden när den körs i realtid.
+Resursberäkningspersonal ger olika nivåer av felsökning, från traditionella `console.log(..)` utdata till integrering med __VS-kod__ och __wskdebug__, vilket gör att utvecklare kan stega igenom arbetskoden när den körs i realtid.
 
 + [Felsöka en arbetare](./test-debug/debug.md)
 
@@ -125,6 +125,14 @@ Resursberäkningspersonal måste distribueras till Adobe I/O Runtime för att ku
 När de distribuerats till Adobe I/O Runtime kan resursberäkningspersonal registreras i AEM som en Cloud Service via [resursbearbetningsprofiler](../../assets/configuring/processing-profiles.md). Bearbetningsprofiler tillämpas i sin tur på resursmappar som tillämpas på resurserna i dem.
 
 + [Integrera med AEM bearbetningsprofiler](./deploy/processing-profiles.md)
+
+## Självstudiekurs om Github
+
+Självstudiekursens kodbas finns på Github:
+
++ [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ överordnad gren
+
+Källkoden innehåller inte de nödvändiga `.env` filerna eller `config.json` filerna. Dessa måste läggas till och konfigureras med dina [konton och tjänster](#accounts-and-services) .
 
 ## Ytterligare resurser
 
