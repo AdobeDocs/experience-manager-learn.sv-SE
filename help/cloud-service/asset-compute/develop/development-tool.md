@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Verktyget Resursberäkning är en lokal webbenhet som gör det möjligt för utv
 
 ## Kör verktyget Resursberäkning
 
-Verktyget Resursberäkningsutveckling kan köras från roten av projektet Resursberäkning via terminalkommandot:
+Verktyget Resursberäkning kan köras från roten av projektet Resursberäkning via det terminala kommandot:
 
 ```
 $ aio app run
@@ -42,9 +42,9 @@ Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatis
 1. __Profildefinition för tillgångsberäkning:__ Definierar den Asset Compute-arbetare som ska köras inklusive parametrar: inklusive arbetarens URL-slutpunkt, det resulterande återgivningsnamnet och eventuella parametrar
 1. __Kör:__ Knappen Kör kör profilen Resursberäkning enligt definitionen i redigeraren för konfigurationsprofilen Resursberäkning
 1. __Avbryt:__ Knappen Avbryt avbryter en körning som initierats från att trycka på knappen Kör
-1. __Begäran/svar:__ Tillhandahåller HTTP-begäran och svar till/från det program för beräkning av tillgångar som körs i Adobe Runtime. Detta kan vara användbart vid felsökning
-1. __Aktiveringsloggar:__ Loggarna som beskriver hur resursberäkningsprogrammet körs, tillsammans med eventuella fel. Den här informationen finns även i `aio app run` standardversionen
-1. __Återgivningar:__ Visar alla återgivningar som genererats av körningen av programmet Resursberäkning
+1. __Begäran/svar:__ Tillhandahåller HTTP-begäran och svar till/från Asset Compute-arbetaren som körs i Adobe I/O Runtime. Detta kan vara användbart vid felsökning
+1. __Aktiveringsloggar:__ Loggarna som beskriver hur resursberäkningsarbetaren körs, tillsammans med eventuella fel. Den här informationen finns även i `aio app run` standardversionen
+1. __Återgivningar:__ Visar alla återgivningar som genererats av körningen av Asset Compute-arbetaren
 1. __devToolToken-frågeparameter:__ En giltig `devToolToken` frågeparameter måste finnas för token för verktyget Resursberäkning. Denna token genereras automatiskt varje gång ett nytt utvecklingsverktyg skapas
 
 ### Kör en anpassad arbetare
@@ -89,18 +89,18 @@ Verktyget Resursberäkning kan försättas i ett läge där inaktuella data häm
 
 + __Fel:__ I listrutan Källfil visas felaktiga objekt.
 + __Orsak:__ Inaktuellt cachelagrat webbläsarläge orsakar
-+ __Upplösning:__ I webbläsaren rensar du helt webbläsarflikens programtillstånd, webbläsarcachen, lokal lagring och servicearbetare.
++ __Upplösning:__ I webbläsaren rensar du helt webbläsarflikens &quot;programtillstånd&quot;, webbläsarens cache, lokal lagring och servicearbetare.
 
-### Frågeparameter för devToolToken saknas{#troubleshooting__devtooltoken}
+### Frågeparametern devToolToken saknas eller är ogiltig{#troubleshooting__devtooltoken}
 
 + __Fel:__ Meddelande om&quot;obehörig&quot; i verktyget Resursberäkning
 + __Orsak:__ `devToolToken` saknas eller är ogiltigt
-+ __Upplösning:__ Stäng webbläsarfönstret för verktyget Resursberäkning, avsluta alla processer som körs i utvecklingsverktyget och som har initierats via `aio app run` kommandot samt starta om utvecklingsverktyget (med `aio app run`).
++ __Upplösning:__ Stäng webbläsarfönstret för verktyget Resursberäkning, avsluta alla processer som körs i utvecklingsverktyget och som har initierats via `aio app run` kommandot, och starta om utvecklingsverktyget (med `aio app run`).
 
 ### Det går inte att ta bort källfiler{#troubleshooting__remove-source-files}
 
 + __Fel:__ Det finns inget sätt att ta bort tillagda källfiler från utvecklingsverktygets användargränssnitt
 + __Orsak:__ Den här funktionen har inte implementerats
-+ __Upplösning:__ Logga in på din molnlagringsleverantör med de autentiseringsuppgifter som anges i `.env`. Leta reda på den behållare som används av utvecklingsverktygen (anges även i `.env`), navigera till __källmappen__ och ta bort alla källbilder. Du kan behöva utföra de steg som beskrivs i [källfilslistan felaktigt](#troubleshooting__dev-tool-application-cache) om de borttagna källfilerna fortfarande visas i listrutan eftersom de kan cachas lokalt i utvecklingsverktygets programläge.
++ __Upplösning:__ Logga in på din molnlagringsleverantör med de autentiseringsuppgifter som anges i `.env`. Leta reda på den behållare som används av utvecklingsverktygen (anges även i `.env`), navigera till __källmappen__ och ta bort alla källbilder. Du kan behöva utföra de steg som beskrivs i [Källfiler för att visa en felaktig](#troubleshooting__dev-tool-application-cache) lista om de borttagna källfilerna fortfarande visas i listrutan eftersom de kan cachas lokalt i utvecklingsverktygets &quot;programtillstånd&quot;.
 
    ![Microsoft Azure Blob Storage](./assets/development-tool/troubleshooting__remove-source-files.png)
