@@ -1,5 +1,5 @@
 ---
-title: Använda rapporter i AEM Assets
+title: Resursrapporter i AEM Assets
 description: 'AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse. '
 feature: reports
 topics: authoring, operations, performance, metadata
@@ -9,15 +9,15 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 648
 translation-type: tm+mt
-source-git-commit: 3b5dd583a458393a41dbce1d8eeb0095a22db734
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '91'
 ht-degree: 2%
 
 ---
 
 
-# Använda rapporter i AEM Assets{#using-reports-in-aem-assets}
+# Resursrapporter{#using-reports-in-aem-assets}
 
 AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse.
 
