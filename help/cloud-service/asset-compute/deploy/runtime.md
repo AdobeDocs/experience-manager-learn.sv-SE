@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Eftersom det här projektet genererades med hjälp `aio app init` av `Developmen
 
 Så här distribuerar du till arbetsytan som definieras i `.env` projektfilen:
 
-1. Öppna kommandoraden i roten av programprojektet Resursberäkning
+1. Öppna kommandoraden i roten av projektet Resursberäkning
 1. Kör kommandot `aio app deploy`
 1. Kör kommandot `aio app get-url` för att hämta arbetarens URL för användning i AEM som en Cloud Service Processing Profile som referens till den här anpassade resurshanteringspersonen. Om projektet innehåller flera arbetare visas separata URL:er för varje arbetare.
 
@@ -54,7 +54,7 @@ Om du anger true för miljövariabler åsidosätts värden för variabler med sa
 Det allmänna tillvägagångssättet, som vanligtvis automatiseras av ett CI/CD-system, för distribution till scen- och produktionsmiljöer är:
 
 1. Kontrollera att plugin-programmet [](../set-up/development-environment.md#aio) Adobe I/O CLI npm och Asset Compute är installerade
-1. Kolla in programmet Asset Compute som ska distribueras från Git
+1. Kolla in projektet Asset Compute som ska distribueras från Git
 1. Ange miljövariablerna med de värden som motsvarar målarbetsytan (scen eller produktion)
    + De två variablerna som krävs är `AIO_runtime_namespace` och `AIO_runtime_auth` hämtas per arbetsyta i Adobe I/O Developer Console via funktionen __Hämta alla__ för arbetsytan.
 
@@ -74,7 +74,7 @@ Om dina tillgångsberäkningspersonal behöver andra variabler, till exempel mol
 1. Arbetar-URL:erna som AEM refererar till som en Cloud Service Processing Profile är också tillgängliga via:
    + `aio app get-url`.
 
-Om programversionen för Resursberäkning ändrar arbetarens URL:er så att de motsvarar den nya versionen, och URL:en måste uppdateras i bearbetningsprofilerna.
+Om projektversionen för Resursberäkning ändrar arbetarens URL:er så att de också återspeglar den nya versionen, och URL:en måste uppdateras i bearbetningsprofilerna.
 
 ## API-etablering för arbetsyta{#workspace-api-provisioning}
 
