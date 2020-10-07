@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ _Klicka igenom felsökningen av en Asset Compute-arbetare med wskdebug (inget lj
        "attachSimplePort": 0,
        "runtimeExecutable": "wskdebug",
        "args": [
-           "wkndAemAssetCompute-0.0.1/__secured_worker",  // Version must match your Asset Compute application's version
+           "wkndAemAssetCompute-0.0.1/__secured_worker",  // Version must match your Asset Compute worker's version
            "${workspaceFolder}/actions/worker/index.js",  // Points to your worker
            "-l",
            "--ngrok"
