@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '239'
 ht-degree: 10%
 
 ---
@@ -47,10 +47,11 @@ ht-degree: 10%
    + [Sökökning](./search-and-discovery/search-boost.md)
 
 + Avancerade funktioner{#advanced}
-   + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
-   + [Resursrapporter](./advanced/asset-reports.md)
-   + [Asset Insights ](./advanced/asset-insights-launch-tutorial.md)
    + [Anteckningar, PDF-utdata](./advanced/customizing-annotations-pdf-output.md)
+   + [Asset Insights ](./advanced/asset-insights-launch-tutorial.md)
+   + [Resursrapporter](./advanced/asset-reports.md)
+   + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
+   + [Vattenstämplar](./advanced/watermarks.md)
 
 + Avancerad metadatahantering{#metadata}
    + [Överlappande metadata](metadata/cascade-metadata-feature-video-use.md)
