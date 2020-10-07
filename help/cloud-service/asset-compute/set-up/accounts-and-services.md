@@ -10,10 +10,10 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +39,7 @@ Alla Adobe-tjänster måste vara tillgängliga via samma Adobe Org, med din Adob
 
 ## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
-Åtkomst till en AEM som Cloud Service krävs för att konfigurera AEM Assets Bearbetningsprofiler så att det anpassade programmet Resursberäkning anropas.
+Åtkomst till en AEM som en Cloud Service-miljö krävs för att konfigurera AEM Assets bearbetningsprofiler så att den anpassade resurshanteraren anropas.
 
 Helst är ett sandlådeprogram eller en icke-sandlådeutvecklingsmiljö tillgänglig för användning.
 
@@ -47,7 +47,7 @@ Observera att en lokal AEM SDK inte räcker till för att slutföra den här sj�
 
 ## Adobe Project Fire{#adobe-project-firefly}
 
-Ramverket [Adobe Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly.html) används för att skapa och distribuera anpassade program till Adobe I/O Runtime, Adobe serverless-plattformen. AEM Assets Compute-program är särskilt byggda Firerefly-program som integreras med AEM Assets via Processing Profiles och ger möjlighet att komma åt och bearbeta resurbinärfiler.
+Ramverket [Adobe Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly.html) används för att skapa och distribuera anpassade åtgärder till Adobe I/O Runtime, Adobe serverless-plattformen. AEM Asset Compute-projekt är särskilt byggda Firerefly-projekt som integreras med AEM Assets via Bearbetningsprofiler och som ger möjlighet att komma åt och bearbeta resurbinärfiler.
 
 Registrera dig för förhandsgranskningen om du vill få åtkomst till Project Fire.
 
@@ -57,9 +57,9 @@ Registrera dig för förhandsgranskningen om du vill få åtkomst till Project F
 
 ## molnlagring
 
-Molnlagring krävs för lokal utveckling av resursberäkningsprogram.
+Molnlagring krävs för lokal utveckling av resursberäkningsprojekt.
 
-När Assets Compute-program distribueras till Adobe I/O Runtime för direkt användning av AEM som Cloud Service krävs inte detta molnlagringsutrymme eftersom AEM tillhandahåller molnlagring som resursen läses från och återgivning skrivs till.
+När Assets Compute-arbetare distribueras till Adobe I/O Runtime för direkt användning av AEM som Cloud Service krävs inte detta molnlagringsutrymme eftersom AEM tillhandahåller molnlagring som resursen läses från och återgivning skrivs till.
 
 ### Microsoft Azure Blob Storage{#azure-blob-storage}
 
