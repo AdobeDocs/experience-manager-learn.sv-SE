@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: 53e4235c55d890765e9f13ffeb37a2c805fb307b
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Konfigurera lokal utvecklingsmiljö
 
-Adobe Asset Compute-applikationer kan inte integreras med den lokala AEM-miljön från AEM SDK och utvecklas med en egen verktygskedja, som är skild från den som krävs för AEM applikationer som baseras på AEM Maven-projekttyp.
+Adobe Asset Compute-projekt kan inte integreras med den lokala AEM-miljön från AEM SDK och utvecklas med en egen verktygskedja, som är skild från den som krävs för AEM program som baseras på AEM Maven-projekttyp.
 
 För att utöka mikrotjänsterna för tillgångsberäkning måste följande verktyg vara installerade på den lokala utvecklingsdatorn.
 
@@ -46,7 +46,7 @@ Här följer en instruktion för att konfigurera en förkortning. Information om
 
 ## Installera Visual Studio Code{#vscode}
 
-[Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för utveckling och felsökning av program för beräkning av tillgångar. Även om annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla programmet kan bara Visual Studio Code integreras för att [felsöka](../test-debug/debug.md) applikationer för tillgångsberäkning.
+[Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för att utveckla och felsöka resurser och beräkningspersonal. Även om annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, kan bara Visual Studio Code integreras för att [felsöka](../test-debug/debug.md) Asset Compute-arbetaren.
 
 _Visual Studio Code 1.48.x+ krävs för att[wskdebug](#wskdebug)ska fungera._
 
@@ -67,7 +67,7 @@ Utvecklare på Windows-datorer bör kontrollera att de använder Linux-behållar
 
 ## Installera Node.js (och npm){#node-js}
 
-Resursberäkningspersonal är [Node.js](https://nodejs.org/) -program, och därför krävs Node.js 10+ (och npm) för att utveckla och bygga.
+Resursberäkningspersonal är [Node.js](https://nodejs.org/)-baserade, och därför måste Node.js 10+ (och npm) utvecklas och byggas.
 
 + [Installera Node.js (och npm)](../../local-development-environment/development-tools.md#node-js) på samma sätt som för traditionell AEM.
 
@@ -89,7 +89,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## Installera wskdebug{#wskdebug}
 
-Ladda ned och installera [Apache OpenWhisk-felsökningsmodulen](https://www.npmjs.com/package/@openwhisk/wskdebug) npm för att underlätta lokal felsökning av program för tillgångsberäkning.
+Ladda ned och installera [Apache OpenWhisk-felsökningsmodulen](https://www.npmjs.com/package/@openwhisk/wskdebug) npm för att underlätta lokal felsökning av Asset Compute-arbetare.
 
 _Visual Studio Code 1.48.x+ krävs för att[wskdebug](#wskdebug)ska fungera._
 
@@ -99,7 +99,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## Installera anteckning{#ngrok}
 
-Hämta och installera modulen [nGroup](https://www.npmjs.com/package/ngrok) NPM, som ger allmänheten tillgång till din lokala utvecklingsdator, för att underlätta lokal felsökning av program för beräkning av tillgångar.
+Hämta och installera modulen [ngrupps](https://www.npmjs.com/package/ngrok) npm, som ger allmänheten tillgång till din lokala utvecklingsdator, för att underlätta lokal felsökning av arbetare på tillgångsberäkning.
 
 ```
 $ npm install -g ngrok --unsafe-perm=true
