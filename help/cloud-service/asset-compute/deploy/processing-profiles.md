@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: 59bfc9ae08acca6c41234f23eaa60f56e2eda890
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,14 @@ Skapa först en ny bearbetningsprofil som anropar arbetaren med konfigurerbara p
 ## Klart!
 
 Grattis! Du är klar med [självstudiekursen](../overview.md) om hur du utökar AEM som Cloud Service Asset Compute-mikrotjänster! Nu bör du ha möjlighet att konfigurera, utveckla, testa, felsöka och distribuera anpassade tillgångsberäkningarbetare för användning av din AEM som Cloud Service Author-tjänst.
+
+### Granska den fullständiga projektkällkoden på Github
+
+Det slutliga projektet Asset Compute finns på Github:
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex.`.env`,`.config.json`eller`.aio`._
 
 ## Felsökning
 
