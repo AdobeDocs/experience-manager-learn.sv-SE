@@ -1,5 +1,5 @@
 ---
-title: Använda stängda användargrupper med AEM Assets
+title: Stängda användargrupper i AEM Assets
 description: 'Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser. Stöd för slutna användargrupper med AEM Assets introducerades i AEM 6.4. '
 feature: asset-share
 topics: authoring, collaboration, operations, sharing
@@ -8,15 +8,15 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 
-# Använda stängda användargrupper med AEM Assets{#using-closed-user-groups-with-aem-assets}
+# Stängda användargrupper{#using-closed-user-groups-with-aem-assets}
 
 Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser. Stöd för slutna användargrupper med AEM Assets introducerades i AEM 6.4.
 
