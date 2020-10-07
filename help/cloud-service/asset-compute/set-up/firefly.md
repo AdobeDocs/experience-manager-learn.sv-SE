@@ -1,6 +1,6 @@
 ---
 title: Konfigurera Adobe Project Fire för utbyggbarhet av tillgångsberäkning
-description: Resursberäkningsprogram är särskilt definierade Adobe Project Fire-program, och därför krävs åtkomst till Adobe Project Fire i Adobe Developer Console för att de ska kunna installeras och distribueras.
+description: Resursberäkningsprojekt är särskilt definierade projekt i Adobe Project Fire, och därför måste du ha tillgång till Adobe Project Fire i Adobe Developer Console för att kunna konfigurera och driftsätta dem.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Konfigurera Adobe Project Fire
 
-Resursberäkningsprogram är särskilt definierade Adobe Project Fire-program, och därför krävs åtkomst till Adobe Project Fire i Adobe Developer Console för att de ska kunna installeras och distribueras.
+Resursberäkningsprojekt är särskilt definierade projekt i Adobe Project Fire, och därför måste du ha tillgång till Adobe Project Fire i Adobe Developer Console för att kunna konfigurera och driftsätta dem.
 
 ## Skapa och konfigurera Adobe Project Fire i Adobe Developer Console{#set-up}
 
@@ -34,8 +34,8 @@ _Klicka igenom konfigurationen av Adobe Project Fire (inget ljud)_
 
    + __Projektets titel__: `WKND AEM Asset Compute`
    + __Programnamn__: `wkndAemAssetCompute<YourName>`
-      + Appnamnet __måste vara unikt för alla__ Fireworks-program och kan inte ändras senare. Att lägga till prefix för företagets eller organisationens namn och efterhandskorrigering med ett meningsfullt suffix är ett bra tillvägagångssätt, till exempel: `wkndAemAssetCompute`.
-      + För självaktivering är det oftast bäst att skjuta upp ditt namn till __programnamnet__, t.ex. `wkndAemAssetComputeJaneDoe` för att undvika kollisioner med andra Project Fire-program.
+      + Programnamnet __måste vara unikt för alla__ Fireworks och kan inte ändras senare. Att lägga till prefix för företagets eller organisationens namn och efterhandskorrigering med ett meningsfullt suffix är ett bra tillvägagångssätt, till exempel: `wkndAemAssetCompute`.
+      + För självaktivering är det oftast bäst att skjuta upp ditt namn till __programnamnet__, t.ex. `wkndAemAssetComputeJaneDoe` för att undvika kollisioner med andra projekt i Project Fire.
    + Lägg till en ny miljö med namnet under __Arbetsytor__ `Development`
    + Under __Adobe I/O Runtime__ ser du till att alternativet __Inkludera körtid för varje arbetsyta__ är markerat
    + Tryck på __Spara__ för att spara projektet
@@ -58,7 +58,7 @@ När API-integreringen [för](#set-up) tillgångsberäkning konfigurerades gener
 
 ## Granska JWT-autentiseringsuppgifterna (Service Account)
 
-I/O-projektets autentiseringsuppgifter för Adobe används av det lokala [verktyget](../develop/development-tool.md) för beräkning av tillgångar för att interagera med Adobe I/O Runtime och måste införlivas i projektet för beräkning av tillgångar. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
+I/O-projektets autentiseringsuppgifter för Adobe används av det lokala [verktyget](../develop/development-tool.md) för beräkning av tillgångar för att interagera med Adobe I/O Runtime, och måste införlivas i projektet Resursberäkning. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
 
 ![Adobe Developer Service Account-autentiseringsuppgifter](./assets/firefly/service-account.png)
 
