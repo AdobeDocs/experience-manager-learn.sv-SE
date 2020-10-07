@@ -1,6 +1,6 @@
 ---
 title: Utveckla en Asset Compute-arbetare
-description: Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprogram och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
+description: Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprojekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1508'
 ht-degree: 0%
 
 ---
@@ -20,26 +20,28 @@ ht-degree: 0%
 
 # Utveckla en Asset Compute-arbetare
 
-Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprogram och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
+Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprojekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
 
 Projektet Asset Compute genererar automatiskt en enkel arbetare som kopierar resursens ursprungliga binärfil till en namngiven återgivning, utan några omformningar. I den här självstudiekursen ska vi modifiera den här arbetaren för att göra en intressantare rendering, för att illustrera kraften hos Assets Compute-arbetarna.
 
-Vi kommer att skapa en AM Asset Compute-arbetare som genererar en ny vågrät bildåtergivning som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
+Vi kommer att skapa en Asset Compute-arbetare som genererar en ny vågrät bildåtergivning som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
 
-## Så här fungerar körningen av en Asset Compute-arbetare
+## Logiskt flöde för ett anrop av en Asset Compute-arbetare
 
-Resursberäkningspersonal implementerar ett API för SDK-arbetaren, vilket helt enkelt är:
+Resursberäkningspersonal implementerar ett API för SDK-arbetaren i Asset Compute i `renditionCallback(...)` funktionen, vilket är begreppsmässigt:
 
 + __Indata:__ En AEM ursprungliga resurs binära och parametrar
 + __Utdata:__ En eller flera återgivningar som ska läggas till i AEM
 
-![Arbetsflöde för att beräkna tillgångar](./assets/worker/execution-flow.png)
+![Logiskt arbetsflöde för beräkning av tillgångar](./assets/worker/logical-flow.png)
 
 1. När en Asset Compute-arbetare anropas från AEM Author-tjänsten är den mot en AEM resurs via en Bearbetningsprofil. Resursens ursprungliga binärfil __(1a)__ skickas till arbetaren via återgivningsfunktionens `source` parameter och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen via `rendition.instructions` parameteruppsättning.
-1. Resursberäkningens arbetskod omformar källans binärfil enligt __(1a)__ baserat på parametrar som tillhandahålls av __(1b)__ för att generera en återgivning av källans binärfil.
+1. SDK-lagret Resursberäkning accepterar begäran från bearbetningsprofilen och koordinerar körningen av den anpassade `renditionCallback(...)` funktionen Resursberäkning, vilket omformar källans binärfil som anges i __(1a)__ baserat på parametrar som anges i __(1b)__ för att generera en återgivning av källans binärfil.
    + I den här självstudiekursen skapas renderingen&quot;i arbete&quot;, vilket innebär att arbetaren komponerar renderingen, men källbinärfilen kan skickas till andra webbtjänste-API:er för att renderingen ska genereras.
 1. Resursberäkningsarbetaren sparar återgivningens binära representation som gör den tillgänglig `rendition.path` för sparande i AEM Author-tjänsten.
-1. När de binära data som skrivits till har slutförts visas de via AEM Author Service som en återgivning för den AEM resursen som resursen anropades för. `rendition.path`
+1. När de är klara `rendition.path` skickas de binära data som skrivs till via SDK för tillgångsberäkning och visas via AEM Author Service som en rendering i det AEM användargränssnittet.
+
+Diagrammet ovan visar frågor som rör tillgångsberäkningens utvecklare och det logiska flödet för att anropa en tillgångsberäknings-arbetare. Av nyfikenhet att det finns [interna detaljer om hur Resurser körs](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) , men endast API-kontrakt för beräkning av offentliga tillgångar bör vara beroende av.
 
 ## Anatomi för en arbetare
 
@@ -106,7 +108,7 @@ Det här är den JavaScript-fil för arbetare som vi kommer att ändra i den hä
 
 ## Installera och importera stödda npm-moduler
 
-Som Node.js-program drar resursberäkningsprogrammen nytta av det robusta ekosystemet i [npm-modulen](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt resursberäkningsprojekt.
+Resursberäkningsprojekt som baseras på Node.js utnyttjar det robusta ekosystemet i [npm-modulen](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt Asset Compute-projekt.
 
 I den här arbetaren använder vi [jimp](https://www.npmjs.com/package/jimp) för att skapa och ändra återgivningsbilden direkt i Node.js-koden.
 
@@ -380,6 +382,12 @@ Dessa läses in i arbetaren `index.js` via:
    ![Parameteriserad PNG-rendering](./assets/worker/parameterized-rendition.png)
 
 1. Överför andra bilder till listrutan __Källfil__ och försök köra arbetaren mot dem med olika parametrar!
+
+## Worker index.js on Github
+
+Slutversionen `index.js` finns på Github:
+
++ [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
 ## Felsökning
 
