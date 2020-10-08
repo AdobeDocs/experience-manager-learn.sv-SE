@@ -12,27 +12,33 @@ activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
 translation-type: tm+mt
-source-git-commit: 82127d5be9a4b969537738f9ba537efe07f38479
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
+
 # Förenklade steg för installation av AEM Forms i Windows
 
 >[!NOTE]
+>
 >Dubbelklicka aldrig på AEM snabbstartsburk om du tänker använda AEM Forms.
+>
 >Kontrollera också att det inte finns några blanksteg i sökvägen till installationsmappen för AEM Forms.
+>
 >Installera till exempel inte AEM Forms i c:\jack and jill\AEM Forms folder
 
 >[!NOTE]
-Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft Visual C++-filer.
+>
+>Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft Visual C++-filer.
+>
+>* Microsoft Visual C++ 2008 återdistribuerbar
+>* Microsoft Visual C++ 2010 återdistribuerbar
+>* Microsoft Visual C++ 2012 återdistribuerbar
+>* Microsoft Visual C++ 2013 redistributable (från och med 6.5)
 
-* Microsoft Visual C++ 2008 återdistribuerbar
-* Microsoft Visual C++ 2010 återdistribuerbar
-* Microsoft Visual C++ 2012 återdistribuerbar
-* Microsoft Visual C++ 2013 redistributable (från och med 6.5)
 
 Vi rekommenderar att du följer den [officiella dokumentationen](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) för installation av AEM Forms. Följ de här stegen för att installera och konfigurera AEM Forms i Windows-miljö:
 
