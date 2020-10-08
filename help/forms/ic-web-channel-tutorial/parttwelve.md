@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -68,5 +68,7 @@ Logga in på AEM Forms.
 * [Öppna getad.html](http://localhost:4502/content/getad.html)
 
 * Koden som är associerad med denna URL hämtar kontonumret för den inloggade användaren. Kontonumret skickas sedan som begärandeattribut till FDM. FDM hämtar sedan data som är kopplade till det här kontonumret och fyller i webbkanalsdokumentet.
+
 >[!NOTE]
-Ta en titt på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
+>
+>Ta en titt på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
