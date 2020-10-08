@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,7 @@ De här loggsatserna är tillgängliga för granskning på olika sätt beroende 
 Modulen [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm har stöd för att bifoga en felsökare till Assets Compute-arbetare, inklusive möjligheten att ange brytpunkter i VS-koden och stega igenom koden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+
 _Klicka igenom felsökningen av en Asset Compute-arbetare med wskdebug (inget ljud)_
 
 1. Kontrollera att [wskdebug](../set-up/development-environment.md#wskdebug) - och [ngrok](../set-up/development-environment.md#ngork) npm-moduler är installerade
