@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1ba56ad44df4dc327cf37d39ac72539b5c7af4a2
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -32,4 +32,5 @@ Nästa steg är att skapa ett schema från den Acrobat som skapades i det tidiga
 För att den här demonstrationen ska fungera i ditt system måste du skapa en mapp som kallas `acroforms` i AEM Assets. Överför Acrobat till den här `acroforms` mappen.
 
 >[!NOTE]
-Exempelkoden söker efter acroform i den här mappen. Det behövs för att sammanfoga de data som har skickats från det adaptiva formuläret.
+>
+>Exempelkoden söker efter acroform i den här mappen. Det behövs för att sammanfoga de data som har skickats från det adaptiva formuläret.
