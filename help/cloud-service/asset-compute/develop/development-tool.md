@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatis
 ### Kör en anpassad arbetare
 
 >[!VIDEO](https://video.tv.adobe.com/v/40241?quality=12&learn=on)
+
 _Klicka igenom hur du kör en inventeringsfunktion i utvecklingsverktyget (inget ljud)_
 
 1. Kontrollera att verktyget Resursberäkning har startats från projektets rot med hjälp av `aio app run` kommandot.
@@ -95,7 +96,7 @@ Verktyget Resursberäkning kan försättas i ett läge där inaktuella data häm
 
 + __Fel:__ Meddelande om&quot;obehörig&quot; i verktyget Resursberäkning
 + __Orsak:__ `devToolToken` saknas eller är ogiltigt
-+ __Upplösning:__ Stäng webbläsarfönstret för verktyget Resursberäkning, avsluta alla processer som körs i utvecklingsverktyget och som har initierats via `aio app run` kommandot, och starta om utvecklingsverktyget (med `aio app run`).
++ __Upplösning:__ Stäng webbläsarfönstret för verktyget Resursberäkning, avsluta alla processer som körs i utvecklingsverktyget och som har initierats via `aio app run` kommandot samt starta om utvecklingsverktyget (med `aio app run`).
 
 ### Det går inte att ta bort källfiler{#troubleshooting__remove-source-files}
 
