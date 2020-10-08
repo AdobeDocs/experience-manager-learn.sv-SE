@@ -7,7 +7,7 @@ audience: developer
 doc-type: article
 activity: implement
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -40,7 +40,8 @@ Följande OSGI-tjänst skapades för att exportera skickade data i CSV-format.
 * Rad 89: Detta är startpunkten till tjänsten. Metoden `getCSVFile(..)` tar formName som indataparameter och hämtar skickade data som gäller det angivna formulärnamnet.
 
 >[!NOTE]
-Koden förutsätter att du har definierat en sammanslagen datakälla med namnet&quot;aemformstutorial&quot; i Felix Web Console. Koden förutsätter också att du har ett schema i databasen som kallas aemformstutorial
+>
+>Koden förutsätter att du har definierat en sammanslagen datakälla med namnet&quot;aemformstutorial&quot; i Felix Web Console. Koden förutsätter också att du har ett schema i databasen som kallas aemformstutorial
 
 ```java
 package com.aemforms.storeandexport.core;
