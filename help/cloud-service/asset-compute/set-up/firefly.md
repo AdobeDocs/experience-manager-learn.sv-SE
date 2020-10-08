@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -25,6 +25,7 @@ Resursberäkningsprojekt är särskilt definierade projekt i Adobe Project Fire,
 ## Skapa och konfigurera Adobe Project Fire i Adobe Developer Console{#set-up}
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+
 _Klicka igenom konfigurationen av Adobe Project Fire (inget ljud)_
 
 1. Logga in på [Adobe Developer Console](https://console.adobe.io) med den Adobe ID som är kopplad till de tilldelade [kontona och tjänsterna](./accounts-and-services.md). Kontrollera att du är __systemadministratör__ eller utvecklarroll ____ för rätt Adobe-organisation.
