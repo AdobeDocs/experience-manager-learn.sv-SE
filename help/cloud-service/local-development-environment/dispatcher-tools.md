@@ -11,7 +11,7 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 1%
@@ -74,6 +74,7 @@ Versionen av Dispatcher Tools skiljer sig från AEM SDK. Kontrollera att version
 Observera att alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen innehåller det expanderande Dispatcher-verktygsinnehållet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
 
 ## Förstå Dispatcher-konfigurationsfilerna
@@ -86,6 +87,7 @@ Dispatcher Tools innehåller en uppsättning konfigurationsfiler för Apache HTT
 Dessa filer ska kopieras till ett Experience Manager Maven-projekt till `dispatcher/src` mappen, om de inte redan finns i Experience Manager Maven-projektet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
+
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
 
 En fullständig beskrivning av konfigurationsfilerna finns i de packade Dispatcher-verktygen som `dispatcher-sdk-x.x.x/docs/Config.html`.
@@ -142,6 +144,7 @@ Om du vill köra Dispatcher Tools mot Dispatcher-konfigurationen för ett Experi
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
+
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
 
 ## Loggar för Dispatcher Tools
@@ -177,6 +180,7 @@ En eller flera parametrar kan skickas till `docker_run`
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
+
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
 
 ## När Dispatcher Tools ska uppdateras{#dispatcher-tools-version}
