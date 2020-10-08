@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -19,7 +19,12 @@ ht-degree: 0%
 # Distribuera detta på servern
 
 >[!NOTE]
-Följande krävs för att köra detta på din datorAEM Forms (version 6.3 eller senare)MYSQL Database
+>
+>Följande krävs för att köra detta på datorn
+>
+>* AEM Forms (version 6.3 eller senare)
+>* MYSQL-databas
+
 
 Så här testar du den här funktionen på din AEM Forms-instans:
 
