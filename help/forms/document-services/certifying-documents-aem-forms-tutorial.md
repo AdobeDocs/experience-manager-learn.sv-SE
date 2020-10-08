@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -49,8 +49,10 @@ Du kan skriva ett eget OSGi-paket och använda AEM Forms Client SDK för att imp
 * [Använd API för dokumenttjänst](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
+
 >[!NOTE]
-Exempelpaketet använder alias &quot;ares&quot; för att certifiera dokumenten. Se därför till att ditt alias heter &quot;ares&quot; när du använder det här paketet
+>
+>Exempelpaketet använder alias &quot;ares&quot; för att certifiera dokumenten. Se därför till att ditt alias heter &quot;ares&quot; när du använder det här paketet
 
 ## Testa exemplet på din lokala dator
 
