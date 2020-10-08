@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -29,14 +29,18 @@ XML-variabeln kan användas för att i förväg fylla i det adaptiva formuläret
 Strängvariabeln kan fyllas i med XPthing till XML-variabeln. Den här strängvariabeln används sedan vanligtvis för att fylla i platshållare för e-postmallar i komponenten Skicka e-post
 
 >[!NOTE]
-Om ditt adaptiva formulär inte är associerat med XSD ser XPath för att hämta värdet för ett element ut som**/afData/afUnboundData/data/SubSubITterName**
+>
+>Om ditt adaptiva formulär inte är kopplat till XSD ser XPath för att hämta värdet för ett element ut som
+>
+>**/afData/afUnboundData/data/sändandeName**
 
 De adaptiva formulärdata lagras under dataelementet som visas ovan. **_I ovanstående XPath-text är namnet på textfältet i det adaptiva formuläret._**
 
 >[!NOTE]
-**AEM Forms 6.5.0** - När du skapar en variabel av typen XML för att hämta inskickade data i arbetsflödesmodellen ska du inte associera XSD med variabeln. Detta beror på att inskickade data inte är kompatibla med XSD när du skickar in XSD-baserade adaptiva formulär. XSD-data för klagomål omges av elementet /afData/afBoundData/.
-
-**AEM Forms 6.5.1** - Om du associerar XSD med din XML-variabel kan du bläddra bland schemaelementen för att göra variabelmappningen. Du kommer inte att kunna komma åt formulärdata som inte är bundna till schemaelement. Om ditt användningsfall är att få tillgång till data som är bundna till schemaelement samt obundna data, ska du inte binda schemat till din XML-variabel i arbetsflödet.Du måste använda rätt XPath-uttryck för att få tillgång till de data som du behöver
+>
+>**AEM Forms 6.5.0** - När du skapar en variabel av typen XML för att hämta inskickade data i arbetsflödesmodellen ska du inte associera XSD med variabeln. Detta beror på att inskickade data inte är kompatibla med XSD när du skickar in XSD-baserade adaptiva formulär. XSD-data för klagomål omges av elementet /afData/afBoundData/.
+>
+>**AEM Forms 6.5.1** - Om du associerar XSD med din XML-variabel kan du bläddra bland schemaelementen för att göra variabelmappningen. Du kommer inte att kunna komma åt formulärdata som inte är bundna till schemaelement. Om ditt användningsfall är att få tillgång till data som är bundna till schemaelement samt obundna data, ska du inte binda schemat till din XML-variabel i arbetsflödet.Du måste använda rätt XPath-uttryck för att få tillgång till de data som du behöver
 
 ## Skapa XML-variabler
 
@@ -45,6 +49,7 @@ De adaptiva formulärdata lagras under dataelementet som visas ovan. **_I ovanst
 ### Använda schema med XML-variabel
 
 **Mappa en XML-variabel med schema. Använd den här funktionen från och med AEM Forms 6.5.1**
+
 >[!VIDEO](https://video.tv.adobe.com/v/28098?quality=9&learn=on)
 
 #### Använda variabeln i skicka e-post
