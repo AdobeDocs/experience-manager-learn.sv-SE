@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -38,8 +38,12 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 [Adobe Sign-dokument för texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
-Se till att akrobat-filnamnet inte innehåller några blanksteg. Den aktuella exempelkoden hanterar inte blanksteg.
-Formulärfältsnamnen får endast innehålla följande
-* enkelt blanksteg
-* understreck
-* alfanumeriska tecken
+>
+>Se till att akrobat-filnamnet inte innehåller några blanksteg. Den aktuella exempelkoden hanterar inte blanksteg.
+>
+>Formulärfältsnamnen får endast innehålla följande:
+>
+>* enkelt blanksteg
+>* understreck
+>* alfanumeriska tecken
+
