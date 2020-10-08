@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -129,7 +129,8 @@ Rader 24-26 - Hämta ResourceResolver och sedan resursen som pekar på attachmen
 Resten av koden skapar Document-objekt genom att iterera genom det underordnade objektet för resursen som pekar på attachmentFilePath med API:t. Det här dokumentobjektet är specifikt för AEM Forms. Vi använder sedan metoden copyToFile för dokumentobjektet för att spara dokumentobjektet.
 
 >[!NOTE]
-Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
+>
+>Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
 
 #### Bygg och driftsätt
 
