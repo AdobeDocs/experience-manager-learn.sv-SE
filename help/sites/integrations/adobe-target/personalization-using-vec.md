@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 0%
 
 Lär dig hur du skapar en A/B Test Target-aktivitet med Visual Experience Composer (VEC).
 
+Innan du skapar en aktivitet i Target måste du konfigurera:
+
+1. [Integrera Experience Platform Launch och AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+2. [Integrera Adobe Experience Manager med Adobe Target med Cloud Services](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
 
 ## Scenarioöversikt
 
