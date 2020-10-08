@@ -9,7 +9,7 @@ doc-type: technical video
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -26,7 +26,8 @@ I följande videofilm visas de steg som krävs för att använda tabellkomponent
 Tabeller används för att visa data i tabelläge. Raderna i tabellen måste förstoras eller förminskas beroende på vilka data som returneras av datakällan. Om du vill använda en tabell i ett dokument för tryckkanaler måste du skapa en layoutfil (xdp-fil) med AEM Forms Designer. I den här layoutfilen lägger vi till tabellen med det antal kolumner som krävs. Kontrollera att kolumnfältets objekttyp är antingen TextField eller Numeric Field beroende på dina krav. För var och en av kolumnerna ska du kontrollera att databindningen är inställd på Använd namn.
 
 >[!NOTE]
-Om du vill göra tabellen dynamisk måste du markera raden som upprepad.
+>
+>Om du vill göra tabellen dynamisk måste du markera raden som upprepad.
 
 **Prova på din egen server**
 
