@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,9 @@ ht-degree: 1%
    + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [Använd användningsbehörighet för överförd PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
-+ Interaktiv kommunikation för tryckkanaler {#ic-print-channel-tutorial}
+   + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
++ Interaktiv kommunikation för tryckkanaler
+{#ic-print-channel-tutorial}
    + [Onboarding](ic-print-channel-tutorial/introduction.md)
    + [Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [Skapa datakälla](ic-print-channel-tutorial/create-data-source.md)
