@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Nedan följer mappstrukturen för nyttolast när formulärbilagor har monterats 
 * Ladda ned formuläret [för](assets/assemble-form-attachments-af.zip) sammanställning av formulärbilagor till ditt lokala system.
 * Importera formuläret från[sidan Formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) .
 * Hämta [arbetsflödet](assets/assemble-form-attachments.zip) och importera till AEM med hjälp av pakethanteraren.
-* Ladda ned det anpassade paketet (assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* Ladda ned det [anpassade paketet](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Distribuera och starta paketet med [webbkonsolen](http://localhost:4502/system/console/bundles)
 * Peka webbläsaren på [Sammanställ bifogade filer](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * Lägg till en bifogad fil i ID-dokumentet och ett par PDF-dokument i avsnittet med bankutdrag
