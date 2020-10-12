@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6131
 thumbnail: 41247.jpg
 translation-type: tm+mt
-source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,9 @@ Lär dig hur du lägger till Adobe Target-tillägg i Launch-egenskapen
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 
+## Nästa steg
+
+1. [Läsa in och utlösa ett Target-anrop](./load-and-fire-target.md)
 
 ## Stödlänkar
 
