@@ -1,6 +1,6 @@
 ---
 user-guide-title: AEM Dispatcher Cache - självstudiekurs
-user-guide-description: A tutorial that helps you better understand how the Dispatcher works and how you can work with it.
+user-guide-description: En självstudiekurs som hjälper dig att förstå hur Dispatcher fungerar och hur du kan arbeta med den.
 version: 6.x
 sub-product: grund
 doc-type: tutorial
@@ -13,8 +13,8 @@ team: TM
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 5%
+source-wordcount: '37'
+ht-degree: 2%
 
 ---
 
