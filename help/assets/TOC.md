@@ -1,13 +1,13 @@
 ---
 user-guide-title: AEM Assets Videos och Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Assets.
+user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Assets.
 breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
 source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '253'
 ht-degree: 10%
 
 ---
