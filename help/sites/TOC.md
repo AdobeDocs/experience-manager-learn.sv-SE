@@ -1,13 +1,13 @@
 ---
 user-guide-title: AEM Sites Videos och Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Sites.
+user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
 source-git-commit: 25ca90f641aaeb93fc9319692f3b099d6b528dd1
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 3%
+source-wordcount: '471'
+ht-degree: 2%
 
 ---
 
@@ -50,8 +50,8 @@ ht-degree: 3%
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Komma igång med AEM Headless](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
    + [Bästa praxis för formatsystem](developing/style-organization-style-system-understand-article.md)
@@ -65,10 +65,10 @@ ht-degree: 3%
    + [Använda Experience Fragments med Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Konfigurera ContextHub](personalization/context-hub-technical-video-setup.md)
 + Enkelsidiga program {#spa-editor}
-   + [Använda SPA-redigeraren](spa-editor/spa-editor-framework-feature-video-use.md)
+   + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Självstudiekurs om Hello World](spa-editor/spa-editor-helloworld-tutorial-use.md)
-   + [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + Hantering av flera webbplatser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
