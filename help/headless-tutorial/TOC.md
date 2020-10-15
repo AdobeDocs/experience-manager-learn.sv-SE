@@ -1,6 +1,6 @@
 ---
 user-guide-title: Komma igång med AEM Headless
-user-guide-description: An end-to-end tutorial illustrating how to build-out and expose content using AEM Headless.
+user-guide-description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
 breadcrumb-title: AEM Headless Tutorial
 version: 6.5
 sub-product: content-services
@@ -14,8 +14,8 @@ index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 2%
+source-wordcount: '64'
+ht-degree: 1%
 
 ---
 
