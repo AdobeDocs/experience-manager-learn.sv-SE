@@ -1,13 +1,13 @@
 ---
 user-guide-title: AEM Foundation Videos och Tutorials
 breadcrumb-title: AEM Foundation Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Foundation.
+user-guide-description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 sub-product: grund
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '156'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 # AEM Foundation Videos och Tutorials {#foundation}
 
 + [Översikt](./overview.md)
-+ Om {#administration}
++ Administration {#administration}
    + [Förstå skäl att uppgradera AEM](./administration/understand-reasons-to-upgrade.md)
    + [Använd oak-run.jar för att hantera index](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [Använd rensning av onlineversioner](./administration/use-online-revision-clean-up.md)
