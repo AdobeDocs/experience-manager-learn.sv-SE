@@ -22,8 +22,8 @@ ht-degree: 4%
 + Tutorials i flera steg {#multi}
    + [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Komma igång med AEM Headless](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [Komma igång med AEM och Adobe Target](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/overview.html)
    + [AEM Dispatcher Cache - självstudiekurs](https://docs.adobe.com/content/help/en/experience-manager-learn/dispatcher-tutorial/overview.html)
    + [Självstudiekurs om bästa metoder i Dynamic Media Classic](https://docs.adobe.com/content/help/en/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
