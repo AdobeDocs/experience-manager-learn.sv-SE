@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -255,9 +255,13 @@ För närvarande genererar regeln **CTA Click** bara en konsolsats. Sedan använ
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
-   * `event8` - `CTA Clicked`
+   * `event8`
 
    ![Ange eVar och händelser](assets/track-clicked-component/set-evar-prop-event.png)
+
+   >[!NOTE]
+   >
+   > Här `%Component ID%` används eftersom det ger en unik identifierare för den CTA som du klickade på. En potentiell nackdel med att använda `%Component ID%` är att Analytics-rapporten kommer att innehålla värden som `button-2e6d32893a`. Om du använder `%Component Title%` skulle det ge ett mer användarvänligt namn, men värdet kanske inte är unikt.
 
 1. Lägg sedan till ytterligare en åtgärd till höger om **Adobe Analytics - Ställ in variabler** genom att trycka på **plusikonen** :
 
@@ -265,9 +269,11 @@ För närvarande genererar regeln **CTA Click** bara en konsolsats. Sedan använ
 
 1. Ange **tilläggstypen** till **Adobe Analytics** och ställ in **åtgärdstypen** till **Skicka signal**.
 1. Under **Spärra** anger du alternativknappen till **`s.tl()`**.
-1. Under **Länktyp** väljer du **Egen länk** och för **Länknamn** anger du värdet till **komponenttiteln** för dataelementet:
+1. Under **Länktyp** väljer du **Egen länk** och för **Länknamn** anger du värdet till: **`%Component Title%: CTA Clicked`**:
 
    ![Konfiguration för funktionen Skicka länk](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+
+   Då kombineras den dynamiska variabeln från dataelementets **komponenttitel** och den statiska strängen **CTA som klickades**.
 
 1. Spara ändringarna. Regeln **CTA Click** bör nu ha följande konfiguration:
 
