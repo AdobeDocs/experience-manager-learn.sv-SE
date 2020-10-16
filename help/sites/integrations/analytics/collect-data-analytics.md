@@ -10,9 +10,9 @@ version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2414'
 ht-degree: 1%
 
 ---
@@ -270,6 +270,10 @@ Lägg sedan till Analytics-tillägget i Launch-egenskapen. Vi måste skicka dess
    >[!TIP]
    >
    >Vi rekommenderar att du använder alternativet ** Hantera biblioteket åt mig som bibliotekshanteringsinställning eftersom det gör det mycket enklare att hålla `AppMeasurement.js` biblioteket uppdaterat.
+
+1. Markera kryssrutan för att aktivera **Använd Activity Map**.
+
+   ![Aktivera Använd Activity Map](assets/track-clicked-component/analytic-track-click.png)
 
 1. Ange spårningsservern under **Allmänt** > **Spårningsserver**, t.ex. `tmd.sc.omtrdc.net`. Ange din SSL-spårningsserver om din webbplats stöder `https://`
 
