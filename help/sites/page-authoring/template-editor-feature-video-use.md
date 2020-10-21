@@ -11,7 +11,7 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 41e2c27cd089e7111b2eb1ef6c344d27980f0741
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Med redigerbara mallar kan man skapa och uppdatera sidmallar och hantera avancerade principkonfigurationer med Adobe Experience Manager (AEM) Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/17455/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
 
 Redigerbara mallar är en rekommendation att skapa nya AEM Sites.
 
