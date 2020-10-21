@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Smart bildbehandling fungerar med bilder som levereras via HTTP, HTTPS och HTTP/
 
 Smart Imaging ingår i din befintliga licens av Dynamic Media Classic. Det finns inga extra kostnader för den här funktionen. Du måste uppfylla två krav för att kunna utnyttja det: har ett CDN-paket i Adobe och en dedikerad domän. Sedan måste du aktivera det för ditt konto eftersom det inte aktiveras automatiskt.
 
-Du börjar med att aktivera Smart Imaging genom att skicka en begäran om teknisk support via e-post till [s7support@adobe.com](mailto:s7support@adobe.com). De kommer att arbeta tillsammans med dig för att konfigurera en anpassad domän som du kopplar till Smart Imaging. Du ändrar en parameter som är relaterad till cachelagring (Time To Live, eller TTL) och stödet rensar cachen. Du kan också göra ett valfritt mellanlagringssteg om du vill innan du går till produktion. När Smart Imaging sedan är aktiverat kan du leverera bilder i mindre storlek till kunderna, men med samma kvalitet som de önskade. Det innebär att de får snabbare sidladdning - och allt detta görs automatiskt eftersom Adobe Sensei hjälper dem att välja den mest effektiva storleken.
+Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa ett supportärende| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Support kommer att fungera tillsammans med dig för att konfigurera en anpassad domän som du ska associera med Smart Imaging. Du ändrar en parameter som är relaterad till cachelagring (Time To Live, eller TTL) och stödet rensar cachen. Du kan också göra ett valfritt mellanlagringssteg om du vill innan du går till produktion. När Smart Imaging sedan är aktiverat kan du leverera bilder i mindre storlek till kunderna, men med samma kvalitet som de önskade. Det innebär att de får snabbare sidladdning - och allt detta görs automatiskt eftersom Adobe Sensei hjälper dem att välja den mest effektiva storleken.
 
 När du har aktiverat Smart Imaging vill du kontrollera att den fungerar som förväntat.
 
