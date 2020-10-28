@@ -1,0 +1,43 @@
+---
+title: Anpassade smarta taggar för bilder i AEM Assets
+description: Lär dig hur du utbildar smarta taggar för AEM Assets för att använda anpassade termer på resurser.
+feature: smart-tags
+topics: metadata
+audience: developer, administrator
+doc-type: technical video
+activity: setup
+version: 6.4, 6.5, cloud-services
+kt: 795
+thumbnail: 22254.jpg
+translation-type: tm+mt
+source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 1%
+
+---
+
+
+# Anpassade smarta taggar för bilder
+
+Med anpassade smarta taggar för bilder kan smarta taggar anpassas med kundspecifika termer.
+Anpassade smarta taggar, eller förbättrade smarta taggar, kan sedan utnyttjas för att förbättra användarsökningen och hjälpa till att hitta resurserna vid rätt tidpunkt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
+
+## Konfigurera egna smarta taggar för bilder för AEM 6.x{#set-up}
+
+>[!NOTE]
+> Anpassade smarta taggar för bilder etableras automatiskt för AEM som en Cloud Service.
+
+Anpassade smarta taggar för bilder kräver [smarta taggar för att bilderna ska kunna konfigureras](./image-smart-tags.md#set-up).
+
+Lär dig hur du konfigurerar utbildning för smarta taggar i AEM Assets med hjälp av tjänsten Smart innehåll och Adobe I/O. Anpassade smarta taggar för bilder
+
+>[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
+
+## Ytterligare resurser
+
+* AEM 6.4 kräver det [senaste Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
+
+
