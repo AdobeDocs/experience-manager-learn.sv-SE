@@ -5,10 +5,10 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 10%
+ht-degree: 7%
 
 ---
 
@@ -55,10 +55,9 @@ ht-degree: 10%
 
 + Avancerad metadatahantering{#metadata}
    + [Överlappande metadata](metadata/cascade-metadata-feature-video-use.md)
-   + [Smarta taggar - översikt](metadata/smart-tags-feature-video-use.md)
-   + [Konfigurera Smart Tags](metadata/smart-tags-technical-video-setup.md)
-   + [Förbättrade smarta taggar](metadata/enhanced-smart-tags-feature-video-use.md)
-   + [Konfigurera förbättrade smarta taggar](metadata/enhanced-smart-tags-technical-video-setup.md)
+   + [Smarta taggar för bilder](metadata/image-smart-tags.md)
+   + [Anpassade smarta taggar för bilder](metadata/custom-smart-tags.md)
+   + [Smarta taggar för videoklipp](metadata/video-smart-tags.md)
    + [Importera och exportera metadata](metadata/metadata-import-feature-video-use.md)
 
 + Delning och distribution{#sharing}
