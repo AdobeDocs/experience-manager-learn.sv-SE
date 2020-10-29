@@ -4,9 +4,9 @@ seo-title: Komma igång med AEM Content Services - Kapitel 2 - Definiera fragmen
 description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
 seo-description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
 translation-type: tm+mt
-source-git-commit: 885e30dea2a21dff789c98bdc5beb2f758b806f3
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ I det här kapitlet beskrivs hur du aktiverar och definierar Content Fragment-mo
 
 ## Aktivera modeller för innehållsfragment
 
-Modeller för innehållsfragment **måste** aktiveras via **AEM[!UICONTROL Configuration Browser]**.
+Modeller för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**.
 
 Om Content Fragment Models **inte** är aktiverat för en konfiguration visas inte knappen **[!UICONTROL Create]>[!UICONTROL Content Fragment]** för den aktuella AEM.
 
@@ -36,10 +36,12 @@ Om Content Fragment Models **inte** är aktiverat för en konfiguration visas in
 >För att en konfiguration ska kunna påverka en innehållshierarki måste det finnas en referens till konfigurationen via egenskapen `cq:conf` i den innehållshierarkin. (Detta uppnås för [!DNL WKND Mobile] konfigurationen i **steg 5** nedan).
 >
 >När `global` konfigurationen används gäller konfigurationen allt innehåll och behöver `cq:conf` inte anges.
+>
+>Mer information finns i [[!UICONTROL Configuration Browser] dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) .
 
 1. Logga in på AEM Author som användare med tillräcklig behörighet för att ändra konfigurationen.
    * I den här självstudiekursen kan du använda **administratörsanvändaren** .
-1. Navigera till **[!UICONTROL Tool]>[!UICONTROL General]>[!UICONTROL Configuration Browser]**
+1. Navigera till **[!UICONTROL Tool]> [!UICONTROL General] >[!UICONTROL Configuration Browser]**
 1. Tryck på **mappikonen** bredvid **[!DNL WKND Mobile]** för att markera och tryck sedan på **[!UICONTROL Edit]knappen** längst upp till vänster.
 1. Markera **[!UICONTROL Content Fragment Models]** och tryck **[!UICONTROL Save & Close]** i det övre högra hörnet.
 
@@ -58,7 +60,7 @@ Om Content Fragment Models **inte** är aktiverat för en konfiguration visas in
 
 1. Använd **[!DNL WKND Mobile]** konfigurationen på **[!DNL WKND Mobile]resursmappen** för att tillåta att innehållsfragment från modeller för innehållsfragment skapas i resursmappens hierarki:
 
-   1. Navigera till **[!UICONTROL AEM]>[!UICONTROL Assets]>[!UICONTROL Files]**
+   1. Navigera till **[!UICONTROL AEM]> [!UICONTROL Assets] >[!UICONTROL Files]**
    1. Markera **[!UICONTROL WKND Mobile]mappen**
    1. Tryck på **[!UICONTROL Properties]** knappen i det övre åtgärdsfältet för att öppna [!UICONTROL Folder Properties]
    1. Tryck på [!UICONTROL Folder Properties]fliken **[!UICONTROL Cloud Services]** i
@@ -79,7 +81,7 @@ Med mappningen kan vi definiera innehållsfragment som ska användas för att sa
 
 ## Skapa innehållsfragmentmodellen
 
-1. Navigera till **[!UICONTROL Tools]>[!UICONTROL Assets]>[!UICONTROL Content Fragment Models]**.
+1. Navigera till **[!UICONTROL Tools]> [!UICONTROL Assets] >[!UICONTROL Content Fragment Models]**.
 1. Tryck på den **[!DNL WKND Mobile]** mapp du vill öppna.
 1. Tryck för **[!UICONTROL Create]** att öppna guiden Skapa innehållsfragmentmodell.
 1. Ange **[!DNL Event]** som **[!UICONTROL Model Title]** description (description is optional) *och tryck på* **[!UICONTROL Create]** för att spara.
@@ -88,7 +90,7 @@ Med mappningen kan vi definiera innehållsfragment som ska användas för att sa
 
 ## Definiera strukturen för innehållsfragmentmodellen
 
-1. Navigera till **[!UICONTROL Tools]>[!UICONTROL Assets]>[!UICONTROL Content Fragment Models]>[!DNL WKND]**.
+1. Navigera till **[!UICONTROL Tools]> [!UICONTROL Assets] > [!UICONTROL Content Fragment Models] >[!DNL WKND]**.
 1. Välj **[!DNL Event]** Content Fragment Model (Innehållsfragmentmodell) och tryck **[!UICONTROL Edit]** i det övre åtgärdsfältet.
 1. Dra från **[!UICONTROL Data Types]fliken** till höger **[!UICONTROL Single line text input]** till vänster släppzon för att definiera **[!DNL Question]** fältet.
 1. Se till att den nya **[!UICONTROL Single line text input]** är markerad till vänster och att **[!UICONTROL Properties]fliken** är markerad till höger. Fyll i egenskapsfälten enligt följande:
