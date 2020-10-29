@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Me
 >
 >Vi använder WKND-referenswebbplatsen för den här videon och den ingår inte i AEM. Du kan hämta den [senaste versionen här](https://github.com/adobe/aem-guides-wknd/releases).
 
-Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken. ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar.
+Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub JavaScript-biblioteken. ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar.
 
 ## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
@@ -40,7 +40,7 @@ Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScrip
 
 ## Platskonfiguration och ContextHub-segment {#site-configuration-and-contexthub-segments}
 
-ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivera ContextHub-segmenten för din webbplats under [!UICONTROL Configuration Browser].
+ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivera ContextHub-segmenten för din webbplats under [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html).
 
 ## Skapa segment {#create-segments}
 
