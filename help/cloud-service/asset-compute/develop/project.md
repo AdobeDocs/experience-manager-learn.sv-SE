@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Använd plugin-programmet [för beräkning av CLI-tillgångar i](../set-up/devel
 
 1. Navigera från kommandoraden till mappen som projektet ska innehålla.
 1. Kör från kommandoraden `aio app init` för att påbörja genereringen av det interaktiva projektet CLI.
-   + Detta kan leda till att en webbläsare uppmanas att autentisera sig för Adobe I/O. Om så är fallet anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter](../set-up/accounts-and-services.md)som krävs. Om du inte kan logga in följer du dessa instruktioner för hur du skapar ett projekt.
+   + Detta kan leda till att en webbläsare uppmanas att autentisera sig för Adobe I/O. Om så är fallet anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter](../set-up/accounts-and-services.md)som krävs. Om du inte kan logga in följer du [dessa instruktioner för hur du skapar ett projekt](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __Välj organisation__
    + Markera den Adobe-organisation som har AEM som Cloud Service och som Project Fireworks är registrerad på
 1. __Välj projekt__
@@ -50,6 +50,16 @@ Använd plugin-programmet [för beräkning av CLI-tillgångar i](../set-up/devel
    + Använd standardnamnet `worker`.
    + Om projektet innehåller flera arbetare som utför olika tillgångsberäkningar namnger du dem semantiskt
 
+## Generera console.json
+
+Kör följande kommando från roten för det nya projektet Resursberäkning för att generera ett `console.json`.
+
+```
+$ aio app use
+```
+
+Kontrollera att den aktuella arbetsytans information är korrekt och att den är snygg `Y` eller ange för att generera en `console.json`. Om `.env` och `.aio` identifieras som befintliga trycker du på `x` för att hoppa över skapandet av dem.
+
 ## Granska projektets status
 
 Det genererade projektet Asset Compute är ett Node.js-projekt för ett specialiserat projekt i Adobe Project Fire. Följande är idiosynkratiskt med projektet Asset Compute:
@@ -62,8 +72,12 @@ Det genererade projektet Asset Compute är ett Node.js-projekt för ett speciali
    + `/test/asset-compute/worker`, som representerar en testsvit för en viss arbetare, innehåller undermappar som representerar ett specifikt testfall, tillsammans med testindata, parametrar och förväntade utdata.
 + `/build` innehåller utdata, loggar och artefakter från testkörningar av tillgångar.
 + `/manifest.yml` definierar vilka tillgångsberäkningarbetare projektet ger. Varje implementering av arbetare måste räknas upp i den här filen för att de ska vara tillgängliga för AEM som en Cloud Service.
-+ `/.aio` innehåller konfigurationer som används av AIR CLI-verktyget. Den här filen kan konfigureras via `aio config` kommandot.
-+ `/.env` definierar miljövariabler i en `key=value` syntax och innehåller hemligheter som inte ska delas. För att skydda dessa hemligheter bör den här filen INTE checkas in i Git och ignoreras via projektets standardfil `.gitignore` .
++ `/console.json` definierar Adobe I/O-konfigurationer
+   + Filen kan genereras/uppdateras med `aio app use` kommandot .
++ `/.aio` innehåller konfigurationer som används av AIR CLI-verktyget.
+   + Filen kan genereras/uppdateras med `aio app use` kommandot .
++ `/.env` definierar miljövariabler i en `key=value` syntax och innehåller hemligheter som inte ska delas. Detta kan genereras eller För att skydda dessa hemligheter bör den här filen INTE checkas in i Git och ignoreras via projektets standard `.gitignore` fil.
+   + Filen kan genereras/uppdateras med `aio app use` kommandot .
    + Variabler som definieras i den här filen kan åsidosättas genom [att variabler](../deploy/runtime.md) exporteras på kommandoraden.
 
 Mer information om granskning av projektstruktur finns i [Anatomin för ett projekt](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)i Adobe Project Firefoly.
@@ -76,4 +90,5 @@ Det slutliga projektet Asset Compute finns på Github:
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex.`.env`,`.config.json`eller`.aio`._
+_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex. `.env`, `console.json` eller `.aio`._
+
