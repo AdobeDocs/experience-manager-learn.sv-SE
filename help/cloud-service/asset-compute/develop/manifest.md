@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -122,14 +122,5 @@ Så här startar du verktyget Resursberäkning för projektet Resursberäkning:
 
 ## Felsökning
 
-### Felaktigt YAML-indrag
-
-+ __Fel:__ YAMLException: felaktigt indrag för en mappningspost på rad X, kolumn Y:(via standard ut från `aio app run` kommando)
-+ __Orsak:__ Yaml-filer är känsliga med vitt mellanrum, vilket kan innebära att indraget är felaktigt.
-+ __Upplösning:__ Granska `manifest.yml` och se till att allt indrag är korrekt.
-
-### gränsen för memorySize är för låg
-
-+ __Fel:__  Local Dev Server OpenWhiskError: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true returnerade HTTP 400 (Ogiltig begäran) —> &quot;Innehållet i begäran hade felaktigt format:krav misslyckades: minne 64 MB under det tillåtna tröskelvärdet 134217728 B&quot;
-+ __Orsak:__ En `memorySize` gräns i manifestet angavs under den lägsta tillåtna tröskeln som rapporterades av felmeddelandet i byte.
-+ __Upplösning:__  Granska `memorySize` gränserna i `manifest.yml` och se till att alla är större än det lägsta tillåtna tröskelvärdet.
++ [Felaktigt YAML-indrag](../troubleshooting.md#incorrect-yaml-indentation)
++ [gränsen för memorySize är för låg](../troubleshooting.md#memorysize-limit-is-set-too-low)
