@@ -10,10 +10,10 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '630'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Skapa först en ny bearbetningsprofil som anropar arbetaren med konfigurerbara p
    + __Tillägg:__ `png`
       + Tillägget för den återgivning som ska genereras. Anges till `png` eftersom detta är det utdataformat som stöds av arbetarens webbtjänst, och ger en genomskinlig bakgrund bakom cirkeln som klipps ut.
    + __Slutpunkt:__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + Det här är URL:en till arbetaren som hämtas via `aio app get-url`. Kontrollera att URL-punkterna på rätt arbetsyta baseras på AEM som en Cloud Service som bearbetningsprofilen konfigureras i. Observera att den här underdomänen matchar `development` arbetsytan.
+      + Det här är URL:en till arbetaren som hämtas via `aio app get-url`. Kontrollera URL-punkterna på rätt arbetsyta baserat på AEM som en Cloud Service.
       + Kontrollera att arbetarens URL pekar på rätt arbetsyta. AEM som Cloud Service ska använda arbetsytans URL och AEM som Cloud Service Production bör använda arbetsytans URL.
    + __Tjänsteparametrar__
       + Tryck på __Lägg till parameter__
@@ -54,7 +54,7 @@ Skapa först en ny bearbetningsprofil som anropar arbetaren med konfigurerbara p
       + Dessa nyckel-/värdepar som skickas till Asset Compute-arbetaren och är tillgängliga via `rendition.instructions` JavaScript-objektet.
    + __Mime-typer__
       + __Innehåller:__ `image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
-         + Dessa MIME-typer är de enda som arbetarens webbtjänst stöder, vilket begränsar vilka resurser som kan bearbetas av den anpassade arbetaren.
+         + Dessa MIME-typer är de enda som arbetarens npm-moduler är. Den här listan begränsar vilka resurser som ska bearbetas av den anpassade arbetaren.
       + __Exkluderar:__ `Leave blank`
          + Bearbeta aldrig resurser med dessa MIME-typer med den här tjänstkonfigurationen. I det här fallet använder vi bara tillåtelselista.
 1. Tryck på __Spara__ längst upp till höger
@@ -83,26 +83,9 @@ Det slutliga projektet Asset Compute finns på Github:
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex.`.env`,`.config.json`eller`.aio`._
+_Github innehåller projektets sluttillstånd, som är fullt ifyllt med arbetaren och testfall, men som inte innehåller några autentiseringsuppgifter, t.ex. `.env`, `.config.json` eller `.aio`._
 
 ## Felsökning
 
-### Anpassad återgivning saknas i resurs
-
-+ __Fel:__ Ny och ombearbetad resursprocess har slutförts, men den anpassade återgivningen saknas
-
-#### Bearbetningsprofilen används inte för den överordnade mappen
-
-+ __Orsak:__ Resursen finns inte i en mapp med bearbetningsprofilen som använder den anpassade arbetaren
-+ __Upplösning:__ Använd bearbetningsprofilen på en överordnad mapp för resursen
-
-#### Bearbetningsprofil ersatt av en lägre bearbetningsprofil
-
-+ __Orsak:__ Resursen finns under en mapp där den anpassade arbetarens bearbetningsprofil används, men en annan bearbetningsprofil som inte använder kundarbetaren har tillämpats mellan den mappen och resursen.
-+ __Upplösning:__ Kombinera, eller på annat sätt stämma av, de två bearbetningsprofilerna och ta bort den mellanliggande bearbetningsprofilen
-
-### Resursbearbetningen misslyckades
-
-+ __Fel:__ Tillgångsbearbetningen misslyckades, märke visas på resursen
-+ __Orsak:__ Ett fel uppstod när den anpassade arbetaren kördes
-+ __Upplösning:__ Följ anvisningarna om hur du [felsöker Adobe I/O Runtime-aktiveringar](../test-debug/debug.md#aio-app-logs) med `aio app logs`.
++ [Anpassad återgivning saknas för resurs i AEM](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [Resursbearbetning misslyckas i AEM](../troubleshooting.md#asset-processing-fails)
