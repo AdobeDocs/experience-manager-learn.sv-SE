@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatis
 1. __Källfil:__ Välja källfil används för att:
    + Markerade resursens binärfil som kommer att vara den `source` binära fil som skickas till Asset Compute-arbetaren
    + Överför källfiler
-1. __Profildefinition för tillgångsberäkning:__ Definierar den Asset Compute-arbetare som ska köras inklusive parametrar: inklusive arbetarens URL-slutpunkt, det resulterande återgivningsnamnet och eventuella parametrar
+1. __Definition av tillgångsberäkningsprofil(er):__ Definierar den Asset Compute-arbetare som ska köras inklusive parametrar: inklusive arbetarens URL-slutpunkt, det resulterande återgivningsnamnet och eventuella parametrar
 1. __Kör:__ Knappen Kör kör profilen Resursberäkning enligt definitionen i redigeraren för konfigurationsprofilen Resursberäkning
 1. __Avbryt:__ Knappen Avbryt avbryter en körning som initierats från att trycka på knappen Kör
 1. __Begäran/svar:__ Tillhandahåller HTTP-begäran och svar till/från Asset Compute-arbetaren som körs i Adobe I/O Runtime. Detta kan vara användbart vid felsökning
@@ -84,24 +84,10 @@ Om du ändrar koden för arbetaren medan utvecklingsverktyget körs kommer ändr
 
 ## Felsökning
 
-### Felaktig listruta för källfiler{#troubleshooting__dev-tool-application-cache}
-
-Verktyget Resursberäkning kan försättas i ett läge där inaktuella data hämtas och är mest märkbart i listrutan __Källfil__ med felaktiga objekt.
-
-+ __Fel:__ I listrutan Källfil visas felaktiga objekt.
-+ __Orsak:__ Inaktuellt cachelagrat webbläsarläge orsakar
-+ __Upplösning:__ I webbläsaren rensar du helt webbläsarflikens &quot;programtillstånd&quot;, webbläsarens cache, lokal lagring och servicearbetare.
-
-### Frågeparametern devToolToken saknas eller är ogiltig{#troubleshooting__devtooltoken}
-
-+ __Fel:__ Meddelande om&quot;obehörig&quot; i verktyget Resursberäkning
-+ __Orsak:__ `devToolToken` saknas eller är ogiltigt
-+ __Upplösning:__ Stäng webbläsarfönstret för verktyget Resursberäkning, avsluta alla processer som körs i utvecklingsverktyget och som har initierats via `aio app run` kommandot samt starta om utvecklingsverktyget (med `aio app run`).
-
-### Det går inte att ta bort källfiler{#troubleshooting__remove-source-files}
-
-+ __Fel:__ Det finns inget sätt att ta bort tillagda källfiler från utvecklingsverktygets användargränssnitt
-+ __Orsak:__ Den här funktionen har inte implementerats
-+ __Upplösning:__ Logga in på din molnlagringsleverantör med de autentiseringsuppgifter som anges i `.env`. Leta reda på den behållare som används av utvecklingsverktygen (anges även i `.env`), navigera till __källmappen__ och ta bort alla källbilder. Du kan behöva utföra de steg som beskrivs i [Källfiler för att visa en felaktig](#troubleshooting__dev-tool-application-cache) lista om de borttagna källfilerna fortfarande visas i listrutan eftersom de kan cachas lokalt i utvecklingsverktygets &quot;programtillstånd&quot;.
-
-   ![Microsoft Azure Blob Storage](./assets/development-tool/troubleshooting__remove-source-files.png)
++ [Felaktigt YAML-indrag](../troubleshooting.md#incorrect-yaml-indentation)
++ [gränsen för memorySize är för låg](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [Utvecklingsverktyget kan inte starta eftersom private.key saknas](../troubleshooting.md#missing-private-key)
++ [Felaktig listruta för källfiler](../troubleshooting.md#source-files-dropdown-incorrect)
++ [Frågeparametern devToolToken saknas eller är ogiltig](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [Det går inte att ta bort källfiler](../troubleshooting.md#unable-to-remove-source-files)
++ [Återgivningen returnerade delvis ritad/skadad](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
