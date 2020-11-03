@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Resursberäkningspersonal ger olika nivåer av felsökning, från traditionella 
 
 ## Distribuera
 
-Lär dig hur du integrerar skräddarsydda tillgångsberäkningspersonal med AEM som Cloud Service genom att först distribuera dem till Adobe I/O Runtime och sedan anropa dem från AEM som Cloud Service Author via AEM Assets Processing Profiles.
+Lär dig hur du integrerar anpassade tillgångsberäkningspersonal med AEM som Cloud Service genom att först distribuera dem till Adobe I/O Runtime och sedan anropa dem från AEM som Cloud Service Author via AEM Assets Bearbetningsprofiler.
 
 ### Distribuera till Adobe I/O Runtime
 
@@ -126,7 +126,13 @@ När de distribuerats till Adobe I/O Runtime kan resursberäkningspersonal regis
 
 + [Integrera med AEM bearbetningsprofiler](./deploy/processing-profiles.md)
 
-## Självstudiekurs om Github
+## Avancerat
+
+De här förkortade självstudiekurserna tar upp mer avancerade användningsfall som bygger på grundläggande inlärningar i de föregående kapitlen.
+
++ [Utveckla en metadataarbetare](./advanced/metadata.md) för tillgångsberäkning som kan skriva tillbaka metadata till
+
+## Codebase on Github
 
 Självstudiekursens kodbas finns på Github:
 
@@ -142,14 +148,13 @@ Nedan följer olika Adobe-resurser som ger mer information och användbara API:e
 
 + [Dokumentation för tjänsten Resursberäkning](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
 + [Viktigt om verktyget för beräkning av tillgångar](https://github.com/adobe/asset-compute-devtool)
-
-### Andra kodexempel
-
 + [Exempelarbetare för tillgångsberäkning](https://github.com/adobe/asset-compute-example-workers)
 
 ### API:er och SDK:er
 
 + [SDK för tillgångsberäkning](https://github.com/adobe/asset-compute-sdk)
    + [Kommandon för beräkning av tillgångar](https://github.com/adobe/asset-compute-commons)
+   + [XMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [Adobe Cloud Blobstore Wrapper-bibliotek](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Bibliotek för hämtning av Adobe-nod](https://github.com/adobe/node-fetch-retry)
++ [Exempelarbetare för tillgångsberäkning](https://github.com/adobe/asset-compute-example-workers)
