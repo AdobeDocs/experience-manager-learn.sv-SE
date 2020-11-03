@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Strukturen för testerna i ett projekt för beräkning av tillgångar är följa
 ...
 /test/
   asset-compute/
-    <worker-name>/           <--- Test suite for the worker
+    <worker-name>/           <--- Test suite for the worker, must match the yaml key for this worker in manifest.yml
         <test-case-1>/       <--- Specific test case 
             file.jpg         <--- Input file (ie. `source.path` or `source.url`)
             params.json      <--- Parameters (ie. `rendition.instructions`)
@@ -118,21 +118,5 @@ De sista testfallen finns på Github:
 
 ## Felsökning
 
-### Ingen återgivning har genererats
-
-Testfall misslyckas utan att en återgivning genereras.
-
-+ __Fel:__ Fel: Ingen återgivning genererades.
-+ __Orsak:__ Arbetaren kunde inte generera en återgivning på grund av ett oväntat fel, till exempel ett JavaScript-syntaxfel.
-+ __Upplösning:__ Granska testkörningen `test.log` på `/build/test-results/test-worker/test.log`. Leta reda på avsnittet i den här filen som motsvarar det misslyckade testfallet och granska felen.
-
-   ![Felsökning - Ingen återgivning genererades](./assets/test/troubleshooting__no-rendition-generated.png)
-
-### Test genererar felaktig återgivning
-
-Testfall kan inte generera en felaktig återgivning.
-
-+ __Fel:__ Fel: Renderingen &#39;rendition.xxx&#39; är inte som förväntat.
-+ __Orsak:__ Arbetaren returnerar en återgivning som inte var densamma som `rendition.<extension>` i testfallet.
-   + Om den förväntade `rendition.<extension>` filen inte skapas på exakt samma sätt som den lokalt genererade återgivningen i testfallet, kan testet misslyckas eftersom det kan finnas vissa skillnader i bitarna. Om den förväntade renderingen i testfallet sparas från utvecklingsverktyget, vilket innebär att den genereras i Adobe I/O Runtime, kan bitarna tekniskt sett vara olika, vilket gör att testet misslyckas, även om de förväntade och faktiska renderingsfilerna är identiska ur ett mänskligt perspektiv.
-+ __Upplösning:__ Granska återgivningsutdata från testet genom att navigera till `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`och jämföra dem med den förväntade återgivningsfilen i testfallet.
++ [Ingen återgivning genererades under testkörningen](../troubleshooting.md#test-no-rendition-generated)
++ [Test genererar felaktig återgivning](../troubleshooting.md#tests-generates-incorrect-rendition)
