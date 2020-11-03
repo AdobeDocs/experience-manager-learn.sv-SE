@@ -2,7 +2,7 @@
 title: Kapitel 5 - Sidor för redigering av innehållstjänster
 description: Kapitel 5 i den AEM självstudiekursen Headless handlar om att skapa sidor från mallarna som definieras i kapitel 4. Dessa sidor fungerar som JSON HTTP-slutpunkter.
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Kapitel 5 i den AEM självstudiekursen Headless handlar om att skapa sidan med h
 
 ## Skapa API-sidan för händelser
 
-1. Navigera till **[!UICONTROL AEM]>[!UICONTROL Sites]>[!DNL WKND Mobile]>[!DNL English]>[!DNL API]**.
+1. Navigera till **[!UICONTROL AEM]> [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**.
 1. **Tryck på etiketten för API-sidan** och tryck sedan på knappen **Skapa** i det övre åtgärdsfältet och skapa en ny API-sida för händelser under API-sidan.
    1. Tryck på **Skapa** i det övre åtgärdsfältet
    1. Välj **händelsens API** -mall
@@ -44,7 +44,7 @@ Kapitel 5 i den AEM självstudiekursen Headless handlar om att skapa sidan med h
 1. Lägg till **taggrad** som ska visas ovanför händelserna.
    1. Redigera **Text** -komponenten
    1. Ange texten:
-      1. `The WKND is here.`
+      * `The WKND is here.`
 
 1. Markera de **händelser** som ska visas:
    1. Ange följande konfiguration på fliken **Egenskaper** :
