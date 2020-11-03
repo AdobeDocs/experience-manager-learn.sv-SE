@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -30,18 +30,20 @@ Vi kommer att skapa en Asset Compute-arbetare som genererar en ny vågrät bild�
 
 Resursberäkningspersonal implementerar ett API för SDK-arbetaren i Asset Compute i `renditionCallback(...)` funktionen, vilket är begreppsmässigt:
 
-+ __Indata:__ En AEM ursprungliga resurs binära och parametrar
++ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbetningsprofil
 + __Utdata:__ En eller flera återgivningar som ska läggas till i AEM
 
 ![Logiskt arbetsflöde för beräkning av tillgångar](./assets/worker/logical-flow.png)
 
-1. När en Asset Compute-arbetare anropas från AEM Author-tjänsten är den mot en AEM resurs via en Bearbetningsprofil. Resursens ursprungliga binärfil __(1a)__ skickas till arbetaren via återgivningsfunktionens `source` parameter och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen via `rendition.instructions` parameteruppsättning.
-1. SDK-lagret Resursberäkning accepterar begäran från bearbetningsprofilen och koordinerar körningen av den anpassade `renditionCallback(...)` funktionen Resursberäkning, vilket omformar källans binärfil som anges i __(1a)__ baserat på parametrar som anges i __(1b)__ för att generera en återgivning av källans binärfil.
-   + I den här självstudiekursen skapas renderingen&quot;i arbete&quot;, vilket innebär att arbetaren komponerar renderingen, men källbinärfilen kan skickas till andra webbtjänste-API:er för att renderingen ska genereras.
-1. Resursberäkningsarbetaren sparar återgivningens binära representation som gör den tillgänglig `rendition.path` för sparande i AEM Author-tjänsten.
-1. När de är klara `rendition.path` skickas de binära data som skrivs till via SDK för tillgångsberäkning och visas via AEM Author Service som en rendering i det AEM användargränssnittet.
+1. AEM Author-tjänsten anropar Asset Compute-arbetaren, som tillhandahåller resursens ursprungliga binära __(1a)__ (`source` parameter) och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen (`rendition.instructions` parameter).
+1. SDK:t Resursberäkning koordinerar körningen av den anpassade metadataarbetarens `renditionCallback(...)` funktion, vilket genererar en ny binär återgivning baserat på resursens ursprungliga binära __(1a)__ och eventuella parametrar __(1b)__.
 
-Diagrammet ovan visar frågor som rör tillgångsberäkningens utvecklare och det logiska flödet för att anropa en tillgångsberäknings-arbetare. Av nyfikenhet att det finns [interna detaljer om hur Resurser körs](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) , men endast API-kontrakt för beräkning av offentliga tillgångar bör vara beroende av.
+   + I den här självstudiekursen skapas renderingen&quot;i arbete&quot;, vilket innebär att arbetaren komponerar renderingen, men källbinärfilen kan skickas till andra webbtjänste-API:er för att renderingen ska genereras.
+
+1. Resursberäkningsarbetaren sparar den nya återgivningens binära data i `rendition.path`.
+1. Binära data som skrivs till `rendition.path` transporteras via SDK för tillgångsberäkning till AEM Author Service och exponeras som __(4a)__ en textåtergivning och __(4b)__ beständig till objektets metadatanod.
+
+Diagrammet ovan visar frågor som rör tillgångsberäkningens utvecklare och det logiska flödet för att anropa en tillgångsberäknings-arbetare. Av nyfikenhet att det finns [interna detaljer om hur Resurser körs](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) , men endast de offentliga SDK-API-kontrakten för tillgångsberäkning kan vara beroende av.
 
 ## Anatomi för en arbetare
 
@@ -316,7 +318,7 @@ class RenditionInstructionsError extends ClientError {
 Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.yml](./manifest.md)kan den köras med det lokala verktyget för utveckling av resursuppdatering för att se resultatet.
 
 1. Från roten i projektet Asset Compute
-1. Kör `app aio run`
+1. Kör `aio app run`
 1. Vänta tills verktyget Resursberäkning har öppnats i ett nytt fönster
 1. I __Välj en fil..__ välj en exempelbild som ska bearbetas
    + Välj en exempelbildfil som ska användas som källresursens binärfil
@@ -391,11 +393,4 @@ Slutversionen `index.js` finns på Github:
 
 ## Felsökning
 
-### Återgivning returneras delvis ritad
-
-+ __Fel__: Återgivningen återges inte fullständigt när den totala återgivningsfilstorleken är stor
-
-   ![Felsökning - Återgivningen återställs delvis](./assets/worker/troubleshooting__await.png)
-
-+ __Orsak__: Arbetarens `renditionCallback` funktion avslutas innan återgivningen kan skrivas till `rendition.path`.
-+ __Upplösning__: Granska den anpassade arbetskoden och se till att alla asynkrona anrop görs synkrona.
++ [Återgivningen returnerade delvis ritad/skadad](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
