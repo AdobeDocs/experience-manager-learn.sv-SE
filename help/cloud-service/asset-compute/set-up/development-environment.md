@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Här följer en instruktion för att konfigurera en förkortning. Information om
 1. [Installera Docker Desktop](https://www.docker.com/products/docker-desktop) och hämta de dockningsbilder som behövs:
 
    ```
-   $ docker pull openwhisk/action-nodejs-v10:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
+   $ docker pull openwhisk/action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
    ```
 
 1. [Installera Visual Studio Code](https://code.visualstudio.com/download)
@@ -44,11 +44,13 @@ Här följer en instruktion för att konfigurera en förkortning. Information om
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
+Mer information om de förkortade installationsanvisningarna finns i avsnitten nedan.
+
 ## Installera Visual Studio Code{#vscode}
 
 [Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för att utveckla och felsöka resurser och beräkningspersonal. Även om annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, kan bara Visual Studio Code integreras för att [felsöka](../test-debug/debug.md) Asset Compute-arbetaren.
 
-_Visual Studio Code 1.48.x+ krävs för att[wskdebug](#wskdebug)ska fungera._
+_Visual Studio Code 1.48.x+ krävs för att [wskdebug](#wskdebug) ska fungera._
 
 I den här självstudiekursen antas användningen av Visual Studio Code som den ger den bästa utvecklarupplevelsen när det gäller att utöka Assets Compute.
 
@@ -59,7 +61,7 @@ Ladda ned och installera de senaste stabila [Docker Desktop](https://www.docker.
 När du har installerat Docker Desktop startar du programmet och installerar följande Docker-bilder från kommandoraden:
 
 ```
-$ docker pull openwhisk/action-nodejs-v10:latest
+$ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
@@ -91,7 +93,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 Ladda ned och installera [Apache OpenWhisk-felsökningsmodulen](https://www.npmjs.com/package/@openwhisk/wskdebug) npm för att underlätta lokal felsökning av Asset Compute-arbetare.
 
-_Visual Studio Code 1.48.x+ krävs för att[wskdebug](#wskdebug)ska fungera._
+_Visual Studio Code 1.48.x+ krävs för att [wskdebug](#wskdebug) ska fungera._
 
 ```
 $ npm install -g @openwhisk/wskdebug
