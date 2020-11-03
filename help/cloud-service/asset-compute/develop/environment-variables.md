@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,4 @@ Så här startar du verktyget Resursberäkning för projektet Resursberäkning:
 
 ## Felsökning
 
-### Lokala utvecklingsverktyg för resursberäkning kan inte starta på grund av att private.key saknas
-
-+ __Fel:__ Local Dev ServerError: Nödvändiga filer saknas vid validatePrivateKeyFile... (via standard ut från `aio app run` kommando)
-+ __Orsak:__ Värdet `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` i `.env` filen pekar inte på `private.key` eller `private.key` är inte läsbart av den aktuella användaren.
-+ __Upplösning:__ Granska `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` värdet i `.env` filen och se till att den innehåller den fullständiga, absoluta sökvägen till `private.key` filsystemet.
++ [Utvecklingsverktyget kan inte starta eftersom private.key saknas](../troubleshooting.md#missing-private-key)
