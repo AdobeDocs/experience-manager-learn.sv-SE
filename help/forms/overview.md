@@ -5,7 +5,7 @@ description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-ut
 seo-description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
 sub-product: formulär
 translation-type: tm+mt
-source-git-commit: b085a2c75f8e0b4860d503774ea01a108773ad09
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%
@@ -21,18 +21,15 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 * **[Hantera felmeddelanden i steget Anropa formulärdatamodelltjänst](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   <br>
    *En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp*
 
 * **[Diagram från flera serier i interaktiva kommunikationsdokument (video)](./interactive-communications/multiseriescharts.md)**
 
-   <br>
    *Rita mer än en serie i samma diagram.Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen Line, Bar och Column.*
 
 * **[Skapa återanvändbara arbetsflödesmodeller](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
-   <br>
-   _Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär_
+   *Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär*
 
 ## Personalval
 
@@ -82,7 +79,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 ## Ytterligare resurser
 
-* [Experience League - utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites Authoring Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites Developing Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites Administering Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
