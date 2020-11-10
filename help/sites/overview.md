@@ -5,7 +5,7 @@ description: 'En samling videor och självstudiekurser för Adobe Experience Man
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites
 sub-product: webbplatser, innehållstjänster
 translation-type: tm+mt
-source-git-commit: 2325132bc5fecf6637d6c105b66d4455e7edf485
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 1%
@@ -19,34 +19,28 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 ## Nyheter
 
-* **[Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)(självstudiekurs)**
+* **[Komma igång med AEM och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) (självstudiekurs)**
 
-   <br>
    *A getting started guide for developers to integrated a single page applications (SPA) with AEM using React*
 
-* **[Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)(självstudiekurs)**
+* **[Komma igång med AEM och vinkelredigerare](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) (självstudiekurs)**
 
-   <br>
    *A getting started guide for developers to integrated a single page applications (SPA) with AEM using Angular*
 
 * **[Komma igång med AEM Headless (självstudiekurs)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
 
-   <br>
    *Visa innehåll från AEM som ska användas av en intern mobilapp i ett headless CMS-scenario.*
 
 * **[Använda upplevelsefragment (videoserien)](./experience-fragments/experience-fragments-feature-video-use.md)**
 
-   <br>
    *Läs mer om AEM Experience Fragments för att marknadsföra innehåll över flera kanaler.*
 
 * **[Använda innehållsfragment (videoserie)](./content-fragments/content-fragments-feature-video-use.md)**
 
-   <br>
    *Innehållsfragment är kanalagnostiska innehållsdelar som kan återanvändas.*
 
-* **[Använda SPA-redigeraren (video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
+* **[Använda SPA (video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
-   <br>
    *Läs om AEM redigeringsfunktioner för single page-applikationer (SPA).*
 
 ## Personalval
@@ -81,11 +75,11 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
   </td>
   <td>
     <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
-      <img alt="Komma igång med AEM SPA Editor" src="./assets/aem-wknd-spa-editor-tutorial.png" />
+      <img alt="Komma igång med AEM SPA" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
       <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
-        <strong>Komma igång med AEM SPA Editor</strong>
+        <strong>Komma igång med AEM SPA</strong>
       </a>
     </div>
     <p>
@@ -97,7 +91,7 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 ## Ytterligare resurser
 
-* [Experience League - utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Sites Authoring Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites Developing Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites Administering Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
