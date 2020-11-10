@@ -12,7 +12,7 @@ version: 6.3, 6.4, 6.5, cloud-service
 kt: 4243
 thumbnail: 31785.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3cf310e19bac93ae0c15f69c7099b267813a9994
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 0%
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Lär dig hur du skapar och organiserar organisationens webbsidor i AEM Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31785?quality=12&learn=on)
