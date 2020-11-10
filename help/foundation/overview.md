@@ -4,7 +4,7 @@ seo-title: AEM Foundation Videos och Tutorials
 description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Foundation
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 1%
@@ -19,22 +19,15 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 ## Nyheter
 
 * **[Använd arbetsflödeshantering i AEM (video)](./workflow/use-workflow-management.md)**
-
-   <br>
-   *AEM ger synlighet i pågående arbetsflöden och underlättar hanteringen av[!DNL Workflow]definitioner.*
+   *AEM ger synlighet i pågående arbetsflöden och underlättar hanteringen av [!DNL Workflow] definitioner.*
 
 * **[Förstå Cloud Manager för AEM (video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   <br>
-
    *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
 
 * **[Konfigurera offentliga och privata nycklar för användning med Adobe I/O (självstudiekurs)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   <br>
-   *Lär dig hur nycklar och nyckelbehållare genereras med[!DNL openssl]det som fungerar med AEM och Adobe I/O.*
+   *Lär dig hur nycklar och nyckelbehållare genereras med [!DNL openssl] det som fungerar med AEM och Adobe I/O.*
 
 * **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   <br>
-
    *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
 
 ## Personalval
@@ -85,7 +78,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 ## Ytterligare resurser
 
-* [Experience League - utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM som Cloud Service Tutorials](/help/cloud-service/overview.md)
 * [AEM Sites Videos och Tutorials](/help/sites/overview.md)
 * [AEM Assets Videos och Tutorials](/help/assets/overview.md)
