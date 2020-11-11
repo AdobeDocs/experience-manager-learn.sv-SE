@@ -8,31 +8,30 @@ topics: authoring, front-end-development
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: cloud-service
 kt: 974
+thumbnail: 21750.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: fc456c868bdfe2fbb71387f36432a134fbff7dbb
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
 
-# Använda formatsystemet{#using-the-style-system-with-aem-sites}
+# Använda formatsystemet {#using-the-style-system-with-aem-sites}
 
 Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=12&learn=on)
 
 I den här videon visas hur Style System kan användas för att skapa helt olika visuella utseenden för en enskild komponent, med enbart CSS.
 
-De format som vi ska granska tillhandahålls av programmet We.Retail för List-komponenten. Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTL-skriptet eller Sling Model, för att manifesteras.
-
-## Stödmaterial {#supporting-materials}
-
-[demo.sites.style-system-2.0.0.zip (Detta kräver AEM 6.4 eller senare och demowebbplatsen We.Retail är installerad)](assets/demo_sites_style-system-200.zip)
+Formaten som visas tillhandahålls av [WKND-programmet](https://github.com/adobe/aem-guides-wknd). Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTML-skriptet eller Sling Model.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Systemdokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html)
+Vill du lära dig hur du utvecklar med Style System? Titta på följande självstudiekurser:
+
+* [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
