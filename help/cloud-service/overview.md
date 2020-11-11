@@ -4,7 +4,7 @@ description: En samling självstudiekurser för Adobe Experience Manager (AEM) s
 sub-product: sajter, cloud manager, grund, resurser
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 8%
@@ -20,29 +20,24 @@ Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM som Cloud Servic
 
 ## Nyheter
 
-* **[Resursberäkning, mikrotjänster, utbyggbarhet (självstudiekurs)](./asset-compute/overview.md)**
+* **[Utbyggbarhet för Asset compute-mikrotjänster (självstudiekurs)](./asset-compute/overview.md)**
 
-   <br>
-   *Lär dig hur du utvecklar resurshanteringsarbetare för att generera anpassade resursåtergivningar*
+   *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
 
 * **[Konfigurera åtkomst till AEM som Cloud Service (självstudiekurs)](./accessing/overview.md)**
 
-   <br>
    *Lär dig hur du konfigurerar IMS-användare i Adobe Admin Console så att de kan komma åt AEM*
 
 * **[Felsöka AEM som en Cloud Service (självstudiekurs)](./debugging/cloud-service/overview.md)**
 
-   <br>
    *Utforska hur du felsöker AEM som en Cloud Service*
 
 * **[Felsöka AEM SDK (självstudiekurs)](./debugging/aem-sdk-local-quickstart/overview.md)**
 
-   <br>
    *Utforska de olika verktyg som används för att felsöka programmet på AEM som en Cloud Service-SDK:s lokala snabbstart*
 
 * **[Installation av lokal utvecklingsmiljö (självstudiekurs)](./local-development-environment/overview.md)**
 
-   <br>
    *Lär dig hur du konfigurerar din lokala utvecklingsdator för AEM som en Cloud Service-utveckling*
 
 ## Personalval
@@ -91,5 +86,5 @@ Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM som Cloud Servic
 
 ## Ytterligare resurser
 
-* [Experience League - utforska Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - Utforska Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [Adobe Experience Manager som Cloud Service Documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/landing/home.html)
