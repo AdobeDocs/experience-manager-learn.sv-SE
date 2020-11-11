@@ -1,0 +1,52 @@
+---
+title: Skapa MyAccountForm
+description: Skapa myaccount-formuläret för att hämta det delvis ifyllda formuläret vid lyckad verifiering av program-ID och telefonnummer.
+feature: adaptive-forms
+topics: development
+audience: developer
+doc-type: tutorial
+activity: implement
+version: 6.4,6.5
+kt: 6599
+thumbnail: 6599.jpg
+translation-type: tm+mt
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
+
+---
+
+
+
+# Skapa MyAccountForm
+
+Formuläret **MyAccountForm** används för att hämta det delvis ifyllda adaptiva formuläret efter att användaren har verifierat program-ID:t och det mobilnummer som är kopplat till program-ID:t.
+
+![mitt kontoformulär](assets/6599.JPG)
+
+När användaren anger program-ID:t och klickar på knappen **FetchApplication** hämtas det mobilnummer som är kopplat till program-ID:t från databasen med åtgärden Hämta i formulärdatamodellen.
+
+I det här formuläret används POSTENS anrop av formulärdatamodellen för att verifiera mobilnumret med hjälp av engångslösenord. Formulärets sändningsåtgärd aktiveras när mobilnumret har verifierats med följande kod. Vi utlöser klickhändelsen för skicka-knappen med namnet **submitForm**.
+
+>[!NOTE]
+> Du måste ange API-nyckeln och API-hemlighetsvärdena som är specifika för ditt [Nexmo](https://dashboard.nexmo.com/) -konto i fälten för MyAccountForm
+
+![trigger-submit](assets/trigger-submit.JPG)
+
+
+
+Det här formuläret är kopplat till en anpassad skickaåtgärd som vidarebefordrar formuläröverföringen till serverutrymmet som är monterat på **/bin/renderaf**
+
+```java
+com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
+```
+
+Koden i serverutrymmet som är monterad på **/bin/renderaf** vidarebefordrar begäran om att återge butiken med adaptiva formulär ifyllda med sparade data.
+
+
+* MyAccountForm kan [laddas ned härifrån](assets/my-account-form.zip)
+
+* Exempelformulär bygger på [anpassade formulärmallar](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
+
+* [En anpassad överföringshanterare](assets/custom-submit-my-account-form.zip) som är associerad med MyAccountForm-överföringen måste importeras till AEM.
