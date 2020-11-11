@@ -6,9 +6,9 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '898'
 ht-degree: 1%
 
 ---
@@ -84,24 +84,35 @@ ht-degree: 1%
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
-   + [Onboarding](prefill-fdm-db/introduction.md)
+   + [Introduktion](prefill-fdm-db/introduction.md)
    + [Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
    + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
    + [Hämta begäranparameter](prefill-fdm-db/get-request-parameter.md)
    + [Skapa anpassat formulär](prefill-fdm-db/create-adaptive-form.md)
 + Anpassning av inkorgen{#inbox-customization}
-   + [Onboarding](inbox-customization/introduction.md)
+   + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
    + [Använda enkel mall](inbox-customization/use-sightly-template.md)
 
-
++ Lagra och hämta anpassat formulär{#store-and-retrieve-af-with-2fa}
+   + [Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
+   + [Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [Lagra bifogade formulär](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [Lagra formulärdata](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [Skapa server](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [Återge formulär med sparade data](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [Skapa klientbibliotek](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [Integrera med OTP-tjänst](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [Skapa huvudformuläret](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [Skapa formuläret Mitt konto](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [Distribuera exemplet](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + Exporterar skickade data i CSV-format{#export-submitted-data-csv-format}
    + [Exportera skickade data](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
    + [Skapa HTML5-formulär](html5-forms/create-html5-form.md)
    + [Hantera inskickning av HTML5-formulär](html5-forms/handle-html5-form-submission.md)
 + AEM Forms och Adobe Sign{#forms-and-sign}
-   + [Onboarding](aem-forms-and-adobe-sign/introduction.md)
+   + [Introduktion](aem-forms-and-adobe-sign/introduction.md)
    + [Konfigurera SSL](aem-forms-and-adobe-sign/set-up-ssl.md)
    + [Skapa Adobe Sign API-program](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
    + [Skapa Adobe Sign Cloud-konfiguration](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
@@ -109,7 +120,7 @@ ht-degree: 1%
    + [Skapa och konfigurera anpassningsbara formulär](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [Konfigurera anpassat formulär för en signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [Konfigurera anpassat formulär för två signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [Konfigurera automatisk Forms Conversion Service](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [Konfigurera tjänsten Automated forms conversion](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [Konvertera PDF-formulär till anpassat formulär](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
@@ -122,7 +133,7 @@ ht-degree: 1%
    + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
-   + [Onboarding](storing-retrieving-form-data/introduction.md)
+   + [Introduktion](storing-retrieving-form-data/introduction.md)
    + [Konfigurera datakälla](storing-retrieving-form-data/part1.md)
    + [Servern för lagring av data](storing-retrieving-form-data/part2.md)
    + [Tjänst för att hämta data](storing-retrieving-form-data/part3.md)
@@ -130,13 +141,13 @@ ht-degree: 1%
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
 + Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
-   + [Onboarding](offline-mobile-form-submission/introduction.md)
+   + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
    + [Hantera inskickning av PDF](offline-mobile-form-submission/part-two.md)
    + [Arbetsflöde för att granska PDF](offline-mobile-form-submission/part-three.md)
    + [Driftsätt i ditt system](offline-mobile-form-submission/part-four.md)
 + Frågar skickade data{#querying-submitted-data}
-   + [Onboarding](querying-submitted-data/introduction.md)
+   + [Introduktion](querying-submitted-data/introduction.md)
    + [Skapa formulär baserat på JSON-schema](querying-submitted-data/part1.md)
    + [Lagra skickade data](querying-submitted-data/part2.md)
    + [Lagra JSON-schemat](querying-submitted-data/part3.md)
@@ -151,7 +162,7 @@ ht-degree: 1%
    + [Del 4 - Sammanfoga allt](aem-forms-with-marketo/part4.md)
 
 + AEM Forms med Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
-   + [Onboarding](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
+   + [Introduktion](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
    + [Del1 - Generera token](aem-forms-with-adobe-campaign/partone.md)
    + [Del 2 - Skapa ACS-profil vid formuläröverföring](aem-forms-with-adobe-campaign/parttwo.md)
    + [Del3 - Fylla i formulär i förväg med ACS-profilinformation](aem-forms-with-adobe-campaign/partthree.md)
@@ -172,7 +183,7 @@ ht-degree: 1%
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
 + Interaktiv kommunikation för tryckkanaler
 {#ic-print-channel-tutorial}
-   + [Onboarding](ic-print-channel-tutorial/introduction.md)
+   + [Introduktion](ic-print-channel-tutorial/introduction.md)
    + [Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [Skapa datakälla](ic-print-channel-tutorial/create-data-source.md)
    + [Skapa formulärdatamodell](ic-print-channel-tutorial/create-form-data-model.md)
@@ -194,7 +205,7 @@ ht-degree: 1%
    + [Generera interaktivt kommunikationsdokument för utskriftskanal med bevakade mappar](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 + Interaktiv kommunikation för webbkanal {#ic-web-channel-tutorial}
-   + [Onboarding](ic-web-channel-tutorial/introduction.md)
+   + [Introduktion](ic-web-channel-tutorial/introduction.md)
    + [Konfigurera Tomcat](ic-web-channel-tutorial/partone.md)
    + [Skapa datakälla](ic-web-channel-tutorial/parttwo.md)
    + [Skapa formulärdatamodell](ic-web-channel-tutorial/partthree.md)
