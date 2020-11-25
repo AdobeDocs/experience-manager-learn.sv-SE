@@ -4,7 +4,7 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 2%
@@ -107,7 +107,7 @@ ht-degree: 2%
       + [Lägg till måltillägg i startegenskapen](integrations/adobe-target/add-target-launch-extension.md)
       + [Läsa in och utlösa ett Target-anrop](integrations/adobe-target/load-and-fire-target.md)
       + [Skapa Adobe Target Cloud Service-konto](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [Exportera Experience Fragment till Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
+      + [Exportera upplevelsefragment till Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
