@@ -1,6 +1,6 @@
 ---
 title: Personalisering av en hel webbsida - upplevelse
-description: Lär dig hur du skapar en aktivitet som dirigerar om de webbsidor som finns på AEM till en ny sida med Adobe Target.
+description: Lär dig hur du skapar en Target-aktivitet för att dirigera om dina AEM webbsidor till nya sidor med Adobe Target.
 feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,12 @@ ht-degree: 0%
 
 Lär dig hur du skapar en aktivitet som dirigerar om de webbsidor som finns på AEM till en ny sida med Adobe Target.
 
-Innan du skapar en aktivitet i Target måste du konfigurera:
+## Förutsättningar
 
-1. [Integrera Experience Platform Launch och AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+För att personalisera hela sidor på en AEM webbplats måste följande inställningar göras:
+
+1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
 
 ## Scenarioöversikt
 
