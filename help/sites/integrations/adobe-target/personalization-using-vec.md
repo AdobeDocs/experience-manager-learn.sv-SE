@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 0%
 
 Lär dig hur du skapar en A/B Test Target-aktivitet med Visual Experience Composer (VEC).
 
-Innan du skapar en aktivitet i Target måste du konfigurera:
+## Förutsättningar
 
-1. [Integrera Experience Platform Launch och AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [Integrera Adobe Experience Manager med Adobe Target med Cloud Services](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+För att kunna använda VEC på en AEM webbplats måste följande inställningar göras:
+
+1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
 
 ## Scenarioöversikt
 
@@ -33,7 +35,10 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
-1. Logga in på Adobe Target och navigera till aktivitetsfliken
+1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Target__, navigera till fliken __Activity__ (Aktiviteter)
+
+   + Om du inte ser __Target__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+
 1. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B-testaktivitet**
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
@@ -82,5 +87,5 @@ I det här kapitlet kunde en marknadsförare skapa en upplevelse med Visual Expe
 
 ## Stödlänkar
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
