@@ -10,24 +10,28 @@ version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
 
-# Skapa Adobe Target Activity med Experience Fragment {#target-activity-experience-fragment}
+# Skapa Adobe Target-aktivitet med Experience Fragment-erbjudanden {#target-activity-experience-fragment}
 
-Lär dig hur du skapar och testar en Adobe Target Activity med AEM Experience Fragment-erbjudanden.
+Lär dig hur du skapar och testar en Adobe Target-aktivitet med AEM Experience Fragment-erbjudanden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41246?quality=12&learn=on)
 
-Innan du skapar en aktivitet i Target måste du konfigurera:
+## Förutsättningar
 
-1. [Integrera Experience Platform Launch och AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [Integrera Adobe Experience Manager med Adobe Target med Cloud Services](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+För att skapa Adobe Target-aktiviteter med Experience Fragment-erbjudanden måste följande byggas upp:
+
+1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
+1. [Integrera AEM Author med Adobe Target](./setup-aem-target-cloud-service.md)
+1. [Exportera AEM Experience Fragments till Adobe Target](./export-experience-fragment-target.md)
 
 ## Stödlänkar
 
