@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Läsa in och utlösa ett Target-anrop {#load-fire-target}
 
-Lär dig hur du läser in, skickar parametrar till sidförfrågningar och startar ett Target-anrop från webbplatssidan med en startregel. Sidinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
+Lär dig hur du läser in, skickar parametrar till sidförfrågningar och startar ett Target-anrop från webbplatssidan med en startregel. Webbsidesinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
@@ -28,98 +28,134 @@ Lär dig hur du läser in, skickar parametrar till sidförfrågningar och starta
 
 Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon anropas `Launch Library Loaded` regeln med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
 
-### Egen händelse
+### Egen sidvisningshändelse{#page-event}
 
-Kodfragmentet nedan lägger till en händelseavlyssnare genom att föra in en funktion i datalagret. När `cmp:show` händelsen utlöses anropas `pageShownEventHandler` funktionen. I den här funktionen läggs några säkerhetskontroller till och en ny `dataObject` skapas med det senaste läget för datalagret för komponenten som utlöste händelsen.
+![Händelsekonfiguration som visas på sidan och anpassad kod](assets/load-and-fire-target-call.png)
 
-Efter det `trigger(dataObject)` anropas. `trigger()` är ett reserverat namn i Launch och kommer att utlösa startregeln. Vi skickar händelseobjektet som en parameter som i sin tur visas med ett annat reserverat namn i Launch-händelsen. Dataelement i Launch kan nu referera till olika egenskaper som: `event.component['someKey']`.
+Lägg till en ny **händelse** i **regeln i egenskapen Launch**
+
++ __Tillägg:__ Core
++ __Händelsetyp:__ Egen kod
++ __Namn:__ Visa sidhändelsehanterare (eller något beskrivande)
+
+Tryck på knappen __Öppna redigeraren__ och klistra in följande kodfragment. Den här koden __måste__ läggas till i __händelsekonfigurationen__ och en efterföljande __åtgärd__.
 
 ```javascript
-var pageShownEventHandler = function(evt) {
-// defensive coding to avoid a null pointer exception
-if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-   //trigger Launch Rule and pass event
-   console.debug("cmp:show event: " + evt.eventInfo.path);
-   var event = {
-      //include the id of the component that triggered the event
-      id: evt.eventInfo.path,
-      //get the state of the component that triggered the event
-      component: window.adobeDataLayer.getState(evt.eventInfo.path)
-   };
+// Define the event handler function
+var pageShownEventHandler = function(coreComponentEvent) {
 
-      //Trigger the Launch Rule, passing in the new `event` object
-      // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
-      // i.e `event.component['someKey']`
-      trigger(event);
+    // Check to ensure event trigger via AEM Core Components is shaped correctly
+    if (coreComponentEvent.hasOwnProperty("eventInfo") && 
+        coreComponentEvent.eventInfo.hasOwnProperty("path")) {
+    
+        // Debug the AEM Component path the show event is associated with
+        console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
+
+        // Create the Launch Event object
+        var launchEvent = {
+            // Include the ID of the AEM Component that triggered the event
+            id: coreComponentEvent.eventInfo.path,
+            // Get the state of the AEM Component that triggered the event           
+            component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
+        };
+
+        //Trigger the Launch Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // i.e `event.component['someKey']`
+        trigger(launchEvent);
    }
 }
 
-//set the namespace to avoid a potential race condition
+// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+
+// Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
-//push the event listener for cmp:show into the data layer
-window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:show` and callback to the `pageShownEventHandler` function
-   dl.addEventListener("cmp:show", pageShownEventHandler);
+
+// Push the event custom listener onto the Adobe Data Layer
+window.adobeDataLayer.push(function (dataLayer) {
+   // Add event listener for the `cmp:show` event, and the custom `pageShownEventHandler` function as the callback
+   dataLayer.addEventListener("cmp:show", pageShownEventHandler);
 });
 ```
 
-### ID för datalagersida
+En anpassad funktion definierar `pageShownEventHandler`och lyssnar efter händelser som skickas av AEM Core Components, hämtar den relevanta informationen från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
+
+Startregeln aktiveras med hjälp av Launch-funktionen, som `trigger(...)` bara ____ är tillgänglig från en Regels egen kodfragmentsdefinition för en Regel.
+
+Funktionen tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements med ett annat reserverat namn i Launch med namnet `trigger(...)` `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event` objektet med syntax som `event.component['someKey']`.
+
+Om `trigger(...)` används utanför sammanhanget för händelsetypen Custom Code (till exempel i en Action) `trigger is undefined` genereras JavaScript-felet på den webbplats som är integrerad med egenskapen Launch.
+
+
+### Dataelement
+
+![Dataelement](assets/data-elements.png)
+
+Adobe Launch Data Elements mappar data från händelseobjektet som [utlöses i den anpassade sidvisningshändelsen](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
+
+#### Dataelement för sid-ID
 
 ```
-if(event && event.id) {
+if (event && event.id) {
     return event.id;
 }
 ```
 
+Den här koden returnerar Core-komponentens genererade unika ID.
+
 ![Sida-ID](assets/pageid.png)
 
-### Sidsökväg
+### Dataelement för sidsökväg
 
 ```
-if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+if (event && event.component && event.component.hasOwnProperty('repo:path')) {
     return event.component['repo:path'];
 }
 ```
 
+Den här koden returnerar AEM sökväg.
+
 ![Sidsökväg](assets/pagepath.png)
 
-### Sidrubrik
+### Dataelement för sidrubrik
 
 ```
-if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+if (event && event.component && event.component.hasOwnProperty('dc:title')) {
     return event.component['dc:title'];
 }
 ```
 
+Den här koden returnerar AEM sidtitel.
+
 ![Sidrubrik](assets/pagetitle.png)
 
-### Vanliga problem
+## Felsökning
 
-#### Varför skjuter inte mina lådor på mina webbsidor?
+### Varför skjuter inte mina lådor på mina webbsidor?
 
-**Felmeddelande när mboxDisable cookie inte är inställd**
+#### Felmeddelande när mboxDisable cookie inte är inställd**
 
 ![Fel på Cookie-måldomän](assets/target-cookie-error.png)
 
-**Lösning**
+#### Lösning
 
 Målgrupper använder ibland molnbaserade instanser med Target för testning eller för enkla konceptbevis. Dessa domäner, och många andra, ingår i Public Suffix-listan .
 I moderna webbläsare sparas inte cookies om du använder dessa domäner om du inte anpassar `cookieDomain` inställningen med `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
-   cookieDomain: 'your-domain' //set the cookie directly on this subdomain 
+   cookieDomain: 'your-domain' //set the cookie directly on this subdomain, for example: 'publish-p1234-e5678.adobeaemcloud.com'
 };
 ```
 
 ## Nästa steg
 
-1. [Exportera Experience Fragment till Adobe Target](./export-experience-fragment-target.md)
++ [Exportera Experience Fragment till Adobe Target](./export-experience-fragment-target.md)
 
 ## Stödlänkar
 
-* [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-* [Använda Adobe Client Data Layer och Core Components Documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
-* [Introduktion till Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Använda Adobe Client Data Layer och Core Components Documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Introduktion till Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
