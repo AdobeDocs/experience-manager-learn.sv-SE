@@ -29,11 +29,11 @@ När du har skapat och testat ditt dokument för tryckkanaler behöver vi en mek
 
 När du konfigurerar en bevakad mapp i AEM associerar du ett ECMA-skript eller en Java-kod som körs när en fil släpps i den bevakade mappen. I den här artikeln fokuserar vi på ECMA-skript som genererar dokument för tryckkanaler och sparar dem i filsystemet.
 
-Den bevakade mappkonfigurationen och ECMA-skriptet är en del av de resurser du importerade i [början av den här självstudiekursen](introduction.md)
+Den bevakade mappkonfigurationen och ECMA-skriptet är en del av de resurser du importerade i början av den här självstudiekursen[](introduction.md)
 
 Indatafilen som släpps i den bevakade mappen har följande struktur. ECMA-skript läser kontonumren och genererar dokument för utskriftskanaler för vart och ett av dessa konton.
 
-Mer information om ECMA-skript för att generera dokument [finns i den här artikeln](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+Mer information om ECMA-skriptet för att generera dokument finns i [den här artikeln](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
