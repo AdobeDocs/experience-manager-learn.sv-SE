@@ -28,18 +28,18 @@ Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att 
 
 AEM innehållsfragment är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
 
-Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Mer information om hur du [levererar innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
+Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om [leverans av innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivera och definiera modeller för innehållsfragment
 2. Skapa innehållsfragment
 3. Hämta innehållsfragment
 4. Redigeringsfunktioner
 
-## Defining Content Fragment Models {#defining-content-fragment-models}
+## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)så att Content Fragment Models kan definieras per konfiguration.
+AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfigurationsbas.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -52,7 +52,7 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 *Exempel på sportbiografi för import:*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## Hämta innehållsfragment {#downloading-content-fragments}
+## Hämtar innehållsfragment {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
 
@@ -71,7 +71,7 @@ AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som inneh�
 
 ## Nästa steg
 
-Lär dig hur du [levererar innehållsfragment](content-fragments-delivery-feature-video-use.md).
+Lär dig mer om att [leverera innehållsfragment](content-fragments-delivery-feature-video-use.md).
 
 ## Ytterligare resurser {#additional-resources}
 
