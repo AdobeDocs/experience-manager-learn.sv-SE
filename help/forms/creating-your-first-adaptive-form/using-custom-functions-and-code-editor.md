@@ -22,11 +22,11 @@ ht-degree: 0%
 ---
 
 
-# Använda anpassade funktioner och kodredigerare {#using-functions-and-code-editor}
+# Använda anpassade funktioner och kodredigeraren {#using-functions-and-code-editor}
 
 I den här delen använder vi anpassade funktioner och kodredigeraren för att skapa affärsregler.
 
-du har redan installerat [ClientLib med anpassad funktion](assets/client-libs-and-logo.zip) tidigare i den här självstudien.
+du har redan installerat [ClientLib med den anpassade funktionen](assets/client-libs-and-logo.zip) tidigare i den här självstudien.
 
 Ett klientbibliotek består vanligtvis av CSS- och JavaScript-filer. Det här klientbiblioteket innehåller javascript-filen som visar en funktion för att fylla i värden i listrutor.
 
@@ -35,7 +35,7 @@ Ett klientbibliotek består vanligtvis av CSS- och JavaScript-filer. Det här kl
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### Ange panelens sammanfattningsrubrik {#set-the-summary-title-of-panels}
+### Ange sammanfattningsrubrik för panelen {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
