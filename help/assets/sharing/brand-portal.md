@@ -27,7 +27,7 @@ Videoguider för integrering av Adobe Experience Manager (AEM) Assets Brand Port
 
 I varumärkesportalens september 2019 introduceras främst Assets Sourcing, som ökar innehållets hastighet och möjliggör enkelt och snabbt utbyte av resurser mellan författare i Experience Manager och tredjepartskreatörer och medverkande.
 
-### Källa för varumärkesportalresurser{#asset-sourcing}
+### Resurskälla för varumärkesportalen{#asset-sourcing}
 
 Brand Portals resurshantering används för att samla in resurser från tredjepartsbyråer och -team och synka dem smidigt tillbaka till Experience Manager Author för granskning och användning.
 
@@ -35,9 +35,9 @@ Brand Portals resurshantering används för att samla in resurser från tredjepa
 
 *Experience Manager Author 6.5 SP2 (6.5.2) eller senare krävs för att använda Resurser*
 
-Läs [Enable Experience Manager Author for Asset Source](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) (Aktivera författare av-resurser) för instruktioner om hur du konfigurerar och ställer in resurskälla för författaren av Experience Manager.
+Läs [Aktivera Experience Manager Author for Asset Source](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) för instruktioner om hur du konfigurerar och konfigurerar Resurser för Experience Manager Author.
 
-## Varumärkesportalen februari 2019 Funktioner och förbättringar{#brand-portal-features-and-enhancements-644}
+## Varumärkesportalen februari 2019 - funktioner och förbättringar{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -53,7 +53,7 @@ Läs vidare om du vill veta mer om partiell textsökning och jokerteckensökning
 
 Nu kan du söka efter resurser genom att endast ange en del - det vill säga ett eller två - av den sökda frasen i filtreringsrutan.
 
-**Använd skiftläge** : Delvis frassökning är användbart när du är osäker på den exakta kombinationen av ord som förekommer i den sökda frasen.
+**Användningsfall** : Delvis frassökning är användbart när du är osäker på den exakta kombinationen av ord som förekommer i den sökda frasen.
 
 Om ditt sökformulär i Varumärkeportal till exempel använder egenskapspredikatet för partiell sökning efter resurstitel, kommer alla resurser med ordet läger i sin titelfras att returneras när du anger termen läger.
 
@@ -61,7 +61,7 @@ Om ditt sökformulär i Varumärkeportal till exempel använder egenskapspredika
 
 På varumärkesportalen kan du använda asterisken (*) i sökfrågan tillsammans med en del av ordet i den sökbara frasen.
 
-**Använd skiftläge** :Om du inte är säker på exakt vilka ord som finns i den sökfrasen kan du använda en jokerteckenssökning för att fylla i luckorna i sökfrågan.
+**Använd skiftläge** :Om du inte är säker på exakt vilka ord som förekommer i den sökda frasen kan du använda en jokerteckenssökning för att fylla i luckorna i sökfrågan.
 
 Om du till exempel anger klättra* returneras alla resurser som har ord som börjar med tecknen klättrar i sin titelfras om sökformuläret i varumärkesportalen använder egenskapspredikatet för partiell sökning på resurstiteln.
 
@@ -73,12 +73,12 @@ På samma sätt kan du ange:
 #### Aktivera mapphierarki
 
 Administratörer kan nu konfigurera hur mapparna visas för icke-adminanvändare (redigerare, visningsprogram och gästanvändare) vid inloggning.
-[Konfigurationen Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) har lagts till i Allmänna inställningar på panelen Administrationsverktyg. Om konfigurationen är:
+[Aktivera ](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) mapphierarkikonfiguration har lagts till i Allmänna inställningar på panelen Administrationsverktyg. Om konfigurationen är:
 
 * Aktiverat är mappträdet som börjar från rotmappen synligt för icke-adminanvändare. Det innebär att de får en navigeringsupplevelse som liknar administratörerna.
 * Inaktiverat visas bara de delade mapparna på landningssidan.
 
-[Aktivera funktionen Mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) (när den är aktiverad) så att du kan skilja mappar med samma namn som delas från olika hierarkier åt. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
+[Aktivera mapphierarki (](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) när det här alternativet är aktiverat) så att du kan särskilja mappar med samma namn som delas från olika hierarkier. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
 
 De delade mapparna ordnas i respektive katalog i virtuella mappar. Du känner igen dessa virtuella mappar med en låsikon.
 
@@ -103,7 +103,7 @@ Dynamic Media Video-kodningar kan hämtas från:
 
 ### Schemalagd publicering på varumärkesportalen
 
-Arbetsflödet för publicering av resurser (och mappar) från [AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Författarinstans till Varumärkeportal kan schemaläggas för ett senare datum och tid.
+Arbetsflödet för publicering av resurser (och mappar) från [AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Författarinstansen till Författarportalen kan schemaläggas för ett senare datum och tid.
 
 Publicerade resurser kan också tas bort från portalen vid ett senare datum (tid) genom att schemalägga arbetsflödet för att avpublicera från varumärkesportalen.
 
@@ -112,11 +112,11 @@ Publicerade resurser kan också tas bort från portalen vid ett senare datum (ti
 Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i deras befintliga portal-URL måste man kontakta supporten för Adobe.
 
 Observera att bara prefixet för varumärksportal-URL:en kan anpassas och inte hela URL:en.
-En organisation med befintlig domän `wknd.brand-portal.adobe.com` kan till exempel `wkndinc.brand-portal.adobe.com` skapas på begäran.
+En organisation med den befintliga domänen `wknd.brand-portal.adobe.com` kan till exempel få `wkndinc.brand-portal.adobe.com` skapad på begäran.
 
-AEM Author-instansen kan dock bara [konfigureras](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
+AEM Author-instansen kan bara vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
 
-**Använd skiftläge** : Man kan anpassa portalens URL istället för att följa Adobe:s webbadress.
+**Användningsfall** : Man kan anpassa portalens URL istället för att följa Adobe:s webbadress.
 
 ## Varumärkesportalen december 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-642}
 
@@ -156,12 +156,12 @@ Sex nya konfigurationer har lagts till för administratörer för att aktivera/i
 
 ### Andra förbättringar
 
-* *Mapphierarkisökvägen på kort- och listvyer* - gör att användarna kan hitta de mappar som lagras i en Brand Portal-instans. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
-* *Översiktsalternativ* - ger icke-adminanvändare metadata om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
+* *Mapphierarkisökvägen på kort- och listvyer*  - gör att användarna kan hitta de mappar som lagras i en Brand Portal-instans. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
+* *Översiktsalternativ*  - ger icke-adminanvändare metadata om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
 
-### I/O-värdgränssnitt för Adobe för att konfigurera autentiseringsintegreringar
+### Adobe I/O värdar-användargränssnitt för att konfigurera autentiseringsintegreringar
 
-Brand Portal använder gränssnittet Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) för att skapa JWT-program, som gör det möjligt att konfigurera autenticeringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns gränssnittet för konfiguration av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-gränssnittet för att skapa JWT-program, som gör det möjligt att konfigurera autenticeringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns gränssnittet för konfiguration av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med varumärkesportalen för att publicera resurser och samlingar på varumärkesportalen finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Varumärkesportalen februari 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-632}
 
