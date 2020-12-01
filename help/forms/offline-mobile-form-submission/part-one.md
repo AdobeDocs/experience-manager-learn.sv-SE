@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I den här delen skapar vi en [anpassad profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP-filen som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar en interaktiv PDF och direktuppspelar den till det anropande programmet.
 
-Hämta formulärdata med `formBridge` JavaScript API. Vi använder `getDataXML()` metoden:
+Hämta formulärdata med JavaScript-API:t `formBridge`. Vi använder metoden `getDataXML()`:
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -123,7 +123,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### Återge interaktiv PDF
 
-Följande kod använder [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktiv PDF med data från mobilformuläret.
+Följande kod använder [API:t för Forms-tjänster](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktiv PDF med data från mobilformuläret.
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -146,7 +146,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-Om du vill visa möjligheten att hämta interaktiva PDF-filer från delvis ifyllda mobilformulär [klickar du här](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
+[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content) om du vill visa möjligheten att hämta interaktiv PDF från delvis ifyllda mobilformulär.
 När PDF-filen har laddats ned är nästa steg att skicka PDF-filen för att starta ett AEM arbetsflöde. Det här arbetsflödet sammanfogar data från den skickade PDF-filen och genererar en icke-interaktiv PDF för granskning.
 
 Den anpassade profil som skapats för det här användningsfallet är tillgänglig som en del av den här självstudiekursen.
