@@ -28,7 +28,7 @@ Debugging Dispatcher Tools loggar och cacheinnehåll kan vara avgörande för at
 
 ## Loggar för Dispatcher Tools
 
-Loggarna för Dispatcher Tools finns tillgängliga via `stdout` kommandot, `bin/docker_run` kommandot eller med mer information i Docker-behållaren på `/etc/https/logs`.
+Loggar för Dispatcher Tools finns tillgängliga via kommandot `stdout` eller `bin/docker_run`, eller med mer information, som finns i Docker-behållaren på `/etc/https/logs`.
 
 Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du får direktåtkomst till Dispatcher Tools&#39; Docker-behållarens loggar.
 
@@ -36,7 +36,7 @@ Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du f
 
 ### Åtkomst till loggar i Docker-behållaren
 
-Dispatcher-cachen kan komma åt direkt i Docker-behållaren på ` /mnt/var/www/html`.
+Dispatcher-cachen kan användas direkt i Docker-behållaren på ` /mnt/var/www/html`.
 
 ```shell
 $ docker ps
@@ -56,7 +56,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopiera Docker-loggarna till det lokala filsystemet
 
-Sändningsloggar kan kopieras ut från Docker-behållaren i `/mnt/var/www/html` till det lokala filsystemet och granskas med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
+Sändningsloggar kan kopieras ut från Docker-behållaren på `/mnt/var/www/html` till det lokala filsystemet för kontroll med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
 
 ```shell
 $ docker ps
