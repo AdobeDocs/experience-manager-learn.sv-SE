@@ -68,12 +68,15 @@ Nedan följer data från den adaptiva formuläröverföringen. Det adaptiva form
 ```
 
 Om du vill initiera ArrayList-variabeln för en deltypssträng kan du antingen använda JSON-punktnotationsläget eller XPath-mappningsläget. På följande skärmbild visas hur du fyller i en ArrayList-variabel som kallas CustomRoutes med JSON Dot Notation. Se till att du pekar på ett element i ett arrayobjekt så som visas på skärmbilden nedan. Vi fyller i CustomRoutes ArrayList med namnen på arrayobjektet managementChain.
-ArrayList för CustomRoutes används sedan för att fylla i rutorna i komponenten![AssignTask](assets/arraylist.jpg)när ArrayList-variabeln CustomRoutes initieras med värden från skickade data, fylls rutorna i med variabeln CustomRoutes. På skärmbilden nedan visas de anpassade vägarna i en AssignTask![asingtask](assets/customactions.jpg)
+ArrayList för CustomRoutes används sedan för att fylla i rutorna i komponenten AssignTask
+![anpassade vägar](assets/arraylist.jpg)
+När variabeln CustomRoutes ArrayList initieras med värden från skickade data fylls rutorna för komponenten AssignTask i med variabeln CustomRoutes. På skärmbilden nedan visas de anpassade vägarna i en AssignTask
+![asingtask](assets/customactions.jpg)
 
 Så här testar du arbetsflödet på datorn:
 
 * Hämta och spara filen ArrayListVariable.zip i filsystemet
-* [Importera zip-filen](assets/arraylistvariable.zip) med AEM Package Manager
+* [Importera zip-](assets/arraylistvariable.zip) filen med AEM Package Manager
 * [Öppna formuläret TravelExpenseReport](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * Ange ett par utgifter och namnen på de två cheferna
 * Tryck på skicka-knappen
