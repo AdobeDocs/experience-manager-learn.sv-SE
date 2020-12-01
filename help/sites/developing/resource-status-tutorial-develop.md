@@ -15,7 +15,7 @@ ht-degree: 1%
 ---
 
 
-# Utveckla resursstatus {#developing-resource-statuses-in-aem-sites}
+# Utvecklar resursstatus {#developing-resource-statuses-in-aem-sites}
 
 Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden AEM olika redigeringswebbgränssnitt.
 
@@ -42,21 +42,21 @@ När du utvecklar anpassade resursstatusar består utvecklingsarbetet av:
 
    ![resursstatusarkitektur](assets/sample-editor-resource-status-application-architecture.png)
 
-3. Statusresursen som tillhandahålls som en del av redigerarna för sidan, Experience Fragment och Template ges en typ via egenskapen &quot;[!DNL statusType]&quot; för resurserna.
+3. Statusresursen som tillhandahålls som en del av redigerarna för sidan, upplevelsefragment och mall får en typ via egenskapen [!DNL statusType] för resurserna.
 
    * Sidredigerare: `editor`
    * Experience Fragment editor: `editor`
    * Mallredigerare: `template-editor`
 
-4. Statusresursens `statusType` matchas mot den registrerade `CompositeStatusType` OSGi-konfigurerade `name` egenskapen.
+4. Statusresursens `statusType` matchar den registrerade egenskapen `CompositeStatusType` OSGi konfigurerad `name`.
 
-   För alla matchningar samlas `CompositeStatusType's` typerna in och används för att samla in de implementeringar som har den här typen via `ResourceStatusProvider` `ResourceStatusProvider.getType()`.
+   För alla matchningar samlas `CompositeStatusType's`-typerna in och används för att samla in `ResourceStatusProvider`-implementeringar som har den här typen, via `ResourceStatusProvider.getType()`.
 
-5. Matchningen `ResourceStatusProvider` skickas `resource` i redigeraren och avgör om statusen `resource` ska visas. Om status krävs ansvarar den här implementeringen för att skapa 0 eller många `ResourceStatuses` som ska returneras, och var och en representerar en status som ska visas.
+5. Matchande `ResourceStatusProvider` skickas som `resource` i redigeraren och avgör om `resource` har status att visa. Om status krävs ansvarar den här implementeringen för att skapa 0 eller många `ResourceStatuses` som ska returneras, och var och en representerar en status som ska visas.
 
-   Normalt `ResourceStatusProvider` returneras 0 eller 1 `ResourceStatus` per `resource`.
+   Vanligtvis returnerar en `ResourceStatusProvider` 0 eller 1 `ResourceStatus` per `resource`.
 
-6. ResourceStatus är ett gränssnitt som kan implementeras av kunden eller så `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kan hjälpmedlet användas för att skapa en status. En status består av:
+6. ResourceStatus är ett gränssnitt som kan implementeras av kunden eller så kan hjälpmedlet `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` användas för att konstruera en status. En status består av:
 
    * Titel
    * Meddelande
@@ -66,7 +66,7 @@ När du utvecklar anpassade resursstatusar består utvecklingsarbetet av:
    * Åtgärder
    * Data
 
-7. Om `Actions` det finns ett alternativ för `ResourceStatus` objektet krävs stödklienter för att binda funktioner till åtgärdslänkarna i statusfältet.
+7. Om `Actions` anges för `ResourceStatus`-objektet krävs stödklienter för att binda funktioner till åtgärdslänkarna i statusfältet.
 
    ```js
    (function(jQuery, document) {
