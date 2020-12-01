@@ -36,11 +36,13 @@ Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Arch
 
 ### Skapa klass som implementerar WorkflowProcess
 
-Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera **projektnamn** > **kärnmapp** . Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Den körda metodens signatur är som följer: execute(WorkItem, WorkflowSession, workflowSession, MetaDataMap processArguments) returnerar WorkflowExceptionKörningsmetoden ger åtkomst till följande tre variabler
+Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera mappen **projektnamn** > **core**. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande
+public void execute(WorkItem workItem, WorkflowSession, workflowSession, MetaDataMap processArguments)returnerar WorkflowException
+Körningsmetoden ger åtkomst till följande tre variabler
 
-**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen finns [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen finns [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
 **MetaDataMap**: Alla metadata som är associerade med arbetsflödet. Alla processargument som skickas till processsteget är tillgängliga med MetaDataMap-objektet.[API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -134,7 +136,8 @@ Resten av koden skapar Document-objekt genom att iterera genom det underordnade 
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen här](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
+[Bygg paketet enligt beskrivningen ](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[härKontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.
 
