@@ -28,7 +28,7 @@ Så här ställer du in tomcat:
 
 1. Hämta och installera JDK1.8.
 2. Ställ in JAVA_HOME till att peka på JDK1.8.
-3. Ladda ned [tomcat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
+3. Hämta [tomcat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
 4. Ladda ned tomcat-versionen av din inställning. Du kan ladda ned zip-filen för 64-bitarsfönster under kärnavsnittet.
 5. Packa upp innehållet till c:\tomcat.
 6. Du bör se något liknande i din c-enhet **c:\tomcat\apache-tomcat-8.5.27** beroende på vilken version av din tomcat du har
@@ -36,7 +36,7 @@ Så här ställer du in tomcat:
 8. Kopiera filen SampleRest.war till webbappen för din Tomcat-installation
 9. Starta nytt kommandotolkfönster.
 10. Navigera till &lt;tomcat install folder>\bin och kör startup.bat
-11. När tomcat har startat testar du slutpunkten som visas av WAR-filen genom att [klicka här](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+11. När tomcat har startats testar du slutpunkten som visas av WAR-filen genom att [klicka här](http://localhost:8080/SampleRest/webapi/getStatement/9586)
 12. Du bör hämta exempeldata som resultat av det här anropet.
 
 Grattis!!!! Du har konfigurerat för att katt och distribuerat filen SampleRest.war.
