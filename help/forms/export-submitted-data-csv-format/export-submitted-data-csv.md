@@ -22,14 +22,18 @@ Kunder vill vanligtvis exportera inskickade formulärdata i CSV-format. I den h�
 >
 >Det här exemplet fungerar bara med Adaptiv Forms som inte är baserad på schemat eller formulärdatamodellen
 
-![Tabellstruktur](assets/tablestructure.PNG)Som du ser är schemats namn en självstudiekurs.I det här schemat är tabellformaten inskickade med följande kolumner definierade
+![TabellstrukturNär du kan se namnet på schemat är en ](assets/tablestructure.PNG)
+självstudiekurs.I det här schemat är tabellformaten som skickas med följande kolumner definierade
 
 * formulärdata: Den här kolumnen innehåller skickade formulärdata
 * formulärnamn: Den här kolumnen innehåller namnet på det skickade formuläret
 * id: Det här är primärnyckeln och ställs in på automatisk ökning
 
 Tabellnamnet och namnen på två kolumner visas som OSGi-konfigurationsegenskaper enligt skärmbilden nedan:
-![osgi-configuration](assets/configuration.PNG)Koden kommer att läsa dessa värden och konstruera rätt SQL-fråga som ska köras. Följande fråga kommer till exempel att köras baserat på ovanstående värden **SELECT formdata FROM aemformstutorial.formsending där formname=timeoffrequest form** I ovanstående fråga kommer namnet på formuläret(timeoffrequestForm) att skickas som request-parameter till servern.
+![osgi-configuration](assets/configuration.PNG)
+Koden kommer att läsa dessa värden och skapa rätt SQL-fråga som ska köras. Följande fråga kommer till exempel att köras baserat på värdena ovan
+**SELECT formdata FROM aemformstutorial.formsending where formname=timeoffrequestForm**
+I ovanstående fråga skickas namnet på formuläret(timeoffrequestForm) som request-parameter till serverleten.
 
 ## **Skapa OSGi-tjänst**
 
@@ -37,7 +41,7 @@ Följande OSGI-tjänst skapades för att exportera skickade data i CSV-format.
 
 * Rad 37: Vi använder den poolade DataSource för Apache Sling-anslutningen.
 
-* Rad 89: Detta är startpunkten till tjänsten. Metoden `getCSVFile(..)` tar formName som indataparameter och hämtar skickade data som gäller det angivna formulärnamnet.
+* Rad 89: Det här är startpunkten till tjänsten. Metoden `getCSVFile(..)` har formenName som indataparameter och hämtar inskickade data som gäller det angivna formulärnamnet.
 
 >[!NOTE]
 >
@@ -257,7 +261,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-Nedan följer serverkoden som anropar tjänstens `getCSVFile(..)` metod. Tjänsten returnerar StringBuffer-objektet som sedan direktuppspelas tillbaka till det anropande programmet
+Nedan följer serverkoden som anropar metoden `getCSVFile(..)` för tjänsten. Tjänsten returnerar StringBuffer-objektet som sedan direktuppspelas tillbaka till det anropande programmet
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -299,6 +303,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### Distribuera på servern
 
-* Importera [SQL-filen](assets/formsubmissions.sql) till MySQL-servern med MySQL Workbench. Detta skapar ett schema som kallas **aemformstutorial** och en tabell som kallas **formskickningar** med vissa exempeldata.
+* Importera [SQL-filen](assets/formsubmissions.sql) till MySQL-servern med MySQL Workbench. Schemat **aemformstutorial** skapas och tabellen **formSubmit** skapas med vissa exempeldata.
 * Distribuera [OSGi Bundle](assets/store-export.jar) med Felix webbkonsol
 * [För att hämta TimeOffRequest-överföringar](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). Du bör få CSV-filen strömmad tillbaka till dig.
