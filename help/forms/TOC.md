@@ -6,10 +6,10 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Konfigurera OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
-+ Skapa ditt första anpassade formulär {#creating-your-first-adaptive-form}
++ Skapar ditt första anpassade formulär {#creating-your-first-adaptive-form}
    + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -29,7 +29,7 @@ ht-degree: 1%
    + [Lägga till tabell på resultatpanelen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ Hantera inskickning av formulär {#handling-af-form-submissions}
++ Hantera formuläröverföringar {#handling-af-form-submissions}
    + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Visar sidan Tack](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -83,7 +83,7 @@ ht-degree: 1%
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
++ Fylla i anpassat formulär i förväg med formulärdatamodell{#prefill-fdm-db}
    + [Introduktion](prefill-fdm-db/introduction.md)
    + [Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
    + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
@@ -135,12 +135,12 @@ ht-degree: 1%
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Introduktion](storing-retrieving-form-data/introduction.md)
    + [Konfigurera datakälla](storing-retrieving-form-data/part1.md)
-   + [Servern för lagring av data](storing-retrieving-form-data/part2.md)
-   + [Tjänst för att hämta data](storing-retrieving-form-data/part3.md)
+   + [Tjänsten lagrar data](storing-retrieving-form-data/part3.md)
+   + [Skapa server](storing-retrieving-form-data/part2.md)
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
++ Utlösa AEM från inskickning av mobilformulär{#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
    + [Hantera inskickning av PDF](offline-mobile-form-submission/part-two.md)
@@ -155,7 +155,7 @@ ht-degree: 1%
 + Visar anpassade tillgångstyper i Forms Portal{#listing-custom-asset-types}
    + [Del1-Registrera anpassade tillgångstyper](listing-custom-asset-types/part1.md)
    + [Del2 - Skapa anpassad mall](listing-custom-asset-types/part2.md)
-+ AEM Forms med Marketo{#aem-forms-with-marketo}
++ AEM Forms With Marketo{#aem-forms-with-marketo}
    + [Del1 - Introduktion](aem-forms-with-marketo/part1.md)
    + [Del2 - Anpassad autentisering](aem-forms-with-marketo/part2.md)
    + [Del3 - Datakälla](aem-forms-with-marketo/part3.md)
@@ -168,7 +168,7 @@ ht-degree: 1%
    + [Del3 - Fylla i formulär i förväg med ACS-profilinformation](aem-forms-with-adobe-campaign/partthree.md)
    + [Del 4 - Skapa ACS-profil med hjälp av formulärdatamodell](aem-forms-with-adobe-campaign/partfour.md)
 
-+ Document Services {#document-services}
++ Dokumenttjänster {#document-services}
    + [Använda Assembler Service i AEM Forms](document-services/using-assembler-service-in-aem-forms.md)
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Använda streckkodstjänsten i AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
