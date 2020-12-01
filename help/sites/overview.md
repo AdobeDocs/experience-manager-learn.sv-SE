@@ -19,11 +19,11 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 ## Nyheter
 
-* **[Komma igång med AEM och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) (självstudiekurs)**
+* **[Komma igång med AEM och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)  (självstudiekurs)**
 
    *A getting started guide for developers to integrated a single page applications (SPA) with AEM using React*
 
-* **[Komma igång med AEM och vinkelredigerare](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) (självstudiekurs)**
+* **[Komma igång med AEM och vinkelredigerare](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)  (självstudiekurs)**
 
    *A getting started guide for developers to integrated a single page applications (SPA) with AEM using Angular*
 
