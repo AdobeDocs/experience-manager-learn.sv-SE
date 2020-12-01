@@ -29,7 +29,7 @@ I den här artikeln ska vi ta en titt på följande
 * Utdatatjänst - Den här tjänsten används vanligtvis för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf
 * FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer
 
-Den officiella javadoc-filen för AEM Forms API finns [här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+Den officiella javadoc-filen för AEM Forms API visas [här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 Följande kodfragment exporterar data från PDF-filen
 
@@ -67,10 +67,16 @@ Rad 6 exporterar xmlData från PDF-filen
 1. /content/AemFormsSamples/exportdata
 1. /content/help/seFormsSamples/outputService
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan man begära POST från servern. Installera appen Postman på datorn.
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan man begära POST från servern. Installera appen Postman på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 
-Se till att du har valt &quot;POST&quot; i listrutanhttp://localhost:4502/content/AemFormsSamples/exportdata.htmläkerhet att du anger &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord för servernNavigera till fliken &quot;Brödtext&quot; och ange de frågeparametrar som visas i bilden under![exporten](assets/postexport.png). Klicka sedan på knappen Skicka
+Se till att du har valt &quot;POST&quot; i listrutan
+http://localhost:4502/content/AemFormsSamples/exportdata.html
+Ange&quot;Authorization&quot; som&quot;Basic Auth&quot;. Ange AEM användarnamn och lösenord
+Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för förfrågningen som visas i bilden nedan
+![export](assets/postexport.png)
+Klicka sedan på knappen Skicka
 
 Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänsten eller Forms-tjänsten ska användas, tjänstens URL, indataparametrar som förväntas av varje tjänst
 
