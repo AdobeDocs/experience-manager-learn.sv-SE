@@ -39,7 +39,7 @@ Autentiseringstypen är anpassad och autentiseringsimplementeringen måste match
 
 När du har konfigurerat datakällan är nästa steg att skapa en formulärdatamodell som baseras på den datakälla som konfigurerats i det tidigare steget. Så här skapar du en formulärdatamodell:
 
-Peka webbläsaren på sidan för [dataintegrering.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Här visas alla dataintegreringar som har skapats på din AEM.
+Peka webbläsaren på sidan [dataintegreringar.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Här visas alla dataintegreringar som har skapats på din AEM.
 
 1. Klicka på Skapa | Formulärdatamodell
 1. Ange beskrivande titel som FormsAndMarketo och klicka på Nästa
