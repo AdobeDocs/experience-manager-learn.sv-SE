@@ -1,5 +1,5 @@
 ---
-title: Automatiserad Forms Conversion Service
+title: Tjänsten Automated forms conversion
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ---
 
-# Automatiserad Forms Conversion Service
+# Tjänsten Automated forms conversion
 
-I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated Forms Conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation. Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
+I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation. Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
 * Installera, konfigurera och administrera Adobe Experience Manager- och AEM-paket,
 * Med operativsystemen Linux och Microsoft Windows
@@ -25,17 +25,17 @@ I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated Form
 
 ## Förutsättningar:
 
-Du behöver följande för att kunna använda den automatiska Forms Conversion Service:
+Du behöver följande för att kunna använda tjänsten Automated forms conversion:
 
-* Automatiserad Forms Conversion-tjänst är aktiverad för din organisation
+* Tjänsten Automated forms conversion är aktiverad för din organisation
 * Ett Adobe ID-konto med administratörsbehörighet för konverteringstjänsten
 * En AEM 6.4- eller AEM 6.5-författarinstans med senaste AEM Service Pack
 * En AEM användare (i din AEM instans) som är medlem i användargruppen formulär
 
 >[!NOTE]
->Följande video visas när Adobe har aktiverat åtkomst för din organisation och ger administratören nödvändiga behörigheter. Administratören kan logga in på Admin Console, skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till den automatiska Forms Conversion-tjänsten i Adobe Cloud.
+>Följande video visas när Adobe har aktiverat åtkomst för din organisation och ger administratören nödvändiga behörigheter. Administratören kan logga in på Admin Console, skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till tjänsten Automated forms conversion i Adobe Cloud.
 
-* I videon förklaras de steg som krävs för att ansluta din lokala AEM Forms-instans till den automatiska Forms Conversion-tjänsten i Adobe Cloud.
+* I videon förklaras de steg som krävs för att ansluta din lokala AEM Forms-instans till tjänsten Automated forms conversion i Adobe Cloud.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493/?quality=9&learn=on)
 
