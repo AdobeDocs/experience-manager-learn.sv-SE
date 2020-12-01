@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Översikt {#overview}
 
-Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgängliga för användare av AEM Sites [!DNL Assets] och [!DNL Forms].
+Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgängliga för användare av AEM Sites, [!DNL Assets] och [!DNL Forms].
 
 ## Nyheter
 
 * **[Använd arbetsflödeshantering i AEM (video)](./workflow/use-workflow-management.md)**
-   *AEM ger synlighet i pågående arbetsflöden och underlättar hanteringen av [!DNL Workflow] definitioner.*
+   *AEM ger synlighet i pågående arbetsflöden och underlättar hanteringen av  [!DNL Workflow] definitioner.*
 
 * **[Förstå Cloud Manager för AEM (video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
 
 * **[Konfigurera offentliga och privata nycklar för användning med Adobe I/O (självstudiekurs)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Lär dig hur nycklar och nyckelbehållare genereras med [!DNL openssl] det som fungerar med AEM och Adobe I/O.*
+   *Lär dig hur nycklar och nyckelbehållare genereras  [!DNL openssl] som fungerar med AEM och Adobe I/O.*
 
 * **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
