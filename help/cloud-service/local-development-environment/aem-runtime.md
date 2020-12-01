@@ -28,7 +28,7 @@ Observera att `~` används som kortskrift för användarens katalog. I Windows m
 
 Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utvecklingsverktygen.
 
-1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Kontrollera att Java 11 SDK är installerat genom att köra kommandot:
    + Windows:`java -version`
    + macOS / Linux: `java --version`
@@ -41,26 +41,26 @@ AEM som Cloud Service-SDK, eller AEM SDK, innehåller den QuickStart Jar som anv
 
 1. Logga in på [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) med din Adobe ID
    + Observera att din Adobe-organisation __måste__ etableras för AEM som Cloud Service för att kunna hämta AEM som en Cloud Service-SDK.
-1. Navigera till __AEM som en Cloud Service__ -flik
-1. Sortera efter __publiceringsdatum__ i __fallande__ ordning
-1. Klicka på den senaste __AEM SDK__ -resultatraden
-1. Granska och godkänn slutanvändaravtalet och tryck på knappen __Hämta__ .
+1. Navigera till fliken __AEM som en Cloud Service__
+1. Sortera efter __Publiceringsdatum__ i __Fallande__ ordning
+1. Klicka på den senaste __AEM SDK__-resultatraden
+1. Granska och godkänn slutanvändaravtalet och tryck på knappen __Hämta__
 
 ## Extrahera Quickstart Jar från AEM SDK-zip
 
-1. Zippa upp den hämtade `aem-sdk-XXX.zip` filen
+1. Zippa upp den hämtade `aem-sdk-XXX.zip`-filen
 
 ## Konfigurera lokal AEM Author-tjänst{#set-up-local-aem-author-service}
 
 Den lokala AEM Author Service ger utvecklare en lokal upplevelse som digitala marknadsförare/innehållsförfattare delar för att skapa och hantera innehåll.  AEM Author Service är utformad både som en redigerings- och förhandsvisningsmiljö, vilket gör att de flesta valideringar av funktionsutveckling kan utföras mot den, vilket gör den till en viktig del av den lokala utvecklingsprocessen.
 
 1. Skapa mappen `~/aem-sdk/author`
-1. Kopiera __QuickStart JAR__ -filen till `~/aem-sdk/author` och ge den ett nytt namn `aem-author-p4502.jar`
+1. Kopiera __Quickstart JAR__-filen till `~/aem-sdk/author` och ge den ett nytt namn till `aem-author-p4502.jar`
 1. Starta den lokala AEM Author Service genom att köra följande från kommandoraden:
    + `java -jar aem-author-p4502.jar`
       + Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 
-   Du *kan inte* starta AEM som Cloud Service Quickstart Jar [genom att dubbelklicka](#troubleshooting-double-click).
+   Du *kan inte* starta AEM som Cloud Service Quickstart Jar [genom att dubbelklicka på](#troubleshooting-double-click).
 1. Gå till den lokala AEM Author Service på [http://localhost:4502](http://localhost:4502) i en webbläsare
 
 Windows:
@@ -83,16 +83,16 @@ $ java -jar aem-author-p4502.jar
 
 ## Konfigurera lokal AEM-publiceringstjänst
 
-Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som slutanvändarna av AEM har, till exempel genom att bläddra på den webbplats som är AEM. En lokal AEM Publish Service är viktig eftersom den integreras med AEM SDK:s [Dispatcher-verktyg](./dispatcher-tools.md) och gör att utvecklare kan röka och finjustera slutanvändarupplevelsen.
+Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som slutanvändarna av AEM har, till exempel genom att bläddra på den webbplats som är AEM. En lokal AEM Publish Service är viktig eftersom den integreras med AEM SDK:s [Dispatcher tools](./dispatcher-tools.md) och gör att utvecklare kan röka och finjustera slutanvändarupplevelsen.
 
 1. Skapa mappen `~/aem-sdk/publish`
-1. Kopiera __QuickStart JAR__ -filen till `~/aem-sdk/publish` och ge den ett nytt namn `aem-publish-p4503.jar`
+1. Kopiera __Quickstart JAR__-filen till `~/aem-sdk/publish` och ge den ett nytt namn till `aem-publish-p4503.jar`
 1. Starta den lokala AEM-publiceringstjänsten genom att köra följande från kommandoraden:
    + `java -jar aem-publish-p4503.jar`
       + Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 
-   Du *kan inte* starta AEM som Cloud Service Quickstart Jar [genom att dubbelklicka](#troubleshooting-double-click).
-1. Gå till den lokala AEM Publish Service på [http://localhost:4503](http://localhost:4503) i en webbläsare
+   Du *kan inte* starta AEM som Cloud Service Quickstart Jar [genom att dubbelklicka på](#troubleshooting-double-click).
+1. Gå till den lokala AEM-publiceringstjänsten på [http://localhost:4503](http://localhost:4503) i en webbläsare
 
 Windows:
 
@@ -114,9 +114,9 @@ $ java -jar aem-publish-p4503.jar
 
 ## Snabbstarta JAR-startlägen
 
-Namnet på QuickStart Jar `aem-<tier>_<environment>-p<port number>.jar` anger hur det ska börja. När AEM har startats i ett visst skikt, författare eller publicering kan det inte ändras till det alternativa skiktet. För att göra detta måste den `crx-Quickstart` mapp som skapades under den första körningen tas bort och Quickstart Jar måste köras igen. Miljö och portar kan ändras, men de kräver stopp/start för den lokala AEM.
+Namnet på QuickStart Jar, `aem-<tier>_<environment>-p<port number>.jar`, anger hur det kommer att starta. När AEM har startats i ett visst skikt, författare eller publicering kan det inte ändras till det alternativa skiktet. Om du vill göra det måste mappen `crx-Quickstart` som genereras under den första körningen tas bort och QuickStart Jar måste köras igen. Miljö och portar kan ändras, men de kräver stopp/start för den lokala AEM.
 
-Förändrade miljöer, `dev`och `stage` `prod`kan vara användbara för utvecklare för att säkerställa att miljöspecifika konfigurationer definieras korrekt och löses av AEM. Vi rekommenderar att lokal utveckling i första hand utförs mot standardmiljöns `dev` körläge.
+Förändrade miljöer, `dev`, `stage` och `prod`, kan vara användbara för utvecklare för att säkerställa att miljöspecifika konfigurationer definieras och löses korrekt av AEM. Vi rekommenderar att lokal utveckling primärt utförs mot standardmiljöns körläge `dev`.
 
 Tillgängliga permutationer är följande:
 
@@ -139,8 +139,8 @@ Tillgängliga permutationer är följande:
 
 Observera att portnumret kan vara vilken tillgänglig port som helst på den lokala utvecklingsdatorn, men enligt konvention:
 
-+ Port __4502__ används för den __lokala AEM Author-tjänsten__
-+ Port __4503__ används för den __lokala AEM-publiceringstjänsten__
++ Port __4502__ används för den lokala AEM Author-tjänsten ____
++ Porten __4503__ används för den lokala AEM-publiceringstjänsten ____
 
 Om du ändrar dessa kan du behöva justera AEM SDK-konfigurationer
 
@@ -161,14 +161,14 @@ Uppdatera AEM SDK minst en gång i månaden, eller kort efter, den sista torsdag
 Genom att uppgradera AEM SDK skapas en helt ny AEM, inklusive en ny databas, vilket innebär att ändringar som gjorts i en tidigare AEM SDK-databas går förlorade. Följande är användbara strategier för att hjälpa till med bestående innehåll mellan AEM SDK-uppgraderingar och kan användas diskret eller i kombination:
 
 1. Skapa ett innehållspaket som är avsett för att innehålla exempelinnehåll som ska vara till hjälp vid utvecklingen, och behåll det i Git. Allt innehåll som ska bevaras genom AEM SDK-uppgraderingar kommer att finnas kvar i det här paketet och återdistribueras efter uppgraderingen av AEM SDK.
-1. Använd [ekuponvertering](https://jackrabbit.apache.org/oak/docs/migration.html) med `includepaths` direktivet för att kopiera innehåll från den tidigare AEM SDK-databasen till den nya AEM SDK-databasen.
+1. Använd [eko-uppgradering](https://jackrabbit.apache.org/oak/docs/migration.html) med `includepaths`-direktivet för att kopiera innehåll från den tidigare AEM SDK-databasen till den nya AEM SDK-databasen.
 1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på föregående AEM SDK och installera om dem på nya AEM SDK.
 
 Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar, så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
 
 ## Felsökning
 
-## Om du dubbelklickar på Quickstart JAR-filen uppstår ett fel{#troubleshooting-double-click}
+## Om du dubbelklickar på filen Quickstart JAR uppstår ett fel{#troubleshooting-double-click}
 
 När du dubbelklickar på QuickStart Jar för att starta visas ett felmodalt fel som förhindrar att AEM startas lokalt.
 
@@ -176,7 +176,7 @@ När du dubbelklickar på QuickStart Jar för att starta visas ett felmodalt fel
 
 Detta beror på att AEM som Cloud Service QuickStart Jar inte stöder dubbelklickning av QuickStart Jar för att starta AEM lokalt. Du måste i stället köra JAR-filen från kommandoraden.
 
-Så här startar du AEM Author-tjänsten `cd` i katalogen som innehåller snabbstartsverktyget och kör kommandot:
+Om du vill starta AEM Author-tjänsten `cd` i katalogen som innehåller snabbstartsverktyget och kör kommandot:
 
 `$ java -jar aem-author-p4502.jar`
 
@@ -184,7 +184,7 @@ eller, för att starta AEM Publish-tjänsten, `cd` i katalogen som innehåller Q
 
 `$ java -jar aem-author-p4503.jar`
 
-## Starten av snabbstartsgaren från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
+## Starten av Quickstart Jar från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
 
 När du startar Quickstart Jar från kommandoraden avbryts processen omedelbart och AEM startar inte, med följande fel:
 
@@ -199,7 +199,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 När Java SDK 11 har installerats kontrollerar du att det är den aktiva versionen genom att köra följande från kommandoraden.
 
 När Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
