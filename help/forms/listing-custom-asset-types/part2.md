@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# Visar anpassade tillgångstyper i AEM Forms {#listing-custom-asset-types-in-aem-forms}
+# Visar anpassade resurstyper i AEM Forms {#listing-custom-asset-types-in-aem-forms}
 
-## Skapa anpassad mall {#creating-custom-template}
+## Skapar anpassad mall {#creating-custom-template}
 
 
 I den här artikeln kommer vi att skapa en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
 
 1. Skapa en sling: under /apps. Ge den namnet &quot;myportalcomponent&quot;
-1. Lägg till en fpContentType-egenskap. Ange värdet till &quot;**/libs/fd/ fp/formTemplate&quot;.**
+1. Lägg till en fpContentType-egenskap. Ange värdet som **/libs/fd/ fp/formTemplate&quot;.**
 1. Lägg till en title-egenskap och ställ in dess värde på &quot;custom template&quot;. Det här namnet visas i listrutan för sök- och listkomponenten
 1. Skapa en&quot;template.html&quot; under den här mappen. Den här filen innehåller koden för att formatera och visa de olika resurstyperna.
 
@@ -114,4 +114,5 @@ Nu när du har konfigurerat söknings- och listportalkomponenten är det dags at
 >
 >Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att du ger&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
 
-![assettypes](assets/assettypeslistings.png)[Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som ska användas som resurstyper för att lista med hjälp av sök- och listkomponenten
+![Resurstyper ](assets/assettypeslistings.png)
+[Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som ska användas som resurstyper för att lista med hjälp av sök- och listkomponenten
