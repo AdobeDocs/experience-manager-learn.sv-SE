@@ -34,7 +34,7 @@ I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar 
 1. Ange användartypen som data och klicka på den gröna ikonen för att slutföra processen att skapa systemanvändaren
 1. [Öppna configMgr](http://localhost:4502/system/console/configMgr)
 1. Sök efter &#39; Apache Sling Service User Mapper Service &#39; och klicka för att öppna egenskaperna
-1. Klicka på *+* -ikonen (plus) för att lägga till följande Service Mapping
+1. Klicka på ikonen *+* (plus) för att lägga till följande tjänstmappning
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -49,7 +49,7 @@ Vi kan också hämta resurslösare för Fd-service-användare. Den här tjänsta
 1. Navigera till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. Ladda upp och starta OSGi-paketet
 1. Kontrollera att paketet är i aktivt läge
-1. Du har nu skapat en *systemanvändare* och även distribuerat *tjänstanvändarpaketet*.
+1. Du har nu skapat en *systemanvändare* och distribuerat *tjänstanvändarpaketet*.
 
    Ge systemanvändaren (&#39; data &#39;) läsbehörighet på innehållsnoden för att ge åtkomst till /content.
 
