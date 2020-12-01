@@ -10,7 +10,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '4652'
+source-wordcount: '4649'
 ht-degree: 0%
 
 ---
@@ -28,24 +28,24 @@ Det här är en självstudiekurs om utveckling som visar hur du utvecklar för [
 
 [[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
 
-AEM innehåller flera [OOTB-projektmallar](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). När du skapar ett nytt projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi ska titta närmare på strukturen för en projektmall och skapa en exempelmall.
+AEM innehåller flera [OTB-projektmallar](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). När du skapar ett nytt projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi ska titta närmare på strukturen för en projektmall och skapa en exempelmall.
 
 ![Anpassat projektkort](./assets/develop-aem-projects/custom-project-card.png)
 
 ## Inställningar
 
-Den här självstudiekursen stegar igenom koden som behövs för att skapa en anpassad projektmall. Du kan hämta och installera det [bifogade paketet](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) i en lokal miljö för att följa med i självstudiekursen. Du kan även komma åt hela Maven-projektet på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide).
+Den här självstudiekursen stegar igenom koden som behövs för att skapa en anpassad projektmall. Du kan hämta och installera det [bifogade paketet](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) till en lokal miljö som du följer tillsammans med självstudiekursen. Du kan även komma åt hela Maven-projektet på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide).
 
 * [Självstudiepaketet har slutförts](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-I den här självstudiekursen förutsätts en del grundläggande kunskaper om [AEM utvecklingsmetoder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html) och viss vana vid [AEM projektinställningar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html)för Maven. All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+I den här självstudiekursen förutsätts vissa grundläggande kunskaper i [AEM utvecklingspraxis](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html) och viss vana vid [AEM Maven project setup](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). All kod som nämns ska användas som referens och ska endast distribueras till en [lokal AEM](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted)-instans.
 
 ## Struktur för en projektmall
 
-Projektmallar ska placeras under källkontroll och finnas under programmappen under /apps. De bör placeras i en undermapp med namnkonventionen ***/projects/templates/**&lt;my-template>. Genom att använda den här namnkonventionen blir alla nya anpassade mallar automatiskt tillgängliga för författare när de skapar ett projekt. Konfigurationen av tillgängliga projektmallar är: **/content/projects/jcr:content** -nod av **egenskapen cq:allowedTemplates** . Som standard är detta ett reguljärt uttryck: **/(apps|libs)/.*/projects/templates/.***
+Projektmallar ska placeras under källkontroll och finnas under programmappen under /apps. De bör placeras i en undermapp med namnkonventionen ***/projects/templates/**&lt;min-mall>. Genom att använda den här namnkonventionen blir alla nya anpassade mallar automatiskt tillgängliga för författare när de skapar ett projekt. Konfigurationen av tillgängliga projektmallar är: **/content/projects/jcr:content**-noden av egenskapen **cq:allowedTemplates**. Som standard är detta ett reguljärt uttryck: **/(apps|libs)/.*/projects/templates/.***
 
-Rotnoden för en projektmall kommer att ha **jcr:primärType** för **cq:Template**. Under rotnoden finns tre noder: **gadgets**, **roller** och **arbetsflöden**. Alla dessa noder är **inte:ostrukturerade**. Under rotnoden kan även en miniatyrbild.png-fil visas när du väljer mallen i guiden Skapa projekt.
+Rotnoden för en projektmall kommer att ha **jcr:primaryType** **cq:Template**. Under rotnoden finns tre noder: **gadgets**, **roller** och **arbetsflöden**. Alla de här noderna är **not:undefined**. Under rotnoden kan även en miniatyrbild.png-fil visas när du väljer mallen i guiden Skapa projekt.
 
 Den fullständiga nodstrukturen:
 
@@ -61,23 +61,23 @@ Den fullständiga nodstrukturen:
 
 ### Projektmallsrot
 
-Projektmallens rotnod är av typen **cq:Template**. På den här noden kan du konfigurera egenskaperna **jcr:title** och **jcr:description** som ska visas i guiden Skapa projekt. Det finns också en egenskap som kallas **guide** som pekar på ett formulär som fyller i projektets egenskaper. Standardvärdet för: **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** fungerar bäst i de flesta fall eftersom användaren kan fylla i de grundläggande projektegenskaperna och lägga till gruppmedlemmar.
+Projektmallens rotnod är av typen **cq:Template**. På den här noden kan du konfigurera egenskaperna **jcr:title** och **jcr:description** som ska visas i guiden Skapa projekt. Det finns också en egenskap med namnet **guide** som pekar på ett formulär som fyller i projektets egenskaper. Standardvärdet för: **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** bör fungera i de flesta fall eftersom användaren kan fylla i de grundläggande projektegenskaperna och lägga till gruppmedlemmar.
 
-**Observera att serververktyget för att skapa projekt inte använder POSTEN Sling. Värden bokförs i stället på en anpassad servlet:**com.adobe.cq.projects.impl.servlet.ProjectServlet**. Detta bör beaktas när du lägger till anpassade fält.*
+**Observera att serververktyget för att skapa projekt inte använder POSTEN Sling. Värden bokförs i stället på en anpassad servlet:**com.adobe.cq.projects.impl.servlet.ProjectServlet**. Detta bör beaktas när anpassade fält läggs till.*
 
 Ett exempel på en anpassad guide finns för översättningsprojektmallen: **/libs/cq/core/content/projects/wizard/translationproject/defaultproject**.
 
 ### Gadgets {#gadgets}
 
-Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) (kallas även gadgets eller pods) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista med flikpaneler finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
+Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles)  (även kallade gadgets eller pods) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista med flikpaneler finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
 
 ### Roller {#roles}
 
-Det finns tre [standardroller](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) för varje projekt: **Observatörer**, **redigerare** och **ägare**. Genom att lägga till underordnade noder under rollnoden kan du lägga till ytterligare företagsspecifika projektroller för mallen. Du kan sedan koppla rollerna till specifika arbetsflöden som är kopplade till projektet.
+Det finns tre [standardroller](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) för varje projekt: **Observrar**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under rollnoden kan du lägga till ytterligare företagsspecifika projektroller för mallen. Du kan sedan koppla rollerna till specifika arbetsflöden som är kopplade till projektet.
 
 ### Arbetsflöden {#workflows}
 
-Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under **arbetsflödesnoden** måste det finnas en **modellnod** (även `nt:unstructured`) och underordnade noder under de tillgängliga arbetsflödesmodellerna. Egenskapen **modelId **pekar på arbetsflödesmodellen under /etc/workflow och **egenskapsguiden** pekar på den dialogruta som användes när arbetsflödet startades. En stor fördel med Projekt är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan driva vidare åtgärder i arbetsflödet.
+Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under noden **workflows** måste det finnas en **modellnod** (även `nt:unstructured`) och underordnade noder under de tillgängliga arbetsflödesmodellerna. Egenskapen **modelId **pekar på arbetsflödesmodellen under /etc/workflow och egenskapen **guide** pekar på den dialogruta som användes när arbetsflödet startades. En stor fördel med Projekt är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan driva vidare åtgärder i arbetsflödet.
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -88,11 +88,11 @@ Ett av de mest lockande skälen till att du skapar en anpassad projektmall är a
                    - wizard = dialog used to start the workflow
 ```
 
-## Creating a project template {#creating-project-template}
+## Skapa en projektmall {#creating-project-template}
 
-Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda CRXDE Lite. Öppna [CRXDE Lite i den lokala AEM instansen](http://localhost:4502/crx/de/index.jsp).
+Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda CRXDE Lite. Öppna [CRXDE Lite](http://localhost:4502/crx/de/index.jsp) i den lokala AEM instansen.
 
-1. Börja med att skapa en ny mapp under `/apps/&lt;your-app-folder&gt;` namnet `projects`. Skapa en annan mapp under namnet `templates`.
+1. Börja med att skapa en ny mapp under `/apps/&lt;your-app-folder&gt;` med namnet `projects`. Skapa en annan mapp under som heter `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -102,7 +102,7 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
 
 1. För att göra det enklare kommer vi att starta vår anpassade mall från den befintliga mallen för enkla projekt.
 
-   1. Kopiera och klistra in noden **/libs/cq/core/content/projects/templates/default** under *mallmappen* som skapades i steg 1.
+   1. Kopiera och klistra in noden **/libs/cq/core/content/projects/templates/default** under mappen *templates* som skapades i steg 1.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -110,11 +110,11 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
                      + default (cq:Template)
    ```
 
-1. Nu bör du ha en sökväg som **/apps/aem-guides/projects-tasks/projects/templates/authoring-project**.
+1. Du bör nu ha en sökväg som **/apps/aem-guides/projects-tasks/projects/templates/authoring-project**.
 
-   1. Redigera egenskaperna **jcr:title** och **jcr:description** för noden author-project till anpassade värden för title och description.
+   1. Redigera egenskaperna **jcr:title** och **jcr:description** för noden author-project till anpassade titel- och beskrivningsvärden.
 
-      1. Låt **guideegenskapen** peka mot standardprojektegenskaperna.
+      1. Lämna **wizard**-egenskapen som pekar på standardprojektegenskaperna.
 
    ```shell
    /apps/aem-guides/projects-tasks/projects/
@@ -126,8 +126,8 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
    ```
 
 1. För den här projektmallen vill vi använda uppgifter.
-   1. Lägg till en ny **nod, not:unsigned** , under authoring-project/gadgets som kallas **uppgifter**.
-   1. Lägg till String-egenskaper i aktivitetsnoden för **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Tasks&quot; och **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;.
+   1. Lägg till en ny **nt:ostrukturerad**-nod under authoring-project/gadgets som kallas **uppgifter**.
+   1. Lägg till String-egenskaper i aktivitetsnoden för **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Aktiviteter&quot; och **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;.
 
    Nu visas [aktivitetspanelen](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks) som standard när ett nytt projekt skapas.
 
@@ -148,12 +148,12 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
 
 1. Vi ska lägga till en anpassad godkännarroll i vår projektmall.
 
-   1. Under projektmallsnoden (authoring-project) lägger du till en ny **nt:undefined** -nod med namnet **roles**.
-   1. Lägg till en annan **nod, ej strukturerad** , med namnet Godkännare som underordnad till noden Roller.
-   1. Lägg till String-egenskaper **jcr:title** = &quot;**Godkännare**&quot;, **rollClass** =&quot;**owner**&quot;, **roleid******=&quot;Godkännare¥&quot;.
+   1. Under projektmallsnoden (authoring-project) lägger du till en ny **nt:undefined**-nod med namnet **roller**.
+   1. Lägg till en annan **nt:undefined**-nod med namnet Godkännare som underordnad till rollnoden.
+   1. Lägg till strängegenskaper **jcr:title** = &quot;**Godkännare**&quot;, **rollklass** =&quot;**ägare**&quot;, **roleid**=&quot;**godkännare**&quot;.
       1. Namnet på godkännarnoden, samt jcr:title och roleid, kan vara vilket strängvärde som helst (så länge som roleid är unikt).
-      1. **rollklassen** styr behörigheter som används för den rollen baserat på de [3 OOTB-rollerna](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User roller i ett projekt): **ägare**, **redigerare** och **observatör**.
-      1. I allmänhet kan rollklassen vara **ägare om den anpassade rollen är mer av en ledarroll.** om det är en mer specifik redigeringsroll som fotografen eller Designer så räcker det med **redigeringsrollklassen** . Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
+      1. **rollklasser styr** behörigheter som används för den rollen baserat på de  [3 OOTB-rollerna] (https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User roller i ett projekt):  **ägare**,  **redigerare** och  **observatör**.
+      1. Om den anpassade rollen är mer av en ledarroll kan klassen vara **ägare;** om det är en mer specifik redigeringsroll som fotograf eller Designer så är **redigerare**-rollklass tillräcklig. Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
 
    ```shell
    ../projects/templates/authoring-project
@@ -177,9 +177,9 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
    ```
 
 1. För att göra det enkelt för innehållsförfattare att identifiera projektmallen kan du lägga till en anpassad miniatyrbild. Den rekommenderade storleken är 319 x 319 pixlar.
-   1. I CRXDE Lite skapar du en ny fil på samma nivå som gadgets, roller och arbetsflödesnoder med namnet **thumbnail.png**.
-   1. Spara och navigera sedan till `jcr:content` noden och dubbelklicka på `jcr:data` egenskapen (undvik att klicka på &#39;visa&#39;).
-      1. Då visas en dialogruta där du kan redigera `jcr:data` filen och du kan överföra en anpassad miniatyrbild.
+   1. Skapa en ny fil på samma nivå som gadgets, roller och arbetsflödesnoder med namnet **thumbnail.png** i CRXDE Lite.
+   1. Spara och navigera sedan till noden `jcr:content` och dubbelklicka på egenskapen `jcr:data` (undvik att klicka på &#39;view&#39;).
+      1. Då visas en dialogruta där du kan redigera `jcr:data`-filen och du kan överföra en anpassad miniatyrbild.
 
    ```shell
    ../projects/templates/authoring-project
@@ -270,11 +270,11 @@ Traditionellt AEM arbetsflöden som bygger på en godkännandeprocess har använ
 
 Att använda ett steg för att skapa en uppgift framför vanliga deltagarsteg ger några fördelar:
 
-* **Start- och förfallodatum** - gör det enkelt för författare att hantera sin tid. Den nya kalenderfunktionen använder dessa datum.
-* **Prioritet** - Inbyggda prioriteringar i Låg, Normal och Hög gör att författare kan prioritera arbetet
-* **Kopplade kommentarer** - när författare arbetar med en uppgift kan de lämna kommentarer vilket ökar samarbetet
-* **Synlighet** - Aktivitetsrutor och vyer med projekt gör att chefer kan se hur mycket tid som läggs på
-* **Projektintegrering** - Aktiviteter har redan integrerats med projektroller och instrumentpaneler
+* **Start- och förfallodatum**  - gör det enkelt för författare att hantera sin tid. Den nya kalenderfunktionen använder dessa datum.
+* **Prioritet**  - Inbyggt i prioritetsordningen Låg, Normal och Hög gör att författare kan prioritera arbetet
+* **Kopplade kommentarer**  - när författare arbetar med en uppgift kan de lämna kommentarer vilket ökar samarbetet
+* **Synlighet**  - Aktivitetsrutor och vyer med projekt gör att chefer kan se hur mycket tid som läggs på
+* **Projektintegrering**  - Aktiviteter har redan integrerats med projektroller och instrumentpaneler
 
 Precis som deltagarsteg kan uppgifter tilldelas och slussas dynamiskt. Metadata för uppgifter som Title, Priority (Prioritet), kan också anges dynamiskt baserat på tidigare åtgärder som vi kommer att se i följande självstudiekurs.
 
@@ -292,9 +292,9 @@ När den första uppgiften är klar har den som tilldelats tre alternativ för a
 
 **Normal **- normal routning skapar en uppgift som tilldelats projektets godkännargrupp för granskning och godkännande. Aktivitetens prioritet är Normal och förfallodatumet är 5 dagar från den dag den skapades.
 
-**Rush** - push-routning skapar också en uppgift som är tilldelad projektets godkännargrupp. Aktivitetens prioritet är Hög och förfallodatumet är bara 1 dag.
+**Rush** -russling skapar också en uppgift som är tilldelad projektets godkännargrupp. Aktivitetens prioritet är Hög och förfallodatumet är bara 1 dag.
 
-**Kringgå** - i det här exempelarbetsflödet har den initiala deltagaren möjlighet att kringgå godkännandegruppen. (ja, detta kan motverka syftet med ett godkännandearbetsflöde, men det gör det möjligt för oss att illustrera ytterligare routningsfunktioner)
+**Kringgå**  - i det här exempelarbetsflödet har den initiala deltagaren möjlighet att kringgå godkännandegruppen. (ja, detta kan motverka syftet med ett godkännandearbetsflöde, men det gör det möjligt för oss att illustrera ytterligare routningsfunktioner)
 
 Godkännargruppen kan godkänna innehållet eller skicka tillbaka det till den ursprungliga tilldelade personen för omarbete. Om en ny uppgift skickas tillbaka för återarbete skapas den och får den korrekta etiketten&quot;Skickat för återarbete&quot;.
 
@@ -308,9 +308,9 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    ![Dialogrutan Skapa arbetsflöde](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   Mer information om hur du [skapar arbetsflöden finns här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
+   Mer information om att [skapa arbetsflöden finns här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
 
-1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. I CRXDE Lite skapar du en ny **&#39;not:folder&#39;** under /etc/workflow/models med namnet **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
+1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. I CRXDE Lite skapar du en ny **&#39;nt:folder&#39;** under /etc/workflow/models med namnet **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
 
    *Observera att det är viktigt att aldrig placera mappen eller anpassade arbetsflöden under undermappar som /etc/workflow/models/dam eller /etc/workflow/models/projects, eftersom hela undermappen också kan skrivas över av uppgraderingar eller servicepaket.
 
@@ -320,11 +320,12 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    >[!NOTE]
    >
-   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Mer information finns [här.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Mer information finns i [här.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
-   Om du använder AEM 6.4+ skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa ovanstående steg med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` nedanför den.
+   Om du använder AEM 6.4+ skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
 
-   ![Modern arbetsflödesdefinitionsplats](./assets/develop-aem-projects/modern-workflow-definition-location.png)Placering av arbetsflödesmodell i 6.4+
+   ![Modern arbetsflödesdefinition ](./assets/develop-aem-projects/modern-workflow-definition-location.png)
+platsArbetsflödesmodellens plats i 6.4+
 
 1. I AEM 6.3 introducerades möjligheten att lägga till arbetsflödessteg i ett visst arbetsflöde. Stegen visas för användaren från Inkorgen på fliken Arbetsflödesinformation. Den visar användaren det aktuella steget i arbetsflödet samt de steg som föregår och följer det.
 
@@ -342,11 +343,11 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    Förloppsindikatorn för arbetsflödet som visas i AEM Inkorg.
 
-   Du kan också överföra en **bild** till de sidegenskaper som ska användas som arbetsflödesminiatyrbild när användare väljer den. Bilddimensionerna ska vara 319 x 319 pixlar. Om du lägger till en **beskrivning** i Sidegenskaper visas också när en användare väljer arbetsflödet.
+   Du kan också överföra en **bild** till de sidegenskaper som ska användas som arbetsflödets miniatyrbild när användare väljer den. Bilddimensionerna ska vara 319 x 319 pixlar. Om du lägger till en **beskrivning** i Sidegenskaper visas även när en användare väljer arbetsflödet.
 
 1. Arbetsflödet Skapa projektuppgift är utformat för att skapa en uppgift som ett steg i arbetsflödet. Arbetsflödet går framåt först när uppgiften har slutförts. En kraftfull aspekt av steget Skapa projektuppgift är att det går att läsa metadatavärden för arbetsflödet och använda dem för att dynamiskt skapa uppgiften.
 
-   Ta först bort det deltagarsteg som skapas som standard. Från Sidekick på komponentmenyn expanderar du underrubriken **&quot;Projekt&quot;** och drar och släpper **&quot;Skapa projektuppgift&quot;** på modellen.
+   Ta först bort det deltagarsteg som skapas som standard. Expandera underrubriken **&quot;Projekt&quot;** och dra och släpp **&quot;Skapa projektuppgift&quot;** till modellen från sidokickaren på komponentmenyn.
 
    Dubbelklicka på steget&quot;Skapa projektuppgift&quot; för att öppna arbetsflödesdialogrutan. Konfigurera följande egenskaper:
 
@@ -371,7 +372,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
        Due In - Days = "2"
    ```
 
-   Fliken för routning är en valfri dialogruta som kan ange tillgängliga åtgärder för användaren som utför uppgiften. Dessa åtgärder är bara strängvärden och sparas i arbetsflödets metadata. Dessa värden kan läsas av skript och/eller processteg senare i arbetsflödet för att dynamiskt dirigera arbetsflödet. Baserat på [arbetsflödesmålen](#goals-tutorial) lägger vi till tre åtgärder på den här fliken:
+   Fliken för routning är en valfri dialogruta som kan ange tillgängliga åtgärder för användaren som utför uppgiften. Dessa åtgärder är bara strängvärden och sparas i arbetsflödets metadata. Dessa värden kan läsas av skript och/eller processteg senare i arbetsflödet för att dynamiskt dirigera arbetsflödet. Baserat på [arbetsflödesmål](#goals-tutorial) lägger vi till tre åtgärder på den här fliken:
 
    ```shell
    Routing Tab
@@ -390,7 +391,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. I föregående steg refererade vi till ett Pre-Create Task Script. Vi ska skapa skriptet där vi nu ställer in Tilldelning av uppgiften baserat på värdet för arbetsflödets metadatavärde &quot;**tilldelad**&quot;. Värdet **&quot;tilldelad&quot;** anges när arbetsflödet startas. Vi läser också arbetsflödets metadata för att dynamiskt välja uppgiftens prioritet genom att läsa värdet &quot;**taskPriority&quot;** för arbetsflödets metadata samt **&quot;taskdueDate&quot; **som dynamiskt ställs in när den första uppgiften förfaller.
+1. I föregående steg refererade vi till ett Pre-Create Task Script. Skriptet skapas nu där vi ställer in Tilldelad för uppgiften baserat på värdet för arbetsflödets metadatavärde &quot;**tilldelad**&quot;. Värdet **&quot;assigner&quot;** anges när arbetsflödet startas. Vi läser också arbetsflödets metadata för att dynamiskt välja uppgiftens prioritet genom att läsa värdet &quot;**taskPriority&quot;** för arbetsflödets metadata samt **&quot;taskdueDate&quot; **som dynamiskt ställs in när den första uppgiften förfaller.
 
    För organisatoriska ändamål har vi skapat en mapp under vår appmapp för alla våra projektrelaterade skript: **/apps/aem-guides/projects-tasks/projects/scripts**. Skapa en ny fil under den här mappen med namnet **&quot;start-task-config.ecma&quot;**. *Observera att sökvägen till filen start-task-config.ecma matchar sökvägen som angetts på fliken Avancerade inställningar i steg 4.
 
@@ -415,7 +416,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. Gå tillbaka till arbetsflödet för godkännande av innehåll. Dra och släpp **ELLER Dela** -komponenten (finns i kategorin Sidspark under kategorin Arbetsflöde) under steget **Starta uppgift** . I dialogrutan Allmänt väljer du alternativknappen för 3 grenar. OR Split läser arbetsflödets metadatavärde **&quot;lastTaskAction&quot;** för att fastställa arbetsflödets väg. Egenskapen **&quot;lastTaskAction&quot;** ställs in på ett av värdena från fliken Routning som konfigurerats i steg 4. Fyll i textområdet för **skript** med följande värden för var och en av grenflikarna:
+1. Gå tillbaka till arbetsflödet för godkännande av innehåll. Dra och släpp **ELLER Dela**-komponenten (finns i kategorin Sidspark under Arbetsflöde) under steget **Starta aktivitet**. I dialogrutan Allmänt väljer du alternativknappen för 3 grenar. OR Split läser arbetsflödets metadatavärde **&quot;lastTaskAction&quot;** för att fastställa arbetsflödets väg. Egenskapen **&quot;lastTaskAction&quot;** ställs in på ett av värdena från fliken Routning som konfigurerats i steg 4. Fyll i textområdet **Skript** för var och en av grenflikarna med följande värden:
 
    ```
    function check() {
@@ -455,7 +456,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    *Observera att vi gör en direkt strängmatchning för att fastställa vägen, så det är viktigt att värdena som anges i underskriftsskripten matchar de flödesvärden som anges i steg 4.
 
-1. Dra och släpp ett annat&quot;**Skapa projektuppgift**&quot;-steg till modellen längst till vänster (grenen 1) under ELLER-delningen. Fyll i dialogrutan med följande egenskaper:
+1. Dra och släpp ett annat &quot;**Skapa projektuppgift**&quot;-steg till modellen längst till vänster (grenen 1) under ELLER-delningen. Fyll i dialogrutan med följande egenskaper:
 
    ```
    Common Tab
@@ -477,11 +478,11 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
        "Send Back for Revision"
    ```
 
-   Eftersom det här är den normala vägen för godkännande anges aktivitetens prioritet till Medel. Dessutom ger vi gruppen Godkännare 5 dagar på oss att slutföra uppgiften. Den som ska tilldelas är tom på fliken Aktivitet eftersom den tilldelas dynamiskt på fliken Avancerade inställningar. Vi ger gruppen Godkännare två möjliga vägar när vi slutför den här uppgiften: **&quot;Godkänn och publicera&quot;** om de godkänner innehållet och det kan publiceras och **&quot;Skicka tillbaka för granskning&quot;** om det finns problem som den ursprungliga redigeraren behöver korrigera. Godkännaren kan lämna kommentarer som den ursprungliga redigeraren ser om arbetsflödet returneras till honom/henne.
+   Eftersom det här är den normala vägen för godkännande anges aktivitetens prioritet till Medel. Dessutom ger vi gruppen Godkännare 5 dagar på oss att slutföra uppgiften. Den som ska tilldelas är tom på fliken Aktivitet eftersom den tilldelas dynamiskt på fliken Avancerade inställningar. Vi ger gruppen Godkännare två möjliga vägar när vi slutför den här uppgiften: **&quot;Godkänn och publicera&quot;** om de godkänner innehållet och det kan publiceras och **&quot;Lägg tillbaka för revision&quot;** om det finns problem som den ursprungliga redigeraren behöver korrigera. Godkännaren kan lämna kommentarer som den ursprungliga redigeraren ser om arbetsflödet returneras till honom/henne.
 
 Tidigare i den här självstudiekursen skapade vi en projektmall som innehöll en godkännarroll. Varje gång ett nytt projekt skapas från den här mallen skapas en projektspecifik grupp för rollen Godkännare. På samma sätt som ett deltagarsteg kan en uppgift bara tilldelas till en användare eller grupp. Vi vill tilldela den här uppgiften till den projektgrupp som motsvarar gruppen Godkännare. Alla arbetsflöden som startas från ett projekt har metadata som mappar projektrollerna till den projektspecifika gruppen.
 
-Kopiera+Klistra in följande kod i **skripttextområdet** på fliken **Avancerade inställningar*. Den här koden läser arbetsflödets metadata och tilldelar uppgiften till gruppen Godkännare för projektet. Om det inte går att hitta värdet för gruppen godkännare återgår det till att tilldela uppgiften till gruppen Administratörer.
+Kopiera+Klistra in följande kod i textområdet **Skript** på fliken **Avancerade inställningar **tfliken. Den här koden läser arbetsflödets metadata och tilldelar uppgiften till gruppen Godkännare för projektet. Om det inte går att hitta värdet för gruppen godkännare återgår det till att tilldela uppgiften till gruppen Administratörer.
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -489,7 +490,7 @@ var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approv
 task.setCurrentAssignee(projectApproverGrp);
 ```
 
-1. Dra och släpp ett annat&quot;**Skapa projektuppgift**&quot;-steg till modellen till den mittersta grenen (grenen 2) under ELLER-delningen. Fyll i dialogrutan med följande egenskaper:
+1. Dra och släpp ett annat &quot;**Skapa projektuppgift**&quot;-steg till modellen till den mittersta grenen (grenen 2) under ELLER-delningen. Fyll i dialogrutan med följande egenskaper:
 
    ```
    Common Tab
@@ -513,7 +514,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    Eftersom det här är vägen för Rush-godkännande är aktivitetens prioritet inställd på Hög. Dessutom ger vi gruppen Godkännare endast en dag för att slutföra uppgiften. Den som ska tilldelas är tom på fliken Aktivitet eftersom den tilldelas dynamiskt på fliken Avancerade inställningar.
 
-   Vi kan återanvända samma skriptfragment som i steg 7 för att fylla i **skriptområdet** på fliken** Avancerade inställningar **. Kopiera+Klistra in nedanstående kod:
+   Vi kan återanvända samma skriptfragment som i steg 7 för att fylla i textområdet **Skript** på fliken** Avancerade inställningar **. Kopiera+Klistra in nedanstående kod:
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -536,7 +537,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    Arbetsflödesmodellen ska se ut så här när alla tre grenarna i ELLER-delningen har konfigurerats.
 
-1. Eftersom gruppen Godkännare har möjlighet att skicka tillbaka arbetsflödet till den ursprungliga redigeraren för ytterligare ändringar, använder vi steget **Gå till** för att läsa den senaste åtgärden och dirigera arbetsflödet till början eller låta det fortsätta.
+1. Eftersom gruppen Godkännare har möjlighet att skicka tillbaka arbetsflödet till den ursprungliga redigeraren för ytterligare ändringar, använder vi steget **Gå till** för att läsa den senaste åtgärden som utförts och dirigera arbetsflödet till början eller låta det fortsätta.
 
    Dra och släpp Goto Step-komponenten (finns i sidosparken under Arbetsflöde) under ELLER-delningen där den återansluter. Dubbelklicka på och konfigurera följande egenskaper i dialogrutan:
 
@@ -553,7 +554,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    Den sista delen som vi ska konfigurera är skriptet som en del av Gå till-processsteget. Skriptvärdet kan bäddas in via dialogrutan eller konfigureras så att det pekar på en extern fil. Goto-skriptet måste innehålla en **funktionskontroll()** och returnera true om arbetsflödet ska gå till det angivna steget. Om du returnerar false flyttas arbetsflödet framåt.
 
-   Om godkännargruppen väljer åtgärden **&quot;Skicka tillbaka för ändring&quot;** (konfigurerad i steg 7 och 8) vill vi återgå till arbetsflödet i steget **&quot;Skapa** startaktivitet&quot;.
+   Om godkännargruppen väljer åtgärden **&quot;Skicka tillbaka för revision&quot;** (konfigurerad i steg 7 och 8) vill vi returnera arbetsflödet till steget **&quot;Starta skapande av uppgift&quot;**.
 
    På fliken Process lägger du till följande utdrag i skripttextområdet:
 
@@ -569,15 +570,15 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-1. För att publicera nyttolasten ska vi använda steget Aktivera sida/ **resursprocess** i verktygsfältet. Det här steget kräver liten konfiguration och lägger till arbetsflödets nyttolast i replikeringskön för aktivering. Vi lägger till steget under steget Gå till och på det här sättet kan det bara nås om gruppen Godkännare har godkänt innehållet för publicering eller om den ursprungliga redigeraren har valt vägen Åsidosätt godkännande.
+1. För att publicera nyttolasten ska vi använda steget Aktivera sida/resurs **i verktygsfältet.** Det här steget kräver liten konfiguration och lägger till arbetsflödets nyttolast i replikeringskön för aktivering. Vi lägger till steget under steget Gå till och på det här sättet kan det bara nås om gruppen Godkännare har godkänt innehållet för publicering eller om den ursprungliga redigeraren har valt vägen Åsidosätt godkännande.
 
-   Dra och släpp steget **Aktivera sida/tillgångsprocess** (finns i Spark under WCM-arbetsflöde) under steget Gå till i modellen.
+   Dra och släpp steget **Aktivera sida/resurs** Process (finns i Sidspark under WCM-arbetsflöde) under Gå till steg i modellen.
 
    ![arbetsflödesmodell slutförd](assets/develop-aem-projects/workflow-model-final.png)
 
    Hur arbetsflödesmodellen ska se ut när du har lagt till steget Gå till och Aktivera sidan/resursen.
 
-1. Om gruppen Godkännare skickar tillbaka innehållet för revision vill vi meddela den ursprungliga redigeraren. Vi kan uppnå detta genom att dynamiskt ändra egenskaperna för att skapa uppgifter. Egenskapsvärdet lastActionTaken för **&quot;Send Back for Revision&quot;**&#x200B;är inte längre tillgängligt. Om det värdet finns ändrar vi titeln och beskrivningen för att ange att den här uppgiften är resultatet av att innehållet skickas tillbaka för revision. Vi kommer också att uppdatera prioriteten till **&quot;Hög&quot;** så att det är det första som redigeraren arbetar med. Slutligen ställer vi in aktivitetens förfallodatum till en dag från när arbetsflödet skickades tillbaka för revision.
+1. Om gruppen Godkännare skickar tillbaka innehållet för revision vill vi meddela den ursprungliga redigeraren. Vi kan uppnå detta genom att dynamiskt ändra egenskaperna för att skapa uppgifter. Egenskapsvärdet för lastActionTaken är **&quot;Skicka tillbaka för revision&quot;**. Om det värdet finns ändrar vi titeln och beskrivningen för att ange att den här uppgiften är resultatet av att innehållet skickas tillbaka för revision. Vi uppdaterar även prioriteten till **&quot;Hög&quot;** så att det är det första objektet som redigeraren arbetar med. Slutligen ställer vi in aktivitetens förfallodatum till en dag från när arbetsflödet skickades tillbaka för revision.
 
    Ersätt startskriptet `start-task-config.ecma` (skapat i steg 5) med följande:
 
@@ -622,21 +623,21 @@ task.setCurrentAssignee(projectApproverGrp);
 
 ## Skapa guiden Starta arbetsflöde {#start-workflow-wizard}
 
-När du stänger av ett arbetsflöde inifrån ett projekt måste du ange en guide för att starta arbetsflödet. Standardguiden: `/libs/cq/core/content/projects/workflowwizards/default_workflow` gör att användaren kan ange en arbetsflödesrubrik, en startkommentar och en nyttolastsökväg som arbetsflödet ska köras i. Det finns också flera andra exempel i: `/libs/cq/core/content/projects/workflowwizards`.
+När du stänger av ett arbetsflöde inifrån ett projekt måste du ange en guide för att starta arbetsflödet. Standardguiden: Med `/libs/cq/core/content/projects/workflowwizards/default_workflow` kan användaren ange en arbetsflödesrubrik, en startkommentar och en nyttolastsökväg som arbetsflödet ska köras i. Det finns också flera andra exempel i: `/libs/cq/core/content/projects/workflowwizards`.
 
 Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in viktig information innan arbetsflödet startar. Data lagras som en del av arbetsflödets metadata och arbetsflödesprocesser kan läsa detta och dynamiskt ändra beteendet baserat på de värden som anges. Vi skapar en anpassad guide som dynamiskt tilldelar den första uppgiften i arbetsflödet baserat på ett startguidevärde.
 
-1. I CRXDE-Lite skapar vi en undermapp under `/apps/aem-guides/projects-tasks/projects` mappen &quot;wizards&quot;. Kopiera standardguiden från: `/libs/cq/core/content/projects/workflowwizards/default_workflow` under den nya guidemappen och ändra namnet till **content-approval-start**. Den fullständiga sökvägen bör nu vara: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
+1. I CRXDE-Lite skapar vi en undermapp under `/apps/aem-guides/projects-tasks/projects` med namnet &quot;guider&quot;. Kopiera standardguiden från: `/libs/cq/core/content/projects/workflowwizards/default_workflow` under den nya guidemappen och ändra namnet till **content-approval-start**. Den fullständiga sökvägen bör nu vara: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder standardkomponenter [för användargränssnittet i](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html) Granite för att fylla i fälten.
+   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder [GRE-komponenter](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html) som standard för att fylla i fälten.
 
    ![arbetsflödesguide för godkännande av innehåll](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. Vi ska lägga till ytterligare ett fält i guiden som ska användas för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `../content-approval-start/jcr:content/items/column2/items` Skapa en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på [Granite User Picker Component](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
+   Under `../content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på komponenten [Granite User Picker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
 
-   Nedan visas XML-representationen av den **tilldelade** noden:
+   Nedan visas XML-representationen av **tilldelningsnoden**:
 
    ```xml
    <assign
@@ -652,11 +653,11 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
        required="{Boolean}true"/>
    ```
 
-1. Vi ska också lägga till ett prioritetsurvalsfält som avgör prioriteten för den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
+1. Vi ska också lägga till ett prioritetsurvalsfält som avgör prioriteten för den första aktiviteten i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `/content-approval-start/jcr:content/items/column2/items` Skapa en ny nod av typen `nt:unstructured` med namnet **priority**. Vi använder komponenten [](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html) Granska användargränssnitt för att fylla i formulärfältet.
+   Under `/content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **priority**. Vi använder komponenten [Bevilja gränssnittsmarkering](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html) för att fylla i formulärfältet.
 
-   Under **prioritetsnoden** lägger vi till en **objektnod** med **not:undefined**. Under noden **items** lägger du till ytterligare tre noder för att fylla i markeringsalternativen Hög, Medel och Låg. Varje nod är av typen **nt:undefined** och ska ha en **text** - och **value** -egenskap. Både texten och värdet ska ha samma värde:
+   Under **priority**-noden lägger vi till en **item**-nod på **nt:undefined**. Under noden **items** lägger du till ytterligare tre noder för att fylla i markeringsalternativen Hög, Medel och Låg. Varje nod är av typen **nt:ostrukturerad** och ska ha egenskapen **text** och **value**. Både texten och värdet ska ha samma värde:
 
    1. Hög
    1. Medel
@@ -690,9 +691,9 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
    </priority>
    ```
 
-1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html) för att hämta indata. Vi lägger också till ett dolt fält med ett [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att säkerställa att indata lagras som en Date-typegenskap i JCR.
+1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html) för att hämta indata. Vi lägger också till ett dolt fält med ett [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
 
-   Lägg till två **nt:ostrukturerade** noder med följande egenskaper som finns i XML:
+   Lägg till två **nt:ostrukturerade**-noder med följande egenskaper representerade i XML:
 
    ```xml
    <duedate
@@ -712,13 +713,13 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
        value="Calendar"/>
    ```
 
-1. Du kan visa den fullständiga koden för startguiden [här](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml).
+1. Du kan visa den fullständiga koden för startguidedialogrutan [här](https://github.com/Adobe-Marketing-Cloud/aem-guides/blob/master/projects-tasks-guide/ui.apps/src/main/content/jcr_root/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start/.content.xml).
 
 ## Ansluta arbetsflödet och projektmallen {#connecting-workflow-project}
 
 Det sista vi behöver göra är att se till att arbetsflödesmodellen är tillgänglig att startas från i något av projekten. För att göra detta måste vi besöka projektmallen som vi skapade i del 1 i den här serien igen.
 
-Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka arbetsflöden som är tillgängliga för projektet. Konfigurationen ansvarar också för att ange guiden Starta arbetsflöde när du stänger av arbetsflödet (som vi skapade i [föregående steg)](#start-workflow-wizard). Arbetsflödeskonfigurationen för en projektmall är&quot;live&quot;, vilket innebär att om du uppdaterar arbetsflödeskonfigurationen kommer både nya projekt som skapats och befintliga projekt som använder mallen att påverkas.
+Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka arbetsflöden som är tillgängliga för projektet. Konfigurationen ansvarar också för att ange guiden Starta arbetsflöde när du startar arbetsflödet (som vi skapade i [föregående steg)](#start-workflow-wizard). Arbetsflödeskonfigurationen för en projektmall är&quot;live&quot;, vilket innebär att om du uppdaterar arbetsflödeskonfigurationen kommer både nya projekt som skapats och befintliga projekt som använder mallen att påverkas.
 
 1. I CRXDE-Lite navigerar du till den projektmall som skapades tidigare `/apps/aem-guides/projects-tasks/projects/templates/authoring-project/workflows/models`.
 
@@ -734,10 +735,10 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
 
    >[!NOTE]
    >
-   >Om AEM 6.4 används har arbetsflödets plats ändrats. Peka på `modelId` egenskapen till platsen för körningsarbetsflödesmodellen under `/var/workflow/models/aem-guides/content-approval-workflow`
+   >Om AEM 6.4 används har arbetsflödets plats ändrats. Peka egenskapen `modelId` på platsen för arbetsflödesmodellen vid körning under `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >Mer information [om förändringen i arbetsflödets plats finns här.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >Mer information om förändringen av arbetsflödets plats finns i [här.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
    ```xml
    <contentapproval
