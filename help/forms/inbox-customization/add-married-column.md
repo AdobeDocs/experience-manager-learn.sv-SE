@@ -82,10 +82,10 @@ return isMarried(inboxItem);
 * [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
 * [Distribuera och starta anpassningspaketet för inkorgen](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [Öppna din inkorg](http://localhost:4502/aem/inbox)
-* Öppna Admin Control genom att klicka på ikonen _Listvy_ bredvid knappen _Skapa_
+* Öppna Admin Control genom att klicka på ikonen _Listvy_ bredvid _Skapa_
 * Lägg till en gift kolumn i Inkorgen och spara ändringarna
 * [Gå till användargränssnittet för FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Importera exempelformuläret](assets/snap-form.zip) genom att välja _Filöverföring_ på menyn _Skapa_
+* [Importera exempelformuläret ](assets/snap-form.zip) genom att välja  _Arkiv_ överföring från  __ CreateMenu
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * Välj _civilstånd_ och skicka formuläret
    [visa inkorg](http://localhost:4502/aem/inbox)
