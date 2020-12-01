@@ -1,5 +1,5 @@
 ---
-title: Anslut AEM med Launch med Adobe i/O
+title: Anslut AEM med Launch med Adobe I/O
 description: Lär dig hur du skapar en IMS-konfiguration med Adobe I/O för att autentisera AEM med Launch API. När integreringen är klar kan AEM kommunicera via Launch API för att få åtkomst till Launch-egenskaperna.
 feature: launch
 topics: integrations
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Anslut AEM med Launch med Adobe i/O {#connect-aem-launch-adobe-io}
+# Anslut AEM med Launch med Adobe I/O {#connect-aem-launch-adobe-io}
 
 Lär dig hur du skapar en IMS-konfiguration med Adobe I/O för att autentisera AEM med Launch API. När integreringen är klar kan AEM kommunicera via Launch API för att få åtkomst till Launch-egenskaperna.
 
