@@ -29,7 +29,7 @@ I den här videon utforskar vi Dynamic Media Color Management och hur den kan an
 
 >[!NOTE]
 >
->[Aktivera Dynamic Media](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) i AEM för att använda den här funktionen.
+>[Aktivera Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Mediain-AEM för att använda den här funktionen.
 
 Den här funktionen är tillgänglig för AEM 6.1- och 6.2-versioner som ett funktionspaket.
 
@@ -115,7 +115,7 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
 | PS4Default | CMYK | Photoshop 4 - standard-CMYK |
-| PS5Default | CMYK | Photoshop 5 - standard-CMYK |
+| PS5Standard | CMYK | Photoshop 5 - standard-CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
