@@ -20,9 +20,9 @@ ht-degree: 0%
 ---
 
 
-# Förifyll HTML5 Forms med dataattribut {#prepopulate-html-forms-using-data-attribute}
+# PreFyll i HTML5 Forms med dataattributet {#prepopulate-html-forms-using-data-attribute}
 
-På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
 
 XDP-mallar som återges i HTML-format med AEM Forms kallas HTML5 eller Mobile Forms. Ett vanligt användningssätt är att fylla i dessa formulär i förväg när de återges.
 
@@ -49,7 +49,8 @@ När XDP-filen återges kan du även skicka vissa parametrar till xdp och utifr�
 Den JSP som du skriver har åtkomst till name-parametern via request.getParameter(&quot;name&quot;). Du kan sedan skicka värdet för den här parametern till backend-processen för att hämta nödvändiga data.
 Följ stegen nedan för att få den här funktionen att fungera i ditt system:
 
-* [Hämta och importera resurserna till AEM med pakethanteraren](assets/prepopulatemobileform.zip)Paketet installerar följande
+* [Hämta och importera resurserna till AEM med hjälp av ](assets/prepopulatemobileform.zip)
+pakethanterarenPaketet installerar följande
 
    * CustomProfile
    * Exempel på XDP
