@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Det finns flera sätt att förifylla adaptiva formulärfält. I den här artikeln ska vi titta närmare på hur man fyller i anpassningsbara formulär med AEM Forms förifyllningstjänst.
 
-Om du vill veta mer om olika metoder för att förifylla adaptiva formulär kan du [följa den här dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+[Följ denna dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice) om du vill veta mer om olika metoder för att förifylla adaptiva formulär
 
 Om du vill förifylla anpassningsbara formulär med förifyllningstjänsten måste du skapa en klass som implementerar DataProvider-gränssnittet. Metoden getPrefillData har logiken för att skapa och returnera data som anpassningsbara formulär använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataström för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
 
@@ -88,7 +88,7 @@ public class PrefillAdaptiveForm implements DataProvider {
 Utför följande för att testa den här funktionen på servern:
 
 * [Hämta och extrahera innehållet i zip-filen till datorn](assets/prefillservice.zip)
-* Kontrollera att den inloggade [användarens profilinformation](http://localhost:4502/libs/granite/security/content/useradmin) är fullständigt ifylld. Detta är ett krav för att exemplet ska fungera. Exemplet innehåller inte någon felsökning för saknade användarprofilsegenskaper.
+* Kontrollera att den inloggade [användarens profil](http://localhost:4502/libs/granite/security/content/useradmin)-informationen är fullständigt ifylld. Detta är ett krav för att exemplet ska fungera. Exemplet innehåller inte någon felsökning för saknade användarprofilsegenskaper.
 * Distribuera paketet med [AEM webbkonsol](http://localhost:4502/system/console/bundles)
 * Skapa anpassat formulär med XSD
 * Associera&quot;Custom AEM Form Pre Fill Service&quot; som förifyllningstjänst för ditt adaptiva formulär
@@ -99,5 +99,5 @@ Utför följande för att testa den här funktionen på servern:
 >
 >Om det adaptiva formuläret är baserat på XSD kontrollerar du att det XML-dokument som returneras av förifyllningstjänsten matchar det XSD som det adaptiva formuläret är baserat på.
 >
->Om det adaptiva formuläret inte är baserat på XSD måste du binda fälten manuellt. Om du till exempel vill binda ett adaptivt formulärfält till elementet fname i XML-data som du använder `/data/fname` i bindningsreferensen i det adaptiva formulärfältet.
+>Om det adaptiva formuläret inte är baserat på XSD måste du binda fälten manuellt. Om du till exempel vill binda ett adaptivt formulärfält till fname-element i XML-data använder du `/data/fname` i bindningsreferensen för det adaptiva formulärfältet.
 
