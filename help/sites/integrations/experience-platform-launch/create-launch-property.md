@@ -26,7 +26,7 @@ Lär dig hur du skapar en Launch-egenskap med lägsta möjliga konfiguration som
 
 ## Nästa steg
 
-[Anslut AEM med Launch med Adobe i/O](connect-aem-launch-adobe-io.md)
+[Anslut AEM med Launch med Adobe I/O](connect-aem-launch-adobe-io.md)
 
 ## Ytterligare resurser {#additional-resources}
 
