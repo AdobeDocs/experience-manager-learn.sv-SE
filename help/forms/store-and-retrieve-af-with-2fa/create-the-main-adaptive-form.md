@@ -24,14 +24,14 @@ Formuläret **StoreAFWithAttachments** är den huvudsakliga adaptiva formen. Det
 
 ![huvudansökningsformulär](assets/6552.JPG)
 
-Det här formuläret är kopplat till **klientbibliotek för bootboxjs540,storeAFWithAttachments** som skapats tidigare under kursen och ett AEM arbetsflöde som aktiveras när formulär skickas.
+Det här formuläret är associerat med **bootboxjs540,storeAFWithAttachments** klientbibliotek som skapats tidigare under kursen och ett AEM arbetsflöde som aktiveras när formulär skickas.
 
 
-* Exempelformulären är baserade på en [anpassad formulärmall](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
+* Exempelformulären är baserade på [en anpassad adaptiv formulärmall](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
 
 * Det färdiga [StoreAfWithAttachments-formuläret](assets/store-af-with-attachments-form.zip) kan hämtas och importeras till din AEM.
 
-* Det [AEM arbetsflöde som är kopplat till det här formuläret](assets/workflow-model-store-af-with-attachments.zip) måste importeras till din AEM för att formuläret ska fungera.
+* Det [AEM arbetsflöde som är associerat med det här formuläret](assets/workflow-model-store-af-with-attachments.zip) måste importeras till din AEM för att formuläret ska fungera.
 
 
 
