@@ -27,7 +27,7 @@ Från och med AEM Forms 6.5 kan vi nu skapa arbetsflödesmodeller som inte är k
 Utför följande steg för att utforma ett sådant arbetsflöde
 
 1. Logga in på AEM
-1. Peka webbläsaren mot [arbetsflödesmodellen](http://localhost:4502/libs/cq/workflow/admin/console/content/models.html)
+1. Peka webbläsaren på [arbetsflödesmodell](http://localhost:4502/libs/cq/workflow/admin/console/content/models.html)
 1. Klicka på Skapa | Skapa modell för att lägga till arbetsflödesmodell
 1. Ange rätt namn och titel för arbetsflödesmodellen och klicka sedan på Klar
 1. Öppna den nyskapade modellen i redigeringsläge
@@ -39,7 +39,8 @@ Utför följande steg för att utforma ett sådant arbetsflöde
 Det finns tre sätt att ange formulärsökvägen
 
 1. Tillgängligt på en absolut sökväg - Det innebär att arbetsflödet är nära kopplat till en anpassningsbar form. Det är inte vad vi vill här
-1. **Skickat till arbetsflödet** - Det innebär att när det adaptiva formuläret skickas kommer arbetsflödesmotorn att extrahera namnet på formuläret från skickade data. Det här alternativet måste väljas
-1. Finns på en sökväg i en variabel - Det innebär att den adaptiva formen hämtas från variabeln i arbetsflödet. På följande skärmbild visas rätt alternativ som du behöver välja för att ta bort kopplingen från det adaptiva formuläret
+1. **Skickat till arbetsflödet**  - Det innebär att när det adaptiva formuläret skickas kommer arbetsflödesmotorn att extrahera namnet på formuläret från skickade data. Det här alternativet måste väljas
+1. Finns på en sökväg i en variabel - Det innebär att det adaptiva formuläret hämtas upp från arbetsflödesvariabeln
+På följande skärmbild visas rätt alternativ som du behöver för att välja ett avkopplingsarbetsflöde från ett anpassat formulär
 
 ![arbetsflödesmodell](assets/workflomodel.PNG)
