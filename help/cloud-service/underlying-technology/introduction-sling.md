@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Introduktion till [!DNL Sling] {#introduction-sling}
 
-En introduktion till [!DNL Sling][!DNL RESTful] , ett webbaserat ramverk med öppen källkod som ingår i Adobe Experience Manager underliggande teknikstack.
+En introduktion till [!DNL Sling], ett öppen källkodsramverk för [!DNL RESTful] som ingår i Adobe Experience Manager underliggande teknikstack.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32032/?quality=12&learn=on)
