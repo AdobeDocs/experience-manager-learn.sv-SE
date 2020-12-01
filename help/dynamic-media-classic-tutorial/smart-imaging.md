@@ -22,7 +22,7 @@ En av de viktigaste aspekterna av kundupplevelsen på er webbplats eller mobilwe
 
 Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med den bästa premiumtjänsten från Adobe. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter som har den lägsta latensen och/eller paketförlustfrekvensen än standardvägen på Internet.
 
-Läs mer om [smart bildbehandling](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
+Läs mer om [Smart bildbehandling](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Fördelar med smart bildbehandling
 
@@ -34,7 +34,7 @@ Eftersom bilder utgör huvuddelen av en sidas laddningstid kan prestandaförbät
 
 Smart Imaging utnyttjar Adobe Sensei AI-funktioner och arbetar med befintliga bildförinställningar för att automatiskt konvertera bilder till nästa generationens optimala bildformat som WebP, samtidigt som den visuella återgivningen bibehålls.
 
-Läs mer om [hur Smart Imaging fungerar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive detaljer som bildformat som stöds (och vad som händer om du inte använder dessa format) och hur de påverkar befintliga bildförinställningar som används.
+Läs mer om [Hur smart bildbehandling fungerar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive detaljer som bildformat som stöds (och vad som händer om du inte använder dessa format) och dess påverkan på befintliga bildförinställningar som används.
 
 ## Effekter av Smart Imaging
 
@@ -56,4 +56,4 @@ Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en 
 
 ## Ytterligare resurser
 
-Titta på webbseminariet [Dynamic Media Classic Optimizing Page Performance SKill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand om du vill veta mer om Smart Imaging.
+Titta på [Dynamic Media Classic Optimizing Page Performance Sill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand-webbinariet om du vill veta mer om Smart Imaging.
