@@ -24,4 +24,4 @@ I videon förklaras de olika stegen som krävs för att konfigurera ett adaptivt
 
 Resurser relaterade till den här videon kan hämtas via följande länk
 
-* [Ändring av bidragsmottagande formulär ](assets/change-of-beneficiary-form.zip)
+* [Ändring av bidragsmottagande formulär  ](assets/change-of-beneficiary-form.zip)
