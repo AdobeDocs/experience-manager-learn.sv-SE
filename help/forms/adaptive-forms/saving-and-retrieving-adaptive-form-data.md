@@ -212,7 +212,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## Skapa OSGI-tjänst för att hämta data {#create-osgi-service}
+## Skapa en OSGI-tjänst för att hämta data {#create-osgi-service}
 
 Följande kod skrevs för att hämta lagrade data för adaptiva formulär. En enkel fråga används för att hämta data för adaptiva formulär som är kopplade till ett givet GUID. Hämtade data returneras sedan till det anropande programmet. Samma datakälla skapades i det första steget som refereras i den här koden.
 
@@ -405,12 +405,12 @@ $(document).ready(function()
 });
 ```
 
-## Skapa adaptiv formulärmall och sidkomponent {#form-template-and-page-component}
+## Skapa anpassad formulärmall och sidkomponent {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### Demonstration av förmågan {#capability-demo}
+### Demonstration av kapaciteten {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
