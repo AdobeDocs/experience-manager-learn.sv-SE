@@ -22,9 +22,9 @@ ht-degree: 0%
 ---
 
 
-# Lägga till underordnade paneler till rotpanelen {#adding-child-panels-to-root-panel}
+# Lägger till underordnade paneler till rotpanelen {#adding-child-panels-to-root-panel}
 
-När du lägger till underordnade paneler i rotpanelen **måste du vara i redigeringsläge. Redigeringsknappen finns längst upp till höger i webbläsaren.**
+När du lägger till underordnade paneler i rotpanelen måste du **kontrollera att du är i redigeringsläge. Redigeringsknappen finns längst upp till höger i webbläsaren.**
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=9&learn=on)
