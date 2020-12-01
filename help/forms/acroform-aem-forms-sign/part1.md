@@ -29,7 +29,7 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 
 >[!NOTE]
 >
->Om du vill skicka det ifyllbara makroformuläret för signering med Adobe Sign, måste du namnge fälten därefter. Du kan t.ex. ge fältet namnet **Sig_es_:signer1:signature**. Det här är syntaxen som Adobe Sign förstår.
+>Om du vill skicka det ifyllbara makroformuläret för signering med Adobe Sign, måste du namnge fälten därefter. Du kan till exempel namnge ett fält **Sig_es_:signer1:signature**. Det här är syntaxen som Adobe Sign förstår.
 
 >[!NOTE]
 >
