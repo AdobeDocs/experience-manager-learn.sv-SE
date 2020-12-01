@@ -27,7 +27,7 @@ Via loggarna för AEM SDK kan AEM SDK:s lokala snabbstartsverktyg eller Dispatch
 
 Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM. Adobe rekommenderar att du behåller lokal utveckling och AEM som en Cloud Service Dev-loggningskonfigurationer så lika som möjligt, eftersom det normaliserar loggsynligheten på AEM SDK:s lokala snabbstart och AEM som en Cloud Services Dev-miljöer, vilket minskar behovet av att ändra konfigurationen och omdistribuera den.
 
-I [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigureras loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
@@ -35,25 +35,25 @@ som loggar till `error.log`.
 
 Om standardloggningen inte är tillräcklig för lokal utveckling kan ad hoc-loggning konfigureras via AEM SDK:s lokala snabbstartswebbkonsol, på ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)), men det rekommenderas inte att ad hoc-ändringar sparas i Git om inte samma loggkonfigurationer behövs i AEM som en Cloud Service Dev-miljö. Tänk på att ändringar via loggsupportkonsolen sparas direkt i AEM SDK:s lokala snabbstartdatabas.
 
-Java-loggsatser kan visas i `error.log` filen:
+Java-loggsatser kan visas i filen `error.log`:
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-Det är ofta praktiskt att &quot;svansen&quot; `error.log` som direktuppspelar utdata till terminalen.
+Det är ofta användbart att &quot;svansen&quot; av `error.log` som direktuppspelar utdata till terminalen.
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windows kräver [tredjepartsprogram](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) eller [PowerShell-kommandot](https://stackoverflow.com/a/46444596/133936)Get-Content.
++ Windows kräver [program från tredje part](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) eller [PowerShell-kommandot Get-Content](https://stackoverflow.com/a/46444596/133936).
 
 ## Dispatcher-loggar
 
-Sändningsloggar skrivs ut så att de inte stängs när `bin/docker_run` anropas, men loggarna kan nås direkt från Docker.
+Sändningsloggar skickas som utdata som stoppas när `bin/docker_run` anropas, men loggarna kan nås direkt med i Docker.
 
 ### Åtkomst till loggar i Docker-behållaren
 
-Sändningsloggar kan vara direkt åtkomliga i Docker-behållaren på `/etc/httpd/logs`.
+Sändningsloggar kan användas direkt i Docker-behållaren på `/etc/httpd/logs`.
 
 ```shell
 $ docker ps
@@ -75,7 +75,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopiera Docker-loggarna till det lokala filsystemet
 
-Sändningsloggar kan kopieras ut från Docker-behållaren på `/etc/httpd/logs` det lokala filsystemet och granskas med det logganalysverktyg du föredrar. Observera att detta är en kopia som skickas vid en viss tidpunkt och inte innehåller realtidsuppdateringar av loggarna.
+Sändningsloggar kan kopieras ut från Docker-behållaren på `/etc/httpd/logs` till det lokala filsystemet för kontroll med ditt favoritlogganalysverktyg. Observera att detta är en kopia som skickas vid en viss tidpunkt och inte innehåller realtidsuppdateringar av loggarna.
 
 ```shell
 $ docker ps
