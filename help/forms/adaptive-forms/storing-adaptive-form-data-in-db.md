@@ -35,7 +35,7 @@ Användningsexemplet är att utlösa ett AEM arbetsflöde för att skicka ett ad
    * Sök efter JDBC-anslutningspool. Skapa en ny JDBC-anslutningspool för dagskommandon. Ange inställningarna som är specifika för databasen.
 
    * ![jdbc-anslutningspool](assets/jdbc-connection-pool.png)
-   * Sök efter&quot;**Infoga formulärdata i DB**&quot;
+   * Sök efter &quot;**Infoga formulärdata i DB**&quot;
    * Ange egenskaper som är specifika för databasen.
       * DataSourceName:Namn på datakällan som du konfigurerade tidigare.
       * TableName - namnet på den tabell där du vill lagra AF-data
