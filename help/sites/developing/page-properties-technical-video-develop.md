@@ -22,7 +22,7 @@ Att anpassa metadatafälten för Sidegenskaper är ett vanligt krav i alla imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
 
-I videon ovan visas hur du anpassar sidegenskaperna för programmet We.Retail i **AEM 6.4** med hjälp av olika funktioner i Sling Resource Merger. Det möjliggör följande anpassningar:
+I videon ovan visas hur du anpassar sidegenskaperna för programmet We.Retail i **AEM 6.4** med olika funktioner i Sling Resource Merger. Det möjliggör följande anpassningar:
 
 * Anpassad flik som infogats före fliken Grundläggande.
 * Ett nytt textfält har infogats som en del av fliken Grundläggande.
