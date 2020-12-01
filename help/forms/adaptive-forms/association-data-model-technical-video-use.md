@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Använda Associationsdatamodeller med AEM Forms{#using-association-data-models-with-aem-forms}
+# Använda associationsdatamodeller med AEM Forms{#using-association-data-models-with-aem-forms}
 
 Skapa associationer mellan två entiteter i formulärdatamodellen
 
