@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Bokför binära data med formulärdatamodellen{#using-form-data-model-to-post-binary-data}
+# Använda formulärdatamodell för att posta binära data{#using-form-data-model-to-post-binary-data}
 
 Från och med AEM Forms 6.4 har vi nu möjlighet att anropa datamodelltjänsten i form av ett steg i AEM arbetsflöde. I den här artikeln får du hjälp med att skicka ett exempel på hur du kan använda Document of Record med hjälp av Form Data Model Service.
 
@@ -54,16 +54,16 @@ Följ stegen nedan för att testa den här funktionen på servern:
 
 1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här anpassade OSGI-paketet används för att skapa en metadataegenskap och ange dess värde från skickade formulärdata.
 
-1. [Importera resurser](assets/postdortodam.zip) som är associerade med den här artikeln till AEM med hjälp av pakethanteraren. Du får följande
+1. [Importera de ](assets/postdortodam.zip) resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren. Du får följande
 
    1. Arbetsflödesmodell
    1. Anpassat formulär har konfigurerats för att skickas till AEM arbetsflöde
    1. Datakällan har konfigurerats att använda filen PostToDam.JSON
    1. Formulärdatamodell som använder datakällan
 
-1. Peka din [webbläsare för att öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. Peka på din [webbläsare för att öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och skicka in det.
 1. Kontrollera Assets-programmet om arkivdokumentet skapas och lagras.
 
 
-[Swagger-filen](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) som används för att skapa datakällan är tillgänglig som referens
+[Swagger ](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) Fileused in creating the data source is available for your reference
