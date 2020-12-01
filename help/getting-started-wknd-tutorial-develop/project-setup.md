@@ -29,7 +29,7 @@ I den här självstudiekursen beskrivs hur du skapar ett Maven Multi Module-modu
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att du har en ny instans av Adobe Experience Manager tillgänglig lokalt och att inga fler exempel-/demopaket har installerats (förutom obligatoriska Service Pack).
 
-## Syfte {#objective}
+## Mål {#objective}
 
 1. Lär dig hur du skapar ett nytt AEM med en Maven-arkityp.
 1. Förstå de olika moduler som genereras av den AEM projekttypen och hur de fungerar tillsammans.
@@ -43,13 +43,13 @@ I det här kapitlet genererar du ett nytt Adobe Experience Manager-projekt med [
 
 ## Bakgrund {#background}
 
-**Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager* -implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod utöver AEM.
+**Vad är ett Maven-projekt?** -  [Apache ](https://maven.apache.org/) Mavenis är ett programhanteringsverktyg för att skapa projekt. *Alla implementeringar av Adobe Experience* Manager använder Maven-projekt för att skapa, hantera och driftsätta anpassad kod utöver AEM.
 
-**Vad är en Maven-arketype?** - En [Maven-arkityp](https://maven.apache.org/archetype/index.html) är en mall eller ett mönster för att generera nya projekt. Med den AEM projekttypen kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
+**Vad är en Maven-arketype?** - En  [Maven-](https://maven.apache.org/archetype/index.html) arketypeär en mall eller ett mönster för att generera nya projekt. Med den AEM projekttypen kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
 
 ## Skapa projektet {#create}
 
-Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen kommer att utnyttja [Maven AEM Project Archetype **22**](https://github.com/adobe/aem-project-archetype). I Cloud Manager [finns även en guide](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html) för användargränssnitt som initierar skapandet av ett AEM programprojekt. Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
+Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen använder [Maven AEM Project Archetype **22**](https://github.com/adobe/aem-project-archetype). I Cloud Manager finns också en gränssnittsguide [som initierar skapandet av ett AEM programprojekt. ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html) Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. Kontrollera att **adobe-public** -profilen är aktiv genom att köra följande kommando:
+1. Kontrollera att profilen **adobe-public** är aktiv genom att köra följande kommando:
 
    ```shell
    $ mvn help:effective-settings
@@ -85,15 +85,15 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
    [INFO] Total time:  0.856 s
    ```
 
-   Om du **inte** ser **adobe-public** är det en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml` fil. Gå igenom stegen för att installera och konfigurera Apache Maven i [en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
+   Om du **inte** ser **adobe-public** är det en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml`-fil. Gå igenom stegen för att installera och konfigurera Apache Maven i [en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
 
-1. Navigera till en katalog där du vill generera det AEM projektet. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. En katalog med namnet `code` under användarens hemkatalog:
+1. Navigera till en katalog där du vill generera det AEM projektet. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. En katalog med namnet `code` under användarens arbetskatalog:
 
    ```shell
    $ cd ~/code
    ```
 
-1. Klistra in följande på kommandoraden för att [generera projektet i gruppläge](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
+1. Klistra in följande på kommandoraden för att [generera projektet i batchläge](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
    $ mvn archetype:generate -B \
@@ -123,11 +123,11 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
 
    >[!NOTE]
    >
-   >Som standard används interaktivt läge när du genererar ett projekt från Maven-arkitypen. För att undvika att fet fingrar på värden som vi har genererat i gruppläge. Det går också att skapa projektet Maven AEM med [AEM Developer Tools för Eclipse](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/aem-eclipse.html).
+   >Som standard används interaktivt läge när du genererar ett projekt från Maven-arkitypen. För att undvika att fet fingrar på värden som vi har genererat i gruppläge. Det går också att skapa projektet Maven AEM med [AEM Developer Tools plugin for Eclipse](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/aem-eclipse.html).
 
    >[!CAUTION]
    >
-   >Om du får något av följande fel: *Det gick inte att köra målet org.apache.maven.plugins:maven-archietype-plugin:3.1.1:generate (default-cli) i fristående projekt: Den önskade arkitypen finns* inte. Det är en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml` fil. Gå igenom de tidigare stegen och kontrollera att filen settings.xml refererar till Adobe repo.
+   >Om du får något av följande fel: *Det gick inte att köra målet org.apache.maven.plugins:maven-archietype-plugin:3.1.1:generate (default-cli) i fristående projekt: Den önskade arkitypen finns inte*. Det är en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml`-fil. Gå igenom de tidigare stegen och kontrollera att filen settings.xml refererar till Adobe repo.
 
    I följande tabell visas de värden som används för den här självstudiekursen:
 
@@ -175,7 +175,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
 Nu när vi har skapat ett nytt projekt kan vi distribuera projektkoden till en lokal instans av AEM.
 
 1. Kontrollera att du har en instans av AEM som körs lokalt på port **4502**.
-1. Navigera från kommandoraden till `aem-guides-wknd` projektkatalogen.
+1. Gå till projektkatalogen `aem-guides-wknd` från kommandoraden.
 
    ```shell
    $ cd aem-guides-wknd
@@ -203,27 +203,27 @@ Nu när vi har skapat ett nytt projekt kan vi distribuera projektkoden till en l
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Profilen Maven `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna `admin:admin`.
+   Maven-profilen `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna `admin:admin`.
 
-1. Navigera till Package Manager på den lokala AEM instansen: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Du borde se tre paket för `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.content`och `aem-guides-wknd.all`.
+1. Navigera till Package Manager på den lokala AEM instansen: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Du bör se tre paket för `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.content` och `aem-guides-wknd.all`.
 
-   Du bör också se flera paket för [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) som ingår i projektet av typen architype. Detta beskrivs senare i självstudiekursen.
+   Du bör också se flera paket för [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) som ingår i projektet av arkitypen. Detta beskrivs senare i självstudiekursen.
 
-1. Gå till webbplatskonsolen: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND-platsen blir en av platserna. Den kommer att innehålla en webbplatsstruktur med hierarkin USA och Språkmallsidor. Den här platshierarkin baseras på värdena för `language_country` och `isSingleCountryWebsite` när projektet genereras med hjälp av arkitypen.
+1. Gå till webbplatskonsolen: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND-platsen blir en av platserna. Den kommer att innehålla en webbplatsstruktur med hierarkin USA och Språkmallsidor. Den här platshierarkin baseras på värdena för `language_country` och `isSingleCountryWebsite` när projektet genereras med hjälp av arkivtypen.
 
-1. Öppna sidan för **amerikansk** `>` engelska **genom att markera sidan och klicka på knappen** Redigera **** i menyraden:
+1. Öppna sidan **US** `>` **English** genom att markera sidan och klicka på knappen **Redigera** i menyraden:
 
    ![webbplatskonsol](assets/project-setup/aem-sites-console.png)
 
 1. En del innehåll har redan skapats och flera komponenter är tillgängliga för att läggas till på en sida. Experimentera med de här komponenterna för att få en uppfattning om funktionaliteten. Hur den här sidan och komponenterna är konfigurerade kommer att utforskas i detalj senare i självstudiekursen.
 
-## Inspect {#project-structure}
+## Inspect projektet {#project-structure}
 
 Den AEM typen består av individuella Maven-moduler:
 
 * [core](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/core.html) - Java bundle som innehåller alla kärnfunktioner som OSGi-tjänster, avlyssnare eller schemaläggare, liksom komponentrelaterad Java-kod som servrar eller begärandefilter.
-* [ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html) - innehåller /apps-delar av projektet, t.ex. JS&amp;CSS clientlibs, components och OSGi configs
-* [ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.html) - innehåller strukturerat innehåll och konfigurationer som redigerbara mallar, metadatamappningar (/content, /conf)
+* [ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html) - innehåller /apps-delar av projektet, t.ex. JS&amp;CSS-klientlibs, components och OSGi configs
+* [ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.html) - innehåller strukturellt innehåll och konfigurationer som redigerbara mallar, metadatamallar (/content, /conf)
 * ui.tests - Java bundle containing JUnit tests that are execserver-side. Paketet ska inte distribueras till produktionen.
 * ui.launcher - innehåller limkod som distribuerar paketet ui.tests (och beroende paket) till servern och utlöser fjärrexekveringen av JUnit
 * [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html) - (valfritt) innehåller de artefakter som krävs för att använda den Webpack-baserade front-end-modulen.
@@ -231,7 +231,7 @@ Den AEM typen består av individuella Maven-moduler:
 
 ![Maven Project Diagram](assets/project-setup/project-pom-structure.png)
 
-Läs [AEM Project Archetype-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) om du vill veta mer om Maven-modulerna.
+Mer information om Maven-modulerna finns i [AEM Project Archetype-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ## Avancerade Maven-kommandon {#advanced-maven-commands}
 
@@ -241,9 +241,9 @@ Därefter ska vi titta på några av de Maven-profiler och kommandon du kan anv�
 
 ### Kärnmodul {#core-module}
 
-Kärnmodulen innehåller **[all](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/core.html)** Java-kod som är kopplad till projektet. När den byggts distribueras ett OSGi-paket till AEM. Så här skapar du bara den här modulen:
+Modulen **[core](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/core.html)** innehåller all Java-kod som är associerad med projektet. När den byggts distribueras ett OSGi-paket till AEM. Så här skapar du bara den här modulen:
 
-1. Navigera till `core` mappen (under `aem-guides-wknd`):
+1. Navigera till mappen `core` (under `aem-guides-wknd`):
 
    ```shell
    $ cd core/
@@ -265,23 +265,23 @@ Kärnmodulen innehåller **[all](https://docs.adobe.com/content/help/en/experien
    [INFO] ------------------------------------------------------------------------
    ```
 
-1. Gå till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles). Det här är OSGi-webbkonsolen och innehåller information om alla paket som är installerade på AEM.
+1. Navigera till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles). Det här är OSGi-webbkonsolen och innehåller information om alla paket som är installerade på AEM.
 
-1. Växla sorteringskolumnen för **ID** så ser du WKND-paketet som är installerat och aktivt.
+1. Växla sorteringskolumnen **Id** så ser du WKND-paketet som är installerat och aktivt.
 
    ![Kärnpaket](assets/project-setup/wknd-osgi-console.png)
 
-1. Du kan se var behållaren finns i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd/install/wknd-sites-guide.core-0.0.1-SNAPSHOT.jar):
+1. Du kan se var behållaren befinner sig i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd/install/wknd-sites-guide.core-0.0.1-SNAPSHOT.jar):
 
    ![CRXDE-plats för JAR](assets/project-setup/jcr-bundle-location.png)
 
-### Ui.apps och Ui.content-moduler {#apps-content-module}
+### Ui.apps och Ui.content-modulerna {#apps-content-module}
 
-Modul **[ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som lagras i ett AEM som kallas [clientlibs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html). Detta inkluderar även [HTML](https://docs.adobe.com/docs/en/htl/overview.html) -skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR men i ett format som kan lagras i ett filsystem och användas för källkontroll. Modulen **ui.apps** innehåller bara kod.
+Mappmodulen **[ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)** innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som kommer att lagras i ett AEM som heter [clientlibs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html). Detta inkluderar även [HTML](https://docs.adobe.com/docs/en/htl/overview.html)-skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR-läsaren, men i ett format som kan lagras i ett filsystem och implementeras för källkontroll. Modulen **ui.apps** innehåller bara kod.
 
 Så här skapar du bara den här modulen:
 
-1. Från kommandoraden. Navigera till `ui.apps` mappen (under `aem-guides-wknd`):
+1. Från kommandoraden. Navigera till mappen `ui.apps` (under `aem-guides-wknd`):
 
    ```shell
    $ cd ../ui.apps
@@ -301,11 +301,11 @@ Så här skapar du bara den här modulen:
    [INFO] ------------------------------------------------------------------------
    ```
 
-1. Gå till [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Du bör se paketet som det första installerade paketet och det bör ha en senare tidsstämpel än något av de andra paketen. `ui.apps`
+1. Navigera till [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Du bör se `ui.apps`-paketet som det första installerade paketet och det bör ha en senare tidsstämpel än något av de andra paketen.
 
    ![Ui.apps-paketet är installerat](assets/project-setup/ui-apps-package.png)
 
-1. Återgå till kommandoraden och kör följande kommando (i `ui.apps` mappen):
+1. Återgå till kommandoraden och kör följande kommando (i mappen `ui.apps`):
 
    ```shell
    $ mvn -PautoInstallPackagePublish clean install
@@ -328,7 +328,7 @@ Så här skapar du bara den här modulen:
 
    Profilen `autoInstallPackagePublish` är avsedd att distribuera paketet till en publiceringsmiljö som körs på port **4503**. Ovanstående fel förväntas om det inte går att hitta en AEM som körs på http://localhost:4503.
 
-1. Kör slutligen följande kommando för att distribuera `ui.apps` paketet på port **4504**:
+1. Kör slutligen följande kommando för att distribuera `ui.apps`-paketet på port **4504**:
 
    ```shell
    $ mvn -PautoInstallPackage clean install -Daem.port=4504
@@ -346,17 +346,17 @@ Så här skapar du bara den här modulen:
    [INFO] --------------------------------------------------------------------
    ```
 
-   Ett byggfel förväntas inträffa igen om det inte finns någon AEM som körs på port **4504** . Parametern `aem.port` definieras i POM-filen på `aem-guides-wknd/pom.xml`.
+   Återigen förväntas ett byggfel inträffa om det inte finns någon AEM som körs på port **4504** tillgänglig. Parametern `aem.port` definieras i POM-filen på `aem-guides-wknd/pom.xml`.
 
-Modulen **[ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.htm)** är strukturerad på samma sätt som modulen **ui.apps** . Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **muterbart** innehåll. **Muterbart** innehåll avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i källkontrollen **men** kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar. För närvarande är det viktiga att samma Maven-kommandon som används för att skapa modulen **ui.apps** kan användas för att skapa modulen **ui.content** . Upprepa stegen ovan i mappen **ui.content** .
+Modulen **[ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.htm)** är strukturerad på samma sätt som modulen **ui.apps**. Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **mutable**-innehåll. **** MutableContent avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i  **** källkontrollsknappar som kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar. För närvarande är det viktigt att samma Maven-kommandon som används för att skapa modulen **ui.apps** kan användas för att skapa modulen **ui.content**. Upprepa stegen ovan i mappen **ui.content**.
 
-### Ui.frontModule {#ui-frontend-module}
+### Ui.front-modul {#ui-frontend-module}
 
-Modulen **[ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)** är en Maven-modul som egentligen är ett [webbpaketsprojekt](https://webpack.js.org/) . Modulen är konfigurerad att vara ett dedikerat frontendsystem som genererar JavaScript- och CSS-filer, som i sin tur distribueras till AEM. Med modulen **ui.front** kan utvecklare koda med språk som [Sass](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), använda [npm](https://www.npmjs.com/) -moduler och integrera utdata direkt i AEM.
+Modulen **[ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)** är en Maven-modul som egentligen är ett [webpack](https://webpack.js.org/)-projekt. Modulen är konfigurerad att vara ett dedikerat frontendsystem som genererar JavaScript- och CSS-filer, som i sin tur distribueras till AEM. Med modulen **ui.front** kan utvecklare koda med språk som [Sass](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), använda [npm](https://www.npmjs.com/)-moduler och integrera utdata direkt i AEM.
 
 Modulen **ui.front** beskrivs mer ingående i kapitlet om bibliotek på klientsidan och frontendutveckling. Nu ska vi titta på hur den är integrerad i projektet.
 
-1. Från kommandoraden. Navigera till `ui.frontend` mappen (under `aem-guides-wknd`):
+1. Från kommandoraden. Navigera till mappen `ui.frontend` (under `aem-guides-wknd`):
 
    ```shell
    $ cd ../ui.frontend
@@ -387,11 +387,11 @@ Modulen **ui.front** beskrivs mer ingående i kapitlet om bibliotek på klientsi
    [INFO] Finished at: 2019-12-06T15:26:16-08:00
    ```
 
-   Lägg märke till strecken som `copy: dist/clientlib-site/site.js ../ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js`. Detta anger att kompilerad CSS och JS kopieras till `ui.apps` mappen.
+   Lägg märke till raderna som `copy: dist/clientlib-site/site.js ../ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/js/site.js`. Detta anger att kompilerad CSS och JS kopieras till mappen `ui.apps`.
 
-1. Visa den ändrade tidsstämpeln för filen `aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css.txt`. Den bör uppdateras senare än de andra filerna i `ui.apps` modulen.
+1. Visa den ändrade tidsstämpeln för filen `aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css.txt`. Den bör uppdateras senare än de andra filerna i modulen `ui.apps`.
 
-   Till skillnad från de andra modulerna vi tittade på distribueras inte modulen **ui.front** direkt till AEM. I stället kopieras CSS och JS till modulen **ui.apps** och sedan distribueras modulen **ui.apps** till AEM. Om du tittar på byggordningen från det allra första Maven-kommandot ser du att **ui.front** alltid är skapat *före* **ui.apps**.
+   Till skillnad från andra moduler som vi tittade på distribueras inte modulen **ui.front** direkt till AEM. I stället kopieras CSS och JS till modulen **ui.apps** och sedan distribueras modulen **ui.apps** till AEM. Om du tittar på byggordningen från det allra första Maven-kommandot ser du att **ui.front** alltid är skapat *före* **ui.apps**.
 
    Senare i kursen ska vi titta på de avancerade funktionerna i modulen **ui.front** och den inbäddade webbpaketutvecklingsservern för snabb utveckling.
 
@@ -399,9 +399,9 @@ Modulen **ui.front** beskrivs mer ingående i kapitlet om bibliotek på klientsi
 
 Arkitypen bäddar automatiskt in [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i projektet. Tidigare ingick flera paket relaterade till kärnkomponenter när de distribuerade paketen granskades AEM. Core Components är en uppsättning baskomponenter som utformats för att påskynda utvecklingen av ett AEM Sites-projekt. Core Components är öppen källkod och tillgängliga på [GitHub](https://github.com/adobe/aem-core-wcm-components). Mer information om hur kärnkomponenter [ingår i projektet finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html#core-components).
 
-1. Använd din favorittextredigerare öppen `aem-guides-wknd/pom.xml`.
+1. Använd din favorittextredigerare och öppna `aem-guides-wknd/pom.xml`.
 
-1. Search for `core.wcm.components.version`. Här ser du vilken version av Core Components som ingår:
+1. Sök efter `core.wcm.components.version`. Här ser du vilken version av Core Components som ingår:
 
    ```xml
        <core.wcm.components.version>2.x.x</core.wcm.components.version>
@@ -411,7 +411,7 @@ Arkitypen bäddar automatiskt in [AEM kärnkomponenter](https://docs.adobe.com/c
    >
    > AEM Project Archetype innehåller en version av AEM Core Components, men dessa projekt har olika releasecykler, och därmed kanske inte den medföljande versionen av Core Components är den senaste. Det bästa sättet är att alltid utnyttja den senaste versionen av Core Components. Nya funktioner och felkorrigeringar uppdateras ofta. Den senaste [versionsinformationen finns på GitHub](https://github.com/adobe/aem-core-wcm-components/releases).
 
-1. Om du bläddrar nedåt till `dependencies` avsnittet bör du se de enskilda Core Component-beroendena:
+1. Om du bläddrar nedåt till `dependencies`-avsnittet bör du se de enskilda Core Component-beroendena:
 
    ```xml
    <dependency>
@@ -447,7 +447,7 @@ Maven skapar en målmapp när du skapar och installerar kodpaketet. Målmappen o
 
 Under ui.apps kommer du också att märka många .content.xml-filer som skapas. Dessa XML-filer mappar nodtyperna och egenskaperna för innehåll som är installerat i JCR-läsaren. Dessa filer är viktiga och ska **inte** ignoreras.
 
-Den AEM projekttypen genererar en exempelfil `.gitignore` som kan användas som startpunkt för vilken filer kan ignoreras. Filen genereras i `<src>/aem-guides-wknd/.gitignore`.
+Den AEM projekttypen genererar en `.gitignore`-exempelfil som kan användas som startpunkt för vilken filer kan ignoreras. Filen genereras på `<src>/aem-guides-wknd/.gitignore`.
 
 ## Granska {#chapter-review}
 
@@ -459,4 +459,4 @@ Grattis, du har just skapat ditt första AEM projekt!
 
 ### Nästa steg {#next-steps}
 
-Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt `HelloWorld` exempel med självstudiekursen [Component Basics](component-basics.md) .
+Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt `HelloWorld`-exempel med självstudiekursen [Component Basics](component-basics.md).
