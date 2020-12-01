@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Understanding Multitenancy and Concurrent Development {#understanding-multitenancy-and-concurrent-development}
+# Förstå multitenans och samtidig utveckling {#understanding-multitenancy-and-concurrent-development}
 
 ## Introduktion {#introduction}
 
@@ -67,7 +67,7 @@ I det här scenariot, om teamet som arbetar med projekt B behöver funktioner i 
 
 Observera att detta inte eliminerar behovet av att dessa team delar detta beroende - det bara sätter fokus på frågor snabbt och tidigt så att teamen kan diskutera eventuella risker och komma överens om en lösning.
 
-### Förhindra kodduplicering {#preventing-code-duplication-nbsp-br}
+### Förhindrar kodduplicering {#preventing-code-duplication-nbsp-br}
 
 När du arbetar med flera projekt är det viktigt att se till att koden inte dupliceras. Kodduplicering ökar sannolikheten för felhändelser, kostnaden för systemändringar och den övergripande stelheten i kodbasen. För att undvika dubbelarbete kan du lägga in den vanliga logiken i återanvändbara bibliotek som kan användas i flera projekt.
 
@@ -134,7 +134,7 @@ När du utvecklar komponenter och mallar för flera redigeringsgrupper är det v
 
 En bra arkitektur och öppna kommunikationskanaler kan förhindra att defekter introduceras i oväntade delar av sajten, men dessa metoder är inte förifyllda. Därför är det viktigt att till fullo testa vad som distribueras på plattformen innan något släpps i produktionen. Detta kräver samordning mellan teamen om deras lanseringscykler och förstärker behovet av en serie automatiska tester som täcker så mycket funktionalitet som möjligt. Och eftersom ett system delas av flera team blir prestanda, säkerhet och belastningstestning viktigare än någonsin.
 
-## Verksamhetsöverväganden {#operational-considerations}
+## Användningsöverväganden {#operational-considerations}
 
 ### Delade resurser {#shared-resources}
 
@@ -144,7 +144,7 @@ AEM körs inom en enda JVM. alla distribuerade AEM delar resurser med varandra, 
 
 Om du inte följer AEM bästa praxis är det möjligt att utveckla program som förbrukar resurser utöver vad som anses vara normalt. Exempel på detta är att utlösa många omfattande arbetsflödesåtgärder (till exempel DAM Update Asset), använda MSM push-on-modify-åtgärder över många noder eller använda dyra JCR-frågor för att återge innehåll i realtid. Dessa kommer oundvikligen att påverka prestanda för andra klientapplikationer.
 
-### Loggning {#logging}
+### Loggar {#logging}
 
 AEM tillhandahåller färdiga gränssnitt för robust loggkonfiguration som kan användas till våra fördelar i delade utvecklingsscenarier. Genom att ange separata loggare för varje varumärke, per paketnamn, kan vi uppnå en viss grad av loggseparation. Medan systemomfattande åtgärder som replikering och autentisering fortfarande loggas på en central plats, kan icke-delad anpassad kod loggas separat, vilket underlättar övervakning och felsökning för varje varumärkes tekniska team.
 
@@ -155,6 +155,6 @@ Metoderna omfattar inte så lätt konfigurationsinställningar eller programlogi
 
 ## Säkerhetsaspekter {#security-considerations}
 
-### ACL {#acls}
+### ACL:er {#acls}
 
 Det går förstås att använda åtkomstkontrollistor för att styra vilka som har åtkomst att visa, skapa och ta bort innehåll baserat på innehållssökvägar, vilket kräver att användargrupper skapas och hanteras. Svårigheten med att underhålla åtkomstkontrollistor och grupper beror på vikten av att se till att varje klientorganisation inte har någon kunskap om andra och huruvida de distribuerade programmen är beroende av delade resurser. För att säkerställa effektiv åtkomstkontroll, användar- och gruppadministration rekommenderar vi att ni har en centraliserad grupp med nödvändig tillsyn för att säkerställa att dessa åtkomstkontroller och principer överlappar (eller inte överlappar) på ett sätt som främjar effektivitet och säkerhet.
