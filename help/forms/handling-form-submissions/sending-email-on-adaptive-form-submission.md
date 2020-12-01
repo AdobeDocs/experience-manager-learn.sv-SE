@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Skicka e-post om inskickning av anpassat formulär {#sending-email-on-adaptive-form-submission}
+# Skickar e-post om inskickning av anpassat formulär {#sending-email-on-adaptive-form-submission}
 
 En vanlig åtgärd är att skicka ett bekräftelsemeddelande via e-post till den som skickat in det anpassade formuläret. För att uppnå detta väljer vi&quot;Skicka e-post&quot; som skicka-åtgärd.
 
@@ -31,7 +31,7 @@ När det adaptiva formuläret skickas får mottagaren ett e-postmeddelande.
 
 ![SendEmail](assets/sendemailaction.gif)
 
-## Konfigurationer krävs {#configurations-needed}
+## Konfigurationer som behövs {#configurations-needed}
 
 Du måste konfigurera Day CQ Mail-tjänsten. Detta kan konfigureras genom att peka din webbläsare till [Felix Configuration Manager](http://localhost:4502/system/console/configMgr)
 
@@ -41,7 +41,7 @@ På skärmbilden visas konfigurationsegenskaperna för Adobe-e-postservern.
 
 Följ dessa anvisningar om du vill prova detta på servern:
 
-* [Importera de resurser](assets/timeoffrequest.zip) som är associerade med den här artikeln i AEM med pakethanteraren.
+* [Importera de ](assets/timeoffrequest.zip) resurser som är associerade med den här artikeln i AEM med pakethanteraren.
 
 * Öppna [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 
