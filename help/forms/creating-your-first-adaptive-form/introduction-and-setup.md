@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Komma igång med adaptiva Forms {#getting-started-with-adaptive-forms}
+# Komma igång med adaptiv Forms {#getting-started-with-adaptive-forms}
 
 I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler.
 
@@ -36,8 +36,8 @@ Du behöver följande:
 
 * **Du måste köra AEM Forms version 6.4 eller senare på localhost:4502.**
 
-* [Ladda ned client-libs-and-logo](assets/client-libs-and-logo.zip) och [getting-started-fragment](assets/getting-started-fragment.zip) till hårddisken.
+* [Ladda ned klient-libs-and-](assets/client-libs-and-logo.zip) logo och  [getting-started-](assets/getting-started-fragment.zip) fragment till hårddisken.
 
-* Importera zip-filerna till AEM med [pakethanteraren ](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera zip-filer till AEM med [pakethanteraren ](http://localhost:4502/crx/packmgr/index.jsp)
 
 
