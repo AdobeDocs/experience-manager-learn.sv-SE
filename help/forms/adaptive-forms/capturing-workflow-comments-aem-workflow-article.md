@@ -28,18 +28,18 @@ En vanlig begäran är möjligheten att inkludera kommentarer som har angetts av
 
 För att uppfylla detta krav finns ett exempel på ett OSGi-paket som kan användas för att samla in kommentarer och lagra dessa kommentarer som arbetsflödets metadataegenskap.
 
-I följande skärmbild visas hur du använder processsteg i [AEM arbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) för att samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
+I följande skärmbild visas hur du använder processsteg i [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) för att samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
 
-![workflowcomments1](assets/workflowcomments1.gif)
+![arbetsflödenkommentarer1](assets/workflowcomments1.gif)
 
 Så här testar du den här funktionen på datorn:
 * [Kontrollera att processteget i arbetsflödet är konfigurerat att använda kommentarerna i arbetsflödet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
 * [Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Distribuera paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)SetValue. Paketet innehåller exempelkoden som fångar in kommentarerna och lagrar den som en metadataegenskap
+* [Distribuera paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar) SetValue. Paketet innehåller exempelkoden som fångar in kommentarerna och lagrar den som en metadataegenskap
 
-* [Ladda ned och zippa upp resurser som hör till den här artikeln till ditt filsystem](assets/capturecomments.zip) Resurserna innehåller arbetsflödesmodell och exempel på adaptiv form.
+* [Ladda ned och zippa upp resurser som hör till den här artikeln i ](assets/capturecomments.zip) filsystemetResurserna innehåller en arbetsflödesmodell och ett exempel på adaptiv form.
 
 * Importera de två ZIP-filerna till AEM med hjälp av pakethanteraren
 
