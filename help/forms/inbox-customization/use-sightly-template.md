@@ -18,13 +18,14 @@ ht-degree: 1%
 
 # Använda enkel mall för att visa inkorgsdata
 
-Du kan använda en liten mall för att formatera de data som ska visas i inkorgskolumner. I det här exemplet visas koral-ui-ikoner beroende på värdet i resultatkolumnen. På följande skärmbild visas hur ikoner används i resultatkolumnen![Inkomst-ikoner](assets/income-column.PNG)
+Du kan använda en liten mall för att formatera de data som ska visas i inkorgskolumner. I det här exemplet visas koral-ui-ikoner beroende på värdet i resultatkolumnen. På följande skärmbild visas hur ikoner används i resultatkolumnen
+![intäktsikoner](assets/income-column.PNG)
 
-[Den smidiga mallen](assets/sightly-template.zip) som används för att visa de anpassade URI-ikonerna för coral finns som en del av den här artikeln.
+[Den smidigt ](assets/sightly-template.zip) mall som används för att visa de anpassade URI-ikonerna för coral finns som en del av den här artikeln.
 
 ## Liten mall
 
-Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [korallusikonbiblioteket](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
+Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av det [URI-bibliotek för koral](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
