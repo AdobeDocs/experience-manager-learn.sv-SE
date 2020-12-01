@@ -92,7 +92,7 @@ Till och med i ett lokalt datacenter har en&quot;Scale Out&quot;-topologi med fl
 
 #### Gränser för utskalningstopologin
 
-Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom &quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Det här är en användbar funktion - vi behandlade det här i [kapitel 1](chapter-1.md) i den här serien - men det innebär också att när du ofta har gjort ändringar på din webbplats blir cachen ofta ogiltig. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
+Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom &quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Detta är en användbar funktion - vi behandlade detta i [Kapitel 1](chapter-1.md) i den här serien - men det innebär också att när du ofta har gjort ändringar på webbplatsen gör du cacheminnet mycket ogiltigt. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
 
 Om du har två utskickare har den andra besökaren 50 % chans att sidan inte cachelagras, och då får han en större fördröjning när sidan återges igen. Med ännu fler utskickare per publicering blir allt värre. Vad som händer är att publiceringsservern får mer belastning eftersom den måste återge sidan för varje Dispatcher separat.
 
@@ -108,11 +108,11 @@ Du kan överväga att använda en central delad lagring för alla utskickare ell
 
 Vi har experimenterat med NFS - men NFS introducerar stora prestandaproblem på grund av innehållslåsning. Detta minskade faktiskt det totala resultatet.
 
-**Sammanfattning** - Att dela ett gemensamt filsystem mellan flera utskickare rekommenderas INTE.
+**Sammanfattning**  - Att dela ett gemensamt filsystem mellan flera avsändare rekommenderas INTE.
 
 Om du har problem med prestandan kan du skala upp Publish och Dispatcher lika för att undvika belastningen på Publisher-instanserna. Det finns ingen gyllene regel om förhållandet mellan publicering och utskick - den beror i hög grad på hur förfrågningarna distribueras och hur ofta publikationer och cacheminnet blir ogiltiga.
 
-Om du också är oroad över den fördröjning som en besökare upplever kan du använda ett leveransnätverk, cacheåterhämtning, förebyggande cacheuppvärmning, ange en respittid enligt beskrivningen i [kapitel 1](chapter-1.md) i den här serien eller hänvisa till några avancerade idéer i [del 3](chapter-3.md).
+Om du också är orolig för den fördröjning som en besökare upplever bör du använda ett leveransnätverk, cachelagra om hämtning, förebyggande cacheuppvärmning, ange en respittid enligt beskrivningen i [Kapitel 1](chapter-1.md) i den här serien eller hänvisa till några avancerade idéer i [Del 3](chapter-3.md).
 
 ### Konfiguration av &quot;Cross Connected&quot;
 
