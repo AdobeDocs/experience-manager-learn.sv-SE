@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa element för datamodell för beräknade formulär i AEM Forms{#creating-computed-form-data-model-elements-in-aem-forms}
+# Skapar element för datamodell för beräknade formulär i AEM Forms{#creating-computed-form-data-model-elements-in-aem-forms}
 
 Beräknade element i formulärdatamodellen gör att du kan lagra manipuleringsresultatet för ett eller flera element i formulärdatamodellen. Du kan till exempel beräkna och lagra månadslönen genom att utföra en matematisk åtgärd i lönefältet. Om du vill göra det delar du lönen med 12 och lagrar resultatet i det beräknade elementet för formulärdatamodell som kallas monthlySalary.
 
