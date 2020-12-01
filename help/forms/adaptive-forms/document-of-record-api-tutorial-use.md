@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# Använda API för att generera arkivdokument i AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}
+# Använda API för att generera ett dokument för post i AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}
 
 Generera DOR (Document Of Record) programmatiskt
 
-Den här artikeln visar hur du använder `com.adobe.aemds.guide.addon.dor.DoRService API` för att generera **dokument** med programkod. [Dokumentet är](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) en PDF-version av data som samlats in i adaptiv form.
+I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **postdokument** programmatiskt. [Document of ](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) Recordis är en PDF-version av de data som samlats in i adaptiv form.
 
 1. Här följer kodfragmentet. Den första raden hämtar DOR-tjänsten.
 1. Ange DoROptions.
@@ -45,10 +45,10 @@ com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.gui
 Följ de här stegen för att prova detta på din lokala dator
 
 1. [Hämta och installera artikelresurserna med pakethanteraren](assets/dor-with-api.zip)
-1. Kontrollera att du har installerat och startat paketet DevelopingWithServiceUser som ingår i artikeln [Skapa tjänstanvändare](service-user-tutorial-develop.md)
+1. Kontrollera att du har installerat och startat DevelopingWithServiceUser-paketet som ingår i [Create Service User-artikeln](service-user-tutorial-develop.md)
 1. [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
 1. Sök efter användarmappningstjänsten för Apache Sling Service
-1. Se till att du skriver följande _DevelopingWithServiceUser.core:getformsresourceServer=fd-service_ i avsnittet Tjänstmappningar
+1. Se till att du anger följande _DevelopingWithServiceUser.core:getformsresourceServer=fd-service_ i avsnittet Tjänstmappningar
 1. [Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och klicka på Visa PDF
 1. Du bör se DOR på den nya fliken i webbläsaren
@@ -59,7 +59,7 @@ Följ de här stegen för att prova detta på din lokala dator
 PDF visas inte på den nya fliken i webbläsaren:
 
 1. Kontrollera att du inte blockerar popup-fönster i webbläsaren
-1. Låt dig följa de steg som beskrivs i den här [artikeln](service-user-tutorial-develop.md)
+1. Låt dig följa stegen som beskrivs i den här [artikeln](service-user-tutorial-develop.md)
 1. Kontrollera att DevelopingWithServiceUser-paketet är i *aktivt läge*
 1. Kontrollera att systemanvändarens data har behörigheterna Läs, Ändra och Skapa på följande nod `/content/usergenerated/content/aemformsenablement`
 
