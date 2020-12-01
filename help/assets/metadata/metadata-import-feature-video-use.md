@@ -31,9 +31,9 @@ Tack vare import- och exportfunktionerna för AEM Assets-metadata kan skribenter
 
 >[!VIDEO](https://video.tv.adobe.com/v/21374/?quality=9&learn=on)
 
-Ladda ned [sportmappen WeRetail](assets/we-retail-sports.zip)
+Ladda ned [Sportmappen WeRetail](assets/we-retail-sports.zip)
 
-Hämta [resursens metadatapaket](assets/we-retail-sports-asset-metadata.zip)
+Hämta [metadatapaket för resurs](assets/we-retail-sports-asset-metadata.zip)
 
 ## Metadatafilformat {#metadata-file-format}
 
@@ -42,7 +42,7 @@ Hämta [resursens metadatapaket](assets/we-retail-sports-asset-metadata.zip)
 #### Första raden
 
 * Den första raden i CSV-filen definierar metadataschemat.
-* Den första kolumnen är som standard `assetPath`, vilket innehåller den absoluta JCR-sökvägen för en resurs.
+* Den första kolumnen är som standard `assetPath`, som innehåller den absoluta JCR-sökvägen för en resurs.
 
 * Efterföljande kolumner i den första raden pekar på andra metadataegenskaper för en resurs.
 
