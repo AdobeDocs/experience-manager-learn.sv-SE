@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Använda steget Skicka e-post för Forms Workflow {#using-send-email-step-of-forms-workflow}
+# Använda steget Skicka e-post för Formens Workflow {#using-send-email-step-of-forms-workflow}
 
 Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas stegen för hur du konfigurerar komponenten för att skicka e-post.
 
@@ -49,7 +49,7 @@ Så här kör du exemplet på datorn:
 1. [Hämta och installera setValue-](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)paketet innehåller koden för att skapa metadataegenskaperna som en del av arbetsflödets processteg.
 1. [Konfigurera daglig CQ Mail-tjänst](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
 1. [Importera och installera resurser som är associerade med den här artikeln med hjälp av pakethanteraren i CRX](assets/emaildoraemformskt.zip)
-1. Starta det [adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Fyll i de obligatoriska fälten och skicka.
+1. Starta [adaptiv form](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Fyll i de obligatoriska fälten och skicka.
 1. Du bör få ett e-postmeddelande med DocumentOfRecord som en bifogad fil
 
 Utforska [arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
@@ -60,5 +60,6 @@ Ta en titt på arbetsflödets processsteg. Den anpassade kod som är associerad 
 >
 >I AEM Forms 6.5 och senare behöver du inte den här anpassade koden för att skapa metadataegenskaper. Använd variabelfunktionerna i AEM
 
-Kontrollera att fliken Bifogade filer i komponenten Skicka e-post är konfigurerad enligt skärmbilden under![fliken Skicka e-postbilaga.](assets/sendemailcomponentconfigure.jpg)Värdet DOR.pdf måste matcha värdet som anges i dokumentsökvägen som anges i alternativen för att skicka anpassat formulär.
+Kontrollera att fliken Bifogade filer i komponenten Skicka e-post är konfigurerad enligt skärmbilden nedan
+![Fliken Skicka e-postbilaga](assets/sendemailcomponentconfigure.jpg)Värdet &quot;DOR.pdf&quot; måste matcha det värde som anges i dokumentsökvägen som anges i alternativen för att skicka formulär som kan anpassas.
 
