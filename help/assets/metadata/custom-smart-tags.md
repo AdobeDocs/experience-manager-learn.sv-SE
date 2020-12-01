@@ -30,14 +30,14 @@ Anpassade smarta taggar, eller förbättrade smarta taggar, kan sedan utnyttjas 
 >[!NOTE]
 > Anpassade smarta taggar för bilder etableras automatiskt för AEM som en Cloud Service.
 
-Anpassade smarta taggar för bilder kräver [smarta taggar för att bilderna ska kunna konfigureras](./image-smart-tags.md#set-up).
+Anpassade smarta taggar för bilder kräver [smarta taggar för bilder som ska konfigureras](./image-smart-tags.md#set-up).
 
-Lär dig hur du konfigurerar utbildning för smarta taggar i AEM Assets med hjälp av tjänsten Smart innehåll och Adobe I/O. Anpassade smarta taggar för bilder
+Lär dig hur du konfigurerar utbildningsmaterialet för smarta taggar i AEM Assets med hjälp av Smart Content Service och Adobe I/O. Anpassade smarta taggar för bilder
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
 ## Ytterligare resurser
 
-* AEM 6.4 kräver det [senaste Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
+* AEM 6.4 kräver [den senaste Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
 
 
