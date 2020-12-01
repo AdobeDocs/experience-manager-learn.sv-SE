@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Skapar AEM Forms för dokumentmall för webbkanal {#creating-web-channel-document-template-aem-forms}
+# Skapar dokumentmall för webbkanal AEM Forms {#creating-web-channel-document-template-aem-forms}
 
 I den här delen skapar vi en mall för webbkanalsdokument.
 Skapa dokumentmall för webbkanal i AEM Forms 6.4
