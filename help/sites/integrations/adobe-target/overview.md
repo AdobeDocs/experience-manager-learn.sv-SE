@@ -40,7 +40,7 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
    1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
    1. [Anpassa en del av en webbsida med Visual Experience Composer](./personalization-using-vec.md)
 
-* __Scenario 3:__ Personalisering av kompletta webbsidesupplevelser
+* __Scenario 3:__ Personalisering av hela webbsidor
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
    1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
