@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Uppdatera en språkkopia med startprogram {#update-language-copy-launch}
+# Uppdaterar en språkkopia med Launches {#update-language-copy-launch}
 
 Lär dig hur du uppdaterar, granskar och godkänner ändringar i en språkkopia med hjälp av Launches.
 
