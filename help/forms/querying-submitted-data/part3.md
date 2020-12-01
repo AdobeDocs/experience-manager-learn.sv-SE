@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Lagra JSON-schema i databas {#storing-json-schema-in-database}
+# Lagra JSON-schema i databasen {#storing-json-schema-in-database}
 
 
 För att kunna fråga efter skickade data måste vi lagra det JSON-schema som är associerat med det skickade formuläret. JSON-schemat används i frågebyggaren för att skapa frågan.
