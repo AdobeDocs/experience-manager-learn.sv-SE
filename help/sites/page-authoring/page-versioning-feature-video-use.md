@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa sidversioner {#creating-page-versions-aem-sites}
+# Skapar sidversioner {#creating-page-versions-aem-sites}
 
 Sidversionshantering hjälper innehållsförfattare att spåra ändringar som är kopplade till en sida genom att skapa en sidversion och ger möjlighet att förhandsgranska en version, återställa en version och jämföra en version med den aktuella versionen av en sida.
 
