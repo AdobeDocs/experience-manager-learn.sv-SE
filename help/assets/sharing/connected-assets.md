@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Använda uppkopplade resurser med AEM Assets{#using-connected-assets-with-aem-assets}
+# Använda anslutna resurser med AEM Assets{#using-connected-assets-with-aem-assets}
 
 Med funktionen för sammankopplade resurser kan en AEM Sites-författare smidigt dela digitala resurser som lagras på en annan instans av AEM.
 
@@ -28,4 +28,4 @@ Med funktionen för sammankopplade resurser kan en AEM Sites-författare smidigt
 * 03:30 - Använda en bild från de anslutna resurserna
 * 04:42 - Administratörskonfigurationer för att aktivera funktionen för anslutna resurser
 
-Granska de distributioner av anslutna resurser [som](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) stöds för att ta reda på om din AEM-distribution har stöd för anslutna resurser.
+Granska de [distributioner som stöds för Anslutna resurser](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) för att ta reda på om din AEM-distribution har stöd för Anslutna resurser.
