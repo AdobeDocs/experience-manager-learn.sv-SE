@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# Förstå sidegenskaper {#understanding-page-properties-aem-sites}
+# Om sidegenskaper {#understanding-page-properties-aem-sites}
 
 I följande video visas de sidegenskaper som är kopplade till en sida i Adobe Experience Manager.
 
