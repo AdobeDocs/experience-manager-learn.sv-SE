@@ -50,7 +50,7 @@ En samlad vy över de autentiseringsmekanismer (och ibland auktoriseringsmekanis
             <td>✔</td>
         </tr>
         <tr>
-            <td>Tokenbaserad (med <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">inkapslad token</a>)</td>
+            <td>Tokenbaserad (w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">inkapslad token</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
@@ -93,4 +93,4 @@ En samlad vy över de autentiseringsmekanismer (och ibland auktoriseringsmekanis
     </tbody>
 </table>
 
-⁕ *tillhandahålls via communityprojekt, men stöds inte direkt av Adobe.*
+⁕ *Tillhandahålls via communityprojekt, men stöds inte direkt av Adobe.*
