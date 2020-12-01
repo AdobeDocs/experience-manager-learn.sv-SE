@@ -29,7 +29,7 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 <td><strong>Experience Fragments (XF)</strong></td>
 </tr><tr><td><strong>Definition</strong></td>
 <td><ul>
-<li>Återanvändbart, presentationsbaserat <strong>innehåll</strong>som består av strukturerade dataelement (text, datum, referenser osv.)</li>
+<li>Återanvändbart, presentationsbaserat <strong>innehåll</strong>, bestående av strukturerade dataelement (text, datum, referenser osv.)</li>
 </ul>
 </td>
 <td><ul>
@@ -39,7 +39,7 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </tr><tr><td><strong>Core Tenants</strong></td>
 <td><ul>
 <li>Innehållscentrerat</li>
-<li>Definieras av en <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">strukturerad, formulärbaserad datamodell.</a></li>
+<li>Definieras av en <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">strukturerad, formulärbaserad, datamodell.</a></li>
 <li>Design- och layoutagnostiker.</li>
 <li>Kanalen äger presentationen av Content Fragment-innehållet (layout och design)</li>
 </ul>
@@ -72,16 +72,16 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 <td><ul>
 <li>Variationer är kanal- eller kontextspecifika</li>
 <li>Variationer hålls synkroniserade via AEM Live Copy</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">Byggblocken</a> tillåter återanvändning av innehåll i olika varianter</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">Bygga </a> blockera återanvändning av innehåll i olika varianter</li>
 </ul>
 </td>
 </tr><tr><td><strong>Funktioner</strong></td>
 <td><ul>
 <li>Variationer</li>
 <li>Versioner</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank">Synkronisering</a> av innehåll mellan olika variationer</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">Visual diff</a> of Content Fragment versions</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">Anteckningar</a> av flerradiga textelement</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank"></a> Synkronisering av innehåll mellan olika varianter</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">Visual </a> diffof Content Fragment versions</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">Kommentarer </a> till textelement med flera rader</li>
 <li>Intelligent <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">sammanfattning</a> av flerradiga textelement.</li>
 <li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/creating-translation-projects-for-content-fragments.html" target="_blank">Översättning/lokalisering</a></li>
 </ul>
@@ -98,15 +98,15 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </td>
 </tr><tr><td><strong>Användning</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Core Components Content Fragment component</a> for use in AEM Sites, AEM Screens or in Experience Fragments.</li>
-<li>JSON-export via <a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a> för användning i tredje part</li>
+<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Core Components Content Fragment </a> Components för användning i AEM Sites, AEM Screens eller i Experience Fragments.</li>
+<li>JSON-export via <a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a> för användning av tredje part</li>
 <li>JSON via AEM HTTP Assets API:er för användning av tredje part.</li>
 </ul>
 </td>
 <td><ul>
 <li>AEM Experience Fragment-komponent som ska användas i AEM Sites, AEM Screens eller andra Experience Fragments.</li>
-<li>Exportera som <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">vanlig HTML</a> för användning i tredjepartssystem</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-export till Adobe Target</a> för riktade erbjudanden</li>
+<li>Exportera som <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">Vanlig HTML</a> för användning i tredjepartssystem</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-export till Adobe </a> Target för riktade erbjudanden</li>
 <li>JSON-export till Adobe Target för riktade erbjudanden</li>
 </ul>
 </td>
@@ -142,27 +142,27 @@ I följande diagram visas den övergripande arkitekturen för AEM innehållsfrag
 
 !![Arkitektur för innehållsfragment](./assets/content-fragments-architecture.png)
 
-+ **Modeller** för innehållsfragment definierar de element (eller fält) som definierar vilket innehåll som innehållsfragmentet kan fånga och visa.
-+ **Innehållsfragmentet** är en instans av en innehållsfragmentmodell som representerar en logisk innehållsenhet.
-+ Innehållsfragmentsvariationer **** som följer innehållsfragmentmodellen har dock olika innehåll.
++ **Content Fragment-** modeller definierar de element (eller fält) som definierar vilket innehåll som Content Fragment kan fånga och visa.
++ **Innehållsfragmentet** är en instans av en Content Fragment Model som representerar en logisk innehållsenhet.
++ Innehållsfragmentet **variationer** som följer innehållsfragmentmodellen har dock olika innehåll.
 + Innehållsfragment kan visas/användas av:
    + Använda innehållsfragment på **AEM Sites** (eller AEM Screens) via AEM WCM Core Components Content Fragment-komponent.
-   + Bädda in ett innehållsfragment i ett **Experience Fragment** via AEM WCM Core Components Content Fragment-komponent, som kan användas i alla Experience Fragment-användningsfall.
-   + Exponera ett innehållsfragment som varierar innehåll som JSON via **AEM Content Services** och API Pages för skrivskyddad användning.
+   + Bädda in ett innehållsfragment i ett **Experience Fragment** via AEM WCM Core Components Content Fragment-komponent, som kan användas i alla Experience Fragment-fall.
+   + Visa ett innehållsfragment varierar innehåll som JSON via **AEM Content Services** och API Pages för skrivskyddad användning.
    + Exponera innehåll i innehållsfragment (alla varianter) direkt som JSON via direktanrop till AEM Assets via **AEM Assets HTTP API** för CRUD-användning.
 
 ## Experience Fragments arkitektur
 
 !![Experience Fragments arkitektur](./assets/experience-fragments-architecture.png)
 
-+ **Redigerbara mallar**, som i sin tur definieras av **redigerbara malltyper** och en implementering **av en** AEM sidkomponent, definierar de tillåtna AEM komponenter som kan användas för att skapa ett Experience Fragment.
-+ Experience **Fragment** är en instans av en ändringsbar mall som representerar en logisk upplevelse.
-+ Experience Fragment- **variationer** följer den redigerbara mallen men har olika upplevelser (innehåll och design).
++ **Redigerbara mallar**, som i sin tur definieras av  **redigerbara** malltyper och en implementering **av en** AEM sidkomponent, definierar de tillåtna AEM komponenter som kan användas för att skapa ett Experience Fragment.
++ **Experience Fragment** är en instans av en redigerbar mall som representerar en logisk upplevelse.
++ Experience Fragment **variationer** följer den redigerbara mallen men har olika upplevelser (innehåll och design).
 + Upplevelsefragment kan visas/användas av:
    + Använda Experience Fragments på AEM Sites (eller AEM Screens) via komponenten AEM Experience Fragment.
-   + Exponera en Experience Fragment-varianter av innehåll som JSON (med inbäddad HTML) via **AEM Content Services** och API Pages.
+   + Exponera en Experience Fragment-varierar innehåll som JSON (med inbäddad HTML) via **AEM Content Services** och API Pages.
    + Exponerar en Experience Fragment-variant direkt som **&quot;Vanlig HTML&quot;**.
-   + Exportera Experience Fragments till **Adobe Target** som antingen HTML eller JSON.
+   + Exportera Experience Fragments till **Adobe Target** som antingen HTML eller JSON erbjuder.
    + AEM Sites stöder HTML-erbjudanden, men JSON-erbjudanden kräver anpassad utveckling.
 
 ## Supporting materials for Content Fragments
