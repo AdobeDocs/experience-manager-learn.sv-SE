@@ -26,7 +26,7 @@ I den här artikeln ska vi ta en titt på följande tjänst
 
 * FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-fil och även generera interaktiv PDF genom att sammanfoga XML-data i xdp-mall
 
-Den officiella javadoc-filen för AEM Forms API finns [här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+Den officiella javadoc-filen för AEM Forms API visas [här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 Följande kodfragment återger interaktiv pdf med hjälp av åtgärden renderPDFForm i FormsService. Schishing.xdp är en mall som används för att sammanfoga xml-data.
 
@@ -67,6 +67,6 @@ Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande progr
 1. Den interaktiva PDF-filen bör laddas ned till ditt lokala system
 
 
-Exempelpaketet innehåller den anpassade profil som är associerad med mobilformuläret. Titta närmare på filen [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) . Detta jsp extraherar data från mobilformuläret och gör en begäran om POST till serverlet som är monterad på sökvägen ***/bin/generateinteractivepdf*** . Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system
+Exempelpaketet innehåller den anpassade profil som är associerad med mobilformuläret. Titta närmare på filen [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp). Denna jsp extraherar data från mobilformuläret och gör en begäran om POST till serverlet som är monterad på sökvägen ***/bin/generateinteractivepdf***. Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system
 
 
