@@ -39,7 +39,7 @@ För att Java-loggar ska vara tillgängliga i AEM som Cloud Service (via [Cloud 
 
 Både AEM Author- och Publish-tjänsterna tillhandahåller AEM körningsserverloggar:
 
-+ `aemerror` är Java-felloggen (finns på AEM SDK:s lokala snabbstart). `/crx-quickstart/error.log` Följande loggnivåer [rekommenderas](#log-levels) för anpassade loggare per miljötyp:
++ `aemerror` är Java-felloggen (finns  `/crx-quickstart/error.log` på AEM SDK:s lokala snabbstart). Följande är [rekommenderade loggnivåer](#log-levels) för anpassade loggare per miljötyp:
    + Utveckling: `DEBUG`
    + Scen: `WARN`
    + Produktion: `ERROR`
@@ -51,7 +51,7 @@ Både AEM Author- och Publish-tjänsterna tillhandahåller AEM körningsserverlo
 Endast AEM Publish Dispatcher tillhandahåller Apache-webbserver och Dispatcher-loggar, eftersom dessa aspekter bara finns i AEM-publiceringsskiktet, och inte på AEM Author-skiktet.
 
 + `httpdaccess` visar en lista över HTTP-begäranden som gjorts till AEM Apache-webbservern/Dispatcher.
-+ `httperror`  visar loggmeddelanden från webbservern Apache och hjälp med felsökning av Apache-moduler som `mod_rewrite`.
++ `httperror`  visar loggmeddelanden från webbservern Apache och hjälp med felsökning av Apache-moduler som  `mod_rewrite`.
    + Utveckling: `DEBUG`
    + Scen: `WARN`
    + Produktion: `ERROR`
@@ -70,11 +70,11 @@ Loggarna kan laddas ned och inspekteras via alla logganalysverktyg.
 
 ## Adobe I/O CLI med plugin-programmet Cloud Manager{#aio}
 
-Adobe Cloud Manager har stöd för åtkomst av AEM som Cloud Service-loggar via [Adobe I/O CLI](https://github.com/adobe/aio-cli) med plugin-programmet [Cloud Manager för Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+Adobe Cloud Manager har stöd för åtkomst av AEM som Cloud Service-loggar via [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager-pluginen för Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-Först [ställer du in Adobe I/O med plugin-programmet](../../local-development-environment/development-tools.md#aio-cli)för Cloud Manager.
+Först [ställer du in Adobe I/O med molnhanterarplugin](../../local-development-environment/development-tools.md#aio-cli).
 
-Kontrollera att rätt program-ID och miljö-ID har identifierats och använd [list-available-log-options](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid) för att lista de loggalternativ som används för att [avsluta](#aio-cli-tail-logs) eller [hämta](#aio-cli-download-logs) loggar.
+Kontrollera att rätt program-ID och miljö-ID har identifierats och använd [list-available-log-options](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid) för att lista de loggalternativ som används för att [hämta](#aio-cli-tail-logs) eller [hämta](#aio-cli-download-logs)-loggar.
 
 ```
 $ aio cloudmanager:list-programs
@@ -104,26 +104,26 @@ Environment Id Service    Name
 22295          dispatcher aemdispatcher 
 ```
 
-### Spridningsloggar{#aio-cli-tail-logs}
+### Utseendeloggar{#aio-cli-tail-logs}
 
-Med Adobe I/O CLI kan du svepa loggar i realtid från AEM som en Cloud Service med kommandot [slutloggar](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) . Passning är användbart när du vill se loggaktivitet i realtid när åtgärder utförs på AEM som en Cloud Service.
+Med Adobe I/O CLI kan du avsluta loggar i realtid från AEM som en Cloud Service med kommandot [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name). Passning är användbart när du vill se loggaktivitet i realtid när åtgärder utförs på AEM som en Cloud Service.
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
 $ aio cloudmanager:tail-logs <ENVIRONMENT ID> <SERVICE> <NAME>
 ```
 
-Andra kommandoradsverktyg, som `grep` kan användas tillsammans med `tail-logs` för att isolera loggsatser av intresse, till exempel:
+Andra kommandoradsverktyg, som `grep`, kan användas tillsammans med `tail-logs` för att isolera loggsatser av intresse, till exempel:
 
 ```
 $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 ```
 
-... visar bara loggsatser som genererats från `com.example.MySlingModel` eller innehåller strängen.
+... visar bara loggsatser som genererats från `com.example.MySlingModel` eller innehåller den strängen i dem.
 
-### Hämtar loggar{#aio-cli-download-logs}
+### Laddar ned loggar{#aio-cli-download-logs}
 
-Adobe I/O CLI ger möjlighet att hämta loggar från AEM som en Cloud Service med kommandot [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)). Detta ger samma slutresultat som när du hämtar loggarna från webbgränssnittet i Cloud Manager, med skillnaden är att kommandot konsoliderar loggar över flera dagar, baserat på hur många dagar som loggarna begärs. `download-logs`
+Med kommandot [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)) i Adobe I/O CLI kan du hämta loggar från AEM som Cloud Service. Detta ger samma slutresultat som när du hämtar loggarna från webbgränssnittet för Cloud Manager, med skillnaden är att kommandot `download-logs` konsoliderar loggar över flera dagar, baserat på hur många dagar av loggar som begärs.
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
@@ -132,7 +132,7 @@ $ aio cloudmanager:download-logs <ENVIRONMENT> <SERVICE> <NAME> <DAYS>
 
 ## Förstå loggar
 
-Loggar in AEM som en Cloud Service har flera pods som skriver loggsatser i sig. Eftersom flera AEM-instanser skriver till samma loggfil är det viktigt att du förstår hur du analyserar och minskar bruset vid felsökning. Följande `aemerror` loggutdrag används som förklaring:
+Loggar in AEM som en Cloud Service har flera pods som skriver loggsatser i sig. Eftersom flera AEM-instanser skriver till samma loggfil är det viktigt att du förstår hur du analyserar och minskar bruset vid felsökning. Följande `aemerror`-loggutdrag kommer att användas som förklaring:
 
 ```
 01.01.2020 12:00:00.000 [cm-p12345-e56789-aem-author-abcdefg-1111] *DEBUG* [qtp2078364989-269] com.example.components.impl.ExampleModelImpl Preparing to collect resources
@@ -173,9 +173,9 @@ Att ställa in den lämpligaste loggnivån för varje miljötyp är med AEM som 
 
 ### Miljöspecifika variabler för att ställa in Java-loggnivåer
 
-Ett alternativ till att ställa in statiska, välkända Java-loggnivåer för varje miljö är att använda AEM som Cloud Servicens [miljöspecifika variabler](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) för att parametrisera loggnivåer, så att värdena kan ändras dynamiskt via [Adobe I/O CLI med plugin](#aio-cli)-programmetCloud Manager.
+Ett alternativ till att ställa in statiska, välkända Java-loggnivåer för varje miljö är att använda AEM som Cloud Servicens [miljöspecifika variabler](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) för att parametrisera loggnivåer, vilket gör att värdena kan ändras dynamiskt via [Adobe I/O CLI med plugin-programmet Cloud Manager](#aio-cli).
 
-Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att använda miljöspecifika variabelplatshållare. [Standardvärden](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) för loggnivåer ska anges enligt [Adobe rekommendationer](#log-levels). Till exempel:
+Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att använda miljöspecifika variabelplatshållare. [Standardvärden ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) för loggnivåer ska anges enligt  [Adobe rekommendationer](#log-levels). Till exempel:
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
@@ -189,7 +189,7 @@ Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att anvä
 Detta tillvägagångssätt har nackdelar som måste beaktas:
 
 + [Ett begränsat antal miljövariabler tillåts](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables), och om du skapar en variabel som hanterar loggnivån används en.
-+ Miljövariabler kan bara hanteras programmatiskt via [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) eller [Cloud Manager HTTP API](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties).
++ Miljövariabler kan bara hanteras programmatiskt via [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) eller [Cloud Manager HTTP API:er](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties).
 + Ändringar av miljövariabler måste återställas manuellt av ett verktyg som stöds. Om du glömmer att återställa en hög trafikmiljö, till exempel produktion, till en mindre detaljerad loggnivå kan loggarna flöda och påverka AEM prestanda.
 
 _Miljöspecifika variabler fungerar inte för webbservern Apache eller Dispatcher-loggkonfigurationer eftersom dessa inte har konfigurerats via OSGi-konfigurationen._
