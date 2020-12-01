@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# Introduktion till AEM {#introduction-architecture}
+# Introduktion till AEM Architecture Stack {#introduction-architecture}
 
-Vi presenterar teknikerna i [!DNL OSGi], [!DNL JCR], [!DNL Oak]och [!DNL Sling] som en del av Adobe Experience Manager teknikstack.
+Introducerar teknikerna i [!DNL OSGi], [!DNL JCR], [!DNL Oak] och [!DNL Sling] som en del av Adobe Experience Manager tekniska stack.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
