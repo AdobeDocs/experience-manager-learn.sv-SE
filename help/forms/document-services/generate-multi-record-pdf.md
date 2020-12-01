@@ -23,7 +23,8 @@ Nedan visas en skärmbild av XML-filen som innehåller flera poster.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml-fil skickas till metoden [OutputService](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) generatePDFOutputBatch som hämtar lista över pdf-dokument (en per post)Signaturen för metoden generatePDFOutputBatch har följande parametrar
+Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch-metoden](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över PDF-dokument (en per post)
+Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 * mallar - Karta som innehåller mallen, identifierad med en nyckel
 * data - Karta som innehåller XML-datadokument, identifierad med nyckel
@@ -32,13 +33,13 @@ Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml-fi
 
 >[!NOTE]
 >
->Det här användningsexemplet finns som exempel på den här [webbplatsen](https://forms.enablementadobe.com/content/samples/samples.html?query=0).
+>Det här användningsexemplet finns tillgängligt som live-exempel på den här [webbplatsen](https://forms.enablementadobe.com/content/samples/samples.html?query=0).
 
 ## Använd ärendeinformation{#use-case-details}
 
 I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och data(xml)-filen. När filöverföringen är klar och POSTEN har skickats till AEM. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
 
-## Servlet Code{#servlet-code}
+## Servletkod{#servlet-code}
 
 Nedan följer kodfragmentet från serverleten. Koden extraherar mallen(xdp) och datafilen(xml) från begäran. Mallfilen sparas i filsystemet. Två kartor skapas - templateMap och dataFileMap som innehåller mallen respektive xml(data)-filerna. Därefter anropas metoden generateMultipleRecords för DocumentServices-tjänsten.
 
