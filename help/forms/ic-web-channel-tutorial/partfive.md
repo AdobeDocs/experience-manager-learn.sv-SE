@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa dokumentfragment för mottagarens namn och adress {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# Skapar dokumentfragment för mottagarens namn och adress {#creating-document-fragments-to-hold-the-recipient-name-and-address}
 
 I den här delen skapar vi dokumentfragment för mottagarens namn och adress.
 
