@@ -30,14 +30,14 @@ Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra 
 
 ## Utforska datalagret
 
-Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att använda utvecklarverktygen i din webbläsare och den aktiva [WKND-referenswebbplatsen](https://wknd.site/).
+Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att bara använda utvecklarverktygen i din webbläsare och den aktiva [WKND-referensplatsen](https://wknd.site/).
 
 >[!NOTE]
 >
 > Skärmbilder nedan tagna från webbläsaren Chrome.
 
 1. Navigera till [https://wknd.site](https://wknd.site)
-1. Öppna utvecklarverktygen och ange följande kommando i **konsolen**:
+1. Öppna dina utvecklingsverktyg och ange följande kommando i **konsolen**:
 
    ```js
    window.adobeDataLayer.getState();
@@ -60,7 +60,7 @@ Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer 
    });
    ```
 
-1. Kör kommandot `adobeDataLayer.getState()` igen och sök efter posten `training-data`.
+1. Kör kommandot `adobeDataLayer.getState()` igen och sök efter posten för `training-data`.
 1. Lägg sedan till en path-parameter som returnerar bara ett specifikt läge för en komponent:
 
    ```js
@@ -92,13 +92,13 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   Ovanstående kod inspekterar `event` objektet och använder `adobeDataLayer.getState` metoden för att hämta det aktuella läget för objektet som utlöste händelsen. Hjälpmetoden granskar sedan `filter` villkoren och bara om den aktuella `dataObject` uppfyller filtret returneras den.
+   Ovanstående kod undersöker `event`-objektet och använder metoden `adobeDataLayer.getState` för att hämta det aktuella tillståndet för det objekt som utlöste händelsen. Hjälpmetoden kontrollerar sedan `filter`-villkoren och bara om det aktuella `dataObject` uppfyller filtret returneras det.
 
    >[!CAUTION]
    >
-   > Det är viktigt att du **inte** uppdaterar webbläsaren under övningen, annars försvinner konsolens JavaScript.
+   > Det är viktigt att **inte** uppdatera webbläsaren under övningen, annars försvinner konsolens JavaScript.
 
-1. Ange sedan en händelsehanterare som ska anropas när en **Teaser** -komponent visas i en **Carousel**.
+1. Ange sedan en händelsehanterare som ska anropas när en **Teaser**-komponent visas i en **Carousel**.
 
    ```js
    function teaserShownHandler(event) {
@@ -110,9 +110,9 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   Metoden anropas `teaserShownHandler` och `getDataObjectHelper` skickas som ett filter för `wknd/components/teaser` att `@type` filtrera bort händelser som utlöses av andra komponenter.
+   `teaserShownHandler` anropar metoden `getDataObjectHelper` och skickar ett filter av `wknd/components/teaser` som `@type` för att filtrera bort händelser som utlöses av andra komponenter.
 
-1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna `cmp:show` händelsen.
+1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna händelsen `cmp:show`.
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -120,13 +120,13 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    });
    ```
 
-   Händelsen `cmp:show` aktiveras av många olika komponenter, som när en ny bildruta visas i **Carousel** eller när en ny flik väljs i **Tab** -komponenten.
+   Händelsen `cmp:show` aktiveras av många olika komponenter, till exempel när en ny bildruta visas i **Carousel** eller när en ny flik väljs i komponenten **Tabb**.
 
 1. På sidan växlar du karusellbildrutorna och följer konsolsatserna:
 
    ![Växla Carousel och se händelseavlyssnare](assets/teaser-console-slides.png)
 
-1. Ta bort händelseavlyssnaren från datalagret för att sluta lyssna efter `cmp:show` händelsen:
+1. Ta bort händelseavlyssnaren från datalagret för att sluta lyssna efter händelsen `cmp:show`:
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -151,7 +151,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    Observera att resurstypen `wknd/components/page` används för att filtrera händelsen.
 
-1. Sedan skickar du en händelseavlyssnare till datalagret för att avlyssna `cmp:show` händelsen och anropar `pageShownHandler`.
+1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna händelsen `cmp:show` och anropar `pageShownHandler`.
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -166,14 +166,14 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    Händelsen `cmp:show` för sidan aktiveras för varje sida som läses in högst upp på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
 
-   Detta är en av de unika funktionerna i Adobe Client Data Layer, eftersom du kan registrera händelseavlyssnare **före** eller **efter** det att datalagret har initierats. Detta är en viktig funktion för att undvika konkurrensförhållanden.
+   Detta är en av de unika funktionerna i datalagret för klienten i Adobe, eftersom du kan registrera händelseavlyssnare **före** eller **efter att datalagret har initierats.** Detta är en viktig funktion för att undvika konkurrensförhållanden.
 
-   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Datalagret kommer som standard att utlösa händelseåteranrop för händelser som har inträffat **tidigare** samt händelser i **framtiden**. Det går att filtrera händelserna så att de bara är äldre eller framtida. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Datalagret kommer som standard att utlösa händelseåteranrop för händelser som inträffade i **förbi** samt händelser i **framtiden**. Det går att filtrera händelserna så att de bara är äldre eller framtida. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nästa steg
 
-Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe Client Data-lagret för att [samla in siddata och skicka till Adobe Analytics](../analytics/collect-data-analytics.md).
+Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [samla in siddata och skicka till Adobe Analytics](../analytics/collect-data-analytics.md).
 
 
 ## Ytterligare resurser {#additional-resources}
