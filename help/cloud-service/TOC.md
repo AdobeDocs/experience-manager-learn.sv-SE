@@ -1,5 +1,5 @@
 ---
-user-guide-title: Adobe Experience Manager as a Cloud Service Tutorials
+user-guide-title: Självstudiekurser om Adobe Experience Manager as a Cloud Service
 user-guide-description: En samling självstudiekurser för Adobe Experience Manager som Cloud Service.
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
@@ -13,7 +13,7 @@ ht-degree: 19%
 ---
 
 
-# Adobe Experience Manager as a Cloud Service Tutorials {#cloud-service}
+# Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Översikt](./overview.md)
 + Underliggande teknik {#underlying-technology}
@@ -23,12 +23,12 @@ ht-degree: 19%
    + [Introduktion till Sling](./underlying-technology/introduction-sling.md)
    + [Introduktion till redigerings- och publiceringsnivå](./underlying-technology/introduction-author-publish.md)
    + [Introduktion till Dispatcher](./underlying-technology/introduction-dispatcher.md)
-+ Lokal utvecklingsmiljö - konfiguration {#local-development-environment-set-up}
++ Konfigurera lokal utvecklingsmiljö {#local-development-environment-set-up}
    + [Översikt](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
    + [Local Dispatcher Tools](./local-development-environment/dispatcher-tools.md)
-+ AEM{#debugging}
++ Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Loggar](./debugging/aem-sdk-local-quickstart/logs.md)
@@ -51,19 +51,19 @@ ht-degree: 19%
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
 + Migrering {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
-+ Utbyggbarhet för tillgångsberäkning{#asset-compute}
++ Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
       + [Konto- och tjänsteetablering](./asset-compute/set-up/accounts-and-services.md)
       + [Lokal utvecklingsmiljö](./asset-compute/set-up/development-environment.md)
       + [Adobe Project Fire](./asset-compute/set-up/firefly.md)
    + Utveckla{#develop}
-      + [Skapa ett tillgångsberäkningsprojekt](./asset-compute/develop/project.md)
+      + [Skapa ett Asset compute-projekt](./asset-compute/develop/project.md)
       + [Konfigurera miljövariabler](./asset-compute/develop/environment-variables.md)
       + [Konfigurera manifest.yml](./asset-compute/develop/manifest.md)
       + [Utveckla en arbetare](./asset-compute/develop/worker.md)
       + [Använda utvecklingsverktyget](./asset-compute/develop/development-tool.md)
-   + Testa och felsöka{#test-debug}
+   + Testa och felsök{#test-debug}
       + [Testa en arbetare](./asset-compute/test-debug/test.md)
       + [Felsöka en arbetare](./asset-compute/test-debug/debug.md)
    + Distribuera{#deploy}
