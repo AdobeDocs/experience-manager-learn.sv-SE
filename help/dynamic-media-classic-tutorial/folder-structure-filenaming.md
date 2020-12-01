@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Ange mappstruktur och namngivningskonvention för filer {#folder-structure-filenaming}
+# Ange mappstruktur och namngivningskonvention {#folder-structure-filenaming}
 
 Innan du börjar ladda upp allt ditt innehåll är det klokt att fundera över mappstrukturen du ska använda och i synnerhet namnkonventionen. Det sparar antagligen tid och du behöver göra om uppgifter senare. Det är bäst att samordna dessa beslut i alla grupper.
 
@@ -46,7 +46,7 @@ För er mappstrategi bör ni fundera över vad som passar er organisation bäst.
 
 Det sätt du väljer att namnge filerna är kanske det viktigaste beslutet du kommer att fatta när det gäller Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
 
-Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett resurs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Exempelvis _får 896649.jpg_ tillgångs- _ID 896649_.
+Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett resurs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Till exempel _896649.jpg_ hämtar resurs _ID 896649_.
 
 Regler för tillgångs-ID:
 
@@ -78,7 +78,7 @@ Detta är ett mycket enkelt system och bra om du har blygsamma behov. Den är do
 | AA123 | Alt-vyer | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |  | Färgade vyer | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
 |  | Färgrutor | AA123_BLU_SW.tif | AA123_BLU_SW |
-|  | Bilduppsättning eller uppsättning med färgrutor |  | AA123 eller AA123_SET | -- |
+|  | Bilduppsättning eller uppsättning med färgrutor |  | AA123 eller AA123_SET | — |
 
 När du arbetar med uppsatta samlingar, som bilduppsättningar och färgruteuppsättningar, måste själva uppsättningen också ha ett unikt namn. I det här fallet kan uppsättningen få bas-SKU:n som namn, eller SKU:n med tillägget&quot;_SET&quot;.
 
