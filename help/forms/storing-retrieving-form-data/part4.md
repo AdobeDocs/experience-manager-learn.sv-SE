@@ -8,9 +8,9 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ function getAllUrlParams(url) {
 
             // set parameter name and value (use 'true' if empty)
             var paramName = a[0];
-            var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+            var paramValue = typeof(a[1]) === 'undefined' ? true : a[1];
 
             // (optional) keep case consistent
             paramName = paramName.toLowerCase();
@@ -89,31 +89,36 @@ function getAllUrlParams(url) {
     return obj;
 }
 
-
-$(document).ready(function () {
+$(document).ready(function() {
+    console.log(window.location.hostname + "   " + window.location.protocol);
     var linktext = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].info[0].linktxt[0]");
     var linktext1 = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].info[0].linktext1[0]");
     linktext.visible = false;
     linktext1.visible = false;
-    $(".savebutton").click(function () {
+    $(".savebutton").click(function() {
         var params = getAllUrlParams(window.location.href);
         console.log(getAllUrlParams(window.location.href));
         window.guideBridge.getDataXML({
-            success: function (guideResultObject) {
+            success: function(guideResultObject) {
                 console.log("The data is " + guideResultObject.data);
                 let xhr = new XMLHttpRequest();
                 xhr.open('POST', '/bin/storeafdata');
                 let formData = new FormData();
-                if (typeof (params.guid) != "undefined") {
+                if (typeof(params.guid) != "undefined") {
                     formData.append("operation", "update");
                     formData.append("guid", params.guid);
+
                 }
-                if (typeof (params.guid) == "undefined") {
+                if (typeof(params.guid) == "undefined") {
                     formData.append("operation", "insert");
+
+
                 }
+
+
                 formData.append("formdata", guideResultObject.data);
                 xhr.send(formData);
-                xhr.onload = function (e) {
+                xhr.onload = function(e) {
                     console.log("The data is ready");
                     if (this.status == 200) {
                         var jsonResponse = JSON.parse(this.response);
@@ -121,13 +126,18 @@ $(document).ready(function () {
                         var linktext = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].info[0].linktxt[0]");
                         var linktext1 = guideBridge.resolveNode("guide[0].guide1[0].guideRootPanel[0].info[0].linktext1[0]");
                         linktext1.visible = true;
-                        linktext.value = "http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled&guid=" + jsonResponse.guid;
+                        linktext.value =  "/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled&guid=" + jsonResponse.guid;
                         linktext.visible = true;
                         guideBridge.setFocus("guide[0].guide1[0].guideRootPanel[0].info[0].linktxt[0]");
                     }
+
                 }
             }
         });
+
+
     });
+
+
 });
 ```
