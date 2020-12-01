@@ -64,7 +64,7 @@ _Dynamic Media Classic-gränssnitt_
 
 >[!IMPORTANT]
 >
->Förutom varje resurs-ID finns växeln **Markera för publicering** . När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
+>Förutom varje resurs-ID finns växeln **Mark for Publish**. När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
 
 ![bild](assets/overview/overview-mark-for-publish.png)
 
@@ -72,4 +72,4 @@ _Dynamic Media Classic-gränssnitt_
 >
 >Markera kryssrutan **Publicera efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
-Läs mer om [Navigering i gränssnittet för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Läs mer om [Navigera i gränssnittet för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
