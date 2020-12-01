@@ -31,5 +31,5 @@ I den här videon visas AEM inkorg.
 * Info-konsol för arbetsflöde
 * Skapa ad hoc-uppgifter
 * Synlighet för uppgift och arbetsuppgift
-* [!DNL Inbox] och [!DNL Omnisearch] integrering
-* [!DNL Inbox] och [!DNL AEM Projects] integrering
+* [!DNL Inbox] och  [!DNL Omnisearch] integrering
+* [!DNL Inbox] och  [!DNL AEM Projects] integrering
