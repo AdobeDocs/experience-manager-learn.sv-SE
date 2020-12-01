@@ -28,9 +28,9 @@ ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Me
 
 Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub JavaScript-biblioteken. ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar.
 
-## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
+## Lägger till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
-Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` komponenten i `<head>` -avsnittet på webbsidan. HTML-koden för sidkomponenten liknar följande exempel:
+Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub`-komponenten i `<head>`-avsnittet på webbsidan. HTML-koden för sidkomponenten liknar följande exempel:
 
 ```java
 <!--/* Include Context Hub */-->
@@ -46,7 +46,7 @@ ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställ
 
 Skapa AEM segment som fungerar som regler för teasers. Det innebär att de definierar när innehåll inom ett suddgummi visas på en webbsida. Innehållet kan sedan anpassas specifikt efter besökarens behov och intressen, beroende på vilket segment de matchar.
 
-## Tilldela molnkonfiguration, segmentsökväg och ContextHub-sökväg till din plats {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
+## Tilldela molnkonfiguration, segmentsökväg och ContextHub-sökväg till platsen {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
 Tilldela molnkonfigurationssökvägen, segmenteringssökvägen och ContextHub-sökvägen till platsens rotnod så att du kan skapa en personlig upplevelse för din publik. Med ContextHub kan du ändra kontextdata och testa de lösta segmenten.
 
