@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa interaktiv kommunikation för tryckkanaler {#create-interactive-communication-for-print-channel}
+# Skapa interaktiv kommunikation för utskriftskanalen {#create-interactive-communication-for-print-channel}
 
 I den här delen skapas en kanal för interaktivt kommunikationsdokument för utskrift.
 
