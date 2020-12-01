@@ -25,7 +25,7 @@ Nästa steg är att fråga efter skickade data och visa resultaten i tabellform.
 
 [QueryBuilder](https://querybuilder.js.org/) - UI-komponent för att skapa frågor
 
-[Datatabeller](https://datatables.net/)- Visar frågeresultaten i tabellformat.
+[Datatabeller](https://datatables.net/) - Visar frågeresultaten i tabellformat.
 
 Följande användargränssnitt har skapats för att aktivera frågor om skickade data. Endast de element som markerats som obligatoriska i JSON-schemat är tillgängliga för att fråga mot. På skärmbilden nedan frågar vi efter alla sändningar där deliverypref är SMS.
 
@@ -37,7 +37,7 @@ Det exempelgränssnitt som används för att fråga efter skickade data använde
 >
 >Den aktuella versionen av den här självstudiekursen stöder inte frågor i flera kolumner.
 
-När du väljer ett formulär som ska utföra din fråga görs ett GET-anrop till **/bin/getdatasfromschema**. Det här GET-anropet returnerar de obligatoriska fält som är kopplade till formulärets schema. De obligatoriska fälten fylls sedan i i den nedrullningsbara listan i QueryBuilder så att du kan skapa frågan.
+När du väljer ett formulär som ska utföra din fråga görs ett GET-anrop till **/bin/getdatakeysfromschema**. Det här GET-anropet returnerar de obligatoriska fält som är kopplade till formulärets schema. De obligatoriska fälten fylls sedan i i den nedrullningsbara listan i QueryBuilder så att du kan skapa frågan.
 
 Följande kodfragment gör ett anrop till metoden getRequiredColumnsFromSchema i JSONSchemaOperations-tjänsten. Vi skickar egenskaperna och de nödvändiga elementen i schemat till det här metodanropet. Arrayen som returneras av det här funktionsanropet används sedan för att fylla i listrutan för frågebyggaren
 
