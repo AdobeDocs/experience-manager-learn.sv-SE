@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Värderingsbara rapporter för administratörer {#valuable-reports}
+# Värderbara rapporter för administratörer {#valuable-reports}
 
 I det sista kapitlet vill vi bara att du ska få veta mer om två värdefulla rapporter som du kan komma att konfigurera om du är administratör: rapporten Bandwidth &amp; Storage och rapporten Image Errors.
 
@@ -42,8 +42,8 @@ Vi hoppas att du har hittat innehållet i den här metodguiden som hjälper dig 
 
 Läs mer om Dynamic Media Classic här:
 
-- [Dynamic Media Classic on Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic on Experience League - gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic i Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic i Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Prenumerationssida för Dynamic Media Newsletter](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic-dokumentation](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
