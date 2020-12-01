@@ -39,13 +39,13 @@ Krav för den här självstudiekursen:
 * Ange lämpliga OAuth-scope för appen (jag har valt alla tillgängliga OAuth-scope för testning)
 * Ange återanrops-URL. Återanrops-URL:en i mitt fall var
 
-   * Om du använder **AEM Forms 6.3** blir återanrops-URL:en https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. I den här URL:en är creatlead namnet på min formulärdatamodell.
+   * Om du använder **AEM Forms 6.3** blir callback-URL:en https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. I den här URL:en är creatlead namnet på min formulärdatamodell.
 
    * Om du använder** AEM Forms 6.4** är återanrops-URL:en [https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html](https://gbedekar-w7-1:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html)
 
 I det här exemplet är gbedekar -w7-1:6443 namnet på min server och den port som AEM körs på.
 
-När du har skapat den anslutna appen kan du se **konsumentnyckeln och den hemliga nyckeln**. Du behöver dessa när du skapar datakällan i AEM Forms.
+När du har skapat anteckningen för den anslutna appen är **konsumentnyckeln och hemlig nyckel**. Du behöver dessa när du skapar datakällan i AEM Forms.
 
 Nu när du har skapat din anslutna app måste du skapa en swagger-fil för de åtgärder du behöver utföra i Salesforce. En swagger-exempelfil inkluderas som en del av de hämtningsbara resurserna. Med den här swagger-filen kan du skapa Lead-objekt när du skickar adaptiva formulär. Utforska den här växlingsfilen.
 
@@ -73,7 +73,7 @@ Nästa steg är att skapa en datakälla i AEM Forms. Följ de här stegen enligt
 * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
 * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
 * **Åtkomsttagg-URL - https://na5.salesforce.com/services/oauth2/token**
-* Auktoriseringsomfång: ** api chatter_api full-id openid refresh_token visualforce web**
+* Auktoriseringsomfång: ** api   chatter_api, fullständigt id   open   refresh_token visualforce web**
 * Autentiseringshanterare: Authorization Bearer
 * Klicka på &quot;Anslut till OAUTH&quot;.Om allt fungerar bra bör du inte se några fel
 
@@ -104,7 +104,7 @@ När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på 
    * Ange värden för ClientID och Client Secret
    * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
    * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
-   * Åtkomsttoken-**URL - https://na5.salesforce.com/services/oauth2/token**
+   * Access Token Ur **l - https://na5.salesforce.com/services/oauth2/token**
    * Auktoriseringsomfång: ** api chatter_api full-id openid refresh_token visualforce web**
    * Autentiseringshanterare: Authorization Bearer
    * Klicka på knappen &quot;Anslut till OAuth&quot;. Om du skulle få se några fel bör du gå igenom de föregående stegen för att säkerställa att all information har angetts korrekt.
