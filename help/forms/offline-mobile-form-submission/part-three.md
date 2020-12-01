@@ -38,6 +38,6 @@ Den genererade PDF-filen tilldelas arbetsflödesvariabeln `submittedPDF`.
 
 ### Tilldela den genererade PDF-filen för granskning och godkännande
 
-Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF-filen för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och Dokument i arbetsflödeskomponenten Tilldela uppgift.
+Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF-filen för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och dokument i arbetsflödeskomponenten Tilldela uppgift.
 
 ![arbetsflöde](assets/assign-task.PNG)
