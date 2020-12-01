@@ -26,11 +26,11 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Självstudiekursen är utformad för att fungera med **AEM som Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**.
+Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**.
 
 **[Titta på självstudiekursen här!](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Deploying WKND to AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Distribuerar WKND till AEM som en Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
 När du är klar med WKND-självstudiekursen kan du titta på videon nedan för att få en översikt över hur du distribuerar WKND-projektet till AEM som en Cloud Service.
 
@@ -42,4 +42,4 @@ Videon visar hur WKND Site-projektet kan vara:
 2. Skickat till en Adobe Cloud Manager Git-databas som är registrerad med en AEM som ett Cloud Service-program
 3. Driftsätts via rörledningar för Cloud Manager för att AEM som en Cloud Service-miljö
 
-Titta på videoserien om hur du [integrerar Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)om du vill få en fullständig översikt över hur du distribuerar AEM till AEM som en molntjänst.
+Titta på videoserien om hur du [integrerar Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html) om du vill få en fullständig översikt över hur du distribuerar AEM till AEM som en molntjänst.
