@@ -25,9 +25,9 @@ Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt öv
 
 1. Systemöversikten finns här: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
 
-   Direkt vid **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   Direkt **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. Du [!UICONTROL System Overview] kan exportera informationen från dialogrutan genom att klicka på [!UICONTROL Download] knappen. Informationen visas även via följande [!DNL REST] slutpunkt:
+1. Informationen från [!UICONTROL System Overview] kan exporteras genom att klicka på knappen [!UICONTROL Download]. Informationen visas även via följande [!DNL REST]-slutpunkt:
 1. Nedan visas ett exempel på JSON-utdata som exporteras från [!UICONTROL System Overview]:
 
    ```json
