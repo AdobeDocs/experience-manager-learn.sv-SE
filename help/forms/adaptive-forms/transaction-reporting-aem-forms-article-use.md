@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Transaktionsrapportering för att fånga upp antalet inskickade formulär, återgivning av dokument med dokumenttjänster och återgivning av interaktiv kommunikation (webben och tryckkanaler) har introducerats i AEM Forms 6.4.1. Den här funktionen är främst avsedd för kunder som vill licensiera programvaran baserat på antalet inskickade formulär och/eller återgivna dokument. Den här funktionen är för närvarande endast tillgänglig i AEM Forms OSGI-stacken.
 
-## Aktivera transaktionsrapportering {#enabling-transaction-reporting}
+## Aktiverar transaktionsrapportering {#enabling-transaction-reporting}
 
 Som standard är transaktionsregistrering inaktiverat. Följ stegen nedan för att aktivera transaktionsregistrering:
 
