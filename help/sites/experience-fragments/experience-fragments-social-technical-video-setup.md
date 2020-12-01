@@ -23,7 +23,7 @@ Med Experience Fragments kan marknadsförare lägga upp upplevelser som skapats 
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
 
-*[Experience Fragments]- konfigurera och konfigurera för sociala inlägg på Facebook och Pinterest*
+*[Experience Fragments]  - konfigurera och konfigurera sociala inlägg på Facebook och Pinterest*
 
 ## Checklista för konfiguration av Experience Fragments som ska publiceras på Facebook och Pinterest
 
