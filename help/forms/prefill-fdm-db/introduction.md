@@ -25,11 +25,12 @@ När kursen är slut har du lärt dig följande.
 
 * Skapa RDBMS-baserad formulärdatamodell
 * Skapa association mellan två enheter
-* Fyll i tabell med data som returnerats av _get_ service för formulärdatamodellen
+* Fyll i tabell med data som returnerats av _get_-tjänsten för formulärdatamodellen
 * Använd formulärdatamodellens attribut för begäran
 
 
-[Klicka för att se en live-demonstration av funktionen](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)I följande video visas en översikt över kursen
+[Klicka här för att se en live-demonstration av ](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+funktionenI följande video finns en översikt över kursen
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## Förutsättningar
