@@ -27,7 +27,7 @@ I den här artikeln ska vi titta på ett enkelt arbetsflöde som används för a
 * Administratören öppnar formuläret. Administratören ska inte kunna redigera någon information som fyllts i av den som skickar in formuläret.
 * Godkännaravsnittet ska vara synligt för godkännaren (i det här fallet är det AEM adminanvändaren).
 
-För att uppfylla ovanstående krav använder vi ett dolt fält som kallas **initialsteg** i formuläret och dess standardvärde är inställt på Ja. När formuläret skickas anges värdet för initialsteget med det första steget i arbetsflödet till Nej. Formuläret har affärsregler för att dölja och visa lämpliga avsnitt baserat på det initiala stegvärdet.
+För att uppfylla ovanstående krav använder vi ett dolt fält med namnet **initialsteg** i formuläret och dess standardvärde är inställt på Ja. När formuläret skickas, ställer det första steget i arbetsflödet in värdet för initialsteget på Nej. Formuläret har affärsregler för att dölja och visa lämpliga avsnitt baserat på det initiala stegvärdet.
 
 **Konfigurera formuläret för att utlösa AEM arbetsflöde**
 
