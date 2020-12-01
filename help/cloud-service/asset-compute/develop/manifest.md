@@ -1,6 +1,6 @@
 ---
-title: Konfigurera manifest.yml för ett Asset Compute-projekt
-description: Asset Compute-projektets manifest.yml beskriver alla arbetare i det här projektet som ska distribueras.
+title: Konfigurera manifest.yml för ett Asset compute-projekt
+description: Asset compute projekts manifest.yml beskriver alla arbetare i det här projektet som ska distribueras.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # Konfigurera manifest.yml
 
-I `manifest.yml`rotkatalogen för projektet Asset Compute beskrivs alla arbetare i det här projektet som ska distribueras.
+`manifest.yml`, som finns i roten av projektet Asset compute, beskriver alla arbetare i det här projektet som ska distribueras.
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## Standarddefinition för arbetare
 
-Arbetare definieras som Adobe I/O Runtime åtgärdsposter under `actions`, och består av en uppsättning konfigurationer.
+Arbetare definieras som Adobe I/O Runtime åtgärdsposter under `actions` och består av en uppsättning konfigurationer.
 
-Arbetare som använder andra Adobe I/O-integreringar måste ange `annotations -> require-adobe-auth` egenskapen till `true` eftersom detta [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via `params.auth` objektet. Detta är vanligtvis nödvändigt när arbetaren anropar API:er för Adobe I/O som Adobe Photoshop, Lightroom eller Sensei och kan växlas per arbetare.
+Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom denna [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via objektet `params.auth`. Detta krävs vanligtvis när arbetaren anropar Adobe I/O API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
 
-1. Öppna och granska den automatiskt genererade arbetaren `manifest.yml`. Projekt som innehåller flera Asset Compute-arbetare måste definiera en post för varje arbetare under `actions` arrayen.
+1. Öppna och granska den automatiskt genererade arbetaren `manifest.yml`. Projekt som innehåller flera Asset compute-arbetare måste definiera en post för varje arbetare under `actions`-arrayen.
 
 ```yml
 packages:
@@ -51,9 +51,9 @@ packages:
 
 Varje arbetare kan konfigurera [gränserna](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) för sin körningskontext i Adobe I/O Runtime. Dessa värden bör justeras för att ge optimal storlek för arbetaren, baserat på volymen, hastigheten och typen av resurser som den beräknar samt vilken typ av arbete den utför.
 
-Granska [vägledningen](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) för storleksändring av Adobe innan du anger gränser. Resursberäkningspersonal kan få slut på minne när resurser bearbetas, vilket leder till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla resurser.
+Granska [vägledningen för storleksändring av Adobe](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) innan du anger gränser. asset compute kan få slut på minne när resurser bearbetas, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla resurser som kan användas som kandidater.
 
-1. Lägg till ett `inputs` avsnitt i den nya `wknd-asset-compute` åtgärdsposten. Detta gör det möjligt att justera resursplaneringsarbetarens totala prestanda och resursallokering.
+1. Lägg till ett `inputs`-avsnitt i den nya `wknd-asset-compute`-åtgärdsposten. På så sätt kan du justera Asset compute arbetarens totala prestanda och resursallokering.
 
 ```yml
 packages:
@@ -75,7 +75,7 @@ packages:
 
 ## Den färdiga manifest.yml
 
-Den slutliga `manifest.yml` stilen ser ut så här:
+Den sista `manifest.yml` ser ut så här:
 
 ```yml
 packages:
@@ -96,29 +96,29 @@ packages:
 
 ## manifest.yml på Github
 
-Slutversionen `.manifest.yml` finns på Github:
+Den sista `.manifest.yml` finns på Github:
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
 ## Verifierar manifest.yml
 
-När den genererade resursberäkningen `manifest.yml` har uppdaterats kör du det lokala utvecklingsverktyget och ser till att de uppdaterade `manifest.yml` inställningarna börjar gälla.
+När den genererade Asset compute `manifest.yml` har uppdaterats kör du det lokala utvecklingsverktyget och ser till att startinställningarna har uppdaterats.`manifest.yml`
 
-Så här startar du verktyget Resursberäkning för projektet Resursberäkning:
+Så här startar du Asset compute Development Tool för projektet Asset compute:
 
-1. Öppna en kommandorad i projektroten Resursberäkning (i VS-koden kan den öppnas direkt i IDE via Terminal > New Terminal) och kör kommandot:
+1. Öppna en kommandorad i Asset compute projektroten (i VS-koden kan du öppna den direkt i IDE via Terminal > New Terminal) och köra kommandot:
 
    ```
    $ aio app run
    ```
 
-1. Det lokala verktyget Resursberäkning öppnas i standardwebbläsaren på __http://localhost:9000__.
+1. Det lokala utvecklingsverktyget för Asset compute öppnas i din standardwebbläsare på __http://localhost:9000__.
 
    ![aio-appkörning](assets/environment-variables/aio-app-run.png)
 
 1. Se kommandoradsutdata och webbläsaren för felmeddelanden när utvecklingsverktyget initieras.
-1. Om du vill stoppa verktyget Resursberäkning trycker du `Ctrl-C` i fönstret som utfördes `aio app run` för att avsluta processen.
+1. Om du vill stoppa utvecklingsverktyget i Asset compute trycker du på `Ctrl-C` i det fönster som körde `aio app run` för att avsluta processen.
 
 ## Felsökning
 
