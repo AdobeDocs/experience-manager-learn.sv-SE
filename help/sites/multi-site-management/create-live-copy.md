@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa en Live Copy {#create-livecopy}
+# Skapa en Live-kopia {#create-livecopy}
 
 Lär dig hur du skapar en Live-kopia för din webbplats från en utkast med guiden Skapa Live-kopia.
 
