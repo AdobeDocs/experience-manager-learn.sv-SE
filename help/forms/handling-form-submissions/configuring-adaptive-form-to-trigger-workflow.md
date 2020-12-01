@@ -33,10 +33,10 @@ Exempelformuläret som används i det här arbetsflödet är baserat på en anpa
 
 ### Hämta exemplet Adaptiv form
 
-* Ladda ned [adaptiv blankett](assets/peak-application-form.zip)
+* Hämta [anpassningsbart formulär](assets/peak-application-form.zip)
 * Bläddra till [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa -> Filöverföring
-* Det adaptiva exempelformuläret placeras i en mapp som heter [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* Det adaptiva exempelformuläret placeras i en mapp med namnet [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 I följande video förklaras hur du konfigurerar ett adaptivt formulär för att aktivera ett AEM arbetsflöde
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
