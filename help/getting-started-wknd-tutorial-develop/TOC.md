@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# Getting Started with AEM Sites - WKND Tutorial {#getting-started-wknd-tutorial-develop}
+# Komma igång med AEM Sites - WKND självstudiekurs {#getting-started-wknd-tutorial-develop}
 
 + [Översikt över WKND-självstudiekurs](overview.md)
 + [Projektinställningar](project-setup.md)
