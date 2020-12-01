@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Publishing pages {#using-publication-management-with-aem-sites}
+# Publicerar sidor {#using-publication-management-with-aem-sites}
 
 AEM Sites har flera alternativ för publicering och avpublicering av innehåll. I den här videon utforskas de olika metoderna och deras funktioner.
 
