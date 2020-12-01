@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Hantera inskickning av PDF
 
-I den här delen ska vi skapa en enkel server som körs på AEM Publish för att hantera PDF-inlämningen från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-förfrågan till en server som körs i en AEM författare som har ansvar för att spara skickade data som en `nt:file` nod i AEM Authors databas.
+I den här delen ska vi skapa en enkel server som körs på AEM Publish för att hantera PDF-inlämningen från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-begäran till en server som körs i en AEM författare som är direkt ansvarig för att spara skickade data som en `nt:file`-nod i AEM Authors databas.
 
 Nedan följer koden för den server som hanterar PDF-överföringen. På den här servern gör vi ett anrop till en POST som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM Authors databas.
 
@@ -200,7 +200,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-En AEM startfunktion för arbetsflöden är konfigurerad att utlösa varje gång en ny resurs av typen `nt:file` skapas under `/content/pdfsubmissions` noden. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF-filer genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
+En AEM startfunktion för arbetsflödet är konfigurerad att utlösa varje gång en ny resurs av typen `nt:file` skapas under noden `/content/pdfsubmissions`. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF-filer genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
 
-För att lagra inskickade data under `/content/pdfsubmissions` noden använder vi OSGi- `GetResolver` tjänsten för att spara inskickade data med hjälp av den `fd-service` systemanvändare som är tillgänglig i varje AEM Forms-installation.
+För att lagra skickade data under noden `/content/pdfsubmissions` använder vi OSGi-tjänsten `GetResolver` för att spara skickade data med hjälp av `fd-service`-systemanvändaren som finns tillgänglig i alla AEM Forms-installationer.
 
