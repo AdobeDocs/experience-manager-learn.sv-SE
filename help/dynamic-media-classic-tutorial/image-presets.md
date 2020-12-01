@@ -38,7 +38,7 @@ En bildförinställning har ett dollartecken ($) på båda sidor om namnet och f
 >
 >Skapa en bildförinställning per unik bildstorlek på webbplatsen. Om du till exempel behöver en bild på 350 x 350 för produktinformationssidan, en bild på 120 x 120 för bläddrings-/söksidorna och en bild på 90 x 90 för korsförsäljning/aktuellt objekt behöver du tre förinställda bilder, oavsett om du har 500 bilder eller 500 0 000.
 
-- Läs mer om [bildförinställningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- Läs mer om [Bildförinställningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
 - Lär dig hur du [skapar en bildförinställning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## Bildförinställningar och skärpa
@@ -61,12 +61,12 @@ I följande bild visas tre nivåer av skärpa. Från höger till vänster har du
 
 Dynamic Media Classic tillåter tre typer av skärpa: Enkel skärpa, omsamplingsläge och Oskarp mask.
 
-Läs mer om [Dynamic Media Classic Sharpening Options](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Läs mer om [Alternativ för dynamisk Media Classic-skärpa](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Ytterligare resurser
 
-[Förinställningsguide](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)för bild. Inställningar som ska användas för att optimera bildkvalitet och inläsningshastighet.
+[Förinställningsguide](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf) för bild. Inställningar som ska användas för att optimera bildkvalitet och inläsningshastighet.
 
 [Bilden är allt del 2: Det är aldrig bara oskärpa - kvalitet jämfört med hastighet](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). Ett blogginlägg där man diskuterar hur man använder bildförinställningar för att leverera högkvalitativa, snabba bilder.
 
-[Bild är allt som är webbinarier](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Länkar till inspelningar av alla tre webbinarierna i serien _Image Is everything_ . [I webbinarium 2](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandlas bildförinställningar.
+[Bild är allt som är webbinarier](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Länkar till inspelningar av alla tre webbinarierna i _Image Is everything_-serien. [I webbinarium 2 ](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandlas bildförinställningar.
