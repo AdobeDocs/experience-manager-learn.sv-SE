@@ -54,13 +54,13 @@ ht-degree: 0%
 
 * Ersätt standardtexten med &quot;**Uppskattad månadsvis pensionsinkomst&quot;**
 
-## Lägg till dokumentfragment för återbetalningsintäkt i Outlook {#add-retirement-income-outlook-document-fragment}
+## Lägg till dokumentfragment i Outlook för pensionsintäkt {#add-retirement-income-outlook-document-fragment}
 
 * Klicka på ikonen Resurser och använd filtret för att visa resurser av typen &quot;Dokumentfragment&quot;. Dra och släpp dokumentfragmentet RetirementIncomeOutlook på målområdet för den vänstra panelen.
 
 * Du kan referera [till den här sidan](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) när du lägger till dokumentfragment i innehållsområden.
 
-## Ökning av uppskattad månadsinkomst {#adding-estimated-monthly-income-chart}
+## Lägger till uppskattat månadsinkomstdiagram {#adding-estimated-monthly-income-chart}
 
 * Klicka på målområdet för högerpanelen på den högra sidan. Klicka på plustecknet (+) för att infoga diagramkomponenten. Vi använder ett kolumndiagram för att visa den beräknade månadsinkomsten. Tryck försiktigt på den nyligen infogade diagramkomponenten. Välj ikonen &quot;Wrench&quot; för att öppna konfigurationsbladet.Konfigurera diagrammet med följande egenskaper, som visas på skärmbilden nedan.
 
