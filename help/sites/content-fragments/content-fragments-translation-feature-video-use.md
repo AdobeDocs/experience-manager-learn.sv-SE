@@ -23,7 +23,7 @@ I AEM 6.3 introduceras möjligheten att översätta innehållsfragment. Medieres
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
 
-## Användningsexempel för översättning av innehållsfragment {#content-fragment-translation-use-cases}
+## Användningsexempel för innehållsfragmentöversättning {#content-fragment-translation-use-cases}
 
 Innehållsfragment är en identifierad innehållstyp som AEM extraherar och skickas till en extern översättningstjänst. Flera användningsområden stöds inte:
 
