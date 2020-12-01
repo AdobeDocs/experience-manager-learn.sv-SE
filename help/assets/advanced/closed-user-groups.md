@@ -36,7 +36,7 @@ Stängda användargrupper (CUG) är en funktion som används för att begränsa 
 
 Gruppen för butiksmedlemmar har lagts till som en stängd användargrupp i mappen: /content/dam/we-retail/en/beta-products
 
-En blandning av **rep:CugMixin** används för mappen **/content/dam/we-retail/en/beta-products** . En nod för **rep:cugPolicy** läggs till under mappen och vi-retail-members anges som huvudobjekt. En annan blandning av **granite:AuthenticationRequired** används i mappen för betaprodukter och egenskapen** granite:loginPath** anger vilken inloggningssida som ska användas om en användare inte är autentiserad och försöker begära en resurs under mappen för **betaprodukter** .
+En blandning av **rep:CugMixin** används i mappen **/content/dam/we-retail/en/beta-products**. En nod på **rep:cugPolicy** läggs till under mappen och vi-retail-members anges som huvudobjekt. En annan blandning av **granite:AuthenticationRequired** används i mappen för betaprodukter och egenskapen** granite:loginPath** anger vilken inloggningssida som ska användas om en användare inte är autentiserad och försöker begära en resurs under mappen **beta-products**.
 
 JCR-beskrivning nedan:
 
@@ -56,7 +56,7 @@ Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används f
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på den **aktuella** AEM. | Konfigurera CUG-principer för innehåll på AEM **författarinstans** . Använd CUG-profiler för innehåll AEM **publiceringsinstanser** . |
+| Avsedd användning | Konfigurera och använd behörigheter för innehåll på den aktuella **AEM**-instansen. | Konfigurera CUG-principer för innehåll på AEM **författare**-instans. Använd CUG-principer för innehåll på AEM **publicera** instanser(er). |
 | Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst för alla andra användare/grupper. |
 | Replikering | ACL:er replikeras inte med innehåll. | CUG-principer replikeras med innehåll. |
 
