@@ -29,7 +29,7 @@ Följ följande anvisningar för att få det här användningsfallet att fungera
 
 ## Skapa databas
 
-I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa [databasschemat genom att importera schemafilen](assets/data-base-schema.sql) till MySQL workbench.
+I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa databasschemat [genom att importera schemafilen](assets/data-base-schema.sql) till MySQL workbench.
 
 ## Skapa datakälla
 
@@ -37,15 +37,16 @@ Du måste skapa en datakälla med namnet **StoreAndRetrieveAfData**. Koden i OSG
 
 ## Skapa formulärdatamodell
 
-Formulärdatamodell måste skapas baserat på den här datakällan med namnet **StoreAndRetrieveAfData**. Den här formulärdatamodellen används för att hämta det mobiltelefonnummer som är kopplat till program-ID:t. Här kan du [hämta formulärdatamodellen.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+Formulärdatamodell måste skapas baserat på den här datakällan med namnet **StoreAndRetrieveAfData**. Den här formulärdatamodellen används för att hämta det mobiltelefonnummer som är kopplat till program-ID:t. Formulärdatamodellen kan hämtas [härifrån.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
 ## Skapa utvecklarkonto med nexmo
 
-Skapa ett utvecklarkonto hos [Nexmo](https://dashboard.nexmo.com/) för att skicka och verifiera OTP-koder. Anteckna API-nyckeln och API-hemlig nyckel. Datakällan och formulärdatamodellen har redan skapats för dig mot den här tjänsten och ingår i de tillgångar som nämns i föregående steg.
+Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skicka och verifiera OTP-koder. Anteckna API-nyckeln och API-hemlig nyckel. Datakällan och formulärdatamodellen har redan skapats för dig mot den här tjänsten och ingår i de tillgångar som nämns i föregående steg.
 
 ## Distribuera följande OSGi-paket
 
-Distribuera det paket som innehåller [koden för att lagra och hämta data från databasen](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)Distribuera [DevelopingWithServiceUser-paketet](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+Distribuera paketet som har [koden för att lagra och hämta data från databasen](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
+Distribuera [DevelopingWithServiceUser Bundle](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
 
 ## Distribuera klientbiblioteket
 
@@ -53,17 +54,18 @@ Exemplet använder två klientbibliotek. Importera dessa [klientbibliotek](asset
 
 ## Importera en anpassad formulärmall
 
-Exempelformulären som används i den här demon är baserade på en anpassad mall. Importera den [anpassade mallen till AEM](assets/custom-template-with-page-component.zip)
+Exempelformulären som används i den här demon är baserade på en anpassad mall. Importera den anpassade [mallen till AEM](assets/custom-template-with-page-component.zip)
 
 ## Importera exempeladaptiva formulär
 
-De två formulär som utgör det här exemplet måste importeras till AEM. Exempelformulären kan [laddas ned här](assets/sample-forms.zip)
+De två formulär som utgör det här exemplet måste importeras till AEM. Exempelformulären kan [hämtas här](assets/sample-forms.zip)
 
-Open the [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) in edit mode. Ange API-nyckel och API-hemlighet i lämpliga fält i det adaptiva formuläret.
+Öppna [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) i redigeringsläge. Ange API-nyckel och API-hemlighet i lämpliga fält i det adaptiva formuläret.
 
 ## Testa lösningen
 
-Förhandsgranska [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)Ange ditt mobilnummer inklusive landskoden, fyll i dina användaruppgifter och lägg till några bilagor. Klicka på knappen &quot;Spara och avsluta&quot; för att spara det adaptiva formuläret och dess bilagor
+Förhandsgranska [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
+Ange ditt mobilnummer inklusive landskoden, fyll i dina användaruppgifter och lägg till några bilagor. Klicka på knappen &quot;Spara och avsluta&quot; för att spara det adaptiva formuläret och dess bilagor
 
 
 ## Demonstration av användningsfallet
