@@ -15,7 +15,7 @@ ht-degree: 0%
 ---
 
 
-# Sök efter förstärkning med tillgångsmetadata {#search-boost-asset}
+# Sök efter förstärkning med resursmetadata {#search-boost-asset}
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
 
