@@ -67,11 +67,11 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 }
 ```
 
-## Skapa en tjänst för direktuppspelning av PDF-filen {#create-servlet-to-stream-the-pdf}
+## Skapa tjänstför att strömma PDF-filen {#create-servlet-to-stream-the-pdf}
 
 Nästa steg är att skapa en server med en POST-metod som returnerar den utökade PDF-filen till läsaren. I så fall blir användaren ombedd att spara PDF-filen i sitt filsystem. Det beror på att PDF-filen återges som en dynamisk PDF-fil och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
-Här följer koden för servleten. Servern anropas från **anpassad skickaåtgärd** i adaptiv form.
+Här följer koden för servleten. Servern anropas från **anpassad sändning**-åtgärd av adaptiv form.
 Servlet skapar UsageRights-objektet och ställer in dess egenskaper baserat på de värden som användaren anger i det adaptiva formuläret. Servern anropar sedan metoden **applyUsageRights** för den tjänst som skapats för detta ändamål.
 
 ```java
