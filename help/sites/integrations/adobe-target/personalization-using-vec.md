@@ -35,19 +35,19 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
-1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Target__, navigera till fliken __Activity__ (Aktiviteter)
+1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till fliken __Aktiviteter__
 
-   + Om du inte ser __Target__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Om du inte ser __Mål__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B-testaktivitet**
+1. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B Test** aktivitet
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
 
-1. Välj alternativet **Visual Experience Composer** , ange aktivitets-URL:en och klicka sedan på **Nästa**
+1. Välj alternativet **Visual Experience Composer**, ange aktivitets-URL:en och klicka sedan på **Nästa**
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplev A* och *Experience B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda knappen **Lägg till upplevelse** .
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplev A* och *Upplev B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda knappen **Lägg till upplevelse**.
 
    ![Upplevelse A](assets/experience.png)
 
@@ -55,16 +55,16 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 
    ![Element](assets/select-element.png)
 
-1. Ändra texten från *Camping i västra Australien* till *Australiens*&#x200B;äventyr. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
+1. Ändra texten från *Camping i Western Australia* till *Adventures of Australia*. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
 
    ![Annonser](assets/adventures.png)
 
-1. Byt namn på *upplevelse A* till *Adventure*
-1. Uppdatera på samma sätt texten om *Experience B* från *Camping i västra Australien* för att *utforska Australiens vildhet*.
+1. Byt namn på *Upplev A* till *Adventure*
+1. Uppdatera texten på *Experience B* från *Camping i Western Australia* till *Explore the Australian Wilderness*.
 
    ![Utforska](assets/explore.png)
 
-1. Klicka på **Nästa** för att gå över till Riktning och låt oss behålla en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
+1. Klicka på **Nästa** för att gå över till Riktning och låt oss behålla en manuell trafikallokering på 50-50 mellan de två upplevelserna.
 
    ![Målinriktning](assets/targeting.png)
 
