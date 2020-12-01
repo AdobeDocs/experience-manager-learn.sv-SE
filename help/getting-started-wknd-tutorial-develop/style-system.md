@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Utveckla med Style System {#developing-with-the-style-system}
+# Utveckla med formatsystemet {#developing-with-the-style-system}
 
 Lär dig hur du implementerar enskilda format och återanvänder kärnkomponenter med Experience Manager Style System. I den här självstudien beskrivs hur du utvecklar för Style System för att utöka grundkomponenterna med varumärkesspecifik CSS och avancerade principkonfigurationer för mallredigeraren.
 
@@ -28,14 +28,14 @@ Lär dig hur du implementerar enskilda format och återanvänder kärnkomponente
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
-Vi rekommenderar också att du går igenom självstudiekurserna för [klientbibliotek och arbetsflöde](client-side-libraries.md) i gränssnittet för att förstå grunderna i klientbibliotek och de olika frontverktygen som är inbyggda i AEM.
+Vi rekommenderar också att du går igenom självstudiekursen [Klientbibliotek och Front-end-arbetsflöde](client-side-libraries.md) för att förstå grunderna i klientbibliotek och de olika frontverktygen som är inbyggda i AEM.
 
 ### Startprojekt
 
 Ta en titt på den baslinjekod som självstudiekursen bygger på:
 
-1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `style-system/start` grenen
+1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `style-system/start`
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
@@ -60,7 +60,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Vad du ska bygga {#what-you-will-build}
 
-I det här kapitlet ska vi använda [formatsystemfunktionen](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) för att skapa olika varianter av komponenter som används på artikelsidan. Vi använder också Style System för att skapa variationer för strukturella element som sidhuvud/sidfot och layoutbehållare.
+I det här kapitlet ska vi använda funktionen [Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) för att skapa flera varianter av komponenter som används på artikelsidan. Vi använder också Style System för att skapa variationer för strukturella element som sidhuvud/sidfot och layoutbehållare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30386/?quality=12&learn=on)
 
@@ -70,15 +70,15 @@ Med [Style System](https://docs.adobe.com/content/help/en/experience-manager-65/
 
 Den allmänna idén med Style System är att författare kan välja olika stilar för hur en komponent ska se ut. &quot;Styles&quot; backas upp av ytterligare CSS-klasser som injiceras i en komponents yttre div. I klientbiblioteken läggs CSS-regler till baserat på dessa formatklasser så att komponenten ändrar utseende.
 
-Här finns [detaljerad dokumentation om Style System](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html). Det finns också en bra [teknisk video för att förstå Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+Du hittar [detaljerad dokumentation om Style System här](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/style-system.html). Det finns också en bra [teknisk video för att förstå Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
 
 ## Rubrikkomponentformat {#title-component}
 
-I det här skedet har [titelkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/title.html) proxynerats in i projektet `/apps/wknd/components/content/title` som en del av modulen **ui.apps** . Standardformaten för rubrikelement (`H1`, `H2`, `H3`..) har redan implementerats i modulen **ui.front** i `_elements.scss` filen under `ui.frontend/src/main/webpack/base/sass/_elements.scss`.
+I det här läget har [titelkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/title.html) proxynerats in i projektet under `/apps/wknd/components/content/title` som en del av modulen **ui.apps**. Standardformaten för rubrikelement (`H1`, `H2`, `H3`...) har redan implementerats i modulen **ui.front** i filen `_elements.scss` under `ui.frontend/src/main/webpack/base/sass/_elements.scss`.
 
 ### Understrykningsformat
 
-WKND- [artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för komponenten Title med en understrykning. I stället för att skapa två komponenter eller ändra komponentdialogrutan kan du använda Style System för att ge författarna möjlighet att lägga till ett understruket format.
+[WKND-artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för komponenten Title med en understrykning. I stället för att skapa två komponenter eller ändra komponentdialogrutan kan du använda Style System för att ge författarna möjlighet att lägga till ett understruket format.
 
 ![Understrykningsformat - titelkomponent](assets/style-system/title-underline-style.png)
 
@@ -86,7 +86,7 @@ WKND- [artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåll
 
 Som gränssnittsutvecklare är det första steget för att formatera en Core-komponent att förstå den kod som genereras av komponenten.
 
-Som en del av det genererade projektet är det inbäddade **Core Component Examples** -projektet för arkitypen. För utvecklare och innehållsförfattare innehåller detta en enkel referens för att förstå alla funktioner som finns i Core Components. Det [finns](https://opensource.adobe.com/aem-core-wcm-components/library.html)också en liveversion.
+Som en del av det genererade projektet är arkitypen inbäddad i **Core Component Examples**-projektet. För utvecklare och innehållsförfattare innehåller detta en enkel referens för att förstå alla funktioner som finns i Core Components. En liveversion är också [tillgänglig](https://opensource.adobe.com/aem-core-wcm-components/library.html).
 
 1. Öppna en ny webbläsare och visa komponenten Title:
 
@@ -121,9 +121,9 @@ Som en del av det genererade projektet är det inbäddade **Core Component Examp
 
 ### Implementera understrykning - ui.front
 
-Därefter implementerar vi understrykningsformatet med **ui.front** -modulen i vårt projekt. Vi använder webbpaketets utvecklingsserver som medföljer modulen **ui.front** för att förhandsgranska formaten *innan* de distribueras till en lokal instans av AEM.
+Därefter implementerar vi understrykningsformatet med hjälp av modulen **ui.front** i vårt projekt. Vi använder webbpaketets utvecklingsserver som medföljer modulen **ui.front** för att förhandsgranska formaten *innan* distribueras till en lokal instans av AEM.
 
-1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front** :
+1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front**:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -142,7 +142,7 @@ Därefter implementerar vi understrykningsformatet med **ui.front** -modulen i v
    ![Utvecklingsserver för webbpaket](assets/style-system/static-webpack-server.png)
 
 1. I Eclipse eller den IDE du väljer öppnar du filen `index.html` som finns på: `ui.frontend/src/main/webpack/static/index.html`. Detta är den statiska kod som används av webbpaketets utvecklingsserver.
-1. I `index.html` finns en förekomst av den Title Component (Rubrikkomponent) som du vill lägga till understrykningsformatet i genom att söka efter *cmp-title* i dokumentet. Välj komponenten Title med texten *&quot;Vans off the Wall Skatepark&quot;* (line 218). Lägg till klassen `cmp-title--underline` i den omgivande diven:
+1. I `index.html` söker du efter en instans av den Title Component som understrykningsformatet ska läggas till i genom att söka i dokumentet efter *cmp-title*. Välj komponenten Title med texten *&quot;Vans utanför Wall Skatepark&quot;* (rad 218). Lägg till klassen `cmp-title--underline` i den omgivande diven:
 
    ```html
     <!-- before -->
@@ -163,7 +163,7 @@ Därefter implementerar vi understrykningsformatet med **ui.front** -modulen i v
    ```
 
 1. Återgå till webbläsaren och kontrollera att den extra klassen återspeglas i koden.
-1. Återgå till modulen **ui.front** och uppdatera filen `title.scss` som finns i: `ui.frontend/src/main/webpack/components/content/title/scss/title.scss`:
+1. Återgå till modulen **ui.front** och uppdatera filen `title.scss` som finns på: `ui.frontend/src/main/webpack/components/content/title/scss/title.scss`:
 
    ```css
    /* Add Title Underline Style */
@@ -188,7 +188,7 @@ Därefter implementerar vi understrykningsformatet med **ui.front** -modulen i v
    >
    >Det anses vara en bra rutin att alltid ha tätt omfång av format till målkomponenten. Detta säkerställer att extra format inte påverkar andra delar av sidan.
    >
-   >Alla kärnkomponenter följer **[BEM-notationen](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. Det är bäst att ha den yttre CSS-klassen som mål när du skapar ett standardformat för en komponent. Ett annat tips är att ange klassnamn som mål som anges av BEM-notationen för kärnkomponenten i stället för HTML-element.
+   >Alla kärnkomponenter följer **[BEM-notation](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. Det är bäst att ha den yttre CSS-klassen som mål när du skapar ett standardformat för en komponent. Ett annat tips är att ange klassnamn som mål som anges av BEM-notationen för kärnkomponenten i stället för HTML-element.
 
 1. Återgå till webbläsaren en gång till och du bör se understrykningsformatet som lagts till:
 
@@ -207,34 +207,34 @@ Därefter måste vi lägga till en ny policy för rubrikkomponenter så att inne
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigera till **artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. Navigera till **Artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. I **strukturläget** väljer du ikonen **Princip** bredvid komponenten **Titel** under **Tillåtna komponenter** i *huvudlayoutbehållaren*:
+1. I **Structure**-läget, i huvudbehållaren **Layoutbehållare**, väljer du ikonen **Policy** bredvid komponenten **Title** under *Tillåtna komponenter*:
 
    ![Titelprincipkonfiguration](assets/style-system/article-template-title-policy-icon.png)
 
 1. Skapa en ny princip för komponenten Title med följande värden:
 
-   *Policytitel **: **WKND**
+   *Policytitel **:  **WKND**
 
-   *Egenskaper* > *Fliken* Format > *Lägg till ett nytt format*
+   *Egenskaper*  >  *Fliken*  Format >  *Lägg till ett nytt format*
 
-   **Understruken** : `cmp-title--underline`
+   **Understruken** :  `cmp-title--underline`
 
    ![Formatprincipkonfiguration för titel](assets/style-system/title-style-policy.gif)
 
-   Klicka på **Klar** för att spara ändringarna i titelprincipen.
+   Klicka på **Klar** om du vill spara ändringarna i titelprincipen.
 
    >[!NOTE]
    >
-   > Värdet `cmp-title--underline` matchar den CSS-klass som vi angav tidigare när vi utvecklade i modulen **ui.front** .
+   > Värdet `cmp-title--underline` matchar den CSS-klass som vi angav tidigare vid utveckling i modulen **ui.front**.
 
 ### Använda understrykningsformat
 
 Slutligen kan vi som författare välja att använda understrykningsformatet på vissa rubrikkomponenter.
 
 1. Gå till artikeln **La Skateparks** i AEM Sites Editor på: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. Välj en titelkomponent i **redigeringsläget** . Klicka på **penselns** ikon och välj **Understrykning** :
+1. Välj en titelkomponent i **redigeringsläget**. Klicka på ikonen **penselns** och välj formatet **Understruken**:
 
    ![Använda understrykningsformat](assets/style-system/apply-underline-style-title.png)
 
@@ -244,15 +244,15 @@ Slutligen kan vi som författare välja att använda understrykningsformatet på
 
    ![Visa som publicerad](assets/style-system/view-as-published.png)
 
-   Använd webbläsarutvecklarverktygen för att verifiera koden runt Title-komponenten som CSS-klassen `cmp-title--underline` används på den yttre diven.
+   Använd webbläsarens utvecklingsverktyg för att verifiera koden runt Title-komponenten där CSS-klassen `cmp-title--underline` används på den yttre diven.
 
 ## Textkomponentformat {#text-component}
 
-Därefter upprepar vi liknande steg för att tillämpa ett unikt format på [textkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html). Komponenten Text har proxiderats in i projektet `/apps/wknd/components/content/text` som en del av modulen **ui.apps** . Standardformaten för styckeelement har redan implementerats i modulen **ui.front** i `_elements.scss` filen under `ui.frontend/src/main/webpack/base/sass/_elements.scss`.
+Därefter upprepar vi liknande steg för att tillämpa ett unikt format på [textkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html). Textkomponenten har proxiderats in i projektet under `/apps/wknd/components/content/text` som en del av modulen **ui.apps**. Standardformaten för styckeelement har redan implementerats i modulen **ui.front** i filen `_elements.scss` under `ui.frontend/src/main/webpack/base/sass/_elements.scss`.
 
 ### Blockformat för citat
 
-WKND-artikeldesignen [](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för Text-komponenten med ett citattecken:
+[WKND-artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för Text-komponenten med ett citattecken:
 
 ![Blockformat för citat - textkomponent](assets/style-system/quote-block-style.png)
 
@@ -296,9 +296,9 @@ Lokal AEM: [http://localhost:4502/editor.html/content/core-components-examples/l
 
 ### Implementera formatet Offertblock - ui.front
 
-Därefter implementerar vi formatet Quote Block med **ui.front** -modulen i vårt projekt.
+Därefter implementerar vi formatet Offertblock med hjälp av modulen **ui.front** i vårt projekt.
 
-1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front** :
+1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front**:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -309,7 +309,7 @@ Därefter implementerar vi formatet Quote Block med **ui.front** -modulen i vår
    ```
 
 1. I Eclipse eller den IDE du väljer öppnar du filen `index.html` som finns på: `ui.frontend/src/main/webpack/static/index.html`. Detta är den statiska kod som används av webbpaketets utvecklingsserver.
-1. I söker du `index.html` efter en förekomst av textkomponenten genom att söka efter texten *&quot;Jacob Wester&quot;* (rad 210). Lägg till klassen `cmp-text--quote` i den omgivande diven:
+1. I `index.html` söker du efter en instans av textkomponenten genom att söka efter texten *&quot;Jacob Wester&quot;* (rad 210). Lägg till klassen `cmp-text--quote` i den omgivande diven:
 
    ```html
     <!-- before -->
@@ -332,7 +332,7 @@ Därefter implementerar vi formatet Quote Block med **ui.front** -modulen i vår
    ```
 
 1. Återgå till webbläsaren och kontrollera att den extra klassen återspeglas i koden.
-1. Återgå till modulen **ui.front** och uppdatera filen `text.scss` som finns i: `ui.frontend/src/main/webpack/components/content/text/scss/text.scss`:
+1. Återgå till modulen **ui.front** och uppdatera filen `text.scss` som finns på: `ui.frontend/src/main/webpack/components/content/text/scss/text.scss`:
 
    ```css
    /* WKND Text Quote style */
@@ -391,36 +391,36 @@ Lägg sedan till en ny princip för textkomponenterna.
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigera till **artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. Navigera till **Artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. I **strukturläget** väljer du ikonen **Princip** bredvid **Text** -komponenten under **Tillåtna komponenter** i *Layoutbehållaren*:
+1. I **Structure**-läget, i **layoutbehållaren**, väljer du ikonen **Policy** bredvid **Text**-komponenten som listas under *Tillåtna komponenter*:
 
    ![Konfigurera textprofil](assets/style-system/article-template-text-policy-icon.png)
 
 1. Skapa en ny princip för komponenten Text med följande värden:
 
-   *Policytitel **: **WKND-text**
+   *Policytitel **:  **WKND-text**
 
-   *Plugins* > *Paragraph Styles* > *Enable paragraph styles*
+   *Plugins*  >  *Paragraph Styles* >  *Enable paragraph styles*
 
-   *Fliken* Format > *Lägg till ett nytt format*
+   *Fliken*  Format >  *Lägg till ett nytt format*
 
-   **Citatblock** : `cmp-text--quote`
+   **Citatblock** :  `cmp-text--quote`
 
    ![Princip för textkomponent](assets/style-system/text-policy-enable-paragraphstyles.png)
 
    ![Textkomponentprincip 2](assets/style-system/text-policy-enable-quotestyle.png)
 
-   Klicka på **Klar** för att spara ändringarna i textprofilen.
+   Klicka på **Klar** om du vill spara ändringarna i textprofilen.
 
 ### Använda formatet Offertblock
 
 1. Gå till artikeln **La Skateparks** i AEM Sites Editor på: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. Välj en textkomponent i **redigeringsläget** . Redigera komponenten så att den innehåller ett citattecken:
+1. Välj en textkomponent i **redigeringsläget**. Redigera komponenten så att den innehåller ett citattecken:
 
    ![Konfiguration av textkomponent](assets/style-system/configure-text-component.png)
 
-1. Markera textkomponenten och klicka på **penselikonen** och välj formatet **Citatblock** :
+1. Markera textkomponenten och klicka på ikonen **penselns** och välj formatet **Citatblock**:
 
    ![Använda formatet Offertblock](assets/style-system/quote-block-style-applied.png)
 
@@ -430,13 +430,13 @@ Lägg sedan till en ny princip för textkomponenterna.
 
 Layoutbehållare har använts för att skapa artikelsidmallens grundläggande struktur och ange släppzoner där innehållsförfattare kan lägga till innehåll på en sida. Layoutbehållare kan också utnyttja Style System och ge innehållsförfattarna ännu fler alternativ för att utforma layouter.
 
-För närvarande används en CSS-regel på hela sidan med fast bredd. Ett mer flexibelt sätt är i stället att skapa ett format med **fast bredd** som innehållsförfattare kan aktivera/inaktivera.
+För närvarande används en CSS-regel på hela sidan med fast bredd. I stället är det mer flexibelt att skapa en **fast bredd**-stil som innehållsförfattare kan aktivera/inaktivera.
 
 ### Implementera stilen Fast bredd - ui.front
 
 Vi börjar implementera stilen Fast bredd i modulen **ui.front** i vårt projekt.
 
-1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front** :
+1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front**:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -444,11 +444,11 @@ Vi börjar implementera stilen Fast bredd i modulen **ui.front** i vårt projekt
    ```
 
 1. Öppna filen `index.html` som finns på: `ui.frontend/src/main/webpack/static/index.html`.
-1. Vi vill att texten i artikelsidmallen ska ha fast bredd, så att sidhuvudet och sidfoten kan utvidgas. Därför vill vi rikta in oss på den andra `<div class='responsivegrid aem-GridColumn aem-GridColumn--default--12'` (layoutbehållaren) mellan de två upplevelsefragmenten (rad 136)
+1. Vi vill att texten i artikelsidmallen ska ha fast bredd, så att sidhuvudet och sidfoten kan utvidgas. Därför vill vi rikta in den andra `<div class='responsivegrid aem-GridColumn aem-GridColumn--default--12'` (Layoutbehållare) mellan de två upplevelsefragmenten (rad 136)
 
    ![Behållar-Div för huvudbrödtextlayout](assets/style-system/main-body-layoutContainer.png)
 
-1. Lägg till klassen `cmp-layout-container--fixed` till den som `div` identifieras i föregående steg.
+1. Lägg till klassen `cmp-layout-container--fixed` i `div` som identifierades i föregående steg.
 
    ```html
    <!-- Experience Fragment Header -->
@@ -482,7 +482,7 @@ Vi börjar implementera stilen Fast bredd i modulen **ui.front** i vårt projekt
    }
    ```
 
-1. Uppdatera filen `_elements.scss` som finns på: `ui.frontend/src/main/webpack/base/sass/_elements.scss` och ändra regeln så att `.root` den får en ny maximal bredd inställd på variabeln `$max-body-width`.
+1. Uppdatera filen `_elements.scss` som finns på: `ui.frontend/src/main/webpack/base/sass/_elements.scss` och ändra regeln `.root` så att den nya maxbredden anges till variabeln `$max-body-width`.
 
    ```css
     /* Before */
@@ -529,19 +529,19 @@ Därefter lägger vi till stilen Fast bredd genom att uppdatera reglerna för La
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigera till **artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. Navigera till **Artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. I **strukturläge** väljer du **huvudlayoutbehållaren** (mellan Experience Fragment Header och Footer ) och väljer sedan **Policy** .
+1. I **Struktur**-läge väljer du huvudbehållaren **Layoutbehållare** (mellan Experience Fragment Header och Footer ) och väljer ikonen **Policy**.
 
    ![Konfigurera princip för behållare för huvudbrödtextlayout](assets/style-system/layout-container-article-template-policy-icon.png)
 
-1. Uppdatera standardprincipen **för** WKND-platsen så att den innehåller ett ytterligare format för **Fast bredd** med värdet `cmp-layout-container--fixed`:
+1. Uppdatera principen **WKND-platsens standard** om du vill inkludera ett ytterligare format för **Fast bredd** med värdet `cmp-layout-container--fixed`:
 
-   ![Uppdatering av standardprincip för WKND-webbplats ](assets/style-system/wknd-site-default-policy-update-fixed-width.png)
+   ![Uppdatering av standardprincip för WKND-webbplats  ](assets/style-system/wknd-site-default-policy-update-fixed-width.png)
 
    Spara ändringarna och uppdatera sidan Artikelsidmall.
 
-1. Markera återigen huvudbehållaren **för** layout (mellan Experience Fragment Header och Footer). Den här gången ska **penselikonen** visas och du kan välja **Fast bredd** i listrutan Format.
+1. Markera återigen huvudbehållaren **Layoutbehållare** (mellan Experience Fragment Header och Footer). Den här gången ska ikonen **penselns** visas och du kan välja **Fast bredd** i listrutan Format.
 
    ![Använd behållare för fast breddslayout](assets/style-system/apply-fixed-width-layout-container.png)
 
@@ -549,15 +549,15 @@ Därefter lägger vi till stilen Fast bredd genom att uppdatera reglerna för La
 
 1. Gå till artikeln **La Skateparks** i AEM Sites Editor på: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). Du bör se hur behållaren med fast bredd fungerar.
 
-## Sidhuvud/sidfot - Experience Fragment {#experience-fragment}
+## Header/Footer - Experience Fragment {#experience-fragment}
 
 Därefter ska vi lägga till format i sidhuvudet och sidfoten för att slutföra artikelsidmallen. Både sidhuvud och sidfot har implementerats som en Experience Fragment, som är en gruppering av komponenter inuti en behållare. Vi kan tillämpa en unik CSS-klass på Experience Fragment-komponenter, precis som andra Core-komponenter med Style System.
 
 ### Implementera sidhuvudsformatet - ui.front
 
-Komponenterna i Header-komponenten är redan formaterade för att matcha [AdobeXD-designen](assets/pages-templates/wknd-article-design.xd). Bara vissa små layoutändringar behövs.
+Komponenterna i Header-komponenten är redan formaterade för att matcha [AdobeXD-designen](assets/pages-templates/wknd-article-design.xd), endast vissa små layoutändringar behövs.
 
-1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front** :
+1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front**:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -565,8 +565,8 @@ Komponenterna i Header-komponenten är redan formaterade för att matcha [AdobeX
    ```
 
 1. Öppna filen `index.html` som finns på: `ui.frontend/src/main/webpack/static/index.html`.
-1. Hitta den **första** instansen av Experience Fragment-komponenten genom att söka efter *class=&quot;experience* &quot; (rad 48).
-1. Lägg till klassen `cmp-experiencefragment--header` till den som `div` identifieras i föregående steg.
+1. Sök efter den första **instansen** av Experience Fragment-komponenten genom att söka efter *class=&quot;experience efragment* (rad 48).
+1. Lägg till klassen `cmp-experiencefragment--header` i `div` som identifierades i föregående steg.
 
    ```html
        ...
@@ -625,16 +625,16 @@ Sidfoten i [AdobeXD-designen](assets/pages-templates/wknd-article-design.xd) inn
 
 1. Öppna filen `index.html` som finns på: `ui.frontend/src/main/webpack/static/index.html`.
 
-1. Hitta den **andra** instansen av Experience Fragment-komponenten genom att söka efter *class=&quot;experience* &quot; (rad 385).
+1. Hitta den **andra** instansen av Experience Fragment-komponenten genom att söka efter *class=&quot;experience efragment* (rad 385).
 
-1. Lägg till klassen `cmp-experiencefragment--footer` till den som `div` identifieras i föregående steg.
+1. Lägg till klassen `cmp-experiencefragment--footer` i `div` som identifierades i föregående steg.
 
    ```html
    <!-- add cmp-experiencefragment--footer -->
    <div class="experiencefragment cmp-experiencefragment--footer aem-GridColumn aem-GridColumn--default--12">
    ```
 
-1. Öppna filen `experiencefragment.scss` som finns på nytt: `ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. **Lägg till** följande format i filen:
+1. Öppna filen `experiencefragment.scss` igen som finns på: `ui.frontend/src/main/webpack/components/content/experiencefragment/scss/experiencefragment.scss`. **Lägg** till följande format i filen:
 
    ```css
    /* Footer Style */
@@ -704,13 +704,13 @@ Därefter lägger vi till formaten för sidhuvud och sidfot genom att uppdatera 
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Navigera till **artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
+1. Navigera till **Artikelsidmallen** som finns på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page-template/structure.html).
 
-1. I **strukturläge** väljer du **Upplevelsefragment** för sidhuvud och väljer ikonen **Princip** .
+1. I **Struktur**-läge väljer du Header **Experience Fragment** och sedan ikonen **Policy**.
 
    ![Konfigurera Experience Fragment Policy](assets/style-system/experience-fragment-click-policy.png)
 
-1. Uppdatera **WKND Site Experience Fragment - Header** -principen för att lägga till en **standard-CSS-klass** med värdet `cmp-experiencefragment--header`:
+1. Uppdatera **WKND Site Experience Fragment - Header**-principen om du vill lägga till en **standard-CSS-klass** med värdet `cmp-experiencefragment--header`:
 
    ![WKND Site Experience Fragment - huvuduppdatering](assets/style-system/experience-fragment-header-policy-configure.png)
 
@@ -720,9 +720,9 @@ Därefter lägger vi till formaten för sidhuvud och sidfot genom att uppdatera 
    >
    > Eftersom du inte behöver växla rubrikformatet annat än i mallen kan du helt enkelt ange det som standard-CSS-format.
 
-1. Välj sedan **Footer Experience Fragment** och klicka på ikonen **Policy** för att öppna principkonfigurationen.
+1. Välj sedan sidfoten **Experience Fragment** och klicka på ikonen **Policy** för att öppna principkonfigurationen.
 
-1. Uppdatera principen **WKND Site Experience Fragment - Footer** om du vill lägga till en **standard-CSS-klass** med värdet `cmp-experiencefragment--footer`:
+1. Uppdatera **WKND Site Experience Fragment - Footer**-principen om du vill lägga till en **standard-CSS-klass** med värdet `cmp-experiencefragment--footer`:
 
    ![WKND Site Experience Fragment - sidfotsuppdatering](assets/style-system/experience-fragment-footer-policy-configure.png)
 
@@ -744,9 +744,9 @@ Artikelsidan är nästan helt formaterad och du har fått en praktisk upplevelse
 
 ### Nästa steg {#next-steps}
 
-Lär dig stegen från början till slut för att skapa en [anpassad AEM som](custom-component.md) visar innehåll som har skapats i en dialogruta, och utforskar utveckling av en Sling-modell för att kapsla in affärslogik som fyller i komponentens HTML-kod.
+Lär dig stegen från början till slut om du vill skapa en [anpassad AEM](custom-component.md)-komponent som visar innehåll som har skapats i en dialogruta, och utforskar utvecklingen av en delningsmodell för att kapsla in affärslogik som fyller i komponentens HTML-kod.
 
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `style-system/solution`.
 
-1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `style-system/solution` grenen.
+1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `style-system/solution`.
