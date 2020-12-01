@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 
-På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samp
 >
 >Konfigurera reCaptach för författarinstans
 >
->öppna felix- [webbkonsolen](http://localhost:4502/system/console/bundles) på författarinstansen
+>öppna felix [webbkonsolen](http://localhost:4502/system/console/bundles) på författarinstansen
 >
 >sök efter com.adobe.granite.crypto.file bundle
 >
@@ -51,7 +51,7 @@ På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samp
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * Kopiera HMAC-filer och överordnad filer
 
-Öppna [felix-webbkonsolen](http://localhost:4502/system/console/bundles) på din publiceringsinstans. Sök efter paketet com.adobe.granite.crypto.file. Observera paket-ID
+Öppna webbkonsolen [felix](http://localhost:4502/system/console/bundles) på din publiceringsinstans. Sök efter paketet com.adobe.granite.crypto.file. Observera paket-ID
 Navigera till paket-ID:t i filsystemet för din publiceringsinstans
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * ta bort befintliga HMAC- och överordnad filer.
