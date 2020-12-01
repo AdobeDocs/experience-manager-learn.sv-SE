@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa anpassat formulär {#creating-adaptive-form}
+# Skapar anpassat formulär {#creating-adaptive-form}
 
 I del 1 skapar vi ett adaptivt formulär baserat på mallen som skapades i den tidigare lektionen och konfigurerar verktygsfältet med lämpliga knappar.
 
