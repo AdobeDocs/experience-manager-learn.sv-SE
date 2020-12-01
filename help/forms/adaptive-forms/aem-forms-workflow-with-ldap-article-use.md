@@ -75,7 +75,7 @@ Om du vill testa detta på datorn (för anställda på Adobe kan du använda det
 * [Importera de resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren](assets/aem-forms-ldap.zip). Som en del av det här paketet ingår LDAP-konfigurationsfiler, arbetsflöde och ett anpassat formulär.
 * Konfigurera AEM med LDAP med lämpliga LDAP-autentiseringsuppgifter.
 * Logga in på AEM med dina LDAP-autentiseringsuppgifter.
-* Öppna formuläret [för begäran om tidsjustering](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Öppna [timeoffrequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i formuläret och skicka in det.
 * Den som skickar in formuläret bör hämta det för granskning.
 
