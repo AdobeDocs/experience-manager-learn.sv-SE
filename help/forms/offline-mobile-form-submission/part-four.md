@@ -28,13 +28,13 @@ Följ de här stegen för att få det här användningsexemplet att fungera på 
 
 * Installera AEM Author-instansen på port 4502 och AEM Publish-instansen på port 4503
 * [Följ instruktionerna som anges i Utveckla för en servicecentral i AEM Forms](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html). Se till att skapa tjänstanvändaren och distribuera paketet på din AEM Author- och Publish-instans.
-* [Öppna SGB-konfigurationen ](http://localhost:4503/system/console/configMgr).
-* Sök efter **referensfiltret** för Apache Sling. Kontrollera att kryssrutan Tillåt tomt är markerad.
+* [Öppna SGB-konfigurationen  ](http://localhost:4503/system/console/configMgr).
+* Sök efter **Refererarfilter för Apache Sling**. Kontrollera att kryssrutan Tillåt tomt är markerad.
 * [Distribuera det anpassade AEMFormDocumentService Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Paketet måste distribueras till din AEM Publish-instans. Paketet innehåller koden som behövs för att generera interaktiv PDF från mobilformulär.
 * [Hämta och zippa upp resurser som hör till den här artikeln.](assets/offline-pdf-submission-assets.zip) Du får följande
-   * **offline-submission-profile.zip** - Det här AEM innehåller den anpassade profilen som gör att du kan hämta den interaktiva PDF-filen till det lokala filsystemet. Distribuera det här paketet på din AEM Publish-instans.
-   * **xdp-form-and-workflow.zip** - Det här AEM innehåller XDP, exempelarbetsflöde, starcher konfigurerad för nodinnehåll/pdfsending. Distribuera det här paketet på både AEM Author- och Publish-instansen.
-   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar** - Detta är det AEM paketet som utför merparten av arbetet. Det här paketet innehåller serverpaketet som är monterat på `/bin/startworkflow`. Den här servern sparar skickade formulärdata under `/content/pdfsubmissions` noden i AEM. Distribuera det här paketet på både AEM Author- och Publish-instansen.
+   * **offline-submission-profile.zip**  - Det här AEM innehåller den anpassade profilen som gör att du kan hämta den interaktiva PDF-filen till det lokala filsystemet. Distribuera det här paketet på din AEM Publish-instans.
+   * **xdp-form-and-workflow.zip**  - Det här AEM innehåller XDP, exempelarbetsflöde, starcher konfigurerad för nodinnehåll/pdfsending. Distribuera det här paketet på både AEM Author- och Publish-instansen.
+   * **HandlePDFSubmission.HandlePDFSubmission.core-1.0-SNAPSHOT.jar**  - Detta är det AEM paketet som utför merparten av arbetet. Paketet innehåller serverpaketet som är monterat på `/bin/startworkflow`. Den här servern sparar skickade formulärdata under `/content/pdfsubmissions`-noden i AEM. Distribuera det här paketet på både AEM Author- och Publish-instansen.
 * [Förhandsgranska mobilformuläret](http://localhost:4503/content/dam/formsanddocuments/testsubmision.xdp/jcr:content)
 * Fyll i flera fält och klicka sedan på knappen i verktygsfältet för att hämta den interaktiva PDF-filen.
 * Fyll i den hämtade PDF-filen med Acrobat och tryck på Skicka.
