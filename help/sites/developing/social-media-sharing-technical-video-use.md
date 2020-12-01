@@ -22,7 +22,7 @@ Upptäck hur du konfigurerar och använder komponenten Delning i sociala medier.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
 
-I den här videon utforskas följande funktioner i komponenten Delning i sociala medier (ingår i [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)) med exempelwebbplatsen [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) .
+I den här videon utforskas följande funktioner i Social Media Sharing-komponenten (ingår i [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)) med exempelwebbplatsen [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail).
 
 * 0:00 - Lägga till och konfigurera komponenten Delning i sociala medier
 * 1:00 - Dela på Facebook
@@ -35,9 +35,9 @@ I den här videon utforskas följande funktioner i komponenten Delning i sociala
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) bör konfigureras på både AEM Author och AEM Publish för att mappa publiceringsläget till den offentliga domän som används för att komma åt AEM Publish.
+[AEM ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) externalizer bör konfigureras på både AEM Author och AEM Publish för att mappa publiceringsläget till den offentliga domän som används för åtkomst till AEM Publish.
 
-I den här videon använder vi `/etc/hosts` för att skapa en *www.example.com* som leder till localhost och en [grundläggande konfiguration](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) AEM Dispatcher som gör att www.example.com kan användas framför AEM Publish.
+I den här videon använder vi `/etc/hosts` för att hitta *www.example.com* för att matcha till localhost, och använder en [grundläggande AEM Dispatcher-konfiguration](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för att tillåta www.example.com till AEM-publicering framför.
 
 ## Stödmaterial {#supporting-materials}
 
