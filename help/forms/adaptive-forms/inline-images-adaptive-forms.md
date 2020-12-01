@@ -67,7 +67,7 @@ function consumeImage (file) {
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på AEM med AEM.
-* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) på AEM med AEM.
-* Peka webbläsaren på [Lägg till textbunden bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på din AEM med AEM pakethanterare.
+* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) till din AEM med AEM pakethanterare.
+* Peka webbläsaren på [Lägg till infogad bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicka på knappen &quot;Bifoga ditt foto&quot; för att lägga till en bild
