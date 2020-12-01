@@ -1,6 +1,6 @@
 ---
-title: Utveckla en Asset Compute-arbetare
-description: Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprojekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
+title: Utveckla en Asset compute-arbetare
+description: asset compute är kärnan i ett Asset compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, det arbete som utförs på en resurs för att skapa en ny rendering.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -18,36 +18,36 @@ ht-degree: 0%
 ---
 
 
-# Utveckla en Asset Compute-arbetare
+# Utveckla en Asset compute-arbetare
 
-Resursberäkningspersonal är kärnan i ett tillgångsberäkningsprojekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny återgivning.
+Arbetare i asset compute är kärnan i ett Asset compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, det arbete som utförs på en resurs för att skapa en ny rendering.
 
-Projektet Asset Compute genererar automatiskt en enkel arbetare som kopierar resursens ursprungliga binärfil till en namngiven återgivning, utan några omformningar. I den här självstudiekursen ska vi modifiera den här arbetaren för att göra en intressantare rendering, för att illustrera kraften hos Assets Compute-arbetarna.
+Asset compute-projektet genererar automatiskt en enkel arbetare som kopierar resursens ursprungliga binärfil till en namngiven återgivning, utan några omformningar. I den här självstudiekursen ska vi modifiera den här arbetaren för att göra en intressantare rendering, för att illustrera Asset compute arbetares styrka.
 
-Vi kommer att skapa en Asset Compute-arbetare som genererar en ny vågrät bildåtergivning som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
+Vi kommer att skapa en Asset compute-arbetare som genererar en ny vågrät bildåtergivning, som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
 
-## Logiskt flöde för ett anrop av en Asset Compute-arbetare
+## Logiskt flöde för ett anrop till en Asset compute-arbetare
 
-Resursberäkningspersonal implementerar ett API för SDK-arbetaren i Asset Compute i `renditionCallback(...)` funktionen, vilket är begreppsmässigt:
+asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i funktionen `renditionCallback(...)`, som är begreppsmässigt:
 
-+ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbetningsprofil
-+ __Utdata:__ En eller flera återgivningar som ska läggas till i AEM
++ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbeta profil
++ __Utdata:__ en eller flera återgivningar som ska läggas till i AEM
 
-![Logiskt arbetsflöde för beräkning av tillgångar](./assets/worker/logical-flow.png)
+![Logiskt flöde för asset compute-arbetare](./assets/worker/logical-flow.png)
 
-1. AEM Author-tjänsten anropar Asset Compute-arbetaren, som tillhandahåller resursens ursprungliga binära __(1a)__ (`source` parameter) och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen (`rendition.instructions` parameter).
-1. SDK:t Resursberäkning koordinerar körningen av den anpassade metadataarbetarens `renditionCallback(...)` funktion, vilket genererar en ny binär återgivning baserat på resursens ursprungliga binära __(1a)__ och eventuella parametrar __(1b)__.
+1. AEM Author anropar Asset compute-arbetaren, förutsatt att resursens __(1a)__ ursprungliga binära (`source` parameter) och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen (`rendition.instructions` parameter).
+1. Asset compute SDK hanterar körningen av den anpassade Asset compute-metadataarbetarens `renditionCallback(...)`-funktion och genererar en ny binär återgivning baserat på resursens ursprungliga binära __(1a)__ och eventuella parametrar __(1b)__.
 
    + I den här självstudiekursen skapas renderingen&quot;i arbete&quot;, vilket innebär att arbetaren komponerar renderingen, men källbinärfilen kan skickas till andra webbtjänste-API:er för att renderingen ska genereras.
 
-1. Resursberäkningsarbetaren sparar den nya återgivningens binära data i `rendition.path`.
-1. Binära data som skrivs till `rendition.path` transporteras via SDK för tillgångsberäkning till AEM Author Service och exponeras som __(4a)__ en textåtergivning och __(4b)__ beständig till objektets metadatanod.
+1. Asset compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
+1. Binära data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och visas som __(4a)__ en textåtergivning och __(4b)__ beständiga till objektets metadatanod.
 
-Diagrammet ovan visar frågor som rör tillgångsberäkningens utvecklare och det logiska flödet för att anropa en tillgångsberäknings-arbetare. Av nyfikenhet att det finns [interna detaljer om hur Resurser körs](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) , men endast de offentliga SDK-API-kontrakten för tillgångsberäkning kan vara beroende av.
+Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet följer att den interna informationen för exekvering av Asset compute[ är tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)
 
 ## Anatomi för en arbetare
 
-Alla tillgångsberäkningspersonal följer samma grundläggande struktur och in-/utdatakontrakt.
+Alla Asset compute-arbetare följer samma grundläggande struktur och in-/utdatakontrakt.
 
 ```javascript
 'use strict';
@@ -102,30 +102,30 @@ function customHelperFunctions() { ... }
 
 ![Autogenererat index.js](./assets/worker/autogenerated-index-js.png)
 
-1. Se till att projektet Resursberäkning är öppet i VS-kod
-1. Navigate to the `/actions/worker` folder
-1. Open the `index.js` file
+1. Kontrollera att Asset compute-projektet är öppet i VS-kod
+1. Navigera till mappen `/actions/worker`
+1. Öppna filen `index.js`
 
 Det här är den JavaScript-fil för arbetare som vi kommer att ändra i den här självstudiekursen.
 
 ## Installera och importera stödda npm-moduler
 
-Resursberäkningsprojekt som baseras på Node.js utnyttjar det robusta ekosystemet i [npm-modulen](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt Asset Compute-projekt.
+Node.js-baserade projekt i Asset compute har nytta av det stabila [npm-modulens ekosystem](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt Asset compute-projekt.
 
 I den här arbetaren använder vi [jimp](https://www.npmjs.com/package/jimp) för att skapa och ändra återgivningsbilden direkt i Node.js-koden.
 
 >[!WARNING]
 >
->Alla NPM-moduler för tillgångsändring stöds inte av tillgångsberäkning. npm-moduler som är beroende av befintliga program som ImageMagick eller operativsystemsberoende bibliotek. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
+>Alla NPM-moduler för tillgångsändring stöds inte av Asset compute. npm-moduler som är beroende av befintliga program som ImageMagick eller operativsystemsberoende bibliotek. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
 
-1. Öppna kommandoraden i roten av projektet Resursberäkning (detta kan göras i VS-koden via __Terminal > New Terminal__) och kör kommandot:
+1. Öppna kommandoraden i roten av ditt Asset compute-projekt (detta kan göras i VS-koden via __Terminal > New Terminal__) och kör kommandot:
 
    ```
    $ npm install jimp
    ```
 
-1. Importera `jimp` modulen till arbetskoden så att den kan användas via `Jimp` JavaScript-objektet.
-Uppdatera `require` direktiven högst upp i arbetarens `index.js` för att importera `Jimp` objektet från `jimp` modulen:
+1. Importera modulen `jimp` till arbetskoden så att den kan användas via JavaScript-objektet `Jimp`.
+Uppdatera `require`-direktiven högst upp i arbetarens `index.js` för att importera `Jimp`-objektet från modulen `jimp`:
 
    ```javascript
    'use strict';
@@ -147,11 +147,11 @@ Uppdatera `require` direktiven högst upp i arbetarens `index.js` för att impor
 
 ## Läsa parametrar
 
-Resursberäkningspersonal kan läsa i parametrar som kan skickas via Bearbeta profiler som definierats i AEM som en författartjänst för Cloud Service. Parametrarna skickas till arbetaren via `rendition.instructions` objektet.
+asset compute kan läsa in parametrar som kan skickas via Bearbeta profiler som definieras i AEM som en författartjänst för Cloud Service. Parametrarna skickas till arbetaren via objektet `rendition.instructions`.
 
-Dessa kan läsas genom åtkomst `rendition.instructions.<parameterName>` i arbetskoden.
+Du kan läsa dessa genom att gå till `rendition.instructions.<parameterName>` i arbetskoden.
 
-Här läser vi de konfigurerbara återgivningarna `SIZE`och `BRIGHTNESS` `CONTRAST`anger standardvärden om ingen har angetts via Bearbetningsprofilen. Observera att `renditions.instructions` skickas som strängar när de anropas från AEM som en Cloud Service Processing Profiles, så se till att de omvandlas till rätt datatyper i arbetskoden.
+Här läser vi i den konfigurerbara återgivningens `SIZE`, `BRIGHTNESS` och `CONTRAST` som tillhandahåller standardvärden om ingen har angetts via Bearbetningsprofilen. Observera att `renditions.instructions` skickas som strängar när de anropas från AEM som en Cloud Service Processing Profiles, så att de omvandlas till rätt datatyper i arbetskoden.
 
 ```javascript
 'use strict';
@@ -176,14 +176,14 @@ exports.main = worker(async (source, rendition, params) => {
 }
 ```
 
-## Utlösande fel{#errors}
+## Utlöser fel{#errors}
 
-Resursberäkningspersonal kan stöta på situationer som leder till fel. Adobe Asset Compute SDK innehåller [en serie fördefinierade fel](https://github.com/adobe/asset-compute-commons#asset-compute-errors) som kan genereras när sådana situationer uppstår. Om ingen specifik feltyp finns kan den `GenericError` användas eller `ClientErrors` definieras.
+asset compute-arbetare kan stöta på situationer som leder till fel. Adobe Asset compute SDK innehåller [en serie fördefinierade fel](https://github.com/adobe/asset-compute-commons#asset-compute-errors) som kan genereras när sådana situationer uppstår. Om ingen specifik feltyp finns kan `GenericError` användas eller specifika anpassade `ClientErrors` definieras.
 
 Innan du börjar bearbeta återgivningen bör du kontrollera att alla parametrar är giltiga och stöds i den här arbetarens kontext:
 
-+ Kontrollera att återgivningsinstruktionsparametrarna för `SIZE`, `CONTRAST`och `BRIGHTNESS` är giltiga. Om inte, kan du skapa ett anpassat fel `RenditionInstructionsError`.
-   + En anpassad `RenditionInstructionsError` klass som utökas `ClientError` definieras längst ned i den här filen. Användning av ett specifikt, anpassat fel är användbart när du [skriver tester](../test-debug/test.md) för arbetaren.
++ Kontrollera att återgivningsinstruktionsparametrarna för `SIZE`, `CONTRAST` och `BRIGHTNESS` är giltiga. Om inte, kan du skapa ett anpassat fel `RenditionInstructionsError`.
+   + En anpassad `RenditionInstructionsError`-klass som utökar `ClientError` definieras längst ned i den här filen. Användning av ett specifikt, anpassat fel är användbart när [test](../test-debug/test.md) skrivs för arbetaren.
 
 ```javascript
 'use strict';
@@ -237,20 +237,20 @@ class RenditionInstructionsError extends ClientError {
 
 När parametrarna har lästs, sanerats och validerats skrivs koden för att generera återgivningen. Pseudokoden för återgivningsgenereringen är följande:
 
-1. Skapa en ny `renditionImage` arbetsyta i fyrkantiga dimensioner som anges med `size` parametern.
-1. Skapa ett `image` objekt från källresursens binärfil
-1. Använd __Jimp__ Library för att omvandla bilden:
+1. Skapa en ny arbetsyta i fyrkantiga dimensioner som anges med parametern `renditionImage`.`size`
+1. Skapa ett `image`-objekt från källresursens binärfil
+1. Använd biblioteket __Jimp__ för att omforma bilden:
    + Beskär originalbilden till en centrerad kvadrat
    + Klipp ut en cirkel från mitten av den fyrkantiga bilden
-   + Anpassa till de dimensioner som definieras av `SIZE` parametervärdet
-   + Justera kontrast baserat på `CONTRAST` parametervärdet
-   + Justera intensiteten baserat på `BRIGHTNESS` parametervärdet
-1. Placera den omformade `image` i mitten av den `renditionImage` som har en genomskinlig bakgrund
-1. Skriv det sammansatta så att `renditionImage` `rendition.path` det kan sparas i AEM som en resursåtergivning.
+   + Anpassa till de dimensioner som definieras av `SIZE`-parametervärdet
+   + Justera kontrast baserat på parametervärdet `CONTRAST`
+   + Justera intensiteten baserat på parametervärdet `BRIGHTNESS`
+1. Placera den omformade `image` mitt i `renditionImage` som har en genomskinlig bakgrund
+1. Skriv den sammansatta `renditionImage` till `rendition.path` så att den kan sparas i AEM som en resursåtergivning.
 
-I den här koden används [Jimp API:er](https://github.com/oliver-moran/jimp#jimp) för att utföra dessa bildomformningar.
+Den här koden använder [Jimp API:er](https://github.com/oliver-moran/jimp#jimp) för att utföra dessa bildomformningar.
 
-Resursberäkningspersonalen måste slutföra sitt arbete synkront och `rendition.path` måste skrivas tillbaka helt innan arbetarens `renditionCallback` slutförs. Detta kräver att asynkrona funktionsanrop görs synkrona med operatorn `await` . Om du inte känner till asynkrona JavaScript-funktioner och hur de kan köras synkront, kan du bekanta dig med [JavaScript-operatorn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)await.
+asset compute-arbetare måste slutföra sitt arbete synkront och `rendition.path` måste skrivas tillbaka helt till innan arbetarens `renditionCallback` slutförs. Detta kräver att asynkrona funktionsanrop görs synkrona med operatorn `await`. Om du inte är bekant med asynkrona JavaScript-funktioner och hur de ska köras synkront, kan du bekanta dig med [JavaScript-operatorn await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
 
 Den färdiga arbetaren `index.js` ska se ut så här:
 
@@ -315,15 +315,15 @@ class RenditionInstructionsError extends ClientError {
 
 ## Arbetaren körs
 
-Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.yml](./manifest.md)kan den köras med det lokala verktyget för utveckling av resursuppdatering för att se resultatet.
+Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.yml](./manifest.md) kan den köras med det lokala utvecklingsverktyget i Asset compute för att se resultatet.
 
-1. Från roten i projektet Asset Compute
+1. Från Asset compute-projektets rot
 1. Kör `aio app run`
-1. Vänta tills verktyget Resursberäkning har öppnats i ett nytt fönster
-1. I __Välj en fil..__ välj en exempelbild som ska bearbetas
+1. Vänta tills Asset compute Development Tool öppnas i ett nytt fönster
+1. I __Markera en fil..__ väljer du en exempelbild som ska bearbetas
    + Välj en exempelbildfil som ska användas som källresursens binärfil
-   + Om det inte finns någon ännu trycker du på __(+)__ till vänster och överför en [exempelbildfil](../assets/samples/sample-file.jpg) , och uppdaterar webbläsarfönstret Utvecklingsverktyg
-1. Uppdatera `"name": "rendition.png"` som den här arbetaren för att generera en genomskinlig PNG.
+   + Om det inte finns någon ännu trycker du på __(+)__ till vänster och överför en [exempelbild](../assets/samples/sample-file.jpg)-fil och uppdaterar webbläsarfönstret för utvecklingsverktyg
+1. Uppdatera `"name": "rendition.png"` som den här arbetaren för att skapa en genomskinlig PNG.
    + Observera att den här&quot;name&quot;-parametern bara används för utvecklingsverktyget och inte ska förlita sig på.
 
    ```json
@@ -337,18 +337,18 @@ Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.
    }
    ```
 1. Tryck på __Kör__ och vänta tills återgivningen genereras
-1. I avsnittet __Återgivningar__ förhandsvisas den återgivning som genereras. Tryck på renderingsförhandsvisningen för att hämta den fullständiga renderingen
+1. Avsnittet __Återgivningar__ förhandsvisar den återgivning som genereras. Tryck på renderingsförhandsvisningen för att hämta den fullständiga renderingen
 
    ![PNG-standardåtergivning](./assets/worker/default-rendition.png)
 
 ### Kör arbetaren med parametrar
 
-Parametrar, som skickas via Bearbeta profilkonfigurationer, kan simuleras i utvecklingsverktygen för tillgångsberäkning genom att tillhandahålla dem som nyckel/värde-par i återgivningsparametern JSON.
+Parametrar, som skickas via Bearbeta profilkonfigurationer, kan simuleras i Asset compute Development Tools genom att tillhandahålla dem som nyckel/värde-par i återgivningsparametern JSON.
 
 >[!WARNING]
 >
 >Vid lokal utveckling kan värden skickas med olika datatyper, när de skickas från AEM som Cloud Service Processing Profiles as strings, så se till att rätt datatyper analyseras om det behövs.
-> Jimp `crop(width, height)` -funktionen kräver till exempel att dess parametrar är `int`s. Om `parseInt(rendition.instructions.size)` inte parsas till ett int-värde misslyckas anropet till `jimp.crop(SIZE, SIZE)` eftersom parametrarna inte är kompatibla med typen String.
+> Jimps `crop(width, height)`-funktion kräver till exempel att dess parametrar är `int`. Om `parseInt(rendition.instructions.size)` inte tolkas till ett int-värde misslyckas anropet till `jimp.crop(SIZE, SIZE)` eftersom parametrarna inte är kompatibla med typen String.
 
 I vår kod accepteras parametrar för:
 
@@ -356,7 +356,7 @@ I vår kod accepteras parametrar för:
 + `contrast` definierar kontrastjusteringen, måste vara mellan -1 och 1, som flyttal
 + `brightness`  definierar den ljusa justeringen, måste vara mellan -1 och 1, som flyttal
 
-Dessa läses in i arbetaren `index.js` via:
+Dessa läses i arbetaren `index.js` via:
 
 + `const SIZE = parseInt(rendition.instructions.size) || 800`
 + `const CONTRAST = parseFloat(rendition.instructions.contrast) || 0`
@@ -383,11 +383,11 @@ Dessa läses in i arbetaren `index.js` via:
 
    ![Parameteriserad PNG-rendering](./assets/worker/parameterized-rendition.png)
 
-1. Överför andra bilder till listrutan __Källfil__ och försök köra arbetaren mot dem med olika parametrar!
+1. Överför andra bilder till listrutan __Källfil__ och försök köra arbetaren mot dem med andra parametrar!
 
 ## Worker index.js on Github
 
-Slutversionen `index.js` finns på Github:
+Den sista `index.js` finns på Github:
 
 + [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
