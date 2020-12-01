@@ -38,21 +38,21 @@ I den här videon utforskas hur du konfigurerar pipeline för programmet i Cloud
 
 ## Felaktig pipeline-körning
 
-I den här videon utforskas körningen av CI/CD Pipeline med kod som misslyckas med Cloud Managers nödvändiga kvalitetskontroller med hjälp av **[!DNL yellow]** databasgrenen.
+I den här videon utforskas körningen av CI/CD-pipeline med kod som inte klarar de kvalitetskontroller som krävs av Cloud Manager med hjälp av databasgrenen **[!DNL yellow]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
 
 ## Slutförd pipeline-körning
 
-I den här videon utforskas den lyckade körningen av CI/CD Pipeline med kod som klarar Cloud Managers obligatoriska kvalitetskontroller med hjälp av **[!DNL master]** databasgrenen.
+I den här videon utforskas den lyckade körningen av CI/CD-pipeline med hjälp av kod som klarar de kvalitetskontroller som krävs av Cloud Manager med hjälp av databasgrenen **[!DNL master]**.
 
-Den här videon rör även vid [!UICONTROL Activity] konsolen i Cloud Manager, som gör att du kan komma in i aktiva körningar igen eller granska slutförda eller misslyckade körningar.
+Den här videon rör även vid [!UICONTROL Activity]-konsolen i Cloud Manager, där du kan starta om till aktiva körningar eller granska slutförda eller misslyckade körningar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
 
 ## Stödmaterial
 
 * [Användarhandbok för Cloud Manager](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html)
-* [Hämta [!DNL SonarQube] regler för kodskanning](https://helpx.adobe.com/experience-manager/cloud-manager/using/understand-your-test-results.html#CodeQualityTesting)
+* [Hämta  [!DNL SonarQube] regler för kodskanning](https://helpx.adobe.com/experience-manager/cloud-manager/using/understand-your-test-results.html#CodeQualityTesting)
    * *XLSX finns längst ned i det länkade avsnittet*
 * [[!DNL SonarQube] Java-regelindex](https://rules.sonarsource.com/java/)
