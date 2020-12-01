@@ -13,7 +13,7 @@ discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera
 
 ## Privat nyckel och självsignerad certifikatnedladdning
 
-Följande ZIP innehåller [!DNL DER] och [!DNL CRT] filer som krävs för att konfigurera AEM SSL på localhost och som endast är avsedda för lokal utveckling.
+Följande zip innehåller [!DNL DER]- och [!DNL CRT]-filer som krävs för att konfigurera AEM SSL på localhost och som endast är avsedda för lokal utveckling.
 
-Filerna [!DNL DER] och [!DNL CERT] filerna tillhandahålls av praktiska skäl och genereras enligt anvisningarna i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
+Filerna [!DNL DER] och [!DNL CERT] tillhandahålls av praktiska skäl och genereras enligt stegen som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
 
-Om det behövs är certifikatets lösenordsfras **admin**.
+Vid behov är certifikatets lösenordsfras **admin**.
 
 localhost - private key och self-signed certificate.zip (upphör i juli 2028)
 
