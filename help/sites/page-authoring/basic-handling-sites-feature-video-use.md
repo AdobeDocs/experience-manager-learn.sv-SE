@@ -20,7 +20,7 @@ ht-degree: 4%
 ---
 
 
-# AEM Sites gränssnitt och navigering {#basic-handling-aem-sites}
+# AEM Sites användargränssnitt och navigering {#basic-handling-aem-sites}
 
 I följande video visas en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
 
