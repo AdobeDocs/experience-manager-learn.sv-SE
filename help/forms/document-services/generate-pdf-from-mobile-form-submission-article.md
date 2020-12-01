@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# Generera PDF från HTML5-formulärskickning {#generate-pdf-from-htm-form-submission}
+# Generera PDF från HTML5-formulärinskickning {#generate-pdf-from-htm-form-submission}
 
 I den här artikeln får du stegvisa instruktioner för hur du genererar PDF-filer från en inskickning av HTML5-formulär (även Mobile Forms). Denna demo förklarar också stegen som krävs för att lägga till en bild i HTML5-formulär och sammanfoga bilden i den slutliga PDF-filen.
 
-Om du vill se en live-demonstration av den här funktionen kan du besöka [exempelservern](https://forms.enablementadobe.com/content/samples/samples.html?query=0) och söka efter&quot;Mobilformulär till PDF&quot;.
+Om du vill se en live-demonstration av den här funktionen går du till [exempelservern](https://forms.enablementadobe.com/content/samples/samples.html?query=0) och söker efter&quot;Mobilformulär till PDF&quot;.
 
 Så här sammanfogar du skickade data i xdp-mallen:
 
