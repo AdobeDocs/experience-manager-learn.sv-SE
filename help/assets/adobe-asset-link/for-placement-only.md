@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# For Placement Only (FPO) rendering{#for-placement-only-rendition}
+# För återgivning endast för placering (FPO){#for-placement-only-rendition}
 
 Lär dig hur du skapar och använder en FPO-återgivning (For Placement Only) för AEM resurser.
 
