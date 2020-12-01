@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Montera länkad{#place-linked}
+# Placera länkad{#place-linked}
 
 Lär dig hur du använder resurser från AEM Assets med åtgärden Montera länkad.
 
