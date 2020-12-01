@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# Komma igång med AEM SPA och vinkelrät {#spa-angular-tutorial}
+# Komma igång med AEM SPA och vinkeln {#spa-angular-tutorial}
 
 + [Översikt](overview.md)
 + [SPA](create-project.md)
