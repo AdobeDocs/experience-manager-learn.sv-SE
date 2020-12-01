@@ -29,9 +29,9 @@ Apache Sling erbjuder en Jackson JSON-exportör som täcker det vanligaste falle
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] är en funktion i [!DNL Apache Sling] projektet och är inte direkt knuten till AEM produktlanseringscykel. [!DNL Sling Model Exporter] är kompatibelt med AEM 6.3 och senare.
+[!DNL Sling Model Exporter] är en funktion i  [!DNL Apache Sling] projektet och är inte direkt knuten till AEM produktlanseringscykel. [!DNL Sling Model Exporter] är kompatibelt med AEM 6.3 och senare.
 
-## Användningsexempel för [!DNL Sling Model Exporter]
+## Användningsfall för [!DNL Sling Model Exporter]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
 
@@ -41,24 +41,24 @@ Apache Sling erbjuder en Jackson JSON-exportör som täcker det vanligaste falle
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
 
-Det är lika enkelt att aktivera [!DNL Exporter] stöd för en [!DNL Sling Model] kommentar som att lägga till `@Exporter` anteckningen i Java-klassen.
+Det är lika enkelt att aktivera [!DNL Exporter]-stöd för en [!DNL Sling Model] som att lägga till `@Exporter`-anteckningen i Java-klassen.
 
 ## Använda exportalternativ för delningsmodell
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] har stöd för att skicka exportalternativ per modell till exportörimplementeringen för att styra hur den slutligen [!DNL Sling Model] exporteras. De här alternativen gäller i allmänhet&quot;globalt&quot; för hur [!DNL Sling Model] du exporterar, jämfört med per datapunkt, vilket kan göras via textbundna anteckningar som beskrivs nedan.
+[!DNL Sling Model Exporter] har stöd för att skicka exportalternativ per modell till exportörimplementeringen för att styra hur exportfunktionen slutligen  [!DNL Sling Model] exporteras. Dessa alternativ gäller vanligtvis&quot;globalt&quot; för hur [!DNL Sling Model] exporteras, jämfört med per datapunkt, vilket kan göras via textbundna anteckningar som beskrivs nedan.
 
 [!DNL Jackson Exporter] bland annat:
 
 * [Alternativ för mappningsfunktioner](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/MapperFeature.html)
 * [Alternativ för serialiseringsfunktioner](https://static.javadoc.io/com.fasterxml.jackson.core/jackson-databind/2.8.5/com/fasterxml/jackson/databind/SerializationFeature.html)
 
-## Använda [!DNL Jackson] anteckningar
+## Använder [!DNL Jackson] anteckningar
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
 
-Exportörernas implementeringar kan också ha stöd för anteckningar som kan användas infogat i [!DNL Sling Model] klassen, vilket ger en bättre kontrollnivå för hur data exporteras.
+Exportörimplementeringar kan även ha stöd för anteckningar som kan användas infogat i klassen [!DNL Sling Model], som ger en bättre kontrollnivå för hur data exporteras.
 
 * [[!DNL Jackson Exporter] anteckningar](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 
