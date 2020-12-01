@@ -24,7 +24,7 @@ ht-degree: 0%
 
 En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript.
 
-Om du vill veta mer om hur du skapar en bevakad mapp [klickar du här](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
+[Klicka här](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html) om du vill veta mer om hur du skapar en bevakad mapp
 
 Bevakade mappar används för att generera dokument i gruppläge. Med bevakad mappfunktion kan du generera interaktiv kommunikation för utskriftskanalen eller använda utdatatjänsten för att sammanfoga data med mallen.
 
