@@ -25,7 +25,7 @@ ht-degree: 0%
 # Lägga till tabell i avgiftsavsnitt
 
 I den här delen ska vi lägga till en tabell i avsnittet om bidrag.
-Mer information om hur du använder tabeller i dokument för utskriftskanaler finns i [Använda tabeller i Utskriftskanal](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) .
+Mer information om hur du använder tabeller i dokument för utskriftskanaler finns i [Använda tabeller i utskriftskanalen](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md).
 
 Logga in på AEM Forms och gå till Adobe Experience Manager > Forms > Forms &amp; Documents.
 
