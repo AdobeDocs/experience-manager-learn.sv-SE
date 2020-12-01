@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera resursmallar med AEM Assets och InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
+# Ställ in resursmallar med AEM Assets och InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
 Med hjälp av resursmallar kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Det är mycket enklare att skapa marknadsföringsbroschyrer, visitkort, flygblad, annonser och postkort med tillgångsmallar när de integreras med InDesign-servern. Konfiguration av InDesign-server med AEM beskrivs i det här avsnittet.
 
@@ -26,9 +26,9 @@ Med hjälp av resursmallar kan marknadsförarna skapa, hantera och leverera digi
 >
 >AEM **måste** vara ansluten till en InDesign-server som körs när INDD-mallen överförs. En del av den inledande bearbetningen i INDD-filen kräver InDesign-servern.
 
-## Ladda ned testversionen av InDesign Server {#download-indesign-server-trial}
+## Hämta testversionen av InDesign Server {#download-indesign-server-trial}
 
-Ladda ned [InDesign Server webbplats](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+Hämta [InDesign Server webbplats för nedladdning av testversion](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
 
 ## Startar InDesign Server {#starting-indesign-server}
 
