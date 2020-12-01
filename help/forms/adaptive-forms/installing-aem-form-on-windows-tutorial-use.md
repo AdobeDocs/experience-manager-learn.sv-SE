@@ -40,14 +40,14 @@ ht-degree: 0%
 >* Microsoft Visual C++ 2013 redistributable (från och med 6.5)
 
 
-Vi rekommenderar att du följer den [officiella dokumentationen](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) för installation av AEM Forms. Följ de här stegen för att installera och konfigurera AEM Forms i Windows-miljö:
+Vi rekommenderar att du följer [den officiella dokumentationen](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) för installation av AEM Forms. Följ de här stegen för att installera och konfigurera AEM Forms i Windows-miljö:
 
 * Kontrollera att rätt JDK är installerat
    * AEM 6.2: Oracle SE 8 JDK 1.8.x (64 bitar)
 * 
    * AEM 6.3 och AEM 6.4: Oracle SE 8 JDK 1.8.x (64 bitar)
 * AEM 6.5 behöver du JDK 8 eller JDK 11
-* [De officiella JDK-kraven](https://helpx.adobe.com/experience-manager/6-3/sites/deploying/using/technical-requirements.html) anges här
+* [Officiella JDK-](https://helpx.adobe.com/experience-manager/6-3/sites/deploying/using/technical-requirements.html) krav anges här
 * Kontrollera att JAVA_HOME är inställt på att peka på den JDK som du har installerat.
    * Följ stegen nedan för att skapa variabeln JAVA_HOME i Windows:
       * Högerklicka på Den här datorn och välj Egenskaper
@@ -78,20 +78,20 @@ Vi rekommenderar att du följer den [officiella dokumentationen](https://helpx.a
 
    * Du måste ha AdobeId för att logga in på paketresursen
    * Sök efter AEM Forms Add on-paket som passar din version av AEM Forms och operativsystemet
-   * Eller så kan [du ladda ned rätt formulärtilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+   * Eller [du kan hämta rätt formulär-addon-paket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
    * När du har installerat add-on-paketet måste du följa följande steg
 
-      * **Kontrollera att alla paket är i aktivt läge. (Förutom för AEMFD-signaturpaket).**
+      * **Kontrollera att alla paket är i aktivt läge. (Förutom för AEMFD-signaturpaketet).**
       * **Det tar vanligtvis fem eller fler minuter för alla paket att aktiveras.**
    * **När alla paket är aktiva (förutom AEMFD Signatures-paketet) startar du om datorn för att slutföra AEM Forms-installationen**
 
 
-* Lägg till `sun.util.calendar` paketet i tillåtelselista:
+* Lägg till `sun.util.calendar`-paketet i tillåtelselista:
 
    1. Öppna Felix webbkonsol i [webbläsarfönstret](http://localhost:4502/system/console/configMgr)
    2. Sök och öppna Firewall Configuration (Brandväggskonfiguration för deserialisering): `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-   3. Lägg till `sun.util.calendar` som ny post under `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+   3. Lägg till `sun.util.calendar` som en ny post under `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
    4. Spara ändringarna.
 
 Grattis! Du har nu installerat och konfigurerat AEM Forms på datorn.
-Beroende på dina behov kan du konfigurera [Reader Extensions](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) eller [ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) på servern
+Beroende på dina behov kan du konfigurera [Reader-tillägg](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) eller [ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) på servern
