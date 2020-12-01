@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# Getting Started with AEM Sites - WKND Tutorial {#introduction}
+# Komma igång med AEM Sites - WKND självstudiekurs {#introduction}
 
 Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
@@ -30,7 +30,7 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Självstudiekursen är utformad för att fungera med **AEM som Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**. Webbplatsen implementeras med:
+Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**. Webbplatsen implementeras med:
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
@@ -47,7 +47,7 @@ WKND är en påhittad nättidskrift och blogg som fokuserar på nattliv, aktivit
 
 ### Adobe XD UI Kit
 
-För att göra den här självstudiekursen närmare ett verkligt scenario skapade Adobe talangfulla UX-designers dummies för sajten med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND:s sajt.
+För att den här självstudiekursen ska bli närmare ett verkligt scenario skapade Adobe-designers modeller för webbplatsen med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
 
 Ladda ned XD UI-kit:
 
@@ -72,34 +72,34 @@ Dessutom har varje del av självstudiekursen en egen gren i GitHub. Användaren 
 
 En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs i Mac OS-miljö. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
 
-**Är du inte AEM som Cloud Service?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
-**Har du inte använt AEM 6.5 tidigare?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+**Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ### Nödvändig programvara
 
 Följande bör installeras lokalt:
 
-* [AEM som Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) eller [AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) eller [AEM 6.4 + SP2](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM som en Cloud Service ](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) SDKor  [AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) or  [AEM 6.4 + SP2](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) (endast AEM 6.5+)
-* [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
+* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
 * [Node.js v10+](https://nodejs.org/en/)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
 
 ### Integrated Development Environment (IDE)
 
-I den här självstudiekursen används [Eclipse](https://www.eclipse.org/) med [AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/) som IDE, men alla IDE som har stöd för Java- och Maven-projekt kan användas. Den här självstudiekursen är minimalt beroende av vissa IDE-funktioner.
+I den här självstudien används [Eclipse](https://www.eclipse.org/) med [AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/) som IDE, men alla IDE som har stöd för Java- och Maven-projekt kan användas. Den här självstudiekursen är minimalt beroende av vissa IDE-funktioner.
 
-Mer information om hur du använder Eclipse eller andra utvecklingsmiljöer som [Visual Studio Code](https://code.visualstudio.com/) eller [IntelliJ](https://www.jetbrains.com/idea/)finns i [följande guide](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+Mer information om hur du använder Eclipse eller andra utvecklingsmiljöer som [Visual Studio Code](https://code.visualstudio.com/) eller [IntelliJ](https://www.jetbrains.com/idea/), [finns i följande guide](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Referenswebbplats {#reference-site}
 
 En färdig version av WKND-webbplatsen finns också som referens: [https://wknd.site/](https://wknd.site/)
 
-Självstudiekursen behandlar de viktigaste utvecklingskunskaperna för en AEM utvecklare, men kommer *inte* att bygga hela webbplatsen från början till slut. Den färdiga referenswebbplatsen är en annan bra resurs att utforska och se mer av AEM funktioner.
+Självstudiekursen behandlar de viktigaste utvecklingskunskaperna som en AEM behöver, men *inte* bygger hela webbplatsen från början till slut. Den färdiga referenswebbplatsen är en annan bra resurs att utforska och se mer av AEM funktioner.
 
-Om du vill testa den senaste koden innan du går in i självstudiekursen hämtar och installerar du den **[senaste versionen från GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
+Om du vill testa den senaste koden innan du går till självstudiekursen hämtar och installerar du den **[senaste versionen från GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
 
 ### Powered by Adobe Stock
 
@@ -109,4 +109,4 @@ Med Adobe Stock får du tillgång till över 140 miljoner högklassiga royaltyfr
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lära dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projektarkitekturen.
+Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lär dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projektarkitypen.
