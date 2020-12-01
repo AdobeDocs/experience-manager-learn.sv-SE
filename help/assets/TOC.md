@@ -41,7 +41,7 @@ ht-degree: 7%
    + [Versioner](./collaboration/versions.md)
    + [Granska uppgift](./collaboration/review-task.md)
 
-+ Sök och hitta{#search-and-discovery}
++ Sök och identifiera{#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
    + [Samlingar](./search-and-discovery/collections.md)
    + [Sökökning](./search-and-discovery/search-boost.md)
