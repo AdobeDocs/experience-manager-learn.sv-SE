@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Innehållsstruktur och -hierarki {#content-hierarchy}
+# Innehållsstruktur och hierarki {#content-hierarchy}
 
 Lär dig hur du skapar och organiserar organisationens webbsidor i AEM Sites.
 
