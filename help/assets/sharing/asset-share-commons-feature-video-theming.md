@@ -80,7 +80,7 @@ I den här videon kommer ett nytt tema att skapas baserat på det mörka temat R
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Hämta tema för [anpassat klientbibliotek](assets/asc-theme-demo.zip)
+Hämta [tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
 
 ## Ytterligare resurser{#additional-resources}
 
