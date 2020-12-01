@@ -18,7 +18,8 @@ ht-degree: 1%
 
 # Testa den här funktionen på datorn
 
-[Hämta och importera det här paketet till AEM](assets/acro-form-aem-form.zip)Paketet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa schemat från den överförda Acrobat.
+[Hämta och importera det här paketet till ](assets/acro-form-aem-form.zip)
+AEMTet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa schemat från den överförda Acrobat.
 
 ## Konfigurera arbetsflöde
 
