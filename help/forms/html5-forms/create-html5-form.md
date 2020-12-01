@@ -24,7 +24,7 @@ HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder åter
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
 
 ## Skapa ditt första HTML5-formulär
 
@@ -40,7 +40,7 @@ xdp kan förhandsgranskas i HTML5-format eller PDF-format. Följ de här stegen 
 * Tryck på den nyligen överförda xdp-filen och klicka på _Förhandsgranska -> Förhandsgranska som HTML_. Du bör se xdp renderad som HTML5
 
 >[!NOTE]
->När du väljer alternativet _Förhandsgranska som PDF_ visas inte den återgivna PDF-filen i webbläsaren eftersom AEM Forms återger dynamiska PDF-filer som kräver Acrobat plugin.Du måste hämta PDF-filen och öppna den med Adobe Acrobat/Reader för att kunna visa den
+>När du väljer alternativet _Förhandsgranska som PDF_ visas inte den återgivna PDF-filen i webbläsaren eftersom AEM Forms återger dynamiska PDF-filer som kräver Acrobat-plugin.Du måste hämta PDF-filen och öppna den med Adobe Acrobat/Reader för att kunna visa den
 
 
 ## Förhandsgranska med data
@@ -54,9 +54,9 @@ Om du vill förhandsgranska xdp i HTML5-format med datafil följer du följande 
 
 Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, skicka-hanterare, återgivningsprofil för formuläret, förifyllningstjänst osv. Om du vill visa de avancerade egenskaperna för mallen trycker du på xdp och klickar på _egenskaper -> Avancerat_. Här hittar du ett antal egenskaper. Vissa av dessa egenskaper beskrivs här.
 
-**Skicka-URL** - Det här är den URL som kommer att hantera ditt inskickade HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
+**Skicka-URL**  - Det här är den URL som kommer att hantera ditt inskickade HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
 
-**HTML-återgivningsprofil** - HTML5-formulär har begreppet profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
+**HTML-återgivningsprofil**  - HTML5-formulär har begreppet profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
 
-**Förifyllningstjänst** - förifyllningstjänsten används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.
+**Prefill Service**  - Prefill Service används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.
 
