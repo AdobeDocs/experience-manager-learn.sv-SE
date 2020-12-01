@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Förbättringar av Theme Editor i AEM Forms{#theme-editor-improvements-in-aem-forms}
+# Förbättringar av temaredigeraren i AEM Forms{#theme-editor-improvements-in-aem-forms}
 
 Förbättringar av Theme Editor för anpassningsbara formulär i AEM 6.3
 
