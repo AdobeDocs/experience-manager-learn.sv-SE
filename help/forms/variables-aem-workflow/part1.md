@@ -59,7 +59,7 @@ De adaptiva formulärdata lagras under dataelementet som visas ovan. **_I ovanst
 Följ de här stegen för att få resurserna att fungera i ditt system:
 
 * [Hämta och importera resurser till AEM med hjälp av pakethanteraren](assets/xmlandstringvariable.zip)
-* [Utforska arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) för att förstå de variabler som används i arbetsflödet
+* [Utforska arbetsflödesmodellen ](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) för att förstå de variabler som används i arbetsflödet
 * [Konfigurera e-posttjänsten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
 * Fyll i uppgifterna och skicka in formuläret.
