@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# Skapa kampanjprofil med hjälp av formulärdatamodell {#create-campaign-profile-using-form-data-model}
+# Skapa kampanjprofil med hjälp av formulärdatamodellen {#create-campaign-profile-using-form-data-model}
 
 Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Form Data Model
 
@@ -118,7 +118,8 @@ Du får en exempelfil som en del av resursens relaterade artikel.**Kontrollera a
 Följ följande steg för att testa lösningen:
 * [Kontrollera att du har följt de steg som beskrivs här](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Hämta och zippa upp den här filen för att hämta swagger-filen](assets/create-acs-profile-swagger-file.zip)
-* Skapa datakälla med swagger-filenSkapa formulärdatamodell och basera den på datakällan som skapades i föregående steg
+* Skapa datakälla med swagger-filen
+Skapa formulärdatamodell och basera den på datakällan som skapades i föregående steg
 * Skapa ett anpassat formulär baserat på den formulärdatamodell som skapades i det tidigare steget.
 * Dra och släpp följande element från fliken Datakällor till det adaptiva formuläret
 
