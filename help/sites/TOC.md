@@ -93,10 +93,10 @@ ht-degree: 2%
    + Experience Platform Launch {#experience-platform-launch}
       + [Översikt](integrations/experience-platform-launch/overview.md)
       + [Skapa en startegenskap](integrations/experience-platform-launch/create-launch-property.md)
-      + [Anslut AEM med Launch med Adobe i/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
+      + [Anslut AEM med Launch med Adobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [Skapa en Launch-Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [Felsöka en Launch-implementering](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe-klientdatalager {#adobe-client-data-layer}
+   + Adobe-klientdatalagret {#adobe-client-data-layer}
       + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
    + Analyser {#analytics}
       + [Samla in siddata med Adobe Analytics](integrations/analytics/collect-data-analytics.md)
