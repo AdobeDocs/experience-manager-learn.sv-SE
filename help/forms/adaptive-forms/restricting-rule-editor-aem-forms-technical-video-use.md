@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Begränsa regelredigeraren till särskilda grupper i AEM Forms {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
+# Begränsa regelredigeraren till specifika grupper i AEM Forms {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
 
 Begränsa redigeraren för anpassade formulärregler till specifika grupper i AEM
 
