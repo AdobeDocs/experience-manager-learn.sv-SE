@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Så här kodar du för formatsystemet{#understanding-how-to-code-for-the-aem-style-system}
 
-I den här videon ska vi titta närmare på den CSS (eller [!DNL LESS]) och JavaScript som används för att formatera Experience Managers Core Title Component med Style System, samt hur dessa format tillämpas på HTML och DOM.
+I den här videon ska vi titta närmare på den beskrivning av CSS (eller [!DNL LESS]) och JavaScript som används för att formatera Experience Managers Core Title Component med Style System, samt hur dessa format tillämpas på HTML och DOM.
 
 >[!NOTE]
 >
@@ -30,17 +30,17 @@ I den här videon ska vi titta närmare på den CSS (eller [!DNL LESS]) och Java
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
 
-Det medföljande AEM-paketet (**technical-review.sites.style-system-1.0.0.zip**) installerar exempeltitelformatet, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
+Det angivna AEM-paketet (**technical-review.sites.style-system-1.0.0.zip**) installerar exempelnamnstilen, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
 ### CSS {#the-css}
 
-Följande är [!DNL LESS] definitionen för exempelformatet som finns i:
+Följande är [!DNL LESS]-definitionen för exempelformatet som finns på:
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-För dem som föredrar CSS är det CSS som kompileras till under det här kodfragmentet. [!DNL LESS]
+För dem som föredrar CSS är det CSS som [!DNL LESS] kompileras till under det här kodfragmentet.
 
 ```css
 /* LESS */
@@ -68,7 +68,7 @@ För dem som föredrar CSS är det CSS som kompileras till under det här kodfra
 }
 ```
 
-Ovanstående [!DNL LESS] kompileras inbyggt av Experience Manager till följande CSS.
+Ovanstående [!DNL LESS] kompileras direkt av Experience Manager till följande CSS.
 
 ```css
 /* CSS */
@@ -99,7 +99,7 @@ Följande JavaScript samlar in och injicerar den aktuella sidans senaste ändrin
 
 Det är valfritt att använda jQuery och de namnkonventioner som används.
 
-Följande är [!DNL LESS] definitionen för exempelformatet som finns i:
+Följande är [!DNL LESS]-definitionen för exempelformatet som finns på:
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/js/title.js`
 
@@ -149,14 +149,14 @@ jQuery(function ($) {
 });
 ```
 
-## Utveckla bästa praxis {#development-best-practices}
+## Bästa praxis för utveckling {#development-best-practices}
 
 ### Bästa praxis för HTML {#html-best-practices}
 
 * HTML (genererad via HTML) ska vara så strukturellt semantisk som möjligt. undvika onödig gruppering/kapsling av element.
 * HTML-element ska kunna adresseras via CSS-klasser i BEM-format.
 
-**Bra** - Alla element i komponenten kan adresseras via BEM-notation:
+**Bra**  - Alla element i komponenten kan adresseras via BEM-notation:
 
 ```html
 <!-- Good practice -->
@@ -167,7 +167,7 @@ jQuery(function ($) {
 </div>
 ```
 
-**Felaktigt** - list- och listelementen kan endast adresseras efter elementnamn:
+**Felaktigt**  - list- och listelementen kan endast adresseras efter elementnamn:
 
 ```html
 <!-- Bad practice -->
@@ -189,23 +189,23 @@ jQuery(function ($) {
 
 >[!NOTE]
 >
->Style System gör en liten teknisk skillnad från [BEM](https://en.bem.info/)på så sätt att `BLOCK` och inte `BLOCK--MODIFIER` tillämpas på samma element, enligt [BEM](https://en.bem.info/).
+>Style System gör en liten teknisk skillnad från [BEM](https://en.bem.info/), eftersom `BLOCK` och `BLOCK--MODIFIER` inte används för samma element, enligt vad som anges av [BEM](https://en.bem.info/).
 >
->På grund av produktbegränsningar `BLOCK--MODIFIER` tillämpas i stället elementets överordnade `BLOCK` element.
+>På grund av produktbegränsningar tillämpas i stället `BLOCK--MODIFIER` på det överordnade elementet för `BLOCK`-elementet.
 >
->Alla övriga innehavare av [BEM](https://en.bem.info/) bör anpassas till varandra.
+>Alla övriga innehavare av [BEM](https://en.bem.info/) ska justeras mot.
 
-* Använd preprocessorer som [LESS](https://lesscss.org/) (stöds AEM internt) eller [SCSS](https://sass-lang.com/) (kräver anpassat build-system) för att möjliggöra en tydlig CSS-definition och återanvändbarhet.
+* Använd preprocessorer som [LESS](https://lesscss.org/) (stöds av AEM native) eller [SCSS](https://sass-lang.com/) (kräver anpassat byggsystem) för att tillåta tydlig CSS-definition och återanvändbarhet.
 
 * Behåll väljarens vikt/specificitet enhetlig. Detta hjälper till att undvika och lösa svåridentifierade CSS-överlappningskonflikter.
 * Ordna varje format i en separat fil.
-   * Dessa filer kan kombineras med LESS/SCSS `@imports` eller om rå CSS krävs, via HTML-klientbibliotekets filinkludering eller anpassade front end-system för tillgångsbygge.
+   * Dessa filer kan kombineras med LESS/SCSS `@imports` eller om rå CSS krävs, via filinkludering i HTML-klientbibliotek eller anpassade frontendsystem för att skapa resurser.
 * Undvik att blanda många komplexa format.
    * Ju fler format som kan användas samtidigt på en komponent, desto fler möjligheter till genomskinlighet. Det kan bli svårt att upprätthålla/kvalitetssäkra varumärkesprofiler/säkerställa varumärkesanpassning.
 * Använd alltid CSS-klasser (efter BEM-notation) för att definiera CSS-regler.
    * Om det är absolut nödvändigt att markera element utan CSS-klasser (d.v.s. oskarpa element), flyttar du dem högre i CSS-definitionen så att det tydligt framgår att de har lägre specificitet än eventuella kollisioner med element av den typen som har valbara CSS-klasser.
 * Undvik att formatera `BLOCK--MODIFIER` direkt eftersom det är kopplat till det responsiva stödrastret. Om du ändrar visningen av det här elementet kan återgivningen och funktionaliteten för det responsiva stödrastret påverkas, så det är bara formatet på den här nivån när metoden är att ändra beteendet för det responsiva stödrastret.
-* Använd formatomfång med `BLOCK--MODIFIER`. Den `BLOCK__ELEMENT--MODIFIERS` kan användas i komponenten, men eftersom den `BLOCK` representerar komponenten och komponenten är den som är formaterad är stilen&quot;definierad&quot; och omfångsgraden via `BLOCK--MODIFIER`.
+* Använd formatomfång med `BLOCK--MODIFIER`. `BLOCK__ELEMENT--MODIFIERS` kan användas i komponenten, men eftersom `BLOCK` representerar komponenten och komponenten är den som är formaterad är Style&quot;definierad&quot; och omfångsdefinierad via `BLOCK--MODIFIER`.
 
 Exempel på CSS-väljarstruktur ska vara följande:
 
@@ -223,7 +223,7 @@ Exempel på CSS-väljarstruktur ska vara följande:
    <td valign="middle"><span class="code">.cmp-list</span></td> 
    <td valign="middle"><span class="code">.cmp-list_item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item { </span></strong></p> <p><strong> färg: blå,</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item {  </span></strong></p> <p><strong> färg: blå,</strong></p> <p><strong> }</strong></p> </td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-image—hero</span></td> 
@@ -235,7 +235,7 @@ Exempel på CSS-väljarstruktur ska vara följande:
  </tbody> 
 </table>
 
-När det gäller kapslade komponenter kommer CSS-väljardjupet för dessa kapslade komponentelement att överskrida väljaren på den tredje nivån. Upprepa samma mönster för den kapslade komponenten, men omfång för den överordnade komponentens `BLOCK`. Du kan med andra ord starta den kapslade komponentens `BLOCK` på den tredje nivån, och den kapslade komponentens `ELEMENT` blir på den fjärde väljarnivån.
+När det gäller kapslade komponenter kommer CSS-väljardjupet för dessa kapslade komponentelement att överskrida väljaren på den tredje nivån. Upprepa samma mönster för den kapslade komponenten, men omfånget görs av den överordnade komponentens `BLOCK`. Du kan med andra ord starta den kapslade komponentens `BLOCK` på den tredje nivån, och den kapslade komponentens `ELEMENT` kommer att vara på den fjärde väljarnivån.
 
 ### Bästa praxis för JavaScript {#javascript-best-practices}
 
@@ -255,7 +255,7 @@ De bästa metoderna som definieras i det här avsnittet gäller&quot;style-JavaS
 #### Prestandaöverväganden {#performance-considerations}
 
 * Style-JavaScript ska hållas lätt och svagt.
-* För att undvika flimmer och onödiga omritningar döljer du först komponenten via `BLOCK--MODIFIER BLOCK`och visar den när alla DOM-ändringar i JavaScript är slutförda.
+* För att undvika flimmer och onödiga omritningar döljer du först komponenten via `BLOCK--MODIFIER BLOCK` och visar den när alla DOM-ändringar i JavaScript har slutförts.
 * Prestanda för style-JavaScript-ändringar liknar grundläggande jQuery-plugin-program som kopplar till och ändrar element i DOMReady.
 * Kontrollera att förfrågningar grupperas och att CSS och JavaScript är minimerade.
 
