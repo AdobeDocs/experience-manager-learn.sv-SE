@@ -107,19 +107,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 För att få den här funktionen att fungera på din AEM
 
-* Hämta [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till din lokala dator.
+* Hämta [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
 * Överför och installera paketet med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* [Ladda nedPaket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Hämta[paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * Ladda ned [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Distribuera och starta paketen med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)
-* Peka webbläsaren på [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* Peka webbläsaren på [Sammanställ PDF.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * Dra och släpp några filer i PDF-filer
 
 >[!NOTE]
 >
 >Kontrollera att AEM Forms-installationen är klar. Alla paket måste vara i aktivt läge.
 >
->Se till att du har lagt till - Boot delegate-RSA- och BouncyCastle-bibliotek som nämns i denna [installation av AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Se till att du har lagt till - Boot delegate RSA- och BouncyCastle-bibliotek som nämns i denna [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
 >**Caveats for this Demo**
 >
