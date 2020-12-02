@@ -30,5 +30,7 @@ Skärmbilderna nedan visar konfigurationsinställningarna för datakällor i AEM
 
 **Konfiguration av datakälla i AEM 6.4**
 
-![64Konfiguration](assets/64release.gif)av **redigerbar datakälla för datakälla i AEM 6.5 och senare**![65Konfiguration för datakälla](assets/modifiabledatasource.jfif)
+![64Konfiguration ](assets/64release.gif)
+**av datakälla för redigerbar datakälla i AEM 6.5 och senare**
+![65Konfiguration av datakälla](assets/modifiabledatasource.jfif)
 
