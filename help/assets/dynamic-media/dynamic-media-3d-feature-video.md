@@ -23,7 +23,7 @@ Med 3D-stödet för dynamiska media i Adobe Experience Manager kan du enkelt anp
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
-Kolla in 3D [Dimensional Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) här.
+Ta en titt på 3D [Dimensional Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) här.
 
 
 ## Använda 3D Experience Viewer
