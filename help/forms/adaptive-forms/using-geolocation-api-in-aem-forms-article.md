@@ -20,15 +20,15 @@ ht-degree: 0%
 ---
 
 
-# Använda Geolocation-API:er i Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
+# Använda Geolocation-API:er i Adaptiv Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
 
 I den här artikeln ska vi titta närmare på hur du använder Googles Geolocation-API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i de aktuella adressfälten i ett formulär.
 
 Följande steg har utförts för att använda Geolocation-API:t i Adaptive Forms.
 
-1. [Hämta API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key) från Google för att använda Google Maps-plattformen. Du kan få en provnyckel som gäller i ett år.
+1. [Hämta API ](https://developers.google.com/maps/documentation/javascript/get-api-key) Keyfrom Google för att använda Google Maps-plattformen. Du kan få en provnyckel som gäller i ett år.
 
 1. Anpassat formulärfragment skapades med fält för den aktuella adressen
 
