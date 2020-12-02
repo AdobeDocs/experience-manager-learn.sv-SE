@@ -11,7 +11,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 # Utveckla för Cross-Origin Resource Sharing (CORS)
 
-Ett kort exempel på hur du kan utnyttja AEM innehåll från ett externt webbprogram via JavaScript på klientsidan. [!DNL CORS]
+Ett kort exempel på hur du använder [!DNL CORS] för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 I den här videon:
 
-* **www.example.com** mappar till localhost via `/etc/hosts`
-* **aem-publish.local** maps to localhost via `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (en wrapper för [[!DNL Python]s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) visar HTML-sidan via port 8000.
-* [!DNL AEM Dispatcher] körs på [!DNL Apache HTTP Web Server] 2.4 och begäran om omvänd proxering till `aem-publish.local` till `localhost:4503`.
+* **www.example.** commaps to localhost via  `/etc/hosts`
+* **aem-publish.** localmaps to localhost via  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)  (en wrapper för  [[!DNL Python]s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) visar HTML-sidan via port 8000.
+* [!DNL AEM Dispatcher] körs på  [!DNL Apache HTTP Web Server] 2.4 och omvänd proxybegäran  `aem-publish.local` till  `localhost:4503`.
 
 Mer information finns i [Understanding Cross-Origin Resource Sharing (CORS) i AEM](./understand-cross-origin-resource-sharing.md).
 
@@ -37,8 +37,8 @@ Mer information finns i [Understanding Cross-Origin Resource Sharing (CORS) i AE
 Den här webbsidan har logik för att
 
 1. När du klickar på knappen
-1. Begär [!DNL AJAX GET] att `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. Hämtar `jcr:title` formuläret från JSON-svaret
+1. Gör en [!DNL AJAX GET]-begäran till `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. Hämtar `jcr:title` från JSON-svaret
 1. Injicerar `jcr:title` i DOM
 
 ```xml
@@ -74,7 +74,7 @@ Den här webbsidan har logik för att
 
 ## OSGi-fabrikskonfiguration
 
-OSGi Configuration factory för [!DNL Cross-Origin Resource Sharing] är tillgänglig via:
+OSGi-konfigurationsfabriken för [!DNL Cross-Origin Resource Sharing] är tillgänglig via:
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -96,7 +96,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
-Om du vill tillåta cache-lagring och visning av sidhuvuden i cachelagrat innehåll lägger du till följande konfiguration i alla AEM Publish- [!DNL CORS] `dispatcher.any` filer som stöds.
+Om du vill tillåta cachelagring och visning av [!DNL CORS]-huvuden i cachelagrat innehåll lägger du till följande konfiguration i alla AEM Publish `dispatcher.any`-filer som stöds.
 
 ```
 /cache { 
@@ -113,15 +113,15 @@ Om du vill tillåta cache-lagring och visning av sidhuvuden i cachelagrat inneh�
 }
 ```
 
-**Starta om webbserverprogrammet** när du har gjort ändringar i `dispatcher.any` filen.
+**Starta om webbserverprogrammet** när du har gjort ändringar i  `dispatcher.any` filen.
 
-Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/headers` konfigurationsuppdatering.
+Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/headers`-konfigurationsuppdatering.
 
 ## Stödmaterial {#supporting-materials}
 
 * [AEM OSGi Configuration factory for Cross-Origin Resource Sharing Policies](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer för macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (Windows/macOS/Linux-kompatibel)
+* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)  (Windows/macOS/Linux-kompatibel)
 
 * [Understanding Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md)
 * [Resursdelning mellan ursprung (W3C)](https://www.w3.org/TR/cors/)
