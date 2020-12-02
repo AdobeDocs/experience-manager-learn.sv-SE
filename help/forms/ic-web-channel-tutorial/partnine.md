@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Lägga till tabell på kontosaldopanelen{#adding-table-to-account-balance-panel}
+# Lägger till tabell på kontosaldopanelen{#adding-table-to-account-balance-panel}
 
 I den här delen ska vi lägga till en tabell på panelen Kontosaldo.
 
