@@ -85,7 +85,7 @@ URL:en för den ovanstående rotationsuppsättningen kan se ut som:
 
 ![bild](assets/media-sets/spin-set.png)
 
-- Lär dig mer om snurruppsättningar med [Snabbstart till snurra uppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
+- Läs mer om snurruppsättningar med [Snabbstart till snurra uppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
 - Lär dig hur du [skapar en snurruppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
 
 ## Blandad medieuppsättning
@@ -114,7 +114,7 @@ Fram tills nu har vi diskuterat hur du skapar uppsättningar manuellt med funkti
 
 Varje förinställning är en unik, självständig uppsättning instruktioner som definierar hur uppsättningen ska skapas med bilder som matchar de definierade namnkonventionerna. I förinställningen definierar du först namnkonventioner för de resurser som du vill gruppera tillsammans i en uppsättning. En förinställning för gruppuppsättning kan sedan skapas för att referera till dessa bilder.
 
-Det går att skapa förinställningen själv (de finns under **Konfigurera > Programinställningar > Gruppera förinställningar** ), men du bör ha konfigurerat det för dig som en god vana. Därför:
+Det går att skapa förinställningen själv (de finns under **Konfigurera > Programinställningar > Gruppera förinställningar** ), men du bör konfigurera det för ditt konsultteam eller din tekniska support. Därför:
 
 - Förinställningar för gruppuppsättningar kan vara komplicerade att konfigurera - de drivs av reguljära uttryck och om du inte är utvecklare kan den här syntaxen vara okänd eller förvirrande.
 - När de har skapats aktiveras de som standard. Det finns ingen ångra-funktion. Om du börjar överföra tusentals bilder och din förinställning är felaktigt konfigurerad kan det resultera i hundratals eller tusentals uppsättningar som du måste hitta och ta bort manuellt.
@@ -125,15 +125,15 @@ Förinställningar för gruppuppsättning används endast vid överföring. de i
 
 När förinställningarna har skapats kan företagsadministratören välja om de är aktiva eller inaktiva. Aktiva innebär att de visas på överföringssidan under **Jobbalternativ**, medan inaktiva förinställningar förblir dolda.
 
-Lär dig hur du [skapar en förinställning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)för gruppuppsättning.
+Lär dig hur du [skapar en gruppuppsättningsförinställning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
 
 ### Använda förinställningar för gruppuppsättning vid överföring
 
 Så här använder du gruppuppsättningsförinställningar vid överföring när de har skapats:
 
 1. Klicka på **Överför** och välj antingen **Från skrivbord** eller **Via FTP**.
-2. Klicka på **jobbalternativ**.
-3. Öppna alternativet **Gruppera förinställningar** och markera eller avmarkera förinställningen för att använda den vid överföringen.
+2. Klicka på **Jobbalternativ**.
+3. Öppna alternativet **Gruppuppsättningsförinställningar** och markera eller avmarkera förinställningen för att använda den vid överföringen.
 4. När överföringen är klar letar du efter de färdiga uppsättningarna i mappen.
 
-Läs mer om [Förinställningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets)för gruppuppsättning.
+Läs mer om [Förinställningar för gruppuppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
