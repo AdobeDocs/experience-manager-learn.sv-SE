@@ -36,27 +36,27 @@ I den här självstudiekursen skapar vi en metadataarbetare för Asset compute s
 
 ## Logiskt flöde för anrop av metadataarbetare för Asset compute
 
-Anropet av metadataarbetare för Asset compute är nästan identiskt med anropet av arbetare [för](../develop/worker.md)binär återgivning, där den primära skillnaden är returtypen är en XMP (XML)-återgivning vars värden också skrivs till resursens metadata.
+Anropet av metadataarbetare för Asset compute är nästan identiskt med anropet av [binär återgivning som genererar arbetare](../develop/worker.md). Den största skillnaden är returtypen är en XMP (XML)-återgivning vars värden också skrivs till resursens metadata.
 
-asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i `renditionCallback(...)` funktionen, som är begreppsmässigt:
+asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i funktionen `renditionCallback(...)`, som är begreppsmässigt:
 
-+ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbetningsprofil
++ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbeta profil
 + __Utdata:__ En XMP (XML) återgivning beständig till AEM som återgivning och till resursens metadata
 
 ![Logiskt arbetsflöde för Asset compute-metadataarbetare](./assets/metadata/logical-flow.png)
 
-1. AEM Author-tjänsten anropar metadataarbetaren i Asset compute, med objektets ursprungliga binärfil __(1a)__ och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen.
-1. Asset compute SDK hanterar körningen av den anpassade arbetarens `renditionCallback(...)` funktion för Asset compute-metadata och härleder en XMP (XML)-återgivning baserat på resursens binära __(1a)__ och eventuella parametrar för bearbetningsprofil __(1b)__.
+1. AEM Author-tjänsten anropar metadataarbetaren i Asset compute, förutsatt att resursens __(1a)__ ursprungliga binärfil och __(1b)__ alla parametrar som definierats i Bearbetningsprofilen.
+1. Asset compute SDK hanterar körningen av den anpassade Asset compute-metadataarbetarens `renditionCallback(...)`-funktion, härleder en XMP (XML)-återgivning baserat på resursens binära __(1a)__ och eventuella parametrar för Bearbetningsprofil __(1b)__.
 1. Arbetaren i Asset compute sparar XMP (XML) till `rendition.path`.
-1. De XMP (XML)-data som skrivs till `rendition.path` överförs via Asset compute SDK till AEM Author Service och visar dem som __(4a)__ en textåtergivning och __(4b)__ beständiga till objektets metadatanod.
+1. De XMP (XML)-data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och visar dem som __(4a)__ en textåtergivning och __(4b)__ beständiga till resursens metadatanod.
 
 ## Konfigurera manifest.yml{#manifest}
 
 Alla Asset compute-arbetare måste registreras i [manifest.yml](../develop/manifest.md).
 
-Öppna projektets `manifest.yml` arbetsplats och lägg till en arbetspost som konfigurerar den nya arbetaren, i det här fallet `metadata-colors`.
+Öppna projektets `manifest.yml` och lägg till en arbetarpost som konfigurerar den nya arbetaren, i det här fallet `metadata-colors`.
 
-_Kom ihåg `.yml` att blankstegskänsligt är._
+_Kom ihåg  `.yml` att blankstegskänsligt._
 
 ```
 packages:
@@ -81,17 +81,17 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` pekar på arbetsimplementeringen som skapades i [nästa steg](#metadata-worker). Namnge arbetare semantiskt (t.ex. `actions/worker/index.js` kan ha fått ett bättre namn `actions/rendition-circle/index.js`), eftersom dessa visas i [arbetarens URL](#deploy) och även avgör [arbetarens testsvitens mappnamn](#test).
+`function` pekar på arbetsimplementeringen som skapades i  [nästa steg](#metadata-worker). Namnge arbetare semantiskt (till exempel kan `actions/worker/index.js` ha fått ett bättre namn `actions/rendition-circle/index.js`), eftersom dessa visas i [arbetarens URL](#deploy) och även fastställa [arbetarens testsvitsmapp](#test).
 
-De `limits` och `require-adobe-auth` konfigureras separat per arbetare. I den här arbetaren tilldelas `512 MB` minne när koden undersöker (eventuellt) stora binära bilddata. Den andra `limits` tas bort för att använda standardvärden.
+`limits` och `require-adobe-auth` konfigureras separat per arbetare. I den här arbetaren tilldelas `512 MB` minne när koden undersöker (eventuellt) stora binära bilddata. Övriga `limits` tas bort för att använda standardvärden.
 
 ## Utveckla en metadataarbetare{#metadata-worker}
 
-Skapa en ny JavaScript-fil för metadataarbetare i Asset compute-projektet på den [definierade manifest.yml-sökvägen för den nya arbetaren](#manifest)på `/actions/metadata-colors/index.js`
+Skapa en ny JavaScript-fil för metadataarbetare i Asset compute-projektet på sökvägen [definierad manifest.yml för den nya arbetaren](#manifest), `/actions/metadata-colors/index.js`
 
 ### Installera npm-moduler
 
-Installera de extra npm-modulerna ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-colors](https://www.npmjs.com/package/get-image-colors)och [color-namer](https://www.npmjs.com/package/color-namer)) som ska användas i den här Asset compute-arbetaren.
+Installera de extra npm-modulerna ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-colors](https://www.npmjs.com/package/get-image-colors) och [color-namer](https://www.npmjs.com/package/color-namer)) som ska användas i den här Asset compute-arbetaren.
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -101,7 +101,7 @@ $ npm install color-namer
 
 ### Metadata worker code
 
-Den här arbetaren ser ut ungefär som den [återgivningsgenererande arbetaren](../develop/worker.md). Den största skillnaden är att den skriver XMP (XML) data till `rendition.path` för att sparas AEM.
+Den här arbetaren ser ut ungefär som [återgivningsarbetaren](../develop/worker.md). Den största skillnaden är att den skriver XMP (XML) till `rendition.path` för att sparas AEM.
 
 
 ```javascript
@@ -182,14 +182,14 @@ function getColorName(colorsFamily, color) {
 
 När koden för arbetaren är klar kan den köras med det lokala utvecklingsverktyget i Asset compute.
 
-Eftersom vårt Asset compute-projekt innehåller två arbetare (den tidigare [cirkelrenderingen](../develop/worker.md) och den här `metadata-colors` arbetaren) listas körningsprofiler för båda arbetarna i [Asset compute Development Tool](../develop/development-tool.md) -profildefinitionen. Den andra profildefinitionen pekar på den nya `metadata-colors` arbetaren.
+Eftersom vårt Asset compute-projekt innehåller två arbetare (den tidigare [cirkelrenderingen](../develop/worker.md) och den här `metadata-colors`-arbetaren) listas körningsprofiler för båda arbetarna i [Asset compute Development Tool&#39;s](../develop/development-tool.md)-profildefinitionen. Den andra profildefinitionen pekar på den nya `metadata-colors`-arbetaren.
 
 ![XML-metadataåtergivning](./assets/metadata/metadata-rendition.png)
 
 1. Från Asset compute-projektets rot
 1. Kör `aio app run` för att starta utvecklingsverktyget Asset compute
-1. I __Välj en fil..__ listruta, välj en [exempelbild](../assets/samples/sample-file.jpg) som ska bearbetas
-1. I den andra profildefinitionskonfigurationen, som pekar på `metadata-colors` arbetaren, kan du uppdatera `"name": "rendition.xml"` allt eftersom arbetaren genererar en XMP (XML) återgivning. Du kan också lägga till en `colorsFamily` parameter (värden som stöds `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`).
+1. I __Markera en fil..__ listruta, välj [exempelbild](../assets/samples/sample-file.jpg) för att bearbeta
+1. I den andra profildefinitionskonfigurationen, som pekar på `metadata-colors`-arbetaren, uppdaterar du `"name": "rendition.xml"` när den här arbetaren genererar en XMP (XML)-återgivning. Du kan också lägga till en `colorsFamily`-parameter (värden som stöds `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`).
 
    ```json
    {
@@ -203,12 +203,12 @@ Eftersom vårt Asset compute-projekt innehåller två arbetare (den tidigare [ci
    }
    ```
 1. Tryck på __Kör__ och vänta på att XML-återgivningen ska generera
-   + Eftersom båda arbetarna är listade i profildefinitionen genereras båda återgivningarna. Den övre profildefinitionen som pekar på den [cirkelformade återgivningsarbetaren](../develop/worker.md) kan också tas bort, så att den inte körs i utvecklingsverktyget.
-1. I avsnittet __Återgivningar__ förhandsvisas den återgivning som genereras. Tryck på `rendition.xml` för att ladda ned den och öppna den i VS-koden (eller din favoritredigerare för XML/text) för att granska.
+   + Eftersom båda arbetarna är listade i profildefinitionen genereras båda återgivningarna. Den övre profildefinitionen som pekar på den cirkelformade renderingsarbetaren [ kan också tas bort för att undvika att den körs från utvecklingsverktyget.](../develop/worker.md)
+1. Avsnittet __Återgivningar__ förhandsvisar den återgivning som genereras. Tryck på `rendition.xml` för att hämta den och öppna den i VS-koden (eller din favoritredigerare för XML/text) för att granska.
 
 ## Testa arbetaren{#test}
 
-Metadataarbetare kan testas med [samma Asset compute-testmiljö som binära renderingar](../test-debug/test.md). Den enda skillnaden är att `rendition.xxx` filen i testfallet måste vara den förväntade XMP (XML) återgivningen.
+Metadataarbetare kan testas med [samma Asset compute-testramverk som binära renderingar](../test-debug/test.md). Den enda skillnaden är att filen `rendition.xxx` i testfallet måste vara den förväntade XMP (XML) återgivningen.
 
 1. Skapa följande struktur i Asset compute-projektet:
 
@@ -220,7 +220,7 @@ Metadataarbetare kan testas med [samma Asset compute-testmiljö som binära rend
        rendition.xml
    ```
 
-2. Använd [exempelfilen](../assets/samples/sample-file.jpg) som testskiftläge `file.jpg`.
+2. Använd [exempelfilen](../assets/samples/sample-file.jpg) som `file.jpg` för testfallet.
 3. Lägg till följande JSON i `params.json`.
 
    ```
@@ -230,16 +230,16 @@ Metadataarbetare kan testas med [samma Asset compute-testmiljö som binära rend
    }
    ```
 
-   Observera att `"fmt": "xml"` det krävs för att instruera testsviten att generera en `.xml` textbaserad återgivning.
+   Observera att `"fmt": "xml"` krävs för att instruera testsviten att generera en `.xml` textbaserad återgivning.
 
-4. Ange förväntad XML i `rendition.xml` filen. Detta kan erhållas genom att
+4. Ange förväntad XML i filen `rendition.xml`. Detta kan erhållas genom att
    + Kör testindatafilen med utvecklingsverktyget och spara den (validerade) XML-återgivningen.
 
    ```
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. Kör `aio app test` från roten av Asset compute-projektet för att köra alla testsviter.
+5. Kör `aio app test` från roten för projektet Asset compute om du vill köra alla testsviter.
 
 ### Distribuera arbetaren till Adobe I/O Runtime{#deploy}
 
@@ -251,7 +251,7 @@ $ aio app deploy
 
 ![driftsättning av aio-appar](./assets/metadata/aio-app-deploy.png)
 
-Observera att detta distribuerar alla arbetare i projektet. Granska de [ej förkortade distributionsinstruktionerna](../deploy/runtime.md) för hur du distribuerar till arbetsytorna Stage och Production.
+Observera att detta distribuerar alla arbetare i projektet. Granska [instruktionerna för obegränsad distribution](../deploy/runtime.md) för hur du distribuerar till arbetsytorna Stage och Production.
 
 ### Integrera med AEM bearbetningsprofiler{#processing-profile}
 
@@ -259,10 +259,10 @@ Anropa arbetaren från AEM genom att skapa en ny, eller ändra en befintlig, anp
 
 ![Bearbetar profil](./assets/metadata/processing-profile.png)
 
-1. Logga in på AEM som Cloud Service Author Service som __AEM Administrator__
+1. Logga in som Cloud Service Author-tjänst som __AEM Administrator__
 1. Navigera till __Verktyg > Resurser > Bearbeta profiler__
-1. __Skapa__ en ny, eller __redigera__ och befintlig, bearbetningsprofil
-1. Tryck på fliken __Egen__ och tryck sedan på __Lägg till ny__
+1. __Skapa__ en ny, eller  ____ redigera och befintlig, Bearbeta profil
+1. Tryck på fliken __Anpassad__ och tryck på __Lägg till ny__
 1. Definiera den nya tjänsten
    + __Skapa metadataåtergivning__: Växla till aktiv
    + __Slutpunkt:__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
@@ -273,10 +273,10 @@ Anropa arbetaren från AEM genom att skapa en ny, eller ändra en befintlig, anp
          + Värde: `pantone`
             + Värden som stöds: `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`
    + __Mime-typer__
-      + __Innehåller:__ `image/jpeg`, `image/png`, `image/gif`, `image/svg`
+      + __Innehåller:__ `image/jpeg`,  `image/png`,  `image/gif`,  `image/svg`
          + Detta är de enda MIME-typer som stöds av npm-moduler från tredje part som används för att härleda färgerna.
       + __Exkluderar:__ `Leave blank`
-1. Tryck på __Spara__ längst upp till höger
+1. Tryck på __Spara__ överst till höger
 1. Använd bearbetningsprofilen på en AEM Assets-mapp om detta inte redan är gjort
 
 ### Uppdatera metadataschemat{#metadata-schema}
@@ -285,28 +285,28 @@ Om du vill granska färgmetadata mappar du två nya fält i bildens metadataram 
 
 ![Metadataschema](./assets/metadata/metadata-schema.png)
 
-1. Gå till __Verktyg > Resurser > Metadatascheman i tjänsten AEM Author.__
-1. Navigera till __standard__ och markera och redigera __bilden__ och lägg till skrivskyddade formulärfält för att visa de genererade färgmetadata
-1. Lägga till en __enkelradstext__
-   + __Fältetikett__: `Colors Family`
-   + __Mappa till egenskap__: `./jcr:content/metadata/wknd:colorsFamily`
+1. Navigera till __Verktyg > Resurser > Metadata Schemas__ i tjänsten AEM Author.
+1. Navigera till __standard__ och markera och redigera __bild__ och lägg till skrivskyddade formulärfält för att visa de genererade färgmetadata
+1. Lägg till en __enkelradstext__
+   + __Fältetikett__:  `Colors Family`
+   + __Mappa till egenskap__:  `./jcr:content/metadata/wknd:colorsFamily`
    + __Regler > Fält > Inaktivera redigering__: Markerad
-1. Lägga till en __flervärdestext__
-   + __Fältetikett__: `Colors`
-   + __Mappa till egenskap__: `./jcr:content/metadata/wknd:colors`
-1. Tryck på __Spara__ längst upp till höger
+1. Lägg till en __text med flera värden__
+   + __Fältetikett__:  `Colors`
+   + __Mappa till egenskap__:  `./jcr:content/metadata/wknd:colors`
+1. Tryck på __Spara__ överst till höger
 
 ## Bearbetar resurser
 
 ![Tillgångsinformation](./assets/metadata/asset-details.png)
 
-1. Gå till __Resurser > Filer i tjänsten AEM Author.__
+1. Gå till __Resurser > Filer__ i tjänsten AEM Author.
 1. Navigera till mappen, eller undermappen, som Bearbetningsprofilen tillämpas på
-1. Överför en ny bild (JPEG, PNG, GIF eller SVG) till mappen eller bearbeta om befintliga bilder med den uppdaterade [bearbetningsprofilen](#processing-profile)
-1. När bearbetningen är klar markerar du resursen och trycker på __egenskaperna__ i det övre åtgärdsfältet för att visa dess metadata
-1. Granska `Colors Family` - och `Colors` metadatafälten [](#metadata-schema) för metadata som skrivits tillbaka från den anpassade metadataarbetaren i Asset compute.
+1. Överför en ny bild (JPEG, PNG, GIF eller SVG) till mappen eller bearbeta om befintliga bilder med den uppdaterade [Bearbeta profil](#processing-profile)
+1. När bearbetningen är klar markerar du resursen och trycker på __egenskaper__ i det övre åtgärdsfältet för att visa dess metadata
+1. Granska metadatafälten `Colors Family` och `Colors` [för metadata](#metadata-schema) för metadata som skrivits tillbaka från den anpassade metadataarbetaren för Asset compute.
 
-När färgmetadata skrivs till resursens metadata indexeras dessa metadata, vilket gör det möjligt att identifiera resurser med dessa termer via sökning. De kan även skrivas tillbaka till resursens binärfil om arbetsflödet för `[dam:Asset]/jcr:content/metadata` DAM-metadataåterställning ____ anropas.
+När färgmetadata skrivs till resursens metadata indexeras dessa metadata via sökningen och kan även skrivas tillbaka till resursens binärfil om `[dam:Asset]/jcr:content/metadata`DAM Metadata Writeback __-arbetsflödet anropas.__
 
 ### Metadataåtergivning i AEM Assets
 
@@ -316,10 +316,10 @@ Den faktiska XMP som genereras av metadataarbetaren i Asset compute lagras ocks�
 
 ## metadata-colors worker code on Github
 
-Slutversionen `metadata-colors/index.js` finns på Github:
+Den sista `metadata-colors/index.js` finns på Github:
 
 + [aem-guides-wknd-asset-compute/actions/metadata-colors/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/metadata-colors/index.js)
 
-Den sista `test/asset-compute/metadata-colors` testsviten finns på Github:
+Den sista `test/asset-compute/metadata-colors`-testsviten finns på Github:
 
 + [aem-guides-wknd-asset-compute/test/asset-compute/metadata-colors](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
