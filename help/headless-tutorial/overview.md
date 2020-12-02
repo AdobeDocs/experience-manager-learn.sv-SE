@@ -1,33 +1,58 @@
 ---
-title: Komma igång med AEM Headless
-description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
+title: AEM Headless-självstudiekurser
+description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
 
-# Komma igång med AEM Headless
+# AEM Headless-självstudiekurser
 
-En heltäckande självstudiekurs som visar hur man bygger upp och exponerar innehåll med hjälp av AEM och som används av en intern mobilapp i ett headless CMS-scenario.
+Adobe Experience Manager har flera alternativ för att definiera headless-slutpunkter och leverera innehållet som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
->[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+## AEM GraphQL API:er, genomgång
 
-I den här självstudiekursen utforskas hur AEM Content Services kan användas för att driva upplevelsen av en mobilapp som visar händelseinformation (musik, prestanda, konst osv.) som struktureras av WKND-teamet.
+>[!CAUTION]
+>
+> AEM GraphQL API for Content Fragment Delivery släpps i början av 2021.
+> Den relaterade dokumentationen är tillgänglig för förhandsgranskning.
 
-Den här självstudiekursen kommer att omfatta följande ämnen:
+AEM GraphQL API:er för innehållsfragment
+har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
 
-* Skapa innehåll som representerar en händelse med hjälp av innehållsfragment
-* Definiera AEM Content Services-slutpunkter med hjälp av mallar och sidor för AEM Sites som visar händelsedata som JSON
-* Se hur AEM WCM Core Components kan användas för att marknadsförarna ska kunna skapa JSON-slutpunkter
-* Förbruka AEM Content Services JSON från en mobilapp
-   * Android används eftersom det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra den inbyggda appen.
+Ett modernt API för innehållsleverans är avgörande för effektiviteten och prestandan i Javascript-baserade klientprogram. Att använda ett REST API medför utmaningar:
 
-## GitHub-projekt
+* Ett stort antal begäranden om att hämta ett objekt i taget
+* Innehåll som ofta&quot;överlevererar&quot;, vilket innebär att programmet får mer än det behöver
 
-Källkoden och innehållspaketen finns i [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
+För att övervinna dessa utmaningar tillhandahåller GraphQL ett frågebaserat API som gör att klienter kan fråga AEM efter endast det innehåll som behövs och ta emot via ett enda API-anrop.
 
-Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+* Lär dig använda AEM GraphQL API:er med självstudiekursen [Komma igång med AEM GraphQL API:er](./graphql/overview.md)
+
+## AEM Content Services, genomgång
+
+AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
+
+AEM Content Services tillåter att samma innehållsavvikelser som används för att skapa webbsidor i AEM Sites definierar innehållet och schemana för dessa HTTP API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON API:er som kan användas i alla applikationer.
+
+* Lär dig hur du använder AEM Content Services: [Självstudiekursen Komma igång med AEM Content Services](./content-services/overview.md)
+
+## AEM GraphQL vs. AEM Content Services
+
+|  | AEM GraphQL API:er | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
+| Innehåll | Innehållsfragment | AEM |
+| Innehållsidentifiering | Efter GraphQL-fråga | Efter AEM |
+| Leveransformat | GraphQL JSON | AEM ComponentExporter JSON |
+
+## Andra praktiska självstudiekurser
+
+Andra självstudiekurser AEM headless concepts är:
+
+* [Komma igång med AEM SPA och vinkelrät](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
