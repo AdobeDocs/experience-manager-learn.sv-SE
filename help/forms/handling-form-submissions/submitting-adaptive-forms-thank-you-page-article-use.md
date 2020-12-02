@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Skicka till din tacksida {#submitting-to-thank-you-page}
+# Skickar till din tacksida {#submitting-to-thank-you-page}
 
 Alternativet Skicka till REST-slutpunkt skickar data som är ifyllda i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. Du kan lägga till namnet på fälten som ska begäras. Begäran har följande format:
 
@@ -39,8 +39,8 @@ Du kan också skicka till den externa slutpunkten via POST. För att uppnå dett
 
 Följ instruktionerna nedan för att testa den här funktionen på servern:
 
-* Importera den [resursfil som är associerad med den här artikeln till AEM med pakethanteraren](assets/submittingtorestendpoint.zip)
-* Peka webbläsaren på formuläret [Tid för avstängning](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Importera [resursfilen som är associerad med den här artikeln till AEM med hjälp av pakethanteraren](assets/submittingtorestendpoint.zip)
+* Peka webbläsaren på [Formuläret för att ställa in tid](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i det obligatoriska fältet och skicka formuläret
 * Du bör få en tacksida med dina uppgifter ifyllda på sidan
 
