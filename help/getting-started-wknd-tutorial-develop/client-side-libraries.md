@@ -18,22 +18,22 @@ ht-degree: 0%
 ---
 
 
-# Bibliotek på klientsidan och arbetsflöde på klientsidan {#client-side-libraries}
+# Klientbibliotek och frontendarbetsflöde {#client-side-libraries}
 
-Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av en Adobe Experience Manager (AEM) Sites. Den här självstudiekursen handlar också om hur modulen [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html) , ett frikopplat [webbpack](https://webpack.js.org/) -projekt, kan integreras i hela byggprocessen.
+Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av en Adobe Experience Manager (AEM) Sites. Den här självstudiekursen handlar också om hur [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)-modulen, ett frikopplat [webbpack](https://webpack.js.org/)-projekt, kan integreras i hela byggprocessen.
 
 ## Förutsättningar {#prerequisites}
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
-Vi rekommenderar också att du går igenom självstudiekursen [Komponentgrunder](component-basics.md#client-side-libraries) för att förstå grunderna i klientbibliotek och AEM.
+Vi rekommenderar också att du går igenom självstudiekursen [Component Basics](component-basics.md#client-side-libraries) för att förstå grunderna i bibliotek och AEM på klientsidan.
 
 ### Startprojekt
 
 Ta en titt på den baslinjekod som självstudiekursen bygger på:
 
-1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `client-side-libraries/start` grenen
+1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `client-side-libraries/start`
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
@@ -72,13 +72,13 @@ Med bibliotek på klientsidan kan du ordna och hantera CSS- och JavaScript-filer
 
 Mer information om hur du använder [klientbibliotek finns här.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)
 
-Klientbibliotek har vissa begränsningar. Det viktigaste är ett begränsat stöd för populära språk som Sass, LESS och TypeScript. I självstudiekursen ska vi titta på hur modulen **ui.front** kan bidra till att lösa detta.
+Klientbibliotek har vissa begränsningar. Det viktigaste är ett begränsat stöd för populära språk som Sass, LESS och TypeScript. I självstudiekursen ska vi titta på hur modulen **ui.front** kan hjälpa till att lösa detta.
 
 Distribuera startkodsbasen till en lokal AEM och navigera till [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). Den här sidan är för närvarande inte formaterad. Vi kommer sedan att implementera bibliotek på klientsidan för WKND-varumärket för att lägga till CSS och Javascript på sidan.
 
-## Biblioteksorganisation på klientsidan {#organization}
+## Biblioteksorganisation för klientsidan {#organization}
 
-Därefter ska vi titta närmare på hur de klienter som genereras av [AEM Project Archetype är organiserade](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
+Därefter ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ![Klientbiblioteksorganisation på hög nivå](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -88,8 +88,8 @@ Därefter ska vi titta närmare på hur de klienter som genereras av [AEM Projec
 >
 > Följande biblioteksorganisation på klientsidan genereras av AEM Project Archetype men representerar bara en startpunkt. Hur ett projekt slutligen hanterar och levererar CSS och Javascript till en webbplatsimplementering kan variera dramatiskt baserat på resurser, kompetens och krav.
 
-1. Med Eclipse eller någon annan utvecklingsmiljö öppnas modulen **ui.apps** .
-1. Expandera banan `/apps/wknd/clientlibs` för att visa de klienter som genereras av arkitypen.
+1. Använd Eclipse eller någon annan utvecklingsmiljö för att öppna modulen **ui.apps**.
+1. Expandera sökvägen `/apps/wknd/clientlibs` om du vill visa de klienter som genereras av typen architype.
 
    ![Clientlibs in ui.apps](assets/client-side-libraries/four-clientlib-folders.png)
 
@@ -97,15 +97,15 @@ Därefter ska vi titta närmare på hur de klienter som genereras av [AEM Projec
 
 1. Inspect egenskaperna för `clientlibs/clientlib-base`.
 
-   **clientlib-base** representerar basnivån för CSS och JavaScript som behövs för att WKND-webbplatsen ska fungera. Observera egenskapen `categories` som är inställd på `wknd.base`. `categories` är en taggningsmekanism för clientlibs och det är så de kan refereras.
+   **clientlib-** baseraren representerar den CSS- och JavaScript-basnivå som behövs för att WKND-webbplatsen ska fungera. Observera egenskapen `categories` som är inställd på `wknd.base`. `categories` är en taggningsmekanism för clientlibs och det är så de kan refereras.
 
-   Lägg märke till `embed` egenskapen och `String[]` värdena. Egenskapen bäddar `embed` in andra klientlibs baserat på deras kategori. **clientlib-base** kommer att innehålla alla AEM Core Component-klientbibliotek som behövs. Detta inkluderar artefakter som javascript för Carousel, komponenter för snabbsökning som ska fungera. **clientlib-base** kommer inte att innehålla egen CSS och Javascript, utan bara bädda in andra klientbibliotek. **clientlib-base** bäddar in clientlib- **grid** clientlib med kategorin `wknd.grid`.
+   Observera egenskapen `embed` och `String[]` för värden. Egenskapen `embed` bäddar in andra klientlibs utifrån deras kategori. **clientlib-** based kommer att innehålla alla AEM Core Component-klientbibliotek som behövs. Detta inkluderar artefakter som javascript för Carousel, komponenter för snabbsökning som ska fungera. **clientlib-** based kommer inte att innehålla egen CSS och Javascript, utan bara bädda in andra klientbibliotek. **clientlib-** baseline bäddar in  **clientlib-** gridclientlib med kategorin  `wknd.grid`.
 
-   Observera att egenskapen `allowProxy` är inställd på `true`. Det är bäst att alltid använda `allowProxy=true` klientlibs. Egenskapen gör att vi kan lagra klientlibs med vår programkod under `allowProxy``/apps` men **sedan levererar klientlibs över en sökväg som prefix med** `/etc.clientlibs` för att undvika att visa programkod för slutanvändarna. Mer information om egenskapen [allowProxy finns här.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
+   Observera att egenskapen `allowProxy` är inställd på `true`. Det är en god vana att alltid ställa in `allowProxy=true` på klientlibs. Med egenskapen `allowProxy` kan vi lagra klientlibs med vår programkod under `/apps` **men** levererar sedan klientlibs över en sökväg som har prefixet `/etc.clientlibs` för att undvika att visa programkod för slutanvändarna. Mer information om egenskapen [allowProxy finns här.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
 
 1. Inspect egenskaperna för `clientlibs/clientlib-grid`.
 
-   **clientlib-grid** ansvarar för att inkludera/generera den CSS som behövs för att [layoutläget](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html) ska fungera med AEM Sites-redigeraren. **clientlib-grid** hade en kategori inställd på `wknd.grid` och är inbäddad via **clientlib-base**.
+   **clientlib-** gridis ansvarar för att inkludera/generera den CSS som behövs för  [layoutläget när du ](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html) arbetar med AEM Sites-redigeraren. **clientlib-** gridhade en kategori inställd på  `wknd.grid` och är inbäddad via  **clientlib-base**.
 
    Rutnätet kan anpassas så att olika mängder kolumner och brytpunkter används. Därefter uppdaterar vi standardbrytpunkterna som genereras.
 
@@ -151,38 +151,38 @@ Därefter ska vi titta närmare på hur de klienter som genereras av [AEM Projec
 
    Detta ändrar brytpunkterna så att de motsvarar mallbrytpunkterna som angetts i `/ui.content/src/main/content/jcr_root/conf/wknd/settings/wcm/templates/article-page-template/structure/.content.xml`.
 
-   Observera att den här filen faktiskt refererar till en `grid_base.less` fil `/libs` som innehåller en anpassad blandning för att generera stödrastret.
+   Observera att den här filen faktiskt refererar till en `grid_base.less`-fil under `/libs` som innehåller en anpassad blandning för att generera rutnätet.
 
 1. Inspect egenskaperna för `clientlibs/clientlib-site`.
 
-   **clientlib-site** kommer att innehålla alla webbplatsspecifika format för WKND-varumärket. Notera kategorin för `wknd.site`. CSS och Javascript som genererar klientlib kommer i själva verket att behållas i `ui.frontend` modulen. Vi kommer att utforska den här integreringen härnäst.
+   **clientlib-** site kommer att innehålla alla webbplatsspecifika format för WKND-varumärket. Observera kategorin `wknd.site`. CSS och Javascript som genererar klientlib kommer i själva verket att behållas i modulen `ui.frontend`. Vi kommer att utforska den här integreringen härnäst.
 
 1. Inspect egenskaperna för `clientlibs/clientlib-dependencies`.
 
-   **clientlib-beroenden** är avsedda att bädda in tredjepartsberoenden. Det är ett separat klientlib så att det kan läsas in högst upp på HTML-sidan om det behövs. Notera kategorin för `wknd.dependencies`. CSS och Javascript som genererar klientlib kommer i själva verket att behållas i `ui.frontend` modulen. Vi kommer att utforska integreringen senare i självstudiekursen.
+   **clientlib-** beroenden är avsedda att bädda in tredjepartsberoenden. Det är ett separat klientlib så att det kan läsas in högst upp på HTML-sidan om det behövs. Observera kategorin `wknd.dependencies`. CSS och Javascript som genererar klientlib kommer i själva verket att behållas i modulen `ui.frontend`. Vi kommer att utforska integreringen senare i självstudiekursen.
 
 ## Använda modulen ui.front {#ui-frontend}
 
-Nu ska vi utforska användningen av modulen **[ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)** .
+Därefter ska vi titta närmare på hur du använder modulen **[ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**.
 
 ### Motivering
 
-Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för språk som [Sass](https://sass-lang.com/) eller [TypeScript](https://www.typescriptlang.org/). Det har också skett en explosion av verktyg med öppen källkod som [NPM](https://www.npmjs.com/) och [webbpack](https://webpack.js.org/) som snabbar upp och optimerar frontendutvecklingen.
+Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för språk som [Sass](https://sass-lang.com/) eller [TypeScript](https://www.typescriptlang.org/). Det har också skett en explosion av verktyg med öppen källkod som [NPM](https://www.npmjs.com/) och [webpack](https://webpack.js.org/) som snabbar upp och optimerar frontendutvecklingen.
 
-Grundtanken bakom modulen **ui.front** är att kunna använda fantastiska verktyg som NPM och Webpack för att hantera större delen av frontendutvecklingen. En viktig integrationsbit som är inbyggd i modulen **ui.front** , [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) , tar kompilerade CSS- och JS-artefakter från ett webpack/npm-projekt och omvandlar dem till AEM klientbibliotek. Detta ger en utvecklare större frihet att välja olika verktyg och tekniker.
+Grundtanken bakom **ui.front**-modulen är att kunna använda fantastiska verktyg som NPM och Webpack för att hantera större delen av frontendutvecklingen. En viktig integrationsbit som är inbyggd i **ui.front**-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) tar de kompilerade CSS- och JS-artefakterna från ett webpack-/npm-projekt och omvandlar dem till AEM klientbibliotek. Detta ger en utvecklare större frihet att välja olika verktyg och tekniker.
 
 ![Integrering av ui.front-architecture](assets/client-side-libraries/ui-frontend-architecture.png)
 
 ### Användning
 
-Nu ska vi lägga till några grundformat för WKND-varumärket genom att lägga till några Sass-filer (tillägg`.scss` ) via **modulen ui.front** .
+Nu ska vi lägga till några basformat för WKND-varumärket genom att lägga till några Sass-filer (`.scss`-tillägg) via modulen **ui.front**.
 
 1. Öppna modulen **ui.front** och navigera till `src/main/webpack/base/sass`.
 
    ![ui.frontModule](assets/client-side-libraries/ui-frontendmodule-eclipse.png)
 
 1. Skapa en ny fil med namnet `_variables.scss` under mappen `src/main/webpack/base/sass`.
-1. Fyll `_variables.scss` med följande:
+1. Fyll i `_variables.scss` med följande:
 
    ```scss
    //== Colors
@@ -330,16 +330,16 @@ Nu ska vi lägga till några grundformat för WKND-varumärket genom att lägga 
    }
    ```
 
-   Observera att variabelerna i filen används i `_elements.scss` filen `_variables.scss`.
+   Observera att `_elements.scss`-filen använder variablerna i `_variables.scss`.
 
-1. Uppdatera `_shared.scss` under `src/main/webpack/base/sass` för att inkludera `_elements.scss` och `_variables.scss` filer.
+1. Uppdatera `_shared.scss` under `src/main/webpack/base/sass` för att inkludera filerna `_elements.scss` och `_variables.scss`.
 
    ```css
    @import './variables';
    @import './elements';
    ```
 
-1. Öppna en kommandoradsterminal och installera modulen **ui.front** med hjälp av `npm install` kommandot:
+1. Öppna en kommandoradsterminal och installera modulen **ui.front** med kommandot `npm install`:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend
@@ -350,7 +350,7 @@ Nu ska vi lägga till några grundformat för WKND-varumärket genom att lägga 
    >
    >`npm install` behöver bara köras en gång efter en ny klon eller generering av projektet.
 
-1. Skapa och distribuera modulen **ui.front** i samma terminal med `npm run dev` kommandot:
+1. I samma terminal skapar och distribuerar du modulen **ui.front** med kommandot `npm run dev`:
 
    ```shell
    $ npm run dev
@@ -362,43 +362,43 @@ Nu ska vi lägga till några grundformat för WKND-varumärket genom att lägga 
    copy: dist/clientlib-site/css/site.css ../ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css
    ```
 
-   Kommandot `npm run dev` bör skapa och kompilera källkoden för Webpack-projektet och slutligen fylla i **clientlib-site** och **clientlib-beroenden** i modulen **ui.apps** .
+   Kommandot `npm run dev` bör skapa och kompilera källkoden för WebPack-projektet och slutligen fylla i **clientlib-site** och **clientlib-beroenden** i modulen **ui.apps**.
 
    >[!NOTE]
    >
-   >Det finns också en `npm run prod` profil som miniatyrbilderna JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
+   >Det finns också en `npm run prod`-profil som miniatyrerna för JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
-1. Inspect filen `site.css` under `ui.frontend/dist/clientlib-site/css/site.css`. Observera att CSS oftast består av innehåll i den `_elements.scss` fil som skapades tidigare, men att variablerna har ersatts med faktiska värden.
+1. Inspect filen `site.css` under `ui.frontend/dist/clientlib-site/css/site.css`. Observera att CSS främst består av innehåll i `_elements.scss`-filen som skapades tidigare, men variablerna har ersatts med faktiska värden.
 
    ![Distribuerad plats-css](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
-1. Inspect filen `ui.frontend/clientlib.config.js`. Detta är konfigurationsfilen för ett npm-plugin, [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). **aem-clientlib-generator** är det verktyg som omformar den kompilerade CSS/JavaScript och kopierar den till **modulen ui.apps** .
+1. Inspect filen `ui.frontend/clientlib.config.js`. Detta är konfigurationsfilen för ett npm-plugin-program, [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). **aem-clientlib-** generatorär det verktyg som omformar den kompilerade CSS/JavaScript och kopierar den till  **ui.** appsmodul.
 
-1. Inspect filen `site.css` i modulen **ui.apps** på `ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`. Detta bör vara en identisk kopia av `site.css` filen från modulen **ui.front** . Nu när den finns i modulen **ui.apps** kan den distribueras till AEM.
+1. Inspect filen `site.css` i modulen **ui.apps** på `ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`. Detta bör vara en identisk kopia av `site.css`-filen från **ui.front**-modulen. Nu när den finns i **ui.apps**-modulen kan den distribueras till AEM.
 
    ![ui.apps clientlib-site](assets/client-side-libraries/ui-apps-clientlib-site-css.png)
 
    >[!NOTE]
    >
-   > Eftersom **clientlib-site** kompileras under byggtiden, med antingen **npm** eller **maven**, kan den i själva verket ignoreras från källkontrollen i modulen **ui.apps** . Inspect filen `.gitignore` under **ui.apps**.
+   > Eftersom **clientlib-site** kompileras under byggtid med antingen **npm** eller **maven** kan den ignoreras från källkontrollen i modulen **ui.apps**. Inspect filen `.gitignore` under **ui.apps**.
 
 >[!CAUTION]
 >
-> Användning av modulen **ui.front** kanske inte är nödvändig för alla projekt. Modulen **ui.front** lägger till ytterligare komplexitet och om det inte finns något behov/behov av att använda några av dessa avancerade verktyg (Sass, webpack, npm...) kan det vara överdrivet. Därför betraktas den som en valfri del av AEM Project Archetype och användningen av standardbibliotek på klientsidan samt vanilj-CSS och JavaScript fortsätter att ha fullt stöd.
+> Det är inte säkert att du behöver använda modulen **ui.front** för alla projekt. Modulen **ui.front** lägger till ytterligare komplexitet och om det inte finns något behov/behov av att använda några av de här avancerade verktygen (Sass, webpack, npm...) kan det vara överdrivet. Därför betraktas den som en valfri del av AEM Project Archetype och användningen av standardbibliotek på klientsidan samt vanilj-CSS och JavaScript fortsätter att ha fullt stöd.
 
-## Inkludering av sidor och mallar {#page-inclusion}
+## Inkludering av sida och mall {#page-inclusion}
 
-Därefter ska vi granska hur projektet är konfigurerat för att inkludera klientlibs i AEM mallar/sidor. Ett vanligt tillvägagångssätt vid webbutveckling är att inkludera CSS i HTML-huvudet `<head>` och JavaScript precis innan du stänger `</body>` -taggen.
+Därefter ska vi granska hur projektet är konfigurerat för att inkludera klientlibs i AEM mallar/sidor. Ett vanligt tillvägagångssätt vid webbutveckling är att inkludera CSS i HTML-huvudet `<head>` och JavaScript direkt innan du stänger taggen `</body>`.
 
-1. Navigera till modulen **ui.apps** `ui.apps/src/main/content/jcr_root/apps/wknd/components/structure/page`.
+1. Navigera till `ui.apps/src/main/content/jcr_root/apps/wknd/components/structure/page` i modulen **ui.apps**.
 
    ![Struktursidkomponent](assets/client-side-libraries/customheaderlibs-html.png)
 
-   Detta är den `page` komponent som används för att återge alla sidor i WKND-implementeringen.
+   Det här är `page`-komponenten som används för att återge alla sidor i WKND-implementeringen.
 
-1. Open the file `customheaderlibs.html`. Lägg märke till raderna `${clientlib.css @ categories='wknd.base'}`. Detta anger att CSS för klienten med en kategori av `wknd.base` inkluderas via den här filen, vilket effektivt inkluderar **klientlib-base** i sidhuvudet på alla våra sidor.
+1. Öppna filen `customheaderlibs.html`. Observera raderna `${clientlib.css @ categories='wknd.base'}`. Detta anger att CSS för klientlib med kategorin `wknd.base` kommer att inkluderas via den här filen, vilket innebär att **klientlib-base** inkluderas i sidhuvudet på alla våra sidor.
 
-1. Uppdatera så `customheaderlibs.html` att du inkluderar en referens till Google-teckensnittsformat som vi angav tidigare i modulen **ui.front** . Vi kommer också att kommentera ut ContextHub för tillfället..
+1. Uppdatera `customheaderlibs.html` om du vill ta med en referens till Google-teckensnittsformat som vi angav tidigare i modulen **ui.front**. Vi kommer också att kommentera ut ContextHub för tillfället..
 
    ```html
    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Asar&display=swap" rel="stylesheet">
@@ -410,7 +410,7 @@ Därefter ska vi granska hur projektet är konfigurerat för att inkludera klien
    */-->
    ```
 
-1. Inspect filen `customfooterlibs.html`. Den här filen ska skrivas över av implementeringsprojekt, precis som `customheaderlibs.html` i. Här `${clientlib.js @ categories='wknd.base'}` innebär raden att JavaScript från **clientlib-base** kommer att inkluderas längst ned på alla våra sidor.
+1. Inspect filen `customfooterlibs.html`. Den här filen, som `customheaderlibs.html`, ska skrivas över av implementeringsprojekt. Här betyder raden `${clientlib.js @ categories='wknd.base'}` att JavaScript från **clientlib-base** kommer att inkluderas längst ned på alla våra sidor.
 
 1. Bygg och distribuera projektet till en lokal AEM med Maven:
 
@@ -425,7 +425,7 @@ Därefter ska vi granska hur projektet är konfigurerat för att inkludera klien
 
    ![Välj artikelsidmall](assets/client-side-libraries/open-article-page-template.png)
 
-1. Klicka på ikonen **Sidinformation** och välj **Sidprofil** på menyn för att öppna dialogrutan **Sidprofil** .
+1. Klicka på ikonen **Sidinformation** och välj **Sidprofil** på menyn för att öppna dialogrutan **Sidprofil**.
 
    ![Artikelsidmallens menysidpolicy](assets/client-side-libraries/template-page-policy.png)
 
@@ -437,15 +437,15 @@ Därefter ska vi granska hur projektet är konfigurerat för att inkludera klien
 
    >[!NOTE]
    >
-   > Det går också att referera till `wknd.site` eller `wknd.dependencies` från sidkomponenten direkt, med hjälp av `customheaderlibs.html` - eller `customfooterlibs.html` -skriptet, som vi såg tidigare för `wknd.base` clientlib. Mallen ger viss flexibilitet så att du kan välja vilka klipp som ska användas per mall. Om du t.ex. har ett mycket stort JavaScript-bibliotek som bara ska användas på en vald mall.
+   > Det går också att referera till `wknd.site` eller `wknd.dependencies` från sidkomponenten direkt med hjälp av skriptet `customheaderlibs.html` eller `customfooterlibs.html`, vilket visades tidigare för klientlib `wknd.base`. Mallen ger viss flexibilitet så att du kan välja vilka klipp som ska användas per mall. Om du t.ex. har ett mycket stort JavaScript-bibliotek som bara ska användas på en vald mall.
 
-1. Navigera till sidan **LA-skateparker** som skapats med **artikelsidmallen**: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). Du bör se en skillnad i teckensnitt och vissa grundläggande format som används för att ange att CSS som skapats i modulen **ui.front** fungerar.
+1. Navigera till sidan **LA Skateparks** som skapats med **Artikelsidmall**: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). Du bör se en skillnad i teckensnitt och vissa grundläggande format som används för att ange att CSS som skapats i modulen **ui.front** fungerar.
 
-1. Klicka på ikonen **Sidinformation** och välj sedan **Visa som publicerad** på menyn för att öppna artikelsidan utanför AEM redigerare.
+1. Klicka på ikonen **Sidinformation** och välj **Visa som publicerad** på menyn för att öppna artikelsidan utanför AEM redigerare.
 
    ![Visa som publicerad](assets/client-side-libraries/view-as-published-article-page.png)
 
-1. Visa sidkällan för [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled) och du bör kunna se följande klientlib-referenser i `<head>`:
+1. Visa sidkällan för [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled) och du bör kunna se följande klientreferenser i `<head>`:
 
    ```html
    <head>
@@ -458,7 +458,7 @@ Därefter ska vi granska hur projektet är konfigurerat för att inkludera klien
    </head>
    ```
 
-   Observera att klientlibs använder `/etc.clientlibs` proxyslutpunkten. Du bör även se följande klickbara objekt längst ned på sidan:
+   Observera att klientlibs använder proxyslutpunkten `/etc.clientlibs`. Du bör även se följande klickbara objekt längst ned på sidan:
 
    ```html
    ...
@@ -470,17 +470,17 @@ Därefter ska vi granska hur projektet är konfigurerat för att inkludera klien
 
    >[!WARNING]
    >
-   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med hjälp av filteravsnittet [](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section)Dispatcher. Egenskapen [](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) allowProxy i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
+   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section). Egenskapen [allowProxy](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
 
 ## Webpack DevServer {#webpack-dev-server}
 
-Under de föregående övningarna kunde vi uppdatera flera Sass-filer i modulen **ui.front** och genom en byggprocess slutligen se dessa ändringar återspeglas i AEM. Därefter ska vi använda en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla våra front end-format.
+Under de föregående övningarna kunde vi uppdatera flera Sass-filer i modulen **ui.front** och genom en byggprocess kan vi slutligen se dessa ändringar återspeglas i AEM. Därefter ska vi titta på hur vi använder en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla våra front end-format.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30352/?quality=12&learn=on)
 
 Nedan visas de högnivåsteg som visas i videon:
 
-1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front** :
+1. Starta webbpaketets dev-server genom att köra följande kommando i modulen **ui.front**:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
@@ -491,8 +491,8 @@ Nedan visas de högnivåsteg som visas i videon:
    ```
 
 1. Då öppnas ett nytt webbläsarfönster på [http://localhost:8080/](http://localhost:8080/) med statisk kod.
-1. Kopiera sidkällan för LA-skateparartikelsidan på [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled).
-1. Klistra in den kopierade markeringen från AEM i `index.html` modulen **ui.front** under `src/main/webpack/static`.
+1. Kopiera sidkällan för LA-skateparkartikelsidan på [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html?wcmmode=disabled).
+1. Klistra in den kopierade markeringen från AEM i `index.html` i modulen **ui.front** under `src/main/webpack/static`.
 1. Redigera den kopierade koden och ta bort alla referenser till **clientlib-site** och **clientlib-beroenden**:
 
    ```html
@@ -506,8 +506,8 @@ Nedan visas de högnivåsteg som visas i videon:
 
    Vi kan ta bort dessa referenser eftersom webbpaketets dev-server genererar dessa artefakter automatiskt.
 
-1. Redigera `.scss` filerna och se ändringarna automatiskt i webbläsaren.
-1. Granska `/aem-guides-wknd.ui.frontend/webpack.dev.js` filen. Detta innehåller webbpaketskonfigurationen som används för att starta webbpack-dev-servern. Observera att sökvägarna `/content` och `/etc.clientlibs` en instans av AEM som körs lokalt visas som utkast. Så här blir bilderna och andra klientlibs (som inte hanteras av **ui.front** -koden) tillgängliga.
+1. Redigera `.scss`-filerna och se ändringarna automatiskt återspeglas i webbläsaren.
+1. Granska `/aem-guides-wknd.ui.frontend/webpack.dev.js`-filen. Detta innehåller webbpaketskonfigurationen som används för att starta webbpack-dev-servern. Observera att sökvägarna `/content` och `/etc.clientlibs` proxies från en lokal instans av AEM. Så här blir bilderna och andra klientlibs (som inte hanteras av **ui.front**-koden) tillgängliga.
 
    >[!CAUTION]
    >
@@ -516,7 +516,7 @@ Nedan visas de högnivåsteg som visas i videon:
 
 ## Sammanfoga {#putting-it-together}
 
-Fokus på den här självstudiekursen ligger på bibliotek på klientsidan och potentiella arbetsflöden som kan integreras med AEM. Med detta i åtanke kommer vi att påskynda implementeringen genom att installera [client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip), som innehåller vissa standardformat för Core-komponenter som används i artikelsidmallen:
+Fokus på den här självstudiekursen ligger på bibliotek på klientsidan och potentiella arbetsflöden som kan integreras med AEM. Med detta i åtanke kommer vi att påskynda implementeringen genom att installera [client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip), som innehåller vissa standardformat för kärnkomponenter som används i artikelsidmallen:
 
 * [Breadcrumb](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html)
 * [Hämta](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/download.html)
@@ -530,7 +530,7 @@ Fokus på den här självstudiekursen ligger på bibliotek på klientsidan och p
 
 Nedan visas de högnivåsteg som visas i videon:
 
-1. Ladda ned [client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip) och zippa upp innehållet under `ui.frontend/src/main/webpack`. Innehållet i zip-filen ska skriva över följande mappar:
+1. Hämta [client-side-libraries-final-styles.zip](assets/client-side-libraries/client-side-libraries-final-styles.zip) och zippa upp innehållet under `ui.frontend/src/main/webpack`. Innehållet i zip-filen ska skriva över följande mappar:
 
    ```plain
    /src/main/webpack
@@ -558,37 +558,37 @@ Nedan visas de högnivåsteg som visas i videon:
 
 ## Grattis! {#congratulations}
 
-Grattis! Artikelsidan har nu några konsekventa format som matchar WKND-varumärket och du har blivit bekant med **ui.front** -modulen!
+Grattis! Artikelsidan har nu några konsekventa format som matchar WKND-varumärket och du har blivit bekant med **ui.front**-modulen!
 
 ### Nästa steg {#next-steps}
 
-Lär dig hur du implementerar enskilda format och återanvänder kärnkomponenter med Experience Manager Style System. [Utveckla med Style System](style-system.md) omfattar användning av Style System för att utöka grundkomponenterna med varumärkesspecifik CSS och avancerade principkonfigurationer i Template Editor.
+Lär dig hur du implementerar enskilda format och återanvänder kärnkomponenter med Experience Manager Style System. [Utveckla med Style ](style-system.md) System: Använda Style System för att utöka grundkomponenterna med varumärkesspecifik CSS och avancerade principkonfigurationer i Template Editor.
 
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `client-side-libraries/solution`.
 
-1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `client-side-libraries/solution` grenen.
+1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `client-side-libraries/solution`.
 
 ## Ytterligare verktyg och resurser {#additional-resources}
 
 ### aemfed {#develop-aemfed}
 
-[**aemfed**](https://aemfed.io/) är ett kommandoradsverktyg med öppen källkod som kan användas för att snabba upp frontendutvecklingen. Den drivs av [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://www.npmjs.com/package/browser-sync) och [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
+[**aemfedis är ett kommandoradsverktyg**](https://aemfed.io/) med öppen källkod som kan användas för att snabba upp framände-utvecklingen. Den drivs av [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://www.npmjs.com/package/browser-sync) och [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
 
-På en hög nivå är den **inmatade** funktionen utformad för att lyssna på filändringar i modulen **ui.apps** och synkroniserar dem automatiskt direkt till en AEM som körs. Baserat på ändringarna uppdateras en lokal webbläsare automatiskt, vilket snabbar upp framtagningen. Den är även utformad för att fungera med Sling Log Tracer för att automatiskt visa eventuella serverfel direkt i terminalen.
+På en hög nivå **är** utformad för att lyssna på filändringar i modulen **ui.apps** och synkroniserar dem automatiskt direkt till en AEM som körs. Baserat på ändringarna uppdateras en lokal webbläsare automatiskt, vilket snabbar upp framtagningen. Den är även utformad för att fungera med Sling Log Tracer för att automatiskt visa eventuella serverfel direkt i terminalen.
 
-Om du gör mycket arbete i modulen **ui.apps** , ändrar HTML-skript och skapar anpassade komponenter **kan emfed** vara ett mycket kraftfullt verktyg att använda. [Fullständig dokumentation finns här.](https://github.com/abmaonline/aemfed).
+Om du gör mycket arbete i **ui.apps**-modulen, ändrar HTML-skript och skapar anpassade komponenter kan **aemfed** vara ett mycket kraftfullt verktyg att använda. [Fullständig dokumentation finns här.](https://github.com/abmaonline/aemfed).
 
 ### Felsöka bibliotek på klientsidan {#debugging-clientlibs}
 
-Med olika metoder för **kategorier** och **inbäddning** för att inkludera flera klientbibliotek kan det vara besvärligt att felsöka. AEM visar flera verktyg som kan hjälpa dig med detta. Ett av de viktigaste verktygen är **Återskapa klientbibliotek** som tvingar AEM att kompilera om LESS-filer och generera CSS.
+Olika metoder i **kategorierna** och **bäddar in** för att inkludera flera klientbibliotek. Det kan vara besvärligt att felsöka. AEM visar flera verktyg som kan hjälpa dig med detta. Ett av de viktigaste verktygen är **Återskapa klientbibliotek** som tvingar AEM att kompilera om LESS-filer och generera CSS.
 
-* [**Dumpa libs**](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - Visar en lista över alla klientbibliotek som registrerats i AEM. `<host>/libs/granite/ui/content/dumplibs.html`
+* [**Dumpbibliotek**](http://localhost:4502/libs/granite/ui/content/dumplibs.html)  - Visar en lista över alla klientbibliotek som registrerats i AEM.  `<host>/libs/granite/ui/content/dumplibs.html`
 
-* [**Testa utdata**](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - gör att en användare kan se förväntade HTML-utdata från clientlib includes baserat på kategori. `<host>/libs/granite/ui/content/dumplibs.test.html`
+* [**Testa utdata**](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html)  - gör att en användare kan se förväntade HTML-utdata från clientlib includes baserat på kategori.  `<host>/libs/granite/ui/content/dumplibs.test.html`
 
-* [**Validering**](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) av biblioteksberoenden - markerar beroenden eller inbäddade kategorier som inte kan hittas. `<host>/libs/granite/ui/content/dumplibs.validate.html`
+* [**Validering**](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html)  av biblioteksberoenden - markerar beroenden eller inbäddade kategorier som inte kan hittas.  `<host>/libs/granite/ui/content/dumplibs.validate.html`
 
-* [**Återskapa klientbibliotek**](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - gör att en användare kan tvinga AEM att återskapa alla klientbibliotek eller göra cachen i klientbiblioteken ogiltig. Det här verktyget är särskilt effektivt när du utvecklar med LESS eftersom det kan tvinga AEM att kompilera om den genererade CSS-koden. I allmänhet är det effektivare att validera cacheminnen och sedan utföra en siduppdatering jämfört med att återskapa alla bibliotek. `<host>/libs/granite/ui/content/dumplibs.rebuild.html`
+* [**Återskapa klientbibliotek**](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html)  - gör att en användare kan tvinga AEM att återskapa alla klientbibliotek eller göra cachen i klientbiblioteken ogiltig. Det här verktyget är särskilt effektivt när du utvecklar med LESS eftersom det kan tvinga AEM att kompilera om den genererade CSS-koden. I allmänhet är det effektivare att validera cacheminnen och sedan utföra en siduppdatering jämfört med att återskapa alla bibliotek. `<host>/libs/granite/ui/content/dumplibs.rebuild.html`
 
 ![återskapa klientbibliotek](assets/client-side-libraries/rebuild-clientlibs.png)
