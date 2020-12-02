@@ -28,7 +28,7 @@ Vanligtvis vill man skicka formulärdata till en extern server för vidare bearb
 
 Om du vill skicka data till en intern server anger du en sökväg till resursen. Data bokförs som resurssökväg. Till exempel &lt;/content/restEndPoint> . För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 
-Ange en URL om du vill skicka data till en extern server. The format of the URL is <http://host:port/path_to_rest_end_point>. Kontrollera att du har konfigurerat sökvägen så att den hanterar POSTENS begäran anonymt.
+Ange en URL om du vill skicka data till en extern server. URL-adressen har formatet <http://host:port/path_to_rest_end_point>. Kontrollera att du har konfigurerat sökvägen så att den hanterar POSTENS begäran anonymt.
 
 I den här artikeln har jag skrivit en enkel krigsfil som kan distribueras på din tomcat-instans. Om du antar att din tomcat körs på port 8080 kommer POST-URL:en att vara
 
@@ -52,13 +52,14 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 }
 ```
 
-![skicka](assets/formsubmission.gif)in formulär Gör följande för att testa detta på servern
+![skicka ](assets/formsubmission.gif)
+formulärGör följande för att testa detta på servern
 
 1. Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
-1. Ladda ned den [zip-fil](assets/aemformsenablement.zip) som är associerad med den här artikeln. Zippa upp filen för att få krigsfilen.
+1. Hämta den [zip-fil](assets/aemformsenablement.zip) som är associerad med den här artikeln. Zippa upp filen för att få krigsfilen.
 1. Distribuera krigsfilen på tomcat-servern.
 1. Skapa ett enkelt adaptivt formulär med en bifogad fil och konfigurera dess skicka-åtgärd enligt skärmbilden ovan. POSTENS URL är <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>. Om AEM och tomcat inte körs på localhost ska du ändra URL:en i enlighet med detta.
 1. Om du vill att data från flera delar ska kunna skickas till tomcat ska du lägga till följande attribut i elementet context i &lt;tomcatInstallDir>\conf\context.xml och starta om Tomcat-servern.
-1. **&lt;Context allowCasualMultipartParsing=&quot;true&quot;>**
+1. **&lt;context allowCasualMultipartParsing=&quot;true&quot;>**
 1. Förhandsgranska ditt adaptiva formulär, lägg till en bilaga och skicka. Kontrollera om det finns meddelanden i tomcat-konsolfönstret.
 
