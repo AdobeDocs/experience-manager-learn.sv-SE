@@ -28,12 +28,12 @@ Följande aspekter av arbetsflödeshantering, som introducerades i AEM 6.5, besk
 + Aktivera arbetsflödesmetadata under inställningar för listvyn.
 + Enkel navigering till tidslinjen i arbetsflödet från listvyn
 + Kopiera och klistra in ett befintligt OOTB-arbetsflöde för att anpassa eller åsidosätta standardfunktionerna
-+ Publicera snabbt för [!DNL Workflow Models] och [!DNL Launchers]
++ Utför en snabb publicering för [!DNL Workflow Models] och [!DNL Launchers]
 + Hantera publikation för [!DNL Workflow Models] och [!DNL Launchers].
 + Meddela användare med ett varningsverktygstips när de försöker redigera en OTB-arbetsflödesmodell eller -startare.
 + Möjlighet att återskapa ändringar som gjorts i en OOTB-arbetsflödesmodell eller -startare.
 
-Den här videon använder [!DNL Workflow models] för att demonstrera den här uppsättningen funktioner, men de gäller även för [!DNL AEM Launchers].
+I den här videon används [!DNL Workflow models] för att demonstrera den här uppsättningen funktioner, men de gäller även för [!DNL AEM Launchers].
 
 
 >[!NOTE]
