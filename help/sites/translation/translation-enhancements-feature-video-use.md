@@ -26,11 +26,11 @@ AEM robusta översättningsramverk gör att AEM kan översättas smidigt av öve
 
 AEM 6.5-översättningsförbättringar:
 
-**Godkänn översättningsjobb** automatiskt: Godkännandeflaggan i översättningsjobbet är en binär egenskap. Den kan inte köra eller integreras med färdiga arbetsflöden för granskning och godkännande. För att minimera antalet steg i ett översättningsjobb anges det som standard som&quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] ett översättningsprojekt. Om din organisation kräver godkännande för ett översättningsjobb kan du avmarkera alternativet &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] ett översättningsprojekt.
+**Godkänn översättningsjobb** automatiskt: Godkännandeflaggan i översättningsjobbet är en binär egenskap. Den kan inte köra eller integreras med färdiga arbetsflöden för granskning och godkännande. För att minimera antalet steg i ett översättningsjobb anges det som standard som&quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] i ett översättningsprojekt. Om din organisation kräver godkännande för ett översättningsjobb kan du avmarkera alternativet &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt.
 
 **Ta automatiskt bort översättningsstarter**: I stället för att manuellt ta bort översättningsstarter i Launches Admin efter faktumet, är det nu möjligt att automatiskt ta bort översättningsstarter när de har befordrats.
 
-**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare versioner har stöd för XML- och XLIFF-format för översättningsobjekt. Nu kan du konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration]och sedan kan du välja exportformatet som JSON.
+**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare versioner har stöd för XML- och XLIFF-format för översättningsobjekt. Nu kan du konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration] och välj sedan exportformatet som JSON.
 
 **Uppdatera översatt AEM i översättningsminnet (TMS)**: lokal författare som inte har tillgång till AEM kan uppdatera översatt innehåll som redan har importerats till AEM, direkt i TM (översättningsminne, i TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobb från TMS till AEM
 
