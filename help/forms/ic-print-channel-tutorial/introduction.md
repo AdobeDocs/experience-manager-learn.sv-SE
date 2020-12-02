@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du stegvisa instruktioner för att skapa en interaktiv kommunikation för tryckkanalen.
 
-På exempelsidan för [AEM Forms](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
 
 ## Förutsättningar {#prerequistes}
 
