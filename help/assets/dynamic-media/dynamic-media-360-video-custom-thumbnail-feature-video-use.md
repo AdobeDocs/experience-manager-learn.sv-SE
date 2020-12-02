@@ -55,7 +55,7 @@ Dynamic Media-video har nu stöd för möjligheten att välja en anpassad miniat
    <tr>
       <td>Körningsläge för dynamiska media</td>
       <td>Endast Dynamic Media Scene7 Mode</td>
-      <td>Endast Dynamic Media Scene7 Mode<br>
+      <td>Dynamic Media Scene7 Mode only<br>
          <br>
       </td>
    </tr>
