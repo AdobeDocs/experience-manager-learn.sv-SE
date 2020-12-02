@@ -29,7 +29,7 @@ Om du vill lagra skickade data i databasen skriver vi en serverlet som extrahera
 
 Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår serverdator.
 
-Läs den här [artikeln om du vill veta mer om anpassade inlämningsförfrågningar](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+Läs den här [artikeln](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html) om du vill veta mer om anpassade inlämningsförfrågningar
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/stoconfirmSubmit&quot;,null,null);
 
