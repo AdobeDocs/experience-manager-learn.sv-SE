@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Ange värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# Ställa in värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
 Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 
@@ -49,10 +49,10 @@ Så här distribuerar du resurser på ditt lokala system:
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Detta är det anpassade OSGI-paketet som gör att du kan ange värden för ett element i skickade JSON-data.
 
 * [Hämta och extrahera innehållet i zip-filen](assets/set-value-jsondata.zip)
-   * Peka webbläsaren mot [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+   * Peka webbläsaren på [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
       * Importera och installera SetValueOfElementInJSONDataWorkflow.zip.Det här paketet har den exempelarbetsflödesmodell och formulärdatamodell som är associerad med formuläret.
 
-* Peka webbläsaren mot [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Peka webbläsaren på [Forms och Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring
 * Ladda upp filen TimeOffRequestForm.zip
    **Det här formuläret har skapats med AEM Forms 6.4. Kontrollera att du använder AEM Forms 6.4 eller senare**
@@ -65,7 +65,7 @@ Så här distribuerar du resurser på ditt lokala system:
 
 >[!NOTE]
 >
->Eftersom vi fyller i det adaptiva formuläret i förväg med hjälp av användarprofilen bör du kontrollera att det finns [användarprofilsinformation för administratören ](http://localhost:4502/security/users.html). Kontrollera att du har angett fälten FirstName, LastName och Email som minst.
+>Eftersom vi fyller i det adaptiva formuläret i förväg med hjälp av användarprofilen bör du kontrollera att administratören [anger användarprofilsinformation ](http://localhost:4502/security/users.html). Kontrollera att du har angett fälten FirstName, LastName och Email som minst.
 >Du kan aktivera felsökningsloggning genom att aktivera loggning för com.aemforms.setvalue.core.SetValueInJson [härifrån](http://localhost:4502/system/console/slinglog)
 
 >[!NOTE]
