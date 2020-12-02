@@ -47,7 +47,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) -syntax.
+QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som du kan använda för att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-syntax.
 
 Felsökaren för QueryBuilder finns på:
 
@@ -57,9 +57,9 @@ Felsökaren för QueryBuilder finns på:
 
 ![Sling Log Tracer och AEM Chrome](./assets/other-tools/log-tracer.png)
 
-[Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html), som medföljer AEM SDK:s lokala snabbstart, möjliggör detaljerad spårning av HTTP-begäranden och visar detaljerad felsökningsinformation per begäran. OSGi-konfigurationen för [loggspårning måste konfigureras](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) för att den här funktionen ska kunna aktiveras.
+[Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html), som medföljer AEM SDK:s lokala snabbstart, möjliggör detaljerad spårning av HTTP-begäranden och visar detaljerad felsökningsinformation per begäran. Konfigurationen [Loggspårarens OSGi måste konfigureras](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) för att den här funktionen ska kunna aktiveras.
 
-Plugin-programmet Chrome [AEM öppen källkod](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US) för webbläsaren [](https://www.google.com/chrome/)Google Chrome, integreras med Log Tracer och visar felsökningsinformationen direkt i Chrome Dev Tools.
+Öppen källkod [AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US) för webbläsaren [Google Chrome](https://www.google.com/chrome/), integreras med loggspåraren och felsökningsinformationen visas direkt i Chrome&#39;s Dev Tools.
 
 _Plugin-programmet AEM Chrome är ett verktyg med öppen källkod, och Adobe har inget stöd för det._
 
