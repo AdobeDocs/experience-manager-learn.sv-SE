@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Med Adobe Experience Manager (AEM) Assets kan du identifiera resurser som delar gemensamma attribut och markera dem som relaterade med den nya funktionen Relaterade resurser. Det gör det även möjligt för användare att definiera en källa/härledd relation mellan resurser, vilket gör det enkelt för användarna att identifiera ursprunget för en resurs. När du kör ett översättningsarbetsflöde på en härledd resurs hämtas alla resurser som källfilen refererar till och inkluderas för översättning, vilket minskar arbetet med att underhålla flera platser.
 
-## Filhantering för flera resurser {#multisite-asset-source-file-management}
+## Filhantering för multisiteresurskälla {#multisite-asset-source-file-management}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
 
