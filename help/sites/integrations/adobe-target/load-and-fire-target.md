@@ -26,17 +26,17 @@ Lär dig hur du läser in, skickar parametrar till sidförfrågningar och starta
 
 ## Inläsningsregel för sida
 
-Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon anropas `Launch Library Loaded` regeln med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
+Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager har lästs in utlöser det en händelse `cmp:show`. I videon anropas regeln `Launch Library Loaded` med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
 ![Händelsekonfiguration som visas på sidan och anpassad kod](assets/load-and-fire-target-call.png)
 
-Lägg till en ny **händelse** i **regeln i egenskapen Launch**
+I Launch-egenskapen lägger du till en ny **Event** i **regeln**
 
-+ __Tillägg:__ Core
-+ __Händelsetyp:__ Egen kod
-+ __Namn:__ Visa sidhändelsehanterare (eller något beskrivande)
++ __tillägg:__ Core
++ __händelsetyp:__ egen kod
++ __Namn:__ Händelsehanterare för sidvisning (eller något beskrivande)
 
 Tryck på knappen __Öppna redigeraren__ och klistra in följande kodfragment. Den här koden __måste__ läggas till i __händelsekonfigurationen__ och en efterföljande __åtgärd__.
 
@@ -78,20 +78,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-En anpassad funktion definierar `pageShownEventHandler`och lyssnar efter händelser som skickas av AEM Core Components, hämtar den relevanta informationen från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
+En anpassad funktion definierar `pageShownEventHandler` och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
 
-Startregeln aktiveras med hjälp av Launch-funktionen, som `trigger(...)` bara ____ är tillgänglig från en Regels egen kodfragmentsdefinition för en Regel.
+Startregeln aktiveras med Launch-funktionen `trigger(...)` som är __endast__ som är tillgänglig från en Regels definition av anpassat kodfragment för en händelse.
 
-Funktionen tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements med ett annat reserverat namn i Launch med namnet `trigger(...)` `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event` objektet med syntax som `event.component['someKey']`.
+Funktionen `trigger(...)` tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements med ett annat reserverat namn i Launch med namnet `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event`-objektet med syntax som `event.component['someKey']`.
 
-Om `trigger(...)` används utanför sammanhanget för händelsetypen Custom Code (till exempel i en Action) `trigger is undefined` genereras JavaScript-felet på den webbplats som är integrerad med egenskapen Launch.
+Om `trigger(...)` används utanför kontexten för händelsetypen Custom Code (till exempel i en Action) genereras JavaScript-felet `trigger is undefined` på den webbplats som är integrerad med egenskapen Launch.
 
 
 ### Dataelement
 
 ![Dataelement](assets/data-elements.png)
 
-Adobe Launch Data Elements mappar data från händelseobjektet som [utlöses i den anpassade sidvisningshändelsen](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
+Adobe Launch Data Elements mappar data från händelseobjektet [som utlöstes i den anpassade sidvisningshändelsen](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
 
 #### Dataelement för sid-ID
 
@@ -140,7 +140,7 @@ Den här koden returnerar AEM sidtitel.
 #### Lösning
 
 Målgrupper använder ibland molnbaserade instanser med Target för testning eller för enkla konceptbevis. Dessa domäner, och många andra, ingår i Public Suffix-listan .
-I moderna webbläsare sparas inte cookies om du använder dessa domäner om du inte anpassar `cookieDomain` inställningen med `targetGlobalSettings()`.
+Moderna webbläsare sparar inte cookies om du använder dessa domäner om du inte anpassar inställningen `cookieDomain` med `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
