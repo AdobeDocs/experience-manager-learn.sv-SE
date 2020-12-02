@@ -56,5 +56,5 @@ AEM 6.5 har nu stöd för fulltextsökning för Experience Fragments.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27720/?quality=9&learn=on)
 
-* **Innehållsförfattare** (intern sökning) kan nu söka efter en textdel i ett Experience Fragment och resultatet skulle inkludera de upplevelsefragment som innehåller texten samt sidan som refererar till upplevelsefragmentet.
-* **Webbplatsanvändare** (extern sökning) kan nu utföra en fulltextsökning med hjälp av sökkomponenten, och resultatet skulle inkludera webbplatssidor som refererar till det upplevelsefragment som innehåller söknyckelordet.
+* **Innehållsförfattare**  (intern sökning) kan nu söka efter en textdel i ett Experience Fragment och resultatet skulle inkludera de upplevelsefragment som innehåller texten samt sidan som refererar till upplevelsefragmentet.
+* **Webbplatsanvändare**  (extern sökning) kan nu utföra en fulltextsökning med hjälp av sökkomponenten, och resultatet skulle inkludera webbplatssidor som refererar till det upplevelsefragment som innehåller söknyckelordet.
