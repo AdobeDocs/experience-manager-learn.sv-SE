@@ -22,7 +22,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 >[!NOTE]
 >
-> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder användargränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) .
+> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder gränssnittet för översättningskonfiguration i AEM 6.4+ sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll att översätta](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
 
@@ -36,7 +36,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 Gå till gränssnittet för översättningskonfiguration:
 
-* **[!UICONTROL AEM Start Menu]>[!UICONTROL Tools]>[!UICONTROL General]>[[!UICONTROL Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM Start Menu]>  [!UICONTROL Tools] >  [!UICONTROL General] >  [[!UICONTROL Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## Före AEM 6.3 {#prior-to-aem}
 
