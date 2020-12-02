@@ -30,14 +30,14 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 ```
 
 + `address` anger vilken port AEM avlyssnar fjärrfelsökningsanslutningar och kan ändras till vilken port som helst som är tillgänglig på den lokala utvecklingsdatorn.
-+ Den sista parametern (t.ex. `aem-author-p4502.jar`) är AEM SKD Quickstart Jar. Detta kan vara antingen AEM Author Service (`aem-author-p4502.jar`) eller AEM Publish Service (`aem-publish-p4503.jar`).
++ Den sista parametern (t.ex. `aem-author-p4502.jar`) är AEM SKD Quickstart Jar. Det kan vara antingen AEM Author-tjänsten (`aem-author-p4502.jar`) eller AEM Publish-tjänsten (`aem-publish-p4503.jar`).
 
 ## Instruktioner för IDE-konfiguration
 
 De flesta Java IDE:er har stöd för fjärrfelsökning av Java-program, men de exakta konfigurationsstegen för varje IDE varierar. Se instruktionerna för hur du konfigurerar fjärrfelsökning för din IDE. Vanligtvis kräver IDE-konfigurationer:
 
 + Värden AEM SDK:s lokala snabbstart lyssnar på, vilket är `localhost`.
-+ Porten AEM SDK:s lokala snabbstart lyssnar efter fjärrfelsökningsanslutning, som är den port som anges av `address` parametern när AEM SDK:s lokala snabbstart startas.
++ Porten AEM SDK:s lokala snabbstart lyssnar efter fjärrfelsökningsanslutning, som är den port som anges av parametern `address` när AEM SDK:s lokala snabbstart startas.
 + Ibland måste det anges vilka Maven-projekt som tillhandahåller källkoden till fjärrfelsökningen. det här är ditt OSGi-paket med maven-projekt.
 
 ### Konfigurera instruktioner
