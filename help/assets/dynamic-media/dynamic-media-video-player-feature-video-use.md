@@ -27,7 +27,7 @@ AEM Dynamic Media-videospelaren som använde Flash runtime för att stödja adap
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## Snabb sökning i videospelare utan Flash {#quick-look-into-non-flash-video-player}
+## Snabb sökning i icke-Flash-videospelaren {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
