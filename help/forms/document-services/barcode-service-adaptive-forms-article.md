@@ -31,7 +31,7 @@ I den här artikeln visas hur streckkodstjänsten används för att fylla i adap
 
 Följande kod avkodar streckkoden och fyller i ett JSON-objekt med de avkodade värdena. Servern returnerar sedan JSON-objektet i sitt svar på det anropande programmet.
 
-Du kan se den här funktionen live, gå till [exempelportalen](https://forms.enablementadobe.com/content/samples/samples.html?query=0) och söka efter demo av streckkodstjänsten
+Du kan se den här funktionen live, besök [exempelportalen](https://forms.enablementadobe.com/content/samples/samples.html?query=0) och sök efter streckkodstjänstens demo
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -146,11 +146,11 @@ Rad 23 - Anropa metoden extractBarCode för DocumentServices så att JSON-objekt
 
 Så här kör du det här på datorn:
 
-1. [Ladda ned BarcodeService.zip](assets/barcodeservice.zip) och importera till AEM med pakethanteraren
+1. [Ladda ned BarcodeService.](assets/barcodeservice.zip) zipand-import till AEM med pakethanteraren
 1. [Hämta och installera paketet med anpassade Document Services](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Ladda ned PDF-exempelformuläret](assets/barcode.pdf)
-1. Peka webbläsaren på det adaptiva [exempelformuläret](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Peka webbläsaren på [exempeladaptiv form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. Ladda upp PDF-exempelfilen
 1. Du bör se formulären som innehåller data
 
