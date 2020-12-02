@@ -22,10 +22,10 @@ ht-degree: 0%
 ---
 
 
-# Skapa DataSource-konfiguration i AEM Forms{#creating-datasource-configuration-in-aem-forms}
+# Skapar DataSource-konfiguration i AEM Forms{#creating-datasource-configuration-in-aem-forms}
 
 I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
 
-Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [början](introduction.md) av den här självstudiekursen.
+Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudiekursen.
