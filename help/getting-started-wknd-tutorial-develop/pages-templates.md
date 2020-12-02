@@ -33,8 +33,8 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 Ta en titt på den baslinjekod som självstudiekursen bygger på:
 
-1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `pages-templates/start` grenen.
+1. Klona [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `pages-templates/start`.
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
@@ -63,13 +63,13 @@ I den här delen av självstudiekursen skapar du en ny artikelsidmall som kan an
 
 ![Artikelsiddesign och ej formaterad version](assets/pages-templates/what-you-will-build.png)
 
-## UI Planning with Adobe XD {#adobexd}
+## UI-planering med Adobe XD {#adobexd}
 
-I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är ett designverktyg för att skapa användarupplevelser. Därefter undersöker vi ett gränssnittspaket och dummies för att planera strukturen för artikelsidmallen.
+I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe ](https://www.adobe.com/products/xd.html) XDär ett designverktyg som bygger upp användarupplevelser. Därefter undersöker vi ett gränssnittspaket och dummies för att planera strukturen för artikelsidmallen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
-Ladda ned designfilen för [WKND-artikeln](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
+Hämta [WKND-artikeldesignfilen](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
 
 ## Skapa ett sidhuvud och en sidfot med Experience Fragments {#experience-fragments}
 
@@ -91,7 +91,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
    *WKND Dark, logotyp*
 
-1. Uppdatera Experience Fragment Header som finns på [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html) så att logotypen WKND Light visas.
+1. Uppdatera Experience Fragment Header som finns [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html) så att den innehåller WKND Light-logotypen.
 
    ![WKND Light, logotyp](assets/pages-templates/wknd-logo-light.png)
 
@@ -101,11 +101,11 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
 
-Det finns tre huvudområden för [redigerbara mallar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html):
+Det finns tre huvudområden för [Redigerbara mallar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html):
 
-1. **Struktur** - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
-1. **Ursprungligt innehåll** - definierar komponenter som mallen ska börja med, som kan redigeras och/eller tas bort av innehållsförfattare
-1. **Profiler** - definierar konfigurationer för hur komponenter fungerar och vilka alternativ författare har tillgängliga.
+1. **Struktur**  - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
+1. **Ursprungligt innehåll**  - definierar komponenter som mallen ska börja med, som kan redigeras och/eller tas bort av innehållsförfattare
+1. **Profiler**  - definierar konfigurationer för hur komponenter ska bete sig och vilka alternativ författare ska ha tillgängliga.
 
 Nästa vi ska göra är att skapa artikelsidmallen. Detta inträffar i en lokal instans av AEM.
 
@@ -114,8 +114,8 @@ Nästa vi ska göra är att skapa artikelsidmallen. Detta inträffar i en lokal 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 1. Navigera till mappen WKND Sites Template: **Verktyg** > **Allmänt** > **Mallar** > **WKND-plats**
-1. Skapa en ny mall med malltypen **WKND-webbplats tom sida** med en rubrik för **artikelsidmall**
-1. I **strukturläge** konfigurerar du mallen så att den innehåller följande element:
+1. Skapa en ny mall med **tom WKND-mallsida** Malltyp med rubriken **Artikelsidmall**
+1. I **Struktur**-läge konfigurerar du mallen så att den innehåller följande element:
 
    * Experience Fragment Header
    * Bild
@@ -128,14 +128,14 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
    *Struktur - Artikelsidmall*
 
-1. Växla till **ursprungligt innehåll** och lägg till följande komponenter som startinnehåll:
+1. Växla till **Inledande innehåll**-läge och lägg till följande komponenter som startinnehåll:
 
    * **Huvudbehållare**
       * Titel - standardstorlek för H1
       * Titel - *&quot;Efter författarnamn&quot;* med storleken H4
       * Text - tom
    * **Sidbehållare**
-      * Title - *&quot;Share this Story&quot;* with a size of H5
+      * Titel - *&quot;Dela den här artikeln&quot;* med storleken H5
       * Delning av sociala medier
       * Avgränsare
       * Hämta
@@ -146,35 +146,35 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
    *Ursprungligt innehåll - artikelsidmall*
 
 1. Uppdatera **Inledande sidegenskaper** för att aktivera användardelning för både **Facebook** och **Pinterest**.
-1. Överför en bild till **artikelsidmallens** egenskaper för att enkelt identifiera den:
+1. Överför en bild till **artikelsidmallens**-egenskaper för att enkelt identifiera den:
 
    ![Miniatyr av artikelsidmall](assets/pages-templates/article-page-template-thumbnail.png)
 
    *Miniatyr av artikelsidmall*
 
-1. Aktivera **artikelsidmallarna** i mappen [](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd/settings/wcm/templates)WKND-platsmallar.
+1. Aktivera **Artikelsidmallens** i mappen [WKND-platsmallar](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd/settings/wcm/templates).
 
 ## Skapa en artikelsida
 
 Nu när vi har en mall kan vi skapa en ny sida med den mallen.
 
-1. Ladda ned zip-paketet [WKND-PagesTemplates-DAM-Assets.zip](assets/pages-templates/WKND-PagesTemplates-DAM-Assets.zip) och installera det via [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+1. Hämta följande zip-paket, [WKND-PagesTemplates-DAM-Assets.zip](assets/pages-templates/WKND-PagesTemplates-DAM-Assets.zip), och installera det via [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
-   Ovanstående paket installerar flera bilder och resurser under `/content/dam/wknd/en/magazine/la-skateparks` för att fylla i en artikelsida i senare steg.
+   Ovanstående paket installerar flera bilder och resurser under `/content/dam/wknd/en/magazine/la-skateparks` som kan användas för att fylla i en artikelsida i senare steg.
 
-   *Bilder och resurser i ovanstående paket är licensierade kostnadsfritt från[Unsplash.com](https://unsplash.com/).*
+   *Bilder och resurser i ovanstående paket är licensierade kostnadsfritt från  [Unsplash.com](https://unsplash.com/).*
 
    ![Exempel på DAM-resurser](assets/pages-templates/sample-assets-la-skatepark.png)
 
-1. Skapa en ny sida, under **WKND** > **US** > **en**, med namnet **Magazine**. Använd mallen **Innehållssida** .
+1. Skapa en ny sida, under **WKND** > **US** > **en**, med namnet **Magazine**. Använd mallen **Innehållssida**.
 
    Den här sidan kommer att ge webbplatsen en viss struktur och göra det möjligt för oss att se komponenten Breadcrumb in action.
 
-1. Skapa sedan en ny sida under **WKND** > **US** > **en** > **Magazine**. Använd mallen **Artikelsida** . Använd en titel på **Ultimate Guide till LA Skateparks** och ett namn på **guide-la-skateparks**.
+1. Skapa sedan en ny sida, under **WKND** > **US** > **en** > **Magazine**. Använd mallen **Artikelsida**. Använd rubriken **Ultimate guide till LA Skateparks** och namnet **guide-la-skateparks**.
 
    ![Artikelsida som skapats ursprungligen](assets/pages-templates/create-article-page-nocontent.png)
 
-1. Fyll sidan med innehåll för att matcha de dummies som inspekterats i delen [UI Planning med AdobeXD](#adobexd) . Exempelartikeltext kan [laddas ned här](assets/pages-templates/la-skateparks-copy.txt). Du bör kunna skapa något liknande:
+1. Fyll sidan med innehåll för att matcha de dummies som inspekterats i [UI Planning med AdobeXD](#adobexd)-delen. Exempelartikeltext kan [laddas ned här](assets/pages-templates/la-skateparks-copy.txt). Du bör kunna skapa något liknande:
 
    ![Fylld artikelsida](assets/pages-templates/article-page-unstyled.png)
 
@@ -190,15 +190,15 @@ Vi kan göra detta med CRXDE-Lite-verktyget på en lokal AEM.
 
 1. Öppna [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent) och använd trädnavigeringen för att navigera till `/content/wknd/us/en/magazine/guide-la-skateparks`.
 
-1. Klicka på `jcr:content` noden under `la-skateparks` sidan och visa egenskaperna:
+1. Klicka på noden `jcr:content` under sidan `la-skateparks` och visa egenskaperna:
 
    ![Egenskaper för JCR-innehåll](assets/pages-templates/jcr-content-properties-CRXDELite.png)
 
    Observera värdet för `cq:template`, som pekar på `/conf/wknd/settings/wcm/templates/article-page`, artikelsidmallen som vi skapade tidigare.
 
-   Lägg också märke till värdet för `sling:resourceType`, som pekar på `wknd/components/structure/page`. Detta är den sidkomponent som skapas av AEM projekttyp och som ansvarar för återgivningen av sidan baserat på mallen.
+   Lägg också märke till värdet `sling:resourceType`, som pekar på `wknd/components/structure/page`. Detta är den sidkomponent som skapas av AEM projekttyp och som ansvarar för återgivningen av sidan baserat på mallen.
 
-1. Expandera `jcr:content` noden under `/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content` och visa nodhierarkin:
+1. Expandera noden `jcr:content` under `/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content` och visa nodhierarkin:
 
    ![JCR Content LA Skateparks](assets/pages-templates/page-jcr-structure.png)
 
@@ -208,15 +208,15 @@ Vi kan göra detta med CRXDE-Lite-verktyget på en lokal AEM.
 
    ![Egenskaper för sidkomponent](assets/pages-templates/page-component-properties.png)
 
-   Observera att sidkomponenten ligger under en mapp med namnet **structure**. Detta är en konvention som motsvarar mallredigerarens strukturläge och som används för att ange att sidkomponenten inte är något författare interagerar med direkt.
+   Observera att sidkomponenten finns under en mapp med namnet **struktur**. Detta är en konvention som motsvarar mallredigerarens strukturläge och som används för att ange att sidkomponenten inte är något författare interagerar med direkt.
 
-   Observera att det bara finns två HTML-skript `customfooterlibs.html` och `customheaderlibs.html` under sidkomponenten. Hur återger den här komponenten sidan?
+   Observera att det bara finns två HTML-skript, `customfooterlibs.html` och `customheaderlibs.html` under sidkomponenten. Hur återger den här komponenten sidan?
 
-   Observera `sling:resourceSuperType` egenskapen och värdet för `core/wcm/components/page/v2/page`. Den här egenskapen gör att WKND:s sidkomponent kan ärva alla funktioner i kärnkomponentsidkomponenten. Detta är det första exemplet på något som kallas [Proxy-komponentmönster](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Mer information finns [här.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html).
+   Observera egenskapen `sling:resourceSuperType` och värdet för `core/wcm/components/page/v2/page`. Den här egenskapen gör att WKND:s sidkomponent kan ärva alla funktioner i kärnkomponentsidkomponenten. Detta är det första exemplet på något som kallas [Proxykomponentmönster](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Mer information finns [här.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html).
 
-1. Inspect är en annan komponent i WKND-komponenterna, som `Breadcrumb` finns på: `/apps/wknd/components/content/breadcrumb`. Observera att samma `sling:resourceSuperType` egenskap kan hittas, men den här gången pekar den på `core/wcm/components/breadcrumb/v2/breadcrumb`. Detta är ett annat exempel på hur du använder komponentmönstret Proxy för att inkludera en Core-komponent. Faktum är att alla komponenter i WKND-kodbasen är proxies av AEM Core Components (förutom vår kända HelloWorld-komponent). Det är en god vana att försöka återanvända så mycket av funktionerna i Core Components som möjligt *innan* du skriver egen kod.
+1. Inspect är en annan komponent i WKND-komponenterna, `Breadcrumb`-komponenten som finns på: `/apps/wknd/components/content/breadcrumb`. Observera att samma `sling:resourceSuperType`-egenskap kan hittas, men den här gången pekar den på `core/wcm/components/breadcrumb/v2/breadcrumb`. Detta är ett annat exempel på hur du använder komponentmönstret Proxy för att inkludera en Core-komponent. Faktum är att alla komponenter i WKND-kodbasen är proxies av AEM Core Components (förutom vår kända HelloWorld-komponent). Det är en god vana att försöka återanvända så mycket av funktionerna i Core Components som möjligt *innan* skriver egen kod.
 
-1. Kontrollera sedan Core Component Page på `/apps/core/wcm/components/page/v2/page` CRXDE Lite:
+1. Kontrollera sedan Core Component Page på `/apps/core/wcm/components/page/v2/page` med CRXDE Lite:
 
    ![Huvudkomponentsida](assets/pages-templates/core-page-component-properties.png)
 
@@ -243,37 +243,37 @@ Vi kan göra detta med CRXDE-Lite-verktyget på en lokal AEM.
    </html>
    ```
 
-   Den andra anledningen till att HTML delas upp i flera skript är att tillåta proxykomponenterna att åsidosätta enskilda skript för att implementera anpassad affärslogik. HTML-skripten `customfooterlibs.html` och `customheaderlibs.html`skapas för det uttryckliga syftet att åsidosättas av implementeringsprojekt.
+   Den andra anledningen till att HTML delas upp i flera skript är att tillåta proxykomponenterna att åsidosätta enskilda skript för att implementera anpassad affärslogik. HTML-skripten `customfooterlibs.html` och `customheaderlibs.html` skapas för det uttryckliga syftet som ska åsidosättas genom att projekt implementeras.
 
-   Du kan läsa mer om hur faktorer för redigerbar mall påverkar återgivningen av [innehållssidan i den här artikeln](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html#resultant-content-pages).
+   Du kan lära dig mer om hur faktorer för redigerbar mall påverkar återgivningen av [innehållssidan genom att läsa den här artikeln](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html#resultant-content-pages).
 
-1. Inspect är den andra kärnkomponenten, som Breadcrumb på `/apps/core/wcm/components/breadcrumb/v2/breadcrumb`. Visa skriptet för att förstå hur koden för Breadcrumb-komponenten genereras i slutändan `breadcrumb.html` .
+1. Inspect är den andra kärnkomponenten, som Breadcrumb på `/apps/core/wcm/components/breadcrumb/v2/breadcrumb`. Visa `breadcrumb.html`-skriptet för att förstå hur koden för Breadcrumb-komponenten genereras.
 
-## Spara konfigurationer till källkontroll {#configuration-persistence}
+## Sparar konfigurationer till källkontrollen {#configuration-persistence}
 
 I många fall, särskilt i början av ett AEM projekt, är det viktigt att behålla konfigurationer som mallar och relaterade innehållsprinciper för källkontroll. Detta garanterar att alla utvecklare arbetar mot samma uppsättning innehåll och konfigurationer och kan säkerställa ytterligare enhetlighet mellan miljöer. När ett projekt når en viss mognadsnivå kan rutinen med mallhantering överföras till en särskild grupp med avancerade användare.
 
-För tillfället kommer vi att behandla mallarna som andra kodavsnitt och synkronisera **artikelsidmallen** som en del av projektet. Fram tills nu har vi **flyttat** kod från vårt AEM till en lokal instans av AEM. Artikelsidmallen **** skapades direkt i en lokal instans av AEM, så vi måste **hämta** eller importera mallen till vårt AEM. Modulen **ui.content** ingår i AEM projekt för detta ändamål.
+För tillfället kommer vi att behandla mallarna som andra koddelar och synkronisera **artikelsidmallen** nedåt som en del av projektet. Fram tills nu har vi **push**-kod från vårt AEM till en lokal instans av AEM. **Artikelsidmallen** skapades direkt i en lokal instans av AEM, så vi måste **pull** eller importera mallen till vårt AEM. Modulen **ui.content** ingår i AEM projekt för detta ändamål.
 
-Nästa steg kommer att utföras med Eclipse-utvecklingsmiljön, men skulle kunna vara att använda vilken utvecklingsmiljö som helst som du har konfigurerat för att **hämta** eller importera innehåll från en lokal instans av AEM.
+Nästa steg kommer att utföras med Eclipse IDE, men det kan vara en IDE som du har konfigurerat till **pull** eller importera innehåll från en lokal instans av AEM.
 
-1. I Eclipse IDE ser du till att en server har startat plugin-programmet för AEM som ansluter till den lokala AEM och att modulen **ui.content** har lagts till i serverkonfigurationen.
+1. I Eclipse IDE ser du till att en server har startat det AEM plugin-programmet för anslutningsutvecklare till den lokala instansen av AEM och att modulen **ui.content** har lagts till i serverkonfigurationen.
 
    ![Eclipse-serveranslutning](assets/pages-templates/eclipse-server-started.png)
 
-1. Expandera modulen **ui.content** i Project Explorer. Expandera `src` mappen (den med den lilla globikonen) och navigera till `/conf/wknd/settings/wcm/templates`.
+1. Expandera modulen **ui.content** i Project Explorer. Expandera mappen `src` (den med den lilla globikonen) och navigera till `/conf/wknd/settings/wcm/templates`.
 
-1. [!UICONTROL Right+Click] Markera `templates` noden och välj **Importera från server..**:
+1. [!UICONTROL Right+Click] Markera  `templates` noden och välj  **Importera från server..**:
 
    ![Eclipse-importmall](assets/pages-templates/eclipse-import-templates.png)
 
-   Bekräfta dialogrutan **Importera från databas** och klicka på **Slutför**. Du bör nu se `article-page-template` under `templates` mappen.
+   Bekräfta dialogrutan **Importera från databas** och klicka på **Slutför**. Du bör nu se `article-page-template` under mappen `templates`.
 
-1. Upprepa stegen för att importera innehåll men välj **principnoden** som finns på `/conf/wknd/settings/wcm/policies`.
+1. Upprepa stegen för att importera innehåll men välj **policies**-noden som finns på `/conf/wknd/settings/wcm/policies`.
 
    ![Eclipse-importprofiler](assets/pages-templates/policies-article-page-template.png)
 
-1. Inspect filen `filter.xml` finns på `src/main/content/META-INF/vault/filter.xml`.
+1. Inspect filen `filter.xml` på `src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -286,13 +286,13 @@ Nästa steg kommer att utföras med Eclipse-utvecklingsmiljön, men skulle kunna
    </workspaceFilter>
    ```
 
-   Filen `filter.xml` identifierar sökvägen till noder som ska installeras med paketet. Observera att `mode="merge"` på varje filter anger att befintligt innehåll inte ändras, utan bara nytt innehåll läggs till. Eftersom innehållsförfattare kanske uppdaterar dessa sökvägar är det viktigt att en koddistribution **inte** skriver över innehåll. Mer information om hur du arbetar med filterelement finns i dokumentationen [för](https://jackrabbit.apache.org/filevault/filter.html) FileVault.
+   Filen `filter.xml` identifierar sökvägarna till noder som ska installeras med paketet. Observera `mode="merge"` för varje filter som anger att befintligt innehåll inte ändras, endast nytt innehåll läggs till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution **inte** skriver över innehåll. Mer information om hur du arbetar med filterelement finns i [dokumentationen för FileVault](https://jackrabbit.apache.org/filevault/filter.html).
 
-   Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` förstå de olika noder som hanteras av varje modul.
+   Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` för att förstå de olika noder som hanteras av varje modul.
 
    >[!WARNING]
    >
-   > För att säkerställa konsekventa distributioner för WKND-referensplatsen har vissa grenar av projektet konfigurerats så att ändringar i JCR- `ui.content` artikeln skrivs över. Detta är utformat, dvs. för Solution Branches, eftersom kod/format skrivs för specifika profiler.
+   > För att säkerställa konsekventa distributioner för WKND-referensplatsen har vissa grenar av projektet konfigurerats så att `ui.content` skriver över ändringar i JCR. Detta är utformat, dvs. för Solution Branches, eftersom kod/format skrivs för specifika profiler.
 
 ## Grattis! {#congratulations}
 
@@ -300,9 +300,9 @@ Grattis, du har just skapat en ny mall och sida med Adobe Experience Manager Sit
 
 ### Nästa steg {#next-steps}
 
-Nu är artikelsidan helt klart inte formaterad. Följ självstudiekurserna [Klientbibliotek och Arbetsflöde](client-side-libraries.md) i gränssnittet för att lära dig de bästa sätten att inkludera CSS och Javascript för att använda globala format på webbplatsen och integrera en dedikerad frontbygge.
+Nu är artikelsidan helt klart inte formaterad. Följ självstudiekursen [Klientbibliotek och Front-end-arbetsflöde](client-side-libraries.md) för att lära dig de bästa sätten att inkludera CSS och Javascript för att använda globala format på webbplatsen och integrera en dedikerad front-end-bygge.
 
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `pages-templates/solution`.
 
-1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) .
-1. Kolla in `pages-templates/solution` grenen.
+1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd)-databasen.
+1. Kolla in grenen `pages-templates/solution`.
