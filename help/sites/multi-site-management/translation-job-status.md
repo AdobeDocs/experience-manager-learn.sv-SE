@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Status för översättningsjobb {#translation-job-status}
+# Översättningsjobbstatus {#translation-job-status}
 
 Förstå de olika statusvärden som är associerade med ett översättningsjobb eller ett objekt i jobbet.
 
