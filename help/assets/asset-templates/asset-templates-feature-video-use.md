@@ -22,7 +22,7 @@ Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digital
 
 >[!NOTE]
 >
->Anvisningar om hur du konfigurerar InDesign Server finns i [Konfigurera resursmallar med InDesign Server](asset-templates-technical-video-setup.md).
+>Information om hur du konfigurerar InDesign Server finns i [Konfigurera resursmallar med InDesign Server](asset-templates-technical-video-setup.md).
 
 ## Översikt {#overview}
 
