@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Lägga till komponenter i avsnittet Resurser {#adding-components-to-assets-section}
+# Lägga till komponenter i resursavsnittet {#adding-components-to-assets-section}
 
 Konfigurera dragspelslayout för resurspanelen. Dragspelslayouten ger en bättre slutanvändarupplevelse när du lägger till repeterbara avsnitt.
 
