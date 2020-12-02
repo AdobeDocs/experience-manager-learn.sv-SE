@@ -18,8 +18,11 @@ Dispatcher är en viktig del av de flesta, om inte alla AEM installationer. Mål
 
 Den här självstudiekursen är uppdelad i tre delar.
 
-1. [Concepts, Patterns, and Antipatterns](chapter-1.md)En kort introduktion till Dispatchers historia, mekaniker och diskuterar hur detta påverkar hur en AEM skulle utforma sina komponenter.
+1. [Concepts, Patterns, and ](chapter-1.md)
+AntipatternsEn kort introduktion till Dispatchers historia, mekaniker och diskuterar hur detta påverkar hur en AEM skulle utforma sina komponenter.
 
-1. [Infrastrukturmönster](chapter-2.md)Diskuterar olika topologier om hur du skalar upp ett AEM med ett kluster av publiceringssystem och Dispatcher-cacher framför.
+1. [Infrastructure ](chapter-2.md)
+PatternDiskuterar olika topologier om hur man skalar upp ett AEM med ett kluster av publiceringssystem och Dispatcher-cacher framför.
 
-1. [Avancerad cachelagring](chapter-3.md)Där de två första delarna fokuserade på vanlig http-cachelagring i Dispatcher och vilka begränsningar det finns. Här diskuteras några idéer om hur man övervinner dessa begränsningar.
+1. [Avancerad cachelagring ](chapter-3.md)
+- Där de två första delarna fokuserade på vanlig http-cachning i Dispatcher och vilka begränsningar det finns. Här diskuteras några idéer om hur man övervinner dessa begränsningar.
