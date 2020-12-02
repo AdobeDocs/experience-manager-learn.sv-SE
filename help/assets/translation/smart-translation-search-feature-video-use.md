@@ -29,7 +29,7 @@ Med AEM Smart Translation Search kan användare söka efter innehåll i AEM med 
 
 Smart Translation Search är en perfekt komplementation till AEM smarta taggar som används för resurser på engelska.
 
-I det här videoklippet förutsätts det att [AEM sökningen](smart-translation-search-technical-video-setup.md) efter smart översättning har konfigurerats.
+I den här videon antas [AEM sökningen efter smart översättning](smart-translation-search-technical-video-setup.md) har konfigurerats.
 
 ## Så här fungerar Smart Translation Search {#how-smart-translation-search-works}
 
