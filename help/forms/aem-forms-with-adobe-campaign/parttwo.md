@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Skapa kampanjprofil för inskickning av adaptiva formulär {#creating-campaign-profile-on-adaptive-form-submission}
+# Skapar kampanjprofil för inskickning av adaptiva formulär {#creating-campaign-profile-on-adaptive-form-submission}
 
 I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
 
@@ -249,7 +249,7 @@ return null;
 
 Skapa en anpassad överföringshanterare som hanterar överföringen av adaptiva formulär. I den här anpassade överföringshanteraren ska vi anropa metoden createProfile för CampaignService. Metoden createProfile accepterar ett JSONObject som representerar den profil som behöver skapas.
 
-Klicka på den här [länken om du vill veta mer om den anpassade överföringshanteraren i AEM Forms](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+Följ den här [länken](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md) om du vill veta mer om den anpassade överföringshanteraren i AEM Forms
 
 Koden i den anpassade sändningen
 
@@ -271,6 +271,6 @@ När vi har definierat tjänsten och den anpassade sändningsåtgärden är vi r
 
 * [Kontrollera att du har följt de steg som beskrivs här](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Importera anpassat formulär och anpassad överföringshanterare med hjälp av pakethanteraren](assets/create-acs-profile-on-af-submission.zip). Paketet innehåller anpassat formulär som har konfigurerats för att skicka till en anpassad sändningsåtgärd.
-* Preview the [form](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* Förhandsgranska [formuläret](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * Fyll i alla fält och skicka
 * En ny profil skapas i ACS-instansen
