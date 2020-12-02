@@ -25,7 +25,7 @@ ht-degree: 0%
 Uppvisa dra och släpp-funktioner för att skapa PDF med AEM Forms
 
 PDFG står för PDF Generation. Det innebär att du kan konvertera en mängd olika filformat till PDF. De vanligaste är Microsoft Office-dokument. PDFG har varit en del av AEM Forms sedan 6.1.
-[Javadoc för PDFG API finns här](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
+[Javadoc for PDFG API listas här](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
 
 Med resurserna som är kopplade till den här artikeln kan du dra och släppa MS Office-dokument eller JPG-filer i HTML-sidans släppzon. När dokumentet har släppts anropas PDFG-tjänsten och dokumentet konverteras till PDF-format och sparas i filsystemet på AEM Server.
 
@@ -34,10 +34,10 @@ Så här installerar du demoresurserna:
 1. Konfigurera PDFG enligt anvisningarna i det här dokumentet [här](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html).
 1. Följ lämplig dokumentation för din AEM Forms-version.
 1. [Importera och installera resurser som är relaterade till den här artikeln med hjälp av pakethanteraren.](assets/createpdfgdemov2.zip)
-1. [Navigera till post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) i din CRX
+1. [Navigera till post.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspin i din CRX
 1. Ändra platsen där du vill spara (rad 9)
 1. Spara ändringarna.
-1. Öppna [ HTML-sidan](http://localhost:4502/content/DocumentServices/CreatePDFG.html) där du kan dra och släppa filer för konvertering.
+1. Öppna HTML-sidan [](http://localhost:4502/content/DocumentServices/CreatePDFG.html) för att dra och släppa filer för konvertering.
 1. Släpp en ordfil eller jpg i släppzonen.
 1. Indatadokumentet konverteras till PDF och sparas på samma plats som anges i punkt 4.
 
