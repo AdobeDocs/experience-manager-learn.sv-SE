@@ -62,4 +62,4 @@ Följande formler används i videon för att generera diagrammet Resurser efter 
 
 ## Ytterligare resurser{#additional-resources}
 
-Hämta Excel-fil med [alla resurser med diagram](./assets/asset-reports/all-assets.xlsx)
+Hämta [Excel-fil för alla resurser med diagram](./assets/asset-reports/all-assets.xlsx)
