@@ -32,7 +32,7 @@ Arbetsflödet i Dynamic Media Classic-lösningar består av tre huvudsteg:
 
 Detta är början på arbetsflödet. I det här steget samlar du in eller skapar det källinnehåll som passar i arbetsflödet som du använder och överför det till Dynamic Media Classic. Systemet har stöd för flera filtyper för bilder, video och teckensnitt, men också för PDF, Adobe Illustrator och Adobe InDesign.
 
-Se den fullständiga listan över [filtyper](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats)som stöds.
+Se den fullständiga listan med [Filtyper som stöds](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
 
 Du kan överföra källinnehåll på flera olika sätt:
 
@@ -47,7 +47,7 @@ Standardläget är Från skrivbord, där du bläddrar efter filer i det lokala n
 >
 >Lägg inte till dina mappar manuellt. Kör i stället en överföring från FTP och använd alternativet **Inkludera undermappar** för att återskapa mappstrukturen i Dynamic Media Classic.
 
-De två viktigaste överföringsalternativen är aktiverade som standard - **Markera för publicering**, som vi har diskuterat tidigare, och **Skriv över**. Skriv över innebär att om filen som överförs har samma namn som en fil som redan finns i systemet kommer den nya filen att ersätta den befintliga versionen. Om du avmarkerar det här alternativet kanske filen inte kan överföras.
+De två viktigaste överföringsalternativen är aktiverade som standard - **Markera för Publish**, som vi har diskuterat tidigare, och **Skriv över**. Skriv över innebär att om filen som överförs har samma namn som en fil som redan finns i systemet kommer den nya filen att ersätta den befintliga versionen. Om du avmarkerar det här alternativet kanske filen inte kan överföras.
 
 ### Skriv över vid överföring av bilder
 
@@ -65,11 +65,11 @@ Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga b
 - **Skriv över i valfri mapp, samma basresursnamn oavsett tillägg**.
 Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
 
-Läs mer om alternativet [](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option)Skriv över bilder.
+Läs mer om [Skriv över bilder](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
 
 Även om det inte är nödvändigt kan du vid överföring med någon av de två metoderna ovan ange jobbalternativ för just den överföringen, till exempel för att schemalägga en återkommande överföring, ange beskärningsalternativ vid överföring och många andra. Dessa kan vara värdefulla för vissa arbetsflöden, så det är värt att fundera över om de kan vara till för dig.
 
-Läs mer om [jobbalternativ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
+Läs mer om [Jobbalternativ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
 
 Överföring är det första nödvändiga steget i ett arbetsflöde eftersom Dynamic Media Classic inte kan arbeta med innehåll som inte redan finns i systemet. Bakom scenerna under överföringen registreras alla överförda resurser i den centraliserade Dynamic Media Classic-databasen, ett ID tilldelas och kopieras till lagringen. Dessutom konverterar systemet bildfiler till ett format som tillåter dynamisk storleksändring och zoomning och konverterar videofiler till MP4-format (webbvänligt format).
 
@@ -98,7 +98,7 @@ På samma sätt kan du överföra din överordnad källvideo till Dynamic Media 
 
 **Även om det inte finns något minimivärde för bildstorlek rekommenderar vi inte att du överför gigantiska bilder.** En enorm bild kan anses vara över 4 000 pixlar. Om du överför bilder i den här storleken kan det uppstå fel, t.ex. dammkorn eller hårkors i bilden. Sådana bilder tar också upp mer utrymme på Dynamic Media Classic-servern, vilket kan göra att du överskrider de avtalade lagringsgränserna.
 
-Läs mer om [Överföra filer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
+Läs mer om [Överför filer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
 
 ## Steg 2: Författare (och publicera)
 
@@ -140,18 +140,18 @@ Nyligen överförda och publicerade mediefiler visas direkt, medan uppdaterade m
 
 Detta är vanligtvis inget problem om det inte har inträffat ett fel och bilden/resursen har samma namn som den tidigare publicerade versionen, men det finns ett problem med bilden. Du kanske av misstag överförde en version med låg upplösning eller så godkändes bilden inte av art director. I det här fallet vill du återkalla originalbilden och ersätta den med en ny version med samma resurs-ID.
 
-Lär dig hur du [manuellt rensar cachen för de URL:er som behöver uppdateras](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
+Lär dig hur du [Rensa cachen manuellt för de URL:er som behöver uppdateras](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
 
 >[!TIP]
 >
 >För att undvika problem med cachningsfördröjning ska du alltid arbeta i förväg - en kväll, en dag, två veckor osv. Bygg upp i tid för att interna parter ska godkänna eller godkänna frågor och svar innan de skickar ut materialet till allmänheten. Du kan till och med jobba en kväll innan och göra ändringar och publicera om kvällen. På morgonen har 10 timmar gått och cachen uppdateras med rätt bild.
 
-- Läs mer om [hur du skapar ett publiceringsjobb](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
-- Läs mer om [publicering](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html).
+- Läs mer om [Skapa ett publiceringsjobb](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
+- Läs mer om [Publicering](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html).
 
 ## Steg 3: Leverera
 
-Kom ihåg att slutprodukten i ett dynamiskt media Classic-arbetsflöde är en URL som pekar på resursen. URL:en kan peka på en enskild bild, en bilduppsättning, en snurruppsättning eller någon annan bilduppsättningssamling eller video. Du måste ta den URL-adressen och göra något med den, till exempel redigera HTML-koden så att `<IMG>` -taggarna pekar på bilden Dynamic Media Classic i stället för att peka på en bild som kommer från den aktuella webbplatsen.
+Kom ihåg att slutprodukten i ett dynamiskt media Classic-arbetsflöde är en URL som pekar på resursen. URL:en kan peka på en enskild bild, en bilduppsättning, en snurruppsättning eller någon annan bilduppsättningssamling eller video. Du måste ta den URL-adressen och göra något med den, till exempel redigera HTML-koden så att `<IMG>`-taggarna pekar på bilden Dynamic Media Classic i stället för att peka på en bild som kommer från den aktuella webbplatsen.
 
 I leveransen måste du integrera dessa URL:er i din webbplats, mobilapp, e-postkampanj eller någon annan digital kontaktyta där du vill visa resursen.
 
@@ -175,14 +175,14 @@ Exempel på en länk (i rött) som öppnar en bilduppsättning i ett visningspro
 
 ## Förhandsgranska resurser
 
-Du vill antagligen förhandsgranska de mediefiler som du har överfört eller skapar eller redigerar för att vara säker på att de visas som du vill när kunderna tittar på dem. Du kommer åt förhandsgranskningsfönstret genom att klicka på en **förhandsgranskningsknapp** , antingen på miniatyrbilden av resursen, högst upp på panelen **** Bläddra/Skapa eller genom att gå till **Arkiv > Förhandsvisa**. I ett webbläsarfönster förhandsvisas den resurs som för närvarande finns på panelen, oavsett om det är en bild, en video eller en inbyggd resurs som en bilduppsättning.
+Du vill antagligen förhandsgranska de mediefiler som du har överfört eller skapar eller redigerar för att vara säker på att de visas som du vill när kunderna tittar på dem. Du kommer åt förhandsgranskningsfönstret genom att klicka på en **Förhandsgranska**-knapp, antingen på miniatyrbilden av resursen, högst upp på **panelen Bläddra/Skapa**, eller genom att gå till **Arkiv > Förhandsgranska**. I ett webbläsarfönster förhandsvisas den resurs som för närvarande finns på panelen, oavsett om det är en bild, en video eller en inbyggd resurs som en bilduppsättning.
 
 ### Förhandsvisning av dynamisk storlek (bildförinställningar)
 
-Du kan förhandsvisa dina bilder i flera storlekar med hjälp av förhandsvisningen av **storlekar** . Då visas en lista med tillgängliga bildförinställningar. Vi diskuterar bildförinställningar senare, men tänk på dem som recept för att läsa in bilden i en namngiven storlek med specifika mängder skärpa och bildkvalitet.
+Du kan förhandsvisa dina bilder i flera storlekar med förhandsvisningen av **storlekar**. Då visas en lista med tillgängliga bildförinställningar. Vi diskuterar bildförinställningar senare, men tänk på dem som recept för att läsa in bilden i en namngiven storlek med specifika mängder skärpa och bildkvalitet.
 
 ### Förhandsgranska zoomning
 
-Du kan också använda alternativet **Zooma** för att förhandsvisa bilden i en av många fördefinierade zoominställningar, som baseras på olika inbyggda zoomningsvisningsprogram.
+Du kan också använda alternativet **Zooma** för att förhandsvisa bilden i en av många fördefinierade zoomförinställningar, som baseras på olika inbyggda zoomningsvisningsprogram.
 
-Läs mer om [förhandsgranskning av resurser](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html).
+Läs mer om [Förhandsgranska resurser](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html).
