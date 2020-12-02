@@ -25,7 +25,7 @@ Ett certifierat dokument ger mottagarna av PDF-dokument och -formulär ytterliga
 
 Om du vill certifiera ett dokument kan du använda Acrobat DC på skrivbordet eller AEM Forms Document Services som en del av en automatiserad process på en server.
 
-I den här artikeln finns exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Den kod som används i exemplet finns [här](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+I den här artikeln finns exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Koden som används i exemplet är [som finns här](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 Om du vill certifiera dokument med AEM Forms måste du följa följande steg
 
@@ -34,7 +34,7 @@ Om du vill certifiera dokument med AEM Forms måste du följa följande steg
 Följ stegen nedan för att lägga till certifikatet i nyckelbehållaren i AEM
 
 * [Initiera globalt förtroendearkiv](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [Sök efter fd-service](http://localhost:4502/security/users.html) -användare
+* [Sök efter fd-](http://localhost:4502/security/users.html) service-användare
 * **Du måste rulla resultatsidan för att läsa in alla användare för att hitta Fd-service-användaren**
 * Dubbelklicka på fd-service-användaren för att öppna fönstret med användarinställningar
 * Klicka på Lägg till privat nyckel från nyckelfilen.Ange det alias och lösenord som är specifikt för certifikatet
@@ -57,16 +57,16 @@ Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
 ## Testa exemplet på din lokala dator
 
 * Hämta och installera [paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Hämta och installera [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Hämta och installera [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [Kontrollera att du har lagt till följande post i användarmappningstjänsten för Apache Sling Service](http://localhost:4502/system/console/configMgr)
 
-   **DevelopingWithServiceUser.core:getformsresouresolver=fd-service** enligt skärmbilden nedan
+   **DevelopingWithServiceUser.core:getformsresouresolver=fd-** service, vilket visas på skärmbilden nedan
    ![User-Mapper](assets/user-mapper-service.PNG)
 * [Importera anpassat exempelformulär](assets/certify-pdf-af.zip)
 * [Importera och installera den anpassade överföringen](assets/custom-submit-certify.zip)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * Ladda upp PDF-dokument som behöver certifieras
-   **valfritt** - Ange det signaturfält som du vill använda för att certifiera dokumentet
+   **valfritt**  - Ange det signaturfält som du vill använda när du certifierar dokumentet
 * Klicka på Skicka.
 * Certifierad PDF bör returneras till dig.
 
