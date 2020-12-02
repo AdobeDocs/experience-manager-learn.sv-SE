@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM SPA Editor och React
-description: Skapa ditt första SPA-program (React Single Page Application) som kan redigeras i Adobe Experience Manager AEM med WKND SPA. Lär dig hur du skapar en SPA med React JS-ramverket med AEM SPA Editor. Denna självstudiekurs i flera delar går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela det sista steget i skapandet av SPA och integrationen med AEM.
+description: Skapa ditt första React Single Page-program (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA. Lär dig hur du skapar en SPA med React JS-ramverket med AEM SPA Editor. Denna självstudiekurs i flera delar går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela SPA och integreringen med AEM.
 sub-product: platser
 topics: development
 version: cloud-service
@@ -18,19 +18,19 @@ ht-degree: 2%
 ---
 
 
-# Skapa din första React SPA i AEM {#overview}
+# Skapa din första SPA i AEM {#overview}
 
-Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte har använt **SPA Editor** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. React-appen kommer att utvecklas och utformas för användning med AEM SPA Editor, som mappar React-komponenter till AEM. Den kompletta SPA-funktionen, som används för AEM, kan skapas dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare i **SPA Editor**-funktionen i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. React-appen kommer att utvecklas och utformas för att användas med AEM SPA Editor, som mappar React-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
-![Slutlig SPA har implementerats](assets/wknd-spa-implementation.png)
+![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
 
-*WKND SPA-implementering*
+*WKND-SPA*
 
 ## Om
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar ett React-program för att arbeta med SPA-redigeringsfunktionen i AEM. I ett verkligt scenario är utvecklingsaktiviteterna uppdelade efter personifiering, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi anser att det är bra att alla utvecklare som kommer att delta i ett AEM SPA-redigeringsprojekt slutför den här självstudiekursen.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar ett React-program för att arbeta med SPA Editor-funktionen i AEM. I ett verkligt scenario är utvecklingsaktiviteterna uppdelade efter persona, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi tror att det är bra att alla utvecklare som kommer att delta i ett AEM SPA Editor-projekt slutför kursen.
 
-Självstudiekursen är utformad för att fungera med **AEM som Cloud Service** och är bakåtkompatibel med **AEM 6.5.4+** och **AEM 6.4.8+**. SPA implementeras med:
+Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5.4+** och **AEM 6.4.8+**. SPA implementeras med:
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
@@ -51,13 +51,13 @@ Den [senaste kodbasen](https://github.com/adobe/aem-guides-wknd-spa/releases) ä
 Innan du startar den här självstudiekursen behöver du följande:
 
 * Grundläggande kunskaper i HTML, CSS och JavaScript
-* Grundläggande kunskap om [React](https://reactjs.org/tutorial/tutorial.html)
-* [AEM som Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk), [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) eller [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* Grundläggande kunskap i [Reagera](https://reactjs.org/tutorial/tutorial.html)
+* [AEM som Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk),  [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) eller  [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
-* [Node.js](https://nodejs.org/en/) och [npm](https://www.npmjs.com/)
+* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
+* [Node.](https://nodejs.org/en/) jsand  [npm](https://www.npmjs.com/)
 
-*Även om det inte är nödvändigt är det bra att ha en grundläggande förståelse för hur man[utvecklar traditionella AEM Sites-komponenter](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
+*Även om det inte är nödvändigt är det bra att ha en grundläggande förståelse för hur man  [utvecklar traditionella AEM Sites-komponenter](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
 
 ## Lokal utvecklingsmiljö {#local-dev-environment}
 
@@ -65,19 +65,19 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 >[!NOTE]
 >
-> **Är du inte AEM som Cloud Service?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [SPA Editor Project](create-project.md) och se hur du genererar ett SPA Editor-aktiverat projekt med hjälp av den AEM projektarkitekturen.
+Vad väntar du på?! Starta självstudiekursen genom att navigera till kapitlet [SPA Editor Project](create-project.md) och lär dig hur du skapar ett projekt som är aktiverat för SPA redigeraren med hjälp av den AEM projekttypen.
 
 ## Bakåtkompatibilitet {#compatibility}
 
-Projektkoden för den här självstudiekursen har skapats för AEM som en Cloud Service. För att göra projektkoden bakåtkompatibel för **6.5.4+** och **6.4.8+** har flera ändringar gjorts i självstudiekursens POM-filer.
+Projektkoden för den här självstudiekursen har skapats för AEM som en Cloud Service. För att göra projektkoden bakåtkompatibel för **6.5.4+** och **6.4.8+** har flera ändringar gjorts i självstudiens POM-filer.
 
-UberJar [](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) v6.4.4 **** har inkluderats som ett beroende:
+[UberJar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4** har inkluderats som ett beroende:
 
 ```xml
 <!-- Adobe AEM 6.x Dependencies -->
@@ -90,7 +90,7 @@ UberJar [](https://docs.adobe.com/content/help/en/experience-manager-65/developi
 </dependency>
 ```
 
-Ytterligare en Maven-profil med namnet `classic` har lagts till för att modifiera bygget AEM 6.x-miljöer:
+En ytterligare Maven-profil med namnet `classic` har lagts till för att ändra byggprocessen till AEM 6.x-miljöer:
 
 ```xml
   <!-- AEM 6.x Profile to include Core Components-->
@@ -104,10 +104,10 @@ Ytterligare en Maven-profil med namnet `classic` har lagts till för att modifie
     </profile>
 ```
 
-Profilen är som standard inaktiverad `classic` . Om du följer självstudiekursen med AEM 6.x ska du lägga till profilen när du får instruktioner om att utföra en Maven-byggnad, dvs: `classic`
+Profilen `classic` är inaktiverad som standard. Om du följer självstudiekursen med AEM 6.x ska du lägga till profilen `classic` när du får instruktioner om att utföra en Maven-konstruktion, dvs:
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-När du genererar ett nytt projekt för en AEM implementering ska du alltid använda den senaste versionen av [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` så att du har den tänkta versionen av AEM.
+När du genererar ett nytt projekt för en AEM implementering ska du alltid använda den senaste versionen av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` för att ange målversionen av AEM.
