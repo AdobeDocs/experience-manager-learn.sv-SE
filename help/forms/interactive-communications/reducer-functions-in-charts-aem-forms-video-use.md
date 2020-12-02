@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Använda Reducer-funktioner i AEM Forms - Charts{#using-reducer-functions-in-aem-forms-charts}
+# Använda Reducer-funktioner i AEM Forms - Diagram{#using-reducer-functions-in-aem-forms-charts}
 
 Reduceringsfunktioner används för att samla värden eller gruppera värden som visas i diagrammet.
 
