@@ -26,7 +26,7 @@ När du skickar in formuläret sätter du ihop de bifogade filerna för att gene
 
 ## Skapa OSGi-komponent som implementerar WorkflowProcess-gränssnittet
 
-Skapa en OSGi-komponent som implementerar gränssnittet [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html)com.adobe.granite.workflow.exec.WorkflowProcess. Koden i den här komponenten kan associeras med processstegskomponenten i AEM arbetsflöde. Körningsmetoden för gränssnittet com.adobe.granite.workflow.exec.WorkflowProcess implementeras i den här komponenten.
+Skapa en OSGi-komponent som implementerar gränssnittet [com.adobe.granite.workflow.exec.WorkflowProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). Koden i den här komponenten kan associeras med processstegskomponenten i AEM arbetsflöde. Körningsmetoden för gränssnittet com.adobe.granite.workflow.exec.WorkflowProcess implementeras i den här komponenten.
 
 När ett anpassningsbart formulär skickas för att utlösa ett AEM arbetsflöde, lagras skickade data i den angivna filen under nyttolastmappen. Det här är till exempel den skickade datafilen. Vi måste montera de bilagor som anges under ID-kortet och bankkontoutdragstaggen.
 ![inskickade data](assets/submitted-data.JPG).
@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### Skapa DDX från namn på bifogade filer
 
-Sedan måste vi skapa [DX-dokument (Document Description XML)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) som används av Assembler-tjänsten för att sammanställa dokument. Följande är den DDX som skapades från processargumenten. Observera att PDF-källelementen är i rätt ordning enligt processargumenten.
+Sedan måste vi skapa [XML-dokument för dokumentbeskrivning (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-dokument som används av Assembler-tjänsten för att samla ihop dokument. Följande är den DDX som skapades från processargumenten. Observera att PDF-källelementen är i rätt ordning enligt processargumenten.
 
 ![ddx-xml](assets/ddx-xml.JPG)
 
@@ -134,12 +134,12 @@ Nedan följer mappstrukturen för nyttolast när formulärbilagor har monterats 
 
 ### För att få den här funktionen att fungera på din AEM
 
-* Ladda ned formuläret [för](assets/assemble-form-attachments-af.zip) sammanställning av formulärbilagor till ditt lokala system.
-* Importera formuläret från[sidan Formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) .
-* Hämta [arbetsflödet](assets/assemble-form-attachments.zip) och importera till AEM med hjälp av pakethanteraren.
-* Ladda ned det [anpassade paketet](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* Hämta formuläret [Sammanställ formulärbilagor](assets/assemble-form-attachments-af.zip) till din lokala dator.
+* Importera formuläret från sidan[Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* Hämta [arbetsflöde](assets/assemble-form-attachments.zip) och importera till AEM med pakethanteraren.
+* Hämta det anpassade [paketet](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Distribuera och starta paketet med [webbkonsolen](http://localhost:4502/system/console/bundles)
-* Peka webbläsaren på [Sammanställ bifogade filer](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* Peka din webbläsare på [Sammanfoga bifogade filer, formulär](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * Lägg till en bifogad fil i ID-dokumentet och ett par PDF-dokument i avsnittet med bankutdrag
 * Skicka formuläret för att utlösa arbetsflödet
 * Kontrollera arbetsflödets [nyttolastmapp i crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) för den sammansatta PDF-filen
