@@ -26,13 +26,13 @@ Varje AEM som en Cloud Service har sin egen Developer Console.
 
 ## Åtkomst till Developer Console
 
-För att få tillgång till och använda Developer Console måste följande behörigheter ges till utvecklarens Adobe ID via [Adobe Admin Console](https://adminconsole.adobe.com).
+För att få tillgång till och använda Developer Console måste följande behörigheter anges till utvecklarens Adobe ID via [Adobe Admin Console](https://adminconsole.adobe.com).
 
 1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM som Cloud Service är aktiv i Adobe Org-växlaren.
-1. Utvecklaren måste vara medlem i produktprofilen för Cloud Manager- __Cloud Servicen__ .
+1. Utvecklaren måste vara medlem i Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile.
    + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
-1. Utvecklaren måste vara medlem i produktprofilen för AEM Author och Publish Service __AEM Administrators__ .
-   + Om det här medlemskapet inte finns, kommer [statusdumpar att timeout-problem](#status) med ett 401 oauktoriserat fel.
+1. Utvecklaren måste vara medlem i AEM Author och Publish Services __AEM Administrators__ produktprofil.
+   + Om det här medlemskapet inte finns kommer dumparna [status](#status) att timeout med ett 401 oauktoriserat fel.
 
 ### Felsökning: Developer Console-åtkomst
 
@@ -72,7 +72,7 @@ Status innehåller alternativ för att skriva ut ett specifikt AEM körningstill
 
 ### Paket
 
-Paketen innehåller alla OSGi-paket i AEM. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstart OSGi Bundles](http://localhost:4502/system/console/bundles) på `/system/console/bundles`.
+Paketen innehåller alla OSGi-paket i AEM. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsOSGi Bundles](http://localhost:4502/system/console/bundles) `/system/console/bundles`.
 
 Paket hjälper dig att felsöka genom att:
 
@@ -93,7 +93,7 @@ Komponenterna hjälper till vid felsökning genom att:
 
 ### Konfigurationer
 
-Konfigurationer visar alla OSGi-komponentens konfigurationer (OSGi-egenskaper och -värden). Den här funktionen liknar [AEM SDK:s lokala snabbstartsOSGi Configuration Manager](http://localhost:4502/system/console/configMgr) på `/system/console/configMgr`.
+Konfigurationer visar alla OSGi-komponentens konfigurationer (OSGi-egenskaper och -värden). Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsOSGi Configuration Manager](http://localhost:4502/system/console/configMgr) `/system/console/configMgr`.
 
 Konfigurationer hjälper dig att felsöka genom att:
 
@@ -102,7 +102,7 @@ Konfigurationer hjälper dig att felsöka genom att:
 
 ### Oak Index
 
-Oak Indexes är en dump av de noder som definieras under `/oak:index`. Tänk på att detta inte visar sammanfogade index, som inträffar när ett AEM ändras.
+Oak Indexes är en dump av noderna som definieras under `/oak:index`. Tänk på att detta inte visar sammanfogade index, som inträffar när ett AEM ändras.
 
 Ta hjälp av index:
 
@@ -110,7 +110,7 @@ Ta hjälp av index:
 
 ### OSGi Services
 
-Komponenterna listar alla OSGi-tjänster. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsprogram OSGi Services](http://localhost:4502/system/console/services) på `/system/console/services`.
+Komponenterna listar alla OSGi-tjänster. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsprogram OSGi Services](http://localhost:4502/system/console/services) `/system/console/services`.
 
 OSGi Services hjälper dig att felsöka genom att:
 
@@ -118,7 +118,7 @@ OSGi Services hjälper dig att felsöka genom att:
 
 ### Försäljningsjobb
 
-Sling Jobs visar alla kön för Sling Jobs. Den här funktionen liknar [AEM jobb](http://localhost:4502/system/console/slingevent) för lokal snabbstart för SDK `/system/console/slingevent`.
+Sling Jobs visar alla kön för Sling Jobs. Den här funktionaliteten liknar [AEMSDK:s lokala snabbstartjobb](http://localhost:4502/system/console/slingevent) `/system/console/slingevent`.
 
 Sling Jobs hjälper till vid felsökning genom att:
 
@@ -127,7 +127,7 @@ Sling Jobs hjälper till vid felsökning genom att:
 
 ## Java-paket
 
-Med Java-paket kan du kontrollera om ett Java-paket, och version, är tillgängligt för användning i AEM som Cloud Service. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartsfunktion Dependency Finder](http://localhost:4502/system/console/depfinder) på `/system/console/depfinder`.
+Med Java-paket kan du kontrollera om ett Java-paket, och version, är tillgängligt för användning i AEM som Cloud Service. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartssökare](http://localhost:4502/system/console/depfinder) på `/system/console/depfinder`.
 
 ![Developer Console - Java-paket](./assets/developer-console/java-packages.png)
 
@@ -136,11 +136,11 @@ Java-paket används för att förhindra att bildpaket startas på grund av olös
 + Kontrollera att projektets AEM API-maven-beroende version matchar miljöns version AEM Release (och uppdatera om möjligt allt till den senaste).
 + Om extra Maven-beroenden används i Maven-projektet
    + Kontrollera om ett alternativt API från AEM SDK API-beroende kan användas i stället.
-   + Om det extra beroendet krävs kontrollerar du att det är ett OSGi-paket (i stället för en vanlig Jar) och att det är inbäddat i projektets kodpaket, (`ui.apps`), på samma sätt som OSGi-kärnpaketet är inbäddat i `ui.apps` paketet.
+   + Om det extra beroendet krävs kontrollerar du att det är ett OSGi-paket (i stället för ett vanligt Jar) och att det är inbäddat i projektets kodpaket (`ui.apps`), på samma sätt som OSGi-kärnpaketet är inbäddat i `ui.apps`-paketet.
 
 ## Servlets
 
-Servlets används för att ge insikt i hur AEM löser en URL till en Java-server eller ett Java-skript (HTL, JSP) som slutligen hanterar begäran. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartsverktyg Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) på `/system/console/servletresolver`.
+Servlets används för att ge insikt i hur AEM löser en URL till en Java-server eller ett Java-skript (HTL, JSP) som slutligen hanterar begäran. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartsverktyg Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) `/system/console/servletresolver`.
 
 ![Developer Console - Servlets](./assets/developer-console/servlets.png)
 
@@ -151,7 +151,7 @@ Servlets hjälper dig att felsöka:
 
 ## Frågor
 
-Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartsverktyg > Query Performance ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) console.
+Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartskonsol Verktyg > Frågeprestanda ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html).
 
 Frågar fungerar bara när en viss ruta har valts, eftersom den öppnar den pods webbkonsol för frågeprestanda, som kräver att utvecklaren har åtkomst till AEM.
 
