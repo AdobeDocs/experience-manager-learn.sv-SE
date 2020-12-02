@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -208,40 +208,40 @@ Låt oss sedan ändra appen React för att utföra parametriserade, filtrerade G
 1. Öppna filen i din utvecklingsmiljö: `src/components/Adventures.js`. Den här filen representerar hemupplevelsens äventyrskomponent, som frågar efter och visar Adventures-kort.
 1. Inspect funktionen `filterQuery(activity)`, som inte används, men har förberetts för att formulera en GraphQL-fråga som filtrerar äventyren med `activity`.
 
-Observera att parametern `activity` matas in i GraphQL-frågan som en del av `filter` i fältet `adventureActivity`, vilket kräver att fältets värde matchar parameterns värde.
+   Observera att parametern `activity` matas in i GraphQL-frågan som en del av `filter` i fältet `adventureActivity`, vilket kräver att fältets värde matchar parameterns värde.
 
-    &quot;
-    javascriptfunction filterQuery(activity) {
-    return`
-    {
-    adventures (filter: {
-    adventureActivity: {
-    _expressions: [
-    {
-    value: &quot;${activity}&quot;
-    }
-    ]
-    }
-    }){
-    items {
-    _
-    
-    
-    
-    pathadventureTitleadventurePriceadventureTripLengthadventurePrimaryImage {
-    ... på ImageRef {
-    _
-    
-    
-    pathmimeTypeWidthheight
-    }
-    }
-    }
-    }
-    }
-    `;
-    }
-    &quot;
+   ```javascript
+   function filterQuery(activity) {
+       return `
+           {
+           adventures (filter: {
+               adventureActivity: {
+               _expressions: [
+                   {
+                   value: "${activity}"
+                   }
+                 ]
+               }
+           }){
+               items {
+               _path
+               adventureTitle
+               adventurePrice
+               adventureTripLength
+               adventurePrimaryImage {
+               ... on ImageRef {
+                   _path
+                   mimeType
+                   width
+                   height
+               }
+               }
+             }
+         }
+       }
+       `;
+   }
+   ```
 
 1. Uppdatera `return`-satsen för komponenten React Adventures om du vill lägga till knappar som anropar den nya parametern `filterQuery(activity)` för att tillhandahålla äventyren som ska visas.
 
