@@ -7,11 +7,11 @@ topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: cloud-service
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '372'
 ht-degree: 2%
 
 ---
@@ -20,11 +20,6 @@ ht-degree: 2%
 # Skapa innehållsfragment {#authoring-content-fragments}
 
 Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder.
-
->[!NOTE]
->
->Funktionen AEM innehållsfragment som beskrivs i dessa videofilmer introducerades först i [AEM 6.3 + FP 19008 och FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html).
-
 
 AEM innehållsfragment är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
 
