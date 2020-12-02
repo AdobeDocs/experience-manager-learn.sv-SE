@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Checka in-utcheckning {#check-in-check-out}
+# Checka ut {#check-in-check-out}
 
 Med Adobe Asset kan du checka ut AEM Assets direkt från det kreativa program du arbetar med och direkt börja redigera. Du kan enkelt checka in resurser tillbaka till AEM Assets med rätt versionshantering och kommentarer när du är klar med redigeringen i Creative Cloud-appen.
 
