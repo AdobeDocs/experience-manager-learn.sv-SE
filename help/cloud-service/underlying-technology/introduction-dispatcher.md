@@ -20,7 +20,7 @@ ht-degree: 27%
 
 # Introduktion till [!DNL Dispatcher] {#introduction-dispatcher}
 
-En introduktion till funktionaliteten och funktionerna i [!DNL dispatcher] som en del av den AEM arkitekturen.
+En introduktion till funktionerna och funktionerna i [!DNL dispatcher] som en del av den AEM arkitekturen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12&learn=on)
 
