@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Rendera XDP till PDF med användningsbehörighet{#rendering-xdp-into-pdf-with-usage-rights}
+# Renderar XDP till PDF med användningsbehörighet{#rendering-xdp-into-pdf-with-usage-rights}
 
 Ett vanligt användningssätt är att återge xdp till PDF och använda Reader-tillägg på den återgivna PDF-filen.
 
@@ -34,7 +34,7 @@ För att uppnå detta måste vi göra följande.
 
 * Skapa en anpassad OSGi-tjänst som återger och tillämpar användarrättigheter. Koden som ska användas anges nedan
 
-## Rendera XDP och Använd användarrättigheter {#render-xdp-and-apply-usage-rights}
+## Återge XDP och använd användningsbehörighet {#render-xdp-and-apply-usage-rights}
 
 * Rad 7: Med hjälp av FormsTjänsts renderPDFForm genererar vi PDF från XDP.
 
@@ -123,7 +123,7 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## Skapa en tjänst för direktuppspelning av PDF-filen {#create-servlet-to-stream-the-pdf}
+## Skapa tjänstför att strömma PDF-filen {#create-servlet-to-stream-the-pdf}
 
 Nästa steg är att skapa en server med en GET-metod som returnerar den utökade PDF-filen till läsaren. I så fall blir användaren ombedd att spara PDF-filen i sitt filsystem. Det beror på att PDF-filen återges som en dynamisk PDF-fil och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
@@ -203,7 +203,7 @@ Följ de här stegen för att testa detta på den lokala servern
 1. [Hämta och importera resurser som är relaterade till den här artikeln till AEM med hjälp av pakethanteraren](assets/renderandextendxdp.zip)
    * Paketet har en exempelportal och en xdp-fil
 1. Lägg till certifikat för Reader-tillägg till användaren fd-service
-1. Peka webbläsaren mot [portalwebbsidan](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
+1. Peka webbläsaren på [portalwebbsidan](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. Klicka på pdf-ikonen för att återge xdp och hämta pdf som är Reader Extended
 
 
