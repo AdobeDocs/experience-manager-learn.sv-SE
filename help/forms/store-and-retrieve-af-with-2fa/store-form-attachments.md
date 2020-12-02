@@ -31,7 +31,7 @@ Följande är den FileMap som skickas till servern. Nyckeln är det adaptiva for
 }
 ```
 
-Följande kod extraherar de bifogade filerna från begäran och lagrar dem i mappen **/content/fetments**
+Följande kod extraherar de bifogade filerna från begäran och lagrar dem under mappen **/content/fettments**
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
