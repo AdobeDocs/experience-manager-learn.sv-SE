@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -37,12 +37,6 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 * Se hur Content Fragments in AEM kan efterfrågas med det integrerade utvecklingsverktyget GraphiQL.
 * AEM GraphQL API:er från ett WKND GraphQL-exempelprogram
 * Utför avancerad datamodellering med fragmentreferenser
-
-## GraphQL - översikt
-
-I videon nedan visas en översikt över GraphQL API som implementerats i AEM. GraphQL API i AEM är främst utformat för att leverera Content fragment-data till program längre fram i kedjan som en del av en headless-distribution.
-
->[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
 ## GraphQL - översikt
 
