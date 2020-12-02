@@ -20,11 +20,18 @@ ht-degree: 0%
 
 # Fyll i adaptiv formulärtabell med resultatet av anrop till tjänsten för formulärdatamodell
 
-[Live-formulär finns här](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)I den här artikeln tar vi en titt på att fylla i tabeller med anpassade formulär genom att hämta data från anrop av formulärdatamodelltjänst. Vi ska skapa en amorteringsplan i en tabell som visar varje vanlig betalning på en inteckning över tiden. Avskrivningsresultaten returneras av vår formulärdatamodell. Tjänsten för formulärdatamodellen anropas vid click-händelsen för knappen calculate, vilket visas på skärmbilden. Indata- och utdataparametrarna för serviceanropet mappas på rätt sätt enligt skärmbilden. Utdata mappas till kolumnerna i Klickhändelse för rad1![](assets/amortization.PNG)
+[Live-formuläret ligger ](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+härI den här artikeln tar vi en titt på att fylla i tabeller med anpassade formulär genom att hämta data från anrop av formulärdatamodelltjänst. Vi ska skapa en amorteringsplan i en tabell som visar varje vanlig betalning på en inteckning över tiden. Avskrivningsresultaten returneras av vår formulärdatamodell. Tjänsten för formulärdatamodellen anropas vid click-händelsen för knappen calculate, vilket visas på skärmbilden. Indata- och utdataparametrarna för serviceanropet mappas på rätt sätt enligt skärmbilden. Utdata mappas till kolumnerna i rad1
+![klickhändelse](assets/amortization.PNG)
 
-Rad1 är konfigurerad att växa beroende på vilka data som returneras av serviceanropet. Lägg märke till de inställningar för upprepning som anges här. Värdet -1 anger ett obegränsat antal rader i tabellen![Rad1](assets/rowconfiguration.PNG)
+Rad1 är konfigurerad att växa beroende på vilka data som returneras av serviceanropet. Lägg märke till de inställningar för upprepning som anges här. Värdet -1 anger ett obegränsat antal rader i tabellen
+![Rad1](assets/rowconfiguration.PNG)
 
 ## Distribuera detta på servern
 
-[Installera Tomcat enligt anvisningarna här](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)[Distribuera filen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)SampleRest.war[Installera resurserna ](assets/amortizationschedule.zip) med AEM pakethanterare[Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)för amorteringsschema Ange lämpligt värde och klicka på calculateAmortization Schedule ska fyllas i i formuläret
+[Installera Tomcat enligt ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[anvisningarna härDistribuera ](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+[filen SampleRest.warInstallera materialet  ](assets/amortizationschedule.zip) med AEM pakethanterare 
+[Öppna ](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+formuläret för amorteringsschemaAnge lämpligt värde och klicka på Beräkna amorteringsschema för att fylla i formuläret
 
