@@ -26,7 +26,7 @@ AEM som en Cloud Services vattenstämpelfunktioner gör att anpassade bildåterg
 
 ## OSGi-konfiguration
 
-Följande OSGi-konfigurationsstub kan uppdateras och läggas till i AEM projekt `ui.config` .
+Följande OSGi-konfigurationsstub kan uppdateras och läggas till i ditt AEM `ui.config`-projekt.
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
