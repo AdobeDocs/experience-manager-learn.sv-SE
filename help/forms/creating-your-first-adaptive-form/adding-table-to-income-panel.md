@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Lägga till komponenter i resultatpanelen {#adding-components-to-income-panel}
+# Lägga till komponenter i inkomstpanelen {#adding-components-to-income-panel}
 
 Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och använd regelredigeraren för att beräkna totalsumman.
 
@@ -46,7 +46,7 @@ Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och anv
 
 * Ange Minsta och Högsta antal till 1 och 5 under Upprepa inställningar och spara ändringarna genom att klicka på den blå bockmarkeringsikonen. Det innebär att tabellen kan ha högst fem rader. Om du vill ha ett obegränsat antal rader anger du maxantalet till -1.
 
-## Skapa regel för att beräkna totalsumma {#create-rule-to-calculate-grand-total}
+## Skapa regel för att beräkna totalsumman {#create-rule-to-calculate-grand-total}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
