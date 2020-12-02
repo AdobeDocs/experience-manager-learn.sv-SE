@@ -28,6 +28,6 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 
 ## GitHub-projekt
 
-Källkoden och innehållspaketen finns på [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
+Källkoden och innehållspaketen finns i [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
 
-Om du har problem med självstudiekursen eller koden kan du lämna ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
