@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
+source-git-commit: 3e8b820939c2d39ef9a17f7d7aaef87cd9cdbbbb
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### Skapa DDX från namn på bifogade filer
 
-Sedan måste vi skapa [XML-dokument för dokumentbeskrivning (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-dokument som används av Assembler-tjänsten för att samla ihop dokument. Följande är den DDX som skapades från processargumenten. Observera att PDF-källelementen är i rätt ordning enligt processargumenten.
+Sedan måste vi skapa [XML-dokument för dokumentbeskrivning (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-dokument som används av Assembler-tjänsten för att samla ihop dokument. Följande är den DDX som skapades från processargumenten. Med NoForms-elementet kan du förenkla XFA-baserade dokument innan de sätts samman. Observera att PDF-källelementen är i rätt ordning enligt processargumenten.
 
-![ddx-xml](assets/ddx-xml.JPG)
+![ddx-xml](assets/ddx.PNG)
 
 ### Skapa dokumentkarta
 
