@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -109,27 +109,15 @@ Exempelinnehåll från WKND Reference-webbplatsen installeras för att snabba up
 >
 > Om du använder en kodmiljö läser du dokumentationen om hur du [distribuerar en kodbas som WKND Reference-platsen till en Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying).
 
-## Tillåt GraphQL-begäranden
+## Installera GraphQL-slutpunkter{#graphql-endpoint}
 
-AEM, som är säkert som standard, blockerar förfrågningar om korsursprung och förhindrar att obehöriga program ansluter till och tar sig förbi innehållet.
+GraphQL-slutpunkter måste konfigureras. Detta ger flexibilitet i projektet när det gäller att fastställa exakt vilken slutpunkt GraphQL-API:t exponeras för. Ett [CORS](#cors-config) krävs också för att ge åtkomst till ett externt program. För att underlätta självstudiekursen har ett paket skapats i förväg.
 
-För att den här självstudiekursens React-app ska kunna interagera med AEM GraphQL API-slutpunkter, definieras en resursdelningskonfiguration för korsursprung.
+1. Hämta [aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip](./assets/setup/aem-guides-wknd-graphql.all-1.0.0-SNAPSHOT.zip)-paketet.
+1. I menyn **AEM Start** går du till **Verktyg** > **Distribution** > **Paket**.
+1. Klicka på **Överför paket** och välj det paket som hämtades i föregående steg. Klicka på **Installera** för att installera paketet.
 
-![Konfiguration för resursdelning mellan ursprung](./assets/setup/cross-origin-resource-sharing-configuration.png)
-
-1. Gå till AEM SDK:s webbkonsol på **Verktyg** > **Åtgärder** > **Webbkonsol**
-1. Klicka på raden **Resursdelningsprincip för korsursprung för Adobe Granite** för att skapa en ny konfiguration
-1. Uppdatera följande fält och låt de andra behålla sina standardvärden:
-   * Tillåtna ursprungsobjekt: `localhost:3000`
-   * Tillåtna ursprung (Regex): `.* `
-   * Tillåtna sökvägar: `/content/graphql/endpoint.gql`
-   * Tillåtna metoder: `GET`, `HEAD`, `POST`
-      * Endast `POST` krävs för GraphQL, men de andra metoderna kan vara användbara när du interagerar med AEM utan huvud.
-   * Autentiseringsuppgifter stöds: `Yes`
-      * Detta krävs eftersom React-appen kommunicerar med de skyddade GraphQL-slutpunkterna på AEM Author-tjänsten.
-1. Klicka på **Spara**
-
-Den här konfigurationen tillåter `POST` HTTP-begäranden som kommer från `localhost:3000` till AEM Author-tjänsten på sökvägen `/content/graphql/endpoint.gql`.
+Ovanstående paket innehåller också [GraphiQL-verktyget](https://github.com/graphql/graphiql) som ska användas i senare kapitel. Mer information om CORS-konfigurationen finns nedan [](#cors-config).
 
 ## Installera exempelappen{#sample-app}
 
@@ -209,3 +197,29 @@ Grattis, du har nu ett externt program som AEM innehåll med GraphQL. Du kan gra
 ## Nästa steg {#next-steps}
 
 I nästa kapitel, [Defining Content Fragment Models](content-fragment-models.md), får du lära dig att modellera innehåll och skapa ett schema med **Content Fragment Models**. Du kommer att granska befintliga modeller och skapa en ny modell. Du får också lära dig mer om de olika datatyper som kan användas för att definiera ett schema som en del av modellen.
+
+## (Bonus) CORS-konfiguration {#cors-config}
+
+AEM, som är säkert som standard, blockerar förfrågningar om korsursprung och förhindrar att obehöriga program ansluter till och tar sig förbi innehållet.
+
+För att den här självstudiekursens React-app ska kunna interagera med AEM GraphQL API-slutpunkter har en resursdelningskonfiguration för korsursprung definierats i GraphQL-slutpunktspaketet.
+
+![Konfiguration för resursdelning mellan ursprung](./assets/setup/cross-origin-resource-sharing-configuration.png)
+
+Så här konfigurerar du manuellt:
+
+1. Gå till AEM SDK:s webbkonsol på **Verktyg** > **Åtgärder** > **Webbkonsol**
+1. Klicka på raden **Resursdelningsprincip för korsursprung för Adobe Granite** för att skapa en ny konfiguration
+1. Uppdatera följande fält och låt de andra behålla sina standardvärden:
+   * Tillåtna ursprungsobjekt: `localhost:3000`
+   * Tillåtna ursprung (Regex): `.* `
+   * Tillåtna sökvägar: `/content/graphql/endpoint.gql`
+   * Tillåtna metoder: `GET`, `HEAD`, `POST`
+      * Endast `POST` krävs för GraphQL, men de andra metoderna kan vara användbara när du interagerar med AEM utan huvud.
+   * Autentiseringsuppgifter stöds: `Yes`
+      * Detta krävs eftersom React-appen kommunicerar med de skyddade GraphQL-slutpunkterna på AEM Author-tjänsten.
+1. Klicka på **Spara**
+
+Den här konfigurationen tillåter `POST` HTTP-begäranden som kommer från `localhost:3000` till AEM Author-tjänsten på sökvägen `/content/graphql/endpoint.gql`.
+
+Den här konfigurationen och GraphQL-slutpunkterna genereras från ett AEM projekt. [Se informationen här](https://github.com/adobe/aem-guides-wknd-graphql/tree/master/aem-project).
