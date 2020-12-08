@@ -8,10 +8,10 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6678
+thumbnail: 328618.jpg
 translation-type: tm+mt
-source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 0%
