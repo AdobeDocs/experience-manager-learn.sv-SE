@@ -4,10 +4,10 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 2%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
@@ -16,36 +16,36 @@ ht-degree: 2%
 
 + [Översikt](overview.md)
 + Sidredigering {#page-authoring}
-   + [Redigeringsöversikt](page-authoring/aem-sites-authoring-overview.md)
-   + [Grundläggande navigering och hantering i AEM Sites](page-authoring/basic-handling-sites-feature-video-use.md)
-   + [Innehållshierarki i AEM Sites](page-authoring/content-hierarchy-feature-video-use.md)
-   + [Sidredigering i AEM Sites](page-authoring/page-authoring-overview-feature-video-use.md)
-   + [Skapa en ny sida](page-authoring/creating-page-feature-video-use.md)
-   + [Använda sidredigeraren](page-authoring/page-editor-feature-video-use.md)
-   + [Förstå responsiv layout](page-authoring/responsive-layout-feature-video-understand.md)
-   + [Sidtaggning i AEM Sites](page-authoring/page-tagging-feature-video-use.md)
+   + [Redigering](page-authoring/aem-sites-authoring-overview.md)
+   + [Navigering](page-authoring/basic-handling-sites-feature-video-use.md)
+   + [Webbplatsstruktur](page-authoring/content-hierarchy-feature-video-use.md)
+   + [Skapa sida](page-authoring/creating-page-feature-video-use.md)
+   + [Sidredigering](page-authoring/page-authoring-overview-feature-video-use.md)
+   + [Page Editor](page-authoring/page-editor-feature-video-use.md)
+   + [Sidtaggning](page-authoring/page-tagging-feature-video-use.md)
    + [Sidversionshantering](page-authoring/page-versioning-feature-video-use.md)
-   + [Jämföra sidversioner](page-authoring/page-diff-feature-video-use.md)
-   + [Förstå sidegenskaper](page-authoring/page-properties-feature-video-understand.md)
-   + [Grundläggande sidåtgärder](page-authoring/page-operations-feature-video-use.md)
-   + [Publicera sidor](page-authoring/publication-management-feature-video-use.md)
-   + [Använda redigerbara sidmallar](page-authoring/template-editor-feature-video-use.md)
-   + [Använda formatsystemet](page-authoring/style-system-feature-video-use.md)
-   + [Använda Timewarp](page-authoring/timewarp-feature-video-use.md)
+   + [Jämförelse av sidversioner](page-authoring/page-diff-feature-video-use.md)
+   + [Sidegenskaper](page-authoring/page-properties-feature-video-understand.md)
+   + [Sidåtgärder](page-authoring/page-operations-feature-video-use.md)
+   + [Layoutläge](page-authoring/responsive-layout-feature-video-understand.md)
+   + [Publicering](page-authoring/publication-management-feature-video-use.md)
+   + [Redigerbara mallar](page-authoring/template-editor-feature-video-use.md)
+   + [Formatsystem](page-authoring/style-system-feature-video-use.md)
+   + [Timewarp](page-authoring/timewarp-feature-video-use.md)
 + Komponenter {#components}
    + [Komponentutveckling](components/component-development.md)
-   + [Förstå kärnkomponenter](components/core-components-feature-video-understand.md)
-   + [Använda komponentkonsolen](components/components-console-feature-video-use.md)
+   + [Kärnkomponenter](components/core-components-feature-video-understand.md)
+   + [Komponentkonsol](components/components-console-feature-video-use.md)
 + Innehållsfragment {#content-fragments}
    + [Skapa innehållsfragment](content-fragments/content-fragments-feature-video-use.md)
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
-   + [Använda översättning med innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
-   + [Förstå innehållsfragment jämfört med upplevelsefragment](content-fragments/understand-content-fragments-and-experience-fragments.md)
+   + [Översätta med innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
+   + [Content Fragments vs. Experience Fragments](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + Experience Fragments {#experience-fragments}
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Upplevelsefragment](experience-fragments/experience-fragments-feature-video-understand.md)
    + [Konfigurera social bokföring med Experience Fragments](experience-fragments/experience-fragments-social-technical-video-setup.md)
-   + [Förstå innehållsfragment jämfört med upplevelsefragment](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + [Content Fragments vs. Experience Fragments](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Utveckling {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
