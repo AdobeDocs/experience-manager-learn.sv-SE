@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 7%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 7%
    + [Resurssökning](./adobe-asset-link/asset-search.md)
 
 + Dynamic Media{#dynamic-media}
-   + [Dynamisk mediaöversikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Dynamic Media - översikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Smart beskärning](dynamic-media/smart-crop-feature-video-use.md)
    + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [Interaktiv video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
@@ -102,6 +102,7 @@ ht-degree: 7%
    + [Dynamic Media Classic Desktop Application](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
 
 + Översättning {#translation}
    + [Översättning av källfil](translation/source-file-translation-feature-video-use.md)
