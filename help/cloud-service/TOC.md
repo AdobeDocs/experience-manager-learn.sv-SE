@@ -5,9 +5,9 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '205'
 ht-degree: 19%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 19%
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
 + Migrering {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
+   + [Massimport av resurser](./migration/bulk-import.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
