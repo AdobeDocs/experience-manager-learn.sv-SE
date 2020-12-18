@@ -4,9 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '447'
 ht-degree: 4%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 4%
       + [Felsöka en Launch-implementering](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe-klientdatalagret {#adobe-client-data-layer}
       + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
       + [Samla in siddata med Adobe Analytics](integrations/analytics/collect-data-analytics.md)
       + [Spåra klickade komponenter med Adobe Analytics](integrations/analytics/track-clicked-component.md)
