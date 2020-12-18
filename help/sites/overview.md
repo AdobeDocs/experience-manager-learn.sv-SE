@@ -5,9 +5,9 @@ description: 'En samling videor och självstudiekurser för Adobe Experience Man
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites
 sub-product: webbplatser, innehållstjänster
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -19,21 +19,13 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 ## Nyheter
 
-* **[Komma igång med AEM och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)  (självstudiekurs)**
+* **[Anpassa Adobe-klientdatalagret med AEM](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *A getting started guide for developers to integrated a single page applications (SPA) with AEM using React*
+   *Lär dig hur du uppdaterar Adobe-klientdatalagret med innehåll från anpassade AEM-komponenter.*
 
-* **[Komma igång med AEM och vinkelredigerare](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)  (självstudiekurs)**
+* **[Komma igång med AEM Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *A getting started guide for developers to integrated a single page applications (SPA) with AEM using Angular*
-
-* **[Komma igång med AEM Headless (självstudiekurs)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
-
-   *Visa innehåll från AEM som ska användas av en intern mobilapp i ett headless CMS-scenario.*
-
-* **[Använda upplevelsefragment (videoserien)](./experience-fragments/experience-fragments-feature-video-use.md)**
-
-   *Läs mer om AEM Experience Fragments för att marknadsföra innehåll över flera kanaler.*
+   *Visa innehåll från AEM som ska användas av en intern mobilapp med hjälp AEM GraphQL API:er.*
 
 * **[Använda innehållsfragment (videoserie)](./content-fragments/content-fragments-feature-video-use.md)**
 
