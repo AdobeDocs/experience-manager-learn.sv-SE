@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -174,6 +174,8 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 ## Nästa steg
 
 Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [samla in siddata och skicka till Adobe Analytics](../analytics/collect-data-analytics.md).
+
+Eller läs hur du [anpassar Adobe-klientdatalagret med AEM komponenter](./data-layer-customize.md)
 
 
 ## Ytterligare resurser {#additional-resources}
