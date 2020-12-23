@@ -6,10 +6,10 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -182,6 +182,7 @@ ht-degree: 1%
    + [Använd användningsbehörighet för överförd PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
+   + [Användbara verktygstjänster](document-services/useful-utility-services.md)
 + Interaktiv kommunikation för tryckkanaler
 {#ic-print-channel-tutorial}
    + [Introduktion](ic-print-channel-tutorial/introduction.md)
