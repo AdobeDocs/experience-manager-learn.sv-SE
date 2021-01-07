@@ -4,7 +4,7 @@ seo-title: Komma igång med AEM Content Services - Kapitel 1 - Komma igång med 
 description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
 seo-description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
 workflow-type: tm+mt
 source-wordcount: '17502'
 ht-degree: 0%
@@ -599,7 +599,7 @@ Vi kommer att beskriva principerna och taktiken i följande avsnitt.
 >
 >Det här är ett antimönster. Använd den inte. Någonsin.
 
-Har du någonsin sett frågeparametrar som `?ck=398547283745`? De kallas cacheminnesmördare (&quot;ck&quot;). Tanken är att om du lägger till en frågeparameter kommer resursen inte att matchas. Om du dessutom lägger till ett slumpmässigt tal som parameterns värde (till exempel &quot;398547283745&quot;) blir URL-adressen unik och du ser till att ingen annan cache mellan AEM och skärmen kan cachelagra något. Vanligtvis är mellanliggande misstänkta ett&quot;Varnish&quot;-cache framför Dispatcher, ett CDN eller till och med webbläsarens cache. Igen: Gör inte så. Du vill verkligen att dina resurser ska cachas så mycket och så länge som möjligt. Cacheminnet är din vän. Dödar inte vänner.
+Har du någonsin sett frågeparametrar som `?ck=398547283745`? De kallas cacheminnesmördare (&quot;ck&quot;). Tanken är att om du lägger till en frågeparameter kommer resursen inte att cachelagras. Om du dessutom lägger till ett slumpmässigt tal som parameterns värde (till exempel &quot;398547283745&quot;) blir URL-adressen unik och du ser till att ingen annan cache mellan AEM och skärmen kan cachelagra något. Vanligtvis är mellanliggande misstänkta ett&quot;Varnish&quot;-cache framför Dispatcher, ett CDN eller till och med webbläsarens cache. Igen: Gör inte så. Du vill verkligen att dina resurser ska cachas så mycket och så länge som möjligt. Cacheminnet är din vän. Dödar inte vänner.
 
 #### Automatisk invalidering
 
