@@ -10,9 +10,9 @@ audience: developer
 kt: 4267
 thumbnail: 25907.jpg
 translation-type: tm+mt
-source-git-commit: cb5f3c323c433c9321ba26ac1194be0cd225a405
+source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Med plugin-programmet Adobe I/O Cloud Manager kan AIO CLI interagera med Adobe C
 
 Med plugin-programmet Adobe I/O Cloud Manager kan AIO CLI generera och köra Asset compute-arbetare via kommandot `aio asset-compute`.
 
-1. Kör `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
+1. Kör `aio plugins:install @adobe/aio-cli-plugin-asset-compute` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
 
 ### Konfigurera Adobe I/O CLI-autentisering
 
