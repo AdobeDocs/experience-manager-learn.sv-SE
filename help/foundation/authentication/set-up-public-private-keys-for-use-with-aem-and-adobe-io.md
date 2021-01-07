@@ -9,9 +9,9 @@ audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 3f973e36531a2d04cbaf6bb8dd70b39fef7d8b2f
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -114,10 +114,14 @@ Om du uppmanas att skapa en nyckelbehållare gör du det. Den här nyckelbehåll
 Klicka på **[!UICONTROL Add Private Key form KeyStore file]** i användarens nyckelbehållare och lägg till följande information:
 
 * **[!UICONTROL New Alias]**: nyckelns alias i AEM. Detta kan vara vad som helst och behöver inte motsvara namnet på nyckelbehållaren som skapades med kommandot openssl.
-* **[!UICONTROL Keystore File]**: utdata för kommandot openssl pkcs12 (keystore.p12)
-* **[!UICONTROL Private Key Alias]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-  passout` argument.
+* **[!UICONTROL KeyStore File]**: utdata för kommandot openssl pkcs12 (keystore.p12)
+* **[!UICONTROL KeyStore File Password]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-passout` argument.
+* **[!UICONTROL Private Key Alias]**: Värdet som anges för  `-name` argumentet i openssl pkcs12-kommandot ovan (dvs.  `my-key`).
+* **[!UICONTROL Private Key Password]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-passout` argument.
 
-* **[!UICONTROL Private Key Password]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-  passout` argument.
+>[!CAUTION]
+>
+>KeyStore-fillösenordet och lösenordet för den privata nyckeln är samma för båda indata. Om du anger ett lösenord som inte matchar importeras inte nyckeln.
 
 ### Kontrollera att den privata nyckeln har lästs in i AEM nyckelbehållare {#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
