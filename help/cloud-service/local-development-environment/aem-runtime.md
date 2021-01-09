@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
+source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,39 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
+
+## Simulera innehållsdistribution {#content-distribution}
+
+I en riktig Cloud Service distribueras innehåll från Författartjänsten till Publiceringstjänst med [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) och Adobe Pipeline. [Adobe Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) är en isolerad mikrotjänst som bara är tillgänglig i molnmiljön.
+
+Under utvecklingen kan det vara önskvärt att simulera distributionen av innehåll med hjälp av den lokala redigerings- och publiceringstjänsten. Detta kan uppnås genom att aktivera de äldre replikeringsagenterna.
+
+>[!NOTE]
+>
+> Replikeringsagenter är bara tillgängliga för användning i den lokala Quickstart JAR och ger bara en simulering av innehållsdistribution.
+
+1. Logga in på tjänsten **Författare** och gå till [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
+1. Klicka på **Standardagent (publicera)** för att öppna standardsatenten för replikering.
+1. Klicka på **Redigera** för att öppna agentens konfiguration.
+1. Uppdatera följande fält under fliken **Inställningar**:
+
+   + **Aktiverad**  - kontrollera true
+   + **Agentanvändar-ID**  - Lämna det här fältet tomt
+
+   ![Konfiguration av replikagent - Inställningar](assets/aem-runtime/settings-config.png)
+
+1. Uppdatera följande fält under fliken **Transport**:
+
+   + **URI** -  `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **Användare** -  `admin`
+   + **Lösenord** -  `admin`
+
+   ![Konfiguration av replikagent - transport](assets/aem-runtime/transport-config.png)
+
+1. Klicka på **OK** om du vill spara konfigurationen och aktivera **standardsvarningsagenten** för replikering.
+1. Nu kan du ändra innehåll i författartjänsten och publicera det i publiceringstjänsten.
+
+![Publicera sida](assets/aem-runtime/publish-page-changes.png)
 
 ## Snabbstarta JAR-startlägen
 
