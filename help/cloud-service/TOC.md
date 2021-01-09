@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: 81c704240f163ccd151a61643f589f825a288705
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 19%
+source-wordcount: '218'
+ht-degree: 20%
 
 ---
 
@@ -23,6 +23,12 @@ ht-degree: 19%
    + [Introduktion till Sling](./underlying-technology/introduction-sling.md)
    + [Introduktion till redigerings- och publiceringsnivå](./underlying-technology/introduction-author-publish.md)
    + [Introduktion till Dispatcher](./underlying-technology/introduction-dispatcher.md)
++ Cloud Manager {#cloud-manager}
+   + [Program](./cloud-manager/programs.md)
+   + [Miljöer](./cloud-manager/environments.md)
+   + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
+   + [Aktivitet](./cloud-manager/activity.md)
 + Konfigurera lokal utvecklingsmiljö {#local-development-environment-set-up}
    + [Översikt](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
