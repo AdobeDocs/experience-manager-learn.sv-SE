@@ -8,10 +8,10 @@ audience: author
 doc-type: feature video
 activity: use
 version: cloud-service
-kt: 4301
+kt: 4671
 thumbnail: 32052.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 8d0e6f2c4c979e6704cae08e766300baf7ef8ad0
 workflow-type: tm+mt
 source-wordcount: '19'
 ht-degree: 0%
