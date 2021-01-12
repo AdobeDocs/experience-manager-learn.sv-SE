@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: c551eb984d8fefe19a979ce8c556289caa6805d8
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Kör följande kommando från roten för det nyskapade Asset compute-projektet f
 $ aio app use
 ```
 
-Kontrollera att den aktuella arbetsytans information är korrekt och snygg `Y` eller ange för att generera en `console.json`. Om `.env` och `.aio` identifieras som befintliga trycker du på `x` för att hoppa över skapandet av dem.
+Kontrollera att den aktuella informationen om arbetsytan är korrekt, tryck på `Y` eller ange för att generera en `console.json`. Om `.env` och `.aio` identifieras som befintliga trycker du på `x` för att hoppa över skapandet av dem.
 
 ## Granska projektets status
 
