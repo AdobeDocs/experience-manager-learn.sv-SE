@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: c551eb984d8fefe19a979ce8c556289caa6805d8
+source-git-commit: 676d4bfceaaec3ae8d4feb9f66294ec04e1ecd2b
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,6 @@ asset compute-projekt är Node.js-projekt som genereras med Adobe I/O CLI och so
 >[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
 
 _Klicka igenom för att generera ett Asset compute-projekt (inget ljud)_
-
 
 Använd [Adobe I/O CLI Asset compute plugin](../set-up/development-environment.md#aio-cli) för att generera ett nytt, tomt Asset compute-projekt.
 
@@ -59,6 +58,20 @@ $ aio app use
 ```
 
 Kontrollera att den aktuella informationen om arbetsytan är korrekt, tryck på `Y` eller ange för att generera en `console.json`. Om `.env` och `.aio` identifieras som befintliga trycker du på `x` för att hoppa över skapandet av dem.
+
+Om du skapar nya eller skriver över `.env` lägger du till nycklar/värden som saknas i nya `.env`:
+
+```
+## please provide the following environment variables for the Asset Compute devtool. You can use AWS or Azure, not both:
+#ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+#S3_BUCKET=
+#AWS_ACCESS_KEY_ID=
+#AWS_SECRET_ACCESS_KEY=
+#AWS_REGION=
+#AZURE_STORAGE_ACCOUNT=
+#AZURE_STORAGE_KEY=
+#AZURE_STORAGE_CONTAINER_NAME=
+```
 
 ## Granska projektets status
 
