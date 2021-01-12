@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,15 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 + __Upplösning__: Granska den anpassade arbetskoden och se till att alla asynkrona anrop görs synkrona med  `await`.
 
 ## Utvecklingsverktyg{#development-tool}
+
+### Console.json-filen saknas i Asset compute-projektet{#missing-console-json}
+
++ __Fel:__ Fel: Nödvändiga filer saknas vid validering (..)/node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) vid async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __Orsak:__   `console.json` Filen saknas i roten för Asset compute-projektet
++ __Upplösning:__ Ladda ned ett nytt  `console.json` formulär från ditt Adobe I/O-projekt
+   1. I console.adobe.io öppnar du det Adobe I/O-projekt som Asset compute har konfigurerats att använda
+   1. Tryck på knappen __Hämta__ i det övre högra hörnet
+   1. Spara den hämtade filen i roten av ditt Asset compute-projekt med filnamnet `console.json`
 
 ### Felaktigt YAML-indrag i manifest.yml{#incorrect-yaml-indentation}
 
@@ -95,7 +104,6 @@ asset compute Development Tool kan ha ett läge där inaktuella data hämtas, oc
    + Du kan också validera den testgenererade filen på `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`, verifiera att den är korrekt och använda den som den förväntade återgivningsfilen
 
 ## Felsök
-
 
 ### Felsökaren är inte kopplad{#debugger-does-not-attach}
 
