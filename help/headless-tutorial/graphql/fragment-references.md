@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment Delivery släpps i början av 2021.
-> Den relaterade dokumentationen är tillgänglig för förhandsgranskning.
+> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
+> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 Det går att referera till ett innehållsfragment inifrån andra innehållsfragment. Detta gör att användaren kan skapa komplexa datamodeller med relationer mellan fragment.
 
