@@ -11,7 +11,7 @@ audience: developer
 kt: 5878
 thumbnail: 5878-spa-react.jpg
 translation-type: tm+mt
-source-git-commit: 52748ff530e98c4ec21b84250bd73543899db4e4
+source-git-commit: e6da018a21155eca3a52dd562e469296b3c68c0d
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 0%
@@ -247,8 +247,8 @@ Reaktionskoden för den anpassade komponenten har redan skapats. Därefter gör 
 
    ```js
    return (
-           <div class="CustomComponent">
-               <h2 class="CustomComponent__message">{this.props.message}</h2>
+           <div className="CustomComponent">
+               <h2 className="CustomComponent__message">{this.props.message}</h2>
            </div>
        );
    ```
