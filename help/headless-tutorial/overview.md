@@ -2,9 +2,9 @@
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,8 @@ Adobe Experience Manager har flera alternativ för att definiera headless-slutpu
 
 >[!CAUTION]
 >
-> AEM GraphQL API for Content Fragment Delivery släpps i början av 2021.
-> Den relaterade dokumentationen är tillgänglig för förhandsgranskning.
+> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
+> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 AEM GraphQL API:er för innehållsfragment
 har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
