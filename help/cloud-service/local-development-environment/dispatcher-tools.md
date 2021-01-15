@@ -11,9 +11,9 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1566'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan validera
 
 + Användning:
    + Windows: `bin\validate src`
-   + macOS / Linux: `./bin/validate ./src`
+   + macOS / Linux: `./bin/validate.sh ./src`
 
 ## Kör Dispatcher lokalt
 
@@ -185,6 +185,13 @@ En eller flera parametrar kan skickas till `docker_run`
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
 
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
+
+### Loggfilsåtkomst
+
+Du kan komma åt Apache-webbservern och AEM Dispatcher-loggarna direkt i Docker-behållaren:
+
++ [Åtkomst till loggar i Docker-behållaren](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
++ [Kopiera Docker-loggarna till det lokala filsystemet](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## När Dispatcher Tools{#dispatcher-tools-version} ska uppdateras
 
