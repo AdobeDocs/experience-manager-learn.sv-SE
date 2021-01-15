@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5252
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Det är ofta användbart att &quot;svansen&quot; av `error.log` som direktuppspe
 
 Sändningsloggar skickas som utdata som stoppas när `bin/docker_run` anropas, men loggarna kan nås direkt med i Docker.
 
-### Åtkomst till loggar i Docker-behållaren
+### Åtkomst till loggar i Docker-behållaren{#dispatcher-tools-access-logs}
 
 Sändningsloggar kan användas direkt i Docker-behållaren på `/etc/httpd/logs`.
 
@@ -73,7 +73,10 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### Kopiera Docker-loggarna till det lokala filsystemet
+_Inmatningen  `<CONTAINER ID>` i  `docker exec -it <CONTAINER ID> /bin/sh` måste ersättas med det Docker CONTAINER ID som anges från  `docker ps` kommandot._
+
+
+### Kopiera Docker-loggarna till det lokala filsystemet{#dispatcher-tools-copy-logs}
 
 Sändningsloggar kan kopieras ut från Docker-behållaren på `/etc/httpd/logs` till det lokala filsystemet för kontroll med ditt favoritlogganalysverktyg. Observera att detta är en kopia som skickas vid en viss tidpunkt och inte innehåller realtidsuppdateringar av loggarna.
 
@@ -90,3 +93,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
+_Inmatningen  `<CONTAINER_ID>` i  `docker cp <CONTAINER_ID>:/var/log/apache2 ./` måste ersättas med det Docker CONTAINER ID som anges från  `docker ps` kommandot._
