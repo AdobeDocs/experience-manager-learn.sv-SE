@@ -6,10 +6,10 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '938'
+ht-degree: 1%
 
 ---
 
@@ -125,6 +125,18 @@ ht-degree: 0%
    + [Konvertera PDF-formulär till anpassat formulär](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
++ Signera flera Forms{#sign-multiple-documents}
+   + [Introduktion](sign-multiple-documents/introduction.md)
+   + [Konfigurera datakälla](sign-multiple-documents/configure-data-source.md)
+   + [Skapa OSGi-tjänst](sign-multiple-documents/create-osgi-service.md)
+   + [Skapa huvudarbetsflöde](sign-multiple-documents/create-main-workflow.md)
+   + [Uppdatera arbetsflöde för signaturstatus](sign-multiple-documents/update-signature-status.md)
+   + [Anpassa komponenten Sammanfattning](sign-multiple-documents/customize-summary-component.md)
+   + [Skapa klientbibliotek](sign-multiple-documents/create-client-lib.md)
+   + [Skapa formulärmall](sign-multiple-documents/create-af-template.md)
+   + [Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
+   + [Skapa Forms för signering](sign-multiple-documents/create-forms-for-signing.md)
+   + [Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
 + Variabler i AEM{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
