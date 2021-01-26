@@ -4,9 +4,9 @@ description: En samling självstudiekurser för Adobe Experience Manager (AEM) s
 sub-product: sajter, cloud manager, grund, resurser
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '277'
 ht-degree: 8%
 
 ---
@@ -19,6 +19,10 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## Nyheter
+
+* **[Autentisera till AEM som en Cloud Service från ett externt program (självstudiekurs)](../headless-tutorial/authentication/overview.md)**
+
+   *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM som en Cloud Service via HTTP*
 
 * **[Massimport (video)](./migration/bulk-import.md)**
 
@@ -36,9 +40,6 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 
    *Lär dig hur du konfigurerar IMS-användare i Adobe Admin Console så att de kan komma åt AEM*
 
-* **[Felsöka AEM som en Cloud Service (självstudiekurs)](./debugging/cloud-service/overview.md)**
-
-   *Utforska hur du felsöker AEM som en Cloud Service*
 
 ## Personalval
 
