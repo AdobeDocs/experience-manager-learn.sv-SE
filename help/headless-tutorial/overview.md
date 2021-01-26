@@ -2,9 +2,9 @@
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,13 @@ Ett modernt API för innehållsleverans är avgörande för effektiviteten och p
 
 För att övervinna dessa utmaningar tillhandahåller GraphQL ett frågebaserat API som gör att klienter kan fråga AEM efter endast det innehåll som behövs och ta emot via ett enda API-anrop.
 
-* Lär dig använda AEM GraphQL API:er med självstudiekursen [Komma igång med AEM GraphQL API:er](./graphql/overview.md)
+* Lär dig använda AEM GraphQL API:er i självstudiekursen [Komma igång med AEM GraphQL API:er](./graphql/overview.md)
+
+## Självstudiekurs om tokenbaserad autentisering
+
+AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan kanter, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
+
+* Lär dig hur du autentiserar till AEM via HTTP med åtkomsttoken i [Autentiserar till AEM som en Cloud Service från en extern programsjälvstudiekurs](./authentication/overview.md)
 
 ## AEM Content Services, genomgång
 
@@ -39,7 +45,7 @@ AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria
 
 AEM Content Services tillåter att samma innehållsavvikelser som används för att skapa webbsidor i AEM Sites definierar innehållet och schemana för dessa HTTP API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON API:er som kan användas i alla applikationer.
 
-* Lär dig hur du använder AEM Content Services: [Självstudiekursen Komma igång med AEM Content Services](./content-services/overview.md)
+* Lär dig använda AEM Content Services i självstudiekursen [Komma igång med AEM Content Services](./content-services/overview.md)
 
 ## AEM GraphQL vs. AEM Content Services
 
