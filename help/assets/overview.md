@@ -3,9 +3,9 @@ title: AEM Assets Videos och Tutorials
 description: En samling videor och självstudiekurser för Adobe Experience Manager Assets
 sub-product: resurser, dynamiska medier
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '227'
 ht-degree: 3%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 3%
 Adobe Experience Manager Assets är ett verktyg för digital resurshantering på AEM Platform som gör att användare kan skapa, hantera och dela sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
 ## Nyheter
+
+
+* **[Publicera resurser (video)](./sharing/publish.md)**
+
+   *Lär dig allt om att publicera material från AEM Author till AEM Publish*
 
 * **[Vattenstämplar (video)](./advanced/watermarks.md)**
 
@@ -32,10 +37,6 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 * **[Bearbetar profiler (video)](./configuring/processing-profiles.md)**
 
    *Upptäck hur Assets microservices anropas för att återge resurser*
-
-* **[Använda resurssamlingar (video)](./search-and-discovery/collections.md)**
-
-   *Se hur Collections i AEM Assets ger nya sätt att ordna och upptäcka material*
 
 ## Personalval
 
@@ -68,11 +69,11 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamisk mediaöversikt" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media - översikt" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamisk mediaöversikt</strong>
+      <strong>Dynamic Media - översikt</strong>
       </a>
    </div>
    <p>
