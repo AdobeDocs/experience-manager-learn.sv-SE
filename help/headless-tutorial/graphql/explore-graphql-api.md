@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Ett vanligt krav är att fråga efter flera innehållsfragment.
 
    `fullName` och  `occupation` är enkla egenskaper. Kom ihåg följande i kapitlet [Defining Content Fragment Models](./content-fragment-models.md): `fullName` och `occupation` är de värden som används när du definierar **egenskapsnamnet** för respektive fält.
 
-1. `pictureReference` och  `biography` representerar mer komplexa fält. Uppdatera frågan med följande om du vill returnera data om fälten `pictureReference` och `biography`.
+1. `pictureReference` och  `biographyText` representerar mer komplexa fält. Uppdatera frågan med följande om du vill returnera data om fälten `pictureReference` och `biographyText`.
 
    ```graphql
    {
@@ -82,7 +82,7 @@ Ett vanligt krav är att fråga efter flera innehållsfragment.
          _path
          fullName
          occupation
-         biography {
+         biographyText {
            html
          }
          pictureReference {
@@ -97,7 +97,7 @@ Ett vanligt krav är att fråga efter flera innehållsfragment.
    }
    ```
 
-   `biography` är ett textfält med flera rader och med GraphQL API kan vi välja olika format för resultaten, till exempel  `html`,  `markdown`eller  `json`   `plaintext`.
+   `biographyText` är ett textfält med flera rader och med GraphQL API kan vi välja olika format för resultaten, till exempel  `html`,  `markdown`eller  `json`   `plaintext`.
 
    `pictureReference` är en innehållsreferens och förväntas vara en bild. Därför används det inbyggda  `ImageRef` objektet. Detta gör att vi kan begära ytterligare data om bilden som ska refereras, som `width` och `height`.
 
