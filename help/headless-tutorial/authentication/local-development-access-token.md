@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330477.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM 
 
 ![Hämta en lokal åtkomsttoken för utveckling](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token.
+Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
 
 1. I [Adobe AdminConsole](https://adminconsole.adobe.com/) ser du till att du, utvecklaren, är medlem i:
    + __Cloud Manager -__ DeveloperIMS-produktprofil (ger åtkomst till AEM Developer Console)
@@ -44,7 +44,7 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-t
 
 ![AEM Developer Console - integreringar - Get Local Development Token](./assets/local-development-access-token/developer-console.png)
 
-## Hämta token för lokal utvecklingsåtkomst{#download-local-development-access-token}
+## Använde token för lokal utvecklingsåtkomst{#use-local-development-access-token}
 
 ![Åtkomsttoken för lokal utveckling - externt program](assets/local-development-access-token/local-development-access-token-external-application.png)
 
@@ -55,11 +55,11 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-t
 1. Det externa programmet konstruerar HTTP-begäranden som ska AEM som en Cloud Service och lägger till Local Development Access Token som en Bearer-token i HTTP-begärandenas auktoriseringshuvud
 1. AEM som en Cloud Service tar emot HTTP-begäran, autentiserar begäran och utför det arbete som begärdes av HTTP-begäran och returnerar ett HTTP-svar till det externa programmet
 
-### Det externa programmet
+### Externt exempelprogram
 
 Vi ska skapa ett enkelt externt JavaScript-program som illustrerar hur du programmässigt får åtkomst till AEM som en Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_-program eller -system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att programmässigt autentisera till och få åtkomst till AEM som en Cloud Service. I [nästa avsnitt](./service-credentials.md) uppdaterar vi den här programkoden så att den stöder metoden för att generera en token för användning i produktionen.
 
-Det här programmet körs från kommandoraden och uppdaterar metadata AEM resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
+Det här exempelprogrammet körs från kommandoraden och uppdaterar metadata AEM resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
 
 1. Läser in parametrar från kommandoraden (`getCommandLineParams()`)
 1. Hämtar åtkomsttoken som används för att autentisera AEM som en Cloud Service (`getAccessToken(...)`)
@@ -208,11 +208,11 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    }
    ```
 
-   Granska `fetch(..)`-anropen i `listAssetsByFolder(...)` och `updateMetadata(...)` och lägg märke till `headers` för att definiera rubriken för HTTP-begäran med värdet `Bearer <ACCESS TOKEN>`. `Authorization` Det är så här HTTP-begäran som kommer från det externa programmet autentiseras som en Cloud Service AEM.
+   Granska `fetch(..)`-anropen i `listAssetsByFolder(...)` och `updateMetadata(...)` och lägg märke till `headers` för att definiera rubriken för HTTP-begäran med värdet `Bearer ACCESS_TOKEN`. `Authorization` Det är så här HTTP-begäran som kommer från det externa programmet autentiseras som en Cloud Service AEM.
 
    ```javascript
    ...
-   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json?configid=ims`, {
+   return fetch(`${params.aem}${ASSETS_HTTP_API}${folder}.json`, {
                method: 'get',
                headers: { 
                    'Content-Type': 'application/json',
@@ -267,4 +267,6 @@ Kontrollera att metadata har uppdaterats genom att logga in på AEM som en Cloud
 
 ## Nästa steg
 
-Nu när vi programmässigt har använt AEM som Cloud Service med hjälp av den lokala utvecklingstoken måste vi uppdatera koden till.
+Nu när vi programmässigt har använt AEM som Cloud Service med hjälp av den lokala utvecklingstoken, måste vi uppdatera programmet så att det kan hantera tjänstens autentiseringsuppgifter, så att programmet kan användas i ett produktionssammanhang.
+
++ [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
