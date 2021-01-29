@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ Integrationer med AEM som Cloud Service måste kunna autentiseras säkert till A
 
 Tjänstautentiseringsuppgifter kan se ut som [token för lokal utvecklingsåtkomst](./local-development-access-token.md), men skiljer sig på några viktiga sätt:
 
-+ Tjänstautentiseringsuppgifterna är _inte_ åtkomsttokens, utan de är autentiseringsuppgifter som används för att hämta åtkomsttokens.
-+ Autentiseringsuppgifterna för tjänsten är permanenta och ändras inte om de inte återkallas, medan token för lokal utvecklingsåtkomst upphör att gälla dagligen.
-+ Tjänstautentiseringsuppgifter för en AEM som en Cloud Service-miljömappning till en enda AEM-användare, medan token för lokal utvecklingsåtkomst autentiseras som den AEM användare som genererade åtkomsttoken.
++ Tjänstautentiseringsuppgifterna är _inte_ åtkomsttokens, utan de är autentiseringsuppgifter som används för att _hämta_-åtkomsttoken.
++ Autentiseringsuppgifterna för tjänsten är mer permanenta (upphör att gälla var 365:e dag) och ändras inte om de inte återkallas, medan token för lokal utvecklingsåtkomst upphör att gälla dagligen.
++ Tjänstautentiseringsuppgifter för en AEM som en Cloud Service-miljömappning till en enskild AEM-användare, medan Local Development Access-token autentiseras som den AEM användare som genererade åtkomsttoken.
+
+Både tjänstautentiseringsuppgifter och åtkomsttoken som de genererar, liksom token för lokal utvecklingsåtkomst, bör hållas hemliga eftersom alla tre kan användas för att få åtkomst till sina respektive AEM som en Cloud Service-miljö
 
 ## Generera autentiseringsuppgifter för tjänsten
 
@@ -39,7 +41,7 @@ Generering av servicereferenser delas upp i två steg:
 
 ### Initiering av tjänstautentiseringsuppgifter
 
-Till skillnad från Local Development Access-token kräver tjänstautentiseringsuppgifter en engångsininitiering av Adobe Org IMS-administratören innan de kan hämtas.
+Till skillnad från Local Development Access-token krävs en _engångsininitiering_ av IMS-administratören för Adobe-organisationen innan de kan hämtas.
 
 ![Initiera autentiseringsuppgifter för tjänsten](assets/service-credentials/initialize-service-credentials.png)
 
@@ -55,7 +57,7 @@ __Detta är en engångsinitiering per AEM som en Cloud Service-miljö__
 
 ![AEM Developer Console - Integreringar - Hämta tjänstautentiseringsuppgifter](./assets/service-credentials/developer-console.png)
 
-När AEM som Cloud Service-miljöns tjänstautentiseringsuppgifter har initierats kan andra användare hämta dem.
+När AEM som Cloud Service-miljöns tjänstautentiseringsuppgifter har initierats kan andra AEM i din Adobe IMS-organisation hämta dem.
 
 ### Hämta tjänstens autentiseringsuppgifter
 
@@ -71,7 +73,7 @@ När du hämtar tjänstens autentiseringsuppgifter följer du samma steg som ini
 1. Tryck på fliken __Integreringar__
 1. Tryck på knappen __Hämta tjänstinloggningsuppgifter__
 1. Tryck på nedladdningsknappen i det övre vänstra hörnet om du vill hämta JSON-filen som innehåller värdet för tjänstens autentiseringsuppgifter och spara filen på en säker plats.
-   + _Kontakta Adobe Support omedelbart om dessa användaruppgifter inte fungerar som de ska_
+   + _Om inloggningsuppgifterna är i konflikt kontaktar du Adobe Support omedelbart för att få dem återkallade_
 
 ## Installera tjänstens autentiseringsuppgifter
 
@@ -137,38 +139,38 @@ Exempelprogrammet är Node.js-baserat, så det är bäst att använda [@adobe/jw
 
 1. Uppdatera `getAccessToken(..)` för att inspektera JSON-filens innehåll och kontrollera om den representerar en lokal utvecklingstoken eller tjänstautentiseringsuppgifter. Detta kan du enkelt göra genom att kontrollera om egenskapen `.accessToken` finns, som bara finns för Local Development Access Token JSON.
 
-Om tjänstautentiseringsuppgifter anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Vi använder [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)-funktionen `auth(...)` som båda genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop.  Parametrarna för `auth(..)` är ett [JSON-objekt som består av specifik information](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som är tillgänglig från JSON för tjänstinloggningsuppgifter, vilket beskrivs nedan i koden.
+   Om tjänstautentiseringsuppgifter anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Vi använder [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)-funktionen `auth(...)` som båda genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop.  Parametrarna för `auth(..)` är ett [JSON-objekt som består av specifik information](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som är tillgänglig från JSON för tjänstinloggningsuppgifter, vilket beskrivs nedan i koden.
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   Beroende på vilken JSON-fil (Local Development Access Token JSON eller Service Credentials JSON) som skickas via kommandoradsparametern `file`, kommer programmet att erhålla en åtkomsttoken.
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
-
-         return access_token;
-     }
- }
-```
-
-    Beroende på vilken JSON-fil (Local Development Access Token JSON eller Service Credentials JSON) som skickas via kommandoradsparametern &quot;file&quot;, kommer programmet nu att erhålla en åtkomsttoken.
-    
-    Kom ihåg att även om inloggningsuppgifterna inte upphör att gälla så måste JWT och motsvarande åtkomsttoken uppdateras 12 timmar efter att de har utfärdats. Detta kan du göra genom att använda en &quot;refresh_token&quot; [tillhandahålls av Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
+   Kom ihåg att även om inloggningsuppgifterna inte upphör att gälla så måste JWT och motsvarande åtkomsttoken uppdateras innan de går ut. Detta kan du göra genom att använda en `refresh_token` [som tillhandahålls av Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
 
 1. När dessa ändringar är på plats och JSON för tjänstreferenser har hämtats från AEM Developer Console (och för enkelhetens skull, sparats som `service_token.json` samma mapp som denna `index.js`) kör du programmet som ersätter kommandoradsparametern `file` med `service_token.json` och uppdaterar `propertyValue` till ett nytt värde så att effekterna syns i AEM.
 
@@ -241,11 +243,6 @@ Utdata till terminalen ser ut så här:
 1. Granska värdet för den uppdaterade egenskapen, till exempel __Copyright__ som är mappad till den uppdaterade JCR-egenskapen `metadata/dc:rights`, som nu återspeglar värdet som anges i parametern `propertyValue`, till exempel __WKND begränsad användning__
 
 ![WKND - metadatauppdatering med begränsad användning](./assets/service-credentials/asset-metadata.png)
-
-## Återkallar tjänstens autentiseringsuppgifter
-
-
-
 
 ## Grattis!
 
