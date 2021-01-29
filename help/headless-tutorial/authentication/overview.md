@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330460.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -43,27 +43,27 @@ Körningsflödet för programmet Node.js är följande:
 
 1. Programmet Node.js anropas från kommandoraden
 1. Parametrar för kommandorad definierar:
-   + AEM som Cloud Service värd att ansluta till (`aem`)
+   + AEM som Cloud Service Author Service Host att ansluta till (`aem`)
    + Den AEM resursmapp vars resurser ska uppdateras (`folder`)
    + Egenskapen och värdet för metadata som ska uppdateras (`propertyName` och `propertyValue`)
    + Den lokala sökvägen till filen med de autentiseringsuppgifter som krävs för att få åtkomst till AEM som Cloud Service (`file`)
-1. Åtkomsttoken som används för att autentisera AEM härleds från JSON-filen för autentiseringsuppgifter som anges av kommandoradsparametrarna
+1. Åtkomsttoken som används för att autentisera AEM härleds från JSON-filen som tillhandahålls via kommandoradsparametern `file`
 
-   a. Om tjänstautentiseringsuppgifter som används för icke-lokal utveckling anges i JSON-autentiseringsuppgifterna hämtas åtkomsttoken från API:er för Adobe IMS
-1. Programmet använder åtkomsttoken för att få åtkomst till AEM och lista alla resurser i mappen som anges i kommandoradsparametrarna
-1. För varje resurs i mappen uppdaterar programmet sina metadata baserat på egenskapsnamnet och värdet som anges i kommandoradsparametrarna
+   a. Om tjänstautentiseringsuppgifter som används för icke-lokal utveckling anges i JSON-filen (`file`) hämtas åtkomsttoken från Adobe IMS API:er
+1. Programmet använder åtkomsttoken för att få åtkomst till AEM och lista alla resurser i mappen som anges i kommandoradsparametern `folder`
+1. För varje resurs i mappen uppdaterar programmet sina metadata baserat på egenskapsnamnet och värdet som anges i kommandoradsparametrarna `propertyName` och `propertyValue`
 
 Även om det här exempelprogrammet är Node.js, kan dessa interaktioner utvecklas med olika programmeringsspråk och köras från andra externa system.
 
 ## Åtkomsttoken för lokal utveckling
 
-Token för lokal utvecklingsåtkomst genereras för en specifik AEM som en Cloud Service och ger tillgång till författar- och publiceringstjänster.  Dessa åtkomsttoken är tillfälliga och ska bara användas för att utveckla externa program eller system som interagerar med AEM via HTTP. Istället för att utvecklaren behöver skaffa och hantera äkta Service Credentials kan han eller hon snabbt och enkelt generera en temporär åtkomsttoken så att han eller hon kan utveckla sin integrering.
+Token för lokal utvecklingsåtkomst genereras för en specifik AEM som en Cloud Service och ger tillgång till författar- och publiceringstjänster.  Dessa åtkomsttoken är temporära och ska bara användas under utvecklingen av externa program eller system som interagerar med AEM via HTTP. Istället för att utvecklaren behöver skaffa och hantera äkta Service Credentials kan han eller hon snabbt och enkelt generera en temporär åtkomsttoken så att han eller hon kan utveckla sin integrering.
 
 + [Så här använder du Local Development Access Token](./local-development-access-token.md)
 
 ## Tjänstautentiseringsuppgifter
 
-Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera och interagera med AEM som en Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte direkt till AEM för autentisering, utan det externa programmet använder dessa för att generera en JWT, som byts ut mot Adobe IMS-programmeringsgränssnitten _för_ en säker åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden som AEM som en Cloud Service.
+Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till och interagera med AEM som en Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan i det externa programmet används dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _för_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden som AEM som en Cloud Service.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
 
