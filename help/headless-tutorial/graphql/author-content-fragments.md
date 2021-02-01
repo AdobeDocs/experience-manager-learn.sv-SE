@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
 
 # Skapa innehållsfragment {#authoring-content-fragments}
-
->[!CAUTION]
->
-> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
-> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 I det här kapitlet skapar och redigerar du ett nytt innehållsfragment baserat på [den nydefinierade modellen för Contributor-innehållsfragment](./content-fragment-models.md). Du får också lära dig hur du skapar varianter av innehållsfragment.
 
