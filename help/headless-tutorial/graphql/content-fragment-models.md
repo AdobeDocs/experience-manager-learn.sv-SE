@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
 
 
 # Definiera modeller för innehållsfragment {#content-fragment-models}
-
->[!CAUTION]
->
-> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
-> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 I det här kapitlet får du lära dig att modellera innehåll och skapa ett schema med **modeller för innehållsfragment**. Du kommer att granska befintliga modeller och skapa en ny modell. Du får också lära dig mer om de olika datatyper som kan användas för att definiera ett schema som en del av modellen.
 
