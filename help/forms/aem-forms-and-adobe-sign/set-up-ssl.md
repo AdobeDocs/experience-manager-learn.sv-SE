@@ -10,7 +10,7 @@ version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
