@@ -6,9 +6,9 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '943'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 1%
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Konfigurera OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
++ [Skapa ditt första OSGi-paket](adaptive-forms/create-your-first-osgi-bundle.md)
 + Skapar ditt första anpassade formulär {#creating-your-first-adaptive-form}
    + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
