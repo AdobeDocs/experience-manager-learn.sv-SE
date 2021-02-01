@@ -10,10 +10,10 @@ user-guide-description: En självstudiekurs i flera delar för utvecklare som in
 breadcrumb-title: AEM Sites WKND Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 3%
 # Komma igång med AEM Sites - WKND självstudiekurs {#getting-started-wknd-tutorial-develop}
 
 + [Översikt över WKND-självstudiekurs](overview.md)
-+ [Projektinställningar](project-setup.md)
-+ [Grundläggande om komponenter](component-basics.md)
-+ [Sidor och mallar](pages-templates.md)
-+ [Klientbibliotek](client-side-libraries.md)
-+ [Formatsystem](style-system.md)
-+ [Egen komponent](custom-component.md)
-+ [Enhetstestning](unit-testing.md)
++ [1 - Projektinställningar](project-setup.md)
++ [2 - Komponentgrunder](component-basics.md)
++ [3 - Sidor och mallar](pages-templates.md)
++ [4 - Bibliotek på klientsidan](client-side-libraries.md)
++ [5 - Stilsystem](style-system.md)
++ [6 - Anpassad komponent](custom-component.md)
++ [7 - Enhetstestning](unit-testing.md)
