@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
 
 
 # Snabbinställningar {#setup}
-
->[!CAUTION]
->
-> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
-> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 I det här kapitlet finns en snabb konfiguration av en lokal miljö för att se ett externt program konsumera innehåll från AEM med hjälp AEM GraphQL API:er. Senare kapitel i självstudiekursen kommer att bygga vidare på den här inställningen.
 
@@ -67,10 +62,6 @@ I den här självstudien används [AEM som en Cloud Service-SDK](https://experie
 1. Ange ett administratörslösenord som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 1. Efter några minuter kommer AEM att slutföra installationen och ett nytt webbläsarfönster öppnas på [http://localhost:4502](http://localhost:4502).
 1. Logga in med användarnamnet `admin` och lösenordet `admin`.
-
->[!CAUTION]
->
-> För att kunna fortsätta med installationen måste GraphQL-funktionen nu aktiveras manuellt i QuickStart SDK. Kontakta Adobe för ytterligare instruktioner. Det här manuella steget behövs bara tills funktionen släpps 2021.
 
 ## Installera exempelinnehåll{#wknd-site}
 
