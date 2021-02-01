@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
 
 
 # Avancerad datamodellering med fragmentreferenser
-
->[!CAUTION]
->
-> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
-> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 Det går att referera till ett innehållsfragment inifrån andra innehållsfragment. Detta gör att användaren kan skapa komplexa datamodeller med relationer mellan fragment.
 
