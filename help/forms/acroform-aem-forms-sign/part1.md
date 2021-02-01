@@ -1,6 +1,7 @@
 ---
 title: Acrobat med AEM Forms
 seo-title: Sammanfoga data i anpassat format med Acrobat
+description: Del 1 av Integrering av Acrobat med AEM Forms. Skapa ett adaptivt formulär med Acrobat och sammanfoga data för att få en PDF-fil.
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -8,9 +9,9 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
