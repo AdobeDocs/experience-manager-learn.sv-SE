@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**. Webbplatsen implementeras med:
+Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5.5.0+** och **AEM 6.4.8.1+**. Webbplatsen implementeras med:
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
@@ -40,6 +40,27 @@ Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service*
 * [Formatsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *Beräkna 1-2 timmar för att komma igenom varje del av självstudiekursen.*
+
+## Lokal utvecklingsmiljö {#local-dev-environment}
+
+En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs i en Mac OS-miljö med [Visual Studio Code](https://code.visualstudio.com/) som IDE. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
+
+### Nödvändig programvara
+
+Följande bör installeras lokalt:
+
+* Lokal AEM **Författare** instans (Cloud Service SDK, 6.5.5+ eller 6.4.8.1+)
+* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
+* [Node.js](https://nodejs.org/en/) (LTS - långsiktigt stöd)
+* [npm 6+](https://www.npmjs.com/)
+* [Git](https://git-scm.com/)
+
+>[!NOTE]
+>
+> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+>
+> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Om självstudiekursen {#about-tutorial}
 
@@ -67,31 +88,6 @@ Dessutom har varje del av självstudiekursen en egen gren i GitHub. Användaren 
 >[!NOTE]
 >
 > Om du arbetade med den tidigare versionen av den här självstudiekursen kan du fortfarande hitta [lösningspaketen](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1) och [koden](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1) på GitHub.
-
-## Lokal utvecklingsmiljö {#local-dev-environment}
-
-En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs i Mac OS-miljö. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
-
-**Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
-
-**Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
-
-### Nödvändig programvara
-
-Följande bör installeras lokalt:
-
-* [AEM som en Cloud Service ](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) SDKor  [AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) or  [AEM 6.4 + SP2](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) (endast AEM 6.5+)
-* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
-
-### Integrated Development Environment (IDE)
-
-I den här självstudien används [Eclipse](https://www.eclipse.org/) med [AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/) som IDE, men alla IDE som har stöd för Java- och Maven-projekt kan användas. Den här självstudiekursen är minimalt beroende av vissa IDE-funktioner.
-
-Mer information om hur du använder Eclipse eller andra utvecklingsmiljöer som [Visual Studio Code](https://code.visualstudio.com/) eller [IntelliJ](https://www.jetbrains.com/idea/), [finns i följande guide](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Referenswebbplats {#reference-site}
 
