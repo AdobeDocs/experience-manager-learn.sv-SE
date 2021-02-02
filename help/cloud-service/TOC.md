@@ -5,9 +5,9 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '270'
 ht-degree: 20%
 
 ---
@@ -16,24 +16,48 @@ ht-degree: 20%
 # Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Översikt](./overview.md)
++ Introduktion till AEM as a Cloud Service{#introduction}
+   + [Vad är AEM som en Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [Utveckling](./introduction/evolution.md)
+   + [Arkitektur](./introduction/architecture.md)
+   + [Cloud Manager](./introduction/cloud-manager.md)
 + Underliggande teknik {#underlying-technology}
-   + [Introduktion till AEM](./underlying-technology/introduction-architecture.md)
-   + [Introduktion till OSGi](./underlying-technology/introduction-osgi.md)
-   + [Introduktion till Java Content Repository](./underlying-technology/introduction-jcr.md)
-   + [Introduktion till Sling](./underlying-technology/introduction-sling.md)
-   + [Introduktion till redigerings- och publiceringsnivå](./underlying-technology/introduction-author-publish.md)
-   + [Introduktion till Dispatcher](./underlying-technology/introduction-dispatcher.md)
+   + [AEM](./underlying-technology/introduction-architecture.md)
+   + [OSGi](./underlying-technology/introduction-osgi.md)
+   + [Java Content Repository](./underlying-technology/introduction-jcr.md)
+   + [Sling](./underlying-technology/introduction-sling.md)
+   + [Författare och publiceringstjänster](./underlying-technology/introduction-author-publish.md)
+   + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [Program](./cloud-manager/programs.md)
    + [Miljöer](./cloud-manager/environments.md)
    + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivitet](./cloud-manager/activity.md)
+   + Dev Ops{#devops}
+      + [Distribuera kod](./cloud-manager/devops/deploy-code.md)
+      + [Sammanfoga projekt](./cloud-manager/devops/merge-projects.md)
+      + [Konfigurera pipelines](./cloud-manager/devops/configure-pipelines.md)
+      + [Kontinuerlig integrering](./cloud-manager/devops/continuous-integration.md)
+      + [Analysera testresultat](./cloud-manager/devops/analyze-test-results.md)
+      + [Dispatcher Configurations](./cloud-manager/devops/dispatcher-configurations.md)
+      + [API:er för Cloud Manager](./cloud-manager/devops/cloud-manager-apis.md)
 + Konfigurera lokal utvecklingsmiljö {#local-development-environment-set-up}
    + [Översikt](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
    + [Local Dispatcher Tools](./local-development-environment/dispatcher-tools.md)
++ Utveckling{#developing}
+   + Grundläggande om utveckling{#basics}
+      + [AEM SDK](./developing/basics/aem-sdk.md)
+      + [Lokal utvecklingsmiljö](./developing/basics/local-development-environment.md)
+      + [AEM Project Archetype](./developing/basics/aem-project-archetype.md)
+      + [AEM-projektstruktur](./developing/basics/project-structure.md)
+      + [Mutable vs. Immutable Content](./developing/basics/mutable-immutable.md)
+      + [Databasstrukturpaket](./developing/basics/repository-structure-package.md)
+      + [Content Publishing](./developing/basics/content-publishing.md)
+      + [OSGi-konfigurationer](./developing/basics/osgi-configurations.md)
+      + [Migrering av Dispatcher-konfiguration](./developing/basics/dispatcher-configuration.md)
 + Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
