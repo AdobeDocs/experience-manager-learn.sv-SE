@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,10 @@ I den här självstudien används [AEM som en Cloud Service-SDK](https://experie
 1. Gå till **[portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM som en Cloud Service** och hämta den senaste versionen av **AEM SDK**.
 
    ![Programdistributionsportal](assets/setup/software-distribution-portal-download.png)
+
+   >[!CAUTION]
+   >
+   > GraphQL-funktionen är som standard endast aktiverad för AEM SDK från 2021-02-04 eller senare.
 
 1. Zippa upp nedladdningen och kopiera Quickstart jar (`aem-sdk-quickstart-XXX.jar`) till en dedikerad mapp, d.v.s. `~/aem-sdk/author`.
 1. Ge filen ett nytt namn till `aem-author-p4502.jar`.
