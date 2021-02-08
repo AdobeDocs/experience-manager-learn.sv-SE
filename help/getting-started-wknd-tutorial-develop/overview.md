@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,8 @@ Följande bör installeras lokalt:
 * [Node.js](https://nodejs.org/en/) (LTS - långsiktigt stöd)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
+* [Visual Studio ](https://code.visualstudio.com/) Codeor equivalent IDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Verktyg som används genomgående i självstudiekursen
 
 >[!NOTE]
 >
