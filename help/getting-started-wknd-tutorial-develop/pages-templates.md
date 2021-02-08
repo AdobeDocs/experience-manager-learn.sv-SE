@@ -13,9 +13,9 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '3072'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,66 @@ Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträff
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
+Steg på hög nivå för videon nedan:
+
+### Strukturkonfigurationer
+
+1. Skapa en ny mall med **sidmallstyp**, med namnet **Artikelsida**.
+1. Växla till **Struktur**-läge.
+1. Lägg till en **Experience Fragment**-komponent som fungerar som **Header** överst i mallen.
+   * Konfigurera komponenten så att den pekar på `/content/experience-fragments/wknd/us/en/site/header/master`.
+   * Ställ in principen på **Sidhuvud** och kontrollera att **standardelementet** är inställt på `header`. `header`elementet kommer att ha CSS som mål i nästa kapitel.
+1. Lägg till en **Experience Fragment**-komponent som fungerar som **sidfot** längst ned i mallen.
+   * Konfigurera komponenten så att den pekar på `/content/experience-fragments/wknd/us/en/site/footer/master`.
+   * Ställ in principen på **Sidfot** och kontrollera att **Default Element** är inställt på `footer`. `footer`-elementet har CSS som mål i nästa kapitel.
+1. Lås **main**-behållaren som inkluderades när mallen skapades.
+   * Ställ in principen på **Sidhuvud** och kontrollera att **standardelementet** är inställt på `main`. `main`-elementet har CSS som mål i nästa kapitel.
+1. Lägg till en **Image**-komponent i **main**-behållaren.
+   * Lås upp komponenten **Image**.
+1. Lägg till en **Breadcrumb**-komponent under **Image**-komponenten i huvudbehållaren.
+   * Skapa en ny princip för **komponenten Breeze** med namnet **Artikelsida - Breadcrumb**. Ange **Navigeringens startnivå** till **4**.
+1. Lägg till en **Container**-komponent under **Breadcrumb**-komponenten och inuti **main**-behållaren. Detta fungerar som **innehållsbehållare** för mallen.
+   * Lås upp **Content**-behållaren.
+   * Ställ in principen på **Sidinnehåll**.
+1. Lägg till ytterligare en **Container**-komponent under **Innehållsbehållaren**. Detta fungerar som **Side Rail**-behållare för mallen.
+   * Lås upp behållaren **Side Rail**.
+   * Skapa en ny princip med namnet **Artikelsida - sidospalt**.
+   * Konfigurera **Tillåtna komponenter** under **WKND Sites Project - Content** till att inkludera: **Knapp**, **Ladda ned**, **Bild**, **Lista**, **Avgränsare**, **Delning av sociala medier**, &lt;a11 6/>Text **och** Titel **.**
+1. Uppdatera principen för sidrotsbehållaren. Det här är mallens yttre behållare. Ställ in principen på **Sidrot**.
+   * Under **Behållarinställningar** anger du **Layout** till **Responsivt rutnät**.
+1. Aktivera layoutläge för **innehållsbehållaren**. Dra handtaget från höger till vänster och krymp behållaren så att den är 8 kolumner bred.
+1. Aktivera layoutläge för **sidoskenans behållare**. Dra handtaget från höger till vänster och krymp behållaren så att den är 4 kolumner bred. Dra sedan det vänstra handtaget från vänster till höger 1 kolumn för att göra behållaren 3 kolumner bred och lämna ett kolumnmellanrum mellan **innehållsbehållaren**.
+1. Öppna mobilemulatorn och byt till en mobil brytpunkt. Aktivera layoutläget igen och gör **innehållsbehållaren** och **sidospaltbehållaren** till hela sidbredden. Detta kommer att stapla behållarna lodrätt i den mobila brytpunkten.
+1. Uppdatera principen för komponenten **Text** i **Innehållsbehållaren**.
+   * Ställ in principen på **Innehållstext**.
+   * Under **Plugin-program** > **Styckeformat** ska du kontrollera **Aktivera styckeformat** och kontrollera att **offertblocket** är aktiverat.
+
+### Inledande innehållskonfigurationer
+
+1. Växla till läget **Ursprungligt innehåll**.
+1. Lägg till en **Title**-komponent i **innehållsbehållaren**. Detta fungerar som artikelrubrik. När den lämnas tom visas den aktuella sidans titel automatiskt.
+1. Lägg till en andra **Title**-komponent under den första Title-komponenten.
+   * Konfigurera komponenten med texten: &quot;Av författare&quot;. Det här blir en textplatshållare.
+   * Ange typen som `H4`.
+1. Lägg till en **Text**-komponent under **By Author** Title-komponenten.
+1. Lägg till en **Title**-komponent i **Side Rail Container**.
+   * Konfigurera komponenten med texten: &quot;Dela den här artikeln&quot;.
+   * Ange typen som `H5`.
+1. Lägg till en **Dela sociala medier**-komponent under **Dela den här artikeln**.
+1. Lägg till en **avgränsarkomponent** under **Delning av sociala medier**-komponenten.
+1. Lägg till en **Hämta**-komponent under **avgränsarkomponenten**.
+1. Lägg till en **List**-komponent under **Hämta**-komponenten.
+1. Uppdatera **Inledande sidegenskaper** för mallen.
+   * Under **Delning av sociala medier** > **Delning av sociala medier** ska du kontrollera **Facebook** och **Pinterest**
+
+### Aktivera mallen och lägg till en miniatyrbild
+
+1. Visa mallen i mallkonsolen genom att gå till [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd)
+1. **Aktivera** artikelsidmallen.
+1. Redigera egenskaperna för artikelsidmallen och överför följande miniatyrbild för att snabbt identifiera sidor som skapats med artikelsidmallen:
+
+   ![Miniatyrbild av artikelsidmall](assets/pages-templates/article-page-template-thumbnail.png)
+
 ## Uppdatera sidhuvud och sidfot med Experience Fragments {#experience-fragments}
 
 Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel ett sidhuvud eller en sidfot, är att använda ett [Experience Fragment](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). Med Experience Fragments kan användare kombinera flera komponenter för att skapa en enda referensbar komponent. Experience Fragments har fördelen att det stöder hantering av flera webbplatser och [lokalisering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure).
@@ -102,13 +162,73 @@ Den AEM projekttypen genererade ett sidhuvud och en sidfot. Uppdatera sedan Expe
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-Hämta och installera exempelinnehållspaketet **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)**.
+Steg på hög nivå för videon nedan:
+
+1. Hämta exempelinnehållspaketet **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)**.
+1. Överför och installera innehållspaketet med Package Manager på [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
+1. Uppdatera webbvariationsmallen, som är den mall som används för Experience Fragments på [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)
+   * Uppdatera principen för komponenten **Container** i mallen.
+   * Ställ in principen på **XF Root**.
+   * Under **Tillåtna komponenter** markerar du komponentgruppen **WKND-platsprojekt - struktur** så att den inkluderar **språknavigering**, **navigering** och **snabbsökning**-komponenter.
+
+### Uppdatera rubrikupplevelsefragment
+
+1. Öppna det Experience Fragment som återger rubriken på [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/header/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/header/master.html)
+1. Konfigurera fragmentets rot **behållare**. Det här är den yttre mest **behållaren**.
+   * Ange **layouten** till **Responsivt rutnät**
+1. Lägg till **WKND Mörk logotyp** som en bild högst upp i **behållaren**. Logotypen ingick i paketet som installerades i ett tidigare steg.
+   * Ändra layouten för **WKND Mörk logotyp** till **2** kolumner bred. Dra handtagen från höger till vänster.
+   * Konfigurera logotypen med **Alternativ text** av &quot;WKND Logo&quot;.
+   * Konfigurera logotypen till **Länka** till `/content/wknd/us/en` hemsidan.
+1. Konfigurera den **navigeringskomponent** som redan finns på sidan.
+   * Ange **Uteslut rotnivåer** till **1**.
+   * Ange **Navigeringsstrukturdjupet** till **1**.
+   * Ändra layouten för **Navigation**-komponenten så att den är **8**-kolumner bred. Dra handtagen från höger till vänster.
+1. Ta bort komponenten **Språknavigering**.
+1. Ändra layouten för **Search**-komponenten till **2** kolumner bred. Dra handtagen från höger till vänster. Alla komponenter ska nu justeras vågrätt på en enda rad.
+
+### Uppdatera sidfotsupplevelsefragment
+
+1. Öppna det Experience Fragment som återger sidfoten på [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html)
+1. Konfigurera fragmentets rot **behållare**. Det här är den yttre mest **behållaren**.
+   * Ange **layouten** till **Responsivt rutnät**
+1. Lägg till **WKND Light-logotypen** som en bild högst upp i **behållaren**. Logotypen ingick i paketet som installerades i ett tidigare steg.
+   * Ändra layouten för **WKND Light-logotypen** till **2** kolumner bred. Dra handtagen från höger till vänster.
+   * Konfigurera logotypen med **Alternativ text** av &quot;WKND Logo Light&quot;.
+   * Konfigurera logotypen till **Länka** till `/content/wknd/us/en` hemsidan.
+1. Lägg till en **Navigation**-komponent under logotypen. Konfigurera komponenten **Navigation**:
+   * Ange **Uteslut rotnivåer** till **1**.
+   * Avmarkera **Samla in alla underordnade sidor**.
+   * Ange **Navigeringsstrukturdjupet** till **1**.
+   * Ändra layouten för **Navigation**-komponenten så att den är **8**-kolumner bred. Dra handtagen från höger till vänster.
 
 ## Skapa en artikelsida
 
 Skapa sedan en ny sida med hjälp av mallen Artikelsida. Skriv innehållet på sidan så att det matchar webbplatsens dummies. Följ stegen i videon nedan:
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
+
+Steg på hög nivå för videon nedan:
+
+1. Gå till webbplatskonsolen på [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
+1. Skapa en ny sida under **WKND** > **US** > **EN** > **Magazine**.
+   * Välj mallen **Artikelsida**.
+   * Under **Egenskaper** ställer du in **Title** till &quot;Ultimate Guide to LA Skateparks&quot;
+   * Ange **namnet** som &quot;guide-la-skateparks&quot;
+1. Ersätt **med författare** med texten&quot;By Stacey Roswells&quot;.
+1. Uppdatera **Text**-komponenten så att den innehåller ett stycke som du vill fylla i artikeln. Du kan använda följande textfil som kopia: [la-skate-parks-copy.txt](assets/pages-templates/la-skateparks-copy.txt).
+1. Lägg till en annan **Text**-komponent.
+   * Uppdatera komponenten så att den innehåller offerten: &quot;Det finns inget bättre ställe att dela med sig av än Los Angeles.&quot;
+   * Redigera RTF-redigeraren i helskärmsläge och ändra offerten ovan så att elementet **Citattecken** används.
+1. Fortsätt fylla i artikelns brödtext för att matcha dummies.
+1. Konfigurera komponenten **Hämta** för att använda en PDF-version av artikeln.
+   * Under **Hämta** > **Egenskaper** klickar du i kryssrutan för att **Hämta titeln från DAM-resursen**.
+   * Ange **Beskrivning** till: &quot;Hämta hela artikeln&quot;.
+   * Ange **åtgärdstexten** till: &quot;Ladda ned PDF&quot;.
+1. Konfigurera **List**-komponenten.
+   * Välj **Underordnade sidor** under **Listinställningar** > **Skapa lista med**.
+   * Ange **den överordnade sidan** till `/content/wknd/us/en/magazine`.
+   * Under **Objektinställningar** markerar du **Länkobjekt** och markerar **Visa datum**.
 
 ## Inspect nodstrukturen {#node-structure}
 
