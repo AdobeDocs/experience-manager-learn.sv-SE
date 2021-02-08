@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ I det här kapitlet ska vi utforska den underliggande tekniken i en Adobe Experi
 ## Förutsättningar {#prerequisites}
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+
+Den IDE som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync).
 
 ## Mål {#objective}
 
@@ -110,7 +112,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 1. Växla till IDE och öppna projektet i modulen `ui.apps`.
 1. Öppna filen `helloworld.html` och gör en ändring i HTML-koden.
-1. Använd IDE-verktygen för att synkronisera filändringen med den lokala AEM.
+1. Använd IDE-verktyg som [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) för att synkronisera filändringen med den lokala AEM.
 1. Återgå till webbläsaren och observera att komponentåtergivningen har ändrats.
 1. Öppna filen `.content.xml` som definierar dialogrutan för komponenten `HelloWorld` på:
 
@@ -209,14 +211,14 @@ Därefter uppdaterar vi `HelloWorldModel`-delningsmodellen för att tillämpa vi
        ...
    
        @ValueMapValue
-       protected String title;
+       private String title;
    
        @ValueMapValue
-       protected String text;
+       private String text;
    
-           @PostConstruct
-           protected void init() {
-               ...
+       @PostConstruct
+       protected void init() {
+           ...
    ```
 
 1. Lägg till följande metod `getTitle()` i klassen `HelloWorldModel` som returnerar värdet för egenskapen `title`. Den här metoden lägger till ytterligare logik för att returnera strängvärdet &quot;Default Value here!&quot; om egenskapen `title` är null eller tom:
@@ -349,6 +351,10 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
    ```
 
 1. Distribuera ändringarna till en lokal instans av AEM med utvecklarpluginen eller med dina Maven-kunskaper.
+
+   >[!NOTE]
+   >
+   > CSS och JavaScript cachelagras ofta av webbläsaren av prestandaskäl. Om du inte omedelbart ser ändringen för klientbiblioteket utför du en hård uppdatering och rensar webbläsarens cache. Det kan vara praktiskt att använda ett inkognito-fönster för att säkerställa en ny cache.
 
 ## Grattis! {#congratulations}
 
