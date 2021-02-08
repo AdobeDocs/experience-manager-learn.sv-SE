@@ -10,9 +10,9 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3291'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för s
 
    Varje fil mappar till en kärnkomponent som [dragspelskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components). Varje kärnkomponent byggs med [Blockelementsmodifierare](https://getbem.com/) eller BEM-notation för att göra det enklare att rikta in sig på specifika CSS-klasser med formatregler. Filerna under `/components` har grupperats ut av den AEM projektarkitekturen med olika BEM-regler för varje komponent.
 
-1. Ladda ned WKND Base Styles **[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)** och **zip** filen.
+1. Ladda ned WKND Base Styles **[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-srcv2.zip)** och **zip** filen.
 
    ![WKND-basformat](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
@@ -307,6 +307,10 @@ Sedan tittar vi på hur du refererar till klippen på AEM. Ett vanligt tillväga
    ...
    </body>
    ```
+
+   >[!NOTE]
+   >
+   > Om du fortsätter på 6.5/6.4 minimeras inte klientsidans bibliotek automatiskt. Se dokumentationen för [HTML-bibliotekshanteraren för att aktivera minimering (rekommenderas)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors).
 
    >[!WARNING]
    >
