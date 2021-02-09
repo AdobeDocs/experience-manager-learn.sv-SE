@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
+source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -180,6 +180,10 @@ Om du ändrar dessa kan du behöva justera AEM SDK-konfigurationer
 ## Stoppa en lokal AEM
 
 Om du vill stoppa en lokal AEM, antingen AEM Author eller Publish, öppnar du kommandoradsfönstret som användes för att starta AEM Runtime och trycker på `Ctrl-C`. Vänta på att AEM stängs av. Kommandoradsprompten är tillgänglig när avstängningsprocessen är slutförd.
+
+## Inställningsåtgärder för lokal AEM
+
++ __Konfigurationsmiljövariabler och hemliga__ variabler för OSGi ställs  [in särskilt för den AEM lokala miljön](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development), i stället för att de hanteras med AIR CLI.
 
 ## När QuickStart Jar ska uppdateras
 
