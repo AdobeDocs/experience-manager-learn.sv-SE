@@ -3,9 +3,9 @@ title: AEM Assets Videos och Tutorials
 description: En samling videor och självstudiekurser för Adobe Experience Manager Assets
 sub-product: resurser, dynamiska medier
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '230'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,9 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 
 ## Nyheter
 
+* **[Relatera och inte relatera (video)](./authoring/relate-unrelate.md)**
+
+   *Lär dig hur du upprättar och hanterar relationer mellan resurser i AEM*
 
 * **[Publicera resurser (video)](./sharing/publish.md)**
 
@@ -33,10 +36,6 @@ Adobe Experience Manager Assets är ett verktyg för digital resurshantering på
 * **[Starta arbetsflöden automatiskt (video)](./configuring/auto-start-workflows.md)**
 
    *Upptäck hur du automatiskt aktiverar AEM arbetsflöde för överförda eller ombearbetade resurser*
-
-* **[Bearbetar profiler (video)](./configuring/processing-profiles.md)**
-
-   *Upptäck hur Assets microservices anropas för att återge resurser*
 
 ## Personalval
 
