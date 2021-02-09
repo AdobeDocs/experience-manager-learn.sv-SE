@@ -6,9 +6,9 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
-+ [Konfigurera OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
++ [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
 + [Skapa ditt första OSGi-paket](adaptive-forms/create-your-first-osgi-bundle.md)
-+ Skapar ditt första anpassade formulär {#creating-your-first-adaptive-form}
++ Skapar ditt första adaptiva formulär {#creating-your-first-adaptive-form}
    + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -91,7 +91,7 @@ ht-degree: 1%
    + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
    + [Hämta begäranparameter](prefill-fdm-db/get-request-parameter.md)
    + [Skapa anpassat formulär](prefill-fdm-db/create-adaptive-form.md)
-+ Anpassning av inkorgen{#inbox-customization}
++ Anpassa inkorg{#inbox-customization}
    + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
    + [Använda enkel mall](inbox-customization/use-sightly-template.md)
@@ -183,6 +183,7 @@ ht-degree: 1%
    + [Del 4 - Skapa ACS-profil med hjälp av formulärdatamodell](aem-forms-with-adobe-campaign/partfour.md)
 
 + Dokumenttjänster {#document-services}
+   + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
    + [Använda Assembler Service i AEM Forms](document-services/using-assembler-service-in-aem-forms.md)
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Använda streckkodstjänsten i AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
