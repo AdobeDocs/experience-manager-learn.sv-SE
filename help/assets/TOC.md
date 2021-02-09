@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '262'
 ht-degree: 7%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 7%
    + [Grundläggande åtgärder](./authoring/basic-operations.md)
    + [Metadata](./authoring/metadata.md)
    + [Återgivningar](./authoring/renditions.md)
+   + [Relatera och inte relatera](./authoring/relate-unrelate.md)
 
 + Samarbete{#collaboration}
    + [Tidslinje och inkorg](./collaboration/timeline-and-inbox.md)
