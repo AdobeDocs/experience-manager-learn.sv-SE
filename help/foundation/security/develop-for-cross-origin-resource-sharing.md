@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
-Om du vill tillåta cachelagring och visning av [!DNL CORS]-huvuden i cachelagrat innehåll lägger du till följande konfiguration i alla AEM Publish `dispatcher.any`-filer som stöds.
+Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/clientheaders-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) i alla AEM Publish `dispatcher.any`-filer som stöds.
 
 ```
 /cache { 
   ...
-  /headers {
+  /clientheaders {
       "Access-Control-Allow-Origin",
       "Access-Control-Expose-Headers",
       "Access-Control-Max-Age",
@@ -115,7 +115,7 @@ Om du vill tillåta cachelagring och visning av [!DNL CORS]-huvuden i cachelagra
 
 **Starta om webbserverprogrammet** när du har gjort ändringar i  `dispatcher.any` filen.
 
-Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/headers`-konfigurationsuppdatering.
+Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/clientheaders`-konfigurationsuppdatering.
 
 ## Stödmaterial {#supporting-materials}
 
