@@ -10,9 +10,9 @@ audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
 translation-type: tm+mt
-source-git-commit: a405cf14d3f71bf51e32e50c828c3216d29aa253
+source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
 workflow-type: tm+mt
-source-wordcount: '2517'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -232,6 +232,7 @@ Så här validerar du problemet:
    1. Om `/var`-resurserna inte är nödvändiga tar du bort resurser under `/var` från innehållspaket som distribueras som en del av programmet.
    2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas mot AEM Author, AEM Publish eller båda, via OSGi-runmodes.
    3. Om `/var`-resurserna bara krävs av AEM författare och inte kan modelleras med [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit), flyttar du dem till ett diskret innehållspaket, som bara installeras på AEM Author genom att [bädda in](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) det i `all`-paketet i en AEM Author-körlägesmapp (`<target>/apps/example-packages/content/install.author</target>`).
+   4. Ange lämpliga åtkomstkontrollistor till `sling-distribution-importer`-tjänstanvändaren enligt beskrivningen i denna [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
 
 ### Skapa ett supportärende för Adobe
 
