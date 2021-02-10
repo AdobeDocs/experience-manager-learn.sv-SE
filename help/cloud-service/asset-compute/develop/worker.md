@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i
 1. Asset compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
 1. Binära data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och visas som __(4a)__ en textåtergivning och __(4b)__ beständiga till objektets metadatanod.
 
-Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet följer att den interna informationen för exekvering av Asset compute[ är tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html)
+Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet följer att den interna informationen för exekvering av Asset compute](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) är tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.[
 
 ## Anatomi för en arbetare
 
@@ -116,7 +116,7 @@ I den här arbetaren använder vi [jimp](https://www.npmjs.com/package/jimp) fö
 
 >[!WARNING]
 >
->Alla NPM-moduler för tillgångsändring stöds inte av Asset compute. npm-moduler som är beroende av befintliga program som ImageMagick eller operativsystemsberoende bibliotek. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
+>Alla NPM-moduler för tillgångsändring stöds inte av Asset compute. NPM-moduler som är beroende av program som ImageMagick eller andra OS-beroende bibliotek stöds inte. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
 
 1. Öppna kommandoraden i roten av ditt Asset compute-projekt (detta kan göras i VS-koden via __Terminal > New Terminal__) och kör kommandot:
 
@@ -237,7 +237,7 @@ class RenditionInstructionsError extends ClientError {
 
 När parametrarna har lästs, sanerats och validerats skrivs koden för att generera återgivningen. Pseudokoden för återgivningsgenereringen är följande:
 
-1. Skapa en ny arbetsyta i fyrkantiga dimensioner som anges med parametern `renditionImage`.`size`
+1. Skapa en ny arbetsyta i fyrkantiga dimensioner som anges med parametern `size`.`renditionImage`
 1. Skapa ett `image`-objekt från källresursens binärfil
 1. Använd biblioteket __Jimp__ för att omforma bilden:
    + Beskär originalbilden till en centrerad kvadrat
