@@ -9,7 +9,7 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
+source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 0%
@@ -102,11 +102,11 @@ Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat inneh
 /cache { 
   ...
   /clientheaders {
-      "Access-Control-Allow-Origin",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Origin"
+      "Access-Control-Expose-Headers"
+      "Access-Control-Max-Age"
+      "Access-Control-Allow-Credentials"
+      "Access-Control-Allow-Methods"
       "Access-Control-Allow-Headers"
   }
   ...
