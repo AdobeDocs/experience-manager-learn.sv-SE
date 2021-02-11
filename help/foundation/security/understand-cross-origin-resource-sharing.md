@@ -9,7 +9,7 @@ activity: understand
 audience: architect, developer
 doc-type: article
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
@@ -139,12 +139,12 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 ```
 /cache { 
   ...
-  /headers {
-      "Access-Control-Allow-Origin",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-      "Access-Control-Allow-Methods",
+  /clientheaders {
+      "Access-Control-Allow-Origin"
+      "Access-Control-Expose-Headers"
+      "Access-Control-Max-Age"
+      "Access-Control-Allow-Credentials"
+      "Access-Control-Allow-Methods"
       "Access-Control-Allow-Headers"
   }
   ...
@@ -153,7 +153,7 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 
 Kom ihåg att **starta om webbserverprogrammet** när du har gjort ändringar i `dispatcher.any`-filen.
 
-Det är troligt att cacheminnet behöver rensas helt för att säkerställa att rubrikerna cachas korrekt på nästa begäran efter en `/headers`-konfigurationsuppdatering.
+Det är troligt att cacheminnet behöver rensas helt för att säkerställa att rubrikerna cachas korrekt på nästa begäran efter en `/clientheaders`-konfigurationsuppdatering.
 
 ## Felsökning av CORS
 
@@ -168,7 +168,7 @@ Loggning finns under `com.adobe.granite.cors`:
 * Verifiera om begäran nekades av CORS-hanteraren och inte av autentiseringen, CSRF-tokenfilter, dispatcherfilter eller andra säkerhetslager
    * Om CORS-hanteraren svarar med 200, men `Access-Control-Allow-Origin`-huvudet saknas i svaret, kan du kontrollera om loggarna innehåller nekanden under [!DNL DEBUG] i `com.adobe.granite.cors`
 * Om dispatchercachelagring av [!DNL CORS]-begäranden är aktiverat
-   * Kontrollera att konfigurationen `/headers` används på `dispatcher.any` och att webbservern har startats om
+   * Kontrollera att konfigurationen `/clientheaders` används på `dispatcher.any` och att webbservern har startats om
    * Kontrollera att cachen rensades korrekt efter ändringar i OSGi eller dispatcher.konfigurationer.
 * vid behov, kontrollera om det finns autentiseringsuppgifter för begäran.
 
