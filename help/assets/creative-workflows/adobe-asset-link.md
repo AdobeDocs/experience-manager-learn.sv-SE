@@ -8,9 +8,9 @@ doc-type: feature video
 activity: use
 version: 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Asset Link v1.1 har nu stöd för direktlänkning mellan Adobe Asset Link 
 
 >[!NOTE]
 >
->Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/configure-aem-for-aal-prerelease.html).
+>Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
 
 
 ### Adobe Asset Link-funktioner
@@ -73,8 +73,6 @@ FPO-återgivningar är enkla ersättningar av de ursprungliga resurserna. De har
 * BMP
 
 Om en FPO-återgivning inte är tillgänglig för en viss resurs i AEM Assets refereras den ursprungliga högupplösta resursen i stället. För FPO-bilder visas status FPO på länkpanelen i InDesign.
-
-
 
 ## Om autentisering med Adobe Asset Link med AEM Assets{#understanding-adobe-asset-link-authentication-with-aem-assets}
 
