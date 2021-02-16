@@ -10,15 +10,20 @@ doc-type: article
 kt: 5882
 thumbnail: KT-5882.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
 
 # Konfigurera åtkomst till AEM som en Cloud Service
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_adobeims_overview"
+>title="Introduktion till Adobe IMS"
+>abstract="AEM som Cloud Service använder Adobe IMS (Identity Management System) för att underlätta inloggningen för sina användare, både administratörer och vanliga användare, till tjänsten AEM Author. Se hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM grupper och behörigheter för att ge detaljerad åtkomst till tjänsten AEM Author."
 
 AEM som Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, till tjänsten AEM Author. Se hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM grupper och behörigheter för att ge detaljerad åtkomst till tjänsten AEM Author.
 
@@ -30,7 +35,7 @@ Användare som behöver åtkomst till AEM Author-tjänsten hanteras som [Adobe I
 
 ## Adobe IMS-användargrupper
 
-Användare som använder AEM Author-tjänsten bör organiseras i logiska grupper med [Adobe IMS-användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html) i [Adobe AdminConsole](https://adminconsole.adobe.com). Användargrupper för Adobe IMS ger inte direkt behörighet eller åtkomst till AEM (detta är ett jobb för [Adobe IMS-produktprofiler](#adobe-ims-product-profiles)), men det är ett bra sätt att definiera logiska användargrupper som i sin tur kan översättas till specifika åtkomstnivåer i AEM Author-tjänsten, med hjälp av AEM grupper och behörigheter.
+Användare som använder AEM Author-tjänsten bör organiseras i logiska grupper med [Adobe IMS-användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html) i [Adobe AdminConsole](https://adminconsole.adobe.com). Användargrupper för Adobe IMS ger inte direkt behörighet eller åtkomst till AEM (det här är jobbet för [Adobe IMS-produktprofiler](#adobe-ims-product-profiles)), men det är ett bra sätt att definiera logiska användargrupper som i sin tur kan översättas till specifika åtkomstnivåer i AEM Author-tjänsten, med hjälp av AEM grupper och behörigheter.
 
 [Läs om användargrupper i Adobe IMS](./adobe-ims-user-groups.md)
 
