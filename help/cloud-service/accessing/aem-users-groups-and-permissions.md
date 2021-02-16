@@ -10,15 +10,22 @@ doc-type: feature video
 kt: 6060
 thumbnail: 39151.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 14%
+source-wordcount: '225'
+ht-degree: 13%
 
 ---
 
 
 # AEM användare, grupper och behörigheter
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_adobeims_aem_users_groups"
+>title="AEM användare, grupper och behörigheter"
+>abstract="Adobe Experience Manager bygger på användare av Adobe IMS, användargrupper och produktprofiler för att ge användare anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM grupper och behörigheter och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge smidig och anpassningsbar åtkomst till AEM."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en" text="IMS-stöd för Adobe Experience Manager as a Cloud Service"
+>additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEM användargrupper och deras behörigheter"
 
 Adobe Experience Manager bygger på användare av Adobe IMS, användargrupper och produktprofiler för att ge användare anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM grupper och behörigheter och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge smidig och anpassningsbar åtkomst till AEM.
 
