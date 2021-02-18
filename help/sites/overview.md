@@ -5,9 +5,9 @@ description: 'En samling videor och självstudiekurser för Adobe Experience Man
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites
 sub-product: webbplatser, innehållstjänster
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,11 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 ## Nyheter
 
-* **[Anpassa Adobe-klientdatalagret med AEM](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[Använda Launches with AEM Sites (Video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
+
+   *Läs mer om AEM Sites lanseringar och hur de kan användas för att förbereda webbinnehåll för framtida releaser.*
+
+* **[Anpassa Adobe-klientdatalagret med AEM (självstudiekurs)](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
    *Lär dig hur du uppdaterar Adobe-klientdatalagret med innehåll från anpassade AEM-komponenter.*
 
