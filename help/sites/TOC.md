@@ -4,9 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 4%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 4%
    + [Redigerbara mallar](page-authoring/template-editor-feature-video-use.md)
    + [Formatsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
+   + [Launches](page-authoring/launches.md)
 + Komponenter {#components}
    + [Komponentutveckling](components/component-development.md)
    + [Kärnkomponenter](components/core-components-feature-video-understand.md)
