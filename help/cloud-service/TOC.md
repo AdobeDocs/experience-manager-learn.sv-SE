@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 20%
+source-wordcount: '282'
+ht-degree: 17%
 
 ---
 
@@ -103,5 +103,11 @@ ht-degree: 20%
    + Avancerat{#advanced}
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
++ Tutorials i flera steg{#multi-step-tutorials}
+   + [Utveckling av AEM Sites](./develop-wknd-tutorial.md)
+   + [GraphQL](../headless-tutorial/graphql/overview.md)
+   + [SPA Editor (React)](../spa-react-tutorial/overview.md)
+   + [SPA (vinkelrät)](../spa-angular-tutorial/overview.md)
+   + [AEM Sites och Adobe Target](../aem-target-personalization/overview.md)
+   + [Tokenbaserad autentisering](../headless-tutorial/authentication/overview.md)
 
-+ [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](./develop-wknd-tutorial.md)
