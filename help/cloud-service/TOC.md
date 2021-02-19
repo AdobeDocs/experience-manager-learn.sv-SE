@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 17%
+source-wordcount: '320'
+ht-degree: 15%
 
 ---
 
@@ -104,10 +104,10 @@ ht-degree: 17%
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
 + Tutorials i flera steg{#multi-step-tutorials}
-   + [Utveckling av AEM Sites](./develop-wknd-tutorial.md)
-   + [GraphQL](../headless-tutorial/graphql/overview.md)
-   + [SPA Editor (React)](../spa-react-tutorial/overview.md)
-   + [SPA (vinkelrät)](../spa-angular-tutorial/overview.md)
-   + [AEM Sites och Adobe Target](../aem-target-personalization/overview.md)
-   + [Tokenbaserad autentisering](../headless-tutorial/authentication/overview.md)
+   + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
+   + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [SPA (vinkelrät)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
+   + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 
