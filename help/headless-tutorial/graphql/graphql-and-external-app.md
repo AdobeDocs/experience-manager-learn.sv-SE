@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Det beskrivs mer ingående i avsnittet [Snabbinställningar](./setup.md) i avsni
 
 1. Granska appen på [http://localhost:3000/](http://localhost:3000/). Exempelappen React består av två huvuddelar:
 
-   * Hemupplevelsen fungerar som ett index för WKND Adventures, men frågar __Adventure__ Content Fragments in AEM med GraphQL. I det här kapitlet ska vi ändra den här vyn så att den har stöd för filtrering av äventyren efter aktivitet.
+   * Hemupplevelsen fungerar som ett index för WKND Adventures genom att fråga __Adventure__ Content Fragments in AEM med GraphQL. I det här kapitlet ska vi ändra den här vyn så att den har stöd för filtrering av äventyren efter aktivitet.
 
       ![WKND GraphQL React-app - Hemupplevelse](./assets/graphql-and-external-app/react-home-view.png)
 
