@@ -1,8 +1,8 @@
 ---
-title: SPA | Komma igång med AEM SPA och vinkelrät
-description: Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett vinkelbaserat program som är integrerat med AEM SPA.
+title: SPA | Komma igång med AEM SPA Editor och Angular
+description: Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som startpunkt för en Angular som är integrerad med AEM SPA Editor.
 sub-product: platser
-feature: maven-archetype
+feature: maven-arketype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -13,7 +13,7 @@ thumbnail: 5309-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # SPA Editor Project {#create-project}
 
-Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett vinkelbaserat program som är integrerat med AEM SPA.
+Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som startpunkt för en Angular som är integrerad med AEM SPA Editor.
 
 ## Syfte
 
@@ -30,9 +30,9 @@ Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som u
 
 ## Vad du ska bygga
 
-I det här kapitlet kommer ett nytt AEM att distribueras baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet kommer att startas med en mycket enkel startpunkt för den vinkelformade SPA. Det projekt som används i detta kapitel kommer att fungera som grund för genomförandet av WKND-SPA och kommer att byggas vidare i framtida kapitel.
+I det här kapitlet kommer ett nytt AEM att distribueras baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet kommer att inledas med en mycket enkel startpunkt för SPA. Det projekt som används i detta kapitel kommer att fungera som grund för genomförandet av WKND-SPA och kommer att byggas vidare i framtida kapitel.
 
-![WKND SPA vinkelstartprojekt](./assets/create-project/what-you-will-build.png)
+![WKND SPA Angular Starter Project](./assets/create-project/what-you-will-build.png)
 
 *Ett klassiskt Hello World-meddelande.*
 
@@ -79,16 +79,16 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
    | Egenskap | Värde |
    |-----------------|---------------------------------------|
    | aemVersion | molnet |
-   | appTitle | WKND SPA Vinkel |
+   | appTitle | WKND SPA Angular |
    | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
-   | frontModule | vinklad |
+   | frontModule | angular |
    | package | com.adobe.aem.guides.wknd.spa.angular |
    | includeExamples | n |
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Vinkelkodsbasen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular code base](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
@@ -192,7 +192,7 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
    ...
    ```
 
-   `clientlib-angular.min.js` är den SPA som läses in på sidan och som ansvarar för återgivningen av innehållet.
+   `clientlib-angular.min.js` är den SPA som läses in på Angularna och som ansvarar för återgivningen av innehållet.
 
    *Var kommer innehållet ifrån?*
 
