@@ -1,8 +1,8 @@
 ---
-title: Utöka en komponent | Komma igång med AEM SPA och vinkelrät
+title: Utöka en komponent | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig att använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
 sub-product: platser
-feature: SPA Editor
+feature: SPA
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5871-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1986'
 ht-degree: 1%
 
 ---
@@ -129,7 +129,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
 
 6. I IDE-växeln till `ui.frontend`-modulen navigerar du till `ui.frontend/src/app/components/card`:
 
-   ![Start för vinkelkomponent](assets/extend-component/angular-card-component-start.png)
+   ![Start för angular Component](assets/extend-component/angular-card-component-start.png)
 
 7. Inspect filen `card.component.ts`.
 
@@ -139,7 +139,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
    MapTo('wknd-spa-angular/components/card')(CardComponent, CardEditConfig);
    ```
 
-   Granska de tre `@Input`-parametrarna i klassen för `src`, `alt` och `title`. Dessa är förväntade JSON-värden från den AEM komponenten som mappas till vinkelkomponenten.
+   Granska de tre `@Input`-parametrarna i klassen för `src`, `alt` och `title`. Dessa är förväntade JSON-värden från den AEM komponenten som ska mappas till komponenten Angular.
 
 8. Öppna filen `card.component.html`:
 
@@ -149,7 +149,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
    </div>
    ```
 
-   I det här exemplet har vi valt att återanvända den befintliga vinkelbildkomponenten `app-image` genom att helt enkelt skicka `@Input`-parametrarna från `card.component.ts`. Senare i självstudiekursen kommer ytterligare egenskaper att läggas till och visas.
+   I det här exemplet har vi valt att återanvända den befintliga Angularna Image component `app-image` genom att helt enkelt skicka `@Input`-parametrarna från `card.component.ts`. Senare i självstudiekursen kommer ytterligare egenskaper att läggas till och visas.
 
 ## Uppdatera mallprincipen
 
@@ -199,7 +199,7 @@ Därefter redigerar du komponenten `Card` med AEM SPA Editor.
 
 6. Uppdatera fliken **Resursmetadata** om du vill lägga till värden för **Alternativ text** och **Bildtext**.
 
-   Inga ytterligare ändringar visas efter att dialogrutan har uppdaterats. Om du vill visa de nya fälten för vinkelkomponenten måste du uppdatera segmentmodellen för `Card`-komponenten.
+   Inga ytterligare ändringar visas efter att dialogrutan har uppdaterats. Om du vill visa de nya fälten för komponenten Angular måste du uppdatera Sling Model för komponenten `Card`.
 
 7. Öppna en ny flik och gå till [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect innehållsnoderna under `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` för att hitta `Card`-komponentinnehållet.
 
@@ -209,7 +209,7 @@ Därefter redigerar du komponenten `Card` med AEM SPA Editor.
 
 ## Uppdatera kortförsäljningsmodell
 
-För att exponera värdena från komponentdialogrutan för den vinkelformade komponenten måste vi uppdatera Sling-modellen som fyller i JSON för `Card`-komponenten. Vi har också möjlighet att implementera två affärslogikfunktioner:
+För att slutligen visa värdena från komponentdialogrutan för komponenten Angular måste vi uppdatera Sling Model som fyller i JSON för komponenten `Card`. Vi har också möjlighet att implementera två affärslogikfunktioner:
 
 * Om `titleFromPage` till **true** returnerar du rubriken för sidan som anges av `cardPath`, annars returneras värdet för textfältet `cardTitle`.
 * Returnera det senaste ändringsdatumet för sidan som anges av `cardPath`.
@@ -258,7 +258,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   Dessa metoder visas via JSON-modellens API och skickas till vinkelkomponenten.
+   Dessa metoder visas via JSON-modell-API:t och skickas till Angular-komponenten.
 
 3. Öppna `CardImpl.java`. Detta är implementeringen av gränssnittet `Card.java`. Den här implementeringen har redan delvis stoppats för att snabba upp självstudiekursen.  Lägg märke till att anteckningarna `@Model` och `@Exporter` används för att säkerställa att Sling Model kan serialiseras som JSON via Sling Model Exporter.
 
@@ -379,9 +379,9 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
 
    Observera att JSON-modellen uppdateras med ytterligare nyckel/värde-par efter att metoderna i `CardImpl`-delningsmodellen har uppdaterats.
 
-## Uppdatera vinkelkomponent
+## Uppdatera Angular-komponent
 
-Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaText`, `cardTitle` och `cardLastModified` kan vi uppdatera vinkelkomponenten för att visa dessa.
+Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaText`, `cardTitle` och `cardLastModified` kan vi uppdatera Angularna för att visa dessa.
 
 1. Återgå till IDE och öppna modulen `ui.frontend`. Du kan också starta webbpaketets dev-server från ett nytt terminalfönster för att se ändringarna i realtid:
 
@@ -449,7 +449,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
 
    >[!NOTE]
    >
-   > Du kan visa den färdiga [vinkelkortskomponentkoden här](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
+   > Du kan visa den färdiga [Angular card-komponentkoden här](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
 
 5. Använd de fullständiga ändringarna i AEM från projektets rot i Maven:
 
