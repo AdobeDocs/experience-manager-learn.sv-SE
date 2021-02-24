@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '966'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ I det föregående kapitlet redigerades och visades flera tillägg för innehål
 Skapa sedan en ny modell för **Contributor**, som är datamodellen för de användare som skriver tidskrift och äventyrar innehåll som en del av WKND-varumärket.
 
 1. Klicka på **Skapa** i det övre högra hörnet för att visa guiden **Skapa modell**.
-1. Ange **modelltitel**: **Contributor** och klicka på **Skapa**
+1. Ange **modelltitel**: **Deltagare** och klicka på **Skapa**
 
    ![Guiden för innehållsfragmentmodell](assets/content-fragment-models/content-fragment-model-wizard.png)
 
@@ -133,13 +133,13 @@ Skapa sedan en ny modell för **Contributor**, som är datamodellen för de anv�
 
 ## Aktivera Contributor-modellen
 
-Modeller för innehållsfragment får som standard läget **Utkast** när de skapas. Detta gör att användare kan förfina innehållsfragmentmodellen **före** så att författare kan använda den. Kom ihåg att om du ändrar **egenskapsnamnet** för ett fält i modellen ändras det underliggande dataschemat och det kan ha betydande effekter nedåt på befintliga fragment och externa program. Vi rekommenderar att du noga planerar namnkonventionen som används för **egenskapsnamnet** för fält.
+Modeller för innehållsfragment måste vara **Enabled** innan innehållsförfattare kan använda dem. Det går att **inaktivera** en innehållsfragmentmodell, vilket förhindrar författare från att använda den. Kom ihåg att om du ändrar **egenskapsnamnet** för ett fält i modellen ändras det underliggande dataschemat och det kan ha betydande effekter nedåt på befintliga fragment och externa program. Vi rekommenderar att du noga planerar namnkonventionen som används för **egenskapsnamnet** för fält innan du aktiverar innehållsfragmentmodellen för användare.
 
-1. Observera att modellen **Contributor** för närvarande är i tillståndet **Draft**.
+1. Kontrollera att **Contributor**-modellen är i läget **Aktiverad**.
 
-1. Aktivera **Contributor-modellen** genom att hålla markören över kortet och klicka på ikonen **Aktivera**:
+   ![Aktiverad Contributor-modell](assets/content-fragment-models/enable-contributor-model.png)
 
-   ![Aktivera Contributor-modellen](assets/content-fragment-models/enable-contributor-model.png)
+   Du kan växla läge för en innehållsfragmentmodell genom att hålla markören över kortet och klicka på ikonen **Inaktivera** / **Aktivera**.
 
 ## Grattis! {#congratulations}
 
