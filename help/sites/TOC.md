@@ -4,9 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '447'
 ht-degree: 4%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 4%
    + [Content Fragments vs. Experience Fragments](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + Experience Fragments {#experience-fragments}
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
-   + [Upplevelsefragment](experience-fragments/experience-fragments-feature-video-understand.md)
+   + [Byggblock](experience-fragments/building-blocks.md)
    + [Konfigurera social bokföring med Experience Fragments](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [Content Fragments vs. Experience Fragments](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Utveckling {#developing}
@@ -52,7 +52,7 @@ ht-degree: 4%
    + [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Komma igång med AEM Headless](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Komma igång med AEM SPA och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
    + [Bästa praxis för formatsystem](developing/style-organization-style-system-understand-article.md)
@@ -69,7 +69,7 @@ ht-degree: 4%
    + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Självstudiekurs om Hello World](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Komma igång med AEM SPA och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 + Hantering av flera webbplatser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
