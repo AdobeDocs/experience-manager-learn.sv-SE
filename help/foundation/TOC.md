@@ -5,9 +5,9 @@ user-guide-description: 'En samling videor och självstudiekurser för Adobe Exp
 sub-product: grund
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '147'
 ht-degree: 3%
 
 ---
@@ -46,6 +46,5 @@ ht-degree: 3%
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflödeshantering](./workflow/use-workflow-management.md)
-   + [Använda kalendervyn med AEM projekt och inkorgen](./workflow/use-the-calendar-view-with-aem-projects-and-inbox.md)
    + [Använda Inkorgen](./workflow/use-the-inbox.md)
 
