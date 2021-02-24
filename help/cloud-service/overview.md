@@ -4,9 +4,9 @@ description: En samling självstudiekurser för Adobe Experience Manager (AEM) s
 sub-product: sajter, cloud manager, grund, resurser
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '275'
 ht-degree: 8%
 
 ---
@@ -20,9 +20,13 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 
 ## Nyheter
 
-* **[Tokenbaserad autentisering (självstudiekurs)](../headless-tutorial/authentication/overview.md)**
+* **[Tokenbaserad autentisering (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
    *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM som en Cloud Service via HTTP*
+
+* **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+
+   *Lär dig använda AEM GraphQL-API:er för att ge kraft åt upplevelser i ett externt program.*
 
 * **[Massimport (video)](./migration/bulk-import.md)**
 
@@ -35,11 +39,6 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 * **[Utbyggbarhet för Asset compute-mikrotjänster (självstudiekurs)](./asset-compute/overview.md)**
 
    *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
-
-* **[Konfigurera åtkomst till AEM som Cloud Service (självstudiekurs)](./accessing/overview.md)**
-
-   *Lär dig hur du konfigurerar IMS-användare i Adobe Admin Console så att de kan komma åt AEM*
-
 
 ## Personalval
 
