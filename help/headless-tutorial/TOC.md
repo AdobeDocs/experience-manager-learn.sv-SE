@@ -12,9 +12,9 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '107'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 2%
    + [4 - Utforska GraphQL API:er](./graphql/explore-graphql-api.md)
    + [5 - Fråga från en extern app](./graphql/graphql-and-external-app.md)
    + [6 - Avancerad datamodellering med fragmentreferenser](./graphql/fragment-references.md)
+   + [7 - Produktionsdistribution](./graphql/production-deployment.md)
 + Tokenbaserad autentisering {#authentication}
    + [Översikt](./authentication/overview.md)
    + [1 - Åtkomsttoken för lokal utveckling](./authentication/local-development-access-token.md)
