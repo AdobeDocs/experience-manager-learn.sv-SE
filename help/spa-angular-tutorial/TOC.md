@@ -5,8 +5,8 @@ version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
-user-guide-title: Komma igång med AEM SPA och vinkelrät
-user-guide-description: Skapa ditt första vinkelbaserade enkelsidiga program (SPA) som kan redigeras i AEM med WKND-SPA.
+user-guide-title: Komma igång med AEM SPA Editor och Angular
+user-guide-description: Skapa ett program med en Angular (SPA) som kan redigeras i AEM med WKND-SPA.
 breadcrumb-title: AEM SPA Editor och Angular Tutorial
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# Komma igång med AEM SPA och vinkeln {#spa-angular-tutorial}
+# Komma igång med AEM SPA Editor och Angular {#spa-angular-tutorial}
 
 + [Översikt](overview.md)
 + [SPA](create-project.md)
