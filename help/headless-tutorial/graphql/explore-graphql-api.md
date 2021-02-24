@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 GraphQL API i AEM tillhandahåller ett kraftfullt frågespråk för att visa data från innehållsfragment för program längre fram i kedjan. Modeller för innehållsfragment definierar det dataschema som används av innehållsfragment. När en innehållsfragmentmodell skapas eller uppdateras översätts schemat och läggs till i det diagram som utgör GraphQL-API:t.
 
-I det här kapitlet ska vi undersöka några vanliga GraphQL-frågor för att samla in innehåll. Inbyggd i AEM är en IDE som heter [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. GraphiQL ger också enkel åtkomst till dokumentationen vilket gör det enkelt att ta reda på vilka metoder som finns tillgängliga.
+I det här kapitlet ska vi undersöka några vanliga GraphQL-frågor för att samla in innehåll med en IDE som heter [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. GraphiQL ger också enkel åtkomst till dokumentationen vilket gör det enkelt att ta reda på vilka metoder som finns tillgängliga.
 
 ## Förutsättningar {#prerequisites}
 
@@ -36,6 +36,23 @@ Det här är en självstudiekurs i flera delar och det antas att de steg som bes
 * Lär dig hur du filtrerar och begär specifika dataattribut.
 * Lär dig hur du frågar efter en variant av ett innehållsfragment.
 * Lär dig hur du sammanfogar en fråga med flera innehållsfragmentmodeller
+
+## Installera GraphiQL-verktyget {#install-graphiql}
+
+GraphiQL IDE är ett utvecklingsverktyg och behövs bara i miljöer på låg nivå, t.ex. en utvecklingsmiljö eller lokal instans. Det ingår därför inte i AEM utan ingår som ett separat paket som kan installeras på ad hoc-basis.
+
+1. Navigera till **[portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM som en Cloud Service**.
+1. Sök efter &quot;GraphiQL&quot; (se till att inkludera **i** i **GraphiQL**.
+1. Ladda ned det senaste **GraphiQL-innehållspaketet v.x.x.x**
+
+   ![Hämta GraphiQL-paket](assets/explore-graphql-api/software-distribution.png)
+
+   Zip-filen är ett AEM som kan installeras direkt.
+
+1. I menyn **AEM Start** går du till **Verktyg** > **Distribution** > **Paket**.
+1. Klicka på **Överför paket** och välj det paket som hämtades i föregående steg. Klicka på **Installera** för att installera paketet.
+
+   ![Installera GraphiQL-paket](assets/explore-graphql-api/install-graphiql-package.png)
 
 ## Fråga en lista över innehållsfragment {#query-list-cf}
 
@@ -181,7 +198,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -205,7 +222,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
