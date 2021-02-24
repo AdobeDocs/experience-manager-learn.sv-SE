@@ -1,6 +1,6 @@
 ---
 title: Avancerad datamodellering med fragmentreferenser - Komma igång med AEM Headless - GraphQL
-description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig hur du använder funktionen Fragmentreferens för avancerad datamodellering och skapar en relation mellan två olika innehållsfragment. Lär dig hur du ändrar en GraphQL-fråga så att den inkluderar fält från en refererad modell.
+description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig hur du använder funktionen Fragmentreferens för avancerad datamodellering och hur du skapar en relation mellan två olika innehållsfragment. Lär dig hur du ändrar en GraphQL-fråga så att den inkluderar fält från en refererad modell.
 sub-product: resurser
 topics: headless
 version: cloud-service
@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '848'
 ht-degree: 0%
 
 ---
@@ -234,13 +234,10 @@ Uppdatera sedan frågorna som används av React Application så att de inkludera
 
    ![Medarbetare tillagd i appen](assets/fragment-references/contributor-added-detail.png)
 
-## Ytterligare resurser
-
-Mer information om innehållsfragment och GraphQL finns i följande resurser:
-
-* [Headless Content Delivery using Content Fragments with GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [AEM GraphQL API för användning med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-
 ## Grattis!{#congratulations}
 
 Grattis! Du har uppdaterat en befintlig modell för innehållsfragment för att referera till ett kapslat innehållsfragment med hjälp av fältet **Fragmentreferens**. Du lärde dig också att ändra en GraphQL-fråga så att den inkluderar fält från en refererad modell.
+
+## Nästa steg {#next-steps}
+
+I nästa kapitel, [Produktionsdistribution med en AEM-publiceringsmiljö](./production-deployment.md), får du lära dig mer om AEM Author- och Publish-tjänster och det rekommenderade distributionsmönstret för headless-program. Du uppdaterar ett befintligt program så att det använder miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Du får också lära dig hur du konfigurerar AEM för Cross-Origin Resource Sharing (CORS).
