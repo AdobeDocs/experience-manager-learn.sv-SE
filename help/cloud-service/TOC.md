@@ -5,7 +5,7 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
+source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 14%
@@ -42,7 +42,7 @@ ht-degree: 14%
       + [Analysera testresultat](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher Configurations](./cloud-manager/devops/dispatcher-configurations.md)
       + [API:er för Cloud Manager](./cloud-manager/devops/cloud-manager-apis.md)
-+ Installation av lokal utvecklingsmiljö {#local-development-environment-setup}
++ Installation av lokal utvecklingsmiljö {#local-development-environment-set-up}
    + [Översikt](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
