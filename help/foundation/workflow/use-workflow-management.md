@@ -1,19 +1,17 @@
 ---
-title: Använd arbetsflödeshantering
+title: Hantera arbetsflöde i AEM
 description: 'AEM arbetsflödeshantering ger en användare bättre överblick över innehållet i arbetsflödet och gör det enklare att hantera definitioner av arbetsflödesmodeller. '
-seo-title: Använd arbetsflödeshantering i AEM
-seo-description: EM Workflow Management ger en användare bättre överblick över innehållet i arbetsflödet och gör det enklare att hantera definitioner av arbetsflödesmodeller.
-version: 6.5
-sub-product: grund, sajter, resurser
-feature: workflow
-topics: governance, collaboration
-activity: use
-audience: administrator
-doc-type: feature video
+version: 6.5, cloud-service
+feature: Arbetsflöde
+topic: Innehållshantering
+role: Administratör
+level: Mellanliggande
+kt: 2557
+thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -23,19 +21,18 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27848/?quality=12&learn=on)
 
-Följande aspekter av arbetsflödeshantering, som introducerades i AEM 6.5, beskrivs i den här videon:
+Följande aspekter av arbetsflödeshantering beskrivs i den här videon:
 
 + Aktivera arbetsflödesmetadata under inställningar för listvyn.
-+ Enkel navigering till tidslinjen i arbetsflödet från listvyn
-+ Kopiera och klistra in ett befintligt OOTB-arbetsflöde för att anpassa eller åsidosätta standardfunktionerna
-+ Utför en snabb publicering för [!DNL Workflow Models] och [!DNL Launchers]
-+ Hantera publikation för [!DNL Workflow Models] och [!DNL Launchers].
-+ Meddela användare med ett varningsverktygstips när de försöker redigera en OTB-arbetsflödesmodell eller -startare.
-+ Möjlighet att återskapa ändringar som gjorts i en OOTB-arbetsflödesmodell eller -startare.
++ Navigera till arbetsflödets tidslinje för innehåll i AEM
++ Anpassa ett arbetsflöde som tillhandahålls av AEM
++ Snabbpublicering för [!DNL Workflow Models] och [!DNL Launchers]
++ Hantera publikation för [!DNL Workflow Models] och [!DNL Launchers]
++ Återställa ändringar som gjorts i en arbetsflödesmodell eller startprogram
 
-I den här videon används [!DNL Workflow models] för att demonstrera den här uppsättningen funktioner, men de gäller även för [!DNL AEM Launchers].
+I den här videon används [!DNL Workflow Models] för att demonstrera den här uppsättningen funktioner, men de gäller även för [!DNL AEM Launchers].
 
 
 >[!NOTE]
 >
-> I videofilmer används AEM Sites UI för att demonstrera metadatafunktionen för arbetsflödesstatus. Metadata för arbetsflödesstatus gäller även för AEM Assets-användargränssnitt. Se till att du väljer listvyn för att aktivera metadata för arbetsflödesstatus i användargränssnittet.
+> Video använder AEM Sites för att demonstrera arbetsflödets statusmetadata. Metadata för arbetsflödesstatus gäller även för AEM Assets. Om du vill visa arbetsflödesstatus för resurser kontrollerar du att listvyn är aktiverad.
