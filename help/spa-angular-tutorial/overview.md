@@ -1,6 +1,6 @@
 ---
-title: Komma igång med AEM SPA och vinkelrät
-description: Skapa ditt första vinkelbaserade enkelsidiga program (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA. Lär dig hur du skapar en SPA med det vinkelbaserade JS-ramverket med AEM SPA Editor. Den här självstudiekursen i flera delar går igenom implementeringen av en Angular-applikation för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela SPA och integreringen med AEM.
+title: Komma igång med AEM SPA Editor och Angular
+description: Skapa ett program med en Angular (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA. Lär dig hur du skapar en SPA med Angularnas JS-ramverk med AEM SPA Editor. Denna självstudiekurs i flera delar går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela SPA och integreringen med AEM.
 sub-product: platser
 topics: development
 version: cloud-service
@@ -18,9 +18,9 @@ ht-degree: 2%
 ---
 
 
-# Skapa din första vinkelräta SPA i AEM {#introduction}
+# Skapa din första Angular SPA i AEM {#introduction}
 
-Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare i **SPA Editor**-funktionen i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular-applikation för ett fiktivt livsstilsmärke, WKND. Vinkelappen kommer att utvecklas och utformas för att användas med AEM SPA Editor, som mappar vinkelkomponenter till AEM komponenter. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare i **SPA Editor**-funktionen i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular kommer att utvecklas och utformas för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
 ![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
 
@@ -28,14 +28,14 @@ Välkommen till en självstudiekurs i flera delar som utformats för utvecklare 
 
 ## Om
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar ett vinkelbaserat program för att arbeta med SPA redigeringsfunktion i AEM. I ett verkligt scenario är utvecklingsaktiviteterna uppdelade efter persona, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi tror att det är bra att alla utvecklare som kommer att delta i ett AEM SPA Editor-projekt slutför kursen.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en Angular som fungerar med SPA redigeringsfunktion i AEM. I ett verkligt scenario är utvecklingsaktiviteterna uppdelade efter persona, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi tror att det är bra att alla utvecklare som kommer att delta i ett AEM SPA Editor-projekt slutför kursen.
 
 Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5.4+** och **AEM 6.4.8+**. SPA implementeras med:
 
 * [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Vinkel](https://angular.io/)
+* [Angular](https://angular.io/)
 
 *Beräkna 1-2 timmar för att komma igenom varje del av självstudiekursen.*
 
@@ -50,7 +50,7 @@ Den [senaste kodbasen](https://github.com/adobe/aem-guides-wknd-spa/releases) ä
 Innan du startar den här självstudiekursen behöver du följande:
 
 * Grundläggande kunskaper i HTML, CSS och JavaScript
-* Grundläggande kunskap i [Vinkel](https://angular.io/)
+* Grundläggande kunskap om [Angular](https://angular.io/)
 * [AEM som Cloud Service SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk),  [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) eller  [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
