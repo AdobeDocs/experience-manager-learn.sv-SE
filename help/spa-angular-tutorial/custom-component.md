@@ -1,8 +1,8 @@
 ---
-title: Skapa en anpassad komponent | Komma igång med AEM SPA och vinkelrät
+title: Skapa en anpassad komponent | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
 sub-product: platser
-feature: SPA Editor
+feature: SPA
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5831-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    static final String RESOURCE_TYPE = "wknd-spa-angular/components/custom-component";
    ```
 
-   Resurstypen för komponenten är den som kommer att binda Sling-modellen till AEM och mappas till vinkelkomponenten.
+   Resurstypen för komponenten är den som kommer att binda Sling-modellen till AEM och mappas till komponenten Angular.
 
 6. Lägg till metoden `getExportedType()` i klassen `CustomComponentImpl` för att returnera komponentresurstypen:
 
@@ -215,7 +215,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    }
    ```
 
-   Den här metoden krävs när du implementerar gränssnittet `ComponentExporter` och visar resurstypen som tillåter mappningen till vinkelkomponenten.
+   Den här metoden krävs vid implementering av gränssnittet `ComponentExporter` och visar den resurstyp som tillåter mappningen till komponenten Angular.
 
 7. Uppdatera metoden `getMessage()` om du vill returnera värdet för egenskapen `message` som bevaras av författardialogrutan. Använd `@ValueMap`-anteckningen för att mappa JCR-värdet `message` till en Java-variabel:
 
@@ -238,9 +238,9 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    >
    > Du kan visa den [färdiga CustomComponentImpl.java här](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
-## Uppdatera vinkelkomponenten
+## Uppdatera komponenten Angular
 
-Vinkelkoden för den anpassade komponenten har redan skapats. Därefter gör du några uppdateringar för att mappa vinkelkomponenten till AEM.
+Koden för den anpassade Angularna har redan skapats. Därefter gör du några uppdateringar för att mappa Angularna till AEM.
 
 1. Öppna filen `ui.frontend/src/app/components/custom/custom.component.ts` i modulen `ui.frontend`
 2. Observera raden `@Input() message: string;`. Det omformade versalvärdet förväntas mappas till den här variabeln.
