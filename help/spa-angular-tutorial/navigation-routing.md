@@ -1,8 +1,8 @@
 ---
-title: Lägga till navigering och routning | Komma igång med AEM SPA och vinkelrät
-description: Lär dig hur flera vyer i SPA stöds med AEM sidor och SPA Editor SDK. Dynamisk navigering implementeras med hjälp av vinkelvägar och läggs till i en befintlig Header-komponent.
+title: Lägga till navigering och routning | Komma igång med AEM SPA Editor och Angular
+description: Lär dig hur flera vyer i SPA stöds med AEM sidor och SPA Editor SDK. Dynamisk navigering implementeras med hjälp av Angular och läggs till i en befintlig Header-komponent.
 sub-product: platser
-feature: SPA Editor
+feature: SPA
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5312-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
-source-wordcount: '2643'
+source-wordcount: '2645'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 # Lägga till navigering och routning {#navigation-routing}
 
-Lär dig hur flera vyer i SPA stöds med AEM sidor och SPA Editor SDK. Dynamisk navigering implementeras med hjälp av vinkelvägar och läggs till i en befintlig Header-komponent.
+Lär dig hur flera vyer i SPA stöds med AEM sidor och SPA Editor SDK. Dynamisk navigering implementeras med hjälp av Angular och läggs till i en befintlig Header-komponent.
 
 ## Syfte
 
 1. Förstå de alternativ för SPA modellroutning som är tillgängliga när du använder SPA Editor.
-2. Lär dig att använda [vinkelroutning](https://angular.io/guide/router) för att navigera mellan olika vyer av SPA.
+2. Lär dig att använda [routning av Angular](https://angular.io/guide/router) för att navigera mellan olika vyer av SPA.
 3. Implementera en dynamisk navigering som styrs av AEM sidhierarki.
 
 ## Vad du ska bygga
@@ -69,7 +69,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Inspect HeaderComponent-uppdateringar {#inspect-header}
 
-I tidigare kapitel lades `HeaderComponent`-komponenten till som en ren vinkelkomponent som inkluderades via `app.component.html`. I det här kapitlet tas `HeaderComponent`-komponenten bort från programmet och läggs till via [mallredigeraren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
+I tidigare kapitel lades `HeaderComponent`-komponenten till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas `HeaderComponent`-komponenten bort från programmet och läggs till via [mallredigeraren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ I tidigare kapitel lades `HeaderComponent`-komponenten till som en ren vinkelkom
 
 Skapa sedan ytterligare sidor i AEM som ska fungera som de olika vyerna i SPA. Vi kommer också att inspektera den hierarkiska strukturen i JSON-modellen som AEM tillhandahåller.
 
-1. Navigera till konsolen **Platser**: [http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home). Markera **WKND SPA vinkelrät startsida** och klicka på **[!UICONTROL Create]** > **[!UICONTROL Page]**:
+1. Navigera till konsolen **Platser**: [http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home). Markera startsidan för **WKND SPA Angular** och klicka på **[!UICONTROL Create]** > **[!UICONTROL Page]**:
 
    ![Skapa ny sida](assets/navigation-routing/create-new-page.png)
 
@@ -211,7 +211,7 @@ Skapa sedan ytterligare sidor i AEM som ska fungera som de olika vyerna i SPA. V
    }
    ```
 
-   Under `:children` bör du se en post för varje sida som skapas. Innehållet för alla sidor finns i den här inledande JSON-begäran. När navigeringsflödet har implementerats läses efterföljande vyer av SPA in snabbt eftersom innehållet redan är tillgängligt på klientsidan.
+   Under `:children` ska du se en post för varje sida som skapas. Innehållet för alla sidor finns i den här inledande JSON-begäran. När navigeringsflödet har implementerats läses efterföljande vyer av SPA in snabbt eftersom innehållet redan är tillgängligt på klientsidan.
 
    Det är inte klokt att läsa in **ALL** för innehållet i en SPA i den inledande JSON-begäran eftersom det skulle göra den inledande sidinläsningen långsammare. Nu ska vi titta på hur sidornas hierarkiska djup samlas in.
 
@@ -311,9 +311,9 @@ Implementera sedan navigeringsmenyn med en ny `NavigationComponent`. Vi kan läg
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   De AEM sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att komponenten `Header` ärver alla funktioner i [Navigation Core Component](https://www.aemcomponents.dev/content/core-components-examples/library/templating/navigation.html) och att innehållet som exponeras via JSON automatiskt mappas till vinkelanteckningen `@Input`.
+   De AEM sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att `Header`-komponenten ärver alla funktioner i [Navigation Core Component](https://www.aemcomponents.dev/content/core-components-examples/library/templating/navigation.html) och att innehållet som exponeras via JSON automatiskt mappas till Angularna `@Input`-anteckningen.
 
-2. Öppna ett nytt terminalfönster och navigera till mappen `ui.frontend` i SPA. Skapa en ny `NavigationComponent` med hjälp av det vinkelbaserade CLI-verktyget:
+2. Öppna ett nytt terminalfönster och navigera till mappen `ui.frontend` i SPA. Skapa en ny `NavigationComponent` med Angular CLI-verktyget:
 
    ```shell
    $ cd ui.frontend
@@ -325,7 +325,7 @@ Implementera sedan navigeringsmenyn med en ny `NavigationComponent`. Vi kan läg
    UPDATE src/app/app.module.ts (2032 bytes)
    ```
 
-3. Skapa sedan en klass med namnet `NavigationLink` med vinkeln CLI i den nyligen skapade `components/navigation`-katalogen:
+3. Skapa sedan en klass med namnet `NavigationLink` med Angular-CLI i den nyligen skapade `components/navigation`-katalogen:
 
    ```shell
    $ cd src/app/components/navigation/
@@ -542,7 +542,7 @@ Nu när `NavigationComponent` har implementerats måste `HeaderComponent` uppdat
    ...
    ```
 
-   En ny instans av `NavigationLink` skapas baserat på `items[0]`, roten för den JSON-navigeringsmodell som skickas från AEM. `this.route.snapshot.data.path` returnerar den aktuella vinkelruttens sökväg. Det här värdet används för att avgöra om den aktuella vägen är **startsidan**. `this.homePageUrl` används för att fylla i ankarlänken på  **logotypen**.
+   En ny instans av `NavigationLink` skapas baserat på `items[0]`, roten för den JSON-navigeringsmodell som skickas från AEM. `this.route.snapshot.data.path` returnerar Angularnas sökväg. Det här värdet används för att avgöra om den aktuella vägen är **startsidan**. `this.homePageUrl` används för att fylla i ankarlänken på  **logotypen**.
 
 5. Öppna `header.component.html` och ersätt den statiska platshållaren för navigeringen med en referens till den nyskapade `NavigationComponent`:
 
@@ -631,13 +631,13 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
    export class AppRoutingModule {}
    ```
 
-   Arrayen `routes: Routes = [];` definierar vägar eller navigeringssökvägar till vinkelkomponentmappningar.
+   Arrayen `routes: Routes = [];` definierar vägar eller navigeringssökvägar till komponentmappningar för Angular.
 
-   `AemPageMatcher` är en anpassad Angular-router  [UrlMatcher](https://angular.io/api/router/UrlMatcher) som matchar allt som &quot;ser ut som&quot; en sida i AEM som är en del av det här vinkelprogrammet.
+   `AemPageMatcher` är en anpassad  [Angular-router, UrlMatcher](https://angular.io/api/router/UrlMatcher), som matchar allt som &quot;ser ut som&quot; en  i AEM som är en del av det här Angularna.
 
-   `PageComponent` är den vinkelkomponent som representerar en sida i AEM och de matchande vägarna aktiveras. `PageComponent` kommer att inspekteras ytterligare.
+   `PageComponent` är den sidkomponent som representerar en Angular i AEM, och de matchande flödena kommer att anropas. `PageComponent` kommer att inspekteras ytterligare.
 
-   `AemPageDataResolver`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad  [vinkelrouter som ](https://angular.io/api/router/Resolve) löses för att omforma rutt-URL:en, som är sökvägen i AEM inklusive tillägget .html, till resurssökvägen i AEM, som är sidsökvägen minus tillägget.
+   `AemPageDataResolver`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad  [Angular Router ](https://angular.io/api/router/Resolve) Resolverused för att omforma väg-URL:en, som är sökvägen i AEM inklusive tillägget .html, till resurssökvägen i AEM, som är sidsökvägen minus tillägget.
 
    Med `AemPageDataResolver` omvandlas till exempel URL:en för en väg till `content/wknd-spa-angular/us/en/home.html` till sökvägen `/content/wknd-spa-angular/us/en/home`. Detta används för att matcha sidans innehåll baserat på sökvägen i JSON-modellens API.
 
@@ -667,9 +667,9 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
    }
    ```
 
-   `PageComponent` krävs för att bearbeta den JSON som hämtats från AEM och används som vinkelkomponent för att återge rutterna.
+   `PageComponent` krävs för att bearbeta den JSON som hämtats från AEM och används som Angular för att återge vägarna.
 
-   `ActivatedRoute`, som tillhandahålls av modulen Vinkelrouter, innehåller läget som anger vilket AEM sidans JSON-innehåll som ska läsas in i den här instansen av komponenten för vinkelsideskomponenten.
+   `ActivatedRoute`, som tillhandahålls av modulen Angular Router, innehåller läget som anger vilket AEM sidans JSON-innehåll som ska läsas in i den här komponentinstansen för Angular Page.
 
    `ModelManagerService`, hämtar JSON-data baserat på vägen och mappar data till klassvariablerna  `path`,  `items`,  `itemsOrder`. Dessa skickas sedan till [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md)
 
@@ -685,9 +685,9 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
    </aem-page>
    ```
 
-   `aem-page` innehåller  [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md). Variablerna `path`, `items` och `itemsOrder` skickas till `AEMPageComponent`. `AemPageComponent`, som tillhandahålls via JavaScript SDK:n i SPA Editor, itererar sedan över dessa data och instansierar dynamiskt vinkelkomponenter baserat på JSON-data som visas i självstudiekursen [Kartkomponenter](./map-components.md).
+   `aem-page` innehåller  [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md). Variablerna `path`, `items` och `itemsOrder` skickas till `AEMPageComponent`. `AemPageComponent`, som tillhandahålls via JavaScript SDK:n i SPA Editor, itererar sedan över dessa data och instansierar dynamiskt komponentkomponenter baserat på JSON-data som visas i självstudiekursen [Kartkomponenter](./map-components.md).
 
-   `PageComponent` är egentligen bara en proxy för `AEMPageComponent` och det är `AEMPageComponent` som gör större delen av det tunga lyftet för att korrekt mappa JSON-modellen till vinkelkomponenterna.
+   `PageComponent` är egentligen bara en proxy för `AEMPageComponent` och det är `AEMPageComponent` som gör större delen av det tunga lyftet för att korrekt mappa JSON-modellen till Angularnas komponenter.
 
 ## Inspect the SPA routing in AEM
 
@@ -700,7 +700,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
 
    >[!CAUTION]
    >
-   > Vissa mycket strikta lintingregler är aktiverade i det vinkelbaserade projektet. Om det inte går att skapa Maven kontrollerar du felet och söker efter **Lint-fel i de listade filerna.**. Åtgärda eventuella fel som uppstått vid markören och kör kommandot Maven igen.
+   > Vissa mycket strikta lintingregler är aktiverade i projektet Angular. Om det inte går att skapa Maven kontrollerar du felet och söker efter **Lint-fel i de listade filerna.**. Åtgärda eventuella fel som uppstått vid markören och kör kommandot Maven igen.
 
 2. Navigera till SPA hemsida i AEM: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) och öppna webbläsarens utvecklarverktyg. Skärmbilder nedan hämtas från webbläsaren Google Chrome.
 
@@ -726,7 +726,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
 
 ## Grattis! {#congratulations}
 
-Grattis! Du har lärt dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering har implementerats med vinkelroutning och lagts till i `Header`-komponenten.
+Grattis! Du har lärt dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering har implementerats med hjälp av Angular-routning och lagts till i `Header`-komponenten.
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/navigation-routing-solution`.
 
