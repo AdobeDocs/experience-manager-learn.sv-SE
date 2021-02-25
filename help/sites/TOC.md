@@ -4,10 +4,10 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
 translation-type: tm+mt
-source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
+source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 + Innehållsfragment {#content-fragments}
    + [Skapa innehållsfragment](content-fragments/content-fragments-feature-video-use.md)
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
-   + [Översätta med innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
+   + [Översätta innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
    + [Content Fragments vs. Experience Fragments](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + Experience Fragments {#experience-fragments}
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
