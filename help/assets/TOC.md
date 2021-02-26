@@ -5,7 +5,7 @@ breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
 translation-type: tm+mt
-source-git-commit: d302444e74f8c2a548d2e08b5ec2991cc7347324
+source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 7%
@@ -59,7 +59,7 @@ ht-degree: 7%
    + [Smarta taggar för bilder](metadata/image-smart-tags.md)
    + [Anpassade smarta taggar för bilder](metadata/custom-smart-tags.md)
    + [Smarta taggar för videoklipp](metadata/video-smart-tags.md)
-   + [Importera och exportera metadata](metadata/metadata-import-feature-video-use.md)
+   + [Importera och exportera metadata](metadata/metadata-import-export.md)
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
