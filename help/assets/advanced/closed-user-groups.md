@@ -1,16 +1,17 @@
 ---
 title: Stängda användargrupper i AEM Assets
-description: 'Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser. Stöd för slutna användargrupper med AEM Assets introducerades i AEM 6.4. '
-feature: asset-share
-topics: authoring, collaboration, operations, sharing
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+description: Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser.
+version: 6.3, 6.4, 6.5, cloud-service
+topic: Administration, säkerhet
+feature: Användare och grupper
+role: Administratör
+level: Mellanliggande
+kt: 649
+thumbnail: 22155.jpg
 translation-type: tm+mt
-source-git-commit: 10784dce34443adfa1fc6dc324242b1c021d2a17
+source-git-commit: 407840a0e0c90c4f004390a052d036f9b69fa8df
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser. Stöd för slutna användargrupper med AEM Assets introducerades i AEM 6.4.
 
->[!VIDEO](https://video.tv.adobe.com/v/22155?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22155?quality=12&learn=on)
 
 ## CUG (Closed User Group) med AEM Assets
 
@@ -30,26 +31,6 @@ Stängda användargrupper (CUG) är en funktion som används för att begränsa 
 * CUG-profiler ärvs automatiskt av alla undermappar och använda resurser.
 * CUG-profiler kan åsidosättas av undermappar genom att ange en ny CUG-princip. Detta bör användas sparsamt och anses inte vara en god praxis.
 
-## CUG-representation i JCR {#cug-representation-in-the-jcr}
-
-![CUG-representation i JCR](assets/closed-user-groups/folder-properties-closed-user-groups.png)
-
-Gruppen för butiksmedlemmar har lagts till som en stängd användargrupp i mappen: /content/dam/we-retail/en/beta-products
-
-En blandning av **rep:CugMixin** används i mappen **/content/dam/we-retail/en/beta-products**. En nod på **rep:cugPolicy** läggs till under mappen och vi-retail-members anges som huvudobjekt. En annan blandning av **granite:AuthenticationRequired** används i mappen för betaprodukter och egenskapen** granite:loginPath** anger vilken inloggningssida som ska användas om en användare inte är autentiserad och försöker begära en resurs under mappen **beta-products**.
-
-JCR-beskrivning nedan:
-
-```xml
-/beta-products
-    - jcr:primaryType = sling:Folder
-    - jcr:mixinTypes = rep:CugMixin, granite:AuthenticationRequired
-    - granite:loginPath = /content/we-retail/us/en/community/signin
-    + rep:cugPolicy
-         - jcr:primaryType = rep:CugPolicy
-         - rep:principalNames = we-retail-members
-```
-
 ## Stängda användargrupper jämfört med åtkomstkontrollistor {#closed-user-groups-vs-access-control-lists}
 
 Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används för att styra åtkomst till innehåll i AEM och baserat på AEM och grupper. Tillämpningen och implementeringen av dessa funktioner är dock mycket annorlunda. I följande tabell sammanfattas skillnaderna mellan de två funktionerna.
@@ -57,11 +38,11 @@ Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används f
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Avsedd användning | Konfigurera och använd behörigheter för innehåll på den aktuella **AEM**-instansen. | Konfigurera CUG-principer för innehåll på AEM **författare**-instans. Använd CUG-principer för innehåll på AEM **publicera** instanser(er). |
-| Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst för alla andra användare/grupper. |
-| Replikering | ACL:er replikeras inte med innehåll. | CUG-principer replikeras med innehåll. |
+| Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst till *alla andra* användare/grupper. |
+| Publicering | ACL:er är *inte* publicerade med innehåll. | CUG-profiler *är* publicerade med innehåll. |
 
 ## Stödlänkar {#supporting-links}
 
-* [Hantera resurser och stängda användargrupper](https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets-touch-ui.html#ClosedUserGroup)
-* [Skapa en stängd användargrupp](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/cug.html)
+* [Hantera resurser och stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
+* [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
 * [Dokumentation för stängd användargrupp](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)
