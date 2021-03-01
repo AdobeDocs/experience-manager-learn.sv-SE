@@ -6,8 +6,8 @@ sub-product: platser
 translation-type: tm+mt
 source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '446'
+ht-degree: 4%
 
 ---
 
