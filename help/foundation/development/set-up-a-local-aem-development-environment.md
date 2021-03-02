@@ -2,14 +2,14 @@
 title: Konfigurera en lokal AEM utvecklingsmiljö
 description: Guide to setting up a local development for Adobe Experience Manager, AEM. Omfattar viktiga ämnen som rör lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning/felsökning. Utveckling med Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ diskuteras.
 version: 6.4, 6.5
-feature: maven-archetype
+feature: maven-arketype
 topics: development
 activity: develop
 audience: developer
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 947ffbfcc64f0e2e010a0515c8e6cf1530ec4ea9
 workflow-type: tm+mt
-source-wordcount: '2561'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -188,6 +188,20 @@ Alla AEM ska bygga på den senaste versionen av **[!DNL AEM Project Archetype]**
 En integrerad utvecklingsmiljö eller IDE är ett program som kombinerar en textredigerare, syntaxstöd och byggverktyg. Beroende på vilken typ av utveckling du håller på med kan en utvecklingsmiljö vara att föredra framför en annan. Oavsett vilken utvecklingsmiljö det gäller är det viktigt att du regelbundet kan ***push***-kod till en lokal AEM för att testa den. Det är också viktigt att ibland ***pull***-konfigurationer från en lokal AEM till ditt AEM projekt för att kunna fortsätta till ett källstyrningssystem som Git.
 
 Nedan visas några av de populäraste IDE:erna som används för AEM med motsvarande videofilmer som visar integrationen med en lokal AEM.
+
+>[!NOTE]
+>
+> WKND-projektet har uppdaterats till standardinställningen att fungera på AEM som en Cloud Service. Den har uppdaterats så att den är [bakåtkompatibel med 6.5/6.4](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). Om du använder AEM 6.5 eller 6.4 lägger du till profilen `classic` till valfritt Maven-kommando.
+
+```shell
+$ mvn clean install -PautoInstallSinglePackage -Pclassic
+```
+
+Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
+
+![Maven Profile Tab](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
+
+*IntelliJ Maven-profil*
 
 ### [!DNL Eclipse] IDE
 
