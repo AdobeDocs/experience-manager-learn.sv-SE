@@ -3,7 +3,7 @@ title: Förifyll HTML5 Forms med hjälp av dataattribut.
 seo-title: Förifyll HTML5 Forms med hjälp av dataattribut.
 description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
 seo-description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
-feature: integrations
+feature: Adaptiv Forms
 topics: mobile-forms
 audience: developer
 doc-type: article
@@ -11,10 +11,13 @@ activity: implement
 version: 6.3,6.4,6.5.
 uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
 discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -58,6 +61,6 @@ pakethanterarenPaketet installerar följande
 
 >[!NOTE]
 >
->Om du vill fylla i formuläret genom att anropa workbench-processen kanske du vill inkludera callWorkbenchProcess.jsp i /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp i stället för setdata.jsp
+>Om du vill fylla i formuläret genom att anropa workbench-processen kan du inkludera callWorkbenchProcess.jsp i /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp i stället för setdata.jsp
 
 * [Peka din favoritwebbläsare mot den här URL:en](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). Formuläret ska fyllas i i förväg med värdet för name-parametern
