@@ -1,17 +1,20 @@
 ---
 title: Felsöka AEM SDK med hjälp av loggar
 description: Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
+topic: Utveckling
+role: Developer
+level: Nybörjare, mellanliggande
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -49,7 +52,7 @@ Det är ofta användbart att &quot;svansen&quot; av `error.log` som direktuppspe
 
 ## Dispatcher-loggar
 
-Sändningsloggar skickas som utdata som stoppas när `bin/docker_run` anropas, men loggarna kan nås direkt med i Docker.
+Sändningsloggar skrivs ut till timeout när `bin/docker_run` anropas, men loggarna kan nås direkt från Docker.
 
 ### Åtkomst till loggar i Docker-behållaren{#dispatcher-tools-access-logs}
 
