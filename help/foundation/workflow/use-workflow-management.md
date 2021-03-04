@@ -1,18 +1,23 @@
 ---
 title: Hantera arbetsflöde i AEM
 description: 'AEM arbetsflödeshantering ger en användare bättre överblick över innehållet i arbetsflödet och gör det enklare att hantera definitioner av arbetsflödesmodeller. '
-version: 6.5, cloud-service
+version: 6.5
+sub-product: grund, sajter, resurser
 feature: Arbetsflöde
-topic: Innehållshantering
-role: Administratör
-level: Mellanliggande
+topics: governance, collaboration
+activity: use
+audience: administrator
+doc-type: feature video
+topic: Samarbete
+role: Developer
+level: Nybörjare
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 1%
 
 ---
 
