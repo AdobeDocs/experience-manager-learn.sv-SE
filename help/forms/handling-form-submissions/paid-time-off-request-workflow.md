@@ -2,17 +2,20 @@
 title: Arbetsflöde för enkel betald tid på begäran
 description: Dölja och visa anpassade formulärpaneler i AEM arbetsflöde
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
-feature: integrations
+feature: Adaptiv Forms
 topics: workflow
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
