@@ -1,17 +1,20 @@
 ---
 title: Lagra och hämta formulärdata från MySQL-databasen
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 0%
+source-wordcount: '283'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ ht-degree: 0%
 
 Så här testar du den här funktionen på din AEM Forms-instans:
 
-* Hämta och distribuera JAR-filer för MySQL-drivrutinen [ med ](assets/mysqldriver.jar)felix-webbkonsolen[](http://localhost:4502/system/console/bundles)
+* Hämta och distribuera JAR-filer för MySQL-drivrutinen ](assets/mysqldriver.jar) med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)[
 * Hämta och distribuera [OSGi-paketet](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)
 * Hämta och installera [paketet som innehåller klientlib, adaptiv formulärmall och den anpassade sidkomponenten](assets/store-and-fetch-af-with-data.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * Importera [exemplet Adaptiv form](assets/sample-adaptive-form.zip) med [gränssnittet FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
