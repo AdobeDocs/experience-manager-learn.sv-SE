@@ -1,11 +1,15 @@
 ---
 title: Kapitel 6 - Visa innehåll på AEM Publish som JSON - Innehållstjänster
 description: Kapitel 6 i självstudiekursen AEM Headless handlar om att säkerställa att alla nödvändiga paket, konfigurationer och innehåll finns på AEM Publish för att tillåta användning från mobilappen.
+feature: Innehållsfragment, API:er
+topic: Headless, Content Management
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 0%
+source-wordcount: '454'
+ht-degree: 1%
 
 ---
 
