@@ -3,10 +3,14 @@ title: Kapitel 4 - Definiera mallar för innehållstjänster - Innehållstjänst
 seo-title: Komma igång med AEM utan rubrik - Kapitel 4 - Definiera innehållstjänstmallar
 description: Kapitel 4 i AEM Headless-självstudiekursen behandlar rollen AEM redigerbara mallar i AEM Content Services. Redigerbara mallar används för att definiera den JSON-innehållsstruktur AEM Content Services kommer att visa.
 seo-description: Kapitel 4 i AEM Headless-självstudiekursen behandlar rollen AEM redigerbara mallar i AEM Content Services. Redigerbara mallar används för att definiera den JSON-innehållsstruktur AEM Content Services kommer att visa.
+feature: Innehållsfragment, API:er
+topic: Headless, Content Management
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
