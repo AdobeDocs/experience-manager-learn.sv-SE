@@ -3,10 +3,14 @@ title: Kapitel 3 - Innehållsfragment för redigeringshändelser - Innehållstj�
 seo-title: Komma igång med AEM Content Services - Kapitel 3 - Innehållsfragment för redigeringshändelser
 description: Kapitel 3 i den AEM självstudiekursen Headless handlar om att skapa och redigera händelseinnehållsfragment från innehållsfragmentmodellen som skapas i kapitel 2.
 seo-description: Kapitel 3 i den AEM självstudiekursen Headless handlar om att skapa och redigera händelseinnehållsfragment från innehållsfragmentmodellen som skapas i kapitel 2.
+feature: Innehållsfragment, API:er
+topic: Headless, Content Management
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
