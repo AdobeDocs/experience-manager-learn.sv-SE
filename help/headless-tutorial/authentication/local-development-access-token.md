@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
+topic: Headless, integreringar
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
