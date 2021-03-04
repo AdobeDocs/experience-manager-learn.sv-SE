@@ -3,17 +3,20 @@ title: Skapa din första interaktiva kommunikation för webbkanalen
 seo-title: Skapa din första interaktiva kommunikation för webbkanalen
 description: Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du hjälp med att skapa en interaktiv kommunikation för webbkanalen.
 seo-description: Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du hjälp med att skapa en interaktiv kommunikation för webbkanalen.
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 0%
+source-wordcount: '219'
+ht-degree: 1%
 
 ---
 
