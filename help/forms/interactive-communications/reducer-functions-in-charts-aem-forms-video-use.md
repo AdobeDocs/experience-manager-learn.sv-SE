@@ -5,20 +5,17 @@ description: Reduceringsfunktioner används för att samla in eller gruppera vä
 seo-description: Reduceringsfunktioner används för att samla in eller gruppera värden som visas i diagrammet. I följande videofilm visas stegen som används för att använda reduceringsfunktioner.
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
-feature: Interaktiv kommunikation
+feature: interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: technical video
 activity: use
 version: 6.4,6.5
-topic: Utveckling
-role: Developer
-level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 1%
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
