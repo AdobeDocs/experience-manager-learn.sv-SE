@@ -3,7 +3,7 @@ title: Använda API för att generera arkivdokument med AEM Forms
 seo-title: Använda API för att generera arkivdokument med AEM Forms
 description: Generera DOR (Document Of Record) programmatiskt
 seo-description: Använda API för att generera arkivdokument med AEM Forms
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
@@ -11,10 +11,13 @@ activity: implement
 version: 6.4,6.5
 uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
 discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -47,7 +50,7 @@ Följ de här stegen för att prova detta på din lokala dator
 1. [Hämta och installera artikelresurserna med pakethanteraren](assets/dor-with-api.zip)
 1. Kontrollera att du har installerat och startat DevelopingWithServiceUser-paketet som ingår i [Create Service User-artikeln](service-user-tutorial-develop.md)
 1. [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter användarmappningstjänsten för Apache Sling Service
+1. Sök efter användarmappningstjänsten för Apache Sling-tjänsten
 1. Se till att du anger följande _DevelopingWithServiceUser.core:getformsresourceServer=fd-service_ i avsnittet Tjänstmappningar
 1. [Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och klicka på Visa PDF
