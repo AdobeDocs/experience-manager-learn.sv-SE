@@ -7,10 +7,13 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
+topic: Uppgradera
+role: '"Leader, Architect, Developer, Administrator, Business Practitioner"'
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 1519856731758ece2860615c06fc0d64edb104a5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3540'
+source-wordcount: '3548'
 ht-degree: 1%
 
 ---
@@ -84,7 +87,7 @@ Nedan finns en matris med grundläggande funktioner som AEM erbjuder. Vissa av d
 
 + [Versionsinformation för AEM Foundation](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html)
 
-***○ <sup>+</sup> signifikanta förbättringar av funktionen i den här versionen.***
+***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
 
@@ -116,7 +119,7 @@ Nedan finns en matris med grundläggande funktioner som AEM erbjuder. Vissa av d
         </tr>
         <tr>
             <td>
-                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak Content Repository</a>:</strong> Ger mycket bättre prestanda och skalbarhet jämfört med föregående Jackrabbit 2.</td>
+                <strong><a href="https://jackrabbit.apache.org/oak/docs/index.html" target="_blank">Oak Content Repository</a>:</strong> Ger mycket bättre prestanda och skalbarhet jämfört med föregångaren Jackrabbit 2.</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -428,7 +431,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
 
 + [Versionsinformation för AEM Sites](https://helpx.adobe.com/experience-manager/6-5/release-notes/sites.html)
 
-***○ <sup>+</sup> signifikanta förbättringar av funktionen i den här versionen.***
+***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
 
@@ -887,7 +890,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
 
 ### AEM Assets Dynamic Media
 
-***○ <sup>+</sup> signifikanta förbättringar av funktionen i den här versionen.***
+***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
 
@@ -895,7 +898,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
 <table>
     <thead>
         <tr>
-            <td>Funktionen Dynamic Media</td>
+            <td>Dynamic Media Feature</td>
             <td>5.6.x</td>
             <td>6.0</td>
             <td>6.1</td>
@@ -964,7 +967,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">Leverans</a>:</strong>
-            Flexibla alternativ för länkning eller inbäddning av dynamiskt medieinnehåll och leverans via HTTP/2-protokoll.</td>
+            Flexibla alternativ för länkning eller inbäddning av Dynamic Media-innehåll och leverans via HTTP/2-protokoll.</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -974,7 +977,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Uppgradera från Scene7 till Dynamic Media: </strong>
+            <td><strong>Uppgradera från Scene7 till Dynamic Media:</strong>
             möjlighet att migrera överordnad resurser och fortsätta använda befintliga S7-URL:er.</td>
             <td> </td>
             <td> </td>
@@ -993,7 +996,7 @@ Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM er
 
 + [Versionsinformation för AEM Forms](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
 
-***○ <sup>+</sup> signifikanta förbättringar av funktionen i den här versionen.***
+***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
 
@@ -1189,7 +1192,7 @@ Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som 
 
 + [Sammanfattning av nya funktioner i AEM Communities](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
-***○ <sup>+</sup> signifikanta förbättringar av funktionen i den här versionen.***
+***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
 
