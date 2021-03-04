@@ -1,7 +1,7 @@
 ---
 title: Konfigurera utvecklingsverktygen för AEM som en Cloud Service
 description: Konfigurera en lokal utvecklingsmaskin med alla grundläggande verktyg som behövs för att utveckla mot AEM lokalt.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -28,7 +31,7 @@ Observera att `~` används som kortskrift för användarens katalog. I Windows m
 
 Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utveckling och AEM som en Cloud Service SDK.
 
-1. [Hämta och installera den senaste versionen av Java 11 SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. [Hämta och installera den senaste versionen av Java 11 SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Kontrollera att Java 11 SDK är installerat genom att köra kommandot:
    + Windows: `java -version`
    + macOS / Linux: `java --version`
@@ -111,7 +114,7 @@ Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som anvä
 
 ## Konfigurera Adobe I/O CLI{#aio-cli}
 
-Med [Adobe I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, får du kommandoradsåtkomst till en mängd olika Adobe-tjänster, inklusive [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) och [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Adobe I/O CLI spelar en viktig roll när det gäller utveckling av AEM eftersom det ger utvecklarna möjlighet att
+Med [Adobe I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, får du kommandoradsåtkomst till en mängd olika Adobe-tjänster, inklusive [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) och [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). CLI för Adobe I/O spelar en viktig roll när det gäller utveckling av AEM som en Cloud Service eftersom den ger utvecklarna möjlighet att
 
 + Loggar från AEM som Cloud Services
 + Hantera Cloud Manager-pipelines från CLI
@@ -134,16 +137,16 @@ Med plugin-programmet Adobe I/O Cloud Manager kan AIO CLI generera och köra Ass
 
 1. Kör `aio plugins:install @adobe/aio-cli-plugin-asset-compute` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
 
-### Konfigurera Adobe I/O CLI-autentisering
+### Ställa in Adobe I/O CLI-autentisering
 
-För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste en Cloud Manager-integrering skapas i Adobe I/O Console och autentiseringsuppgifter måste hämtas för att autentiseringen ska lyckas.
+För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste en integrering med Cloud Manager skapas i Adobe I/O Console, och autentiseringsuppgifter måste hämtas för att autentiseringen ska lyckas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35094?quality=12&learn=on)
 
 1. Logga in på [console.adobe.io](https://console.adobe.io)
 1. Se till att din organisation som innehåller den Cloud Manager-produkt som du vill ansluta till är aktiv i Adobe Org-växlaren
 1. Skapa ett nytt eller öppna ett befintligt [Adobe I/O-program](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
-   + Adobe I/O Console-programmen är helt enkelt grupperingar av integreringar, skapar eller använder befintliga program baserat på hur du vill hantera integreringarna
+   + Adobe I/O Console-program är helt enkelt grupperingar av integreringar, skapar eller använder befintliga program baserat på hur du vill hantera dina integreringar
    + Om du skapar ett nytt projekt väljer du Tomt projekt om du uppmanas till det (till skillnad från Skapa från mall)
    + Adobe I/O Console-program är olika koncept för Cloud Manager-program
 1. Skapa en ny API-integrering för Cloud Manager med profilen &quot;Developer - Cloud Service&quot;
