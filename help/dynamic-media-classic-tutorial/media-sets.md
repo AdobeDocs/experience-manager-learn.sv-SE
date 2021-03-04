@@ -2,15 +2,18 @@
 title: Bild, Färgruta, Snurra och Blandade medieuppsättningar
 description: En av de mest användbara och kraftfulla funktionerna i Dynamic Media Classic är stödet för att skapa multimedieuppsättningar som Bild, Färgruta, Snurra och Blandade medieuppsättningar. Lär dig vad varje multimedieuppsättning är och hur du skapar varje typ i Dynamic Media Classic. Läs sedan mer om gruppuppsättningsförinställningar, som automatiserar processen för att skapa multimedieuppsättningar vid överföring.
 sub-product: dynamiska medier
-feature: sets
+feature: Dynamic Media Classic, bilduppsättningar, Mix Media Sets, Snurra uppsättningar
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e7a02900b0582fe9b329e5f9bd568f3c54d8d63d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
@@ -18,7 +21,7 @@ ht-degree: 0%
 
 # Bild, Färgruta, Snurra och Blandade medieuppsättningar {#media-sets}
 
-Dynamic Media Classic-samlingar är inte bara en enda bild för dynamisk storleksändring och zoomning. De ger en rikare onlineupplevelse. I det här avsnittet av självstudiekursen får du lära dig att skapa följande multimedieuppsättningar i Dynamic Media Classic:
+Dynamic Media Classic-uppsättningar är inte bara en bild för dynamisk storleksändring och zoomning, de ger en rikare onlineupplevelse. I det här avsnittet av självstudiekursen får du lära dig att skapa följande multimedieuppsättningar i Dynamic Media Classic:
 
 - Bilduppsättning
 - Uppsättning med färgrutor
@@ -29,13 +32,13 @@ Den visar också hur du använder gruppuppsättningsförinställningar för att 
 
 ## Allt du alltid vill veta om uppsättningar
 
-Bredvid grundläggande dynamisk storleksändring och zoomning är uppsättningar förmodligen den mest använda Dynamic Media Classic-underprodukten. Uppsättningar är i princip&quot;virtuella&quot; resurser som inte innehåller några faktiska bilder, men som består av en uppsättning relationer till andra bilder och/eller video. Den största fördelen med scenbilder är att de är miniprogram som är klara &quot;utanför hyllan&quot;. Därför menar vi att varje set-visningsprogram har sin egen logik och sitt eget gränssnitt, så att allt du behöver göra är att anropa dem på webbplatsen. Dessutom krävs det bara att du spårar ett enda resurs-ID per uppsättning, i stället för att du själv måste hantera alla medlemsresurser och relationer.
+Bredvid grundläggande dynamisk storlek och zoomning är uppsättningar förmodligen den vanligaste Dynamic Media Classic-underprodukten. Uppsättningar är i princip&quot;virtuella&quot; resurser som inte innehåller några faktiska bilder, men som består av en uppsättning relationer till andra bilder och/eller video. Den största fördelen med scenbilder är att de är miniprogram som är klara &quot;utanför hyllan&quot;. Därför menar vi att varje set-visningsprogram har sin egen logik och sitt eget gränssnitt, så att allt du behöver göra är att anropa dem på webbplatsen. Dessutom krävs det bara att du spårar ett enda resurs-ID per uppsättning, i stället för att du själv måste hantera alla medlemsresurser och relationer.
 
 När du skapar en uppsättning hanteras den som en separat resurs som måste markeras för publicering och publiceras innan den kan hanteras från en URL. Alla medlemsresurser måste också publiceras.
 
 ### Typer av uppsättningar
 
-Låt oss lära oss mer om de fyra olika uppsättningar du kan skapa i Dynamic Media Classic: Bild, Färgruta, Snurra och Blandade medieuppsättningar.
+Läs mer om de fyra uppsättningar du kan skapa i Dynamic Media Classic: Bild, Färgruta, Snurra och Blandade medieuppsättningar.
 
 ## Bilduppsättning
 
@@ -58,7 +61,7 @@ Den här typen av uppsättning används vanligtvis för att visa färgade vyer a
 
 Den största skillnaden mellan en färgruta och en bilduppsättning är att färgruteuppsättningar använder en annan bild som en klickbar färgruta, medan bilduppsättningar använder en miniatyrversion av originalbilden som kan klickas.
 
-Färgruteuppsättningar färglägger inte bilder (en vanlig missuppfattning). Bilderna byts bara ut, precis som i en bilduppsättning. Minifärgrutebilderna kunde ha skapats med Photoshop, varje färg kunde ha fotograferats separat eller så kunde beskärningsverktyget i Dynamic Media Classic ha använts för att skapa en färgruta av en av färgbilderna.
+Färgruteuppsättningar färglägger inte bilder (en vanlig missuppfattning). Bilderna byts bara ut, precis som i en bilduppsättning. Minifärgrutebilderna kan ha skapats med Photoshop, varje färg kan ha fotograferats separat eller så kan beskärningsverktyget i Dynamic Media Classic ha använts till att skapa en färgruta av en av färgbilderna.
 
 ![bild](assets/media-sets/image-set-2.jpg)
 
@@ -104,7 +107,7 @@ URL:en för den ovannämnda blandade medieuppsättningen kan se ut som:
 
 - Lär dig hur du [skapar en blandad medieuppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
 
-Om du vill visa en bild för zoomning, en uppsättning eller en video på webbplatsen anropar du den i ett&quot;visningsprogram för Dynamic Media Classic&quot;. Dynamic Media Classic innehåller visningsprogram för mediefiler som färgruteuppsättningar, snursuppsättningar, video och många andra.
+Om du vill visa en bild för zoomning, en uppsättning eller en video på webbplatsen anropar du den i ett Dynamic Media Classic-visningsprogram. I Dynamic Media Classic finns visningsprogram för mediefiler som färgruteuppsättningar, snurruppsättningar, video och många andra.
 
 Läs mer om [visningsprogram för AEM Assets och Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
 
