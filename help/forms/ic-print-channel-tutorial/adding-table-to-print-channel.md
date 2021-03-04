@@ -4,7 +4,7 @@ seo-title: Lägga till tabell i avgiftsavsnitt
 description: Detta är en del av 9-stegssjälvstudiekursen för att skapa ditt första interaktiva kommunikationsdokument.I det här avsnittet ska vi lägga till en tabell i avsnittet om bidrag.
 seo-description: Detta är en del av 9-stegssjälvstudiekursen för att skapa ditt första interaktiva kommunikationsdokument.I det här avsnittet ska vi lägga till en tabell i avsnittet om bidrag.
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: Interaktiv kommunikation
+feature: interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,11 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
