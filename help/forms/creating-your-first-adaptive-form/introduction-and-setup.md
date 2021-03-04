@@ -4,18 +4,21 @@ seo-title: Komma igång med adaptiva Forms
 description: 'I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler. '
 seo-description: 'I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler. '
 uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.3,6.4,6.5
 discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 1%
 
 ---
 
