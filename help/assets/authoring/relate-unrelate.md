@@ -1,17 +1,17 @@
 ---
 title: Hur man relaterar och frigör tillgångar i AEM
 description: Lär dig hur du upprättar och hanterar relationer mellan resurser i AEM.
-feature: Asset Management
-topics: Content Management
-role: Business Practitioner
-level: Beginner
+feature: Resurshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 version: cloud-service
 kt: 6969
 thumbnail: 331107.jpg
+topic: Innehållshantering
 translation-type: tm+mt
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '33'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
