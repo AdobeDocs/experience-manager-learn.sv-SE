@@ -1,21 +1,16 @@
 ---
 title: Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
-seo-title: Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
-description: Förbättringarna av Dynamic Media Viewer i AEM 6.5 innefattar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
-seo-description: Förbättringarna av Dynamic Media Viewer i AEM 6.5 innefattar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
-uuid: 44b91c22-635c-48c2-af27-49bdbfb61639
-discoiquuid: 67d5e0f2-3fde-4ea7-9e53-4fc0cf8b9f2a
+description: Förbättringarna i Dynamic Media Viewer i AEM 6.5 inkluderar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
 sub-product: dynamiska medier
-feature: video-profiles, viewer-presets
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-doc-type: feature video
-audience: all
-activity: use
+feature: Videoprofiler
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '402'
 ht-degree: 2%
 
 ---
@@ -23,7 +18,7 @@ ht-degree: 2%
 
 # Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
 
-Förbättringarna av Dynamic Media Viewer i AEM 6.5 innefattar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
+Förbättringarna i Dynamic Media Viewer i AEM 6.5 inkluderar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=9&learn=on)
 
@@ -53,9 +48,9 @@ Dynamic Media-video har nu stöd för möjligheten att välja en anpassad miniat
       <td>**Video360VR Viewer**</td>
    </tr>
    <tr>
-      <td>Körningsläge för dynamiska media</td>
+      <td>Dynamic Media körningsläge</td>
       <td>Endast Dynamic Media Scene7 Mode</td>
-      <td>Dynamic Media Scene7 Mode only<br>
+      <td>Endast Dynamic Media Scene7 Mode<br>
          <br>
       </td>
    </tr>
