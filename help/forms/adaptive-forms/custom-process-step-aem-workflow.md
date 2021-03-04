@@ -3,16 +3,19 @@ title: Implementera anpassat processsteg
 seo-title: Implementera anpassat processsteg
 description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
 seo-description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
-feature: arbetsflöde
+feature: Arbetsflöde
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
