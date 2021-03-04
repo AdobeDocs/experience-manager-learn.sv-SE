@@ -2,18 +2,16 @@
 title: Använda kontrollpanelen för systemöversikt i AEM
 description: I tidigare versioner av AEM behövde administratörer undersöka flera olika platser för att få en fullständig bild av den AEM instansen. Syftet med systemöversikten är att lösa detta genom att tillhandahålla en översikt över konfiguration, maskinvara och hälsa för den AEM instansen från en enda kontrollpanel.
 version: 6.4, 6.5
+feature: null
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
-topic: Administration
-role: Administratör
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
