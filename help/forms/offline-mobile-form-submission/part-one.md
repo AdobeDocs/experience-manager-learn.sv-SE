@@ -3,16 +3,19 @@ title: AEM arbetsflöde vid HTML5-formuläröverföring
 seo-title: AEM arbetsflödet vid inskickning av HTML5-formulär
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
 seo-description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
-feature: mobile-forms
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
@@ -146,7 +149,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content) om du vill visa möjligheten att hämta interaktiv PDF från delvis ifyllda mobilformulär.
+[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content) om du vill se möjligheten att hämta interaktiv PDF från delvis ifyllda mobilformulär.
 När PDF-filen har laddats ned är nästa steg att skicka PDF-filen för att starta ett AEM arbetsflöde. Det här arbetsflödet sammanfogar data från den skickade PDF-filen och genererar en icke-interaktiv PDF för granskning.
 
 Den anpassade profil som skapats för det här användningsfallet är tillgänglig som en del av den här självstudiekursen.
