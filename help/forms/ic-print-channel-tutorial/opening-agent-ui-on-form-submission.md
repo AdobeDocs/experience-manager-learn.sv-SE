@@ -4,7 +4,7 @@ seo-title: Öppnar användargränssnittet för agenten när POST skickas
 description: Detta är en del av en självstudiekurs i flera steg som du kan använda för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
 seo-description: Detta är en del av en självstudiekurs i flera steg som du kan använda för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: Interaktiv kommunikation
+feature: interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,13 +12,10 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: Utveckling
-role: Developer
-level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
