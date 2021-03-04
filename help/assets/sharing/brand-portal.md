@@ -1,19 +1,15 @@
 ---
 title: Använda varumärkesportalen
-seo-title: Använda varumärkesportalen med AEM Assets
 description: Videogenomgång av integreringen mellan AEM Author och AEM Assets Brand Portal.
-seo-description: Videogenomgång av integreringen mellan AEM Author och AEM Assets Brand Portal.
-feature: brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions, administration
-audience: all
-doc-type: feature video
-activity: use
+feature: Varumärkesportal
 version: 6.3, 6.4, 6.5
-team: tm
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -84,19 +80,19 @@ De delade mapparna ordnas i respektive katalog i virtuella mappar. Du känner ig
 
 Observera att standardminiatyrbilden för de virtuella mapparna är miniatyrbilden för den första delade mappen.
 
-### Stöd för videoåtergivningar i Dynamic Media
+### Stöd för videoåtergivningar från Dynamic Media
 
-Användare vars AEM Author-instans är i läget Dynamic Media kan förhandsgranska och hämta de dynamiska medieåtergivningarna, utöver de ursprungliga videofilerna.
+Användare vars AEM Author-instans är i hybridläget Dynamic Media kan förhandsgranska och hämta de dynamiska medieåtergivningarna, utöver de ursprungliga videofilerna.
 
-För att tillåta förhandsgranskning och hämtning av dynamiska medierenderingar på specifika innehavarkonton måste administratörer ange Dynamic Media Configuration (DM-Gateway URL) och registrerings-ID för att hämta den dynamiska videon) i videokonfigurationen från administratörsverktygspanelen.
+Om du vill tillåta förhandsgranskning och hämtning av dynamiska medierenderingar på specifika klientkonton måste administratörer ange Dynamic Media Configuration (URL för videotjänst (DM-Gateway-URL) och registrerings-ID för att hämta den dynamiska videon) i videokonfigurationen från panelen Administrationsverktyg.
 
-Dynamiska medievideor kan förhandsgranskas på:
+Dynamic Media videor kan förhandsgranskas på:
 
 * Sidan Resursinformation
 * Resursvy
 * Förhandsgranska länkdelning
 
-Dynamic Media Video-kodningar kan hämtas från:
+Dynamic Media Video encodes kan laddas ned från:
 
 * Varumärkesportal
 * Delad länk
@@ -159,9 +155,9 @@ Sex nya konfigurationer har lagts till för administratörer för att aktivera/i
 * *Mapphierarkisökvägen på kort- och listvyer*  - gör att användarna kan hitta de mappar som lagras i en Brand Portal-instans. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
 * *Översiktsalternativ*  - ger icke-adminanvändare metadata om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
 
-### Adobe I/O värdar-användargränssnitt för att konfigurera autentiseringsintegreringar
+### Adobe I/O Värdar-användargränssnittet för att konfigurera autentiseringsintegreringar
 
-Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-gränssnittet för att skapa JWT-program, som gör det möjligt att konfigurera autenticeringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns gränssnittet för konfiguration av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med varumärkesportalen för att publicera resurser och samlingar på varumärkesportalen finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-gränssnittet för att skapa JWT-program, vilket gör det möjligt att konfigurera autentiseringsintegreringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns gränssnittet för konfiguration av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med varumärkesportalen för att publicera resurser och samlingar på varumärkesportalen finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Varumärkesportalen februari 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-632}
 
