@@ -1,22 +1,16 @@
 ---
 title: Om resursvisningsprogrammet med AEM Dynamic Media
-seo-title: Om resursvisningsprogrammet med AEM Dynamic Media
-description: Med förbättringarna AEM Dynamic Media Viewer kan AEM definiera och anpassa upplevelsen som presenteras för webbplatsens användare.
-seo-description: Med förbättringarna AEM Dynamic Media Viewer kan AEM definiera och anpassa upplevelsen som presenteras för webbplatsens användare.
-uuid: 5762c0a2-4371-4719-8400-849c7a11926d
-discoiquuid: a0be2cd0-4fdb-431f-a8c7-e4620b8b129b
-products: SG_EXPERIENCEMANAGER/6.3/ASSETS
-sub-product: dynamiska medier
-feature: viewer-presets, image-profiles
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: understand
+description: Med förbättringarna i Dynamic Media Viewer kan AEM definiera och anpassa de upplevelser som ska presenteras för webbplatsanvändarna.
+sub-product: dynamic media classic
+feature: Visningsförinställningar, bildprofiler
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -24,7 +18,7 @@ ht-degree: 0%
 
 # Om resursvisningsprogrammet med AEM Dynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-Med förbättringarna AEM Dynamic Media Viewer kan AEM definiera och anpassa upplevelsen som presenteras för webbplatsens användare.
+Med förbättringarna i Dynamic Media Viewer kan AEM definiera och anpassa de upplevelser som ska presenteras för webbplatsanvändarna.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
 
