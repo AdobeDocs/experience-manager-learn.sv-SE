@@ -1,17 +1,20 @@
 ---
 title: Använda delning av sociala medier i AEM Sites
 description: Upptäck hur du konfigurerar och använder komponenten Delning i sociala medier.
-feature: core-components
+feature: Kärnkomponenter
 topics: integrations
 audience: developer, implementer
 doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 3%
+source-wordcount: '215'
+ht-degree: 4%
 
 ---
 
