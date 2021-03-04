@@ -1,16 +1,19 @@
 ---
 title: De bästa sätten att lära sig formatsystem med AEM Sites
 description: En detaljerad artikel som förklarar de bästa sätten att implementera Style System med Adobe Experience Manager Sites.
-feature: style-system
+feature: Formatsystem
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
+topic: Utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1534'
 ht-degree: 0%
 
 ---
@@ -71,7 +74,7 @@ Namnen på [!UICONTROL Style Group], Layout och Visning matchar som en händelse
 
 Namnen på [!UICONTROL Style Group] och antalet [!UICONTROL Style Groups] ska anpassas efter komponentens användningsfall och projektspecifika regler för komponentformat.
 
-Formatgruppnamnet **Display** kan till exempel ha namnet **Färger**.
+Exempelvis kan formatgruppnamnet **Display** ha namnet **Färger**.
 
 ![Visa formatgrupp](assets/style-config.png)
 
