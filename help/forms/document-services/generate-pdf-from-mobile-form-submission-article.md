@@ -4,17 +4,20 @@ seo-title: Generera PDF från inskickning av HTML5-formulär
 description: Generera PDF från inskickning av mobilformulär
 seo-description: Generera PDF från inskickning av mobilformulär
 uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
-feature: mobile-forms
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
