@@ -2,7 +2,7 @@
 title: SPA | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som startpunkt för en Angular som är integrerad med AEM SPA Editor.
 sub-product: platser
-feature: maven-arketype
+feature: SPA Editor, AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5309
 thumbnail: 5309-spa-angular.jpg
+topic: SPA
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
