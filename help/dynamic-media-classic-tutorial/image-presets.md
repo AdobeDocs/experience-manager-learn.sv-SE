@@ -2,15 +2,18 @@
 title: Bildförinställningar
 description: Bildförinställningar i Dynamic Media Classic innehåller alla inställningar som behövs för att skapa en bild med en viss storlek, format, kvalitet och skärpa. Bildförinställningar är en nyckelkomponent för dynamisk storleksändring. När du tittar på en URL i Dynamic Media Classic kan du enkelt se om en bildförinställning används. Lär dig mer om bildförinställningar, varför de är så användbara och hur du skapar en.
 sub-product: dynamiska medier
-feature: image-presets
+feature: Dynamic Media Classic, bildförinställningar
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -20,7 +23,7 @@ ht-degree: 0%
 
 En bildförinställning är i princip ett recept som innehåller alla inställningar som behövs för att skapa en bild med en viss storlek, format, kvalitet och skärpa. Bildförinställningar är en nyckelkomponent för dynamisk storleksändring.
 
-Om du tittar på webbadresserna till nästan alla kunder med Dynamic Media Classic kommer du antagligen att se en bildförinställning som används. Sök bara efter $name$ i slutet av URL:en (med ord eller ord som har ersatts med namn).
+Om du tittar på webbadresserna för nästan alla Dynamic Media Classic-kunder ser du antagligen en bildförinställning som används. Sök bara efter $name$ i slutet av URL:en (med ord eller ord som har ersatts med namn).
 
 Med Bildförinställningar förkortas webbadressen, så i stället för att skriva ut flera instruktioner för bildvisning per begäran kan du skriva en enda bildförinställning. Dessa två URL-adresser skapar till exempel samma 300 x 300 JPEG-bild med skärpa, men den andra använder en bildförinställning:
 
@@ -59,9 +62,9 @@ I följande bild visas tre nivåer av skärpa. Från höger till vänster har du
 
 ![bild](assets/image-presets/image-presets-1.jpg)
 
-Dynamic Media Classic tillåter tre typer av skärpa: Enkel skärpa, omsamplingsläge och Oskarp mask.
+I Dynamic Media Classic kan du göra tre typer av skärpa: Enkel skärpa, omsamplingsläge och Oskarp mask.
 
-Läs mer om [Alternativ för dynamisk Media Classic-skärpa](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Läs mer om [Dynamic Media Classic Sharpening Options](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Ytterligare resurser
 
