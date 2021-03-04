@@ -1,24 +1,27 @@
 ---
 title: Smart bildbehandling
-description: Smart Imaging in Dynamic Media Classic förbättrar bildleveransen genom att automatiskt optimera bildformat och bildkvalitet baserat på webbläsarens funktioner. Det gör man genom att utnyttja Adobe Sensei AI-funktioner och arbeta med befintliga bildförinställningar. Läs mer om Smart Imaging och hur ni kan använda det för att erbjuda bättre kundupplevelser genom snabbare sidladdning.
+description: Smart Imaging i Dynamic Media Classic förbättrar bildleveransen genom att automatiskt optimera bildformat och bildkvalitet baserat på webbläsarens funktioner. Det gör man genom att utnyttja Adobe Sensei AI-funktioner och arbeta med befintliga bildförinställningar. Läs mer om Smart Imaging och hur ni kan använda det för att erbjuda bättre kundupplevelser genom snabbare sidladdning.
 sub-product: dynamiska medier
-feature: smart-crop
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 1%
+source-wordcount: '702'
+ht-degree: 0%
 
 ---
 
 
 # Smart bildbehandling {#smart-imaging}
 
-En av de viktigaste aspekterna av kundupplevelsen på er webbplats eller mobilwebbplats eller i er app är sidans laddningstid. Kunderna överger ofta en webbplats eller app om det tar för lång tid att läsa in en sida. Bilderna utgör större delen av sidans inläsningstid. Smart Imaging in Dynamic Media Classic förbättrar bildleveransen genom att automatiskt optimera bildformat och bildkvalitet baserat på webbläsarens funktioner. Det gör man genom att utnyttja Adobe Sensei AI-funktioner och arbeta med befintliga bildförinställningar. Smart Imaging minskar bildstorleken med 30 procent eller mer - vilket innebär snabbare sidladdning och bättre kundupplevelser.
+En av de viktigaste aspekterna av kundupplevelsen på er webbplats eller mobilwebbplats eller i er app är sidans laddningstid. Kunderna överger ofta en webbplats eller app om det tar för lång tid att läsa in en sida. Bilderna utgör större delen av sidans inläsningstid. Smart Imaging i Dynamic Media Classic förbättrar bildleveransen genom att automatiskt optimera bildformat och bildkvalitet baserat på webbläsarens funktioner. Det gör man genom att utnyttja Adobe Sensei AI-funktioner och arbeta med befintliga bildförinställningar. Smart Imaging minskar bildstorleken med 30 procent eller mer - vilket innebär snabbare sidladdning och bättre kundupplevelser.
 
 Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med den bästa premiumtjänsten från Adobe. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter som har den lägsta latensen och/eller paketförlustfrekvensen än standardvägen på Internet.
 
@@ -56,4 +59,4 @@ Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en 
 
 ## Ytterligare resurser
 
-Titta på [Dynamic Media Classic Optimizing Page Performance Sill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand-webbinariet om du vill veta mer om Smart Imaging.
+Se [Dynamic Media Classic Optimizing Page Performance SKill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand-webbinariet om du vill veta mer om Smart Imaging.
