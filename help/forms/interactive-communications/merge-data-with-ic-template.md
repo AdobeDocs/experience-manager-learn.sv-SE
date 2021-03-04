@@ -3,16 +3,19 @@ title: Generera dokument för utskriftskanal genom att sammanfoga data
 seo-title: Generera dokument för utskriftskanal genom att sammanfoga data
 description: Lär dig hur du genererar dokument för utskriftskanaler genom att sammanfoga data som finns i indataströmmen
 seo-description: Lär dig hur du genererar dokument för utskriftskanaler genom att sammanfoga data som finns i indataströmmen
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
