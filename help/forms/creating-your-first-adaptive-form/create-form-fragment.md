@@ -1,21 +1,18 @@
 ---
 title: Skapa formulärfragment
 description: AEM är en praktisk funktion för att skapa formulärsegment som en panel eller en grupp fält endast en gång och återanvända dem i anpassade formulär.
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 15%
+source-wordcount: '108'
+ht-degree: 13%
 
 ---
 
