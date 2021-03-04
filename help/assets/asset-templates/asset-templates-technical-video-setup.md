@@ -1,16 +1,14 @@
 ---
 title: Konfigurera resursmallar med AEM Assets och InDesign Server
 description: Med hjälp av resursmallar kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Det är mycket enklare att skapa marknadsföringsbroschyrer, visitkort, flygblad, annonser och postkort med tillgångsmallar när de integreras med InDesign-servern. Konfiguration av InDesign-server med AEM beskrivs i det här avsnittet.
-feature: catalogs, asset-templates
-topics: authoring, renditions, documents
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
