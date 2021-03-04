@@ -3,20 +3,17 @@ title: 'Använda automatiska tester med AEM Adaptive Forms '
 seo-title: 'Använda automatiska tester med AEM Adaptive Forms '
 description: Automatiserad testning av Adaptive Forms med Calvin SDK
 seo-description: Automatiserad testning av Adaptive Forms med Calvin SDK
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
