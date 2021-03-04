@@ -5,16 +5,19 @@ description: Detta är en del av 6 i en flerstegskurs för att skapa ditt först
 seo-description: Detta är en del av 6 i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I den här delen ska vi skapa interaktiv kommunikation för webbkanalen.
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
