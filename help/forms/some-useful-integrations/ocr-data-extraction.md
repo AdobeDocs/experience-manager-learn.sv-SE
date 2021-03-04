@@ -1,17 +1,20 @@
 ---
 title: OCR-dataextrahering
 description: Extrahera data från dokument från myndigheter för att fylla i formulär.
-feature: integreringar
+feature: Barcoded Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
