@@ -3,10 +3,12 @@ title: AEM Foundation Videos och Tutorials
 seo-title: AEM Foundation Videos och Tutorials
 description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Foundation
+role: '"Leader, Architect, Developer, Administrator, Business Practitioner"'
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
@@ -25,7 +27,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
    *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
 
 * **[Konfigurera offentliga och privata nycklar för användning med Adobe I/O (självstudiekurs)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Lär dig hur nycklar och nyckelbehållare genereras  [!DNL openssl] som fungerar med AEM och Adobe I/O.*
+   *Lär dig hur nycklar och nyckelbehållare genereras med  [!DNL openssl] det som fungerar med AEM och Adobe I/O.*
 
 * **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
