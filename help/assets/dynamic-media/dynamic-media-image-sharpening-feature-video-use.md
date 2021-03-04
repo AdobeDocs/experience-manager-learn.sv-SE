@@ -1,21 +1,16 @@
 ---
 title: Använda bildskärpa med AEM Dynamic Media
-seo-title: Använda bildskärpa med AEM Dynamic Media
 description: I den här videon beskrivs varför det är viktigt att göra en bild skarpare för att bibehålla bildens återgivning och hur du använder avancerade inställningar för att skapa den perfekta bilden.
-seo-description: I den här videon beskrivs varför det är viktigt att göra en bild skarpare för att bibehålla bildens återgivning och hur du använder avancerade inställningar för att skapa den perfekta bilden.
-uuid: 75ea35e8-7029-4788-b098-2dc0c1c91916
-discoiquuid: 09210489-4d50-434a-ba0c-ea894fe11adf
 sub-product: dynamiska medier
-feature: image-profiles, viewer-presets
-topics: images, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: Bildprofiler, visningsförinställningar
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
