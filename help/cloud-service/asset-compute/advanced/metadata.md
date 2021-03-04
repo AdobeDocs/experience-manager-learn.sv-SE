@@ -1,7 +1,7 @@
 ---
 title: Utveckla en metadataarbetare i Asset compute
 description: Lär dig hur du skapar en Asset compute-metadataarbetare som härleder de vanligaste färgerna i en bildresurs och skriver tillbaka namnen på färgerna till resursens metadata i AEM.
-feature: asset-compute
+feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: c2a8e6c3ae6dcaa45816b1d3efe569126c6c1e60
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -203,7 +206,7 @@ Eftersom vårt Asset compute-projekt innehåller två arbetare (den tidigare [ci
    }
    ```
 1. Tryck på __Kör__ och vänta på att XML-återgivningen ska generera
-   + Eftersom båda arbetarna är listade i profildefinitionen genereras båda återgivningarna. Den övre profildefinitionen som pekar på den cirkelformade renderingsarbetaren [ kan också tas bort för att undvika att den körs från utvecklingsverktyget.](../develop/worker.md)
+   + Eftersom båda arbetarna är listade i profildefinitionen genereras båda återgivningarna. Den övre profildefinitionen som pekar på den cirkelformade renderingsarbetaren ](../develop/worker.md) kan också tas bort för att undvika att den körs från utvecklingsverktyget.[
 1. Avsnittet __Återgivningar__ förhandsvisar den återgivning som genereras. Tryck på `rendition.xml` för att hämta den och öppna den i VS-koden (eller din favoritredigerare för XML/text) för att granska.
 
 ## Testa arbetaren{#test}
@@ -306,7 +309,7 @@ Om du vill granska färgmetadata mappar du två nya fält i bildens metadataram 
 1. När bearbetningen är klar markerar du resursen och trycker på __egenskaper__ i det övre åtgärdsfältet för att visa dess metadata
 1. Granska metadatafälten `Colors Family` och `Colors` [för metadata](#metadata-schema) för metadata som skrivits tillbaka från den anpassade metadataarbetaren för Asset compute.
 
-När färgmetadata skrivs till resursens metadata indexeras dessa metadata via sökningen och kan även skrivas tillbaka till resursens binärfil om `[dam:Asset]/jcr:content/metadata`DAM Metadata Writeback __-arbetsflödet anropas.__
+När färgmetadata skrivs till resursens metadata indexeras dessa metadata via sökningen och kan även skrivas tillbaka till resursens binärfil om __DAM Metadata Writeback__-arbetsflödet anropas.`[dam:Asset]/jcr:content/metadata`
 
 ### Metadataåtergivning i AEM Assets
 
