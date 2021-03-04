@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
+feature: '"Innehållsfragment, GraphQL API:er"'
+topic: '"Headless, Content Management"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
