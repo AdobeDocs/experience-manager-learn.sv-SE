@@ -9,13 +9,10 @@ activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: '"Headless, integrations"'
-role: Developer
-level: '"Intermediera, erfarna"'
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
