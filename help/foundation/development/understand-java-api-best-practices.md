@@ -3,18 +3,15 @@ title: Förstå bästa praxis för Java API i AEM
 description: AEM bygger på en programhög med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: grund, resurser, platser
-feature: API:er
+feature: null
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -131,7 +128,7 @@ Det önskade API:t är [AEM Query Builder](https://helpx.adobe.com/experience-ma
 * Byggstenar för asynkron bearbetning av arbete
 
    * [Händelse- och jobbhanterare](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)
-   * [Scheman](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
+   * [Schemaläggare](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 * [Tjänstanvändare](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
