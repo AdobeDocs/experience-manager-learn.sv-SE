@@ -1,17 +1,20 @@
 ---
 title: Developing with the AEM SPA Editor - Hello World Tutorial
-description: AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React- eller Angular-ramverk.
+description: AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React eller Angular.
 sub-product: webbplatser, innehållstjänster
-feature: spa-editor
+feature: Spa Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
+topic: SPA
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3143'
+source-wordcount: '3148'
 ht-degree: 0%
 
 ---
@@ -21,25 +24,25 @@ ht-degree: 0%
 
 >[!WARNING]
 >
-> Den här självstudiekursen är **inaktuell**. Vi rekommenderar att du följer något av följande: [Komma igång med AEM SPA och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) eller [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+> Den här självstudiekursen är **inaktuell**. Vi rekommenderar att du följer något av följande: [Komma igång med AEM och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) eller [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
 
-AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React- eller Angular-ramverk.
+AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React eller Angular.
 
 >[!NOTE]
 >
 > Funktionen SPA (Single-Page Application Editor) kräver AEM 6.4 Service Pack 2 eller senare.
 >
-> SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
+> SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
 
 ## Nödvändig läsning {#prereq}
 
-Den här självstudiekursen är avsedd att markera de steg som behövs för att mappa en SPA till en AEM för att aktivera kontextredigering. Användare som börjar med den här självstudiekursen bör känna till grundläggande koncept för utveckling med Adobe Experience Manager, AEM och utveckling med React of Angular-ramverk. Självstudiekursen omfattar både back-end- och front-end-utvecklingsuppgifter.
+Den här självstudiekursen är avsedd att markera de steg som behövs för att mappa en SPA till en AEM för att aktivera kontextredigering. Användare som börjar med den här självstudiekursen bör känna till grundläggande begrepp för utveckling med Adobe Experience Manager, AEM och att utveckla med React of Angular-ramverk. Självstudiekursen omfattar både back-end- och front-end-utvecklingsuppgifter.
 
 Du bör granska följande resurser innan du startar den här självstudiekursen:
 
 * [SPA Editor Feature Video](spa-editor-framework-feature-video-use.md)  - En videoöversikt av SPA Editor och appen We.Retail Journal.
 * [Självstudiekurs](https://reactjs.org/tutorial/tutorial.html)  i React.js - en introduktion till hur du utvecklar med React Framework.
-* [Vinkelbaserad självstudiekurs](https://angular.io/tutorial)  - en introduktion till att utveckla med vinklar
+* [Självstudiekurs](https://angular.io/tutorial)  om angular - en introduktion till att utveckla med Angular
 
 ## Lokal utvecklingsmiljö {#local-dev}
 
@@ -75,7 +78,7 @@ Det grundläggande konceptet är att mappa en SPA till en AEM. AEM komponenter, 
 
 ![SPA](assets/spa-editor-helloworld-tutorial-use/mapto.png)
 
-Populära ramverk [React JS](https://reactjs.org/) och [Vinkeln](https://angular.io/) stöds inte. Användare kan slutföra den här självstudiekursen i antingen Vinkel eller Reagera, beroende på vilket ramverk de är mest bekväma med.
+Populära ramverk [React JS](https://reactjs.org/) och [Angular](https://angular.io/) stöds inte. Användare kan slutföra den här självstudiekursen i Angular eller Reagera, beroende på vilket ramverk de är mest bekväma med.
 
 ## Projektinställningar {#project-setup}
 
@@ -115,7 +118,7 @@ Målet med den här självstudiekursen är att utöka appen We.Retail Journal me
    * `ui.apps`: innehåller /apps-delar av projektet, t.ex. JS- och CSS-klientlibs, komponenter, runmode-specifika konfigurationer.
    * `ui.content`: innehåller strukturinnehåll och konfigurationer (`/content`,  `/conf`)
    * `react-app`: Reaktionsprogram för webbutiksjournal. Det här är både en Maven-modul och ett webpack-projekt.
-   * `angular-app`: Vinkelprogram för detaljhandelsjournal. Detta är både en [!DNL Maven]-modul och ett webbpaketprojekt.
+   * `angular-app`: Vi.Retail Journal Angular application. Detta är både en [!DNL Maven]-modul och ett webbpaketprojekt.
 
 1. Öppna ett nytt terminalfönster och kör följande kommando för att skapa och distribuera hela programmet till en lokal AEM som körs på [http://localhost:4502](http://localhost:4502).
 
@@ -399,7 +402,7 @@ Därefter skapas en [!DNL Sling Model]-komponent för att backa komponenten [!DN
    >
    > Metodnamnet `getDisplayMessage` är viktigt. När [!DNL Sling Model] har serialiserats med [!DNL Jackson Exporter] visas den som en JSON-egenskap: `displayMessage`. [!DNL Jackson Exporter] serialiserar och visar alla `getter`-metoder som inte tar någon parameter (såvida de inte uttryckligen markerats för att ignorera). Senare i appen React/Angular läser vi egenskapsvärdet och visar det som en del av programmet.
 
-   Metoden `getExportedType` är också viktig. Värdet för komponenten `resourceType` används för att &quot;mappa&quot; JSON-data till frontkomponenten (vinkelrät/React). Vi kommer att undersöka detta i nästa avsnitt.
+   Metoden `getExportedType` är också viktig. Värdet för komponenten `resourceType` används för att mappa JSON-data till front end-komponenten (Angular/React). Vi kommer att undersöka detta i nästa avsnitt.
 
 1. Implementera metoden `getExportedType()` för att returnera resurstypen för `HelloWorld`-komponenten.
 
@@ -436,7 +439,7 @@ Därefter skapas komponenten React. Öppna **responsapp**-modulen ( `<src>/aem-s
 
 >[!NOTE]
 >
-> Du kan hoppa över det här avsnittet om du bara är intresserad av [vinkelutveckling](#angular-component).
+> Du kan hoppa över det här avsnittet om du bara är intresserad av [Angular-utveckling](#angular-component).
 
 1. I mappen `react-app` navigerar du till mappen src. Expandera komponentmappen för att visa de befintliga React-komponentfilerna.
 
@@ -567,7 +570,7 @@ Därefter skapas komponenten React. Öppna **responsapp**-modulen ( `<src>/aem-s
    > **app.** jsis the bundled React app. Koden är inte längre läsbar för människor. Kommandot `npm run build` har utlöst en optimerad version som genererar kompilerad JavaScript som kan tolkas av moderna webbläsare.
 
 
-## Skapa vinkelkomponent {#angular-component}
+## Skapa Angular-komponent {#angular-component}
 
 **Persona: Front End Developer**
 
@@ -575,11 +578,11 @@ Därefter skapas komponenten React. Öppna **responsapp**-modulen ( `<src>/aem-s
 >
 > Du kan hoppa över det här avsnittet om du bara är intresserad av React-utveckling.
 
-Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-sample-we-retail-journal/angular-app`) med valfri redigerare.
+Därefter skapas komponenten Angular. Öppna modulen **angular-app** (`<src>/aem-sample-we-retail-journal/angular-app`) med valfri redigerare.
 
-1. I mappen `angular-app` navigerar du till mappen `src`. Expandera komponentmappen för att visa de befintliga komponentfilerna för vinkeln.
+1. I mappen `angular-app` navigerar du till mappen `src`. Expandera komponentmappen för att visa de befintliga komponentfilerna för Angularna.
 
-   ![Vinkelfilstruktur](assets/spa-editor-helloworld-tutorial-use/angular-file-structure.png)
+   ![Angularnas filstruktur](assets/spa-editor-helloworld-tutorial-use/angular-file-structure.png)
 
 1. Lägg till en ny mapp under komponentmappen `helloworld`. Under mappen `helloworld` lägger du till nya filer med namnet `helloworld.component.css, helloworld.component.html, helloworld.component.ts`.
 
@@ -594,7 +597,7 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
    +                    helloworld.component.ts
    ```
 
-1. Öppna `helloworld.component.ts`. Lägg till en import-sats för att importera klasserna Angular `Component` och `Input`. Skapa en ny komponent som pekar på `styleUrls` och `templateUrl` till `helloworld.component.css` och `helloworld.component.html`. Exportera slutligen klassen `HelloWorldComponent` med den förväntade inmatningen `displayMessage`.
+1. Öppna `helloworld.component.ts`. Lägg till en import-sats för att importera klasserna `Component` och `Input` för Angularna. Skapa en ny komponent som pekar på `styleUrls` och `templateUrl` till `helloworld.component.css` och `helloworld.component.html`. Exportera slutligen klassen `HelloWorldComponent` med den förväntade inmatningen `displayMessage`.
 
    ```js
    //helloworld.component.ts
@@ -615,7 +618,7 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
 
    >[!NOTE]
    >
-   > Om du kommer ihåg [!DNL Sling Model] som skapades tidigare fanns det en metod **getDisplayMessage()**. Den serialiserade JSON-koden för den här metoden är **displayMessage**, som vi nu läser i vinkelappen.
+   > Om du kommer ihåg [!DNL Sling Model] som skapades tidigare fanns det en metod **getDisplayMessage()**. Den serialiserade JSON-koden för den här metoden är **displayMessage**, som vi nu läser i appen Angular.
 
 1. Öppna `helloworld.component.html` om du vill inkludera en `h1`-tagg som ska skriva ut egenskapen `displayMessage`:
 
@@ -673,7 +676,7 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
    });
    ```
 
-1. Nästa uppdatering `src/components/mapping.ts` som inkluderar `HelloWorldComponent`. Lägg till en `HelloWorldEditConfig` som markerar platshållaren i AEM redigerare innan komponenten har konfigurerats. Lägg slutligen till en linje för att mappa AEM till vinkelkomponenten med `MapTo`-hjälpen.
+1. Nästa uppdatering `src/components/mapping.ts` som inkluderar `HelloWorldComponent`. Lägg till en `HelloWorldEditConfig` som markerar platshållaren i AEM redigerare innan komponenten har konfigurerats. Lägg slutligen till en linje för att mappa AEM till komponenten Angular med `MapTo`-hjälpen.
 
    ```js
    // src/components/mapping.ts
@@ -744,7 +747,7 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
    $ mvn -PautoInstallSinglePackage clean install
    ```
 
-1. Öppna `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js` i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js). Gör en snabbsökning i **HelloWorld** i `main.js` för att kontrollera att vinkelkomponenten ingår.
+1. Öppna `/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js` i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/we-retail-journal/angular/clientlibs/we-retail-journal-angular/js/main.js). Gör en snabbsökning i **HelloWorld** i `main.js` för att kontrollera att komponenten för Angular har inkluderats.
 
    >[!NOTE]
    >
@@ -752,9 +755,9 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
 
 ## Uppdaterar mallen {#template-update}
 
-1. Navigera till den redigerbara mallen för React- och/eller Angular-versionerna:
+1. Navigera till Redigerbar mall för versionerna React och/eller Angular:
 
-   * (Vinkel) [http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
+   * (Angular) [http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/angular/settings/wcm/templates/we-retail-angular-weather-template/structure.html)
    * (Reagera) [http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html](http://localhost:4502/editor.html/conf/we-retail-journal/react/settings/wcm/templates/we-retail-react-weather-template/structure.html)
 
 1. Markera huvudikonen [!UICONTROL Layout Container] och välj ikonen [!UICONTROL Policy] för att öppna profilen:
@@ -779,7 +782,7 @@ Därefter skapas vinkelkomponenten. Öppna modulen **angular-app** (`<src>/aem-s
 
 ## Samla allt {#putting-together}
 
-1. Navigera till sidorna Vinkel eller Reagera:
+1. Navigera till Angularna eller Reagera-sidorna:
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
@@ -833,6 +836,6 @@ Om ett AEM inte uppfylls, antingen i **[!UICONTROL AEM Package Manager]** eller 
 
 **Upplösning**: Rensa webbläsarens historik/cacheminne och/eller öppna en ny webbläsare eller använd läget Incognito. Om det inte fungerar gör du klientbibliotekscachen ogiltig på den lokala AEM. AEM försöker cache-lagra stora klientbibliotek för att vara effektiva. Ibland behövs det att manuellt göra cachen ogiltig för att åtgärda problem där inaktuell kod cachelagras.
 
-Navigera till: [http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) och klicka på Invalidera cache. Återgå till sidan Reaktion/Vinkel och uppdatera sidan.
+Navigera till: [http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) och klicka på Invalidera cache. Gå tillbaka till sidan Reagera/Angular och uppdatera sidan.
 
 ![Återskapa klientbibliotek](assets/spa-editor-helloworld-tutorial-use/invalidatecache.png)
