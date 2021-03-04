@@ -4,20 +4,17 @@ seo-title: 'Genererar JSON-webbtoken och åtkomsttoken '
 description: I den här artikeln förklaras koden som behövs för att skapa JWT och Access Token som behövs för att göra REST-anrop till Adobe Campaign Standard
 seo-description: I den här artikeln förklaras koden som behövs för att skapa JWT och Access Token som behövs för att göra REST-anrop till Adobe Campaign Standard
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: '"Adaptive Forms, Form Data Model"'
+feature: adaptiva formulär, formulärdatamodell
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
