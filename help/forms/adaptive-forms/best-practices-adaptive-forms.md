@@ -3,17 +3,20 @@ title: Namngivningskonventioner och bästa praxis som ska följas när man skapa
 seo-title: Namngivningskonventioner och bästa praxis som ska följas när man skapar anpassningsbara formulär
 description: Namngivningskonventioner och bästa praxis som ska följas när man skapar anpassningsbara formulär
 seo-description: Namngivningskonventioner och bästa praxis som ska följas när man skapar anpassningsbara formulär
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: best-practices
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 2%
 
 ---
 
