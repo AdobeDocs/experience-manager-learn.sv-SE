@@ -1,16 +1,19 @@
 ---
 title: Konfigurera ContextHub för personalisering med AEM Sites
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Med ContextHub Javascript API kan du komma åt arkiv för att skapa, uppdatera och ta bort data efter behov. Därför representerar ContextHub ett datalager på dina sidor. På den här sidan beskrivs hur du lägger till sammanhangsnav på dina AEM webbplatssidor.
-feature: context-hub
+feature: Kontextnav
 topics: personalization
 audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
+topic: Personanpassning
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '429'
 ht-degree: 1%
 
 ---
@@ -26,7 +29,7 @@ ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Me
 >
 >Vi använder WKND-referenswebbplatsen för den här videon och den ingår inte i AEM. Du kan hämta den [senaste versionen här](https://github.com/adobe/aem-guides-wknd/releases).
 
-Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub JavaScript-biblioteken. ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar.
+Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken. ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar.
 
 ## Lägger till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
