@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 5912
 thumbnail: 5912-spa-react.jpg
+feature: SPA
+topic: SPA
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '734'
 ht-degree: 2%
 
 ---
