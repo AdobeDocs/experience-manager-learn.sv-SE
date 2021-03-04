@@ -2,17 +2,20 @@
 title: Förstå autentiseringsstöd i AEM
 description: 'En samlad vy över de autentiseringsmekanismer (och ibland auktoriseringsmekanismer) som stöds av AEM. '
 version: 6.3, 6.4, 6.5
-feature: autentisering
+feature: 'Användare och grupper '
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
+topic: Arkitektur
+role: Arkitekt
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 2%
 
 ---
 
