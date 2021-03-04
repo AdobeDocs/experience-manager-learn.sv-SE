@@ -1,17 +1,20 @@
 ---
 title: Felsöka AEM SDK
 description: AEM SDK är den primära utvecklingsmiljön som används av utvecklare och stöder en mängd olika sätt att felsöka AEM och distribuerade program.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: null
+topic: Utveckling
+role: Developer
+level: Nybörjare, mellanliggande
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
