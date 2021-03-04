@@ -3,16 +3,19 @@ title: AEM arbetsflöde vid HTML5-formuläröverföring
 seo-title: AEM arbetsflödet vid inskickning av HTML5-formulär
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
 seo-description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
-feature: mobile-forms
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
