@@ -4,17 +4,20 @@ seo-title: Ange värde för Json-dataelement i AEM Forms Workflow
 description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 seo-description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: adaptive-forms,workflow
+feature: Adaptiv Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
