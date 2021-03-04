@@ -1,21 +1,16 @@
 ---
 title: Färghantering med AEM Dynamic Media
-seo-title: Färghantering med AEM Dynamic Media
-description: I den här videon utforskar vi Dynamic Media Color Management och hur den kan användas för att förgranska färgkorrigeringar i för AEM Assets.
-seo-description: I den här videon utforskar vi Dynamic Media Color Management och hur den kan användas för att förgranska färgkorrigeringar i för AEM Assets.
-uuid: dc14d067-11a2-4662-acfd-f9f6f1d738ee
-discoiquuid: b2b9ccc9-96b5-4bea-9995-2e6b353c469d
+description: I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
 sub-product: dynamiska medier
-feature: image-profiles, video-profiles
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
+feature: Bildprofiler, videoprofiler
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '330'
 ht-degree: 4%
 
 ---
@@ -23,7 +18,7 @@ ht-degree: 4%
 
 # Färghantering med AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
-I den här videon utforskar vi Dynamic Media Color Management och hur den kan användas för att förgranska färgkorrigeringar i för AEM Assets.
+I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
@@ -130,4 +125,4 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Konfigurera Dynamic Media Color Management](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurera Dynamic Media färghantering](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
