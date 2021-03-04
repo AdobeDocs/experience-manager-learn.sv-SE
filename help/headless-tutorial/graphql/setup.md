@@ -10,14 +10,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: '"Innehållsfragment, GraphQL API:er"'
-topic: '"Headless, Content Management"'
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
