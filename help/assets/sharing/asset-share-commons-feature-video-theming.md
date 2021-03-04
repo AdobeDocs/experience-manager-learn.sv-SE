@@ -1,22 +1,15 @@
 ---
 title: Introduktion till tema i Resursdelningskommentarer
-seo-title: Introduktion till tema i Resursdelningskommentarer
 description: Material för både funktionell och teknisk förståelse Assets Share Commons
-seo-description: Material för både funktionell och teknisk förståelse Assets Share Commons
-uuid: 5991a015-392a-4bb5-8332-192681505b07
-discoiquuid: 08a5a394-c62b-4748-b303-33117f283612
-contentOwner: dgonzale
-feature: asset-share, brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions
-audience: developer, architect, administrator
-doc-type: technical video
-activity: setup
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 1%
+source-wordcount: '117'
+ht-degree: 2%
 
 ---
 
