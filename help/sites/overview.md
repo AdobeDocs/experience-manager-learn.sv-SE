@@ -4,10 +4,11 @@ seo-title: AEM Sites Tutorials
 description: 'En samling videor och självstudiekurser för Adobe Experience Manager Sites. '
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites
 sub-product: webbplatser, innehållstjänster
+topic: Innehållshantering
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '365'
 ht-degree: 1%
 
 ---
