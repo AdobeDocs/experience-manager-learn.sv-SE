@@ -1,7 +1,7 @@
 ---
 title: Spåra klickade komponenter med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics med en spårlänkssignal.
-feature: analytics
+feature: analys
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
+topic: Integreringar
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1835'
 ht-degree: 1%
 
 ---
