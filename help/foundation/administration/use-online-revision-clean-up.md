@@ -2,17 +2,15 @@
 title: Använd rensning av onlineversioner
 description: 'En kort introduktion till rensning av onlineändringar. Rensa online-versioner minskar behovet av att ofta rensa offlinerevision. '
 version: 6.3, 6.4, 6.5
+feature: ek, komprimering
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
 doc-type: technical video
-topic: Administration
-role: Administratör
-level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
