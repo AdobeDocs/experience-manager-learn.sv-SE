@@ -1,21 +1,18 @@
 ---
 title: Skicka dokument för signering med hjälp av arbetsflöde
 description: Skicka dokument för underskrift med hjälp av ett arbetsflöde. Skapa ett AEM arbetsflöde med dokumentkomponenten för signering. Använd den automatiskt genererade DoR-funktionen för att skicka för signering med signeringskomponenten. I videon förklaras de olika steg som behövs för att skapa ett effektivt arbetsflöde för att skicka dokument för signering.
-feature: '"Adaptiv Forms,Adobe Sign"'
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 38182.jpg
 kt: 6035
-topic: Utveckling
-role: Developer
-level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 2%
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
