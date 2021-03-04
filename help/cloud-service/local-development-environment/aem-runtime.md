@@ -1,7 +1,7 @@
 ---
 title: Konfigurera lokal AEM för AEM som en Cloud Service-utveckling
 description: Konfigurera den lokala AEM Runtime-miljön med AEM som snabbstartsdarr för en Cloud Service-SDK.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 0%
+source-wordcount: '1657'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ Observera att `~` används som kortskrift för användarens katalog. I Windows m
 
 Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utvecklingsverktygen.
 
-1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Kontrollera att Java 11 SDK är installerat genom att köra kommandot:
    + Windows:`java -version`
    + macOS / Linux: `java --version`
@@ -173,7 +176,7 @@ Tillgängliga permutationer är följande:
 Observera att portnumret kan vara vilken tillgänglig port som helst på den lokala utvecklingsdatorn, men enligt konvention:
 
 + Port __4502__ används för den lokala AEM Author-tjänsten ____
-+ Porten __4503__ används för den lokala AEM-publiceringstjänsten ____
++ Port __4503__ används för den lokala AEM-publiceringstjänsten ____
 
 Om du ändrar dessa kan du behöva justera AEM SDK-konfigurationer
 
@@ -236,7 +239,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 När Java SDK 11 har installerats kontrollerar du att det är den aktiva versionen genom att köra följande från kommandoraden.
 
 När Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
