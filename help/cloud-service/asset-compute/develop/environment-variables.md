@@ -1,7 +1,7 @@
 ---
 title: Konfigurera miljövariabler för Asset compute-utökningsbarhet
-description: Miljövariabler bevaras i .env-filen för lokal utveckling och används för att ange Adobe I/O-autentiseringsuppgifter och molnlagringsreferenser som krävs för lokal utveckling.
-feature: asset-compute
+description: Miljövariabler bevaras i .env-filen för lokal utveckling, och används för att ange autentiseringsuppgifter för Adobe I/O och molnlagring som krävs för lokal utveckling.
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -22,16 +25,16 @@ ht-degree: 0%
 
 ![punktmiljöfil](assets/environment-variables/dot-env-file.png)
 
-Innan du börjar utveckla Asset compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env`, som bara används för lokal utveckling, och inte sparas i Git. Filen `.env` är ett praktiskt sätt att visa par med nycklar/värden i den lokala utvecklingsmiljön i Asset compute. När [distribuerar](../deploy/runtime.md) Asset compute arbetare till Adobe I/O Runtime används inte filen `.env`, utan en delmängd av värdena skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i filen `.env`, till exempel utvecklingsuppgifter för webbtjänster från tredje part.
+Innan du börjar utveckla Asset compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env` som endast används för lokal utveckling och inte sparas i Git. Filen `.env` är ett praktiskt sätt att visa par med nycklar/värden i den lokala utvecklingsmiljön i Asset compute. När [distribuerar](../deploy/runtime.md) Asset compute arbetare till Adobe I/O Runtime används inte filen `.env`, utan en delmängd av värdena skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i filen `.env`, till exempel utvecklingsuppgifter för webbtjänster från tredje part.
 
 ## Referera till `private.key`
 
 ![privat nyckel](assets/environment-variables/private-key.png)
 
-Öppna filen `.env`, avkommentera nyckeln `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` och ange den absoluta sökvägen i filsystemet till `private.key` som paras med det offentliga certifikatet som lagts till i ditt Adobe I/O FireFly-projekt.
+Öppna filen `.env`, avkommentera nyckeln `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` och ange den absoluta sökvägen i filsystemet till `private.key` som parar med det offentliga certifikatet som lagts till i ditt Adobe I/O FireFly-projekt.
 
-+ Om nyckelparet genererades av Adobe I/O hämtades det automatiskt som en del av `config.zip`.
-+ Om du gav Adobe I/O den offentliga nyckeln bör du också ha den motsvarande privata nyckeln.
++ Om nyckelparet genererades av Adobe I/O laddades det ned automatiskt som en del av `config.zip`.
++ Om du har gett Adobe I/O den offentliga nyckeln bör du också ha den motsvarande privata nyckeln.
 + Om du inte har dessa nyckelpar kan du generera nya nyckelpar eller överföra nya offentliga nycklar längst ned i:
    [https://console.adobe.com](https://console.adobe.io) > Ditt Asset compute-projekt > Arbetsytor @ Utveckling > Tjänstkonto (JWT).
 
@@ -79,7 +82,7 @@ Om du INTE använder Microsoft Azure Blob Storage tar du bort eller låter de ko
 
 ### Använda Amazon S3-molnlagring{#amazon-s3}
 
-Om du använder molnlagringen i Amazon S3 avkommenterar du och fyller i följande nycklar i filen `.env`.
+Om du använder molnlagringen i Amazon S3 avkommenterar du och fyller i följande knappar i filen `.env`.
 
 Det här kan till exempel se ut så här (värden endast för illustrationer):
 
