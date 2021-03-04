@@ -2,15 +2,18 @@
 title: Använd oak-run.jar för att hantera index
 description: index-kommandot oak-run.jar konsoliderar ett antal funktioner för att hantera Oak-index i AEM, från att samla in indexstatistik, köra konsekvenskontroller av index samt att indexera om sig själv.
 version: 6.4, 6.5
-feature: oak
+feature: Sökning
 topics: search
 activity: use
 audience: architect, developer, implementer
 doc-type: technical video
+topic: Prestanda
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
