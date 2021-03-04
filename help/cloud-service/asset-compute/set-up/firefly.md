@@ -1,7 +1,7 @@
 ---
 title: Konfigurera Adobe Project Fire för Asset compute-utbyggbarhet
 description: Projekt i asset compute är särskilt definierade projekt i Adobe Project Fire, och därför måste du ha tillgång till Adobe Project Fire i Adobe Developer Console för att kunna konfigurera och driftsätta dem.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -63,8 +66,8 @@ Det här Adobe I/O-projektets autentiseringsuppgifter används av det lokala [As
 
 ![Adobe Developer Service Account-autentiseringsuppgifter](./assets/firefly/service-account.png)
 
-1. Kontrollera att arbetsytan `Development` är markerad i Adobe I/O Project Fire-projektet
+1. Kontrollera att arbetsytan `Development` är markerad i projektet Adobe I/O Project Firefoly
 1. Tryck på __JWT (Service Account)__ under __Autentiseringsuppgifter__
-1. Granska de Adobe I/O-autentiseringsuppgifter som visas
+1. Granska inloggningsuppgifterna för Adobe I/O som visas
    + Den __publika nyckeln__ som anges längst ned har den __private.key__-motsvarigheten i `config.zip` som hämtades när __Asset compute-API__ lades till i det här projektet.
-      + Om den privata nyckeln förloras eller komprometteras kan den matchande offentliga nyckeln tas bort och ett nytt nyckelpar som genereras i eller överförs till Adobe I/O med det här gränssnittet.
+      + Om den privata nyckeln förloras eller komprometteras kan den matchande offentliga nyckeln tas bort och ett nytt nyckelpar genereras i eller överförs till Adobe I/O med det här gränssnittet.
