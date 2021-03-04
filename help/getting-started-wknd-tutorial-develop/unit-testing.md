@@ -9,10 +9,14 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+feature: '"API:er, AEM Project Archetype"'
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '3024'
 ht-degree: 0%
 
 ---
@@ -206,9 +210,9 @@ Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet sk
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-    Men även differentiera testfilen    `Test`-suffixet i enhetstestfilen, `BylineImplTest.java` är en konvention som gör att vi kan
-      1. Identifiera den enkelt som testfilen _för_ `BylineImpl.java`
-      2. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
+2. Men även differentiera testfilen    `Test`-suffixet i enhetstestfilen, `BylineImplTest.java` är en konvention som gör att vi kan
+1. Identifiera den enkelt som testfilen _för_ `BylineImpl.java`
+2. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
 
 ## Granska BylineImplTest.java {#reviewing-bylineimpltest-java}
 
@@ -344,7 +348,7 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
 
    ![BylineImplTest.json](assets/unit-testing/bylineimpltest-json.png)
 
-   Denna JSON definierar en modellresurs (JCR-nod) för Byline-komponentenhetstestet. I det här skedet har JSON den minsta uppsättning egenskaper som krävs för att representera en innehållskälla för en Byline-komponent, `jcr:primaryType` och `sling:resourceType`.
+   Denna JSON definierar en modellresurs (JCR-nod) för Byline-komponentenhetstestet. I det här skedet har JSON den minsta uppsättning egenskaper som krävs för att representera en innehållsresurs för en instickskomponent, `jcr:primaryType` och `sling:resourceType`.
 
    En allmän regel när du arbetar med enhetstester är att skapa den minimala uppsättningen av modellinnehåll, kontext och kod som krävs för att uppfylla varje test. Undvik frestelsen att bygga ut en komplett modellkontext innan du skriver testerna, eftersom det ofta leder till onödiga artefakter.
 
@@ -447,7 +451,7 @@ Nu när vi har skapat en grundläggande modellkontext kan vi skriva vårt först
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med  [Mockito JUnit Jupiter ](https://www.javadoc.io/page/org.mockito/mockito-junit-jupiter/latest/org/mockito/junit/jupiter/MockitoExtension.html) Extensionering, som tillåter användning av @Mock-anteckningar för att definiera modellobjekt på klassnivå.
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med  [Mockito JUnit Jupiter ](https://www.javadoc.io/page/org.mockito/mockito-junit-jupiter/latest/org/mockito/junit/jupiter/MockitoExtension.html) Extension, som tillåter användning av @Mock-anteckningar för att definiera modellobjekt på klassnivå.
    * **`@Mock private Image`** skapar ett modellobjekt av typen  `com.adobe.cq.wcm.core.components.models.Image`. Observera att detta definieras på klassnivå så att `@Test`-metoder kan ändra sitt beteende efter behov.
    * **`@Mock private ModelFactory`** skapar ett modellobjekt av typen ModelFactory. Observera att det här är en ren Mockito-mock och att inga metoder har implementerats på den. Observera att detta definieras på klassnivå så att `@Test`metoder kan ändra sitt beteende efter behov.
    * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar modellbeteende för när  `getModelFromWrappedRequest(..)` anropas i Mock ModelFactory-objektet. Resultatet som definieras i `thenReturn (..)` är att returnera modellbildobjektet. Observera att det här beteendet bara anropas när: den första parametern är lika med `ctx`-objektets request-objekt, den andra parametern är ett Resource-objekt och den tredje parametern måste vara Core Components Image-klass. Vi accepterar alla resurser eftersom vi under testerna kommer att ställa in `ctx.currentResource(...)` på olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till strängen **leenient()** eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
