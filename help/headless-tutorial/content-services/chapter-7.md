@@ -1,10 +1,14 @@
 ---
 title: Kapitel 7 - Använda AEM innehållstjänster från en mobilapp - Innehållstjänster
 description: Kapitel 7 i självstudiekursen innehåller Android-mobilappen som kan använda redigerat innehåll från AEM Content Services.
+feature: '"Innehållsfragment, API:er"'
+topic: '"Headless, Content Management"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
