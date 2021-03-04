@@ -2,17 +2,17 @@
 title: Checka in-utcheckning
 description: Med Adobe Asset Link kan du checka ut AEM Assets direkt från det kreativa program du arbetar i och börja redigera direkt. Du kan enkelt checka in resurser tillbaka till AEM Assets med rätt versionshantering och kommentarer när du är klar med redigeringen i Creative Cloud-appen.
 sub-product: resurser
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images, operations
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: 6.4, 6.5, cloud-service
+kt: 4910
 thumbnail: 33886.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
