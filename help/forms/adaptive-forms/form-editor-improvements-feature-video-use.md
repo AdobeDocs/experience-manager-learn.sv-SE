@@ -3,7 +3,7 @@ title: Förbättringar av formulärredigeraren i AEM Forms
 seo-title: Förbättringar av formulärredigeraren i AEM Forms
 description: I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versionen för att förenkla redigeringen av adaptiva formulär och dokument. Förbättringarna minskar time to market och gör det möjligt för företagsanvändare att arbeta med formulär och dokument
 seo-description: I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versionen för att förenkla redigeringen av adaptiva formulär och dokument. Förbättringarna minskar time to market och gör det möjligt för företagsanvändare att arbeta med formulär och dokument
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -11,10 +11,13 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
+topic: Utveckling
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
