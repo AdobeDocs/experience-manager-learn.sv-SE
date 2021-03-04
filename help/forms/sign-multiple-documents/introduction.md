@@ -1,18 +1,21 @@
 ---
 title: Introduktion
 description: Videodemonstration av signering av flera formulär
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 thumbnail: 330165.jpg
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 2%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
