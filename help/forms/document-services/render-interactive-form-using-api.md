@@ -3,16 +3,19 @@ title: Utveckla med Output och Forms Services i AEM Forms
 seo-title: Utveckla med Output och Forms Services i AEM Forms
 description: Använda API:er för Output och Forms Service i AEM Forms
 seo-description: Använda API:er för Output och Forms Service i AEM Forms
-feature: form-service
+feature: Forms Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
