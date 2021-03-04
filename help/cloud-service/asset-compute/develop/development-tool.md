@@ -1,7 +1,7 @@
 ---
 title: asset compute Development Tool
 description: Asset compute Development Tool är en lokal webbenhet som gör det möjligt för utvecklare att konfigurera och köra Assets Computer Workers lokalt, utanför AEM SDK mot Asset compute-resurserna i Adobe I/O Runtime.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -39,7 +42,7 @@ Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatis
 1. __Källfil:__ Källfilsvalet används för att:
    + Markerade resursens binärfil som ska vara den `source`-binärfil som skickas till Asset compute-arbetaren
    + Överför källfiler
-1. __asset compute-profildefinition:__ Definierar den Asset compute-arbetare som ska köras inklusive parametrar: inklusive arbetarens URL-slutpunkt, det resulterande återgivningsnamnet och eventuella parametrar
+1. __definition av Asset compute-profil(er):__ Definierar den Asset compute-arbetare som ska köras inklusive parametrar: inklusive arbetarens URL-slutpunkt, det resulterande återgivningsnamnet och eventuella parametrar
 1. __Kör:__ Knappen Kör kör den Asset compute-profil som definierats i Asset compute konfigurationsprofilredigerare
 1. __Avbryt:__ Knappen Avbryt avbryter en körning som initierats från att trycka på knappen Kör
 1. __Begäran/svar:__ Tillhandahåller HTTP-begäran och svar till/från den Asset compute-arbetare som körs i Adobe I/O Runtime. Detta kan vara användbart vid felsökning
