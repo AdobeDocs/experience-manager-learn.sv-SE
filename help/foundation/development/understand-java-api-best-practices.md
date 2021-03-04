@@ -3,15 +3,18 @@ title: Förstå bästa praxis för Java API i AEM
 description: AEM bygger på en programhög med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: grund, resurser, platser
-feature: null
+feature: API:er
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
