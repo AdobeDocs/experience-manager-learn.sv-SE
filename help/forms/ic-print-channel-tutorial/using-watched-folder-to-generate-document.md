@@ -4,7 +4,7 @@ seo-title: Generera dokument för utskriftskanaler med bevakad mapp
 description: Det här är en del av 10 steg-självstudiekursen för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen genererar vi dokument i tryckkanaler med hjälp av bevakade mappfunktioner.
 seo-description: Det här är en del av 10 steg-självstudiekursen för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen genererar vi dokument i tryckkanaler med hjälp av bevakade mappfunktioner.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: Interaktiv kommunikation
+feature: interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,13 +12,10 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
