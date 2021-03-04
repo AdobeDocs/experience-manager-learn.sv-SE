@@ -2,7 +2,7 @@
 title: Konfigurera Dispatcher Tools för AEM som en Cloud Service Development
 description: AEM SDKs Dispatcher Tools underlättar den lokala utvecklingen av Adobe Experience Manager-projekt (AEM) genom att göra det enkelt att installera, köra och felsöka Dispatcher lokalt.
 sub-product: grund
-feature: dispatcher
+feature: Dispatcher, utvecklingsverktyg
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -152,7 +155,7 @@ Om du vill köra Dispatcher Tools mot Dispatcher-konfigurationen för ett Experi
 
 ## Loggar för Dispatcher Tools
 
-Distributionsloggar är användbara vid lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan anges genom att köra `docker_run` med miljöparametrar som prefix.
+Distributionsloggar är användbara under lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan anges genom att köra `docker_run` med miljöparametrar som prefix.
 
 Loggar för Dispatcher Tools skickas till standard out när `docker_run` körs.
 
