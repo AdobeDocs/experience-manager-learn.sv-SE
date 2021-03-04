@@ -4,15 +4,18 @@ description: AEM Service Credentials används för att underlätta för externa 
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API:er
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
+topic: '"Headless, integrations"'
+role: Developer
+level: '"Intermediera, erfarna"'
 translation-type: tm+mt
-source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
