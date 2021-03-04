@@ -1,18 +1,21 @@
 ---
 title: Hyresavtal med 2 signerare
 description: Uthyrningsavtal med två signerare. I videon förklaras de olika stegen som krävs för att konfigurera ett adaptivt formulär med två signerare.
-feature: adaptive-forms
+feature: '"Adaptiv Forms,Adobe Sign"'
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39294.jpg
 kt: 6071
+topic: Utveckling
+role: Administratör
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 1%
 
 ---
 
