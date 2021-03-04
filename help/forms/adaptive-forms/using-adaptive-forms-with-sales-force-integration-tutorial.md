@@ -4,20 +4,17 @@ seo-title: Konfigurera DataSource med Salesforce i AEM Forms 6.3 och 6.4
 description: Integrera AEM Forms med Salesforce med hjälp av formulärdatamodell
 seo-description: Integrera AEM Forms med Salesforce med hjälp av formulärdatamodell
 uuid: 0124526d-f1a3-4f57-b090-a418a595632e
-feature: '"Adaptive Forms, Form Data Model"'
+feature: adaptiva formulär, formulärdatamodell
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 8e314fc3-62d0-4c42-b1ff-49ee34255e83
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
