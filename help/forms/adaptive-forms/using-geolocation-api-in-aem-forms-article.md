@@ -4,18 +4,21 @@ seo-title: Använda Geolocation-API:er i Adaptive Forms
 description: Fylla i adressfält i formuläret med API:n för geopositionering
 seo-description: Fylla i adressfält i formuläret med API:n för geopositionering
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: adaptiva former,
+feature: Adaptiv Forms
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 0%
+source-wordcount: '434'
+ht-degree: 1%
 
 ---
 
