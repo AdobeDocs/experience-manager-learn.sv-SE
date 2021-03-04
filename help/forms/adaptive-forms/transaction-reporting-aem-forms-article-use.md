@@ -4,17 +4,20 @@ seo-title: Använda transaktionsrapportering i AEM Forms
 description: Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution.
 seo-description: Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution.
 uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: developing
 audience: administrator
 doc-type: article
 activity: setup
 version: 6.4.1,6.5
 discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -47,7 +50,7 @@ eller visa transaktionsrapporten genom att klicka [här](http://localhost:4502/m
 
 På skärmbilden ovan Dokumentbearbetat visas antalet dokument som genererats med hjälp av dokumenttjänster. Återgivna dokument är antalet interaktiva kommunikationsdokument (webb och utskrift) som återges. Forms som skickas in är antalet inskickade anpassade formulär.
 
-En transaktion finns kvar i bufferten under en angiven period (Tömningstid för buffert + Omvänd replikeringstid). Som standard tar det ca 90 sekunder för antalet transaktioner att återspeglas i transaktionsrapporten.
+En transaktion finns kvar i bufferten under en angiven period (Tömningstid + Omvänd replikeringstid). Som standard tar det ca 90 sekunder för antalet transaktioner att återspeglas i transaktionsrapporten.
 
 Åtgärder som att skicka ett PDF-formulär, använda agentgränssnittet för att förhandsgranska interaktiv kommunikation eller använda icke-standardiserade metoder för att skicka formulär räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att registrera sådana transaktioner. Anropa API:t från dina anpassade implementeringar för att registrera en transaktion.
 
