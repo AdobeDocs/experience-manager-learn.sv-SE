@@ -1,7 +1,7 @@
 ---
 title: Läsa in och utlösa ett Target-anrop
 description: Lär dig hur du läser in, skickar parametrar till sidförfrågningar och startar ett Target-anrop från webbplatssidan med en startregel. Sidinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
-feature: launch, core-components, data-layer
+feature: Kärnkomponenter, Adobe-klientdatalager
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
+topic: Integreringar
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
