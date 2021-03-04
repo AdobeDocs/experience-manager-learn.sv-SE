@@ -2,17 +2,20 @@
 title: Ställ in social bokföring med AEM Experience Fragments
 description: Med Experience Fragments kan marknadsförare lägga upp upplevelser som skapats i AEM till plattformar för sociala medier. I videon nedan visas de inställningar och konfigurationer som krävs för att publicera Experience Fragments på Facebook och Pinterest.
 sub-product: webbplatser, innehållstjänster
-feature: experience-fragments
+feature: Experience Fragments
 topics: integrations, content-delivery
 audience: administrator, implementer, developer
 doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Administratör, utvecklare
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
