@@ -4,18 +4,21 @@ seo-title: Skapa element för datamodell för beräknade formulär i AEM Forms
 description: Skapar element för datamodell för beräknade formulär
 seo-description: Skapar element för datamodell för beräknade formulär
 uuid: 30d72569-6a38-44f6-a091-b9a595d5ac77
-feature: workflow
+feature: Arbetsflöde
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: b7b6d05b-7378-4028-add3-4f2a03a7455d
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '163'
+ht-degree: 1%
 
 ---
 
