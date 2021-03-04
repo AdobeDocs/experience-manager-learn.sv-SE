@@ -1,7 +1,7 @@
 ---
 title: Distribuera Asset compute-arbetare till Adobe I/O Runtime för användning med AEM som Cloud Service
 description: 'asset compute-projekt, och de arbetare de innehåller, måste driftsättas i Adobe I/O Runtime för att AEM ska kunna användas som Cloud Service. '
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -67,7 +70,7 @@ $ export AIO_runtime_namespace=81368-wkndaemassetcompute-stage
 $ export AIO_runtime_auth=27100f9f-2676-4cce-b73d-b3fb6bac47d1:0tDu307W6MboQf5VWB1BAK0RHp8xWqSy1CQc3lKe7f63o3aNtAu0Y3nAmN56502W
 ```
 
-Om dina Asset compute-arbetare behöver andra variabler, till exempel molnlagring, bör de också exporteras som miljövariabler.
+Om dina Asset compute-arbetare behöver några andra variabler, till exempel molnlagring, bör de också exporteras som miljövariabler.
 
 1. När alla miljövariabler har ställts in för målarbetsytan att distribuera till kör du kommandot deploy:
    + `aio app deploy`
@@ -78,6 +81,6 @@ Om projektversionen för Asset compute ändrar arbetarens URL:er ändras också 
 
 ## API-etablering för arbetsyta{#workspace-api-provisioning}
 
-När [du konfigurerade Project Fire-projektet i Adobe I/O](../set-up/firefly.md) för att stödja lokal utveckling skapades en ny arbetsyta för utveckling och __API:er för I/O-händelser__ och __I/O-händelsehantering__ lades till i den.
+När [du konfigurerade Project Fire-projektet i Adobe I/O](../set-up/firefly.md) för att stödja lokal utveckling skapades en ny arbetsyta för utveckling och __API:er för Asset compute, I/O-händelser__ och __I/O-händelsehantering__ lades till i den.
 
 API:erna __för I/O-händelser__ och __I/O-händelsehantering__ för Asset compute läggs endast uttryckligen till i arbetsytorna som används för lokal utveckling. Arbetsytor som integreras (exklusivt) med AEM som en Cloud Service-miljö behöver __inte__ dessa API:er som läggs till explicit eftersom API:erna görs naturligt tillgängliga för AEM som en Cloud Service.
