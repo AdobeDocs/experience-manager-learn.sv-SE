@@ -1,7 +1,7 @@
 ---
 title: Skapa anpassat formulär
 description: Skapa och konfigurera anpassningsbara formulär att använda formulärdatamodellens förifyllningstjänst
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,10 +9,13 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
+topic: Utveckling
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -52,7 +55,7 @@ Det första steget är att koppla förifyllningstjänsten för formuläret. Föl
 
 ## Konfigurera medarbetarinformation
 
-Nästa steg är textfälten i det adaptiva formuläret som binds till element i formulärdatamodellen. Du måste öppna egenskapsbladet för följande fält och ange dess bindRef enligt nedan
+Nästa steg är textfälten i det adaptiva formuläret som binds till elementen i formulärdatamodellen. Du måste öppna egenskapsbladet för följande fält och ange dess bindRef enligt nedan
 
 
 | Fältnamn | Bind ref |
