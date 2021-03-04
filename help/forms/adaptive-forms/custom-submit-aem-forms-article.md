@@ -3,7 +3,7 @@ title: Skriva en anpassad sändning i AEM Forms
 seo-title: Skriva en anpassad sändning i AEM Forms
 description: Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för anpassat formulär
 seo-description: Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för anpassat formulär
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: implement
 version: 6.3,6.4,6.5
 uuid: a26db0b9-7db4-4e80-813d-5c0438fabd1e
 discoiquuid: 28611011-2ff9-477e-b654-e62e7374096a
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 1%
+source-wordcount: '232'
+ht-degree: 2%
 
 ---
 
