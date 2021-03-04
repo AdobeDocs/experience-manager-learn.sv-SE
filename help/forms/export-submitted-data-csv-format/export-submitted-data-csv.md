@@ -1,15 +1,18 @@
 ---
 title: Exportera skickade formulärdata i CSV-format
 description: Exportera inskickade data i anpassningsbara formulär i CSV-format
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
