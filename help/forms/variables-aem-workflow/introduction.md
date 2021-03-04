@@ -3,17 +3,20 @@ title: Variabler i AEM
 seo-title: Variabler i AEM
 description: Använda variabler av typen xml,json,arraylist,dokument i aem-arbetsflöde
 seo-description: Använda variabler av typen xml,json,arraylist,dokument i aem-arbetsflöde
-feature: workflow
+feature: Arbetsflöde
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 4%
+source-wordcount: '128'
+ht-degree: 7%
 
 ---
 
