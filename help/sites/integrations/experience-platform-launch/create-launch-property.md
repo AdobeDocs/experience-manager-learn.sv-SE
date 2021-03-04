@@ -1,7 +1,6 @@
 ---
 title: Skapa en startegenskap
 description: Lär dig hur du skapar en Launch-egenskap med den lägsta konfiguration som krävs för att konfigurera resten av integreringen. Användarna kommer att få en introduktion till startgränssnittet och lära sig mer om tillägg, regler och publiceringsarbetsflöden.
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 5980
 thumbnail: 38553.jpg
+topic: Integreringar
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 1%
+source-wordcount: '112'
+ht-degree: 3%
 
 ---
 
