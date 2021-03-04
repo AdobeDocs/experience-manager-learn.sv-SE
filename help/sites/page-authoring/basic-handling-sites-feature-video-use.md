@@ -3,7 +3,7 @@ title: Grundläggande hantering i AEM Sites
 seo-title: Skapa en ny sida i Adobe Experience Manager Sites
 description: I följande video visas en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
 seo-description: I följande video visas en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
-feature: page-editor, template-editor
+feature: sidredigeraren, redigerbara mallar
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 26760a76cfa523d28399c8e44c8db070cac49496
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '379'
 ht-degree: 4%
 
 ---
