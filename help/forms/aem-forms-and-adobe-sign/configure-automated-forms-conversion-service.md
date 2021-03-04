@@ -1,17 +1,20 @@
 ---
 title: Tjänsten Automated forms conversion
 description: automated forms conversion Service. I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation.
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39493.jpg
 kt: 6114
+topic: Utveckling
+role: Administratör
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
