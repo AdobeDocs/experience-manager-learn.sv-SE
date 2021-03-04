@@ -1,20 +1,17 @@
 ---
 title: Anpassning av inkorgen
 description: 'Anpassa inkorgen genom att lägga till nya kolumner baserat på arbetsflödesdata '
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
