@@ -3,11 +3,15 @@ title: Personalisering med Adobe Target
 seo-title: Personalisering med Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target.
 seo-description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target.
+feature: Experience Fragments
+topic: Personanpassning
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 0%
+source-wordcount: '611'
+ht-degree: 1%
 
 ---
 
