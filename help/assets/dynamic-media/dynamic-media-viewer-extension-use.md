@@ -1,27 +1,24 @@
 ---
 title: Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch
-seo-title: Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch
-description: Med tillägget Dynamic Media Viewers för Adobe Launch, tillsammans med releasen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i Adobe Launch-konfigurationen.
-seo-description: 'Med tillägget Dynamic Media Viewers för Adobe Launch, tillsammans med releasen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i Adobe Launch-konfigurationen. '
-sub-product: dynamiska medier, analys
-feature: asset-insights, media-player
-topics: images, videos, renditions, authoring, integrations, publishing
-doc-type: feature video
-audience: all
-activity: use
+description: Med Dynamic Media Viewers-tillägget för Adobe Launch, tillsammans med versionen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i sin Adobe Launch-konfiguration.
+sub-product: Dynamic Media
+feature: 'Asset Insights '
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '367'
+ht-degree: 4%
 
 ---
 
 
-# Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Använda Dynamic Media-visningsprogram med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen av Dynamic Media Viewer på din webbplats med hjälp av Dynamic Media Viewer Extension.
+För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen av Dynamic Media Viewer på din webbplats med Dynamic Media Viewer Extension.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
 
@@ -29,11 +26,11 @@ För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen
 >
 > Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med din AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html).
 
-I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med Dynamic Media Viewer (5.13), vilket ger mer detaljkontroll över händelsespårningen när en Dynamic Media Viewer används på en Sites-sida.
+I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med visningsprogram från Dynamic Media (5.13), vilket ger mer detaljkontroll över händelsespårningen när ett Dynamic Media Viewer används på en Sites-sida.
 
 Om du redan har AEM Assets och Sites kan du integrera Launch-egenskapen med AEM författarinstans. När startintegreringen är kopplad till webbplatsen kan du lägga till dynamiska mediekomponenter på sidan med händelsespårning för visningsprogram aktiverat.
 
-För kunder som bara har AEM Assets eller Dynamic Media Classic kan användaren hämta inbäddningskod för ett visningsprogram och lägga till den på sidan. Det går sedan att lägga till skriptbibliotek för att starta dem manuellt på sidan för att spåra visningsprogrammets händelser.
+För kunder som bara har AEM Assets eller Dynamic Media Classic kan användare hämta inbäddningskod för ett visningsprogram och lägga till den på sidan. Det går sedan att lägga till skriptbibliotek för att starta dem manuellt på sidan för att spåra visningsprogrammets händelser.
 
 I följande tabell visas Dynamic Media Viewer-händelser och deras argument som stöds:
 
@@ -169,5 +166,5 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 ## Ytterligare resurser{#additional-resources}
 
 * [Integrera Adobe Experience Manager med Adobe Launch](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
-* [Köra Adobe Experience Manager i Scene7-läget Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+* [Köra Adobe Experience Manager i Dynamic Media Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 * [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
