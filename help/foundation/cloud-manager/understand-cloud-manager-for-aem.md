@@ -2,15 +2,17 @@
 title: Förstå Adobe Cloud Manager
 description: Adobe Cloud Manager är en enkel, men robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM miljöer.
 sub-product: cloud-manager, grund
-feature: rörledningar, program, projekt, kvalitetsportar, rapporter
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
+topic: Arkitektur
+role: Arkitekt
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
