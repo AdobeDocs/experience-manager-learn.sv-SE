@@ -1,20 +1,17 @@
 ---
 title: Skapa anpassad formulärmall
 description: Mallen definierar strukturen och det ursprungliga innehållet i det adaptiva formuläret.
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 thumbnail: 37324.jpg
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
