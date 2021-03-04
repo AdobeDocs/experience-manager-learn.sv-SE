@@ -1,10 +1,12 @@
 ---
 title: Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll
+seo-title: Komma igång med AEM Content Services - Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll
 description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
+seo-description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1917'
 ht-degree: 0%
 
 ---
