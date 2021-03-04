@@ -1,17 +1,20 @@
 ---
 title: SMS-autentisering med två faktorer
 description: Lägg till ett extra säkerhetslager som hjälper till att bekräfta en användares identitet när han/hon vill utföra vissa aktiviteter
-feature: integrations
+feature: Adaptiv Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6317
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 SMS Two Factor Authentication (Dual Factor Authentication) är en säkerhetsverifieringsprocedur som aktiveras genom att en användare loggar in på en webbplats, ett program eller ett program. I inloggningsprocessen skickas användaren automatiskt ett SMS till sitt mobilnummer med en unik numerisk kod.
 
-Det finns ett antal organisationer som tillhandahåller den här tjänsten och så länge de har väldokumenterade REST API:er kan du enkelt integrera AEM Forms med AEM Forms dataintegrationsfunktioner. I den här självstudiekursen har jag använt [Nexmo](https://developer.nexmo.com/verify/overview) för att demonstrera användningen av SMS 2FA.
+Det finns ett antal organisationer som tillhandahåller den här tjänsten och så länge de har väldokumenterade REST API:er kan du enkelt integrera AEM Forms med AEM Forms dataintegrationsfunktioner. I den här självstudiekursen har jag använt [Nexmo](https://developer.nexmo.com/verify/overview) för att demonstrera SMS 2FA-användningsexemplet.
 
 Följande steg utfördes för att implementera SMS 2FA med AEM Forms med tjänsten Nexmo Verify.
 
