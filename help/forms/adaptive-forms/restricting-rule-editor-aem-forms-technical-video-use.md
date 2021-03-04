@@ -4,20 +4,17 @@ seo-title: Begränsa regelredigeraren till särskilda grupper i AEM Forms
 description: Begränsa redigeraren för anpassade formulärregler till specifika grupper i AEM
 seo-description: Begränsa redigeraren för anpassade formulärregler till specifika grupper i AEM
 uuid: b50f3736-b72e-4154-9ca5-95e10606f4ad
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: authoring
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 5aa35204-1c6d-4a1e-b8cd-79170653471a
-topic: Administration
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
