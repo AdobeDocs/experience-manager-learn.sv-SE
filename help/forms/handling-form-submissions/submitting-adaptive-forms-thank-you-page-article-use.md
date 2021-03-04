@@ -4,17 +4,20 @@ seo-title: Skicka till din tacksida
 description: Visa en tacksida när du skickar ett anpassat formulär
 seo-description: Visa en tacksida när du skickar ett anpassat formulär
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 0bccdea82f6db391cbca3ab06009a7b4420a38bf
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
