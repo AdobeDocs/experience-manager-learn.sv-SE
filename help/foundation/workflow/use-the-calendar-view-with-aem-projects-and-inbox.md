@@ -4,20 +4,17 @@ seo-title: Använd kalendervyn med AEM projekt och inkorgen
 description: 'AEM Kalendervy spårar projekt och uppgifter i en kalendervy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort. '
 seo-description: AEM Kalendervy spårar projekt och uppgifter i en kalendervy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
 version: 6.3, 6.4, 6.5
-feature: '"Arbetsflöde, projekt"'
+feature: inkorg, projekt, arbetsflöde
 topics: governance, collaboration
 activity: use
 audience: author, analyst
 doc-type: feature video
 uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
 discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
-topic: Samarbete
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
