@@ -3,16 +3,19 @@ title: Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde
 seo-title: Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde
 description: I AEM Forms 6.5 introducerades möjligheten att skapa variabler i AEM. Med den här nya funktionen som använder tjänsten Anropa formulärdatamodell i AEM arbetsflöde har det blivit mycket enkelt. I följande video får du hjälp med att använda tjänsten Anropa formulärdatamodell i AEM arbetsflöde.
 seo-description: I AEM Forms 6.5 introducerades möjligheten att skapa variabler i AEM. Med den här nya funktionen som använder tjänsten Anropa formulärdatamodell i AEM arbetsflöde har det blivit mycket enkelt. I följande video får du hjälp med att använda tjänsten Anropa formulärdatamodell i AEM arbetsflöde.
-feature: workflow.
+feature: Arbetsflöde
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -29,7 +32,7 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att använda Form Data Model Se
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern
 
-* Konfigurera för katt med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html). Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html). Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
 * [ Importera resurser till AEM med pakethanteraren](assets/aem65-loanapplication.zip)
 * Paketet innehåller följande:
