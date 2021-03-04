@@ -1,16 +1,19 @@
 ---
 title: Värderingsbara rapporter för administratörer
-description: Upptäck två värdefulla rapporter som administratörer av Dynamic Media Classic bör överväga att konfigurera.
+description: Upptäck två värdefulla rapporter som administratörer av Dynamic Media Classic bör överväga att skapa.
 sub-product: dynamiska medier, resurser
-feature: reports
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
+topic: Innehållshantering
+role: Administratör
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: ac603e55308f306305482dfdee31a591274c164a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -42,9 +45,9 @@ Vi hoppas att du har hittat innehållet i den här metodguiden som hjälper dig 
 
 Läs mer om Dynamic Media Classic här:
 
-- [Dynamic Media Classic i Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic på Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic i Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Prenumerationssida för Dynamic Media Newsletter](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
+- [Dynamic Media Newsletter Subscription Page](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic-dokumentation](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
 - [Blogginlägg för multimedia](https://theblog.adobe.com/tag/dynamic-media)
