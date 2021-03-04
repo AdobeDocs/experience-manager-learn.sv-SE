@@ -11,10 +11,14 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
+feature: '"Kärnkomponenter, sidredigeraren, redigerbara mallar, AEM projekttyp"'
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '907'
 ht-degree: 2%
 
 ---
