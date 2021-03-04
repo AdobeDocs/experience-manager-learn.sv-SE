@@ -1,17 +1,20 @@
 ---
 title: Felsöka AEM SDK med OSGi-webbkonsolen
 description: AEM SDK:s lokala snabbstart har en OSGi-webbkonsol som innehåller en mängd information och introspectioner i den lokala AEM som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5265, 5366, 5267
+topic: Utveckling
+role: Developer
+level: Nybörjare, mellanliggande
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
