@@ -4,15 +4,18 @@ description: Verktyget Innehållsöverföring är det rekommenderade sättet att
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: content-transfer-tool
+feature: Migrering
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
+topic: Migrering
+role: Arkitekt, utvecklare
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 44734103ede53f559bbdfe848f5ca308ff4e128b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '87'
 ht-degree: 2%
 
 ---
