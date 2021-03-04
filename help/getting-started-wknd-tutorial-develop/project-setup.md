@@ -3,7 +3,7 @@ title: Komma igång med AEM Sites - projektinställningar
 seo-title: Komma igång med AEM Sites - projektinställningar
 description: Omfattar skapandet av ett Maven Multi Module-projekt för att hantera koden och konfigurationerna för en AEM.
 sub-product: platser
-feature: maven-arketype
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
+topic: Innehållshantering, utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1895'
 ht-degree: 1%
 
 ---
