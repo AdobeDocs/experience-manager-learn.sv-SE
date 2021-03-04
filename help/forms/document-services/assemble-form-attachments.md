@@ -1,7 +1,7 @@
 ---
 title: Sammanställa formulärbilagor
 description: Sammanställa formulärbilagor i angiven ordning
-feature: Assembler
+feature: montör
 topics: development
 audience: developer
 doc-type: article
@@ -9,13 +9,10 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
