@@ -3,10 +3,12 @@ title: AEM Foundation Videos och Tutorials
 seo-title: AEM Foundation Videos och Tutorials
 description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Foundation
+role: Leader, Architect, Developer, Administrator, Business Practitioner
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
