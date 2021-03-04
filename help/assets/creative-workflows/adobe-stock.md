@@ -1,16 +1,15 @@
 ---
 title: Använda Adobe Stock-resurser med AEM Assets
 description: 'AEM ger användarna möjlighet att söka, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM. '
-feature: creative-cloud-integration
-topics: authoring, collaboration, operations, sharing, metadata, images, stock
-audience: all
-doc-type: feature video
-activity: use
+feature: Adobe Stock
 version: 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -53,7 +52,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 ### Filter
 
 * En användare kan filtrera mediefiler baserat på tillgångstyp, orientering och liknande
-* Resurstypen innehåller foton, illustrationer, vektorer, videor, mallar, 3D, Premium, redaktionellt
+* Resurstypen innehåller foton, illustrationer, vektorer, videoklipp, mallar, 3D, Premium, redaktionellt
 * Orienteringen inkluderar Vågrät, Lodrät och Fyrkant.
 * Filtret Visa liknande kräver Adobe Stock-filnummer
 
@@ -64,7 +63,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 
 ## Konfigurera Adobe Stock med AEM Assets{#set-up-adobe-stock-with-aem-assets}
 
-I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. I den här videon får du snabbt veta hur du konfigurerar Adobe Stocks med AEM Assets via Adobe I/O Console.
+I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. I den här videon får du snabbt veta hur du ställer in Adobe Stocks med AEM Assets via Adobe I/O Console.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
 
