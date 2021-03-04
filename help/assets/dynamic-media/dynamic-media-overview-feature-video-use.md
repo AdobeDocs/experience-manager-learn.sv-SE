@@ -1,19 +1,16 @@
 ---
 title: Översikt över Dynamic Media med AEM Assets
-seo-title: Översikt över Dynamic Media med AEM Assets
-description: I den här videoserien får du en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som tjänst för innehållsvisning. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
-seo-description: I den här videoserien får du en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som tjänst för innehållsvisning. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
+description: I den här videoserien får du en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
 sub-product: dynamiska medier
-feature: smart-crop, video-profiles, image-profiles, viewer-presets, vr-360, sets
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: Smart beskärning, videoprofiler, bildprofiler, visningsförinställningar, 360 VR-video, bilduppsättningar, snurruppsättningar
 version: 6.3, 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -21,17 +18,17 @@ ht-degree: 0%
 
 # Använda Dynamic Media med AEM Assets {#understanding-aem-dynamic-media}
 
-Den här videoserien i flera delar ger dig en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som tjänst för innehållsvisning. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
+Den här videoserien i flera delar ger dig en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
 
-## Dynamisk mediaöversikt
+## Dynamic Media - översikt
 
 >[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, som är det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7.
+>Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7.
 
-I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Dynamic Media använder en enda metod för Överordnad Asset där du överför en bildresurs eller videomaterial som kan begäras för att klara en obegränsad uppsättning förbrukningsbara variationer eller härledda återgivningar. Ingår:
+I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Dynamic Media använder en enda Överordnad Asset-metod där du överför en bildresurs eller videomaterial som kan begäras för att klara ett obegränsat antal förbrukningsbara variationer eller härledda renderingar. Ingår:
 
 * Enskild Överordnad resurs till URL-produkt som kan levereras
 * Bildbearbetningsalternativ
@@ -39,36 +36,36 @@ I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experie
 * Kopiera URL:er till bilder och responsiva visningsprogram
 * Variationer för smart beskärning till URL-adresser
 
-## Dynamiska medier med AEM Sites och andra CMS-system
+## Dynamic Media med AEM Sites och andra CMS-system
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, som är det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7. Den här videon refererar till begrepp som beskrivs i del 1-video (Dynamic Media Overview).
+>Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7. Den här videon refererar till begrepp som beskrivs i del 1-video (Dynamic Media Overview).
 
 I den här videon beskrivs hur mediematerial hanteras i Adobe Experience Manager Dynamic Media och kan enkelt användas i AEM Sites, med en komponent, för enkel och automatiskt beskärd för att optimera baserat på responsiv sidbredd. Skapa enkelt interaktiv bildbanderoll och generera en kopia-URL som kan användas i alla Content Management System.
 
-* AEM Sites Dynamic Media Components flexibility
+* Komponentflexibilitet i AEM Sites Dynamic Media
 * Hämta lokalt med bildförinställningar
 * Skapa och publicera interaktiv banderoll
 
-## Dynamic Media för att skapa en blandad mediesamling och ett anpassat visningsprogram
+## Dynamic Media för att skapa blandad mediesamling och anpassat visningsprogram
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, som är det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7. Den här videon refererar till begrepp som beskrivs i del 1-video (Dynamic Media Overview).
+>Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7. Den här videon refererar till begrepp som beskrivs i del 1-video (Dynamic Media Overview).
 
 I den här videon beskrivs den enkla processen att skapa för en samling medieresurser i visningsprogrammet för blandade media, inklusive en snurruppsättning, video och en samling produktbilder. Lägg till innehåll i den blandade medieuppsättningen och skapa ett anpassat visningsprogram som du kan välja från i den slutliga kopiera-URL:en eller AEM Sites-komponenten.
 
 * Skapa snurra uppsättning av lämpliga produktfoton
-* Ladda upp och koda matervideo för Dynamic Media Video
+* Ladda upp och koda videomaterial för Dynamic Media Video
 * Skapa en uppsättning med blandade media från snurra, video och foton
 * Redigera och använda anpassat visningsprogram för blandade media
 
-## Dynamiska förinställningar för mediabilder
+## Dynamic Media-bildförinställningar
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
 
@@ -79,19 +76,19 @@ I den här videon beskrivs hur bildförinställningar skapas och vad som är en 
 * Använd alltid skärpa
 * Fältet URL-modifierare om du vill lägga till extra kommandon för att ändra storlek på bildförinställningen
 
-## Avancerade URL-modifierare för Dynamic Media
+## Dynamic Media Advanced URL modifiers
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
 
-I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Medias URL-modifierare.
+I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Media URL-modifierare.
 
-* Använda URL-modifierare i fältet Dynamisk mediemodifierare
+* Använda URL-modifierare i fältet Dynamic Media Modifier
 * Ändra bakgrundsfärg på bilder med genomskinlighet
 * Urklipp till en bildbana
 * Beskära till en bildbana
 * Skapa en textmall från en Photoshop-fil
 
-## Dynamic Media Controlling JPEG file size in Kilobytes
+## Dynamic Media Kontrollera JPEG-filstorleken i kB
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
 
@@ -106,7 +103,7 @@ Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) f
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
 
-Lägg enkelt till textning i Dynamic Media-video genom att lägga till URL:en Copy så att den pekar på ett annat dokument i filen Closed Captioning, en web.VTT-fil, som innehåller CC-informationen för alla videofilmer.
+Lägg enkelt till undertextning i Dynamic Media-video genom att lägga till URL-adressen till en länk till ett annat dokument för undertextningsfilen web.VTT, som innehåller CC-informationen för alla videofilmer.
 
 ## Använda bildskärpa med AEM Dynamic Media
 
