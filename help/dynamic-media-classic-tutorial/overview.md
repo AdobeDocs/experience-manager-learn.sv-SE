@@ -1,21 +1,25 @@
 ---
-title: Välkommen till självstudiekursen Dynamic Media Classic Best Practices
-description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om bästa praxis har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort beskrivning av dess kärnfunktioner och användargränssnitt.
+title: Välkommen till självstudiekursen om bästa praxis för Dynamic Media Classic
+description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om bästa praxis har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort titt på dess kärnfunktioner och användargränssnitt.
 sub-product: dynamiska medier
 doc-type: tutorial
 topics: best-practices, development, authoring, configuring
 audience: all
 activity: develop, use
+feature: Dynamic Media Classic
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
 
 
-# Välkommen till självstudiekursen Dynamic Media Classic Best Practices
+# Välkommen till självstudiekursen om bästa praxis för Dynamic Media Classic
 
 Den här guiden är avsedd att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med sin kraftfulla multimedielösning från Adobe. Vi gör det genom att:
 
@@ -26,11 +30,11 @@ Den här guiden är avsedd att hjälpa nuvarande och nya användare av Dynamic M
 
 Under hela guiden kommer vi att ge exempel, tips och bästa praxis. Vi kommer också att förklara viktiga termer och koncept som du bör känna till när du arbetar med Dynamic Media Classic. Och när det finns för ett visst ämne kan vi hänvisa dig till relevanta webbinarier, blogginlägg och onlinedokumentation.
 
-Vi hoppas att den här guiden ger dig den information du behöver för att utnyttja din Dynamic Media Classic-lösning till ett riktigt bra pris. Klicka på bokmärkesikonen till vänster om stödlinjen för att visa innehållet.
+Vi hoppas att den här guiden ger dig den information du behöver för att utnyttja din Dynamic Media Classic-lösning till fullo. Klicka på bokmärkesikonen till vänster om stödlinjen för att visa innehållet.
 
 ## Översikt över Dynamic Media Classic
 
-Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Dynamic Media Classic är en integrerad miljö för hantering, publicering och service av multimedia. Multimedia kan levereras till alla marknadsförings- och försäljningskanaler, inklusive webben, trycksaker, e-postkampanjer, webbapplikationer, datorer och enheter.
+Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Dynamic Media Classic är en integrerad miljö för hantering, publicering och visning av multimedia. Multimedia kan levereras till alla marknadsförings- och försäljningskanaler, inklusive webben, trycksaker, e-postkampanjer, webbapplikationer, datorer och enheter.
 
 Bildvisning är kanske den mest använda funktionen i Dynamic Media Classic. Faktum är att de flesta kunder använder Dynamic Media Classic för att visa upp alla bilder på sina webbplatser, inklusive bilder för zoomning och multimedia. Den kan dock även användas för många andra syften, bland annat leverans av video och användning av AI för att optimera de bilder som levereras.
 
@@ -44,13 +48,13 @@ I den här guiden diskuterar vi följande viktiga funktioner i Dynamic Media Cla
 
 Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html).
 
-## Gränssnittet i Dynamic Media Classic
+## Dynamic Media Classic User Interface (UI)
 
-Huvudgränssnittet för Dynamic Media Classic består av tre huvudområden: det globala navigeringsfältet, resursbiblioteket och panelen Bläddra/Bygg.
+Huvudgränssnittet i Dynamic Media Classic består av tre huvudområden: det globala navigeringsfältet, resursbiblioteket och panelen Bläddra/Bygg.
 
 ![bild](assets/overview/overview-dmc-ui-ew.png)
 
-_Dynamic Media Classic-gränssnitt_
+_Dynamic Media Classic UI_
 
 **Globalt navigeringsfält.** Överst på skärmen finns knapparna i det här fältet för att komma åt nyckelområden och funktioner i lösningen. Du kommer till exempel att använda den för att komma åt uppladdningsfunktioner, öppna olika resursuppbyggnadsområden (bilduppsättning, snurruppsättning osv.), utföra viktiga uppgifter som att konfigurera bildförinställningar och visningsförinställningar och publicera dina resurser. Här kan du också övervaka dina jobb, se de senaste aktiviteterna och välja bland en mängd olika hjälpalternativ.
 
@@ -72,4 +76,4 @@ _Dynamic Media Classic-gränssnitt_
 >
 >Markera kryssrutan **Publicera efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
-Läs mer om [Navigera i gränssnittet för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Läs mer om [Navigera i användargränssnittet för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
