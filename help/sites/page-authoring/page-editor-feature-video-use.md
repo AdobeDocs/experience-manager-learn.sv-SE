@@ -3,7 +3,7 @@ title: Använda sidredigeraren med AEM Sites
 seo-title: Använda sidredigeraren med Adobe Experience Manager Sites
 description: I följande video visas flera av de viktigaste funktionerna i Touch-UI Sites Editor i Adobe Experience Manager.
 seo-description: I följande video visas flera av de viktigaste funktionerna i Touch-UI Sites Editor i Adobe Experience Manager.
-feature: page-editor
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4248
 thumbnail: 32011.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '249'
 ht-degree: 1%
 
 ---
