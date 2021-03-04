@@ -4,20 +4,17 @@ seo-title: Använda Assembler Service i AEM Forms
 description: Använda Assembler Service i AEM Forms för att sammanställa flera PDF-filer
 seo-description: Använda Assembler Service i AEM Forms för att sammanställa flera PDF-filer
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
-feature: Assembler
+feature: montör
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
