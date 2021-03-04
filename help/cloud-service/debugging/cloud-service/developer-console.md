@@ -1,7 +1,7 @@
 ---
 title: Utvecklarkonsol
 description: AEM som Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om den AEM som körs och som är till hjälp vid felsökning.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 1af3661e5c18206d58d339d51d5189834e843023
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -45,7 +48,7 @@ Om någon status dumpas innebär det att 401 Oauktoriserat fel har rapporterats,
 Så här löser du det 401 obehöriga problemet:
 
 1. Se till att din användare är medlem i rätt Adobe IMS-produktprofil (AEM administratörer eller AEM användare) för utvecklarkonsolens associerade AEM som en Cloud Service produktinstans.
-   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser; aem som Cloud Service Author och Publish, så att rätt produktprofiler används beroende på vilket tjänstskikt som kräver åtkomst via Developer Console.
+   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser; AEM som Cloud Service Author och Publish, så att rätt produktprofiler används beroende på vilket tjänstskikt som kräver åtkomst via Developer Console.
 1. Logga in på AEM som en Cloud Service (författare eller publicera) och kontrollera att användare och grupper har synkroniserats korrekt till AEM.
    + Developer Console kräver att din användarpost skapas i motsvarande AEM tjänstenivå för att den ska kunna autentiseras till den tjänstnivån.
 1. Rensa dina webbläsares cookies och programtillstånd (lokal lagring) och logga in på Developer Console igen, så att åtkomsttoken Developer Console används korrekt och inte har gått ut.
