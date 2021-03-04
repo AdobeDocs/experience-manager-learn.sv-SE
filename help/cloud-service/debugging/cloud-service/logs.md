@@ -1,7 +1,7 @@
 ---
 title: Loggar
 description: Loggar fungerar som en frontlinje för felsökning AEM program i AEM som en Cloud Service, men är beroende av korrekt inloggning i det distribuerade AEM.
-feature: null
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
@@ -106,7 +109,7 @@ Environment Id Service    Name
 
 ### Utseendeloggar{#aio-cli-tail-logs}
 
-Med Adobe I/O CLI kan du avsluta loggar i realtid från AEM som en Cloud Service med kommandot [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name). Passning är användbart när du vill se loggaktivitet i realtid när åtgärder utförs på AEM som en Cloud Service.
+Med kommandot [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) kan Adobe I/O CLI avsluta loggar i realtid från AEM som en Cloud Service. Passning är användbart när du vill se loggaktivitet i realtid när åtgärder utförs på AEM som en Cloud Service.
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
@@ -123,7 +126,7 @@ $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 
 ### Laddar ned loggar{#aio-cli-download-logs}
 
-Med kommandot [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)) i Adobe I/O CLI kan du hämta loggar från AEM som Cloud Service. Detta ger samma slutresultat som när du hämtar loggarna från webbgränssnittet för Cloud Manager, med skillnaden är att kommandot `download-logs` konsoliderar loggar över flera dagar, baserat på hur många dagar av loggar som begärs.
+Med Adobe I/O CLI kan du hämta loggar från AEM som en Cloud Service med kommandot [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)). Detta ger samma slutresultat som när du hämtar loggarna från webbgränssnittet för Cloud Manager, med skillnaden är att kommandot `download-logs` konsoliderar loggar över flera dagar, baserat på hur många dagar av loggar som begärs.
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
