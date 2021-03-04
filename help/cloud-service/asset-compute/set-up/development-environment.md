@@ -1,7 +1,7 @@
 ---
 title: Konfigurera en lokal utvecklingsmiljö för utbyggbarhet i Asset compute
 description: För att kunna utveckla Asset compute-arbetare, som är Node.js JavaScript-program, krävs särskilda utvecklingsverktyg som skiljer sig från traditionell AEM, från Node.js och olika npm-moduler till Docker Desktop och Microsoft Visual Studio Code.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -75,7 +78,7 @@ asset compute är [Node.js](https://nodejs.org/)-baserade, och därför måste N
 
 ## Installera Adobe I/O CLI{#aio}
 
-[Installera Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli), eller  ____ aiois an command-line (CLI) npm module, som underlättar användning av och interaktion med Adobe I/O tekniker, och som används både för att generera och lokalt utveckla skräddarsydda Asset compute.
+[Installera Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli), eller  ____ aiois an command-line (CLI) npm module, som underlättar användning av och interaktion med Adobe I/O, och som används både för att generera och lokalt utveckla skräddarsydda Asset compute-arbetare.
 
 ```
 $ npm install -g @adobe/aio-cli
@@ -83,7 +86,7 @@ $ npm install -g @adobe/aio-cli
 
 ## Installera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
 
-Plugin-programmet [Adobe I/O CLI Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)
+Insticksprogrammet [Adobe I/O CLI Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
 ```
 $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
