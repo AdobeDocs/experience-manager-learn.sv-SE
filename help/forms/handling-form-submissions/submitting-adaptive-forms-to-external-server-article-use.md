@@ -4,17 +4,20 @@ seo-title: Skicka anpassat formulär till extern server
 description: Skicka anpassat formulär till REST-slutpunkt som körs på en extern server
 seo-description: Skicka anpassat formulär till REST-slutpunkt som körs på en extern server
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
