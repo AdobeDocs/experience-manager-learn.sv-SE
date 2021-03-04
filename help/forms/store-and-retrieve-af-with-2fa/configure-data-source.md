@@ -1,7 +1,7 @@
 ---
 title: Konfigurera datakälla
 description: Skapa en datakälla som pekar på MySQL-databasen
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: implement
 version: 6.4,6.5
 kt: 6541
 thumbnail: 6541.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -20,7 +23,7 @@ ht-degree: 0%
 
 # Konfigurera datakälla
 
-Det finns många sätt att integrera AEM med externa databaser. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection Pooled DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
+Det finns många sätt att integrera AEM med externa databaser. En av de vanligaste standardmetoderna för databasintegrering är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
 Det första steget är att hämta och distribuera lämpliga [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
 Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika för databasen. På följande skärmbild visas de inställningar som används för den här självstudiekursen. Databasschemat är en del av den här självstudiekursen.
 
