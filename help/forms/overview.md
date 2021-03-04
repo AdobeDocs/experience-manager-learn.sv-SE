@@ -4,11 +4,13 @@ seo-title: AEM Forms Tutorials och videor
 description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
 seo-description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
 sub-product: formulär
+topic: Utveckling
+role: Developer
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 1%
+source-wordcount: '305'
+ht-degree: 2%
 
 ---
 
