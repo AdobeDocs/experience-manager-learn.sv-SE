@@ -11,10 +11,14 @@ audience: developer
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
+feature: '"Kärnkomponenter, formatsystem"'
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
