@@ -3,7 +3,7 @@ title: Använda sidtaggning med AEM Sites
 seo-title: Använda sidtaggning med Adobe Experience Manager Sites
 description: I följande videofilm visas hur du snabbt och enkelt klassificerar innehåll på en webbplats i Adobe Experience Manager med hjälp av sidtaggar.
 seo-description: I följande videofilm visas hur du snabbt och enkelt klassificerar innehåll på en webbplats i Adobe Experience Manager med hjälp av sidtaggar.
-feature: page-editor
+feature: Page Editor
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4632
 thumbnail: 32150.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
