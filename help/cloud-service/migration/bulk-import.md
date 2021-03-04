@@ -4,15 +4,18 @@ description: Med verktyget för massimport i AEM som Cloud Service kan administr
 version: cloud-service
 doc-type: technical-video
 topics: Migration
-feature: Bulk Import
+feature: Migrering
 activity: develop
 audience: developer
 kt: 6729
 thumbnail: 329680.jpg
+topic: Migrering
+role: Arkitekt, utvecklare
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
