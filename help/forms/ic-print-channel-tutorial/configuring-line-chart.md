@@ -4,7 +4,7 @@ seo-title: Konfigurera linjediagram för ditt första interaktiva kommunikations
 description: Detta är en del av 8-stegssjälvstudiekurser för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen ska vi lägga till ett linjediagram för att visa kontosaldot.
 seo-description: Detta är en del av 8-stegssjälvstudiekurser för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen ska vi lägga till ett linjediagram för att visa kontosaldot.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: interaktiv kommunikation
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 0%
+source-wordcount: '175'
+ht-degree: 1%
 
 ---
 
