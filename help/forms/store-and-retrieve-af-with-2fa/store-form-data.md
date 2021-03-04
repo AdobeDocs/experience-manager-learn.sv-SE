@@ -1,7 +1,7 @@
 ---
 title: Lagra formulärdata
 description: Lagra formulärdata tillsammans med den nya bilagemappningen i databasen
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 0%
+source-wordcount: '74'
+ht-degree: 2%
 
 ---
 
