@@ -4,7 +4,7 @@ seo-title: Prefill Service in Adaptive Forms
 description: Fyll i anpassningsbara formulär i förväg genom att hämta data från backend-datakällor.
 seo-description: Fyll i anpassningsbara formulär i förväg genom att hämta data från backend-datakällor.
 sub-product: formulär
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: integrations
 audience: developer
 doc-type: article
@@ -12,11 +12,14 @@ activity: implement
 version: 6.4,6.5
 uuid: 26a8cba3-7921-4cbb-a182-216064e98054
 discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 0%
+source-wordcount: '483'
+ht-degree: 1%
 
 ---
 
