@@ -4,17 +4,20 @@ seo-title: Skapa kampanjprofil med hjälp av formulärdatamodell
 description: Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Form Data Model
 seo-description: Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Form Data Model
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive-forms, form-data-model
+feature: Utdatatjänst
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---
