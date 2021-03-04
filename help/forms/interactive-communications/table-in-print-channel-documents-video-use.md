@@ -2,19 +2,16 @@
 title: Använda tabellkomponent i AEM Forms Print Channel-dokument
 seo-title: Använda tabellkomponent i AEM Forms Print Channel-dokument
 description: I följande videofilm visas de steg som krävs för att använda tabellkomponenten i Interactive Communications för dokument i tryckkanaler.
-feature: Interaktiv kommunikation
+feature: interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
-topic: Utveckling
-role: Developer
-level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
