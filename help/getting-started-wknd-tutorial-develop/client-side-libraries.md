@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
+feature: '"Kärnkomponenter, AEM projekttyp"'
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3291'
+source-wordcount: '3301'
 ht-degree: 0%
 
 ---
@@ -223,7 +227,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
 
    ![Uppdaterade basformat för artikeln](assets/client-side-libraries/updated-base-styles.png)
 
-   Du bör nu se de uppdaterade formaten för artikeln. Du kan behöva göra en hård uppdatering för att rensa alla CSS-filer som har cachelagrats i webbläsaren.
+   Du bör nu se de uppdaterade formaten för artikeln. Du kan behöva göra en hård uppdatering för att rensa alla CSS-filer som cachelagrats av webbläsaren.
 
    Det börjar se mycket närmare på mockonerna!
 
