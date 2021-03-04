@@ -2,18 +2,17 @@
 title: Kommentarer och anteckningar
 description: Lär dig hur du använder kommentarer och anteckningar i AEM för att kommunicera och samarbeta med resurser.
 sub-product: resurser
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: Samarbete
 version: cloud-service
 kt: 4541
 thumbnail: 32049.jpg
+topic: Samarbete
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
