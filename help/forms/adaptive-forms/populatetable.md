@@ -3,16 +3,19 @@ title: 'Fyll i tabell med anpassat formulär '
 seo-title: Fyll i tabell med anpassat formulär
 description: Fyll i tabellen Adaptivt formulär med resultat från anrop till tjänsten Formulärdatamodell
 seo-description: Fyll i tabellen Adaptivt formulär med resultat från anrop till tjänsten Formulärdatamodell
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Yrkesverksamma inom affärsverksamhet
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
