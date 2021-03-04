@@ -1,19 +1,15 @@
 ---
 title: Konfigurera smart översättningssökning med AEM Assets
-seo-title: Konfigurera smart översättningssökning med AEM Assets
 description: Med Smart Translation Search kan du använda söktermer som inte är engelska för att matcha till engelskt innehåll. Om du vill konfigurera AEM för smart översättning-sökning måste Apache Oak Search Machine Translation OSGi-paketet installeras och konfigureras, samt relevanta kostnadsfria och öppna källpaket för Apache Joshua som innehåller översättningsreglerna.
-seo-description: Med Smart Translation Search kan du använda söktermer som inte är engelska för att matcha till engelskt innehåll. Om du vill konfigurera AEM för smart översättning-sökning måste Apache Oak Search Machine Translation OSGi-paketet installeras och konfigureras, samt relevanta kostnadsfria och öppna källpaket för Apache Joshua som innehåller översättningsreglerna.
-uuid: b0e8dab2-6bc4-4158-91a1-4b9811359798
-discoiquuid: 4db1b4db-74f4-4646-b5de-cb891612cc90
-topics: authoring, search, metadata, localization
-audience: administrator, developer
-doc-type: technical video
-activity: setup
 version: 6.3, 6.4, 6.5
+feature: Sökning
+topic: Innehållshantering
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
