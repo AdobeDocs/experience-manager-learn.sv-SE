@@ -1,7 +1,7 @@
 ---
 title: Verifiera användare med engångslösenord
 description: Verifiera det mobilnummer som är kopplat till programnumret med hjälp av engångslösenord.
-feature: Adaptiv Forms
+feature: integreringar
 topics: adaptive forms
 audience: developer
 doc-type: article
@@ -9,13 +9,10 @@ activity: use
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
