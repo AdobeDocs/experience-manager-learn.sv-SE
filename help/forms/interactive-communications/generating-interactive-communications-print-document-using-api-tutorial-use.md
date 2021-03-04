@@ -3,16 +3,19 @@ title: Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad
 seo-title: Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad mappmekanism
 description: Använd bevakad mapp för att generera dokument för utskriftskanaler
 seo-description: Använd bevakad mapp för att generera dokument för utskriftskanaler
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
