@@ -4,18 +4,21 @@ seo-title: Lägga till text- och bildinnehåll i webbkanalsdokument
 description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I den här delen ska vi lägga till bilder och textinnehåll i sidhuvudspanelen. '
 seo-description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I den här delen ska vi lägga till bilder och textinnehåll i sidhuvudspanelen. '
 uuid: 440f8b74-3be7-4e58-a46e-4110065b7705
-feature: interaktiv kommunikation
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 3dd64e7d-3f13-4022-bb75-c9dc1884bc19
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 0%
+source-wordcount: '186'
+ht-degree: 1%
 
 ---
 
