@@ -1,7 +1,7 @@
 ---
 title: Introduktion till Dispatcher
 description: En introduktion till funktionerna och funktionerna hos dispatchern som en del av den AEM arkitekturen.
-feature: dispatcher
+feature: Dispatcher
 topics: architecture
 audience: administrator, developer
 doc-type: technical video
@@ -9,11 +9,14 @@ activity: understand
 version: cloud-service
 kt: 4644
 thumbnail: 32029.jpg
+topic: Arkitektur, prestanda
+role: Arkitekt, utvecklare
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 27%
+source-wordcount: '53'
+ht-degree: 24%
 
 ---
 
