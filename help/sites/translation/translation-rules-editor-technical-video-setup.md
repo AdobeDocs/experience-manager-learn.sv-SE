@@ -1,16 +1,19 @@
 ---
 title: Ställ in översättningsregler i AEM
-description: Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur en ny översättningsregel skapas för en anpassad komponent.
-feature: language-copy
+description: Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur du skapar en ny översättningsregel för en anpassad komponent.
+feature: Språkkopia
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
+topic: Lokalisering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -18,7 +21,7 @@ ht-degree: 0%
 
 # Konfigurera översättningsregler {#set-up-translation-rules-in-aem}
 
-Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur en ny översättningsregel skapas för en anpassad komponent.
+Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur du skapar en ny översättningsregel för en anpassad komponent.
 
 >[!NOTE]
 >
