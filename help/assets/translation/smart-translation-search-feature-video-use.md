@@ -1,20 +1,16 @@
 ---
 title: Använda smart översättningssökning med AEM Assets
-seo-title: Använda smart översättningssökning med AEM Assets
 description: Smart Translation Search möjliggör sökning och identifiering på flera språk automatiskt i AEM, både Assets och Pages, och stöder över 50 språk vilket minskar behovet av manuell översättning.
-seo-description: Smart Translation Search möjliggör sökning och identifiering på flera språk automatiskt i AEM, både Assets och Pages, och stöder över 50 språk vilket minskar behovet av manuell översättning.
-uuid: daa6f20f-a4d3-402d-83b9-57d852062a89
-discoiquuid: eb2e484a-0068-458f-acff-42dd95a40aab
-topics: authoring, search, metadata, localization
-audience: all
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
+feature: Sökning
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 1%
 
 ---
 
