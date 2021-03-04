@@ -3,7 +3,7 @@ title: Förstå responsiv layout med AEM Sites
 seo-title: Förstå responsiv layout med AEM Sites
 description: AEM gör att du kan ha en responsiv layout för sidorna med komponenten Layoutbehållare. Med den responsiva layouten kan innehållsförfattarna skapa responsivt innehåll för olika enheter och förhandsgranska användarupplevelsen i AEM.
 seo-description: Omfattar stegen för att skapa responsiv layout för olika enheter
-feature: template-editor, page-editor
+feature: sidredigeraren, redigerbara mallar
 topics: authoring, responsive
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4252
 thumbnail: 32012.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '137'
 ht-degree: 1%
 
 ---
