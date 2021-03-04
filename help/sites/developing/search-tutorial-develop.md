@@ -6,10 +6,14 @@ audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.3, 6.4, 6.5
+feature: Sökning
+topic: Utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
