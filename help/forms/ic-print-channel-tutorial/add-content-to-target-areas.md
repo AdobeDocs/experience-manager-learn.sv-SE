@@ -4,7 +4,7 @@ seo-title: Lägga till text- och bildinnehåll i dokument för tryckkanaler
 description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de målområden som definieras i layout(xdp). '
 seo-description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de målområden som definieras i layout(xdp). '
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,10 +13,13 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
