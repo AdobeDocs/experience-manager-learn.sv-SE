@@ -3,23 +3,26 @@ title: Lägga till objekt i urvalsgruppskomponenten
 seo-title: Lägga till objekt i urvalsgruppskomponenten
 description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
 seo-description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: Utveckling
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
 
 
 
-# Lägga till objekt dynamiskt i alternativgruppskomponenten
+# Lägga till objekt dynamiskt till urvalskomponenten för grupp
 
 I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i en adaptiv Forms-valgruppkomponent som CheckBox, Radio Button och Image List.
 
