@@ -3,10 +3,14 @@ title: Komma igång med AEM och Adobe Target
 seo-title: Komma igång med AEM och Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager och Adobe Target. I den här självstudiekursen får du även lära dig mer om olika personer som deltar i den sista processen och hur de samarbetar med varandra
 seo-description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager och Adobe Target. I den här självstudiekursen får du även lära dig mer om olika personer som deltar i den sista processen och hur de samarbetar med varandra
+feature: Experience Fragments
+topic: Personanpassning
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: c4ddafe392f74be8401f3ef6e07fc9d463d7620a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
