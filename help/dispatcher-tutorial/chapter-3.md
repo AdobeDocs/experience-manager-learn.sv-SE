@@ -1,10 +1,12 @@
 ---
 title: Kapitel 3 - Avancerade cachelagringsämnen
+seo-title: AEM Dispatcher Cache Demystified - Kapitel 3 - Avancerade cachelagringsämnen
 description: I kapitel 3 i den AEM självstudiekursen"Dispatcher Cache Demystified" beskrivs hur du övervinner de begränsningar som beskrivs i kapitel 2.
+seo-description: I kapitel 3 i den AEM självstudiekursen"Dispatcher Cache Demystified" beskrivs hur du övervinner de begränsningar som beskrivs i kapitel 2.
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '6162'
+source-wordcount: '6187'
 ht-degree: 0%
 
 ---
