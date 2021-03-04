@@ -1,7 +1,7 @@
 ---
 title: Skapa AF-mall
 description: Skapa en AF-mall och koppla den till sidåtergivningskomponenten
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 6891
 thumbnail: 6891.jpg
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 2%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
