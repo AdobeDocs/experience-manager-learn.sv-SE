@@ -4,20 +4,17 @@ seo-title: Konfigurera anpassat formulär som utlöser AEM
 description: Förstå de olika alternativen för att konfigurera adaptiva formulär som utlöser AEM arbetsflöde
 seo-description: Förstå de olika alternativen för att konfigurera adaptiva formulär som utlöser AEM arbetsflöde
 sub-product: formulär
-feature: Arbetsflöde
+feature: arbetsflöde
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 6%
+source-wordcount: '47'
+ht-degree: 0%
 
 ---
 
