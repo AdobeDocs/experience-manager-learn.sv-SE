@@ -3,7 +3,7 @@ title: Förifyll HTML5 Forms med hjälp av dataattribut.
 seo-title: Förifyll HTML5 Forms med hjälp av dataattribut.
 description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
 seo-description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
-feature: Adaptiv Forms
+feature: integreringar
 topics: mobile-forms
 audience: developer
 doc-type: article
@@ -11,13 +11,10 @@ activity: implement
 version: 6.3,6.4,6.5.
 uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
 discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
