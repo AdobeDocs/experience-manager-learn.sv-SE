@@ -2,15 +2,18 @@
 title: Beskärning, justerade bilder och zoomningsmål
 description: I den överordnad bilden av Dynamic Media Classic går det att skapa separata beskurna versioner av varje bild för att visa detaljer eller färgrutor utan att behöva skapa separata beskurna versioner av varje bild. Lär dig beskära bilder i Dynamic Media Classic och spara som en ny överordnad fil eller en virtuell bild, spara virtuella justerade bilder och använda dem i stället för överordnad resurser, och skapa zoommål för dina bilder för att visa markerade detaljer.
 sub-product: dynamiska medier
-feature: smart-crop
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -28,7 +31,7 @@ I slutet av kursen får du lära dig att:
 
 ## Beskärning
 
-Dynamic Media Classic har ett fåtal bildredigeringsverktyg som är bekvämt tillgängliga i användargränssnittet, bland annat beskärningsverktyget. Du kanske vill beskära den överordnad bilden i Dynamic Media Classic av flera anledningar. Till exempel:
+I Dynamic Media Classic finns ett antal lättanvända bildredigeringsverktyg i användargränssnittet, bland annat beskärningsverktyget. Du kanske vill beskära den överordnad bilden i Dynamic Media Classic av flera olika anledningar. Till exempel:
 
 - Du har inte åtkomst till originalfilen. Du vill visa bilden med en annan beskärnings- eller proportioner, men du har inte originalfilen på datorn eller arbetar hemifrån. I det här fallet kan du gå till Dynamic Media Classic, hitta bilden, beskära den och spara den eller spara den som en ny version.
 - För att ta bort överflödigt tomt utrymme. Bilden har fotograferats med för mycket tomt utrymme, vilket gör att produkten ser liten ut. Du vill att miniatyrbilderna ska fylla upp arbetsytan så mycket som möjligt.
@@ -41,7 +44,7 @@ Dynamic Media Classic har ett fåtal bildredigeringsverktyg som är bekvämt til
 
 ### Använda beskärningsverktyget
 
-Du kan öppna beskärningsverktyget i Dynamic Media Classic från sidan Detaljer för en resurs eller genom att klicka på knappen **Redigera**. Du kan beskära på två sätt med verktyget:
+Du kommer åt beskärningsverktyget i Dynamic Media Classic från detaljsidan för en resurs eller genom att klicka på knappen **Redigera**. Du kan beskära på två sätt med verktyget:
 
 - Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller anger värden i rutan Storlek. Lär dig hur du [Beskär](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) manuellt.
 - Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
@@ -50,7 +53,7 @@ Du kan öppna beskärningsverktyget i Dynamic Media Classic från sidan Detaljer
 
 När du sparar en manuellt beskuren version ser det ut som om bilden beskärs permanent; Dynamic Media Classic döljer faktiskt pixlarna genom att lägga till en intern URL-modifierare för att beskära bilden. När du publicerar ser det ut som om bilden beskärs, men du kan gå tillbaka till beskärningsredigeraren och ta bort beskärningen vid ett senare tillfälle.
 
-Du kan sedan välja om du vill spara som en ny Överordnad bild eller som en extra vy av den överordnad bilden. En ny överordnad är en ny fysisk fil (som TIFF eller JPEG) som tar upp lagringsutrymme. Ytterligare en vy är en virtuell bild som inte tar upp något serverutrymme. Vi rekommenderar inte att du väljer Ersätt original eftersom detta skriver över din överordnad och gör beskärningen permanent. Om du sparar som en ny överordnad eller som en extra vy måste du välja ett nytt resurs-ID. Precis som andra resurs-ID:n måste detta vara ett unikt namn i Dynamic Media Classic.
+Du kan sedan välja om du vill spara som en ny Överordnad bild eller som en extra vy av den överordnad bilden. En ny överordnad är en ny fysisk fil (som TIFF eller JPEG) som tar upp lagringsutrymme. Ytterligare en vy är en virtuell bild som inte tar upp något serverutrymme. Vi rekommenderar inte att du väljer Ersätt original eftersom detta skriver över din överordnad och gör beskärningen permanent. Om du sparar som en ny överordnad eller som en extra vy måste du välja ett nytt resurs-ID. Precis som andra resurs-ID:n måste det här vara ett unikt namn i Dynamic Media Classic.
 
 ### _Beskär beskärning_
 
@@ -76,11 +79,11 @@ Dynamic Media Classic kommer ihåg det här alternativet för nästa överförin
 
 >[!IMPORTANT]
 >
->Om du anger en beskärning för överföringen lägger Dynamic Media Classic en cookie för att komma ihåg den inställningen nästa gång. Det är en god idé att klicka på knappen **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som återstår från den senaste överföringen. annars kan du av misstag beskära nästa grupp med bilder.
+>Om du anger en beskärning för överföringen lägger Dynamic Media Classic en cookie-fil som kommer ihåg den inställningen nästa gång. Det är en god idé att klicka på knappen **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som återstår från den senaste överföringen. annars kan du av misstag beskära nästa grupp bilder.
 
 ### Beskära efter URL
 
-Även om det inte syns i Dynamic Media Classic kan du även beskära enbart via webbadressen (eller till och med lägga till beskärning till en bildförinställning).
+Även om det inte är uppenbart i Dynamic Media Classic kan du även beskära enbart via webbadressen (eller till och med lägga till beskärning till en bildförinställning).
 
 När du använder beskärningsverktyget visas URL-värdena i fältet längst ned. Du kan använda dessa värden och använda dem direkt på en bild som URL-modifierare.
 
@@ -110,7 +113,7 @@ Kan du se vilken som är överordnad och vilken bild som är justerad?
 
 ![bild](assets/crop-adjusted-zoom-targets/real-image-stand-up.png)
 
-Du bör inte kunna se detta utan att titta i Dynamic Media Classic och se resurstypen &quot;Adjusted Image&quot; för SBR_MAIN2.
+Du bör inte kunna se detta utan att titta i Dynamic Media Classic och se resurstypen &quot;Justerad bild&quot; för SBR_MAIN2.
 
 En justerad bild använder inget diskutrymme eftersom den bara finns som ett radobjekt i databasen. Den är också permanent knuten till den ursprungliga tillgången. Om originalet tas bort tas även den justerade bilden bort. Den kan bestå av en hel, obeskuren bild eller bara en del av en bild (en beskärning).
 
@@ -131,7 +134,7 @@ Zoommål finns också på **Redigera**-menyn och **Information**-sidan i en bild
 
 Eftersom Zoom Targets i huvudsak är en försäljningsfunktion och kräver kunskap om en produkts försäljningspunkter, så är det normalt en person i Merchandising- eller Product-teamet på ett företag som arbetar med dem.
 
-Processen är mycket enkel - klicka på funktionen, ge den ett beskrivande namn och spara. Målen kan kopieras från en bild till en annan om de liknar varandra, men processen är manuell. Det finns inget sätt i Dynamic Media Classic att automatisera skapandet av zoommål, eftersom varje bild är olika och har olika funktioner.
+Processen är mycket enkel - klicka på funktionen, ge den ett beskrivande namn och spara. Målen kan kopieras från en bild till en annan om de liknar varandra, men processen är manuell. I Dynamic Media Classic går det inte att automatisera skapandet av zoommål eftersom varje bild är olika och har olika funktioner.
 
 Ett annat sätt att avgöra om du ska använda zoommål är att välja visningsprogram. Alla visningsprogramtyper kan inte visa zoommål (t.ex. saknar visningsprogrammet stöd för dem).
 
@@ -155,7 +158,7 @@ Här är arbetsflödet för att skapa mål i Dynamic Media Classic.
 6. När målet är markerat har rutan gröna streckade linjer runt sig och du kan ändra storlek på och flytta den. Dra i hörnen för att ändra storlek eller dra i målrutan för att flytta den.
 
    - Bilden läses in i standardvisningsprogrammet för anpassad zoomning. Kontrollera att visningsförinställningen har stöd för zoomningsmål. I allmänhet har alla standardförinställningar som har ordet&quot;-Guidad&quot; utformats för användning med zoommål. Om du vill använda målen håller du pekaren över målminiatyrbilden (eller hotspot-ikonen) för att visa etiketten och klickar på den för att se visningsprogrammet zooma in på den funktionen.
-   - Precis som med allt annat arbete du gör i Dynamic Media Classic måste du publicera för att dina zoommål ska kunna publiceras på webben. Om du redan använder ett visningsprogram som har stöd för mål visas de omedelbart (när cachen har rensats). Om du inte använder ett zoommålaktiverat visningsprogram förblir de dock dolda.
+   - Precis som allt annat arbete du gör i Dynamic Media Classic måste du publicera för att dina zoommål ska kunna publiceras på webben. Om du redan använder ett visningsprogram som har stöd för mål visas de omedelbart (när cachen har rensats). Om du inte använder ett zoommålaktiverat visningsprogram förblir de dock dolda.
 
       ![bild](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
