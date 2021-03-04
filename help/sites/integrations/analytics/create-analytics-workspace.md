@@ -1,7 +1,7 @@
 ---
 title: Analysera data med Analysis Workspace
 description: Läs om hur du mappar data som samlats in från en Adobe Experience Manager-webbplats till mätvärden och dimensioner i Adobe Analytics rapporteringsprogram. Lär dig hur du skapar en detaljerad rapportkontrollpanel med Analysis Workspace-funktionen i Adobe Analytics.
-feature: analytics
+feature: analys
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
+topic: Integreringar
+role: Yrkesverksamma inom affärsverksamhet
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2207'
 ht-degree: 0%
 
 ---
