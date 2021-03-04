@@ -2,17 +2,16 @@
 title: Filer och samlingar
 description: Lär dig hur du snabbt och enkelt kommer åt AEM Assets-filer och -samlingar från panelen Resurslänk.
 sub-product: resurser
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: 6.4, 6.5, cloud-service
 thumbnail: 33884.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '51'
 ht-degree: 0%
 
 ---
