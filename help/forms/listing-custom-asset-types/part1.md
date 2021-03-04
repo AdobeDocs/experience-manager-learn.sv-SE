@@ -4,17 +4,20 @@ seo-title: Registrerar anpassade resurstyper
 description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
 seo-description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
-feature: adaptive-forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -38,7 +41,7 @@ Steg för att konfigurera bassökvägen
 1. Navigera till **/libs/fd/fp/extensions/querybuilder/basepath**
 
 1. Klicka på &quot;Overlay Node&quot; i verktygsfältet
-1. Kontrollera att överläggsplatsen är &quot;/apps/&quot;
+1. Kontrollera att överläggsplatsen är /apps/
 1. Klicka på OK
 1. Klicka på Spara
 1. Navigera till den nya strukturen som skapades på **/apps/fd/fp/extensions/querybuilder/basepath**
