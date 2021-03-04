@@ -3,10 +3,14 @@ title: Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll - Innehål
 seo-title: Komma igång med AEM Content Services - Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll
 description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
 seo-description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
+feature: '"Innehållsfragment, API:er"'
+topic: '"Headless, Content Management"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -31,7 +35,7 @@ Om Content Fragment Models är **inte** aktiverat för en konfiguration visas in
 
 >[!NOTE]
 >
->AEM representerar en uppsättning [kontextmedvetna klientkonfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) som lagras under `/conf`. Vanligtvis AEM konfigurationer korrelerar med en viss webbplats som hanteras i AEM Sites eller en affärsenhet som ansvarar för en underuppsättning av innehåll (resurser, sidor osv.) aem.
+>AEM representerar en uppsättning [kontextmedvetna klientkonfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) som lagras under `/conf`. Vanligtvis AEM konfigurationer korrelerar med en viss webbplats som hanteras i AEM Sites eller en affärsenhet som ansvarar för en underuppsättning av innehåll (resurser, sidor osv.) AEM.
 >
 >För att en konfiguration ska kunna påverka en innehållshierarki måste det finnas en referens till konfigurationen via egenskapen `cq:conf` i den innehållshierarkin. (Detta uppnås för [!DNL WKND Mobile]-konfigurationen i **steg 5** nedan).
 >
