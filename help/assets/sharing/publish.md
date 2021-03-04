@@ -2,18 +2,17 @@
 title: Publicera resurser med AEM
 description: Lär dig hur du publicerar resurser och deras återgivningar från AEM Author till AEM Publish.
 sub-product: resurser
-feature: Publishing
-topics: Content Management
-audience: author
-doc-type: feature video
-activity: use
+feature: Resurshantering
 version: cloud-service
 kt: 330932
 thumbnail: 32194.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '58'
 ht-degree: 1%
 
 ---
