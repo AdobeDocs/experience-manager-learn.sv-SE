@@ -1,12 +1,14 @@
 ---
-title: Kapitel 1 - Självstudiekurser - Konfigurera och hämta
-seo-title: Komma igång med AEM Content Services - Kapitel 1 - Komma igång med självstudiekurser
-description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
-seo-description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
+title: '"Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"'
+description: I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
+feature: Dispatcher
+topic: Arkitektur
+role: Arkitekt
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '17502'
+source-wordcount: '17489'
 ht-degree: 0%
 
 ---
