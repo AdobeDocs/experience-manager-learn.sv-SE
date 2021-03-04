@@ -1,27 +1,22 @@
 ---
 title: Använda Smart Crop med AEM Assets Dynamic Media
-seo-title: Använda Smart Crop med AEM Assets Dynamic Media
 description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
-seo-description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
-uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
-discoiquuid: e4b8534c-fa64-491f-86ec-4dbe50cd6bf7
 sub-product: dynamiska medier
-feature: smart-crop, image-profiles
-topics: images, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: Smart beskärning, bildprofiler
 version: 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
 
-# Använda Smart Crop med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# Använda smart beskärning med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
 Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
 
@@ -36,7 +31,7 @@ Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma
 * AEM kan enkelt skapa bildprofiler för smart beskärning baserat på enhetens bredd och höjd.
 * Smart beskärning kan utföras för en enskild resurs eller för alla resurser i en mapp.
 * Du kan ändra storlek på redigeringslayouten för smart beskärning så att den blir synligare.
-* AEM Sites Dynamic Media-komponent har stöd för Smart Crop.
+* Dynamic Media-komponenten för AEM Sites har stöd för Smart Crop.
 * Publicerad URL för den smarta beskurna resursen är tillgänglig för användning med program från tredje part som accepterar värdbaserade resurser.
 
 >[!NOTE]
