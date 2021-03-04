@@ -5,17 +5,20 @@ description: Lägg till associationer mellan entiteter i formulärdatamodellen
 seo-description: Lägg till associationer mellan entiteter i formulärdatamodellen
 uuid: 82626632-3251-4f7b-9af1-43a9161107c2
 discoiquuid: e01e9bd4-5b47-4356-9884-6968f385bb20
-feature: adaptive-forms, form-data-model
+feature: '"Adaptive Forms, Form Data Model"'
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.3,6.4,6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 0%
+source-wordcount: '53'
+ht-degree: 3%
 
 ---
 
