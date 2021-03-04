@@ -2,7 +2,7 @@
 title: Egen komponent
 description: Täcker hela skapandet av en anpassad infallskomponent som visar redigerat innehåll. Innehåller utveckling av en Sling-modell för inkapsling av affärslogik för att fylla i den inkapslade komponenten och motsvarande HTML för återgivning av komponenten.
 sub-product: platser
-feature: sling-models
+feature: '"Kärnkomponenter, API:er"'
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3969'
 ht-degree: 0%
 
 ---
@@ -703,7 +706,7 @@ Vi kommer att välja **andra**-metoden. Det första tillvägagångssättet är f
    }
    ```
 
-   Kom ihåg att Sling Models är **NOT** OSGi Services, så det är säkert att upprätthålla klasstillstånd. `@PostConstruct` härleder och ställer ofta in Sling Model-klasstillstånd för senare användning, som liknar det som en vanlig konstruktor gör.
+   Kom ihåg att Sling Models är **NOT** OSGi Services, så det är säkert att behålla klasstillstånd. `@PostConstruct` härleder och ställer ofta in Sling Model-klasstillstånd för senare användning, som liknar det som en vanlig konstruktor gör.
 
    Observera att om metoden `@PostConstruct` genererar ett undantag, kommer inte SSLING-modellen att initiera (den kommer att vara null).
 
