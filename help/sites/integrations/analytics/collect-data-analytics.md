@@ -1,7 +1,7 @@
 ---
 title: Samla in siddata med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att samla in data om användaraktivitet på en webbplats som byggts med Adobe Experience Manager. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics rapportserie.
-feature: analytics
+feature: analys
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+topic: Integreringar
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2415'
+source-wordcount: '2419'
 ht-degree: 1%
 
 ---
@@ -92,7 +95,7 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
    ```json
    page-2eee4f8914:
        @type: "wknd/components/page"
-       dc:description: "WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world."
+       dc:description: WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world.
        dc:title: "WKND Adventures and Travel"
        repo:modifyDate: "2020-08-31T21:02:21Z"
        repo:path: "/content/wknd/us/en.html"
@@ -303,7 +306,7 @@ Uppdatera sedan regeln **Inläst sida** så att den använder dataelementet **Co
 
 För närvarande ger regeln **Inläst sida** bara en konsolsats. Sedan använder du dataelementen och Analytics-tillägget för att ange Analytics-variabler som en **åtgärd** i **regeln för inläst sida**. Vi kommer också att ange en ytterligare åtgärd som ska utlösa **sidvisningsbeacon** och skicka insamlade data till Adobe Analytics.
 
-1. I **regeln** för inläst sida **tar du bort åtgärden** Core - Custom Code **(konsolsatserna):**
+1. I **regeln** för inläst sida **tar du bort** åtgärden **Core - Custom Code** (konsolsatserna):
 
    ![Ta bort anpassad kodsåtgärd](assets/collect-data-analytics/remove-console-statements.png)
 
