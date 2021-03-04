@@ -2,19 +2,18 @@
 title: Metadataprofiler
 description: Med metadataprofiler kan du automatiskt använda standardmetadata för resurser i resursmappar, vilket minskar belastningen för metadatahantering för AEM användare och ökar konsekvensen i metadata.
 sub-product: resurser
-feature: metadata-profiles
-topics: configuring, content-architecture, metadata
-audience: administrator, implementer
-doc-type: feature video
-activity: use
+feature: Metadata
 version: cloud-service
 kt: 4984
 thumbnail: 33974.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 0d4d1140dd226bbb02de0b19942b55495e3e2b2c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 6%
+source-wordcount: '69'
+ht-degree: 5%
 
 ---
 
