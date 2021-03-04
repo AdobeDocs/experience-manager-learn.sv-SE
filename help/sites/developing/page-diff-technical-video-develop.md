@@ -1,17 +1,20 @@
 ---
 title: Developing for Page Difference in AEM Sites
 description: I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
-feature: page-diff
+feature: Redigering
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 0%
+source-wordcount: '295'
+ht-degree: 1%
 
 ---
 
