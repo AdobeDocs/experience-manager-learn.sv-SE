@@ -2,15 +2,18 @@
 title: Utveckla projekt i AEM
 description: En självstudiekurs om utveckling som illustrerar hur du utvecklar för AEM projekt.  I den här självstudiekursen skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
 version: 6.3, 6.4, 6.5
-feature: projects, workflow
+feature: '"Projekt, arbetsflöde"'
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4654'
 ht-degree: 0%
 
 ---
