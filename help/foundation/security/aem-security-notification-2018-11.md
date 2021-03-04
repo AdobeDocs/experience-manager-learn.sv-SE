@@ -4,17 +4,20 @@ seo-title: AEM säkerhetsmeddelande (november 2018)
 description: AEM Experience Manager Security Notification Dispatcher
 seo-description: AEM Experience Manager Security Notification Dispatcher
 version: 6.4
-feature: dispatcher
+feature: Dispatcher
 topics: security
 activity: understand
 audience: all
 doc-type: article
 uuid: 3ccf7323-4061-49d7-ae95-eb003099fd77
 discoiquuid: 9d181b3e-fbd5-476d-9e97-4452176e495c
+topic: Dokumentskydd
+role: Arkitekt
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 1e615d1c51fa0c4c0db335607c29a8c284874c8d
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
