@@ -3,7 +3,7 @@ title: Använda Multi-Site Manager med AEM Sites
 seo-title: Använda Multi Site Manager Touch-gränssnitten med Adobe Experience Manager
 description: Översikt över Live Copy och Konfigurationshanteraren för utkast är gränssnitt aktiverade för Touch-gränssnitt för arbete med Multi Site Manager.
 seo-description: Live Copy Overview och Blueprint Configuration Manager är gränssnitt aktiverade för pekskärmsgränssnitt som används med Multi Site Manager i Adobe Experience Manager.
-feature: multi-site-manager
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
+topic: Lokalisering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '172'
 ht-degree: 1%
 
 ---
