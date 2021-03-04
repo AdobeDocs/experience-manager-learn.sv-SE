@@ -4,17 +4,20 @@ seo-title: Konfigurera leverans av webbkanalsdokument
 description: Det här är den sista delen i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. Här tittar vi på hur vi levererar webbkanalsdokument via e-post.
 seo-description: Det här är den sista delen i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. Här tittar vi på hur vi levererar webbkanalsdokument via e-post.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: interaktiv kommunikation
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
