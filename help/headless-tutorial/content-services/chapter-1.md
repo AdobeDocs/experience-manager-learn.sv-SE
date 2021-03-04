@@ -3,10 +3,14 @@ title: Kapitel 1 - Ställa in och hämta självstudiekurser - Innehållstjänste
 seo-title: Komma igång med AEM Content Services - Kapitel 1 - Komma igång med självstudiekurser
 description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
 seo-description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
+feature: Innehållsfragment, API:er
+topic: Headless, Content Management
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
