@@ -1,12 +1,10 @@
 ---
 title: Kapitel 3 - Avancerade cachelagringsämnen
-seo-title: AEM Dispatcher Cache Demystified - Kapitel 3 - Avancerade cachelagringsämnen
 description: I kapitel 3 i den AEM självstudiekursen"Dispatcher Cache Demystified" beskrivs hur du övervinner de begränsningar som beskrivs i kapitel 2.
-seo-description: I kapitel 3 i den AEM självstudiekursen"Dispatcher Cache Demystified" beskrivs hur du övervinner de begränsningar som beskrivs i kapitel 2.
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6162'
 ht-degree: 0%
 
 ---
@@ -361,7 +359,7 @@ Nyckeln är komponentsökvägen som den skulle ha på hemsidan. Vi använder int
 
 &quot;Cache&quot; är en indikator där posten ska lagras. Du har vanligtvis mer än en cache där du lagrar objekt. Var och en av dem kan bete sig lite annorlunda. Så det är bra att skilja ut det som lagras - även om det i slutänden bara är strängar.
 
-&quot;Beroende&quot; är det här cacheposten är beroende av. Cacheminnet för huvudnavigering kan ha en regel som innebär att om det finns någon ändring under noden &quot;beroende&quot; måste posten rensas. Därför måste cacheimplementeringen registreras som en händelseavlyssnare i databasen för att vara medveten om ändringar och sedan tillämpa de cachespecifika reglerna för att ta reda på vad som behöver göras ogiltigt.
+&quot;Beroende&quot; är det här cacheposten är beroende av. Cacheminnet för huvudnavigering kan ha en regel som innebär att om det finns någon ändring under noden &quot;beroende&quot; måste posten rensas. Därför måste cacheimplementeringen registreras som händelseavlyssnare i databasen för att vara medveten om ändringarna och sedan tillämpa de cachespecifika reglerna för att ta reda på vad som behöver göras ogiltigt.
 
 Ovanstående var bara ett exempel. Du kan också välja att ha ett träd med cacher. När den första nivån används för att skilja ut webbplatser (eller klientorganisationer) och den andra nivån, delas sedan ut i olika typer av innehåll (till exempel&quot;huvudnavigering&quot;), vilket kan göra att du inte behöver lägga till sökvägen för hemsidor som i exemplet ovan.
 
