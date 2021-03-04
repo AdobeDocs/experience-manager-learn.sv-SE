@@ -3,15 +3,17 @@ title: Cross-Origin Resource Sharing (CORS) med AEM
 description: Adobe Experience Manager Cross-Origin Resource Sharing (CORS) underlättar för icke-AEM webbegenskaper att anropa AEM på klientsidan, både autentiserad och oautentiserad, för att hämta innehåll eller interagera direkt med AEM.
 version: 6.3, 6,4, 6.5
 sub-product: grund, innehållstjänster, webbplatser
-feature: null
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
+topic: Dokumentskydd
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
