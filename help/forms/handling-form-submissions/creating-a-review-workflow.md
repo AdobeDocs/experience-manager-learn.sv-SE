@@ -2,7 +2,7 @@
 title: Skapa arbetsflöde för granskning av skickade data
 description: Skapa AEM arbetsflödesmodell med AEM Forms arbetsflödeskomponenter för att granska skickade data.
 sub-product: formulär
-feature: Arbetsflöde
+feature: arbetsflöde
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,14 +10,11 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 2%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
