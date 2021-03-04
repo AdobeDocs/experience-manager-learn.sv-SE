@@ -1,16 +1,15 @@
 ---
 title: Använda Adobe Asset Link Extension med AEM Assets
 description: 'Adobe Experience Manager resurser kan nu användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud Enterprise utökar möjligheten att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp resurser, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe Photoshop, InDesign och Illustrator. '
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images
-audience: all
-doc-type: feature video
-activity: use
+feature: Adobe Asset Link
 version: 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Manager resurser kan nu användas av designers och kreativa anv
 
 ## Adobe Asset Link 1.1
 
-Adobe Asset Link v1.1 har nu stöd för direktlänkning mellan Adobe Asset Link och AEM Assets i InDesign. Tack vare stödet för direktlänkning i InDesign kan du nu montera (montera länkat eller montera kopia) eller dra-och-släppa digitala resurser till InDesign från AEM Assets via panelen Länk till Adobe. Dessutom introducerar återgivningen av *Endast för placering* (FPO).
+Adobe Asset Link v1.1 har nu stöd för direktlänkning mellan Adobe Asset Link och AEM Assets i InDesign. Med stöd för direktlänkning från InDesign kan du nu montera (montera länkat eller montera kopia) eller dra-och-släppa digitala resurser till InDesign från AEM Assets via panelen Länk till Adobe. Dessutom introducerar återgivningen av *Endast för placering* (FPO).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
 
