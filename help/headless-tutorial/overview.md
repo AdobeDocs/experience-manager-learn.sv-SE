@@ -1,10 +1,14 @@
 ---
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
+feature: '"Innehållsfragment, API:er"'
+topic: '"Headless, Content Management"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -60,5 +64,5 @@ AEM Content Services tillåter att samma innehållsavvikelser som används för 
 
 Andra självstudiekurser AEM headless concepts är:
 
-* [Komma igång med AEM SPA och vinkelrät](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Komma igång med AEM SPA Editor och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
