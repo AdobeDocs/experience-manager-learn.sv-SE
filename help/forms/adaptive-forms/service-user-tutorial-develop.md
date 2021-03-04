@@ -4,16 +4,19 @@ seo-title: Developing with Service Users in AEM Forms
 description: I den här artikeln beskrivs hur du skapar en tjänstanvändare i AEM Forms
 seo-description: I den här artikeln beskrivs hur du skapar en tjänstanvändare i AEM Forms
 uuid: 996f30df-3fc5-4232-a104-b92e1bee4713
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: development,administration
 audience: implementer,developer
 doc-type: article
 activity: setup
 discoiquuid: 65bd4695-e110-48ba-80ec-2d36bc53ead2
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
