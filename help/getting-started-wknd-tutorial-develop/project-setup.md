@@ -3,7 +3,7 @@ title: Komma igång med AEM Sites - projektinställningar
 seo-title: Komma igång med AEM Sites - projektinställningar
 description: Omfattar skapandet av ett Maven Multi Module-projekt för att hantera koden och konfigurationerna för en AEM.
 sub-product: platser
-feature: maven-archetype
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
+topic: '"Content Management, Development"'
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1895'
 ht-degree: 1%
 
 ---
@@ -23,7 +26,7 @@ ht-degree: 1%
 
 # Projektinställningar {#project-setup}
 
-I den här självstudiekursen beskrivs hur du skapar ett Maven Multi Module-modulprojekt för att hantera kod och konfigurationer för en Adobe Experience Manager-webbplats.
+I den här självstudiekursen beskrivs hur du skapar ett Maven Multi Module Module-projekt för att hantera kod och konfigurationer för en Adobe Experience Manager-webbplats.
 
 ## Förutsättningar {#prerequisites}
 
