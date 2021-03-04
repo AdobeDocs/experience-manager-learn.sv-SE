@@ -9,10 +9,13 @@ activity: use
 version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
+topic: Integreringar
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -160,7 +163,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    });
    ```
 
-1. Du bör omedelbart se en konsolprogramsats som utlösts med siddata:
+1. Du bör omedelbart se en konsolsats som utlösts med siddata:
 
    ![Visa data](assets/page-show-console-data.png)
 
