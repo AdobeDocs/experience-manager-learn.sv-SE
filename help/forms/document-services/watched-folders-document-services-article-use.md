@@ -4,17 +4,20 @@ seo-title: Använda bevakade mappar i AEM Forms
 description: Konfigurera och använda bevakade mappar i AEM Forms
 seo-description: Konfigurera och använda bevakade mappar i AEM Forms
 uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: output-service
+feature: Utdatatjänst
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
+topic: Utveckling
+role: Developer
+level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
