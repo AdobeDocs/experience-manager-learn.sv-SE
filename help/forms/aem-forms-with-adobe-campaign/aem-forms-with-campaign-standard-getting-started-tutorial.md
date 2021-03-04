@@ -4,17 +4,20 @@ seo-title: Komma igång med AEM Forms och Adobe Campaign Standard
 description: Integrera AEM Forms med Adobe Campaign Standard med AEM Forms Form Data Model för att hämta information om ACS-kampanjprofiler osv.
 seo-description: Integrera AEM Forms med Adobe Campaign Standard med AEM Forms Form Data Model för att hämta information om ACS-kampanjprofiler osv.
 uuid: 56450c9b-3752-4a64-b1b3-8c78e81f5921
-feature: adaptive-forms, form-data-model
+feature: '"Adaptive Forms, Form Data Model"'
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 89245554-7b99-4e7e-9810-52191f9ea365
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 3b44a9e2341ce23f737e6ef75c67fadd9870d2ac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
