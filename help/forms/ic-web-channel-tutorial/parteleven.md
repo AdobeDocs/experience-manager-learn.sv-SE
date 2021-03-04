@@ -4,17 +4,20 @@ seo-title: Konfigurera panelen Investment Mix
 description: Detta är en del av en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till cirkeldiagram för att visa den aktuella och modellens investeringsmix.
 seo-description: Detta är en del av en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till cirkeldiagram för att visa den aktuella och modellens investeringsmix.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
