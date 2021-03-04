@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5310
 thumbnail: 5310-spa-angular.jpg
+topic: SPA
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2204'
+source-wordcount: '2207'
 ht-degree: 0%
 
 ---
