@@ -4,16 +4,15 @@ user-guide-description: En självstudiekurs som hjälper dig att förstå hur Di
 version: 6.x
 sub-product: grund
 doc-type: tutorial
-feature: avsändare
 audience: architect, developer, implementer
 activity: develop, understand
 kt: 2233
 index: y
 team: TM
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '37'
 ht-degree: 2%
 
 ---
