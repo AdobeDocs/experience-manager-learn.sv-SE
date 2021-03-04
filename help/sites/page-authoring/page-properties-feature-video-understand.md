@@ -3,7 +3,7 @@ title: Sidegenskaper i AEM Sites
 seo-title: Sidegenskaper i Adobe Experience Manager Sites
 description: I följande video visas de metadata för sidegenskaper som är kopplade till en sida i Adobe Experience Manager.
 seo-description: 'I följande video visas de metadata för sidegenskaper som är kopplade till en sida i Adobe Experience Manager. '
-feature: page-editor
+feature: Page Editor
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 4%
+source-wordcount: '177'
+ht-degree: 3%
 
 ---
 
