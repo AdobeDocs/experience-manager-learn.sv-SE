@@ -9,10 +9,13 @@ activity: use
 version: cloud-service
 kt: 6874
 thumbnail: 26319.jpg
+topic: Arkitektur
+role: Arkitekt, utvecklare, administratör
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
