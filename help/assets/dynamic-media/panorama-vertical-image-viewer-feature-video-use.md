@@ -1,27 +1,24 @@
 ---
 title: Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media
-seo-title: Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media
-description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och vertikal bildvisare. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
-seo-description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och vertikal bildvisare. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
+description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
 sub-product: dynamiska medier
-feature: video-profiles, video-profiles, vr-360
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: Videoprofiler, videoprofiler, 360 VR-video
 version: 6.4, 6.5
+topic: Innehållshantering
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
 
 
-# Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# Använda Panorama och Lodrät bildvisning med AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och vertikal bildvisare. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
+Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
 
@@ -51,7 +48,7 @@ När det gäller vågräta färgrutor, beroende på konsumentens skärmstorlek, 
    <td>Lodrät bildvisare</td>
   </tr>
   <tr>
-   <td>Körningsläge för dynamiska media</td>
+   <td>Dynamic Media körningsläge</td>
    <td>Endast Dynamic Media Scene7 Mode</td>
    <td>DMS7 och Dynamic Media</td>
   </tr>
@@ -70,7 +67,7 @@ När det gäller vågräta färgrutor, beroende på konsumentens skärmstorlek, 
 
 [Konfigurera Dynamic Media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[Konfigurera Dynamic Media i hybrid-läge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
+[Konfigurera Dynamic Media i hybridläge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >
