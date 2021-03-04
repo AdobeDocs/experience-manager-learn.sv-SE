@@ -1,20 +1,17 @@
 ---
 title: SMS-autentisering med två faktorer
 description: Lägg till ett extra säkerhetslager som hjälper till att bekräfta en användares identitet när han/hon vill utföra vissa aktiviteter
-feature: Adaptiv Forms
+feature: integreringar
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6317
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
