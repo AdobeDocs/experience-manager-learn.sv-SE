@@ -1,16 +1,19 @@
 ---
 title: Så här kodar du för AEM Style System
 description: I den här videon ska vi titta närmare på den beskrivning av CSS (eller LESS) och JavaScript som används för att formatera huvudtitelkomponenten i Adobe Experience Manager med Style System, samt hur dessa format tillämpas på HTML och DOM.
-feature: style-system
+feature: Formatsystem
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
+topic: Utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 664d3964df796d508973067f8fa4fe5ef83c5fec
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
