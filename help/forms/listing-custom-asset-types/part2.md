@@ -4,20 +4,17 @@ seo-title: Visar anpassade tillgångstyper i AEM Forms
 description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
 seo-description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
-topic: Utveckling
-role: Developer
-level: Erfaren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
