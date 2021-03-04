@@ -1,12 +1,10 @@
 ---
 title: Kapitel 1 - Självstudiekurser - Konfigurera och hämta
-seo-title: Komma igång med AEM Content Services - Kapitel 1 - Komma igång med självstudiekurser
 description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
-seo-description: Kapitel 1 i självstudiekursen AEM Headless. Baslinjeinställningen för den AEM instansen av självstudiekursen.
 translation-type: tm+mt
-source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '17502'
+source-wordcount: '17476'
 ht-degree: 0%
 
 ---
@@ -36,7 +34,7 @@ Denna brist på grundläggande information leder till ett antal antimönster som
 
 Du kanske har hört programmeringsråden _&quot;Låt det först fungera - sedan snabbt.&quot;_. Det är inte helt fel. Utan rätt sammanhang brukar det emellertid feltolkas och inte tillämpas korrekt.
 
-De bör hindra utvecklaren från att i förväg optimera kod, som kanske aldrig kommer att köras - eller som körs så sällan, att en optimering inte har tillräcklig effekt för att motivera den insats som görs i optimeringen. Optimering kan dessutom leda till mer komplex kod och därmed medföra fel. Om du är utvecklare ska du alltså inte lägga alltför mycket tid på att mikrooptimera varje kodrad. Se bara till att du väljer rätt datastruktur, algoritmer och bibliotek och vänta på en profilerares hotspot-analys för att se var en mer detaljerad optimering kan öka den totala prestandan.
+De bör hindra utvecklaren från att i förtid optimera kod, som kanske aldrig kommer att köras - eller så sällan körs, att en optimering inte skulle ha tillräcklig effekt för att motivera den insats som gjorts för optimeringen. Optimering kan dessutom leda till mer komplex kod och därmed medföra fel. Om du är utvecklare ska du alltså inte lägga alltför mycket tid på att mikrooptimera varje kodrad. Se bara till att du väljer rätt datastruktur, algoritmer och bibliotek och vänta på en profilerares hotspot-analys för att se var en mer detaljerad optimering kan öka den totala prestandan.
 
 ### Arkitektbeslut och artefakter
 
@@ -380,7 +378,7 @@ Men än en gång - hur kan det vara så att det är billigare att kasta bort och
 
 Det finns två viktiga orsaker:
 
-1. På en vanlig webbplats efterfrågas bara en liten del av sidorna ofta. Även om du slänger allt återgivet innehåll efterfrågas bara ett fåtal dussin efteråt. Återgivningen av den långa änden av sidor kan distribueras över tiden när de faktiskt efterfrågas. Det innebär att belastningen på återgivningssidor inte är så hög som du kan förvänta dig. Det finns förstås alltid undantag.. vi kommer att diskutera några trick som kan hantera lika distribuerade webbplatser på större webbplatser med tomma Dispatcher-cacher senare.
+1. På en vanlig webbplats efterfrågas bara en liten del av sidorna ofta. Även om du slänger allt återgivet innehåll efterfrågas bara ett fåtal dussin efteråt. Återgivningen av den långa sidslut kan distribueras över tiden när de faktiskt begärs. Det innebär att belastningen på återgivningssidor inte är så hög som du kan förvänta dig. Det finns förstås alltid undantag.. vi kommer att diskutera några trick som kan hantera lika distribuerade webbplatser på större webbplatser med tomma Dispatcher-cacher senare.
 
 2. Alla sidor är ändå sammankopplade med huvudnavigeringen. Så nästan alla sidor är beroende av varandra. Detta innebär att även den smartaste beroendespåraren kommer att ta reda på vad vi redan vet: Om någon av sidorna ändras måste du göra alla andra ogiltiga.
 
@@ -444,7 +442,7 @@ Självständiga resurser ska betjänas på den resursens sökväg. Det hjälper 
 
 Inaktiveringsbegäran för Dispatcher utlöses vanligtvis av en replikeringsagent från publiceringssystemet.
 
-Om du känner dig säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
+Om du känner dig riktigt säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
 
 Det skulle gå lite längre än den här guiden för att gå in på detaljerna, men vi vill ge dig åtminstone några tips.
 
@@ -690,7 +688,7 @@ Invalidate-path /content/mysite/dummy`
 
 1. En avlyssnare i publiceringssystemet aktiveras när en fil i DAM ändras
 
-2. Avlyssnaren skickar en ogiltig begäran till Dispatcher. På grund av automatisk ogiltigförklaring spelar det ingen roll vilken väg vi skickar in den automatiska ogiltigförklaringen, såvida den inte ligger under webbplatsens hemsida - eller mer exakt i webbplatsens statusnivå.
+2. Avlyssnaren skickar en ogiltig begäran till Dispatcher. På grund av automatisk ogiltigförklaring spelar det ingen roll vilken väg vi skickar in den automatiska ogiltigförklaringen, såvida den inte ligger under webbplatsens hemsida - eller mer exakt på webbplatsens statusnivå.
 
 3. Statusfilen uppdateras.
 
@@ -727,7 +725,7 @@ Till slut kommer du att få lite jobb att städa alla filer som är äldre än..
 
 Men vänta, det finns ett annat fel i den här lösningen:
 
-Vi missbrukar en väljare som parameter: fp-2018-31-12-23-59 genereras dynamiskt som något slags&quot;cacheminnesmördare&quot;. Men en liten liten skugga (eller en krypbägare i sökmotorn) börjar begära sidorna:
+Vi missbrukar en väljare som parameter: fp-2018-31-12-23-59 genereras dynamiskt som något slags&quot;cache-mördare&quot;. Men en liten liten skugga (eller en krypbägare i sökmotorn) börjar begära sidorna:
 
 ```
 /content/mysite/home/jcr:content/par/img.fp-0000-00-00-00-00.jpg
@@ -781,7 +779,7 @@ Har ändrats vid publicering. Agenten skulle starta en sökning efter&quot;/cont
 
 Sedan kan den skicka ett antal ogiltigförklaringsbegäranden till Dispatcher. En för varje sida som innehåller resursen.
 
-Teoretiskt sett, det borde fungera. Men bara för förstanivåberoenden. Du vill inte använda det schemat för beroenden på flera nivåer, till exempel när du använder bilden på ett upplevelsefragment som används på en sida. Faktiskt anser vi att det här tillvägagångssättet är för komplext - och det kan finnas körningsproblem. Och oftast är det bästa rådet att inte göra dyr datorhantering i händelsehanterare. Och särskilt sökandet kan bli ganska dyrt.
+Teoretiskt sett, det borde fungera. Men bara för förstanivåberoenden. Du vill inte använda det schemat för beroenden på flera nivåer, till exempel när du använder bilden på ett upplevelsefragment som används på en sida. Faktiskt anser vi att det här tillvägagångssättet är alltför komplext - och det kan finnas körningsproblem. Och oftast är det bästa rådet att inte göra dyr datorhantering i händelsehanterare. Och särskilt sökandet kan bli ganska dyrt.
 
 ##### Slutsats
 
@@ -1013,7 +1011,7 @@ Du bör ange bildens kvalitet och storlek genom att författaren redigerar sidan
 
 ## Utskriftsmönstret - besökt och rehabiliterat
 
-### Hur bufferthanteraren undviker att exponera API:t
+### Hur Utskriftshanteraren undviker att exponera API:t
 
 Vi fick lite misskrediter till Spooler-mönstret i det sista kapitlet. Det är dags att återupprätta det.
 
@@ -1379,7 +1377,7 @@ För vanliga filer skapar vi vanligtvis ett fast schema, som att kontrollera HTM
 
 Webbläsarcachelagring är mycket användbart i redigeringssystemet. Du vill cacha så mycket du kan i webbläsaren för att förbättra redigeringsupplevelsen. Tyvärr är de dyraste resurserna, HTML-sidorna kan inte cachelagras.. de ska ändras ofta på författaren.
 
-Granitbiblioteken, som utgör AEM, kan cachas under en hel del tid. Du kan även cachelagra platsens statiska filer (teckensnitt, CSS och JavaScript) i webbläsaren. Även bilder i `/content/dam` kan vanligtvis cachelagras i cirka 15 minuter eftersom de inte ändras lika ofta som kopieringstext på sidorna. Bilder redigeras inte interaktivt i AEM. De redigeras och godkänns först, innan de överförs till AEM. Du kan alltså anta att de inte ändras lika ofta som text.
+Granitbiblioteken, som utgör AEM, kan cachas under en hel del tid. Du kan även cachelagra platsens statiska filer (teckensnitt, CSS och JavaScript) i webbläsaren. Även bilder i `/content/dam` kan vanligtvis cachelagras i ungefär 15 minuter eftersom de inte ändras lika ofta som kopieringstext på sidorna. Bilder redigeras inte interaktivt i AEM. De redigeras och godkänns först, innan de överförs till AEM. Du kan alltså anta att de inte ändras lika ofta som text.
 
 När du cachelagrar gränssnittsfiler kan platsens biblioteksfiler och bilder göra att det går betydligt snabbare att läsa in sidor när du är i redigeringsläge.
 
@@ -1800,7 +1798,7 @@ Numrering, som i första hand verkar vara ett enkelt val, når sin gräns i län
 
 Vi vill föreslå ett annat tillvägagångssätt: Troligen kommer du inte att hitta meningsfulla identifierare för varje enskild filterregel. Men de har antagligen ett större syfte, så de kan grupperas på olika sätt beroende på det ändamålet. Exempel: &quot;grundläggande konfiguration&quot;, &quot;programspecifika undantag&quot;, &quot;globala undantag&quot; och &quot;säkerhet&quot;.
 
-Du kan sedan namnge och gruppera reglerna efter behov och ange läsaren för konfigurationen (din kära kollega), viss orientering i filen:
+Du kan sedan namnge och gruppera reglerna utifrån detta och ange läsaren för konfigurationen (din kära kollega), en viss orientering i filen:
 
 ```plain
   # basic setup:
