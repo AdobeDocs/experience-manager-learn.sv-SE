@@ -1,7 +1,7 @@
 ---
 title: Konfigurera datakälla
 description: Skapa en datakälla som pekar på MySQL-databasen
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,13 +9,10 @@ activity: implement
 version: 6.4,6.5
 kt: 6541
 thumbnail: 6541.jpg
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
