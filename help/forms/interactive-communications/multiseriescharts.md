@@ -3,16 +3,19 @@ title: Diagram för flera serier i AEM Forms
 seo-title: Diagram för flera serier i AEM Forms
 description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i utskrifts- och webbkanalsdokument.
 seo-description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i utskrifts- och webbkanalsdokument.
-feature: interactive-communication
+feature: Interaktiv kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: Utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
