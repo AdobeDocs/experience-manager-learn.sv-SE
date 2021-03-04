@@ -1,16 +1,19 @@
 ---
 title: Konfigurera OKTA med AEM
 description: Förstå olika konfigurationsinställningar för att använda enkel inloggning med okta
-feature: administration
+feature: Adaptiv Forms
 topics: development, authentication, security
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.5
+topic: Administration
+role: Administratör
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: 0b48ae445f4b32deeec08bcb68f805bf19992c9e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
