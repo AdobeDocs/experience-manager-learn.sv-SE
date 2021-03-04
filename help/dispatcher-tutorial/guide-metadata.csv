@@ -1,7 +1,0 @@
-filename,title,description,feature,topic,role,level
-./metadata.md,,,,,,
-./help/dispatcher-tutorial/TOC.md,,,,,,
-help/dispatcher-tutorial/overview.md,AEM Dispatcher Cache Tutorial,The goal of this tutorial is to help you better understand how the Dispatcher works and how you can work with it.,Dispatcher,Architecture,Architect,Beginner
-help/dispatcher-tutorial/chapter-1.md,"Chapter 1 - Dispatcher Concepts, Patterns and Antipatterns",This chapter provides a brief introduction over the Dispatcher's history and mechanics and discusses how this influences how an AEM developer would design his components.,Dispatcher,Architecture,Architect,Beginner
-help/dispatcher-tutorial/chapter-2.md,Chapter 2 - Dispatcher infrastructure,Understand the publish and dispatcher topology. Learn about the most common topologies and setups.,Dispatcher,Architecture,Architect,Beginner
-help/dispatcher-tutorial/chapter-3.md,Chapter 3 - Advanced Dispatcher caching topics,This is Part 3 of a three part Ð series to caching in AEM. Where the first two parts focused on plain http caching in the Dispatcher and what limitations there are. This part discusses some ideas on how to overcome these limitations.,Dispatcher,Architecture,Architect,Intermediate
