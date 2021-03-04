@@ -4,19 +4,16 @@ seo-title: Skicka e-post om inskickning av anpassat formulär
 description: Skicka bekräftelsemeddelande via e-post när formulär skickas in på ett adaptivt sätt med skicka-e-postkomponenten
 seo-description: Skicka bekräftelsemeddelande via e-post när formulär skickas in på ett adaptivt sätt med skicka-e-postkomponenten
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
-feature: Adaptiv Forms
+feature: adaptiva formulär
 topics: authoring, integrations
 audience: developer
 doc-type: article
 activity: use
 discoiquuid: 1187357f-2f36-4a04-b708-44bb9c174fb5
-topic: Utveckling
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
