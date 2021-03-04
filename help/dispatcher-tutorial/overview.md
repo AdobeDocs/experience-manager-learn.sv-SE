@@ -3,10 +3,14 @@ title: AEM Dispatcher Cache - självstudiekurs
 seo-title: AEM Dispatcher Cache - självstudiekurs
 description: Målet med den här självstudiekursen är att hjälpa dig att bättre förstå hur Dispatcher fungerar och hur du kan arbeta med den.
 seo-description: Målet med den här självstudiekursen är att hjälpa dig att bättre förstå hur Dispatcher fungerar och hur du kan arbeta med den.
+feature: Dispatcher
+topic: Arkitektur
+role: Arkitekt
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 9c8943de439cab926540eca028cb632ebdc4d888
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
