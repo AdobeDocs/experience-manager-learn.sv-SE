@@ -1,7 +1,7 @@
 ---
 title: asset compute mikrotjänster för AEM som Cloud Service
 description: I den här självstudiekursen går du igenom hur du skapar en enkel Asset compute-arbetare som skapar en resursåtergivning genom att beskära den ursprungliga resursen till en cirkel och tillämpar konfigurerbar kontrast och ljusstyrka. Även om arbetaren själv är grundläggande används den här självstudien för att utforska hur du skapar, utvecklar och distribuerar en anpassad Asset compute-arbetare som kan användas med AEM som Cloud Service.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: Integrering, utveckling
+role: Developer
+level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -66,13 +69,13 @@ Lär dig hur du skapar och konfigurerar ett Asset compute-projekt och sedan utve
 
 ### Skapa ett nytt Asset compute-projekt
 
-asset compute-projekt, som innehåller en eller flera Asset compute-arbetare, genereras med den interaktiva Adobe I/O CLI. Projekt i asset compute är särskilt strukturerade projekt i Adobe Project Fire, som i sin tur är Node.js-projekt.
+asset compute-projekt, som innehåller en eller flera Asset compute-arbetare, genereras med den interaktiva CLI-funktionen för Adobe I/O. Projekt i asset compute är särskilt strukturerade projekt i Adobe Project Fire, som i sin tur är Node.js-projekt.
 
 + [Skapa ett nytt Asset compute-projekt](./develop/project.md)
 
 ### Konfigurera miljövariabler
 
-Miljövariabler bevaras i `.env`-filen för lokal utveckling, och används för att ange Adobe I/O-autentiseringsuppgifter och molnlagringsuppgifter som krävs för lokal utveckling.
+Miljövariabler bevaras i `.env`-filen för lokal utveckling, och används för att ange autentiseringsuppgifter för Adobe I/O och molnlagring som krävs för lokal utveckling.
 
 + [Konfigurera miljövariabler](./develop/environment-variables.md)
 
