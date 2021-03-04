@@ -1,7 +1,7 @@
 ---
 title: Skapa det adaptiva huvudformuläret
 description: Skapa adaptiva formulär för att hämta information om sökande och adaptiva formulär för att hämta det sparade adaptiva formuläret
-feature: adaptiva formulär
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
+topic: Utveckling
+role: Yrkesverksamma inom affärsverksamhet
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
