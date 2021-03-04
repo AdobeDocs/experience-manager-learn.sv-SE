@@ -2,7 +2,7 @@
 title: Komma igång med AEM Sites - Grunderna i komponenter
 description: Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt HelloWorld-exempel. Ämnen som rör HTML, Sling Models, Client-side libraries och författardialogrutor har utforskats.
 sub-product: platser
-feature: komponenter, sling-models, htl
+feature: Huvudkomponenter, utvecklingsverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
+topic: Innehållshantering, utveckling
+role: Developer
+level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
