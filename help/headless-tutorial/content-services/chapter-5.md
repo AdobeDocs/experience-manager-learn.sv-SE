@@ -1,14 +1,10 @@
 ---
 title: Kapitel 5 - Skapa sidor för innehållstjänster - Innehållstjänster
 description: Kapitel 5 i den AEM självstudiekursen Headless handlar om att skapa sidor från mallarna som definieras i kapitel 4. Dessa sidor fungerar som JSON HTTP-slutpunkter.
-feature: '"Innehållsfragment, API:er"'
-topic: '"Headless, Content Management"'
-role: Developer
-level: Nybörjare
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
