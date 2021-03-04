@@ -3,16 +3,19 @@ title: AEM Forms med Marketo (del 2)
 seo-title: AEM Forms med Marketo (del 2)
 description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
 seo-description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
-feature: adaptive-forms, form-data-model
+feature: '"Adaptive Forms, Form Data Model"'
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
+topic: Utveckling
+role: Developer
+level: Erfaren
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
