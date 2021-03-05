@@ -15,9 +15,9 @@ topic: Headless, Content Management
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -127,11 +127,12 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
    $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Öppna filen `.env.development` på `aem-guides-wknd-graphql/react-app/.env.development` i den utvecklingsmiljö du väljer. Avkommentera `REACT_APP_AUTHORIZATION`-raden så att filen ser ut så här:
+1. Öppna filen `.env.development` på `aem-guides-wknd-graphql/react-app/.env.development` i den utvecklingsmiljö du väljer. Kontrollera att raden `REACT_APP_AUTHORIZATION` inte är kommenterad och att filen ser ut så här:
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
    REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json
+   # Use Authorization when connecting to an AEM Author environment
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
@@ -139,7 +140,7 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
 
    >[!NOTE]
    >
-   > I ett produktionsscenario ansluter appen till en AEM **Publish**-miljö. Detta beskrivs mer ingående senare i självstudiekursen.
+   > I ett produktionsscenario ansluter appen till en AEM **Publish**-miljö. Detta beskrivs mer ingående i kapitlet [Produktionsdistribution](production-deployment.md).
 
 1. Navigera till mappen `aem-guides-wknd-graphql/react-app`. Installera och starta programmet:
 
