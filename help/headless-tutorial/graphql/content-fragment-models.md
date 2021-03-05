@@ -15,9 +15,9 @@ topic: Headless, Content Management
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,10 @@ Det här är en självstudiekurs i flera delar och det antas att de steg som bes
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 I videon ovan visas en översikt på hög nivå över hur du arbetar med modeller för innehållsfragment.
+
+>[!CAUTION]
+>
+> I videon ovan visas hur du skapar modellen **Contributor** med namnet `Contributors`. När du utför stegen i din egen miljö ska du se till att titeln använder ett enda formulär: `Contributor` utan **s**. Namngivningen av innehållsfragmentmodellen styr GraphQL API-anropen som kommer att utföras senare i självstudiekursen.
 
 ## Inspect - Adventure Content Fragment Model
 
