@@ -6,9 +6,9 @@ topic: Headless, Content Management
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,6 @@ ht-degree: 0%
 Adobe Experience Manager har flera alternativ för att definiera headless-slutpunkter och leverera innehållet som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
 ## AEM GraphQL API:er, genomgång
-
->[!CAUTION]
->
-> AEM GraphQL API för leverans av innehållsfragment är tillgänglig på begäran.
-> Kontakta Adobe Support för att aktivera API:t för din AEM som ett Cloud Service-program.
 
 AEM GraphQL API:er för innehållsfragment
 har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
