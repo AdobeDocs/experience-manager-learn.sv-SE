@@ -16,9 +16,9 @@ topic: Innehållshantering, utveckling
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3104'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ I de flesta fall börjar planering av en ny webbplats med dummies och statisk de
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
 **Ladda ned designfilen för  [WKND-artikeln](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**.
+
+>[!NOTE]
+>
+> En allmän [AEM Core Components UI Kit finns också tillgänglig](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd) som startpunkt för anpassade projekt.
 
 ## Skapa artikelsidmall
 
