@@ -13,7 +13,7 @@ topic: Integrering, utveckling
 role: Developer
 level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 53c20b9774c15b04a1c78c7c0c7b61a60996bf60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Här följer en instruktion för att konfigurera en förkortning. Information om
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
    ```
 
 1. [Installera Visual Studio Code](https://code.visualstudio.com/download)
