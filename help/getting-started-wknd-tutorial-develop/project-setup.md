@@ -16,9 +16,9 @@ topic: Innehållshantering, utveckling
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1947'
 ht-degree: 1%
 
 ---
@@ -134,6 +134,24 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
            |--- pom.xml
            |--- README.md
            |--- .gitignore
+   ```
+
+### Uppdatera Project Analyser-version
+
+>[!CAUTION]
+>
+> Det finns ett [känt fel](https://github.com/adobe/aem-project-archetype/issues/638) i Arketype version 25 som kräver en uppdatering av versionen av **Project Analyser** i det genererade projektet. Stegen nedan är **endast** som behövs för projekt som skapats med `aemVersion="cloud"`.
+
+1. Öppna filen `aem-guides-wknd/poml.xml` med din favorittextredigerare.
+1. Uppdatera `aemanalyser.version` till **`0.9.2`**:
+
+   ```diff
+    <properties>
+       ...
+   -   <aemanalyser.version>0.0.18</aemanalyser.version>
+   +   <aemanalyser.version>0.9.2</aemanalyser.version>
+       ...
+    </properties>
    ```
 
 ## Distribuera och bygg projektet {#build}
