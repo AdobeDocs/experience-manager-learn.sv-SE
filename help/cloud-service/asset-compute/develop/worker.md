@@ -13,7 +13,7 @@ topic: Integrering, utveckling
 role: Developer
 level: Mellan, erfaren
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
 workflow-type: tm+mt
 source-wordcount: '1429'
 ht-degree: 0%
@@ -133,7 +133,7 @@ Uppdatera `require`-direktiven högst upp i arbetarens `index.js` för att impor
    ```javascript
    'use strict';
    
-   const { Jimp } = require('jimp');
+   const Jimp = require('jimp');
    const { worker, SourceCorruptError } = require('@adobe/asset-compute-sdk');
    const fs = require('fs').promises;
    
@@ -159,7 +159,7 @@ Här läser vi i den konfigurerbara återgivningens `SIZE`, `BRIGHTNESS` och `CO
 ```javascript
 'use strict';
 
-const { Jimp } = require('jimp');
+const Jimp = require('jimp');
 const { worker, SourceCorruptError } = require('@adobe/asset-compute-sdk');
 const fs = require('fs').promises;
 
@@ -191,7 +191,7 @@ Innan du börjar bearbeta återgivningen bör du kontrollera att alla parametrar
 ```javascript
 'use strict';
 
-const { Jimp } = require('jimp');
+const Jimp = require('jimp');
 // Import the Asset Compute SDK provided `ClientError` 
 const { worker, SourceCorruptError, ClientError } = require('@adobe/asset-compute-sdk');
 const fs = require('fs').promises;
@@ -270,25 +270,26 @@ exports.main = worker(async (source, rendition, params) => {
         throw new SourceCorruptError('source file is empty');
     }
 
+    // Read/parse and validate parameters
     const SIZE = parseInt(rendition.instructions.size) || 800; 
     const CONTRAST = parseFloat(rendition.instructions.contrast) || 0;
     const BRIGHTNESS = parseFloat(rendition.instructions.brightness) || 0;
 
     if (SIZE <= 10 || SIZE >= 10000) {
-        throw new RenditionInstructionsError("'size' must be between 10 and 10,000");
+        throw new RenditionInstructionsError("'size' must be between 10 and 1,0000");
     } else if (CONTRAST <= -1 || CONTRAST >= 1) {
         throw new RenditionInstructionsError("'contrast' must between -1 and 1");
     } else if (BRIGHTNESS <= -1 || BRIGHTNESS >= 1) {
         throw new RenditionInstructionsError("'brightness' must between -1 and 1");
     }
 
-    // Create target rendition image of the target size with a transparent background (0x0)
+    // Create target rendition image 
     let renditionImage =  new Jimp(SIZE, SIZE, 0x0);
 
     // Read and perform transformations on the source binary image
     let image = await Jimp.read(source.path);
 
-    // Crop a circle from the source asset, and then apply contrast and brightness using Jimp
+    // Crop a circle from the source asset, and then apply contrast and brightness
     image.crop(
             image.bitmap.width < image.bitmap.height ? 0 : (image.bitmap.width - image.bitmap.height) / 2,
             image.bitmap.width < image.bitmap.height ? (image.bitmap.height - image.bitmap.width) / 2 : 0,
@@ -304,7 +305,7 @@ exports.main = worker(async (source, rendition, params) => {
     renditionImage.composite(image, 0, 0)
 
     // Write the final transformed image to the asset's rendition
-    renditionImage.write(rendition.path);
+    await renditionImage.writeAsync(rendition.path);
 });
 
 // Custom error used for renditions.instructions parameter checking
