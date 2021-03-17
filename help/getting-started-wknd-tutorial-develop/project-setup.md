@@ -16,9 +16,9 @@ topic: Innehållshantering, utveckling
 role: Developer
 level: Nybörjare
 translation-type: tm+mt
-source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
+source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1890'
 ht-degree: 1%
 
 ---
@@ -50,11 +50,11 @@ I det här kapitlet genererar du ett nytt Adobe Experience Manager-projekt med [
 
 ## Skapa projektet {#create}
 
-Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen använder [Maven AEM Project Archetype **25**](https://github.com/adobe/aem-project-archetype). I Cloud Manager finns också en gränssnittsguide [som initierar skapandet av ett AEM programprojekt. ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html) Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
+Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen använder [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). I Cloud Manager finns också en gränssnittsguide [som initierar skapandet av ett AEM programprojekt. ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html) Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
 
 >[!NOTE]
 >
->I den här självstudiekursen används version **25** av arketypen. Det är alltid en god vana att använda den **senaste** versionen av arkitypen för att generera ett nytt projekt.
+>I den här självstudiekursen används version **26** av arketypen. Det är alltid en god vana att använda den **senaste** versionen av arkitypen för att generera ett nytt projekt.
 
 Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, men de bör vara lika om en Windows-terminal används.
 
@@ -100,7 +100,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
    mvn -B archetype:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=25 \
+       -D archetypeVersion=26 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
        -D groupId="com.adobe.aem.guides.wknd" \
@@ -111,7 +111,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
 
    >[!NOTE]
    >
-   > Om du använder AEM 6.5.5.0+ eller 6.4.8.1+ ersätter du `aemVersion="cloud"` med målversionen av AEM, d.v.s. `aemVersion="6.5.5"` eller `aemVersion="6.4.8.1"`
+   > Om mål AEM 6.5.5+ ersätter `aemVersion="cloud"` med `aemVersion="6.5.5"`. Om du har 6.4.8+ som mål ska du använda `aemVersion="6.4.8"`.
 
    En fullständig lista över tillgängliga egenskaper för konfigurering av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -134,24 +134,6 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
            |--- pom.xml
            |--- README.md
            |--- .gitignore
-   ```
-
-### Uppdatera Project Analyser-version
-
->[!CAUTION]
->
-> Det finns ett [känt fel](https://github.com/adobe/aem-project-archetype/issues/638) i Arketype version 25 som kräver en uppdatering av versionen av **Project Analyser** i det genererade projektet. Stegen nedan är **endast** som behövs för projekt som skapats med `aemVersion="cloud"`.
-
-1. Öppna filen `aem-guides-wknd/poml.xml` med din favorittextredigerare.
-1. Uppdatera `aemanalyser.version` till **`0.9.2`**:
-
-   ```diff
-    <properties>
-       ...
-   -   <aemanalyser.version>0.0.18</aemanalyser.version>
-   +   <aemanalyser.version>0.9.2</aemanalyser.version>
-       ...
-    </properties>
    ```
 
 ## Distribuera och bygg projektet {#build}
