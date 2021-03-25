@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
+source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 14%
+source-wordcount: '353'
+ht-degree: 13%
 
 ---
 
@@ -83,6 +83,15 @@ ht-degree: 14%
 + Migrering {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)
++ Forms{#forms}
+   + [Integrera med Salesforce]{#integrate-with-salesforce}
+      + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
+      + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
+      + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
@@ -111,4 +120,3 @@ ht-degree: 14%
    + [SPA (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-
