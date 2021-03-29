@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 13%
+source-wordcount: '413'
+ht-degree: 11%
 
 ---
 
@@ -84,7 +84,26 @@ ht-degree: 13%
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)
 + Forms{#forms}
-   + [Integrera med Salesforce]{#integrate-with-salesforce}
+   + Skapa anpassat formulär{#create-first-af}
+      + [Skapa tema](./forms/create-first-af/create-theme.md)
+      + [Skapa mall](./forms/create-first-af/create-template.md)
+      + [Skapa fragment](./forms/create-first-af/create-fragments.md)
+      + [Skapa formulär](./forms/create-first-af/create-af.md)
+      + [Konfigurera rotpanel](./forms/create-first-af/configure-root-panel.md)
+      + [Konfigurera personpanel](./forms/create-first-af/configure-people-panel.md)
+      + [Konfigurera inkomstpanelen](./forms/create-first-af/configure-income-panel.md)
+      + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
+      + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
+      + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
+   + Skapa granskningsarbetsflöde{#create-aem-workflow}
+      + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
+      + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
+   + Adobe Sign med AEM Forms{forms-and-sign}
+      + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
+      + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Integrera med Salesforce{#integrate-with-salesforce}
       + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
       + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
