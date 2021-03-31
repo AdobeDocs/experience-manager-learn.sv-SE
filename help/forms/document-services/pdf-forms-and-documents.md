@@ -1,8 +1,7 @@
 ---
 title: Förstå de olika typerna av PDF forms och dokument
 description: PDF är en familj av filformat och den här artikeln beskriver de typer av PDF-filer som är viktiga och relevanta för formulärutvecklare.
-solution: Experience Manager Forms
-product: aem
+solution: Experience Manager, Experience Manager Forms
 type: Dokumentation
 role: Developer
 level: Nybörjare,Mellanliggande
@@ -11,7 +10,7 @@ feature: Dokumenttjänster
 kt: 7071
 topic: Utveckling
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 0%
