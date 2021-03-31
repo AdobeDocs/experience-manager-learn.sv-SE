@@ -1,7 +1,6 @@
 ---
 title: 'Skapa ett Lead-objekt i Salesforce-databasen för en knapps click-händelse '
 description: Skapa som lead genom att anropa poståtgärden för formulärdatamodellen
-product: aem
 type: Dokumentation
 role: Developer
 level: Nybörjare, mellanliggande
@@ -10,7 +9,7 @@ feature: Adaptiv Forms
 topic: Utveckling
 kt: 7193
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 4%
