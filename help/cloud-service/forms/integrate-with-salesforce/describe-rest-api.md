@@ -1,7 +1,7 @@
 ---
 title: Skapa en swagger-fil som beskriver Salesforce REST API
 description: Swagger-filen definierar API-slutpunkterna samt in- och utdataparametrarna
-solution: Experience Manager Forms
+solution: Experience Manager, Experience Manager Forms
 type: Dokumentation
 role: Developer
 level: Nybörjare, mellanliggande
@@ -11,7 +11,7 @@ topic: Utveckling
 kt: 7147
 thumbnail: 331754.jpg
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 5%
