@@ -7,8 +7,9 @@ product: experience manager
 index: y
 type: Självstudiekurs
 solution: Experience Manager
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+source-git-commit: 10c3a0393ad987a6552064b3d082bc2889b726d6
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
