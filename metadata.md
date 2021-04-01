@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 solution-title: Experience Manager
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-learn.sv-SE
@@ -9,7 +9,7 @@ type: Självstudiekurs
 solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 10c3a0393ad987a6552064b3d082bc2889b726d6
+source-git-commit: 34c31db8d48f4e3ba3a213c4c52dc08b73020526
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
