@@ -9,8 +9,9 @@ version: cloud-service
 feature: Adaptiv Forms
 topic: Utveckling
 kt: 7151
+thumbnail: 331758.jpg
 translation-type: tm+mt
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 4%
