@@ -15,9 +15,9 @@ topic: Utveckling
 role: Developer
 level: Mellanliggande
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,9 @@ Använda API:er för Output och Forms Service i AEM Forms
 
 I den här artikeln ska vi ta en titt på följande
 
-* Utdatatjänst - Den här tjänsten används vanligtvis för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf
-* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer
+* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för utdatatjänsten.
+* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) för Forms-tjänsten.
 
-Den officiella javadoc-filen för AEM Forms API visas [här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 Följande kodfragment exporterar data från PDF-filen
 
