@@ -1,19 +1,19 @@
 ---
 title: Konfigurera anpassat formulär så att användaren kan fylla i och signera
 description: I det här fallet är formuläranvändaren och signeraren samma person.
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
 feature: Adaptiv Forms
 topic: Utveckling
-kt: 7438
+kt: 7432
 thumbnail: 332439.jpg
 translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 5%
+source-wordcount: '52'
+ht-degree: 1%
 
 ---
 
