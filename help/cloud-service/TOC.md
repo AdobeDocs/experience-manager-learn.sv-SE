@@ -5,10 +5,10 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -85,6 +85,7 @@ ht-degree: 11%
    + [Massimport av resurser](./migration/bulk-import.md)
 + Forms{#forms}
    + Skapa anpassat formulär{#create-first-af}
+      + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
       + [Skapa mall](./forms/create-first-af/create-template.md)
       + [Skapa fragment](./forms/create-first-af/create-fragments.md)
@@ -98,7 +99,7 @@ ht-degree: 11%
    + Skapa granskningsarbetsflöde{#create-aem-workflow}
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign med AEM Forms{forms-and-sign}
+   + Adobe Sign med AEM Forms{#forms-and-sign}
       + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
       + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
