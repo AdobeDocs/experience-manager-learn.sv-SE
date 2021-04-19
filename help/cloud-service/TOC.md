@@ -5,9 +5,9 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
+source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '414'
 ht-degree: 12%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 12%
       + [Content Publishing](./developing/basics/content-publishing.md)
       + [OSGi-konfigurationer](./developing/basics/osgi-configurations.md)
       + [Migrering av Dispatcher-konfiguration](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)
+   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
