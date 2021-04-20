@@ -6,13 +6,14 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-topic: development
+topic: utveckling
 thumbnail: 331891.jpg
+kt: 7192
 translation-type: tm+mt
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '35'
+ht-degree: 2%
 
 ---
 
