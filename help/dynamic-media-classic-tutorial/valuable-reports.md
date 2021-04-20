@@ -7,9 +7,9 @@ doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
-topic: Innehållshantering
-role: Administratör
-level: Mellanliggande
+topic: Content Management
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

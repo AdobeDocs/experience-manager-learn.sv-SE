@@ -3,7 +3,7 @@ title: Komma igång med AEM Sites - Sidor och mallar
 seo-title: Komma igång med AEM Sites - Sidor och mallar
 description: Lär dig mer om relationen mellan en bassidkomponent och redigerbara mallar. Lär dig mer om hur grundkomponenterna proxyeras in i projektet och lär dig avancerade policykonfigurationer av redigerbara mallar för att skapa en välstrukturerad mall för artikelsidor baserad på en dummy från Adobe XD.
 sub-product: platser
-feature: Huvudkomponenter, redigerbara mallar
+feature: Core Components, Editable Templates
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ audience: developer
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-topic: Innehållshantering, utveckling
+topic: Content Management, Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt

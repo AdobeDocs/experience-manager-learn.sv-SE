@@ -2,9 +2,9 @@
 title: '"Kapitel 3 - Avancerade ämnen i Dispatcher-cachning"'
 description: Detta är del 3 i en tredelsserie som cachelagras i AEM. Där de två första delarna fokuserade på vanlig http-cachning i Dispatcher och vilka begränsningar det finns. Här diskuteras några idéer om hur man övervinner dessa begränsningar.
 feature: Dispatcher
-topic: Arkitektur
-role: Arkitekt
-level: Mellanliggande
+topic: Architecture
+role: Architect
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

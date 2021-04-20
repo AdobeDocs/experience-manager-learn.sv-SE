@@ -2,10 +2,10 @@
 title: Så här använder du Inkorgen i AEM
 description: AEM underlättar samarbete och synlighet i uppgifter och arbetsflöden.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Samarbete
-feature: Inkorg
-role: Yrkesverksamma inom affärsverksamhet
-level: Mellanliggande
+topic: Collaboration
+feature: Inbox
+role: Business Practitioner
+level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
 translation-type: tm+mt

@@ -4,16 +4,16 @@ seo-title: Installera och konfigurera Tomcat
 description: Detta är en del av en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
 seo-description: Detta är en del av en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
 uuid: c6d4c74c-ea16-4c63-92c9-182d087fd88c
-feature: Interaktiv kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4f400c22-6c96-4018-851c-70d988ce7c6c
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

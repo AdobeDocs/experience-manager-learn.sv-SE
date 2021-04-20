@@ -4,16 +4,16 @@ seo-title: Registrerar anpassade resurstyper
 description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
 seo-description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
-topic: Utveckling
+topic: Development
 role: Developer
-level: Erfaren
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

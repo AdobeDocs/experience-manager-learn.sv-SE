@@ -3,7 +3,7 @@ title: Använda CAPTCHA med AEM Adaptive Forms
 seo-title: Använda CAPTCHA med AEM Adaptive Forms
 description: Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 seo-description: Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
-feature: Adaptiv Forms, arbetsflöde
+feature: Adaptive Forms,Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,9 +11,9 @@ activity: setup
 version: 6.4,6.5
 uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
 discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
-topic: Utveckling
+topic: Development
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

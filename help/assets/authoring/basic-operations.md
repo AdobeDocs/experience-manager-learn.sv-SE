@@ -1,13 +1,13 @@
 ---
 title: Grundläggande åtgärder
 description: Lär dig mer om grundläggande funktioner i AEM Assets, inklusive hur du skapar mappar samt överför, kopierar, flyttar och tar bort resurser.
-feature: Resurshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+feature: Asset Management
+role: Business Practitioner
+level: Beginner
 version: cloud-service
 kt: 4299
 thumbnail: 32044.jpg
-topic: Innehållshantering
+topic: Content Management
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

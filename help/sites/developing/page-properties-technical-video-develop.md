@@ -1,8 +1,8 @@
 ---
 title: Utöka Sidegenskaper i AEM Sites
 description: Lär dig hur du utökar metadatafälten för Sidegenskaper i Adobe Experience Manager Sites. I den här videon beskrivs det mest effektiva sättet att uppnå detta med funktionerna i Sling Resource Merger.
-topic: Utveckling
-feature: Kärnkomponenter
+topic: Development
+feature: Core Components
 role: Developer
 version: cloud-service
 kt: 243

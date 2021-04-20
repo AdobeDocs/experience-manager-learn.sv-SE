@@ -1,7 +1,7 @@
 ---
 title: Skapa huvudarbetsflöde för att utlösa signaturprocessen
 description: Skapa ett arbetsflöde för att lagra formulären för signering i databasen
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: Utveckling
+topic: Development
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

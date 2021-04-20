@@ -3,7 +3,7 @@ title: Grundläggande sidåtgärder i AEM Sites
 seo-title: Grundläggande sidåtgärder i AEM Sites
 description: I följande videofilm visas hur du utför grundläggande sidhanteringsåtgärder för en Adobe Experience Manager Sites-sida.
 seo-description: I följande videofilm visas hur du utför grundläggande sidhanteringsåtgärder för en Adobe Experience Manager Sites-sida.
-feature: sidredigeraren, redigerbara mallar
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4245
 thumbnail: 32147.jpg
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

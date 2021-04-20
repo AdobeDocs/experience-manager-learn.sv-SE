@@ -1,7 +1,7 @@
 ---
 title: Loggar
 description: Loggar fungerar som en frontlinje för felsökning AEM program i AEM som en Cloud Service, men är beroende av korrekt inloggning i det distribuerade AEM.
-feature: Utvecklarverktyg
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

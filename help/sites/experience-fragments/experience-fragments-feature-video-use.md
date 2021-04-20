@@ -3,9 +3,9 @@ title: Använda AEM Experience Fragments
 description: Med Experience Fragments kan innehållsförfattare återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
 sub-product: webbplatser, innehållstjänster
 feature: Experience Fragments
-topic: Innehållshantering
-role: Arkitekt, utvecklare, administratör, affärsansvarig
-level: Nybörjare
+topic: Content Management
+role: Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 doc-type: feature video
 version: cloud-service
 kt: 194

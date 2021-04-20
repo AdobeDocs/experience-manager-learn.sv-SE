@@ -1,7 +1,7 @@
 ---
 title: Skapa anpassat formulär
 description: Skapa och konfigurera anpassningsbara formulär att använda formulärdatamodellens förifyllningstjänst
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
-topic: Utveckling
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

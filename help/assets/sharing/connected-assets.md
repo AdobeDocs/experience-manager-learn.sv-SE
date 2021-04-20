@@ -1,11 +1,11 @@
 ---
 title: Använda uppkopplade resurser med AEM Sites
 description: Med funktionen för sammankopplade resurser kan en AEM Sites-författare smidigt dela digitala resurser som lagras på en annan instans av AEM.
-feature: Anslutna resurser
+feature: Connected Assets
 version: 6.5
-topic: Innehållshantering
+topic: Content Management
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

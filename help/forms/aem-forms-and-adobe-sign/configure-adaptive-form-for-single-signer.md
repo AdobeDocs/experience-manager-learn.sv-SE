@@ -1,16 +1,16 @@
 ---
 title: Anpassat formulär med en signerare
 description: Anpassningsbart formulär med en signerare. I videon förklaras de olika stegen som krävs för att konfigurera ett adaptivt formulär med en signerare.
-feature: Adaptiv Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
-topic: Utveckling
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

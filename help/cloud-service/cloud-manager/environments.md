@@ -9,9 +9,9 @@ activity: use
 version: cloud-service
 kt: 6871
 thumbnail: 26318.jpg
-topic: Arkitektur
-role: Arkitekt, utvecklare, administratör
-level: Nybörjare
+topic: Architecture
+role: Architect, Developer, Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

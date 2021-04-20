@@ -1,7 +1,7 @@
 ---
 title: Aktivera SSL för AEM
 description: Använd installationsguiden för Adobe Experience Manager SSL för att konfigurera en AEM som ska köras över HTTPS.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 17993.jpg
 kt: 6046
-topic: Utveckling
-role: Administratör
-level: Mellanliggande
+topic: Development
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

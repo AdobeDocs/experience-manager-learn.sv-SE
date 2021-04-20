@@ -2,9 +2,9 @@
 title: '"Kapitel 2 - Dispatcher Infrastructure"'
 description: Förstå publicerings- och utgivartopologin. Lär dig mer om de vanligaste topologierna och inställningarna.
 feature: Dispatcher
-topic: Arkitektur
-role: Arkitekt
-level: Nybörjare
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

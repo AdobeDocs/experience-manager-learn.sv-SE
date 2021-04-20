@@ -1,11 +1,11 @@
 ---
 title: Konfigurera tillgångsinsikter med AEM Assets och Adobe Launch
 description: I denna 5-delars videoserie går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som distribueras via Launch by Adobe.
-feature: 'Asset Insights '
+feature: Asset Insights
 version: 6.3, 6.4, 6.5
-topic: Integreringar
+topic: Integrations
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

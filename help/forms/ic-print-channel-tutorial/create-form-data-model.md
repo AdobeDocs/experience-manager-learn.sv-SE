@@ -4,7 +4,7 @@ seo-title: Skapar formulärdatamodell
 description: Detta är en del av 3 i en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en formulärdatamodell. Med formulärdatamodellen kan du konfigurera och ansluta till olika datakällor. Den tillhandahåller ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. I följande videofilm går du igenom stegen för att skapa formulärdatamodellen.
 seo-description: Detta är en del av 3 i en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en formulärdatamodell. Med formulärdatamodellen kan du konfigurera och ansluta till olika datakällor. Den tillhandahåller ett intuitivt användargränssnitt för att skapa ett enhetligt databerderingsschema för affärsenheter och tjänster över anslutna datakällor. I följande videofilm går du igenom stegen för att skapa formulärdatamodell.
 uuid: 4cba42f3-860a-4bd3-b4b0-79c63195b36d
-feature: Interaktiv kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 kt: 5952
 thumbnail: 27763.jpg
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

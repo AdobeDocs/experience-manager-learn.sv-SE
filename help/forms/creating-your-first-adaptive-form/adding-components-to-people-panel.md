@@ -4,7 +4,7 @@ seo-title: Lägga till komponenter i panelen Personer
 description: Konfigurera panelen Personer genom att lägga till fragmentet med information om make/maka. En regel skapas för att visa fragmentet med uppgifter om make/maka om den sökandes civilstånd är gift.
 seo-description: Konfigurera panelen Personer genom att lägga till fragmentet med information om make/maka. En regel skapas för att visa fragmentet med uppgifter om make/maka om den sökandes civilstånd är gift.
 uuid: be5d2cff-797b-44ea-90e9-2423f1ec8983
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 kt: 4210
 thumbail: 28385.jpg
 discoiquuid: 520c8633-925f-4d3f-b800-ea34710f68d7
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

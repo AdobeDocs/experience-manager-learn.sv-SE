@@ -4,16 +4,16 @@ seo-title: Skapa DataSource-konfiguration i AEM Forms
 description: Detta är en del 2 av självstudiekursen i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
 seo-description: Detta är en del 2 av självstudiekursen i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
 uuid: f20abc8d-3512-4a48-9688-524a0dfe732c
-feature: Interaktiv kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 0e1760ad-c412-4a55-a51a-d0875c55768e
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

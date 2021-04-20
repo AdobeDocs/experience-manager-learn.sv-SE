@@ -1,7 +1,7 @@
 ---
 title: Hämta sparat anpassat formulär
 description: Servern som återger det adaptiva formuläret med sparade data
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: Utveckling
+topic: Development
 role: Developer
-level: Erfaren
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

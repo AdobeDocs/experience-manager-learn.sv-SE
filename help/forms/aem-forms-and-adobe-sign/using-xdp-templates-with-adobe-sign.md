@@ -1,16 +1,16 @@
 ---
 title: Använda XDP-mallar med AEM Forms och Adobe Sign
 description: Använda XDP-mallar med AEM Forms och Adobe Sign. En video som detaljerat utnyttjar befintliga XDP-mallar med AEM Forms- och Sign-integrering.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39705.jpg
 kt: 6143
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

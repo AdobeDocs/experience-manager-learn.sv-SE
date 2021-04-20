@@ -2,11 +2,11 @@
 title: Använda anpassade videominiatyrbilder med AEM Dynamic Media
 description: Med AEM Assets anpassade videominiatyrbilder kan författare välja en lämplig miniatyrbild från en uppsättning genererade miniatyrbilder. Det är enkelt att anpassa antalet miniatyrbilder som genereras för en video.
 sub-product: dynamiska medier
-feature: Videoprofiler
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

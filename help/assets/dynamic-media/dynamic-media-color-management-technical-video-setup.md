@@ -2,11 +2,11 @@
 title: Färghantering med AEM Dynamic Media
 description: I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
 sub-product: dynamiska medier
-feature: Bildprofiler, videoprofiler
+feature: Image Profiles, Video Profiles
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
+topic: Content Management
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

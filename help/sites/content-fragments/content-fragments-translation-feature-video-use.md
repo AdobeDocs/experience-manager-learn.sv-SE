@@ -2,9 +2,9 @@
 title: Översättningsstöd för AEM innehållsfragment
 description: Lär dig hur innehållsfragment kan lokaliseras och översättas med Adobe Experience Manager. Medieresurser som är kopplade till ett innehållsfragment kan också extraheras och översättas.
 feature: Content Fragments, Multi Site Manager
-topic: Lokalisering
-role: Yrkesverksamma inom affärsverksamhet
-level: Mellanliggande
+topic: Localization
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg

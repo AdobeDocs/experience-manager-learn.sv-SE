@@ -2,12 +2,12 @@
 title: Konfigurera inkomstpanelen
 description: Lägg till tabellkomponent på resultatpanelen.
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7379
 thumbnail: 332233.jpg
 translation-type: tm+mt

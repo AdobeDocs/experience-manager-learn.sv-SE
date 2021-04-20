@@ -3,7 +3,7 @@ title: Skapa dokumentfragment
 description: 'Detta är en del av 5 i en flerstegskurs som du kan använda för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi dokumentfragment för mottagarens namn och adress. '
 seo-description: 'Detta är en del av 5 i en flerstegskurs som du kan använda för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi dokumentfragment för mottagarens namn och adress. '
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
-feature: Interaktiv kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 kt: 5958
 thumbnail: 22350.jpg
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

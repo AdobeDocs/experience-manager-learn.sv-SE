@@ -1,10 +1,10 @@
 ---
 title: Utveckling av AEM som en Cloud Service
 description: 'Se historiken över AEM och skillnaderna mellan AEM, Adobes hanterade tjänster AEM och AEM som en Cloud Service. '
-role: Arkitekt, utvecklare
-level: Nybörjare
-type: Självstudiekurs
-topic: Arkitektur
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6920
 thumbnail: 330543.jpg
 translation-type: tm+mt

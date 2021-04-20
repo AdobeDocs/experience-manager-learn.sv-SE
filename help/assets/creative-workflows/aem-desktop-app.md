@@ -3,11 +3,11 @@ title: AEM
 description: Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som hanteras i AEM på datorn, för alla program och filformat.
 kt: 2551
 sub-product: resurser
-feature: Experience Manager-datorprogram
+feature: Experience Manager Desktop App
 version: 6.5, 6.4, 6.3
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

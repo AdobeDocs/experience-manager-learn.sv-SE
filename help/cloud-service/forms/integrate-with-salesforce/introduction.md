@@ -2,11 +2,11 @@
 title: Integrera Adobe Experience Manager Forms som Cloud Service med Salesforce
 description: Skapa ett Lead-objekt i Salesforce med integreringen
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-topic: utveckling
+topic: development
 thumbnail: 331891.jpg
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f

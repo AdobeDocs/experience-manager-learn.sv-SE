@@ -3,15 +3,15 @@ title: Lagra adaptiva formulärdata
 seo-title: Lagra adaptiva formulärdata
 description: Lagra adaptiva formulärdata i DataBase som en del av AEM arbetsflöde
 seo-description: Lagra adaptiva formulärdata i DataBase som en del av AEM arbetsflöde
-feature: Adaptiv Forms, arbetsflöde, formulärdatamodell
+feature: Adaptive Forms,Workflow,Form Data Model
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
-level: Erfaren
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

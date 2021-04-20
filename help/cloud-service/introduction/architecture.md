@@ -1,10 +1,10 @@
 ---
 title: Arkitekturen för AEM as a Cloud Service
 description: Utforska den underliggande arkitekturen och viktiga delar av AEM som en Cloud Service. Djupdykning in i Cloud Manager och API:erna.
-role: Arkitekt, utvecklare
-level: Nybörjare
-type: Självstudiekurs
-topic: Arkitektur
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6919
 thumbnail: 330542.jpg
 translation-type: tm+mt

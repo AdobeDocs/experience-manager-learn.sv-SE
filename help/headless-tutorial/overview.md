@@ -1,10 +1,10 @@
 ---
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
-feature: Innehållsfragment, API:er
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
 workflow-type: tm+mt

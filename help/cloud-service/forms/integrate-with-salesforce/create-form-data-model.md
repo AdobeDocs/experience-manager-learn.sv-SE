@@ -2,12 +2,12 @@
 title: Skapa formulärdatamodell baserat på Salesforce-datakällan
 description: Skapa formulärdatamodell som backas upp av RESTful-datakälla
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7149
 thumbnail: 331756.jpg
 translation-type: tm+mt

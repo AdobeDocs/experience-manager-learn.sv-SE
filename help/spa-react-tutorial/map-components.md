@@ -2,7 +2,7 @@
 title: Mappa SPA komponenter till AEM | Komma igång med AEM SPA Editor och React
 description: Lär dig hur du mappar React-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
 sub-product: platser
-feature: SPA
+feature: SPA Editor
 topics: development
 version: cloud-service
 activity: develop
@@ -11,7 +11,7 @@ kt: 4854
 thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

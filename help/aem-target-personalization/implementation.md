@@ -4,9 +4,9 @@ seo-title: En artikel som handlar om olika sätt att integrera Adobe Experience 
 description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
 seo-description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
 feature: Experience Fragments
-topic: Personanpassning
+topic: Personalization
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

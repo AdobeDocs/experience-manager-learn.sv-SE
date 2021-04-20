@@ -2,12 +2,12 @@
 title: Lägg till och konfigurera verktygsfält
 description: Lägg till möjlighet att navigera mellan formulärpaneler.
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7389
 thumbnail: 332236.jpg
 translation-type: tm+mt

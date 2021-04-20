@@ -9,10 +9,10 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
-feature: API:er, AEM projekttyp
-topic: Innehållshantering, utveckling
+feature: APIs, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

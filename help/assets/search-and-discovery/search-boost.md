@@ -1,10 +1,10 @@
 ---
 title: Vad är Search Boost i AEM Assets?
 description: Lär dig hur du lägger till nyckelord och fraser för att öka sökrelevansen för en resurs i Adobe Experience Manager.
-topic: Innehållshantering
-feature: Sökning
-role: Yrkesverksamma inom affärsverksamhet
-level: Mellanliggande
+topic: Content Management
+feature: Search
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 103
 thumbnail: 16766.jpg

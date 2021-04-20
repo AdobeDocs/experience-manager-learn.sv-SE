@@ -3,9 +3,9 @@ title: Använda Adobe Asset Link Extension med AEM Assets
 description: 'Adobe Experience Manager resurser kan nu användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud Enterprise utökar möjligheten att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp resurser, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe Photoshop, InDesign och Illustrator. '
 feature: Adobe Asset Link
 version: 6.4, 6.5
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,12 +2,12 @@
 title: Skapa ditt första anpassningsbara formulär
 description: Introduktionsvideo till kursen om hur du skapar ditt första adaptiva formulär
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7464
 thumbnail: 332571.jpg
 translation-type: tm+mt

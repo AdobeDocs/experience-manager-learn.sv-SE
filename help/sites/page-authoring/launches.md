@@ -1,10 +1,10 @@
 ---
 title: Så här använder du Launches i AEM Sites
 description: I AEM Sites finns ett sätt att skapa, redigera och granska innehåll för framtida releaser.
-topic: Innehållshantering
+topic: Content Management
 feature: Launches
-level: Mellan, erfaren
-role: Administratör
+level: Intermediate, Experienced
+role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg

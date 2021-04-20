@@ -5,10 +5,10 @@ description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av
 seo-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 content-type: reference
 topic-tags: introduction
-feature: AEM Project Archettype, Core Components, Page Editor, Editable Templates
-topic: Utveckling
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

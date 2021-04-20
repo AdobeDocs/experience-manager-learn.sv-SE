@@ -5,9 +5,9 @@ sub-product: resurser
 feature: Adobe Asset Link
 version: 6.4, 6.5, cloud-service
 thumbnail: 34048.jpg
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

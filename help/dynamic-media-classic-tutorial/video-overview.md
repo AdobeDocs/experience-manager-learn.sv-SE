@@ -2,14 +2,14 @@
 title: Videoöversikt
 description: Dynamic Media Classic innehåller automatisk konvertering av video vid överföring, direktuppspelad video till datorer och mobila enheter samt adaptiva videouppsättningar som är optimerade för uppspelning baserat på enhet och bandbredd. Läs mer om videofilmer i Dynamic Media Classic och få en översikt över videokoncept och terminologi. Sedan kan du lära dig att ladda upp och koda video, välja videoförinställningar för att ladda upp, lägga till eller redigera en videoförinställning, förhandsgranska videor i ett videovisningsprogram, distribuera video på webben och mobilsajter, lägga till bildtexter och kapitelmarkörer i video samt publicera videovisningsprogram för dator- och mobilanvändare.
 sub-product: dynamiska medier
-feature: Dynamic Media Classic, videoprofiler, visningsförinställningar
+feature: Dynamic Media Classic, Video Profiles, Viewer Presets
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

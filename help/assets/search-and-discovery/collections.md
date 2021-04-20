@@ -2,13 +2,13 @@
 title: Samlingar
 description: Lär dig hur samlingar ger dig en alternativ vy till AEM Assets.
 sub-product: resurser
-feature: Samlingar
+feature: Collections
 version: cloud-service
 kt: 4301
 thumbnail: 32053.jpg
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,13 +2,13 @@
 title: Granska uppgift
 description: Se hur AEM Assets' Review Task underlättar de vanligaste arbetsflödena för granskning och godkännande.
 sub-product: resurser
-feature: Samarbete
+feature: Collaboration
 version: cloud-service
 kt: 4670
 thumbnail: 32050.jpg
-topic: Samarbete
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

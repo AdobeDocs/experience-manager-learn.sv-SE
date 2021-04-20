@@ -2,11 +2,11 @@
 title: 'Skapa en molntjänstkonfiguration '
 description: Skapa en datakälla för att ansluta till Salesforce med OAuth-autentiseringsuppgifterna
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-topic: Utveckling
+topic: Development
 kt: 7148
 thumbnail: 331755.jpg
 translation-type: tm+mt

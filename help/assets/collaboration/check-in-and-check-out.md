@@ -2,13 +2,13 @@
 title: Checka in och Checka ut
 description: Lär dig använda AEM in- och utcheckningsfunktioner för att underlätta samarbete mellan flera användare om resurser.
 sub-product: resurser
-feature: Resurshantering
+feature: Asset Management
 version: cloud-service
 kt: 4542
 thumbnail: 32048.jpg
-topic: Samarbete
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

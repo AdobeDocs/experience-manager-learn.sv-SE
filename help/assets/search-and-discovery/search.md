@@ -1,13 +1,13 @@
 ---
 title: Sökning
 description: Lär dig använda AEM Omnissearch för att snabbt hitta resurser.
-feature: Sökning
+feature: Search
 version: cloud-service
 kt: 4312
 thumbnail: 32054.jpg
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

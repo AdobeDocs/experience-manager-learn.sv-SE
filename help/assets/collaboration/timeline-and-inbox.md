@@ -2,13 +2,13 @@
 title: Tidslinje och inkorg
 description: Bekanta dig med de viktigaste webbkonsolerna i AEM Assets som används för samarbete.
 sub-product: resurser
-feature: Arbetsflöde
+feature: Workflow
 version: cloud-service
 kt: 4540
 thumbnail: 32051.jpg
-topic: Samarbete
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

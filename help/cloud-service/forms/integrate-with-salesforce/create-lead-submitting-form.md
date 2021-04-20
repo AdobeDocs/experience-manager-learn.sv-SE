@@ -2,12 +2,12 @@
 title: Skicka formulär med formulärdatamodellens skicka-åtgärd
 description: Skapa ett anpassat formulär för att testa Salesforce-integreringen genom att skapa ett Lead-objekt när formulär skickas
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7151
 thumbnail: 331758.jpg
 translation-type: tm+mt

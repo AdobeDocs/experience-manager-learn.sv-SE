@@ -1,10 +1,10 @@
 ---
 title: 'Utforska vikten av Cloud Manager i AEM '
 description: Utforska syftet med Cloud Manager och hur det fungerar med AEM som Cloud Service.
-role: Arkitekt, utvecklare
-level: Nybörjare
-type: Självstudiekurs
-topic: Arkitektur
+role: Architect, Developer
+level: Beginner
+type: Tutorial
+topic: Architecture
 kt: 6922
 thumbnail: 330545.jpg
 translation-type: tm+mt

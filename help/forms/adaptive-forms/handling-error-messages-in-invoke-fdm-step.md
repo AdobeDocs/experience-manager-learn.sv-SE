@@ -3,15 +3,15 @@ title: Hämta felmeddelanden i formulärdatamodelltjänsten som ett steg i arbet
 seo-title: Hämta felmeddelanden i formulärdatamodelltjänsten som ett steg i arbetsflödet
 description: Från och med AEM Forms 6.5.1 har vi nu möjlighet att samla in felmeddelanden som genererats när vi använder anropa tjänsten Form Data Model som ett steg i AEM Workflow. Arbetsflöde.
 seo-description: Från och med AEM Forms 6.5.1 har vi nu möjlighet att samla in felmeddelanden som genererats när vi använder anropa tjänsten Form Data Model som ett steg i AEM Workflow. Arbetsflöde.
-feature: Arbetsflöde
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
 activity: setup
 version: 6.5.1,6.5.2
-topic: Utveckling
+topic: Development
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

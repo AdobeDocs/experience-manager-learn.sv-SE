@@ -2,9 +2,9 @@
 title: '"Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"'
 description: I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
 feature: Dispatcher
-topic: Arkitektur
-role: Arkitekt
-level: Nybörjare
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

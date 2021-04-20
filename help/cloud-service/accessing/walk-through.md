@@ -1,7 +1,7 @@
 ---
 title: Konfigurera åtkomst till AEM genomgång
 description: En förkortad genomgång av konfigureringen av Adobe IMS-användare, användargrupper och produktprofiler i Adobe AdminConsole, och av hur du använder dessa IMS-abstraktioner för Adobe i AEM Author för att definiera och hantera specifika gruppbaserade behörigheter.
-feature: 'Användare och grupper '
+feature: Users and Groups
 topics: authentication, permissions
 version: cloud-service
 activity: setup
@@ -9,9 +9,9 @@ audience: administrator
 doc-type: technical video
 kt: 6061
 thumbnail: 39155.jpg
-topic: Administration, säkerhet
-role: Administratör
-level: Nybörjare
+topic: Administration, Security
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

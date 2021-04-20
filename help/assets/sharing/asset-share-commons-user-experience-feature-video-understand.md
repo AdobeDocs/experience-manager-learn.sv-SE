@@ -2,9 +2,9 @@
 title: Förstå användarupplevelsen för resursdelningskommandon
 description: Material för både funktionell och teknisk förståelse Assets Share Commons
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Mellanliggande
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

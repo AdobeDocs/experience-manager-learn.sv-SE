@@ -1,13 +1,13 @@
 ---
 title: Anpassade smarta taggar för bilder i AEM Assets
 description: Lär dig hur du utbildar smarta taggar för AEM Assets för att använda anpassade termer på resurser.
-feature: Smarta taggar
+feature: Smart Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
-topic: Innehållshantering
+topic: Content Management
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

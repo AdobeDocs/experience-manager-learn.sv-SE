@@ -2,12 +2,12 @@
 title: Skapa Salesforce-ansluten app.
 description: Med en ansluten app kan du integrera Salesforce med tredjepartsprogram som AEM Forms med Salesforce.
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7152
 thumbnail: 331757.jpg
 translation-type: tm+mt

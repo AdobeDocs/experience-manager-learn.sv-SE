@@ -2,9 +2,9 @@
 title: Använda resurskatalog med AEM Commerce och InDesign Server
 description: AEM 6.4 Katalogförbättringar gör det möjligt att skapa katalogsidor med AEM Resursmallar och InDesign Server.  En användare kan skapa en katalogsida med hjälp av mallen InDesign och mappa produktegenskaper till redigerbara fält, som senare kan användas för att skapa liknande sidor för olika produkter.
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

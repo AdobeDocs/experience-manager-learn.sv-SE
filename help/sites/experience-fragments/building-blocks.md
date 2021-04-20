@@ -4,9 +4,9 @@ description: Byggblock är en underfunktion till Experience Fragments som gör d
 sub-product: webbplatser, innehållstjänster
 version: cloud-service
 feature: Experience Fragments
-topic: Innehållshantering
-level: Nybörjare, mellanliggande
-role: Arkitekt, utvecklare, administratör, affärsansvarig
+topic: Content Management
+level: Beginner, Intermediate
+role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg

@@ -1,16 +1,16 @@
 ---
 title: Skapa Adobe Sign API-program
 description: Med Adobe Sign API Application kan du integrera AEM Forms med Adobe Sign
-feature: Adaptiv Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 kt: 6032
 thumbnail: 38178.jpg
-topic: Utveckling
-role: Administratör
-level: Nybörjare
+topic: Development
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

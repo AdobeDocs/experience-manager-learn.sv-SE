@@ -4,16 +4,16 @@ seo-title: Utveckla med Output och Forms Services i AEM Forms
 description: Använda API:er för Output och Forms Service i AEM Forms
 seo-description: Använda API:er för Output och Forms Service i AEM Forms
 uuid: be018eb5-dbe7-4101-a1a9-bee11ac97273
-feature: Utdatatjänst
+feature: Output Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 57f478a9-8495-469e-8a06-ce1251172fda
-topic: Utveckling
+topic: Development
 role: Developer
-level: Mellanliggande
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt

@@ -2,12 +2,12 @@
 title: Skapa Adobe Sign-program
 description: Adobe Sign Application är det första steget i att skapa integreringen mellan AEM Forms och Adobe Sign.
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7427
 thumbnail: 332436.jpg
 translation-type: tm+mt

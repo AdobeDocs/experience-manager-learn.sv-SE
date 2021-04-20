@@ -1,16 +1,16 @@
 ---
 title: Felsöka AEM som en Cloud Service
 description: på självbetjäning, skalbar, molnbaserad infrastruktur, som kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM som en Cloud Service, från att bygga och driftsätta till att få information om AEM program som körs.
-feature: Utvecklarverktyg
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

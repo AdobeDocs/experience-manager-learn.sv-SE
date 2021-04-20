@@ -7,10 +7,10 @@ topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
-topic: Dokumentskydd
+topic: Security
 role: Developer
-level: Nybörjare
-feature: null
+level: Beginner
+feature:  
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

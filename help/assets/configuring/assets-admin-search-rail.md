@@ -2,13 +2,13 @@
 title: Resursadministratörssökspår
 description: Med hjälp av sökfältet Resursadministratörer kan resurser sökas efter med anpassade villkor i Omnissearch.
 sub-product: resurser
-feature: Sökning
+feature: Search
 version: cloud-service
 kt: 4995
 thumbnail: 35842.jpg
-topic: Innehållshantering
-role: Administratör
-level: Mellanliggande
+topic: Content Management
+role: Administrator
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

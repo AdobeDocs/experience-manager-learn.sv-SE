@@ -2,12 +2,12 @@
 title: Skapa ett anpassat formulärtema
 description: Temat är ett AEM klientbibliotek som definierar utseendet och känslan i din adaptiva form.
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7386
 thumbnail: 332229.jpg
 translation-type: tm+mt

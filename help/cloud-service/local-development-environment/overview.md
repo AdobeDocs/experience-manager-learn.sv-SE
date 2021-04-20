@@ -1,7 +1,7 @@
 ---
 title: Lokal utvecklingsmiljö för AEM som Cloud Service
 description: Översikt över den lokala utvecklingsmiljön i Adobe Experience Manager (AEM).
-feature: Utvecklarverktyg
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: article
@@ -9,9 +9,9 @@ activity: troubleshoot
 audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Utveckling
+topic: Development
 role: Developer
-level: Nybörjare
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

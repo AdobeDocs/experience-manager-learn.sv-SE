@@ -2,12 +2,12 @@
 title: Skapa adaptiva formulärfragment
 description: Ett fragment är en återanvändbar del av ett formulär. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
 solution: Experience Manager Forms
-type: Dokumentation
+type: Documentation
 role: Developer
-level: Nybörjare, mellanliggande
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 kt: 7383
 thumbnail: 332231.jpg
 translation-type: tm+mt

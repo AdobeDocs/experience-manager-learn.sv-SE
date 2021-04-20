@@ -2,11 +2,11 @@
 title: Använda bildskärpa med AEM Dynamic Media
 description: I den här videon beskrivs varför det är viktigt att göra en bild skarpare för att bibehålla bildens återgivning och hur du använder avancerade inställningar för att skapa den perfekta bilden.
 sub-product: dynamiska medier
-feature: Bildprofiler, visningsförinställningar
+feature: Image Profiles, Viewer Presets
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
-role: Yrkesverksamma inom affärsverksamhet
-level: Nybörjare
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
