@@ -5,9 +5,9 @@ breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
 translation-type: tm+mt
-source-git-commit: 0c7759b59e6b6c99da3cd7e7c502445c14964e26
+source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 12%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 12%
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign med AEM Forms{#forms-and-sign}
+      + [Introduktion](./forms/forms-and-sign/introduction.md)
       + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
       + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
