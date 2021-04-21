@@ -6,9 +6,9 @@ user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarn
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '952'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 1%
 
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+   + [Installera 32-bitarspaket i Linux](adaptive-forms/installing-aem-form-on-linux.md)
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
@@ -169,7 +170,7 @@ ht-degree: 1%
 + Visar anpassade tillgångstyper i Forms Portal{#listing-custom-asset-types}
    + [Del1-Registrera anpassade tillgångstyper](listing-custom-asset-types/part1.md)
    + [Del2 - Skapa anpassad mall](listing-custom-asset-types/part2.md)
-+ AEM Forms With Marketo{#aem-forms-with-marketo}
++ AEM Forms med Marketo{#aem-forms-with-marketo}
    + [Del1 - Introduktion](aem-forms-with-marketo/part1.md)
    + [Del2 - Anpassad autentisering](aem-forms-with-marketo/part2.md)
    + [Del3 - Datakälla](aem-forms-with-marketo/part3.md)
