@@ -11,10 +11,10 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 2%
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
@@ -22,6 +22,25 @@ ht-degree: 2%
 # Komma igång med AEM Headless{#getting-started-with-aem-headless}
 
 + [AEM Headless Overview](./overview.md)
++ GraphQL {#graphql}
+   + [Översikt](./graphql/overview.md)
+   + Videoserie{#video-series}
+      + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
+      + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
+      + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
+   + Flerstegs självstudiekurs{#multi-step}
+      + [Översikt](./graphql/multi-step/overview.md)
+      + [1 - Snabbinställningar](./graphql/multi-step/setup.md)
+      + [2 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
+      + [3 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
+      + [4 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
+      + [5 - Fråga från en extern app](./graphql/multi-step/graphql-and-external-app.md)
+      + [6 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
+      + [7 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
++ Tokenbaserad autentisering {#authentication}
+   + [Översikt](./authentication/overview.md)
+   + [1 - Åtkomsttoken för lokal utveckling](./authentication/local-development-access-token.md)
+   + [2 - Tjänstreferenser](./authentication/service-credentials.md)
 + Innehållstjänster {#content-services}
    + [Översikt](./content-services/overview.md)
    + [1 - Ställa in självstudiekurser](./content-services/chapter-1.md)
@@ -31,16 +50,3 @@ ht-degree: 2%
    + [5 - Skapa sidor för innehållstjänster](./content-services/chapter-5.md)
    + [6 - Visa innehållet på AEM Publish for Delivery](./content-services/chapter-6.md)
    + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
-+ GraphQL {#graphql}
-   + [Översikt](./graphql/overview.md)
-   + [1 - Snabbinställningar](./graphql/setup.md)
-   + [2 - Definiera modeller för innehållsfragment](./graphql/content-fragment-models.md)
-   + [3 - Skapa innehållsfragment](./graphql/author-content-fragments.md)
-   + [4 - Utforska GraphQL API:er](./graphql/explore-graphql-api.md)
-   + [5 - Fråga från en extern app](./graphql/graphql-and-external-app.md)
-   + [6 - Avancerad datamodellering med fragmentreferenser](./graphql/fragment-references.md)
-   + [7 - Produktionsdistribution](./graphql/production-deployment.md)
-+ Tokenbaserad autentisering {#authentication}
-   + [Översikt](./authentication/overview.md)
-   + [1 - Åtkomsttoken för lokal utveckling](./authentication/local-development-access-token.md)
-   + [2 - Tjänstreferenser](./authentication/service-credentials.md)
