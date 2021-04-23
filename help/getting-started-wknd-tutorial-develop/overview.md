@@ -11,15 +11,15 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
-topic: Content Management, Development
+feature: Huvudkomponenter, sidredigeraren, redigerbara mallar, AEM projekttyp
+topic: Innehållshantering, utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 2%
+source-wordcount: '510'
+ht-degree: 0%
 
 ---
 
@@ -34,40 +34,6 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5.5.0+** och **AEM 6.4.8.1+**. Webbplatsen implementeras med:
-
-* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
-* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
-* Sling Models
-* [Redigerbara mallar](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [Formatsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
-
-*Beräkna 1-2 timmar för att komma igenom varje del av självstudiekursen.*
-
-## Lokal utvecklingsmiljö {#local-dev-environment}
-
-En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs i en Mac OS-miljö med [Visual Studio Code](https://code.visualstudio.com/) som IDE. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
-
-### Nödvändig programvara
-
-Följande bör installeras lokalt:
-
-* Lokal AEM **Författare** instans (Cloud Service SDK, 6.5.5+ eller 6.4.8.1+)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
-* [Node.js](https://nodejs.org/en/) (LTS - långsiktigt stöd)
-* [npm 6+](https://www.npmjs.com/)
-* [Git](https://git-scm.com/)
-* [Visual Studio ](https://code.visualstudio.com/) Codeor equivalent IDE
-   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Verktyg som används genomgående i självstudiekursen
-
->[!NOTE]
->
-> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
->
-> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
-
 ## Om självstudiekursen {#about-tutorial}
 
 WKND är en påhittad nättidskrift och blogg som fokuserar på nattliv, aktiviteter och evenemang i flera internationella städer.
@@ -80,20 +46,6 @@ Ladda ned XD UI-kit:
 
 * [AEM Core Component UI Kit](assets/overview/AEM-CoreComponents-UI-Kit.xd)
 * [WKND UI Kit](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND.xd)
-
-Namnet WKND passar eftersom vi förväntar oss att en utvecklare ska ta den bättre delen av en ***helg*** för att slutföra självstudiekursen.
-
-### Github {#github}
-
-All kod för projektet finns i Github i AEM:
-
-**[GitHub: WKND Sites Project](https://github.com/adobe/aem-guides-wknd)**
-
-Dessutom har varje del av självstudiekursen en egen gren i GitHub. Användaren kan börja självstudiekursen när som helst genom att helt enkelt checka ut den gren som motsvarar föregående del.
-
->[!NOTE]
->
-> Om du arbetade med den tidigare versionen av den här självstudiekursen kan du fortfarande hitta [lösningspaketen](https://github.com/adobe/aem-guides-wknd/releases/tag/archetype-18.1) och [koden](https://github.com/adobe/aem-guides-wknd/tree/archetype-18.1) på GitHub.
 
 ## Referenswebbplats {#reference-site}
 
@@ -111,4 +63,4 @@ Med Adobe Stock får du tillgång till över 140 miljoner högklassiga royaltyfr
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lär dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projektarkitypen.
+Vad väntar du på?! Starta självstudiekursen och lär dig hur du [skapar ett nytt Adobe Experience Manager-projekt med AEM Project Archetype](./project-archetype/overview.md).
