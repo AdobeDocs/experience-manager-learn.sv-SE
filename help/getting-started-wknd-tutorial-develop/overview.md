@@ -16,9 +16,9 @@ topic: Innehållshantering, utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,19 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-## Om självstudiekursen {#about-tutorial}
+## Alternativ för att starta ett Sites-projekt
 
-WKND är en påhittad nättidskrift och blogg som fokuserar på nattliv, aktiviteter och evenemang i flera internationella städer.
+Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
-### Adobe XD UI Kit
+**AEM Project Archetype**  - Traditionell metod för AEM genom att generera ett minimalt AEM med en Maven-mall. Detta är det rekommenderade tillvägagångssättet för AEM 6.5/6.4-projekt och AEM som ett Cloud Service-projekt som förutser omfattande anpassningar. Självstudiekursen ger en djupdykning i AEM utveckling.
+
+[Starta självstudiekursen med AEM Project Archetype](./project-archetype/overview.md)
+
+**AEM webbplatsmallar**  - En lågkodsmetod för att generera en AEM genom att använda en fördefinierad platsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare. Endast tillgänglig för AEM som Cloud Service.
+
+[Starta självstudiekursen med hjälp av en webbplatsmall](./site-template/create-site.md)
+
+## Adobe XD UI Kit
 
 För att den här självstudiekursen ska bli närmare ett verkligt scenario skapade Adobe-designers modeller för webbplatsen med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
 
@@ -63,4 +71,4 @@ Med Adobe Stock får du tillgång till över 140 miljoner högklassiga royaltyfr
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen och lär dig hur du [skapar ett nytt Adobe Experience Manager-projekt med AEM Project Archetype](./project-archetype/overview.md).
+Vad väntar du på?! Lär dig hur du [skapar ett nytt Adobe Experience Manager-projekt med den AEM Project Archetype](./project-archetype/overview.md) eller [skapar en webbplats med hjälp av en Site Template](./site-template/create-site.md).
