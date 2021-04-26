@@ -1,7 +1,7 @@
 ---
 title: Utvecklarkonsol
 description: AEM som Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om den AEM som körs och som är till hjälp vid felsökning.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ För att få tillgång till och använda Developer Console måste följande beh�
 1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM som Cloud Service är aktiv i Adobe Org-växlaren.
 1. Utvecklaren måste vara medlem i Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile.
    + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
-1. Utvecklaren måste vara medlem i AEM Author och Publish Services __AEM Administrators__ produktprofil.
+1. Utvecklaren måste vara medlem i __AEM Users__ eller __AEM Administrators__ produktprofil på AEM Author and/or Publish.
    + Om det här medlemskapet inte finns kommer dumparna [status](#status) att timeout med ett 401 oauktoriserat fel.
 
 ### Felsökning: Developer Console-åtkomst
