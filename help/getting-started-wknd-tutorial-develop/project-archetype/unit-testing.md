@@ -14,9 +14,9 @@ topic: Innehållshantering, utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,9 @@ Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet sk
    `Test`-suffixet i enhetstestfilen, `BylineImplTest.java` är en konvention som gör att vi kan
 
    1. Identifiera den enkelt som testfilen _för_ `BylineImpl.java`
-   2. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
+   1. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
+
+
 
 ## Granska BylineImplTest.java {#reviewing-bylineimpltest-java}
 
