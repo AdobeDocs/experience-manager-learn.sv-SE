@@ -210,9 +210,10 @@ Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet sk
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-2. Men även differentiera testfilen    `Test`-suffixet i enhetstestfilen, `BylineImplTest.java` är en konvention som gör att vi kan
-1. Identifiera den enkelt som testfilen _för_ `BylineImpl.java`
-2. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
+   `Test`-suffixet i enhetstestfilen, `BylineImplTest.java` är en konvention som gör att vi kan
+
+   1. Identifiera den enkelt som testfilen _för_ `BylineImpl.java`
+   2. Men skiljer också testfilen _från_ klassen som testas, `BylineImpl.java`
 
 ## Granska BylineImplTest.java {#reviewing-bylineimpltest-java}
 
