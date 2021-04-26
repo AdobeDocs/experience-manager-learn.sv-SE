@@ -10,10 +10,10 @@ user-guide-description: En självstudiekurs i flera delar för utvecklare som in
 breadcrumb-title: AEM Sites WKND Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 1%
+source-wordcount: '76'
+ht-degree: 9%
 
 ---
 
@@ -30,3 +30,8 @@ ht-degree: 1%
    + [5 - Stilsystem](./project-archetype/style-system.md)
    + [6 - Anpassad komponent](./project-archetype/custom-component.md)
    + [7 - Enhetstestning](./project-archetype/unit-testing.md)
++ Platsmall {#site-template}
+   + [1. Skapa en plats](./site-template/create-site.md)
+   + [2. Skriv innehåll och publicera ändringar](./site-template/author-content-publish.md)
+   + [3. Sidmallar](./site-template/page-templates.md)
+   + [4. Tema](./site-template/theming.md)
