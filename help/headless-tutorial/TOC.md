@@ -11,7 +11,7 @@ activity: develop, understand
 kt: 2963
 index: y
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 3%
@@ -40,12 +40,12 @@ ht-degree: 3%
 + SPA Editor{#spa-editor}
    + SPA{#remote-spa}
       + [Översikt](./spa-editor/remote-spa/overview.md)
-      + [1 - Snabbinställningar](./spa-editor/remote-spa/quick-setup.md)
-      + [2 - Konfigurera AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [3 - Bootstrap i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
-      + [4 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
-      + [5 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
-      + [6 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
+      + [Snabbinställningar](./spa-editor/remote-spa/quick-setup.md)
+      + [1 - Konfigurera AEM](./spa-editor/remote-spa/aem-configure.md)
+      + [2 - Bootstrap i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [4 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
+      + [5 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + Tokenbaserad autentisering {#authentication}
    + [Översikt](./authentication/overview.md)
    + [1 - Åtkomsttoken för lokal utveckling](./authentication/local-development-access-token.md)
