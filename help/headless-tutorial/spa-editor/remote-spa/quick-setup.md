@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -75,8 +75,8 @@ Den här självstudiekursen är beroende av __WKND 0.3.0+&#39;s__-projekt (för 
 
 För att göra en snabb konfiguration tillhandahålls AEM som innehåller den slutliga AEM och det färdiga innehållet.
 
-1. Hämta `wknd-app.all.x.x.x.zip` från DemoHub Assets pod
-1. Hämta `wknd-app.ui.content.sample.x.x.x.zip` från DemoHub Assets pod
+1. [Hämta  `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Hämta  `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. Logga in på AEM SDK:s Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med `admin`-inloggningsuppgifterna.
 1. __Ladda__ upp  `wknd-app.all.x.x.x.zip` nedladdat i steg 1
 1. Tryck på __Install__-knappen för posten `wknd-app.all.x.x.x.zip`
