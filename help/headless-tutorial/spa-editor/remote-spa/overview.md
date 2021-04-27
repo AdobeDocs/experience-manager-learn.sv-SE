@@ -8,9 +8,9 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -67,35 +67,37 @@ I den här självstudiekursen förutsätts:
 
 Med Snabbinstallation kommer du igång med WKND App SPA och AEM SPA Editor på 15 minuter. Detta snabbredigerade installationsprogram tar dig direkt till självstudiekursens slutläge, så att du kan utforska utvecklingen av SPA i AEM SPA.
 
-+ [Snabbkonfiguration](./quick-setup.md)
++ [Läs om snabbinställningar](./quick-setup.md)
 
-## Konfigurera AEM för SPA Editor
+## 1. Konfigurera AEM för SPA Editor
 
 AEM konfigurationer krävs för att integrera SPA med AEM SPA Editor. Dessa konfigurationer hanteras och distribueras via ett AEM projekt. Läs om vilka konfigurationer som är nödvändiga och hur du definierar dem i det här kapitlet.
 
-+ [Konfigurera AEM](./aem-configure.md)
++ [Lär dig hur du konfigurerar AEM för SPA Editor](./aem-configure.md)
 
-## Bootstrap the SPA
+## 2. Bootstrap the SPA
 
 För att AEM redigeraren ska kunna integrera en SPA i sitt redigeringssammanhang måste några tillägg göras i SPA.
 
-+ [Bootstrap SPA för AEM SPA](./spa-bootstrap.md)
++ [Läs om hur du startar SPA för AEM SPA](./spa-bootstrap.md)
 
-## Redigerbara fasta komponenter
+## 3. Redigerbara fasta komponenter
 
 Börja med att utforska hur du lägger till en redigerbar&quot;fast komponent&quot; i SPA. Detta visar hur en utvecklare kan placera en viss redigerbar komponent i SPA. Även om författaren kan ändra komponentens innehåll kan de inte ta bort komponenten eller ändra dess placering, placering eller storlek.
 
-+ [Redigerbara fasta komponenter](./spa-fixed-component.md)
++ [Lär dig mer om redigerbara fasta komponenter](./spa-fixed-component.md)
 
-## Redigerbara behållarkomponenter
+## 4. Redigerbara behållarkomponenter
 
 Utforska sedan att lägga till en redigerbar&quot;behållarkomponent&quot; i SPA. Detta visar hur en utvecklare kan placera en behållarkomponent i SPA. Med behållarkomponenter kan författare placera tillåtna komponenter i den och justera komponenternas layout.
 
-## Dynamiska vägar och redigerbara komponenter
++ [Lär dig mer om redigerbara behållarkomponenter](./spa-container-component.md)
+
+## 5. Dynamiska vägar och redigerbara komponenter
 
 Slutligen bör de begrepp som beskrivs i tidigare kapitel användas för dynamiska rutter. vägar som visar olika innehåll baserat på flödets parameter. Detta visar hur AEM redigerare kan användas för att skapa innehåll på vägar som är programmässigt drivna och härledda.
 
-+ [Dynamiska vägar och redigerbara komponenter](./spa-dynamic-routes.md)
++ [Lär dig mer om dynamiska vägar och redigerbara komponenter](./spa-dynamic-routes.md)
 
 ## Ytterligare resurser
 
