@@ -8,7 +8,7 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: ba45a52b9dac44f0c08c819cf4778dba83f325c9
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 1%
@@ -92,6 +92,7 @@ $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
 $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
 $ git checkout -b feature/spa-editor
+$ git pull origin feature/spa-editor
 ```
 
 ## Starta SPA
