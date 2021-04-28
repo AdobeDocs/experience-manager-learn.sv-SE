@@ -1,7 +1,7 @@
 ---
 title: Lokal utvecklingsmiljö för AEM som Cloud Service
 description: Översikt över den lokala utvecklingsmiljön i Adobe Experience Manager (AEM).
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: article
@@ -9,19 +9,26 @@ activity: troubleshoot
 audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
 
 # Lokal utvecklingsmiljö - konfiguration
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_overview"
+>title="Översikt"
+>abstract="Att konfigurera en lokal utvecklingsmiljö för AEM som en Cloud Service innefattar utvecklingsverktyg som krävs för att utveckla, skapa och kompilera AEM projekt, liksom lokala körtider som gör att utvecklare snabbt kan validera nya funktioner lokalt innan de distribueras till AEM som en Cloud Service via Adobe Cloud Manager."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="Utvecklingsriktlinjer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="Grundläggande om utveckling"
 
 I den här självstudiekursen får du hjälp med att konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager (AEM) med AEM som Cloud Service-SDK. Utvecklingsverktygen som behövs för att utveckla, bygga och kompilera AEM-projekt ingår, liksom lokala körtider som gör att utvecklare snabbt kan validera nya funktioner lokalt innan de distribueras till AEM som en Cloud Service via Adobe Cloud Manager.
 
