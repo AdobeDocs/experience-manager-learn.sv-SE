@@ -1,6 +1,6 @@
 ---
-title: Installera AEM Forms i Linux.
-description: Installera 32-bitars bibliotek så att AEM Forms fungerar med Linux-installation.
+title: Installera AEM Forms i Linux
+description: Lär dig hur du installerar 32-bitars bibliotek så att AEM Forms kan användas vid Linux-installation.
 feature: Adaptiv Forms
 audience: developer
 doc-type: article
@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 kt: 7593
 translation-type: tm+mt
-source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
+source-git-commit: 9583006352ca6a20a763c9d5ec7ba15c3791e897
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
