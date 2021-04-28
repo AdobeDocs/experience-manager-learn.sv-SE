@@ -1,7 +1,7 @@
 ---
 title: Konfigurera lokal AEM för AEM som en Cloud Service-utveckling
 description: Konfigurera den lokala AEM Runtime-miljön med AEM som snabbstartsdarr för en Cloud Service-SDK.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1734'
 ht-degree: 1%
 
 ---
 
 
 # Konfigurera lokal AEM
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_aemruntime"
+>title="Local AEM Runtime"
+>abstract="Adobe Experience Manager (AEM) kan köras lokalt med AEM som en Cloud Service-SDK’s Quickstart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det till en AEM som en Cloud Service-miljö."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="SDK för AEM as a Cloud Service"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Hämta AEM som Cloud Service-SDK"
 
 Adobe Experience Manager (AEM) kan köras lokalt med AEM som QuickStart Jar för Cloud Service SDK. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det till en AEM som en Cloud Service-miljö.
 
