@@ -1,7 +1,7 @@
 ---
 title: Konfigurera utvecklingsverktygen för AEM som en Cloud Service
 description: Konfigurera en lokal utvecklingsmaskin med alla grundläggande verktyg som behövs för att utveckla mot AEM lokalt.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
 
 
 # Konfigurera utvecklingsverktyg
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_devtools"
+>title="Installationsutvecklingsverktyg"
+>abstract="Utvecklingsverktyg för Adobe Experience Manager (AEM) kräver en minimalistisk uppsättning utvecklingsverktyg som ska installeras och konfigureras på utvecklingsdatorn. Bland dessa verktyg finns Java, Maven, Adobe I/O CLI, Development IDE med flera."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html" text="Utvecklingsriktlinjer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="Grundläggande om utveckling"
 
 Utvecklingsverktyg för Adobe Experience Manager (AEM) kräver en minimalistisk uppsättning utvecklingsverktyg som ska installeras och konfigureras på utvecklingsdatorn. Dessa verktyg har stöd för utveckling och byggande av AEM projekt.
 
