@@ -8,7 +8,7 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: ba45a52b9dac44f0c08c819cf4778dba83f325c9
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 1%
