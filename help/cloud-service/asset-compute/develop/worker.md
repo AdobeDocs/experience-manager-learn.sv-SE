@@ -1,7 +1,7 @@
 ---
 title: Utveckla en Asset compute-arbetare
 description: asset compute är kärnan i ett Asset compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, det arbete som utförs på en resurs för att skapa en ny rendering.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -340,6 +340,7 @@ Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.
        ]
    }
    ```
+
 1. Tryck på __Kör__ och vänta tills återgivningen genereras
 1. Avsnittet __Återgivningar__ förhandsvisar den återgivning som genereras. Tryck på renderingsförhandsvisningen för att hämta den fullständiga renderingen
 
