@@ -1,7 +1,7 @@
 ---
 title: Felsöka en Asset compute-arbetare
 description: asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM som Cloud Service.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ _Klicka igenom felsökningen av en Asset compute-arbetare med wskdebug (inget lj
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 1. Starta en ny instans av Asset compute Development Tool med kommandot `npx adobe-asset-compute devtool`
 1. I VS-kod trycker du på ikonen Debug (Felsökning) i den vänstra navigeringen
    + Om du uppmanas till det trycker du på __Skapa en launch.json-fil > Node.js__ för att skapa en ny `launch.json`-fil.
