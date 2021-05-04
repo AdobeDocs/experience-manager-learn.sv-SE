@@ -1,7 +1,7 @@
 ---
 title: Testa en Asset compute-arbetare
 description: I Asset compute-projektet definieras ett mönster för att enkelt skapa och köra tester av Asset compute.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,9 @@ Detta testfall kontrollerar att parametriserade indata (`params.json`) för inda
        "brightness": "-0.50"
    }
    ```
+
    Detta är samma nyckel/värden som skickas till Asset compute-profildefinitionen för [utvecklingsverktyget](../develop/development-tool.md), minus `worker`-tangenten.
+
 1. Lägg till den förväntade [återgivningsfilen](./assets/test/success-parameterized/rendition.png) i det här testfallet och ge den namnet `rendition.png`. Den här filen representerar förväntade utdata för arbetaren för angivna indata `file.jpg`.
 1. Kör testerna av projektroten från kommandoraden genom att köra `aio app test`
    + Kontrollera att [Docker Desktop](../set-up/development-environment.md#docker) och tillhörande Docker-bilder är installerade och startade
