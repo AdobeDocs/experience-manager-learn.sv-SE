@@ -1,7 +1,7 @@
 ---
 title: Utveckla en metadataarbetare i Asset compute
 description: Lär dig hur du skapar en Asset compute-metadataarbetare som härleder de vanligaste färgerna i en bildresurs och skriver tillbaka namnen på färgerna till resursens metadata i AEM.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1439'
 ht-degree: 0%
 
 ---
@@ -205,6 +205,7 @@ Eftersom vårt Asset compute-projekt innehåller två arbetare (den tidigare [ci
        ]
    }
    ```
+
 1. Tryck på __Kör__ och vänta på att XML-återgivningen ska generera
    + Eftersom båda arbetarna är listade i profildefinitionen genereras båda återgivningarna. Den övre profildefinitionen som pekar på den cirkelformade renderingsarbetaren ](../develop/worker.md) kan också tas bort för att undvika att den körs från utvecklingsverktyget.[
 1. Avsnittet __Återgivningar__ förhandsvisar den återgivning som genereras. Tryck på `rendition.xml` för att hämta den och öppna den i VS-koden (eller din favoritredigerare för XML/text) för att granska.
