@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -32,8 +32,11 @@ Den här självstudiekursen kräver följande:
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
++ endast macOS-förutsättningar
+   + [Kommandoradsverktygen ](https://developer.apple.com/xcode/) Xcodeor  [Xcode](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all.0.3.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
 + [källkoden aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql)
+
 
 I den här självstudiekursen förutsätts:
 
@@ -90,7 +93,8 @@ Hämta WKND-appens källkod från Github.com och byt gren som innehåller ändri
 ```
 $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
-$ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
 $ git checkout -b feature/spa-editor
 $ git pull origin feature/spa-editor
 ```
@@ -146,6 +150,8 @@ Innan du skapar innehåll måste du ordna webbläsarfönstren så att AEM Author
 1. Tryck på __Bali Surf Camp__-kortet och navigera till dess dynamiska väg
 1. Lägg till, ändra eller ta bort komponenter från behållarkomponenten som finns ovanför rubriken __Intervär__
 1. Uppdatera SPA som körs på `http://localhost:3000` och se att ändringarna återspeglas
+
+Nya AEM under startsidan för __WKND-appen > Adventure__ _måste_ ha ett AEM sidnamn som matchar namnet för motsvarande äventyr. Detta beror på att den SPA vägen till AEM Sidmappning baseras på det sista segmentet i flödet, som är namnet på innehållsfragmentet.
 
 ## Grattis!
 
