@@ -4,20 +4,26 @@ description: Förstå bästa praxis och kontinuerlig integrering med Adobe Cloud
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: Developer Tools
+topic: Utveckling
+feature: Utvecklarverktyg
 kt: 6914
 thumbnail: 330536.jpg
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '32'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
 # Kontinuerlig integrering och Cloud Manager
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_devops_cicd"
+>title="Kontinuerlig integrering och Cloud Manager"
+>abstract="Förstå bästa praxis och kontinuerlig integrering med Adobe Cloud Manager."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#non-production-pipelines" text="Konfigurera CI-CD-pipeline"
 
 Förstå bästa praxis och kontinuerlig integrering med Adobe Cloud Manager.
 
