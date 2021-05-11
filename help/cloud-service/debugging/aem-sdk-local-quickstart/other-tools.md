@@ -1,21 +1,21 @@
 ---
 title: Andra verktyg för felsökning AEM SDK
 description: En mängd andra verktyg kan hjälpa dig att felsöka AEM SDK:s lokala snabbstart.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 1%
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
@@ -55,14 +55,4 @@ QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som du kan använd
 Felsökaren för QueryBuilder finns på:
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-
-## Sling Log Tracer och AEM Chrome
-
-![Sling Log Tracer och AEM Chrome](./assets/other-tools/log-tracer.png)
-
-[Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html), som medföljer AEM SDK:s lokala snabbstart, möjliggör detaljerad spårning av HTTP-begäranden och visar detaljerad felsökningsinformation per begäran. Konfigurationen [Loggspårarens OSGi måste konfigureras](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1) för att den här funktionen ska kunna aktiveras.
-
-Öppen källkod [AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US) för webbläsaren [Google Chrome](https://www.google.com/chrome/), integreras med loggspåraren och felsökningsinformationen visas direkt i Chrome&#39;s Dev Tools.
-
-_Plugin-programmet AEM Chrome är ett verktyg med öppen källkod, och Adobe har inget stöd för det._
 
