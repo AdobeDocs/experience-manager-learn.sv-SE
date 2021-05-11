@@ -3,19 +3,19 @@ title: Implementera anpassat processsteg
 seo-title: Implementera anpassat processsteg
 description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
 seo-description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
-feature: Workflow
+feature: Arbetsflöde
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikeln](https://helpx.adobe.com/experience-manager/using/maven_arch13.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
@@ -55,57 +55,83 @@ Följande Java-klass har skrivits för att uppnå detta användningsfall
 
 Låt oss titta på den här koden
 
-```
-@Component(property = { Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
-        Constants.SERVICE_VENDOR + "=Adobe Systems",
-        "process.label" + "=Save Adaptive Form Attachments to File System" })
+```java
+package com.learningaemforms.adobe.core;
+
+import java.io.File;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.Session;
+
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.aemfd.docmanager.Document;
+import com.adobe.granite.workflow.WorkflowException;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.exec.WorkflowProcess;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.day.cq.search.PredicateGroup;
+import com.day.cq.search.Query;
+import com.day.cq.search.QueryBuilder;
+import com.day.cq.search.result.Hit;
+import com.day.cq.search.result.SearchResult;
+
+@Component(property = {
+	Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
+	Constants.SERVICE_VENDOR + "=Adobe Systems",
+	"process.label" + "=Save Adaptive Form Attachments to File System"
+})
 public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
-     private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
-     @Override
-    public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
-            throws WorkflowException {
-        // TODO Auto-generated method stub
-        log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
-        String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
-        String attachmentsPath = params[0];
-        String saveToLocation = params[1];
-        log.debug("The seperator is" + File.separator);
-        String payloadPath = workItem.getWorkflowData().getPayload().toString();
- 
-        String attachmentsFilePath = payloadPath + "/" + attachmentsPath + "/attachments";
-        log.debug("The data file path is " + attachmentsFilePath);
- 
-        ResourceResolver resourceResolver = workflowSession.adaptTo(ResourceResolver.class);
- 
-        Resource attachmentsNode = resourceResolver.getResource(attachmentsFilePath);
-        Iterator<Resource> attachments = attachmentsNode.listChildren();
-        while (attachments.hasNext()) {
-            Resource attachment = attachments.next();
-            String attachmentPath = attachment.getPath();
-            String attachmentName = attachment.getName();
- 
-            log.debug("The attachmentPath is " + attachmentPath + " and the attachmentname is " + attachmentName);
-            com.adobe.aemfd.docmanager.Document attachmentDoc = new com.adobe.aemfd.docmanager.Document(attachmentPath,
-                    attachment.getResourceResolver());
-            try {
-                File file = new File(saveToLocation + File.separator + workItem.getId());
-                if (!file.exists()) {
-                    file.mkdirs();
-                }
- 
-                attachmentDoc.copyToFile(new File(file + File.separator + attachmentName));
- 
-                log.debug("Saved attachment" + attachmentName);
-                attachmentDoc.close();
- 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
- 
-        }
- 
-    }
+
+	private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
+	@Reference
+	QueryBuilder queryBuilder;
+
+	@Override
+	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
+	throws WorkflowException {
+		// TODO Auto-generated method stub
+		log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
+		String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
+		String attachmentsPath = params[0];
+		String saveToLocation = params[1];
+		log.debug("The seperator is" + File.separator);
+		String payloadPath = workItem.getWorkflowData().getPayload().toString();
+		Map<String, String> map = new HashMap<String, String> ();
+		map.put("path", payloadPath + "/" + attachmentsPath);
+		File saveLocationFolder = new File(saveToLocation);
+		if (!saveLocationFolder.exists()) {
+			saveLocationFolder.mkdirs();
+		}
+
+		map.put("type", "nt:file");
+		Query query = queryBuilder.createQuery(PredicateGroup.create(map), workflowSession.adaptTo(Session.class));
+		query.setStart(0);
+		query.setHitsPerPage(20);
+
+		SearchResult result = query.getResult();
+		log.debug("Got  " + result.getHits().size() + " attachments ");
+		Node attachmentNode = null;
+		for (Hit hit: result.getHits()) {
+			try {
+				String path = hit.getPath();
+				log.debug("The attachment title is  " + hit.getTitle() + " and the attachment path is  " + path);
+				attachmentNode = workflowSession.adaptTo(Session.class).getNode(path + "/jcr:content");
+				InputStream documentStream = attachmentNode.getProperty("jcr:data").getBinary().getStream();
+				Document attachmentDoc = new Document(documentStream);
+				attachmentDoc.copyToFile(new File(saveLocationFolder + File.separator + hit.getTitle()));
+				attachmentDoc.close();
+			} catch (Exception e) {
+				log.debug("Error saving file " + e.getMessage());
+			}
 ```
 
 Rad 1 - definierar komponentens egenskaper. Egenskapen process.label är vad du kommer att se när du associerar OSGi-komponenten med processteget, vilket visas i en av skärmbilderna nedan.
@@ -120,18 +146,8 @@ Dessa två värden skickas som processargument, vilket visas i skärmbilden neda
 
 ![ProcessStep](assets/implement-process-step.gif)
 
+Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i mappen attachmentsPath. Resten av koden itererar genom sökresultaten för att skapa ett Document-objekt och spara det i filsystemet
 
-Rad 19: skapar vi sedan attachmentFilePath. Sökvägen till den bifogade filen är som
-
-    /var/fd/dashboard/payload/server0/2018-11-19/3EF6ENASOQTHCPLNDYVNAM7OKA_7/Bifogade filer/bifogade filer
-
-* &quot;Bifogade filer&quot; är namnet på mappen i förhållande till arbetsflödets nyttolast som angavs när du konfigurerade det adaptiva formulärets sändningsalternativ.
-
-   ![inskickningsalternativ](assets/af-submit-options.gif)
-
-Rader 24-26 - Hämta ResourceResolver och sedan resursen som pekar på attachmentFilePath.
-
-Resten av koden skapar Document-objekt genom att iterera genom det underordnade objektet för resursen som pekar på attachmentFilePath med API:t. Det här dokumentobjektet är specifikt för AEM Forms. Vi använder sedan metoden copyToFile för dokumentobjektet för att spara dokumentobjektet.
 
 >[!NOTE]
 >
@@ -139,7 +155,7 @@ Resten av koden skapar Document-objekt genom att iterera genom det underordnade 
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen ](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[Bygg paketet enligt beskrivningen ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
 [härKontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.
