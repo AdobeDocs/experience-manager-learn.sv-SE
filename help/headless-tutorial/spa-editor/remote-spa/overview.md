@@ -8,7 +8,7 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service*
 
 ## Senaste kod
 
-+ Den här självstudiekursens kod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphq) i `feature/spa-editor`-grenen.
++ Den här självstudiekursens kod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) i `feature/spa-editor`-grenen.
 
 ## Förutsättningar
 
