@@ -13,7 +13,7 @@ topic: Utveckling
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 1%
@@ -229,7 +229,7 @@ Om du vill starta AEM Author-tjänsten `cd` i katalogen som innehåller snabbsta
 
 eller, för att starta AEM Publish-tjänsten, `cd` i katalogen som innehåller QuickStart Jar och köra kommandot:
 
-`$ java -jar aem-author-p4503.jar`
+`$ java -jar aem-publish-p4503.jar`
 
 ## Starten av Quickstart Jar från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
 
@@ -246,7 +246,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+Detta beror på att AEM som Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 När Java SDK 11 har installerats kontrollerar du att det är den aktiva versionen genom att köra följande från kommandoraden.
 
 När Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
