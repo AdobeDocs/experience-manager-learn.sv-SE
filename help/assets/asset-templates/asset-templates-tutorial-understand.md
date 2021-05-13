@@ -2,13 +2,12 @@
 title: 'Om InDesign-filer och resursmallar i AEM Assets '
 description: I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-fil och alla tillhörande överväganden som du kan använda i funktionen Resursmallar för AEM Resurser.
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: Innehållshantering
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -74,4 +73,4 @@ InDesign-mallfil och bildstöd
 Hämta [InDesign-mallfilen och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [Ladda ned testversion av InDesign CC](https://creative.adobe.com/products/download/indesign)
-* [Ladda ned testversion av InDesign Server](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+* [CC Enterprise-kunder kan kontakta sin Account Executive för att begära en provlicens för InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
