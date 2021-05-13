@@ -6,9 +6,8 @@ feature: SPA, kärnkomponenter, API:er, utveckling
 role: Developer, Architect
 level: Beginner
 kt: 7630
-thumbnail: kt-7630.jpg
-translation-type: tm+mt
-source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
+thumbnail: 333272.jpeg
+source-git-commit: cede0c97e0f322fe5d20d5c4f685ed10b90af1d4
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 1%
@@ -21,6 +20,8 @@ ht-degree: 1%
 Välkommen till flerdelssjälvstudiekursen för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) SPA med redigerbart AEM med AEM SPA Editor.
 
 Den här självstudiekursen bygger vidare på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som förbrukar AEM Content Fragment-innehåll över AEM GraphQL-API:er, men har ingen sammanhangsbaserad redigering av SPA.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
 
 ## Om självstudiekursen
 
