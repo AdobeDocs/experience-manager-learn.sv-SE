@@ -9,10 +9,9 @@ role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -22,5 +21,10 @@ ht-degree: 0%
 
 Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.
 
->[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
+I den här videon kommer du att:
 
++ Lär dig hur du skapar och definierar en modell för innehållsfragment
++ Lär dig mer om de olika datatyperna och valideringarna som används för att skapa Content Fragment Model
++ Förstå hur innehållsfragmentmodellen driver GraphQL API
+
+>[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
