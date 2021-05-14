@@ -10,10 +10,9 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '142'
 ht-degree: 3%
 
 ---
@@ -28,6 +27,8 @@ ht-degree: 3%
       + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
       + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
+      + [4 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
+      + [5 - Variationer för innehållsfragment](./graphql/video-series/content-fragment-variations.md)
    + Flerstegs självstudiekurs{#multi-step}
       + [Översikt](./graphql/multi-step/overview.md)
       + [1 - Snabbinställningar](./graphql/multi-step/setup.md)
