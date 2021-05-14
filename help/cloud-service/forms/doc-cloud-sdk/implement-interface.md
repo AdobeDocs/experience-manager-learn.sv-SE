@@ -7,12 +7,11 @@ role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: utveckling
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7826.jpg
+kt: 7826
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '44'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,8 @@ ht-degree: 0%
 # Implementering av gränssnitt
 
 Här följer den fullständiga koden för den klass som implementerar gränssnittet.
-Den här klassen använder två verktygsmetoder, getAccessToken, getJWTToken och den statiska metoden getContentAnalyserRequest, för klassen GetContentAnalyser.
+
+Den här klassen använder två verktygsmetoder `getAccessToken`, `getJWTToken` och den statiska metoden `getContentAnalyserRequest` i klassen `GetContentAnalyser`.
 
 
 ```java
