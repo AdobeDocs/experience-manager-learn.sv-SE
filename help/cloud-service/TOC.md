@@ -4,11 +4,10 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 12%
+source-wordcount: '440'
+ht-degree: 11%
 
 ---
 
@@ -96,6 +95,14 @@ ht-degree: 12%
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
+   + Document Cloud API och AEM Forms CS{#doc-cloud-sdk}
+      + [Introduktion](./forms/doc-cloud-sdk/introduction.md)
+      + [Skapa Adobe IO-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [Skapa OSGI-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Definiera gränssnitt](./forms/doc-cloud-sdk/create-interface.md)
+      + [Implementeringsgränssnitt](./forms/doc-cloud-sdk/implement-interface.md)
+      + [Skapa JSON-del](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [Anpassat processsteg](./forms/doc-cloud-sdk/custom-process-step.md)
    + Skapa granskningsarbetsflöde{#create-aem-workflow}
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
