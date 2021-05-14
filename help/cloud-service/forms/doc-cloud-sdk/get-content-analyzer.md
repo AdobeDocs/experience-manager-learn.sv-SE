@@ -1,25 +1,33 @@
 ---
 title: Skapa innehållsanalys
 description: Skapa JSON-delen som innehåller information om indataparametrarna för REST-anropet.
-solution: Experience Manager, Experience Manager Forms
+solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: utveckling
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7836.jpg
+kt: 7836
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 0%
+source-wordcount: '59'
+ht-degree: 3%
 
 ---
 
-# contentAnalyserRequests
 
-JSON-delen som innehåller information om indata, parametrar och utdata. Information om den här [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+# Skapa Analyzer-förfrågningar
+
+Skapa ett JSON-fragment som definierar:
+
++ input
++ parameters
++ output.
+
+Information om den här [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+
+Den exempelkod som visas nedan genererar JSON-fragmentet för alla Office 365-dokumenttyper.
 
 ```java
 package com.aemforms.doccloud.core.impl;
@@ -34,10 +42,15 @@ public class GetContentAnalyser {
 		
 		JsonObject documentIn = new JsonObject();
 		documentIn.addProperty("cpf:location", "InputFile0");
-		System.out.println("The file name is "+fileName);
+
+		if(fileName.endsWith(".pptx"))
+		{
+			documentIn.addProperty("dc:format","application/vnd.openxmlformats-officedocument.presentationml.presentation");
+		}
+
 		if(fileName.endsWith(".docx"))
 		{
-			System.out.println("This is word document");
+			
 			documentIn.addProperty("dc:format","application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 		}
 		if(fileName.endsWith(".xlsx"))
