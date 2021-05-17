@@ -13,10 +13,9 @@ thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 375df47a13b1820911a7ceb73af0dad15c68740e
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1120'
 ht-degree: 1%
 
 ---
@@ -122,23 +121,23 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
    Projektets flera moduler ska kompileras och distribueras till AEM.
 
    ```plain
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
-    [INFO] 
-    [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
-    [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
-    [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
-    [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
-    [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
-    [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
-    [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
-    [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
-    [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
-    [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  01:44 min
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
+   [INFO] 
+   [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
+   [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
+   [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
+   [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
+   [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
+   [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
+   [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
+   [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
+   [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
+   [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
+   [INFO] ------------------------------------------------------------------------
+   [INFO] BUILD SUCCESS
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Total time:  01:44 min
    ```
 
    Maven-profilen ***autoInstallSinglePackage*** kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna **admin:admin**.
