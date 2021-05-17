@@ -13,10 +13,9 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 375df47a13b1820911a7ceb73af0dad15c68740e
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1101'
 ht-degree: 1%
 
 ---
@@ -102,9 +101,9 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    ```shell
    $ mvn --version
-    Apache Maven 3.6.2
-    Maven home: /Library/apache-maven-3.6.2
-    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
+   Apache Maven 3.6.2
+   Maven home: /Library/apache-maven-3.6.2
+   Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
 3. Kör kommandot nedan Maven från katalogen `aem-guides-wknd-spa` för att skapa och distribuera projektet till AEM:
@@ -122,22 +121,22 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
    Projektets flera moduler ska kompileras och distribueras till AEM.
 
    ```plain
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Reactor Summary for wknd-spa-angular 1.0.0-SNAPSHOT:
-    [INFO] 
-    [INFO] wknd-spa-angular ................................... SUCCESS [  0.473 s]
-    [INFO] WKND SPA Angular - Core ............................ SUCCESS [ 54.866 s]
-    [INFO] wknd-spa-angular.ui.frontend - UI Frontend ......... SUCCESS [02:10 min]
-    [INFO] WKND SPA Angular - Repository Structure Package .... SUCCESS [  0.694 s]
-    [INFO] WKND SPA Angular - UI apps ......................... SUCCESS [  6.351 s]
-    [INFO] WKND SPA Angular - UI content ...................... SUCCESS [  2.885 s]
-    [INFO] WKND SPA Angular - All ............................. SUCCESS [  1.736 s]
-    [INFO] WKND SPA Angular - Integration Tests Bundles ....... SUCCESS [  2.563 s]
-    [INFO] WKND SPA Angular - Integration Tests Launcher ...... SUCCESS [  1.846 s]
-    [INFO] WKND SPA Angular - Dispatcher ...................... SUCCESS [  0.270 s]
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Reactor Summary for wknd-spa-angular 1.0.0-SNAPSHOT:
+   [INFO] 
+   [INFO] wknd-spa-angular ................................... SUCCESS [  0.473 s]
+   [INFO] WKND SPA Angular - Core ............................ SUCCESS [ 54.866 s]
+   [INFO] wknd-spa-angular.ui.frontend - UI Frontend ......... SUCCESS [02:10 min]
+   [INFO] WKND SPA Angular - Repository Structure Package .... SUCCESS [  0.694 s]
+   [INFO] WKND SPA Angular - UI apps ......................... SUCCESS [  6.351 s]
+   [INFO] WKND SPA Angular - UI content ...................... SUCCESS [  2.885 s]
+   [INFO] WKND SPA Angular - All ............................. SUCCESS [  1.736 s]
+   [INFO] WKND SPA Angular - Integration Tests Bundles ....... SUCCESS [  2.563 s]
+   [INFO] WKND SPA Angular - Integration Tests Launcher ...... SUCCESS [  1.846 s]
+   [INFO] WKND SPA Angular - Dispatcher ...................... SUCCESS [  0.270 s]
+   [INFO] ------------------------------------------------------------------------
+   [INFO] BUILD SUCCESS
+   [INFO] ------------------------------------------------------------------------
    ```
 
    Maven-profilen ***autoInstallSinglePackage*** kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna **admin:admin**.
