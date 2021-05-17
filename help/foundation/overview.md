@@ -5,10 +5,9 @@ description: 'En samling videor och självstudiekurser för Adobe Experience Man
 seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Foundation
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '261'
 ht-degree: 1%
 
 ---
@@ -20,8 +19,9 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 ## Nyheter
 
-* **[Använd arbetsflödeshantering i AEM (video)](./workflow/use-workflow-management.md)**
-   *AEM ger synlighet i pågående arbetsflöden och underlättar hanteringen av  [!DNL Workflow] definitioner.*
+* **[Använd AEM (video)](./workflow/use-workflow.md)**
+
+   *AEM Workflow är ett sätt att samarbeta, hantera och bearbeta innehåll i AEM.*
 
 * **[Förstå Cloud Manager för AEM (video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
