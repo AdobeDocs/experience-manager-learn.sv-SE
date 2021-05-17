@@ -6,9 +6,8 @@ feature: SPA, kärnkomponenter, API:er, utveckling
 role: Developer, Architect
 level: Beginner
 kt: 7629
-thumbnail: 333181.jpeg
-translation-type: tm+mt
-source-git-commit: e6dc028a120670d34806def36ad200ed161295e1
+thumbnail: 333181.jpg
+source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 0%
@@ -82,8 +81,8 @@ Den här självstudiekursen är beroende av __WKND 0.3.0+&#39;s__-projekt (för 
 
 För att göra en snabb konfiguration tillhandahålls AEM som innehåller den slutliga AEM och det färdiga innehållet.
 
-1. [Hämta  `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Hämta  `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
+1. [Hämta ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Hämta ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. Logga in på AEM SDK:s Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med `admin`-inloggningsuppgifterna.
 1. __Ladda__ upp  `wknd-app.all.x.x.x.zip` nedladdat i steg 1
 1. Tryck på __Install__-knappen för posten `wknd-app.all.x.x.x.zip`
