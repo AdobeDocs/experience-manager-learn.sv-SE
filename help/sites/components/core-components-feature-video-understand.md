@@ -1,7 +1,7 @@
 ---
 title: Förstå kärnkomponenter
 description: 'AEM Core Components är standardkomponenter som ska användas med Adobe Experience Manager. Core Components bygger med Adobe bästa praxis och standarder och ger basfunktioner för alla implementeringar av Sites. '
-feature: Core Components
+feature: Kärnkomponenter
 topics: authoring
 audience: all
 activity: use
@@ -9,19 +9,24 @@ doc-type: feature video
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4676
 thumbnail: 18926.jpg
-topic: Development
+topic: Utveckling
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 51756acf098c86852038c2375c3ae01cbf8a47fe
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Förstå kärnkomponenter{#understanding-core-components}
+
+>[!CONTEXTUALHELP]
+>id="intro_core_components"
+>title="Introduktion till kärnkomponenter i AEM som Cloud Service"
+>abstract="På den här fliken kan du visa innehåll som hjälper dig att skapa moderna webbplatser som är kompatibla med AEM som en Cloud Service. Nyckeln till att göra detta är att använda kärnkomponenter"
+>additional-url="https://video.tv.adobe.com/v/18926" text="Översikt över kärnkomponenter"
 
 AEM Core Components är standardkomponenter som ska användas med Adobe Experience Manager. Core Components bygger med Adobe bästa praxis och standarder och ger basfunktioner för alla implementeringar av Sites.
 
@@ -32,5 +37,3 @@ AEM Core Components är standardkomponenter som ska användas med Adobe Experien
 * [GitHub-projekt](https://github.com/adobe/aem-core-wcm-components)
 * [Exempel på kärnkomponent](https://www.aemcomponents.dev/)
 * [Komponentdokumentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-
-
