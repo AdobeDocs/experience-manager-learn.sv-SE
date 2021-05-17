@@ -4,10 +4,9 @@ breadcrumb-title: AEM Foundation Tutorials
 user-guide-description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 sub-product: grund
 index: y
-translation-type: tm+mt
-source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '146'
 ht-degree: 3%
 
 ---
@@ -45,6 +44,6 @@ ht-degree: 3%
    + [Använda SSL-guiden](./security/use-the-ssl-wizard.md)
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
-   + [Använd arbetsflödeshantering](./workflow/use-workflow-management.md)
+   + [Använd arbetsflöde](./workflow/use-workflow.md)
    + [Använda Inkorgen](./workflow/use-the-inbox.md)
 
