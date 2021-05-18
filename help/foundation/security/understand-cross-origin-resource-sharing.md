@@ -7,13 +7,12 @@ topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
-topic: Security
+topic: Dokumentskydd
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -141,7 +140,8 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 ```
 /cache { 
   ...
-  /clientheaders {
+  /headers {
+      "Origin",
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
@@ -155,7 +155,7 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 
 Kom ihåg att **starta om webbserverprogrammet** när du har gjort ändringar i `dispatcher.any`-filen.
 
-Det är troligt att cacheminnet behöver rensas helt för att säkerställa att rubrikerna cachas korrekt på nästa begäran efter en `/clientheaders`-konfigurationsuppdatering.
+Det är troligt att cacheminnet behöver rensas helt för att säkerställa att rubrikerna cachas korrekt på nästa begäran efter en `/cache/headers`-konfigurationsuppdatering.
 
 ## Felsökning av CORS
 
@@ -170,7 +170,7 @@ Loggning finns under `com.adobe.granite.cors`:
 * Verifiera om begäran nekades av CORS-hanteraren och inte av autentiseringen, CSRF-tokenfilter, dispatcherfilter eller andra säkerhetslager
    * Om CORS-hanteraren svarar med 200, men `Access-Control-Allow-Origin`-huvudet saknas i svaret, kan du kontrollera om loggarna innehåller nekanden under [!DNL DEBUG] i `com.adobe.granite.cors`
 * Om dispatchercachelagring av [!DNL CORS]-begäranden är aktiverat
-   * Kontrollera att konfigurationen `/clientheaders` används på `dispatcher.any` och att webbservern har startats om
+   * Kontrollera att konfigurationen `/cache/headers` används på `dispatcher.any` och att webbservern har startats om
    * Kontrollera att cachen rensades korrekt efter ändringar i OSGi eller dispatcher.konfigurationer.
 * vid behov kontrollera om det finns autentiseringsuppgifter för begäran.
 
