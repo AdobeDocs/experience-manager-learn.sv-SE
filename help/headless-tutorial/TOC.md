@@ -10,9 +10,9 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
+source-git-commit: bfca379bf2722dc1658400f375e65d2943f27ed7
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '147'
 ht-degree: 3%
 
 ---
@@ -27,9 +27,10 @@ ht-degree: 3%
       + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
       + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
-      + [4 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
-      + [5 - Variationer för innehållsfragment](./graphql/video-series/content-fragment-variations.md)
-      + [6 - GraphQL-slutpunkter](./graphql/video-series/graphql-endpoints.md)
+      + [4 - Persistenta GraphQL-frågor](./graphql/video-series/graphql-persisted-queries.md)
+      + [5 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
+      + [6 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
+      + [7 - GraphQL-slutpunkter](./graphql/video-series/graphql-endpoints.md)
    + Flerstegs självstudiekurs{#multi-step}
       + [Översikt](./graphql/multi-step/overview.md)
       + [1 - Snabbinställningar](./graphql/multi-step/setup.md)
