@@ -9,11 +9,10 @@ user-guide-title: Komma igång med AEM Sites - WKND självstudiekurs
 user-guide-description: En självstudiekurs i flera delar för utvecklare som inte är AEM. Implementera en AEM sajt för ett fiktivt livsstilsmärke, WKND.
 breadcrumb-title: AEM Sites WKND Tutorials
 index: y
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 3c9bff3238a057e976868c13ad185ea687600dea
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +30,8 @@ ht-degree: 9%
    + [6 - Anpassad komponent](./project-archetype/custom-component.md)
    + [7 - Enhetstestning](./project-archetype/unit-testing.md)
 + Platsmall {#site-template}
-   + [1. Skapa en plats](./site-template/create-site.md)
-   + [2. Skriv innehåll och publicera ändringar](./site-template/author-content-publish.md)
-   + [3. Sidmallar](./site-template/page-templates.md)
-   + [4. Tema](./site-template/theming.md)
+   + [Översikt](./site-template/overview.md)
+   + [1 - Skapa en webbplats](./site-template/create-site.md)
+   + [2 - Redigera innehåll och publicera ändringar](./site-template/author-content-publish.md)
+   + [3 - Sidmallar](./site-template/page-templates.md)
+   + [4 - Tema](./site-template/theming.md)
