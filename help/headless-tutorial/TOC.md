@@ -10,9 +10,9 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-source-git-commit: 2b2c45e5ceb6f1121ff5b9befa0c79226e4e2efb
+source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '164'
 ht-degree: 3%
 
 ---
@@ -41,6 +41,14 @@ ht-degree: 3%
       + [6 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
       + [7 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
 + SPA Editor{#spa-editor}
+   + Reagera{#react}
+      + [Översikt](./spa-editor/react/overview.md)
+      + [1 - Skapa projekt](./spa-editor/react/create-project.md)
+      + [2 - Integrera SPA](./spa-editor/react/integrate-spa.md)
+      + [3 - Mappa SPA](./spa-editor/react/map-components.md)
+      + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
+      + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
+      + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
    + SPA{#remote-spa}
       + [Översikt](./spa-editor/remote-spa/overview.md)
       + [Snabbinställningar](./spa-editor/remote-spa/quick-setup.md)
