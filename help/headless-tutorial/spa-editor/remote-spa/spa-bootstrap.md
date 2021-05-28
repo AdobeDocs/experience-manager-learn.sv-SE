@@ -7,8 +7,7 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -278,7 +277,7 @@ Lägg till AEM Responsive Grid SCSS-filer i SPA.
 1. Hämta och kopiera följande två filer till `src/styles`
    + [_grid.scss](./assets/spa-bootstrap/_grid.scss)
       + AEM Responsive Grid SCSS-generator
-   + [_grid-init.scss](./assets/spa-bootstrap/_grid.scss)
+   + [_grid-init.scss](./assets/spa-bootstrap/_grid-init.scss)
       + Anropar `_grid.scss` med de SPA specifika brytpunkterna (skrivbord och mobil) och kolumnerna (12).
 1. Öppna `src/App.scss` och importera `./styles/grid-init.scss`
 
