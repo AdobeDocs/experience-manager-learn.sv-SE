@@ -10,9 +10,9 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '182'
 ht-degree: 3%
 
 ---
@@ -49,6 +49,14 @@ ht-degree: 3%
       + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
+   + Angular{#angular}
+      + [Översikt](./spa-editor/angular/overview.md)
+      + [1 - SPA](./spa-editor/angular/create-project.md)
+      + [2 - Integrera SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 - Mappa SPA](./spa-editor/angular/map-components.md)
+      + [4 - Navigering och routning](./spa-editor/angular/navigation-routing.md)
+      + [5 - Anpassad komponent](./spa-editor/angular/custom-component.md)
+      + [6 - Utöka komponent](./spa-editor/angular/extend-component.md)
    + SPA{#remote-spa}
       + [Översikt](./spa-editor/remote-spa/overview.md)
       + [Snabbinställningar](./spa-editor/remote-spa/quick-setup.md)
