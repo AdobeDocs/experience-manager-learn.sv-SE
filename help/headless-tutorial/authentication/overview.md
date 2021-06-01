@@ -4,24 +4,25 @@ description: Upptäck hur ett externt program kan autentisera och interagera med
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API:er
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: Headless, Integrations
+topic: Headless, integreringar
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
 
 
 # Tokenbaserad autentisering som AEM som Cloud Service
+
+AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan kanter, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
 
 I den här självstudiekursen kan du utforska hur ett externt program kan autentisera och interagera med till AEM som en Cloud Service via HTTP med hjälp av åtkomsttoken.
 
