@@ -1,14 +1,13 @@
 ---
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
-feature: Content Fragments, APIs
+feature: Innehållsfragment, API:er
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: db9f4d09dcc83f85c8d02d94c383fa456af88c24
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -16,48 +15,143 @@ ht-degree: 0%
 
 # AEM Headless-självstudiekurser
 
-Adobe Experience Manager har flera alternativ för att definiera headless-slutpunkter och leverera innehållet som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
+Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-slutpunkter och leverera dess innehåll som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
-## AEM GraphQL API:er, genomgång
+>[!TIP]
+>
+>Den här samlingen självstudiekurser är avsedda för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du läsa [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
-AEM GraphQL API:er för innehållsfragment
-har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
+## Tutorials efter API
 
-Ett modernt API för innehållsleverans är avgörande för effektiviteten och prestandan i Javascript-baserade klientprogram. Att använda ett REST API medför utmaningar:
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt="GraphQL API" src="./assets/graphql-icon.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <strong>GraphQL API</strong>
+    </a>
+    </div>
+    <p>
+    <em>Lär dig hur ett program kan använda AEM GraphQL API för att fråga efter innehåll.</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <img alt="Tokenbaserad autentisering" src="./assets/token-auth-icon.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <strong>Tokenautentisering</strong>
+    </a>
+    </div>
+    <p>
+    <em>Lär dig hur ett program kan autentiseras säkert med AEM.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+      <img alt="Innehållstjänster" src="./assets/content-services.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+        <strong>Innehållstjänster</strong>
+      </a>
+    </div>
+    <p>
+    <em>Lär dig hur ett program kan använda ett REST API för att förbruka innehåll.</em>
+    <p>
+  </td>
+</tr>
+</table>
 
-* Ett stort antal begäranden om att hämta ett objekt i taget
-* Innehåll som ofta&quot;överlevererar&quot;, vilket innebär att programmet får mer än det behöver
+## Tutorials per ramverk
 
-För att övervinna dessa utmaningar tillhandahåller GraphQL ett frågebaserat API som gör att klienter kan fråga AEM efter endast det innehåll som behövs och ta emot via ett enda API-anrop.
+Bläddra bland följande självstudiekurser baserat på vilken teknik som används. Lär dig mer om AEM än bara vanliga användningsområden, med alternativ för kontextredigering och upplevelsehantering.
 
-* Lär dig använda AEM GraphQL API:er i självstudiekursen [Komma igång med AEM GraphQL API:er](./graphql/overview.md)
-
-## Självstudiekurs om tokenbaserad autentisering
-
-AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan kanter, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
-
-* Lär dig hur du autentiserar till AEM via HTTP med åtkomsttoken i [Autentiserar till AEM som en Cloud Service från en extern programsjälvstudiekurs](./authentication/overview.md)
-
-## AEM Content Services, genomgång
-
-AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
-
-AEM Content Services tillåter att samma innehållsavvikelser som används för att skapa webbsidor i AEM Sites definierar innehållet och schemana för dessa HTTP API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON API:er som kan användas i alla applikationer.
-
-* Lär dig använda AEM Content Services i självstudiekursen [Komma igång med AEM Content Services](./content-services/overview.md)
-
-## AEM GraphQL vs. AEM Content Services
-
-|  | AEM GraphQL API:er | AEM Content Services |
-|--------------------------------|:-----------------|:---------------------|
-| Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
-| Innehåll | Innehållsfragment | AEM |
-| Innehållsidentifiering | Efter GraphQL-fråga | Efter AEM |
-| Leveransformat | GraphQL JSON | AEM ComponentExporter JSON |
-
-## Andra praktiska självstudiekurser
-
-Andra självstudiekurser AEM headless concepts är:
-
-* [Komma igång med AEM SPA Editor och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
+      <img alt="Reaktion - utan huvud" src="./assets/react-headless.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <strong>Reaktion - utan huvud</strong>
+    </a>
+    </div>
+    <p>
+    <em>Bygg en React JS-app med GraphQL i ett helt headless-scenario.</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <img alt="Reagera - fjärrredigerare" src="./assets/react-remote.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <strong>Reagera - fjärrredigerare</strong>
+    </a>
+    </div>
+    <p>
+    <em>Skapa sammanhangsberoende delar av ett React-program på fjärrbasis.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+      <img alt="Reagera - SPA" src="./assets/react-spa-editor.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
+        <strong>Reagera - SPA</strong>
+      </a>
+    </div>
+    <p>
+    <em>Använd AEM redigerare för SPA för att hantera hela React-appupplevelsen.</em>
+    <p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
+      <img alt="Reaktion - utan huvud" src="./assets/angular-spa-editor.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
+    <strong>Angular - SPA</strong>
+    </a>
+    </div>
+    <p>
+    <em>Använd redigeraren för AEM SPA för att hantera hela Angularnas appupplevelse.</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <img alt="Angular - Innehållstjänster" src="./assets/android.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <strong>Android - Innehållstjänster</strong>
+    </a>
+    </div>
+    <p>
+    <em>Använd Content Services och REST för att driva ett mobilt Android-program.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+      <img alt="Node.js - Autentisering" src="./assets/node-js.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+        <strong>Node.js - Autentisering</strong>
+      </a>
+    </div>
+    <p>
+    <em>Bygg en Node.js-app med utvecklare och tjänsttokens för autentisering.</em>
+    <p>
+  </td>
+</tr>
+</table>
