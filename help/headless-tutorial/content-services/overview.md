@@ -1,20 +1,25 @@
 ---
 title: Komma igång med AEM utan rubriker - Innehållstjänster
 description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
-feature: Content Fragments, APIs
+feature: Innehållsfragment, API:er
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
 
 # Komma igång med AEM utan rubriker - Innehållstjänster
+
+AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
+
+AEM Content Services tillåter att samma innehållsavvikelser som används för att skapa webbsidor i AEM Sites definierar innehållet och schemana för dessa HTTP API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON API:er som kan användas i alla applikationer.
+
+## Självstudiekurs om innehållstjänster
 
 En heltäckande självstudiekurs som visar hur man bygger upp och exponerar innehåll med hjälp av AEM och som används av en intern mobilapp i ett headless CMS-scenario.
 
@@ -35,3 +40,12 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 Källkoden och innehållspaketen finns i [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
 
 Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+
+## AEM GraphQL vs. AEM Content Services
+
+|  | AEM GraphQL API:er | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
+| Innehåll | Innehållsfragment | AEM |
+| Innehållsidentifiering | Efter GraphQL-fråga | Efter AEM |
+| Leveransformat | GraphQL JSON | AEM ComponentExporter JSON |
