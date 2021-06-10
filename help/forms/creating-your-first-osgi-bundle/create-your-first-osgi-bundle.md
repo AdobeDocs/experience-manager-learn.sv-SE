@@ -6,9 +6,9 @@ feature: Adaptiv Forms
 topic: Utveckling
 role: Developer
 level: Beginner
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,12 @@ Expandera `src/main/java` under mappen `learningaemforms.core`. Det här är den
 ## Bygg ditt projekt
 
 
-När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera lämplig klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD Client SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
+
+
+När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera lämplig klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD Client SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
+
+
+
 
 
 ```xml
@@ -131,5 +136,6 @@ Så här skapar du ditt projekt:
 
 * Öppna **kommandotolkfönstret**
 * Navigera till `c:\aemformsbundles\learningaemforms\core`
-* Kör kommandot `mvn clean install`
-Om allt blir bra ska du se paketet på följande plats `C:\AEMFormsBundles\learningaemforms\core\target`. Paketet är nu klart att distribueras till AEM med Felix webbkonsol.
+* Kör kommandot `mvn clean install -PautoInstallBundle`
+Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
+   `C:\AEMFormsBundles\learningaemforms\core\target` och kan driftsättas med  [Felix webbkonsol](http://localhost:4502/system/console/bundles)
