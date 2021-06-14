@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '977'
 ht-degree: 1%
 
 ---
@@ -98,9 +98,10 @@ ht-degree: 1%
    + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
    + [Använda enkel mall](inbox-customization/use-sightly-template.md)
-+ Bifogade formulär för postnummer{#zipping-form-attachments}
++ Bifogade e-postformulär{#zipping-form-attachments}
    + [Introduktion](zipping-form-attachments/introduction.md)
-   + [Anpassad process](zipping-form-attachments/custom-process-step.md)
+   + [Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
+   + [Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
    + [Testa lösningen](zipping-form-attachments/test.md)
 + Lagra och hämta anpassat formulär{#store-and-retrieve-af-with-2fa}
    + [Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
