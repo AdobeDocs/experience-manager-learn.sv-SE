@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
+source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,18 @@ ht-degree: 0%
 # Bootstrap the Remote SPA for SPA Editor
 
 Innan de redigerbara områdena kan läggas till i SPA måste det startas med JavaScript SDK för AEM SPA redigeraren och några andra konfigurationer.
+
+
+## Ladda ned WKND App-källan
+
+Om du inte redan har gjort det hämtar du WKND-appens källkod från Github.com och växlar grenen som innehåller ändringarna till SPA som utfördes i den här självstudiekursen.
+
+```
+$ mkdir -p ~/Code/wknd-app
+$ cd ~/Code/wknd-app
+$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
+```
 
 ## Lägg till AEM JS SDK npm-beroenden i redigeraren
 
