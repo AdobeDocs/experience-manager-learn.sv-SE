@@ -4,7 +4,7 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
-source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
+source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 11%
@@ -142,7 +142,7 @@ ht-degree: 11%
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
 + Tutorials i flera steg{#multi-step-tutorials}
-   + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
    + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
