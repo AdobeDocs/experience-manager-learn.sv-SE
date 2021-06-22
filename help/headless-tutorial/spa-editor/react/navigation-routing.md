@@ -12,7 +12,7 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
    Under **Tillåtna komponenter** > **Allmänt** > väljer du komponenten **Layoutbehållare**.
 
-   Under **Tillåtna komponenter** > **WKND SPA REACT - STRUKTUR** väljer du komponenten **Header**:
+   Under **Tillåtna komponenter** > **WKND SPA REACT - STRUKTUR** väljer du komponenten **Navigering**:
 
    ![Välj navigeringskomponent](assets/navigation-routing/select-navigation-component.png)
 
@@ -284,7 +284,7 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
        }
    ```
 
-   I stället för att använda standardtaggen `<a>` använder vi `<Link>` som tillhandahålls av React Router. Så länge som `to=` pekar på en giltig väg, kommer SPA att växla till den vägen och **inte** utföra en uppdatering av hela sidan. Här hårdkodar vi länken till hemsidan för att visa hur `Link` används.
+   I stället för att använda en `<a>`-ankartagg som standard använder vi `<Link>` från React Router. Så länge som `to=` pekar på en giltig väg, kommer SPA att växla till den vägen och **inte** utföra en uppdatering av hela sidan. Här hårdkodar vi länken till hemsidan för att visa hur `Link` används.
 
 1. Uppdatera testet på `App.test.js` `ui.frontend/src/App.test.js`.
 
