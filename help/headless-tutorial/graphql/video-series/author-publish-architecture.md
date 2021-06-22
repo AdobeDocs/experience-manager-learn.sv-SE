@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -28,3 +28,5 @@ I den här videon kommer du att:
 + Utforska hur redigeringsmiljön kan användas som förhandsgranskning för ett program
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
+
+_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
