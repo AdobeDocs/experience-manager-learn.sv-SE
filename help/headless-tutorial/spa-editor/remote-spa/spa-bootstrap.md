@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
+source-git-commit: aa4fb5afc2d30bb499493b93c51940ea6db56e41
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Innan de redigerbara områdena kan läggas till i SPA måste det startas med Jav
 
 ## Ladda ned WKND App-källan
 
-Om du inte redan har gjort det hämtar du WKND-appens källkod från Github.com och växlar grenen som innehåller ändringarna till SPA som utfördes i den här självstudiekursen.
+Om du inte redan har gjort det hämtar du WKND-appens källkod från Github.com och växlar grenen som innehåller ändringarna till SPA som utfördes i kursen.
 
 ```
 $ mkdir -p ~/Code/wknd-app
