@@ -11,7 +11,7 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -155,7 +155,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
 
 1. Öppna modulen `core` på `aem-guides-wknd-spa.react/core` i den IDE du väljer.
 1. Skapa en fil med namnet `OpenWeatherModel.java` på `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
-1. Fyll i `OpenWeather.java` med följande:
+1. Fyll i `OpenWeatherModel.java` med följande:
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
