@@ -4,10 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
-translation-type: tm+mt
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '265'
 ht-degree: 7%
 
 ---
@@ -64,7 +63,7 @@ ht-degree: 7%
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
    + [Publicera resurser](./sharing/publish.md)
-   + [Varumärkesportal](./sharing/brand-portal.md)
+   + [Brand Portal](./sharing/brand-portal.md)
    + Resursresurs{#assets-share}
       + [Kommandon för resursdelning](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Konfigurera resursdelningskommentarer på lokala AEM](./sharing/asset-share-commons-technical-video-setup.md)
@@ -87,6 +86,9 @@ ht-degree: 7%
    + [Montera länkad](./adobe-asset-link/place-linked.md)
    + [Endast för placering (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Resurssökning](./adobe-asset-link/asset-search.md)
+
++ Automatisering av innehåll{#content-automation}
+   + [Översikt](./content-automation/overview.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media - översikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
