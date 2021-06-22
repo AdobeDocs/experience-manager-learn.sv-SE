@@ -10,8 +10,7 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '3299'
 ht-degree: 0%
@@ -88,7 +87,7 @@ Klientbibliotek har vissa begränsningar. Det viktigaste är ett begränsat stö
 
 Distribuera startkodsbasen till en lokal AEM och navigera till [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). Den här sidan är för närvarande inte formaterad. Vi kommer sedan att implementera bibliotek på klientsidan för WKND-varumärket för att lägga till CSS och Javascript på sidan.
 
-## Biblioteksorganisation för klientsidan {#organization}
+## Biblioteksorganisation på klientsidan {#organization}
 
 Därefter ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
 
@@ -131,7 +130,8 @@ Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för s
 
    `main.scss` är startpunkten till alla Sass-filer i  `ui.frontend` modulen. Den kommer att innehålla filen `_variables.scss`, som innehåller en serie varumärkesvariabler som ska användas i olika Sass-filer i projektet. Filen `_base.scss` ingår också och definierar vissa grundläggande format för HTML-element. Ett reguljärt uttryck innehåller alla format för enskilda komponentformat under `src/main/webpack/components`. Ett annat reguljärt uttryck innehåller alla filer under `src/main/webpack/site/styles`.
 
-1. Inspect filen `main.ts`. `main.ts` innehåller  `main.scss` och innehåller ett reguljärt uttryck för att samla in  `.js` eller  `.ts` filer i projektet. Den här startpunkten används av [webbpaketets konfigurationsfiler](https://webpack.js.org/configuration/) som startpunkt för hela `ui.frontend`-modulen.
+1. 
+   1. Inspect filen `main.ts`. Den innehåller `main.scss` och ett reguljärt uttryck för att samla in alla `.js`- eller `.ts`-filer i projektet. Den här startpunkten används av [webbpaketets konfigurationsfiler](https://webpack.js.org/configuration/) som startpunkt för hela `ui.frontend`-modulen.
 
 1. Inspect filerna under `src/main/webpack/site/styles`:
 
@@ -202,7 +202,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
    >
    >Det finns också en `npm run prod`-profil som miniatyrerna för JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
-1. Inspect filen `site.css` under `ui.frontend/dist/clientlib-site/css/site.css`. Detta är den kompilerade CSS-koden som baseras på Sass-källfilerna.
+1. Inspect filen `site.css` under `ui.frontend/dist/clientlib-site/site.css`. Detta är den kompilerade CSS-koden som baseras på Sass-källfilerna.
 
    ![Distribuerad plats-css](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
@@ -224,7 +224,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
 
    ![Uppdaterade basformat för artikeln](assets/client-side-libraries/updated-base-styles.png)
 
-   Du bör nu se de uppdaterade formaten för artikeln. Du kan behöva göra en hård uppdatering för att rensa alla CSS-filer som cachelagrats av webbläsaren.
+   Du bör nu se de uppdaterade formaten för artikeln. Du kan behöva göra en hård uppdatering för att rensa alla CSS-filer som har cachelagrats i webbläsaren.
 
    Det börjar se mycket närmare på mockonerna!
 
