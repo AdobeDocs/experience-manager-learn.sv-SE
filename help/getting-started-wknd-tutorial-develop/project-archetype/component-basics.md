@@ -11,8 +11,7 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 0%
@@ -30,7 +29,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 Den IDE som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync).
 
-## Mål {#objective}
+## Syfte {#objective}
 
 1. Lär dig vilken roll HTML-mallar och Sling-modeller har för att dynamiskt återge HTML.
 1. Förstå hur dialogrutor används för att underlätta framtagning av innehåll.
@@ -329,7 +328,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
    helloworld.js
    ```
 
-1. Uppdatera `clientlib-helloworld/.conten.xml`-filen så att den innehåller följande egenskaper:
+1. Uppdatera `clientlib-helloworld/.content.xml`-filen så att den innehåller följande egenskaper:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
