@@ -1,0 +1,648 @@
+{
+	"info": {
+		"_postman_id": "213b4709-5a66-4825-9f76-4de50e647637",
+		"name": "AEM Headless Video Series",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphQL Endpoints",
+			"item": [
+				{
+					"name": "WKND Site Endpoint",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{ \n    adventureList { \n        items { \n          _path\n          adventureTitle \n        } \n    } \n} ",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/content/cq:graphql/wknd/endpoint.json",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"content",
+								"cq:graphql",
+								"wknd",
+								"endpoint.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WKND Dining Endpoint",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{ \n    restaurantList { \n        items { \n          _path\n          restaurantTitle \n        } \n    } \n} ",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/content/cq:graphql/wknd-dining/endpoint.json",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"content",
+								"cq:graphql",
+								"wknd-dining",
+								"endpoint.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Global Endpoint",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{ \n    restaurantList { \n        items { \n          _path\n          restaurantTitle \n        } \n    } \n    adventureList { \n        items { \n          _path\n          adventureTitle \n        } \n    } \n} ",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/content/cq:graphql/global/endpoint.json",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"content",
+								"cq:graphql",
+								"global",
+								"endpoint.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Persisted Queries",
+			"item": [
+				{
+					"name": "Create Persisted Query",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  adventureList {\n    items {\n      _path\n      adventureTitle\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Persisted Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  adventureList {\n    items {\n      _path\n      adventureTitle\n      adventureDescription {\n          html\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute Persisted Query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/execute.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"execute.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Persisted Query",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Persisted Query with caching",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"query\": \"{ adventureList { items {_path adventureTitle adventureDescription { html  } } } }\" , \n    \"cache-control\": { \"max-age\": 300 }\n}\n"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Persisted Query with caching",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"query\": \"{ adventureList { items {_path adventureTitle adventureDescription { html  } } } }\" , \n    \"cache-control\": { \"max-age\": 600 }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partial Update Persisted Query with caching",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"cache-control\": { \"max-age\": 300 }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Persisted Query with caching Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_LIST_ADVENTURES_WITH_CACHE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Persisted Query with parameters",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "query findAdventureByPath($apath: String!) {\n  adventureByPath(_path: $apath) {\n    item {\n      _path\n      adventureTitle\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Persisted Query with parameters",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "query findAdventureByPath($apath: String!) {\n  adventureByPath(_path: $apath) {\n    item {\n      _path\n      adventureTitle\n      adventureDescription {\n          html\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute Persisted Query with parameters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/execute.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}%3bapath%3d%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"execute.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}%3bapath%3d%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Persisted Query with parameters and conditional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "query findAdventureByPath($apath: String!,  $withDescription: Boolean = true) {\n  adventureByPath(_path: $apath) {\n    item {\n      _path\n      adventureTitle\n      adventureDescription  @include(if: $withDescription) {\n          html\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute Persisted Query with two parameters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/execute.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}%3bapath%3d%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp%3bwithDescription%3dfalse",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"execute.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}%3bapath%3d%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp%3bwithDescription%3dfalse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Persisted Query with parameters Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}",
+							"protocol": "{{AEM_SCHEME}}",
+							"host": [
+								"{{AEM_HOST}}"
+							],
+							"path": [
+								"graphql",
+								"persist.json",
+								"{{AEM_PROJECT}}",
+								"{{AEM_PQ_FIND_ADVENTURE_BY_PATH}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author Publish Architecture",
+			"item": [
+				{
+					"name": "GraphQL Query Publish Validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  adventureByPath ( _path: \"/content/dam/wknd/en/adventures/tahoe-skiing/tahoe-skiing\" ) {\n    item {\n      _path\n      relatedArticles {\n        markdown\n      }\n      contributors {\n      \t... on ContributorModel {\n          _path\n          fullName\n          biography {\n            markdown\n          }\n        }  \n      }\n    }\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://publish-p29702-e109852.adobeaemcloud.com/content/_cq_graphql/global/endpoint.json",
+							"protocol": "https",
+							"host": [
+								"publish-p29702-e109852",
+								"adobeaemcloud",
+								"com"
+							],
+							"path": [
+								"content",
+								"_cq_graphql",
+								"global",
+								"endpoint.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AEM_AUTH_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AEM_AUTH_TOKEN",
+			"value": "changeme"
+		},
+		{
+			"key": "AEM_HOST",
+			"value": "localhost:4502"
+		},
+		{
+			"key": "AEM_SCHEME",
+			"value": "http"
+		},
+		{
+			"key": "AEM_PROJECT",
+			"value": "wknd"
+		},
+		{
+			"key": "AEM_PQ_LIST_ADVENTURES",
+			"value": "list-adventures"
+		},
+		{
+			"key": "AEM_PQ_LIST_ADVENTURES_WITH_CACHE",
+			"value": "list-adventures-cache"
+		},
+		{
+			"key": "AEM_PQ_FIND_ADVENTURE_BY_PATH",
+			"value": "find-adventure-by-path"
+		},
+		{
+			"key": "AEM_PUB_AUTH_TOKEN",
+			"value": ""
+		}
+	]
+}
