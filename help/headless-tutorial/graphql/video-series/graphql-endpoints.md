@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
-source-git-commit: bfca379bf2722dc1658400f375e65d2943f27ed7
+source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---
@@ -28,3 +28,5 @@ I den här videon kommer du att:
 + Förstå hur man publicerar och skyddar GraphQL-slutpunkter
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339/?quality=12&learn=on)
+
+_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
