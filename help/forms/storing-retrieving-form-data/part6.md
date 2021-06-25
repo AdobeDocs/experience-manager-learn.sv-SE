@@ -1,20 +1,15 @@
 ---
 title: Lagra och hämta formulärdata från MySQL-databasen
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.3,6.4,6.5
-topic: Development
+feature: Adaptiv Forms
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.3,6.4,6.5
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 1%
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
@@ -40,11 +35,10 @@ Så här testar du den här funktionen på din AEM Forms-instans:
 * Logga in på [configMgr.](http://localhost:4502/system/console/configMgr) Sök efter &quot;Apache Sling Connection Pooled DataSource. Skapa en ny post för den grupperade datakällan för Apache Sling-anslutningen med namnet **SaveAndContinue** med följande egenskaper:
 
 | Egenskapsnamn | Värde |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Namn på datakälla | SparaOchFortsätt |
 | JDBC-drivrutinsklass | com.mysql.cj.jdbc.Driver |
 | JDBC-anslutnings-URI | jdbc:mysql://localhost:3306/aemformstutorial |
-
 
 * Öppna [det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
 * Fyll i viss information och klicka på knappen &quot;Spara och fortsätt senare&quot;.
