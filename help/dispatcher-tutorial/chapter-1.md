@@ -2,13 +2,12 @@
 title: '"Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"'
 description: I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
 feature: Dispatcher
-topic: Architecture
+topic: Arkitektur
 role: Architect
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67e55e92cf95e03388ab3de49eff5a80786fb3a7
 workflow-type: tm+mt
-source-wordcount: '17489'
+source-wordcount: '17487'
 ht-degree: 0%
 
 ---
@@ -685,8 +684,10 @@ På så sätt kan din anpassade Dispatcher Flushing-agent enkelt skicka och ogil
 
 Faktiskt så spelar det ingen roll vilken sökväg du ber Dispatcher att ogiltigförklara - så länge den befinner sig på samma plats, i samma &quot;underträd&quot;. Du behöver inte ens använda en riktig resurssökväg. Det kan även vara&quot;virtuellt&quot;:
 
-`GET /dispatcher-invalidate
-Invalidate-path /content/mysite/dummy`
+```
+GET /dispatcher-invalidate
+Invalidate-path /content/mysite/dummy
+```
 
 ![](assets/chapter-1/resource-path.png)
 
@@ -909,8 +910,10 @@ Detta gör att cacheminnet kringgås och inläsning skapas i publiceringssysteme
 
 Att minska antalet väljare var en bra början. Som tumregel bör du alltid begränsa antalet giltiga parametrar till ett absolut minimum. Om du gör detta smart kan du även använda en brandvägg för webbaserade program utanför AEM med en statisk uppsättning filter utan djupa kunskaper om det underliggande AEM för att skydda dina system:
 
-`Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
-\.respi\.q-(20|40|60|80|100)\.jpg`
+```
+Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
+       \.respi\.q-(20|40|60|80|100)\.jpg
+```
 
 Om du inte har någon brandvägg för webbprogram måste du filtrera i Dispatcher eller i AEM. Om du gör det i AEM, vänligen kontrollera att
 
@@ -1162,7 +1165,7 @@ Den bästa lösningen är naturligtvis att göra alla webbplatsers rötter lika 
 
 Vilken är den rätta nivån nu? Det beror på hur många beroenden du har mellan platserna. Inklusioner som du löser för återgivning av en sida betraktas som&quot;beroende&quot;. Vi demonstrerade en sådan _inkludering_ när vi introducerade komponenten _Teaser_ i början av den här guiden.
 
-__ Hyperlänkar är en mjukare form av beroenden. Det är mycket troligt att du kommer att hyperlänka inom en webbplats.. och det är inte osannolikt att du har länkar mellan dina webbplatser. Enkla hyperlänkar skapar vanligtvis inte beroenden mellan webbplatser. Tänk bara på en extern länk som du länkar från sajten till Facebook... Du behöver inte återge sidan om något ändras i Facebook och vice versa, eller hur?
+__ Hyperlänkar är en mjukare form av beroenden. Det är mycket troligt att du kommer att hyperlänka inom en webbplats.. och det är inte osannolikt att du har länkar mellan dina webbplatser. Enkla hyperlänkar skapar vanligtvis inte beroenden mellan webbplatser. Tänk bara på en extern länk som du länkar från din webbplats till facebook... Du behöver inte återge din sida om något ändras på facebook och vice versa, eller hur?
 
 Ett beroende inträffar när du läser innehåll från den länkade resursen (t.ex. navigeringstiteln). Sådana beroenden kan undvikas om du bara förlitar dig på lokalt angivna navigeringsrubriker och inte ritar dem från målsidan (som med externa länkar).
 
