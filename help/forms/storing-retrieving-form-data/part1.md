@@ -1,19 +1,14 @@
 ---
 title: Lagra och hämta formulärdata från MySQL-databasen
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+feature: Adaptiv Forms
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
@@ -36,9 +31,7 @@ SQL-filen som schemat ska skapas från kan [hämtas här](assets/form-data-db.sq
 >Ange ett namn för datakällan **SaveAndContinue**. Exempelkoden använder namnet för att ansluta till databasen.
 
 | Egenskapsnamn | Värde |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Namn på datakälla | SparaOchFortsätt |
 | JDBC-drivrutinsklass | com.mysql.cj.jdbc.Driver |
 | JDBC-anslutnings-URI | jdbc:mysql://localhost:3306/aemformstutorial |
-
-
