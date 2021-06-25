@@ -1,21 +1,16 @@
 ---
 title: Skapa det första formuläret för att utlösa processen
 description: Skapa ett första formulär som utlöser e-postmeddelandet för att starta signeringsprocessen.
-feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+feature: Adaptiv Forms
 version: 6.4,6.5
-kt: 6892
-thumbnail: 6892.jpg
-topic: Development
+topic: Utveckling
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6892
+thumbnail: 6892.jpg
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '171'
 ht-degree: 4%
 
 ---
@@ -25,17 +20,13 @@ ht-degree: 4%
 
 Det initiala formuläret (Omfinansieringsformulär) används för att signera flera formulär genom att utlösa AEM **Signera flera Forms**. Du kan ange valfria värden men se till att följande fält läggs till i formuläret.
 
-
-
 | Fälttyp | Namn | Syfte | Dold | Standardvärde |
-------------------------|---------------------------------------|--------------------|--------|-----------------
+| ------------------------|---------------------------------------|--------------------|--------|----------------- |
 | TextField | signerad | Ange signeringsstatus | J | N |
 | TextField | guid | Identifiera formulär unikt | J | 3889 |
 | TextField | customerName | Hämta kundnamn | N |
 | TextField | customerEmail | E-post till kund som skickar meddelande | N |
 | CheckBox | formsToSign | Objekten identifierar formulären i paketet | N |
-
-
 
 Det inledande formuläret måste konfigureras för att utlösa ett AEM som heter **signmultipleforms**
 Kontrollera att sökvägen till datafilen är **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
