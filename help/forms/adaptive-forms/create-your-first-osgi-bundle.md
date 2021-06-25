@@ -1,20 +1,19 @@
 ---
 title: Skapa ditt första OSGi-paket med AEM formulär
 description: Bygg ditt första OSGi-paket med maven och eclipse
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3a9778c97d57e55e3da740b492472456768fb32c
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 1%
+source-wordcount: '833'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +77,7 @@ Så här skapar du ditt första maven-projekt:
 Maskprojektet genereras interaktivt och du ombeds ange värden för ett antal egenskaper, som
 
 | Egenskapsnamn | Signifikans | Värde |
-------------------------|---------------------------------------|---------------------
+|------------------------|---------------------------------------|---------------------|
 | groupId | groupId identifierar projektet unikt i alla projekt | com.learningaemforms.adobe |
 | appsFolderName | Namnet på mappen som ska innehålla projektstrukturen | inlärningsaemforms |
 | artifactId | artifactId är namnet på behållaren utan version. Om du skapade den kan du välja vilket namn du vill med gemener och inga märkliga symboler. | inlärningsaemforms |
