@@ -4,18 +4,17 @@ description: AEM Service Credentials används för att underlätta för externa 
 version: cloud-service
 doc-type: tutorial
 topics: Development, Security
-feature: APIs
+feature: API:er
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: Headless, Integrations
+topic: Headless, integreringar
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -173,7 +172,7 @@ Exempelprogrammet är Node.js-baserat, så det är bäst att använda [@adobe/jw
 
    Beroende på vilken JSON-fil (Local Development Access Token JSON eller Service Credentials JSON) som skickas via kommandoradsparametern `file`, kommer programmet att erhålla en åtkomsttoken.
 
-   Kom ihåg att även om inloggningsuppgifterna inte upphör att gälla så måste JWT och motsvarande åtkomsttoken uppdateras innan de går ut. Detta kan du göra genom att använda en `refresh_token` [som tillhandahålls av Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
+   Kom ihåg att medan tjänstens autentiseringsuppgifter upphör att gälla var 365:e dag, upphör JWT och motsvarande åtkomsttoken att gälla ofta och måste uppdateras innan de går ut. Detta kan du göra genom att använda en `refresh_token` [som tillhandahålls av Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
 
 1. När dessa ändringar är på plats och JSON för tjänstreferenser har hämtats från AEM Developer Console (och för enkelhetens skull, sparats som `service_token.json` samma mapp som denna `index.js`) kör du programmet som ersätter kommandoradsparametern `file` med `service_token.json` och uppdaterar `propertyValue` till ett nytt värde så att effekterna syns i AEM.
 
