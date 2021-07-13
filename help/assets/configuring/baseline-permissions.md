@@ -2,17 +2,16 @@
 title: Baslinjebehörigheter
 description: Hantering av användaråtkomst i resursmappar är en viktig aspekt när det gäller styrning och säkerställer att processerna stöds på rätt sätt.
 sub-product: resurser
-feature: Asset Management
+feature: Resurshantering
 version: cloud-service
 kt: 4870
 thumbnail: 37696.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '56'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
