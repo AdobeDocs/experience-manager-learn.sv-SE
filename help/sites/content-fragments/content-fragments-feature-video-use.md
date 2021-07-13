@@ -2,19 +2,18 @@
 title: Skapa innehållsfragment i AEM
 description: 'Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder. '
 sub-product: content-services
-feature: Content Fragments
+feature: Innehållsfragment
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 3%
 
 ---
@@ -50,7 +49,7 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 *Exempel på sportbiografi för import:*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
-## Hämtar innehållsfragment {#downloading-content-fragments}
+## Hämta innehållsfragment {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
 
