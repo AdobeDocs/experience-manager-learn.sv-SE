@@ -2,16 +2,15 @@
 title: Använda Cascading Metadata i AEM Assets
 description: Med avancerad metadatahantering kan användare skapa överlappande fältregler för att skapa sammanhangsberoende relationer mellan metadata i AEM Assets. I videon nedan visas nya dynamiska regler för fältkrav, synlighet och sammanhangsberoende val. I videon finns även information om de steg som en administratör behöver för att tillämpa dessa regler på ett anpassat metadataschema.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Content Management
+topic: Innehållshantering
 feature: Metadata
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
-translation-type: tm+mt
-source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
