@@ -1,20 +1,19 @@
 ---
 title: Konfigurera konverterad adaptiv form
 description: Konfigurera konverterad adaptiv form
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39574.jpg
 kt: 6126
-topic: Development
-role: Business Practitioner
+topic: Utveckling
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '77'
 ht-degree: 1%
 
 ---
