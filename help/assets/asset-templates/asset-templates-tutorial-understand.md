@@ -3,9 +3,9 @@ title: 'Om InDesign-filer och resursmallar i AEM Assets '
 description: I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-fil och alla tillhörande överväganden som du kan använda i funktionen Resursmallar för AEM Resurser.
 version: 6.3, 6.4, 6.5
 topic: Innehållshantering
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-fil och alla tillhörande överväganden som du kan använda i funktionen Resursmallar för AEM Resurser.
 
-## Skapar InDesign-mallfilen {#constructing-the-indesign-template-file}
+## Skapa mallfilen InDesign {#constructing-the-indesign-template-file}
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
