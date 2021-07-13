@@ -7,19 +7,18 @@ doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
 
 
-# Ange mappstruktur och namngivningskonvention {#folder-structure-filenaming}
+# Ange mappstruktur och namngivningskonvention för filer {#folder-structure-filenaming}
 
 Innan du börjar ladda upp allt ditt innehåll är det klokt att fundera över mappstrukturen du ska använda och i synnerhet namnkonventionen. Det sparar antagligen tid och du behöver göra om uppgifter senare. Det är bäst att samordna dessa beslut i alla grupper.
 
