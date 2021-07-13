@@ -8,19 +8,18 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4630
 thumbnail: 32151.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
 
 
-# Skapar sidversioner {#creating-page-versions-aem-sites}
+# Skapa sidversioner {#creating-page-versions-aem-sites}
 
 Sidversionshantering hjälper innehållsförfattare att spåra ändringar som är kopplade till en sida genom att skapa en sidversion och ger möjlighet att förhandsgranska en version, återställa en version och jämföra en version med den aktuella versionen av en sida.
 
