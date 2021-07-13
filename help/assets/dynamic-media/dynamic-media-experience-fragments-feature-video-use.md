@@ -4,13 +4,12 @@ description: AEM Assets Dynamic Media integrerar aktiveringspunkter för resurse
 sub-product: dynamiska medier, innehållstjänster
 feature: Experience Fragments
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '155'
 ht-degree: 1%
 
 ---
