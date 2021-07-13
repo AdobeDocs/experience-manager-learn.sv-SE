@@ -6,14 +6,13 @@ audience: all
 doc-type: feature video
 version: 6.3, 6.4, 6.5
 activity: use
-feature: Core Components
-topic: Content Management
-role: Business Practitioner
+feature: Kärnkomponenter
+topic: Innehållshantering
+role: User
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '171'
 ht-degree: 1%
 
 ---
