@@ -9,10 +9,9 @@ version: 6.4,6.5
 kt: 4419
 thumbnail: 36387.jpg
 topic: utveckling
-role: Business Practitioner
+role: User
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
