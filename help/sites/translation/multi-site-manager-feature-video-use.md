@@ -11,13 +11,12 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: Localization
-role: Business Practitioner
+topic: Lokalisering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '169'
 ht-degree: 1%
 
 ---
@@ -27,7 +26,7 @@ ht-degree: 1%
 
 [!UICONTROL Live Copy Overview] och  [!UICONTROL Blueprint Configuration Manager] är AEM Author-gränssnitt för arbete med Multi Site Manager-funktionen i Adobe Experience Manager Sites.
 
-## Live Copy-översikt {#live-copy-overview}
+## Live Copy - översikt {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
 
