@@ -2,21 +2,20 @@
 title: Använda Smart Crop med AEM Assets Dynamic Media
 description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
 sub-product: dynamiska medier
-feature: Smart Crop, Image Profiles
+feature: Smart beskärning, bildprofiler
 version: 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# Använda smart beskärning med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# Använda Smart Crop med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
 Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
 
