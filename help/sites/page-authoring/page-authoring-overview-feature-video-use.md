@@ -3,7 +3,7 @@ title: Skapa en sida i AEM Sites
 seo-title: I följande videofilm visas hur du skapar en ny sida i Adobe Experience Manager Sites med hjälp av användargränssnittet i Site Editor
 description: I följande videofilm visas hur du skapar en ny sida i Adobe Experience Manager Sites med hjälp av användargränssnittet i Site Editor
 seo-description: I följande videofilm visas hur du skapar en ny sida i Adobe Experience Manager Sites med hjälp av användargränssnittet i Site Editor
-feature: Page Editor, Editable Templates
+feature: sidredigeraren, redigerbara mallar
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,14 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 5%
+source-wordcount: '182'
+ht-degree: 6%
 
 ---
 
