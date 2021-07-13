@@ -2,21 +2,20 @@
 title: Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch
 description: Med Dynamic Media Viewers-tillägget för Adobe Launch, tillsammans med versionen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i sin Adobe Launch-konfiguration.
 sub-product: Dynamic Media
-feature: Asset Insights
+feature: 'Asset Insights '
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '364'
 ht-degree: 4%
 
 ---
 
 
-# Använda Dynamic Media-visningsprogram med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen av Dynamic Media Viewer på din webbplats med Dynamic Media Viewer Extension.
 
