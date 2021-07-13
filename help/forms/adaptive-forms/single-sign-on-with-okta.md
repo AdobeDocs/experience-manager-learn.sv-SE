@@ -1,19 +1,18 @@
 ---
 title: Konfigurera OKTA med AEM
 description: Förstå olika konfigurationsinställningar för att använda enkel inloggning med okta
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: development, authentication, security
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.5
 topic: Administration
-role: Administrator
+role: Admin
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -71,7 +70,7 @@ Följande nyckelegenskaper måste anges:
 * **Skapa CRX-användare** automatiskt:true
 * **Lägg till i grupper**:true
 * **Standardgrupper**:oktausers(Detta är den grupp som användarna ska läggas till i. Du kan ange en befintlig grupp i AEM)
-* **NamedIDPolicy**: Anger begränsningar för den namnidentifierare som ska användas för att representera det begärda ämnet. Kopiera och klistra in följande markerade sträng **urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress**
+* **NamedIDPolicy**: Anger begränsningar för den namnidentifierare som ska användas för att representera det begärda ämnet. Kopiera och klistra in följande markerade sträng **urn:oasis:namn:tc:SAML:2.0:nameidformat:emailAddress**
 * **Synkroniserade attribut**  - Dessa attribut lagras från SAML-försäkran i AEM profil
 
 ![saml-authentication-handler](assets/saml-authentication-settings-blurred.PNG)
