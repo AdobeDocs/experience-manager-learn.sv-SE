@@ -2,19 +2,18 @@
 title: Förstå innehållsfragment och upplevelsefragment
 description: Adobe Experience Manager Content Fragments och Experience Fragments kan se likadana ut på ytan, men de spelar en viktig roll i olika fall. Lär dig hur innehålls- och upplevelsefragment liknar varandra, skiljer sig åt och när och hur du använder varje fragment.
 sub-product: resurser, webbplatser, innehållstjänster
-feature: Content Fragments, Experience Fragments
+feature: Innehållsfragment, Upplevelsefragment
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1004'
 ht-degree: 0%
 
 ---
