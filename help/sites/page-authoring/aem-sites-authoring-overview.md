@@ -3,7 +3,7 @@ title: Översikt över redigering i AEM Sites
 seo-title: Översikt över redigering i AEM Sites
 description: I följande video visas en översikt över grundläggande redigeringsbegrepp i en AEM författarmiljö. Den använder platskonsolen som grund.
 seo-description: I följande video visas en översikt över grundläggande redigeringsbegrepp i en AEM författarmiljö. Den använder platskonsolen som grund.
-feature: Page Editor, Editable Templates
+feature: sidredigeraren, redigerbara mallar
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,13 +11,12 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4242
 thumbnail: 33594.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '121'
 ht-degree: 1%
 
 ---
