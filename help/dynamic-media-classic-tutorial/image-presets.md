@@ -2,18 +2,17 @@
 title: Bildförinställningar
 description: Bildförinställningar i Dynamic Media Classic innehåller alla inställningar som behövs för att skapa en bild med en viss storlek, format, kvalitet och skärpa. Bildförinställningar är en nyckelkomponent för dynamisk storleksändring. När du tittar på en URL i Dynamic Media Classic kan du enkelt se om en bildförinställning används. Lär dig mer om bildförinställningar, varför de är så användbara och hur du skapar en.
 sub-product: dynamiska medier
-feature: Dynamic Media Classic, Image Presets
+feature: Dynamic Media Classic, bildförinställningar
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
