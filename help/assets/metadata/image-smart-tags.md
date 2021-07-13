@@ -1,18 +1,17 @@
 ---
 title: Smarta taggar för bilder med AEM Assets
 description: Smarta taggar för bilder ökar AEM sökfunktioner genom att automatiskt och intelligent lägga till metadatataggar till bildresurser baserat på bildens innehåll.
-topic: Content Management
-feature: Smart Tags
-role: Business Practitioner
+topic: Innehållshantering
+feature: Smarta taggar
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 645
 thumbnail: 17019.jpg
-translation-type: tm+mt
-source-git-commit: a5fb96275194ddc46169832c0fb79a2587833564
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 29%
+source-wordcount: '222'
+ht-degree: 30%
 
 ---
 
