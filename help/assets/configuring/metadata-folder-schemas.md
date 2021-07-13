@@ -6,13 +6,12 @@ feature: Metadata
 version: cloud-service
 kt: 4983
 thumbnail: 34071.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
