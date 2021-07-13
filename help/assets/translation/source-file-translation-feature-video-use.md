@@ -2,13 +2,12 @@
 title: Använda källfilsöversättning med AEM Assets
 description: Med Adobe Experience Manager (AEM) Assets kan du identifiera resurser som delar gemensamma attribut och markera dem som relaterade med den nya funktionen Relaterade resurser. Det gör det även möjligt för användare att definiera en källa/härledd relation mellan resurser, vilket gör det enkelt för användarna att identifiera ursprunget för en resurs. När du kör ett översättningsarbetsflöde på en härledd resurs hämtas alla resurser som källfilen refererar till och inkluderas för översättning, vilket minskar arbetet med att underhålla flera platser.
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 Med Adobe Experience Manager (AEM) Assets kan du identifiera resurser som delar gemensamma attribut och markera dem som relaterade med den nya funktionen Relaterade resurser. Det gör det även möjligt för användare att definiera en källa/härledd relation mellan resurser, vilket gör det enkelt för användarna att identifiera ursprunget för en resurs. När du kör ett översättningsarbetsflöde på en härledd resurs hämtas alla resurser som källfilen refererar till och inkluderas för översättning, vilket minskar arbetet med att underhålla flera platser.
 
-## Filhantering för multisiteresurskälla {#multisite-asset-source-file-management}
+## Filhantering för flera resurser {#multisite-asset-source-file-management}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
 
