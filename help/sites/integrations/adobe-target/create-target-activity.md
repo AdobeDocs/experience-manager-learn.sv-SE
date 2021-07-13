@@ -9,13 +9,12 @@ activity: use
 version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
-topic: Integrations
-role: Business Practitioner
+topic: Integreringar
+role: User
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '121'
 ht-degree: 3%
 
 ---
