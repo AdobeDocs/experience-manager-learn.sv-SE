@@ -11,13 +11,12 @@ version: 6.3, 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '153'
 ht-degree: 1%
 
 ---
