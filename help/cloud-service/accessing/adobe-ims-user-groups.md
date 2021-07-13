@@ -1,7 +1,7 @@
 ---
 title: Användargrupper och AEM för Adobe IMS
 description:  Adobe IMS-användargrupper skapar logiska uppsättningar av användare som exponeras för AEM, där de kan användas för att definiera finjusteringsbehörigheter för AEM.
-feature: Users and Groups
+feature: 'Användare och grupper '
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,13 +9,12 @@ audience: administrator
 doc-type: feature video
 kt: 4999
 thumbnail: 39150.jpg
-topic: Administration, Security
-role: Administrator
+topic: Administration, säkerhet
+role: Admin
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '99'
+source-wordcount: '97'
 ht-degree: 3%
 
 ---
