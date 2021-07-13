@@ -7,13 +7,12 @@ doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2670'
 ht-degree: 0%
 
 ---
@@ -154,7 +153,7 @@ Här är arbetsflödet för att skapa mål i Dynamic Media Classic.
    - Målstorleken bestäms av visningsstorleken i visningsförinställningen. Detta avgör storleken på den huvudsakliga zoombilden. Se _Ange visningsstorlek_ nedan.
 
 4. Målet som du just skapade blir blått och till höger visas en miniatyrversion av målet samt standardnamnet&quot;target-0&quot;.
-5. Om du vill byta namn på målet klickar du på dess miniatyrbild, skriver ett nytt **namn** och klickar på **Enter** eller **Tabb** - om du bara klickar på en annan plats sparas inte namnet.
+5. Om du vill byta namn på målet klickar du på dess miniatyrbild, skriver ett nytt **namn** och klickar på **Enter** eller **Tabb** - om du bara klickar på någon annan plats sparas inte namnet.
 6. När målet är markerat har rutan gröna streckade linjer runt sig och du kan ändra storlek på och flytta den. Dra i hörnen för att ändra storlek eller dra i målrutan för att flytta den.
 
    - Bilden läses in i standardvisningsprogrammet för anpassad zoomning. Kontrollera att visningsförinställningen har stöd för zoomningsmål. I allmänhet har alla standardförinställningar som har ordet&quot;-Guidad&quot; utformats för användning med zoommål. Om du vill använda målen håller du pekaren över målminiatyrbilden (eller hotspot-ikonen) för att visa etiketten och klickar på den för att se visningsprogrammet zooma in på den funktionen.
