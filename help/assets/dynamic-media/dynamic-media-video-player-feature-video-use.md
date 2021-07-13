@@ -2,15 +2,14 @@
 title: Använda videospelaren i AEM Dynamic Media
 description: AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apples leveransprotokoll för HTTP-direktuppspelning) kan innehållet nu direktuppspelas utan att förlita sig på flash.
 sub-product: dynamiska medier
-feature: Video Profiles
+feature: Videoprofiler
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -22,7 +21,7 @@ AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv v
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## Snabb sökning i icke-Flash-videospelaren {#quick-look-into-non-flash-video-player}
+## Snabb sökning i videospelare utan Flash {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
