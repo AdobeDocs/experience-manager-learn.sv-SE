@@ -11,19 +11,18 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4243
 thumbnail: 31785.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
 
-# Innehållsstruktur och hierarki {#content-hierarchy}
+# Innehållsstruktur och -hierarki {#content-hierarchy}
 
 Lär dig hur du skapar och organiserar organisationens webbsidor i AEM Sites.
 
