@@ -1,16 +1,15 @@
 ---
 title: Adobe IMS-produktprofiler och AEM
 description: Adobe IMS-produktprofiler ger användare rätt att logga in på en AEM Author-tjänst och ange en åtkomstnivå beroende på vilken produktprofil de är medlemmar i.
-feature: Users and Groups
+feature: 'Användare och grupper '
 kt: 5000
 thumbnail: 39156.jpg
-topic: Administration, Security
-role: Administrator
+topic: Administration, säkerhet
+role: Admin
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '153'
 ht-degree: 8%
 
 ---
