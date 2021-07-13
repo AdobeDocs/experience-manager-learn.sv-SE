@@ -7,19 +7,18 @@ doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '2737'
+source-wordcount: '2734'
 ht-degree: 0%
 
 ---
 
 
-# Dynamic Media Classic Main Workflow and Previewing Assets {#main-workflow}
+# Dynamic Media Classic - huvudarbetsflöde och förhandsgranskning av resurser {#main-workflow}
 
 Dynamic Media har stöd för arbetsflödena Skapa (och Överför), Författare (och Publicera) och Leverera. Du börjar med att ladda upp resurser, sedan göra något med dessa resurser, som att skapa en bilduppsättning och slutligen publicera för att göra dem levande. Steget Skapa är valfritt för vissa arbetsflöden. Om målet till exempel är att bara göra dynamiska storleksändringar och zooma in bilder eller konvertera och publicera video för direktuppspelning, finns det inga nödvändiga konstruktionssteg.
 
