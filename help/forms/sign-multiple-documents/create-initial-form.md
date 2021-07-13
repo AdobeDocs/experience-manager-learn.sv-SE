@@ -4,11 +4,11 @@ description: Skapa ett första formulär som utlöser e-postmeddelandet för att
 feature: Adaptiv Forms
 version: 6.4,6.5
 topic: Utveckling
-role: Business Practitioner
+role: User
 level: Intermediate
 kt: 6892
 thumbnail: 6892.jpg
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 4%
