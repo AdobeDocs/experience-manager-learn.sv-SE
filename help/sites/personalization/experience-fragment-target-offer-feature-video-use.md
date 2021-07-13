@@ -12,13 +12,12 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
-topic: Personalization
-role: Business Practitioner
+topic: Personanpassning
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -45,7 +44,7 @@ Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM o
 * För att skapa ett personaliserat erbjudande kan vi nu enkelt utnyttja innehåll som lagras i AEM.
 * Du kan skapa olika typer av Target-aktiviteter, bland annat Sensei-baserade aktiviteter som Automatisk allokering, Automatiskt mål och Automated Personalization
 
-## AEM 6.3 Feature Packs and Dependencies {#aem-feature-packs-and-dependencies}
+## AEM 6.3 - funktionspaket och beroenden {#aem-feature-packs-and-dependencies}
 
 | AEM 6.3 Feature Pack | Beroenden |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
