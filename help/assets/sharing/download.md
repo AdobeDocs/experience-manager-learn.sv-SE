@@ -2,17 +2,16 @@
 title: Hämta
 description: Lär dig hur du hämtar resurser och deras återgivningar till din lokala dator för användning och delning.
 sub-product: resurser
-feature: Asset Management
+feature: Resurshantering
 version: cloud-service
 kt: 4300
 thumbnail: 32194.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
