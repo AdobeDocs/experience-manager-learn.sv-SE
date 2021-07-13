@@ -1,17 +1,16 @@
 ---
 title: Använda Timewarp med AEM Sites
 description: Timewarp är en funktion i Adobe Experience Manager Sites som ger författare ett snabbt sätt att granska en sidas status vid en viss tidpunkt.
-topic: Content Management
-feature: Authoring
-role: Business Practitioner
+topic: Innehållshantering
+feature: Redigering
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 3307
 thumbnail: 17453.jpg
-translation-type: tm+mt
-source-git-commit: d1578e1c6fb6208f04953454354e1ed23566e450
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '83'
 ht-degree: 1%
 
 ---
