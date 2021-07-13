@@ -2,15 +2,14 @@
 title: Översikt över Dynamic Media med AEM Assets
 description: I den här videoserien får du en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
 sub-product: dynamiska medier
-feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
+feature: Smart beskärning, videoprofiler, bildprofiler, visningsförinställningar, 360 VR-video, bilduppsättningar, snurruppsättningar
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -95,7 +94,7 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 
 >[!NOTE]
 >
->Bildkvaliteten mäts i procent vid omvänd komprimering, där 100 % kvalitet är minst komprimerad vilket resulterar i bilder med hög kvalitet men relativt stora filstorlekar. JPEG-komprimering är ett förlustgivande komprimeringsschema där komprimeringsinställningarna bestämmer bildkvalitet och filstorlek.
+>Bildkvaliteten mäts i procent vid omvänd komprimering, där 100 % kvalitet är minst komprimerad vilket resulterar i bilder av hög kvalitet men relativt stora filstorlekar. JPEG-komprimering är ett förlustgivande komprimeringsschema där komprimeringsinställningarna bestämmer bildkvalitet och filstorlek.
 
 Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) för att förbättra sidans inläsningshastighet, med 2 kommandon för att justera jpeg-komprimeringsinställningarna. QLT definierar bildkvaliteten genom att justera kvalitetsinställningarna för jpeg-komprimering. Med kommandot JPEG-storlek kan du ange vilken filstorlek som ska uppnås med komprimering.
 
