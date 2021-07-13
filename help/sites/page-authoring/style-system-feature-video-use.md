@@ -3,7 +3,7 @@ title: Använda formatsystemet med AEM Sites
 seo-title: Använda Style System med Adobe Experience Manager, AEM Sites
 description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
 seo-description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
-feature: Style System
+feature: Formatsystem
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
@@ -11,13 +11,12 @@ activity: use
 version: cloud-service
 kt: 974
 thumbnail: 21750.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '260'
 ht-degree: 1%
 
 ---
