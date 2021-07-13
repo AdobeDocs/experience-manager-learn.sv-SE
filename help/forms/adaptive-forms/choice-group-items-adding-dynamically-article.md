@@ -3,19 +3,18 @@ title: Lägga till objekt i urvalsgruppskomponenten
 seo-title: Lägga till objekt i urvalsgruppskomponenten
 description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
 seo-description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Development
-role: Business Practitioner
+topic: Utveckling
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
