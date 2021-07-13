@@ -2,16 +2,15 @@
 title: Skapa arbetsflöden i AEM
 description: Arbetsflödet möjliggör hantering av affärsprocesser i Experience Manager och används för automatisk behandling av innehåll samt underlättar styrning och processer som kräver mänskligt beslutsfattande.
 version: 6.4, 6.5, cloud-service
-feature: Workflow
-topic: Content Management
+feature: Arbetsflöde
+topic: Innehållshantering
 level: Intermediate
-role: Administrator, Developer
+role: Admin, Developer
 kt: 657
 thumbnail: 22201.jpg
-translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '87'
 ht-degree: 1%
 
 ---
