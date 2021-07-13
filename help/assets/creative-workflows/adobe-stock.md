@@ -3,13 +3,12 @@ title: Använda Adobe Stock-resurser med AEM Assets
 description: 'AEM ger användarna möjlighet att söka, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM. '
 feature: Adobe Stock
 version: 6.4, 6.5
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -52,7 +51,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 ### Filter
 
 * En användare kan filtrera mediefiler baserat på tillgångstyp, orientering och liknande
-* Resurstypen innehåller foton, illustrationer, vektorer, videoklipp, mallar, 3D, Premium, redaktionellt
+* Resurstypen innehåller foton, illustrationer, vektorer, videor, mallar, 3D, Premium, redaktionellt
 * Orienteringen inkluderar Vågrät, Lodrät och Fyrkant.
 * Filtret Visa liknande kräver Adobe Stock-filnummer
 
