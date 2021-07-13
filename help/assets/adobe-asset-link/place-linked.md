@@ -5,19 +5,18 @@ sub-product: resurser
 feature: Adobe Asset Link
 version: cloud-service
 thumbnail: 34839.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Placera länkad{#place-linked}
+# Montera länkad{#place-linked}
 
 Lär dig hur du använder resurser från AEM Assets med åtgärden Montera länkad.
 
