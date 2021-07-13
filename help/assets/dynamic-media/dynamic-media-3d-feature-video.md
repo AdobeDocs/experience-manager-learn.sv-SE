@@ -5,9 +5,9 @@ feature: 3D-resurser
 version: 6.5
 kt: 5349
 topic: Innehållshantering
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: aac86e29887a6ad543c1ec696e4197514dda9fef
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
