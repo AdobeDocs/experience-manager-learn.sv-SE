@@ -3,20 +3,19 @@ title: Använda redigerbara sidmallar med AEM Sites
 seo-title: Använda redigerbara sidmallar med Adobe Experience Manager Sites
 description: Med redigerbara mallar kan man skapa och uppdatera sidmallar och hantera avancerade regelkonfigurationer med AEM Sites.
 seo-description: Med redigerbara mallar kan man skapa och uppdatera sidmallar och hantera avancerade regelkonfigurationer med Adobe Experience Manager Sites.
-feature: Editable Templates
+feature: Redigerbara mallar
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -34,7 +33,7 @@ Redigerbara mallar är en rekommendation att skapa nya AEM Sites.
 
 **Avancerade principkonfigurationer**  - Följande visar några avancerade principkonfigurationer som gjorts tillgängliga med redigerbara mallar:
 
-* **Layoutbehållare**  - möjlighet att konfigurera tillåtna komponenter, hantera dra och släpp-mappning av resurser och responsiva stödrasterkolumner.
+* **Layoutbehållare**  - möjlighet att konfigurera tillåtna komponenter, hantera dra och släpp-mappningen av resurser och responsiva stödrasterkolumner.
 * **Textkomponent**  - möjlighet att konfigurera plugin-program för RTF-redigerare med ett nytt användargränssnitt och återanvända RTE-profiler för alla mallar.
 * **Bildkomponent**  - möjlighet att aktivera/inaktivera funktioner som beskärning, överföring av filer till skrivbordet med ett nytt användargränssnitt och återanvända bildprofiler mellan mallar.
 
