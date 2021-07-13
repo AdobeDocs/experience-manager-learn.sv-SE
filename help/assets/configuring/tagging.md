@@ -2,17 +2,16 @@
 title: Taggar
 description: Taggar är ett viktigt verktyg för att hantera resurser i resursernas mapphierarki. Det är viktigt att skapa en taggningstaxonomi så att användare kan identifiera och ordna resurser och resurser i AEM.
 sub-product: resurser
-feature: Asset Management
+feature: Resurshantering
 version: cloud-service
 kt: 4871
 thumbnail: 34073.jpg
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '70'
+source-wordcount: '67'
 ht-degree: 2%
 
 ---
