@@ -7,13 +7,12 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
-topic: Upgrade
-role: Leader, Architect, Developer, Administrator, Business Practitioner
+topic: Uppgradera
+role: Leader, Architect, Developer, Admin, User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '3548'
+source-wordcount: '3541'
 ht-degree: 1%
 
 ---
@@ -764,7 +763,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Varumärkesportal</a>:SAAS-lösning för </strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Brand Portal</a>:SAAS-lösning för </strong>
             molntjänster för smidig delning och distribution av digitala resurser.</td>
             <td> </td>
             <td> </td>
