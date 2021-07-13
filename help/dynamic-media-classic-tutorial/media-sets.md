@@ -2,18 +2,17 @@
 title: Bild, Färgruta, Snurra och Blandade medieuppsättningar
 description: En av de mest användbara och kraftfulla funktionerna i Dynamic Media Classic är stödet för att skapa multimedieuppsättningar som Bild, Färgruta, Snurra och Blandade medieuppsättningar. Lär dig vad varje multimedieuppsättning är och hur du skapar varje typ i Dynamic Media Classic. Läs sedan mer om gruppuppsättningsförinställningar, som automatiserar processen för att skapa multimedieuppsättningar vid överföring.
 sub-product: dynamiska medier
-feature: Dynamic Media Classic, Image Sets, Mix Media Sets, Spin Sets
+feature: Dynamic Media Classic, bilduppsättningar, Mix Media Sets, Snurra uppsättningar
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
-topic: Content Management
-role: Business Practitioner
+topic: Innehållshantering
+role: User
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
