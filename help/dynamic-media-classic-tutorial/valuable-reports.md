@@ -7,19 +7,18 @@ doc-type: tutorial
 topics: development, authoring, configuring, reports
 audience: all
 activity: use
-topic: Content Management
-role: Administrator
+topic: Innehållshantering
+role: Admin
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
 
 
-# Värderbara rapporter för administratörer {#valuable-reports}
+# Värderingsbara rapporter för administratörer {#valuable-reports}
 
 I det sista kapitlet vill vi bara att du ska få veta mer om två värdefulla rapporter som du kan komma att konfigurera om du är administratör: rapporten Bandwidth &amp; Storage och rapporten Image Errors.
 
@@ -46,7 +45,7 @@ Vi hoppas att du har hittat innehållet i den här metodguiden som hjälper dig 
 Läs mer om Dynamic Media Classic här:
 
 - [Dynamic Media Classic på Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic i Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic på Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media Newsletter Subscription Page](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic-dokumentation](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
