@@ -1,17 +1,16 @@
 ---
 title: Resursrapporter i AEM Assets
 description: 'AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse. '
-feature: Asset Reports
+feature: Resursrapporter
 topic: Administration
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 648
 thumbnail: 22140.jpg
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
