@@ -11,16 +11,15 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-translation-type: tm+mt
-source-git-commit: 255d6bd403d240b2c18a0ca46c15b0bb98cf9593
+source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
 workflow-type: tm+mt
-source-wordcount: '3967'
+source-wordcount: '4108'
 ht-degree: 0%
 
 ---
 
 
-# Anpassad komponent {#custom-component}
+# Egen komponent {#custom-component}
 
 I den här självstudiekursen beskrivs hur du skapar en anpassad AEM Byline-komponent som visar innehåll som har skapats i en dialogruta och utforskar hur du utvecklar en Sling-modell för att kapsla in affärslogik som fyller komponentens HTML-kod.
 
@@ -79,7 +78,7 @@ Implementeringen av komponenten Byline innehåller en dialogruta som samlar in b
 * Bild
 * Yrken
 
-## Skapa en infallskomponent {#create-byline-component}
+## Skapa Byline-komponent {#create-byline-component}
 
 Skapa först nodstrukturen för Byline-komponenten och definiera en dialogruta. Detta representerar komponenten i AEM och definierar implicit komponentens resurstyp genom sin placering i JCR-läsaren.
 
@@ -205,7 +204,7 @@ Definiera sedan en dialogruta för den inbyggda komponenten med följande fält:
 
    ![slutförd dialogruta för byline](assets/custom-component/byline-dialog-created.png)
 
-### Skapa principdialogrutan {#create-the-policy-dialog}
+### Skapa dialogrutan Princip {#create-the-policy-dialog}
 
 På samma sätt som när du skapar en dialogruta skapar du en principdialogruta (tidigare kallad designdialogruta) som döljer oönskade fält i principkonfigurationen som ärvts från kärnkomponentens image-komponent.
 
@@ -290,7 +289,7 @@ På samma sätt som när du skapar en dialogruta skapar du en principdialogruta 
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-## Lägg till komponenten på en sida {#add-the-component-to-a-page}
+## Lägga till komponenten på en sida {#add-the-component-to-a-page}
 
 För att hålla saker enkla och fokuserade på AEM komponentutveckling lägger vi till komponenten Byline i det aktuella läget på en artikelsida för att verifiera att noddefinitionen `cq:Component` är distribuerad och korrekt, AEM känner igen den nya komponentdefinitionen och komponentens dialogruta fungerar för redigering.
 
@@ -346,13 +345,13 @@ Lägg sedan till komponenten Byline på en sida i AEM. Eftersom vi har lagt till
 
    ![bytegenskaper i CRXDE](assets/custom-component/byline-properties-crxde.png)
 
-## Skapa signaturbedömningsmodell {#create-sling-model}
+## Skapa Byline Sling Model {#create-sling-model}
 
 Sedan skapar vi en Sling-modell som fungerar som datamodell och lagrar affärslogiken för Byline-komponenten.
 
 Sling Models är anteckningsdrivna Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) som underlättar mappningen av data från JCR till Java-variabler och som ger ett antal andra instanser vid utveckling i AEM.
 
-### Granska Maven-beroenden {#maven-dependency}
+### Granska Maven Dependencies {#maven-dependency}
 
 Byline Sling Model förlitar sig på flera Java-API:er som tillhandahålls av AEM. Dessa API:er är tillgängliga via `dependencies` som anges i POM-filen för modulen `core`. Det projekt som används för den här självstudiekursen har skapats för AEM som Cloud Service. Men den är unik eftersom den är bakåtkompatibel med AEM 6.5/6.4. Därför ingår både beroenden för Cloud Service och AEM 6.x.
 
@@ -400,7 +399,7 @@ Byline Sling Model förlitar sig på flera Java-API:er som tillhandahålls av AE
 
    Senare i den här självstudiekursen använder vi klassen Core Component Image för att visa bilden i komponenten Byline. Det är nödvändigt att ha beroendet av kärnkomponenten för att kunna skapa och kompilera vår Sling-modell.
 
-### Gränssnitt {#byline-interface}
+### Byline-gränssnitt {#byline-interface}
 
 Skapa ett publikt Java-gränssnitt för Byline. `Byline.java` definierar de publika metoder som behövs för att köra  `byline.html` HTML-skriptet.
 
@@ -443,6 +442,19 @@ Skapa ett publikt Java-gränssnitt för Byline. `Byline.java` definierar de publ
    Metoden `isEmpty()` används för att avgöra om komponenten har något innehåll att återge eller om den väntar på att konfigureras.
 
    Observera att det inte finns någon metod för bilden. [vi ska ta en titt på varför det är senare](#tackling-the-image-problem).
+
+1. Java-paket som innehåller publika Java-klasser, i det här fallet en Sling-modell, måste versionshanteras med paketets `package-info.java`-fil.
+
+Eftersom WKND-källans Java-paket `com.adobe.aem.guides.wknd.core.models` deklarerar en version av `2.0.0`, och vi lägger till ett hårt offentligt gränssnitt och metoder, måste versionen ökas till `2.1.0`. Öppna filen på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` och uppdatera `@Version("2.0.0")` till `@Version("2.1.0")`.
+
+    &quot;
+    @Version(&quot;2.1.0&quot;)
+    package com.adobe.aem.guides.wknd.core.models;
+    
+    import org.osgi.annotation.versioning.Version;
+    &quot;
+
+När du ändrar filerna i det här paketet måste du justera [paketversionen semantiskt](https://semver.org/). Om inte, kommer Maven-projektets [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) att upptäcka en ogiltig paketversion och bryta den byggda. Som tur är rapporterar plugin-programmet Maven den ogiltiga versionen av Java-paketet samt versionen som det ska vara. `@Version("...")`-deklarationen i Java-paketets `package-info.java` har uppdaterats till den version som rekommenderas av plugin-programmet för att korrigeras.
 
 ### Byline-implementering {#byline-implementation}
 
@@ -603,7 +615,7 @@ public class BylineImpl implements Byline {
 ```
 
 
-#### Hanterar &quot;Bildproblem&quot; {#tackling-the-image-problem}
+#### Hantering av &quot;Bildproblem&quot; {#tackling-the-image-problem}
 
 Det är enkelt att kontrollera namn och villkor för yrket (och klassen Apache Commons Lang3 är alltid användbar [StringUtils](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html)), men det är oklart hur **förekomsten av bilden** kan valideras eftersom bildkomponenten Core Components Image används för att visa bilden.
 
@@ -836,7 +848,7 @@ Vi kommer att välja **andra**-metoden. Det första tillvägagångssättet är f
    ```
 
 
-## Stryk i HTML {#byline-htl}
+## Byline HTML {#byline-htl}
 
 I modulen `ui.apps` öppnar du `/apps/wknd/components/byline/byline.html` som vi skapade i den tidigare versionen av AEM.
 
@@ -998,7 +1010,7 @@ Därför måste vi ta med den aktuella bylineresursen, men tvinga resurstypen f�
 
    ![ej formaterad byline-komponent](assets/custom-component/unstyled.png)
 
-### Granska registreringen av Sling-modellen {#reviewing-the-sling-model-registration}
+### Granska registreringen av försäljningsmodellen {#reviewing-the-sling-model-registration}
 
 I vyn [AEM Web Console&#39;s Sling Models Status](http://localhost:4502/system/console/status-slingmodels) visas alla registrerade Sling Models i AEM. Byline Sling Model kan valideras som installerad och identifieras genom att läsa den här listan.
 
@@ -1008,7 +1020,7 @@ Om **BylineImpl** inte visas i den här listan uppstod troligen ett problem med 
 
 *http://localhost:4502/system/console/status-slingmodels*
 
-## Formatmallar {#byline-styles}
+## Format för pyline {#byline-styles}
 
 Byline-komponenten måste vara formaterad så att den överensstämmer med den kreativa designen för Byline-komponenten. Detta uppnås genom att använda SCSS, som AEM stöder via delprojektet **ui.front** Maven.
 
