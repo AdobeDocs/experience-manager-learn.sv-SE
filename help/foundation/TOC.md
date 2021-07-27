@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation Tutorials
 user-guide-description: 'En samling videor och självstudiekurser för Adobe Experience Manager Foundation. '
 sub-product: grund
 index: y
-source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 2%
 
 ---
 
@@ -46,4 +46,14 @@ ht-degree: 3%
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflöde](./workflow/use-workflow.md)
    + [Använda Inkorgen](./workflow/use-the-inbox.md)
-
++ Felsökning {#troubleshooting}
+   + [Så här aktiverar du resurshämtningsrapport](./troubleshooting/how-to-enable-asset-download-report.md)
+   + [Framtvinga omkompilering i AEM6.4](./troubleshooting/how-to-force-recompilation.md)
+   + [Hur du undersöker indexeringsrelaterade problem i AEM](./troubleshooting/how-to-investigate-indexing-related-issues.md)
+   + [Hur man undersöker SAML-relaterade problem i AEM](./troubleshooting/how-to-investigate-saml-related-issues.md)
+   + [Hur du undersöker sökrelaterade problem i AEM](./troubleshooting/how-to-investigate-search-related-issues.md)
+   + [Ange förfallodatum för Oak-inloggningstoken-session](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
+   + [Felsöka problem med Jetty-konfiguration](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
+   + [Felsöka prestandarelaterade problem](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
+   + [Steg för att lösa minnesrelaterade problem i AEM](./troubleshooting/steps-to-resolve-memory-related-issues.md)
+   + [Steg för att lösa replikeringsproblem i AEM](./troubleshooting/steps-to-resolve-replication-issues.md)
