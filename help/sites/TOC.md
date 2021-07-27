@@ -3,11 +3,10 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 sub-product: platser
-translation-type: tm+mt
-source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 4%
+source-wordcount: '605'
+ht-degree: 3%
 
 ---
 
@@ -113,3 +112,24 @@ ht-degree: 4%
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
+
++ Dynamic Media Tutorials {#dynamic-media}
+   + [Lägga till information om testbildserver (IP-filter för klient) i Dynamic Media för säker förhandsvisning med DMc App](dynamic-media/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
+   + [Skapa olika typer av uppsättningar med AEM Dynamic Media | Carousel-uppsättning](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+   + [Skapa olika typer av uppsättningar med AEM Dynamic Media| Bilduppsättning](dynamic-media/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
+   + [Skapa bildförinställningar](dynamic-media/creating-image-presets.md)
+   + [Skapa bildprofil (smart beskärning) i Dynamic Media](dynamic-media/creating-image-profile-smart-crop.md)
+   + [Skapa videoprofil för att bearbeta videofilmer i Dynamic Media](dynamic-media/creating-video-profile-to-process-videos-in-dynamic-media.md)
+   + [Tar bort Dynamic Media-konfiguration](dynamic-media/deleting-dynamic-media-configuration.md)
+   + [Hämta resurser i Dynamic Media Classic App](dynamic-media/how-to-download-asset-in-dynamic-media-classic-app.md)
+   + [Generera en offentlig URL eller bädda in kod för en resurs](dynamic-media/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+   + [Så här kör du arbetsflödet för DAM-uppdatering på en resurs med Dynamic Media aktiverat.](dynamic-media/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+   + [Så här utlöser du ett exportjobb i Dynamic Media under körningsparameter för överföringsjobb](dynamic-media/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+   + [Introduktion till Dynamic Media klassiska IPS API](dynamic-media/introduction-to-dynamic-media-classic-ips-api.md)
+   + [CDN-cachen har inte verifierats via Dynamic Media](dynamic-media/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+   + [Använda DM-komponenter på webbplatssidan](dynamic-media/using-dm-components-on-site-page.md)
+
++ Brand Portal Tutorials {#brand-portal}
+   + [Konfigurera resurskälla med varumärkesportalen](brand-portal/configuring-asset-sourcing-with-the-brand-portal.md)
+   + [Så här aktiverar du hämtning av återgivningar](brand-portal/how-to-enable-the-download-of-renditions.md)
+   + [Steg för att konfigurera AEM Assets Brand Portal](brand-portal/steps-to-configure-aem-assets-brand-portal.md)
