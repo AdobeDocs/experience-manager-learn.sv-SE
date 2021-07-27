@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: Headless, integreringar
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
+source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ Till skillnad från Local Development Access-token krävs en _engångsininitieri
 
 __Detta är en engångsinitiering per AEM som en Cloud Service-miljö__
 
-1. Se till att du är inloggad som Adobe IMS-organisationens administratör
+1. Se till att du är inloggad som:
+   + Din Adobe IMS-organisations administratör
+   + Medlem i __Cloud Manager - utvecklare__ IMS-produktprofil
+   + Medlem i __AEM användare__ eller __AEM administratörer__ IMS-produktprofil på __AEM Author__
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller AEM som en Cloud Service-miljö för att integrera inställningarna för tjänsten
 1. Tryck på ellipsen bredvid miljön i __Miljön__-avsnittet och välj __Utvecklarkonsol__
@@ -67,8 +70,10 @@ När AEM som Cloud Service-miljöns tjänstautentiseringsuppgifter har initierat
 
 När du hämtar tjänstens autentiseringsuppgifter följer du samma steg som initieringen. Om initieringen ännu inte har utförts visas ett fel för användaren när användaren trycker på knappen __Hämta inloggningsuppgifter__.
 
-1. Kontrollera att du är medlem i __Cloud Manager - Developer__ IMS-produktprofilen (som ger åtkomst till AEM Developer Console)
-   + För sandlådevisning som Cloud Service-miljöer krävs endast medlemskap i antingen __AEM Administrators__ eller __AEM Användare__ produktprofil
+1. Se till att du är inloggad som:
+   + Medlem i __Cloud Manager - Developer__ IMS-produktprofil (som ger åtkomst till AEM Developer Console)
+      + För sandlådemiljöer som Cloud Service krävs inte detta __Cloud Manager - Developer__-medlemskap
+   + Medlem i __AEM användare__ eller __AEM administratörer__ IMS-produktprofil på __AEM Author__
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller AEM som en Cloud Service-miljö att integrera med
 1. Tryck på ellipsen bredvid miljön i __Miljön__-avsnittet och välj __Utvecklarkonsol__
