@@ -5,10 +5,10 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 1%
+source-wordcount: '1593'
+ht-degree: 0%
 
 ---
 
@@ -242,3 +242,74 @@ ht-degree: 1%
    + [Konfigurera cirkeldiagram](ic-web-channel-tutorial/parteleven.md)
    + [Leverans av webbkanalsdokument](ic-web-channel-tutorial/parttwelve.md)
    + [E-postleverans av webbkanalsdokument](interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+
++ Felsökning {#troubleshooting}
+   + [Dokumenttjänster: Steg för att felsöka DDX-relaterade problem](troubleshooting/steps-to-capture-required-information-to-troubleshoot-ddx-related-issues.md)
+   + [Dokumenttjänster: Steg för att felsöka PDFA-konverteringsproblem](troubleshooting/steps-to-capture-required-information-to-troubleshoot-pdfa-conversion-issues.md)
+   + [Dokumenttjänster: Felsöka teckensnittsrelaterade problem i Forms och Output Service](troubleshooting/how-to-debug-font-related-issue-for-forms-and-output-service.md)
+   + [Dokumenttjänster: Så här bäddar du in teckensnitt för Forms och Output Service](troubleshooting/how-to-embed-fonts-for-forms-and-output-service.md)
+   + [Dokumenttjänster: Aktivera loggning av prestanda för att felsöka Forms och Output Service](troubleshooting/how-to-enable-performance-logging-to-debug-forms-and-output-service.md)
+   + [Dokumenttjänster: Hur man kan öka tidsgränsen för transaktioner för stora filers konvertering](troubleshooting/how-to-increase-aries-transaction-timeout-for-conversion-of-large-files.md)
+   + [Dokumenttjänster: Köra belastningstester med FormsIVS och OutputIVS](troubleshooting/how-to-run-load-tests-using-formsivs-and-outputivs.md)
+   + [Dokumenttjänster: Så här uppdaterar du anpassade XDP-filer och datafiler i FormsIVS och OutputIVS](troubleshooting/how-to-update-custom-xdps-and-data-files-in-formsivs-and-outputivs.md)
+   + [Dokumenttjänster: Steg för att aktivera utförlig ORB-spårning](troubleshooting/steps-to-enable-verbose-orb-trace.md)
+   + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part1](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
+   + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part2](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
+   + [Dokumenttjänster: Steg för att justera parametrar på JMX-konsolen](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
+   + [PDFG: Ändra tidsgränser för transaktioner i PDFG](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
+   + [PDFG: Så här uppdaterar du CORBA-timeout i PDFG](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
+   + [PDFG: Så här uppdaterar du tidsgränser i PDFG](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
+   + [PDFG: Steg för att lägga till PDFG-användare i Windows Server 2016](troubleshooting/steps-to-add-pdfg-user-in-windows-server.md)
+   + [PDFG: Steg för att kontrollera och installera 32-bitars bibliotek och deras beroenden](troubleshooting/steps-to-check-and-install-32-bit-libraries-and-their-dependencies.md)
+   + [PDFG: Steg för att kontrollera mappbehörighet på Windows Server 2016](troubleshooting/steps-to-check-folder-permission-on-windows-server-2016.md)
+   + [PDFG: Steg för att aktivera strängen vid unix](troubleshooting/steps-to-enable-strace-on-unix-setup.md)
+   + [PDFG: Steg för att installera nödvändiga 32-bitars omdistribuerbara Microsoft Visual C++-filer](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
+   + [PDFG: Steg för att köra och tolka utdata från verktyget för systemberedskap](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
+   + [PDFG: Steg för att felsöka Acrobat-specifika problem](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
+   + [PDFG: Steg för att felsöka HTMLtoPDF-problem i fönster](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
+   + [PDFG: Steg för att felsöka HtmltoPDF-specifika problem i unix (PhantomJS)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-phantomjs.md)
+   + [PDFG: Steg för att felsöka HtmltoPDF-specifika problem i unix (WebKit-konvertering)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-webkit.md)
+   + [PDFG: Steg för att felsöka PDFG-konvertering för flera användare på unix](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-unix.md)
+   + [PDFG: Steg för att felsöka PDFG-konvertering för flera användare i Windows](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-windows.md)
+   + [PDFG: Steg för att felsöka OpenOffice-specifika problem i Unix](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-unix.md)
+   + [PDFG: Steg för att felsöka OpenOffice-specifika problem i fönster](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-windows.md)
+   + [Dokumentsäkerhet: Hur man tillämpar en profil som skapats med dokumentsäkerhetsmodulen i Acrobat](troubleshooting/how-to-apply-policy-created-using-document-security-module-in-acrobat.md)
+   + [Användarhantering: Lägga till användare eller grupper i AEM Forms JEE](troubleshooting/how-to-add-users-or-groups-in-aem-forms-jee.md)
+   + [Användarhantering: Så här ökar du tidsgränsen för UM-sessioner](troubleshooting/how-to-increase-um-session-timeout.md)
+   + [Workbench: Ansluta workbench med https](troubleshooting/connecting-workbench-using-https.md)
+   + [Workbench: Samla in Workbench-loggar från hjälpmenyn](troubleshooting/gathering-workbench-logs-from-help-menu.md)
+   + [Workbench: Så här aktiverar du felsökningsutdata för Workbench](troubleshooting/how-to-enable-debug-output-for-workbench.md)
+   + [Workbench: Så här justerar du parametrar för arbetsbench-minne](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
+   + [Workbench: Så här justerar du prestandaparametrar för workbench](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
+   + [Designer: Designer är beroende av C++ återdistribuerbart](troubleshooting/dependency-of-vc-on-designer.md)
+   + [Designer: Aktivera HTML-förhandsvisning](troubleshooting/how-to-enable-html-preview.md)
+   + [Designer: Aktivera PDF-förhandsgranskning](troubleshooting/how-to-enable-pdf-preview.md)
+   + [Designer: Så här installerar du Designer-korrigeringar](troubleshooting/how-to-install-designer-patches.md)
+   + [JEE Foundation: Så här ändrar du värdet för entropi](troubleshooting/how-to-change-the-value-of-entropy.md)
+   + [JEE Foundation: Så här ändrar du tidsgränsen för transaktioner för en tjänst i AEM Forms JEE](troubleshooting/how-to-change-transaction-timeout-of-any-service-in-aem-forms-jee.md)
+   + [JEE Foundation: Så här rensar du processposter från jobbhanterartabellen](troubleshooting/how-to-purge-process-records-from-the-job-manager-table.md)
+   + [JEE Foundation: Så här kör du processtömning från kommandoraden](troubleshooting/how-to-run-process-purge-from-command-line.md)
+   + [JEE Foundation: Steg för att starta manuellt](troubleshooting/steps-to-bootstrap-manually.md)
+   + [JEE Foundation: Steg för att samla in felsökningsloggar för mobilformulär](troubleshooting/steps-to-capture-debug-logs-for-mobile-forms.md)
+   + [JEE Foundation: Steg för att begränsa ForcedDisconnectException](troubleshooting/steps-to-mitigate-forceddisconnectexception.md)
+   + [Allmänt: Lägga till hanteringsanvändare för JBoss Admin Console](troubleshooting/how-to-add-management-user-for-jboss-admin-console.md)
+   + [Allmänt: Så här fångar du HAR-loggar](troubleshooting/how-to-capture-har-logs.md)
+   + [Allmänt: Så här fångar du heap-dumpar för en JVM på en unix-server](troubleshooting/how-to-capture-heap-dumps-of-a-jvm-on-a-unix-server.md)
+   + [Allmänt: Så här fångar du stackdumpar för en JVM på en Windows-server](troubleshooting/how-to-capture-heap-dumps-of-a-jvm-on-a-windows-server.md)
+   + [Allmänt: Hämta nätverksloggar](troubleshooting/how-to-capture-network-logs.md)
+   + [Allmänt: Så här hämtar du tråddumpar för en JVM på en unix-server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-unix-server.md)
+   + [Allmänt: Så här hämtar du tråddumpar för en JVM på en Windows-server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-windows-server.md)
+   + [Allmänt: Så här skapar du ett självsignerat certifikat](troubleshooting/how-to-generate-a-self-signed-certificate.md)
+   + [Allmänt: Hur man gör ett webbtjänstanrop från HTML5-formulär](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
+   + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i AEM Forms OSGI](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
+   + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i JBOSS-programservern](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
+   + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i Websphere Application Server](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
+   + [Allmänt: Steg för att aktivera SSL för AEM Forms OSGi](troubleshooting/steps-to-enable-ssl-for-aem-forms-osgi.md)
+   + [Allmänt: Steg för att kryptera nyckellösenord som ska användas i lc_körkey.xml](troubleshooting/steps-to-encrypt-keystore-password-to-be-used-in-lc-turnkey-xml.md)
+   + [Allmänt: Steg-to-reset-default-password-for-users-in-AEM-Forms-JEE](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
+   + [Allmänt: Steg-to-reset-default-password-for-users-in-AEM-Forms-OSGI](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-osgi.md)
+   + [Allmänt: Steg för att konfigurera gemfire-lokaliserare i ett kluster och utföra relaterad konfiguration](troubleshooting/steps-to-set-up-gemfire-locators-in-a-cluster-and-perform-related-configuration.md)
+
+
+
+
