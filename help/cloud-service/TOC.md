@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
-source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
+source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '460'
 ht-degree: 11%
 
 ---
@@ -57,7 +57,14 @@ ht-degree: 11%
       + [Content Publishing](./developing/basics/content-publishing.md)
       + [OSGi-konfigurationer](./developing/basics/osgi-configurations.md)
       + [Migrering av Dispatcher-konfiguration](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + AEM projekt{#aem-projects}
+      + [AEM Maven Project](./developing/projects/maven-project-structure.md)
++ OSGi Services{#osgi-services}
+   + [OSGi Service Basics](./developing/osgi-services/basics.md)
+   + [OSGi Component Lifecycle](./developing/osgi-services/lifecycle.md)
+   + [Grundläggande om OSGi-konfigurationer](./developing/osgi-services/configurations.md)
+   + [OSGi-konfigurationer med OCD](./developing/osgi-services/configurations-ocd.md)
++ [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
