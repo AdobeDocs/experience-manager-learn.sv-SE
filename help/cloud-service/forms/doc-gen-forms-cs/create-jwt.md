@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: cloud-service
 feature: Adaptiv Forms
 topic: Utveckling
-kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+kt: 8184
+thumbnail: 8184.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -35,6 +35,7 @@ public String getJWTToken()
 
 	            long now = System.currentTimeMillis();
 	            Long expirationTime = now + TimeUnit.MINUTES.toMillis(5);
+                // get the private key string from the service credentials
 	            String privateKeyString = getCredentials.getPRIVATE_KEY();
 	          //The JWT signature algorithm we will be using to sign the token
 	            SignatureAlgorithm sa = SignatureAlgorithm.RS256;
