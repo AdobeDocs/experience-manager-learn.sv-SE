@@ -9,13 +9,12 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4, 6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -149,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content) om du vill se möjligheten att hämta interaktiv PDF från delvis ifyllda mobilformulär.
+[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content) om du vill se möjligheten att hämta interaktiv PDF från delvis ifyllda mobilformulär.
 När PDF-filen har laddats ned är nästa steg att skicka PDF-filen för att starta ett AEM arbetsflöde. Det här arbetsflödet sammanfogar data från den skickade PDF-filen och genererar en icke-interaktiv PDF för granskning.
 
 Den anpassade profil som skapats för det här användningsfallet är tillgänglig som en del av den här självstudiekursen.
