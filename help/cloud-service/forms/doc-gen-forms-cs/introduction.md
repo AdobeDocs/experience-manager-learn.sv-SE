@@ -8,8 +8,8 @@ version: cloud-service
 feature: Dokumenttjänster
 topic: Utveckling
 kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+thumbnail: 334859.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 2%
@@ -24,3 +24,5 @@ I den här kursen använder vi mikrotjänsterna för dokumentgenerering för att
 1. Skapa en JSON Web Token (JWT) från inloggningsuppgifterna och byt ut samma mot en åtkomsttoken
 1. Konfigurera åtkomst för det tekniska kontot i AEM
 1. Göra HTTP-anrop med åtkomsttoken
+
+>[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
