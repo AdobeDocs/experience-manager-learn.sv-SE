@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -198,6 +198,7 @@ ht-degree: 0%
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
    + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [Använd användningsbehörighet för överförd PDF](document-services/apply-reader-extension-rights-to-pdf.md)
