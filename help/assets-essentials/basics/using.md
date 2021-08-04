@@ -1,16 +1,16 @@
 ---
 title: "Använda Assets Essentials\t"
-description: null
+description: Lär dig hur du hämtar resurser i Assets Essentials.
 version: cloud-service
 feature: Assets Essentials
 topic: Innehållshantering
 role: User
 level: Beginner
-kt: null
+kt: 8380
 thumbnai: 335861.jpeg
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 882c7ce872533ab4848c8db6145172b8cce4e270
 workflow-type: tm+mt
-source-wordcount: '10'
+source-wordcount: '32'
 ht-degree: 0%
 
 ---
@@ -18,4 +18,6 @@ ht-degree: 0%
 
 # Använda Assets Essentials
 
->[!VIDEO](https://video.tv.adobe.com/v/335861/?quality=9&learn=on)
+Lär dig hur du hämtar resurser i Assets Essentials.
+
+>[!VIDEO](https://video.tv.adobe.com/v/335861/?quality=12&learn=on)
