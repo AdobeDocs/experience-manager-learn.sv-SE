@@ -12,9 +12,9 @@ thumbnail: KT-5882.jpg
 topic: Administration, säkerhet
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,11 @@ ht-degree: 1%
 >title="Introduktion till Adobe IMS"
 >abstract="AEM som Cloud Service använder Adobe IMS (Identity Management System) för att underlätta inloggningen för sina användare, både administratörer och vanliga användare, till tjänsten AEM Author. Se hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM grupper och behörigheter för att ge detaljerad åtkomst till tjänsten AEM Author."
 
-AEM som Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, till tjänsten AEM Author. Se hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM grupper och behörigheter för att ge detaljerad åtkomst till tjänsten AEM Author.
+AEM som Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, till tjänsten AEM Author.
+
+![Adobe Admin Console](./assets/hero.png)
+
+Se hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM grupper och behörigheter för att ge detaljerad åtkomst till tjänsten AEM Author.
 
 ## Adobe IMS-användare
 
