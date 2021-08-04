@@ -4,7 +4,7 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
-source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
+source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 7%
@@ -121,4 +121,3 @@ ht-degree: 7%
 
 + Distribution{#deployment}
    + [Multi-tenancy and Concurrent Development](deployment/multitenancy-concurrent-article-understand.md)
-
