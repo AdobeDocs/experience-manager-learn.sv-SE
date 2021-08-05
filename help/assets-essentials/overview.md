@@ -2,9 +2,9 @@
 title: AEM Assets Essentials - videor
 description: En samling videor för Adobe Experience Manager Assets Essentials
 sub-product: resurser
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ Titta på våra videofilmer om hur du använder Assets Essentials för att hante
    </p>
 </td>
 <td>
-   <a href="./basics/collaborating.md">
-   <img alt="" src="./assets/overview/collaboration.png"/>
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <img alt="" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="./basics/collaborating.md">
-      <strong>Samarbeta med Assets Essentials</strong>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+      <strong>Assets Essentials-dokumentation</strong>
       </a>
    </div>
    <p>
-      <em>Läs om hur Assets Essentials tillhandahåller enkel uppgiftshantering för att hantera mediematerialet!</em>
+      <em>Läs Assets Essentials produktdokumentation!</em>
    <p>
 </td>
 <td>
@@ -53,7 +53,7 @@ Titta på våra videofilmer om hur du använder Assets Essentials för att hante
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Adobe Journey Optimizer</strong>
+      <strong>Integrering med Adobe Journey Optimizer</strong>
       </a>
    </div>
    <p>
