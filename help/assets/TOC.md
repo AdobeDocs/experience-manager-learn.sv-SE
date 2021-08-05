@@ -4,9 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Assets Tutorials
 sub-product: resurser
 team: TM
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '273'
 ht-degree: 7%
 
 ---
@@ -121,3 +121,5 @@ ht-degree: 7%
 
 + Distribution{#deployment}
    + [Multi-tenancy and Concurrent Development](deployment/multitenancy-concurrent-article-understand.md)
+
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
