@@ -4,9 +4,9 @@ user-guide-description: En samling videor för Adobe Experience Manager Assets E
 breadcrumb-title: AEM Assets Essentials - videor
 sub-product: resurser
 team: TM
-source-git-commit: 5438fd521e08b37405f18e5fc2e7fc1f02592a78
+source-git-commit: 70ec794abc15aaed23f5a7bd99a3deafc65ed401
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '44'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 2%
 + [Översikt](overview.md)
 
 + [Provisionering](./provisioning.md)
++ [Komma igång](./getting-started.md)
 
 + Grundläggande{#basics}
    + [Hantera](basics/managing.md)
