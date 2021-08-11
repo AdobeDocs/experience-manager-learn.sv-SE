@@ -6,9 +6,9 @@ feature: Assets Essentials
 topic: Innehållshantering
 role: User
 level: Beginner
-kt: null
+kt: 7916
 thumbnail: 335856.jpeg
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: c7da508b500ac64ac2e817c5b6ff40899f71e7f3
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
