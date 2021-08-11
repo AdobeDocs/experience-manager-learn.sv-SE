@@ -4,9 +4,9 @@ user-guide-description: En samling videor för Adobe Experience Manager Assets E
 breadcrumb-title: AEM Assets Essentials - videor
 sub-product: resurser
 team: TM
-source-git-commit: 70ec794abc15aaed23f5a7bd99a3deafc65ed401
+source-git-commit: c7da508b500ac64ac2e817c5b6ff40899f71e7f3
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '47'
 ht-degree: 2%
 
 ---
@@ -25,5 +25,6 @@ ht-degree: 2%
    + [Skapa innehåll](basics/creating.md)
    + [Samarbete](basics/collaborating.md)
 
-+ [Adobe Journey Optimizer Integration](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
++ [Integrering med Creative Cloud](integrations/creative-cloud.md)
++ [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
