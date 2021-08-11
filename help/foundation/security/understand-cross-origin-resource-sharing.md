@@ -10,9 +10,9 @@ doc-type: article
 topic: Dokumentskydd
 role: Developer
 level: Intermediate
-source-git-commit: 1c99c319fba5048904177fc82c43554b0cf0fc15
+source-git-commit: 3418cd424cc82fece9e7d13de72c0d8dde346d7c
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## Skickar problem med cachelagring och konfiguration {#dispatcher-caching-concerns-and-configuration}
+## Dispatcher cacheminnesproblem och konfiguration {#dispatcher-caching-concerns-and-configuration}
 
 Från och med Dispatcher 4.1.1+ kan svarshuvuden cachelagras. Detta gör det möjligt att cachelagra [!DNL CORS]-huvuden längs med de [!DNL CORS]-begärda resurserna, så länge som begäran är anonym.
 
@@ -141,7 +141,7 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 /cache { 
   ...
   /headers {
-      "Origin",
+      "Origin"
       "Access-Control-Allow-Origin"
       "Access-Control-Expose-Headers"
       "Access-Control-Max-Age"
