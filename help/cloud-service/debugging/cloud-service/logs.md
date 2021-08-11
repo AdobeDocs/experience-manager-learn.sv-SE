@@ -1,7 +1,7 @@
 ---
 title: Loggar
 description: Loggar fungerar som en frontlinje för felsökning AEM program i AEM som en Cloud Service, men är beroende av korrekt inloggning i det distribuerade AEM.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,14 +9,13 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e2473a1584ccf315fffe5b93cb6afaed506fdbce
 workflow-type: tm+mt
-source-wordcount: '995'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,11 +37,21 @@ AEM som en Cloud Services stöder inte anpassade loggfiler, men det stöder anpa
 
 För att Java-loggar ska vara tillgängliga i AEM som Cloud Service (via [Cloud Manager](#cloud-manager) eller [Adobe I/O CLI](#aio)) måste anpassade loggsatser skrivas i `error.log`. Loggar som skrivits till anpassade namngivna loggar, till exempel `example.log`, kommer inte att vara tillgängliga från AEM som en Cloud Service.
 
+Loggar kan skrivas till `error.log` med hjälp av en Sling LogManager OSGi-konfigurationsegenskap i programmets `org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`-filer.
+
+```
+{
+   ...
+   "org.apache.sling.commons.log.file": "logs/error.log"
+   ...
+}
+```
+
 ## AEM Author and Publish service logs
 
 Både AEM Author- och Publish-tjänsterna tillhandahåller AEM körningsserverloggar:
 
-+ `aemerror` är Java-felloggen (finns  `/crx-quickstart/error.log` på AEM SDK:s lokala snabbstart). Följande är [rekommenderade loggnivåer](#log-levels) för anpassade loggare per miljötyp:
++ `aemerror` är Java-felloggen (finns  `/crx-quickstart/logs/error.log` på AEM SDK:s lokala snabbstart). Följande är [rekommenderade loggnivåer](#log-levels) för anpassade loggare per miljötyp:
    + Utveckling: `DEBUG`
    + Scen: `WARN`
    + Produktion: `ERROR`
@@ -107,7 +116,7 @@ Environment Id Service    Name
 22295          dispatcher aemdispatcher 
 ```
 
-### Utseendeloggar{#aio-cli-tail-logs}
+### Spridningsloggar{#aio-cli-tail-logs}
 
 Med kommandot [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) kan Adobe I/O CLI avsluta loggar i realtid från AEM som en Cloud Service. Passning är användbart när du vill se loggaktivitet i realtid när åtgärder utförs på AEM som en Cloud Service.
 
@@ -124,7 +133,7 @@ $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 
 ... visar bara loggsatser som genererats från `com.example.MySlingModel` eller innehåller den strängen i dem.
 
-### Laddar ned loggar{#aio-cli-download-logs}
+### Hämtar loggar{#aio-cli-download-logs}
 
 Med Adobe I/O CLI kan du hämta loggar från AEM som en Cloud Service med kommandot [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days)). Detta ger samma slutresultat som när du hämtar loggarna från webbgränssnittet för Cloud Manager, med skillnaden är att kommandot `download-logs` konsoliderar loggar över flera dagar, baserat på hur många dagar av loggar som begärs.
 
