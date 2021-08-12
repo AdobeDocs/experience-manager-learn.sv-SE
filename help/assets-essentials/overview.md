@@ -2,9 +2,9 @@
 title: AEM Assets Essentials - videor
 description: En samling videor för Adobe Experience Manager Assets Essentials
 sub-product: resurser
-source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
+source-git-commit: 21d6df065fe61614d3bbd68ce2f20d3dc23a9cef
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Titta på våra videofilmer om hur du använder Assets Essentials för att hante
       </a>
    </div>
    <p>
-      <em>Lär dig grunderna i hur Assets Essentials!</em>
+      <em>Lär dig grunderna i Assets Essentials!</em>
    </p>
 </td>
 <td>
