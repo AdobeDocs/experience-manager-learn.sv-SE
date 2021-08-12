@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: molntjänst
 team: TM
-source-git-commit: e442c6d67a02aae4c6ce9241e754c15abc920c67
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '478'
 ht-degree: 11%
 
 ---
@@ -110,6 +110,12 @@ ht-degree: 11%
       + [Implementeringsgränssnitt](./forms/doc-cloud-sdk/implement-interface.md)
       + [Skapa JSON-del](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [Anpassat processsteg](./forms/doc-cloud-sdk/custom-process-step.md)
+   + Azure Portal Storage{#forms-cs-azure-portal}
+      + [Introduktion](./forms/forms-cs-azure-portal/introduction.md)
+      + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)
+      + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
+      + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
+      + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + Skapa granskningsarbetsflöde{#create-aem-workflow}
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
