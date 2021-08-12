@@ -14,9 +14,9 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: Utveckling
 role: Developer
 level: Experienced
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Följ de här stegen för att testa detta på den lokala servern
    * Paketet har en exempelportal och en xdp-fil
 1. Lägg till certifikat för Reader-tillägg till användaren fd-service
 1. Peka webbläsaren på [portalwebbsidan](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
-1. Klicka på pdf-ikonen för att återge xdp och hämta pdf som är Reader Extended
+1. Klicka på pdf-ikonen för att återge xdp som en pdf-fil med användningsbehörighet.
 
 
 
