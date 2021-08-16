@@ -1,19 +1,18 @@
 ---
 title: Generera flera PDF-filer från en datafil
-seo-title: Generera flera PDF-filer från en datafil
-feature: Output Service
+description: OutputService innehåller ett antal metoder för att skapa dokument med hjälp av en formulärdesign och data som ska sammanfogas med formulärdesignen. Lär dig att generera flera PDF-filer från en stor XML som innehåller flera enskilda poster.
+feature: Utdatatjänst
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -42,7 +41,7 @@ Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och data(xml)-filen. När filöverföringen är klar och POSTEN har skickats till AEM. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
 
-## Servletkod{#servlet-code}
+## Servlet Code{#servlet-code}
 
 Nedan följer kodfragmentet från serverleten. Koden extraherar mallen(xdp) och datafilen(xml) från begäran. Mallfilen sparas i filsystemet. Två kartor skapas - templateMap och dataFileMap som innehåller mallen respektive xml(data)-filerna. Därefter anropas metoden generateMultipleRecords för DocumentServices-tjänsten.
 
