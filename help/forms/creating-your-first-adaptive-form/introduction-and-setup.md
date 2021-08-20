@@ -1,29 +1,20 @@
 ---
 title: Komma igång med adaptiva Forms
-seo-title: Komma igång med adaptiva Forms
 description: 'I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler. '
-seo-description: 'I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler. '
-uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
-feature: Adaptive Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptiv Forms
 version: 6.3,6.4,6.5
-discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# Komma igång med adaptiv Forms {#getting-started-with-adaptive-forms}
+# Komma igång med adaptiva Forms {#getting-started-with-adaptive-forms}
 
 I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler.
 
