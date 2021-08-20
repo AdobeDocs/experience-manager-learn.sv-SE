@@ -1,31 +1,22 @@
 ---
 title: Lägga till komponenter i resultatpanelen
-seo-title: Lägga till komponenter i resultatpanelen
 description: Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och använd regelredigeraren för att beräkna totalsumman.
-seo-description: Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och använd regelredigeraren för att beräkna totalsumman.
-uuid: d5c98561-c559-4624-976a-7a1486da7e69
-feature: Adaptive Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptiv Forms
 version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
-discoiquuid: fa483260-38ff-40d8-96a7-1de11d8b792b
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
 
-# Lägga till komponenter i inkomstpanelen {#adding-components-to-income-panel}
+# Lägga till komponenter i resultatpanelen {#adding-components-to-income-panel}
 
 Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och använd regelredigeraren för att beräkna totalsumman.
 
@@ -49,7 +40,7 @@ Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och anv
 
 * Ange Minsta och Högsta antal till 1 och 5 under Upprepa inställningar och spara ändringarna genom att klicka på den blå bockmarkeringsikonen. Det innebär att tabellen kan ha högst fem rader. Om du vill ha ett obegränsat antal rader anger du maxantalet till -1.
 
-## Skapa regel för att beräkna totalsumman {#create-rule-to-calculate-grand-total}
+## Skapa regel för att beräkna totalsumma {#create-rule-to-calculate-grand-total}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
