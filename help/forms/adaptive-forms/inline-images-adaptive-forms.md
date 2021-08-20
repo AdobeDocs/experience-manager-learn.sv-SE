@@ -1,21 +1,15 @@
 ---
 title: Visa textbundna bilder i Adaptiv Forms
-seo-title: Visa textbundna bilder i Adaptiv Forms
 description: Visa överförda bilder i adaptiv Forms
-seo-description: Visa överförda bilder i adaptiv Forms
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: development
-audience: developer
-doc-type: article
-activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -24,6 +18,8 @@ ht-degree: 0%
 # Textbundna bilder i Adaptive Forms
 
 Ett vanligt användningssätt är att visa den överförda bilden som en textbunden bild i adaptiv form. Som standard visas den överförda bilden som en länk och den här upplevelsen kan förbättras genom att bilden visas i adaptiv form. I den här artikeln får du hjälp med att visa textbundna bilder.
+
+[Live-exempel på den här funktionen](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
 
 ## Lägg till platshållarbild
 
