@@ -1,22 +1,17 @@
 ---
 title: Skapa OSGi-tjänst
 description: Skapa OSGi-tjänst för att lagra formulären som ska signeras
-feature: Workflow
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+feature: Arbetsflöde
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 1%
+source-wordcount: '354'
+ht-degree: 0%
 
 ---
 
