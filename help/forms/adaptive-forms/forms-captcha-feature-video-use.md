@@ -1,23 +1,14 @@
 ---
 title: Använda CAPTCHA med AEM Adaptive Forms
-seo-title: Använda CAPTCHA med AEM Adaptive Forms
 description: Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
-seo-description: Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
-feature: Adaptive Forms,Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+feature: Adaptiv Forms, arbetsflöde
 version: 6.4,6.5
-uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
-discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -27,7 +18,7 @@ ht-degree: 0%
 
 Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 
-På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) finns en länk till en live-demo av den här funktionen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -43,7 +34,7 @@ På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/
 >
 >Konfigurera reCaptach för författarinstans
 >
->öppna felix [webbkonsolen](http://localhost:4502/system/console/bundles) på författarinstansen
+>öppna Felix [webbkonsolen](http://localhost:4502/system/console/bundles) på författarinstansen
 >
 >sök efter com.adobe.granite.crypto.file bundle
 >
