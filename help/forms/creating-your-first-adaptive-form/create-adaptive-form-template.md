@@ -1,20 +1,15 @@
 ---
 title: Skapa anpassad formulärmall
 description: Mallen definierar strukturen och det ursprungliga innehållet i det adaptiva formuläret.
-feature: Adaptive Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptiv Forms
 thumbnail: 37324.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +22,7 @@ I följande video visas den grundläggande processen att skapa en adaptiv formul
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-Mer information finns i [dokumentationen för adaptiv formulärmall](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
+Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
 Vid behov kan du hämta [adaptiv formulärmall](assets/peak-application-template.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
