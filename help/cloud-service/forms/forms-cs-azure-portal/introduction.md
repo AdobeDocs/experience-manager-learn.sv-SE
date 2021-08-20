@@ -6,13 +6,13 @@ type: Documentation
 role: Developer
 level: Beginner
 version: cloud-service
-topic: integration
+topic: Integreringar
 thumbnail: 331891.jpg
 kt: 7192
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
