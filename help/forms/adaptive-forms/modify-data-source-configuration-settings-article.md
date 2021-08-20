@@ -1,24 +1,15 @@
 ---
 title: Ändra konfigurationsinställningar för datakälla.
-seo-title: Ändra konfigurationsinställningar för datakälla.
 description: Ändra värdnamnet och andra inställningar i Konfigurationsinställningar för datakälla.
-seo-description: Ändra värdnamnet och andra inställningar i Konfigurationsinställningar för datakälla.
-feature: Adaptive Forms
-topics: form-data-model
-audience: developer
-doc-type: technical video
-activity: setup
+feature: Adaptiv Forms
 version: 6.5
-uuid: 31e297c9-3d12-4a7a-b1ff-1e347e17b24c
-discoiquuid: de227e8f-0f59-4506-828b-3b6b18b61eb1
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
