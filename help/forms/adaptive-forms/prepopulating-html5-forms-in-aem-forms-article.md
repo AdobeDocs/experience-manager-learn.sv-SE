@@ -1,29 +1,20 @@
 ---
 title: Förifyll HTML5 Forms med hjälp av dataattribut.
-seo-title: Förifyll HTML5 Forms med hjälp av dataattribut.
 description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
-seo-description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
-feature: Adaptive Forms
-topics: mobile-forms
-audience: developer
-doc-type: article
-activity: implement
+feature: Adaptiv Forms
 version: 6.3,6.4,6.5.
-uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
-discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# PreFyll i HTML5 Forms med dataattributet {#prepopulate-html-forms-using-data-attribute}
+# Förifyll HTML5 Forms med dataattribut {#prepopulate-html-forms-using-data-attribute}
 
 På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
 
