@@ -1,31 +1,22 @@
 ---
 title: Använda Geolocation-API:er i Adaptive Forms
-seo-title: Använda Geolocation-API:er i Adaptive Forms
-description: Fylla i adressfält i formuläret med API:n för geopositionering
-seo-description: Fylla i adressfält i formuläret med API:n för geopositionering
-uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: Adaptive Forms
-topics: integrations
-audience: developer
-doc-type: article
-activity: develop
+description: Fyll i adressfält i formuläret med hjälp av API:n för geopositionering
+feature: Adaptiv Forms
 version: 6.3,6.4,6.5
-discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 1%
+source-wordcount: '417'
+ht-degree: 0%
 
 ---
 
 
-# Använda Geolocation-API:er i Adaptiv Forms{#using-geolocation-api-s-in-adaptive-forms}
+# Använda Geolocation-API:er i Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) finns en länk till en live-demo av den här funktionen.
+På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) finns en länk till en live-demo av den här funktionen.
 
 I den här artikeln ska vi titta närmare på hur du använder Googles Geolocation-API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i de aktuella adressfälten i ett formulär.
 
