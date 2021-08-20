@@ -1,29 +1,22 @@
 ---
 title: AEM Forms med Marketo (del 2)
-seo-title: AEM Forms med Marketo (del 2)
-description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
-seo-description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
-feature: Adaptive Forms, Form Data Model
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
+feature: Adaptiv Forms, formulärdatamodell
 version: 6.3,6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
 
-# Marketo-autentiseringstjänst
+# Marketo autentiseringstjänst
 
-Marketos REST API:er autentiseras med 2-legged OAuth 2.0. Vi måste skapa anpassad autentisering för att autentisera mot Marketo. Denna anpassade autentisering skrivs vanligtvis inuti ett OSGI-paket. Följande kod visar den anpassade autentiseraren som användes som en del av den här självstudiekursen.
+Marketo REST API:er autentiseras med 2-legged OAuth 2.0. Vi måste skapa anpassad autentisering för att autentisera mot Marketo. Denna anpassade autentisering skrivs vanligtvis inuti ett OSGI-paket. Följande kod visar den anpassade autentiseraren som användes som en del av den här självstudiekursen.
 
 ## Tjänst för anpassad autentisering
 
@@ -206,5 +199,5 @@ public class MarketoConfigurationService {
 ```
 
 1. Bygg och distribuera paketet på din AEM.
-1. [Peka din webbläsare på ](http://localhost:4502/system/console/configMgr) configMgrand-sökning efter &quot;Marketo Credentials Service Configuration&quot;
+1. [Peka din webbläsare på ](http://localhost:4502/system/console/configMgr) configMgrand-sökningen efter &quot;Tjänskonfiguration för Marketo Credentials&quot;
 1. Ange lämpliga egenskaper för din Marketo-instans
