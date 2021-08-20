@@ -1,21 +1,16 @@
 ---
 title: Skapa formulärfragment
 description: AEM är en praktisk funktion för att skapa formulärsegment som en panel eller en grupp fält endast en gång och återanvända dem i anpassade formulär.
-feature: Adaptive Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptiv Forms
 kt: 5862
 thumbnail: 37325.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 15%
+source-wordcount: '108'
+ht-degree: 14%
 
 ---
 
@@ -29,7 +24,7 @@ Ett fragment är en återanvändbar del av ett formulär. Ett fragment kan t.ex.
 
 
 
-Mer information finns i [dokumentationen för adaptiv formulärmall](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
+Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
 
 Vid behov kan du hämta [Spouse-details-fragment ](assets/spouse-details-fragment.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
