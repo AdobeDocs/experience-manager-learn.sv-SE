@@ -1,22 +1,13 @@
 ---
 title: Använda setValue i AEM Forms-arbetsflödet
-seo-title: Använda setValue i AEM Forms Workflow
 description: Ange värdet för element i adaptiva Forms-inskickade data i AEM Forms OSGI
-seo-description: Ange värdet för element i adaptiva Forms-inskickade data i AEM Forms OSGI
-uuid: fe431e48-f05b-4b23-94d2-95d34d863984
-feature: Adaptive Forms
-topics: developing
-audience: implementer
-doc-type: article
-activity: setup
-discoiquuid: dbd87302-f770-4e61-b5ad-3fc5831b4613
-topic: Development
+feature: Adaptiv Forms
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
