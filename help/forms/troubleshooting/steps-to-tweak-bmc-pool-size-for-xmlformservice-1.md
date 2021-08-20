@@ -2,14 +2,13 @@
 title: Steg för att justera bmc-poolstorleken för XMLForm-tjänsten (1 av 2)
 description: Konfigurera XMLFormService-parametrar
 type: Troubleshooting
-product: forms
 role: Developer
 level: Intermediate
 version: 6.5
-feature: Output Service, Forms Service
+feature: Utdatatjänst,Forms-tjänst
 topic: 'Utveckling   '
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 2%
