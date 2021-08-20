@@ -1,21 +1,17 @@
 ---
 title: Verifiera användare med engångslösenord
 description: Verifiera det mobilnummer som är kopplat till programnumret med hjälp av engångslösenord.
-feature: Adaptive Forms
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
+feature: Adaptiv Forms
+type: Tutorial
 version: 6.4,6.5
 kt: 6594
 thumbnail: 6594.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -53,11 +49,11 @@ Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swag
 
 ## Skapa datakälla
 
-För att integrera AEM/AEM Forms med program från tredje part måste vi [REST-baserad datakälla med swagger-filen](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Den färdiga datakällan tillhandahålls som en del av kursmaterialet.
+För att integrera AEM/AEM Forms med program från tredje part måste vi [REST-baserad datakälla med swagger-filen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Den färdiga datakällan tillhandahålls som en del av kursmaterialet.
 
 ## Skapa formulärdatamodell
 
-AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html). En formulärdatamodell bygger på datakällor för datautbyte.
+AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). En formulärdatamodell bygger på datakällor för datautbyte.
 Den ifyllda formulärdatamodellen kan [hämtas här](assets/sms-2fa-fdm.zip)
 
 ![fdm](assets/2FA-fdm.PNG)
