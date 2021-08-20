@@ -1,22 +1,14 @@
 ---
 title: Rendera XDP till PDF med användningsbehörighet
-seo-title: Rendera XDP till PDF med användningsbehörighet
 description: Använd användningsbehörighet för PDF
-seo-description: Använd användningsbehörighet för PDF
-uuid: 5e60c61e-821d-439c-ad89-ab169ffe36c0
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 feature: Forms Service
-discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: Utveckling
 role: Developer
 level: Experienced
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
