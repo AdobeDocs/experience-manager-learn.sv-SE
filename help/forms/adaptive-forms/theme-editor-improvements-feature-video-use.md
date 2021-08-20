@@ -1,23 +1,15 @@
 ---
 title: Förbättringar av Theme Editor i AEM Forms
-seo-title: Förbättringar av Theme Editor i AEM Forms
 description: Förbättringar av Theme Editor för anpassningsbara formulär i AEM 6.3
-seo-description: Förbättringar av Theme Editor för anpassningsbara formulär i AEM 6.3
-uuid: cd1f01ee-2603-4d9a-a8ad-2981e3937956
 feature: Adaptiv Forms
-topics: developing
-audience: implementer
-doc-type: feature video
-activity: use
 version: 6.3,6.4,6.5
-discoiquuid: 9ba8c552-bf3f-445c-b0d1-17e62b34f1a2
 topic: Utveckling
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 1%
+source-wordcount: '43'
+ht-degree: 2%
 
 ---
 
