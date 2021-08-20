@@ -1,20 +1,14 @@
 ---
 title: Lägga till objekt i urvalsgruppskomponenten
-seo-title: Lägga till objekt i urvalsgruppskomponenten
 description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
-seo-description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
 feature: Adaptiv Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: Utveckling
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -96,7 +90,7 @@ Så här provar du det på datorn:
 **Använda den visuella redigeraren för att lägga till objekt**
 
 * [Hämta resurserna](assets/usingthevisualeditor.zip)
-* Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [Distribuera filen SampleRest.war i Tomcat](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring och ladda upp filen som du laddade ned i föregående steg
