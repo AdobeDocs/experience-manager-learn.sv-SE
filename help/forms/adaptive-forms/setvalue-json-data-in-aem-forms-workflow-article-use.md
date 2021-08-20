@@ -1,29 +1,20 @@
 ---
 title: Ange värde för Json-dataelement i AEM Forms Workflow
-seo-title: Ange värde för Json-dataelement i AEM Forms Workflow
 description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
-seo-description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
-uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: Adaptive Forms
-topics: developing
-audience: implementer
-doc-type: article
-activity: setup
+feature: Adaptiv Forms
 version: 6.4
-discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
 
 
-# Ställa in värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# Ange värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
 Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde måste vissa fält eller paneler döljas eller inaktiveras baserat på personen som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 
