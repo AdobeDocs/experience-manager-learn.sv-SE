@@ -1,23 +1,14 @@
 ---
 title: Tagga och lagra AEM Forms DoR i DAM
-seo-title: Tagga och lagra AEM Forms DoR i DAM
 description: I den här artikeln går vi igenom hur du lagrar och taggar DoR-filer som genererats av AEM Forms i AEM DAM. Dokumentets taggning görs utifrån skickade formulärdata.
-seo-description: I den här artikeln går vi igenom hur du lagrar och taggar DoR-filer som genererats av AEM Forms i AEM DAM. Dokumentets taggning görs utifrån skickade formulärdata.
-uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: Adaptive Forms,Workflow
-topics: developing
-audience: implementer
-doc-type: article
-activity: develop
+feature: Adaptiv Forms
 version: 6.4,6.5
-discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
