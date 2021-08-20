@@ -1,23 +1,14 @@
 ---
 title: Streckkodstjänst med adaptiv Forms
-seo-title: Streckkodstjänst med adaptiv Forms
-description: Använda streckkodstjänsten för att avkoda streckkod och fylla i formulärfält från extraherade data
-seo-description: Använda streckkodstjänsten för att avkoda streckkod och fylla i formulärfält från extraherade data
-uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
-feature: barcoded-forms
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+description: Använda streckkodstjänsten för att avkoda streckkod och fylla i formulärfält från extraherade data.
+feature: Barcoded Forms
 version: 6.4,6.5
-discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
