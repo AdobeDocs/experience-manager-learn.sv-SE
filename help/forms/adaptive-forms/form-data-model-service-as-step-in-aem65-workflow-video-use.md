@@ -1,21 +1,15 @@
 ---
 title: Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde
-seo-title: Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde
 description: I AEM Forms 6.5 introducerades möjligheten att skapa variabler i AEM. Med den här nya funktionen som använder tjänsten Anropa formulärdatamodell i AEM arbetsflöde har det blivit mycket enkelt. I följande video får du hjälp med att använda tjänsten Anropa formulärdatamodell i AEM arbetsflöde.
-seo-description: I AEM Forms 6.5 introducerades möjligheten att skapa variabler i AEM. Med den här nya funktionen som använder tjänsten Anropa formulärdatamodell i AEM arbetsflöde har det blivit mycket enkelt. I följande video får du hjälp med att använda tjänsten Anropa formulärdatamodell i AEM arbetsflöde.
-feature: Workflow
-topics: workflow.
-audience: developer.
-doc-type: technical video.
-activity: setup.
+feature: Arbetsflöde
+type: Tutorial
 version: 6.5.
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
