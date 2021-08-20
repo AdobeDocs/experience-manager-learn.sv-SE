@@ -2,19 +2,14 @@
 title: OCR-dataextrahering
 description: Extrahera data från dokument från myndigheter för att fylla i formulär.
 feature: Barcoded Forms
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6679
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -52,11 +47,11 @@ Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swag
 
 ## Skapa datakälla
 
-Om du vill integrera AEM/AEM Forms med program från tredje part måste du [skapa en datakälla](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filen](assets/drivers-license-swagger.zip) för att skapa datakällan.
+Om du vill integrera AEM/AEM Forms med program från tredje part måste du [skapa en datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filen](assets/drivers-license-swagger.zip) för att skapa datakällan.
 
 ## Skapa formulärdatamodell
 
-AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html). Basera formulärdatamodellen på datakällan som skapades i det tidigare steget.
+AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). Basera formulärdatamodellen på datakällan som skapades i det tidigare steget.
 
 ![fdm](assets/test-dl-fdm.PNG)
 
