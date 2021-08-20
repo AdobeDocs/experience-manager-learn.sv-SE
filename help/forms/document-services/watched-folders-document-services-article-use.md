@@ -1,23 +1,14 @@
 ---
 title: Använda bevakade mappar i AEM Forms
-seo-title: Använda bevakade mappar i AEM Forms
 description: Konfigurera och använda bevakade mappar i AEM Forms
-seo-description: Konfigurera och använda bevakade mappar i AEM Forms
-uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: Output Service
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+feature: Utdatatjänst
 version: 6.4,6.5
-discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
