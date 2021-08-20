@@ -1,28 +1,19 @@
 ---
 title: Förifyll anpassat formulär med ACS-profil
-seo-title: Förifyll anpassat formulär med ACS-profil
 description: Förifyll adaptiv Forms med ACS-profil
-seo-description: Förifyll adaptiv Forms med ACS-profil
-uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
-feature: Adaptive Forms, Form Data Model
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+feature: Adaptiv Forms, formulärdatamodell
 version: 6.3,6.4,6.5
-discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '339'
 ht-degree: 1%
 
 ---
 
-# Fylla i anpassat formulär i förväg med ACS-profilen {#prefilling-adaptive-form-using-acs-profile}
+# Förifyll anpassat formulär med ACS-profil {#prefilling-adaptive-form-using-acs-profile}
 
 I den här delen fyller vi i det anpassade formuläret i förväg med profilinformation som hämtats från ACS. AEM Forms har denna kraftfulla funktion för att förifylla anpassningsbara formulär.
 
