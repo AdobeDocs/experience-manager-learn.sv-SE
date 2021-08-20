@@ -2,14 +2,13 @@
 title: Aktivera Performance Logging i AEM Forms för att felsöka problem som rör Forms och utdatatjänsten
 description: Steg för att aktivera loggning av prestanda för att felsöka problem som rör Forms eller utdatatjänsten
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
-feature: Output Service, Forms Service
+feature: Utdatatjänst,Forms-tjänst
 topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
