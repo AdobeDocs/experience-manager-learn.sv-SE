@@ -1,18 +1,14 @@
 ---
 title: Spara och hämta anpassade formulärdata
-seo-title: Spara och hämta anpassade formulärdata
 description: Spara och hämta adaptiva formulärdata från databasen. Med den här funktionen kan formuläranvändare spara formuläret och fortsätta att fylla i det vid ett senare datum.
-seo-description: Spara och hämta adaptiva formulärdata från databasen. Med den här funktionen kan formuläranvändare spara formuläret och fortsätta att fylla i det vid ett senare datum.
-feature: adaptive-forms
-topics: developing
-audience: developer,implementer
-doc-type: article
-activity: setup
+feature: Adaptiv Forms
+topic: Utveckling
+role: Developer
+type: Tutorial
 version: 6.3,6.4,6.5
-translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -38,7 +34,7 @@ Den poolade DataSource för Apache Sling-anslutningen har konfigurerats för att
 
 * JDBC-drivrutinsklass:com.mysql.jdbc.Driver
 
-* JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial
+* URL för JDBC-anslutning:jdbc:mysql://localhost:3306/aemformstutorial
 
 ![anslutningpool](assets/storingdata.PNG)
 
@@ -212,7 +208,7 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## Skapa en OSGI-tjänst för att hämta data {#create-osgi-service}
+## Skapa OSGI-tjänst för att hämta data {#create-osgi-service}
 
 Följande kod skrevs för att hämta lagrade data för adaptiva formulär. En enkel fråga används för att hämta data för adaptiva formulär som är kopplade till ett givet GUID. Hämtade data returneras sedan till det anropande programmet. Samma datakälla skapades i det första steget som refereras i den här koden.
 
@@ -405,12 +401,12 @@ $(document).ready(function()
 });
 ```
 
-## Skapa anpassad formulärmall och sidkomponent {#form-template-and-page-component}
+## Skapa adaptiv formulärmall och sidkomponent {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### Demonstration av kapaciteten {#capability-demo}
+### Demonstration av förmågan {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
