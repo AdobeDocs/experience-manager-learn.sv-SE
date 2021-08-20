@@ -1,29 +1,20 @@
 ---
 title: Använda Associationsdatamodeller med AEM Forms
-seo-title: Använda Associationsdatamodeller med AEM Forms
 description: Lägg till associationer mellan entiteter i formulärdatamodellen
-seo-description: Lägg till associationer mellan entiteter i formulärdatamodellen
-uuid: 82626632-3251-4f7b-9af1-43a9161107c2
-discoiquuid: e01e9bd4-5b47-4356-9884-6968f385bb20
-feature: Adaptive Forms, Form Data Model
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+feature: Adaptiv Forms, formulärdatamodell
 version: 6.3,6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 3%
+source-wordcount: '36'
+ht-degree: 2%
 
 ---
 
 
-# Använda associationsdatamodeller med AEM Forms{#using-association-data-models-with-aem-forms}
+# Använda Associationsdatamodeller med AEM Forms{#using-association-data-models-with-aem-forms}
 
 Skapa associationer mellan två entiteter i formulärdatamodellen
 
