@@ -1,29 +1,21 @@
 ---
 title: Använda datamodelltjänst för formulär som ett steg i arbetsflödet
-seo-title: Använda datamodelltjänst för formulär som ett steg i arbetsflödet
 description: Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodellen som en del av AEM arbetsflöde. I följande videofilm visas stegen som behövs för att konfigurera steget för formulärdatamodell i AEM arbetsflöde.
-seo-description: Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodellen som en del av AEM arbetsflöde. I följande videofilm visas stegen som behövs för att konfigurera steget för formulärdatamodell i AEM arbetsflöde.
-uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
-feature: Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+feature: Arbetsflöde
+type: Tutorial
 version: 6.4,6.5
-discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
 
 
-# Använda datamodelltjänst för formulär som steg i arbetsflödet {#using-form-data-model-service-as-step-in-workflow}
+# Använda datamodelltjänst för formulär som ett steg i arbetsflödet {#using-form-data-model-service-as-step-in-workflow}
 
 Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodellen som en del av AEM arbetsflöde. I följande videofilm visas de steg som krävs för att konfigurera steget Formulärdatamodell i AEM arbetsflöde
 
@@ -34,7 +26,7 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet som anger metadataegenskaper.
 >!![NOTE]I AEM Forms 6.5 och senare finns den här funktionen tillgänglig direkt  [enligt beskrivningen här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html). Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html). Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
 * [Importera resurserna till AEM med hjälp av pakethanteraren](assets/invoke-fdm-as-service-step.zip). Paketet innehåller följande:
 
