@@ -1,31 +1,22 @@
 ---
 title: Använda funktioner och kodredigerare
-seo-title: Använda funktioner och kodredigerare
 description: Använda funktioner och kodredigerare för att skapa affärsregler
-seo-description: Använda funktioner och kodredigerare för att skapa affärsregler
-uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: Adaptive Forms
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptiv Forms
 version: 6.4,6.5
-discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 1%
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
 
-# Använda anpassade funktioner och kodredigeraren {#using-functions-and-code-editor}
+# Använda anpassade funktioner och kodredigerare {#using-functions-and-code-editor}
 
 I den här delen använder vi anpassade funktioner och kodredigeraren för att skapa affärsregler.
 
@@ -38,7 +29,7 @@ Ett klientbibliotek består vanligtvis av CSS- och JavaScript-filer. Det här kl
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### Ange sammanfattningsrubrik för panelen {#set-the-summary-title-of-panels}
+### Ange panelens sammanfattningsrubrik {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
