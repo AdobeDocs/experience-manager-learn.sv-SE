@@ -1,29 +1,20 @@
 ---
 title: Använda steget Skicka e-post för Forms Workflow
-seo-title: Använda steget Skicka e-post för Forms Workflow
-description: Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas stegen för hur du konfigurerar komponenten Skicka e-post
-seo-description: Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas stegen för hur du konfigurerar komponenten Skicka e-post
-uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
-feature: Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+description: Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas hur du konfigurerar komponenten för att skicka e-post
+feature: Arbetsflöde
 version: 6.4,6.5
-discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 
-# Använda steget Skicka e-post för Formens Workflow {#using-send-email-step-of-forms-workflow}
+# Använda steget Skicka e-post för Forms Workflow {#using-send-email-step-of-forms-workflow}
 
 Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas stegen för hur du konfigurerar komponenten för att skicka e-post.
 
