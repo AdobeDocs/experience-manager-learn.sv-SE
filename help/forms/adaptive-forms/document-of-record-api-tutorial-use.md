@@ -1,33 +1,24 @@
 ---
 title: Använda API för att generera arkivdokument med AEM Forms
-seo-title: Använda API för att generera arkivdokument med AEM Forms
 description: Generera DOR (Document Of Record) programmatiskt
-seo-description: Använda API för att generera arkivdokument med AEM Forms
-feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: article
-activity: implement
+feature: Adaptiv Forms
 version: 6.4,6.5
-uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
-discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
 
-# Använda API för att generera ett dokument för post i AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}
+# Använda API för att generera arkivdokument i AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}
 
 Generera DOR (Document Of Record) programmatiskt
 
-I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **postdokument** programmatiskt. [Document of ](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) Recordis är en PDF-version av de data som samlats in i adaptiv form.
+I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **postdokument** programmatiskt. [Document of ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) Recordis är en PDF-version av de data som samlats in i adaptiv form.
 
 1. Här följer kodfragmentet. Den första raden hämtar DOR-tjänsten.
 1. Ange DoROptions.
@@ -50,7 +41,7 @@ Följ de här stegen för att prova detta på din lokala dator
 1. [Hämta och installera artikelresurserna med pakethanteraren](assets/dor-with-api.zip)
 1. Kontrollera att du har installerat och startat DevelopingWithServiceUser-paketet som ingår i [Create Service User-artikeln](service-user-tutorial-develop.md)
 1. [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter användarmappningstjänsten för Apache Sling Service
+1. Sök efter användarmappningstjänsten för Apache Sling-tjänsten
 1. Se till att du anger följande _DevelopingWithServiceUser.core:getformsresourceServer=fd-service_ i avsnittet Tjänstmappningar
 1. [Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och klicka på Visa PDF
