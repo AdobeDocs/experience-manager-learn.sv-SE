@@ -1,32 +1,26 @@
 ---
 title: 'Använda automatiska tester med AEM Adaptive Forms '
-seo-title: 'Använda automatiska tester med AEM Adaptive Forms '
 description: Automatiserad testning av Adaptive Forms med Calvin SDK
-seo-description: Automatiserad testning av Adaptive Forms med Calvin SDK
-feature: Adaptive Forms
-topics: development
-audience: developer
+feature: Adaptiv Forms
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
-uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
 
-# Använda automatiska tester med AEM Adaptiv Forms {#using-automated-tests-with-aem-adaptive-forms}
+# Använda automatiska tester med AEM Adaptive Forms {#using-automated-tests-with-aem-adaptive-forms}
 
 Automatiserad testning av Adaptive Forms med Calvin SDK
 
-Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Hobbes.js testramverk](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html). Calvin SDK finns med AEM Forms 6.3 och senare.
+Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Hobbes.js testramverk](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
 
 I den här självstudiekursen skapar du följande:
 
@@ -81,7 +75,7 @@ Testfall kan läggas till för testsviten som ska köras mot en adaptiv form.
 * När du har skapat ett testfall kan du lägga till åtgärder i testfallet.
 * Åtgärder som `navigateTo`, `asserts.isTrue` kan läggas till som åtgärder i testfallet.
 
-## Köra de automatiserade testerna {#running-the-automated-tests}
+## Köra automatiska tester {#running-the-automated-tests}
 
 [Öppna ](http://localhost:4502/libs/granite/testing/hobbes.html)testsvitenUtöka testsviten och kör testerna. Om allt fungerar som det ska visas följande utdata.
 
