@@ -1,23 +1,14 @@
 ---
 title: Använda transaktionsrapportering i AEM Forms
-seo-title: Använda transaktionsrapportering i AEM Forms
 description: Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution.
-seo-description: Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution.
-uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
-feature: Adaptive Forms
-topics: developing
-audience: administrator
-doc-type: article
-activity: setup
+feature: Adaptiv Forms
 version: 6.4.1,6.5
-discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -27,7 +18,7 @@ ht-degree: 0%
 
 Transaktionsrapportering för att fånga upp antalet inskickade formulär, återgivning av dokument med dokumenttjänster och återgivning av interaktiv kommunikation (webben och tryckkanaler) har introducerats i AEM Forms 6.4.1. Den här funktionen är främst avsedd för kunder som vill licensiera programvaran baserat på antalet inskickade formulär och/eller återgivna dokument. Den här funktionen är för närvarande endast tillgänglig i AEM Forms OSGI-stacken.
 
-## Aktiverar transaktionsrapportering {#enabling-transaction-reporting}
+## Aktivera transaktionsrapportering {#enabling-transaction-reporting}
 
 Som standard är transaktionsregistrering inaktiverat. Följ stegen nedan för att aktivera transaktionsregistrering:
 
