@@ -1,24 +1,15 @@
 ---
 title: Skapa återanvändbara AEM Forms-arbetsflödesmodeller.
-seo-title: Skapa återanvändbara AEM Forms-arbetsflödesmodeller.
 description: arbetsflödesmodeller som är oberoende av Adaptive Forms.
-seo-description: Arbetsflödesmodeller oberoende av Adaptiv Forms.
-feature: Workflow
-topics: development
-audience: developer
-doc-type: article
-activity: setup
+feature: Arbetsflöde
 version: 6.5
-uuid: 3a082743-3e56-42f4-a44b-24fa34165926
-discoiquuid: 9f18c314-39d1-4c82-b1bc-d905ea472451
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 1%
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
