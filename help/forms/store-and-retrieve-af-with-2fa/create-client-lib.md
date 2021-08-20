@@ -1,28 +1,24 @@
 ---
 title: Skapa klientbibliotek
 description: Skapa klientbibliotek för att hantera klickhändelsen för knappen "Spara och avsluta"
-feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+feature: Adaptiv Forms
+type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 1%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
 # Skapa klientbibliotek
 
-Skapa [klientlib](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för API:t `guideBridge` för händelsen click för knappen som identifieras av CSS-klassen **savebutton**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
+Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för API:t `guideBridge` för händelsen click för knappen som identifieras av CSS-klassen **savebutton**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
 
 När formulärdata har sparats genereras ett unikt program-ID som visas för användaren i en dialogruta. När dialogrutan stängs dirigeras användaren till formuläret som gör att användaren kan hämta det sparade adaptiva formuläret med det unika program-ID:t.
 
