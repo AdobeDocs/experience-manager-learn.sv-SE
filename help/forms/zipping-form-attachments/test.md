@@ -1,18 +1,13 @@
 ---
 title: Testa lösningen
 description: Testa lösningen genom att lägga till bilagor i formuläret och utlösa arbetsflödet för att skicka e-postmeddelandet.
-sub-product: formulär
-feature: Arbetsflöde
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: develop
+feature: Adaptiv Forms
 version: 6.5
 topic: Utveckling
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
