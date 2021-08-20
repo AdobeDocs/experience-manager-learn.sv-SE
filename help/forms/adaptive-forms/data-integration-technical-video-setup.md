@@ -1,24 +1,15 @@
 ---
 title: Konfigurera dataintegrering med AEM Forms
-seo-title: Konfigurera dataintegrering med AEM Forms
 description: Konfigurera dataanslutning till en JDBC-datakälla
-seo-description: Konfigurera dataanslutning till en JDBC-datakälla
-feature: Adaptive Forms,Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+feature: Adaptiv Forms, arbetsflöde
 version: 6.4,6.5
-uuid: 267de794-4462-4421-adee-d40a469fabb3
-discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 2%
+source-wordcount: '78'
+ht-degree: 1%
 
 ---
 
