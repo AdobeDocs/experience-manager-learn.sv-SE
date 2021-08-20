@@ -2,14 +2,13 @@
 title: Så här uppdaterar du anpassade XDP-filer och datafiler i FormsIVS och OutputIVS i testsyfte
 description: Lägga till eller ta bort anpassade XDP-filer och datafiler i FormsIVS och OutputIVS
 type: Troubleshooting
-product: forms
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Output Service, Forms Service '
+feature: 'Utdatatjänst, Forms-tjänst '
 topic: 'Utveckling '
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 1%
