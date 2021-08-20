@@ -1,21 +1,14 @@
 ---
 title: AEM Forms med Marketo (del 1)
-seo-title: AEM Forms med Marketo (del 1)
-description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
-seo-description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
-feature: Adaptive Forms, Form Data Model
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
+feature: Adaptiv Forms, formulärdatamodell
 version: 6.3,6.4,6.5
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -23,15 +16,15 @@ ht-degree: 0%
 
 # AEM Forms med Marketo
 
-Marketo, en del av Adobe, erbjuder Marketing Automation-programvara som fokuserar på kontobaserad marknadsföring, inklusive e-post, mobilt, sociala, digitala annonser, webbhantering och analys.
+Marketo, som ingår i Adobe, tillhandahåller Marketing Automation-programvara som fokuserar på kontobaserad marknadsföring, inklusive e-post, mobilt, sociala, digitala annonser, webbhantering och analys.
 
-Med hjälp av AEM Forms formulärdatamodell kan vi nu integrera AEM med Marketo smidigt.
+Med hjälp av AEM Forms Form Data Model kan vi nu integrera AEM Form med Marketo.
 
 [Läs mer om formulärdatamodellen](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
 
-Marketo visar ett REST API som tillåter fjärrexekvering av många av systemets funktioner. Det finns många alternativ, från att skapa program till att importera flera leads, som tillåter detaljerad kontroll av en Marketo-instans. Med hjälp av formulärdatamodellen är det ganska enkelt att integrera AEM Forms med Marketo.
+Marketo visar ett REST API som tillåter fjärrexekvering av många av systemets funktioner. Det finns många alternativ, från att skapa program till att importera leads, som ger detaljerad kontroll av en Marketo-instans. Med hjälp av formulärdatamodellen är det mycket enkelt att integrera AEM Forms med Marketo.
 
-I den här självstudiekursen får du hjälp med att integrera AEM Forms med Marketo med hjälp av formulärdatamodellen. När du är klar med självstudiekursen får du ett OSGi-paket som gör den anpassade autentiseringen mot Marketo. Du kommer också att ha konfigurerat datakällan med den angivna swagger-filen.
+I den här självstudiekursen får du hjälp med att integrera AEM Forms med Marketo med hjälp av Form Data Model. När du är klar med självstudiekursen får du ett OSGi-paket som utför den anpassade autentiseringen mot Marketo. Du kommer också att ha konfigurerat datakällan med den angivna swagger-filen.
 
 Vi rekommenderar att du är bekant med följande ämnen i avsnittet Krav för att komma igång.
 
@@ -52,7 +45,7 @@ Det första steget i integreringen av Marketo med AEM Forms är att hämta de AP
 1. identity_endpoint
 1. autentiserings-URL.
 
-[Följ den officiella Marketo-dokumentationen för att få tillgång till ovanstående egenskaper.](https://developers.marketo.com/rest-api/) Du kan också kontakta administratören för Marketo-instansen.
+[Följ den officiella Marketo-dokumentationen för att få tillgång till ovanstående egenskaper.](https://developers.marketo.com/rest-api/) Du kan också kontakta administratören för din Marketo-instans.
 
 **Innan du börjar**
 
