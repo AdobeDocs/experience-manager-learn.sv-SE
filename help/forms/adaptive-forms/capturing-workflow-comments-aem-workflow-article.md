@@ -1,24 +1,15 @@
 ---
 title: Samla in arbetsflödeskommentarer i adaptiv Forms Workflow
-seo-title: Samla in arbetsflödeskommentarer i adaptiv Forms Workflow
 description: Samla in arbetsflödeskommentarer i AEM arbetsflöde
-seo-description: Samla in arbetsflödeskommentarer i AEM arbetsflöde
-uuid: df41fc6f-9abf-47b4-a014-b3b9fb58b6f7
-feature: Workflow
-topics: development
-audience: developer
-doc-type: article
-activity: setup
+feature: Arbetsflöde
 version: 6.3,6.4
-discoiquuid: d5e40650-3b1f-4875-91b2-e22d932b5e7c
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 1%
+source-wordcount: '382'
+ht-degree: 0%
 
 ---
 
