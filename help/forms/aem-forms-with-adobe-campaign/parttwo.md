@@ -1,29 +1,20 @@
 ---
 title: Skapa kampanjprofil för inskickning av adaptiva formulär
-seo-title: Skapa kampanjprofil för inskickning av adaptiva formulär
 description: I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
-seo-description: I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
-uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: Adaptive Forms, Form Data Model
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+feature: Adaptiv Forms, formulärdatamodell
 version: 6.3,6.4,6.5
-discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# Skapar kampanjprofil för inskickning av adaptiva formulär {#creating-campaign-profile-on-adaptive-form-submission}
+# Skapa kampanjprofil för inskickning av adaptiva formulär {#creating-campaign-profile-on-adaptive-form-submission}
 
 I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
 
