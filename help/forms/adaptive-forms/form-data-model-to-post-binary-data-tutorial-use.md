@@ -1,29 +1,20 @@
 ---
 title: Bokför binära data med formulärdatamodellen
-seo-title: Bokför binära data med formulärdatamodellen
 description: Bokföra binära data till AEM DAM med hjälp av formulärdatamodellen
-seo-description: Bokföra binära data till AEM DAM med hjälp av formulärdatamodellen
-uuid: dd344ed8-69f7-4d63-888a-3c96993fe99d
-feature: Workflow
-topics: integrations
-audience: developer
-doc-type: article
-activity: setup
+feature: Arbetsflöde
 version: 6.4,6.5
-discoiquuid: 6e99df7d-c030-416b-83d2-24247f673b33
-topic: Development
+topic: Utveckling
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
 
 
-# Använda formulärdatamodell för att posta binära data{#using-form-data-model-to-post-binary-data}
+# Bokför binära data med formulärdatamodellen{#using-form-data-model-to-post-binary-data}
 
 Från och med AEM Forms 6.4 har vi nu möjlighet att anropa datamodelltjänsten i form av ett steg i AEM arbetsflöde. I den här artikeln får du hjälp med att skicka ett exempel på hur du kan använda Document of Record med hjälp av Form Data Model Service.
 
