@@ -12,11 +12,10 @@ level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 1%
+source-wordcount: '1857'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +28,7 @@ I den här självstudiekursen beskrivs hur du skapar ett Maven Multi Module Modu
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](../overview.md#local-dev-environment). Se till att du har en ny instans av Adobe Experience Manager tillgänglig lokalt och att inga fler exempel-/demopaket har installerats (förutom obligatoriska Service Pack).
 
-## Mål {#objective}
+## Syfte {#objective}
 
 1. Lär dig hur du skapar ett nytt AEM med en Maven-arkityp.
 1. Förstå de olika moduler som genereras av den AEM projekttypen och hur de fungerar tillsammans.
@@ -47,7 +46,7 @@ I det här kapitlet genererar du ett nytt Adobe Experience Manager-projekt med [
 
 ## Skapa projektet {#create}
 
-Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen använder [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). I Cloud Manager finns också en gränssnittsguide [som initierar skapandet av ett AEM programprojekt. ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html) Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
+Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen använder [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). I Cloud Manager finns också en gränssnittsguide [som initierar skapandet av ett AEM programprojekt. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
 
 >[!NOTE]
 >
@@ -83,7 +82,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
    [INFO] Total time:  0.856 s
    ```
 
-   Om du **inte** ser **adobe-public** är det en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml`-fil. Gå igenom stegen för att installera och konfigurera Apache Maven i [en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
+   Om du **inte** ser **adobe-public** är det en indikation på att Adobe repo inte refereras korrekt i din `~/.m2/settings.xml`-fil. Gå igenom stegen för att installera och konfigurera Apache Maven i [en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
 
 1. Navigera till en katalog där du vill generera det AEM projektet. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. En katalog med namnet `code` under användarens arbetskatalog:
 
@@ -133,7 +132,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
            |--- .gitignore
    ```
 
-## Distribuera och bygg projektet {#build}
+## Distribuera och skapa projektet {#build}
 
 Skapa och distribuera projektkoden till en lokal instans av AEM.
 
@@ -193,28 +192,28 @@ Skapa och distribuera projektkoden till en lokal instans av AEM.
 
    *Exempelinnehåll som genererats av Arketypen*
 
-## Inspect projektet {#project-structure}
+## Inspect {#project-structure}
 
 Det genererade AEM består av enskilda Maven-moduler, var och en med olika roller. Den här självstudiekursen och en majoritet av utvecklingsfokus ligger på följande moduler:
 
-* [core](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/core.html)  - Java Code, främst serverutvecklare.
-* [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)  - Innehåller källkod för CSS, JavaScript, Sass och Type Script, främst för frontutvecklare.
-* [ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)  - Innehåller komponent- och dialogdefinitioner, bäddar in kompilerad CSS och JavaScript som klientbibliotek.
-* [ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.html) - innehåller strukturellt innehåll och konfigurationer som redigerbara mallar, metadatamappningar (/content, /conf).
+* [core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)  - Java Code, främst serverutvecklare.
+* [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)  - Innehåller källkod för CSS, JavaScript, Sass och Type Script, främst för frontutvecklare.
+* [ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)  - Innehåller komponent- och dialogdefinitioner, bäddar in kompilerad CSS och JavaScript som klientbibliotek.
+* [ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html) - innehåller strukturellt innehåll och konfigurationer som redigerbara mallar, metadatamappningar (/content, /conf).
 
 * **all** - det här är en tom Maven-modul som kombinerar ovanstående moduler till ett enda paket som kan distribueras till en AEM miljö.
 
 ![Maven Project Diagram](assets/project-setup/project-pom-structure.png)
 
-Mer information om **alla** Maven-modulerna finns i [AEM Project Archetype-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
+Mer information om **alla** Maven-modulerna finns i [AEM Project Archetype-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ### Inkludering av kärnkomponenter {#core-components}
 
-[AEM ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM. De här komponenterna utgör en basuppsättning med funktioner och är utformade för att formateras, anpassas och utökas för enskilda projekt.
+[AEM ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM. De här komponenterna utgör en basuppsättning med funktioner och är utformade för att formateras, anpassas och utökas för enskilda projekt.
 
-AEM som Cloud Service innehåller den senaste versionen av [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Därför innehåller projekt som genererats för AEM som en Cloud Service **inte** en inbäddning av AEM kärnkomponenter.
+AEM som Cloud Service innehåller den senaste versionen av [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). Därför innehåller projekt som genererats för AEM som en Cloud Service **inte** en inbäddning av AEM kärnkomponenter.
 
-För AEM 6.5/6.4-genererade projekt bäddar arkitypen automatiskt in [AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i projektet. Det är en god vana för AEM 6.5/6.4 att bädda in AEM Core Components för att säkerställa att den senaste versionen distribueras med ditt projekt. Mer information om hur kärnkomponenter [ingår i projektet finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/using.html#core-components).
+För AEM 6.5/6.4-genererade projekt bäddar arkitypen automatiskt in [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i projektet. Det är en god vana för AEM 6.5/6.4 att bädda in AEM Core Components för att säkerställa att den senaste versionen distribueras med ditt projekt. Mer information om hur kärnkomponenter [ingår i projektet finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#core-components).
 
 ## Hantering av källkontroll {#source-control}
 
@@ -242,7 +241,7 @@ Därefter ska vi titta på några av de Maven-profiler och kommandon du kan anv�
 
 ### Kärnmodul {#core-module}
 
-Modulen **[core](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/core.html)** innehåller all Java-kod som är associerad med projektet. När den byggts distribueras ett OSGi-paket till AEM. Så här skapar du bara den här modulen:
+Modulen **[core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)** innehåller all Java-kod som är associerad med projektet. När den byggts distribueras ett OSGi-paket till AEM. Så här skapar du bara den här modulen:
 
 1. Navigera till mappen `core` (under `aem-guides-wknd`):
 
@@ -274,9 +273,9 @@ Modulen **[core](https://docs.adobe.com/content/help/en/experience-manager-core-
 
    ![CRXDE-plats för JAR](assets/project-setup/jcr-bundle-location.png)
 
-### Ui.apps och Ui.content-modulerna {#apps-content-module}
+### Ui.apps och Ui.content-moduler {#apps-content-module}
 
-Mappmodulen **[ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)** innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som kommer att lagras i ett AEM som heter [clientlibs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/clientlibs.html). Detta inkluderar även [HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)-skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR-läsaren, men i ett format som kan lagras i ett filsystem och implementeras för källkontroll. Modulen **ui.apps** innehåller bara kod.
+Mappmodulen **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som kommer att lagras i ett AEM som heter [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/clientlibs.html). Detta inkluderar även [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)-skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR-läsaren, men i ett format som kan lagras i ett filsystem och implementeras för källkontroll. Modulen **ui.apps** innehåller bara kod.
 
 Så här skapar du bara den här modulen:
 
@@ -347,6 +346,6 @@ Så här skapar du bara den här modulen:
 
    Återigen förväntas ett byggfel inträffa om det inte finns någon AEM som körs på port **4504** tillgänglig. Parametern `aem.port` definieras i POM-filen på `aem-guides-wknd/pom.xml`.
 
-Modulen **[ui.content](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uicontent.htm)** är strukturerad på samma sätt som modulen **ui.apps**. Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **mutable**-innehåll. **** MutableContent avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i  **** källkontrollsknappar som kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
+Modulen **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.htm)** är strukturerad på samma sätt som modulen **ui.apps**. Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **mutable**-innehåll. **** MutableContent avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i  **** källkontrollsknappar som kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
 
 Samma Maven-kommandon som används för att skapa modulen **ui.apps** kan användas för att skapa modulen **ui.content**. Upprepa stegen ovan i mappen **ui.content**.
