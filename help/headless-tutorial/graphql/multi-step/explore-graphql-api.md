@@ -1,23 +1,17 @@
 ---
 title: Utforska GraphQL API:er - Komma igång med AEM Headless - GraphQL
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Utforska AEM GraphQL API:er med den inbyggda GrapiQL IDE. Lär dig hur AEM automatiskt genererar ett GraphQL-schema baserat på en Content Fragment-modell. Experimentera med att skapa grundläggande frågor med GraphQL-syntaxen.
-sub-product: resurser
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -58,7 +52,7 @@ GraphiQL IDE är ett utvecklingsverktyg och behövs bara i miljöer på låg niv
 
    ![Installera GraphiQL-paket](assets/explore-graphql-api/install-graphiql-package.png)
 
-## Fråga en lista över innehållsfragment {#query-list-cf}
+## Fråga en lista med innehållsfragment {#query-list-cf}
 
 Ett vanligt krav är att fråga efter flera innehållsfragment.
 
@@ -190,7 +184,7 @@ Sedan ska vi titta på hur det går att filtrera resultatet till en delmängd av
 
 Det finns många andra alternativ för att filtrera och skapa komplexa frågor. Ovanför är bara några exempel.
 
-## Fråga ett enskilt innehållsfragment {#query-single-cf}
+## Fråga ett enstaka innehållsfragment {#query-single-cf}
 
 Det går också att ställa frågor direkt till ett enda innehållsfragment. Innehåll i AEM lagras hierarkiskt och den unika identifieraren för ett fragment baseras på fragmentets sökväg. Om målet är att returnera data om ett enskilt fragment är det att föredra att använda sökvägen och fråga modellen direkt. Om du använder den här syntaxen kommer frågans komplexitet att bli mycket låg och ge ett snabbare resultat.
 
@@ -238,7 +232,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
 
 1. Kör frågan och observera att `biography`-fältet innehåller ett mycket kortare `html`-resultat.
 
-## Fråga efter modeller för flera innehållsfragment {#query-multiple-models}
+## Fråga efter flera modeller för innehållsfragment {#query-multiple-models}
 
 Det går också att kombinera olika frågor i en enda fråga. Detta är användbart för att minimera antalet HTTP-begäranden som krävs för att köra programmet. Vyn *Hem* för ett program kan till exempel visa innehåll baserat på **två** olika modeller för innehållsfragment. I stället för att köra **två** separata frågor kan vi kombinera frågorna i en enda begäran.
 
