@@ -2,7 +2,7 @@
 title: Anpassa meddelande om tilldelning av uppgift
 description: Inkludera formulärdata i e-postmeddelanden om tilldelning av uppgifter
 sub-product: formulär
-feature: Workflow
+feature: Arbetsflöde
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,13 +10,12 @@ activity: setup
 version: 6.4,6.5
 kt: 6279
 thumbnail: KT-6279.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ ht-degree: 0%
 # Anpassa meddelande om tilldelning av uppgift
 
 Tilldela Task-komponent används för att tilldela uppgifter till arbetsflödesdeltagare. När en uppgift tilldelas en användare eller grupp skickas ett e-postmeddelande till den angivna användaren eller gruppmedlemmarna.
-Det här e-postmeddelandet innehåller vanligtvis dynamiska data som är relaterade till uppgiften. Dynamiska data hämtas med hjälp av de systemgenererade [metadataegenskaperna](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
+Det här e-postmeddelandet innehåller vanligtvis dynamiska data som är relaterade till uppgiften. Dynamiska data hämtas med hjälp av de systemgenererade [metadataegenskaperna](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
 Om du vill inkludera värden från skickade formulärdata i e-postmeddelandet måste vi skapa en anpassad metadataegenskap och sedan använda dessa anpassade metadataegenskaper i e-postmallen
 
 
@@ -131,7 +130,7 @@ När OSGi-komponenten har byggts och distribuerats till AEM server konfigurerar 
 
 ## Gör så här på servern
 
-* [Konfigurera daglig CQ Mail-tjänst](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [Konfigurera daglig CQ Mail-tjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * Associera ett giltigt e-post-ID med [admin-användare](http://localhost:4502/security/users.html)
 * Hämta och installera [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) med [package manager](http://localhost:4502/crx/packmgr/index.jsp)
 * Hämta [adaptiv form](assets/request-travel-authorization.zip) och importera till AEM från gränssnittet [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
