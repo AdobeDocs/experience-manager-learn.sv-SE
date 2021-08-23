@@ -1,27 +1,22 @@
 ---
 title: Anpassa Adobe-klientdatalagret med AEM
 description: Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från AEM Core Components för att utöka och anpassa datalagret.
-feature: Adobe Client Data Layer, Core Component
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: use
 version: cloud-service
-kt: 6265
-thumbnail: KT-6265.jpg
-topic: Integrations
+topic: Integreringar
+feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6265
+thumbnail: KT-6265.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
 
 
-# Anpassa Adobe-klientdatalagret med AEM-komponenter {#customize-data-layer}
+# Anpassa Adobe-klientdatalagret med AEM {#customize-data-layer}
 
 Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
 
@@ -41,11 +36,11 @@ I den här självstudiekursen utforskar du olika alternativ för att utöka data
 
 En **lokal utvecklingsmiljö** krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs på ett macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
 
-**Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
-**Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+**Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
-## Hämta och distribuera WKND-referenswebbplatsen {#set-up-wknd-site}
+## Hämta och distribuera WKND Reference-webbplatsen {#set-up-wknd-site}
 
 Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klona och installera WKND-kodbasen i din lokala miljö.
 
@@ -86,7 +81,7 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
 
    Observera att komponenten Byline inte finns med i datalagret.
 
-## Uppdatera Byline Sling-modellen {#sling-model}
+## Uppdatera modellen Byline Sling {#sling-model}
 
 Om du vill mata in data om komponenten i datalagret måste vi först uppdatera komponentens Sling Model. Uppdatera sedan implementeringen av Java- och Sling Model i Byline för att lägga till en ny metod `getData()`. Den här metoden innehåller de egenskaper som vi vill mata in i datalagret.
 
@@ -302,7 +297,7 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
 
    `cmp:click`-händelsen är den enklaste att ansluta till. För mer komplexa komponenter och för att spåra andra beteenden är det möjligt att lägga till egna javascript för att lägga till och registrera nya händelser. Ett bra exempel är Carousel-komponenten, som utlöser en `cmp:show`-händelse när en bild växlas. Mer information finns i [källkoden](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219).
 
-## Använd verktyget DataLayerBuilder {#data-layer-builder}
+## Använda verktyget DataLayerBuilder {#data-layer-builder}
 
 När Sling Model [uppdaterades](#sling-model) tidigare i kapitlet valde vi att skapa JSON-strängen med en `HashMap` och ange var och en av egenskaperna manuellt. Den här metoden fungerar bra för små engångskomponenter, men för komponenter som utökar AEM Core Components kan det resultera i mycket extra kod.
 
@@ -438,4 +433,4 @@ Du har utforskat några sätt att utöka och anpassa datalagret för klienten i 
 
 * [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [Datalagerintegrering med kärnkomponenterna](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [Använda Adobe Client Data Layer och Core Components Documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
