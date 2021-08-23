@@ -12,10 +12,9 @@ thumbnail: KT-6282.jpg
 topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -46,7 +45,7 @@ asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i
 1. Asset compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
 1. Binära data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och visas som __(4a)__ en textåtergivning och __(4b)__ beständiga till objektets metadatanod.
 
-Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet följer att den interna informationen för exekvering av Asset compute](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) är tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.[
+Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet följer att den interna informationen för exekvering av Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html) är tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.[
 
 ## Anatomi för en arbetare
 
@@ -179,7 +178,7 @@ exports.main = worker(async (source, rendition, params) => {
 }
 ```
 
-## Utlöser fel{#errors}
+## Utlösande fel{#errors}
 
 asset compute-arbetare kan stöta på situationer som leder till fel. Adobe Asset compute SDK innehåller [en serie fördefinierade fel](https://github.com/adobe/asset-compute-commons#asset-compute-errors) som kan genereras när sådana situationer uppstår. Om ingen specifik feltyp finns kan `GenericError` användas eller specifika anpassade `ClientErrors` definieras.
 
