@@ -4,11 +4,12 @@ description: 'Lär dig grunderna i att utveckla en OSGi-tjänst '
 role: Developer
 level: Beginner
 topic: Utveckling
+feature: OSGI
 kt: 8227
 thumbnail: 335476.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '90'
 ht-degree: 3%
 
 ---
