@@ -1,14 +1,13 @@
 ---
 title: Kapitel 7 - Använda AEM innehållstjänster från en mobilapp - Innehållstjänster
 description: Kapitel 7 i självstudiekursen innehåller Android-mobilappen som kan använda redigerat innehåll från AEM Content Services.
-feature: Content Fragments, APIs
+feature: Innehållsfragment, API:er
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -164,7 +163,7 @@ Slutligen läses logotypens `src` in i Android ImageView med hjälp av hjälpbib
 
 Observera att vi måste tillhandahålla AEM schema, värd och port (via `aemHost`) till AEM Publish-instansen eftersom AEM Content Services bara tillhandahåller JCR-sökvägen (d.v.s. `/content/dam/wknd-mobile/images/wknd-logo.png`) till det refererade innehållet.
 
-#### Bild-POJO{#image-pojo}
+#### Bildens POJO{#image-pojo}
 
 Om du väljer det här alternativet kan du använda [Jackson ObjectMapper](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html) eller liknande funktioner från andra bibliotek, som Gson, för att mappa komplexa JSON-strukturer till Java POJO-organisationer utan att behöva hantera de inbyggda JSON-objekten direkt. I det här enkla fallet mappar vi `src`-nyckeln från JSON-objektet `image` till `src`-attributet i Image POJO direkt via `@JSONProperty`-anteckningen.
 
@@ -202,7 +201,7 @@ Uppdatera mobilappen efter varje steg och bekräfta uppdateringen av mobilupplev
 Läs mer om AEM Content Services och AEM som Headless CMS på Adobe i annan dokumentation och annat material:
 
 * [Använda innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM Användarhandbok för WCM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [AEM Användarhandbok för WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM Core Components Components Library](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM Core Components GitHub Project](https://github.com/adobe/aem-core-wcm-components)
 * [AEM kärnkomponenter i WCM - Fråga experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
