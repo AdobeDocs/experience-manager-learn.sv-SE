@@ -1,7 +1,7 @@
 ---
 title: Konfigurera manifest.yml för ett Asset compute-projekt
 description: Asset compute projekts manifest.yml beskriver alla arbetare i det här projektet som ska distribueras.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,12 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -31,7 +30,7 @@ ht-degree: 0%
 
 Arbetare definieras som Adobe I/O Runtime åtgärdsposter under `actions` och består av en uppsättning konfigurationer.
 
-Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom den här [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via objektet `params.auth`. Detta är vanligtvis nödvändigt när arbetaren anropar Adobe I/O-API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
+Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom den här [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via objektet `params.auth`. Detta är vanligtvis nödvändigt när arbetaren anropar Adobe I/O-API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
 
 1. Öppna och granska den automatiskt genererade arbetaren `manifest.yml`. Projekt som innehåller flera Asset compute-arbetare måste definiera en post för varje arbetare under `actions`-arrayen.
 
@@ -54,7 +53,7 @@ packages:
 
 Varje arbetare kan konfigurera [gränserna](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) för sin körningskontext i Adobe I/O Runtime. Dessa värden bör justeras för att ge optimal storlek för arbetaren, baserat på volymen, hastigheten och typen av resurser som den beräknar samt vilken typ av arbete den utför.
 
-Granska [vägledningen för storleksändring av Adobe](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) innan du anger gränser. asset compute kan få slut på minne när resurser bearbetas, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla resurser som kan användas som kandidater.
+Granska [vägledningen för storleksändring av Adobe](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) innan du anger gränser. asset compute kan få slut på minne när resurser bearbetas, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla resurser som kan användas som kandidater.
 
 1. Lägg till ett `inputs`-avsnitt i den nya `wknd-asset-compute`-åtgärdsposten. På så sätt kan du justera Asset compute arbetarens totala prestanda och resursallokering.
 
