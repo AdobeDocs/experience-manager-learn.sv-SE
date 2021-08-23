@@ -1,7 +1,7 @@
 ---
 title: asset compute mikrotjänster för AEM som Cloud Service
 description: I den här självstudiekursen går du igenom hur du skapar en enkel Asset compute-arbetare som skapar en resursåtergivning genom att beskära den ursprungliga resursen till en cirkel och tillämpar konfigurerbar kontrast och ljusstyrka. Även om arbetaren själv är grundläggande används den här självstudien för att utforska hur du skapar, utvecklar och distribuerar en anpassad Asset compute-arbetare som kan användas med AEM som Cloud Service.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrations, Development
+topic: Integrering, utveckling
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -149,7 +148,7 @@ Nedan följer olika Adobe-resurser som ger mer information och användbara API:e
 
 ### Dokumentation
 
-+ [asset compute Service-dokumentation](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
++ [asset compute Service-dokumentation](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
 + [Viktigt om verktyget asset compute Development Tool](https://github.com/adobe/asset-compute-devtool)
 + [asset compute exempelarbetare](https://github.com/adobe/asset-compute-example-workers)
 
