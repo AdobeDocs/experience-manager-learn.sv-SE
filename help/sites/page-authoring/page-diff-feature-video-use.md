@@ -14,9 +14,9 @@ thumbnail: 32152.jpg
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
@@ -49,4 +49,4 @@ Funktionen Sidskillnad kan även användas för att identifiera skillnaden mella
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för sidskillnader](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [Dokumentation för sidskillnader](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
