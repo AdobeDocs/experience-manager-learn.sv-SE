@@ -2,11 +2,11 @@
 user-guide-title: AEM Assets Essentials - videor
 user-guide-description: En samling videor för Adobe Experience Manager Assets Essentials.
 breadcrumb-title: AEM Assets Essentials - videor
-sub-product: resurser
+feature-set: Experience Manager Assets
 team: TM
-source-git-commit: c7da508b500ac64ac2e817c5b6ff40899f71e7f3
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '46'
 ht-degree: 2%
 
 ---
