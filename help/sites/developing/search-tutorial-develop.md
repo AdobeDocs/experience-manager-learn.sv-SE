@@ -6,22 +6,21 @@ audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: Search
-topic: Development
+feature: Sökning
+topic: Utveckling
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 
-# Implementeringsguide för enkel sökning{#simple-search-implementation-guide}
+# Implementeringshandbok för enkel sökning{#simple-search-implementation-guide}
 
-Den enkla sökimplementeringen är material från **Adobe Summit Lab AEM Search Demystified**. Den här sidan innehåller material från det här labbet. En guidad visning av labbet finns i Lab-arbetsboken i avsnittet Presentation på den här sidan.
+Den enkla sökimplementeringen är material från **Adobe Summit lab AEM Search Demystified**. Den här sidan innehåller material från det här labbet. En guidad visning av labbet finns i Lab-arbetsboken i avsnittet Presentation på den här sidan.
 
 ![Översikt över sökarkitekturen](assets/l4080/simple-search-application.png)
 
@@ -73,12 +72,12 @@ Den enkla sökimplementeringen är material från **Adobe Summit Lab AEM Search 
 * [Kapitel 6 lösning](assets/l4080/l4080-chapter6.zip)
 * [Kapitel 9 lösning](assets/l4080/l4080-chapter9.zip)
 
-## Refererade material {#reference-materials}
+## Refererat material {#reference-materials}
 
 * [Github-databas](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 * [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
 * [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)  ([dokumentationssida](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrigeringar och uppföljning {#corrections-and-follow-up}
