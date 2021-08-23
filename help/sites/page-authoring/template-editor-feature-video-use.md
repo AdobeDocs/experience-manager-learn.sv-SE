@@ -13,9 +13,9 @@ kt: 193
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -42,5 +42,5 @@ URL för redigerbara mallar (lokal AEM): [http://localhost:4502/libs/wcm/core/co
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigerbara sidmallar - dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [Skapa sidmallar - dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/templates.html)
+* [Redigerbara sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [Skapa sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
