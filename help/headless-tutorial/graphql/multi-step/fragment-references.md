@@ -1,23 +1,17 @@
 ---
 title: Avancerad datamodellering med fragmentreferenser - Komma igång med AEM Headless - GraphQL
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig hur du använder funktionen Fragmentreferens för avancerad datamodellering och hur du skapar en relation mellan två olika innehållsfragment. Lär dig hur du ändrar en GraphQL-fråga så att den inkluderar fält från en refererad modell.
-sub-product: resurser
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
