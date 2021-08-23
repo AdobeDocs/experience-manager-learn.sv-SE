@@ -12,9 +12,9 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med S
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [Navigation Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html) används.
+I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [Navigation Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) används.
 
 ![Navigering har lagts till](assets/navigation-routing/navigation-added.png)
 
@@ -208,7 +208,7 @@ Kontrollera sedan den JSON-modell som driver SPA upplevelse av flera vyer.
 
 1. Experimentera med länkar genom att navigera direkt till: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Tänk också på att webbläsarens bakåtknapp fortsätter att fungera.
 
-## Inspect React Routing {#react-routing}
+## Inspect React Routing  {#react-routing}
 
 Navigering och routning implementeras med [Reaktionsrouter](https://reactrouter.com/). React Router är en samling navigeringskomponenter för React-program. [AEM React Core-](https://github.com/adobe/aem-react-core-wcm-components-base) komponenter använder funktionerna i React Router för att implementera den  **** navigeringskomponent som användes i föregående steg.
 
@@ -284,7 +284,7 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
        }
    ```
 
-   I stället för att använda en `<a>`-ankartagg som standard använder vi `<Link>` från React Router. Så länge som `to=` pekar på en giltig väg, kommer SPA att växla till den vägen och **inte** utföra en uppdatering av hela sidan. Här hårdkodar vi länken till hemsidan för att visa hur `Link` används.
+   I stället för att använda standardtaggen `<a>` använder vi `<Link>` som tillhandahålls av React Router. Så länge som `to=` pekar på en giltig väg, kommer SPA att växla till den vägen och **inte** utföra en uppdatering av hela sidan. Här hårdkodar vi länken till hemsidan för att visa hur `Link` används.
 
 1. Uppdatera testet på `App.test.js` `ui.frontend/src/App.test.js`.
 
