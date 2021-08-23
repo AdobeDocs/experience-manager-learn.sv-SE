@@ -11,10 +11,9 @@ level: Beginner
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3013'
 ht-degree: 0%
 
 ---
@@ -79,11 +78,11 @@ Vi kommer att använda AEM bästa praxis och använda:
 
 ## Enhetstestning och Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integrerar körning av enhetstester och  [kodstäckning ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
+[Adobe Cloud ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integrerar körning av enhetstester och  [kodstäckning ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
 
 Även om kod för enhetstestning är en bra vana för alla kodbaser är det viktigt att kunna dra nytta av dess funktioner för kodkvalitetstestning och rapportering när du använder Cloud Manager genom att tillhandahålla enhetstester som Cloud Manager kan köra.
 
-## Inspect testningen av Maven-beroenden {#inspect-the-test-maven-dependencies}
+## Inspect testning av Maven-beroenden {#inspect-the-test-maven-dependencies}
 
 Det första steget är att undersöka Maven-beroenden för att stödja skrivandet och körningen av testerna. Det krävs fyra beroenden:
 
@@ -188,7 +187,7 @@ Det första steget är att undersöka Maven-beroenden för att stödja skrivande
 
    En parallell källmapp i **core**-projektet kommer att innehålla enhetstesterna och eventuella testfiler som stöds. Denna **test**-mapp skiljer testklasser från källkoden men gör att testerna fungerar som om de finns i samma paket som källkoden.
 
-## Skapar JUnit-testet {#creating-the-junit-test}
+## Skapa JUnit-testet {#creating-the-junit-test}
 
 Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet ska vi skriva ett JUnit-test för **BylineImpl.java**, som är den Sling-modell som stöder Byline-komponenten.
 
@@ -289,7 +288,7 @@ I den här självstudien används den senare metoden (eftersom vi redan har skap
 
 TDD krävs inom ramen för AEM och är bäst lämpat för AEM utvecklare som är skickliga på AEM utveckling och enhetstestning av AEM kod.
 
-## Konfigurera AEM testkontext {#setting-up-aem-test-context}
+## Konfigurera AEM testkontext  {#setting-up-aem-test-context}
 
 De flesta koder som skrivits för AEM är beroende av JCR-, Sling- eller AEM-API:er, som i sin tur kräver att en AEM körs på rätt sätt.
 
