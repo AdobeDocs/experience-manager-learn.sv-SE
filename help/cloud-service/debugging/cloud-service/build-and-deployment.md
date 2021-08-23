@@ -1,7 +1,7 @@
 ---
 title: Bygg och driftsätta
 description: Adobe Cloud Manager underlättar kodbygget och distributionen AEM som en Cloud Service. Fel kan uppstå under steg i byggprocessen, vilket kräver åtgärder för att åtgärda dem. Den här guiden går igenom hur man förstår vanliga fel i distributionen och hur man bäst hanterar dem.
-feature: Developer Tools
+feature: Utvecklarverktyg
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2542'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
@@ -73,11 +72,11 @@ Fel som upptäcks i den här fasen bör kunna reproduceras lokalt, med följande
 
 Kodskanning utför statisk kodanalys med en blandning av Java och AEM bästa praxis.
 
-Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen är ofullständig och kan resultera i [falskt positiv](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives).
+Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen är ofullständig och kan resultera i [falskt positiv](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
 
 Lös problem med kodskanning genom att hämta den CSV-formaterade rapporten från Cloud Manager via knappen **Hämta information** och granska alla poster.
 
-Mer information finns i AEM specifika regler i Cloud Manager-dokumentationen [anpassade AEM-specifika regler för kodskanning](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+Mer information finns i AEM specifika regler i Cloud Manager-dokumentationen [anpassade AEM-specifika regler för kodskanning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
 
 ## Skapa bilder
 
@@ -105,7 +104,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 #### Orsak 2
 
 + __Orsak:__ Det AEM projektet innehåller felaktigt samma kodpaket två gånger, vilket resulterar i att en OSGi-konfiguration i det paketet dupliceras.
-+ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har  `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) konfigurationsuppsättningen  `<cloudManagerTarget>none</cloudManagerTarget>`.
++ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har  `filevault-package-maven-plugin` [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) konfigurationsuppsättningen  `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 ### Felformaterat ompekningsskript
 
@@ -233,8 +232,8 @@ Så här validerar du problemet:
 + __Orsak:__ AEM som används för att distribuera innehållspaket till AEM Publish-tjänsten kan inte skriva till  `/var` på AEM Publish. Detta leder till att distributionen av innehållspaketet till AEM Publish-tjänsten misslyckas.
 + __Lösning:__ Följande sätt att lösa detta problem visas i den ordning du vill:
    1. Om `/var`-resurserna inte är nödvändiga tar du bort resurser under `/var` från innehållspaket som distribueras som en del av programmet.
-   2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas mot AEM Author, AEM Publish eller båda, via OSGi-runmodes.
-   3. Om `/var`-resurserna bara krävs av AEM författare och inte kan modelleras med [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit), flyttar du dem till ett diskret innehållspaket, som bara installeras på AEM Author genom att [bädda in](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) det i `all`-paketet i en AEM Author-körlägesmapp (`<target>/apps/example-packages/content/install.author</target>`).
+   2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas mot AEM Author, AEM Publish eller båda, via OSGi-runmodes.
+   3. Om `/var`-resurserna bara krävs av AEM författare och inte kan modelleras med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit), flyttar du dem till ett diskret innehållspaket, som bara installeras på AEM Author genom att [bädda in](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) det i `all`-paketet i en AEM Author-körlägesmapp (`<target>/apps/example-packages/content/install.author</target>`).
    4. Ange lämpliga åtkomstkontrollistor till `sling-distribution-importer`-tjänstanvändaren enligt beskrivningen i denna [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
 
 ### Skapa ett supportärende för Adobe
