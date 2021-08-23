@@ -11,9 +11,9 @@ thumbnail: 39090.jpg
 topic: Integreringar
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,6 @@ Experience Platform Launch är Adobe och nästa generation av tagghanteringsplat
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Integrering med Experience Platform med program från Experience Cloud](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-* [Användarhandbok för Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Implementera Experience Cloud på webbplatser med Launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/index.html)
+* [Integrering med Experience Platform med program från Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
+* [Användarhandbok för Experience Platform Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [Implementera Experience Cloud på webbplatser med Launch](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/index.html)
