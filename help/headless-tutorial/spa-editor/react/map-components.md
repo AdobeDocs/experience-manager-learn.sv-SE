@@ -12,15 +12,15 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2273'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
 
 
-# Mappa SPA komponenter till AEM komponenter {#map-components}
+# Mappa SPA komponenter till AEM {#map-components}
 
 Lär dig hur du mappar React-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
 
@@ -52,7 +52,7 @@ Det grundläggande konceptet är att mappa en SPA till en AEM. AEM komponenter, 
 
 ## Inspect textkomponenten
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [textkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html). Detta är ett exempel på en **content**-komponent, eftersom den återger *innehåll* från AEM.
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [textkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Detta är ett exempel på en **content**-komponent, eftersom den återger *innehåll* från AEM.
 
 Låt oss se hur komponenten fungerar.
 
@@ -223,7 +223,7 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
    Komponenten **Layoutbehållare** har `sling:resourceType` `wcm/foundation/components/responsivegrid` och känns igen av SPA Editor med egenskapen `:type`, precis som komponenterna `Text` och `Image`.
 
-   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA Editor.
+   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA Editor.
 
 2. Gå tillbaka till [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Lägg till ytterligare **Image**-komponenter och försök ändra storlek på dem med alternativet **Layout**:
 
@@ -251,7 +251,7 @@ Grattis, du lärde dig att mappa SPA till AEM komponenter och du använde React 
 
 [Navigering och routning](navigation-routing.md)  - Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering implementeras med React Router och React Core Components.
 
-## (Bonus) Beständiga konfigurationer för källkontrollen {#bonus-configs}
+## (Bonus) Beständiga konfigurationer av källkontrollen {#bonus-configs}
 
 I många fall, särskilt i början av ett AEM projekt, är det viktigt att behålla konfigurationer som mallar och relaterade innehållsprinciper för källkontroll. Detta garanterar att alla utvecklare arbetar mot samma uppsättning innehåll och konfigurationer och kan säkerställa ytterligare enhetlighet mellan miljöer. När ett projekt når en viss mognadsnivå kan rutinen med mallhantering överföras till en särskild grupp med avancerade användare.
 
@@ -288,7 +288,7 @@ Nästa steg kommer att utföras med Visual Studio Code IDE och [VSCode AEM Sync]
 
 ## (Bonus) Skapa en anpassad bildkomponent {#bonus-image}
 
-En SPA Image-komponent har redan tillhandahållits av React Core-komponenterna. Om du vill ha en extra övning skapar du en egen React-implementering som mappar till AEM [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
+En SPA Image-komponent har redan tillhandahållits av React Core-komponenterna. Om du vill ha en extra övning skapar du en egen React-implementering som mappar till AEM [Image-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
 
 ### Inspect the JSON
 
