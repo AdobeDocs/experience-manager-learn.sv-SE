@@ -1,24 +1,17 @@
 ---
 title: Använda SPA Editor med AEM Sites
-seo-title: Använda SPA Editor-ramverket med AEM Sites
 description: AEM ramverk för Single Page Application Editor ger författare möjlighet att redigera innehåll för ett Single Page-program eller -SPA. Utvecklare som använder ramverken React eller Angular skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda de välbekanta redigeringsverktygen i AEM Sites.
-sub-product: webbplatser, innehållstjänster
-feature: Spa Editor
-topics: authoring, single-page-applications
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, cloud-service
-kt: 1047
-thumbnail: 22229.jpg
 topic: SPA
+feature: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 1047
+thumbnail: 22229.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 1%
+source-wordcount: '277'
+ht-degree: 0%
 
 ---
 
@@ -45,5 +38,5 @@ Hämta och installera lämpligt [WKND-SPA](https://github.com/adobe/aem-guides-w
 
 En detaljerad självstudiekurs om hur du utvecklar med SPA Editor finns i:
 
-* [Komma igång med AEM SPA Editor och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+* [Komma igång med AEM SPA Editor och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
