@@ -10,9 +10,9 @@ feature: Dynamic Media Classic
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ I den här guiden diskuterar vi följande viktiga funktioner i Dynamic Media Cla
 - **Video.** Ladda upp färdiga videor, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
 - **Smart bildbehandling.** Teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
 
-Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html).
+Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
 
 ## Dynamic Media Classic User Interface (UI)
 
@@ -75,4 +75,4 @@ _Dynamic Media Classic UI_
 >
 >Markera kryssrutan **Publicera efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
-Läs mer om [Navigera i användargränssnittet för Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Läs mer om [Navigera i användargränssnittet för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
