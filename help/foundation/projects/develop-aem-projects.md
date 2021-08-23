@@ -2,18 +2,17 @@
 title: Utveckla projekt i AEM
 description: En självstudiekurs om utveckling som illustrerar hur du utvecklar för AEM projekt.  I den här självstudiekursen skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
 version: 6.3, 6.4, 6.5
-feature: Projects, Workflow
+feature: Projekt, arbetsflöde
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4654'
+source-wordcount: '4585'
 ht-degree: 0%
 
 ---
@@ -132,7 +131,7 @@ Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda 
    1. Lägg till en ny **nt:ostrukturerad**-nod under authoring-project/gadgets som kallas **uppgifter**.
    1. Lägg till String-egenskaper i aktivitetsnoden för **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Aktiviteter&quot; och **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;.
 
-   Nu visas [aktivitetspanelen](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks) som standard när ett nytt projekt skapas.
+   Nu visas [aktivitetspanelen](https://experienceleague.adobe.com/docs/#Tasks) som standard när ett nytt projekt skapas.
 
    ```shell
    ../projects/templates/authoring-project
@@ -632,13 +631,13 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. I CRXDE-Lite skapar vi en undermapp under `/apps/aem-guides/projects-tasks/projects` med namnet &quot;guider&quot;. Kopiera standardguiden från: `/libs/cq/core/content/projects/workflowwizards/default_workflow` under den nya guidemappen och ändra namnet till **content-approval-start**. Den fullständiga sökvägen bör nu vara: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder [GRE-komponenter](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html) som standard för att fylla i fälten.
+   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder [GRE-komponenter](https://experienceleague.adobe.com/docs/) som standard för att fylla i fälten.
 
    ![arbetsflödesguide för godkännande av innehåll](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. Vi ska lägga till ytterligare ett fält i guiden som ska användas för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `../content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på komponenten [Granite User Picker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
+   Under `../content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på komponenten [Granite User Picker](https://experienceleague.adobe.com/docs/)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
 
    Nedan visas XML-representationen av **tilldelningsnoden**:
 
@@ -658,7 +657,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. Vi ska också lägga till ett prioritetsurvalsfält som avgör prioriteten för den första aktiviteten i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `/content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **priority**. Vi använder komponenten [Bevilja gränssnittsmarkering](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html) för att fylla i formulärfältet.
+   Under `/content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **priority**. Vi använder komponenten [Bevilja gränssnittsmarkering](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) för att fylla i formulärfältet.
 
    Under **priority**-noden lägger vi till en **item**-nod på **nt:undefined**. Under noden **items** lägger du till ytterligare tre noder för att fylla i markeringsalternativen Hög, Medel och Låg. Varje nod är av typen **nt:ostrukturerad** och ska ha egenskapen **text** och **value**. Både texten och värdet ska ha samma värde:
 
@@ -694,7 +693,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
    </priority>
    ```
 
-1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html) för att hämta indata. Vi lägger också till ett dolt fält med ett [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
+1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) för att hämta indata. Vi lägger också till ett dolt fält med ett [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
 
    Lägg till två **nt:ostrukturerade**-noder med följande egenskaper representerade i XML:
 
