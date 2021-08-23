@@ -2,12 +2,12 @@
 title: Använda interaktiv video med AEM Dynamic Media
 description: AEM Assets kan nu skapa interaktiva videor där användarna kan dela upp en video i mindre segment eller kombinera små segment för att skapa ett stort segment, vilket gör att användarna kan koppla en uppmaning till handling.
 sub-product: dynamiska medier
-feature: Videoprofiler, visningsförinställningar, Mix-medieuppsättningar
+feature: Videoprofiler, visningsförinställningar, blandade medieuppsättningar
 version: 6.3, 6.4, 6.5
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
