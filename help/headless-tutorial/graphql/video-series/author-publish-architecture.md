@@ -1,17 +1,16 @@
 ---
 title: Skapa och publicera arkitektur med AEM GraphQL
 description: Lär dig hur och när du ska utnyttja AEM Author- och Publish-miljöer när du använder AEM GraphQL API:er.
-sub-product: resurser
 version: cloud-service
 topic: Headless, Content Management
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '103'
 ht-degree: 0%
 
 ---
