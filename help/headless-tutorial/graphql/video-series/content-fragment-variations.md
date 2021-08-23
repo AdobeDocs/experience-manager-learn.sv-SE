@@ -1,17 +1,16 @@
 ---
 title: Variationer för innehållsfragment
 description: Lär dig skapa varianter av innehållsfragment och utforska några vanliga användningsexempel.
-sub-product: resurser
 version: cloud-service
 topic: Headless, Content Management
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 role: Developer
 level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
