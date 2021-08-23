@@ -13,10 +13,10 @@ feature: SPA
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 2%
+source-wordcount: '470'
+ht-degree: 0%
 
 ---
 
@@ -61,9 +61,9 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 >[!NOTE]
 >
-> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Nästa steg {#next-steps}
 
