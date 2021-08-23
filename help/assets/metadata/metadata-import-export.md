@@ -2,16 +2,15 @@
 title: Använda import och export av metadata i AEM Assets
 description: Lär dig hur du använder metadatafunktionerna för import och export i Adobe Experience Manager Assets. Tack vare import- och exportfunktionerna kan innehållsförfattare uppdatera metadata för befintliga resurser gruppvis.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Content Management
+topic: Innehållshantering
 feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '264'
 ht-degree: 2%
 
 ---
@@ -54,7 +53,7 @@ Lär dig hur du använder metadatafunktionerna för import och export i Adobe Ex
    * Felaktigt: `Dc:Title {{String}}`
 
 * Egenskapstypen är inte skiftlägeskänslig
-* Alla giltiga [JCR-egenskapstyper](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) stöds
+* Alla giltiga [JCR-egenskapstyper](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) stöds
 
 * Egenskapsformat för flera värden - `<metadata property name> {{<property type : MULTI }}`
 
