@@ -14,9 +14,9 @@ thumbnail: 31784.jpg
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '372'
 ht-degree: 4%
 
 ---
@@ -62,5 +62,5 @@ I den här videon beskrivs följande funktioner:
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigera dokumentation för sidinnehåll](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
-* [Snabbstartsguide till redigering av sidor](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
