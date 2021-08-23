@@ -3,14 +3,13 @@ title: Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll - Innehål
 seo-title: Komma igång med AEM Content Services - Kapitel 2 - Definiera fragmentmodeller för händelseinnehåll
 description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
 seo-description: Kapitel 2 i den AEM självstudiekursen Headless handlar om att aktivera och definiera Content Fragment-modeller som används för att definiera en normaliserad datastruktur och ett redigeringsgränssnitt för att skapa händelser.
-feature: Content Fragments, APIs
+feature: Innehållsfragment, API:er
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
@@ -29,7 +28,7 @@ I det här kapitlet beskrivs hur du aktiverar och definierar Content Fragment-mo
 
 ## Aktivera modeller för innehållsfragment
 
-Modeller för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)**.
+Modeller för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**.
 
 Om Content Fragment Models är **inte** aktiverat för en konfiguration visas inte knappen **[!UICONTROL Create]>[!UICONTROL Content Fragment]** för den aktuella AEM.
 
@@ -41,7 +40,7 @@ Om Content Fragment Models är **inte** aktiverat för en konfiguration visas in
 >
 >När `global`-konfigurationen används gäller konfigurationen allt innehåll och `cq:conf` behöver inte anges.
 >
->Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html).
+>Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
 
 1. Logga in på AEM Author som användare med tillräcklig behörighet för att ändra konfigurationen.
    * I den här självstudiekursen kan du använda **admin**-användaren.
