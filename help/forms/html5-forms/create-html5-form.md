@@ -12,9 +12,9 @@ thumbnail: kt-4419.jpg
 topic: Utveckling
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '484'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder åter
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
 
 ## Skapa ditt första HTML5-formulär
 
@@ -58,7 +58,7 @@ Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, sk
 
 **Skicka-URL**  - Det här är den URL som kommer att hantera ditt inskickade HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
 
-**HTML-återgivningsprofil**  - HTML5-formulär har begreppet profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
+**HTML-återgivningsprofil**  - HTML5-formulär har begreppet profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
 
 **Prefill Service**  - Prefill Service används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.
 
