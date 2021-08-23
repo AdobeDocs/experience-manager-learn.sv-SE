@@ -1,30 +1,24 @@
 ---
 title: Developing with the AEM SPA Editor - Hello World Tutorial
 description: AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React eller Angular.
-sub-product: webbplatser, innehållstjänster
-feature: Spa Editor
-topics: development, single-page-applications
-audience: developer
-doc-type: tutorial
-activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
+feature: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3148'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
 
 
-# Utveckla med AEM SPA Editor - Hello World Tutorial {#developing-with-the-aem-spa-editor-hello-world-tutorial}
+# Developing with the AEM SPA Editor - Hello World Tutorial {#developing-with-the-aem-spa-editor-hello-world-tutorial}
 
 >[!WARNING]
 >
-> Den här självstudiekursen är **inaktuell**. Vi rekommenderar att du följer något av följande: [Komma igång med AEM och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) eller [Komma igång med AEM SPA och Reagera](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+> Den här självstudiekursen är **inaktuell**. Vi rekommenderar att du följer något av följande: [Komma igång med AEM och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html) eller [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 AEM SPA Editor har stöd för kontextredigering av ett Single Page-program eller SPA. Den här självstudiekursen är en introduktion till SPA utveckling som ska användas med AEM SPA Editor JS SDK. I självstudiekursen utökas appen We.Retail Journal genom att en anpassad Hello World-komponent läggs till. Användare kan slutföra självstudiekursen med React eller Angular.
 
@@ -309,7 +303,7 @@ Därefter skapas en [!DNL Sling Model]-komponent för att backa komponenten [!DN
 
 >[!NOTE]
 >
->Som en god praxis bör utvecklare titta efter om det är möjligt att använda [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Bland annat innehåller Core Components [!DNL Sling Models] JSON-utdata som är&quot;SPA-klara&quot;, vilket gör att utvecklare kan fokusera mer på själva presentationen.
+>Som en god praxis bör utvecklare titta efter om det är möjligt att använda [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). Bland annat innehåller Core Components [!DNL Sling Models] JSON-utdata som är&quot;SPA-klara&quot;, vilket gör att utvecklare kan fokusera mer på själva presentationen.
 
 1. Öppna **we-retail-journal-Commons**-projektet ( `<src>/aem-sample-we-retail-journal/bundles/commons`) i valfri redigerare.
 1. I paketet `com.adobe.cq.sample.spa.commons.impl.models`:
@@ -753,7 +747,7 @@ Därefter skapas komponenten Angular. Öppna modulen **angular-app** (`<src>/aem
    >
    > **main.** jsis the bundled Angular app. Koden är inte längre läsbar för människor. Kommandot npm run build har utlöst en optimerad build som genererar kompilerat JavaScript som kan tolkas av moderna webbläsare.
 
-## Uppdaterar mallen {#template-update}
+## Uppdatera mallen {#template-update}
 
 1. Navigera till Redigerbar mall för versionerna React och/eller Angular:
 
@@ -780,7 +774,7 @@ Därefter skapas komponenten Angular. Öppna modulen **angular-app** (`<src>/aem
 
    ![CRXDE Lite som visar de uppdaterade principkonfigurationerna för tillåtna komponenter i layoutbehållaren](assets/spa-editor-helloworld-tutorial-use/editable-template-policy.png)
 
-## Samla allt {#putting-together}
+## Sammanställ allt {#putting-together}
 
 1. Navigera till Angularna eller Reagera-sidorna:
 
