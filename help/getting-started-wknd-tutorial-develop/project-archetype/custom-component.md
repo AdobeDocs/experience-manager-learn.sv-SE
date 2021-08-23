@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4106'
 ht-degree: 0%
 
 ---
@@ -381,7 +381,7 @@ Byline Sling Model förlitar sig på flera Java-API:er som tillhandahålls av AE
 
    `uber-jar` inkluderas bara när profilen `classic` anropas, d.v.s. `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genereras från AEM Project Archetype är `uber-jar` standardvärdet om den AEM versionen är 6.5 eller 6.4.
 
-   [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla publika Java-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen som finns i projektets rot `aem-guides-wknd/pom.xml`.
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla publika Java-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen som finns i projektets rot `aem-guides-wknd/pom.xml`.
 
 1. Hitta beroendet för `core.wcm.components.core`:
 
