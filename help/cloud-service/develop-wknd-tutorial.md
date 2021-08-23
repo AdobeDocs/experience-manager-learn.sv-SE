@@ -5,14 +5,13 @@ description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av
 seo-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 content-type: reference
 topic-tags: introduction
-feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
-topic: Development
+feature: AEM Project Archettype, Core Components, Page Editor, Editable Templates
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '362'
 ht-degree: 6%
 
 ---
@@ -32,9 +31,9 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**.
 
-**[Titta på självstudiekursen här!](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[Titta på självstudiekursen här!](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Distribuerar WKND till AEM som en Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Distribuera WKND till AEM som Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
 När du är klar med WKND-självstudiekursen kan du titta på videon nedan för att få en översikt över hur du distribuerar WKND-projektet till AEM som en Cloud Service.
 
