@@ -1,21 +1,15 @@
 ---
 title: Använda Adobe-klientdatalagret med AEM kärnkomponenter
 description: Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökarupplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
-feature: core-component
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: use
-version: cloud-service
-kt: 6261
-thumbnail: 41195.jpg
-topic: Integrations
+topic: Integreringar
+feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6261
+thumbnail: 41195.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -29,7 +23,7 @@ Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra 
 
 >[!NOTE]
 >
-> Vill du aktivera Adobe-klientdatalagret på AEM? [Se instruktionerna här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
+> Vill du aktivera Adobe-klientdatalagret på AEM? [Se instruktionerna här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 ## Utforska datalagret
 
@@ -184,4 +178,4 @@ Eller läs hur du [anpassar Adobe-klientdatalagret med AEM komponenter](./data-l
 ## Ytterligare resurser {#additional-resources}
 
 * [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Använda Adobe Client Data Layer och Core Components Documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
