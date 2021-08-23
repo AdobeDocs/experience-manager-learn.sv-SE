@@ -1,17 +1,16 @@
 ---
 title: GraphQL-slutpunkter
 description: 'Lär dig hur du aktiverar, kör frågor mot och publicerar och skyddar GraphQL-slutpunkter. '
-sub-product: resurser
 version: cloud-service
 topic: Headless, Content Management
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 role: Developer
 level: Beginner
 kt: 7875
 thumbnail: 333339.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
