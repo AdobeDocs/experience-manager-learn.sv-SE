@@ -12,9 +12,9 @@ thumbnail: 25907.jpg
 topic: Utveckling
 role: Developer
 level: Beginner
-source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Om du använder Homebrew följer du instruktionerna i avsnitten nedan för __Ins
 
 ## Installera Git
 
-[Det ](https://git-scm.com/) här är det system för källkontroll som används av  [Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/source-code-repository.html), och därför krävs för utveckling.
+[Det ](https://git-scm.com/) här är det system för källkontroll som används av  [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html), och därför krävs för utveckling.
 
 + Installera Git med Homebrew
    1. Öppna terminalen/kommandotolken
