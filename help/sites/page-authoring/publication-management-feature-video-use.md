@@ -1,12 +1,7 @@
 ---
 title: Publicera sidor med AEM Sites
-seo-title: Publicera sidor med Adobe Experience Manager Sites
 description: Adobe Experience Manager Sites har flera alternativ för publicering och avpublicering av innehåll. I den här videon utforskas de olika metoderna och deras funktioner.
-seo-description: Adobe Experience Manager Sites har flera alternativ för publicering och avpublicering av innehåll. I den här videon utforskas de olika metoderna och deras funktioner.
-topics: publishing
-audience: all
-doc-type: feature video
-activity: use
+feature-set: Experience Manager
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4322
 thumbnail: 32193.jpg
@@ -14,9 +9,9 @@ feature: Publicering
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '137'
 ht-degree: 1%
 
 ---
@@ -40,4 +35,4 @@ I AEM Sites finns flera metoder för publicerat och opublicerat innehåll, baser
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för publiceringssidor](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [Dokumentation för publiceringssidor](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
