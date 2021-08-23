@@ -1,21 +1,16 @@
 ---
 title: Spåra klickade komponenter med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics med en spårlänkssignal.
-feature: analytics
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6296
-thumbnail: KT-6296.jpg
-topic: Integrations
+topic: Integreringar
+feature: Adobe-klientdatalager
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6296
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1814'
 ht-degree: 1%
 
 ---
@@ -23,7 +18,7 @@ ht-degree: 1%
 
 # Spåra klickade komponenter med Adobe Analytics
 
-Använd det händelsestyrda [Adobe-klientdatalagret med AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
+Använd det händelsestyrda [Adobe-klientdatalagret med AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
 
 ## Vad du ska bygga
 
@@ -41,13 +36,13 @@ WKND:s marknadsföringsteam vill veta vilka Call to Action-knappar (CTA) som fun
 
 Den här självstudien är en fortsättning på [Samla in siddata med Adobe Analytics](./collect-data-analytics.md) och förutsätter att du har:
 
-* En **startegenskap** med [Adobe Analytics-tillägget](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) aktiverat
-* **Adobe** AnalyticsTest/Dev-rapportsprogram-ID och spårningsserver. Se följande dokumentation för [hur du skapar en ny rapportsvit](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Tillägget Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser har konfigurerats med egenskapen Launch inläst på  [https://wknd.site/us/en.](https://wknd.site/us/en.html) htmlor en AEM webbplats med datalagret Adobe aktiverat.
+* En **startegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) aktiverat
+* **Adobe** AnalyticsTest/Dev-rapportsprogram-ID och spårningsserver. Se följande dokumentation för [hur du skapar en ny rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Tillägget Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser har konfigurerats med egenskapen Launch inläst på  [https://wknd.site/us/en.](https://wknd.site/us/en.html) htmlor en AEM webbplats med datalagret Adobe aktiverat.
 
 ## Inspect the Button and Teaser Schema
 
-Innan du gör regler i Launch är det praktiskt att granska [schemat för Button och Teaser](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item) och inspektera dem i datalagrets implementering.
+Innan du gör regler i Launch är det praktiskt att granska [schemat för Button och Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item) och inspektera dem i datalagrets implementering.
 
 1. Navigera till [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. Öppna webbläsarens utvecklarverktyg och gå till **konsolen**. Kör följande kommando:
@@ -83,7 +78,7 @@ Innan du gör regler i Launch är det praktiskt att granska [schemat för Button
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   Dessa baseras på schemat [för komponent-/behållarobjekt](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item). Regeln vi skapar i Launch kommer att använda det här schemat.
+   Dessa baseras på schemat [för komponent-/behållarobjekt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item). Regeln vi skapar i Launch kommer att använda det här schemat.
 
 ## Skapa en CTA-klickad regel
 
@@ -149,11 +144,11 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När du klic
 
    Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är det aktuella läget för komponenten som härletts från datalagret  `getState` som utlöste klickningen.
 
-1. Spara ändringarna och kör en [build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html) i Launch för att befordra koden till [miljön](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
-   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Development**-miljö.
+   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Development**-miljö.
 
 1. Navigera till [WKND-platsen](https://wknd.site/us/en.html) och öppna utvecklarverktygen för att visa konsolen. Välj **Bevara logg**.
 
