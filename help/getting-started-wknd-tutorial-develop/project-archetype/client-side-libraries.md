@@ -10,17 +10,17 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3299'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 
-# Klientbibliotek och frontendarbetsflöde {#client-side-libraries}
+# Bibliotek på klientsidan och arbetsflöde på klientsidan {#client-side-libraries}
 
-Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av en Adobe Experience Manager (AEM) Sites. Den här självstudiekursen handlar också om hur [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)-modulen, ett frikopplat [webbpack](https://webpack.js.org/)-projekt, kan integreras i hela byggprocessen.
+Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av en Adobe Experience Manager (AEM) Sites. Den här självstudiekursen handlar också om hur [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)-modulen, ett frikopplat [webbpack](https://webpack.js.org/)-projekt, kan integreras i hela byggprocessen.
 
 ## Förutsättningar {#prerequisites}
 
@@ -81,7 +81,7 @@ Med bibliotek på klientsidan kan du ordna och hantera CSS- och JavaScript-filer
 1. Hantera beroenden av ramverk från tredje part på ett organiserat sätt
 1. Minimera antalet klientförfrågningar genom att sammanfoga CSS/JS till en eller två förfrågningar.
 
-Mer information om hur du använder [klientbibliotek finns här.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)
+Mer information om hur du använder [klientbibliotek finns här.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)
 
 Klientbibliotek har vissa begränsningar. Det viktigaste är ett begränsat stöd för populära språk som Sass, LESS och TypeScript. I självstudiekursen ska vi titta på hur modulen **ui.front** kan hjälpa till att lösa detta.
 
@@ -89,7 +89,7 @@ Distribuera startkodsbasen till en lokal AEM och navigera till [http://localhost
 
 ## Biblioteksorganisation på klientsidan {#organization}
 
-Därefter ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html).
+Därefter ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ![Klientbiblioteksorganisation på hög nivå](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -119,7 +119,7 @@ Därefter ska vi utforska organisationen av klienter som genereras av [AEM Proje
 
 ## Uppdatera basformat {#base-styles}
 
-Uppdatera sedan basformaten som definierats i modulen **[ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)**. Filerna i modulen `ui.frontend` genererar de `clientlib-site` och `clientlib-dependecies` bibliotek som innehåller platstemat och eventuella beroenden från tredje part.
+Uppdatera sedan basformaten som definierats i modulen **[ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)**. Filerna i modulen `ui.frontend` genererar de `clientlib-site` och `clientlib-dependecies` bibliotek som innehåller platstemat och eventuella beroenden från tredje part.
 
 Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för språk som [Sass](https://sass-lang.com/) eller [TypeScript](https://www.typescriptlang.org/). Det finns ett antal verktyg med öppen källkod som [NPM](https://www.npmjs.com/) och [webpack](https://webpack.js.org/) som snabbar upp och optimerar frontendutvecklingen. Målet med modulen **ui.front** är att kunna använda dessa verktyg för att hantera de flesta källfiler i frontend.
 
@@ -164,7 +164,7 @@ Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för s
 
    Inspect de ändrade filerna för att se information om implementeringen av WKND-formatet.
 
-## Inspect integreringen av ui.front {#ui-frontend-integration}
+## Integrering av Inspect med ui.front {#ui-frontend-integration}
 
 En viktig integrationsbit som är inbyggd i **ui.front**-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) tar de kompilerade CSS- och JS-artefakterna från ett webpack-/npm-projekt och omvandlar dem till AEM klientbibliotek.
 
@@ -200,7 +200,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
 
    >[!NOTE]
    >
-   >Det finns också en `npm run prod`-profil som miniatyrerna för JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
+   >Det finns också en `npm run prod`-profil som miniatyrerna för JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
 1. Inspect filen `site.css` under `ui.frontend/dist/clientlib-site/site.css`. Detta är den kompilerade CSS-koden som baseras på Sass-källfilerna.
 
@@ -236,7 +236,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
 >
 > Det är inte säkert att du behöver använda modulen **ui.front** för alla projekt. Modulen **ui.front** lägger till ytterligare komplexitet och om det inte finns något behov/behov av att använda några av de här avancerade verktygen (Sass, webpack, npm...) kanske den inte behövs.
 
-## Inkludering av sida och mall {#page-inclusion}
+## Inkludering av sidor och mallar {#page-inclusion}
 
 Sedan tittar vi på hur du refererar till klippen på AEM. Ett vanligt tillvägagångssätt vid webbutveckling är att inkludera CSS i HTML-huvudet `<head>` och JavaScript direkt innan du stänger taggen `</body>`.
 
@@ -315,9 +315,9 @@ Sedan tittar vi på hur du refererar till klippen på AEM. Ett vanligt tillväga
 
    >[!WARNING]
    >
-   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section). Egenskapen [allowProxy](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
+   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section). Egenskapen [allowProxy](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
 
-## Webpack DevServer - statisk markering {#webpack-dev-static}
+## Webpack DevServer - statisk kod {#webpack-dev-static}
 
 Under de föregående övningarna kunde vi uppdatera flera Sass-filer i modulen **ui.front** och genom en byggprocess kan vi slutligen se dessa ändringar återspeglas i AEM. Därefter ska vi titta på en teknik som använder en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla våra front end-format mot **statisk** HTML.
 
@@ -371,7 +371,7 @@ Den här tekniken är användbar om huvuddelen av formaten och frontkodningen ko
 
 1. Du kan **stoppa** webbpaketservern från kommandoraden genom att skriva `CTRL+C`.
 
-## Webpack DevServer - Titta och aemsync {#webpack-dev-watch}
+## Webpack DevServer - Titta och synka {#webpack-dev-watch}
 
 En annan teknik är att Node.js ska bevaka om några filändringar har gjorts i src-filerna i modulen `ui.frontend`. När en fil ändras kompilerar den snabbt klientbiblioteket och använder modulen [aemsync](https://www.npmjs.com/package/aemsync) npm för att synkronisera ändringarna till en AEM som körs.
 
