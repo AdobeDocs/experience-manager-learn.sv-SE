@@ -2,16 +2,15 @@
 title: Hur du undersöker sökrelaterade problem i AEM
 description: Steg för att undersöka problem som rör sökning
 type: Troubleshooting
-product: Sites
 role: Admin
 level: Intermediate
 version: 6.5, cloud-service
-feature: Utvecklarverktyg
+feature: Search, Developer Tools
 topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
