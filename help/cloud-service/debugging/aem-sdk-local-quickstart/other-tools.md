@@ -11,10 +11,9 @@ kt: 5251
 topic: Utveckling
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
-source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---
@@ -50,7 +49,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som du kan använda för att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-syntax.
+QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som du kan använda för att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-syntax.
 
 Felsökaren för QueryBuilder finns på:
 
