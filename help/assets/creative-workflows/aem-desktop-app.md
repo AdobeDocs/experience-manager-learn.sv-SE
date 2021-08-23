@@ -1,17 +1,17 @@
 ---
 title: AEM
 description: Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som hanteras i AEM på datorn, för alla program och filformat.
-kt: 2551
-sub-product: resurser
-feature: Experience Manager-datorprogram
 version: 6.5, 6.4, 6.3
 topic: Innehållshantering
+feature: Skrivbordsapp
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 2551
+thumbnail: 28868.jpeg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 6%
+source-wordcount: '138'
+ht-degree: 1%
 
 ---
 
@@ -33,4 +33,4 @@ Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som ha
 
 ## Ytterligare resurser
 
-+ [Ladda ned den senaste AEM datorappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
++ [Ladda ned den senaste AEM datorappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
