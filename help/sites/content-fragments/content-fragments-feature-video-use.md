@@ -11,10 +11,10 @@ version: cloud-service
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 3%
+source-wordcount: '370'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,7 @@ Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfigurationsbas.
+AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfigurationsbas.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -73,8 +73,8 @@ Läs om hur du [levererar innehållsfragment](content-fragments-delivery-feature
 ## Ytterligare resurser {#additional-resources}
 
 * [Leverera innehållsfragment](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM-kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [AEM WCM Core Content Fragment Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM Core Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 Så här hämtar och installerar du paketet nedan på en AEM 6.4+-instans för det slutliga läget från videoserien:
 
