@@ -10,9 +10,9 @@ activity: use
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2659'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ En av de främsta fördelarna med det överordnad bildkonceptet i Dynamic Media 
 
 I slutet av kursen får du lära dig att:
 
-- Beskär bilder i Dynamic Media Classic och spara som nya överordnad filer eller som virtuella bilder. [Läs mer](https://docs.adobe.com/help/en/dynamic-media-classic/using/master-files/cropping-image.html).
-- Spara virtuella justerade bilder och använd dem i stället för överordnad resurser. [Läs mer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/adjusting-image.html).
-- Skapa zoommål för bilderna för att visa upp deras högdagrar. [Läs mer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html).
+- Beskär bilder i Dynamic Media Classic och spara som nya överordnad filer eller som virtuella bilder. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html).
+- Spara virtuella justerade bilder och använd dem i stället för överordnad resurser. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html).
+- Skapa zoommål för bilderna för att visa upp deras högdagrar. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html).
 
 ## Beskärning
 
@@ -45,8 +45,8 @@ I Dynamic Media Classic finns ett antal lättanvända bildredigeringsverktyg i a
 
 Du kommer åt beskärningsverktyget i Dynamic Media Classic från detaljsidan för en resurs eller genom att klicka på knappen **Redigera**. Du kan beskära på två sätt med verktyget:
 
-- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller anger värden i rutan Storlek. Lär dig hur du [Beskär](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) manuellt.
-- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller anger värden i rutan Storlek. Lär dig hur du [Beskär](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) manuellt.
+- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _Manuell beskärning_
 
@@ -78,7 +78,7 @@ Dynamic Media Classic kommer ihåg det här alternativet för nästa överförin
 
 >[!IMPORTANT]
 >
->Om du anger en beskärning för överföringen lägger Dynamic Media Classic en cookie-fil som kommer ihåg den inställningen nästa gång. Det är en god idé att klicka på knappen **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som återstår från den senaste överföringen. annars kan du av misstag beskära nästa grupp bilder.
+>Om du anger en beskärning för överföringen lägger Dynamic Media Classic en cookie-fil som kommer ihåg den inställningen nästa gång. Det är en god idé att klicka på knappen **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som återstår från den senaste överföringen. annars kan du av misstag beskära nästa grupp med bilder.
 
 ### Beskära efter URL
 
@@ -137,7 +137,7 @@ Processen är mycket enkel - klicka på funktionen, ge den ett beskrivande namn 
 
 Ett annat sätt att avgöra om du ska använda zoommål är att välja visningsprogram. Alla visningsprogramtyper kan inte visa zoommål (t.ex. saknar visningsprogrammet stöd för dem).
 
-Lär dig hur du [skapar zoommål](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
+Lär dig hur du [skapar zoommål](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
 
 ![bild](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
