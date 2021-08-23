@@ -9,14 +9,13 @@ activity: understand
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4675
 thumbnail: 32550.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 4%
+source-wordcount: '79'
+ht-degree: 3%
 
 ---
 
@@ -30,4 +29,4 @@ Det AEM projektet innehåller all kod och alla konfigurationer för en implement
 ## Ytterligare resurser {#additional-resources}
 
 * [GitHub-projekt](https://github.com/adobe/aem-project-archetype)
-* [AEM Project Archetype Documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM Project Archetype Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
