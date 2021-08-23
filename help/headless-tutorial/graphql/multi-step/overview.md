@@ -1,23 +1,17 @@
 ---
 title: Komma igång med AEM Headless Hands-on Tutorial - GraphQL
 description: En komplett självstudiekurs som visar hur du bygger ut och visar innehåll med hjälp AEM GraphQL API:er.
-sub-product: platser
-topics: headless
-version: cloud-service
 doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: Innehållsfragment, GraphQL API:er
+feature: Innehållsfragment, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
