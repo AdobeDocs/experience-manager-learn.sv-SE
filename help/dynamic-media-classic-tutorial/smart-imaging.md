@@ -10,9 +10,9 @@ activity: use
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ En av de viktigaste aspekterna av kundupplevelsen på er webbplats eller mobilwe
 
 Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med den bästa premiumtjänsten från Adobe. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter som har den lägsta latensen och/eller paketförlustfrekvensen än standardvägen på Internet.
 
-Läs mer om [Smart bildbehandling](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
+Läs mer om [Smart bildbehandling](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Fördelar med smart bildbehandling
 
@@ -36,7 +36,7 @@ Eftersom bilder utgör huvuddelen av en sidas laddningstid kan prestandaförbät
 
 Smart Imaging utnyttjar Adobe Sensei AI-funktioner och arbetar med befintliga bildförinställningar för att automatiskt konvertera bilder till nästa generationens optimala bildformat som WebP, samtidigt som den visuella återgivningen bibehålls.
 
-Läs mer om [Hur smart bildbehandling fungerar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive detaljer som bildformat som stöds (och vad som händer om du inte använder dessa format) och dess påverkan på befintliga bildförinställningar som används.
+Läs mer om [Hur smart bildbehandling fungerar](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive detaljer som bildformat som stöds (och vad som händer om du inte använder dessa format) och dess påverkan på befintliga bildförinställningar som används.
 
 ## Effekter av Smart Imaging
 
@@ -54,7 +54,7 @@ Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa
 
 När du har aktiverat Smart Imaging vill du kontrollera att den fungerar som förväntat.
 
-Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Frågor och svar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
+Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Ytterligare resurser
 
