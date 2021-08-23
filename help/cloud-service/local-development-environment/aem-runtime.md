@@ -12,10 +12,9 @@ thumbnail: 32551.jpg
 topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 1%
 
 ---
@@ -215,7 +214,7 @@ Kom ihåg att om du använder ovanstående metoder för att underhålla kod mell
 
 ## Felsökning
 
-## Om du dubbelklickar på filen Quickstart JAR uppstår ett fel{#troubleshooting-double-click}
+## Om du dubbelklickar på Quickstart JAR-filen uppstår ett fel{#troubleshooting-double-click}
 
 När du dubbelklickar på QuickStart Jar för att starta visas ett felmodalt fel som förhindrar att AEM startas lokalt.
 
@@ -231,7 +230,7 @@ eller, för att starta AEM Publish-tjänsten, `cd` i katalogen som innehåller Q
 
 `$ java -jar aem-publish-p4503.jar`
 
-## Starten av Quickstart Jar från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
+## Starten av snabbstartsgaren från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
 
 När du startar Quickstart Jar från kommandoraden avbryts processen omedelbart och AEM startar inte, med följande fel:
 
@@ -259,4 +258,4 @@ När Java 11 SDK har installerats kontrollerar du att det är den aktiva version
 + [Hämta AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Ladda ned Docker](https://www.docker.com/)
-+ [Experience Manager Dispatcher-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
