@@ -7,9 +7,9 @@ version: 6.3, 6.4, 6.5
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '362'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen
 
 >[!NOTE]
 >
-> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med din AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html).
+> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med din AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
 
 I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med visningsprogram från Dynamic Media (5.13), vilket ger mer detaljkontroll över händelsespårningen när ett Dynamic Media Viewer används på en Sites-sida.
 
@@ -164,6 +164,6 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Integrera Adobe Experience Manager med Adobe Launch](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
+* [Integrera Adobe Experience Manager med Adobe Launch](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 * [Köra Adobe Experience Manager i Dynamic Media Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 * [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
