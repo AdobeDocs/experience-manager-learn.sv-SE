@@ -3,13 +3,14 @@ title: OSGi-konfigurationer som ObjectClassDefinition-objekt
 description: Lär dig hur du skapar och anger ObjectClassDefinitions som OSGi-konfigurationsrepresentationer i en OSGi-tjänst
 role: Developer
 level: Beginner
-topic: Nybörjare
+topic: Utveckling
+feature: OSGI
 kt: 8269
 thumbnail: 335730.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 1%
+source-wordcount: '106'
+ht-degree: 2%
 
 ---
 
