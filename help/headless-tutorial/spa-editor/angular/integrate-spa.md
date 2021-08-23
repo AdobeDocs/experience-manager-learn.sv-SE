@@ -13,9 +13,9 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2195'
 ht-degree: 0%
 
 ---
@@ -77,13 +77,13 @@ Modulen `ui.frontend` är ett [webbpack](https://webpack.js.org/)-projekt som in
 
 *En högnivåbild av SPA.*
 
-Ytterligare information om Front-end-bygget finns här[](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
+Ytterligare information om Front-end-bygget finns här[](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-## Inspect SPA integrering {#inspect-spa-integration}
+## Integreringen av Inspect SPA {#inspect-spa-integration}
 
-Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats automatiskt av [AEM Project-arkitypen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
+Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats automatiskt av [AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-1. I den utvecklingsmiljö du väljer öppnar du AEM för WKND-SPA. I den här självstudien används [Visual Studio Code IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. I den utvecklingsmiljö du väljer öppnar du AEM för WKND-SPA. I den här självstudien används [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -112,7 +112,7 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   Ovanstående moduler utgör [AEM JS SDK](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-blueprint.html)-SPA för redigeraren och innehåller funktioner som gör det möjligt att mappa SPA komponenter till AEM.
+   Ovanstående moduler utgör [AEM JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)-SPA för redigeraren och innehåller funktioner som gör det möjligt att mappa SPA komponenter till AEM.
 
 5. I `package.json`-filen har flera `scripts` definierats:
 
@@ -132,7 +132,7 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
 
    `build` - sammanställer Angularna för produktionsdistribution. Tillägget av `&& clientlib` ansvarar för att kopiera den kompilerade SPA till `ui.apps`-modulen som ett klientbibliotek under bygget. NPM-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) används för att underlätta detta.
 
-   Mer information om tillgängliga skript finns [här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
+   Mer information om tillgängliga skript finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
 6. Inspect filen `ui.frontend/clientlib.config.js`. Den här konfigurationsfilen används av [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) för att avgöra hur klientbiblioteket ska genereras.
 
@@ -167,7 +167,7 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
 
    `app.component.js` är SPA ingångspunkt. `ModelManager` tillhandahålls av AEM JS SDK SPA Editor. Det ansvarar för att anropa och injicera `pageModel` (JSON-innehållet) i programmet.
 
-## Lägg till en huvudkomponent {#header-component}
+## Lägga till en rubrikkomponent {#header-component}
 
 Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM för att se integreringen.
 
