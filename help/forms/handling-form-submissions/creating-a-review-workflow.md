@@ -2,7 +2,7 @@
 title: Skapa arbetsflöde för granskning av skickade data
 description: Skapa AEM arbetsflödesmodell med AEM Forms arbetsflödeskomponenter för att granska skickade data.
 sub-product: formulär
-feature: Workflow
+feature: Arbetsflöde
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,14 +10,13 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 2%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +27,7 @@ Arbetsflöden används vanligtvis för att skicka inskickade data för gransknin
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
 
 I följande video förklaras hur du skapar arbetsflöden för granskning och godkännande med AEM Forms Components
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
