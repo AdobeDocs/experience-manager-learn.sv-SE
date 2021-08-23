@@ -2,11 +2,10 @@
 doc-type: tutorial
 user-guide-title: AEM Tutorials
 index: y
-translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 8%
+source-wordcount: '137'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 8%
 + [AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 + [AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html)
 + [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/overview.html)
-+ [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html)
++ [AEM som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 + [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 + Flerstegs-Tutorials {#multi}
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
