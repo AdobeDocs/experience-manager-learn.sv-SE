@@ -10,9 +10,9 @@ activity: use
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
@@ -40,8 +40,8 @@ En bildförinställning har ett dollartecken ($) på båda sidor om namnet och f
 >
 >Skapa en bildförinställning per unik bildstorlek på webbplatsen. Om du till exempel behöver en bild på 350 x 350 för produktinformationssidan, en bild på 120 x 120 för bläddrings-/söksidorna och en bild på 90 x 90 för korsförsäljning/aktuellt objekt behöver du tre förinställda bilder, oavsett om du har 500 bilder eller 500 0 000.
 
-- Läs mer om [Bildförinställningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Lär dig hur du [skapar en bildförinställning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Läs mer om [Bildförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- Lär dig hur du [skapar en bildförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## Bildförinställningar och skärpa
 
@@ -63,7 +63,7 @@ I följande bild visas tre nivåer av skärpa. Från höger till vänster har du
 
 I Dynamic Media Classic kan du göra tre typer av skärpa: Enkel skärpa, omsamplingsläge och Oskarp mask.
 
-Läs mer om [Dynamic Media Classic Sharpening Options](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Läs mer om [Dynamic Media Classic Sharpening Options](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Ytterligare resurser
 
