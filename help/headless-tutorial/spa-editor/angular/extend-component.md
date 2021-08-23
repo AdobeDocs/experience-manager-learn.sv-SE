@@ -13,10 +13,10 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 1%
+source-wordcount: '1967'
+ht-degree: 0%
 
 ---
 
@@ -33,13 +33,13 @@ Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SP
 
 ## Vad du ska bygga
 
-I det här kapitlet skapas en ny `Card`-komponent. Komponenten `Card` utökar [Image Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) genom att lägga till ytterligare innehållsfält som Title och Call To Action button för att utföra rollen som teaser för annat innehåll i SPA.
+I det här kapitlet skapas en ny `Card`-komponent. Komponenten `Card` utökar [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) genom att lägga till ytterligare innehållsfält som Title och Call To Action button för att utföra rollen som teaser för annat innehåll i SPA.
 
 ![Slutlig redigering av kortkomponent](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> I en implementering i verkligheten kan det vara lämpligare att bara använda [Teaser Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) och sedan utöka [Image Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) för att skapa en `Card`-komponent beroende på projektkraven. Du bör alltid använda [kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) direkt när det är möjligt.
+> I en implementering i verkligheten kan det vara lämpligare att bara använda [Teaser Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) och sedan utöka [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) för att skapa en `Card`-komponent beroende på projektkraven. Du bör alltid använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) direkt när det är möjligt.
 
 ## Förutsättningar
 
@@ -106,13 +106,13 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
 
    Observera att `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`. Detta anger att WKND-SPA Image-komponenten ärver alla funktioner från Core Component Image.
 
-   Det kallas även [Proxymönster](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) SSLING-resursarv är ett kraftfullt designmönster som tillåter att underordnade komponenter ärver funktioner och utökar/åsidosätter beteenden när så önskas. Sling-arv har stöd för flera arvsnivåer, så i slutändan ärver den nya `Card`-komponenten funktionen för Core Component Image.
+   Det kallas även [Proxymönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) SSLING-resursarv är ett kraftfullt designmönster som tillåter att underordnade komponenter ärver funktioner och utökar/åsidosätter beteenden när så önskas. Sling-arv har stöd för flera arvsnivåer, så i slutändan ärver den nya `Card`-komponenten funktionen för Core Component Image.
 
    Många utvecklingsteam strävar efter att bli D.R.Y. (upprepa inte dig själv). Sling arv gör detta möjligt med AEM.
 
 4. Under mappen `card` öppnar du filen `_cq_dialog/.content.xml`.
 
-   Den här filen är definitionen för komponentdialogrutan för komponenten `Card`. Om du använder Samling-arv är det möjligt att använda funktioner i [Sling Resource Merger](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
+   Den här filen är definitionen för komponentdialogrutan för komponenten `Card`. Om du använder Samling-arv är det möjligt att använda funktioner i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
    Egenskaper som `sling:orderBefore` gör att en utvecklare kan välja var nya flikar eller formulärfält ska infogas. I det här fallet infogas fliken `Text` före fliken `asset`. Om du vill använda Sling Resource Merger fullt ut är det viktigt att du känner till den ursprungliga dialognodstrukturen för dialogrutan [Bildkomponent](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
 
@@ -296,7 +296,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   `@PostConstruct initModel()` anropas alltid när delningsmodellen initieras, därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av ett antal [Java-baserade globala objekt](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) som är tillgängliga för Sling-modeller via `@ScriptVariable`-anteckningen. Metoden [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) används i en sökväg och returnerar ett AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
+   `@PostConstruct initModel()` anropas alltid när delningsmodellen initieras, därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av ett antal [Java-baserade globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) som är tillgängliga för Sling-modeller via `@ScriptVariable`-anteckningen. Metoden [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) används i en sökväg och returnerar ett AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
 
    Detta initierar variabeln `cardPage`, som kommer att användas av de andra nya metoderna för att returnera data om den underliggande länkade sidan.
 
