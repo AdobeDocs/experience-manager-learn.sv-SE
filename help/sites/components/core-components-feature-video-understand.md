@@ -12,10 +12,10 @@ thumbnail: 18926.jpg
 topic: Utveckling
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 7%
+source-wordcount: '146'
+ht-degree: 2%
 
 ---
 
@@ -36,4 +36,4 @@ AEM Core Components är standardkomponenter som ska användas med Adobe Experien
 
 * [GitHub-projekt](https://github.com/adobe/aem-core-wcm-components)
 * [Exempel på kärnkomponent](https://www.aemcomponents.dev/)
-* [Komponentdokumentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [Komponentdokumentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
