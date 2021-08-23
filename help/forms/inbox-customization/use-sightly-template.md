@@ -1,20 +1,19 @@
 ---
 title: Anpassning av inkorgen
 description: Lägg till anpassade kolumner för att visa ytterligare data i arbetsflödet med hjälp av en enkel mall
-feature: Adaptive Forms
+feature: Adaptiv Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -82,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md) i den här serien.
+>I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md) i den här serien.
 
 * [Logga in som administratör](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)
