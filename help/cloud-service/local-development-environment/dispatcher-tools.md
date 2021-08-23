@@ -13,11 +13,10 @@ thumbnail: 30603.jpg
 topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 2%
+source-wordcount: '1637'
+ht-degree: 1%
 
 ---
 
@@ -203,7 +202,7 @@ Du kan komma åt Apache-webbservern och AEM Dispatcher-loggarna direkt i Docker-
 + [Åtkomst till loggar i Docker-behållaren](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [Kopiera Docker-loggarna till det lokala filsystemet](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
-## När Dispatcher Tools{#dispatcher-tools-version} ska uppdateras
+## När Dispatcher Tools ska uppdateras{#dispatcher-tools-version}
 
 Dispatcher Tools-versionerna ökar inte lika ofta som Experience Manager och Dispatcher Tools kräver därför färre uppdateringar i den lokala utvecklingsmiljön.
 
@@ -263,7 +262,7 @@ operable program or batch file.
 ** error: Deployment folder not found: c:\Users\My User\aem-sdk\dispatcher\out
 ```
 
-### docker_run kan inte startas i Windows{#troubleshooting-windows-compatible}
+### docker_run startar inte i Windows{#troubleshooting-windows-compatible}
 
 Om du kör `docker_run` i Windows kan följande fel uppstå, vilket förhindrar att Dispatcher startas. Detta är ett rapporterat problem med Dispatcher i Windows och kommer att åtgärdas i en framtida version.
 
@@ -294,4 +293,4 @@ AH00016: Configuration Failed
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Ladda ned Docker](https://www.docker.com/)
 + [Ladda ned AEM webbplats (WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience Manager Dispatcher-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
