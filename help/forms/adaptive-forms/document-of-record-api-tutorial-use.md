@@ -41,7 +41,7 @@ Följ de här stegen för att prova detta på din lokala dator
 1. [Hämta och installera artikelresurserna med pakethanteraren](assets/dor-with-api.zip)
 1. Kontrollera att du har installerat och startat DevelopingWithServiceUser-paketet som ingår i [Create Service User-artikeln](service-user-tutorial-develop.md)
 1. [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter användarmappningstjänsten för Apache Sling-tjänsten
+1. Sök efter användarmappningstjänsten för Apache Sling Service
 1. Se till att du anger följande _DevelopingWithServiceUser.core:getformsresourceServer=fd-service_ i avsnittet Tjänstmappningar
 1. [Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och klicka på Visa PDF
