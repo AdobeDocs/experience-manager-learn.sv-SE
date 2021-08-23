@@ -2,12 +2,12 @@
 user-guide-title: AEM Assets Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Assets.
 breadcrumb-title: AEM Assets Tutorials
-sub-product: resurser
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 team: TM
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 7%
+source-wordcount: '343'
+ht-degree: 6%
 
 ---
 
@@ -63,12 +63,18 @@ ht-degree: 7%
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
    + [Publicera resurser](./sharing/publish.md)
-   + [Brand Portal](./sharing/brand-portal.md)
+
+   + Brand Portal{#brand-portal}
+      + [Brand Portal](./sharing/brand-portal.md)
+      + [Konfigurera AEM Brand Portal](brand-portal/configure.md)
+      + [Konfigurera resurskälla](brand-portal/configure-asset-sourcing.md)
+      + [Aktivera återgivningshämtningar](brand-portal/enable-renditions-download.md)
    + Resursresurs{#assets-share}
       + [Kommandon för resursdelning](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Konfigurera resursdelningskommentarer på lokala AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Kommandon för att dela resurser med teman](./sharing/asset-share-commons-feature-video-theming.md)
    + [Anslutna resurser](./sharing/connected-assets.md)
+
 
 + Integrera med kreativa arbetsflöden{#creative-workflows}
    + [AEM](./creative-workflows/aem-desktop-app.md)
@@ -107,6 +113,22 @@ ht-degree: 7%
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
    + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
+
+   + Tutorials {#tutorials}
+      + [Skapa Carousel-uppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [Skapa bilduppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
+      + [Skapa bildförinställningar](dynamic-media/tutorials/creating-image-presets.md)
+      + [Skapa profiler för smart beskärning](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
+      + [Skapa videoprofiler](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
+      + [Bearbetar resurser](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [Konfigurera en säker förhandsgranskningsserver](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
+      + [Generera URL:er och bädda in koder](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [Starta ett exportjobb](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+      + [CDN-cachen är ogiltig](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+      + [Använda Dynamic Media Core Components](dynamic-media/tutorials/using-dm-components-on-site-page.md)
+      + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
+      + [Hämta resurser i Dynamic Media Classic-appen](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Översättning {#translation}
    + [Översättning av källfil](translation/source-file-translation-feature-video-use.md)
