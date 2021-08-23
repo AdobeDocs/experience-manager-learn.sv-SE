@@ -3,18 +3,17 @@ title: Förstå bästa praxis för Java API i AEM
 description: AEM bygger på en programhög med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: grund, resurser, platser
-feature: APIs
+feature: API:er
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
-topic: Development
+topic: Utveckling
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
@@ -101,7 +100,7 @@ Det önskade API:t är [AEM Query Builder](https://helpx.adobe.com/experience-ma
 * [OTB-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) prediktioner som stöder vanliga frågekrav
 
 * Utbyggbart API, som möjliggör utveckling av anpassade [frågepredikat](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
-* JCR-SQL2 och XPath kan köras direkt via [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) och [JCR-API:er](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html), vilket returnerar ett [[!DNL Sling] Resurser](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) eller [JCR-noder](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
+* JCR-SQL2 och XPath kan köras direkt via [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) och [JCR-API:er](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html), vilket returnerar ett [[!DNL Sling] Resurser](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) eller [JCR-noder](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 >[!CAUTION]
 >
@@ -138,9 +137,9 @@ Det önskade API:t är [AEM Query Builder](https://helpx.adobe.com/experience-ma
 
 ## JCR-API:er
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-[JCR (Java Content Repository) 2.0 API:er](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) är en del av en specifikation för JCR-implementeringar (för AEM [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)). All JCR-implementering måste följa och implementera dessa API:er, och är därför den lägsta nivån för API för interaktion med AEM.
+[JCR (Java Content Repository) 2.0 API:er](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) är en del av en specifikation för JCR-implementeringar (för AEM [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)). All JCR-implementering måste följa och implementera dessa API:er, och är därför den lägsta nivån för API för interaktion med AEM.
 
 Själva JCR är en hierarkisk/trädbaserad NoSQL-AEM som används som innehållsdatabas. JCR har en mängd API:er som stöds, från innehålls-CRUD till frågor om innehåll. Trots detta robusta API är det sällsynt att de föredras framför AEM och [!DNL Sling]-abstraktioner.
 
@@ -203,11 +202,11 @@ Följande är vanliga undantag till reglerna som definieras ovan.
 
 * AEM QueryBuilder stöder inte vissa frågefunktioner som [förslag](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), stavningskontroll och indextips bland andra mindre vanliga funktioner. Du bör använda JCR-SQL2 för att fråga med dessa funktioner.
 
-### [!DNL Sling] Registrering av serverdel  {#sling-servlet-registration}
+### [!DNL Sling] Registrering av serverdel {#sling-servlet-registration}
 
 * [!DNL Sling] serverregistrering, använd  [OSGi DS 1.2-anteckningar w/ @](https://sling.apache.org/documentation/the-sling-engine/servlets.html) SlingServletResourceTypesover  `@SlingServlet`
 
-### [!DNL Sling] Filterregistrering  {#sling-filter-registration}
+### [!DNL Sling] Filterregistrering {#sling-filter-registration}
 
 * [!DNL Sling] filterregistrering, använd  [OSGi DS 1.2-anteckningar med @](https://sling.apache.org/documentation/the-sling-engine/filters.html) SlingServletFilterover  `@SlingFilter`
 
