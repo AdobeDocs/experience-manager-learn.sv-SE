@@ -2,19 +2,13 @@
 title: Utveckla för Cross-Origin Resource Sharing (CORS) med AEM
 description: Ett kort exempel på hur du använder CORS för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan.
 version: 6.3, 6,4, 6.5
-sub-product: grund, innehållstjänster, webbplatser
-topics: security, development, content-delivery
-activity: develop
-audience: developer
-doc-type: tutorial
-topic: Security
+topic: Säkerhet, utveckling
 role: Developer
 level: Beginner
-feature:  
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+feature: Dokumentskydd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
