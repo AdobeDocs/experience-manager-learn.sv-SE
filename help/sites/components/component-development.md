@@ -1,22 +1,17 @@
 ---
 title: Komponentutveckling i Adobe Experience Manager Sites
 description: Översikt över utveckling av komponenter med Adobe Experience Manager Sites. Innehåller en introduktion till dialogrutor, segmenteringsmodeller, HTML-skript och klientbibliotek.
-feature: sling-models, htl
-topics: components, development
-audience: administrator, developer
-doc-type: technical video
-activity: develop
 version: 6.3, 6.4, 6.5, cloud-service
-kt: 4235
-thumbnail: 32547.jpg
-topic: Development
+topic: Utveckling
+feature: Sling Model, HTML eller HTML Template Language
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 4235
+thumbnail: 32547.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 3%
+source-wordcount: '63'
+ht-degree: 1%
 
 ---
 
