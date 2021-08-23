@@ -13,15 +13,15 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 1%
+source-wordcount: '1097'
+ht-degree: 0%
 
 ---
 
 
-# SPA Editor Project {#create-project}
+# SPA {#create-project}
 
 Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som startpunkt för en Angular som är integrerad med AEM SPA Editor.
 
@@ -90,7 +90,7 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular code base](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
@@ -149,7 +149,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    All anpassad kod som krävs för projektet paketeras i dessa paket och installeras på AEM.
 
-6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM kärnkomponenter finns här](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html).
+6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM kärnkomponenter finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 ## Författarinnehåll
 
