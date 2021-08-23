@@ -10,9 +10,9 @@ activity: use
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6306'
+source-wordcount: '6292'
 ht-degree: 0%
 
 ---
@@ -66,8 +66,8 @@ Eftersom grundläggande mallar vanligtvis utformas i Photoshop men distribueras 
 
 Mallprojekt kan vara relativt enkla eller extremt komplexa beroende på vilka affärsregler och behov programmet har. Grundmallar anropas från Image Server, men på grund av flexibiliteten i Dynamic Media Classic-miljön kan du till och med kapsla mallar i andra mallar, vilket gör att du kan skapa ganska komplexa bilder som kan länkas med vanliga variabler.
 
-- Läs mer om [Grundläggande om mallar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html).
-- Lär dig hur du skapar en [grundläggande mall](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template).
+- Läs mer om [Grundläggande om mallar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html).
+- Lär dig hur du skapar en [grundläggande mall](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template).
 
 ## Skapa en grundmall
 
@@ -189,7 +189,7 @@ Om du vill lägga till en effekt klickar du på **Lägg till effekt** och välje
 
 Skuggeffekter förskjuts vågrätt eller lodrätt från lagret, medan glödeffekter används jämnt i alla riktningar. Innereffekter fungerar ovanpå de ogenomskinliga delarna av lagret, medan yttre effekter bara påverkar de genomskinliga områdena.
 
-Läs mer om att[lägga till lagereffekter](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers).
+Läs mer om att[lägga till lagereffekter](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers).
 
 ### Lägga till parametrar
 
@@ -226,7 +226,7 @@ Det här är arbetsflödet för att skapa parametrar:
 >
 >Kan du inte lägga till en parameter eftersom du inte ser egenskapen? Ändra bara lagrets egenskap från standardvärdet (genom att flytta, ändra storlek, dölja osv.). Nu ska du se den egenskapen exponerad.
 
-Läs mer om [Mallparametrar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html).
+Läs mer om [Mallparametrar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html).
 
 ## Skapa en mall med textlager
 
@@ -315,7 +315,7 @@ Du kan se frasen Chocolate Mint Sandal - det är själva texten.
 - Du kan se ett RGB-värde: \red56\green53\blue4 — this is the text color.
 - Även om teckensnittsstorleken är 20 ser du inte siffran 20. Det finns emellertid ett kommando \fs40 - av någon udda anledning mäter RTF teckensnitt som halvpunkter. Därför är \fs40 teckensnittsstorleken!
 
-Du har tillräckligt med information för att skapa parametrar, men det finns en fullständig referens till alla RTF-kommandon i dokumentationen för bildservern. Besök [dokumentationen om bildservering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c).
+Du har tillräckligt med information för att skapa parametrar, men det finns en fullständig referens till alla RTF-kommandon i dokumentationen för bildservern. Besök [dokumentationen om bildservering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c).
 
 #### Lägga till parametrar i textlager
 
@@ -333,7 +333,7 @@ Så här lägger du till parametrar i textlager.
 >
 >Om du vill lägga till parametrar i textfärgen lägger du till parametrar för röd, grön och blå separat. Om RTF till exempel är `\red56\green53\blue46` lägger du till separata röda, gröna och blå parametrar för värdena 56, 53 och 46. I URL:en ändrar du färgen genom att anropa alla tre: `&$red=56&$green=53&$blue=46`.
 
-Lär dig hur du [skapar dynamiska textparametrar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters).
+Lär dig hur du [skapar dynamiska textparametrar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters).
 
 ## Publicera och skapa mall-URL:er
 
@@ -347,7 +347,7 @@ Det finns inget särskilt med en bildförinställning för en mall. Om du redan 
 
 Du måste köra en publicering för att se ändringarna skickas live till Image Server. Tänk på vad som behöver publiceras: de olika bildresurslagren, teckensnitten för dynamisk text och själva mallen. En grundmall är en artificiell konstruktion, precis som andra multimedieresurser i Dynamic Media Classic, till exempel Bilduppsättningar och Snurra uppsättningar. Det är ett radobjekt i databasen som refererar till bilder och teckensnitt med hjälp av en serie kommandon för bildservering. När du publicerar mallen uppdaterar du bara data på Image Server.
 
-Läs mer om [Publicera din mall](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/publishing-templates.html).
+Läs mer om [Publicera din mall](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html).
 
 ### Skapa mall-URL
 
