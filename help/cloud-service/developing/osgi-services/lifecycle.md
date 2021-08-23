@@ -4,11 +4,12 @@ description: Läs om OSGi-komponentens livscykel, inklusive hur du binder en OSG
 role: Developer
 level: Beginner
 topic: Utveckling
+feature: OSGI
 kt: 8228
 thumbnail: 335475.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '96'
 ht-degree: 3%
 
 ---
