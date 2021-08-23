@@ -3,26 +3,25 @@ title: Ställ in dynamisk SSLING-inkludering för AEM
 description: En videogenomgång av hur du installerar och använder Apache Sling Dynamic Include med AEM Dispatcher som körs på Apache HTTP Web Server.
 version: 6.3, 6.4, 6.5
 sub-product: grund, platser
-feature: APIs
+feature: API:er
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera [!DNL Sling Dynamic Include]
 
-En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html) som körs på [!DNL Apache HTTP Web Server].
+En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) som körs på [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -151,7 +150,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 
 >[!NOTE]
 >
->Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du se till att cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
+>Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du se till att cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
