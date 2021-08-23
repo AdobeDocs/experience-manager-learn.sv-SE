@@ -11,9 +11,9 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1150'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## HTML (HTML-mallspråk) och dialogrutor {#htl-dialogs}
 
-HTML-mallspråk eller **[HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM komponenter för att återge innehåll.
+HTML-mallspråk eller **[HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM komponenter för att återge innehåll.
 
 **** Dialogrutor definierar de konfigurationer som är tillgängliga för en komponent.
 
