@@ -2,17 +2,13 @@
 title: Bild, Färgruta, Snurra och Blandade medieuppsättningar
 description: En av de mest användbara och kraftfulla funktionerna i Dynamic Media Classic är stödet för att skapa multimedieuppsättningar som Bild, Färgruta, Snurra och Blandade medieuppsättningar. Lär dig vad varje multimedieuppsättning är och hur du skapar varje typ i Dynamic Media Classic. Läs sedan mer om gruppuppsättningsförinställningar, som automatiserar processen för att skapa multimedieuppsättningar vid överföring.
 sub-product: dynamiska medier
-feature: Dynamic Media Classic, bilduppsättningar, Mix Media Sets, Snurra uppsättningar
-doc-type: tutorial
-topics: sets, development, authoring, configuring
-audience: all
-activity: use
+feature: Dynamic Media Classic, bilduppsättningar, blandade medieuppsättningar, snurruppsättningar
 topic: Innehållshantering
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -51,8 +47,8 @@ URL:en för bilduppsättningen ovan kan se ut som:
 
 ![bild](assets/media-sets/image-set-url-1.png)
 
-- Läs mer om bilduppsättningar med [Snabbstart till bilduppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
-- Lär dig hur du [skapar en bilduppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set).
+- Läs mer om bilduppsättningar med [Snabbstart till bilduppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
+- Lär dig hur du [skapar en bilduppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set).
 
 ### Uppsättning med färgrutor
 
@@ -70,8 +66,8 @@ URL:en för färgruteuppsättningen ovan kan se ut som:
 
 ![bild](assets/media-sets/image-set_url.png)
 
-- Läs mer om färgruteuppsättningar med [Snabbstart till färgruteuppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
-- Lär dig hur du [skapar en färgruteuppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
+- Läs mer om färgruteuppsättningar med [Snabbstart till färgruteuppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
+- Lär dig hur du [skapar en färgruteuppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
 
 ### Snurra uppsättning
 
@@ -87,8 +83,8 @@ URL:en för den ovanstående rotationsuppsättningen kan se ut som:
 
 ![bild](assets/media-sets/spin-set.png)
 
-- Läs mer om snurruppsättningar med [Snabbstart till snurra uppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
-- Lär dig hur du [skapar en snurruppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
+- Läs mer om snurruppsättningar med [Snabbstart till snurra uppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
+- Lär dig hur du [skapar en snurruppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
 
 ## Blandad medieuppsättning
 
@@ -102,13 +98,13 @@ URL:en för den ovannämnda blandade medieuppsättningen kan se ut som:
 
 ![bild](assets/media-sets/image-set-url-1.png)
 
-- Läs mer om blandade medieuppsättningar med [Snabbstart till blandade medieuppsättningar](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
+- Läs mer om blandade medieuppsättningar med [Snabbstart till blandade medieuppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
 
-- Lär dig hur du [skapar en blandad medieuppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
+- Lär dig hur du [skapar en blandad medieuppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
 
 Om du vill visa en bild för zoomning, en uppsättning eller en video på webbplatsen anropar du den i ett Dynamic Media Classic-visningsprogram. I Dynamic Media Classic finns visningsprogram för mediefiler som färgruteuppsättningar, snurruppsättningar, video och många andra.
 
-Läs mer om [visningsprogram för AEM Assets och Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
+Läs mer om [visningsprogram för AEM Assets och Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
 
 ## Förinställningar för gruppuppsättning
 
@@ -127,7 +123,7 @@ Förinställningar för gruppuppsättning används endast vid överföring. de i
 
 När förinställningarna har skapats kan företagsadministratören välja om de är aktiva eller inaktiva. Aktiva innebär att de visas på överföringssidan under **Jobbalternativ**, medan inaktiva förinställningar förblir dolda.
 
-Lär dig hur du [skapar en gruppuppsättningsförinställning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
+Lär dig hur du [skapar en gruppuppsättningsförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
 
 ### Använda förinställningar för gruppuppsättning vid överföring
 
@@ -138,4 +134,4 @@ Så här använder du gruppuppsättningsförinställningar vid överföring när
 3. Öppna alternativet **Gruppuppsättningsförinställningar** och markera eller avmarkera förinställningen för att använda den vid överföringen.
 4. När överföringen är klar letar du efter de färdiga uppsättningarna i mappen.
 
-Läs mer om [Förinställningar för gruppuppsättning](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
+Läs mer om [Förinställningar för gruppuppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
