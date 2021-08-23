@@ -2,19 +2,18 @@
 seo: Set up public and private keys for use with AEM and Adobe I/O
 description: 'AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I/O och andra webbtjänster. Den här korta självstudiekursen visar hur kompatibla tangenter och nyckelbehållare kan genereras med kommandoradsverktyget openssl som fungerar med både AEM och Adobe I/O. '
 version: 6.4, 6.5
-feature: Users and Groups
+feature: Användare och grupper
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
-topic: Development
+topic: Utveckling
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -28,7 +27,7 @@ AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I
 >
 >Den här guiden skapar självsignerade nycklar som är användbara för utveckling och användning i lägre miljöer. I produktionsscenarier genereras och hanteras nycklar vanligtvis av en organisations IT-säkerhetsteam.
 
-## Generera nyckelparet public/private {#generate-the-public-private-key-pair}
+## Generera nyckelparet offentlig/privat {#generate-the-public-private-key-pair}
 
 Kommandoradsverktyget [[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html) [[!DNL req] command](https://www.openssl.org/docs/man1.0.2/man1/req.html) kan användas för att generera ett nyckelpar som är kompatibelt med Adobe I/O och Adobe Experience Manager.
 
@@ -96,7 +95,7 @@ Certificate fingerprint (SHA1): 7C:6C:25:BD:52:D3:3B:29:83:FD:A2:93:A8:53:91:6A:
 
 ![Verifiera nyckelbehållaren i Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
-## Lägger till nyckelbehållaren i AEM {#adding-the-keystore-to-aem}
+## Lägga till nyckelbehållaren i AEM {#adding-the-keystore-to-aem}
 
 AEM använder den genererade **privata nyckeln** för att kommunicera säkert med Adobe I/O och andra webbtjänster. För att den privata nyckeln ska vara tillgänglig för AEM måste den installeras i en AEM nyckelbehållare.
 
@@ -133,11 +132,11 @@ Klicka på **[!UICONTROL Add Private Key form KeyStore file]** i användarens ny
 
 När den privata nyckeln har lästs in från den angivna nyckelbehållaren till AEM nyckelbehållare visas den privata nyckelns metadata i användarens nyckelbehållarkonsol.
 
-## Lägger till den offentliga nyckeln i Adobe I/O {#adding-the-public-key-to-adobe-i-o}
+## Lägga till den offentliga nyckeln i Adobe I/O {#adding-the-public-key-to-adobe-i-o}
 
 Den matchande offentliga nyckeln måste överföras till Adobe I/O för att AEM som har den offentliga nyckelns motsvarande privata nyckel ska kunna kommunicera säkert.
 
-### Skapa en ny integrering för Adobe I/O {#create-a-adobe-i-o-new-integration}
+### Skapa integrering med Adobe I/O {#create-a-adobe-i-o-new-integration}
 
 ![Skapa integrering med Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
 
@@ -145,7 +144,7 @@ Den matchande offentliga nyckeln måste överföras till Adobe I/O för att AEM 
 
 Om du vill skapa en ny integrering i Adobe I/O måste du överföra ett offentligt certifikat. Överför **certificate.crt** som genererats av kommandot `openssl req`.
 
-### Kontrollera att de offentliga nycklarna har lästs in i Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o}
+### Verifiera att de publika nycklarna har lästs in i Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o}
 
 ![Verifiera offentliga nycklar i Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
