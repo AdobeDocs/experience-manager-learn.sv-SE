@@ -4,13 +4,12 @@ seo-title: Integrera Adobe Experience Manager med Adobe Target med Experience Pl
 description: Steg för steg gå igenom hur du integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
 seo-description: Steg för steg gå igenom hur du integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
 feature: Experience Fragments
-topic: Personalization
+topic: Personanpassning
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1098'
 ht-degree: 1%
 
 ---
@@ -40,7 +39,7 @@ ht-degree: 1%
 
 För den här integreringen måste följande målgrupper vara inblandade, och för att kunna utföra vissa uppgifter kan du behöva administrativ åtkomst.
 
-* Utvecklare
+* Developer
 * AEM
 * Experience Cloud Administrator
 
@@ -88,7 +87,7 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
 
 #### Lägger till måltillägg
 
-Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben `at.js`. Kunder som fortfarande använder det äldre målbiblioteket `mbox.js`, [bör uppgradera till at.js](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/upgrading-from-atjs-1x-to-atjs-20.html) för att använda Launch.
+Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben `at.js`. Kunder som fortfarande använder det äldre målbiblioteket `mbox.js`, [bör uppgradera till at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) för att använda Launch.
 
 Tillägget Mål består av två huvuddelar:
 
@@ -138,7 +137,7 @@ Tillägget Mål består av två huvuddelar:
 
 >[!NOTE]
 >
-> Ge integreringen med Adobe I/O åtkomst till utvalda arbetsytor med rätt [roll så att ett centralt team kan göra API-drivna ändringar på bara några få arbetsytor](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
+> Ge integreringen med Adobe I/O åtkomst till utvalda arbetsytor med rätt [roll så att ett centralt team kan göra API-drivna ändringar på bara några få arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
 1. Skapa IMS-integrering i AEM med hjälp av autentiseringsuppgifter från Adobe I/O. (01:12 till 03:55)
 2. Skapa en egenskap i Experience Platform Launch. (täckt [ovan](#create-launch-property))
