@@ -1,13 +1,13 @@
 ---
 title: Komma igång med AEM Headless - GraphQL
 description: En översikt över AEM GraphQL API:er och funktioner.
-feature: Innehållsfragment, API:er
+feature: Innehållsfragment, GraphQL API, API:er
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '252'
 ht-degree: 1%
 
 ---
