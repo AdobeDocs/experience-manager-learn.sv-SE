@@ -3,16 +3,12 @@ user-guide-title: Komma igång med AEM Headless
 user-guide-description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
 breadcrumb-title: AEM Headless Tutorial
 version: cloud-service
-sub-product: content-services
-audience: architect, developer, implementer
-doc-type: tutorial
-topics: content-delivery
-activity: develop, understand
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '181'
 ht-degree: 3%
 
 ---
