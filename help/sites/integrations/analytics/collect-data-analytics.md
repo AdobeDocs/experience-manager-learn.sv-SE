@@ -1,21 +1,16 @@
 ---
 title: Samla in siddata med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att samla in data om användaraktivitet på en webbplats som byggts med Adobe Experience Manager. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics rapportserie.
-feature: analytics
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 5332
-thumbnail: 5332-collect-data-analytics.jpg
-topic: Integrations
+topic: Integreringar
+feature: Adobe-klientdatalager
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 5332
+thumbnail: 5332-collect-data-analytics.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2378'
 ht-degree: 1%
 
 ---
@@ -23,7 +18,7 @@ ht-degree: 1%
 
 # Samla in siddata med Adobe Analytics
 
-Lär dig använda de inbyggda funktionerna i [Adobe Client Data Layer med AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) för att samla in data om en sida i Adobe Experience Manager Sites. [Experience Platform ](https://www.adobe.com/experience-platform/launch.html) Launchoch  [Adobe Analytics-](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) tillägget används för att skapa regler för att skicka siddata till Adobe Analytics.
+Lär dig använda de inbyggda funktionerna i [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att samla in data om en sida i Adobe Experience Manager Sites. [Experience Platform ](https://www.adobe.com/experience-platform/launch.html) Launchoch  [Adobe Analytics-](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) tillägget används för att skapa regler för att skicka siddata till Adobe Analytics.
 
 ## Vad du ska bygga
 
@@ -42,9 +37,9 @@ I den här självstudiekursen utlöser du en startregel baserad på en händelse
 Följande krävs:
 
 * **Experience Platform** LaunchProperty
-* **Adobe** AnalyticsTest/Dev-rapportsprogram-ID och spårningsserver. Se följande dokumentation för [hur du skapar en ny rapportsvit](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser-tillägg. Skärmbilder i den här självstudiekursen som tagits från webbläsaren Chrome.
-* (Valfritt) AEM Plats med [Adobe Client Data Layer aktiverat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudien används den offentliga webbplatsen [https://wknd.site/us/en.html](https://wknd.site/us/en.html), men du är välkommen att använda din egen webbplats.
+* **Adobe** AnalyticsTest/Dev-rapportsprogram-ID och spårningsserver. Se följande dokumentation för [hur du skapar en ny rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser-tillägg. Skärmbilder i den här självstudiekursen som tagits från webbläsaren Chrome.
+* (Valfritt) AEM Plats med [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudien används den offentliga webbplatsen [https://wknd.site/us/en.html](https://wknd.site/us/en.html), men du är välkommen att använda din egen webbplats.
 
 >[!NOTE]
 >
@@ -52,12 +47,12 @@ Följande krävs:
 
 ## Switch Launch Environment for WKND Site
 
-[https://wknd.](https://wknd.site) site är en offentlig webbplats som byggts utifrån  [ett ](https://github.com/adobe/aem-guides-wknd) projekt med öppen källkod som utformats som referens och  [](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) självstudiekurser för AEM implementeringar.
+[https://wknd.](https://wknd.site) site är en offentlig webbplats som byggts utifrån  [ett ](https://github.com/adobe/aem-guides-wknd) projekt med öppen källkod som utformats som referens och  [](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) självstudiekurser för AEM implementeringar.
 
-I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökaren Experience Platform för att **växla** live [https://wknd.site/](https://wknd.site/) till *din* startegenskap. Naturligtvis kan du använda en egen AEM om den redan har [Adobe Client Data Layer aktiverat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
+I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökaren Experience Platform för att **växla** live [https://wknd.site/](https://wknd.site/) till *din* startegenskap. Naturligtvis kan du använda en egen AEM om den redan har [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
-1. Logga in på Experience Platform Launch och [skapa en startegenskap](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (om du inte redan gjort det).
-1. Kontrollera att ett initialt startbibliotek [har skapats](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library) och befordrats till en startmiljö[miljö](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html).
+1. Logga in på Experience Platform Launch och [skapa en startegenskap](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (om du inte redan gjort det).
+1. Kontrollera att ett initialt startbibliotek [har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och befordrats till en startmiljö[miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html).
 1. Kopiera startkoden för inbäddning från miljön som biblioteket har publicerats i.
 
    ![Copy Launch Embed Code](assets/collect-data-analytics/launch-environment-copy.png)
@@ -77,7 +72,7 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
 
 ## Verifiera Adobe klientdatalager på WKND-plats
 
-[WKND Reference-projektet](https://github.com/adobe/aem-guides-wknd) har skapats med AEM Core Components och har [Adobe Client Data Layer aktiverat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
+[WKND Reference-projektet](https://github.com/adobe/aem-guides-wknd) har skapats med AEM Core Components och har [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
 
 1. Navigera till [https://wknd.site](https://wknd.site).
 1. Öppna webbläsarens utvecklarverktyg och gå till **konsolen**. Kör följande kommando:
@@ -104,11 +99,11 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   Vi använder standardegenskaper som härletts från [sidschemat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page), `dc:title`, `xdm:language` och `xdm:template` för datalagret för att skicka siddata till Adobe Analytics.
+   Vi använder standardegenskaper som härletts från [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), `dc:title`, `xdm:language` och `xdm:template` för datalagret för att skicka siddata till Adobe Analytics.
 
    >[!NOTE]
    >
-   > Ser du inte JavaScript-objektet `adobeDataLayer`? Kontrollera att [Adobe-klientdatalagret har aktiverats](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) på din plats.
+   > Ser du inte JavaScript-objektet `adobeDataLayer`? Kontrollera att [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) på din plats.
 
 ## Skapa en inläst sidregel
 
@@ -175,13 +170,13 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är den aktuella sidan som härleds från datalagret  `getState` i den anpassade händelsen. Återkalla från tidigare [sidschemat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret för att se de olika nycklarna som visas utanför rutan.
+   Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är den aktuella sidan som härleds från datalagret  `getState` i den anpassade händelsen. Återkalla från tidigare [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret för att se de olika nycklarna som visas utanför rutan.
 
-1. Spara ändringarna och kör en [build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html) i Launch för att befordra koden till [miljön](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
-   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Development**-miljö.
+   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Development**-miljö.
 
 1. Navigera till AEM webbplats och öppna utvecklarverktygen för att visa konsolen. Uppdatera sidan så ser du att konsolmeddelandena har loggats:
 
@@ -191,7 +186,7 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
 
 Skapa sedan flera dataelement för att hämta olika värden från datalagret för klienten i Adobe. Som vi tidigare sett är det möjligt att komma åt egenskaperna för datalagret direkt via anpassad kod. Fördelen med att använda dataelement är att de kan återanvändas i alla Launch-regler.
 
-Återkalla från tidigare [sidschemat](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret:
+Återkalla från tidigare [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret:
 
 Dataelement mappas till egenskaperna `@type`, `dc:title` och `xdm:template`.
 
