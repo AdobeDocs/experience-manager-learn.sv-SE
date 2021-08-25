@@ -1,15 +1,15 @@
 ---
 title: Integrera Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
-seo-title: Integrera Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
+seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 description: Steg för steg gå igenom hur du integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
-seo-description: Steg för steg gå igenom hur du integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
+seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 feature: Experience Fragments
-topic: Personanpassning
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 1%
 
 * [AEM skapar och publicerar ](./implementation.md#set-up-aem) instancerunning på localhost-port 4502 respektive 4503
 * **Experience Cloud**
-   * Åtkomst till dina organisationer Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Tillgång till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O Console](https://console.adobe.io)
 
       >[!NOTE]
-      >Du bör ha behörighet att utveckla, godkänna, publicera, hantera tillägg och hantera miljöer i Launch. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om startbehörigheter finns i [dokumentationen](https://docs.adobelaunch.com/administration/user-permissions).
+      >Du bör ha behörighet att utveckla, godkänna, publicera, hantera tillägg och hantera miljöer i Launch. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om startbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 
 * **Webbläsarplugin-program**
@@ -66,7 +66,7 @@ I det här avsnittet ska vi ta upp följande integreringssteg:
 
 En egenskap är en behållare som du fyller med tillägg, regler, dataelement och bibliotek när du distribuerar taggar till webbplatsen.
 
-1. Gå till din organisation [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experienceCloud.adobe.com)
+1. Gå till din organisation [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
 2. Logga in med din Adobe ID och kontrollera att du är i rätt organisation.
 3. I lösningsväljaren klickar du på **Starta** och väljer sedan knappen **Gå till start**.
 
@@ -75,7 +75,7 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
 4. Se till att du är i rätt organisation och fortsätt sedan att skapa en Launch-egenskap.
    ![Experience Cloud - Starta](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *Mer information om hur du skapar egenskaper finns i  [Skapa en ](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) egenskap i produktdokumentationen.*
+   *Mer information om hur du skapar egenskaper finns i  [Skapa en ](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) egenskap i produktdokumentationen.*
 5. Klicka på knappen **Ny egenskap**
 6. Ange ett namn för egenskapen (till exempel *AEM mållokurs*)
 7. Som domän anger du *localhost.com* eftersom det är den domän där WKND-demowebbplatsen körs. Trots att fältet *Domän* är obligatoriskt fungerar egenskapen Launch på alla domäner där det implementeras. Det främsta syftet med det här fältet är att förifylla menyalternativ i regelbyggaren.
@@ -91,7 +91,7 @@ Adobe Target-tillägget stöder implementeringar på klientsidan med Target Java
 
 Tillägget Mål består av två huvuddelar:
 
-* Tilläggskonfigurationen som hanterar huvudbiblioteksinställningarna
+* Tilläggskonfigurationen, som hanterar huvudbiblioteksinställningarna
 * Regelåtgärder för att göra följande:
    * Load Target (at.js)
    * Lägg till parametrar i alla rutor
