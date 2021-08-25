@@ -1,23 +1,17 @@
 ---
 title: Sidegenskaper i AEM Sites
-seo-title: Sidegenskaper i Adobe Experience Manager Sites
 description: I följande video visas de metadata för sidegenskaper som är kopplade till en sida i Adobe Experience Manager.
-seo-description: 'I följande video visas de metadata för sidegenskaper som är kopplade till en sida i Adobe Experience Manager. '
-feature: Page Editor
-topics: authoring, metadata
-audience: author, marketer
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
-kt: 4321
-thumbnail: 32192.jpg
-topic: Innehållshantering
+topic: Content Management
+feature: Page Editor
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4321
+thumbnail: 32192.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 4%
+source-wordcount: '138'
+ht-degree: 9%
 
 ---
 
@@ -64,4 +58,5 @@ I den här videon beskrivs följande sidegenskapselement:
 
 * [Redigera dokumentationen för Sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Användarhandbok för utveckling av webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+
