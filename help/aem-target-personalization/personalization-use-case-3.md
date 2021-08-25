@@ -1,17 +1,16 @@
 ---
 title: Personalisering med Adobe Target Visual Experience Composer
-seo-title: Personalisering med Adobe Target Visual Experience Composer (VEC)
+seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target Visual Experience Composer (VEC).
-seo-description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target Visual Experience Composer (VEC).
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +40,7 @@ För den här övningen måste följande användare vara involverade och för at
    * [AEM publicera ](./implementation.md#getting-aem) instancerunning på 4503
    * [AEM integrerat med Adobe Target med Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * Åtkomst till dina organisationer Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Tillgång till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud har etablerats med [Adobe Target](https://experiencecloud.adobe.com)
 
 ## Marknadsföringsaktiviteter
