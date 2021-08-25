@@ -1,17 +1,16 @@
 ---
 title: Använda Dynamic Media Classic Desktop Application
 description: Adobe introducerar ett datorprogram för Dynamic Media Classic-användare som inte längre använder Adobe Flash i webbläsaren.
-sub-product: dynamiska medier
 feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 Adobe introducerar ett skrivbordsprogram för Dynamic Media Classic som ger en liknande upplevelse som en webbläsare och ett funktionellt, likvärdigt gränssnitt som inte är beroende av Adobe Flash.
 
->[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -38,5 +37,4 @@ Adobe Dynamic Media Classic är kompatibelt med följande operativsystem:
 
 * [Dokumentation för Adobe Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
 * [Vanliga frågor och svar om Adobe Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [Ladda ned - diskavbildningsfil för macOS (.dmg)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.dmg)
-* [Hämta - körbar fil för Windows (.exe)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.exe)
+* [Hämta Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
