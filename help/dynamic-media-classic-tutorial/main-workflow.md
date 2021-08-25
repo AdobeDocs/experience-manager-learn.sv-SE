@@ -1,18 +1,18 @@
 ---
 title: Dynamic Media Classic - huvudarbetsflöde och förhandsgranskning av resurser
 description: Lär dig mer om huvudarbetsflödet i Dynamic Media Classic, som innehåller tre steg - Skapa (och ladda upp), Författare (och Publicera) och Leverera. Lär dig sedan hur du förhandsgranskar resurser i Dynamic Media Classic.
-sub-product: dynamiska medier
+sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2710'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Nyligen överförda och publicerade mediefiler visas direkt, medan uppdaterade m
 
 Detta är vanligtvis inget problem om det inte har inträffat ett fel och bilden/resursen har samma namn som den tidigare publicerade versionen, men det finns ett problem med bilden. Du kanske av misstag överförde en version med låg upplösning eller så godkändes bilden inte av art director. I det här fallet vill du återkalla originalbilden och ersätta den med en ny version med samma resurs-ID.
 
-Lär dig hur du [Rensa cachen manuellt för de URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
+Lär dig hur du [Rensa cachen manuellt för de URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en).
 
 >[!TIP]
 >
