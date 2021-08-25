@@ -1,18 +1,13 @@
 ---
 title: Värderingsbara rapporter för administratörer
 description: Upptäck två värdefulla rapporter som administratörer av Dynamic Media Classic bör överväga att skapa.
-sub-product: dynamiska medier, resurser
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, reports
-audience: all
-activity: use
-topic: Innehållshantering
+topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -47,6 +42,4 @@ Läs mer om Dynamic Media Classic här:
 - [Dynamic Media Classic på Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic på Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Dynamic Media Newsletter Archives](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media Newsletter Subscription Page](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dynamic Media Classic-dokumentation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
-- [Blogginlägg för multimedia](https://theblog.adobe.com/tag/dynamic-media)
