@@ -2,17 +2,12 @@
 title: Förstå skäl att uppgradera
 description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager.
 version: 6.5
-sub-product: resurser, cloud manager, handel, innehållstjänster, dynamiska medier, formulär, grund, skärmar, sajter
-topics: best-practices, upgrade
-audience: all
-activity: understand
-doc-type: article
-topic: Uppgradera
+topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3529'
+source-wordcount: '3462'
 ht-degree: 1%
 
 ---
@@ -504,7 +499,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">Style System</a>:</strong>
+            <td><strong>Style System:</strong>
             Öka återanvändningen av AEM genom att definiera deras visuella utseende med hjälp av sammanhangsberoende formatsystem.</td>
             <td> </td>
             <td> </td>
@@ -559,7 +554,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-understand.html" target="_blank">Innehållsfragment</a>:</strong>
+            <td><strong>Innehållsfragment:</strong>
             Skapa och strukturera redigerbart innehåll som inte är kopplat från presentationen för enkel återanvändning.</td>
             <td> </td>
             <td> </td>
@@ -581,7 +576,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/content-services-fragments-featurepack.html" target="_blank">Innehållstjänster</a>:</strong>
+            <td><strong>Innehållstjänster:</strong>
             Exportera innehåll från AEM som JSON för användning på olika enheter och i olika program.</td>
             <td> </td>
             <td> </td>
@@ -636,7 +631,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-screens-introduction.html" target="_blank">skärmar</a>:</strong>
+            <td><strong>skärmar:</strong>
             Hantera upplevelser för digitala skyltar och kioskdatorer.</td>
             <td> </td>
             <td> </td>
@@ -993,8 +988,6 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
 
 Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM erbjuder. Vissa av dessa funktioner introducerades i tidigare versioner med stegvisa förbättringar som lades till i varje release.
 
-+ [Versionsinformation för AEM Forms](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
-
 ***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
 ***○ <sup></sup> SPbetecknar att funktionen är tillgänglig via Service Pack eller Feature Pack.***
@@ -1149,7 +1142,7 @@ Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM er
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/pdf/aem-forms/6-5/WorkbenchHelp.pdf" target="_blank">Arbetsflöde (J2EE) för Forms-bearbetning</a>:</strong>
+            <td><strong>Arbetsflöde (J2EE) för Forms-bearbetning:</strong>
             Bygg komplexa formulär/dokumentorienterade arbetsflöden med en intuitiv IDE.</td>
             <td></td>
             <td>✔</td>
@@ -1188,8 +1181,6 @@ Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM er
 ## Funktioner i Communities
 
 Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som AEM erbjuder. Vissa av dessa funktioner introducerades i tidigare versioner med stegvisa förbättringar som lades till i varje release.
-
-+ [Sammanfattning av nya funktioner i AEM Communities](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
 ***○ <sup>+</sup> Betydande förbättringar av funktionen i den här versionen.***
 
@@ -1629,7 +1620,7 @@ Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som 
     </tbody>
 </table>
 
-AEM Communities lägger till [förbättringar](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html) genom releaser som gör det möjligt för organisationer att engagera och aktivera sina användare genom att:
+AEM Communities lägger till förbättringar genom releaser som gör det möjligt för organisationer att engagera och möjliggöra för sina användare genom att:
 
 + **@** mentionsupport i användargenererat innehåll.
 + Hjälpmedelsförbättringar genom **tangentbordsnavigering** i **Aktivera**-komponenter.
