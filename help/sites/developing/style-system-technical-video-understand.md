@@ -2,18 +2,13 @@
 title: Så här kodar du för AEM Style System
 description: I den här videon ska vi titta närmare på den beskrivning av CSS (eller LESS) och JavaScript som används för att formatera huvudtitelkomponenten i Adobe Experience Manager med Style System, samt hur dessa format tillämpas på HTML och DOM.
 feature: Style System
-topics: development, components, front-end-development
-audience: developer, implementer
-doc-type: technical video
-activity: understand
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -23,15 +18,10 @@ ht-degree: 0%
 
 I den här videon ska vi titta närmare på den beskrivning av CSS (eller [!DNL LESS]) och JavaScript som används för att formatera Experience Managers Core Title Component med Style System, samt hur dessa format tillämpas på HTML och DOM.
 
->[!NOTE]
->
->AEM Style System introducerades med [AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [Feature Pack 20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593).
->
->I videon antas att komponenten We.Retail Title har uppdaterats för att ärva från [Core Components v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases).
 
 ## Så här kodar du för formatsystemet {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
 
 Det angivna AEM-paketet (**technical-review.sites.style-system-1.0.0.zip**) installerar exempelnamnstilen, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
 
@@ -152,7 +142,7 @@ jQuery(function ($) {
 });
 ```
 
-## Bästa praxis för utveckling {#development-best-practices}
+## Utveckla bästa praxis {#development-best-practices}
 
 ### Bästa praxis för HTML {#html-best-practices}
 
