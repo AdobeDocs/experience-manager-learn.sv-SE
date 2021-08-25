@@ -2,15 +2,15 @@
 title: Samla in siddata med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att samla in data om användaraktivitet på en webbplats som byggts med Adobe Experience Manager. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics rapportserie.
 version: cloud-service
-topic: Integreringar
-feature: Adobe-klientdatalager
+topic: Integrations
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2375'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Följande krävs:
 I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökaren Experience Platform för att **växla** live [https://wknd.site/](https://wknd.site/) till *din* startegenskap. Naturligtvis kan du använda en egen AEM om den redan har [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Logga in på Experience Platform Launch och [skapa en startegenskap](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (om du inte redan gjort det).
-1. Kontrollera att ett initialt startbibliotek [har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och befordrats till en startmiljö[miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html).
+1. Kontrollera att ett initialt startbibliotek [har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och befordrats till en startmiljö[miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
 1. Kopiera startkoden för inbäddning från miljön som biblioteket har publicerats i.
 
    ![Copy Launch Embed Code](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
 
    Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är den aktuella sidan som härleds från datalagret  `getState` i den anpassade händelsen. Återkalla från tidigare [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret för att se de olika nycklarna som visas utanför rutan.
 
-1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
