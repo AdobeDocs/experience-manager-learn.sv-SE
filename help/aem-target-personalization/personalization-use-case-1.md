@@ -1,15 +1,15 @@
 ---
 title: Personalisering med AEM Experience Fragments och Adobe Target
-seo-title: Personalisering med Adobe Experience Manager (AEM) Experience Fragments och Adobe Target
+seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager Experience Fragments och Adobe Target.
-seo-description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager Experience Fragments och Adobe Target.
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
 feature: Experience Fragments
-topic: Personanpassning
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1692'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ För den här övningen måste följande användare vara involverade och för at
 * **AEM**
    * [AEM skapar och publicerar ](./implementation.md#getting-aem) instancerunning på localhost 4502 respektive 4503.
 * **Experience Cloud**
-   * Åtkomst till dina organisationer Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Tillgång till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -79,7 +79,7 @@ För den här övningen måste följande användare vara involverade och för at
 
 ### Skapa en målgrupp med geolokalisering {#marketer-audience}
 
-1. Gå till din organisation [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experienceCloud.adobe.com)
+1. Gå till din organisation [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`<https://<yourcompany>.experiencecloud.adobe.com`)
 1. Logga in med din Adobe ID och kontrollera att du är i rätt organisation.
 1. Klicka på **Target** i lösningsväljaren och **starta** Adobe Target.
 
