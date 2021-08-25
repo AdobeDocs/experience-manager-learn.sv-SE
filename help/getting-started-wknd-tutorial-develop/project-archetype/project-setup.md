@@ -1,20 +1,20 @@
 ---
 title: Komma igång med AEM Sites - projektinställningar
-seo-title: Komma igång med AEM Sites - projektinställningar
+seo-title: Getting Started with AEM Sites - Project Setup
 description: Omfattar skapandet av ett Maven Multi Module-projekt för att hantera koden och konfigurationerna för en AEM.
-sub-product: platser
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
-topic: Innehållshantering, utveckling
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1843'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Modulen **[core](https://experienceleague.adobe.com/docs/experience-manager-core
 
 ### Ui.apps och Ui.content-moduler {#apps-content-module}
 
-Mappmodulen **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som kommer att lagras i ett AEM som heter [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/clientlibs.html). Detta inkluderar även [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)-skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR-läsaren, men i ett format som kan lagras i ett filsystem och implementeras för källkontroll. Modulen **ui.apps** innehåller bara kod.
+Mappmodulen **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som kommer att lagras i ett AEM som heter [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). Detta inkluderar även [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)-skript för återgivning av dynamisk HTML. Du kan tänka dig modulen **ui.apps** som en karta till strukturen i JCR-läsaren, men i ett format som kan lagras i ett filsystem och implementeras för källkontroll. Modulen **ui.apps** innehåller bara kod.
 
 Så här skapar du bara den här modulen:
 
@@ -346,6 +346,6 @@ Så här skapar du bara den här modulen:
 
    Återigen förväntas ett byggfel inträffa om det inte finns någon AEM som körs på port **4504** tillgänglig. Parametern `aem.port` definieras i POM-filen på `aem-guides-wknd/pom.xml`.
 
-Modulen **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.htm)** är strukturerad på samma sätt som modulen **ui.apps**. Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **mutable**-innehåll. **** MutableContent avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i  **** källkontrollsknappar som kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
+Modulen **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** är strukturerad på samma sätt som modulen **ui.apps**. Den enda skillnaden är att modulen **ui.content** innehåller det som kallas **mutable**-innehåll. **** MutableContent avser i huvudsak icke-kodkonfigurationer som mallar, profiler eller mappstrukturer som lagras i  **** källkontrollsknappar som kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
 
 Samma Maven-kommandon som används för att skapa modulen **ui.apps** kan användas för att skapa modulen **ui.content**. Upprepa stegen ovan i mappen **ui.content**.
