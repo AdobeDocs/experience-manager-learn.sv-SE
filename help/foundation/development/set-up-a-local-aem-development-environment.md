@@ -9,10 +9,9 @@ audience: developer
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -208,12 +207,12 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de mer populära IDE:erna för Java-utveckling, till stor del eftersom den har öppen källkod och ***fri***! Adobe tillhandahåller ett plugin-program, **[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)**, för [!DNL Eclipse], som gör det enklare att utveckla med ett trevligt GUI för att synkronisera kod med en lokal AEM. Den integrerade utvecklingsmiljön [!DNL Eclipse] rekommenderas för utvecklare som inte AEM till stor del på grund av stödet för användargränssnittet i [!DNL AEM Developer Tools].
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de mer populära IDE:erna för Java-utveckling, till stor del eftersom den har öppen källkod och ***fri***! Adobe tillhandahåller ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse], som gör det enklare att utveckla med ett trevligt GUI för att synkronisera kod med en lokal AEM. Den integrerade utvecklingsmiljön [!DNL Eclipse] rekommenderas för utvecklare som inte AEM till stor del på grund av stödet för användargränssnittet i [!DNL AEM Developer Tools].
 
 #### Installation och installation
 
 1. Hämta och installera [!DNL Eclipse]-utvecklingsmiljön för [!DNL Java EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
-1. Följ instruktionerna för att installera plugin-programmet [!DNL AEM Developer Tools]: [https://eclipse.adobe.com/aem/dev-tools/](https://eclipse.adobe.com/aem/dev-tools/)
+1. Följ instruktionerna för att installera plugin-programmet [!DNL AEM Developer Tools]: [https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -310,7 +309,7 @@ Som standard är **error.log** konfigurerad att logga *[!DNL INFO]*-satser. Om d
 
 ![Loggningskonfiguration i AEM](./assets/set-up-a-local-aem-development-environment/logging.png)
 
-#### Paketet är i installerat läge {#bundle-active}
+#### Paketet är i ett installerat läge {#bundle-active}
 
 Alla paket (utom fragment) ska vara i läget **[!UICONTROL Active]**. Om du ser kodpaketet i ett [!UICONTROL Installed]-läge finns det ett problem som behöver lösas. Det här är oftast ett beroendeproblem:
 
@@ -324,7 +323,7 @@ Ett användbart verktyg som kan användas är [!UICONTROL Dependency Finder]: [h
 
 I exemplet ovan ser vi att den version som är installerad på AEM är **12.2** jämfört med **12.6** som paketet förväntades. Därifrån kan du arbeta baklänges och se om [!DNL Maven]-beroendena för AEM matchar [!DNL Maven]-beroendena i det AEM projektet. I ovanstående exempel är [!DNL Core Components] **v2.2.0** installerat på AEM men kodpaketet skapades med ett beroende av **v2.2.2**, vilket är orsaken till beroendeproblemet.
 
-#### Verifiera registrering av delningsmodeller {#osgi-component-sling-models}
+#### Verifiera registrering av försäljningsmodeller {#osgi-component-sling-models}
 
 AEM ska alltid backas upp av en [!DNL Sling Model] för att kapsla in affärslogik och säkerställa att HTML-återgivningsskriptet förblir rent. Om du får problem där Sling Model inte kan hittas kan det vara praktiskt att kontrollera [!DNL Sling Models] från konsolen: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). Detta anger om din Sling-modell har registrerats och vilken resurstyp (komponentsökvägen) den är kopplad till.
 
