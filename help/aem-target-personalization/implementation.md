@@ -1,16 +1,16 @@
 ---
 title: Integrera Adobe Experience Manager med Adobe Target
-seo-title: En artikel som handlar om olika sätt att integrera Adobe Experience Manager(AEM) med Adobe Target för att leverera personaliserat innehåll.
+seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
 description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
-seo-description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
+seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
-topic: Personanpassning
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,7 @@ För AEM som vill använda Experience Fragment-erbjudanden för att skapa en akt
       * [Digitalt datalager](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * Åtkomst till dina organisationer Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Tillgång till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
