@@ -1,7 +1,7 @@
 ---
 title: Konfigurera utvecklingsverktygen för AEM som en Cloud Service
 description: Konfigurera en lokal utvecklingsmaskin med alla grundläggande verktyg som behövs för att utveckla mot AEM lokalt.
-feature: Utvecklarverktyg
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,12 +9,12 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare so
 
 ### Eclipse
 
-__[Eclipse ](https://www.eclipse.org/ide/)__ IDE är en populär IDE för Java-utveckling och har stöd för   __[AEM Developer ](https://eclipse.adobe.com/aem/dev-tools/)__ Toolsplug-in från Adobe, som tillhandahåller ett in-IDE-gränssnitt för redigering och synkronisering av JCR-innehåll med en lokal AEM.
+__[Eclipse ](https://www.eclipse.org/ide/)__ IDE är en populär IDE för Java-utveckling och har stöd för   __[AEM Developer ](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ Toolsplug-in från Adobe, som tillhandahåller ett in-IDE-gränssnitt för redigering och synkronisering av JCR-innehåll med en lokal AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Hämta Eclipse](https://www.eclipse.org/ide/)
-+ [Hämta Eclipse Dev Tools](https://eclipse.adobe.com/aem/dev-tools/)
++ [Hämta Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
