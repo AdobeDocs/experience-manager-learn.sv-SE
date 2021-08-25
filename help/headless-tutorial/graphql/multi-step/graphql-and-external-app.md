@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
-feature: Innehållsfragment, GraphQL API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Det här är en självstudiekurs i flera delar och det antas att de steg som bes
 
 _Skärmbilder från IDE i det här kapitlet kommer från  [Visual Studio Code](https://code.visualstudio.com/)_
 
-Du kan också installera ett webbläsartillägg som [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm) för att kunna visa mer information om en GraphQL-fråga.
+Du kan också installera ett webbläsartillägg som [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) för att kunna visa mer information om en GraphQL-fråga.
 
 ## Mål
 
@@ -74,7 +74,7 @@ Det beskrivs mer ingående i avsnittet [Snabbinställningar](./setup.md) i avsni
 
       ![WKND GraphQL React-app - Detaljupplevelse](./assets/graphql-and-external-app/react-details-view.png)
 
-1. Använd webbläsarens utvecklingsverktyg och ett webbläsartillägg som [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm) för att inspektera de GraphQL-frågor som skickas till AEM och deras JSON-svar. Den här metoden kan användas för att övervaka GraphQL-begäranden och svar för att säkerställa att de är korrekt formulerade och att deras svar är som förväntat.
+1. Använd webbläsarens utvecklingsverktyg och ett webbläsartillägg som [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) för att granska GraphQL-frågor som skickas till AEM och deras JSON-svar. Den här metoden kan användas för att övervaka GraphQL-begäranden och svar för att säkerställa att de är korrekt formulerade och att deras svar är som förväntat.
 
    ![Raw Query for adventureList](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
