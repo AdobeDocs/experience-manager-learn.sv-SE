@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: Innehållsfragment, GraphQL API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1814'
 ht-degree: 0%
 
 ---
@@ -158,11 +158,7 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
 
    ![XHR-begäran för GraphQL Endpoint](assets/setup/endpoint-gql.png)
 
-1. Du kan också visa parametrarna och JSON-svaret genom att granska nätverksbegäran. Det kan vara praktiskt att installera ett webbläsartillägg som [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm) for Chrome för att få en bättre förståelse för frågan och svaret.
-
-   ![GraphQL-nätverkstillägg](assets/setup/GraphQL-extension.png)
-
-   *Använda Chrome-tillägget GraphQL-nätverk*
+1. Du kan också visa parametrarna och JSON-svaret genom att granska nätverksbegäran. Det kan vara praktiskt att installera ett webbläsartillägg som [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) for Chrome för att få en bättre förståelse för frågan och svaret.
 
 ## Ändra ett innehållsfragment
 
