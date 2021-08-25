@@ -1,25 +1,20 @@
 ---
-title: Förstå bästa praxis för Java API i AEM
+title: Java API Best Practices in AEM
 description: AEM bygger på en programhög med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 version: 6.2, 6.3, 6.4, 6.5
-sub-product: grund, resurser, platser
-feature: API:er
-topics: best-practices, development
-activity: develop
-audience: developer
-doc-type: article
-topic: Utveckling
+feature: APIs
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
 
 
-# Förstå bästa praxis för Java API
+# Java API Best Practices
 
 Adobe Experience Manager (AEM) bygger på en omfattande programstack med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 
@@ -29,15 +24,15 @@ AEM bygger på fyra primära Java API-uppsättningar.
 
    * Produktabstraktioner som sidor, resurser, arbetsflöden osv.
 
-* **[!DNL Apache Sling]Web Framework**
+* **Apache Sling Web Framework**
 
    * REST och resursbaserade abstraktioner som resurser, värdescheman och HTTP-begäranden.
 
-* **JCR ([!DNL Apache Jackrabbit Oak])**
+* **JCR (Apache Jackrabbit Oak)**
 
    * Data- och innehållsabstraktioner som nod, egenskaper och sessioner.
 
-* **[!DNL OSGi (Apache Felix)]**
+* **OSGi (Apache Felix)**
 
    * OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter.
 
@@ -46,7 +41,7 @@ AEM bygger på fyra primära Java API-uppsättningar.
 Den allmänna regeln är att föredra API:erna/abstraktionerna i följande ordning:
 
 1. **AEM**
-1. **[!DNL Sling]**
+1. **Sling**
 1. **JCR**
 1. **OSGi**
 
@@ -96,8 +91,8 @@ Det önskade API:t är [AEM Query Builder](https://helpx.adobe.com/experience-ma
 
 * Enkel, parametriserad frågekonstruktion (frågeparametrar som modelleras som en karta)
 * Inbyggt [Java API och HTTP API:er](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
-* [OOTB-frågefelsökning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [OTB-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) prediktioner som stöder vanliga frågekrav
+* [AEM Query Debugger](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
+* [AEM ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) som stöder gemensamma frågekrav
 
 * Utbyggbart API, som möjliggör utveckling av anpassade [frågepredikat](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
 * JCR-SQL2 och XPath kan köras direkt via [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) och [JCR-API:er](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html), vilket returnerar ett [[!DNL Sling] Resurser](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) eller [JCR-noder](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
@@ -105,7 +100,6 @@ Det önskade API:t är [AEM Query Builder](https://helpx.adobe.com/experience-ma
 >[!CAUTION]
 >
 >AEM QueryBuilder API läcker ett ResourceResolver-objekt. Följ det här [kodexemplet](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164) om du vill minska läckan.
-
 
 ## [!DNL Sling] API:er
 
@@ -155,12 +149,12 @@ Använd alltid JCR-API:erna framför API:erna för Apache Jackrabbit Oak. JCR-AP
 
 ### Vanliga användningsområden för JCR-API:er
 
-* [Hantering av åtkomstkontroll](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
+* [Hantering av åtkomstkontroll](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 * [Auktoriserbar hantering (användare/grupper)](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR-observation (avlyssna JCR-händelser)
 * Skapa djupnodsstrukturer
 
-   * Även om Sling API:er har stöd för att skapa resurser, har JCR-API:erna praktiska metoder i [JcrUtils](https://jackrabbit.apache.org/api/2.10/index.html?org/apache/jackrabbit/commons/JcrUtils.html) och [JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html) som gör det lättare att skapa djupa strukturer.
+   * Även om Sling API:er har stöd för att skapa resurser, har JCR-API:erna praktiska metoder i [JcrUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) och [JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html) som gör det lättare att skapa djupa strukturer.
 
 ## OSGi API:er
 
