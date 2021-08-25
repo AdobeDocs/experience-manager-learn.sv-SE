@@ -1,18 +1,18 @@
 ---
 title: Bildförinställningar
 description: Bildförinställningar i Dynamic Media Classic innehåller alla inställningar som behövs för att skapa en bild med en viss storlek, format, kvalitet och skärpa. Bildförinställningar är en nyckelkomponent för dynamisk storleksändring. När du tittar på en URL i Dynamic Media Classic kan du enkelt se om en bildförinställning används. Lär dig mer om bildförinställningar, varför de är så användbara och hur du skapar en.
-sub-product: dynamiska medier
-feature: Dynamic Media Classic, bildförinställningar
+sub-product: dynamic-media
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
@@ -70,5 +70,3 @@ Läs mer om [Dynamic Media Classic Sharpening Options](https://experienceleague.
 [Förinställningsguide](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf) för bild. Inställningar som ska användas för att optimera bildkvalitet och inläsningshastighet.
 
 [Bilden är allt del 2: Det är aldrig bara oskärpa - kvalitet jämfört med hastighet](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). Ett blogginlägg där man diskuterar hur man använder bildförinställningar för att leverera högkvalitativa, snabba bilder.
-
-[Bild är allt som är webbinarier](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Länkar till inspelningar av alla tre webbinarierna i _Image Is everything_-serien. [I webbinarium 2 ](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandlas bildförinställningar.
