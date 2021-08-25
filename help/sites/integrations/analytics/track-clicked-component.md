@@ -2,15 +2,15 @@
 title: Spåra klickade komponenter med Adobe Analytics
 description: Använd det händelsestyrda Adobe Client Data-lagret för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i Experience Platform Launch för att lyssna efter dessa händelser och skicka data till en Adobe Analytics med en spårlänkssignal.
 version: cloud-service
-topic: Integreringar
-feature: Adobe-klientdatalager
+topic: Integrations
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1810'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När du klic
 
    Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är det aktuella läget för komponenten som härletts från datalagret  `getState` som utlöste klickningen.
 
-1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
