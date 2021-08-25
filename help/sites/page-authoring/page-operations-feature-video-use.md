@@ -1,23 +1,17 @@
 ---
 title: Grundläggande sidåtgärder i AEM Sites
-seo-title: Grundläggande sidåtgärder i AEM Sites
 description: I följande videofilm visas hur du utför grundläggande sidhanteringsåtgärder för en Adobe Experience Manager Sites-sida.
-seo-description: I följande videofilm visas hur du utför grundläggande sidhanteringsåtgärder för en Adobe Experience Manager Sites-sida.
-feature: sidredigeraren, redigerbara mallar
-topics: authoring, publishing
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
-kt: 4245
-thumbnail: 32147.jpg
-topic: Innehållshantering
+topic: Content Management
+feature: Page Editor, Editable Templates
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4245
+thumbnail: 32147.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 1%
+source-wordcount: '69'
+ht-degree: 11%
 
 ---
 
@@ -32,4 +26,4 @@ Lär dig hur du utför grundläggande sidhanteringsåtgärder för en Adobe Expe
 ## Ytterligare resurser {#additional-resources}
 
 * [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Användarhandbok för utveckling av webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
