@@ -1,21 +1,15 @@
 ---
 title: Skapa ett Asset compute-projekt för utbyggbarhet i Asset compute
 description: asset compute-projekt är Node.js-projekt som genereras med Adobe I/O CLI och som följer en viss struktur som gör att de kan användas i Adobe I/O Runtime och integreras med AEM som Cloud Service.
-feature: Asset Compute Microservices
-topics: renditions, development
-version: cloud-service
-activity: develop
-audience: developer
-doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 topic: Integrations, Development
+feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -35,7 +29,7 @@ Använd plugin-programmet [Adobe I/O CLI Asset compute](../set-up/development-en
 
 1. Navigera från kommandoraden till mappen som projektet ska innehålla.
 1. Kör `aio app init` från kommandoraden för att påbörja den interaktiva projektgenereringen CLI.
-   + Det här kommandot kan resultera i att en webbläsare begär autentisering till Adobe I/O. Om den gör det anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter som krävs](../set-up/accounts-and-services.md). Om du inte kan logga in följer du [dessa instruktioner för hur du skapar ett projekt](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   + Det här kommandot kan resultera i att en webbläsare begär autentisering till Adobe I/O. Om den gör det anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter som krävs](../set-up/accounts-and-services.md). Om du inte kan logga in följer du [dessa instruktioner för hur du skapar ett projekt](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __Välj organisation__
    + Markera den Adobe-organisation som har AEM som Cloud Service och där Project Fire är registrerad med
 1. __Välj projekt__
