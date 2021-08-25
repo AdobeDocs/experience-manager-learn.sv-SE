@@ -2,13 +2,13 @@
 title: Utveckla för Cross-Origin Resource Sharing (CORS) med AEM
 description: Ett kort exempel på hur du använder CORS för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan.
 version: 6.3, 6,4, 6.5
-topic: Säkerhet, utveckling
+topic: Security, Development
 role: Developer
 level: Beginner
-feature: Dokumentskydd
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+feature: Security
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,8 @@ I den här videon:
 
 * **www.example.** commaps to localhost via  `/etc/hosts`
 * **aem-publish.** localmaps to localhost via  `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)  (en wrapper för  [[!DNL Python]s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) visar HTML-sidan via port 8000.
+* SimpleHTTPServer (en wrapper för [[!DNL Python]&#39;s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) visar HTML-sidan via port 8000.
+   * _Finns inte längre i Mac App Store. Använd liknande som [Jeeves](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
 * [!DNL AEM Dispatcher] körs på  [!DNL Apache HTTP Web Server] 2.4 och omvänd proxybegäran  `aem-publish.local` till  `localhost:4503`.
 
 Mer information finns i [Understanding Cross-Origin Resource Sharing (CORS) i AEM](./understand-cross-origin-resource-sharing.md).
@@ -117,7 +118,7 @@ Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna c
 ## Stödmaterial {#supporting-materials}
 
 * [AEM OSGi Configuration factory for Cross-Origin Resource Sharing Policies](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
-* [SimpleHTTPServer för macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
+* [Jeeves for macOS](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
 * [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)  (Windows/macOS/Linux-kompatibel)
 
 * [Understanding Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md)
