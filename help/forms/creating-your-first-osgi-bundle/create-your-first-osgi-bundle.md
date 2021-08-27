@@ -2,13 +2,13 @@
 title: Skapa ditt första OSGi-paket med AEM Forms
 description: Bygg ditt första OSGi-paket med Maven och Eclipse
 version: 6.4,6.5
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 Maven är ett automatiserat byggverktyg som främst används för Java-projekt. Följ de här stegen för att installera maven på din lokala dator.
 
 * Skapa en mapp med namnet `maven` på C-enheten
-* Hämta det binära ZIP-arkivet [](http://maven.apache.org/download.cgi)
+* Hämta det binära ZIP-arkivet [](https://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
 * Skapa en miljövariabel med namnet `M2_HOME` och värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är versionen **mvn** 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
 * Lägg till `%M2_HOME%\bin` i din sökväg

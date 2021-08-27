@@ -9,12 +9,11 @@ version: cloud-service
 feature: Adaptive Forms
 topic: Development
 kt: 7380
-thumbnail: 332232.jpg
-translation-type: tm+mt
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+thumbnail: 22200.jpg
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 9%
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
@@ -23,5 +22,5 @@ ht-degree: 9%
 
 Samla in den sökandes resurser med en repeterbar panel med dragspelslayout.
 
->[!VIDEO](https://video.tv.adobe.com/v/332232?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22200?quality=9&learn=on)
 

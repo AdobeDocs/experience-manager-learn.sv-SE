@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar Outlook-panel för pensionering
-seo-title: Konfigurerar Outlook-panel för pensionering
+seo-title: Configuring Retirement Outlook Panel
 description: Detta är en del av 10 av en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen konfigureras Outlook-panelen för borttagning genom att text och diagramkomponenter läggs till.
-seo-description: Detta är en del av 10 av en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen konfigureras Outlook-panelen för borttagning genom att text och diagramkomponenter läggs till.
+seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
 feature: Interactive Communication
 topics: development
@@ -14,11 +14,10 @@ discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 1%
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -57,13 +56,13 @@ ht-degree: 1%
 
 * Ersätt standardtexten med &quot;**Uppskattad månadsvis pensionsinkomst&quot;**
 
-## Lägg till dokumentfragment i Outlook för pensionsintäkt {#add-retirement-income-outlook-document-fragment}
+## Lägg till dokumentfragment för återbetalningsintäkt i Outlook {#add-retirement-income-outlook-document-fragment}
 
 * Klicka på ikonen Resurser och använd filtret för att visa resurser av typen &quot;Dokumentfragment&quot;. Dra och släpp dokumentfragmentet RetirementIncomeOutlook på målområdet för den vänstra panelen.
 
-* Du kan referera [till den här sidan](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) när du lägger till dokumentfragment i innehållsområden.
+* Du kan referera [till den här sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) när du lägger till dokumentfragment i innehållsområden.
 
-## Lägger till uppskattat månadsinkomstdiagram {#adding-estimated-monthly-income-chart}
+## Ökning av uppskattad månadsinkomst {#adding-estimated-monthly-income-chart}
 
 * Klicka på målområdet för högerpanelen på den högra sidan. Klicka på plustecknet (+) för att infoga diagramkomponenten. Vi använder ett kolumndiagram för att visa den beräknade månadsinkomsten. Tryck försiktigt på den nyligen infogade diagramkomponenten. Klicka på ikonen &quot;Wrench&quot; för att öppna konfigurationsbladet.Konfigurera diagrammet med följande egenskaper så som visas på skärmbilden nedan.
 

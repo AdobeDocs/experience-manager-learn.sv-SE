@@ -1,8 +1,8 @@
 ---
 title: Diagram för flera serier i AEM Forms
-seo-title: Diagram för flera serier i AEM Forms
+seo-title: Multi Series Charts in AEM Forms
 description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i utskrifts- och webbkanalsdokument.
-seo-description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i utskrifts- och webbkanalsdokument.
+seo-description: Create appropriate Form Data Model to create multi series charts in print and web channel documents.
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -12,10 +12,9 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -46,7 +45,7 @@ Följ de här stegen för att testa detta på datorn
 
 * [Hämta och importera filen MutualFundFactSheet.zip med AEM Package Manager.](assets/mutualfundfactsheet.zip)
 * [Ladda ned SeriesChartSampleData.json till hårddisken.](assets/serieschartsampledata.json) Detta är exempeldata som ska användas för att fylla i diagrammet.
-* [Navigera till Forms och Dokument.](https://helpx.adobe.com/aem/forms.html/content/dam/formsanddocuments.html)
+* [Navigera till Forms och Dokument.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Välj försiktigt den interaktiva kommunikationsmallen &quot;MutualFundGrowthFactSheet&quot;.
 * Klicka på Förhandsgranska | Överför exempeldata.
 * Bläddra till exempeldatafilen som ingår i den här artikeln.

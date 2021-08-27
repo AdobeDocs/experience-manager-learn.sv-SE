@@ -1,14 +1,14 @@
 ---
 title: Lägga till objekt i urvalsgruppskomponenten
 description: Lägg till objekt i urvalsgruppskomponenten dynamiskt
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.5
-topic: Utveckling
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i en adaptiv Forms-valgruppkomponent som CheckBox, Radio Button och Image List.
 
-[Den här funktionen är tillgänglig live på Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0). Sök efter objektkort för dynamiska kryssrutor och klicka på Testa.
+[Den här funktionen är tillgänglig live på Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1). Sök efter objektkort för dynamiska kryssrutor och klicka på Testa.
 
 
 Du kan lägga till objekt med den visuella redigeraren och kodredigeraren beroende på hur du använder dem.
@@ -91,7 +91,7 @@ Så här provar du det på datorn:
 
 * [Hämta resurserna](assets/usingthevisualeditor.zip)
 * Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [Distribuera filen SampleRest.war i Tomcat](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+* [Distribuera filen SampleRest.war som finns i zip-filen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring och ladda upp filen som du laddade ned i föregående steg
 * [Förhandsgranska formulären](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

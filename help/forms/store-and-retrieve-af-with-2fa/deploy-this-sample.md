@@ -1,17 +1,17 @@
 ---
 title: Distribuera exemplet
 description: Hämta användningsfall som körs på din lokala AEM Forms-instans
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,8 @@ Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skic
 ## Distribuera följande OSGi-paket
 
 Distribuera paketet som har [koden för att lagra och hämta data från databasen](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
-Distribuera [DevelopingWithServiceUser Bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+Ladda ned och zippa upp [develop-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip).
+Distribuera filen DevelopingWithServiceUser.jar med Felix webbkonsol.
 
 ## Distribuera klientbiblioteket
 

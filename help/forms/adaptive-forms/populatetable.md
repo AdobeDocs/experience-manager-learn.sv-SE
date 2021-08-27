@@ -1,14 +1,14 @@
 ---
 title: 'Fyll i tabell med anpassat formulär '
 description: Fyll i tabellen Adaptivt formulär med resultat från anrop till tjänsten Formulärdatamodell
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Rad1 är konfigurerad att växa beroende på vilka data som returneras av servic
 ## Distribuera detta på servern
 
 [Installera Tomcat enligt ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[anvisningarna härDistribuera ](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-[filen SampleRest.warInstallera materialet  ](assets/amortizationschedule.zip) med AEM pakethanterare 
+[anvisningarna härDistribuera filen SampleRest.war som finns i den här zip-](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[filenInstallera resurserna  ](assets/amortizationschedule.zip) med AEM pakethanteraren 
 [Öppna ](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 formuläret för amorteringsschemaAnge lämpligt värde och klicka på Beräkna amorteringsschema för att fylla i formuläret
 
