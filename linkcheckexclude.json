@@ -29,6 +29,13 @@
         },
         {
             "pattern": "^.*localhost:4502/"
+        },
+        {
+            "pattern": "^.*192.168."
+        },
+        {
+            "pattern": "^.*host:port/."
         }
+
     ]
 }
