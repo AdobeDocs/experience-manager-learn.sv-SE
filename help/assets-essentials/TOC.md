@@ -4,10 +4,10 @@ user-guide-description: En samling videor för Adobe Experience Manager Assets E
 breadcrumb-title: AEM Assets Essentials - videor
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 2edcaa0e10121f75ac3081eb00e8c1419400a205
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 2%
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -23,8 +23,15 @@ ht-degree: 2%
    + [Hantera](basics/managing.md)
    + [Använda](basics/using.md)
    + [Skapa innehåll](basics/creating.md)
-   + [Samarbete](basics/collaborating.md)
+   + [Samarbeta](basics/collaborating.md)
 
 + [Integrering med Creative Cloud](integrations/creative-cloud.md)
+
++ Integrering av Adobe Workfront{#workfront}
+   + [Konfigurerar](./integrations/workfront/configure.md)
+   + [Skicka dokument och länka resurser](./integrations/workfront/link-send.md)
+   + [Versionshistorik](./integrations/workfront/versions.md)
+
 + [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)
