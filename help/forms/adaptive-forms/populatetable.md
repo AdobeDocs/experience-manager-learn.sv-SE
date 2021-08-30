@@ -6,9 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Rad1 är konfigurerad att växa beroende på vilka data som returneras av servic
 ## Distribuera detta på servern
 
 [Installera Tomcat enligt ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[anvisningarna härDistribuera filen SampleRest.war som finns i den här zip-](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
-[filenInstallera resurserna  ](assets/amortizationschedule.zip) med AEM pakethanteraren 
+[anvisningarna härDistribuera filen SampleRest.war som finns i den här zip-filen i ](assets/sample-rest.zip)
+[TomcatInstallera materialet  ](assets/amortizationschedule.zip) med AEM pakethanteraren 
 [Öppna ](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 formuläret för amorteringsschemaAnge lämpligt värde och klicka på Beräkna amorteringsschema för att fylla i formuläret
 
