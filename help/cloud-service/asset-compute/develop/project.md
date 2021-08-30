@@ -7,9 +7,9 @@ topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Använd plugin-programmet [Adobe I/O CLI Asset compute](../set-up/development-en
 
 1. Navigera från kommandoraden till mappen som projektet ska innehålla.
 1. Kör `aio app init` från kommandoraden för att påbörja den interaktiva projektgenereringen CLI.
-   + Det här kommandot kan resultera i att en webbläsare begär autentisering till Adobe I/O. Om den gör det anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter som krävs](../set-up/accounts-and-services.md). Om du inte kan logga in följer du [dessa instruktioner för hur du skapar ett projekt](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   + Det här kommandot kan resultera i att en webbläsare begär autentisering till Adobe I/O. Om den gör det anger du dina inloggningsuppgifter för Adobe som är kopplade till de [Adobe-tjänster och -produkter](../set-up/accounts-and-services.md) som krävs. Om du inte kan logga in följer du [dessa instruktioner för hur du skapar ett projekt](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __Välj organisation__
    + Markera den Adobe-organisation som har AEM som Cloud Service och där Project Fire är registrerad med
 1. __Välj projekt__
@@ -86,7 +86,7 @@ Det genererade Asset compute-projektet är ett Node.js-projekt som används som 
    + Filen kan genereras/uppdateras med kommandot `aio app use`.
    + Variabler som definieras i den här filen kan åsidosättas av [export av variabler](../deploy/runtime.md) på kommandoraden.
 
-Mer information om granskning av projektstruktur finns i [Anatomin för ett Adobe Project Firefoly-projekt](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+Mer information om granskning av projektstruktur finns i [Anatomin för ett Adobe Project Firefoly-projekt](https://www.adobe.io/project-firefly/docs/guides/).
 
 Huvuddelen av utvecklingen äger rum i `/actions`-mappen där arbetarna implementeras och i `/test/asset-compute` där tester för anpassade Asset compute-arbetare skrivs.
 

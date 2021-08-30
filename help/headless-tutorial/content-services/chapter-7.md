@@ -1,13 +1,13 @@
 ---
 title: Kapitel 7 - Använda AEM innehållstjänster från en mobilapp - Innehållstjänster
 description: Kapitel 7 i självstudiekursen innehåller Android-mobilappen som kan använda redigerat innehåll från AEM Content Services.
-feature: Innehållsfragment, API:er
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -205,4 +205,4 @@ Läs mer om AEM Content Services och AEM som Headless CMS på Adobe i annan doku
 * [AEM WCM Core Components Components Library](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM Core Components GitHub Project](https://github.com/adobe/aem-core-wcm-components)
 * [AEM kärnkomponenter i WCM - Fråga experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [Kodexempel för komponentexport](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/bundle/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
+* [Kodexempel för komponentexport](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
