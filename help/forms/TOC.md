@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ ht-degree: 0%
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
    + [Bädda in anpassat formulär på en webbsida](adaptive-forms/embed-af-web-page.md)
+   + [Skapa en array med strängar](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [Använda Ange värde i XML i OSGI-arbetsflöde](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [Använda Ange värde i JSON i OSGI-arbetsflöde](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [Skicka e-postkomponent i AEM Forms Workflow](adaptive-forms/email-step-aem-workflow-video-use.md)
