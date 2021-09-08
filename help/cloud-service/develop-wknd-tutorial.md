@@ -1,18 +1,15 @@
 ---
 title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
-seo-title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
 description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
-seo-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
-content-type: reference
-topic-tags: introduction
-feature: AEM Project Archettype, Core Components, Page Editor, Editable Templates
-topic: Utveckling
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+thumbnail: 30476.jpeg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 6%
+source-wordcount: '300'
+ht-degree: 5%
 
 ---
 

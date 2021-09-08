@@ -1,20 +1,16 @@
 ---
 title: Konfigurera lokal AEM för AEM som en Cloud Service-utveckling
 description: Konfigurera den lokala AEM Runtime-miljön med AEM som snabbstartsdarr för en Cloud Service-SDK.
-feature: Utvecklarverktyg
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Developer Tools
+version: Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---

@@ -1,21 +1,17 @@
 ---
 title: Lokal utvecklingsmiljö för AEM som Cloud Service
 description: Översikt över den lokala utvecklingsmiljön i Adobe Experience Manager (AEM).
-feature: Utvecklarverktyg
-topics: development
-version: cloud-service
+feature: Developer Tools
+version: Cloud Service
 doc-type: article
-activity: troubleshoot
-audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -92,4 +88,4 @@ I det här avsnittet av självstudiekursen visas hur du:
 + Installera [!DNL Dispatcher]-verktyg
 + Kör den lokala [!DNL Dispatcher]-miljön
 
-[Konfigurera  [!DNL Dispatcher] LocalRuntime](./dispatcher-tools.md)
+[Konfigurera lokal [!DNL Dispatcher] körningsmiljö](./dispatcher-tools.md)
