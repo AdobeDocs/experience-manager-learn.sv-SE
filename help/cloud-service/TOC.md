@@ -2,12 +2,12 @@
 user-guide-title: Självstudiekurser om Adobe Experience Manager as a Cloud Service
 user-guide-description: En samling självstudiekurser för Adobe Experience Manager som Cloud Service.
 breadcrumb-title: AEM som Cloud Service Tutorials
-sub-product: molntjänst
+sub-product: cloud-service
 team: TM
-source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
+source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 11%
+source-wordcount: '516'
+ht-degree: 12%
 
 ---
 
@@ -89,6 +89,18 @@ ht-degree: 11%
 + Migrering {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)
+   + Cloud Acceleration Manager {#cloud-acceleration-manager}
+      + [Introduktion](./migration/cloud-acceleration-manager/introduction.md)
+      + [Analysera beredskap och bästa praxis](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
+      + [Implementeringsfas](./migration/cloud-acceleration-manager/implementation-phase.md)
+      + [Verktyget Innehållsöverföring](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [Kodomfaktoriseringsverktyg](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
+      + [Koddatabasmodernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
+      + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
+      + [Indexkonverterare](./migration/cloud-acceleration-manager/index-converter.md)
+      + [Verktyg för resursarbetsflödesmigrering](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
+      + [Navigera i molnaccelerationshanteraren](./migration/cloud-acceleration-manager/navigating.md)
+      + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
@@ -104,8 +116,8 @@ ht-degree: 11%
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
    + Document Cloud API och AEM Forms CS{#doc-cloud-sdk}
       + [Introduktion](./forms/doc-cloud-sdk/introduction.md)
-      + [Skapa Adobe IO-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [Skapa OSGI-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Skapa Adobe I/O-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [Skapa OSGi-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [Definiera gränssnitt](./forms/doc-cloud-sdk/create-interface.md)
       + [Implementeringsgränssnitt](./forms/doc-cloud-sdk/implement-interface.md)
       + [Skapa JSON-del](./forms/doc-cloud-sdk/get-content-analyzer.md)
@@ -116,23 +128,25 @@ ht-degree: 11%
       + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + Skapa granskningsarbetsflöde{#create-aem-workflow}
-      + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
-      + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign med AEM Forms{#forms-and-sign}
-      + [Introduktion](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-      + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
-      + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + Integrera med Salesforce{#integrate-with-salesforce}
-      + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
-      + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
-      + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
-      + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
-      + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
-      + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
+
+
+      + Skapa granskningsarbetsflöde{#create-aem-workflow}
+         + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
+         + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
+      + Adobe Sign med AEM Forms{#forms-and-sign}
+         + [Introduktion](./forms/forms-and-sign/introduction.md)
+         + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
+         + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+         + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
+         + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+      + Integrera med Salesforce{#integrate-with-salesforce}
+         + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
+         + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
+         + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
+         + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
+         + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
+         + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+         + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
