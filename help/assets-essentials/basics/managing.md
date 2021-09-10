@@ -3,18 +3,17 @@ title: Hantera Assets Essentials
 description: Lär dig grunderna i att skapa en mappstruktur och grundläggande åtgärder som att flytta, kopiera och byta namn.
 version: cloud-service
 feature: Assets Essentials
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
 kt: 7913
 thumbnail: 335733.jpeg
-source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
+source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
-
 
 # Hantera Assets Essentials
 
