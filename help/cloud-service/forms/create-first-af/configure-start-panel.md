@@ -1,7 +1,7 @@
 ---
 title: Konfigurera startpanelen
 description: Lägg till en statisk textkomponent på startpanelen.
-solution: Experience Manager Forms
+solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,7 +11,7 @@ topic: Development
 kt: 7388
 thumbnail: 332235.jpg
 exl-id: f3c01af3-bce1-4a7b-84b7-5e0889bebe28
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%

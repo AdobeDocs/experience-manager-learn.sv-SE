@@ -1,7 +1,7 @@
 ---
 title: Konfigurera anpassat formulär för att utlösa arbetsflödet
 description: Utlös arbetsflödet vid sändning av adaptiva formulär.
-solution: Experience Manager Forms
+solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,7 +11,7 @@ topic: Development
 kt: 7425
 thumbnail: 332435.pg
 exl-id: 7e3d449f-f22e-4bf4-a20e-82f3d76004a2
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

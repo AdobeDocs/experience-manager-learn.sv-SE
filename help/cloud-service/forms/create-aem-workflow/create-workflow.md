@@ -1,7 +1,7 @@
 ---
 title: Skapa ett AEM arbetsflöde
 description: Skapa arbetsflödesmodell för att efterlikna affärsprocessen.
-solution: Experience Manager Forms
+solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,7 +11,7 @@ topic: Development
 kt: 7424
 thumbnail: 332434.pg
 exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%
