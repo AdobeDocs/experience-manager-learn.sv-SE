@@ -5,21 +5,20 @@ topics: publishing, architecture
 audience: administrator, developer
 doc-type: technical video
 activity: understand
-version: cloud-service
+version: Cloud Service
 kt: 4639
 thumbnail: 32033.jpg
 feature: Publishing
 topic: Architecture
 role: Architect, Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 586d982e-0128-47a1-b945-7d99298db3fd
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 1%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # Introduktion till redigerings- och publiceringsnivå {#introduction-author-publish}
 

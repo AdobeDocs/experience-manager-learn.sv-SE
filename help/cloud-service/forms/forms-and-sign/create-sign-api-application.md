@@ -5,23 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 7427
 thumbnail: 332436.jpg
-translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+exl-id: 1eb43bdc-2718-4724-a5b8-d0f22cf84418
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '70'
+ht-degree: 0%
 
 ---
-
 
 # Skapa Adobe Sign API-program
 
 Du måste skapa ett API-program på din Adobe Sign för att kunna integrera med din Adobe Sign-plattform. API-programmet fungerar som en representant för ett klientprogram och interagerar med Adobe Sign-plattformen. Du kan skapa API-programmet på kund- eller partnerdomänen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332436?quality=12&learn=on)
-

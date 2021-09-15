@@ -3,7 +3,7 @@ title: Felsöka utbyggbarhet för Asset compute i AEM Assets
 description: Nedan följer ett index över vanliga problem och fel, samt lösningar som kan uppstå när du utvecklar och distribuerar anpassade Asset compute-arbetare för AEM Assets.
 feature: Asset Compute Microservices
 topics: renditions, metadata, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -12,14 +12,13 @@ thumbnail: KT-5802.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka utbyggbarhet för Asset compute
 
@@ -40,7 +39,7 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 
 ### Console.json-filen saknas i Asset compute-projektet{#missing-console-json}
 
-+ __Fel:__ Fel: Nödvändiga filer saknas vid validering (..)/node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) vid async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __Fel:__ Fel: Nödvändiga filer saknas vid validering (..)/node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.:XX:jsYY) vid async setupAssetCompute (..)/node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.:XX:jsYY)
 + __Orsak:__   `console.json` Filen saknas i roten för Asset compute-projektet
 + __Upplösning:__ Ladda ned ett nytt  `console.json` formulär från ditt Adobe I/O-projekt
    1. I console.adobe.io öppnar du det Adobe I/O-projekt som Asset compute har konfigurerats att använda
@@ -53,13 +52,13 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 + __Orsak:__ Yaml-filer är känsliga med vitt mellanrum, det är troligt att indraget är felaktigt.
 + __Upplösning:__ Granska  `manifest.yml` och se till att allt indrag är korrekt.
 
-### gränsen för memorySize är inställd för låg{#memorysize-limit-is-set-too-low}
+### gränsen för memorySize är för låg{#memorysize-limit-is-set-too-low}
 
 + __Fel:__  Local Dev Server OpenWhiskError: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true returnerade HTTP 400 (Ogiltig begäran) —> &quot;Innehållet i begäran hade felaktigt format:krav misslyckades: minne 64 MB under det tillåtna tröskelvärdet 134217728 B&quot;
 + __Orsak:__ En  `memorySize` gräns för arbetaren i  `manifest.yml` angavs till under det lägsta tillåtna tröskelvärdet enligt felmeddelandet i byte.
 + __Upplösning:__  Granska  `memorySize` gränserna i  `manifest.yml` och se till att alla är större än det lägsta tillåtna tröskelvärdet.
 
-### Utvecklingsverktyget kan inte starta eftersom private.key{#missing-private-key} saknas
+### Utvecklingsverktyget kan inte starta eftersom private.key saknas{#missing-private-key}
 
 + __Fel:__ Local Dev ServerError: Nödvändiga filer saknas vid validatePrivateKeyFile... (via standard ut från kommandot `aio app run`)
 + __Orsak:__ Värdet  `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` i  `.env` filen pekar inte på  `private.key` eller  `private.key` är inte läsbart av den aktuella användaren.
@@ -89,7 +88,7 @@ asset compute Development Tool kan ha ett läge där inaktuella data hämtas, oc
 
 ## Testa{#test}
 
-### Ingen återgivning genererades under testkörning{#test-no-rendition-generated}
+### Ingen återgivning genererades under testkörningen{#test-no-rendition-generated}
 
 + __Fel:__ Fel: Ingen återgivning genererades.
 + __Orsak:__ Arbetaren kunde inte generera en återgivning på grund av ett oväntat fel, till exempel ett JavaScript-syntaxfel.
@@ -114,21 +113,21 @@ asset compute Development Tool kan ha ett läge där inaktuella data hämtas, oc
 + __Orsak__: Docker Desktop körs inte på det lokala systemet. Verifiera detta genom att granska VS Code Debug Console (Visa > Debug Console) och bekräfta att felet har rapporterats.
 + __Upplösning__: Starta  [Docker Desktop och kontrollera att de nödvändiga Docker-bilderna är installerade](./set-up/development-environment.md#docker).
 
-### Brytpunkter som inte pausas{#breakpoints-no-pausing}
+### Brytpunkter pausas inte{#breakpoints-no-pausing}
 
 + __Fel__: När du kör Asset compute-arbetaren från det felsökningsbara utvecklingsverktyget pausas inte VS-koden vid brytpunkter.
 
-#### Felsökningsprogrammet för VS-kod är inte bifogat{#vs-code-debugger-not-attached}
+#### Felsökning för VS-kod är inte bifogad{#vs-code-debugger-not-attached}
 
 + __Orsak:__ Felsökaren för VS-kod stoppades/kopplades från.
 + __Upplösning:__ Starta om felsökaren för VS-kod och verifiera den genom att titta på konsolen för VS-kodsfelsökning (Visa > Felsökningskonsol)
 
-#### VS-kodfelsökning bifogad efter att körningen av arbetaren började{#vs-code-debugger-attached-after-worker-execution-began}
+#### VS-kodfelsökning bifogad efter att körningen av arbetaren påbörjats{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __Orsak:__ Felsökaren för VS-koden kopplades inte innan användaren knackade på  ____ utvecklingsverktyget.
 + __Upplösning:__ Kontrollera att felsökaren har bifogats genom att granska VS-kodens felsökningskonsol (Visa > Felsökningskonsol) och kör sedan Asset compute-arbetaren igen från utvecklingsverktyget.
 
-### Arbetarens timeout uppstod vid felsökning{#worker-times-out-while-debugging}
+### Arbetarens timeout vid felsökning{#worker-times-out-while-debugging}
 
 + __Fel__: Felsökningskonsolen rapporterar &quot;Åtgärd kommer att timeout på -XXX millisekunder&quot; eller  [Asset compute Development Tool](./develop/development-tool.md) förhandsvisningsintervall för rendering i oändlighet eller
 + __Orsak__: Timeout för arbetare enligt definitionen i  [manifest.](./develop/manifest.md) ymlis överskreds under felsökning.
@@ -148,7 +147,7 @@ asset compute Development Tool kan ha ett läge där inaktuella data hämtas, oc
 
 ## Distribuera{#deploy}
 
-### Anpassad återgivning saknas i resurs i AEM{#custom-rendition-missing-from-asset}
+### Anpassad återgivning saknas för resurs i AEM{#custom-rendition-missing-from-asset}
 
 + __Fel:__ Ny och ombearbetad resursprocess lyckades, men den anpassade återgivningen saknas
 
@@ -167,5 +166,3 @@ asset compute Development Tool kan ha ett läge där inaktuella data hämtas, oc
 + __Fel:__ märket Bearbetning av resurser misslyckades visas på resursen
 + __Orsak:__ Ett fel uppstod när den anpassade arbetaren kördes
 + __Upplösning:__ Följ anvisningarna om hur du  [felsöker Adobe I/O Runtime-](./test-debug/debug.md#aio-app-logs) aktiveringmed  `aio app logs`.
-
-

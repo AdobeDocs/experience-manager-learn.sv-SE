@@ -6,19 +6,19 @@ topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 5374
 thumbnail: 36679.jpg
-topic: Lokalisering
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 117f4df1-be2c-44e8-b560-1d588e0cd2a6
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
-
 
 # Hantera Live Copy-arv på en sida {#manage-live-copy-page}
 

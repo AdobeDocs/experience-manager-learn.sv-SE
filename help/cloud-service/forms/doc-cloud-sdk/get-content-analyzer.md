@@ -5,17 +5,17 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-topic: Utveckling
+version: Cloud Service
+topic: Development
 thumbnail: 7836.jpg
 kt: 7836
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 5%
+source-wordcount: '58'
+ht-degree: 3%
 
 ---
-
 
 # Skapa Analyzer-förfrågningar
 

@@ -5,23 +5,21 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 7377
 thumbnail: 332238.jpg
-translation-type: tm+mt
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+exl-id: e5c2c53e-bcb2-46a4-a780-fca0dd03a00b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '28'
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera rotpanel
 
 Lägg till underordnade paneler i rotpanelen och konfigurera layouten för de underordnade panelerna.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
-

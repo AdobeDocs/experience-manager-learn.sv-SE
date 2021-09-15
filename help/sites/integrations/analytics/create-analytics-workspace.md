@@ -1,20 +1,20 @@
 ---
 title: Analysera data med Analysis Workspace
 description: Läs om hur du mappar data som samlats in från en Adobe Experience Manager-webbplats till mätvärden och dimensioner i Adobe Analytics rapporteringsprogram. Lär dig hur du skapar en detaljerad rapportkontrollpanel med Analysis Workspace-funktionen i Adobe Analytics.
-version: cloud-service
-topic: Integreringar
-feature: Adobe-klientdatalager
+version: Cloud Service
+topic: Integrations
+feature: Adobe Client Data Layer
 role: User
 level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2179'
 ht-degree: 0%
 
 ---
-
 
 # Analysera data med Analysis Workspace
 
@@ -265,4 +265,3 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 ## Grattis!
 
 Du har just lärt dig att mappa data som samlats in från en Adobe Experience Manager-webbplats till mätvärden och dimensioner i Adobe Analytics rapporteringsprogram, utföra en klassificering för mätvärdena och skapa en detaljerad rapportkontrollpanel med Analysis Workspace-funktionen i Adobe Analytics.
-

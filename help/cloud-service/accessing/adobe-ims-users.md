@@ -1,27 +1,27 @@
 ---
 title: Adobe IMS-användare och -AEM
-description: Användare som behöver åtkomst till AEM Author-tjänsten hanteras som Adobe IMS-användare i Adobe Admin Console. Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
-version: cloud-service
-topic: Administration, säkerhet
-feature: Användare och grupper
+description: Användare som behöver tillgång till tjänsten AEM Author hanteras som Adobe IMS-användare i Adobe Admin Console. Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
+version: Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Beginner
 kt: 4997
 thumbnail: 39149.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '172'
 ht-degree: 6%
 
 ---
-
 
 # Adobe IMS-användare
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_users"
 >title="Adobe IMS-användare"
->abstract="Användare som behöver åtkomst till AEM Author-tjänsten hanteras som Adobe IMS-användare i Adobe Admin Console. Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console."
+>abstract="Användare som behöver tillgång till tjänsten AEM Author hanteras som Adobe IMS-användare i Adobe Admin Console. Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#how-to-set-up" text="Integrera användare i Admin Console"
 >additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="Adobe Admin Console Identity - översikt"
 

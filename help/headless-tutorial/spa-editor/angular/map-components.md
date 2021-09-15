@@ -1,11 +1,11 @@
 ---
 title: Mappa SPA komponenter till AEM | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du mappar komponentkomponenter till Adobe Experience Manager (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
-sub-product: platser
-feature: SPA
+sub-product: sites
+feature: SPA Editor
 topics: development
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5311
@@ -13,13 +13,13 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2378'
 ht-degree: 0%
 
 ---
-
 
 # Mappa SPA komponenter till AEM {#map-components}
 

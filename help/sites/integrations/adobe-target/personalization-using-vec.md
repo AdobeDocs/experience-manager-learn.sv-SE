@@ -5,20 +5,19 @@ topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
-
 
 # Personalisering med Visual Experience Composer {#personalization-vec}
 

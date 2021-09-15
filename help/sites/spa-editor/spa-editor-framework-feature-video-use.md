@@ -1,20 +1,20 @@
 ---
 title: Använda SPA Editor med AEM Sites
 description: AEM ramverk för Single Page Application Editor ger författare möjlighet att redigera innehåll för ett Single Page-program eller -SPA. Utvecklare som använder ramverken React eller Angular skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda de välbekanta redigeringsverktygen i AEM Sites.
-version: 6.4, 6.5, cloud-service
+version: 6.4, 6.5, Cloud Service
 topic: SPA
-feature: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
 kt: 1047
 thumbnail: 22229.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
-
 
 # Använda SPA Editor med AEM Sites {#using-the-spa-editor-with-aem-sites}
 

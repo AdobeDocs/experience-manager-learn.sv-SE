@@ -1,26 +1,26 @@
 ---
 title: Använda formatsystemet med AEM Sites
-seo-title: Använda Style System med Adobe Experience Manager, AEM Sites
+seo-title: Using the Style System with Adobe Experience Manager, AEM Sites
 description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
-seo-description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
-feature: Formatsystem
+seo-description: Adobe Experience Manager's Style System allows visual variations of components without back-end development, allowing better re-use of AEM components, and more versatile and efficient content authoring. The Style System, when used in conjunction with AEM's Core Components, template editor, and responsive layout, offers powerful capabilities to quickly compose rich experiences.
+feature: Style System
 topics: authoring, front-end-development
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 974
 thumbnail: 21750.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
-
 
 # Använda formatsystemet {#using-the-style-system-with-aem-sites}
 

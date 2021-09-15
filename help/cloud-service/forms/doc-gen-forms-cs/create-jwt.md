@@ -4,14 +4,14 @@ description: Skapa en JSON Web Token (JWT) som kan bytas med Adobe IMS API:er f√
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 8184
 thumbnail: 8184.jpg
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---

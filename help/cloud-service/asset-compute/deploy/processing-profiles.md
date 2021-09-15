@@ -3,7 +3,7 @@ title: Integrera Asset compute-arbetare med AEM Bearbetningsprofiler
 description: AEM som Cloud Service kan integreras med Asset compute-arbetare som driftsätts i Adobe I/O Runtime via AEM Assets bearbetningsprofiler. Bearbetningsprofiler konfigureras i redigeringstjänsten för att bearbeta specifika resurser med hjälp av anpassade arbetare och lagra de filer som arbetarna genererar som resursrenderingar.
 feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
@@ -12,14 +12,13 @@ thumbnail: KT-6287.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
-
 
 # Integrera med AEM bearbetningsprofiler
 

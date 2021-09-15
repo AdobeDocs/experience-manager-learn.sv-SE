@@ -5,22 +5,21 @@ topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
-# Personalisering av hela webbsidan Upplev {#personalization-fpe}
+# Personalisering av en hel webbsida - upplevelse {#personalization-fpe}
 
 Lär dig hur du skapar en aktivitet som dirigerar om de webbsidor som finns på AEM till en ny sida med Adobe Target.
 
@@ -83,4 +82,3 @@ Som marknadsförare kunde du skapa en aktivitet för att dirigera om de webbsido
 
 * [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-

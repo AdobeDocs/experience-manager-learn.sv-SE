@@ -1,18 +1,18 @@
 ---
 title: Skapa profiler för smart beskärning i AEM Dynamic Media
 description: Konfigurera smart beskärning i Dynamic Media
-version: cloud-service
+version: Cloud Service
 role: Developer
 level: Intermediate
-feature: Smart beskärning
-topic: Utveckling
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+feature: Smart Crop
+topic: Development
+exl-id: 117e4ba4-2d60-40a6-b267-c2e1d99df808
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 2%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
-
 
 # Skapa profiler för smart beskärning i AEM Dynamic Media
 

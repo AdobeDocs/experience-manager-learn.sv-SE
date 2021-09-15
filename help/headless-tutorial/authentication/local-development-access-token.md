@@ -1,7 +1,7 @@
 ---
 title: Åtkomsttoken för lokal utveckling
 description: AEM Local Development Access-token används för att snabba upp utvecklingen av integreringar med AEM som en Cloud Service som programmässigt interagerar med AEM Author eller Publish services via HTTP.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
 feature: APIs
@@ -12,14 +12,13 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
-
 
 # Åtkomsttoken för lokal utveckling
 

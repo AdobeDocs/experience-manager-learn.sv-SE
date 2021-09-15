@@ -5,19 +5,19 @@ topics: authoring
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4630
 thumbnail: 32151.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: cc659581-031d-4f2a-90c1-cf721e481689
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
-
 
 # Skapa sidversioner {#creating-page-versions-aem-sites}
 

@@ -6,19 +6,19 @@ topics: integrations, personalization, administration, development
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6043
 thumbnail: 41241.jpg
-topic: Integreringar
+topic: Integrations
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
-
 
 # AEM och Adobe Target
 
@@ -47,5 +47,3 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
    1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
    1. [Personalisera hela webbsidan](./personalization-web-page.md)
-
-

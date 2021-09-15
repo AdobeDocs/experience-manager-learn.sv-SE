@@ -3,17 +3,17 @@ title: Hur man kan ladda ned renderingar i Brand Portal.
 description: Steg för att aktivera hämtning av återgivning i Brand Portal
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 feature: Brand Portal
-topic: Utveckling
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 2%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
-
 
 # Aktivera hämtning av återgivningar i Brand Portal
 

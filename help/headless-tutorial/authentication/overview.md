@@ -1,24 +1,24 @@
 ---
 title: Autentisera till AEM som en Cloud Service från ett externt program
 description: Upptäck hur ett externt program kan autentisera och interagera med AEM som en Cloud Service via HTTP med hjälp av Local Development Access-token och inloggningsuppgifter.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API:er
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: Headless, integreringar
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
-
 
 # Tokenbaserad autentisering som AEM som Cloud Service
 
@@ -34,7 +34,7 @@ Kontrollera att följande finns på plats innan du följer med i den här själv
 
 1. Tillgång till am AEM som Cloud Service (helst en utvecklingsmiljö eller ett sandlådeprogram)
 1. Medlemskap i AEM som Cloud Service-miljöns Author services AEM Administrator Product Profile
-1. Medlemskap i eller åtkomst till din Adobe IMS-organisationsadministratör (de måste initiera [tjänstens inloggningsuppgifter](./service-credentials.md))
+1. Medlemskap i, eller åtkomst till, din Adobe IMS-organisationsadministratör (de måste initiera [tjänstens inloggningsuppgifter](./service-credentials.md)) en gång)
 1. Den senaste [WKND-platsen](https://github.com/adobe/aem-guides-wknd) som distribuerats till din Cloud Service-miljö
 
 ## Översikt över externt program
@@ -67,7 +67,7 @@ Token för lokal utvecklingsåtkomst genereras för en specifik AEM som en Cloud
 
 ## Tjänstautentiseringsuppgifter
 
-Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till och interagera med AEM som en Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan det externa programmet använder dessa för att generera en JWT, som byts ut mot Adobe IMS-programmeringsgränssnitten _för_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden som AEM som en Cloud Service.
+Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till och interagera med AEM som en Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan i det externa programmet används dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _för_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden som AEM som en Cloud Service.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
 

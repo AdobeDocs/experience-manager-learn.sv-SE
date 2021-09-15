@@ -1,24 +1,24 @@
 ---
 title: Bygg och driftsätta
 description: Adobe Cloud Manager underlättar kodbygget och distributionen AEM som en Cloud Service. Fel kan uppstå under steg i byggprocessen, vilket kräver åtgärder för att åtgärda dem. Den här guiden går igenom hur man förstår vanliga fel i distributionen och hur man bäst hanterar dem.
-feature: Utvecklarverktyg
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka AEM som Cloud Service och distributioner
 

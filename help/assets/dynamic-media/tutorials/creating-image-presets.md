@@ -3,17 +3,17 @@ title: Skapa bildförinställningar med AEM Dynamic Media
 description: Konfigurera bildförinställningar med Dynamic Media
 role: Developer
 level: Intermediate
-version: cloud-service
-feature: Bildförinställningar
-topic: Utveckling
+version: Cloud Service
+feature: Image Presets
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: e76c50da-e7a8-4560-bc53-02cdb13619bb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 2%
+source-wordcount: '33'
+ht-degree: 0%
 
 ---
-
 
 # Skapa bildförinställningar med AEM Dynamic Media
 

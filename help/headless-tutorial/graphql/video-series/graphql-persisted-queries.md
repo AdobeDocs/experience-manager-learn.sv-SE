@@ -1,20 +1,20 @@
 ---
 title: GraphQL-beständiga frågor
 description: Lär dig hur du aktiverar, skapar uppdateringar och kör permanenta frågor i AEM.
-version: cloud-service
+version: Cloud Service
 topic: Headless, Content Management
 feature: GraphQL API
 role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
-
 
 # GraphQL-beständiga frågor
 

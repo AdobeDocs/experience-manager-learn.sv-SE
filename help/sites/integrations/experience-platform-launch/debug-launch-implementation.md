@@ -5,19 +5,19 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6047
 thumbnail: 38567.jpg
-topic: Integreringar
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
-
 
 # Felsöka en Launch-implementering {#debug-launch-implementation}
 

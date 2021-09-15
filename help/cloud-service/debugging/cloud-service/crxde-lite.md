@@ -1,9 +1,9 @@
 ---
 title: CRXDE Lite
-description: 'CRXDE Lite är ett klassiskt men ändå kraftfullt verktyg för felsökning AEM i Cloud Service Developer-miljöer. CRXDE Lite har en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av JCR och undersöka behörigheter. '
+description: CRXDE Lite är ett klassiskt men ändå kraftfullt verktyg för felsökning AEM i Cloud Service Developer-miljöer. CRXDE Lite har en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av JCR och undersöka behörigheter.
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -12,14 +12,13 @@ thumbnail: kt-5481.jpg
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f3f2c89f-6ec1-49d3-91c7-10a42b897780
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka AEM som en Cloud Service med CRXDE Lite
 

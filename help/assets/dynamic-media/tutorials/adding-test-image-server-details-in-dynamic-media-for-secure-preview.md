@@ -1,18 +1,18 @@
 ---
 title: Konfigurera en säker förhandsgranskningsserver för AEM Dynamic Media
 description: Konfigurera testbildservern för säker förhandsgranskning med AEM Dynamic Media Classic App.
-version: cloud-service
+version: Cloud Service
 role: Developer
 level: Intermediate
-topic: Utveckling
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7c12fc14-cdaf-45eb-807a-64de86a2a36a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 1%
+source-wordcount: '58'
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera en säker förhandsgranskningsserver för AEM Dynamic Media
 

@@ -1,7 +1,7 @@
 ---
-sub-product: resurser
+sub-product: assets
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -9,10 +9,9 @@ user-guide-title: Introduktion till Dynamic Media Classic
 user-guide-description: I den här självstudiekursen visas hur du använder Dynamic Media Classic för att skapa, redigera och leverera multimedieinnehåll.
 breadcrumb-title: Dynamic Media Classic Tutorials
 index: y
-translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '75'
 ht-degree: 2%
 
 ---

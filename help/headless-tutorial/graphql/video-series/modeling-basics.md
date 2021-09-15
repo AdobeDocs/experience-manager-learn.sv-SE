@@ -1,20 +1,20 @@
 ---
 title: Grundläggande om GraphQL-modellering
 description: Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.
-version: cloud-service
+version: Cloud Service
 topic: Headless, Content Management
-feature: Innehållsfragment, GraphQL API
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '99'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
-
 
 # Grundläggande om GraphQL-modellering
 

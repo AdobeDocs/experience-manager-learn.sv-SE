@@ -1,20 +1,20 @@
 ---
 title: Resurssökning
 description: Med Adobe Asset Link-panelen kan kreativa användare söka efter resurser som lagrats i AEM Assets med hjälp av nyckelord eller utföra en sökning under en viss plats. Förutom de grundläggande sökalternativen kan du med Adobe Asset Link även använda en resurs för att söka visuellt liknande resultat i AEM Assets. Den visuella sökningen drivs av maskininlärning med Adobe Sensei och ger resultat med estetiska egenskaper som hör till målbilden.
-sub-product: resurser
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 thumbnail: 34260.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 292c61db-f8d2-424b-8c42-12d1d3b06167
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
-
 
 # Resurssökning {#asset-search}
 

@@ -1,21 +1,21 @@
 ---
 title: Översikt över panelen Resurslänk i Adobe
-description: 'Adobe Asset Link ger kreativa användare möjlighet att bläddra bland, söka efter, checka ut och checka in resurser som lagras i AEM Assets via apppanelen i InDesign, Photoshop och Illustrator. Nu kommer användargränssnittet och funktionerna i panelen Adobe Asset Link. '
-sub-product: resurser
+description: Adobe Asset Link ger kreativa användare möjlighet att bläddra bland, söka efter, checka ut och checka in resurser som lagras i AEM Assets via apppanelen i InDesign, Photoshop och Illustrator. Nu kommer användargränssnittet och funktionerna i panelen Adobe Asset Link.
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 kt: 4905
 thumbnail: 33734.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: ba8d0cd1-b7d2-4628-a069-5ef21cc214c6
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över panelen Resurslänk i Adobe {#adobe-asset-link-panel-overview}
 

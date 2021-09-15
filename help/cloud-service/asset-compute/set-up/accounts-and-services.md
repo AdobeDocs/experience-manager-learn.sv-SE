@@ -3,7 +3,7 @@ title: Konfigurera konton och tjänster för utbyggbarhet för Asset compute
 description: För att kunna utveckla Asset compute-arbetare måste du ha tillgång till konton och tjänster, inklusive AEM som Cloud Service, Adobe Project Fire och molnlagring från Microsoft eller Amazon.
 feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
@@ -12,14 +12,13 @@ thumbnail: 40377.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 2%
+source-wordcount: '627'
+ht-degree: 1%
 
 ---
-
 
 # Ställ in konton och tjänster
 
@@ -40,7 +39,7 @@ Alla Adobe-tjänster måste vara tillgängliga via samma Adobe Org, med din Adob
 > 
 > Se avsnitten nedan om hur du ställer in och tillhandahåller de tjänster som krävs.
 
-## AEM as a Cloud Service{#aem-as-a-cloud-service}
+## AEM som en Cloud Service{#aem-as-a-cloud-service}
 
 Du måste ha tillgång till en AEM som Cloud Service för att kunna konfigurera AEM Assets bearbetningsprofiler så att den anpassade Asset compute-arbetaren anropas.
 

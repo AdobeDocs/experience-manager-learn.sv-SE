@@ -1,7 +1,7 @@
 ---
 title: Snabbinstallation - Komma igång med AEM Headless - GraphQL
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Installera AEM SDK, lägg till exempelinnehåll och distribuera ett program som använder innehåll från AEM med GraphQL API:er. Se hur AEM driver flerkanalsupplevelser.
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
@@ -9,13 +9,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 0%
 
 ---
-
 
 # Snabbinställningar {#setup}
 

@@ -1,20 +1,20 @@
 ---
 title: Använda åtgärden Montera kopia av resurs
 description: Lär dig hur du använder resurser från AEM Assets med funktionen Montera kopia.
-sub-product: resurser
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 thumbnail: 34049.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b74e7cb3-4a2d-4076-b68a-167bc59e20fb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
-
 
 # Montera kopia {#place-copy}
 

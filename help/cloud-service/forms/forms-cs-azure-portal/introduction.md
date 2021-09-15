@@ -5,11 +5,12 @@ feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 topic: Integrations
 thumbnail: 331891.jpg
 kt: 8474
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+exl-id: 1761736c-5e36-4f30-aa42-9caa49d589f9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 2%

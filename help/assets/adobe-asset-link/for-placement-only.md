@@ -1,21 +1,21 @@
 ---
 title: For Placement Only (FPO) rendering
-description: 'Adobe Experience Manager resurser kan nu användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud Enterprise utökar möjligheten att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp resurser, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe Photoshop, InDesign och Illustrator. '
-sub-product: resurser
+description: Adobe Experience Manager resurser kan nu användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud Enterprise utökar möjligheten att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp resurser, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe Photoshop, InDesign och Illustrator.
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 kt: 4916
 thumbnail: 34259.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 940608db-6e84-441a-b031-e8cf52459597
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
-
 
 # For Placement Only (FPO) rendering{#for-placement-only-rendition}
 

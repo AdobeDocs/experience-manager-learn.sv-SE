@@ -4,22 +4,22 @@ description: Utbyt JSON Web Token (JWT) med Adobe IMS API:er för en AEM åtkoms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: Dokumenttjänster
-topic: Utveckling
+version: Cloud Service
+feature: Document Services
+topic: Development
 kt: 8185
 thumbnail: 8185.jpg
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 1%
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 # Exchange JWT för åtkomsttoken
 
 
-Den JWT som skapades i föregående steg byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för att komma åt AEM som en Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST med JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
+Den JWT-fil som skapades i föregående steg byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för att komma åt AEM som Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST med JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
 
 Följande kod användes för att generera utbyte-JWT för åtkomsttoken
 

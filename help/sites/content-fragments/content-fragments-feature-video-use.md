@@ -1,23 +1,23 @@
 ---
 title: Skapa innehållsfragment i AEM
-description: 'Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder. '
+description: Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder.
 sub-product: content-services
-feature: Innehållsfragment
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: cloud-service
-topic: Innehållshantering
+version: Cloud Service
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 1%
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
-
 
 # Skapa innehållsfragment {#authoring-content-fragments}
 

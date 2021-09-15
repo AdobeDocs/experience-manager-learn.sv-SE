@@ -1,10 +1,10 @@
 ---
 title: Lägga till navigering och routning | Komma igång med AEM SPA Editor och React
 description: Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering implementeras med React Router och React Core Components.
-sub-product: platser
-feature: SPA
+sub-product: sites
+feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4988
@@ -12,13 +12,13 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till navigering och routning {#navigation-routing}
 
@@ -329,4 +329,3 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
 ## Grattis! {#congratulations}
 
 Grattis! Du har lärt dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering har implementerats med React Router och lagts till i `Header`-komponenten.
-

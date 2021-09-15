@@ -5,22 +5,20 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7578
 thumbnail: 332706.jpg
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+exl-id: bc66c8fb-d1ce-47dc-af6d-dda0c37347e4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '28'
-ht-degree: 3%
+source-wordcount: '25'
+ht-degree: 0%
 
 ---
-
 
 # Introduktionsvideo
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332706?quality=12&learn=on)
-

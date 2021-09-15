@@ -1,21 +1,21 @@
 ---
 title: Produktionsdistribution med en AEM-publiceringstjänst - Komma igång med AEM Headless - GraphQL
 description: Lär dig mer om AEM Author och Publish och det rekommenderade distributionsmönstret för headless-program. I den här självstudiekursen lär du dig att använda miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Lär dig att konfigurera AEM för Cross-Origin Resource Sharing (CORS).
-version: cloud-service
-feature: Innehållsfragment, GraphQL API
+version: Cloud Service
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2360'
 ht-degree: 0%
 
 ---
-
 
 # Produktionsdistribution med en AEM-publiceringstjänst
 

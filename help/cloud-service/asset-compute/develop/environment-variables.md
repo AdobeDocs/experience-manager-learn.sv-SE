@@ -3,7 +3,7 @@ title: Konfigurera miljövariabler för Asset compute-utökningsbarhet
 description: Miljövariabler bevaras i .env-filen för lokal utveckling, och används för att ange autentiseringsuppgifter för Adobe I/O och molnlagring som krävs för lokal utveckling.
 feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
@@ -12,14 +12,13 @@ thumbnail: KT-6270.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera miljövariabler
 
@@ -80,7 +79,7 @@ Den resulterande `.env`-filen ser ut så här:
 
 Om du INTE använder Microsoft Azure Blob Storage tar du bort eller låter de kommenterade bort (genom att använda `#` som prefix).
 
-### Använda Amazon S3-molnlagring{#amazon-s3}
+### Använda molnlagring i Amazon S3{#amazon-s3}
 
 Om du använder molnlagringen i Amazon S3 avkommenterar du och fyller i följande knappar i filen `.env`.
 

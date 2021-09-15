@@ -1,20 +1,20 @@
 ---
 title: Anpassa Adobe-klientdatalagret med AEM
 description: Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från AEM Core Components för att utöka och anpassa datalagret.
-version: cloud-service
-topic: Integreringar
+version: Cloud Service
+topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate, Experienced
 kt: 6265
 thumbnail: KT-6265.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2021'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa Adobe-klientdatalagret med AEM {#customize-data-layer}
 

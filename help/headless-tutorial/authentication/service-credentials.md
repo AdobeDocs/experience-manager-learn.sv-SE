@@ -1,24 +1,24 @@
 ---
 title: Tjänstautentiseringsuppgifter
 description: AEM Service Credentials används för att underlätta för externa program, system och tjänster att programmässigt interagera med AEM Author eller Publish services via HTTP.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
-feature: API:er
+feature: APIs
 activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: Headless, integreringar
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
+exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
-
 
 # Tjänstautentiseringsuppgifter
 
@@ -140,7 +140,7 @@ function getCommandLineParams() {
 
 ## Skapa en JWT och byt ut mot en Access-token
 
-När tjänstinloggningsuppgifterna har lästs används de för att generera en JWT som sedan byts ut mot API:er för Adobe IMS för en åtkomsttoken, som sedan kan användas för att komma åt AEM som en Cloud Service.
+När tjänstens autentiseringsuppgifter läses används de för att generera en JWT som sedan byts ut mot Adobe IMS API:er för en åtkomsttoken, som sedan kan användas för att få åtkomst till AEM som Cloud Service.
 
 Exempelprogrammet är Node.js-baserat, så det är bäst att använda [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-modulen för att underlätta (1) JWT-generering och (20 utbyte med Adobe IMS. Om ditt program har utvecklats på ett annat språk bör du läsa [de lämpliga kodexemplen](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md) för att konstruera HTTP-begäran för Adobe IMS med andra programmeringsspråk.
 
@@ -254,4 +254,3 @@ Utdata till terminalen ser ut så här:
 ## Grattis!
 
 Nu när vi programmatiskt har kommit åt AEM som Cloud Service med hjälp av en lokal åtkomsttoken för utveckling, liksom en produktionsklar åtkomsttoken för tjänst-till-tjänst!
-

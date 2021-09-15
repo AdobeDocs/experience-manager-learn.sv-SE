@@ -1,20 +1,20 @@
 ---
 title: Åtkomst till Adobe-resurslänk
 description: Adobe Asset Link stärker samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Du kan komma åt innehåll som lagras i Adobe Experience Manager Assets (AEM Assets) utan att lämna de Creative Cloud-program du är mest bekant med. Lär dig hur du startar panelen Adobe Asset Link från ditt Creative Cloud-datorprogram.
-sub-product: resurser
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 thumbnail: 33733.jpg
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 261135af-4d26-4b07-8ec9-6e9875a158ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
-
 
 # Åtkomst till Adobe-resurslänk {#access-adobe-asset-link}
 

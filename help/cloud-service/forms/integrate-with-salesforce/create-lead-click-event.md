@@ -1,27 +1,24 @@
 ---
-title: 'Skapa ett Lead-objekt i Salesforce-databasen för en knapps click-händelse '
+title: Skapa ett Lead-objekt i Salesforce-databasen för en knapps click-händelse
 description: Skapa som lead genom att anropa poståtgärden för formulärdatamodellen
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 7193
 thumbnail: 331892.jpg
-translation-type: tm+mt
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+exl-id: 7b21f24d-d694-489e-a8f6-c5e16445dde3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 4%
+source-wordcount: '55'
+ht-degree: 0%
 
 ---
-
 
 # Testa integreringen
 
 Skapa ett adaptivt formulär baserat på formulärdatamodellen för säljstyrka och testa hur en lead skapas i Salesforce vid klickhändelsen för en knapp
 
 >[!VIDEO](https://video.tv.adobe.com/v/331892?quality=12&learn=on)
-
-

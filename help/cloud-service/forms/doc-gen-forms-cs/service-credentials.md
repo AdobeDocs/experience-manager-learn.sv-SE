@@ -4,14 +4,14 @@ description: Hämta autentiseringsuppgifter för tjänsten från AEM Developer C
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: Adaptiv Forms
-topic: Utveckling
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 8192
 thumbnail: 330519.jpg
-source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---

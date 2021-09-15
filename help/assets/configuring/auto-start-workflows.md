@@ -1,22 +1,21 @@
 ---
 title: Starta arbetsflöden automatiskt
 description: Autostart-arbetsflöden utökar materialbearbetningen genom att automatiskt anropa ett anpassat arbetsflöde vid överföring eller ombearbetning.
-sub-product: resurser
+sub-product: assets
 feature: Asset Compute Microservices, Workflow
-version: cloud-service
+version: Cloud Service
 kt: 4994
 thumbnail: 37323.jpg
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 4%
+source-wordcount: '38'
+ht-degree: 0%
 
 ---
-
 
 # Starta arbetsflöden automatiskt
 

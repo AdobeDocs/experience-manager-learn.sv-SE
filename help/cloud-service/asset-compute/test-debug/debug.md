@@ -1,25 +1,24 @@
 ---
 title: Felsöka en Asset compute-arbetare
 description: asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM som Cloud Service.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrering, utveckling
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka en Asset compute-arbetare
 

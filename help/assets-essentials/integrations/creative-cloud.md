@@ -1,14 +1,15 @@
 ---
 title: Creative Cloud och Assets Essentials
 description: Se hur Assets Essentials kan integreras med Adobe Creative Cloud.
-version: cloud-service
+version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: User
 level: Beginner
 kt: 7918
 thumbnail: 336069.jpeg
-source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
+exl-id: 74eb8b3c-b521-4fd1-9859-43c06f754005
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

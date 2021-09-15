@@ -1,19 +1,19 @@
 ---
 title: Adobe Asset Link och AEM
-description: 'Adobe Experience Manager resurser kan användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlighet att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp material, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe XD, Photoshop, InDesign och Illustrator. '
+description: Adobe Experience Manager resurser kan användas av designers och kreativa användare i Adobe Creative Cloud favoritprogram. Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlighet att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp material, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-verktyg som Adobe XD, Photoshop, InDesign och Illustrator.
 feature: Adobe Asset Link
-version: 6.4, 6.5, cloud-service
-topic: Innehållshantering
+version: 6.4, 6.5, Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Asset Link 3.0
 
@@ -21,6 +21,9 @@ Adobe Experience Manager resurser kan användas av designers och kreativa använ
 
 Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlighet att söka efter och bläddra bland, sortera, förhandsgranska, ladda upp material, checka ut, ändra, checka in och visa metadata för AEM resurser i Creative Cloud-program.
 
+>[!TIP]
+>
+> Läs mer om hur [Adobe XD Premium Training Program](https://spark.adobe.com/page/wU7OXv8qKGugO/) kan hjälpa dig att integrera Asset Link i ditt Adobe Experience Manager-arbetsflöde.
 
 ## Adobe Asset Link och AEM kreativa arbetsflöden
 

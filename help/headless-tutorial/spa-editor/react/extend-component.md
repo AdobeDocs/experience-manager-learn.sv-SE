@@ -1,22 +1,22 @@
 ---
 title: Utöka en kärnkomponent | Komma igång med AEM SPA Editor och React
 description: Lär dig hur du utökar JSON-modellen för en befintlig Core-komponent som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
-sub-product: platser
-feature: SPA, kärnkomponenter
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
-
 
 # Utöka en kärnkomponent {#extend-component}
 
@@ -462,7 +462,7 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
    $ mvn clean install -PautoInstallBundle
    ```
 
-## Samla allt {#put-together}
+## Sammanställ allt {#put-together}
 
 1. Gå tillbaka till AEM och öppna den SPA sidan som innehåller komponenten `Banner`.
 1. Uppdatera `Banner`-komponenten så att den innehåller **banderolltext**:
@@ -495,4 +495,3 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
 ## Grattis! {#congratulations}
 
 Grattis! Du lärde dig att utöka en AEM med hjälp av och hur Sling-modeller och dialogrutor fungerar med JSON-modellen.
-

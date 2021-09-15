@@ -3,7 +3,7 @@ title: Konfigurera Adobe Project Fire för Asset compute-utbyggbarhet
 description: Projekt i asset compute är särskilt definierade projekt i Adobe Project Fire, och därför måste du ha tillgång till Adobe Project Fire i Adobe Developer Console för att kunna konfigurera och driftsätta dem.
 feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
@@ -12,14 +12,13 @@ thumbnail: 40183.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Adobe Project Fire
 
@@ -50,10 +49,10 @@ _Klicka igenom konfigurationen av Adobe Project Fire (inget ljud)_
       + Välj __Generera ett nyckelpar__ och tryck på __Generera nyckelpar__ och spara det hämtade `config.zip` på en säker plats för [senare användning](#private-key)
       + Tryck på __Nästa__
       + Markera produktprofilen __Integreringar - Cloud Service__ och tryck på __Spara konfigurerad API__
-   + __Adobe Services > I/O__ Events och tryck på  __Save configure API__
-   + __Adobe Services > I/O Management API__ och tryck på  __Save configure API__
+   + __Adobe-tjänster > I/O-__ händelser och tryck på  __Spara konfigurerat API__
+   + __Adobe-tjänster > I/O-hanterings-API__ och tryck på  __Spara konfigurerat API__
 
-## Åtkomst till private.key{#private-key}
+## Öppna private.key{#private-key}
 
 När du konfigurerade [API-integreringen för Asset compute](#set-up) skapades ett nytt nyckelpar och en `config.zip`-fil hämtades automatiskt. Detta `config.zip` innehåller det genererade offentliga certifikatet och den matchande `private.key`-filen.
 

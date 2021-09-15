@@ -3,7 +3,7 @@ title: Felsöka AEM SDK med hjälp av loggar
 description: Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM.
 feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,14 +11,13 @@ kt: 5252
 topic: Development
 role: Developer
 level: Beginner, Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka AEM SDK med hjälp av loggar
 

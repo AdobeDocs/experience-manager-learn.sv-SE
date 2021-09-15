@@ -1,20 +1,20 @@
 ---
 title: Så här använder du Projektmallar i AEM
 description: Project Masters förenklar användar- och teamhanteringen avsevärt med AEM.
-version: 6.4, 6.5, cloud-service
-topic: Innehållshantering, samarbete
-feature: Projekt
+version: 6.4, 6.5, Cloud Service
+topic: Content Management, Collaboration
+feature: Projects
 level: Intermediate
 role: User
 kt: 256
 thumbnail: 17740.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # Använd projektmallar
 

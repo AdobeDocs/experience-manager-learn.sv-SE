@@ -4,13 +4,14 @@ description: Steg för att undersöka problem relaterade till SAML
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5, cloud-service
-feature: Utvecklarverktyg
+version: 6.5, Cloud Service
+feature: Developer Tools
 topic: Administration
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 60f34070-be1f-4621-b697-4df12eaccfe3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---

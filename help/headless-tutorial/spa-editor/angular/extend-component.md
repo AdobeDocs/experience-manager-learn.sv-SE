@@ -1,11 +1,11 @@
 ---
 title: Utöka en komponent | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig att använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
-sub-product: platser
-feature: SPA, kärnkomponenter
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5871
@@ -13,13 +13,13 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
-
 
 # Utöka en kärnkomponent {#extend-component}
 

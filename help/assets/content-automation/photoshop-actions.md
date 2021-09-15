@@ -1,20 +1,20 @@
 ---
 title: Photoshop-åtgärder med AEM Assets Content Automation
 description: Lär dig hur innehållsförfattare kan utföra Photoshop-åtgärder i AEM Assets med Creative Cloud API:er med tillägget för innehållsautomatisering.
-version: cloud-service
+version: Cloud Service
 topic: Content Management
 feature: Asset Processing, Renditions
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 kt: 8074
 thumbnail: 336539.jpeg
-source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
+exl-id: 7af14c0f-5a13-49ab-95ea-53ea8cf472f3
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
-
 
 # Photoshop Actions
 

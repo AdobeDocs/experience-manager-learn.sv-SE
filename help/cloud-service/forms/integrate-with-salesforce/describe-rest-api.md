@@ -5,19 +5,18 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 7147
 thumbnail: 331754.jpg
-translation-type: tm+mt
-source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
+exl-id: e406fe4d-f0b6-4e5d-9e18-c28d30a456c7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 5%
+source-wordcount: '48'
+ht-degree: 0%
 
 ---
-
 
 # Skapa Swagger-fil
 

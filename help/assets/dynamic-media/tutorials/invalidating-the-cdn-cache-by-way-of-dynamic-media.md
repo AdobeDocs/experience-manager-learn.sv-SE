@@ -3,16 +3,16 @@ title: CDN-cachen för AEM Dynamic Media har inte verifierats
 description: Steg för att göra CDN-cache ogiltig för AEM Dynamic Media
 role: Developer
 level: Intermediate
-version: cloud-service
-topic: Utveckling
+version: Cloud Service
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 7993e482-3db0-46a0-ae2f-f5a167ac02dc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 2%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
-
 
 # CDN-cachen för AEM Dynamic Media har inte verifierats
 

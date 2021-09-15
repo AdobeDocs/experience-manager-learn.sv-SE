@@ -1,20 +1,20 @@
 ---
 title: Skapa GraphQL-frågor
 description: Lär dig hur du skapar GraphQL-frågor för att returnera innehåll från Adobe Experience Manager (AEM) och hur du använder GraphiQL-verktyget för att snabbt testa, förfina och felsöka frågor.
-version: cloud-service
+version: Cloud Service
 topic: Headless, Content Management
-feature: Innehållsfragment, GraphQL API
+feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # Skapa GraphQL-frågor
 

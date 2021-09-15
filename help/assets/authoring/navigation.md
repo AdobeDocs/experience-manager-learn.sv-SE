@@ -1,20 +1,20 @@
 ---
 title: Navigering
 description: Utforska grunderna för navigering i AEM Assets.
-feature: Resurshantering
+feature: Asset Management
 role: User
 level: Beginner
-version: cloud-service
+version: Cloud Service
 kt: 4305
 thumbnail: 32046.jpg
-topic: Innehållshantering
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+topic: Content Management
+exl-id: eba697fc-02ca-4ac8-82d5-7b230ef4d45b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '20'
+source-wordcount: '16'
 ht-degree: 0%
 
 ---
-
 
 # Navigering
 

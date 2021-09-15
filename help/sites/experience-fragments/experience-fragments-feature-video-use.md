@@ -1,22 +1,22 @@
 ---
 title: Använda AEM Experience Fragments
 description: Med Experience Fragments kan innehållsförfattare återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
-sub-product: webbplatser, innehållstjänster
+sub-product: sites, content-services
 feature: Experience Fragments
-topic: Innehållshantering
+topic: Content Management
 role: Architect, Developer, Admin, User
 level: Beginner
 doc-type: feature video
-version: cloud-service
+version: Cloud Service
 kt: 194
 thumbnail: 331785.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 4%
+source-wordcount: '118'
+ht-degree: 2%
 
 ---
-
 
 # Använda Experience Fragments {#using-aem-experience-fragments}
 

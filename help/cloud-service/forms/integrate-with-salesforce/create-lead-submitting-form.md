@@ -5,19 +5,18 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 7151
 thumbnail: 331758.jpg
-translation-type: tm+mt
-source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
+exl-id: fa00822f-075a-47df-941f-c7370bd1d4f4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 4%
+source-wordcount: '57'
+ht-degree: 0%
 
 ---
-
 
 # Testa lead-generering från formulärinlämning
 

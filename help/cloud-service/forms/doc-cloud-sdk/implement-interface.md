@@ -5,14 +5,15 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-topic: Utveckling
+version: Cloud Service
+topic: Development
 thumbnail: 7826.jpg
 kt: 7826
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c1fd02aa-577b-453f-8948-ca50e3e8f89b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 2%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
 

@@ -5,20 +5,19 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 5982
 thumbnail: 38566.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 2%
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
-
 
 # Skapa en konfiguration för Starta Cloud Service {#create-launch-cloud-service}
 

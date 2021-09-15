@@ -1,25 +1,24 @@
 ---
 title: Utveckla en metadataarbetare i Asset compute
 description: Lär dig hur du skapar en Asset compute-metadataarbetare som härleder de vanligaste färgerna i en bildresurs och skriver tillbaka namnen på färgerna till resursens metadata i AEM.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: metadata, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrering, utveckling
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla en metadataarbetare i Asset compute
 
@@ -28,7 +27,7 @@ Anpassade Asset compute-arbetare kan producera XMP (XML)-data som skickas tillba
 Exempel på vanliga användningsområden:
 
 + Integrering med system från tredje part, t.ex. PIM (Product Information Management System), där ytterligare metadata måste hämtas och lagras på resursen
-+ Integrering med Adobe-tjänster, som Content and Commerce AI, för att förbättra metadata för resurser med ytterligare maskininlärningsattribut
++ Integrering med Adobes tjänster, som Content and Commerce AI, för att förstärka metadata för resurser med ytterligare inlärningsattribut
 + Hämta metadata om resursen från dess binärfil och lagra den som metadata i AEM som en Cloud Service
 
 ## Vad du ska göra

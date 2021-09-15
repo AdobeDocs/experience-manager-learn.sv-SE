@@ -5,16 +5,18 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-topic: Utveckling
+version: Cloud Service
+topic: Development
 thumbnail: 7825.jpg
 kt: 7825
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f262013b-aaf1-43d1-84b8-6173942c3415
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 4%
+source-wordcount: '23'
+ht-degree: 0%
 
 ---
+
 
 # Gränssnitt
 
@@ -27,13 +29,9 @@ import java.io.InputStream;
 
 import com.adobe.aemfd.docmanager.Document;
 
-public interface DocumentCloudSDKService {
-	
+public interface DocumentCloudSDKService {	
 	public Document getPDF(String location,String accessToken,String fileName);
-	public Document createPDFFromInputStream(InputStream is,String fileName);
-
-}
-
-
+	
+    public Document createPDFFromInputStream(InputStream is,String fileName);
 }
 ```

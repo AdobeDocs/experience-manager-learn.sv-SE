@@ -6,19 +6,19 @@ topics: Administration
 audience: administrator
 doc-type: feature video
 activity: use
-version: cloud-service
+version: Cloud Service
 kt: 6873
 thumbnail: 26316.jpg
-topic: Arkitektur
+topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Använda Adobe Cloud Manager - CI/CD Production Pipeline
 

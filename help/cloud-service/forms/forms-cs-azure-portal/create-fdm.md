@@ -1,18 +1,19 @@
 ---
 title: Skapa Azure-lagringsbaserad formulärdatamodell
-description: 'Integrera AEM Forms CS med Azure-lagring med Form Data Model '
-feature: Adaptiv Forms
+description: Integrera AEM Forms CS med Azure-lagring med Form Data Model
+feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: cloud-service
-topic: Integreringar
+version: Cloud Service
+topic: Integrations
 thumbnail: 335385.jpg
 kt: 8229
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3bb4edb9-1b3c-4d9d-a133-16fb2b72f8a5
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 2%
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +22,3 @@ ht-degree: 2%
 Skapa Azure-lagringsbaserad formulärdatamodell
 
 >[!VIDEO](https://video.tv.adobe.com/v/335385/?quality=12&learn=on)
-

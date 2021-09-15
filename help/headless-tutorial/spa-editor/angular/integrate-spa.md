@@ -5,7 +5,7 @@ sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 5310
@@ -13,13 +13,13 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '2191'
 ht-degree: 0%
 
 ---
-
 
 # Integrera en SPA {#integrate-spa}
 
