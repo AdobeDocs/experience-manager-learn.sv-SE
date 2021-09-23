@@ -7,7 +7,7 @@ role: Developer
 level: Experienced
 kt: 8636
 thumbnail: 336964.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

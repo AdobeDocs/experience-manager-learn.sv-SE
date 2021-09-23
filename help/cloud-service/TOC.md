@@ -4,10 +4,10 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM som Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 13%
+source-wordcount: '561'
+ht-degree: 14%
 
 ---
 
@@ -92,17 +92,18 @@ ht-degree: 13%
 
    + Flytta till AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [Introduktion](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
+      + [Onboarding](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [BPA och CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [Verktyg för AEM](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [Databasmodernisering](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [Onboarding](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
-      + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
+      + [asset compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
+      + [Sökning och indexering](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + Innehållsmigrering {#content-migration}
          + [Massimporttjänst](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [Verktyget Innehållsöverföring](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
-      + [Sökning och indexering](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
-      + [asset compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [Felsökning](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Forms som Cloud Service {#aem-forms}
          + [Introduktion](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [Digital registrering](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
