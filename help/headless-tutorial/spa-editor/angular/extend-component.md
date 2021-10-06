@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -296,7 +296,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   `@PostConstruct initModel()` anropas alltid när delningsmodellen initieras, därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av ett antal [Java-baserade globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) som är tillgängliga för Sling-modeller via `@ScriptVariable`-anteckningen. Metoden [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) används i en sökväg och returnerar ett AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
+   `@PostConstruct initModel()` anropas alltid när delningsmodellen initieras, därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av ett antal [Java-baserade globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects) som är tillgängliga för Sling-modeller via `@ScriptVariable`-anteckningen. Metoden [getPage()](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-) tar en sökväg och returnerar ett AEM [Page](https://experienceleague.adobe.com/docs/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
 
    Detta initierar variabeln `cardPage`, som kommer att användas av de andra nya metoderna för att returnera data om den underliggande länkade sidan.
 

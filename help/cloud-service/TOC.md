@@ -1,12 +1,12 @@
 ---
 user-guide-title: Självstudiekurser om Adobe Experience Manager as a Cloud Service
-user-guide-description: En samling självstudiekurser för Adobe Experience Manager som Cloud Service.
-breadcrumb-title: AEM som Cloud Service Tutorials
+user-guide-description: En samling självstudiekurser för Adobe Experience Manager as a Cloud Service.
+breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '564'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 + [Översikt](./overview.md)
 + Introduktion till AEM as a Cloud Service{#introduction}
-   + [Vad är AEM som en Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [Vad är AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Utveckling](./introduction/evolution.md)
    + [Arkitektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
@@ -64,6 +64,8 @@ ht-degree: 14%
       + [OSGi Component Lifecycle](./developing/osgi-services/lifecycle.md)
       + [Grundläggande om OSGi-konfigurationer](./developing/osgi-services/configurations.md)
       + [OSGi-konfigurationer med OCD](./developing/osgi-services/configurations-ocd.md)
+   + Avancerat{#advanced}
+      + [Tjänstanvändare](./developing/advanced/service-users.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
@@ -73,7 +75,7 @@ ht-degree: 14%
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Felsöka AEM som en Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Felsöka AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Översikt](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
@@ -83,7 +85,7 @@ ht-degree: 14%
    + [Översikt](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
    + [Adobe IMS-användargrupper](./accessing/adobe-ims-user-groups.md)
-   + [Adobe IMS-produktprofiler](./accessing/adobe-ims-product-profiles.md)
+   + [Produktprofiler för Adobe IMS](./accessing/adobe-ims-product-profiles.md)
    + [AEM användare, grupper och behörigheter](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
 + Migrering {#migration}
@@ -104,7 +106,7 @@ ht-degree: 14%
          + [Massimporttjänst](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [Verktyget Innehållsöverföring](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [Felsökning](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Forms som Cloud Service {#aem-forms}
+      + AEM Forms as a Cloud Service {#aem-forms}
          + [Introduktion](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [Digital registrering](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [Kommunikation](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
