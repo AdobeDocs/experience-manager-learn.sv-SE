@@ -1,7 +1,7 @@
 ---
 title: Använda SSL-guiden i AEM
 description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
-seo-description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
+seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
 version: 6.3, 6,4, 6.5
 topics: security, operations
 activity: use
@@ -12,14 +12,13 @@ discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 topic: Security
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
+source-git-commit: 835c01cb2ad1d154437087c51c70a2daf90493dd
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
-
 
 # Använda SSL-guiden i AEM
 
@@ -57,7 +56,7 @@ $ openssl genrsa -aes256 -out localhostprivate.key 4096
 $ openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
 
 ### Generate the SSL certificate and sign with the private key, will expire one year from now
-$ openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
+$ openssl x509 -req -extfile <(printf "subjectAltName=DNS:localhost") -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
 
 ### Convert Private Key to DER format - SSL wizard requires key to be in DER format
 $ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
