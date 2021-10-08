@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 9113
 thumbnail: 337530.jpeg
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
+source-git-commit: 28b7f44ede92c33fcb84d520fe500e43ab38df18
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 2%
 
 ---
-
 
 # Tjänstanvändare
 
@@ -83,14 +83,11 @@ public class ContentStatisticsImpl implements ContentStatistics {
         // Get the auto-closing Service resource resolver
         // Remember, any ResourceResolver you get, you must ensure is closed!
         try (ResourceResolver serviceResolver = resourceResolverFactory.getServiceResourceResolver(authInfo)) {
-            if (serviceResolver != null) {
-                // Do some work w your service resource resolver
-                return queryAndCountAssets(serviceResolver);
-            } else {
-                log.warn("Could not obtain a User for the Service: {} ", SERVICE_USER_SUB_SERVICE_ID);
-            }
+            // Do some work with the service user's resource resolver and underlying resources. 
+            // Make sure to do all work that relies on the AEM repository access in the try-block, since the serviceResolver will auto-close when it's left
+            return queryAndCountAssets(serviceResolver);
         } catch (LoginException e) {
-            log.error("Login Exception when obtaining a User for the Bundle Service: {} ", e.getMessage());
+            log.error("Login Exception when obtaining a User for the Bundle Service: {} ", e);
         }
 
         return -1;
@@ -126,9 +123,10 @@ public class ContentStatisticsImpl implements ContentStatistics {
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/org.apache.sling.jcr.repoinit.RepositoryInitializer-wknd-examples-statistics.config`
 
 ```
-scripts=["
+scripts=["   
     create service user wknd-examples-statistics-service with forced path system/cq:services/wknd-examples
 
+    # When using principal ACLs, the service user MUST be created under system/cq:services 
     set principal ACL for wknd-examples-statistics-service
         allow jcr:read on /content/dam
     end
