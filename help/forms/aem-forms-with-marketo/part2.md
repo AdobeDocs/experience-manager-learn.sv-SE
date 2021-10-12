@@ -1,18 +1,18 @@
 ---
 title: AEM Forms med Marketo (del 2)
 description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
-feature: Adaptiv Forms, formulärdatamodell
+feature: Adaptive Forms, Form Data Model
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
+source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # Marketo autentiseringstjänst
 
@@ -128,7 +128,7 @@ MarketoConfigurationService config;
 
 Skärmbilden nedan visar de konfigurationsegenskaper som behöver ställas in. Dessa konfigurationsegenskaper läses in i koden ovan för att få åtkomst_token
 
-![config](assets/marketoconfig.jfif)
+![config](assets/configuration-settings.png)
 
 ### Konfiguration
 
