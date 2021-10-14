@@ -1,21 +1,21 @@
 ---
 title: Förstå skäl att uppgradera
-description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager.
+description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager 6.
 version: 6.5
 topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
+source-git-commit: 278433e7d9a2d524198efcebae336dca01a15259
 workflow-type: tm+mt
 source-wordcount: '3462'
 ht-degree: 1%
 
 ---
 
-
 # Förstå skäl att uppgradera
 
-En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager.
+En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager 6.
 
 ## Viktiga funktioner för uppgradering till AEM 6.5
 
@@ -316,8 +316,8 @@ Nedan finns en matris med viktiga säkerhetsfunktioner som AEM erbjuder. Vissa a
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>Förfalskningsskydd för </strong> <strong></strong></a>
-            <br> CSRFprotectionCross-Site Request.</td>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong></strong> <strong></strong></a>
+            <br> CSRFprotectionCross-Site Request Warery-skydd direkt vid leverans.</td>
         <td></td>
         <td></td>
         <td>✔</td>
@@ -327,8 +327,8 @@ Nedan finns en matris med viktiga säkerhetsfunktioner som AEM erbjuder. Vissa a
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong>CORSsupportStöd </strong> <strong></strong></a>
-            <br> för resursdelning mellan ursprung ger större flexibilitet i programanvändningen.</td>
+        <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank"><strong></strong> <strong></strong></a>
+            <br> CORSsupportCross-Origin Resource Sharing-stöd ger större flexibilitet i applikationen.</td>
         <td></td>
         <td></td>
         <td></td>
@@ -407,7 +407,7 @@ Nedan finns en matris med viktiga säkerhetsfunktioner som AEM erbjuder. Vissa a
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS Authentication </a><br>
- </strong>SupportExklusivt för Adobe Managed Services (AMS), centralt hantera åtkomst till AEM Author-instanser via Adobe IMS (Identity Management System).</td>
+ </strong>SupportExklusivt för Adobe Managed Services (AMS), hantera åtkomsten till AEM Author-instanser centralt via Adobe IMS (Identity Management System).</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -714,8 +714,8 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">Hantering av </a> uppgifter och  <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> arbetsflöden:</strong>
-            Fördefinierade arbetsflöden och uppgifter för granskning och godkännande av digitala resurser som utnyttjar AEM projekt.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> Aktivitets- och  <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> arbetsflödeshantering:</strong>
+            färdiga arbetsflöden och uppgifter för granskning och godkännande av digitala resurser som utnyttjar AEM projekt.</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -847,8 +847,8 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe Imaging Library</a>: </strong>
-                <br> Photoshop och Acrobat PDF Libraries används för att hantera filer med hög kvalitet.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe Imaging Library</a>:</strong>
+                <br> Photoshop och Acrobat PDF-bibliotek används för filhantering av hög kvalitet.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -907,10 +907,10 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">Bild</a>: Leverera bilder </strong>
             dynamiskt i olika storlekar och format, inklusive Smart Crop.</td>
             <td> </td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔<sup>+</sup></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
         </tr>
@@ -1292,7 +1292,7 @@ Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som 
         </tr>
         <tr>
             <td rowspan="5">Aktivera</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank">Katalog- och </a> resurshantering <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">:</a> </strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank"></a> Katalog- och  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">resurshantering</a>:</strong>
             Åtkomst till aktiveringsresurser från katalog.</td>
             <td> </td>
             <td>✔<sup>+</sup></td>
@@ -1343,8 +1343,8 @@ Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som 
         </tr>
         <tr>
             <td rowspan="8">Kommentarer</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank">Kommentarer </a> och bilagor:</strong>
-            (Social Component Framework) Som medlem i communityn delar åsikter och kunskap om innehåll på Communities-webbplatsen.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank"></a> Kommentarer och bilagor:</strong>
+            (Social Component Framework) Som community-medlem delar åsikter och kunskap om innehåll på Communities-webbplatsen.</td>
             <td>✔<sup>+</sup></td>
             <td>✔</td>
             <td>✔<sup>+</sup></td>
@@ -1538,7 +1538,7 @@ Nedan finns en matris med de viktigaste AEM Communities Add-on-funktionerna som 
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank"></a> Aktiviteter och  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">meddelanden</a>:</strong>
-            Visa senaste aktivitetsströmmen och få meddelanden om intressanta händelser.</td>
+            Visa senaste aktiviteter och få meddelanden om intressanta händelser.</td>
             <td> </td>
             <td> </td>
             <td> </td>
