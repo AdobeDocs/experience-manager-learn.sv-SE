@@ -2,9 +2,9 @@
 title: Adobe Experience Manager as a Cloud Service Experts Series
 description: Lär dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe egna expertingenjörer som bygger upp det och professionella tjänster som levererar det.
 sub-product: sites, cloud-manager, assets
-source-git-commit: 5b3dd38d1fa2e3c35bfa2a867f51c7295907ecc7
+source-git-commit: 1e52e29051e219c4cd5ea83e2325fdae62ff833a
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,43 @@ Läs om AEM as a Cloud Service funktioner från Adobe experter.
       <p>
         <br/>
         Lär dig mer om AEM Assets Asset compute Microservices, hur de ersätter AEM 6 och hur de kan utökas för att generera anpassade resursåtergivningar.
+      </p>
+   </td>   
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video">
+      <img alt="Importera flera innehållsförteckningar" src="./assets/experts-series/bulk-import.png"/>
+      </a>
+      <div>
+         <a href="./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>Importera flera innehållsförteckningar</strong></a>
+         <br/><em>med Kiran Murugulla, Senior Cloud Architect</em>
+      </div>
+      <p>
+        <br/>
+        Lär dig hur du på ett säkert och effektivt sätt importerar innehåll i bulk till AEM as a Cloud Service med tjänsten för massimport och AEM Package Manager.
+      </p>
+   </td> 
+    <td></td>
+  </tr>
+</table>
+
+## Behöver du hjälp med AEM som Cloud Services?
+
+Lär dig hur du felsöker och felsöker AEM as a Cloud Service och AEM SDK från experterna!
+
+<table>
+  <tr>
+   <td>
+      <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
+      <img alt="Felsökning AEM as a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
+      </a>
+      <div>
+         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         target="_aem-experts-series-video"><strong>Felsökning AEM as a Cloud Service</strong></a>
+         <br/><em>med Kunwar Saluja, Cloud Architect</em>
+      </div>
+      <p>
+        <br/>
+        Lär dig hur du felsöker olika aspekter av AEM as a Cloud Service, från felsökning av AEM SDK och AEM as a Cloud Service till byggfel och driftsättningsfel i Cloud Manager.
       </p>
    </td>   
     <td></td>
