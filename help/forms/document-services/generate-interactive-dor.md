@@ -6,32 +6,36 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+kt: 9226
+source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
 
-# Ladda ned interaktiv DoR
+# Hämta interaktiv DoR
 
 Ett vanligt användningsexempel är att kunna ladda ned en interaktiv DoR med data från adaptiva formulär. Den hämtade versionen av DoR kommer sedan att fyllas i med Adobe Acrobat eller Adobe Reader.
 
 För att uppnå detta måste vi göra följande
 
-## Generera exempeldata för xdp
+## Generera exempeldata för XDP
 
-Öppna XDP i AEM Forms Designer.
-Klicka på Arkiv | Formuläregenskaper | Förhandsgranska Klicka på Generera förhandsgranskningsdata och klicka på Generera Ange beskrivande filnamn, t.ex. &quot;form-data.xml&quot;
+* Öppna XDP i AEM Forms Designer.
+* Klicka på Arkiv | Formuläregenskaper | Förhandsgranska
+* Klicka på Generera förhandsgranskningsdata
+* Klicka på Generera
+* Ange beskrivande filnamn som&quot;form-data.xml&quot;
 
 ## Generera XSD från XML-data
 
-Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera xsd](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
+Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
 
-## Skapa adaptiv
+## Skapa anpassat formulär
 
-Skapa anpassningsbara formulär baserat på xsd från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet. Följande kod aktiveras när _Hämta PDF_ klickas
+Skapa anpassningsbara formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet. Följande kod aktiveras när _Hämta PDF_ klickas
 
 ```javascript
 $(document).ready(function() {
@@ -72,7 +76,7 @@ $(document).ready(function() {
 
 ## Skapa anpassad servett
 
-Skapa en anpassad servett som sammanfogar data med xdp-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern är en del av [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)).
+Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern är en del av [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -191,13 +195,16 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 I exempelkoden är mallnamnet (f8918-r14e_redo-barcode_3 2.xdp) hårdkodat. Du kan enkelt skicka in mallnamnet till servern för att göra koden generisk och arbeta mot alla mallar.
 
 
+## Distribuera exemplet på servern
+
 Så här testar du detta på den lokala servern:
+
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. Lägg till följande post i användarmappningstjänsten för Apache Sling Service DevelopingWithServiceUser.core:getformsresourceSolver=fd-service
 1. [Hämta och installera det anpassade Document Services-paketet](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
 1. [Importera klientbiblioteket](assets/irs.zip)
 1. [Importera det adaptiva formuläret](assets/f8918complete.zip)
-! [Importera XDP-mall och -schema](assets/xdp-template-and-xsd.zip)
+1. [Importera XDP-mall och -schema](assets/xdp-template-and-xsd.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Fylla i några av formulärfälten
 1. Klicka på Hämta PDF för att hämta PDF
