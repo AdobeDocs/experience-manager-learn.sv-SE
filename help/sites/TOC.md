@@ -3,10 +3,10 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager, Experience Manager Sites
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 5bdff2eafaa28aff722b12607b1278539072be62
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
@@ -64,6 +64,8 @@ ht-degree: 5%
    + [Konfigurera Experience Fragments och Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Använda Experience Fragments med Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Konfigurera ContextHub](personalization/context-hub-technical-video-setup.md)
++ SEO {#seo}
+   + [Webbplatskartor](./seo/sitemaps.md)
 + Enkelsidiga program {#spa-editor}
    + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Självstudiekurs om Hello World](spa-editor/spa-editor-helloworld-tutorial-use.md)
@@ -96,7 +98,7 @@ ht-degree: 5%
       + [Anslut AEM med Launch med Adobe I/O](integrations/experience-platform-launch/connect-aem-launch-adobe-io.md)
       + [Skapa en Launch-Cloud Service](integrations/experience-platform-launch/create-launch-cloud-service.md)
       + [Felsöka en Launch-implementering](integrations/experience-platform-launch/debug-launch-implementation.md)
-   + Adobe-klientdatalagret {#adobe-client-data-layer}
+   + Adobe-klientdatalager {#adobe-client-data-layer}
       + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
