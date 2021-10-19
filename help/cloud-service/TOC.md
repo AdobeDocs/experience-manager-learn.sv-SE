@@ -4,10 +4,10 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 14%
+source-wordcount: '567'
+ht-degree: 13%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 14%
       + [Content Publishing](./developing/basics/content-publishing.md)
       + [OSGi-konfigurationer](./developing/basics/osgi-configurations.md)
       + [Migrering av Dispatcher-konfiguration](./developing/basics/dispatcher-configuration.md)
-   + AEM projekt{#aem-projects}
+   + AEM{#aem-projects}
       + [AEM Maven Project](./developing/projects/maven-project-structure.md)
    + OSGi Services{#osgi-services}
       + [OSGi Service Basics](./developing/osgi-services/basics.md)
@@ -67,7 +67,7 @@ ht-degree: 14%
    + Avancerat{#advanced}
       + [Tjänstanvändare](./developing/advanced/service-users.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
-+ Felsöka AEM{#debugging}
++ AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Loggar](./debugging/aem-sdk-local-quickstart/logs.md)
@@ -75,7 +75,7 @@ ht-degree: 14%
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Felsöka AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Felsökning AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Översikt](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
@@ -180,7 +180,7 @@ ht-degree: 14%
       + [Konfigurera manifest.yml](./asset-compute/develop/manifest.md)
       + [Utveckla en arbetare](./asset-compute/develop/worker.md)
       + [Använda utvecklingsverktyget](./asset-compute/develop/development-tool.md)
-   + Testa och felsök{#test-debug}
+   + Testa och felsöka{#test-debug}
       + [Testa en arbetare](./asset-compute/test-debug/test.md)
       + [Felsöka en arbetare](./asset-compute/test-debug/debug.md)
    + Distribuera{#deploy}
@@ -189,6 +189,7 @@ ht-degree: 14%
    + Avancerat{#advanced}
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
++ [AEM Experts Series](./aem-experts-series.md)
 + Tutorials i flera steg{#multi-step-tutorials}
    + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
