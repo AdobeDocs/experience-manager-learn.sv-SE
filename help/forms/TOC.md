@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
-+ Skapar ditt första adaptiva formulär {#creating-your-first-adaptive-form}
++ Skapa ditt första adaptiva formulär {#creating-your-first-adaptive-form}
    + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -28,7 +28,7 @@ ht-degree: 0%
    + [Lägga till tabell på resultatpanelen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ Hantera formuläröverföringar {#handling-af-form-submissions}
++ Hantera inskickning av formulär {#handling-af-form-submissions}
    + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Visar sidan Tack](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -40,7 +40,7 @@ ht-degree: 0%
 + Användbara integreringar{#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
    + [OCR-dataextrahering](some-useful-integrations/ocr-data-extraction.md)
-+ Skapar OSGi-paket {#creating-your-first-osgi-bundle}
++ Skapa OSGi-paket {#creating-your-first-osgi-bundle}
    + [Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -89,7 +89,7 @@ ht-degree: 0%
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ Fylla i anpassat formulär i förväg med formulärdatamodell{#prefill-fdm-db}
++ Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
    + [Introduktion](prefill-fdm-db/introduction.md)
    + [Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
    + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
@@ -104,7 +104,7 @@ ht-degree: 0%
    + [Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
    + [Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
    + [Testa lösningen](zipping-form-attachments/test.md)
-+ Lagra och hämta anpassat formulär{#store-and-retrieve-af-with-2fa}
++ Lagra och hämta adaptiv form{#store-and-retrieve-af-with-2fa}
    + [Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
    + [Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [Lagra bifogade formulär](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -131,7 +131,7 @@ ht-degree: 0%
    + [Konfigurera anpassat formulär för en signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [Konfigurera anpassat formulär för två signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
    + [Konfigurera tjänsten Automated forms conversion](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
-   + [Konvertera PDF-formulär till anpassat formulär](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
+   + [Konvertera PDF-formulär till anpassat format](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + Signera flera Forms{#sign-multiple-documents}
@@ -162,11 +162,11 @@ ht-degree: 0%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Utlösa AEM från inskickning av mobilformulär{#offline-mobile-form-submission}
++ Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
-   + [Hantera inskickning av PDF](offline-mobile-form-submission/part-two.md)
-   + [Arbetsflöde för att granska PDF](offline-mobile-form-submission/part-three.md)
+   + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
+   + [Arbetsflöde för granskning PDF](offline-mobile-form-submission/part-three.md)
    + [Driftsätt i ditt system](offline-mobile-form-submission/part-four.md)
 + Frågar skickade data{#querying-submitted-data}
    + [Introduktion](querying-submitted-data/introduction.md)
@@ -200,9 +200,10 @@ ht-degree: 0%
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
    + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
+   + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
    + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
-   + [Använd användningsbehörighet för överförd PDF](document-services/apply-reader-extension-rights-to-pdf.md)
+   + [Använd användningsbehörighet för överförda PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
    + [Användbara verktygstjänster](document-services/useful-utility-services.md)
@@ -265,7 +266,7 @@ ht-degree: 0%
    + [PDFG: Steg för att kontrollera och installera 32-bitars bibliotek och deras beroenden](troubleshooting/steps-to-check-and-install-32-bit-libraries-and-their-dependencies.md)
    + [PDFG: Steg för att kontrollera mappbehörighet på Windows Server 2016](troubleshooting/steps-to-check-folder-permission-on-windows-server-2016.md)
    + [PDFG: Steg för att aktivera strängen vid unix](troubleshooting/steps-to-enable-strace-on-unix-setup.md)
-   + [PDFG: Steg för att installera nödvändiga 32-bitars omdistribuerbara Microsoft Visual C++-filer](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
+   + [PDFG: Steg för att installera nödvändiga 32-bitars omdistribuerbara Microsoft Visual C++](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
    + [PDFG: Steg för att köra och tolka utdata från verktyget för systemberedskap](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
    + [PDFG: Steg för att felsöka Acrobat-specifika problem](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
    + [PDFG: Steg för att felsöka HTMLtoPDF-problem i fönster](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
@@ -284,8 +285,8 @@ ht-degree: 0%
    + [Workbench: Så här justerar du parametrar för arbetsbench-minne](troubleshooting/how-to-tweak-workbench-memory-parameters.md)
    + [Workbench: Så här justerar du prestandaparametrar för workbench](troubleshooting/how-to-tweak-workbench-performance-parameters.md)
    + [Designer: Designer är beroende av C++ återdistribuerbart](troubleshooting/dependency-of-vc-on-designer.md)
-   + [Designer: Aktivera HTML-förhandsvisning](troubleshooting/how-to-enable-html-preview.md)
-   + [Designer: Aktivera PDF-förhandsgranskning](troubleshooting/how-to-enable-pdf-preview.md)
+   + [Designer: Aktivera HTML Preview](troubleshooting/how-to-enable-html-preview.md)
+   + [Designer: Aktivera PDF Preview](troubleshooting/how-to-enable-pdf-preview.md)
    + [Designer: Så här installerar du Designer-korrigeringar](troubleshooting/how-to-install-designer-patches.md)
    + [JEE Foundation: Så här ändrar du värdet för entropi](troubleshooting/how-to-change-the-value-of-entropy.md)
    + [JEE Foundation: Så här ändrar du tidsgränsen för transaktioner för en tjänst i AEM Forms JEE](troubleshooting/how-to-change-transaction-timeout-of-any-service-in-aem-forms-jee.md)
@@ -302,7 +303,7 @@ ht-degree: 0%
    + [Allmänt: Så här hämtar du tråddumpar för en JVM på en unix-server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-unix-server.md)
    + [Allmänt: Så här hämtar du tråddumpar för en JVM på en Windows-server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-windows-server.md)
    + [Allmänt: Så här skapar du ett självsignerat certifikat](troubleshooting/how-to-generate-a-self-signed-certificate.md)
-   + [Allmänt: Hur man gör ett webbtjänstanrop från HTML5-formulär](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
+   + [Allmänt: Hur man gör ett webbtjänstanrop från HTML5-formuläret](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
    + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i AEM Forms OSGI](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
    + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i JBOSS-programservern](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
    + [Allmänt: Steg för att aktivera felsökningsloggning för alla klasser i Websphere Application Server](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
