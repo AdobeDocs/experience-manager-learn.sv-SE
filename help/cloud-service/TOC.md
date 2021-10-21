@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '595'
 ht-degree: 13%
 
 ---
@@ -123,6 +123,15 @@ ht-degree: 13%
       + [Navigera i molnaccelerationshanteraren](./migration/cloud-acceleration-manager/navigating.md)
       + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
+
+   + Developing for Forms as a Cloud Service{#developing-for-cloud-service}
+      + [Komma igång](./forms/developing-for-cloud-service/getting-started.md)
+      + [Installera IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
+      + [Konfigurera Git](./forms/developing-for-cloud-service/setup-git.md)
+      + [Synkronisera IntelliJ med AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
@@ -137,8 +146,8 @@ ht-degree: 13%
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
    + Document Cloud API och AEM Forms CS{#doc-cloud-sdk}
       + [Introduktion](./forms/doc-cloud-sdk/introduction.md)
-      + [Skapa Adobe I/O-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [Skapa OSGi-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Skapa Adobe IO-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [Skapa OSGI-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [Definiera gränssnitt](./forms/doc-cloud-sdk/create-interface.md)
       + [Implementeringsgränssnitt](./forms/doc-cloud-sdk/implement-interface.md)
       + [Skapa JSON-del](./forms/doc-cloud-sdk/get-content-analyzer.md)
@@ -149,25 +158,23 @@ ht-degree: 13%
       + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
-
-
-      + Skapa granskningsarbetsflöde{#create-aem-workflow}
-         + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
-         + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
-      + Adobe Sign med AEM Forms{#forms-and-sign}
-         + [Introduktion](./forms/forms-and-sign/introduction.md)
-         + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
-         + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
-         + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
-         + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-      + Integrera med Salesforce{#integrate-with-salesforce}
-         + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
-         + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
-         + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
-         + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
-         + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
-         + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-         + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + Skapa granskningsarbetsflöde{#create-aem-workflow}
+      + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
+      + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
+   + Adobe Sign med AEM Forms{#forms-and-sign}
+      + [Introduktion](./forms/forms-and-sign/introduction.md)
+      + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
+      + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Integrera med Salesforce{#integrate-with-salesforce}
+      + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
+      + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [Skapa swagger-fil](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
+      + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}

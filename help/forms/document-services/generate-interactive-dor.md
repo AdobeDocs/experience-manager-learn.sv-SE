@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9226
-source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -207,4 +207,6 @@ Så här testar du detta på den lokala servern:
 1. [Importera XDP-mall och -schema](assets/xdp-template-and-xsd.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Fylla i några av formulärfälten
-1. Klicka på Hämta PDF för att hämta PDF
+1. Klicka på Hämta PDF för att hämta PDF. Du kan behöva vänta några sekunder på att PDF ska ladda ned
+
+
