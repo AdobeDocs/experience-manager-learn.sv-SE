@@ -207,7 +207,7 @@ Lär dig hur du felsöker och felsöker AEM as a Cloud Service och AEM SDK från
       <img alt="Felsökning AEM as a Cloud Service" src="./assets/experts-series/troubleshooting.png"/>
       </a>
       <div>
-         <a href="/migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
+         <a href="./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
          target="_aem-experts-series-video"><strong>Felsökning AEM as a Cloud Service</strong></a>
          <br/><em>med Kunwar Saluja, Cloud Architect</em>
       </div>
