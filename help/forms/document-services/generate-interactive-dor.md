@@ -201,7 +201,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. Lägg till följande post i användarmappningstjänsten för Apache Sling Service DevelopingWithServiceUser.core:getformsresourceSolver=fd-service
-1. [Hämta och installera det anpassade Document Services-paketet](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
+1. [Hämta och installera det anpassade Document Services-paketet](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
 1. [Importera klientbiblioteket](assets/irs.zip)
 1. [Importera det adaptiva formuläret](assets/f8918complete.zip)
 1. [Importera XDP-mall och -schema](assets/xdp-template-and-xsd.zip)
