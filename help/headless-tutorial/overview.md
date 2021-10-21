@@ -1,17 +1,17 @@
 ---
 title: AEM Headless-självstudiekurser
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
-feature: Innehållsfragment, API:er
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless-självstudiekurser
 
@@ -19,7 +19,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 
 >[!TIP]
 >
->Den här samlingen självstudiekurser är avsedda för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du läsa [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
+>Den här samlingen självstudiekurser är utformad för dem som föredrar att **lära sig göra**. Om du föredrar att lära dig koncept från grunden kan du kolla in [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
 ## Tutorials efter API
 
@@ -62,6 +62,54 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
     </div>
     <p>
     <em>Lär dig hur ett program kan använda ett REST API för att förbruka innehåll.</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Exempelprogram
+
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Ladda ned och installera dessa färdiga exempel för att komma igång direkt.
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+      <img alt="iOS-exempel" src="./assets/ios-example.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+    <strong>iOS SwiftUI-exempel</strong>
+    </a>
+    </div>
+    <p>
+    <em>Ett iOS-program med AEM GraphQL API:er.</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <img alt="Android-exempel" src="./assets/android-example.png" />
+    </a>
+    <div>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <strong>Android-exempel</strong>
+    </a>
+    </div>
+    <p>
+    <em>Ett Android-program med AEM GraphQL API:er.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+      <img alt="Reaktionsexempel" src="./assets/react-example.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+        <strong>Reaktionsexempel</strong>
+      </a>
+    </div>
+    <p>
+    <em>Ett React-program med AEM GraphQL API:er.</em>
     <p>
   </td>
 </tr>

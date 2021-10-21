@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 1%
+source-wordcount: '994'
+ht-degree: 0%
 
 ---
 
@@ -122,4 +122,106 @@ function useGraphQL(query, path) {
 
 Appen visar i första hand en lista med annonser och ger användarna möjlighet att klicka in i informationen om ett äventyr.
 
-`Adventures.js` - Visar en kortlista med annonser.
+`Adventures.js` - Visar en kortlista med annonser.  Det inledande läget använder [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) som [färdigförpackad](https://github.com/adobe/aem-guides-wknd/tree/master/ui.content/src/main/content/jcr_root/conf/wknd/settings/graphql/persistentQueries/adventures-all/_jcr_content) med WKND-referenswebbplatsen. Slutpunkten är `/wknd/adventures-all`. Det finns flera knappar som gör att användaren kan experimentera med filtreringsresultat baserat på en aktivitet:
+
+```javascript
+function filterQuery(activity) {
+  return `
+    {
+      adventureList (filter: {
+        adventureActivity: {
+          _expressions: [
+            {
+              value: "${activity}"
+            }
+          ]
+        }
+      }){
+        items {
+          _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+        adventurePrimaryImage {
+          ... on ImageRef {
+            _path
+            mimeType
+            width
+            height
+          }
+        }
+      }
+    }
+  }
+  `;
+}
+```
+
+`AdventureDetail.js` - Visar en detaljvy över Adventure. Skapar en graphQL-fråga baserat på sökvägen till äventyret som tolkas från URL:en:
+
+```javascript
+//parse the content fragment from the url
+const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
+...
+function adventureDetailQuery(_path) {
+  return `{
+    adventureByPath (_path: "${_path}") {
+      item {
+        _path
+          adventureTitle
+          adventureActivity
+          adventureType
+          adventurePrice
+          adventureTripLength
+          adventureGroupSize
+          adventureDifficulty
+          adventurePrice
+          adventurePrimaryImage {
+            ... on ImageRef {
+              _path
+              mimeType
+              width
+              height
+            }
+          }
+          adventureDescription {
+            html
+          }
+          adventureItinerary {
+            html
+          }
+      }
+    }
+  }
+  `;
+}
+```
+
+### Miljövariabler
+
+Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environment-variables) används av det här projektet för att ansluta till en AEM. Standard ansluter till en AEM redigeringsmiljö som körs på http://localhost:4502. Om du vill ändra det här beteendet uppdaterar du `.env.development` därefter:
+
+* `REACT_APP_HOST_URI=http://localhost:4502` - Ange som AEM målvärd
+* `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json` - Ange slutpunktsbana för GraphQL
+* `REACT_APP_AUTH_METHOD=` - Den önskade autentiseringsmetoden. Valfritt, som standard används ingen autentisering.
+   * `service-token` - använd Service Token Exchange för Cloud Env PROD
+   * `dev-token` - använd Dev-token för lokal utveckling med Cloud Env
+   * `basic` - använd användare/pass för lokal utveckling med Local Author Env
+   * lämna tomt för att använda ingen autentiseringsmetod
+* `REACT_APP_AUTHORIZATION=admin:admin` - ange grundläggande autentiseringsuppgifter som ska användas vid anslutning till en AEM Author-miljö (endast för utveckling). Om du ansluter till en publiceringsmiljö är den här inställningen inte nödvändig.
+* `REACT_APP_DEV_TOKEN` - Dev-tokensträng. Om du vill ansluta till en fjärrinstans kan du förutom grundläggande autentisering (user:pass) använda Bearer-autentisering med DEV-token från molnkonsolen
+* `REACT_APP_SERVICE_TOKEN` - Sökväg till tjänsttokenfil. Om du vill ansluta till en fjärrinstans kan du autentisera med Service Token även (hämta fil från molnkonsolen)
+
+### Proxy API-begäranden
+
+När webbpaketets utvecklingsserver används (`npm start`) förlitar sig projektet på [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) använda `http-proxy-middleware`. Filen är konfigurerad på [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) och är beroende av flera anpassade miljövariabler som är inställda på `.env` och `.env.development`.
+
+Om du ansluter till en AEM författarmiljö måste motsvarande autentiseringsmetod konfigureras.
+
+### CORS - Resursdelning mellan ursprung
+
+Det här projektet är beroende av en CORS-konfiguration som körs på AEM och förutsätter att programmet körs på http://localhost:3000 i utvecklingsläge. The [COR-konfiguration](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) är en del av [WKND-referensplats](https://github.com/adobe/aem-guides-wknd).
+
+![CORS-konfiguration](assets/cross-origin-resource-sharing-configuration.png)
+
+*Exempel på CORS-konfiguration för redigeringsmiljön*
