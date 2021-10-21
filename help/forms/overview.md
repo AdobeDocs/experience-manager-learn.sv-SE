@@ -1,19 +1,18 @@
 ---
 title: AEM Forms Tutorials och videor
-seo-title: AEM Forms Tutorials och videor
+seo-title: AEM Forms Tutorials and Videos
 description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
-seo-description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
-sub-product: formulär
+seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
+sub-product: forms
 topic: Development
 role: Developer
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 2%
+source-wordcount: '500'
+ht-degree: 1%
 
 ---
-
 
 # Översikt {#overview}
 
@@ -60,7 +59,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
     </a>
     </div>
     <p>
-    <em>Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket.  </em>
+    <em>Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket. </em>
     <p>
   </td>
   <td>
@@ -79,6 +78,106 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 </tr>
 </table>
 
+>[!TIP]
+>
+>Den här exempelsamlingen som demonstrerar olika funktioner i AEM Forms. .
+
+
+## Exempel på adaptiva formulär
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt= "Hämta i AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google Captcha i adaptiv form</strong>
+    </a>
+    </div>
+    <p>
+    <em> Skilja mellan manuell och automatisk åtkomst till blanketter</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="Förhandsgranska formulärdata" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>Granska formulärdata</strong>
+    </a>
+    </div>
+    <p>
+    <em>Förhandsgranska formulärdata innan du skickar formuläret.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" Textbunden bild" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>Visa textbunden bild</strong>
+      </a>
+    </div>
+    <p>
+    <em>Visa bilden som lagts till i formuläret.</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Exempel på anpassade formulär och signaturer
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="Hyresavtal" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>Exempel på hyresavtalsformulär</strong>
+    </a>
+    </div>
+    <p>
+    <em>Hyresavtal mellan hyresgäst och hyresvärd som fylls i och undertecknas med AEM Forms och Adobe Sign</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA-avtal" src="./assets/nda.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>Generera sekretessavtal</strong>
+    </a>
+    </div>
+    <p>
+    <em>Skapa ett sekretessavtal dynamiskt och skicka för signering med Adobe Sign</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="Signera dokumentpaket" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>Signera dokumentpaket</strong>
+      </a>
+    </div>
+    <p>
+    <em>Signera smidigt flera dokument med Forms och Adobe Sign</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+
+
+
 ## Ytterligare resurser
 
 * [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
@@ -86,7 +185,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 * [AEM Sites Developing Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites Administering Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites driftsättningsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [AEM som Cloud Service Tutorials](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
 * [AEM Assets Tutorials](/help/assets/overview.md)
 * [AEM Forms Tutorials](/help/forms/overview.md)
 * [AEM Foundation Tutorials](/help/foundation/overview.md)

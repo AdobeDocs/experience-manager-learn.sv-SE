@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -16,12 +16,11 @@ ht-degree: 0%
 ---
 
 
-# Skicka AEM till molnhanteraren Git rep
+# Skicka AEM till molnhanterarens Git-rapport
 
 I föregående steg synkroniserade vi vårt AEM med det adaptiva Forms och de teman som skapades i AEM.
-Vi måste nu lägga till dessa ändringar i vår lokala Git-databas och sedan överföra den lokala Git-databasen till molnhanterarens Git-databas
-
-öppna kommandotolken och navigera till c:\cloudmanager\aem-banking-app Execute the following commands
+Vi måste nu lägga till dessa ändringar i vår lokala Git-databas och sedan överföra den lokala Git-databasen till molnhanterarens Git-databas.
+Öppna kommandotolken och gå till c:\cloudmanager\aem-banking-app Execute the following commands
 
 ```
 git add .**

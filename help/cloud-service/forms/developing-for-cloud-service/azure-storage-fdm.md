@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,11 @@ Inkludera lämplig post i ui.content-projektets filter.xml
 <filter root="/content/dam/formsanddocuments-fdm/registrations" mode="replace"/>
 ```
 
-När du skapar och distribuerar ditt projekt blir formulärdatamodellen baserad på molntjänstkonfigurationen tillgänglig i din molninstans
 
->!![NOTE]
-När du skickar den här molntjänstkonfigurationen till din molninstans måste du uppdatera Azure-nyckeln manuellt med det AEM användargränssnittet. Alla krypterade värden måste uppdateras i molninstanserna med användargränssnittet.
+>[!NOTE]
+
+>När du skapar och distribuerar ditt projekt blir formulärdatamodellen baserad på molntjänstkonfigurationen tillgänglig i din molninstans
+
 
 
 
