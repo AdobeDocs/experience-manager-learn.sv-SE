@@ -9,9 +9,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 9b1e38c8d4a0301c124c6f1607a9e4362b0e9cd1
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 0%
 # Reagera app
 
 Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Ett React-program som demonstrerar hur du frågar efter innehåll med GraphQL-API:erna i AEM. Den AEM Headless-klienten för JavaScript används för att köra GraphQL-frågor som stöder programmet.
+
+Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 ![Reagera på program](./assets/react-screenshot.png)
 
