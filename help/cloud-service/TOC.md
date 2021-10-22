@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '599'
 ht-degree: 13%
 
 ---
@@ -130,8 +130,9 @@ ht-degree: 13%
       + [Konfigurera Git](./forms/developing-for-cloud-service/setup-git.md)
       + [Synkronisera IntelliJ med AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)

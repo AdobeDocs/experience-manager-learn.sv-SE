@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8848
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -61,7 +61,7 @@ git config --global credential.username "gbedekar-adobe-com"
 spara lösenordet i konfigurationsfilen
 
 ```java
-git config --global user.password "bqwxfvxq2akawtqx3oztacb5tkx5a7"
+git config --global user.password "bqwxfvxq2akawtqx3oztacb5wax5a7"
 ```
 
 (Lösenordet är ditt lösenord för molnhanterarens Git-databas)
