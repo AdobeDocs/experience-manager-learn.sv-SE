@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 0%
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [Några användbara tips för användargränssnittet](adaptive-forms/forms-ui-tips.md)
    + [Bädda in anpassat formulär på en webbsida](adaptive-forms/embed-af-web-page.md)
    + [Skapa en array med strängar](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [Använda Ange värde i XML i OSGI-arbetsflöde](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -312,7 +313,6 @@ ht-degree: 0%
    + [Allmänt: Steg-to-reset-default-password-for-users-in-AEM-Forms-JEE](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-jee.md)
    + [Allmänt: Steg-to-reset-default-password-for-users-in-AEM-Forms-OSGI](troubleshooting/steps-to-reset-default-password-for-users-in-aem-forms-osgi.md)
    + [Allmänt: Steg för att konfigurera gemfire-lokaliserare i ett kluster och utföra relaterad konfiguration](troubleshooting/steps-to-set-up-gemfire-locators-in-a-cluster-and-perform-related-configuration.md)
-
 
 
 
