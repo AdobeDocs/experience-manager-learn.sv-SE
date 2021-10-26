@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 0%
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
-   + [Några användbara tips för användargränssnittet](adaptive-forms/forms-ui-tips.md)
    + [Bädda in anpassat formulär på en webbsida](adaptive-forms/embed-af-web-page.md)
    + [Skapa en array med strängar](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [Använda Ange värde i XML i OSGI-arbetsflöde](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
@@ -96,6 +95,9 @@ ht-degree: 0%
    + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
    + [Hämta begäranparameter](prefill-fdm-db/get-request-parameter.md)
    + [Skapa anpassat formulär](prefill-fdm-db/create-adaptive-form.md)
++ Tips och tricks för användargränssnittet{#ui-tips-and-tricks}
+   + [Växla text i lösenordsfält](ui-tips-tricks/toggle-password.md)
+   + [Blanksteg (verktygsfältsknappar)](ui-tips-tricks/toolbar-buttons.md)
 + Anpassa inkorg{#inbox-customization}
    + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
