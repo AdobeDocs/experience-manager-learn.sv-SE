@@ -1,19 +1,19 @@
 ---
-title: Självstudiekurser om Adobe Experience Manager as Cloud Service
-description: En samling självstudiekurser för Adobe Experience Manager (AEM) som en Cloud Service
-sub-product: sajter, cloud manager, grund, resurser
+title: Adobe Experience Manager som Cloud Service Videos och Tutorials
+description: En samling självstudiekurser för Adobe Experience Manager (AEM) as a Cloud Service
+sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 8%
+source-wordcount: '276'
+ht-degree: 5%
 
 ---
 
+# AEM som Cloud Service Videos och Tutorials {#overview}
 
-# Översikt {#overview}
-
-Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och funktioner.
+Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -21,7 +21,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 
 * **[Tokenbaserad autentisering (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM som en Cloud Service via HTTP*
+   *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM as a Cloud Service via HTTP*
 
 * **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
@@ -44,7 +44,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 <table>
    <td>
       <a href="./accessing/overview.md">
-      <img alt="Konfigurera åtkomst till AEM som en Cloud Service" src="./assets/overview/staff-pick__accessing.png"/>
+      <img alt="Konfigurera åtkomst till AEM as a Cloud Service" src="./assets/overview/staff-pick__accessing.png"/>
       </a>
       <div>
          <a href="./accessing/overview.md">
@@ -61,11 +61,11 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>Konfigurera självstudiekurs för lokal utvecklingsmiljö</strong>
+         <strong>Självstudiekurs om installation av lokal utvecklingsmiljö</strong>
          </a>
       </div>
       <p>
-         <em>Gör din lokala dev-dator redo för AEM som en Cloud Service-utveckling!</em>
+         <em>Gör din lokala dev-dator redo för AEM as a Cloud Service utveckling!</em>
       <p>
    </td>   
    <td>
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
          </a>
       </div>
       <p>
-         <em>Utforska verktyg som används för att felsöka programmet på AEM som en Cloud Service-SDK:s lokala snabbstart.</em>
+         <em>Utforska verktyg som används för att felsöka programmet på AEM as a Cloud Service SDK:s lokala snabbstart.</em>
       <p>
    </td>
 </table>
@@ -86,4 +86,4 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM som Cloud Servic
 ## Ytterligare resurser
 
 * [Experience League - Utforska Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager som Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
+* [Adobe Experience Manager as a Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)

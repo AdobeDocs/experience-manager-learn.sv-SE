@@ -1,19 +1,17 @@
 ---
-title: AEM Sites Tutorials
-seo-title: AEM Sites Tutorials
-description: 'En samling videor och självstudiekurser för Adobe Experience Manager Sites. '
-seo-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites
-sub-product: webbplatser, innehållstjänster
-topic: Innehållshantering
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+title: AEM Sites Videos och Tutorials
+description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
+sub-product: sites, content-services
+topic: Content Management
+exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
 
-
-# Översikt {#overview}
+# AEM Sites Videos och Tutorials {#overview}
 
 Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehantering. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Sites.
 
@@ -79,7 +77,7 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
       </a>
     </div>
     <p>
-    <em>En guide som hjälper utvecklare att integrera ett enda sidprogram (SPA) med AEM.</em>
+    <em>En guide som hjälper utvecklare att integrera ett enda program (SPA) med AEM.</em>
     <p>
   </td>
 </tr>
@@ -88,11 +86,11 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 ## Ytterligare resurser
 
 * [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites Authoring Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites Developing Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [AEM Sites Administering Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [AEM Sites driftsättningsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [AEM som Cloud Service Tutorials](/help/cloud-service/overview.md)
+* [AEM Sites Authoring Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites Administering Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites driftsättningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
 * [AEM Assets Tutorials](/help/assets/overview.md)
 * [AEM Forms Tutorials](/help/forms/overview.md)
 * [AEM Foundation Tutorials](/help/foundation/overview.md)

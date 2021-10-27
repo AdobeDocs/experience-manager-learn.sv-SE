@@ -1,19 +1,19 @@
 ---
-title: AEM Headless-självstudiekurser
+title: AEM Headless Tutorials
 description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
-# AEM Headless-självstudiekurser
+# AEM Headless Tutorials
 
 Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-slutpunkter och leverera dess innehåll som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
@@ -92,11 +92,11 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android-exempel</strong>
+    <strong>Android™-exempel</strong>
     </a>
     </div>
     <p>
-    <em>Ett Android-program med AEM GraphQL API:er.</em>
+    <em>Ett Android™-program med AEM GraphQL API:er.</em>
     </p>
   </td>
   <td>
@@ -185,7 +185,7 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
     </div>
     <p>
-    <em>Använd Content Services och REST för att driva ett mobilt Android-program.</em>
+    <em>Använd Content Services och REST för att driva en mobil Android™-applikation.</em>
     </p>
   </td>
   <td>
