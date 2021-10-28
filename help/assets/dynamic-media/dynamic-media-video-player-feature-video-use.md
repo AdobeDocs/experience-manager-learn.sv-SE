@@ -8,12 +8,13 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: d8738ef33940efc856e6fc00f6a57abb641598e5
+source-git-commit: bd1fe0c1aa8883bcb9f92ec26c6fb2c9cac77c0a
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
 
 ---
+
 
 # Använda videospelaren i AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}
 
