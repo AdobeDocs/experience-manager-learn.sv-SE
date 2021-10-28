@@ -1,23 +1,23 @@
 ---
 title: Använda videospelaren i AEM Dynamic Media
-description: AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apples leveransprotokoll för HTTP-direktuppspelning) kan innehållet nu direktuppspelas utan att förlita sig på flash.
-sub-product: dynamiska medier
-feature: Videoprofiler
+description: AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan innehåll nu strömmas utan att förlita sig på flash.
+sub-product: dynamic-media
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
+source-git-commit: 68c49f526146e2f2ba626dc2126fb96d4ae09854
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Använda videospelaren i AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apples leveransprotokoll för HTTP-direktuppspelning) kan innehållet nu direktuppspelas utan att förlita sig på flash.
+AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan innehåll nu strömmas utan att förlita sig på flash.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
@@ -26,6 +26,9 @@ AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv v
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
 Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds används progressiv videoleverans
+
+>!![NOTE]
+Dynamic Media Hybrid stöder INTE Internet Explorer 11 efter maj 2022.
 
 <table> 
  <thead> 
