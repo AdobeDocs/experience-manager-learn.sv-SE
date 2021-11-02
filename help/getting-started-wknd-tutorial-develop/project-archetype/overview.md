@@ -1,30 +1,31 @@
 ---
 title: Komma igång med AEM Sites - Project Archetype
 description: Komma igång med AEM Sites - Project Archetype. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-sub-product: platser
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: Huvudkomponenter, sidredigeraren, redigerbara mallar, AEM projekttyp
-topic: Innehållshantering, utveckling
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
+recommendations: disable
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med AEM Sites - Project Archetype {#project-archetype}
 
 Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND.
 
-Den här självstudien börjar med att använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att generera ett nytt projekt.
+Den här självstudiekursen börjar med att använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att skapa ett nytt projekt.
 
-Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5.5.0+** och **AEM 6.4.8.1+**. Webbplatsen implementeras med:
+Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.5.0+** och **AEM 6.4.8.1+**. Webbplatsen implementeras med:
 
 * [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -37,26 +38,26 @@ Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service*
 
 ## Lokal utvecklingsmiljö {#local-dev-environment}
 
-En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM som en Cloud Service-SDK som körs i en Mac OS-miljö med [Visual Studio Code](https://code.visualstudio.com/) som IDE. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
+En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM as a Cloud Service SDK som körs i en Mac OS-miljö med [Visual Studio Code](https://code.visualstudio.com/) som IDE. Kommandon och kod ska vara oberoende av det lokala operativsystemet, om inget annat anges.
 
 ### Nödvändig programvara
 
 Följande bör installeras lokalt:
 
-* Lokal AEM **Författare** instans (Cloud Service SDK, 6.5.5+ eller 6.4.8.1+)
+* Lokal AEM **Upphovsman** instans (Cloud Service SDK, 6.5.5+ eller 6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/)  (3.3.9 eller senare)
-* [Node.js](https://nodejs.org/en/) (LTS - långsiktigt stöd)
+* [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
+* [Node.js](https://nodejs.org/en/) (LTS - långsiktig support)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio ](https://code.visualstudio.com/) Codeor equivalent IDE
-   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Verktyg som används genomgående i självstudiekursen
+* [Visual Studio Code](https://code.visualstudio.com/) eller motsvarande IDE
+   * [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) - Verktyg som används genomgående i självstudiekursen
 
 >[!NOTE]
 >
-> **Är du inte AEM som Cloud Service?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM som Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+> **Är du AEM as a Cloud Service?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **Har du inte använt AEM 6.5 tidigare?** Ta en titt på  [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+> **Har du inte använt AEM 6.5 tidigare?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Github {#github}
 
@@ -68,4 +69,4 @@ Dessutom har varje del av självstudiekursen en egen gren i GitHub. Användaren 
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lär dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projektarkitypen.
+Vad väntar du på?! Starta självstudiekursen genom att gå till [Projektinställningar](project-setup.md) och lär dig hur du genererar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projektarkitekturen.

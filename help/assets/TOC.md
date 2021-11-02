@@ -2,9 +2,9 @@
 user-guide-title: AEM Assets Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Assets.
 breadcrumb-title: AEM Assets Tutorials
-feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 6%
@@ -41,13 +41,13 @@ ht-degree: 6%
    + [Versioner](./collaboration/versions.md)
    + [Granska uppgift](./collaboration/review-task.md)
 
-+ Sök och identifiera{#search-and-discovery}
++ Sök och hitta{#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
    + [Samlingar](./search-and-discovery/collections.md)
    + [Sökökning](./search-and-discovery/search-boost.md)
 
 + Avancerade funktioner{#advanced}
-   + [Anteckningar, PDF-utdata](./advanced/customizing-annotations-pdf-output.md)
+   + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
    + [Asset Insights ](./advanced/asset-insights-launch-tutorial.md)
    + [Resursrapporter](./advanced/asset-reports.md)
    + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
@@ -129,7 +129,7 @@ ht-degree: 6%
       + [CDN-cachen är ogiltig](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Använda Dynamic Media Core Components](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [Hämta resurser i Dynamic Media Classic-appen](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Hämta resurser i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Översättning {#translation}
