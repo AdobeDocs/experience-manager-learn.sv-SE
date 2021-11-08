@@ -8,9 +8,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: bd1fe0c1aa8883bcb9f92ec26c6fb2c9cac77c0a
+source-git-commit: c921594d5c352f98e0d830d7a85e026844fd5da6
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
 
 >[!NOTE]
 >
-> Dynamic Media Hybrid stöder INTE Internet Explorer 11 efter maj 2022.
+> Dynamic Media Hybrid stöder INTE direktuppspelad video i Internet Explorer 11 efter maj 2022.
 
 <table> 
  <thead> 
