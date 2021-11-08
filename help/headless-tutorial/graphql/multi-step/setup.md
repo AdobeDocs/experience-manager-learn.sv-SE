@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 846400cd3ac4eb1b04ece055dfcbbd677f11e88e
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -64,9 +64,9 @@ I den här självstudiekursen används [AEM as a Cloud Service SDK](https://expe
    $ java -jar aem-author-p4502.jar
    ```
 
-1. Ange ett administratörslösenord som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
+1. Ange ett administratörslösenord som `admin`. Alla administratörslösenord godkänns, men du bör använda dem `admin` för lokal utveckling för att minska behovet av omkonfigurering.
 1. Efter några minuter kommer AEM att slutföra installationen och ett nytt webbläsarfönster öppnas på [http://localhost:4502](http://localhost:4502).
-1. Logga in med användarnamnet `admin` och lösenord `admin`.
+1. Logga in med användarnamnet `admin` och lösenordet som valdes under AEM starten (vanligtvis `admin`).
 
 ## Installera exempelinnehåll och GraphQL-slutpunkter {#wknd-site-content-endpoints}
 
