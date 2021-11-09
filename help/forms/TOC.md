@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 0%
 + Tips och tricks för användargränssnittet{#ui-tips-and-tricks}
    + [Växla text i lösenordsfält](ui-tips-tricks/toggle-password.md)
    + [Blanksteg (verktygsfältsknappar)](ui-tips-tricks/toolbar-buttons.md)
+   + [Navigera mellan flikar med kapslade paneler](ui-tips-tricks/nested-panels.md)
 + Anpassa inkorg{#inbox-customization}
    + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)

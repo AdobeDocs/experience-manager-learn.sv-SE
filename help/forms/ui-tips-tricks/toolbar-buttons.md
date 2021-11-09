@@ -7,8 +7,8 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 9270
-source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
+kt: 9291
+source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
