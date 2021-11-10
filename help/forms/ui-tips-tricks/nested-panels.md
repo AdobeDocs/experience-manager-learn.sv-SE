@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -27,6 +27,7 @@ När formuläret har lämnat navigeringsflikar och en av flikarna har flera pane
 ## Skapa anpassat formulär
 
 Skapa ett anpassat formulär med följande struktur. Rotpanelen har underordnade paneler som visas som flikar till vänster. Några av dessa &quot;**tabbar**&quot; har ytterligare underordnade paneler. Fliken Familj har till exempel två underordnade paneler som heter Mus och Barn.
+
 Ett verktygsfält läggs också till under FormContainer med knapparna Föregående och Nästa
 
 ![verktygsfältsavstånd](assets/multiple-panels.png)
@@ -61,4 +62,5 @@ Använd formatredigeraren för att dölja titeln på flikarnas underordnade pane
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
 >[!NOTE]
-> Funktionen som beskrivs i den här artikeln fungerar inte på den sista fliken. Om fliken Adress till exempel har underordnade paneler fungerar inte den här funktionen.
+>
+>Funktionen som beskrivs i den här artikeln fungerar inte på den sista fliken. Om fliken Adress till exempel har underordnade paneler fungerar inte den här funktionen.
