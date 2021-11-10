@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
+source-git-commit: 3bbd3e51ced1d990532a2cb3e309bf944bab8434
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -61,6 +61,10 @@ Använd formatredigeraren för att dölja titeln på flikarnas underordnade pane
 
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
+Funktionen som beskrivs i den här artikeln fungerar inte på den sista fliken. Om fliken Adress till exempel har underordnade paneler fungerar inte den här funktionen.
+
+<!--
 >[!NOTE]
 >
->Funktionen som beskrivs i den här artikeln fungerar inte på den sista fliken. Om fliken Adress till exempel har underordnade paneler fungerar inte den här funktionen.
+>The capability described in this article does not work in the last tab. For example if the Address tab had child panels this functionality would not work.
+-->
