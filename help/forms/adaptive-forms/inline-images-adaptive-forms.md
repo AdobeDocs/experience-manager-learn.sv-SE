@@ -1,25 +1,23 @@
 ---
-title: Visa textbundna bilder i Adaptiv Forms
+title: Visa textbundna bilder i Adaptive Forms
 description: Visa överförda bilder i adaptiv Forms
-feature: Adaptiv Forms
+feature: Adaptive Forms
 topics: development
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 4a69513d-992c-435a-a520-feb9085820e7
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
 # Textbundna bilder i Adaptive Forms
 
 Ett vanligt användningssätt är att visa den överförda bilden som en textbunden bild i adaptiv form. Som standard visas den överförda bilden som en länk och den här upplevelsen kan förbättras genom att bilden visas i adaptiv form. I den här artikeln får du hjälp med att visa textbundna bilder.
-
-[Live-exempel på den här funktionen](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1)
 
 ## Lägg till platshållarbild
 
@@ -66,7 +64,7 @@ function consumeImage (file) {
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på din AEM med AEM pakethanterare.
-* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) till din AEM med AEM pakethanterare.
-* Peka webbläsaren på [Lägg till infogad bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* Hämta och installera [klientbibliotek](assets/inline-image-client-library.zip) på AEM med AEM pakethanterare.
+* Hämta och installera [exempelformulär](assets/inline-image-af.zip) på AEM med AEM pakethanterare.
+* Peka webbläsaren till [Lägg till textbunden bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicka på knappen &quot;Bifoga ditt foto&quot; för att lägga till en bild

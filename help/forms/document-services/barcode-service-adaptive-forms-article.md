@@ -3,16 +3,16 @@ title: Streckkodstjänst med adaptiv Forms
 description: Använda streckkodstjänsten för att avkoda streckkod och fylla i formulärfält från extraherade data.
 feature: Barcoded Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
-
 
 # Streckkodstjänst med adaptiv Forms{#barcode-service-with-adaptive-forms}
 
@@ -25,7 +25,7 @@ I den här artikeln visas hur streckkodstjänsten används för att fylla i adap
 
 Följande kod avkodar streckkoden och fyller i ett JSON-objekt med de avkodade värdena. Servern returnerar sedan JSON-objektet i sitt svar på det anropande programmet.
 
-Du kan se den här funktionen live, besök [exempelportalen](https://forms.enablementadobe.com/content/samples/samples.html?query=0) och sök efter streckkodstjänstens demo
+
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -140,11 +140,10 @@ Rad 23 - Anropa metoden extractBarCode för DocumentServices så att JSON-objekt
 
 Så här kör du det här på datorn:
 
-1. [Ladda ned BarcodeService.](assets/barcodeservice.zip) zipand-import till AEM med pakethanteraren
+1. [Ladda ned BarcodeService.zip](assets/barcodeservice.zip) och importera till AEM med hjälp av pakethanteraren
 1. [Hämta och installera paketet med anpassade Document Services](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Ladda ned PDF-exempelformuläret](assets/barcode.pdf)
-1. Peka webbläsaren på [exempeladaptiv form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. Ladda upp PDF-exempelfilen
+1. [Ladda ned exempelformuläret PDF](assets/barcode.pdf)
+1. Peka webbläsaren mot [exempeladaptiv form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Överför exempelfilen PDF
 1. Du bör se formulären som innehåller data
-

@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ ht-degree: 0%
 # Navigeringsflikar med flera paneler
 
 När formuläret har lämnat navigeringsflikar och en av flikarna har flera paneler, kanske du vill dölja titeln för de underordnade panelerna och fortfarande kunna navigera mellan flikarna och de underordnade panelerna på dessa flikar
-
-[Den här funktionen finns i det här formuläret](https://forms.enablementadobe.com/content/forms/af/testnav1.html)
-
-
-
 
 ## Skapa anpassat formulär
 

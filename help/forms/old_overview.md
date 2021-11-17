@@ -7,8 +7,8 @@ role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 1%
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -76,6 +76,102 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 </tr>
 </table>
 
+>[!TIP]
+>
+>Den här exempelsamlingen som demonstrerar olika funktioner i AEM Forms.
+
+
+## Exempel på adaptiva formulär
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <img alt= "Hämta i AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google Captcha i adaptiv form</strong>
+    </a>
+    </div>
+    <p>
+    <em> Skilja mellan manuell och automatisk åtkomst till blanketter</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="Förhandsgranska formulärdata" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>Granska formulärdata</strong>
+    </a>
+    </div>
+    <p>
+    <em>Förhandsgranska formulärdata innan du skickar formuläret.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" Textbunden bild" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>Visa textbunden bild</strong>
+      </a>
+    </div>
+    <p>
+    <em>Visa bilden som lagts till i formuläret.</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Exempel på anpassade formulär och signaturer
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="Hyresavtal" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>Exempel på hyresavtalsformulär</strong>
+    </a>
+    </div>
+    <p>
+    <em>Hyresavtal mellan hyresgäst och hyresvärd som fylls i och undertecknas med AEM Forms och Adobe Sign</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA-avtal" src="./assets/nda1.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>Generera sekretessavtal</strong>
+    </a>
+    </div>
+    <p>
+    <em>Skapa ett sekretessavtal dynamiskt och skicka för signering med Adobe Sign</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="Signera dokumentpaket" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>Signera dokumentpaket</strong>
+      </a>
+    </div>
+    <p>
+    <em>Signera smidigt flera dokument med Forms och Adobe Sign</em>
+    <p>
+  </td>
+</tr>
+</table>
 
 
 

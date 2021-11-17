@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9270
-source-git-commit: 96b78ff5056bd9c2be39fb2cf21b4f92863af089
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,7 @@ ht-degree: 1%
 Ett vanligt användningssätt är att låta formuläranvändarna växla till synlighet för den text som anges i lösenordsfältet.
 Jag har använt ögonikonen från [Font Awesome Library](https://fontawesome.com/). Den CSS som krävs och eye.svg ingår i klientbiblioteket som skapats för den här demonstrationen.
 
-## Live-exempel
 
-[Den här funktionen är tillgänglig för att testa här](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 ## Exempelkod
 

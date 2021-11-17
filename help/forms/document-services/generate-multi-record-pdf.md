@@ -1,18 +1,18 @@
 ---
 title: Generera flera PDF-filer från en datafil
 description: OutputService innehåller ett antal metoder för att skapa dokument med hjälp av en formulärdesign och data som ska sammanfogas med formulärdesignen. Lär dig att generera flera PDF-filer från en stor XML som innehåller flera enskilda poster.
-feature: Utdatatjänst
+feature: Output Service
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
-
 
 # Generera en uppsättning PDF-dokument från en XML-datafil
 
@@ -21,17 +21,14 @@ Nedan visas en skärmbild av XML-filen som innehåller flera poster.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch-metoden](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över PDF-dokument (en per post)
-Signaturen för metoden generatePDFOutputBatch har följande parametrar
+Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch, metod](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över pdf-dokument (en per post) Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 * mallar - Karta som innehåller mallen, identifierad med en nyckel
 * data - Karta som innehåller XML-datadokument, identifierad med nyckel
 * pdfOutputOptions - alternativ för att konfigurera PDF-generering
 * batchOptions - options to configure batch
 
->[!NOTE]
->
->Det här användningsexemplet finns tillgängligt som live-exempel på den här [webbplatsen](https://forms.enablementadobe.com/content/samples/samples.html?query=0).
+
 
 ## Använd ärendeinformation{#use-case-details}
 
@@ -127,7 +124,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
-* [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip). ZIP-filen innehåller mallen och XML-datafilen.
+* [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip).Den här zip-filen innehåller mallen och XML-datafilen.
 * [Peka din webbläsare på Felix webbkonsol](http://localhost:4502/system/console/bundles)
 * [Distribuera DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
 * [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filer med hjälp av API:t för OutputService
@@ -139,4 +136,3 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
 >[!NOTE]
 >Det finns flera sätt att aktivera den här funktionen. I det här exemplet har vi använt ett webbgränssnitt för att släppa mallen och datafilen för att demonstrera funktionen.
-

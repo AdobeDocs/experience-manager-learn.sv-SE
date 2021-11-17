@@ -1,20 +1,20 @@
 ---
 title: Förifyll formulär med formulärdatamodell
-description: 'Fyll i anpassat formulär i förväg med hjälp av formulärdatamodellens attribut för begäran '
-feature: Adaptiv Forms
+description: Fyll i anpassat formulär i förväg med hjälp av formulärdatamodellens attribut för begäran
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4419
 thumbnail: 36387.jpg
-topic: Utveckling
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 1%
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
-
 
 # Förifyll formulär med formulärdatamodell
 
@@ -23,12 +23,10 @@ När kursen är slut har du lärt dig följande.
 
 * Skapa RDBMS-baserad formulärdatamodell
 * Skapa association mellan två enheter
-* Fyll i tabell med data som returnerats av _get_-tjänsten för formulärdatamodellen
+* Fyll i tabell med data som returnerats av _get_ tjänst för formulärdatamodell
 * Använd formulärdatamodellens attribut för begäran
 
-
-[Klicka här för att se en live-demonstration av ](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
-funktionenI följande video finns en översikt över kursen
+I följande video visas en översikt över kursen
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## Förutsättningar
@@ -36,4 +34,3 @@ funktionenI följande video finns en översikt över kursen
 * Arbetsinstans för AEM Forms
 * Välbekant med MySQL-databas och MySQL-workbench
 * Viss erfarenhet av att skapa Adaptiv Forms
-

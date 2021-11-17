@@ -6,20 +6,17 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
-
-
 # Lägga till objekt dynamiskt till urvalskomponenten för grupp
 
 I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i en adaptiv Forms-valgruppkomponent som CheckBox, Radio Button och Image List.
-
-[Den här funktionen är tillgänglig live på Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1). Sök efter objektkort för dynamiska kryssrutor och klicka på Testa.
 
 
 Du kan lägga till objekt med den visuella redigeraren och kodredigeraren beroende på hur du använder dem.
