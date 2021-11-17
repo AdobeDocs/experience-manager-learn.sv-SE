@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
 [Starta självstudiekursen med AEM Project Archetype](./project-archetype/overview.md)
 
-**AEM webbplatsmallar** - En lågkodsmetod för att generera en AEM genom att använda en fördefinierad platsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare. För närvarande endast tillgängligt för AEM as a Cloud Service.
+**AEM webbplatsmallar** - Kallas även Snabbskapande av webbplats, en lågkodsmetod för att generera en AEM genom att använda en fördefinierad platsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare. Endast tillgängligt för AEM as a Cloud Service.
 
 [Starta självstudiekursen med hjälp av en webbplatsmall](./site-template/create-site.md)
 
