@@ -1,44 +1,42 @@
 ---
-title: Arbetsflöde för teman
-seo-title: Komma igång med AEM Sites - Arbetsflöde för teman
-description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med GitHub-åtgärder.
-sub-product: platser
+title: Arbetsflöde för teman | AEM Skapa snabbt webbplatser
+description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-feature: Kärnkomponenter
-topic: Innehållshantering, utveckling
+feature: Core Components
+topic: Content Management, Development
 role: Developer
 level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
-translation-type: tm+mt
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
-# Temaarbetsflöde {#theming}
+# Arbetsflöde för teman {#theming}
 
 >[!CAUTION]
 >
-> De snabba funktionerna som visas här kommer att släppas under andra halvåret 2021. Den relaterade dokumentationen är tillgänglig för förhandsgranskning.
+> Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
-I det här kapitlet ska vi uppdatera temakällorna för en Adobe Experience Manager-webbplats så att de använder varumärkesspecifika format. Vi får lära oss hur du använder en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med GitHub-åtgärder.
+I det här kapitlet ska vi uppdatera temakällorna för en Adobe Experience Manager-webbplats så att de använder varumärkesspecifika format. Vi kommer att lära oss att använda en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
 
 Slutligen kommer vår webbplats att uppdateras och innehålla format som matchar WKND-varumärket.
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att stegen som beskrivs i kapitlet [Sidmallar](./page-templates.md) har slutförts.
+Det här är en självstudiekurs i flera delar och det antas att stegen som beskrivs i [Sidmallar](./page-templates.md) kapitlet har slutförts.
 
 ## Mål
 
 1. Lär dig hur temakällorna för en webbplats kan hämtas och ändras.
 1. Lär dig hur koden mot den publicerade webbplatsen ser ut i realtid.
-1. Förstå hela arbetsflödet med att leverera kompilerade CSS- och JavaScript-uppdateringar som en del av ett tema med GitHub-åtgärder.
+1. Förstå hela arbetsflödet med att leverera kompilerade CSS- och JavaScript-uppdateringar som en del av ett tema med Adobe Cloud Managers frontpipeline.
 
 ## Uppdatera ett tema {#theme-update}
 
@@ -55,31 +53,36 @@ Stegen på hög nivå för videon:
 
 ### Lösningsfiler
 
-Hämta de färdiga formaten för [WKND-temat](assets/theming/WKND-THEME-src.zip)
+Ladda ned de färdiga formaten för [Exempeltema för WKND](assets/theming/WKND-THEME-src-1.1.zip)
 
-## Distribuera ett tema {#deploy-theme}
+## Distribuera ett tema med hjälp av en frontpipeline {#deploy-theme}
 
-Distribuera uppdateringar av ett tema till en AEM miljö med GitHub-åtgärder.
+Distribuera uppdateringar av ett tema till en AEM miljö med Cloud Managers frontpipeline.
 
->[!VIDEO](https://video.tv.adobe.com/v/332919/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338722/?quality=12&learn=on)
 
 Stegen på hög nivå för videon:
 
-1. Lägg till ditt temakällprojekt i [GitHub som en ny databas](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line).
-1. Skapa [en personlig åtkomsttoken i GitHub](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) och spara på en säker plats.
-1. Konfigurera GitHub-inställningarna i din AEM så att de pekar på din GitHub-databas och inkluderar din personliga åtkomsttoken.
-1. Skapa följande [krypterade hemligheter](https://docs.github.com/en/actions/reference/encrypted-secrets) i din GitHub-databas:
-   * **AEM_SITE** - roten för AEM (dvs  `wknd`)
-   * **AEM_URL** - url för din AEM-författarmiljö
-   * **GIT_TOKEN**  - Personlig åtkomsttoken från steg 2.
-1. Kör GitHub-åtgärden: **Skapa och distribuera Github-artefakter**. Detta kommer att få den efterföljande effekten att åtgärden körs: **Uppdatera temakonfigurationen på AEM med artefakt-ID**, som distribuerar temakällorna till den AEM miljön enligt `AEM_URL` och `AEM_SITE`.
+1. Skapa en ny Git [databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)
+1. Lägg till ditt temakällprojekt i Cloud Managers Git-databas:
+
+   ```shell
+   $ cd <PATH_TO_THEME_SOURCES_FOLDER>
+   $ git init -b main
+   $ git add .
+   $ git commit -m "initial commit"
+   $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
+   ```
+
+1. Konfigurera en [Front End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) i Cloud Manager för att distribuera slutkoden.
+1. Kör frontpipeline för att distribuera uppdateringar till AEM.
 
 ### Exempelrapporter
 
 Det finns några exempel på GitHub-repor som kan användas som referens:
 
-* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e) - Används som exempel för verkliga projekt.
-* [https://github.com/godanny86/wknd-theme](https://github.com/godanny86/wknd-theme)  - Används som exempel för dem som följer självstudiekursen.
+* [aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)
+* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e) - Används som exempel för&quot;verkliga&quot; projekt.
 
 ## Grattis! {#congratulations}
 
@@ -87,4 +90,4 @@ Grattis, du har just skapat ett uppdaterat och distribuerat tema till AEM!
 
 ### Nästa steg {#next-steps}
 
-Ta en djupdykning AEM utvecklingen och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archetype](../project-archetype/overview.md).
+Gör en djupdykning AEM utvecklingen och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archetype](../project-archetype/overview.md).
