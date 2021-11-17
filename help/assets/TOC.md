@@ -4,10 +4,10 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Assets Tutorials
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 6%
+source-wordcount: '356'
+ht-degree: 5%
 
 ---
 
@@ -131,6 +131,11 @@ ht-degree: 6%
       + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Hämta resurser i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
++ Workfront Integration{#workfront}
+   + Förbättrad anslutning{#enhanced-connector}
+      + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
+      + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
 
 + Översättning {#translation}
    + [Översättning av källfil](translation/source-file-translation-feature-video-use.md)
