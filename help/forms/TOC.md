@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1628'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
-+ [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
++ [Setting up OKTA authentication with AEM Author](adaptive-forms/single-sign-on-with-okta.md)
 + Skapa ditt första adaptiva formulär {#creating-your-first-adaptive-form}
    + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
@@ -37,7 +37,7 @@ ht-degree: 0%
    + [Betalningstid för begärandearbetsflöde](handling-form-submissions/paid-time-off-request-workflow.md)
    + [Konfigurera adaptiv form för att aktivera AEM arbetsflöde - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Anpassa meddelande om tilldelning av uppgift](handling-form-submissions/customize-assign-task-notification.md)
-+ Användbara integreringar{#some-useful-integrations}
++ Useful Integrations{#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
    + [OCR-dataextrahering](some-useful-integrations/ocr-data-extraction.md)
 + Skapa OSGi-paket {#creating-your-first-osgi-bundle}
@@ -46,14 +46,14 @@ ht-degree: 0%
    + [Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
-   + [Installera 32-bitarspaket i Linux](adaptive-forms/installing-aem-form-on-linux.md)
+   + [Installing 32 bit packages on Linux](adaptive-forms/installing-aem-form-on-linux.md)
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
    + [Bädda in anpassat formulär på en webbsida](adaptive-forms/embed-af-web-page.md)
-   + [Skapa en array med strängar](adaptive-forms/converting-comma-seperated-string-to-array.md)
+   + [Creating array of strings](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [Använda Ange värde i XML i OSGI-arbetsflöde](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
-   + [Använda Ange värde i JSON i OSGI-arbetsflöde](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
+   + [Using Set Value in JSON in OSGI Workflow](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [Skicka e-postkomponent i AEM Forms Workflow](adaptive-forms/email-step-aem-workflow-video-use.md)
    + [Generera DocumentOfRecord med API](adaptive-forms/document-of-record-api-tutorial-use.md)
    + [Visa textbundna bilder](adaptive-forms/inline-images-adaptive-forms.md)
@@ -76,10 +76,10 @@ ht-degree: 0%
    + [Form Data Model Service i AEM 6.4 Workflow](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [Hantera felmeddelanden i tjänststeget för formulärdatamodellen](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [Form Data Model Service i AEM 6.5.1 Workflow](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
-   + [Formulärdatamodell utan datakälla](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
+   + [Form Data Model without Data Source](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
    + [Element för beräknad formulärdatamodell](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
    + [Konfigurera JDBC-datakälla i AEM Forms](adaptive-forms/data-integration-technical-video-setup.md)
-   + [JDBC-baserad formulärdatamodell](adaptive-forms/jdbc-data-model-technical-video-use.md)
+   + [JDBC Based Form Data Model](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [Skapa associationer mellan två entiteter i formulärdatamodellen](adaptive-forms/association-data-model-technical-video-use.md)
    + [Använda formulärdatamodellens anropstjänst i regelredigeraren](adaptive-forms/service-data-model-technical-video-use.md)
    + [Posta binära data till AEM DAM med formulärdatamodell](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
@@ -97,8 +97,9 @@ ht-degree: 0%
    + [Skapa anpassat formulär](prefill-fdm-db/create-adaptive-form.md)
 + Tips och tricks för användargränssnittet{#ui-tips-and-tricks}
    + [Växla text i lösenordsfält](ui-tips-tricks/toggle-password.md)
-   + [Blanksteg (verktygsfältsknappar)](ui-tips-tricks/toolbar-buttons.md)
+   + [Space toolbar buttons](ui-tips-tricks/toolbar-buttons.md)
    + [Navigera mellan flikar med kapslade paneler](ui-tips-tricks/nested-panels.md)
+   + [Lägg till ikoner på navigeringsflikar](ui-tips-tricks/active-complete.md)
 + Anpassa inkorg{#inbox-customization}
    + [Introduktion](inbox-customization/introduction.md)
    + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
@@ -156,7 +157,7 @@ ht-degree: 0%
    + [JSON-variabler](variables-aem-workflow/part2.md)
    + [Dokumentvariabler](variables-aem-workflow/part3.md)
    + [ArrayList-variabel](variables-aem-workflow/part4.md)
-   + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
+   + [Form Data Model Variable](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Introduktion](storing-retrieving-form-data/introduction.md)
@@ -199,10 +200,10 @@ ht-degree: 0%
    + [Använda Assembler Service i AEM Forms](document-services/using-assembler-service-in-aem-forms.md)
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Använda streckkodstjänsten i AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
-   + [Använda PDFG-tjänsten i AEM Forms](document-services/using-pdfg-in-aem-forms.md)
+   + [Using PDFG Service in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
-   + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Generate PDF on Mobile Form Submission](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
@@ -263,15 +264,15 @@ ht-degree: 0%
    + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part1](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
    + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part2](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
    + [Dokumenttjänster: Steg för att justera parametrar på JMX-konsolen](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
-   + [PDFG: Ändra tidsgränser för transaktioner i PDFG](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
+   + [PDFG: How to change the transaction timeouts in PDFG](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
    + [PDFG: Så här uppdaterar du CORBA-timeout i PDFG](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
    + [PDFG: Så här uppdaterar du tidsgränser i PDFG](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
    + [PDFG: Steg för att lägga till PDFG-användare i Windows Server 2016](troubleshooting/steps-to-add-pdfg-user-in-windows-server.md)
    + [PDFG: Steg för att kontrollera och installera 32-bitars bibliotek och deras beroenden](troubleshooting/steps-to-check-and-install-32-bit-libraries-and-their-dependencies.md)
    + [PDFG: Steg för att kontrollera mappbehörighet på Windows Server 2016](troubleshooting/steps-to-check-folder-permission-on-windows-server-2016.md)
    + [PDFG: Steg för att aktivera strängen vid unix](troubleshooting/steps-to-enable-strace-on-unix-setup.md)
-   + [PDFG: Steg för att installera nödvändiga 32-bitars omdistribuerbara Microsoft Visual C++](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
-   + [PDFG: Steg för att köra och tolka utdata från verktyget för systemberedskap](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
+   + [PDFG: Steps to install required 32bit Microsoft Visual C++ redistributables](troubleshooting/steps-to-install-required-32bit-microsoft-vc-redistributables.md)
+   + [PDFG: Steps to run and interpret output of System Readiness Tool](troubleshooting/steps-to-run-and-interpret-output-of-system-readiness-tool.md)
    + [PDFG: Steg för att felsöka Acrobat-specifika problem](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
    + [PDFG: Steg för att felsöka HTMLtoPDF-problem i fönster](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
    + [PDFG: Steg för att felsöka HtmltoPDF-specifika problem i unix (PhantomJS)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-phantomjs.md)
