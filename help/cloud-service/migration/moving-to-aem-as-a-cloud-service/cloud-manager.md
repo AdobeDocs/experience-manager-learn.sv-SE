@@ -1,6 +1,6 @@
 ---
-title: Använda Cloud Manager med AEM som Cloud Service
-description: Lär dig mer om Cloud Manager för AEM som en Cloud Service och dess skillnader med Cloud Manager för AEM om Adobe Manage Services (AMS).
+title: Använda Cloud Manager med AEM as a Cloud Service
+description: Lär dig mer om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM på Adobe Manage Services (AMS).
 version: Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
@@ -8,16 +8,54 @@ role: Architect, Developer
 level: Intermediate, Experienced
 kt: 8632
 thumbnail: 336961.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 3%
+source-wordcount: '137'
+ht-degree: 2%
 
 ---
 
-
 # Cloud Manager
 
-Lär dig mer om Cloud Manager för AEM som en Cloud Service och dess skillnader med Cloud Manager för AEM om Adobe Manage Services (AMS).
+Lär dig mer om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM på Adobe Manage Services (AMS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961/?quality=12&learn=on)
+
+## Handövning
+
+Prova det du lärt dig med övningen.
+
+Innan du provar övningen bör du kontrollera att du har tittat på och förstått videon ovan och följande material:
+
++ [Tänk annorlunda om AEM as a Cloud Service](./introduction.md)
++ [Onboarding](./onboarding.md)
+
+Se även till att du har fullföljt tidigare övningar:
+
++ [Praktisk övning för att komma igång](./onboarding.md#hands-on-exercise)
+
+<table style="border-width:0">
+    <tr>
+        <td style="width:150px">
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session4-cloud-manager#bootcamp-session-4-cloud-manager-develop-and-deploy
+"><img alt="Handövande GitHub-databas" src="./assets/github.png"/>
+            </a>        
+        </td>
+        <td style="width:100%;margin-bottom:1rem;">
+            <div style="font-size:1.25rem;font-weight:400;">Handtag med Cloud Manager</div>
+            <p style="margin:1rem 0">
+                Lär dig utlösa en pipeline för Cloud Manager med hjälp av plugin-programmet för AIO CLI Cloud Manager.
+            </p>
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session4-cloud-manager#bootcamp-session-4-cloud-manager-develop-and-deploy
+" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Prova Cloud Manager</span>
+            </a>
+        </td>
+    </tr>
+</table>
+

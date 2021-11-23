@@ -8,7 +8,7 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -27,13 +27,13 @@ Lär dig hur AEM som en Cloud Services tjänst för massimport kan användas fö
 
 Tjänsten för massimport används för att överföra filer som lagras i Azure Blob Storage eller Amazon S3-lagring till AEM as a Cloud Service som resurser.
 
-### Viktiga aktiviteter
+## Viktiga aktiviteter
 
 + Överför filerna som ska importeras till din molnlagringsleverantör (Azure Blob Storage eller Amazon S3).
 + Konfigurera och kör tjänsten för massimport från AEM as a Cloud Service författare.
 + Kör bulktjänstimporteraren som en engångsimport eller schemalägg en periodisk import.
 
-### Andra resurser
+## Andra resurser
 
 + [Adobe Developer Live session om resursintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
 

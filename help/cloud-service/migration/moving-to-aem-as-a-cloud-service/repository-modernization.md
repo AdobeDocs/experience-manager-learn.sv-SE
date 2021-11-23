@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Lär dig mer om databasmodernisering, ändringsbart och oföränderligt innehål
 
 Använd [Verktyget Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) för att strukturera om en 6.x-kodbas till en mer modern struktur.
 
-### Viktiga aktiviteter
+## Viktiga aktiviteter
 
 * Använd [Adobe I/O Repository Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) för att strukturera om ett projekt så att det matchar den förväntade strukturen i ett AEM as a Cloud Service projekt.
 * Justera och åtgärda eventuella byggfel manuellt i den uppdaterade kodbasen.
