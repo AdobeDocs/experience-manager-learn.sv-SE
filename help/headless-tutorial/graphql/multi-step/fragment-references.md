@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Det går att referera till ett innehållsfragment inifrån andra innehållsfragment. Detta gör att användaren kan skapa komplexa datamodeller med relationer mellan fragment.
 
-I det här kapitlet ska du uppdatera Adventure-modellen så att den innehåller en referens till Contributor-modellen med hjälp av fältet **Fragmentreferens**. Du får också lära dig hur du ändrar en GraphQL-fråga så att den innehåller fält från en refererad modell.
+I det här kapitlet ska du uppdatera Adventure-modellen så att den innehåller en referens till Contributor-modellen med hjälp av **Fragmentreferens** fält. Du får också lära dig hur du ändrar en GraphQL-fråga så att den innehåller fält från en refererad modell.
 
 ## Förutsättningar
 
@@ -39,39 +39,39 @@ I det här kapitlet får vi lära oss att:
 Uppdatera Adventure Content Fragment Model för att lägga till en referens till Contributor-modellen.
 
 1. Öppna en ny webbläsare och navigera till AEM.
-1. I menyn **AEM Start** går du till **Verktyg** > **Resurser** > **Modeller för innehållsfragment** > **WKND-plats**.
+1. Från **AEM** gå till **verktyg** > **Resurser** > **Modeller för innehållsfragment** > **WKND-plats**.
 1. Öppna **Adventure** Content Fragment Model
 
    ![Öppna Adventure Content Fragment Model](assets/fragment-references/adventure-content-fragment-edit.png)
 
-1. Under **Datatyper** drar och släpper du fältet **Fragmentreferens** på huvudpanelen.
+1. Under **Datatyper**, dra och släppa **Fragmentreferens** till huvudpanelen.
 
    ![Lägg till fragmentreferensfält](assets/fragment-references/add-fragment-reference-field.png)
 
-1. Uppdatera **egenskaperna** för det här fältet med följande:
+1. Uppdatera **Egenskaper** för detta fält med följande:
 
    * Återge som - `fragmentreference`
    * Fältetikett - **Adventure Contributor**
    * Egenskapsnamn - `adventureContributor`
-   * Modelltyp - Välj **Contributor**-modellen
+   * Modelltyp - Välj **Medarbetare** modell
    * Rotsökväg - `/content/dam/wknd`
 
    ![Fragmentreferensegenskaper](assets/fragment-references/fragment-reference-properties.png)
 
-   Egenskapsnamnet `adventureContributor` kan nu användas som referens för ett Contributor-innehållsfragment.
+   Egenskapsnamnet `adventureContributor` kan nu användas för att referera till ett Contributor-innehållsfragment.
 
 1. Spara ändringarna i modellen.
 
 ## Tilldela en deltagare till ett företag
 
-Nu när Adventure Content Fragment-modellen har uppdaterats kan vi redigera ett befintligt fragment och referera till en Contributor. Observera att när du redigerar innehållsfragmentmodellen *påverkas* alla befintliga innehållsfragment som skapats av den.
+Nu när Adventure Content Fragment-modellen har uppdaterats kan vi redigera ett befintligt fragment och referera till en Contributor. Observera att när du redigerar modellen för innehållsfragment *påverkar* befintliga innehållsfragment som har skapats från den.
 
-1. Navigera till **Resurser** > **Filer** > **WKND-plats** > **Engelska** > **Tillägg** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**.
+1. Navigera till **Resurser** > **Filer** > **WKND-plats** > **Engelska** > **Annonser** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**.
 
-   ![Mappen Bali Surf Camp](assets/setup/bali-surf-camp-folder.png)
+   ![Mappen Bali Surf Camp](../quick-setup/assets/setup/bali-surf-camp-folder.png)
 
-1. Klicka på innehållsfragmentet **Bali Surf Camp** för att öppna Content Fragment Editor.
-1. Uppdatera fältet **Adventure Contributor** och välj en medarbetare genom att klicka på mappikonen.
+1. Klicka på **Bali Surf Camp** innehållsfragment för att öppna Content Fragment Editor.
+1. Uppdatera **Adventure Contributor** och välj en medarbetare genom att klicka på mappikonen.
 
    ![Välj Stacey Roswells som deltagare](assets/fragment-references/stacey-roswell-contributor.png)
 
@@ -79,11 +79,11 @@ Nu när Adventure Content Fragment-modellen har uppdaterats kan vi redigera ett 
 
    ![ifylld sökväg till medverkande](assets/fragment-references/populated-path.png)
 
-   Observera att endast fragment som skapats med **Contributor**-modellen kan markeras.
+   Observera att endast fragment som skapats med **Medarbetare** kan väljas.
 
 1. Spara ändringarna i fragmentet.
 
-1. Upprepa stegen ovan om du vill tilldela en medverkande till äventyr som [Yosemite Backpackaging](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking) och [Color Rock Kliching](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)
+1. Upprepa stegen ovan om du vill tilldela en medverkande till äventyr som [Yosemite Backpackaging](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking) och [Colorado Rock klättring](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)
 
 ## Fråga efter kapslat innehållsfragment med GraphiQL
 
@@ -113,7 +113,7 @@ Utför sedan en fråga för en Adventure och lägg till kapslade egenskaper för
    }
    ```
 
-   Ovanstående fråga avser en enda Adventure genom dess väg. Egenskapen `adventureContributor` refererar till Contributor-modellen och vi kan sedan begära egenskaper från det kapslade innehållsfragmentet.
+   Ovanstående fråga avser en enda Adventure genom dess väg. The `adventureContributor` Egenskapen refererar till Contributor-modellen och vi kan sedan begära egenskaper från det kapslade innehållsfragmentet.
 
 1. Kör frågan så får du följande resultat:
 
@@ -137,7 +137,7 @@ Utför sedan en fråga för en Adventure och lägg till kapslade egenskaper för
    }
    ```
 
-1. Experimentera med andra frågor som `adventureList` och lägg till egenskaper för det refererade innehållsfragmentet under `adventureContributor`.
+1. Experimentera med andra frågor som `adventureList` och lägga till egenskaper för det refererade innehållsfragmentet under `adventureContributor`.
 
 ## Uppdatera React-appen för att visa Contributor-innehåll
 
@@ -149,7 +149,7 @@ Uppdatera sedan frågorna som används av React Application så att de inkludera
 
    ![Komponent-IDE för Adventure Detail](assets/fragment-references/adventure-detail-ide.png)
 
-1. Hitta funktionen `adventureDetailQuery(_path)`. Funktionen `adventureDetailQuery(..)` kapslar bara in en filtrerande GraphQL-fråga som använder AEM `<modelName>ByPath`-syntax för att fråga efter ett enda innehållsfragment som identifieras av dess JCR-sökväg.
+1. Hitta funktionen `adventureDetailQuery(_path)`. The `adventureDetailQuery(..)` funktionen kapslar bara in en filtreringsfråga i GraphQL som använder AEM `<modelName>ByPath` syntax för att fråga efter ett enskilt innehållsfragment som identifieras av dess JCR-sökväg.
 
 1. Uppdatera frågan så att den innehåller information om den refererade Contributor:
 
@@ -197,11 +197,11 @@ Uppdatera sedan frågorna som används av React Application så att de inkludera
    }
    ```
 
-   Med den här uppdateringen inkluderas ytterligare egenskaper om `adventureContributor`, `fullName`, `occupation` och `pictureReference` i frågan.
+   Med den här uppdateringen finns ytterligare egenskaper om `adventureContributor`, `fullName`, `occupation`och `pictureReference` tas med i frågan.
 
-1. Inspect den `Contributor`-komponent som är inbäddad i `AdventureDetail.js`-filen på `function Contributor(...)`. Den här komponenten återger medverkarens namn, befattning och bild om egenskaperna finns.
+1. Inspect `Contributor` -komponenten inbäddad i `AdventureDetail.js` fil på `function Contributor(...)`. Den här komponenten återger medverkarens namn, befattning och bild om egenskaperna finns.
 
-   `Contributor`-komponenten refereras i `AdventureDetail(...)` `return`-metoden:
+   The `Contributor` -komponenten refereras i `AdventureDetail(...)` `return` metod:
 
    ```javascript
    function AdventureDetail(props) {
@@ -228,14 +228,14 @@ Uppdatera sedan frågorna som används av React Application så att de inkludera
    $ npm start
    ```
 
-1. Navigera till [http://localhost:3000](http://localhost:3000/) och klicka på en Adventure som har en referens till Contributor. Nu ska du se Contributor-informationen som listas under **Resursen**:
+1. Navigera till [http://localhost:3000](http://localhost:3000/) och klicka på en Adventure som har en refererad Contributor. Nu ska du se Contributor-informationen nedan **Itinerary**:
 
    ![Medarbetare tillagd i appen](assets/fragment-references/contributor-added-detail.png)
 
 ## Grattis!{#congratulations}
 
-Grattis! Du har uppdaterat en befintlig modell för innehållsfragment för att referera till ett kapslat innehållsfragment med hjälp av fältet **Fragmentreferens**. Du lärde dig också att ändra en GraphQL-fråga så att den inkluderar fält från en refererad modell.
+Grattis! Du har uppdaterat en befintlig modell för innehållsfragment för att referera till ett kapslat innehållsfragment med hjälp av **Fragmentreferens** fält. Du lärde dig också att ändra en GraphQL-fråga så att den inkluderar fält från en refererad modell.
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel, [Produktionsdistribution med en AEM-publiceringsmiljö](./production-deployment.md), får du lära dig mer om AEM Author- och Publish-tjänster och det rekommenderade distributionsmönstret för headless-program. Du uppdaterar ett befintligt program så att det använder miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Du får också lära dig hur du konfigurerar AEM för Cross-Origin Resource Sharing (CORS).
+I nästa kapitel [Produktionsdistribution med en AEM-publiceringsmiljö](./production-deployment.md)Läs om AEM Author och Publish och det rekommenderade distributionsmönstret för headless-program. Du uppdaterar ett befintligt program så att det använder miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Du får också lära dig hur du konfigurerar AEM för Cross-Origin Resource Sharing (CORS).

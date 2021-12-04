@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '190'
 ht-degree: 4%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 4%
 + [AEM Headless Overview](./overview.md)
 + GraphQL {#graphql}
    + [Översikt](./graphql/overview.md)
+   + [Snabbinställningar](./graphql/quick-setup/cloud-service.md)
+   + [Lokal SDK för snabbinstallation](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
       + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
       + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
@@ -29,13 +31,12 @@ ht-degree: 4%
       + [7 - Persistenta GraphQL-frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Flerstegs självstudiekurs{#multi-step}
       + [Översikt](./graphql/multi-step/overview.md)
-      + [1 - Snabbinställningar](./graphql/multi-step/setup.md)
-      + [2 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
-      + [3 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
-      + [4 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
-      + [5 - Fråga från en extern app](./graphql/multi-step/graphql-and-external-app.md)
-      + [6 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
-      + [7 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
+      + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
+      + [2 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
+      + [3 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
+      + [4 - Fråga från en extern app](./graphql/multi-step/graphql-and-external-app.md)
+      + [5 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
+      + [6 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)

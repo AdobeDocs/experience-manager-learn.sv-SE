@@ -5,17 +5,17 @@ doc-type: tutorial
 mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
-feature: Innehållsfragment, GraphQL API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med AEM Headless - GraphQL
 
@@ -33,10 +33,11 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 
 ## Kom så börjar vi!
 
-Starta självstudiekursen AEM GraphQL genom att hoppa till kapitlet [Snabbinställningar](./setup.md)!
+1. Konfigurera en utvecklingsmiljö med [AEM as a Cloud Service](../quick-setup/cloud-service.md) eller använda [lokal SDK](../quick-setup/local-sdk.md).
+2. Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
 
 ## GitHub-projekt
 
-Källkoden och innehållspaketen finns i [AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql).
+Källkoden och innehållspaketen finns på [AEM - WKND GraphQL GitHub-projekt](https://github.com/adobe/aem-guides-wknd-graphql).
 
-Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
