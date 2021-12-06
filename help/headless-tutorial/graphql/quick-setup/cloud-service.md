@@ -1,5 +1,5 @@
 ---
-title: AEM Headless quick setup for AEM as a Cloud Service
+title: AEM Headless-konfiguration för AEM as a Cloud Service
 description: Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site och en React App som förbrukar innehållet AEM Headless GraphQL API:er.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
+source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless-konfiguration för AEM as a Cloud Service
 
@@ -26,13 +26,13 @@ Följande krävs för att följa den här snabbinstallationen:
 
 + AEM as a Cloud Service sandlådemiljö (helst Development)
 + Åtkomst till AEM as a Cloud Service och Cloud Manager
-   + `AEM Administrator` åtkomst till AEM as a Cloud Service
-   + `Cloud Manager - Deployment Manager` åtkomst till Cloud Manager
+   + __AEM__ åtkomst till AEM as a Cloud Service
+   + __Cloud Manager - Distributionshanteraren__ åtkomst till Cloud Manager
 + Följande verktyg måste installeras lokalt:
    + [Node.js v10+](https://nodejs.org/en/)
    + [npm 6+](https://www.npmjs.com/)
    + [Git](https://git-scm.com/)
-   + En IDE (till exempel [Microsoft® Visual Studio Code](https://code.visualstudio.com/)
+   + En IDE (till exempel [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ## 1. Skapa en Cloud Manager Git-databas
 
@@ -41,7 +41,7 @@ Skapa först en Cloud Manager Git-databas som används för att distribuera WKND
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339073/?quality=12&learn=on)
 
-1. Navigate to [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
+1. Navigera till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
 1. Välj Cloud Manager __Program__ som innehåller den AEM as a Cloud Service miljön som ska användas för den här snabbinstallationen
 1. Skapa en Git-databas för WKND-webbplatsprojektet
    1. Välj __Databaser__ i den övre navigeringen
@@ -49,14 +49,14 @@ _Genomgång av steg_
    1. Namnge den nya Git-databasen: `aem-headless-quick-setup`
    1. Välj __Spara__ och vänta på att Git-databasen ska initieras
 
-## 2. Push sample WKND Site project to Cloud Manager Git Repository
+## 2. Push-exempel på WKND-webbplatsprojekt till Cloud Manager Git-databas
 
 När Cloud Manager Git-databasen har skapats klonar du WKND-webbplatsens källkod från GitHub och skickar den till Cloud Manager Git-databasen. Nu kan Cloud Manager komma åt och driftsätta WKND Site-projektet i den AEM as a Cloud Service miljön.
 
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339074/?quality=12&learn=on)
 
-1. From the command line, clone the sample WKND Site project&#39;s source code from GitHub
+1. Klona WKND-webbplatsprojektets källkod från GitHub från kommandoraden
 
    ```shell
    $ mkdir -p ~/Code
@@ -74,15 +74,13 @@ _Genomgång av steg_
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
       ```
 
-1. Skicka exempelprojektets källkod till Cloud Manager Git-databasen
+1. Överför exempelprojektets källkod från din lokala Git-databas till Cloud Manager Git-databasen
 
-   1. Skicka koden från din lokala Git-databas till Cloud Manager Git-databasen
+   ```shell
+   $ git push adobe master:main
+   ```
 
-      ```shell
-      $ git push adobe master:main
-      ```
-
-      När du uppmanas att ange autentiseringsuppgifter anger du __Användarnamn__ och __Lösenord__ från Cloud Managers __Databasinformation__ modal.
+   När du uppmanas att ange autentiseringsuppgifter anger du __Användarnamn__ och __Lösenord__ från Cloud Managers __Databasinformation__ modal.
 
 ## 3. Distribuera WKND-webbplatsen till AEM as a Cloud Service
 
@@ -95,16 +93,16 @@ _Genomgång av steg_
 
 1. Bifoga en __Distributionsförlopp som inte är i produktion__ till den nya Git-databasen
    1. Välj __Pipelines__ i den övre navigeringen
-   1. Select __Add Pipeline__ from the top action bar
+   1. Välj __Lägg till pipeline__ i det övre åtgärdsfältet
    1. På __Konfiguration__ tab
       1. Välj __Distributionsförlopp__ option
-      1. Set the __Non-Production Pipeline Name__ to `Dev Deployment pipeline`
-      1. Select __Deployment Trigger > On Git Changes__
+      1. Ange __Namn på icke-produktionsförlopp__ till `Dev Deployment pipeline`
+      1. Välj __Deployment Trigger > On Git Changes__
       1. Välj __Beteende vid viktiga måttfel > Fortsätt omedelbart__
-      1. Select __Continue__
+      1. Välj __Fortsätt__
    1. På __Källkod__ tab
-      1. Select __Full Stack Code__ option
-      1. Select the __AEM as a Cloud Service development environment__ from the __Eligible Deployment Environments__ select box
+      1. Välj __Fullständig stackkod__ option
+      1. Välj __AEM as a Cloud Service utvecklingsmiljö__ från __Berättigade driftsättningsmiljöer__ välj ruta
       1. Välj `aem-headless-quick-setup` i __Databas__ välj ruta
       1. Välj `main` från __Git-gren__ välj ruta
       1. Välj __Spara__
@@ -114,7 +112,7 @@ _Genomgång av steg_
    1. Välj __...__ till höger om pipeline-posten
    1. Välj __Kör__ och bekräfta i modala
    1. Välj __...__ till höger om den nu pågående pipeline
-   1. Select __View details__
+   1. Välj __Visa detaljer__
 1. Övervaka förloppet tills det har slutförts utifrån information om pipelinekörningen. Körning av pipeline bör ta mellan 45 och 60 minuter.
 
 ## 4. Ladda ned och kör appen WKND React
@@ -156,7 +154,7 @@ _Genomgång av steg_
    $ npm start
    ```
 
-1. The React App, running locally, starts on [http://localhost:3000](http://localhost:3000) and displays a listing of adventures, which are sourced from AEM as a Cloud Service using AEM Headless&#39; GraphQL APIs.
+1. React-appen som körs lokalt börjar på [http://localhost:3000](http://localhost:3000) och visar en lista med äventyr, som kommer från AEM as a Cloud Service med AEM Headless&#39; GraphQL API:er.
 
 ## 5. Redigera innehåll i AEM
 
@@ -168,11 +166,11 @@ _Genomgång av steg_
 1. Logga in på AEM as a Cloud Service Author Service
 1. Navigera till __Assets > Files > WKND > English > Adventures__
 1. Öppna __Cycling Southern Utah__ Mapp
-1. Select the __Cycling Southern Utah__ Content Fragment, and select __Edit__ from the top action bar
-1. Update some of the fields of the Content Fragment, for example:
+1. Välj __Cycling Southern Utah__ Innehållsfragment och markera __Redigera__ i det övre åtgärdsfältet
+1. Uppdatera vissa fält i innehållsfragmentet, till exempel:
    + Titel: `Cycling Utah's National Parks`
-   + Trip Length: `6 Days`
-   + Difficulty: `Intermediate`
+   + Resans längd: `6 Days`
+   + Svårighet: `Intermediate`
    + Pris: `$3500`
    + Primär bild: `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
 1. Välj __Spara__ i det övre åtgärdsfältet
@@ -180,7 +178,7 @@ _Genomgång av steg_
 1. Uppdatera React App som körs den [http://localhost:3000](http://localhost:3000).
 1. I React App (Reagera app) markerar du den nu uppdaterade versionen och verifierar innehållsändringarna i Content Fragment.
 
-1. Using the same approach, in AEM Author service:
+1. På samma sätt som i tjänsten AEM Author:
    1. Avpublicera ett befintligt Adventure-innehållsfragment och verifiera att det har tagits bort från upplevelsen React App
    1. Skapa och publicera ett nytt Adventure Content Fragment och verifiera att det visas i React App Experience
 
@@ -190,7 +188,7 @@ _Genomgång av steg_
 
 ## Grattis!
 
-Grattis! You&#39;ve successfully used AEM Headless to power a React App!
+Grattis! Du har använt AEM Headless för att driva en React App!
 
 Om du vill veta mer om hur React App konsumerar innehåll från AEM as a Cloud Service kan du kolla [den AEM självstudiekursen Headless](../multi-step/overview.md). I självstudiekursen utforskas hur innehållsfragment i AEM har skapats och hur denna React App konsumerar sitt innehåll som JSON.
 
