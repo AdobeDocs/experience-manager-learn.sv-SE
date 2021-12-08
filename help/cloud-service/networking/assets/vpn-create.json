@@ -1,0 +1,40 @@
+{ 
+    "kind": "vpn",
+    "region": "va7",
+    "addressSpace": [ 
+        "10.104.182.64/26"
+    ],
+    "dns": {
+        "resolvers": [
+            "10.151.201.22", 
+            "10.151.202.22",
+            "10.154.155.22"
+        ]
+    },
+    "connections": [{
+        "name": "connection-1",
+        "gateway": {
+            "address": "195.231.212.78",
+            "addressSpace": [
+                 "10.151.0.0/16",
+                 "10.152.0.0/16",
+                 "10.153.0.0/16",
+                 "10.154.0.0/16",
+                 "10.142.0.0/16",
+                 "10.143.0.0/16",
+                 "10.124.128.0/17"
+            ]
+        },
+        "sharedKey": "<secret_shared_key>",
+        "ipsecPolicy": {
+            "dhGroup": "ECP256",
+            "ikeEncryption": "AES256",
+            "ikeIntegrity": "SHA256",
+            "ipsecEncryption": "AES256",
+            "ipsecIntegrity": "SHA256",
+            "pfsGroup": "ECP256",
+            "saDatasize": 102400000,
+            "saLifetime": 3600
+        }
+    }]
+}

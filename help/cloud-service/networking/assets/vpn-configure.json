@@ -1,0 +1,18 @@
+{
+    "nonProxyHosts": [
+        "example.net",
+        "*.example.org"
+    ],
+    "portForwards": [
+        {
+            "name": "mysql.example.com",
+            "portDest": 3306,      
+            "portOrig": 30001
+        },
+        {
+            "name": "smtp.sendgrid.com",
+            "portDest": 465,
+            "portOrig": 30002
+        }
+    ]
+}
