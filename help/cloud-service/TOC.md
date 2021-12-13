@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '651'
 ht-degree: 12%
 
 ---
@@ -95,7 +95,8 @@ ht-degree: 12%
    + [Dedikerad IP-adress för utgångar](./networking/dedicated-egress-ip-address.md)
    + [Virtuellt privat nätverk](./networking/vpn.md)
    + Exempel på koder{#examples}
-      + [HTTP/HTTPS på portar som inte är standard](./networking/examples/http-on-non-standard-ports.md)
+      + [HTTP/HTTPS på portar som inte är standard för flexibel portutgång](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
+      + [HTTP/HTTPS på portar som inte är standard för dedikerad IP-adress/VPN](./networking/examples/http-on-non-standard-ports.md)
       + [SQL-anslutningar med DataSourcePool](./networking/examples/sql-datasourcepool.md)
       + [SQL-anslutningar med Java SQL API:er](./networking/examples/sql-java-apis.md)
       + [E-posttjänst](./networking/examples/email-service.md)

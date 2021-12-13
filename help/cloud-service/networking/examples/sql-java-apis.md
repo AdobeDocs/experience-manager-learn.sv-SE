@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9356
 thumbnail: KT-9356.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
-
 
 # SQL-anslutningar med Java™ API:er
 
@@ -86,11 +86,10 @@ public class MySqlExternalServiceImpl implements ExternalService {
     private static final Logger log = LoggerFactory.getLogger(MySqlExternalServiceImpl.class);
 
     // Get the proxy host using the AEM_PROXY_HOST Java environment variable provided by AEM as a Cloud Service
-    private static final String PROXY_HOST = System.getenv("AEM_PROXY_HOST") != null ?
-            System.getenv("AEM_PROXY_HOST") : "localhost";
+    private static final String PROXY_HOST = System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel");
 
     // Use the port mapped to the external MySQL service in the Cloud Manager API call
-    private static final int PORT_FORWARDS_PORT_ORIG = System.getenv("AEM_PROXY_HOST") != null ? 30001 : 3306;
+    private static final int PORT_FORWARDS_PORT_ORIG = 30001;
 
     private Config config;
 

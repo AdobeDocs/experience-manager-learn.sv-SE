@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # E-posttjänst
 
@@ -22,7 +22,7 @@ Skicka e-post från AEM as a Cloud Service genom att konfigurera AEM `DefaultMai
 
 Eftersom (de flesta) e-posttjänster inte körs via HTTP/HTTPS måste anslutningar till e-posttjänster från AEM as a Cloud Service proxideras.
 
-+ `smtp.host` är inställd på OSGi-miljövariabeln `$[env:AEM_PROXY_HOST]` så den slussas genom utgången.
++ `smtp.host` är inställd på OSGi-miljövariabeln `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` så den slussas genom utgången.
 + `smtp.port` är inställt på `portForward.portOrig` port som mappar till e-posttjänstens målvärd och port. I det här exemplet används mappningen: `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
 
 Eftersom hemligheter inte får lagras i kod bör e-posttjänstens användarnamn och lösenord anges med [hemlig OSGi-konfigurationsvariabel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), anges med AIO CLI eller Cloud Manager API.
@@ -55,7 +55,7 @@ I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att 
 
 ```json
 {
-    "smtp.host": "$[env:AEM_PROXY_HOST]",
+    "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
     "smtp.user": "$[env:EMAIL_USERNAME;default=apikey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
