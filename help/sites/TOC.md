@@ -3,10 +3,10 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 4%
+source-wordcount: '435'
+ht-degree: 5%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 4%
 + Experience Fragments {#experience-fragments}
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
-   + [Konfigurera social bokföring med Experience Fragments](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Utveckling {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
@@ -103,7 +102,7 @@ ht-degree: 4%
       + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
       + [Samla in siddata med Adobe Analytics](integrations/analytics/collect-data-analytics.md)
-      + [Spåra klickade komponenter med Adobe Analytics](integrations/analytics/track-clicked-component.md)
+      + [Spåra klickad komponent med Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysera data med Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [Översikt](integrations/adobe-target/overview.md)
