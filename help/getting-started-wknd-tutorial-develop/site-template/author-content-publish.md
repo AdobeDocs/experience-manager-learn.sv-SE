@@ -11,18 +11,14 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
 
 # Introduktion till redigering och publicering {#author-content-publish}
-
->[!CAUTION]
->
-> Verktyget Skapa snabbwebbplats är för närvarande en förhandsgranskning av teknik. Den tillhandahålls för testning och utvärdering och är inte avsedd för användning i produktionen om inte Adobe Support har kommit överens om det.
 
 Det är viktigt att förstå hur en användare uppdaterar innehåll för webbplatsen. I det här kapitlet kommer vi att anta **Innehållsförfattare** och gör några redaktionella uppdateringar av webbplatsen som skapades i föregående kapitel. I slutet av kapitlet kommer vi att publicera ändringarna för att förstå hur den publicerade webbplatsen uppdateras.
 
