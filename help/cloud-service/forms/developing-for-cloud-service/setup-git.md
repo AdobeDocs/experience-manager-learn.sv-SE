@@ -8,7 +8,8 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8848
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+exl-id: 31487027-d528-48ea-b626-a740b94dceb8
+source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -61,16 +62,16 @@ git config --global credential.username "gbedekar-adobe-com"
 spara lösenordet i konfigurationsfilen
 
 ```java
-git config --global user.password "bqwxfvxq2akawtqx3oztacb5wax5a7"
+git config --global user.password "XXXX"
 ```
 
 (Lösenordet är ditt lösenord för molnhanterarens Git-databas)
 
-Registrera molnhanterarens Git-databas hos din lokala Git-databas. Kommandot nedan associerar **adobe** med fjärrhanterarens Git-databas. Du kunde ha använt vilket namn som helst i stället för **adobe**
+Registrera molnhanterarens Git-databas hos din lokala Git-databas. Kommandot nedan associerar **bankingapp** med fjärrhanterarens Git-databas. Du kunde ha använt vilket namn som helst i stället för **bankingapp**
 
 
-```java
-git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Program2-p24107/
+```shell
+git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo-path>
 ```
 
 (Kontrollera att du använder din databas-URL)
@@ -80,6 +81,3 @@ Kontrollera om fjärrdatabasen är registrerad
 ```java
 git remote -v
 ```
-
-
-
