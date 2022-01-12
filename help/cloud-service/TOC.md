@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 12%
 
 ---
@@ -157,14 +157,14 @@ ht-degree: 12%
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
-   + Document Cloud API och AEM Forms CS{#doc-cloud-sdk}
-      + [Introduktion](./forms/doc-cloud-sdk/introduction.md)
-      + [Skapa Adobe IO-projekt](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [Skapa OSGI-konfiguration](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
-      + [Definiera gränssnitt](./forms/doc-cloud-sdk/create-interface.md)
-      + [Implementeringsgränssnitt](./forms/doc-cloud-sdk/implement-interface.md)
-      + [Skapa JSON-del](./forms/doc-cloud-sdk/get-content-analyzer.md)
-      + [Anpassat processsteg](./forms/doc-cloud-sdk/custom-process-step.md)
+   + Skapa dokument i AEM Forms CS{#doc-gen-formscs}
+      + [Introduktion](./forms/doc-gen-forms-cs/introduction.md)
+      + [Skapa tjänstautentiseringsuppgifter](./forms/doc-gen-forms-cs/service-credentials.md)
+      + [Skapa JWT-token](./forms/doc-gen-forms-cs/create-jwt.md)
+      + [Skapa åtkomsttoken](./forms/doc-gen-forms-cs/create-access-token.md)
+      + [Sammanfoga data med mall](./forms/doc-gen-forms-cs/merge-data-with-template.md)
+      + [Testa lösningen](./forms/doc-gen-forms-cs/test.md)
+      + [Utmaning](./forms/doc-gen-forms-cs/challenge.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
       + [Introduktion](./forms/forms-cs-azure-portal/introduction.md)
       + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)

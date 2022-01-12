@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -17,17 +17,16 @@ ht-degree: 0%
 
 # Importera Eclipse-projekt
 
-Ladda ned och zippa upp zip-filen [zip-fil](./assets/aem-forms-doc-gen.zip)
+Ladda ned och zippa upp [zip-fil](./assets/aem-forms-cs-doc-gen.zip)
 
-Starta Eclipse och importera projektet till Eclipse
-Projektet innehåller följande filer i resursmappen:
+Starta Eclipse och importera projektet till Eclipse Projektet innehåller följande filer i resursmappen:
 
-* DataFile1 och DataFile2 - Exempel på xml-datafiler som ska sammanfogas med mallen för att generera den slutliga PDF-filen
-* address.xdp - XDP-mall
+* DataFile1,DataFile2 och DataFile3 - Exempel på xml-datafiler som ska sammanfogas med mallen för att skapa den slutliga PDF-filen
+* custom_fonts.xdp - XDP-mall.
 * service_token.json - Du måste ersätta innehållet i den här filen med dina kontospecifika autentiseringsuppgifter
-* options.json - De alternativ som anges i den här filen används för att ange egenskaper för PDF-filen som genereras av API:t
+* options.json - De alternativ som anges i den här filen används för att ange egenskaperna för den PDF-fil som genereras av API:t
 
-![resources-file](./assets/resource-files.JPG)
+![resources-file](./assets/resource-files.png)
 
 ## Testa lösningen
 
@@ -37,7 +36,7 @@ Projektet innehåller följande filer i resursmappen:
 * Kör Main.java som java-programmet
 
 >[!NOTE]
-> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge [rätt behörighet till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du [lämplig behörighet för den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-**AEM Forms** Usersis är den roll jag har använt i den här kursen.
+**AEM Forms-användare** Det är den roll jag har använt för den här kursen.
 
