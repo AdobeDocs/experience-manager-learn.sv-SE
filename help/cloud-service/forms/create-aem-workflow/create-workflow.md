@@ -11,7 +11,7 @@ topic: Development
 kt: 7424
 thumbnail: 332434.pg
 exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Skapa ett AEM arbetsflöde
 
-Skapa arbetsflödesmodell med AEM Forms komponenter för arbetsflöde. Använd Eller-Dela-komponenten för att förgrena arbetsflödet baserat på värdet på den totala inkomstvariabeln.
+Skapa arbetsflödesmodell med AEM Forms komponenter för arbetsflöde. Använd eller-dela-komponenten för att förgrena arbetsflödet baserat på värdet för lägesvariabeln.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)

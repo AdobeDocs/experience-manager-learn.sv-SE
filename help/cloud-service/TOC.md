@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '656'
 ht-degree: 12%
 
 ---
@@ -145,6 +145,7 @@ ht-degree: 12%
       + [Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [Uppdaterar makarnas arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
@@ -172,6 +173,7 @@ ht-degree: 12%
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + Skapa granskningsarbetsflöde{#create-aem-workflow}
+      + [Extern arbetsflödeslagring](./forms/create-aem-workflow/externalize-workflow.md)
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign med AEM Forms{#forms-and-sign}
