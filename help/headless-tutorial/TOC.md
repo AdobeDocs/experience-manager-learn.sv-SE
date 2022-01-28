@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 922248133a12e05ea9068a0646324f2370e743e9
+source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '221'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 4%
       + [5 - GraphQL-slutpunkter](./graphql/video-series/graphql-endpoints.md)
       + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
       + [7 - Persistenta GraphQL-frågor](./graphql/video-series/graphql-persisted-queries.md)
-   + Flerstegs självstudiekurs{#multi-step}
+   + Grundläggande självstudiekurs{#multi-step}
       + [Översikt](./graphql/multi-step/overview.md)
       + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
       + [2 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
@@ -39,6 +39,13 @@ ht-degree: 4%
       + [4 - Fråga från en extern app](./graphql/multi-step/graphql-and-external-app.md)
       + [5 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
       + [6 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
+   + Avancerad självstudiekurs{#advanced-tutorial}
+      + [Översikt](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
+      + [1 - Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
+      + [2 - Skapa innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
+      + [3 - Utforska AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [4 - beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [5 - Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
