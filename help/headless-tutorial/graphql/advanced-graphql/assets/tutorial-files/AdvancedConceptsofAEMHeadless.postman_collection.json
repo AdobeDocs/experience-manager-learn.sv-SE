@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "50602065-cd3c-432b-ab99-151daa34a6c7",
+		"name": "Advanced Concepts of AEM Headless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTeamLocationByLocationPath",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getTeamLocationByLocationPath($fragmentPath : String!) {\n\tlocationByPath(_path: $fragmentPath ){\n    item {\n      name\n      description{\n        html\n      }\n      contactInfo{\n        phone\n        email\n      }\n      weatherBySeason\n      address{\n        streetAddress\n        city\n        state\n        zipCode\n        country\n      }\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_TEAM_LOCATION_BY_LOCATION_PATH}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_TEAM_LOCATION_BY_LOCATION_PATH}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTeamMembersByAdventurePath",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getTeamMembersByAdventurePath($fragmentPath : String!) {\r\n\tadventureByPath(_path: $fragmentPath ){\r\n    item {\r\n      instructorTeam {\r\n        teamMembers{\r\n          fullName\r\n          contactInfo{\r\n            phone\r\n            email\r\n          }\r\n        profilePicture {\r\n            ... on ImageRef {\r\n              _path\r\n            }\r\n        }\r\n          instructorExperienceLevel\r\n          skills\r\n          biography{\r\n            plaintext\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_TEAM_MEMBERS_BY_ADVENTURE_PATH}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_TEAM_MEMBERS_BY_ADVENTURE_PATH}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTeamByAdventurePath",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getTeamByAdventurePath($fragmentPath : String!) {\r\n  adventureByPath(_path: $fragmentPath ) {\r\n    item {\r\n      instructorTeam {\r\n         _metadata{\r\n          stringMetadata{\r\n            name\r\n            value\r\n          }\r\n        }\r\n        teamFoundingDate\r\n        description {\r\n          plaintext\r\n          json \r\n        }\r\n      }\r\n    }\r\n    _references {\r\n      ... on ImageRef {\r\n        __typename\r\n        _path\r\n      }\r\n      ... on LocationModel {\r\n        __typename\r\n        _path\r\n        name\r\n        address{\r\n          streetAddress\r\n          city\r\n          zipCode\r\n          country\r\n        }\r\n        contactInfo{\r\n          phone\r\n          email\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_TEAM_BY_ADVENTURE_PATH}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_TEAM_BY_ADVENTURE_PATH}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAdventureAdministratorDetailsByAdministratorName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getAdventureAdministratorDetailsByAdministratorName($name: String!){\r\n  adventureList(\r\n  _locale: \"en\"\r\n    filter: {administrator: {fullName: {_expressions: [{value: $name}]}}}\r\n  ) {\r\n    items {\r\n      adventureTitle\r\n      administrator {\r\n        fullName\r\n        contactInfo {\r\n          phone\r\n          email\r\n        }\r\n        administratorDetails {\r\n          json\r\n          plaintext\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAdventureAdministratorDetailsByAdministratorName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getAdventureAdministratorDetailsByAdministratorName($name: String!){\r\n  adventureList(\r\n  _locale: \"en\"\r\n    filter: {administrator: {fullName: {_expressions: [{value: $name}]}}}\r\n  ) {\r\n    items {\r\n      adventureTitle\r\n      administrator {\r\n        fullName\r\n        contactInfo {\r\n          phone\r\n          email\r\n        }\r\n        administratorDetails {\r\n          json\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAdventureAdministratorDetailsByAdministratorName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/execute.json/{{AEM_PROJECT}}/{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}%3Bname%3DJacob%20Wester",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"execute.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME}}%3Bname%3DJacob%20Wester"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocationDetailsByLocationPath",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getLocationDetailsByLocationPath($fragmentPath : String!) {\r\n\tlocationByPath(_path: $fragmentPath){\r\n    item {\r\n      name\r\n      description{\r\n        html\r\n        json\r\n      }\r\n      contactInfo{\r\n        phone\r\n        email\r\n      }\r\n      locationImage {\r\n        ...on ImageRef {\r\n          _path\r\n        }\r\n      }\r\n      weatherBySeason\r\n      address{\r\n        streetAddress\r\n        city\r\n        state\r\n        zipCode\r\n        country\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n\r\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_LOCATION_DETAILS_BY_LOCATION_PATH}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_LOCATION_DETAILS_BY_LOCATION_PATH}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocationPathByAdventurePath",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getLocationPathByAdventurePath($fragmentPath : String!) {\r\n\tadventureByPath(_path: $fragmentPath ){\r\n    item {\r\n      location{\r\n      \t_path  \r\n      } \r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_LOCATION_PATH_BY_ADVENTURE_PATH}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_LOCATION_PATH_BY_ADVENTURE_PATH}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAdventureDetails",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \" query getAllAdventureDetails($fragmentPath: String!) { adventureByPath(_path: $fragmentPath){ item { _path adventureTitle adventureActivity adventureType adventurePrice adventureTripLength adventureGroupSize adventureDifficulty adventurePrice adventurePrimaryImage{ ...on ImageRef{ _path mimeType width height } } adventureDescription { html json } adventureItinerary { html json } location { _path name description { html json } contactInfo{ phone email } locationImage{ ...on ImageRef{ _path } } weatherBySeason address{ streetAddress city state zipCode country } } instructorTeam { _metadata{ stringMetadata{ name value } } teamFoundingDate description { json } teamMembers { fullName contactInfo { phone email } profilePicture{ ...on ImageRef { _path } } instructorExperienceLevel skills biography { html } } } administrator { fullName contactInfo { phone email } biography { html } } } _references { ...on ImageRef { _path mimeType } ...on LocationModel { _path __typename } } } }\", \r\n    \"cache-control\": { \"max-age\": 300 }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/persist.json/{{AEM_PROJECT}}/{{AEM_GET_ALL_AT_ONCE}}",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"persist.json",
+						"{{AEM_PROJECT}}",
+						"{{AEM_GET_ALL_AT_ONCE}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAdventureDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AEM_SCHEME}}://{{AEM_HOST}}/graphql/execute.json/wknd/all-adventure-details;fragmentPath=%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fyosemite-backpacking%2Fyosemite-backpacking",
+					"protocol": "{{AEM_SCHEME}}",
+					"host": [
+						"{{AEM_HOST}}"
+					],
+					"path": [
+						"graphql",
+						"execute.json",
+						"wknd",
+						"all-adventure-details;fragmentPath=%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fyosemite-backpacking%2Fyosemite-backpacking"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AEM_AUTH_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AEM_AUTH_TOKEN",
+			"value": "changeme"
+		},
+		{
+			"key": "AEM_HOST",
+			"value": "localhost:4502"
+		},
+		{
+			"key": "AEM_SCHEME",
+			"value": "http"
+		},
+		{
+			"key": "AEM_PROJECT",
+			"value": "wknd"
+		},
+		{
+			"key": "AEM_GET_ADVENTURE_ADMINISTRATOR_DETAILS_BY_ADMINISTRATOR_NAME",
+			"value": "adventure-administrator-details-by-administrator-name"
+		},
+		{
+			"key": "AEM_GET_TEAM_LOCATION_BY_LOCATION_PATH",
+			"value": "team-location-by-location-path"
+		},
+		{
+			"key": "AEM_GET_LOCATION_DETAILS_BY_LOCATION_PATH",
+			"value": "team-location-by-location-path"
+		},
+		{
+			"key": "AEM_GET_TEAM_MEMBERS_BY_ADVENTURE_PATH",
+			"value": "team-members-by-adventure-path"
+		},
+		{
+			"key": "AEM_GET_TEAM_BY_ADVENTURE_PATH",
+			"value": "team-by-adventure-path"
+		},
+		{
+			"key": "AEM_GET_LOCATION_PATH_BY_ADVENTURE_PATH",
+			"value": "location-path-by-adventure-path"
+		},
+		{
+			"key": "AEM_GET_ALL_AT_ONCE",
+			"value": "all-adventure-details"
+		}
+	]
+}
