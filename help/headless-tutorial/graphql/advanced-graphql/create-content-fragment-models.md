@@ -131,18 +131,18 @@ Skapa sedan en modell som innehåller information om en person.
 
 10. Under **Acceptera endast angiven bildbredd** väljer du &quot;Maximal bredd&quot;. I **Max (pixlar)** anger du &quot;500&quot;. Välj samma alternativ för **Acceptera endast en angiven bildhöjd**.
 
-   Dessa valideringar säkerställer att tillagda bilder inte överskrider de angivna värdena. Valideringsreglerna ska nu se ut så här:
-   ![Valideringsregler för innehållsreferens](assets/define-content-fragment-models/content-reference-validation.png)
+    Dessa valideringar säkerställer att tillagda bilder inte överskrider de angivna värdena. Valideringsreglerna ska nu se ut så här:
+    ![Valideringsregler för innehållsreferens](assets/define-content-fragment-models/content-reference-validation.png)
 
 11. Lägg till en **Flerradstext** fält och ge det en **Fältetikett** av &quot;Biografi&quot;. Lämna **Standardtyp** som standardalternativ för RTF.
 
-   ![Alternativ för biografi](assets/define-content-fragment-models/biography.png)
+    ![Alternativ för biografi](assets/define-content-fragment-models/biography.png)
 
 12. Navigera till **Datatyper** och sedan dra en **Uppräkning** under &quot;Profilbild&quot;. I stället för standardinställningen **Återge som** alternativ, markera **Listruta**. Ange ett urval av alternativ på lärarupplevelsenivå, t.ex. Expert, Advanced, Intermediate.
 
 13. Dra sedan en annan **Uppräkning** under &quot;Instruktörsupplevelsenivå&quot; och välj &quot;kryssrutor&quot; under **Återge som** alternativ. Ange olika kunskaper, t.ex. Klimatning av sten, Surfing, Cycling, Skiing och Backpackaging. Alternativets etikett och alternativvärde ska matcha följande:
 
-   ![Kunskapsuppräkning](assets/define-content-fragment-models/skills-enum.png)
+    ![Kunskapsuppräkning](assets/define-content-fragment-models/skills-enum.png)
 
 14. Skapa slutligen en etikett för fältet &quot;Administratörsinformation&quot; med en **Flerradstext** fält.
 
