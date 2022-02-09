@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '674'
 ht-degree: 12%
 
 ---
@@ -166,6 +166,12 @@ ht-degree: 12%
       + [Sammanfoga data med mall](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testa lösningen](./forms/doc-gen-forms-cs/test.md)
       + [Utmaning](./forms/doc-gen-forms-cs/challenge.md)
+   + Dokumentgenerering med hjälp av batch-API{#formscs-batch-api}
+      + [Introduktion](./forms/formscs-batch-api/introduction.md)
+      + [Konfigurera Azure Storage](./forms/formscs-batch-api/configure-azure-storage.md)
+      + [Skapa USC-batchkonfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
+      + [Skapa batchkonfiguration](./forms/formscs-batch-api/create-batch-config.md)
+      + [Kör grupp](./forms/formscs-batch-api/execute-batch-generate-documents.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
       + [Introduktion](./forms/forms-cs-azure-portal/introduction.md)
       + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)

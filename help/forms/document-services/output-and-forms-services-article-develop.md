@@ -1,18 +1,18 @@
 ---
 title: Utveckla med Output och Forms Services i AEM Forms
 description: Använda API:er för Output och Forms Service i AEM Forms
-feature: Utdatatjänst
+feature: Output Service
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla med Output och Forms Services i AEM Forms{#developing-with-output-and-forms-services-in-aem-forms}
 
@@ -20,8 +20,8 @@ Använda API:er för Output och Forms Service i AEM Forms
 
 I den här artikeln ska vi ta en titt på följande
 
-* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för utdatatjänsten.
-* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) för Forms-tjänsten.
+* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i[javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för Output-tjänsten.
+* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html) för Forms.
 
 
 Följande kodfragment exporterar data från PDF-filen
@@ -60,45 +60,41 @@ Rad 6 exporterar xmlData från PDF-filen
 1. /content/AemFormsSamples/exportdata
 1. /content/help/seFormsSamples/outputService
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)
-Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan man begära POST från servern. Installera appen Postman på datorn.
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan man begära POST från servern. Installera appen Postman på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 
-Se till att du har valt &quot;POST&quot; i listrutan
-http://localhost:4502/content/AemFormsSamples/exportdata.html
-Ange&quot;Authorization&quot; som&quot;Basic Auth&quot;. Ange AEM användarnamn och lösenord
-Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för förfrågningen som visas i bilden nedan
+Se till att du har valt &quot;POST&quot; i listrutan http://localhost:4502/content/AemFormsSamples/exportdata.html Kontrollera att du har angett &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för begäran enligt bilden nedan
 ![export](assets/postexport.png)
 Klicka sedan på knappen Skicka
 
 Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänsten eller Forms-tjänsten ska användas, tjänstens URL, indataparametrar som förväntas av varje tjänst
 
-**Lägg samman data och förenkla utdata:**
+## Lägg samman data och förenkla utdata
 
 * Använd Utdatatjänst för att sammanfoga data med xdp- eller pdf-dokument för att generera sammanlagd PDF
-* **POST-URL**: http://localhost:4502/content/AemFormsSamples/outputservice.html
+* **POSTS-URL**: http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **Begäranparametrar -**
 
-   * xdp_or_pdf_file : Den xdp- eller pdf-fil som du vill sammanfoga data med
-   * xmlfile: XML-datafilen som ska sammanfogas med xdp_or_pdf_file
-   * saveLocation: Platsen där det återgivna dokumentet sparas i filsystemet
+   * **xdp_or_pdf_file** : Den xdp- eller pdf-fil som du vill sammanfoga data med
+   * **xmlfile**: XML-datafilen som ska sammanfogas med xdp_or_pdf_file
+   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\documents\\sample.pdf
 
-**Importera data till PDF-fil:**
+### Importera data till PDF-fil
+
 * Använd FormsService för att importera data till PDF-filen
-* **POST-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **POSTS-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 * **Begärandeparametrar:**
 
-   * pdffile : PDF-filen som du vill sammanfoga data med
-   * xmlfile: XML-datafilen som ska sammanfogas med PDF-filen
-   * saveLocation: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\\outputsample.pdf.
+   * **pdffile** : PDF-filen som du vill sammanfoga data med
+   * **xmlfile**: XML-datafilen som ska sammanfogas med PDF-filen
+   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\outputsample.pdf.
 
 **Exportera data från PDF-fil**
 * Använd FormsService för att exportera data från PDF-fil
-* **POST-** URL - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **POST-UR** L - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **Begärandeparametrar:**
 
-   * pdffile : Den PDF-fil som du vill exportera data från
-   * saveLocation: Platsen där exporterade data ska sparas i filsystemet
+   * **pdffile** : Den PDF-fil som du vill exportera data från
+   * **saveLocation**: Platsen där exporterade data ska sparas i filsystemet. Till exempel c:\\documents\\exported_data.xml
 
 [Du kan importera den här postmansamlingen för att testa API:t](assets/document-services-postman-collection.json)
-
