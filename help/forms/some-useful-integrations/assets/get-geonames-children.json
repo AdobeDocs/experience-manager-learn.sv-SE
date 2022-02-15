@@ -1,0 +1,102 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Simple API",
+		"description": "Learning Swagger"
+	},
+	"host": "api.geonames.org",
+
+	"schemes": [
+		"http"
+	],
+	"paths": {
+		"/childrenJSON": {
+			"get": {
+				"summary": "Get Geonames Children",
+				"produces": [
+					"application/json"
+				],
+				"consumes": [
+					"appliacation/json"
+				],
+				"operationId": "Get Children of Geoname",
+				"parameters": [{
+					"in": "query",
+					"name": "username",
+					"description": "Username of the geonames user",
+					"type": "string"
+				},
+                {
+					"in": "query",
+					"name": "formatted",
+					"description": "Use true to get formatted response",
+					"type": "string",
+                    "default": "true"
+				},
+                {
+					"in": "query",
+					"name": "geonameId",
+					"description": "id of the geoname object",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "Successfull Response",
+						"schema": {
+							"$ref": "#/definitions/returnvalue"
+						}
+					},
+					"405": {
+						"description": "Invlaid input",
+						"schema": {
+							"$ref": "#/definitions/invalidresponse"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"invalidresponse": {
+			"type": "object",
+			"properties": {
+				"message": {
+					"type": "string"
+				}
+			}
+		},
+		"geoname": {
+			"type": "object",
+			"properties": {
+				"toponymName": {
+					"type": "string"
+				},
+				"adminCode1": {
+					"type": "string"
+				},
+				"countryId": {
+					"type": "string"
+				},
+				"geonameId": {
+					"type": "string"
+				}
+			}
+
+		},
+		"returnvalue": {
+			"type": "object",
+			"properties": {
+				"geonames": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/geoname"
+					}
+				}
+
+			}
+
+		}
+
+	}
+}

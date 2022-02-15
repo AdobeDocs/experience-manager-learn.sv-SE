@@ -1,0 +1,89 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Simple API",
+		"description": "Learning Swagger"
+	},
+	"host": "api.geonames.org",
+
+	"schemes": [
+		"http"
+	],
+	"paths": {
+		"/countryInfoJSON": {
+			"get": {
+				"summary": "Fetch All Countries",
+				"produces": [
+					"application/json"
+				],
+				"consumes": [
+					"appliacation/json"
+				],
+				"operationId": "fetch all countries",
+				"parameters": [{
+					"in": "query",
+					"name": "username",
+					"description": "Username of the geonames user",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "Successfull Response",
+						"schema": {
+							"$ref": "#/definitions/returnvalue"
+						}
+					},
+					"405": {
+						"description": "Invlaid input",
+						"schema": {
+							"$ref": "#/definitions/invalidresponse"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"invalidresponse": {
+			"type": "object",
+			"properties": {
+				"message": {
+					"type": "string"
+				}
+			}
+		},
+		"geoname": {
+			"type": "object",
+			"properties": {
+				"continent": {
+					"type": "string"
+				},
+				"geonameId": {
+					"type": "string"
+				},
+				"continentName": {
+					"type": "string"
+				},
+				"countryName": {
+					"type": "string"
+				}
+			}
+
+		},
+		"returnvalue": {
+			"type": "object",
+			"properties": {
+				"geonames": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/geoname"
+					}
+				}
+
+			}
+
+		}
+
+	}
+}
