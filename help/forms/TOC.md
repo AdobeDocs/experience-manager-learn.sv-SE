@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
+source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1641'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 0%
 + Användbara integreringar{#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
    + [OCR-dataextrahering](some-useful-integrations/ocr-data-extraction.md)
+   + [Listrutor för överlappande](some-useful-integrations/geonames-org.md)
 + Skapa OSGi-paket {#creating-your-first-osgi-bundle}
    + [Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -50,6 +51,7 @@ ht-degree: 0%
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
+   + [Anpassade funktioner i regelredigeraren](adaptive-forms/custom-functions-aem-forms.md)
    + [Bädda in anpassat formulär på en webbsida](adaptive-forms/embed-af-web-page.md)
    + [Skapa en array med strängar](adaptive-forms/converting-comma-seperated-string-to-array.md)
    + [Använda Ange värde i XML i OSGI-arbetsflöde](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
