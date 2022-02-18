@@ -4,9 +4,9 @@ user-guide-description: En samling videor och självstudiekurser för Adobe Expe
 breadcrumb-title: AEM Assets Tutorials
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
+source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '378'
 ht-degree: 5%
 
 ---
@@ -137,6 +137,12 @@ ht-degree: 5%
    + Förbättrad anslutning{#enhanced-connector}
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
+      + AEM Experts Series{#aem-experts-series}
+         + [Översikt](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Inställningar](./workfront/enhanced-connector/aem-experts-series/setup.md)
+         + [Workfront-formulär och AEM metadata](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [Taggar, projektlänkade mappar och mappmetadata](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
+         + [Avancerade inställningar och arbetsflöden](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + Översättning {#translation}
    + [Översättning av källfil](translation/source-file-translation-feature-video-use.md)
