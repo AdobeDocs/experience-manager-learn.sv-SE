@@ -3,7 +3,7 @@ title: Komma igång med AEM Sites - projektinställningar
 seo-title: Getting Started with AEM Sites - Project Setup
 description: Omfattar skapandet av ett Maven Multi Module-projekt för att hantera koden och konfigurationerna för en AEM.
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
@@ -13,9 +13,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,11 @@ I det här kapitlet genererar du ett nytt Adobe Experience Manager-projekt med [
 
 ## Skapa projektet {#create}
 
-Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen utnyttjar [Maven AEM Project Archetype **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager ingår också [innehåller en gränssnittsguide](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) för att initiera skapandet av ett AEM. Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
+Det finns ett par sätt att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudiekursen utnyttjar [Maven AEM Project Archetype **35**](https://github.com/adobe/aem-project-archetype). Cloud Manager ingår också [innehåller en gränssnittsguide](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) för att initiera skapandet av ett AEM. Det underliggande projektet som skapas av användargränssnittet i Cloud Manager resulterar i samma struktur som när du använder typen av arkiv direkt.
 
 >[!NOTE]
 >
->Den här självstudiekursen använder version **26** av arkitypen. Det är alltid en god vana att använda **senaste** version av arkitypen för att generera ett nytt projekt.
+>Den här självstudiekursen använder version **35** av arkitypen. Det är alltid en god vana att använda **senaste** version av arkitypen för att generera ett nytt projekt.
 
 Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, men de bör vara lika om en Windows-terminal används.
 
@@ -63,27 +63,6 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. Verifiera att **adobe-public** profilen är aktiv genom att köra följande kommando:
-
-   ```shell
-   $ mvn help:effective-settings
-       ...
-   <activeProfiles>
-       <activeProfile>adobe-public</activeProfile>
-   </activeProfiles>
-   <pluginGroups>
-       <pluginGroup>org.apache.maven.plugins</pluginGroup>
-       <pluginGroup>org.codehaus.mojo</pluginGroup>
-   </pluginGroups>
-   </settings>
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
-   [INFO] Total time:  0.856 s
-   ```
-
-   Om du gör det **not** se **adobe-public** det är en indikation på att Adobe repo inte har en korrekt referens i din `~/.m2/settings.xml` -fil. Läs om hur du installerar och konfigurerar Apache Maven i [en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
-
 1. Navigera till en katalog där du vill generera det AEM projektet. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. Exempel: en katalog med namnet `code` under användarens hemkatalog:
 
    ```shell
@@ -93,21 +72,22 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
 1. Klistra in följande i kommandoraden för att [generera projektet i batchläge](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=26 \
+       -D archetypeVersion=35 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
-       -D groupId="com.adobe.aem.guides.wknd" \
+       -D groupId="com.adobe.aem.guides" \
        -D artifactId="aem-guides-wknd" \
+       -D package="com.adobe.aem.guides.wknd" \
        -D version="0.0.1-SNAPSHOT" \
        -D aemVersion="cloud"
    ```
 
    >[!NOTE]
    >
-   > Om mål AEM 6.5.5+ ersätts `aemVersion="cloud"` med `aemVersion="6.5.5"`. Om mål är 6.4.8+, använd `aemVersion="6.4.8"`.
+   > Om mål AEM 6.5.10+ ersätts `aemVersion="cloud"` med `aemVersion="6.5.10"`.
 
    En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -349,3 +329,7 @@ Så här skapar du bara den här modulen:
 The **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** modulen är strukturerad på samma sätt som **ui.apps** -modul. Den enda skillnaden är att **ui.content** module contains what is known as **mutabel** innehåll. **Mutable** innehåll avser i huvudsak icke-kodade konfigurationer som mallar, profiler eller mappstrukturer som lagras i källkontrollen **men** kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
 
 Samma Maven-kommandon som användes för att skapa **ui.apps** kan användas för att skapa **ui.content** -modul. Upprepa stegen ovan inifrån **ui.content** mapp.
+
+## Felsökning
+
+Om du har problem med att generera projektet med hjälp av den AEM projekttypen, se listan över [kända problem](https://github.com/adobe/aem-project-archetype#known-issues) och lista över öppna [problem](https://github.com/adobe/aem-project-archetype/issues).

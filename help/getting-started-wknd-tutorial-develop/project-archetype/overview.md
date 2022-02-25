@@ -2,7 +2,7 @@
 title: Komma igång med AEM Sites - Project Archetype
 description: Komma igång med AEM Sites - Project Archetype. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Välkommen till en självstudiekurs i flera delar som är utformad för utveckla
 
 Den här självstudiekursen börjar med att använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att skapa ett nytt projekt.
 
-Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.5.0+** och **AEM 6.4.8.1+**. Webbplatsen implementeras med:
+Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.10+**. Webbplatsen implementeras med:
 
 * [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -44,7 +44,7 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 Följande bör installeras lokalt:
 
-* [Lokal AEM **Upphovsman** instance](https://experience.adobe.com/#/downloads) (Cloud Service SDK, 6.5.5+ eller 6.4.8.1+)
+* [Lokal AEM **Upphovsman** instance](https://experience.adobe.com/#/downloads) (Cloud Service SDK, 6.5.10+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
 * [Node.js](https://nodejs.org/en/) (LTS - långsiktig support)
