@@ -11,9 +11,9 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2882'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ klient-side-libraries/main-scss
 
    Varje fil mappar till en kärnkomponent som [Dragspelskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components). Varje kärnkomponent byggs med [Blockelementsmodifierare](https://getbem.com/) eller BEM-notation för att göra det enklare att rikta in sig på specifika CSS-klasser med formatregler. Filerna under `/components` har delats ut av den AEM projekttypen med olika BEM-regler för varje komponent.
 
-1. Ladda ned WKND-basformat **[wknd-base-styles-src-v3.zip]/(help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** och **uppzip** filen.
+1. Ladda ned WKND-basformat **[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** och **uppzip** filen.
 
    ![WKND-basformat](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
