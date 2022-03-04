@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '679'
 ht-degree: 12%
 
 ---
@@ -217,6 +217,9 @@ ht-degree: 12%
    + Avancerat{#advanced}
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
++ Cloud 5{#cloud-5}
+   + [Introduktion](./cloud-5/cloud5-introduction.md)
+   + [CDN Djupdykning](./cloud-5/cloud5-aem-cdn-part1.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + Tutorials i flera steg{#multi-step-tutorials}
    + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
