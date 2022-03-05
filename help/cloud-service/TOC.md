@@ -4,10 +4,10 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
+source-git-commit: 5da75b172a7dda29452954990f6ab2374e7698d9
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 12%
+source-wordcount: '697'
+ht-degree: 11%
 
 ---
 
@@ -188,6 +188,11 @@ ht-degree: 12%
       + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
       + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Integrera med Microsoft Dynamics{#formscs-dynamics-crm}
+      + [Skapa Dynamics-program](./forms/formscs-dynamics-crm/create-dynamics-account.md)
+      + [Konfigurera datakälla](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [Skapa formulärdatamodell](./forms/formscs-dynamics-crm/create-form-data-model.md)
+      + [Skapa anpassat formulär](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + Integrera med Salesforce{#integrate-with-salesforce}
       + [Introduktion](./forms/integrate-with-salesforce/introduction.md)
       + [Skapa ansluten app](./forms/integrate-with-salesforce/create-connected-app.md)
@@ -219,7 +224,8 @@ ht-degree: 12%
    + [Felsökning](./asset-compute/troubleshooting.md)
 + Cloud 5{#cloud-5}
    + [Introduktion](./cloud-5/cloud5-introduction.md)
-   + [CDN Djupdykning](./cloud-5/cloud5-aem-cdn-part1.md)
+   + [Säsong 1](./cloud-5/cloud5-season-1.md)
+   + [AEM CDN del 1](./cloud-5/cloud5-aem-cdn-part1.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + Tutorials i flera steg{#multi-step-tutorials}
    + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
