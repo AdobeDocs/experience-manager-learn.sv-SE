@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -153,6 +153,9 @@ ht-degree: 0%
    + [Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
    + [Skapa Forms för signering](sign-multiple-documents/create-forms-for-signing.md)
    + [Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
++ Anpassade arbetsflödessteg{#custom-workflow-steps}
+   + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
+   + [Spara dokument i filsystemet](custom-workflow-steps/write-payload-document.md)
 + Variabler i AEM{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
