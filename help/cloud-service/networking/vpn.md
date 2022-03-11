@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,13 @@ Lär dig hur du ansluter AEM as a Cloud Service till ditt VPN för att skapa sä
 
 ## Vad är Virtual Private Network?
 
-Med VPN (Virtual Private Network) kan en AEM as a Cloud Service kund ansluta ett Cloud Manager-program till ett befintligt, [stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN. Detta möjliggör säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
+Med VPN (Virtual Private Network) kan en AEM as a Cloud Service kund ansluta **AEM** inom ett Cloud Manager-program till en befintlig [stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN. Detta möjliggör säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
 
 Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur. Se till att det virtuella privata nätverket är det mest [lämplig typ av nätverksinfrastruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) för AEM as a Cloud Service innan följande kommandon utförs.
+
+>[!NOTE]
+>
+>Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på det offentliga Internet [enligt beskrivning här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >

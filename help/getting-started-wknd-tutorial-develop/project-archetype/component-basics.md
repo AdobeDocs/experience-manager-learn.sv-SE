@@ -2,7 +2,7 @@
 title: Komma igång med AEM Sites - Grunderna i komponenter
 description: Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt HelloWorld-exempel. Ämnen som rör HTML, Sling Models, Client-side libraries och författardialogrutor har utforskats.
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Developer Tools
 topic: Content Management, Development
@@ -12,7 +12,7 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 0%
@@ -186,7 +186,7 @@ Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss af
 1. Lägg till följande importsatser:
 
    ```java
-   import org.apache.commons.lang.StringUtils;
+   import org.apache.commons.lang3.StringUtils;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 

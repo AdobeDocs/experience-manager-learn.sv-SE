@@ -11,9 +11,9 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Det finns några exempel på GitHub-repor som kan användas som referens:
 
 ## Grattis! {#congratulations}
 
-Grattis, du har just skapat ett uppdaterat och distribuerat tema till AEM!
+Grattis, du har precis uppdaterat och distribuerat ett tema till AEM!
 
 ### Nästa steg {#next-steps}
 

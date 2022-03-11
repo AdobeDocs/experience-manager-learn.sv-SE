@@ -1,8 +1,8 @@
 ---
 title: AEM Forms med JSON-schema och data [del 1]
-seo-title: AEM Forms med JSON-schema och data[del1]
+seo-title: AEM Forms with JSON Schema and Data[Part1]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
-seo-description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -12,19 +12,18 @@ version: 6.3,6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
 # Skapa anpassat formulär baserat på JSON-schema
 
 
-Möjligheten att skapa Adaptiv Forms baserat på JSON-schema introducerades i AEM Forms 6.3. Detaljerad information om hur du skapar Adaptive Forms med JSON-schema finns i den här [artikeln](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html).
+Möjligheten att skapa Adaptiv Forms baserat på JSON-schema introducerades i AEM Forms 6.3. Detaljerad information om hur du skapar Adaptive Forms med JSON-schema finns i detta [artikel](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html).
 
 När du har skapat ett adaptivt formulär baserat på JSON-schema är nästa steg att lagra skickade data i databasen. I detta syfte kommer vi att använda den nya JSON-datatypen som introducerats av olika databasleverantörer. För den här artikeln använder vi MySQL 8-databasen för att lagra inskickade data.
 
@@ -34,11 +33,10 @@ Följande skärmbild visar de skickade formulärdata som lagras i datatypen JSON
 
 >[!NOTE]
 >
->Kontrollera att json-schemafilen har rätt namn. Det måste till exempel namnges i följande format: &lt;name>schema.json. Din schemafil kan alltså vara pantbrev.schema.json eller credit.schema.json.
+>Kontrollera att json-schemafilen har rätt namn. Det måste till exempel namnges i följande format &lt;name>schema.json. Din schemafil kan alltså vara pantbrev.schema.json eller credit.schema.json.
 
 
 ![datastyrd](assets/datastored.gif)
 
 
 [Exempel på JSON-scheman som kan användas för att skapa Adaptiv Forms.](assets/samplejsonschemas.zip). Ladda ned och zippa upp zip-filen för att få JSON-scheman
-

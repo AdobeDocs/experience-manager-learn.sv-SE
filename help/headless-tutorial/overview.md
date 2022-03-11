@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 
 >[!TIP]
 >
->Den här samlingen självstudiekurser är utformad för dem som föredrar att **lära sig göra**. Om du föredrar att lära dig koncept från grunden kan du kolla in [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
+>Den här samlingen självstudiekurser är utformad för dem som föredrar att **lära sig göra**. Om du föredrar att lära dig koncept från grunden kan du kolla in [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
 ## Tutorials efter API
 

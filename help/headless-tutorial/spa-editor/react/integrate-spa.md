@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
@@ -25,46 +25,46 @@ Förstå hur källkoden för ett Single Page-program (SPA) skrivet i React kan i
 
 1. Förstå hur SPA projekt integreras med AEM med bibliotek på klientsidan.
 2. Lär dig hur du använder en webbpaketutvecklingsserver för dedikerad frontendutveckling.
-3. Utforska hur du använder en **proxy**- och statisk **mock**-fil för att utveckla mot AEM JSON-modell-API.
+3. Upptäck hur du använder en **proxy** och statisk **mock** för utveckling mot AEM JSON-modell-API.
 
 ## Vad du ska bygga
 
 I det här kapitlet gör du flera små ändringar av SPA för att förstå hur den är integrerad med AEM.
-I det här kapitlet läggs en enkel `Header`-komponent till i SPA. När den här **statiska** `Header`-komponenten byggs ut används flera metoder för AEM SPA.
+I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att bygga ut **static** `Header` AEM kommer att användas.
 
 ![Nytt sidhuvud i AEM](./assets/integrate-spa/final-header-component.png)
 
-*SPA utökas för att lägga till en statisk  `Header` komponent*
+*SPA utökas för att lägga till en statisk `Header` komponent*
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Det här kapitlet är en fortsättning av kapitlet [Skapa projekt](create-project.md), men för att följa med i det hela behöver du bara ett fungerande SPA-aktiverat AEM.
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Detta kapitel är en fortsättning på [Skapa projekt](create-project.md) för att följa med i det hela behöver du ett fungerande SPA-aktiverat AEM.
 
 ## Integreringsmetod {#integration-approach}
 
 Två moduler skapades som en del av AEM: `ui.apps` och `ui.frontend`.
 
-Modulen `ui.frontend` är ett [webbpack](https://webpack.js.org/)-projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning kommer att ske i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till modulen `ui.apps` som sedan distribueras till AEM.
+The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning kommer att ske i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
 
 ![ui.frontHigh-level architecture](assets/integrate-spa/ui-frontend-architecture.png)
 
 *En högnivåbild av SPA.*
 
-Ytterligare information om Front-end-bygget finns här[](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+Ytterligare information om Front-end-bygget kan [hittades här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
 
 ## Integreringen av Inspect SPA {#inspect-spa-integration}
 
-Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats automatiskt av [AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+Kontrollera sedan `ui.frontend` för att förstå SPA som har genererats automatiskt av [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
 
-1. Öppna AEM i den utvecklingsmiljö du valt. I den här självstudien används [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. Öppna AEM i den utvecklingsmiljö du valt. Den här självstudiekursen använder [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
-1. Utöka och inspektera mappen `ui.frontend`. Öppna filen `ui.frontend/package.json`
+1. Expandera och inspektera `ui.frontend` mapp. Öppna filen `ui.frontend/package.json`
 
-1. Under `dependencies` ska du se flera relaterade till `react` inklusive `react-scripts`
+1. Under `dependencies` du bör se flera relaterade till `react` inkluderar `react-scripts`
 
-   `ui.frontend` är ett React-program som är baserat på [Create React App](https://create-react-app.dev/) eller CRA kort. Versionen `react-scripts` anger vilken version av CRA som används.
+   The `ui.frontend` är ett React-program som bygger på [Skapa React App](https://create-react-app.dev/) eller CRA för kort tid. The `react-scripts` anger vilken version av CRA som används.
 
 1. Det finns också flera beroenden som har prefixats med `@adobe`:
 
@@ -76,11 +76,11 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   Ovanstående moduler utgör [AEM JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html)-SPA för redigeraren och innehåller funktioner som gör det möjligt att mappa SPA komponenter till AEM.
+   Modulerna ovan utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) och tillhandahåller funktioner som gör det möjligt att mappa SPA komponenter till AEM.
 
-   [AEM WCM-komponenter - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-base) och [AEM WCM-komponenter - Spa editor - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-spa) ingår också. Detta är en uppsättning återanvändbara gränssnittskomponenter som mappas till AEM. Dessa är utformade för att användas i befintligt skick och med den utformning som passar ditt projekt.
+   Innehåller också [AEM WCM-komponenter - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-base) och [AEM WCM-komponenter - Spa editor - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-spa). Detta är en uppsättning återanvändbara gränssnittskomponenter som mappas till AEM. Dessa är utformade för att användas i befintligt skick och med den utformning som passar ditt projekt.
 
-1. I `package.json`-filen finns flera `scripts` definierade:
+1. I `package.json` fil finns det flera `scripts` definierad:
 
    ```json
    "scripts": {
@@ -91,15 +91,15 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
    }
    ```
 
-   Det här är standardbyggskript som [är tillgängliga](https://create-react-app.dev/docs/available-scripts) av Create React App.
+   Detta är standardbyggskript [tillgänglig](https://create-react-app.dev/docs/available-scripts) av Create React App.
 
-   Den enda skillnaden är att `&& clientlib` har lagts till i `build`-skriptet. Den här extra instruktionen ansvarar för att kopiera den kompilerade SPA till `ui.apps`-modulen som ett klientbibliotek under bygget.
+   Den enda skillnaden är tillägget `&& clientlib` till `build` skript. Den här extra instruktionen ansvarar för att kopiera den kompilerade SPA till `ui.apps` som ett klientbibliotek under bygget.
 
    NPM-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) används för att underlätta detta.
 
 1. Inspect filen `ui.frontend/clientlib.config.js`. Den här konfigurationsfilen används av [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) för att avgöra hur klientbiblioteket ska genereras.
 
-1. Inspect filen `ui.frontend/pom.xml`. Den här filen omvandlar mappen `ui.frontend` till en [Maven-modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html). Filen `pom.xml` har uppdaterats för att använda [front-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) till **test** och **build** SPA under en Maven-konstruktion.
+1. Inspect filen `ui.frontend/pom.xml`. Den här filen omvandlar `ui.frontend` mapp till en [Maven module](https://maven.apache.org/guides/mini/guide-multiple-modules.html). The `pom.xml` filen har uppdaterats för att använda [front-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) till **test** och **bygga** SPA under en Maven-byggnad.
 
 1. Inspect filen `index.js` på `ui.frontend/src/index.js`:
 
@@ -126,20 +126,20 @@ Kontrollera sedan `ui.frontend`-modulen för att förstå SPA som har genererats
    });
    ```
 
-   `index.js` är SPA ingångspunkt. `ModelManager` tillhandahålls av AEM JS SDK SPA Editor. Det ansvarar för att anropa och injicera `pageModel` (JSON-innehållet) i programmet.
+   `index.js` är SPA ingångspunkt. `ModelManager` tillhandahålls av AEM JS SDK SPA Editor. Den ansvarar för att anropa och injicera `pageModel` (JSON-innehållet) i programmet.
 
-1. Inspect filen `import-component.js` på `ui.frontend/src/import-components.js`. Den här filen importerar de färdiga komponenterna **React Core Components** och gör dem tillgängliga för projektet. Vi undersöker mappningen av AEM innehåll till SPA komponenter i nästa kapitel.
+1. Inspect filen `import-component.js` på `ui.frontend/src/import-components.js`. Filen importeras direkt **React Core Components** och gör dem tillgängliga för projektet. Vi undersöker mappningen av AEM innehåll till SPA komponenter i nästa kapitel.
 
 ## Lägga till en statisk SPA {#static-spa-component}
 
 Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM. Detta blir en enkel förändring, bara för att illustrera hur SPA uppdateras.
 
-1. Skapa en ny mapp med namnet `Header` i modulen `ui.frontend` under `ui.frontend/src/components`.
-1. Skapa en fil med namnet `Header.js` under mappen `Header`.
+1. I `ui.frontend` modul, under `ui.frontend/src/components` skapa en ny mapp med namnet `Header`.
+1. Skapa en fil med namnet `Header.js` under `Header` mapp.
 
    ![Huvudmapp och fil](assets/create-project/header-folder-js.png)
 
-1. Fyll i `Header.js` med följande:
+1. Fylla `Header.js` med följande:
 
    ```js
    //Header.js
@@ -162,7 +162,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    Ovanför är en standardreaktionskomponent som ger en statisk textsträng.
 
 1. Öppna filen `ui.frontend/src/App.js`. Detta är programmets startpunkt.
-1. Gör följande uppdateringar i `App.js` för att inkludera den statiska `Header`:
+1. Gör följande uppdateringar av `App.js` att inkludera den statiska `Header`:
 
    ```diff
      import { Page, withModel } from '@adobe/aem-react-editable-components';
@@ -180,7 +180,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
         </div>
    ```
 
-1. Öppna en ny terminal och navigera till mappen `ui.frontend` och kör kommandot `npm run build`:
+1. Öppna en ny terminal och navigera till `ui.frontend` och kör `npm run build` kommando:
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -197,11 +197,11 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. Navigera till mappen `ui.apps`. Under `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` ska du se att de kompilerade SPA har kopierats från mappen`ui.frontend/build`.
+1. Navigera till `ui.apps` mapp. Under `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` ser du att de kompilerade SPA har kopierats från`ui.frontend/build` mapp.
 
    ![Klientbibliotek genererat i ui.apps](./assets/integrate-spa/compiled-spa-uiapps.png)
 
-1. Återgå till terminalen och navigera till mappen `ui.apps`. Kör följande Maven-kommando:
+1. Återgå till terminalen och navigera till `ui.apps` mapp. Kör följande Maven-kommando:
 
    ```shell
    $ cd ../ui.apps
@@ -215,21 +215,21 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Detta distribuerar `ui.apps`-paketet till en lokal instans av AEM som körs.
+   Detta kommer att distribuera `ui.apps` till en lokal instans av AEM.
 
-1. Öppna en webbläsarflik och gå till [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Nu bör du se innehållet i `Header`-komponenten som visas i SPA.
+1. Öppna en webbläsarflik och navigera till [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Nu bör du se innehållet i `Header` som visas i SPA.
 
    ![Implementering av inledande rubrik](./assets/integrate-spa/initial-header-implementation.png)
 
-   Ovanstående steg utförs automatiskt när en Maven-bygge utlöses från projektets rot (d.v.s. `mvn clean install -PautoInstallSinglePackage`). Nu bör du förstå grunderna i integrationen mellan SPA och AEM klientbibliotek. Observera att du fortfarande kan redigera och lägga till `Text`-komponenter i AEM under den statiska `Header`-komponenten.
+   Ovanstående steg utförs automatiskt när en Maven-bygge utlöses från projektets rot (dvs. `mvn clean install -PautoInstallSinglePackage`). Nu bör du förstå grunderna i integrationen mellan SPA och AEM klientbibliotek. Observera att du fortfarande kan redigera och lägga till `Text` -komponenter i AEM under den statiska `Header` -komponenten.
 
 ## Webpack Dev Server - Proxy för JSON API {#proxy-json}
 
 Som vi har sett i tidigare övningar tar det några minuter att skapa och synkronisera klientbiblioteket till en lokal instans av AEM. Detta är godtagbart för sluttestning, men är inte idealiskt för större delen av SPA.
 
-Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen kommer JSON-innehållet från en instans som körs av AEM att **proxideras** till utvecklingsservern.
+A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen kommer JSON-innehållet från en instans av AEM som körs att **proxibel** till utvecklingsservern.
 
-1. Återgå till IDE och öppna filen `ui.frontend/package.json`.
+1. Återgå till utvecklingsmiljön och öppna filen `ui.frontend/package.json`.
 
    Leta efter en rad som följande:
 
@@ -237,9 +237,9 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
    "proxy": "http://localhost:4502",
    ```
 
-   [Create React App](https://create-react-app.dev/docs/proxying-api-requests-in-development) är en enkel mekanism för proxy-API-begäranden. Alla okända begäranden proxiceras via `localhost:4502`, den lokala AEM snabbstarten.
+   The [Skapa React App](https://create-react-app.dev/docs/proxying-api-requests-in-development) har en enkel mekanism för proxy-API-begäranden. Alla okända förfrågningar kommer att proxyvis `localhost:4502`, den lokala AEM snabbstarten.
 
-1. Öppna ett terminalfönster och navigera till mappen `ui.frontend`. Kör kommandot `npm start`:
+1. Öppna ett terminalfönster och navigera till `ui.frontend` mapp. Kör kommandot `npm start`:
 
    ```shell
    $ cd ui.frontend
@@ -256,7 +256,7 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
    To create a production build, use npm run build.
    ```
 
-1. Öppna en ny flik i webbläsaren (om den inte redan är öppen) och gå till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html).
+1. Öppna en ny flik i webbläsaren (om den inte redan är öppen) och navigera till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html).
 
    ![Webpack-dev-server - proxy-json](./assets/integrate-spa/webpack-dev-server-1.png)
 
@@ -266,7 +266,7 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
    >
    > På grund av säkerhetskraven för AEM måste du vara inloggad på den lokala AEM (http://localhost:4502) i samma webbläsare, men på en annan flik.
 
-1. Återgå till IDE och skapa en fil med namnet `Header.css` i mappen `src/components/Header`.
+1. Återgå till utvecklingsmiljön och skapa en fil med namnet `Header.css` i `src/components/Header` mapp.
 1. Fyll i `Header.css` med följande:
 
    ```css
@@ -295,7 +295,7 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
 
    ![VSCode IDE](assets/integrate-spa/header-css-update.png)
 
-1. Öppna `Header.js` igen och lägg till följande rad i referensen `Header.css`:
+1. Öppna igen `Header.js` och lägg till följande rad som referens `Header.css`:
 
    ```diff
      //Header.js
@@ -305,7 +305,7 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
 
    Spara ändringarna.
 
-1. Gå till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) om du vill visa formatändringarna automatiskt.
+1. Navigera till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) om du vill att formatändringarna ska visas automatiskt.
 
 1. Öppna filen `Page.css` på `ui.frontend/src/components/Page`. Gör följande ändringar för att korrigera utfyllnaden:
 
@@ -318,26 +318,26 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
    }
    ```
 
-1. Gå tillbaka till webbläsaren på [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html). Du bör omedelbart se ändringarna av appen återspeglas.
+1. Återgå till webbläsaren på [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html). Du bör omedelbart se ändringarna av appen återspeglas.
 
    ![Format tillagt i sidhuvud](assets/integrate-spa/added-logo-localhost.png)
 
-   Du kan fortsätta att göra innehållsuppdateringar i AEM och se hur de återspeglas i **webpack-dev-server**, eftersom vi proxyerar innehållet.
+   Du kan fortsätta att göra innehållsuppdateringar i AEM och se hur de återspeglas i **webpack-dev-server**, eftersom vi proxyger innehållet.
 
 1. Stoppa webbpaketets dev-server med `ctrl+c` i terminalen.
 
 ## Distribuera SPA uppdateringar till AEM
 
-Ändringarna som görs i `Header` är för närvarande bara synliga via **webpack-dev-server**. Distribuera den uppdaterade SPA för att AEM se ändringarna.
+Ändringarna i `Header` är för närvarande bara synliga genom **webpack-dev-server**. Distribuera den uppdaterade SPA för att AEM se ändringarna.
 
-1. Navigera till projektets rot (`aem-guides-wknd-spa`) och distribuera projektet till AEM med Maven:
+1. Navigera till projektets rot (`aem-guides-wknd-spa`) och distribuera projektet till AEM med hjälp av Maven:
 
    ```shell
    $ cd ..
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. Navigera till [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Du bör se de uppdaterade `Header`-formaten som används.
+2. Navigera till [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Du bör se den uppdaterade `Header` och använda format.
 
    ![Uppdaterat sidhuvud i AEM](assets/integrate-spa/final-header-component.png)
 
@@ -345,21 +345,21 @@ Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev
 
 ## Grattis! {#congratulations}
 
-Grattis, du har uppdaterat SPA och utforskat integreringen med AEM! Du vet hur du utvecklar SPA mot AEM JSON-modell-API:t med en **webpack-dev-server**.
+Grattis, du har uppdaterat SPA och utforskat integreringen med AEM! Du vet hur du utvecklar SPA mot AEM JSON-modell-API med hjälp av en **webpack-dev-server**.
 
 ### Nästa steg {#next-steps}
 
-[Mappa SPA komponenter till AEM komponenter](map-components.md)  - Lär dig hur du mappar React-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
+[Mappa SPA komponenter till AEM](map-components.md) - Lär dig hur du mappar React-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
 
 ## (Bonus) Webpack Dev Server - Mock JSON API {#mock-json}
 
 Ett annat sätt att snabbt utveckla är att använda en statisk JSON-fil som fungerar som JSON-modell. Genom att&quot;maska&quot; JSON tar vi bort beroendet av en lokal AEM. Den gör det också möjligt för en frontendutvecklare att uppdatera JSON-modellen för att testa funktionalitet och driva ändringar i JSON API som senare skulle implementeras av en backend-utvecklare.
 
-Den första konfigurationen av JSON-modellinstansen kräver **en lokal AEM**.
+Den första konfigurationen av JSON-modellen gör **kräver en lokal AEM**.
 
-1. Gå tillbaka till IDE-miljön och navigera till `ui.frontend/public` och lägg till en ny mapp med namnet `mock-content`.
+1. Återgå till IDE och navigera till `ui.frontend/public` och lägga till en ny mapp med namnet `mock-content`.
 1. Skapa en ny fil med namnet `mock.model.json` under `ui.frontend/public/mock-content`.
-1. Gå till [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) i webbläsaren.
+1. Navigera till [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
 
    Detta är den JSON som exporteras av AEM som driver programmet. Kopiera JSON-utdata.
 
@@ -367,7 +367,7 @@ Den första konfigurationen av JSON-modellinstansen kräver **en lokal AEM**.
 
    ![Modell-Json-fil](./assets/integrate-spa/mock-model-json-created.png)
 
-1. Öppna filen `index.html` på `ui.frontend/public/index.html`. Uppdatera metadataegenskapen för den AEM sidmodellen så att den pekar på en variabel `%REACT_APP_PAGE_MODEL_PATH%`:
+1. Öppna filen `index.html` på `ui.frontend/public/index.html`. Uppdatera metadataegenskapen för AEM-sidmodellen så att den pekar på en variabel `%REACT_APP_PAGE_MODEL_PATH%`:
 
    ```html
        <!-- AEM page model -->
@@ -377,9 +377,9 @@ Den första konfigurationen av JSON-modellinstansen kräver **en lokal AEM**.
        />
    ```
 
-   Om du använder en variabel för värdet för `cq:pagemodel_root_url` blir det enklare att växla mellan proxy- och mock-json-modellen.
+   Använda en variabel för värdet på `cq:pagemodel_root_url` gör det enklare att växla mellan proxy- och mock-json-modellen.
 
-1. Öppna filen `ui.frontend/.env.development` och gör följande uppdateringar för att kommentera ut det tidigare värdet för `REACT_APP_PAGE_MODEL_PATH`:
+1. Öppna filen `ui.frontend/.env.development` och gör följande uppdateringar för att kommentera det tidigare värdet för `REACT_APP_PAGE_MODEL_PATH` och `REACT_APP_API_HOST`:
 
    ```diff
    + PUBLIC_URL=/
@@ -388,29 +388,33 @@ Den första konfigurationen av JSON-modellinstansen kräver **en lokal AEM**.
    - REACT_APP_PAGE_MODEL_PATH=/content/wknd-spa-react/us/en.model.json
    + REACT_APP_PAGE_MODEL_PATH=/mock-content/mock.model.json
    
+   - REACT_APP_API_HOST=http://localhost:4502
+   + #REACT_APP_API_HOST=http://localhost:4502
+   
    REACT_APP_ROOT=/content/wknd-spa-react/us/en/home.html
    ```
 
-1. Om den körs just nu stoppar du **webpack-dev-server**. Starta **webpack-dev-server** från terminalen:
+1. Om programmet körs kan du stoppa **webpack-dev-server**. Starta **webpack-dev-server** från terminalen:
 
    ```shell
    $ cd ui.frontend
    $ npm start
    ```
 
-   Navigera till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) och se SPA med samma innehåll som används i **proxyn** json.
+   Navigera till [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) och du bör se SPA med samma innehåll som används i **proxy** json.
 
-1. Gör en liten ändring i `mock.model.json`-filen som skapades tidigare. Det uppdaterade innehållet visas omedelbart i **webpack-dev-server**.
+1. Gör en liten ändring i `mock.model.json` filen skapades tidigare. Det uppdaterade innehållet visas direkt i **webpack-dev-server**.
 
    ![Json-uppdatering av modellmodell](./assets/integrate-spa/webpack-mock-model.gif)
 
 Att kunna manipulera JSON-modellen och se effekterna på en live-SPA kan hjälpa en utvecklare att förstå JSON-modellens API. Det gör det även möjligt att utveckla både fram- och bakände parallellt.
 
-Nu kan du växla var JSON-innehållet ska användas genom att växla posterna i `env.development`-filen:
+Nu kan du växla var JSON-innehållet ska användas genom att växla posterna i `env.development` fil:
 
 ```plain
 # JSON API via proxy to AEM
 #REACT_APP_PAGE_MODEL_PATH=/content/wknd-spa-react/us/en.model.json
+#REACT_APP_API_HOST=http://localhost:4502
 
 # JSON API via static mock file
 REACT_APP_PAGE_MODEL_PATH=/mock-content/mock.model.json
