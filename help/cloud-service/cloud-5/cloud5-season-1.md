@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
+source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -53,14 +53,16 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
    </td>
      <td>
-      <img alt="Loggfiler och loggning" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-log-files.md">
+            <img alt="Loggfiler och loggning" src="./imgs/003-thumb.png"/>
+        </a>
       <div>
-         <strong>Loggfiler och loggning</strong>
+         <a href="./cloud5-aem-log-files.md"><strong>Loggfiler och loggning</strong></a>
          <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Kommer 18 mars 2022
+         Här får du en snabb inblick i hur du kommer åt loggar på AEM as a Cloud Service, inklusive hur du kommer åt dem via användargränssnittet och API:er.
       </p>
    </td> 
   </tr>
