@@ -8,8 +8,9 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 8185
-thumbnail: 8185.jpg
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+thumbnail: KT-8185.jpg
+exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
+source-git-commit: a8f5d75848838540173e7beb66ebc69f3b1fcddc
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
