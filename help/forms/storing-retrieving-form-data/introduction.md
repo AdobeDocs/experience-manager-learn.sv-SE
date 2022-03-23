@@ -1,19 +1,19 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen
+title: Lagra och hämta formulärdata från introduktionen till MySQL-databasen
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
-
 
 # Lagra och hämta adaptiva formulärdata från MySQL-databasen
 
@@ -23,7 +23,7 @@ I den här självstudiekursen får du hjälp med att spara och hämta anpassade 
 
 * Ring en POST till en servett. Den här servern lagrar data i databasen. De lagrade data är associerade med ett GUID
 
-* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med metoden **request.setAttribute**.
+* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med hjälp av **request.setAttribute** -metod.
 
 ## Demonstration av användningsfallet
 

@@ -1,5 +1,5 @@
 ---
-title: Skriv nyttolastdokumentet till filsystemet
+title: Extrahera nod från skickad data-xml
 description: Anpassat processsteg för att lägga till skrivdokument som finns under nyttolastmappen i filsystemet
 feature: Adaptive Forms
 version: 6.5
@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-9860
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+exl-id: 5282034f-275a-479d-aacb-fc5387da793d
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---

@@ -1,20 +1,20 @@
 ---
-title: Utveckla med Output och Forms Services i AEM Forms
-description: Använda API:er för Output och Forms Service i AEM Forms
+title: Återgivning av interaktiv PDF med Forms Services i AEM Forms
+description: Använda Forms Service API i AEM Forms för att återge interaktiv PDF
 feature: Forms Service
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
 
-
-# Återge interaktiv PDF med Forms Services i AEM Forms
+# Återgivning av interaktiv PDF med Forms Services i AEM Forms
 
 Använda Forms Service API i AEM Forms för att återge interaktiv PDF
 
@@ -44,7 +44,7 @@ Rad 1: Sökväg till mappen som innehåller xdp-mallen
 
 Rad2-4: Skapa PDFFormRenderOptions och ange dess egenskaper
 
-Rad 7: Generera interaktiv PDF med tjänsten renderPDFForm i FormsService
+Rad 7: Generera interaktiv PDF med hjälp av tjänsten renderPDFForm i FormsService
 
 Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande programmet
 
@@ -59,10 +59,8 @@ Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande progr
 1. Lägg till följande sökväg i de uteslutna avsnitten och spara
 1. /bin/generateinteractivepdf
 1. [Öppna mobilformuläret](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. Fyll i några fält och klicka sedan på ***Hämta och fyll i ....*** button
+1. Fyll i några fält och klicka sedan på ***Hämta och fyll i....*** button
 1. Den interaktiva PDF-filen bör laddas ned till ditt lokala system
 
 
-Exempelpaketet innehåller den anpassade profil som är associerad med mobilformuläret. Titta närmare på filen [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp). Denna jsp extraherar data från mobilformuläret och gör en begäran om POST till serverlet som är monterad på sökvägen ***/bin/generateinteractivepdf***. Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system
-
-
+Exempelpaketet innehåller den anpassade profil som är kopplad till Mobile-formuläret. Utforska [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) -fil. Detta jsp extraherar data från mobilformuläret och gör en begäran om POST till serverutrymmet som är monterat på ***/bin/generateinteractivepdf*** bana. Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system

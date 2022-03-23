@@ -1,8 +1,8 @@
 ---
-title: Installera och konfigurera Tomcat
-seo-title: Installera och konfigurera Tomcat
+title: Installera och konfigurera Tomcat-video
+seo-title: Install and Configure Tomcat
 description: Detta är en del av en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
-seo-description: Detta är en del av en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
+seo-description: This is part 1 of multistep tutorial for creating your first interactive communications document.In this part, we will install TOMCAT and deploy the sampleRest.war file in TOMCAT. The REST endpoint exposed by this WAR file will be the basis for our Data Source and Form Data Model.
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
 topics: development
@@ -15,14 +15,13 @@ discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera Tomcat {#install-and-configure-tomcat}
 
@@ -34,15 +33,15 @@ Så här ställer du in tomcat:
 
 1. Hämta och installera JDK1.8.
 2. Ställ in JAVA_HOME till att peka på JDK1.8.
-3. Hämta [tomcat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
+3. Hämta [tomat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
 4. Ladda ned tomcat-versionen av din inställning. Du kan ladda ned zip-filen för 64-bitarsfönster under kärnavsnittet.
 5. Packa upp innehållet till c:\tomcat.
-6. Du bör se något liknande i din c-enhet **c:\tomcat\apache-tomcat-8.5.27** beroende på vilken version av din tomcat du har
+6. Du bör se något liknande i din cd-enhet **c:\tomcat\apache-tomcat-8.5.27** beroende på vilken version du har
 7. Skapa en miljövariabel med namnet&quot;CATALINA_HOME&quot; och ange värdet till Exempel på installationsmappen för tomcat c:\tomcat\apache- tomcat-8.5.27
 8. Kopiera filen SampleRest.war till webbappen för din Tomcat-installation
 9. Starta nytt kommandotolkfönster.
-10. Navigera till &lt;tomcat install folder>\bin och kör startup.bat
-11. När tomcat har startats testar du slutpunkten som visas av WAR-filen genom att [klicka här](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+10. Navigera till &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin och kör startup.bat
+11. När tomcat har startat testar du slutpunkten som exponeras av WAR-filen av [klicka här](http://localhost:8080/SampleRest/webapi/getStatement/9586)
 12. Du bör hämta exempeldata som resultat av det här anropet.
 
 Grattis!!!! Du har konfigurerat för att katt och distribuerat filen SampleRest.war.

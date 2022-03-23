@@ -1,13 +1,14 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen
+title: Lagra och hämta formulärdata från MySQL-databasen - skapa klientbibliotek
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%

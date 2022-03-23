@@ -1,8 +1,8 @@
 ---
-title: AEM arbetsflöde vid HTML5-formuläröverföring
-seo-title: AEM arbetsflödet vid inskickning av HTML5-formulär
+title: Starta AEM arbetsflöde för att skicka HTML5-formulär - Granska och godkänn PDF
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
-seo-description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
 topics: development
 audience: developer
@@ -12,35 +12,34 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 1%
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
+# Arbetsflöde för att granska och godkänna det inskickade PDF
 
-# Arbetsflöde för att granska och godkänna den skickade PDF-filen
-
-Det sista och sista steget är att skapa AEM arbetsflöde som genererar en statisk eller icke-interaktiv PDF för granskning och godkännande. Arbetsflödet utlöses via en AEM som konfigurerats på noden `/content/pdfsubmissions`.
+Det sista och sista steget är att skapa AEM arbetsflöde som genererar ett statiskt eller icke-interaktivt PDF för granskning och godkännande. Arbetsflödet utlöses via en AEM som konfigurerats på noden `/content/pdfsubmissions`.
 
 Följande skärmbild visar de steg som ingår i arbetsflödet.
 
 ![arbetsflöde](assets/workflow.PNG)
 
-## Skapa icke-interaktivt PDF-arbetsflödessteg
+## Skapa icke-interaktivt arbetsflödessteg för PDF
 
-XDP-mallen och de data som ska sammanfogas med mallen anges här. De data som ska sammanfogas är de data som skickas från PDF-filen. Dessa skickade data lagras under noden `/content/pdfsubmissions`.
+XDP-mallen och de data som ska sammanfogas med mallen anges här. De data som ska sammanfogas är de data som har skickats från PDF. Dessa skickade data lagras under noden `/content/pdfsubmissions`.
 
 ![arbetsflöde](assets/generate-pdf1.PNG)
 
-Den genererade PDF-filen tilldelas arbetsflödesvariabeln `submittedPDF`.
+Det genererade PDF tilldelas arbetsflödesvariabeln som anropas `submittedPDF`.
 
 ![arbetsflöde](assets/generate-pdf2.PNG)
 
 ### Tilldela den genererade PDF-filen för granskning och godkännande
 
-Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF-filen för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och dokument i arbetsflödeskomponenten Tilldela uppgift.
+Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och Dokument i arbetsflödeskomponenten Tilldela uppgift.
 
 ![arbetsflöde](assets/assign-task.PNG)

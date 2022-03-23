@@ -1,18 +1,18 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen
+title: Lagra och hämta formulärdata från MySQL-databasen - distribuera
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
 version: 6.3,6.4,6.5
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: f520e7a4-d485-4515-aebc-8371feb324eb
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
-
 
 # Distribuera detta på servern
 
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 Så här testar du den här funktionen på din AEM Forms-instans:
 
-* Hämta och distribuera JAR-filer för MySQL-drivrutinen ](assets/mysqldriver.jar) med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)[
-* Hämta och distribuera [OSGi-paketet](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)
-* Hämta och installera [paketet som innehåller klientlib, adaptiv formulärmall och den anpassade sidkomponenten](assets/store-and-fetch-af-with-data.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera [exemplet Adaptiv form](assets/sample-adaptive-form.zip) med [gränssnittet FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Hämta och distribuera [JAR för MySql-drivrutin](assets/mysqldriver.jar) filer med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
+* Hämta och distribuera [OSGi-paket](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
+* Hämta och installera [paket som innehåller klientlib, adaptiv formulärmall och den anpassade sidkomponenten](assets/store-and-fetch-af-with-data.zip) med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera [exempel Adaptiv form](assets/sample-adaptive-form.zip) med [Gränssnittet FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 * Importera [form-data-db.sql](assets/form-data-db.sql) med MySql Workbench. Detta skapar de scheman och tabeller som behövs i databasen för att den här självstudiekursen ska fungera.
-* Logga in på [configMgr.](http://localhost:4502/system/console/configMgr) Sök efter &quot;Apache Sling Connection Pooled DataSource. Skapa en ny post för den grupperade datakällan för Apache Sling-anslutningen med namnet **SaveAndContinue** med följande egenskaper:
+* Logga in på [configMgr.](http://localhost:4502/system/console/configMgr) Sök efter &quot;Apache Sling Connection Pooled DataSource. Skapa en ny post för den grupperade datakällan för Apache Sling-anslutningen med namnet **SparaOchFortsätt** med följande egenskaper:
 
 | Egenskapsnamn | Värde |
 | ------------------------|---------------------------------------|
@@ -40,7 +40,7 @@ Så här testar du den här funktionen på din AEM Forms-instans:
 | JDBC-drivrutinsklass | com.mysql.cj.jdbc.Driver |
 | JDBC-anslutnings-URI | jdbc:mysql://localhost:3306/aemformstutorial |
 
-* Öppna [det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
+* Öppna [Adaptiv form](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
 * Fyll i viss information och klicka på knappen &quot;Spara och fortsätt senare&quot;.
 * Du bör få tillbaka en URL med ett GUID.
 * Kopiera URL-adressen och klistra in den på en ny flik i webbläsaren. **Kontrollera att det inte finns något tomt utrymme i slutet av URL-adressen.**

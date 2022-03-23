@@ -1,22 +1,23 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen
+title: Lagra och hämta formulärdata från MySQL-databasen - Konfigurera datakälla
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
 version: 6.3,6.4,6.5
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Konfigurera datakälla
 
-Det finns många sätt att integrera AEM med externa databaser. En av de vanligaste standardmetoderna för databasintegrering är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
-Det första steget är att hämta och distribuera lämpliga [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) i AEM.
+Det finns många sätt att integrera AEM med externa databaser. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
+Det första steget är att ladda ned och installera rätt [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEM.
 Skapa den poolade datakällan för Apache Sling-anslutningen och ange de egenskaper som anges i skärmbilden nedan. Databasschemat är en del av den här självstudiekursen.
 
 ![datakälla](assets/save-continue.PNG)
@@ -25,10 +26,10 @@ Databasen har en tabell som heter formdata med de tre kolumnerna som visas på s
 
 ![databas](assets/data-base-tables.PNG)
 
-SQL-filen som schemat ska skapas från kan [hämtas här](assets/form-data-db.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
+SQL-filen som ska skapa schemat kan vara [hämtad härifrån](assets/form-data-db.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
 
 >[!NOTE]
->Ange ett namn för datakällan **SaveAndContinue**. Exempelkoden använder namnet för att ansluta till databasen.
+>Ge datakällan ett namn **SparaOchFortsätt**. Exempelkoden använder namnet för att ansluta till databasen.
 
 | Egenskapsnamn | Värde |
 | ------------------------|---------------------------------------|

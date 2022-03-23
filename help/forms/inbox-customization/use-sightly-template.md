@@ -1,5 +1,5 @@
 ---
-title: Anpassning av inkorgen
+title: Använda enkel mall för att visa inkorgsdata
 description: Lägg till anpassade kolumner för att visa ytterligare data i arbetsflödet med hjälp av en enkel mall
 feature: Adaptive Forms
 topics: development
@@ -11,9 +11,10 @@ kt: 5830
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '294'
 ht-degree: 1%
 
 ---
@@ -21,13 +22,13 @@ ht-degree: 1%
 # Använda enkel mall för att visa inkorgsdata
 
 Du kan använda en liten mall för att formatera de data som ska visas i inkorgskolumner. I det här exemplet visas koral-ui-ikoner beroende på värdet i resultatkolumnen. På följande skärmbild visas hur ikoner används i resultatkolumnen
-![intäktsikoner](assets/income-column.PNG)
+![intäkter-ikoner](assets/income-column.PNG)
 
-[Den smidigt ](assets/sightly-template.zip) mall som används för att visa de anpassade URI-ikonerna för coral finns som en del av den här artikeln.
+[Den smidiga mallen](assets/sightly-template.zip) som används för att visa de anpassade gränssnittsikonerna för coral anges som en del av den här artikeln.
 
 ## Liten mall
 
-Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av det [URI-bibliotek för koral](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
+Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [ikonbibliotek för coral ui](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som kommer med AEM.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -81,7 +82,7 @@ return val;
 
 >[!NOTE]
 >
->I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
+>I den här artikeln förutsätts att du har installerat [exempelarbetsflöde](assets/review-workflow.zip) och [exempelformulär](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
 
 * [Logga in som administratör](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)
@@ -91,7 +92,7 @@ return val;
 * Öppna administrationskontrollen genom att klicka på listvyn bredvid knappen Skapa
 * Lägg till resultatkolumn i Inkorgen och spara ändringarna
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Välj _civilstånd_ och skicka formuläret
+* Välj _civilstånd_ och skicka in formuläret
 * [Visa inkorg](http://localhost:4502/aem/inbox)
 
 Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se lämplig ikon under resultatkolumnen

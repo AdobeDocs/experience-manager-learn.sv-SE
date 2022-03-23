@@ -1,19 +1,19 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen
+title: Lagra och hämta formulärdata från MySQL-databas - server där formulärdata ska lagras
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: dd82f309-dd4e-42ce-8856-e51c898024f5
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 1%
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
-
 
 # Servern för lagring av formulärdata
 

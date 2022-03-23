@@ -1,8 +1,8 @@
 ---
-title: AEM arbetsflöde vid HTML5-formuläröverföring
-seo-title: AEM arbetsflödet vid inskickning av HTML5-formulär
+title: Utlös AEM arbetsflöde vid inskickning av HTML5-formulär - Hantera inlämning av PDF
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
-seo-description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
+seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
 topics: development
 audience: developer
@@ -12,20 +12,19 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
+# Hantera inlämning av PDF
 
-# Hantera inskickning av PDF
+I den här delen ska vi skapa en enkel servett som körs på AEM Publish för att hantera PDF från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-begäran till en server som körs i en AEM författare som är direkt ansvarig för att spara skickade data som `nt:file` i AEM Authors databas.
 
-I den här delen ska vi skapa en enkel server som körs på AEM Publish för att hantera PDF-inlämningen från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-begäran till en server som körs i en AEM författare som är direkt ansvarig för att spara skickade data som en `nt:file`-nod i AEM Authors databas.
-
-Nedan följer koden för den server som hanterar PDF-överföringen. På den här servern gör vi ett anrop till en POST som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM Authors databas.
+Nedan följer koden för den server som hanterar PDF-överföringen. I den här serleten ringer vi en POST till en serlet som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM Authors databas.
 
 
 ## AEM Publish servlet
@@ -105,7 +104,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM Author servlet
 
-Nästa steg är att lagra skickade data i AEM Authors databas. Servern som är monterad på `/bin/startworkflow` sparar skickade data.
+Nästa steg är att lagra skickade data i AEM Authors databas. Servern är monterad på `/bin/startworkflow` sparar skickade data.
 
 ```java
 import java.io.BufferedReader;
@@ -203,7 +202,6 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-En AEM startfunktion för arbetsflödet är konfigurerad att utlösa varje gång en ny resurs av typen `nt:file` skapas under noden `/content/pdfsubmissions`. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF-filer genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
+En startfunktion för ett AEM arbetsflöde har konfigurerats så att en ny resurs av typen utlöses varje gång `nt:file` skapas under `/content/pdfsubmissions` nod. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
 
-För att lagra skickade data under noden `/content/pdfsubmissions` använder vi OSGi-tjänsten `GetResolver` för att spara skickade data med hjälp av `fd-service`-systemanvändaren som finns tillgänglig i alla AEM Forms-installationer.
-
+Lagra skickade data under `/content/pdfsubmissions` nod, använder vi `GetResolver` Med OSGi-tjänsten kan vi spara skickade data med `fd-service` systemanvändare som finns i alla AEM Forms-installationer.
