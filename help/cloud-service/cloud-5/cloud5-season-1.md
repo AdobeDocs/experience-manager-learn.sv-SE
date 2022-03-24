@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
+source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -68,14 +68,16 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
   </tr>
   <tr>
    <td>
-      <img alt="Åtkomsttoken" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-getting-login-token-integrations.md">
+            <img alt="Åtkomsttoken" src="./imgs/004-thumb.png"/>
+        </a>
       <div>
-        <strong>Integrera med åtkomsttoken</strong>        
+        <a href="./cloud5-getting-login-token-integrations.md"><strong>Integrera med åtkomsttoken</strong></a>        
          <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Kommer den 25 mars 2022
+         En snabb översikt och demo av interaktion med inloggningstoken för integrering i molntjänstmiljöer.
       </p>
      </td>   
      <td>
