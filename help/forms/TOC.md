@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 0%
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
    + [OCR-dataextrahering](some-useful-integrations/ocr-data-extraction.md)
    + [Listrutor för överlappande](some-useful-integrations/geonames-org.md)
+   + [Integrera med ServiceNow](some-useful-integrations/service-now.md)
 + Skapa OSGi-paket {#creating-your-first-osgi-bundle}
    + [Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -172,7 +173,7 @@ ht-degree: 0%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
++ AEM arbetsflöde från inskickning av Mobile-formulär{#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
    + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
@@ -209,8 +210,8 @@ ht-degree: 0%
    + [Använda PDFG-tjänsten i AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
-   + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
+   + [Generera PDF på Mobile-formulärinlämning](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Generera interaktiv PDF från Mobile-formulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
    + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)

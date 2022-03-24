@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 7994860f6d0ea017aa48e326482bc8e77af6f555
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '725'
 ht-degree: 11%
 
 ---
@@ -172,6 +172,14 @@ ht-degree: 11%
       + [Skapa USC-batchkonfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
       + [Skapa batchkonfiguration](./forms/formscs-batch-api/create-batch-config.md)
       + [Kör grupp](./forms/formscs-batch-api/execute-batch-generate-documents.md)
+   + manipulering av PDF i Forms CS{#forms-cs-assembler}
+      + [Introduktion](./forms/forms-cs-assembler/introduction.md)
+      + [Skapa tjänstautentiseringsuppgifter](./forms/forms-cs-assembler/service-credentials.md)
+      + [Skapa JWT-token](./forms/forms-cs-assembler/create-jwt.md)
+      + [Skapa åtkomsttoken](./forms/forms-cs-assembler/create-access-token.md)
+      + [Sammanställ filer i PDF](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [Testa lösningen](./forms/forms-cs-assembler/test.md)
+      + [Utmaning](./forms/forms-cs-assembler/challenge.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
       + [Introduktion](./forms/forms-cs-azure-portal/introduction.md)
       + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)
