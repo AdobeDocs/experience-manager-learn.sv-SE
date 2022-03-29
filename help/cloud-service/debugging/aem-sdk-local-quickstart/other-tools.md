@@ -12,10 +12,10 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 1%
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +34,42 @@ CRXDE Lite ligger på:
 + Verktyg > Allmänt > CRXDE Lite
 + eller direkt på [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 
+### Felsöka innehåll
+
+CRXDE Lite ger direktåtkomst till JCR. Det innehåll som visas via CRXDE Lite begränsas av de behörigheter som tilldelats användaren, vilket innebär att du kanske inte kan se eller ändra allt i JCR beroende på din åtkomst.
+
++ JCR-strukturen navigeras och ändras med den vänstra navigeringsrutan
++ Om du väljer en nod i det vänstra navigeringsfönstret visas nodegenskaperna i det nedre fönstret.
+   + Egenskaper kan läggas till, tas bort eller ändras från rutan
++ Om du dubbelklickar på en filnod i den vänstra navigeringen öppnas filens innehåll i den övre högra rutan
++ Tryck på knappen Spara alla längst upp till vänster om du vill behålla ändringarna eller på nedåtpilen bredvid Spara alla om du vill återställa ändringar som inte har sparats.
+
+![CRXDE Lite - Felsöka innehåll](./assets/other-tools/crxde-lite__debugging-content.png)
+
+Ändringar som görs direkt i AEM SDK via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till AEM innehållspaket (`ui.content`) och engagerade i Git. Helst utgår alla innehållsändringar i programmet från kodbasen och flödar in i AEM SDK via distributioner, i stället för att göra ändringar direkt i AEM SDK via CRXDE Lite.
+
+### Åtkomstkontroller för felsökning
+
+Med CRXDE Lite kan du testa och utvärdera åtkomstkontroll på en specifik nod för en viss användare eller grupp (även huvudnamn).
+
+Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går du till:
+
++ CRXDE Lite > Verktyg > Testa åtkomstkontroll ...
+
+![CRXDE Lite - testa åtkomstkontroll](./assets/other-tools/crxde-lite__test-access-control.png)
+
+1. Välj en JCR-sökväg som ska utvärderas i fältet Sökväg
+1. Använd fältet Principal och markera den användare eller grupp som sökvägen ska utvärderas mot
+1. Tryck på knappen Testa
+
+Resultaten visas nedan:
+
++ __Bana__ upprepar sökvägen som utvärderades
++ __kapitalbelopp__ upprepar användaren eller gruppen som sökvägen utvärderades för
++ __Huvudkonton__ visar alla huvudobjekt som det valda huvudobjektet är en del av.
+   + Detta är praktiskt om du vill veta mer om de tillfälliga gruppmedlemskap som kan ge behörigheter via arv
++ __Behörigheter vid sökväg__ visar alla JCR-behörigheter som det valda huvudkontot har på den utvärderade sökvägen
+
 ## Förklara fråga
 
 ![Förklara fråga](./assets/other-tools/explain-query.png)
@@ -49,7 +85,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som du kan använda för att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-syntax.
+QueryBuilder-felsökaren är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med hjälp av AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) syntax.
 
 Felsökaren för QueryBuilder finns på:
 

@@ -1,6 +1,6 @@
 ---
-title: Felsöka AEM som en Cloud Service
-description: på självbetjäning, skalbar, molnbaserad infrastruktur, som kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM som en Cloud Service, från att bygga och driftsätta till att få information om AEM program som körs.
+title: Felsökning AEM as a Cloud Service
+description: på självbetjäning, skalbar molninfrastruktur, vilket gör att AEM utvecklare måste förstå och felsöka olika aspekter av AEM as a Cloud Service, från att bygga och driftsätta till att få information om hur AEM program körs.
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -12,37 +12,37 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 1%
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
-# Felsöka AEM som en Cloud Service
+# Felsökning AEM as a Cloud Service
 
-AEM som Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen. AEM som Cloud Service använder självbetjäning, skalbar molninfrastruktur, vilket kräver att AEM utvecklare förstår och felsöker olika delar av AEM som en Cloud Service, från att bygga och driftsätta till att få information om hur AEM körs.
+AEM as a Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen. AEM as a Cloud Service använder självbetjäning, skalbar molninfrastruktur, vilket kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM as a Cloud Service, från att bygga och driftsätta till att få information om hur AEM körs.
 
 ## Loggar
 
-Loggarna innehåller information om hur ditt program fungerar i AEM som en Cloud Service, samt information om distributioner.
+Loggarna innehåller information om hur ditt program fungerar på AEM as a Cloud Service, samt information om problem med distributioner.
 
-[Felsöka AEM som en Cloud Service med hjälp av loggar](./logs.md)
+[Felsöka AEM as a Cloud Service med loggar](./logs.md)
 
 ## Bygg och driftsätt
 
-Adobe Cloud Manager-pipelines distribuerar AEM program genom en serie steg för att fastställa kodkvalitet och lönsamhet när de distribueras till AEM som en Cloud Service. Vart och ett av stegen kan resultera i fel, vilket gör det viktigt att förstå hur du felsöker byggen för att kunna fastställa grundorsaken till och hur du löser eventuella fel.
+Adobe Cloud Manager-pipelines distribuerar AEM program genom en serie steg för att fastställa kodkvalitet och lönsamhet när de distribueras till AEM as a Cloud Service. Vart och ett av stegen kan resultera i fel, vilket gör det viktigt att förstå hur du felsöker byggen för att kunna fastställa grundorsaken till och hur du löser eventuella fel.
 
-[Felsöka AEM som Cloud Service och driftsättning](./build-and-deployment.md)
+[Felsökning AEM as a Cloud Service bygge och driftsättning](./build-and-deployment.md)
 
 ## Developer Console
 
-Developer Console innehåller en mängd information och introspectioner i AEM som en Cloud Service som är användbara för att förstå hur programmet känns igen av och fungerar i AEM som en Cloud Service.
+På Developer Console finns en mängd information och introduktioner till AEM as a Cloud Service miljöer som är användbara för att förstå hur programmet känns igen av och fungerar på AEM as a Cloud Service.
 
-[Felsöka AEM som en Cloud Service med Developer Console](./developer-console.md)
+[Felsökning AEM as a Cloud Service med Developer Console](./developer-console.md)
 
-## CRXDE Lite
+## Databasläsare
 
-CRXDE Lite är ett klassiskt men ändå kraftfullt verktyg för felsökning AEM som utvecklingsmiljöer för Cloud Service. CRXDE Lite tillhandahåller en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av den gemensamma handboken, undersöka behörigheter och utvärdera frågor.
+Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service miljö. Databasläsaren har stöd för en skrivskyddad vy över resurser och egenskaper för AEM på produktions-, scen- och utvecklingsstadiet samt författar-, publicerings- och förhandsgranskningstjänster.
 
-[Felsöka AEM som en Cloud Service med CRXDE Lite](./crxde-lite.md)
+[Felsöka AEM as a Cloud Service med Databasläsaren](./repository-browser.md)
