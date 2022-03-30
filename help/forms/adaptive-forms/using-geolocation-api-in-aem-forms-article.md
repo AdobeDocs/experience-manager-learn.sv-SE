@@ -1,28 +1,26 @@
 ---
 title: Använda Geolocation-API:er i Adaptive Forms
 description: Fyll i adressfält i formuläret med hjälp av API:n för geopositionering
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.3,6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-
 # Använda Geolocation-API:er i Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-På sidan [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) finns en länk till en live-demo av den här funktionen.
-
-I den här artikeln ska vi titta närmare på hur du använder Googles Geolocation-API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i de aktuella adressfälten i ett formulär.
+I den här artikeln ska vi titta närmare på hur du använder Google Geolocation API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i de aktuella adressfälten i ett formulär.
 
 Följande steg har utförts för att använda Geolocation-API:t i Adaptive Forms.
 
-1. [Hämta API ](https://developers.google.com/maps/documentation/javascript/get-api-key) Keyfrom Google för att använda Google Maps-plattformen. Du kan få en provnyckel som gäller i ett år.
+1. [Hämta API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key) från Google till Google Maps. Du kan få en provnyckel som gäller i ett år.
 
 1. Anpassat formulärfragment skapades med fält för den aktuella adressen
 
@@ -77,9 +75,9 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 
 ![Fälten fylls i med geoloaction API](assets/capture-4.gif)
 
-På rad 1 använder vi HTML Geolocation API för att hämta den aktuella platsen. När den aktuella platsen har hämtats skickar vi den aktuella platsen till funktionen showPosition.
+På rad 1 används HTML Geolocation API för att hämta den aktuella platsen. När den aktuella platsen har hämtats skickar vi den aktuella platsen till funktionen showPosition.
 
-I funktionen showPosition använder vi Googles API för att hämta adressinformation för den angivna latituden och longituden.
+I funktionen showPosition använder vi Google-API:t för att hämta adressinformation för den angivna latituden och longituden.
 
 Den JSON som returneras av API tolkas sedan för att ange fälten för adaptiv form.
 
@@ -100,7 +98,7 @@ Så här aktiverar du den här funktionen på servern:
 * [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
 * [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * Öppna regelredigeraren för komponenten Bildval.
-* Ersätt &lt;your_api_key> med Google API-nyckeln.
+* Ersätt &lt;your_api_key> med Google API Key.
 * Spara ändringarna.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
 * Klicka på ikonen &quot;geolocation&quot; (geopositionering).

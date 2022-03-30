@@ -6,13 +6,13 @@ version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 879518db-3f05-4447-86e8-5802537584e5
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
-
 
 # Anpassat processsteg
 
@@ -27,14 +27,12 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
 
-Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera mappen **projektnamn** > **core**. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande
-public void execute(WorkItem workItem, WorkflowSession, workflowSession, MetaDataMap processArguments)returnerar WorkflowException
-Körningsmetoden ger åtkomst till följande tre variabler
+Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Den körda metodens signatur är som följer public void execute(WorkItem, WorkflowSession, workflowSession, MetaDataMap processArguments) ger WorkflowException Körningsmetoden ger åtkomst till följande tre variabler
 
 **WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
@@ -144,12 +142,12 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 
 >[!NOTE]
 >
->Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
+>Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med aemfd-client-sdk-beroendet i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
-[härKontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
+[Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.
 
@@ -160,4 +158,3 @@ Skapa ett adaptivt formulär. Dra och släpp komponenten Bifogade filer i formul
 Spara inställningarna.
 
 Förhandsgranska formuläret. Lägg till några bilagor och skicka formuläret. Bifogade filer bör sparas i filsystemet på den plats som du har angett i arbetsflödet.
-

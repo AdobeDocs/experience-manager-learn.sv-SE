@@ -6,13 +6,13 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ditt första OSGi-paket
 
@@ -31,7 +31,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 
 ### Testa JDK-versionen
 
-Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör gå tillbaka till den version av JDK som identifieras av variabeln `JAVA_HOME`
+Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör gå tillbaka till den version av JDK som identifieras av `JAVA_HOME` variabel
 
 ![datakälla](assets/java-version.JPG)
 
@@ -39,33 +39,33 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 
 Maven är ett automatiserat byggverktyg som främst används för Java-projekt. Följ de här stegen för att installera maven på din lokala dator.
 
-* Skapa en mapp med namnet `maven` på C-enheten
-* Hämta det binära ZIP-arkivet [](https://maven.apache.org/download.cgi)
+* Skapa en mapp med namnet `maven` i C-enheten
+* Ladda ned [binärt zip-arkiv](https://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
-* Skapa en miljövariabel med namnet `M2_HOME` och värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är versionen **mvn** 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
-* Lägg till `%M2_HOME%\bin` i din sökväg
+* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
+* Lägg till `%M2_HOME%\bin` till din bana
 * Spara ändringarna
-* Öppna en ny kommandotolk och skriv `mvn -version`. Du bör se **mvn**-versionen som visas på skärmbilden nedan
+* Öppna en ny kommandotolk och skriv in `mvn -version`. Du borde se **mvn** version som visas på skärmbilden nedan
 
 ![datakälla](assets/mvn-version.JPG)
 
 ## Settings.xml
 
-En Maven `settings.xml`-fil definierar värden som konfigurerar Maven-körningen på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
+A Maven `settings.xml` -filen definierar värden som konfigurerar Maven-körningen på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
 
 Navigera till `C:\Users\<username>\.m2 folder`
-Extrahera innehållet i filen [settings.zip](assets/settings.zip) och placera det i mappen `.m2`.
+Extrahera innehållet i [settings.zip](assets/settings.zip) och montera den i `.m2` mapp.
 
 ## Installera Eclipse
 
-Installera den senaste versionen av [eclipse](https://www.eclipse.org/downloads/)
+Installera den senaste versionen av [förmörka](https://www.eclipse.org/downloads/)
 
 ## Skapa ditt första projekt
 
 Arketype är en Maven-projektmallverktygslåda. En arkityp definieras som ett ursprungligt mönster eller en modell från vilken alla andra saker av samma typ görs. Namnet passar ihop med att vi försöker skapa ett system som ger ett konsekvent sätt att generera Maven-projekt. Med Archetype kan man skapa Maven-projektmallar för användarna och ge användarna möjlighet att generera parametriserade versioner av dessa projektmallar.
 Så här skapar du ditt första maven-projekt:
 
-* Skapa en ny mapp med namnet `aemformsbundles` på C-enheten
+* Skapa en ny mapp med namnet `aemformsbundles` i C-enheten
 * Öppna en kommandotolk och navigera till `c:\aemformsbundles`
 * Kör följande kommando i kommandotolken
 * `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
@@ -85,31 +85,30 @@ Om allt blir bra kan du se ett meddelande om att bygget fungerar i kommandoföns
 ## Skapa förmörkande projekt från ditt maven-projekt
 
 Ändra arbetskatalogen till `learningaemforms`.
-Kör `mvn eclipse:eclipse` från kommandoraden
-Ovanstående kommando läser din pom-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse kan förstå projekttyper, relationer, klassökväg osv.
+Kör `mvn eclipse:eclipse` från kommandoraden Ovanstående kommando läser din PDF-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse kan förstå projekttyper, relationer, klassökväg osv.
 
 ## Importera projektet till förmörkning
 
 Starta **Eclipse**
 
-Gå till **Arkiv -> Importera** och välj **Befintliga Maven-projekt** så som visas här
+Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som visas här
 
 ![datakälla](assets/import-mvn-project.JPG)
 
 Klicka på Nästa
 
-Välj `c:\aemformsbundles\learningaemform`s genom att klicka på knappen **Bläddra**
+Välj `c:\aemformsbundles\learningaemform`s genom att klicka på **Bläddra** knapp
 
 ![datakälla](assets/select-mvn-project.JPG)
 
 >[!NOTE]
 >Du kan välja att importera lämpliga moduler beroende på dina behov. Välj och importera endast kärnmodulen om du bara ska skapa Java-kod i ditt projekt.
 
-Klicka på **Slutför** för att starta importprocessen
+Klicka **Slutför** för att starta importprocessen
 
-Projektet importeras till Eclipse och du ser ett antal `learningaemforms.xxxx`-mappar
+Projektet importeras till Eclipse och ett antal `learningaemforms.xxxx` mappar
 
-Expandera `src/main/java` under mappen `learningaemforms.core`. Det här är den mapp där du skriver större delen av koden.
+Expandera `src/main/java` under `learningaemforms.core` mapp. Det här är den mapp där du skriver större delen av koden.
 
 ![datakälla](assets/learning-core.JPG)
 
@@ -118,7 +117,7 @@ Expandera `src/main/java` under mappen `learningaemforms.core`. Det här är den
 
 
 
-När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera lämplig klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD Client SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
+När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://search.maven.org/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i Maven-projektet. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
 
 
 
@@ -140,4 +139,4 @@ Så här skapar du ditt projekt:
 * Navigera till `c:\aemformsbundles\learningaemforms\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
-   `C:\AEMFormsBundles\learningaemforms\core\target` och kan driftsättas med  [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+   `C:\AEMFormsBundles\learningaemforms\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)

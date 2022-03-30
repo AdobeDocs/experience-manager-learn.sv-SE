@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '438'
 ht-degree: 1%
 
 ---
@@ -33,22 +33,18 @@ AEM verktyg för modernisering konverterar automatiskt befintliga AEM sidor som 
 + Klona AEM 6.x-produktion och kör AEM moderniseringsverktyg mot
 + Hämta och installera [de senaste AEM moderniseringsverktygen](https://github.com/adobe/aem-modernize-tools/releases/latest) på AEM 6.x-produktionsklonen via Package Manager
 
-+ [Sidstrukturkonverterare](https://opensource.adobe.com/aem-modernize-tools/pages/tools/page-structure.html) uppdaterar befintligt sidinnehåll från statisk mall till en mappad redigerbar mall med layoutbehållare
++ [Sidstrukturkonverterare](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) uppdaterar befintligt sidinnehåll från statisk mall till en mappad redigerbar mall med layoutbehållare
    + Definiera konverteringsregler med OSGi-konfiguration
    + Kör sidstrukturkonverteraren mot befintliga sidor
 
-+ [Komponentkonverterare](https://opensource.adobe.com/aem-modernize-tools/pages/tools/component.html) uppdaterar befintligt sidinnehåll från statisk mall till en mappad redigerbar mall med layoutbehållare
++ [Komponentkonverterare](https://opensource.adobe.com/aem-modernize-tools/pages/component/about.html) uppdaterar befintligt sidinnehåll från statisk mall till en mappad redigerbar mall med layoutbehållare
    + Definiera konverteringsregler via JCR-noddefinitioner/XML
    + Kör komponentkonverteringsverktyget mot befintliga sidor
 
-+ [Principimporteraren](https://opensource.adobe.com/aem-modernize-tools/pages/tools/policy-importer.html) skapar profiler från designkonfigurationen
++ [Principimporteraren](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html) skapar profiler från designkonfigurationen
    + Definiera konverteringsregler med JCR-noddefinitioner/XML
    + Kör principimporteraren mot befintliga designdefinitioner
    + Använd importerade profiler på AEM och behållare
-
-+ [Dialogrutekonverterare](https://opensource.adobe.com/aem-modernize-tools/pages/tools/dialog.html) I konverteras Classic(ExtJS) och CoralUI 2-baserade komponentdialogrutor till TouchUI 3-baserade dialogrutor.
-   + Kör verktyget Dialogrutekonverterare mot befintliga dialogrutor baserade på användargränssnittet i ExtJS eller Coral2
-   + Synkronisera konverterade dialogrutor tillbaka till Git-databasen
 
 ## Handövning
 
@@ -94,6 +90,5 @@ Se även till att du har fullföljt tidigare övningar:
 + [AEM Gems - Introduktion till AEM Modernization Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 
-
-1. Distribuera den nymoderniserade äldre webbplatsen på den lokala Cloud Servicens SDK. Ladda ned här:
-+ [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm).
+1. Distribuera den nymoderniserade äldre webbplatsen på den lokala AEM SDK. AEM ASK finns att ladda ned här:
++ [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
