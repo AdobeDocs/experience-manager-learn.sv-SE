@@ -8,9 +8,9 @@ kt: 10054
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342067.jpeg
-source-git-commit: 8212bdddb35fe015efbea897b72b00df3787b120
+source-git-commit: cc4b565aeeaa1419138d459c2d144e944ffb0e67
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,7 @@ Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips oc
 
 ## Innehåll som behandlas i den här videon
 
-+ Loggfiler [Översikt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
-+ Åtkomst till loggfiler via användargränssnittet
-+ Använda Adobe CLI
-   + [Adobe I/O Extensible CLI](https://github.com/adobe/aio-cli)
-   + [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
-+ Utseendeloggfiler
++ distribuera dispatcherfiler i en molntjänstmiljö
+   + [Migreringsdokument](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+   + [Blogg](https://medium.com/adobetech/migrating-a-dispatcher-configuration-from-managed-services-to-aem-as-a-cloud-service-fa8a80d242ee)
++ [Migreringsverktyg](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration)
