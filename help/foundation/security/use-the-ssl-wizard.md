@@ -13,9 +13,9 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 835c01cb2ad1d154437087c51c70a2daf90493dd
+source-git-commit: 2d5446197b9b81a4dbe4eaa5a7cb4fcdd5d63f67
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,8 @@ Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
 
+Öppna __SSL-konfigurationsguide__ kan öppnas direkt genom att navigera till __AEM Author > Tools > Security > SSL Configuration__.
+
 >[!NOTE]
 >
 >I hanterade miljöer är det bäst för IT-avdelningen att tillhandahålla CA-tillförlitliga certifikat och nycklar.
@@ -34,11 +36,11 @@ Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera
 
 ## Privat nyckel och självsignerad certifikatnedladdning
 
-Följande zip innehåller [!DNL DER]- och [!DNL CRT]-filer som krävs för att konfigurera AEM SSL på localhost och som endast är avsedda för lokal utveckling.
+Följande ZIP innehåller [!DNL DER] och [!DNL CRT] filer som krävs för AEM konfigurera SSL på localhost och som endast är avsedda för lokal utveckling.
 
-Filerna [!DNL DER] och [!DNL CERT] tillhandahålls av praktiska skäl och genereras enligt stegen som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
+The [!DNL DER] och [!DNL CERT] filerna tillhandahålls av praktiska skäl och genereras enligt de steg som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
 
-Vid behov är certifikatets lösenordsfras **admin**.
+Om det behövs är certifikatets lösenfras **admin**.
 
 localhost - private key och self-signed certificate.zip (upphör i juli 2028)
 
@@ -46,7 +48,7 @@ localhost - private key och self-signed certificate.zip (upphör i juli 2028)
 
 ## Skapa privata nycklar och självsignerade certifikat
 
-I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon som använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
+I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
 
 ```shell
 ### Create Private Key
