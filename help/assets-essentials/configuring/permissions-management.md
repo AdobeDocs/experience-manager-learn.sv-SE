@@ -8,15 +8,15 @@ role: User
 level: Beginner
 kt: 9818
 thumbnail: 342113.jpeg
-source-git-commit: 225c975dc2eea8afe786f7b7c450f1101bdbe04b
+source-git-commit: e3ff8c16a62a8e79345c384baf3b24f53eed93b3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
 
-# Behörighetshantering
+# Behörighetshantering i Assets Essentials
 
 Läs om hur man med behörighetshanteringen AEM Assets Essentials kan styra åtkomsten till mediefiler, skydda varumärket och säkerställa regelefterlevnad.
 
