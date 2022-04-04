@@ -3,9 +3,9 @@ title: AEM Assets Videos och Tutorials
 description: En samling videor och självstudiekurser för Adobe Experience Manager Assets
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: b7ff3e9abd22bb0c3d791ec3ac7da3562e849912
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '186'
 ht-degree: 2%
 
 ---
@@ -14,27 +14,11 @@ ht-degree: 2%
 
 Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshantering på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
-## Nyheter
+## AEM Assets genomgång
 
-* **[Relatera och inte relatera (video)](./authoring/relate-unrelate.md)**
+Titta på den här heltäckande genomgången av AEM Assets som förklarar vad AEM Assets är och hur det kan användas för att uppnå organisationens affärsmål.
 
-   *Lär dig hur du upprättar och hanterar relationer mellan resurser i AEM*
-
-* **[Publicera resurser (video)](./sharing/publish.md)**
-
-   *Lär dig allt om att publicera material från AEM Author till AEM Publish*
-
-* **[Vattenstämplar (video)](./advanced/watermarks.md)**
-
-   *Lär dig hur du vattenstämplar resursåtergivningar på AEM as a Cloud Service*
-
-* **[Baslinjebehörigheter (video)](./configuring/baseline-permissions.md)**
-
-   *Lär dig hur och varför det är viktigt att konfigurera AEM Assets med baslinjebehörigheter*
-
-* **[Starta arbetsflöden automatiskt (video)](./configuring/auto-start-workflows.md)**
-
-   *Upptäck hur du automatiskt aktiverar AEM arbetsflöde för överförda eller ombearbetade resurser*
+>[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
 ## Personalval
 
