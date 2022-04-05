@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: cc434164a4474b71f23653f33cb7e3d99c271595
+source-git-commit: b277fb0f0cfd19a8318cbf5311e2ded973c092ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 1%
 ## Introduktion
 
 Välkommen till Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att tillhandahålla användbar information om AEM as a Cloud Service på 5 minuter eller mindre.
+
+Besök [Förslagsruta](https://forms.office.com/r/74P5Xz4UH0) för att skicka in ämnesförslag.
 
 ## Säsong 1
 
@@ -97,7 +99,7 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       <img alt="Migrering (del 1)" src="./imgs/coming-soon.png"/>
       <div>
          <strong>Migrering (del 1)</strong>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Special Guest</em>
       </div>
       <p>
         <br/>
@@ -144,7 +146,7 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
         <td>
             <img alt="Adobe App Builder" src="./imgs/coming-soon.png"/>
             <div>
-                <strong>Migrering (del 2)</strong><br/>        
+                <strong>Adobe App Builder</strong><br/>        
                 <em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Special Guest</em>
             </div>
             <p><br/>
