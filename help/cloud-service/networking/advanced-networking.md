@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
+source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt hantering av anslutningar till och från AEM as a Cloud Service program.
 
 |  | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
-|---------------------------------------------------|:-----------------------:|:---------------------|
+|---------------------------------------------------|:-----------------------:|:---------------------:|
 | Stöd för avancerade nätverk | ✔ | ✘ |
 
 
@@ -65,4 +65,55 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
       </p>
     </td>   
   </tr>
+</table>
+
+## Exempel på koder
+
+Den här samlingen innehåller exempel på den konfiguration och kod som krävs för att utnyttja avancerade nätverksfunktioner för specifika användningsområden.
+
+<table><tr>
+   <td>
+      <a  href="./examples/email-service.md"><img alt="VPN (Virtual Private Network)" src="./assets/code-examples__email.png"/></a>
+      <div><strong><a href="./examples/email-service.md">E-posttjänst</a></strong></div>
+      <p>
+        Exempel på OSGi-konfiguration som använder AEM för att ansluta till externa e-posttjänster.
+      </p>
+    </td>  
+    <td>
+        <a  href="./examples/http-on-non-standard-ports.md"><img alt="HTTP/HTTPS på portar som inte är standard" src="./assets/code-examples__http.png"/></a>
+        <div><strong><a href="./examples/http-on-non-standard-ports.md">HTTP/HTTPS på portar som inte är standard</a></strong></div>
+        <p>
+            Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst på icke-standard HTTP/HTTPS-portar.
+        </p>
+    </td>
+    <td>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL-anslutning med JDBC DataSourcePool" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">SQL-anslutning med JDBC DataSourcePool</a></strong></div>
+      <p>
+            Exempel på Java™-kod som ansluter till externa SQL-databaser genom att konfigurera AEM JDBC-datakällpool.
+      </p>
+    </td>   
+    </tr><tr>
+    <td>
+      <a  href="./examples/sql-java-apis.md"><img alt="SQL-anslutning med Java API:er" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">SQL-anslutning med Java™ API:er</a></strong></div>
+      <p>
+            Exempel på Java™-kod som ansluter till externa SQL-databaser med Java™ SQL API:er.
+      </p>
+    </td>   
+    <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Använda ett IP-tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Använda ett IP-tillåtelselista</a></strong></div>
+      <p>
+            Konfigurera en IP-tillåtelselista så att endast VPN-trafik kan komma åt AEM.
+      </p>
+    </td>
+   <td>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish</a></strong></div>
+      <p>
+            Kräv VPN-åtkomst för specifika sökvägar i AEM Publish.
+      </p>
+    </td>
+</tr>
 </table>
