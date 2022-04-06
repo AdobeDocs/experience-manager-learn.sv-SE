@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
+source-git-commit: d526f362f4b03e1d872d973064b65ff8baa749d3
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,8 @@ I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att 
 ```
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
+
+Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) som din e-postleverantör kräver (t.ex. `smtp.ssl`, osv.).
 
 ```json
 {
