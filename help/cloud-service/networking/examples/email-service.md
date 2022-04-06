@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d526f362f4b03e1d872d973064b65ff8baa749d3
+source-git-commit: 4d3256cee67183803692cccc7f17ca1a0820e05d
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/exp
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
-    "smtp.user": "$[env:EMAIL_USERNAME;default=apikey]",
+    "smtp.user": "$[env:EMAIL_USERNAME;default=emailapikey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
     "smtp.ssl": true,
