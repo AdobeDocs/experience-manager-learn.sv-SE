@@ -12,13 +12,13 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
-
 
 # Diagram för flera serier
 
@@ -47,6 +47,6 @@ Följ de här stegen för att testa detta på datorn
 * [Ladda ned SeriesChartSampleData.json till hårddisken.](assets/serieschartsampledata.json) Detta är exempeldata som ska användas för att fylla i diagrammet.
 * [Navigera till Forms och Dokument.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Välj försiktigt den interaktiva kommunikationsmallen &quot;MutualFundGrowthFactSheet&quot;.
-* Klicka på Förhandsgranska | Överför exempeldata.
+* Klicka på Förhandsgranska | Utskriftskanal | Överför exempeldata.
 * Bläddra till exempeldatafilen som ingår i den här artikeln.
 * Förhandsgranska tryckkanalen för den interaktiva kommunikationen &quot;MutualFundGrowthFactSheet&quot; med exempeldata som hämtades i föregående steg.

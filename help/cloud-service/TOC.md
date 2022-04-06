@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 8631d0b23e2befa22032d0b677e0f1c7122f2cb5
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '731'
 ht-degree: 11%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 11%
       + [Skapa JWT-token](./forms/forms-cs-assembler/create-jwt.md)
       + [Skapa åtkomsttoken](./forms/forms-cs-assembler/create-access-token.md)
       + [Sammanställ filer i PDF](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [PDF/A-verktyg](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testa lösningen](./forms/forms-cs-assembler/test.md)
       + [Utmaning](./forms/forms-cs-assembler/challenge.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
