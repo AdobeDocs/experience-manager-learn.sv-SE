@@ -5,7 +5,7 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
 source-wordcount: '1667'
 ht-degree: 0%
@@ -173,7 +173,7 @@ ht-degree: 0%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
++ AEM arbetsflöde från inskickning av Mobile-formulär{#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
    + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
@@ -211,7 +211,7 @@ ht-degree: 0%
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
    + [Generera PDF på Mobile-formulärinlämning](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [Generera interaktiv PDF från Mobile-formulär](document-services/render-interactive-form-using-api.md)
+   + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
    + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
@@ -235,7 +235,7 @@ ht-degree: 0%
    + [Öppnar användargränssnittet för agenten vid formuläröverföring](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + Spara och hämta utkast {#store-retrieve-letters}
    + [Introduktion](store-retrieve-letters/introduction.md)
-   + [implementering](store-retrieve-letters/save-draft-letters.md)
+   + [Implementering](store-retrieve-letters/save-draft-letters.md)
    + [Distribuera exemplet](store-retrieve-letters/deploy-on-your-server.md)
 + Interaktiv kommunikation {#interactive-communications}
    + [Använda batch-API](interactive-communications/batch-generation-interactive-communications.md)

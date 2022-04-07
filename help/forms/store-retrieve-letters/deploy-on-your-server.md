@@ -11,9 +11,10 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,18 @@ ht-degree: 0%
 
 Följ instruktionerna nedan för att få den här funktionen att fungera på din AEM
 
-* Skapa en mapp som kallas för utkast på din c-enhet
 * [Skapa databasschemat](assets/icdrafts.sql)
 * [Importera klientbiblioteket](assets/icdrafts.zip)
 * [Importera det adaptiva formuläret](assets/SavedDraftsAdaptiveForm.zip)
 * Skapa datakälla anropad _SparaOchFortsätt_
 
 ![Skapa datakälla](assets/data-source.png)
+
+| Egenskapsnamn | Egenskapsvärde |
+|---|---|
+| Namn på datakälla | SparaOchFortsätt |
+| JDBC-drivrutinsklass | com.mysql.cj.jdbc.Driver |
+| URL för JDBC-anslutning | jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
 
 * [Distribuera kasseringsprogrampaketet](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * Se till att du _Aktivera Spara med CCRDocumentInstanceService_ i OSGI-konfigurationen enligt nedan
