@@ -5,7 +5,7 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
+source-git-commit: 09dbe82eeebd598d4a5949d61a7ae14937c18b72
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 1%
@@ -96,9 +96,11 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
    </td>
      <td>
-      <img alt="Migrering (del 1)" src="./imgs/006-thumb.png"/>
+        <a href="./cloud5-aem-content-migration-part-1.md">
+            <img alt="Migrering (del 1)" src="./imgs/006-thumb.png"/>
+        </a>
       <div>
-         <strong>Migrering (del 1)</strong>
+         <a href="./cloud5-aem-content-migration-part-1.md"><strong>Migrering (del 1)</strong></a>
          <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Dr. Applesmith</em>
       </div>
       <p>
