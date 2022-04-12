@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -70,6 +70,8 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
 ## Exempel på koder
 
 Den här samlingen innehåller exempel på den konfiguration och kod som krävs för att utnyttja avancerade nätverksfunktioner för specifika användningsområden.
+
+Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigurerats innan du följer dessa självstudiekurser.
 
 <table><tr>
    <td>
