@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8da6d5470c702620ee1121fd2688eb8756f0cebd
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,10 @@ Skicka e-post från AEM as a Cloud Service genom att konfigurera AEM `DefaultMai
 Eftersom (de flesta) e-posttjänster inte körs via HTTP/HTTPS måste anslutningar till e-posttjänster från AEM as a Cloud Service proxideras.
 
 + `smtp.host` är inställd på OSGi-miljövariabeln `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` så den slussas genom utgången.
+   + `$[env:AEM_PROXY_HOST]` är en reserverad variabel som AEM as a Cloud Service mappar till den interna `proxy.tunnel` värd.
+   + Försök INTE att ange `AEM_PROXY_HOST` via Cloud Manager.
 + `smtp.port` är inställt på `portForward.portOrig` port som mappar till e-posttjänstens målvärd och port. I det här exemplet används mappningen: `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
+   + The `smpt.port` är inställt på `portForward.portOrig` och INTE SMTP-serverns faktiska port. Mappningen mellan `smtp.port` och `portForward.portOrig` porten har upprättats av Cloud Manager `portForwards` rule (enligt nedan).
 
 Eftersom hemligheter inte får lagras i kod bör e-posttjänstens användarnamn och lösenord anges med [hemlig OSGi-konfigurationsvariabel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), anges med AIO CLI eller Cloud Manager API.
 
@@ -61,7 +64,7 @@ Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/exp
 {
     "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
-    "smtp.user": "$[env:EMAIL_USERNAME;default=emailapikey]",
+    "smtp.user": "$[env:EMAIL_USERNAME;default=myApiKey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",
     "from.address": "noreply@wknd.site",
     "smtp.ssl": true,
@@ -72,8 +75,11 @@ Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/exp
 }
 ```
 
-Följande `aio CLI` kommandot kan användas för att ange OSGi-hemligheter per miljö:
+The `EMAIL_USERNAME` och `EMAIL_PASSWORD` OSGi-variabeln och hemligheten kan anges per miljö med antingen:
 
-```shell
-$ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "apikey" --secret EMAIL_PASSWORD "password123"
-```
++ [Miljökonfiguration för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ eller med `aio CLI` kommando
+
+   ```shell
+   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"
+   ```
