@@ -1,5 +1,5 @@
 ---
-title: Arbeta med formaterad text | AEM Headless
+title: Använda RTF med AEM Headless
 description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av AEM GraphQL API:er som JSON som ska användas av headless-program.
 version: Cloud Service
 doc-type: article
@@ -7,22 +7,21 @@ kt: 9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
 
-
-# Arbeta med formaterad text i Adobe Experience Manager Headless
+# RTF med AEM Headless
 
 Textfältet med flera rader är en datatyp för innehållsfragment som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, till exempel bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. AEM GraphQL API har en robust funktion för att returnera RTF som HTML, ren text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
 
 ## Flerradig redigerare
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
-
 
 I Content Fragment Editor ger menyraden för flerradigt textfält författare standardfunktioner för RTF-formatering, som **fet**, *kursiv* och understrykning. Om du öppnar fältet Flera rader i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
@@ -38,9 +37,9 @@ När du använder datatypen Flera rader kan du ange **Standardtyp** till:
 * Markdown
 * Oformaterad text
 
-The **Standardtyp** -alternativet påverkar redigeringsmiljön direkt och avgör om det finns RTF-verktyg.
+The **Default Type** option directly influences the editing experience and determines if the rich text tools are present.
 
-Du kan också [aktivera textbundna referenser](#insert-fragment-references) till andra innehållsfragment genom att kontrollera **Tillåt fragmentreferens** och konfigurera **Tillåtna modeller för innehållsfragment**.
+You can also [enable in-line references](#insert-fragment-references) to other Content Fragments by checking the **Allow Fragment Reference** and configuring the **Allowed Content Fragment Models**.
 
 ## RTF-svar med GraphQL API
 
@@ -376,9 +375,9 @@ Använd `json` returtyp och inkludera `_references` objekt när en GraphQL-fråg
 }
 ```
 
-I frågan ovan visas `main` fältet returneras som JSON. The `_references` objektet innehåller fragment för hantering av referenser som är av typen `ImageRef` eller av typen `ArticleModel`.
+In the above query, the `main` field is returned as JSON. The `_references` object includes fragments for handling any references that are of type `ImageRef` or of type `ArticleModel`.
 
-**JSON-svar:**
+**JSON response:**
 
 ```json
 {
@@ -458,7 +457,7 @@ I frågan ovan visas `main` fältet returneras som JSON. The `_references` objek
 }
 ```
 
-JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. The `_references` innehåller sedan alla referenser med de ytterligare egenskaper som efterfrågas. Till exempel `ImageRef` returnerar `width` av bilden som artikeln refererar till.
+JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. The `_references` innehåller sedan alla referenser med de ytterligare egenskaper som efterfrågas. For example, the `ImageRef` returns the `width` of the image referenced in the article.
 
 ## Återge textbundna referenser i formaterad text
 

@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 4%
+source-wordcount: '231'
+ht-degree: 5%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 4%
       + [4 - beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Hur {#how-to}
-      + [Arbeta med RTF](./graphql/how-to/rich-text.md)
+      + [RTF](./graphql/how-to/rich-text.md)
+      + [Bilder](./graphql/how-to/images.md)
+      + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
+      + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
@@ -89,4 +92,4 @@ ht-degree: 4%
    + [4 - Definiera mallar för innehållstjänster](./content-services/chapter-4.md)
    + [5 - Skapa sidor för innehållstjänster](./content-services/chapter-5.md)
    + [6 - Visa innehållet på AEM Publish for Delivery](./content-services/chapter-6.md)
-   + [7 - Använda AEM innehållstjänster från en Mobile-app](./content-services/chapter-7.md)
+   + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
