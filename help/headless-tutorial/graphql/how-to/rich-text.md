@@ -8,16 +8,18 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+source-git-commit: 22d5aa7299ceacd93771bd73a6b89d1903edc561
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
 
 # RTF med AEM Headless
 
-Textfältet med flera rader är en datatyp för innehållsfragment som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, till exempel bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. AEM GraphQL API har en robust funktion för att returnera RTF som HTML, ren text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
+Textfältet med flera rader är en datatyp för innehållsfragment som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, till exempel bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. Textfältet En rad är en annan datatyp för innehållsfragment som ska användas för enkla textelement.
+
+AEM GraphQL API har en robust funktion för att returnera RTF som HTML, ren text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
 
 ## Flerradig redigerare
 
@@ -25,21 +27,35 @@ Textfältet med flera rader är en datatyp för innehållsfragment som gör att 
 
 I Content Fragment Editor ger menyraden för flerradigt textfält författare standardfunktioner för RTF-formatering, som **fet**, *kursiv* och understrykning. Om du öppnar fältet Flera rader i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
+>[!NOTE]
+>
+> Det går inte att anpassa plugin-program för RTF-format i redigeringsprogrammet för flera rader.
+
 ## Datatyp för flerradig text {#multi-line-data-type}
 
 Använd **Flerradstext** datatyp när du definierar innehållsfragmentmodellen för att aktivera RTF-redigering.
 
 ![RTF-datatyp för flera rader](assets/rich-text/multi-line-rich-text.png)
 
-När du använder datatypen Flera rader kan du ange **Standardtyp** till:
+Flera egenskaper för flerradsfältet kan konfigureras.
+
+The **Återge som** kan anges till:
+
+* Textområde - återger ett enskilt fält med flera rader
+* Flera fält - återger flera fält med flera rader
+
+
+The **Standardtyp** kan anges till:
 
 * RTF-text
 * Markdown
 * Oformaterad text
 
-The **Default Type** option directly influences the editing experience and determines if the rich text tools are present.
+The **Standardtyp** -alternativet påverkar redigeringsmiljön direkt och avgör om det finns RTF-verktyg.
 
-You can also [enable in-line references](#insert-fragment-references) to other Content Fragments by checking the **Allow Fragment Reference** and configuring the **Allowed Content Fragment Models**.
+Du kan också [aktivera textbundna referenser](#insert-fragment-references) till andra innehållsfragment genom att kontrollera **Tillåt fragmentreferens** och konfigurera **Tillåtna modeller för innehållsfragment**.
+
+Om innehållet kommer att lokaliseras kan du kontrollera **Översättningsbar** box. Endast RTF och oformaterad text kan lokaliseras. Se [arbeta med lokaliserat innehåll för mer information](./localized-content.md).
 
 ## RTF-svar med GraphQL API
 
@@ -364,10 +380,12 @@ Använd `json` returtyp och inkludera `_references` objekt när en GraphQL-fråg
         _path
         _publishUrl
         width
+        __typename
       }
       ...on ArticleModel {
         _path
         author
+        __typename
       }
       
     }
@@ -375,9 +393,9 @@ Använd `json` returtyp och inkludera `_references` objekt när en GraphQL-fråg
 }
 ```
 
-In the above query, the `main` field is returned as JSON. The `_references` object includes fragments for handling any references that are of type `ImageRef` or of type `ArticleModel`.
+I frågan ovan visas `main` fältet returneras som JSON. The `_references` objektet innehåller fragment för hantering av referenser som är av typen `ImageRef` eller av typen `ArticleModel`.
 
-**JSON response:**
+**JSON-svar:**
 
 ```json
 {
@@ -444,12 +462,14 @@ In the above query, the `main` field is returned as JSON. The `_references` obje
       "_references": [
         {
           "_path": "/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "_publishUrl": "http://localhost:4503/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
-          "width": 1920
+          "_publishUrl": "http://publish-p123-e456.adobeaemcloud.com/content/dam/wknd/en/activities/climbing/sport-climbing.jpg",
+          "width": 1920,
+          "__typename": "ImageRef"
         },
         {
           "_path": "/content/dam/wknd/en/magazine/la-skateparks/ultimate-guide-to-la-skateparks",
           "author": "Stacey Roswells",
+          "__typename": "ArticleModel"
         }
       ]
     }
@@ -457,7 +477,7 @@ In the above query, the `main` field is returned as JSON. The `_references` obje
 }
 ```
 
-JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. The `_references` innehåller sedan alla referenser med de ytterligare egenskaper som efterfrågas. For example, the `ImageRef` returns the `width` of the image referenced in the article.
+JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. The `_references` innehåller sedan alla referenser med de ytterligare egenskaper som efterfrågas. Till exempel `ImageRef` returnerar `width` av bilden som artikeln refererar till.
 
 ## Återge textbundna referenser i formaterad text
 
@@ -498,11 +518,11 @@ const renderReference = {
     // node contains merged properties of the in-line reference and _references object
     'ImageRef': (node) => {
         // when __typename === ImageRef
-        return <img src={node._path} alt={'in-line reference'} /> 
+        return <img src={node._publishUrl} alt={'in-line reference'} /> 
     },
-    'AdventureModel': (node) => {
-        // when __typename === AdventureModel
-        return <Link to={`/adventure:${node._path}`}>{`${node.adventureTitle}: ${node.adventurePrice}`}</Link>;
+    'ArticleModel': (node) => {
+        // when __typename === ArticleModel
+        return <Link to={`/article:${node._path}`}>{`${node.value}`}</Link>;
     }
     ...
 }
