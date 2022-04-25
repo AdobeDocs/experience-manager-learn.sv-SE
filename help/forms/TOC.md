@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,7 @@ ht-degree: 0%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ AEM arbetsflöde från inskickning av Mobile-formulär{#offline-mobile-form-submission}
++ Starta AEM arbetsflöde från att skicka mobilformulär{#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
    + [Egen profil](offline-mobile-form-submission/part-one.md)
    + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
@@ -204,13 +204,14 @@ ht-degree: 0%
 + Dokumenttjänster {#document-services}
    + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
    + [Bädda in PDF i anpassad form](document-services/embed-pdf-inline.md)
+   + [PDF carousel-komponent](document-services/display-pdf-in-carousel.md)
    + [Använda Assembler Service i AEM Forms](document-services/using-assembler-service-in-aem-forms.md)
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Använda streckkodstjänsten i AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
    + [Använda PDFG-tjänsten i AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
-   + [Generera PDF på Mobile-formulärinlämning](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
