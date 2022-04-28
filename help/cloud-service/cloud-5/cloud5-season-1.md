@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: bd60205f5561cfc8d758a15e69bc26fa1d64bd4d
+source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -137,14 +137,16 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
    </td>
      <td>
-      <img alt="Indexerings- och söktips" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-search-and-indexing.md">
+            <img alt="Indexerings- och söktips" src="./imgs/009-thumb.png"/>
+        </a>
       <div>
-         <strong>Indexerings- och söktips</strong>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>Indexerings- och söktips</strong></a>
          <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Kommer den 29 april 2022
+         För något så komplext som indexering och sökning visar teamet några enkla vinster för att optimera utvecklingstiden och lösa saker innan de blir problem.
       </p>
    </td> 
   </tr>
