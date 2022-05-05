@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
+source-git-commit: c6844750c2ef7c3471ce6a337002dde508d611f2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -152,13 +152,15 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
   </tr>
     <tr>
         <td>
-            <img alt="Adobe App Builder" src="./imgs/coming-soon.png"/>
+            <a href="./cloud5-adobe-app-builder.md">
+                <img alt="Adobe App Builder" src="./imgs/010-thumb.png"/>
+            </a>
             <div>
-                <strong>Adobe App Builder</strong><br/>        
-                <em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Special Guest</em>
+                <a href="./cloud5-adobe-app-builder.md"><strong>Adobe App Builder</strong></a><br/>        
+                <em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Amol Anand</em>
             </div>
             <p><br/>
-                Kommer 6 maj 2022
+                Kolla in några coola saker som du kan göra med Adobe App Builder och lär dig något nytt om framtiden för anpassningar i molnet.
             </p>
         </td>
         <td></td>
