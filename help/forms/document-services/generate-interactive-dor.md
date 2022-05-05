@@ -7,21 +7,66 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9226
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+exl-id: d9618cc8-d399-4850-8714-c38991862045
+source-git-commit: eb2a807587ab918be82d00d50bf1b338df58e84c
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
-
 
 # Hämta interaktiv DoR
 
 Ett vanligt användningsexempel är att kunna ladda ned en interaktiv DoR med data från adaptiva formulär. Den hämtade versionen av DoR kommer sedan att fyllas i med Adobe Acrobat eller Adobe Reader.
 
-För att uppnå detta måste vi göra följande
+## Det anpassade formuläret är inte baserat på XSD-schema
 
-## Generera exempeldata för XDP
+Om ditt XDP- och Adaptiv-formulär inte är baserat på något schema följer du de här stegen för att generera ett interaktivt arkivdokument.
+
+### Skapa anpassat formulär
+
+Skapa ett anpassat formulär och kontrollera att de adaptiva formulärfältsnamnen är identiska med fältnamnen i xdp-mallen.
+Anteckna rotelementnamnet för xdp-mallen.
+![root-element](assets/xfa-root-element.png)
+
+### Klientbibliotek
+
+Följande kod aktiveras när knappen Hämta PDF aktiveras
+
+```javascript
+$(document).ready(function() {
+    $(".downloadPDF").click(function() {
+        window.guideBridge.getDataXML({
+            success: function(guideResultObject) {
+                var req = new XMLHttpRequest();
+                req.open("POST", "/bin/generateinteractivedor", true);
+                req.responseType = "blob";
+                var postParameters = new FormData();
+                postParameters.append("dataXml", guideResultObject.data);
+                postParameters.append("xdpName","two.xdp")
+                postParameters.append("formBasedOnSchema", "false");
+                postParameters.append("xfaRootElement","form1");
+                console.log(guideResultObject.data);
+                req.send(postParameters);
+                req.onreadystatechange = function() {
+                    if (req.readyState == 4 && req.status == 200) {
+                        download(this.response, "report.pdf", "application/pdf");
+                    }
+
+
+                }
+            }
+        });
+
+    });
+});
+```
+
+## Anpassningsbart formulär baserat på XSD-schema
+
+Om xdp-filen inte är baserad på XSD följer du de här stegen för att skapa XSD(schema) som du kan basera ditt adaptiva formulär på
+
+### Generera exempeldata för XDP
 
 * Öppna XDP i AEM Forms Designer.
 * Klicka på Arkiv | Formuläregenskaper | Förhandsgranska
@@ -29,38 +74,32 @@ För att uppnå detta måste vi göra följande
 * Klicka på Generera
 * Ange beskrivande filnamn som&quot;form-data.xml&quot;
 
-## Generera XSD från XML-data
+### Generera XSD från XML-data
 
 Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
 
-## Skapa anpassat formulär
+### Skapa anpassat formulär
 
 Skapa anpassningsbara formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet. Följande kod aktiveras när _Hämta PDF_ klickas
 
 ```javascript
 $(document).ready(function() {
-    $(".downloadpdf").click(function() {
+    $(".downloadPDF").click(function() {
         window.guideBridge.getDataXML({
             success: function(guideResultObject) {
                 var req = new XMLHttpRequest();
-
                 req.open("POST", "/bin/generateinteractivedor", true);
                 req.responseType = "blob";
-
-                var formData = new FormData();
-                formData.append("dataXml", guideResultObject.data);
+                var postParameters = new FormData();
+                postParameters.append("dataXml", guideResultObject.data);
+                postParameters.append("xdpName","f8918-r14e_redo-barcode_3 2.xdp")
+                postParameters.append("formBasedOnSchema", "true");
+                postParameters.append("dataNodeToExtract","afData/afBoundData/topmostSubform");
                 console.log(guideResultObject.data);
-                req.send(formData);
-
+                req.send(postParameters);
                 req.onreadystatechange = function() {
-
                     if (req.readyState == 4 && req.status == 200) {
-
-
-
                         download(this.response, "report.pdf", "application/pdf");
-
-
                     }
 
 
@@ -79,121 +118,97 @@ $(document).ready(function() {
 Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern är en del av [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
-package com.aemformssamples.documentservices.core.servlets;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.StringWriter;
-
-import javax.servlet.Servlet;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.servlets.SlingAllMethodsServlet;
-
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.w3c.dom.Node;
-
-import com.adobe.aemfd.docmanager.Document;
-import com.adobe.fd.forms.api.FormsService;
-import com.adobe.fd.forms.api.FormsServiceException;
-import com.aemformssamples.documentservices.core.DocumentServices;
-
-@Component(service = {
-        Servlet.class
-}, property = {
-        "sling.servlet.methods=post",
-        "sling.servlet.paths=/bin/generateinteractivedor"
-})
-
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
-        @Reference
-        DocumentServices documentServices;
-        @Reference
-        FormsService formsService;
+	private static final long serialVersionUID = 1 L;
+	@Reference
+	DocumentServices documentServices;
+	@Reference
+	FormsService formsService;
+	private static final Logger log = LoggerFactory.getLogger(GenerateIInteractiveDor.class);
 
-        private static final Logger log = LoggerFactory.getLogger(GenerateIInteractiveDor.class);
+	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+		doPost(request, response);
+	}
+	protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+		String xdpName = request.getParameter("xdpName");
 
-        protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
-                doPost(request, response);
-        }
+		boolean formBasedOnXSD = Boolean.parseBoolean(request.getParameter("formBasedOnSchema"));
 
-        protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
-                // The xdp name can be passed to this servlet. For now it have been hardocded.
+		XPathFactory xfact = XPathFactory.newInstance();
+		XPath xpath = xfact.newXPath();
+		String dataXml = request.getParameter("dataXml");
+		log.debug("The data xml is " + dataXml);
+		org.w3c.dom.Document xmlDataDoc = documentServices.w3cDocumentFromStrng(dataXml);
+		Document renderedPDF = null;
+		try {
+			if (!formBasedOnXSD) {
+				String xfaRootElement = request.getParameter("xfaRootElement");
+				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+				org.w3c.dom.Document newXMLDocument = dBuilder.newDocument();
+				Element rootElement = newXMLDocument.createElement(xfaRootElement);
+				String unboundData = "afData/afUnboundData/data";
+				Node dataNode = (Node) xpath.evaluate(unboundData, xmlDataDoc, XPathConstants.NODE);
+				NodeList dataChildNodes = dataNode.getChildNodes();
+				for (int i = 0; i<dataChildNodes.getLength(); i++) {
+					Node childNode = dataChildNodes.item(i);
+					if (childNode.getNodeType() == 1) {
+						Element newElement = newXMLDocument.createElement(childNode.getNodeName());
+						newElement.setTextContent(childNode.getTextContent());
+						rootElement.appendChild(newElement);
+						log.debug("the node name is  " + childNode.getNodeName() + " and its value is " + childNode.getTextContent());
+					}
+				}
+				newXMLDocument.appendChild(rootElement);
+				Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(newXMLDocument);
+				String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
+				com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
+				renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
+				renderOptions.setContentRoot(xdpTemplatePath);
+				renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
+				renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
 
-                String xdpName = "f8918-r14e_redo-barcode_3 2.xdp";
+			} else {
+				// form is based on xsd
+				// get the actual xml data that needs to be merged with the template. This can be made more generic
+				String nodeToExtract = request.getParameter("dataNodeToExtract");
+				Node dataNode = (Node) xpath.evaluate(nodeToExtract, xmlDataDoc, XPathConstants.NODE);
+				StringWriter writer = new StringWriter();
+				Transformer transformer = TransformerFactory.newInstance().newTransformer();
+				transformer.transform(new DOMSource(dataNode), new StreamResult(writer));
+				String xml = writer.toString();
+				System.out.println(xml);
+				xmlDataDoc = documentServices.w3cDocumentFromStrng(xml);
+				Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(xmlDataDoc);
+				String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
+				com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
+				renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
+				renderOptions.setContentRoot(xdpTemplatePath);
+				renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
+				renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
+			}
+			InputStream fileInputStream = renderedPDF.getInputStream();
+			response.setContentType("application/pdf");
+			response.addHeader("Content-Disposition", "attachment; filename=" + xdpName.replace("xdp", "pdf"));
+			response.setContentLength((int) fileInputStream.available());
+			OutputStream responseOutputStream = response.getOutputStream();
+			int bytes;
+			while ((bytes = fileInputStream.read()) != -1) {
+				responseOutputStream.write(bytes);
+			}
+			responseOutputStream.flush();
+			responseOutputStream.close();
 
-                XPathFactory xfact = XPathFactory.newInstance();
-                XPath xpath = xfact.newXPath();
-                //String dataXml = request.getParameter("formData");
-                String dataXml = request.getParameter("dataXml");
-                System.out.println("The data xml is " + dataXml);
-                org.w3c.dom.Document xmlDataDoc = documentServices.w3cDocumentFromStrng(dataXml);
-                System.out.println("The af bound data is " + xmlDataDoc.getElementsByTagName("topmostSubform").getLength());
-                try {
-                        // get the actual xml data that needs to be merged with the template. This can be made more generic
-                        Node res = (Node) xpath.evaluate("afData/afBoundData/topmostSubform", xmlDataDoc, XPathConstants.NODE);
-                        StringWriter writer = new StringWriter();
-                        Transformer transformer = TransformerFactory.newInstance().newTransformer();
-                        transformer.transform(new DOMSource(res), new StreamResult(writer));
-                        String xml = writer.toString();
-                        System.out.println(xml);
-                        xmlDataDoc = documentServices.w3cDocumentFromStrng(xml);
-                        Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(xmlDataDoc);
-                        String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
-                        com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
-                        renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
-                        renderOptions.setContentRoot(xdpTemplatePath);
-                        renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
-                        Document xdpPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
-                        InputStream fileInputStream = xdpPDF.getInputStream();
-                        System.out.println("Got xdp PDF" + fileInputStream.available());
-                        response.setContentType("application/pdf");
-                        
-                        response.addHeader("Content-Disposition", "attachment; filename=" + xdpName.replace("xdp", "pdf"));
-                        response.setContentLength((int) fileInputStream.available());
-                        OutputStream responseOutputStream = response.getOutputStream();
-                        int bytes;
-                        while ((bytes = fileInputStream.read()) != -1) {
-                                responseOutputStream.write(bytes);
-                        }
-                        responseOutputStream.flush();
-                        responseOutputStream.close();
+		} catch (XPathExpressionException | TransformerException | FormsServiceException | IOException | ParserConfigurationException e) {
+			log.debug(e.getMessage());
+		}
 
-                } catch (XPathExpressionException e) {
-                        log.debug(e.getMessage());
-
-                } catch (TransformerException e) {
-
-                        log.debug(e.getMessage());
-                } catch (FormsServiceException e) {
-
-                        log.debug(e.getMessage());
-                } catch (IOException e) {
-
-                        log.debug(e.getMessage());
-                }
-
-        }
+	}
 
 }
 ```
 
-I exempelkoden är mallnamnet (f8918-r14e_redo-barcode_3 2.xdp) hårdkodat. Du kan enkelt skicka in mallnamnet till servern för att göra koden generisk och arbeta mot alla mallar.
-
+I exempelkoden extraherar vi xdp-namnet och andra parametrar från begäranobjektet. Om formuläret inte är baserat på XSD skapas det XML-dokument som ska sammanfogas med xdp. Om formuläret är baserat på XSD extraherar vi helt enkelt rätt nod från det adaptiva formuläret som har skickats data för att generera XML-dokument som ska sammanfogas med xdp-mallen.
 
 ## Distribuera exemplet på servern
 
@@ -202,11 +217,12 @@ Så här testar du detta på den lokala servern:
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. Lägg till följande post i användarmappningstjänsten för Apache Sling Service DevelopingWithServiceUser.core:getformsresourceSolver=fd-service
 1. [Hämta och installera det anpassade Document Services-paketet](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
-1. [Importera klientbiblioteket](assets/irs.zip)
-1. [Importera det adaptiva formuläret](assets/f8918complete.zip)
-1. [Importera XDP-mall och -schema](assets/xdp-template-and-xsd.zip)
+1. [Importera klientbiblioteket](assets/generate-interactive-dor-client-lib.zip)
+1. [Importera artikelresurser (adaptiv form, XDP-mallar och XSD)](assets/generate-interactive-dor-sample-assets.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
-1. Fylla i några av formulärfälten
-1. Klicka på Hämta PDF för att hämta PDF. Du kan behöva vänta några sekunder på att PDF ska ladda ned
+1. Fyll i några av formulärfälten.
+1. Klicka på Hämta PDF för att hämta PDF. Du kanske måste vänta några sekunder på att PDF ska hämta.
 
-
+>[!NOTE]
+>
+>Du kan prova samma användningsfall med [icke-xsd-baserad adaptiv form](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Kontrollera att du skickar rätt parametrar till slutpunkten för posten i streampdf.js som finns i irs clientlib.
