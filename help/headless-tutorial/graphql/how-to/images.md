@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
+source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%
 
 ---
-
 
 # Bilder med AEM Headless
 
@@ -90,7 +90,7 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller URL
 
 Använd lämpligt fält för att läsa in den refererade bilden i programmet `_path`, `_authorUrl`, eller `_publishUrl` i `adventurePrimaryImage` som bildens käll-URL.
 
-Domänerna för `_authorUrl` och `_publishUrl` definieras automatiskt av AEM as a Cloud Service med [Externt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.htmli).
+Domänerna för `_authorUrl` och `_publishUrl` definieras automatiskt av AEM as a Cloud Service med [Externalizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
 
 I Reagera ser bilden från AEM Publish ut så här:
 
