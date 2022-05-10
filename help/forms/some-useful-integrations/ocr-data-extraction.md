@@ -4,23 +4,22 @@ description: Extrahera data från dokument från myndigheter för att fylla i fo
 feature: Barcoded Forms
 version: 6.4,6.5
 kt: 6679
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1532a865-4664-40d9-964a-e64463b49587
+source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
-
-
 
 # OCR-dataextrahering
 
 Extrahera automatiskt data från en mängd olika dokument från myndigheter för att fylla i era adaptiva formulär.
 
-Det finns ett antal organisationer som tillhandahåller den här tjänsten och så länge de har väldokumenterade REST API:er kan ni enkelt integrera med AEM Forms med hjälp av dataintegreringsfunktionen. I den här självstudiekursen har jag använt [ID Analyzer](https://www.idanalyzer.com/) för att demonstrera OCR-dataextraheringen för överförda dokument.
+Det finns ett antal organisationer som tillhandahåller den här tjänsten och så länge de har väldokumenterade REST API:er kan ni enkelt integrera med AEM Forms med hjälp av dataintegreringsfunktionen. I den här självstudiekursen har jag använt [ID Analyzer](https://www.idanalyzer.com/) för att demonstrera OCR-extraheringen av överförda dokument.
 
 Följande steg utfördes för att implementera OCR-dataextraheringen med AEM Forms med hjälp av tjänsten ID Analyzer.
 
@@ -33,21 +32,55 @@ Skapa ett utvecklarkonto med [ID Analyzer](https://portal.idanalyzer.com/signin.
 OpenAPI-specifikationen (tidigare Swagger-specifikationen) är ett API-beskrivningsformat för REST API:er. Med en OpenAPI-fil kan du beskriva hela ditt API, inklusive:
 
 * Tillgängliga slutpunkter (/användare) och åtgärder för varje slutpunkt (GET /användare, POST /användare)
-* Operationsparametrar Indata och utdata för varje åtgärd
-Autentiseringsmetoder
+* Åtgärdsparametrar Indata och utdata för varje åtgärd Autentiseringsmetoder
 * Kontaktinformation, licens, användningsvillkor och annan information.
 * API-specifikationer kan skrivas i YAML eller JSON. Formatet är lätt att lära sig och kan läsas av både människor och datorer.
 
-Följ [OpenAPI-dokumentationen](https://swagger.io/docs/specification/2-0/basic-structure/) för att skapa din första swagger/OpenAPI-fil
+Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentation](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (fka Swagger).
 
-Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar engångslösenord som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/drivers-license-swagger.zip)
+Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångslösenord som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/drivers-license-swagger.zip)
+
+## Att tänka på när du definierar swager-filen
+
+* Definitioner krävs
+* $ref måste användas för metoddefinitioner
+* Föredrar att ha definierade förbrukningar och skapar avsnitt
+* Definiera inte textbundna parametrar för förfrågningar eller svarsparametrar. Försök att modularisera så mycket som möjligt. Följande definition stöds till exempel inte
+
+```json
+ "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Rollnum": {
+                  "type": "string",
+                  "description": "Rollnum"
+                }
+              }
+            }
+```
+
+Följande stöds med en referens till definitionen requestBody
+
+```json
+ "name": "requestBody",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/requestBody"
+            }
+```
+
+* [Exempelfil för Swagger som referens](assets/sample-swagger.json)
 
 ## Skapa datakälla
 
-Om du vill integrera AEM/AEM Forms med program från tredje part måste du [skapa en datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filen](assets/drivers-license-swagger.zip) för att skapa datakällan.
+För att integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i molntjänstkonfigurationen. Använd [swagger-fil](assets/drivers-license-swagger.zip) för att skapa en datakälla.
 
 ## Skapa formulärdatamodell
 
@@ -68,15 +101,13 @@ Integrera formulärdatamodellens anrop av POSTEN med ditt anpassningsbara formul
 
 Om du vill använda exempelresurserna med API-nyckeln följer du följande steg:
 
-* [Hämta datakällan ](assets/drivers-license-source.zip) och importera den till AEM med  [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* [Hämta formulärdatamodellen ](assets/drivers-license-fdm.zip) och importera till AEM med  [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Hämta datakällan](assets/drivers-license-source.zip) och importera till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* [Hämta formulärdatamodellen](assets/drivers-license-fdm.zip) och importera till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 * [Hämta klientbiblioteket](assets/drivers-license-client-lib.zip)
-* Hämta exempelformuläret för adaptiv form [som kan hämtas här](assets/adaptive-form-dl.zip). Det här exempelformuläret använder tjänsteanropen för den formulärdatamodell som tillhandahålls som en del av den här artikeln.
-* Importera formuläret till AEM från [Forms- och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Ladda ned exempelformuläret för anpassning [hämtad härifrån](assets/adaptive-form-dl.zip). Det här exempelformuläret använder tjänsteanropen för den formulärdatamodell som tillhandahålls som en del av den här artikeln.
+* Importera formuläret till AEM från [Forms och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Öppna formuläret i [redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
 * Ange API-nyckeln som standardvärde i apikey-fältet och spara ändringarna
 * Öppna regelredigeraren för fältet Base 64-sträng. Observera att tjänsten anropas när värdet för det här fältet ändras.
 * Spara formuläret
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled), ladda upp bilden framför din körkort
-
-
