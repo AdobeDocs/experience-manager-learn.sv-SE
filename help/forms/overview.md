@@ -1,13 +1,13 @@
 ---
 title: AEM Forms Tutorials och videor
-description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
+description: Bläddra bland våra videor och självstudiekurser för AEM Forms, med resurser och dokumentation som kan besvara dina frågor.
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '306'
 ht-degree: 1%
 
 ---
