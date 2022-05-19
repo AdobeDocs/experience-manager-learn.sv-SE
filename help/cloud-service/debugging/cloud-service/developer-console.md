@@ -1,6 +1,6 @@
 ---
 title: Utvecklarkonsol
-description: AEM som Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om den AEM som körs och som är till hjälp vid felsökning.
+description: AEM as a Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om AEM som körs och som är till hjälp vid felsökning.
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -13,28 +13,28 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---
 
-# Felsöka AEM som en Cloud Service med Developer Console
+# Felsökning AEM as a Cloud Service med Developer Console
 
-AEM som Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om den AEM som körs och som är till hjälp vid felsökning.
+AEM as a Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om AEM som körs och som är till hjälp vid felsökning.
 
-Varje AEM som en Cloud Service har sin egen Developer Console.
+Varje AEM as a Cloud Service miljö har en egen Developer Console.
 
 ## Åtkomst till Developer Console
 
-För att få tillgång till och använda Developer Console måste följande behörigheter anges till utvecklarens Adobe ID via [Adobe Admin Console](https://adminconsole.adobe.com).
+För att få tillgång till och använda Developer Console måste utvecklarens Adobe ID ha följande behörigheter via [Adobe Admin Console](https://adminconsole.adobe.com).
 
-1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM som Cloud Service är aktiv i Adobe Org-växlaren.
-1. Utvecklaren måste vara medlem i Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile.
+1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM as a Cloud Service produkter är aktiv i Adobe Org-växlaren.
+1. Utvecklaren måste vara medlem i Cloud Manager-produktens __Utvecklare - Cloud Service__ Produktprofil.
    + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
-1. Utvecklaren måste vara medlem i __AEM Users__ eller __AEM Administrators__ produktprofil på AEM Author and/or Publish.
-   + Om det här medlemskapet inte finns kommer dumparna [status](#status) att timeout med ett 401 oauktoriserat fel.
+1. Utvecklaren måste vara medlem i __AEM__ eller __AEM administratörer__ Produktprofil för AEM Author och/eller Publish.
+   + Om det här medlemskapet inte finns [status](#status) dumpar timeout med 401 Unauthorized error error.
 
 ### Felsökning: Developer Console-åtkomst
 
@@ -42,25 +42,25 @@ För att få tillgång till och använda Developer Console måste följande beh�
 
 ![Developer Console - 401 Unauthorized](./assets/developer-console/troubleshooting__401-unauthorized.png)
 
-Om någon status dumpas innebär det att 401 Oauktoriserat fel har rapporterats, vilket innebär att användaren inte finns med de nödvändiga behörigheterna i AEM eftersom en Cloud Service eller att inloggningstoken är ogiltig eller har gått ut.
+Om någon status dumpas och 401 ett obehörigt fel rapporteras innebär det att användaren inte finns med de nödvändiga behörigheterna i AEM as a Cloud Service eller att inloggningstoken inte används eller har gått ut.
 
 Så här löser du det 401 obehöriga problemet:
 
-1. Se till att din användare är medlem i rätt Adobe IMS-produktprofil (AEM administratörer eller AEM användare) för den utvecklarkonsols associerade AEM som produktinstans för Cloud Service.
-   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser; AEM som Cloud Service Author och Publish, så att rätt produktprofiler används beroende på vilket tjänstskikt som kräver åtkomst via Developer Console.
-1. Logga in på AEM som en Cloud Service (författare eller publicera) och kontrollera att användare och grupper har synkroniserats korrekt till AEM.
+1. Se till att din användare är medlem i rätt Adobe IMS-produktprofil (AEM administratörer eller AEM användare) för Developer Console AEM as a Cloud Service produktinstans.
+   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser; AEM as a Cloud Service Author och Publish produktinstanser, så att rätt produktprofiler används beroende på vilket tjänstskikt som kräver åtkomst via Developer Console.
+1. Logga in på AEM as a Cloud Service (Författare eller Publicera) och kontrollera att användare och grupper har synkroniserats korrekt till AEM.
    + Developer Console kräver att din användarpost skapas i motsvarande AEM tjänstenivå för att den ska kunna autentiseras till den tjänstnivån.
 1. Rensa dina webbläsares cookies och programtillstånd (lokal lagring) och logga in på Developer Console igen, så att åtkomsttoken Developer Console används korrekt och inte har gått ut.
 
 ## Pod
 
-AEM som Cloud Service Author och Publish består av flera instanser för att hantera trafikvariationer och rullande uppdateringar utan driftavbrott. De här instanserna kallas Pods. Markering av rutor i Developer Console definierar omfattningen av de data som ska visas via de andra kontrollerna.
+AEM as a Cloud Service redigerings- och publiceringstjänster består av flera instanser för att hantera trafikvariationer och rullande uppdateringar utan driftavbrott. De här instanserna kallas Pods. Markering av rutor i Developer Console definierar omfattningen av de data som ska visas via de andra kontrollerna.
 
 ![Developer Console - Pod](./assets/developer-console/pod.png)
 
 + En pod är en diskret instans som ingår i en AEM (författare eller publicera)
-+ Poängen är övergående, vilket betyder AEM när en Cloud Service skapar och förstör dem vid behov
-+ Endast poder som är en del av det associerade AEM som en Cloud Service-miljö visas i den miljöns Developer Console&#39;s Pod-väljare.
++ Poängen är övergående, vilket innebär AEM as a Cloud Service skapar och förstör dem vid behov
++ Endast poder som är en del av den associerade AEM as a Cloud Service miljön visas i Developer Console&#39;s Pod Switcher.
 + Längst ned i Pod Switcher kan du med bekväma alternativ välja Pods efter tjänstetyp:
    + Alla författare
    + Alla utgivare
@@ -74,7 +74,7 @@ Status innehåller alternativ för att skriva ut ett specifikt AEM körningstill
 
 ### Paket
 
-Paketen innehåller alla OSGi-paket i AEM. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsOSGi Bundles](http://localhost:4502/system/console/bundles) `/system/console/bundles`.
+Paketen innehåller alla OSGi-paket i AEM. Den här funktionen liknar [AEM SDK&#39;s local quickstart&#39;s OSGi Bundles](http://localhost:4502/system/console/bundles) på `/system/console/bundles`.
 
 Paket hjälper dig att felsöka genom att:
 
@@ -84,35 +84,37 @@ Paket hjälper dig att felsöka genom att:
 
 ### Komponenter
 
-Komponenterna listar alla OSGi-komponenter i AEM. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsprogram OSGi Components](http://localhost:4502/system/console/components) på `/system/console/components`.
+Komponenterna listar alla OSGi-komponenter i AEM. Den här funktionen liknar [AEM SDK:s lokala snabbstartsprogram OSGi Components](http://localhost:4502/system/console/components) på `/system/console/components`.
 
 Komponenterna hjälper till vid felsökning genom att:
 
-+ Lista alla OSGi-komponenter som distribuerats till AEM som en Cloud Service
++ Lista alla OSGi-komponenter som distribuerats till AEM as a Cloud Service
 + tillhandahålla varje OSGi-komponentstatus, inklusive om de är aktiva eller missnöjda
 + Om du anger information i ej tillfredsställande tjänstreferenser kan det leda till att OSGi-komponenter blir aktiva
-+ Visar OSGi-egenskaper och deras värden som är bundna till OSGi-komponenten
++ En lista över OSGi-egenskaper och deras värden som är bundna till OSGi-komponenten.
+   + Detta visar faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values).
 
 ### Konfigurationer
 
-Konfigurationer visar alla OSGi-komponentens konfigurationer (OSGi-egenskaper och -värden). Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsOSGi Configuration Manager](http://localhost:4502/system/console/configMgr) `/system/console/configMgr`.
+Konfigurationer visar alla OSGi-komponentens konfigurationer (OSGi-egenskaper och -värden). Den här funktionen liknar [AEM SDK&#39;s local quickstart&#39;s OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) på `/system/console/configMgr`.
 
 Konfigurationer hjälper dig att felsöka genom att:
 
 + Lista OSGi-egenskaper och deras värden med OSGi-komponenten
+   + Detta visar INTE faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values). Se [Komponenter](#components) ovan, för de injicerade värdena.
 + Hitta och identifiera felkonfigurerade egenskaper
 
 ### Oak Index
 
-Oak Indexes är en dump av noderna som definieras under `/oak:index`. Tänk på att detta inte visar sammanfogade index, som inträffar när ett AEM ändras.
+Oak Indexes innehåller en dump av de noder som definieras under `/oak:index`. Tänk på att detta inte visar sammanfogade index, som inträffar när ett AEM ändras.
 
 Ta hjälp av index:
 
-+ En lista över alla indexdefinitioner för eko som ger insikter om hur sökfrågor körs i AEM. Tänk på att ändringar i AEM inte återspeglas här. Den här vyn är bara användbar för index som endast tillhandahålls av AEM, eller enbart av den anpassade koden.
++ En lista med alla indexdefinitioner för eko som ger insikter om hur sökfrågor körs i AEM. Tänk på att ändringar i AEM inte återspeglas här. Den här vyn är bara användbar för index som endast tillhandahålls av AEM, eller enbart av den anpassade koden.
 
 ### OSGi Services
 
-Komponenterna listar alla OSGi-tjänster. Den här funktionaliteten liknar [AEM SDK:s lokala snabbstartsprogram OSGi Services](http://localhost:4502/system/console/services) `/system/console/services`.
+Komponenterna listar alla OSGi-tjänster. Den här funktionen liknar [AEM SDK&#39;s local quickstart&#39;s OSGi Services](http://localhost:4502/system/console/services) på `/system/console/services`.
 
 OSGi Services hjälper dig att felsöka genom att:
 
@@ -120,7 +122,7 @@ OSGi Services hjälper dig att felsöka genom att:
 
 ### Försäljningsjobb
 
-Sling Jobs visar alla kön för Sling Jobs. Den här funktionaliteten liknar [AEMSDK:s lokala snabbstartjobb](http://localhost:4502/system/console/slingevent) `/system/console/slingevent`.
+Sling Jobs visar alla kön för Sling Jobs. Den här funktionen liknar [AEM SDK:s lokala snabbstartsjobb](http://localhost:4502/system/console/slingevent) på `/system/console/slingevent`.
 
 Sling Jobs hjälper till vid felsökning genom att:
 
@@ -129,7 +131,7 @@ Sling Jobs hjälper till vid felsökning genom att:
 
 ## Java-paket
 
-Med Java-paket kan du kontrollera om ett Java-paket, och version, är tillgängligt för användning i AEM som Cloud Service. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartssökare](http://localhost:4502/system/console/depfinder) på `/system/console/depfinder`.
+Med Java-paket kan du kontrollera om ett Java-paket, och version, är tillgängligt för användning i AEM as a Cloud Service. Den här funktionen är densamma som [AEM SDK:s lokala snabbstartfunktion Dependency Finder](http://localhost:4502/system/console/depfinder) på `/system/console/depfinder`.
 
 ![Developer Console - Java-paket](./assets/developer-console/java-packages.png)
 
@@ -138,11 +140,11 @@ Java-paket används för att förhindra att bildpaket startas på grund av olös
 + Kontrollera att projektets AEM API-maven-beroende version matchar miljöns version AEM Release (och uppdatera om möjligt allt till den senaste).
 + Om extra Maven-beroenden används i Maven-projektet
    + Kontrollera om ett alternativt API från AEM SDK API-beroende kan användas i stället.
-   + Om det extra beroendet krävs kontrollerar du att det är ett OSGi-paket (i stället för ett vanligt Jar) och att det är inbäddat i projektets kodpaket (`ui.apps`), på samma sätt som OSGi-kärnpaketet är inbäddat i `ui.apps`-paketet.
+   + Om det extra beroendet krävs kontrollerar du att det är ett OSGi-paket (i stället för en vanlig Jar) och att det är inbäddat i projektets kodpaket, (`ui.apps`), på samma sätt som OSGi Bundle-kärnan är inbäddad i `ui.apps` paket.
 
 ## Servlets
 
-Servlets används för att ge insikt i hur AEM löser en URL till en Java-server eller ett Java-skript (HTL, JSP) som slutligen hanterar begäran. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartsverktyg Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) `/system/console/servletresolver`.
+Servlets används för att ge insikt i hur AEM löser en URL till en Java-server eller ett Java-skript (HTL, JSP) som slutligen hanterar begäran. Den här funktionen är densamma som [AEM SDK:s lokala snabbstart Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) på `/system/console/servletresolver`.
 
 ![Developer Console - Servlets](./assets/developer-console/servlets.png)
 
@@ -153,7 +155,7 @@ Servlets hjälper dig att felsöka:
 
 ## Frågor
 
-Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionaliteten är densamma som [AEM SDK:s lokala snabbstartskonsol Verktyg > Frågeprestanda ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html).
+Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionen är densamma som  [AEM SDK:s lokala snabbstartsverktyg > Frågeprestanda ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) konsol.
 
 Frågar fungerar bara när en viss ruta har valts, eftersom den öppnar den pods webbkonsol för frågeprestanda, som kräver att utvecklaren har åtkomst till AEM.
 
