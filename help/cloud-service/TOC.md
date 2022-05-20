@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '749'
 ht-degree: 10%
 
 ---
@@ -89,6 +89,9 @@ ht-degree: 10%
    + [Produktprofiler för Adobe IMS](./accessing/adobe-ims-product-profiles.md)
    + [AEM användare, grupper och behörigheter](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
++ Autentisering{#authentication}
+   + [Översikt](./authentication/authentication.md)
+   + [SAML 2.0](./authentication/saml-2-0.md)
 + Avancerat nätverksbyggande{#networking}
    + [Översikt](./networking/advanced-networking.md)
    + [Flexibel portutgång](./networking/flexible-port-egress.md)
