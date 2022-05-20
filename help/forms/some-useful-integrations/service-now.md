@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
-source-git-commit: 81a15fb0182760aaac8cb58cccbfe28de7323492
+source-git-commit: b918afdddf1f047b478e0521883a633f7b0610c6
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ Skapa och visa incidenter i [!DNL ServiceNow] med formulärdatamodell i AEM Form
 ## Exempelresurser
 
 Följande exempelresurser finns i den här artikeln:
+
 * Konfiguration av molntjänster
 * Växla filer för att skapa en incident och hämta alla incidenter
 * Formulärdatamodell baserad på swagger-filer
@@ -37,8 +38,18 @@ Följande exempelresurser finns i den här artikeln:
 
 * Ladda ned [exempelresurser](assets/service-now.zip)
 * Importera resurser till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Swagger-filen som används för den här integreringen finns under ```/conf/9957/settings/cloudconfigs/fdm``` mapp i crx-databas
 * Redigera [Konfiguration av molntjänsten CreateIncident](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)för att matcha ServiceNow-instansen.
-* Redigera [Konfiguration av molntjänsten GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) för att matcha ServiceNow-instansen
+* Redigera [Konfiguration av molntjänsten GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) för att matcha ServiceNow-instansen. Du måste ändra värden, användarnamn och lösenord för att matcha dina ServiceNow-instansreferenser.
+
+## Åtkomst till ServiceNow-instansreferenser
+
+* Klicka på din användarprofil
+   ![klicka på användarprofilen](assets/snow-1.png)
+
+* Klicka på Hantera instanslösenord
+* Instansinformationen visas nedan
+   ![instansinformation](assets/snow-3.png)
 
 ## Testa integreringen
 
