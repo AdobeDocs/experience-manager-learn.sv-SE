@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
+source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2775'
 ht-degree: 1%
 
 ---
-
 
 # SAML 2.0-autentisering{#saml-2-0-authentication}
 
@@ -398,6 +398,10 @@ Efter lyckad autentisering till IDP kommer IDP att dirigera en HTTP-POST tillbak
 ```
 
 Om URL-omskrivning på Apache-webbservern är konfigurerad (`dispatcher/src/conf.d/rewrites/rewrite.rules`) måste du se till att `.../saml_login` ändpunkter inte av misstag bemästras.
+
+## Aktivera datasynkronisering
+
+Användarposterna måste synkroniseras över AEM-publiceringsnivån när SAML-autentiseringsflödet skapar en användare i AEM Publish. Till [aktivera datasynkronisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)skickar du en förfrågan till Adobe kundsupport (via [AdminConsole](https://adminconsole.adobe.com) > Support) som begär att den ska aktiveras.
 
 ## Distribuera SAML-konfiguration
 
