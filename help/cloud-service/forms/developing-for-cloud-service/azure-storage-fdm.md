@@ -8,17 +8,17 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: 8484897297940ab28619c4b1af5362a5937eadfa
+exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-
 # Inkludera molntjänstkonfiguration i ditt projekt
 
-Skapa en konfigurationsbehållare med namnet FormsTutorial som innehåller din molntjänstkonfiguration Skapa en molntjänstkonfiguration för Azure Storage med namnet Store Form Submissions in Azure i FormsTutorial-behållaren. Ange information om Azure-lagringskontot och kontonyckeln
+Skapa en konfigurationsbehållare med namnet &#39;FormTutorial&#39; för din molntjänstkonfiguration Skapa en molntjänstkonfiguration för Azure Storage med namnet &#39;FormsCSAndAzureBlob&#39; i behållaren &#39;FormTutorial&#39; genom att ange information om Azure-lagringskontot och Azure-åtkomstnyckeln.
 
 Öppna AEM i IntelliJ. Se till att du lägger till mappen FormTutorial så som visas nedan i ui.content-projektet
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -45,4 +45,4 @@ Inkludera lämplig post i ui.content-projektets filter.xml
 
 >[!NOTE]
 >
->När du skapar och distribuerar ditt projekt blir formulärdatamodellen baserad på molntjänstkonfigurationen tillgänglig i din molninstans
+>När du skapar och distribuerar ditt projekt med molnhanteraren måste du nu ange din Azure-åtkomstnyckel igen i molntjänstkonfigurationen. För att undvika att ange åtkomstnyckeln igen rekommenderar vi att du skapar en kontextmedveten konfiguration med hjälp av miljövariablerna enligt anvisningarna i [nästa artikel](./context-aware-fdm.md)

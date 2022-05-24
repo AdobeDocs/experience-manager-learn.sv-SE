@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -160,14 +160,14 @@ Följ stegen nedan om du vill att det här exemplet ska fungera i ditt system:
 
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Detta är det anpassade OSGI-paketet som ställer in taggarna från skickade formulärdata.
 
-* [Ladda ned exempelformuläret för anpassad redigering](assets/tag-and-store-in-dam-assets.zip)
+* [Ladda ned exempelformuläret för adaptiv redigering](assets/tag-and-store-in-dam-adaptive-form.zip)
 
 * [Gå till Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* Klicka på Skapa | Filöverföring och överföring av exempel adaptiveform.zip
+* Klicka på Skapa | Filöverföring och överföring av taggen-and-store-in-dam-adaptive-form.zip
 
 * [Importera artikelresurser](assets/tag-and-store-in-dam-assets.zip) med AEM
-* Öppna [exempelformulär i förhandsgranskningsläge](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). Fyll i avsnittet Personer och skicka formuläret.
+* Öppna [exempelformulär i förhandsgranskningsläge](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Fyll i alla fält** och skicka in formuläret.
 * [Navigera till toppmapp i DAM](http://localhost:4502/assets.html/content/dam/Peak). Du bör se DoR i mappen Peak. Kontrollera dokumentets egenskaper. Den bör taggas på lämpligt sätt.
 Grattis! Exemplet har installerats på datorn
 
