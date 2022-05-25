@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8c75e062d2de70c294f95e5c25040d8bb9badcce
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
    Definiera JSON-parametrarna i en `flexible-port-egress.json` och tillhandahålls för att surfa via `... -d @./flexible-port-egress.json`.
 
-[Ladda ned exemplet flexible-port-egress.json](./assets/flexible-port-egress.json)
+   [Ladda ned exemplet flexible-port-egress.json](./assets/flexible-port-egress.json). Den här filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {

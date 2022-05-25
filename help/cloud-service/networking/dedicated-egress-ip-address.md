@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 4f8222d3185ad4e87eda662c33c9ad05ce3b0427
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Definiera JSON-parametrarna i en `dedicated-egress-ip-address.json` och tillhandahålls för att surfa via `... -d @./dedicated-egress-ip-address.json`.
 
-[Ladda ned exemplet dedikerad-egress-ip-address.json](./assets/dedicated-egress-ip-address.json)
+   [Ladda ned exemplet dedikerad-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). Den här filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -157,7 +157,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
 1. IP-adresskonfigurationer för dedikerade utgångar kan uppdateras med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Kom ihåg `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT` -åtgärd, så alla regler måste anges för varje anrop av den här åtgärden.
 
-1. Hämta __dedikerad IP-adress för egress__ genom att använda en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
+1. Hämta __dedikerad IP-adress för egress__ med en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com
