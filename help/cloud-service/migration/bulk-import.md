@@ -1,6 +1,6 @@
 ---
 title: Använda massimport med AEM Assets
-description: Med verktyget för massimport i AEM som Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
+description: Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
 version: Cloud Service
 doc-type: technical-video
 topics: Migration
@@ -13,15 +13,24 @@ topic: Migration
 role: Architect, Developer
 level: Beginner
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 27a8cc66a8c6a9b30e3b39fe64a33c9de07d5c5b
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
 # Använda massimport
 
-Med verktyget för massimport i AEM som Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
+Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
+
+## Schemalägg bulkimport
+
+Massimport stöder schemalagd körning av konfigurationer, inklusive:
+
++ Enskild körning vid ett definierat datum och tid
++ Periodkörningar varje timme, dag eller vecka
+
+![Schema för massimport](./assets/bulk-import/schedule.png)
