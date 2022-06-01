@@ -8,13 +8,13 @@ level: Beginner
 kt: 9720
 thumbnail: 340333.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
+source-git-commit: 485f968e6f8c508b5e81c54e03ca17996e4c1b63
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # AEM, projektlänkade mappar och mappmetadata
 
@@ -25,3 +25,7 @@ Lär dig hur du använder AEM taggar på resurser via Workfront-data, konfigurer
 >[!VIDEO](https://video.tv.adobe.com/v/340333/?quality=12&learn=on)
 
 _Del tre av en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
+
+## Korrigeringar
+
++ __@ 4:34__ AEM är felaktig. Videoskärmar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.
