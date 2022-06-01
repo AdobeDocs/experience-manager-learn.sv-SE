@@ -1,6 +1,6 @@
 ---
-title: HTTP/HTTPS-anslutningar på portar som inte är standard för flexibel portutgång
-description: Lär dig hur du gör HTTP/HTTPS-begäranden från AEM as a Cloud Service till externa webbtjänster som körs på icke-standardportar för flexibla portadresser.
+title: HTTP/HTTPS-anslutningar för dedikerad IP-adress och VPN
+description: Lär dig hur du gör HTTP/HTTPS-begäranden från AEM as a Cloud Service till externa webbtjänster som körs för dedikerad IP-adress och VPN
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -8,17 +8,17 @@ role: Architect, Developer
 level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
-exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
+exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# HTTP/HTTPS-anslutningar på portar som inte är standard för flexibel portutgång
+# HTTP/HTTPS-anslutningar för dedikerad IP-adress och VPN
 
-HTTP/HTTPS-anslutningar på portar som inte är standard (inte 80/443) måste proxifieras från AEM as a Cloud Service, men de behöver inga särskilda `portForwards` regler och kan använda AEM avancerade nätverks `AEM_PROXY_HOST` och en reserverad proxyport `AEM_HTTP_PROXY_HOST` eller `AEM_HTTPS_PROXY_HOST` beroende på om målet är HTTP/HTTPS.
+HTTP-/HTTPS-anslutningar måste proxiceras bort från AEM as a Cloud Service, men de behöver inga särskilda `portForwards` regler och kan använda AEM avancerade nätverks `AEM_HTTP_PROXY_HOST`, `AEM_HTTP_PROXY_PORT`, `AEM_HTTPS_PROXY_HOST`och `AEM_HTTPS_PROXY_PORT`.
 
 ## Avancerat nätverksstöd
 
@@ -28,15 +28,15 @@ Se till att [lämplig](../advanced-networking.md#advanced-networking) avancerad 
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ✔ | ✘ | ✘ |
+| ✘ | ✘ | ✔ | ✔ |
 
 >[!CAUTION]
 >
-> Det här kodexemplet är bara för [Flexibla portägg](../flexible-port-egress.md). Ett liknande men annat kodexempel finns för [HTTP/HTTPS-anslutningar på icke-standardportar för dedikerad IP-adress och VPN](./http-dedicated-egress-ip-vpn.md).
+> Det här kodexemplet är bara för [Dedikerad IP-adress för börs](../dedicated-egress-ip-address.md) och [VPN](../vpn.md). Ett liknande men annat kodexempel finns för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som kan köras AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. För anslutningar till HTTPS-webbservrar används systemvariabler `AEM_PROXY_HOST` och `AEM_HTTPS_PROXY_PORT` (standard till `proxy.tunnel:3128` i AEM versioner &lt; 6094).
+Detta Java™-kodexempel är en OSGi-tjänst som kan köras AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. Anslutningar till HTTPS-webbservrar använder `AEM_HTTPS_PROXY_HOST` och `AEM_HTTPS_PROXY_PORT` i stället för  `AEM_HTTP_PROXY_HOST` och `AEM_HTTP_PROXY_PORT`.
 
 >[!NOTE]
 > Det rekommenderas att [Java™ 11 HTTP API:er](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) används för att göra HTTP/HTTPS-anrop från AEM.
@@ -68,30 +68,28 @@ public class HttpExternalServiceImpl implements ExternalService {
     public boolean isAccessible() {
         HttpClient client;
 
-        // Use System.getenv("AEM_PROXY_HOST") and proxy port System.getenv("AEM_HTTP_PROXY_HOST") 
-        // or System.getenv("AEM_HTTPS_PROXY_HOST"), depending on if the destination requires HTTP/HTTPS
+        // If the URL is http, use System.getenv("AEM_HTTP_PROXY_HOST") and System.getenv("AEM_HTTP_PROXY_PORT")
+        // Else if the URL is https, us System.getenv("AEM_HTTPS_PROXY_HOST") and System.getenv("AEM_HTTPS_PROXY_PORT")
 
-        if (System.getenv("AEM_PROXY_HOST") != null) {
-            // Create a ProxySelector that uses to AEM's provided AEM_PROXY_HOST, with a fallback of proxy.tunnel, and proxy port using the AEM_HTTP_PROXY_PORT variable. 
-            // If the destination requires HTTPS, then use the variable AEM_HTTPS_PROXY_PORT instead of AEM_HTTP_PROXY_PORT.
-            // The explicit fallback of 3128 will be obsoleted in Jan 2022, and only the AEM_HTTP_PROXY_PORT/AEM_HTTPS_PROXY_PORT variable will be required
-            ProxySelector proxySelector = ProxySelector.of(new InetSocketAddress(
-                System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel"), 
-                Integer.parseInt(System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", "3128"))));
-
+        if (System.getenv("AEM_HTTP_PROXY_HOST") != null) {
+            // Create a ProxySelector that maps to AEM's provided AEM_HTTP_PROXY_HOST and AEM_HTTP_PROXY_PORT
+            ProxySelector proxySelector = ProxySelector.of(
+                    new InetSocketAddress(System.getenv("AEM_HTTP_PROXY_HOST"),
+                            Integer.parseInt(System.getenv("AEM_HTTP_PROXY_PORT"))));
+            // Create an HttpClient and provide the proxy selector that will use AEM's native HTTP proxy configuration
             client = HttpClient.newBuilder().proxy(proxySelector).build();
-            log.debug("Using HTTPClient with AEM_PROXY_HOST");
+            log.debug("Using HTTPClient with AEM_HTTP_PROXY");
         } else {
             client = HttpClient.newBuilder().build();
             // If no proxy is set up (such as local dev)
-            log.debug("Using HTTPClient without AEM_PROXY_HOST");
+            log.debug("Using HTTPClient without AEM_HTTP_PROXY");
         }
 
         // Prepare the full URI to request, note this will have the
         // - Scheme (http/https)
         // - External host name
         // - External port
-        // The external service URI, including the scheme/host/port, is defined in code, and NOT in Cloud Manager portForwards rules.
+        // The external service URI, including the scheme/host/port, is defined in code, rather than in Cloud Manager portForwards rules.
         URI uri = URI.create("http://api.example.com:8080/test.json");
 
         // Prepare the HttpRequest

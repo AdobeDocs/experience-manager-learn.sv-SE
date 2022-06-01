@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -220,16 +220,16 @@ Börja med att aktivera det virtuella privata nätverket på AEM as a Cloud Serv
 
 När det virtuella privata nätverket är aktiverat kan AEM kod och konfiguration använda dem för att ringa till externa tjänster via VPN. Det finns två varianter av externa anrop som AEM behandlar på olika sätt:
 
-1. HTTP/HTTPS-anrop till externa tjänster på icke-standardportar
+1. HTTP/HTTPS-anrop till externa tjänster
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
 1. icke-HTTP/HTTPS-anrop till externa tjänster
    + Inkluderar alla icke-HTTP-anrop, t.ex. anslutningar till e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
 
-HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard och kräver ingen extra konfiguration eller överväganden.
+HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard, men VPN-anslutningen används inte om den inte är korrekt konfigurerad enligt beskrivningen nedan.
 
-### HTTP/HTTPS på portar som inte är standard
+### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar till portar som inte är standard (not-80/443) från AEM måste anslutningen göras via en särskild värd och portar, som tillhandahålls via platshållare.
+När du skapar HTTP/HTTPS-anslutningar från AEM, för att kunna få en dedikerad IP-adress för utgångar eller dirigeras via VPN, måste anslutningen göras via en särskild värd och portar, som tillhandahålls via platshållare.
 
 AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
 
@@ -237,7 +237,7 @@ AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappa
 
 Begäranden till externa HTTP/HTTPS-tjänster ska göras genom att Java™ HTTP-klientens proxykonfiguration konfigureras via värden AEM proxyvärdar/portar.
 
-När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är standard utförs ingen motsvarande `portForwards` måste definieras med API:er för Cloud Manager `__enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
+När HTTP/HTTPS-anrop görs till externa tjänster på en port, visas inga motsvarande `portForwards` måste definieras med API:er för Cloud Manager `__enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
 
 >[!TIP]
 >
@@ -248,10 +248,10 @@ När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är stand
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="HTTP/HTTPS på portar som inte är standard" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">HTTP/HTTPS på portar som inte är standard</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst på icke-standard HTTP/HTTPS-portar.
+        Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst med HTTP/HTTPS-protokoll.
     </p>
 </td>
 <td></td>

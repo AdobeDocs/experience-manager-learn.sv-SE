@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: 4f8222d3185ad4e87eda662c33c9ad05ce3b0427
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
 1. IP-adresskonfigurationer för dedikerade utgångar kan uppdateras med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Kom ihåg `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT` -åtgärd, så alla regler måste anges för varje anrop av den här åtgärden.
 
-1. Hämta __dedikerad IP-adress för egress__ med en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
+1. Hämta __dedikerad IP-adress för egress__ genom att använda en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com
@@ -167,43 +167,43 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
 1. Nu kan du använda den dedikerade IP-adressen för utgångar i din anpassade AEM och konfiguration. När du använder en dedikerad IP-adress för utgångar är de externa AEM as a Cloud Service anslutningarna ofta konfigurerade att endast tillåta trafik från den här dedikerade IP-adressen.
 
-## Ansluta till externa tjänster via dedikerad portutgång
+## Ansluta till externa tjänster via dedikerad IP-adress
 
 När den dedikerade IP-adressen för utgångar är aktiverad kan AEM kod och konfiguration använda den dedikerade IP-adressen för utgångar för att ringa till externa tjänster. Det finns två varianter av externa anrop som AEM behandlar på olika sätt:
 
-1. HTTP/HTTPS-anrop till externa tjänster på icke-standardportar
+1. HTTP/HTTPS-anrop till externa tjänster
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
 1. icke-HTTP/HTTPS-anrop till externa tjänster
    + Inkluderar alla icke-HTTP-anrop, t.ex. anslutningar till e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
 
-HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard och kräver ingen extra konfiguration eller överväganden.
+HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard, men de använder inte den dedikerade IP-adressen för utgångar om de inte är korrekt konfigurerade enligt beskrivningen nedan.
 
 >[!TIP]
 >
 > Läs AEM as a Cloud Service dokumentation om IP-adresser för utgångar om du vill veta mer [hela uppsättningen routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
-### HTTP/HTTPS på portar som inte är standard
+### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar till icke-standardportar (inte-80/443) från AEM måste anslutningen göras via särskilda värdar och portar, som tillhandahålls via platshållare.
+När du skapar HTTP/HTTPS-anslutningar från AEM måste anslutningen göras via särskilda värdar och portar, som tillhandahålls via platshållare, för att en dedikerad IP-adress ska kunna hämtas.
 
 AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
 
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxyvärd för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | | `AEM_HTTP_PROXY_PORT` | Proxyport för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` | | `AEM_HTTPS_PROXY_HOST` | Proxyvärd för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | | `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` |
+| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | Konfiguration av Apache-webbserverläge_proxy | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxyvärd för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | Proxyport för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | Proxyvärd för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
 
 Begäranden till externa HTTP/HTTPS-tjänster bör göras genom att konfigurera Java™ HTTP-klientens proxykonfiguration med hjälp AEM proxyvärden/proxyportar.
 
-När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är standard utförs ingen motsvarande `portForwards` måste definieras med Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
+När HTTP/HTTPS-anrop görs till externa tjänster på en port, visas inga motsvarande `portForwards` måste definieras med Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
 
 #### Exempel på koder
 
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="HTTP/HTTPS på portar som inte är standard" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">HTTP/HTTPS på portar som inte är standard</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst på icke-standard HTTP/HTTPS-portar.
+        Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst med HTTP/HTTPS-protokoll.
     </p>
 </td>   
 <td></td>   
