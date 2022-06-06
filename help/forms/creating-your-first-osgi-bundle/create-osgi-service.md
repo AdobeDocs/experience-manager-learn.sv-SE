@@ -1,18 +1,18 @@
 ---
 title: Skapa din första OSGi-tjänst med AEM Forms
-description: 'Bygg din första OSGi-tjänst med AEM Forms '
-feature: Adaptiv Forms
+description: Bygg din första OSGi-tjänst med AEM Forms
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
-
 
 # OSGi Service
 
@@ -22,24 +22,26 @@ En OSGi-tjänst definieras semantiskt av dess tjänstgränssnitt och implementer
 
 ## Definiera gränssnittet
 
-Ett enkelt gränssnitt med en metod för att sammanfoga data med <span class="x x-first x-last">XDP</span>-mallen.
+Ett enkelt gränssnitt med en metod för att sammanfoga data med <span class="x x-first x-last">XDP</span> mall.
 
 ```java
-package com.learningaemforms.adobe.core;
+package com.mysite.samples;
 
 import com.adobe.aemfd.docmanager.Document;
 
-public interface MyfirstInterface {
-  public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
-} 
+public interface MyfirstInterface
+{
+	public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
+}
+ 
 ```
 
 ## Implementera gränssnittet
 
-Skapa ett nytt paket med namnet `com.learningaemforms.adobe.core.impl` för implementeringen av gränssnittet.
+Skapa ett nytt paket som heter `com.mysite.samples.impl` för implementering av gränssnittet.
 
 ```java
-package com.learningaemforms.adobe.core.impl;
+package com.mysite.samples.impl;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -47,7 +49,7 @@ import org.slf4j.LoggerFactory;
 import com.adobe.aemfd.docmanager.Document;
 import com.adobe.fd.output.api.OutputService;
 import com.adobe.fd.output.api.OutputServiceException;
-import com.learningaemforms.adobe.core.MyfirstInterface;
+import com.mysite.samples.MyfirstInterface;
 @Component(service = MyfirstInterface.class)
 public class MyfirstInterfaceImpl implements MyfirstInterface {
   @Reference
@@ -74,34 +76,36 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-Anteckningen `@Component(...)` på rad 10 markerar den här Java-klassen som en OSGi-komponent samt registrerar den som en OSGi-tjänst.
+Anteckningen `@Component(...)` På rad 10 görs den här Java-klassen till en OSGi-komponent och registreras som en OSGi-tjänst.
 
-`@Reference`-anteckningen ingår i OSGi-deklarativa tjänster och används för att mata in en referens för [OutputService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
+The `@Reference` anteckningen ingår i OSGi-deklarationstjänster och används för att mata in en referens till [OutputService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
 
 
 ## Bygg och distribuera paketet
 
 * Öppna **kommandotolkfönstret**
-* Navigera till `c:\aemformsbundles\learningaemforms\core`
+* Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 * Kommandot ovan skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
 
-Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\learningaemforms\core\target`. Paketet kan också distribueras till AEM med webbkonsolen [Felix.](http://localhost:4502/system/console/bundles)
+Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med [Felix webbkonsol.](http://localhost:4502/system/console/bundles)
 
 ## Använda tjänsten
 
 Du kan nu använda tjänsten på JSP-sidan. Följande kodutdrag visar hur du får åtkomst till tjänsten och använder de metoder som implementerats av tjänsten
 
 ```java
-MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.learningaemforms.adobe.core.MyFirstAEMFormsService.class);
+MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samples.MyFirstAEMFormsService.class);
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-Exempelpaketet som innehåller JSP-sidan kan ![hämtas här](assets/learning-aem-forms.zip)
+Exempelpaketet som innehåller JSP-sidan kan [hämtad härifrån](assets/learning_aem_forms.zip)
+
+[Det fullständiga paketet kan laddas ned](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## Testa paketet
 
-Importera och installera paketet i AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+Importera och installera paketet i AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 
 Använd postman för att ringa ett POST-samtal och ange indataparametrarna som visas på bilden nedan
 ![postman](assets/test-service-postman.JPG)

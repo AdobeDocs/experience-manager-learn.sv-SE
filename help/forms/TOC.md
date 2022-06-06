@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: cb5b3eb77a57fa8a2918710b7dbcd1b0a58b74bd
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 0%
    + [Fyller i tabellen med resultat från anrop till formulärdatamodelltjänst](adaptive-forms/populatetable.md)
    + [Samla in arbetsflödeskommentarer](adaptive-forms/capturing-workflow-comments-aem-workflow-article.md)
    + [Lagra skickade formulärdata i DB](adaptive-forms/storing-adaptive-form-data-in-db.md)
+   + [Infoga formulärbilaga i DB](adaptive-forms/inserting-form-attachment-in-db.md)
    + [Form Data Model Service i AEM 6.4 Workflow](adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md)
    + [Hantera felmeddelanden i tjänststeget för formulärdatamodellen](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [Form Data Model Service i AEM 6.5.1 Workflow](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)

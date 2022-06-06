@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -49,12 +49,6 @@ Maven är ett automatiserat byggverktyg som främst används för Java-projekt. 
 
 ![datakälla](assets/mvn-version.JPG)
 
-## Settings.xml
-
-A Maven `settings.xml` -filen definierar värden som konfigurerar Maven-körningen på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
-
-Navigera till `C:\Users\<username>\.m2 folder`
-Extrahera innehållet i [settings.zip](assets/settings.zip) och montera den i `.m2` mapp.
 
 ## Installera Eclipse
 
@@ -68,24 +62,17 @@ Så här skapar du ditt första maven-projekt:
 * Skapa en ny mapp med namnet `aemformsbundles` i C-enheten
 * Öppna en kommandotolk och navigera till `c:\aemformsbundles`
 * Kör följande kommando i kommandotolken
-* `mvn archetype:generate  -DarchetypeGroupId=com.adobe.granite.archetypes  -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=19`
 
-Maven-projektet genereras interaktivt och du ombeds ange värden för ett antal egenskaper som:
+```java
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
+```
 
-| Egenskapsnamn | Signifikans | Värde |
-------------------------|---------------------------------------|---------------------
-| groupId | groupId identifierar projektet unikt i alla projekt | com.learningaemforms.adobe |
-| appsFolderName | Namnet på mappen som ska innehålla projektstrukturen | inlärningsaemforms |
-| artifactId | artifactId är namnet på behållaren utan version. Om du skapade den kan du välja vilket namn du vill med gemener och inga märkliga symboler. | inlärningsaemforms |
-| version | Om du distribuerar den kan du välja valfri typisk version med siffror och punkter (1.0, 1.1, 1.0.1, ...). | 1.0 |
-
-Acceptera standardvärdena för de andra egenskaperna genom att trycka på Retur.
-Om allt blir bra kan du se ett meddelande om att bygget fungerar i kommandofönstret
+När du är klar bör du se ett meddelande om att bygget lyckades i kommandofönstret
 
 ## Skapa förmörkande projekt från ditt maven-projekt
 
-Ändra arbetskatalogen till `learningaemforms`.
-Kör `mvn eclipse:eclipse` från kommandoraden Ovanstående kommando läser din PDF-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse kan förstå projekttyper, relationer, klassökväg osv.
+* Ändra arbetskatalogen till `mysite`
+* Kör `mvn eclipse:eclipse` från kommandoraden. Kommandot läser din pom-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse kan förstå projekttyper, relationer, klassökväg osv.
 
 ## Importera projektet till förmörkning
 
@@ -97,33 +84,24 @@ Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som vis
 
 Klicka på Nästa
 
-Välj `c:\aemformsbundles\learningaemform`s genom att klicka på **Bläddra** knapp
+Välj c:\aemformsbundles\mysite by clicking the **Bläddra** knapp
 
-![datakälla](assets/select-mvn-project.JPG)
+![datakälla](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
 >Du kan välja att importera lämpliga moduler beroende på dina behov. Välj och importera endast kärnmodulen om du bara ska skapa Java-kod i ditt projekt.
 
 Klicka **Slutför** för att starta importprocessen
 
-Projektet importeras till Eclipse och ett antal `learningaemforms.xxxx` mappar
+Projektet importeras till Eclipse och ett antal `mysite.xxxx` mappar
 
-Expandera `src/main/java` under `learningaemforms.core` mapp. Det här är den mapp där du skriver större delen av koden.
+Expandera `src/main/java` under `mysite.core` mapp. Det här är den mapp där du skriver större delen av koden.
 
-![datakälla](assets/learning-core.JPG)
+![datakälla](assets/mysite-core-project.png)
 
-## Bygg ditt projekt
+## Inkludera AEMFD-klient-SDK
 
-
-
-
-När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://search.maven.org/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i Maven-projektet. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
-
-
-
-
-
-
+Du måste inkludera AEMFD-klientens SDK i ditt projekt för att kunna utnyttja olika tjänster som medföljer AEM Forms. Se [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i Maven-projektet. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
 
 ```xml
 <dependency>
@@ -136,7 +114,7 @@ När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projek
 Så här skapar du ditt projekt:
 
 * Öppna **kommandotolkfönstret**
-* Navigera till `c:\aemformsbundles\learningaemforms\core`
+* Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
-   `C:\AEMFormsBundles\learningaemforms\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+   `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)

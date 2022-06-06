@@ -8,9 +8,10 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 10423
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -24,14 +25,14 @@ Följande steg krävs för att skapa kontextuell molnkonfiguration
 
 ## Skapa miljövariabler
 
-Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager. De tillhandahålls körtidsmiljön och kan användas i OSGi-konfigurationer. Miljövariabler kan vara antingen miljöspecifika värden eller miljöhemligheter, baserat på vad som ändras.
+Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager. De tillhandahålls körtidsmiljön och kan användas i OSGi-konfigurationer. [Miljövariabler kan vara antingen miljöspecifika värden eller miljöhemligheter, baserat på vad som ändras.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
-[Miljövariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+
 
 I följande skärmbild visas de definierade miljövariablerna azure_key och azure_connection_string
 ![environment_variables](assets/environment-variables.png)
 
-Dessa miljövariabler kan sedan anges i konfigurationsfilerna som ska användas i lämpliga miljöer Om du till exempel vill att alla författarinstanser ska använda dessa miljövariabler definierar du konfigurationsfilen i mappen config.author enligt vad som anges nedan
+Dessa miljövariabler kan sedan anges i konfigurationsfilerna som ska användas i lämplig miljö. Om du till exempel vill att alla författarinstanser ska använda dessa miljövariabler definierar du konfigurationsfilen i mappen config.author enligt vad som anges nedan
 
 ## Skapa konfigurationsfil
 

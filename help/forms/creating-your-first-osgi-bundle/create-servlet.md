@@ -1,18 +1,18 @@
 ---
 title: Skapa din första servlet i AEM Forms
 description: Bygg din första snedserver för att sammanfoga data med formulärmallen.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 1%
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
-
 
 # Sling Servlet
 
@@ -25,8 +25,8 @@ En AEM kan registreras som OSGi-tjänst: Du kan utöka SlingSafeMethodsServlet f
 ## Servlet Code
 
 ```java
+package com.mysite.core.servlets;
 import javax.servlet.Servlet;
-
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
@@ -74,16 +74,16 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 Så här skapar du ditt projekt:
 
 * Öppna **kommandotolkfönstret**
-* Navigera till `c:\aemformsbundles\learningaemforms\core`
+* Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 * Kommandot ovan skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
 
-Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\learningaemforms\core\target`. Paketet kan också distribueras till AEM med webbkonsolen [Felix.](http://localhost:4502/system/console/bundles)
+Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med [Felix webbkonsol.](http://localhost:4502/system/console/bundles)
 
 
 ## Testa serverlösaren
 
-Peka webbläsaren på URL:en för [serverlösaren](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Det här visar vilken serverdator som kommer att anropas för en viss sökväg enligt skärmbilden nedan
+Peka webbläsaren mot [URL för servermatchare](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Det här visar vilken serverdator som kommer att anropas för en viss sökväg enligt skärmbilden nedan
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Testa servleten med Postman
