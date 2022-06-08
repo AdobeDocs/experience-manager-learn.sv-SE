@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '763'
 ht-degree: 10%
 
 ---
@@ -82,6 +82,8 @@ ht-degree: 10%
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [Databasläsare](./debugging/cloud-service/repository-browser.md)
+      + Risker{#risks}
+         + [Traversionsvarningar](./debugging/cloud-service/risks/traversals.md)
 + Åtkomst till AEM{#accessing}
    + [Översikt](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
