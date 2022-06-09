@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
+source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -44,17 +44,19 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
                 En färgstark ton när det gäller skillnaderna mellan upplevelse och innehållsfragment. Spoiler: alla vinner.
             </p>
         </td>   
-     <td>
-         <img alt="Databasmodernisering" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>Databasmodernisering</strong>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
-      </div>
-      <p>
-        <br/>
-         Kommer 10 juni 2022
-      </p>
-   </td>
+         <td>
+            <a href="season-2/cloud5-repo-modernizer.md">
+                 <img alt="Databasmodernisering" src="./imgs/s2/001-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-repo-modernizer.md"><strong>Databasmodernisering</strong></a> 
+               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+            </div>
+            <p>
+                <br/>
+                Snabb insikt i hur man använder databasuppdateraren för att strukturera om befintliga projektpaket till diskreta paket som är kompatibla med AEM som en molntjänst.
+            </p>
+         </td>
      <td>
             <img alt="Admin Console" src="./imgs/coming-soon.png"/>
       <div>
