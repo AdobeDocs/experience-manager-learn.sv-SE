@@ -1,0 +1,29 @@
+Order of release:
+
+(dates are listed publicly on cloud5-season-2.md)
+
+000 - Fragments                 03 Jun  https://video.tv.adobe.com/v/342864
+001 - Repository Modernizer     10 Jun  https://video.tv.adobe.com/v/342865
+002 - Admin Console             16 Jun  https://video.tv.adobe.com/v/342866
+003 - Sling Jobs                24 Jun  https://video.tv.adobe.com/v/343473
+004 - Repo Initializer          01 Jul  https://video.tv.adobe.com/v/343474
+005 - FY--Cache                 15 Jul  https://video.tv.adobe.com/v/343475
+006 - FY--Rewrites              22 Jul  https://video.tv.adobe.com/v/343600
+007 - MoCM--Experience Audit    29 Jul  https://video.tv.adobe.com/v/343620
+008 - MoCM--Unit Tests          05 Aug  https://video.tv.adobe.com/v/343623
+009 - MoCM--Functional Tests    12 Aug  https://video.tv.adobe.com/v/343624
+
+005 link: season-2/cloud5-fix-your-cache.md
+005 copy: Part one (of two) in the Fix Your... series. In this video we discuss how to improve caching performance.
+
+006 link: season-2/cloud5-fix-your-rewrites.md
+006 copy: Part two (of two) in the Fix Your... series. This video talks about using, developing and optimizing your rewrite files.
+
+007 link: season-2/cloud5-MoCM-experience-audit.md
+007 copy: Part one (of three) in the Mysteries of Cloud Manager series. This video gives a quick overview of Cloud Manager and talks about the experience audit feature.
+
+008 link: season-2/cloud5-MoCM-unit-tests.md
+008 copy: Part two (of three) in the Mysteries of Cloud Manager series. Unit testing is an often overlooked step in the development of applications. We explain why you should do it and how.
+
+009 link: season-2/cloud5-MoCM-functional-tests.md
+009 copy: Part three (of three) in the Mysteries of Cloud Manager series. Many developers don't realize that you can include true functional tests in your projects. This video explains the benefits and helps get you started.
