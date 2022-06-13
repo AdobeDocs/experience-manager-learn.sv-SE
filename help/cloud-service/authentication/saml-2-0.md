@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
+source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2815'
 ht-degree: 1%
 
 ---
@@ -399,9 +399,14 @@ Efter lyckad autentisering till IDP kommer IDP att dirigera en HTTP-POST tillbak
 
 Om URL-omskrivning på Apache-webbservern är konfigurerad (`dispatcher/src/conf.d/rewrites/rewrite.rules`) måste du se till att `.../saml_login` ändpunkter inte av misstag bemästras.
 
-## Aktivera datasynkronisering
+## Aktivera datasynkronisering och kapsla in tokens
 
-Användarposterna måste synkroniseras över AEM-publiceringsnivån när SAML-autentiseringsflödet skapar en användare i AEM Publish. Till [aktivera datasynkronisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)skickar du en förfrågan till Adobe kundsupport (via [AdminConsole](https://adminconsole.adobe.com) > Support) som begär att den ska aktiveras.
+När SAML-autentiseringsflödet skapar en användare i AEM Publish kan den AEM användarnoden autentiseras över AEM Publish-tjänstnivån.
+Detta kräver [datasynkronisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) och [inkapslade tokens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) aktiveras av Adobe Support i AEM Publish Service.
+
+Skicka en förfrågan till Adobe kundsupport (via [AdminConsole](https://adminconsole.adobe.com) > Support) begär:
+
+> Datasynkronisering och inkapslade tokens är aktiverade i AEM Publish-tjänsten för program X och miljö Y.
 
 ## Distribuera SAML-konfiguration
 
