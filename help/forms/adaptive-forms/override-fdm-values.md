@@ -1,0 +1,28 @@
+---
+title: Åsidosätt egenskaper för formulärdatamodell med OSGi-konfiguration
+description: I AEM Forms 6.5.13 introducerades möjligheten att åsidosätta egenskaper för formulärdatamodeller, vilket gör det enklare att testa en formulärdatamodell mot olika slutpunkter.
+feature: Adaptive Forms
+type: Tutorial
+version: 6.5.13
+topic: Development
+role: Developer
+level: Intermediate
+kt: 10537
+source-git-commit: 2cb08c584cb8dce27fd74314d7eba69ef4f8a875
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
+
+---
+
+# Åsidosätt egenskaper för formulärdatamodell
+
+Före AEM Forms 6.5.13 behövde du manuellt ändra konfigurationen av molntjänster för formulärdatamodellen så att den pekar på olika slutpunkter eller skapa en helt ny formulärdatamodell.
+
+I AEM Forms 6.5.13 introducerades möjligheten att åsidosätta egenskaper i formulärdatamodellen, vilket gör det enkelt att testa formulärdatamodellen mot olika tjänstslutpunkter.
+
+I följande video visas funktionen och användningsfallet
+
+>!![NOTE]Funktionen som demonstreras i den här videon kräver AEM Forms 6.5.13
+
+>[!VIDEO](https://video.tv.adobe.com/v/343762?quality=9&learn=on)
