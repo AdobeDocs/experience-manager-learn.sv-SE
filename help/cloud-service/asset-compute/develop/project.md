@@ -8,7 +8,7 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -55,7 +55,7 @@ Utvecklarverktyget kräver en fil med namnet `console.json` som innehåller de n
 1. Gå till roten av Adobe I/O-projektet och tryck på __Hämta alla__ i det övre högra hörnet.
 1. En fil hämtas som `.json` fil som har prefixet med projektet och arbetsytan, till exempel: `wkndAemAssetCompute-81368-Development.json`
 1. Du kan antingen
-   + Byt namn på filen som `config.json` och flytta det till roten av ditt Asset compute-projekt. Det här är metoden i den här självstudiekursen.
+   + Byt namn på filen som `console.json` och flytta det till roten av ditt Asset compute-projekt. Det här är metoden i den här självstudiekursen.
    + Flytta den till en godtycklig mapp OCH referera till den mappen från din `.env` fil med en konfigurationspost `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. Filsökvägen kan vara absolut eller relativ till projektets rot. Till exempel:
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
