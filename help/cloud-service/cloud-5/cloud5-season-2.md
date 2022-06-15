@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 59bcd6f2501b324222de7e68f2f7c311cb595788
+source-git-commit: 7985a5b36523aa090a7a9c7599e36bc1b5a9bd6f
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -57,17 +57,19 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
                 Snabb insikt i hur man använder databasuppdateraren för att strukturera om befintliga projektpaket till diskreta paket som är kompatibla med AEM som en molntjänst.
             </p>
          </td>
-     <td>
-            <img alt="Admin Console" src="./imgs/coming-soon.png"/>
-      <div>
-            <strong>Admin Console</strong>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
-      </div>
-      <p>
-        <br/>
-         Kommer 16 juni 2022
-      </p>
-   </td> 
+         <td>
+            <a href="season-2/cloud5-admin-console.md">
+                 <img alt="Admin Console" src="./imgs/s2/002-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
+               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+            </div>
+            <p>
+            <br/>
+               Darin och James diskuterar några vanliga saker som folk bör känna till om Admin Console, etablering och åtkomst.
+            </p>
+         </td> 
   </tr>
   <tr>
    <td>
