@@ -11,9 +11,9 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
+source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -199,7 +199,7 @@ Här finns andra användbara resurser för att förstå AEM, söka och bläddra 
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - sökning och indexering">Cloud 5 - sökning och indexering</a></p>
                <p class="is-size-6">I Cloud 5-teamet utforskas allt om sökning och indexering på AEM as a Cloud Service.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
        </div>
@@ -222,7 +222,7 @@ Här finns andra användbara resurser för att förstå AEM, söka och bläddra 
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Innehållssökning och indexering">Dokumentation för innehållssökning och indexering</a></p>
                <p class="is-size-6">Lär dig hur du skapar och hanterar index på AEM as a Cloud Service.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ Här finns andra användbara resurser för att förstå AEM, söka och bläddra 
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernisera Oak-index">Modernisera Oak-index</a></p>
                <p class="is-size-6">Lär dig hur du konverterar AEM 6 Oak-indexdefinitioner så att de blir AEM as a Cloud Service kompatibla och behåller index som fortsätter framåt.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ Här finns andra användbara resurser för att förstå AEM, söka och bläddra 
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="Dokumentation för indexdefinition">Dokumentation för Lucene-index</a></p>
                <p class="has-ellipsis is-size-6">Indexreferensen för Apache Oak Jackrabbit Lucene som dokumenterar alla Lucene-indexkonfigurationer som stöds.</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
        </div>
