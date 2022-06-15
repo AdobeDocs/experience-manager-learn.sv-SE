@@ -6,7 +6,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
-source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I den här artikeln beskrivs hur du skapar en tjänstanvändare i AEM Forms
 
 I tidigare versioner av Adobe Experience Manager (AEM) användes den administrativa resurslösaren för backend-bearbetning som krävde åtkomst till databasen. Användningen av den administrativa resurslösaren har tagits bort i AEM 6.3. I stället används en systemanvändare med specifik behörighet i databasen.
 
-Läs mer om hur du skapar och använder [tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
+Läs mer om [skapa och använda tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
 I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar egenskaperna för användarmappningen.
 
@@ -29,8 +29,8 @@ I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar 
 1. Klicka på Skapa systemanvändare
 1. Ange användartypen som data och klicka på den gröna ikonen för att slutföra processen att skapa systemanvändaren
 1. [Öppna configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter &#39; Apache Sling Service User Mapper Service &#39; och klicka för att öppna egenskaperna
-1. Klicka på ikonen *+* (plus) för att lägga till följande tjänstmappning
+1. Sök efter _Användarmappningstjänsten för Apache Sling-tjänsten_ och klicka för att öppna egenskaperna
+1. Klicka på *+* ikon (plus) för att lägga till följande Service Mapping
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -39,13 +39,13 @@ I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar 
 
 I ovanstående konfigurationsinställning är DevelopingWithServiceUser.core paketets symboliska namn. getresouresolver är undertjänstens namn.data är systemanvändaren som skapades i det tidigare steget.
 
-Vi kan också hämta resurslösare för Fd-service-användare. Den här tjänstanvändaren används för dokumenttjänster. Om du t.ex. vill certifiera/använda användningsrättigheter använder vi resurslösare från fd-service-användare för att utföra åtgärderna
+Vi kan också hämta resurslösare för fd-service-användare. Den här tjänstanvändaren används för dokumenttjänster. Om du t.ex. vill certifiera/använda användningsrättigheter använder vi resurslösare från fd-service-användare för att utföra åtgärderna
 
 1. [Ladda ned och zippa upp zip-filen som är kopplad till den här artikeln.](assets/developingwithserviceuser.zip)
 1. Navigera till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. Ladda upp och starta OSGi-paketet
 1. Kontrollera att paketet är i aktivt läge
-1. Du har nu skapat en *systemanvändare* och distribuerat *tjänstanvändarpaketet*.
+1. Du har nu skapat en *Systemanvändare* och även *Tjänstanvändarpaket*.
 
    Ge systemanvändaren (&#39; data &#39;) läsbehörighet på innehållsnoden för att ge åtkomst till /content.
 
