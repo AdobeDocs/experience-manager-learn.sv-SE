@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '790'
 ht-degree: 10%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 10%
    + [Utveckling](./introduction/evolution.md)
    + [Arkitektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
+   + Strategi och tankeledarskap{#strategy}
+      + [Experience Manager - Styrnings- och personalmodeller och arkitekter](./introduction/experience-manager-governance-and-staffing-models.md)
+      + [Skapa innehåll snabbare med Adobe Experience Manager](./introduction/drive-content-velocity-for-sites.md)
+      + [Snabba upp materialets hastighet med AEM](./introduction/accelerate-content-velocity-aem.md)
 + Underliggande teknik {#underlying-technology}
    + [AEM](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
