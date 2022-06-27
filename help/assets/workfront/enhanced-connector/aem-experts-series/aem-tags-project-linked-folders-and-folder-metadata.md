@@ -9,9 +9,9 @@ kt: 9720
 thumbnail: 340333.jpeg
 hidefromtoc: false
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
-source-git-commit: 485f968e6f8c508b5e81c54e03ca17996e4c1b63
+source-git-commit: 49707940e1a980ade97dab82270ab1263bef94d8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
@@ -28,4 +28,4 @@ _Del tre av en [fyra-delars expertserie om den utökade anslutningen Workfront f
 
 ## Korrigeringar
 
-+ __@ 4:34__ AEM är felaktig. Videoskärmar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.
++ __@ 4:34 och 6:20__ AEM är felaktig. Videoskärmar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.

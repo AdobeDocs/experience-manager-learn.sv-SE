@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 71f1d32c12742cdb644dec50050d147395c3f3b6
+source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 0%
+source-wordcount: '224'
+ht-degree: 4%
 
 ---
 
@@ -45,6 +45,23 @@ Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/conf
   "searchPath": "/content/wknd"
 }
 ```
+
+### Absoluta URL för webbplatskarta
+
+AEM sitemap stöder absoluta URL:er med [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta görs genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor.
+
+Exempel på noddefinition för Sling-mappning för `https://wknd.com` kan definieras under `/etc/map/https` enligt följande:
+
+| Bana | Egenskapsnamn | Egenskapstyp | Egenskapsvärde |
+|------|----------|---------------|-------|
+| `/etc/map/https/wknd-site` | `jcr:primaryType` | Sträng | `nt:unstructured` |
+| `/etc/map/https/wknd-site` | `sling:internalRedirect` | Sträng | `/content/wknd/(.*)` |
+| `/etc/map/https/wknd-site` | `sling:match` | Sträng | `wknd.com/$1` |
+
+Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local` (en lokal värdnamnsmappning körs på `http`).
+
+![Konfiguration av absolut URL för platskarta](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+
 
 ### Filterregel för Tillåt utskickning
 
