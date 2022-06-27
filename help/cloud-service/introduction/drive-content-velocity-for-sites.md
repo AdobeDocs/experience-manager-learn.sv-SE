@@ -3,9 +3,9 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -176,3 +176,5 @@ Här är några möjliga fallgropar att undvika:
 * Visa lösningar på ett isolerat sätt. Att enbart fokusera på den tekniska aspekten av AEM implementering kommer till exempel inte att få alla affärsfördelar. Istället rekommenderar vi att ni tittar på användningsfall och scenarier, och sedan väljer arkitektur och design, eftersom detta ger en bättre bild av AEM. Anurandha Pentareddy från Adobe aktier: _&quot;En sak jag rekommenderar är att titta på era värdefulla mål direkt för den plattform ni implementerar.&quot;_
 
 Om du vill ha en mer djupgående diskussion om innehållets hastighet kan du lyssna på den här timmen [paneldiskussion](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) med Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) och Adobe Anuradha Pentareddy.
+
+Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) nav.

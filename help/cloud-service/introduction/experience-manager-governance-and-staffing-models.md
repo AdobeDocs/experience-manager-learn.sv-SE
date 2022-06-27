@@ -3,9 +3,9 @@ title: Styrnings- och personalmodeller och arketyper
 description: Lär dig hur du kan driftsätta din Adobe Experience Manager-plattform (AEM) och få ut det mesta av dina insatser.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -132,3 +132,5 @@ Nedan följer några exempel på roller för ett lätt och tungt kundscenario:
 **Utnyttja interna resurser** - Mellanrum kan komma oväntat. Du kanske kan fylla i dem snabbare genom att skaffa interna teammedlemmar, i stället för att söka utanför organisationen.
 
 Om du vill ha en mer ingående diskussion om styrnings- och personalmodeller samt arkitekter kan du lyssna på den här paneldiskussionen på en timme: [Rollarkityper och skapa en operativ ram för [!DNL AEM Assets] och [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
+
+Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) nav.

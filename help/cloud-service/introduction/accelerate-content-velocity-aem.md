@@ -3,9 +3,9 @@ title: Snabba upp materialets hastighet med AEM
 description: Lär dig använda AEM Style Systems för att ge designers, innehållsförfattare och utvecklare i organisationen möjlighet att skapa och leverera upplevelser i den hastighet och i den omfattning som kunderna förväntar sig.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -91,3 +91,5 @@ Saker är helt enkelt renare. HTML i kärnkomponenterna är mycket detaljerade. 
 Slutligen är användningen av Style Systems mer konst än vetenskapen. Som vi har diskuterat finns det ett antal bästa metoder, men du får flexibilitet i hur du anpassar organisationens konfiguration.
 
 Mer information finns på [Customer Success Webinar](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk.
+
+Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) nav.
