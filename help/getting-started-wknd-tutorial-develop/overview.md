@@ -1,6 +1,6 @@
 ---
-title: Komma igång med AEM Sites - WKND självstudiekurs
-description: Komma igång med AEM Sites - WKND självstudiekurs. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
+title: Kom igång med AEM Sites - WKND, genomgång
+description: Lär dig implementera en AEM sajt för ett fiktivt livsstilsmärke som kallas WKND. Få en genomgång av grundläggande Experience Manager-teman som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -16,20 +16,20 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
-# Komma igång med AEM Sites - WKND självstudiekurs {#introduction}
+# Kom igång med AEM Sites - WKND, genomgång {#introduction}
 
 Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
 ## Översikt {#wknd-tutorial-overview}
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med hjälp av de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). Efter att ha avslutat den här självstudiekursen bör utvecklaren förstå plattformens grundläggande grund och med kunskap om vanliga designmönster i AEM.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med hjälp av de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå den grundläggande grunden för plattformen och de vanliga designmönstren i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
