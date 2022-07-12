@@ -9,9 +9,9 @@ version: 6.3, 6.4, 6.5, Cloud Service
 kt: 201
 thumbnail: 18131.jpg
 exl-id: cc4ffbd0-207a-42e4-bfcb-d6c83fb97237
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 1c2ee81c0d262f9e3f92f4907aba8e8787ce729f
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,15 @@ Lär dig hur innehållsfragment kan lokaliseras och översättas med Adobe Exper
 
 Innehållsfragment är en godkänd innehållstyp som AEM extraheras och skickas till en extern översättningstjänst. Flera användningsområden stöds inte:
 
-1. Ett innehållsfragment kan väljas direkt i Assets-konsolen för språkkopiering och översättning
-2. Innehållsfragment som refereras på en Sites-sida kopieras till rätt språkmapp och extraheras för översättning när Sites-sidan väljs för språkkopia
+1. Ett innehållsfragment kan vara [väljs direkt i Assets-konsolen för språkkopiering och översättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+2. Content Fragments referenced on a Sites page are copied to the appropriate language folder and extract for translation when the Sites page is selected for language copy.
 3. Material för textbundna media som är inbäddade i ett innehållsfragment kan extraheras och översättas.
-4. Resurssamlingar som är kopplade till ett innehållsfragment kan extraheras och översättas
+4. Resurssamlingar som är kopplade till ett innehållsfragment kan extraheras och översättas.
 
 ## Redigerare för översättningsregler {#translation-rules-editor}
 
-Översättningsbeteendet för Experience Manager kan uppdateras med **Översättningsregelredigeraren**. Om du vill uppdatera översättningen går du till **Verktyg** > **Allmänt** > **Översättningskonfiguration** på [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
+Experience Manager kan uppdatera översättningsbeteendet med **Redigerare för översättningsregler**. Om du vill uppdatera översättningen går du till **verktyg** > **Allmänt** > **Översättningskonfiguration** på [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
 
-Utanför förpackningen refererar konfigurationer till innehållsfragment vid `fragmentPath` med resurstypen `core/wcm/components/contentfragment/v1/contentfragment`. Alla komponenter som ärver från `v1/contentfragment` identifieras av standardkonfigurationen.
+Utanför förpackningen refererar konfigurationer till innehållsfragment vid `fragmentPath` med en resurstyp av `core/wcm/components/contentfragment/v1/contentfragment`. Alla komponenter som ärver från `v1/contentfragment` identifieras av standardkonfigurationen.
 
 ![Redigerare för översättningsregler](assets/translation-configuration.png)
