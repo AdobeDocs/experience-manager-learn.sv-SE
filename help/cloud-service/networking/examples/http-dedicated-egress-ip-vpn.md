@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: aa2d0d4d6e0eb429baa37378907a9dd53edd837d
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -52,8 +52,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.ProxySelector;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -64,26 +62,11 @@ import java.time.Duration;
 public class HttpExternalServiceImpl implements ExternalService {
     private static final Logger log = LoggerFactory.getLogger(HttpExternalServiceImpl.class);
 
+    // client with connection pool reused for all requests
+    private HttpClient client = HttpClient.newBuilder().build();
+
     @Override
     public boolean isAccessible() {
-        HttpClient client;
-
-        // If the URL is http, use System.getenv("AEM_HTTP_PROXY_HOST") and System.getenv("AEM_HTTP_PROXY_PORT")
-        // Else if the URL is https, us System.getenv("AEM_HTTPS_PROXY_HOST") and System.getenv("AEM_HTTPS_PROXY_PORT")
-
-        if (System.getenv("AEM_HTTP_PROXY_HOST") != null) {
-            // Create a ProxySelector that maps to AEM's provided AEM_HTTP_PROXY_HOST and AEM_HTTP_PROXY_PORT
-            ProxySelector proxySelector = ProxySelector.of(
-                    new InetSocketAddress(System.getenv("AEM_HTTP_PROXY_HOST"),
-                            Integer.parseInt(System.getenv("AEM_HTTP_PROXY_PORT"))));
-            // Create an HttpClient and provide the proxy selector that will use AEM's native HTTP proxy configuration
-            client = HttpClient.newBuilder().proxy(proxySelector).build();
-            log.debug("Using HTTPClient with AEM_HTTP_PROXY");
-        } else {
-            client = HttpClient.newBuilder().build();
-            // If no proxy is set up (such as local dev)
-            log.debug("Using HTTPClient without AEM_HTTP_PROXY");
-        }
 
         // Prepare the full URI to request, note this will have the
         // - Scheme (http/https)
