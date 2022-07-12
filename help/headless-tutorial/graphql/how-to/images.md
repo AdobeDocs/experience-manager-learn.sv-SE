@@ -9,16 +9,16 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
 
 # Bilder med AEM Headless
 
-Bilder är en viktig aspekt av [utveckla en multimedial, övertygande AEM upplevelse utan motstycke](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
+Bilder är en viktig aspekt av [utveckla multimediala, övertygande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
 
 Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ge URL:er till bilder baserat på varifrån bilden refereras.
 
@@ -34,7 +34,7 @@ Fälten används bäst utifrån följande kriterier:
 
 | ImageRef-fält | Klientwebbprogram som hanteras från AEM | Kundappar frågar AEM Author | Kundappfrågor AEM Publish |
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✘ | ✘ |
+| `_path` | ✔ | ✔ (App måste ange värd i URL) | ✔ (App måste ange värd i URL) |
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
@@ -48,25 +48,28 @@ Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.
 
 ![Content Fragment Model med innehållsreferens till en bild](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL-fråga
+## Beständig GraphQL-fråga
 
-I GraphQL-frågan returnerar du fältet som `ImageRef` skriv och begära lämpliga fält `_path`, `_authorUrl`, eller `_publishUrl` krävs av ditt program.
+I GraphQL-frågan returnerar du fältet som `ImageRef` skriv och begära lämpliga fält `_path`, `_authorUrl`, eller `_publishUrl` krävs av ditt program. Du kan till exempel ställa frågor till ett äventyr i [WKND-referensdemoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
 
-```javascript
-{
-  adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
+```graphql
+query ($path: String!) {
+  adventureByPath(_path: $path) {
     item {
-      adventurePrimaryImage {
+      title,
+      primaryImage {
         ... on ImageRef {
-          _path,
-          _authorUrl,
+          _path
+          _authorUrl
           _publishUrl
         }
       }
     }
-  }  
+  }
 }
 ```
+
+The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
 
 ## GraphQL-svar
 
@@ -78,9 +81,9 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller URL
     "adventureByPath": {
       "item": {
         "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd/en/adventures/bali-surf-camp/AdobeStock_175749320.jpg"
+          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
+          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
         }
       }
     }
@@ -95,7 +98,7 @@ Domänerna för `_authorUrl` och `_publishUrl` definieras automatiskt av AEM as 
 I Reagera ser bilden från AEM Publish ut så här:
 
 ```html
-<img src={ data.adventureByPath.item.adventurePrimaryImage._publishUrl } />
+<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
 ```
 
 ## Bildåtergivningar
@@ -118,9 +121,9 @@ I det här exemplet skapas tre renderingar:
 
 | Återgivningsnamn | Tillägg | Maximal bredd |
 |----------------|:---------:|----------:|
-| stor | jpeg | 1200px |
-| medium | jpeg | 900px |
-| liten | jpeg | 600px |
+| stor | jpeg | 1 200 px |
+| medium | jpeg | 900 px |
+| liten | jpeg | 600 px |
 
 Attributen som anropas i tabellen ovan är viktiga:
 
@@ -132,7 +135,7 @@ Attributen som anropas i tabellen ovan är viktiga:
 
 #### Bearbeta resurser{#reprocess-assets}
 
-När Bearbetningsprofilen har skapats (eller uppdaterats) bearbetar du om materialet för att generera de nya återgivningarna som har definierats i Bearbetningsprofilen. Om resurserna inte bearbetas med de nya återgivningarna finns de inte.
+När Bearbetningsprofilen har skapats (eller uppdaterats) bearbetar du om materialet för att generera de nya återgivningarna som har definierats i Bearbetningsprofilen. Det finns inga nya återgivningar förrän resurserna har bearbetats med bearbetningsprofilen.
 
 + Helst [tilldelat bearbetningsprofilen till en mapp](../../../assets/configuring//processing-profiles.md) så att alla nya resurser som överförs till den mappen automatiskt genererar återgivningarna. Befintliga mediefiler måste bearbetas på nytt enligt metoden&quot;a hoc&quot; nedan.
 
@@ -142,7 +145,7 @@ När Bearbetningsprofilen har skapats (eller uppdaterats) bearbetar du om materi
 
 #### Granska återgivningar
 
-Återgivningar kan valideras av [öppna en återgivningsvy för en resurs](../../../assets/authoring/renditions.md)och välja de nya renderingarna för förhandsgranskning i renderingslisten. Om återgivningarna saknas [se till att resurserna bearbetas med Bearbetningsprofilen](#reprocess-assets).
+Återgivningar kan valideras av [öppna en återgivningsvy för en resurs](../../../assets/authoring/renditions.md)och välja de nya renderingarna för förhandsgranskning i renderingslisten. Om återgivningarna saknas [se till att resurserna bearbetas med bearbetningsprofilen](#reprocess-assets).
 
 ![Granska återgivningar](./assets/images/review-renditions.jpg)
 
@@ -156,9 +159,9 @@ Kontrollera att resurserna med de nya återgivningarna är [(re)publicerad](../.
 
 | Resurs-URL | Delbana för återgivningar | Återgivningsnamn | Återgivningstillägg |  | Återgivnings-URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | stor | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | medium | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | liten | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | stor | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | medium | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | liten | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -210,7 +213,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 Detta enkla `App.js` frågar AEM efter en Adventure-bild och visar sedan bildens tre renderingar: liten, medelstor och stor.
 
-Fråga mot AEM utförs i den anpassade React-kroken [useGraphQL som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-queries).
+Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
 
 Resultatet av frågan och de specifika återgivningsparametrarna skickas till [Bildreaktionskomponent](#react-example-image-component).
 
@@ -218,29 +221,14 @@ Resultatet av frågan och de specifika återgivningsparametrarna skickas till [B
 // src/App.js
 
 import "./App.css";
-import { useGraphQL } from "./useGraphQL";
+import { useAdventureByPath } from './api/persistedQueries'
 import Image from "./Image";
 
 function App() {
 
-  // The GraphQL that returns an image
-  const adventureQuery = `{
-        adventureByPath(_path: "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp") {
-          item {
-            adventureTitle,
-            adventurePrimaryImage {
-              ... on ImageRef {
-                _path,
-                _authorUrl,
-                _publishUrl
-              }
-            }
-          }
-        }  
-    }`;
-
-  // Get data from AEM using GraphQL
-  let { data } = useGraphQL(adventureQuery);
+  // Get data from AEM using GraphQL persisted query as defined above 
+  // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
 
   // Wait for GraphQL to provide data
   if (!data) { return <></> }
@@ -251,10 +239,10 @@ function App() {
       <h2>Small rendition</h2>
       {/* Render the small rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="small"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -262,10 +250,10 @@ function App() {
       <h2>Medium rendition</h2>
       {/* Render the medium rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="medium"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
 
       <hr />
@@ -273,10 +261,10 @@ function App() {
       <h2>Large rendition</h2>
       {/* Render the large rendition for the Adventure Primary Image */}
       <Image
-        assetUrl={data.adventureByPath.item.adventurePrimaryImage._publishUrl}
+        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
         renditionName="large"
         renditionExtension="jpeg"
-        alt={data.adventureByPath.item.adventureTitle}
+        alt={data.adventureByPath.item.title}
       />
     </div>
   );
