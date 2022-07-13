@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: e9aeb54f0e2b52ad2d1cc914820bd6e232e509a0
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -185,15 +185,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 ### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar från AEM måste anslutningen göras via särskilda värdar och portar, som tillhandahålls via platshållare, för att en dedikerad IP-adress ska kunna hämtas.
-
-AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
-
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | Konfiguration av Apache-webbserverläge_proxy | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxyvärd för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | Proxyport för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | Proxyvärd för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-Begäranden till externa HTTP/HTTPS-tjänster bör göras genom att konfigurera Java™ HTTP-klientens proxykonfiguration med hjälp AEM proxyvärden/proxyportar.
-
-När HTTP/HTTPS-anrop görs till externa tjänster på en port, visas inga motsvarande `portForwards` måste definieras med Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
+När du skapar HTTP/HTTPS-anslutningar från AEM, när du använder en dedikerad IP-adress för utgående IP-adresser, proxiceras HTTP/HTTPS-anslutningar automatiskt ut från AEM med den dedikerade IP-adressen för utgående IP-adressen. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
 
 #### Exempel på koder
 
