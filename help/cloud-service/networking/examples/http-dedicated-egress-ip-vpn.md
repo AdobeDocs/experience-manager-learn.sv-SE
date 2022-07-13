@@ -9,22 +9,22 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: aa2d0d4d6e0eb429baa37378907a9dd53edd837d
+source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
 # HTTP/HTTPS-anslutningar för dedikerad IP-adress och VPN
 
-HTTP-/HTTPS-anslutningar måste proxiceras bort från AEM as a Cloud Service, men de behöver inga särskilda `portForwards` regler och kan använda AEM avancerade nätverks `AEM_HTTP_PROXY_HOST`, `AEM_HTTP_PROXY_PORT`, `AEM_HTTPS_PROXY_HOST`och `AEM_HTTPS_PROXY_PORT`.
+HTTP-/HTTPS-anslutningar proxioneras automatiskt från AEM as a Cloud Service med dedikerad IP-adress för utgångar eller VPN, och de behöver inga särskilda `portForwards` regler.
 
 ## Avancerat nätverksstöd
 
 Följande kodexempel stöds av följande avancerade nätverksalternativ.
 
-Se till att [lämplig](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
+Se till att [dedikerad IP-adress för utgångar eller VPN](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -36,7 +36,7 @@ Se till att [lämplig](../advanced-networking.md#advanced-networking) avancerad 
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som kan köras AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. Anslutningar till HTTPS-webbservrar använder `AEM_HTTPS_PROXY_HOST` och `AEM_HTTPS_PROXY_PORT` i stället för  `AEM_HTTP_PROXY_HOST` och `AEM_HTTP_PROXY_PORT`.
+Detta Java™-kodexempel är en OSGi-tjänst som kan köras AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. HTTPS- (eller HTTP)-anslutningarna proxyeras automatiskt från AEM as a Cloud Service och kräver ingen särskild utveckling.
 
 >[!NOTE]
 > Det rekommenderas att [Java™ 11 HTTP API:er](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) används för att göra HTTP/HTTPS-anrop från AEM.
