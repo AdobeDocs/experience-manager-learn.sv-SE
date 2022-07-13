@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1264'
 ht-degree: 0%
 
 ---
@@ -229,15 +229,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 ### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar från AEM, för att kunna få en dedikerad IP-adress för utgångar eller dirigeras via VPN, måste anslutningen göras via en särskild värd och portar, som tillhandahålls via platshållare.
-
-AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
-
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | Konfiguration av Apache-webbserverläge_proxy | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxyvärd för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | Proxyport för HTTP-anslutningar | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | Proxyvärd för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-Begäranden till externa HTTP/HTTPS-tjänster ska göras genom att Java™ HTTP-klientens proxykonfiguration konfigureras via värden AEM proxyvärdar/portar.
-
-När HTTP/HTTPS-anrop görs till externa tjänster på en port, visas inga motsvarande `portForwards` måste definieras med API:er för Cloud Manager `__enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
+När du skapar HTTP-/HTTPS-anslutningar från AEM proxiceras HTTP-/HTTPS-anslutningar automatiskt ut ur AEM när VPN används. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
 
 >[!TIP]
 >
