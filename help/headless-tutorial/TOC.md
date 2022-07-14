@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '221'
 ht-degree: 5%
 
 ---
@@ -36,9 +36,7 @@ ht-degree: 5%
       + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
       + [2 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
       + [3 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
-      + [4 - Fråga från en extern app](./graphql/multi-step/graphql-and-external-app.md)
-      + [5 - Avancerad datamodellering med fragmentreferenser](./graphql/multi-step/fragment-references.md)
-      + [6 - Produktionsdistribution](./graphql/multi-step/production-deployment.md)
+      + [4 - Bygg en React-app](./graphql/multi-step/graphql-and-react-app.md)
    + Avancerad självstudiekurs{#advanced-tutorial}
       + [Översikt](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 - Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)

@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,61 @@ I den här självstudiekursen utforskas hur AEM GraphQL API:er och headless-funk
 
 Den här självstudiekursen kommer att omfatta följande ämnen:
 
-* Skapa modeller för innehållsfragment för att modellera medarbetare i AEM
-* Skapa Contributor-innehållsfragment med den nya Content Fragment-modellen
-* Se hur Content Fragments in AEM kan efterfrågas med det integrerade utvecklingsverktyget GraphiQL.
-* AEM GraphQL API:er från ett WKND GraphQL-exempelprogram
-* Utför avancerad datamodellering med fragmentreferenser
+* Skapa en ny projektkonfiguration
+* Skapa nya modeller för innehållsfragment för att modellera data
+* Skapa nya innehållsfragment baserat på de tidigare modellerna.
+* Se hur AEM kan efterfrågas med det integrerade utvecklingsverktyget GraphiQL.
+* Lagra eller behålla de GraphQL-frågor som ska AEM
+* Förbruka beständiga GraphQL-frågor från en provapp för React
+
+
+## Förutsättningar {#prerequisites}
+
+Du måste följa den här självstudiekursen på följande sätt:
+
+* Baskunskaper i HTML och JavaScript
+* Följande verktyg måste installeras lokalt:
+   * [Node.js v10+](https://nodejs.org/en/)
+   * [npm 6+](https://www.npmjs.com/)
+   * [Git](https://git-scm.com/)
+   * En IDE (till exempel [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
+
+### AEM
+
+Det krävs en Adobe Experience Manager-miljö för att slutföra den här självstudiekursen. Du kan använda något av följande (skärmbilder spelas in från en AEM as a Cloud Service miljö):
+
+* AEM as a Cloud Service miljö med:
+   * [Åtkomst till AEM as a Cloud Service och Cloud Manager](/help/cloud-service/accessing/overview.md)
+      * **AEM** åtkomst till AEM as a Cloud Service
+      * **Cloud Manager - utvecklare** åtkomst till Cloud Manager
+* [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md).
+* [AEM 6.5.13+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+
+### Installera exempelinnehåll {#install-sample-content}
+
+Det kan vara praktiskt att ha exempelinnehåll som redan finns i AEM som ska användas som referens.
+
+1. Navigera till [AEM WKND-delat projekt](https://github.com/adobe/aem-guides-wknd-shared/releases).
+1. Ladda ned den senaste resursen: `aem-guides-wknd-shared.ui.content-x.x.x.zip`.
+1. Logga in i AEM författarmiljö som ska användas för självstudiekursen.
+1. Navigera AEM startskärmen till **verktyg** > **Distribution** > **Paket**:
+
+   ![Navigera i pakethanteraren](assets/overview/navigate-package-manager.png)
+1. Tryck **Överför paket** och väljer `aem-guides-wknd-shared.ui.content-x.x.x.zip` tidigare hämtad fil. Tryck **OK** att överföra.
+1. När paketet har överförts trycker du på **Installera** för att installera innehållet.
+
+   ![Installera exempelinnehållspaket](assets/overview/install-sample-content-package.png)
+
+1. Exempelinnehåll Fragment, Content Fragment Models, images and more will be installed for the ficious [WKND, varumärke](https://wknd.site/). Exempelinnehållet kommer att refereras till senare i självstudiekursen.
 
 ## Kom så börjar vi!
 
-1. Konfigurera en utvecklingsmiljö med [AEM as a Cloud Service](../quick-setup/cloud-service.md) eller använda [lokal SDK](../quick-setup/local-sdk.md).
-2. Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
+1. Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
 
 ## GitHub-projekt
 
 Källkoden och innehållspaketen finns på [AEM - WKND GraphQL GitHub-projekt](https://github.com/adobe/aem-guides-wknd-graphql).
 
 Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+
+Exempel på innehållsfragment, modeller och frågor finns i [AEM WKND-delat projekt](https://github.com/adobe/aem-guides-wknd-shared)

@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 0%
+source-wordcount: '897'
+ht-degree: 1%
 
 ---
 
 # Skapa innehållsfragment {#authoring-content-fragments}
 
-I det här kapitlet skapar och redigerar du ett nytt innehållsfragment baserat på [den nydefinierade modellen för Contributor-innehållsfragment](./content-fragment-models.md). Du får också lära dig hur du skapar varianter av innehållsfragment.
+I det här kapitlet skapar och redigerar du ett nytt innehållsfragment baserat på [nydefinierad modell för innehållsfragment](./content-fragment-models.md). Du får också lära dig hur du skapar varianter av innehållsfragment.
 
 ## Förutsättningar {#prerequisites}
 
@@ -30,92 +30,132 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 * Skapa ett innehållsfragment baserat på en innehållsfragmentmodell
 * Skapa en variant av innehållsfragment
 
-## Redigeringsöversikt för innehållsfragment {#overview}
+## Skapa en resursmapp
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfragment från modeller som skapats i det föregående kapitlet måste du skapa en mapp där de lagras. Mappen måste konfigureras för att du ska kunna skapa fragment från specifika modeller.
 
-I videon ovan visas en översikt på hög nivå över hur du skapar innehållsfragment.
+1. Navigera AEM startskärmen till **Resurser** > **Filer**.
+
+   ![Navigera till resursfiler](assets/author-content-fragments/navigate-assets-files.png)
+
+1. Tryck **Skapa** i hörnet och tryck **Mapp**. I dialogrutan som visas skriver du:
+
+   * Titel*: **Mitt projekt**
+   * Namn: **mitt projekt**
+
+   ![Dialogrutan Skapa mapp](assets/author-content-fragments/create-folder-dialog.png)
+
+1. Välj **Min mapp** mapp och tryck **Egenskaper**.
+
+   ![Öppna mappegenskaper](assets/author-content-fragments/open-folder-properties.png)
+
+1. Tryck på **Cloud Services** -fliken. Under **Molnkonfiguration** använda sökaren för att markera **Mitt projekt** konfiguration. Värdet ska vara `/conf/my-project`.
+
+   ![Ange molnkonfiguration](assets/author-content-fragments/set-cloud-config-my-project.png)
+
+   Om du anger den här egenskapen kan innehållsfragment skapas med hjälp av modellerna som skapades i föregående kapitel.
+
+1. Tryck på **Profiler** -fliken. Under **Tillåtna modeller för innehållsfragment** använda sökaren för att markera **Person** och **Team** modell skapades tidigare.
+
+   ![Tillåtna modeller för innehållsfragment](assets/author-content-fragments/allowed-content-fragment-models.png)
+
+   Dessa profiler ärvs automatiskt av alla undermappar och kan åsidosättas. Observera att du även kan tillåta modeller efter taggar eller aktivera modeller från andra projektkonfigurationer (som WKND Shared). Den här mekanismen är ett kraftfullt sätt att hantera innehållshierarkin.
+
+1. Tryck **Spara och stäng** om du vill spara ändringarna i mappegenskaperna.
+
+1. Navigera inuti **Mitt projekt** mapp.
+
+1. Skapa en ny mapp med följande värden:
+
+   * Titel*: **Engelska**
+   * Namn: **en**
+
+   Ett tips är att skapa projekt för flerspråkigt stöd. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+
 
 ## Skapa ett innehållsfragment {#create-content-fragment}
 
-I föregående kapitel, [Defining Content Fragment Models](./content-fragment-models.md), skapades en **Contributor**-modell. Skapa ett nytt innehållsfragment med den här modellen.
+Därefter kommer flera innehållsfragment att skapas baserat på **Team** och **Person** modeller.
 
-1. På **AEM Start**-menyn navigerar du till **Resurser** > **Filer**.
-1. Klicka igenom mapparna för att navigera till **WKND-plats** > **Engelska** > **Deltagare**. Den här mappen innehåller en lista med huvudbilder för medverkande av WKND-varumärket.
+1. Tryck på AEM Start Screen (Starta skärm) **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
 
-1. Klicka på **Skapa** i det övre högra hörnet och välj **Innehållsfragment**:
+   ![Gränssnitt för innehållsfragment](assets/author-content-fragments/cf-fragment-ui.png)
 
-   ![Klicka på Skapa ett nytt fragment](assets/author-content-fragments/create-content-fragment-menu.png)
+1. I den vänstra listen expanderar du **Mitt projekt** och trycka **Engelska**.
+1. Tryck **Skapa** för att ta fram **Nytt innehållsfragment** och ange följande värden:
 
-1. Markera **Contributor**-modellen och klicka på **Nästa**.
+   * Plats: `/content/dam/my-project/en`
+   * Modell för innehållsfragment: **Person**
+   * Titel: **John Doe**
+   * Namn: `john-doe`
 
-   ![Välj Contributor-modell](assets/author-content-fragments/select-contributor-model.png)
+   ![Nytt innehållsfragment](assets/author-content-fragments/new-content-fragment-john-doe.png)
+1. Tryck **Skapa**.
+1. Upprepa stegen ovan för att skapa ett nytt fragment som representerar **Alison Smith**:
 
-   Detta är samma **Contributor**-modell som skapades i föregående kapitel.
+   * Plats: `/content/dam/my-project/en`
+   * Modell för innehållsfragment: **Person**
+   * Titel: **Alison Smith**
+   * Namn: `alison-smith`
 
-1. Ange **Stacey Roswells** som titel och klicka på **Create**.
-1. Klicka på **Öppna** i dialogrutan **Klart** för att öppna det nyligen skapade fragmentet.
+   Tryck **Skapa** för att skapa det nya personfragmentet.
 
-   ![Nytt innehållsfragment har skapats](assets/author-content-fragments/new-content-fragment.png)
+1. Upprepa sedan stegen för att skapa en ny **Team** fragment som representerar **Team Alpha**:
 
-   Observera att fälten som definieras av modellen nu är tillgängliga för att skapa den här instansen av innehållsfragmentet.
+   * Plats: `/content/dam/my-project/en`
+   * Modell för innehållsfragment: **Team**
+   * Titel: **Team Alpha**
+   * Namn: `team-alpha`
 
-1. För **Fullständigt namn** anger du: **Stacey Roswells**.
-1. För **Biografi** anger du en kort biografi. Behöver du inspiration? Du kan återanvända den här [textfilen](assets/author-content-fragments/stacey-roswells-bio.txt).
-1. För **Bildreferens** klickar du på **mappikonen** och bläddrar till **WKND-plats** > **Engelska** > **Deltagare** > **stacey-roswells.jpg** . Detta utvärderas till sökvägen: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
-1. För **Yrke** väljer du **Fotograf**.
+   Tryck **Skapa** för att skapa det nya teamfragmentet.
 
-   ![Skapat fragment](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
+1. Det ska nu finnas tre innehållsfragment under **Mitt projekt** > **Engelska**:
 
-1. Klicka på **Spara** för att spara ändringarna.
+   ![Nya innehållsfragment](assets/author-content-fragments/new-content-fragments.png)
 
-## Skapa en variant för innehållsfragment
+## Redigera personinnehållsfragment {#edit-person-content-fragments}
 
-Alla innehållsfragment börjar med en **Överordnad**-variant. Variationen **Överordnad** kan anses vara *fragmentets*-standardinnehåll och används automatiskt när innehållet visas via GraphQL-API:erna. Du kan också skapa varianter av ett innehållsfragment. Den här funktionen ger ytterligare flexibilitet vid utformningen av en implementering.
+Fyll sedan i de nyligen skapade fragmenten med data.
 
-Variationer kan användas för att rikta in sig på specifika kanaler. Till exempel kan en **mobil**-variant skapas som innehåller en mindre mängd text eller refererar till en kanalspecifik bild. Hur variationer används beror på implementeringen. Precis som med andra funktioner bör du planera noggrant innan du använder.
+1. Tryck på kryssrutan bredvid **John Doe** och trycka **Öppna**.
 
-Skapa sedan en ny variant för att få en uppfattning om vilka funktioner som är tillgängliga.
+   ![Öppna innehållsfragment](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. Öppna **Stacey Roswells** Content Fragment igen.
-1. Klicka på **Skapa variation** i den vänstra sidlisten.
-1. Ange en titel på **Sammanfattning** i den nya variationen **.**
+1. Innehållsfragmentsredigeraren innehåller ett formulär baserat på modellen för innehållsfragment. Fyll i de olika fälten för att lägga till innehåll i **John Doe** fragment. Under Profilbild kan du välja någon av bilderna i WKND Shared eller ladda upp din egen bild till AEM Assets.
 
-   ![Ny variant - sammanfattning](assets/author-content-fragments/new-variation-summary.png)
+   ![Redigera innehållsfragment](assets/author-content-fragments/content-fragment-editor-jd.png)
 
-1. Klicka på **Biografi** flerradsfält och klicka på knappen **Expandera** för att ange helskärmsläge för flerradsfältet.
+1. Tryck sedan på **Skapa variant** till vänster. I dialogrutan lägger du till text i **Alternativ** för variantnamnet.
 
-   ![Gå till helskärmsläge](assets/author-content-fragments/enter-full-screen-view.png)
+1. Ändra några av elementen i **Alternativ** variation.
 
-1. Klicka på **Sammanfatta text** i den övre högra menyn.
+   ![Alternativ version](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
 
-1. Ange ett **mål** på **50** ord och klicka på **Start**.
+   Med variationsfunktionen kan författare skapa olika versioner av samma innehållsfragment. Detta kan användas för att ge en sammanfattning av en artikel med lång varaktighet. Som standard en enda **Överordnad** varianten skapas. Flerradiga textfältselement i en variant kan synkroniseras med den överordnad variationen.
 
-   ![Förhandsgranskning av sammanfattning](assets/author-content-fragments/summarize-text-preview.png)
+1. Tryck **Spara och stäng** för att spara ändringarna i John Doe-fragmentet.
+1. Återgå till gränssnittet för innehållsfragment och öppna **Alison Smith** fil för redigering.
+1. Upprepa stegen ovan för att fylla i **Alison Smith** fragmentera med innehåll.
 
-   Då öppnas en förhandsgranskning av en sammanfattning. AEM datorspråkprocessor försöker sammanfatta texten baserat på målordsantalet. Du kan också välja olika meningar att ta bort.
+## Redigera teaminnehållsfragment {#edit-team-content-fragment}
 
-1. Klicka på **Sammanfatta** när du är nöjd med sammanfattningen. Klicka i det flerradiga textfältet och växla **Utöka**-knappen för att återgå till huvudvyn.
+1. Öppna **Team Alpha** Innehållsfragment med hjälp av gränssnittet för innehållsfragment.
+1. Fyll i fälten för **Titel**, **Kortnamn** och **Beskrivning**.
+1. Välj **John Doe** och **Alison Smith** Innehållsfragment för att fylla i **Teammedlemmar** fält:
 
-1. Klicka på **Spara** för att spara ändringarna.
+   ![Ange teammedlemmar](assets/author-content-fragments/select-team-members.png)
 
-## Skapa ytterligare ett innehållsfragment
+   >[!NOTE]
+   >
+   >Du kan också skapa nya innehållsfragment online med hjälp av **Nytt innehållsfragment** -knappen.
 
-Upprepa stegen som beskrivs i [Skapa ett innehållsfragment](#create-content-fragment) om du vill skapa ytterligare en **Contributor**. Detta används i nästa kapitel som exempel på hur du kan fråga flera fragment.
+1. Tryck **Spara och stäng** om du vill spara ändringarna i Team Alpha-fragmentet.
 
-1. I mappen **Deltagare** klickar du på **Skapa** i det övre högra hörnet och väljer **Innehållsfragment**:
-1. Markera **Contributor**-modellen och klicka på **Nästa**.
-1. Ange **Jacob Wester** som titel och klicka på **Skapa**.
-1. Klicka på **Öppna** i dialogrutan **Klart** för att öppna det nyligen skapade fragmentet.
-1. För **Fullständigt namn** anger du: **Jacob Wester**.
-1. För **Biografi** anger du en kort biografi. Behöver du inspiration? Du kan återanvända den här [textfilen](assets/author-content-fragments/jacob-wester.txt).
-1. För **Bildreferens** klickar du på **mappikonen** och bläddrar till **WKND-plats** > **Engelska** > **Deltagare** > **jacob_wester.jpg**. Detta utvärderas till sökvägen: `/content/dam/wknd/en/contributors/jacob_wester.jpg`.
-1. För **Yrke** väljer du **Skrivare**.
-1. Klicka på **Spara** för att spara ändringarna. Du behöver inte skapa en variant, såvida du inte vill!
+## Utforska WKND-innehållsfragment (valfritt) {#explore-wknd-content-fragments}
 
-   ![Ytterligare innehållsfragment](assets/author-content-fragments/additional-content-fragment.png)
+Om du [installerade WKND Shared-exempelinnehåll](./overview.md#install-sample-content) kan du inspektera innehållsfragmenten för modeller av annonser, artiklar och författare för att få fler idéer om hur du skapar innehåll.
 
-   Du bör nu ha två **Contributor**-fragment.
+![WKND-innehållsfragment](assets/author-content-fragments/wknd-content-fragments.png)
 
 ## Grattis! {#congratulations}
 
@@ -123,4 +163,9 @@ Grattis, du har just skapat flera innehållsfragment och skapat en variant.
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel, [Utforska GraphQL API:er](explore-graphql-api.md), kommer du att utforska GraphQL API:er AEM det inbyggda GraphQL-verktyget. Lär dig hur AEM automatiskt genererar ett GraphQL-schema baserat på en Content Fragment-modell. Du kommer att experimentera med att skapa grundläggande frågor med GraphQL-syntaxen.
+I nästa kapitel [Utforska GraphQL API:er](explore-graphql-api.md)kommer du att utforska AEM GraphQL API:er med det inbyggda GrapiQL-verktyget. Lär dig hur AEM automatiskt genererar ett GraphQL-schema baserat på en Content Fragment-modell. Du kommer att experimentera med att skapa grundläggande frågor med GraphQL-syntaxen.
+
+## Relaterad dokumentation
+
+* [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
+* [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)

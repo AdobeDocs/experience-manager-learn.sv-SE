@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -128,7 +128,7 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
 
    >[!NOTE]
    >
-   > I ett produktionsscenario ansluter appen till en AEM **Publicera** miljö. Detta beskrivs mer ingående i [Produktionsdistribution](../multi-step/production-deployment.md) kapitel.
+   > I ett produktionsscenario ansluter appen till en AEM **Publicera** miljö. Detta beskrivs mer ingående i _Produktionsdistribution_ -avsnitt.
 
 1. Navigera till `aem-guides-wknd-graphql/react-app` mapp. Installera och starta programmet:
 
