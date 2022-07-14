@@ -1,17 +1,17 @@
 ---
-title: 'Om InDesign-filer och resursmallar i AEM Assets '
+title: Om InDesign-filer och resursmallar i AEM Assets
 description: I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-fil och alla tillhörande överväganden som du kan använda i funktionen Resursmallar för AEM Resurser.
 version: 6.3, 6.4, 6.5
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
+source-git-commit: bf5b2fca04c09fd52df8ef8d9fca8b4b7bd2de2f
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
-
 
 # Om InDesign-filer och resursmallar i AEM Assets {#understanding-indesign-files-and-asset-templates-in-aem-assets}
 
@@ -21,21 +21,21 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 
 >[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
 
-1. Hämta och öppna filmallen [**InDesign**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **Öppna märkordspanelen,** granska märkordsnamnkonventionen och observera att de element som kan redigeras i filen InDesign redan är formaterade. Kom ihåg att bara taggade element kan redigeras i AEM.
+1. Hämta och öppna [**InDesign-filmall**](assets/asset-templates-tutorial-video--supporting-files.zip)
+2. **Öppna märkordspanelen,** Granska namnkonventionen för taggar och observera att elementen som kan redigeras i filen InDesign redan är taggade. Kom ihåg att bara taggade element kan redigeras i AEM.
 
    * **Fönster > Verktyg > Taggar**
 
-3. På sidan lägger du till ett nytt textelement, anger texten&quot;Sidhuvud&quot; och använder styckeformatet **Rubrik**.
+3. På sidan lägger du till ett nytt textelement, anger texten&quot;Sidhuvud&quot; och använder kommandot **Rubrik** Styckeformat.
 
    * **Fönster > Format > Styckeformat**
 
    Skapa och använd sedan en ny tagg med namnet **Page2Heading.**
 
-4. Lägg till FPO-logotypbilden ([som finns i zip](assets/asset-templates-tutorial-video--supporting-files.zip)) i Logo-elementet på den Överordnad sidan.
+4. Lägg till FPO-logotypbilden ([anges i zip-filen](assets/asset-templates-tutorial-video--supporting-files.zip)) till Logo-elementet på den Överordnad sidan.
 
-   * **Högerklicka** och **välj Passning > Passningsalternativ för ram... > Innehållspassning > Fyll ram proportionellt**
-   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames) och vilket som passar dig bäst.
+   * **Högerklicka** och markera **Passning > Passningsalternativ för ram.. > Innehållspassning > Fyll ram proportionellt**
+   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)och som passar ditt sätt att arbeta.
 
 5. Kopiera rubriken (logotyp och företagsnamn) från den Överordnad mallen på sidan och sidan via Klistra in på plats.
 
@@ -53,24 +53,24 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
 
-1. **Starta InDesign** Serveron-port 8080.
-2. Kontrollera att instansen **AEM Author är konfigurerad att interagera med InDesign Server**(och vice versa).
+1. **Starta InDesign Server** på hamn 8080.
+2. Se till att **AEM Author-instansen är konfigurerad att interagera med InDesign Server**(och vice versa).
 
    * [Konfiguration av IDS Worker-Cloud Service](http://localhost:4502/etc/cloudservices/proxy/ids.html)
    * [Konfiguration av proxyserver för molnet](http://localhost:4502/etc/cloudservices/proxy.html)
    * [AEM Externalizer OSGi-konfiguration](http://localhost:4502/system/console/configMgr)
 
-3. **InDesign-filen överfördes till AEM** resurser och AEM arbetsflöde och InDesign Server kan bearbeta materialet fullt ut.
-4. **Skapa en ny** mall under  **Resurser >** Mallar och välj den InDesign-fil som ska överföras till AEM i steg 4.
-5. **Redigera den** resursmall som skapades i steg 5 och redigera de redigerbara fälten.
-6. Klicka på **Klar** för att generera de sista återgivningarna med hög återgivning av resursmallen.
+3. **InDesign-filen har överförts till AEM Assets** och gör det möjligt för AEM Workflow och InDesign Server att bearbeta materialet fullt ut.
+4. **Skapa en ny mall** under **Resurser > Mallar** och markera den InDesign-fil som överförts till AEM i steg 4.
+5. **Redigera resursmallen** som skapats i steg 5 och författare till de redigerbara fälten.
+6. Klicka **Klar** för att generera de slutliga återgivningarna av resursmallen med hög återgivning.
 7. Klicka på resursmallkortet för att öppna och granska resursåtergivningarna för att hämta återgivningarna med hög återgivning.
 
 ## Ytterligare resurser {#additional-resources}
 
 InDesign-mallfil och bildstöd
 
-Hämta [InDesign-mallfilen och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+Hämta [InDesign-mallfil och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [Ladda ned testversion av InDesign CC](https://creative.adobe.com/products/download/indesign)
-* [CC Enterprise-kunder kan kontakta sin Account Executive för att begära en provlicens för InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
+* Testversionen av InDesign Server kan hämtas från [Adobe Prerelease site](https://www.adobeprerelease.com/) eller [CC Enterprise-kunder kan kontakta sin Account Executive för att beställa min testlicens för InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
