@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: c3d3eae47c17a7efed15f14e98e2f3ded719cef0
+source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -99,14 +99,16 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
             </p>
          </td>   
      <td>
-            <img alt="Korrigera... Cache" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-fix-your-cache.md">
+               <img alt="Korrigera din cache" src="./imgs/s2/005-thumb.png"/>
+            </a>
       <div>
-         <strong>Korrigera... Cache</strong>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <a href="season-2/cloud5-fix-your-cache.md"><strong>Korrigera... Cache</strong></a>
+         <br/><em>med Damian Langsweirdt och James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
-        <br/>
-         Kommer 15 juli 2022
+         <br/>
+             Utforska områden för att optimera cacheminnet och få webbplatsen att fungera snabbare på AEM as a Cloud Service.
       </p>
    </td> 
   </tr>
