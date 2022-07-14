@@ -5,13 +5,13 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
+source-git-commit: 6dd7164f5ec045b4cffd7732fd83ad9a91fdd511
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera resursmallar med AEM Assets och InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
@@ -21,11 +21,11 @@ Med hjälp av resursmallar kan marknadsförarna skapa, hantera och leverera digi
 
 >[!NOTE]
 >
->AEM **måste** vara ansluten till en InDesign-server som körs när INDD-mallen överförs. En del av den inledande bearbetningen i INDD-filen kräver InDesign-servern.
+>AEM **måste** anslutas till en InDesign-server som körs när INDD-mallen överförs. En del av den inledande bearbetningen i INDD-filen kräver InDesign-servern.
 
 ## Ladda ned testversionen av InDesign Server {#download-indesign-server-trial}
 
-Hämta [InDesign Server webbplats för nedladdning av testversion](https://www.adobe.com/devnet/premiere/sdk/cs5/indesign-server-trial-downloads.html)
+Hämta [InDesign Server webbplats för nedladdning av testversion](https://www.adobeprerelease.com/)
 
 ## Startar InDesign Server {#starting-indesign-server}
 
