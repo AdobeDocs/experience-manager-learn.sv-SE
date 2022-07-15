@@ -9,9 +9,9 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
+source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,8 @@ _Genomgång av steg_
 1. Skapa en Git-databas för WKND-webbplatsprojektet
    1. Välj __Databaser__ i den övre navigeringen
    1. Välj __Lägg till databas__ i det övre åtgärdsfältet
-   1. Namnge den nya Git-databasen: `aem-headless-quick-setup`
+   1. Namnge den nya Git-databasen: `aem-headless-quick-setup-wknd`
+      + Git-databasnamn måste vara unika per Adobe-organisation,
    1. Välj __Spara__ och vänta på att Git-databasen ska initieras
 
 ## 2. Push-exempel på WKND-webbplatsprojekt till Cloud Manager Git-databas
@@ -71,13 +72,13 @@ _Genomgång av steg_
 
       ```shell
       $ cd aem-guides-wknd
-      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
+      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup-wknd/
       ```
 
 1. Överför exempelprojektets källkod från din lokala Git-databas till Cloud Manager Git-databasen
 
    ```shell
-   $ git push adobe master:main
+   $ git push adobe main:main
    ```
 
    När du uppmanas att ange autentiseringsuppgifter anger du __Användarnamn__ och __Lösenord__ från Cloud Managers __Databasinformation__ modal.
@@ -103,7 +104,7 @@ _Genomgång av steg_
    1. På __Källkod__ tab
       1. Välj __Fullständig stackkod__ option
       1. Välj __AEM as a Cloud Service utvecklingsmiljö__ från __Berättigade driftsättningsmiljöer__ välj ruta
-      1. Välj `aem-headless-quick-setup` i __Databas__ välj ruta
+      1. Välj `aem-headless-quick-setup-wknd` i __Databas__ välj ruta
       1. Välj `main` från __Git-gren__ välj ruta
       1. Välj __Spara__
 1. Kör __Utveckla distributionskanal__
@@ -113,7 +114,7 @@ _Genomgång av steg_
    1. Välj __Kör__ och bekräfta i modala
    1. Välj __...__ till höger om den nu pågående pipeline
    1. Välj __Visa detaljer__
-1. Övervaka förloppet tills det har slutförts utifrån information om pipelinekörningen. Körning av pipeline bör ta mellan 45 och 60 minuter.
+1. Övervaka förloppet tills det har slutförts utifrån information om pipelinekörningen. Körning av pipeline bör ta mellan 30 och 40 minuter.
 
 ## 4. Ladda ned och kör appen WKND React
 
@@ -126,15 +127,15 @@ _Genomgång av steg_
 
    ```shell
    $ cd ~/Code
-   $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Öppna mappen `~/Code/aem-guides-wknd-graphql` i din utvecklingsmiljö.
-1. Öppna filen i IDE `react-app/.env.development`.
+1. Öppna mappen `~/Code/aem-guides-wknd-graphql/react-app` i din utvecklingsmiljö.
+1. Öppna filen i IDE `.env.development`.
 1. Peka på AEM as a Cloud Service __Publicera__ tjänstens värd-URI från  `REACT_APP_HOST_URI` -egenskap.
 
    ```plain
-   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com/
+   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
    ...
    ```
 
@@ -164,19 +165,19 @@ _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. Logga in på AEM as a Cloud Service Author Service
-1. Navigera till __Assets > Files > WKND > English > Adventures__
+1. Navigera till __Assets > Files > WKND Shared > English > Adventures__
 1. Öppna __Cycling Southern Utah__ Mapp
 1. Välj __Cycling Southern Utah__ Innehållsfragment och markera __Redigera__ i det övre åtgärdsfältet
 1. Uppdatera vissa fält i innehållsfragmentet, till exempel:
    + Titel: `Cycling Utah's National Parks`
    + Resans längd: `6 Days`
    + Svårighet: `Intermediate`
-   + Pris: `$3500`
-   + Primär bild: `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
+   + Pris: `3500`
+   + Primär bild: `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. Välj __Spara__ i det övre åtgärdsfältet
 1. Välj __Snabbpublicering__ i det övre åtgärdsfältets __...__
 1. Uppdatera React App som körs den [http://localhost:3000](http://localhost:3000).
-1. I React App (Reagera app) markerar du den nu uppdaterade versionen och verifierar innehållsändringarna i Content Fragment.
+1. I React App (Reagera app) markerar du det nu uppdaterade Cycling-äventyret och verifierar innehållsändringarna i Content Fragment.
 
 1. På samma sätt som i tjänsten AEM Author:
    1. Avpublicera ett befintligt Adventure-innehållsfragment och verifiera att det har tagits bort från upplevelsen React App
