@@ -6,7 +6,7 @@ doc-type: tutorial
 activity: develop
 audience: developer
 user-guide-title: Introduktion till Dynamic Media Classic
-user-guide-description: I den här självstudiekursen visas hur du använder Dynamic Media Classic för att skapa, redigera och leverera multimedieinnehåll.
+user-guide-description: Den här självstudiekursen visar hur du använder Dynamic Media Classic för att skapa, redigera och leverera multimedieinnehåll.
 breadcrumb-title: Dynamic Media Classic Tutorials
 index: y
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
