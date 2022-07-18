@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '796'
 ht-degree: 10%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 10%
       + [OSGi-konfigurationer med OCD](./developing/osgi-services/configurations-ocd.md)
    + Avancerat{#advanced}
       + [Tjänstanvändare](./developing/advanced/service-users.md)
+      + [Cachelagrar sidvarianter](./developing/advanced/variant-caching.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
