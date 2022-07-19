@@ -1,22 +1,21 @@
 ---
-title: Komma igång med AEM Headless - GraphQL
-description: En översikt över AEM GraphQL API:er och funktioner.
-feature: Innehållsfragment, GraphQL API, API:er
+title: Kom igång med AEM Headless - GraphQL
+description: Läs mer om API:erna för GraphQL och deras funktioner i Experience Manager.
+feature: Content Fragments, GraphQL API, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '246'
 ht-degree: 1%
 
 ---
 
-
 # Komma igång med AEM Headless - GraphQL
 
-AEM GraphQL API:er för innehållsfragment
-har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
+AEM GraphQL API:er för innehållsfragment har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
 
 Ett modernt API för innehållsleverans är avgörande för effektiviteten och prestandan i Javascript-baserade klientprogram. Att använda ett REST API medför utmaningar:
 

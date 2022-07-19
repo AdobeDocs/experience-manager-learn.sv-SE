@@ -1,12 +1,12 @@
 ---
-title: AEM Sites Videos och Tutorials
-description: Läs mer om AEM med våra videor och självstudiekurser för Adobe Experience Manager Sites.
+title: AEM Sites videor och självstudiekurser
+description: Läs om Experience Manager Sites i våra videor och självstudiekurser. Upptäck personalväljarna och nyheterna i AEM Sites.
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---

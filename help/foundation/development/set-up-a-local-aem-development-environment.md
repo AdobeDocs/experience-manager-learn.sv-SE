@@ -1,6 +1,6 @@
 ---
 title: Konfigurera en lokal AEM utvecklingsmiljö
-description: Guide to setting up a local development for Adobe Experience Manager, AEM. Omfattar viktiga ämnen som rör lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning/felsökning. Utveckling med Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ diskuteras.
+description: 'Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Experience Manager. Bekanta dig med lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning och felsökning. Använd Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ. '
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2553'
+source-wordcount: '2550'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 * [**Hämta**](https://code.visualstudio.com/Download) **Visual Studio Code**
 * **[repa](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - FTP-liknande verktyg för JCR-innehåll
 * **[aemfed](https://aemfed.io/)** - Snabba upp AEM arbetsflöde
-* **[AEM](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Community-stöd* för tillägg till Visual Studio Code
+* **[AEM](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Community-stöd&#42; tillägg för Visual Studio Code
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 

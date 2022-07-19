@@ -1,6 +1,6 @@
 ---
 title: Skapa en plats | AEM Skapa snabbt webbplatser
-description: Som en del av guiden Skapa webbplats i Adobe Experience Manager, AEM, skapar du en ny webbplats. Standardwebbplatsmallen som tillhandahålls av Adobe används som startpunkt för den nya platsen.
+description: Lär dig hur du använder guiden Skapa webbplats för att skapa en ny webbplats. Standardwebbplatsmallen som tillhandahålls av Adobe är en startpunkt för den nya webbplatsen.
 sub-product: sites
 version: Cloud Service
 type: Tutorial
@@ -11,9 +11,9 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
