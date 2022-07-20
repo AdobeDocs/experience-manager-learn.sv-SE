@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 879018d44cc63421d1c7185cce1c30fedbf526c9
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ Det krävs en Adobe Experience Manager-miljö för att slutföra den här själv
    * [Åtkomst till AEM as a Cloud Service och Cloud Manager](/help/cloud-service/accessing/overview.md)
       * **AEM** åtkomst till AEM as a Cloud Service
       * **Cloud Manager - utvecklare** åtkomst till Cloud Manager
-* [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md).
-* [AEM 6.5.13+](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 
 ### Installera exempelinnehåll {#install-sample-content}
 
@@ -65,6 +63,7 @@ Det kan vara praktiskt att ha exempelinnehåll som redan finns i AEM som ska anv
 1. Navigera AEM startskärmen till **verktyg** > **Distribution** > **Paket**:
 
    ![Navigera i pakethanteraren](assets/overview/navigate-package-manager.png)
+
 1. Tryck **Överför paket** och väljer `aem-guides-wknd-shared.ui.content-x.x.x.zip` tidigare hämtad fil. Tryck **OK** att överföra.
 1. När paketet har överförts trycker du på **Installera** för att installera innehållet.
 
