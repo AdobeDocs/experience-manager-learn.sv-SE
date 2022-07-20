@@ -3,14 +3,14 @@ title: Reaktionsapp - Exempel AEM Headless
 description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här React-programmet visas hur du frågar efter innehåll med hjälp AEM GraphQL-API:er med beständiga frågor.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 9166
-thumbnail: KT-9166.jpg
+kt: 10715
+thumbnail: KT-10715.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
+source-git-commit: 3ef802d4e87b7dc8132dae25c9dbb801dfdce0fe
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
