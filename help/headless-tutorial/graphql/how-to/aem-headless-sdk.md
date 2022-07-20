@@ -9,7 +9,7 @@ level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 595d990b7d8ed3c801a085892fef38d780082a15
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -25,10 +25,6 @@ AEM Headless SDK finns för olika plattformar:
 + [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [AEM Headless SDK for server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 + [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
-
-## GraphQL-frågor
-
-AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa sättet att använda [beständiga GraphQL-frågor](#persisted-graphql-queries).
 
 ## Beständiga GraphQL-frågor
 
@@ -202,3 +198,8 @@ Nytt `useEffect` Det går att skapa kopplingar för varje beständig fråga som 
 +++
 
 <p> </p>
+
+## GraphQL-frågor
+
+AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa sättet att använda [beständiga GraphQL-frågor](#persisted-graphql-queries).
+
