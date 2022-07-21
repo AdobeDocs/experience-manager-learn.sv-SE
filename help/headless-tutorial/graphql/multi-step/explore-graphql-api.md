@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -56,9 +56,9 @@ En GraphQL-slutpunkt krävs för att kunna konfigureras för att aktivera GraphQ
 
    >[!NOTE]
    >
-   > En global slutpunkt kan också skapas som aktiverar frågor mot modeller i olika projekt. Om du till exempel vill kombinera en fråga som innehåller modellerna i **WKND delad** projekt och i **Mitt projekt**. Detta bör användas med försiktighet och endast om det är nödvändigt, eftersom det kan medföra att miljön kan drabbas av ytterligare säkerhetsluckor.
+   > En global slutpunkt kan också skapas för att aktivera frågor mot modeller över flera konfigurationer. Detta bör användas med försiktighet eftersom det kan öppna miljön för ytterligare säkerhetsproblem och göra hanteringen av AEM mer komplex.
 
-1. Nu bör två GraphQL-slutpunkter vara aktiverade i din miljö (förutsatt att du har installerat WKND Shared-innehåll).
+1. Du bör nu se en GraphQL-slutpunkt aktiverad i din miljö.
 
    ![Aktiverade slutpunkter för grafer](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -76,11 +76,11 @@ Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL IDE.
    >
    > För äldre versioner av AEM är GraphiQL IDE eventuellt inte inbyggt. Den kan installeras manuellt efter dessa [instruktioner](#install-graphiql).
 
-1. I det övre högra hörnet anger du **Slutpunkt** till **Min projektslutpunkt**.
+1. I det övre högra hörnet ser du till att **Slutpunkt** är inställd på **Min projektslutpunkt**.
 
    ![Ange GraphQL-slutpunkt](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-   Detta kommer att omfatta alla frågor till modeller som skapats i **Mitt projekt** projekt. Observera att det också finns en slutpunkt för **WKND delad**.
+Detta kommer att omfatta alla frågor till modeller som skapats i **Mitt projekt** projekt.
 
 ### Fråga en lista med innehållsfragment {#query-list-cf}
 
@@ -370,16 +370,28 @@ Sedan finns två enkla frågor kvar som kommer att användas i nästa kapitel.
 
    ![Slutliga beständiga frågor](assets/explore-graphql-api/final-persisted-queries.png)
 
+
+## Publicera GraphQL-slutpunkt och beständiga frågor
+
+Publicera `GraphQL Endpoint` &amp; `Persisted Queries`
+
+1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL**.
+
+1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och trycka **Publicera**
+
+   ![Publicera GraphQL-slutpunkt](assets/explore-graphql-api/publish-graphql-endpoint.png)
+
+1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**
+
+1. Tryck på *alla team* från panelen Beständiga frågor och tryck på **Publicera**
+
+   ![Publicera beständiga frågor](assets/explore-graphql-api/publish-persisted-query.png)
+
+1. Upprepa steget ovan för `person-by-name` fråga
+
 ## Lösningsfiler {#solution-files}
 
 Ladda ned innehåll, modeller och permanenta frågor som skapats i de tre senaste kapitlen: [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
-
-## Utforska WKND-beständiga frågor (valfritt) {#explore-wknd-content-fragments}
-
-Om du [installerade WKND Shared-exempelinnehåll](./overview.md#install-sample-content) kan du granska och köra permanenta frågor som äventyr - alla, äventyr - för-aktivitet, äventyr - för-bana, osv.
-
-![WKND-beständiga frågor](assets/explore-graphql-api/wknd-persisted-queries.png)
-
 
 ## Ytterligare resurser
 

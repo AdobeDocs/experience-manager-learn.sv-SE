@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '819'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
 
    ![Tillåtna modeller för innehållsfragment](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   Dessa profiler ärvs automatiskt av alla undermappar och kan åsidosättas. Observera att du även kan tillåta modeller efter taggar eller aktivera modeller från andra projektkonfigurationer (som WKND Shared). Den här mekanismen är ett kraftfullt sätt att hantera innehållshierarkin.
+   Dessa profiler ärvs automatiskt av alla undermappar och kan åsidosättas. Observera att du även kan tillåta modeller efter taggar eller aktivera modeller från andra projektkonfigurationer. Den här mekanismen är ett kraftfullt sätt att hantera innehållshierarkin.
 
 1. Tryck **Spara och stäng** om du vill spara ändringarna i mappegenskaperna.
 
@@ -121,17 +121,9 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 
    ![Öppna innehållsfragment](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. Innehållsfragmentsredigeraren innehåller ett formulär baserat på modellen för innehållsfragment. Fyll i de olika fälten för att lägga till innehåll i **John Doe** fragment. Under Profilbild kan du välja någon av bilderna i WKND Shared eller ladda upp din egen bild till AEM Assets.
+1. Innehållsfragmentsredigeraren innehåller ett formulär baserat på modellen för innehållsfragment. Fyll i de olika fälten för att lägga till innehåll i **John Doe** fragment. Ladda upp din egen bild till AEM Assets som profilbild.
 
    ![Redigera innehållsfragment](assets/author-content-fragments/content-fragment-editor-jd.png)
-
-1. Tryck sedan på **Skapa variant** till vänster. I dialogrutan lägger du till text i **Alternativ** för variantnamnet.
-
-1. Ändra några av elementen i **Alternativ** variation.
-
-   ![Alternativ version](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
-
-   Med variationsfunktionen kan författare skapa olika versioner av samma innehållsfragment. Detta kan användas för att ge en sammanfattning av en artikel med lång varaktighet. Som standard en enda **Överordnad** varianten skapas. Flerradiga textfältselement i en variant kan synkroniseras med den överordnad variationen.
 
 1. Tryck **Spara och stäng** för att spara ändringarna i John Doe-fragmentet.
 1. Återgå till gränssnittet för innehållsfragment och öppna **Alison Smith** fil för redigering.
@@ -151,11 +143,17 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 
 1. Tryck **Spara och stäng** om du vill spara ändringarna i Team Alpha-fragmentet.
 
-## Utforska WKND-innehållsfragment (valfritt) {#explore-wknd-content-fragments}
+## Publicera innehållsfragment
 
-Om du [installerade WKND Shared-exempelinnehåll](./overview.md#install-sample-content) kan du inspektera innehållsfragmenten för modeller av annonser, artiklar och författare för att få fler idéer om hur du skapar innehåll.
+Publicera den skapade `Content Fragments`
 
-![WKND-innehållsfragment](assets/author-content-fragments/wknd-content-fragments.png)
+1. Tryck på AEM Start Screen (Starta skärm) **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
+
+1. I den vänstra listen expanderar du **Mitt projekt** och trycka **Engelska**.
+
+1. Tryck på kryssrutan bredvid innehållsfragmenten och tryck på **Publicera**
+
+   ![Publicera innehållsfragment](assets/author-content-fragments/publish-content-fragment.png)
 
 ## Grattis! {#congratulations}
 

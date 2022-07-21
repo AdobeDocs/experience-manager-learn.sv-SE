@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Du kan också skapa en egen modell som följer de grundläggande stegen och just
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att en [AEM är tillgänglig](./overview.md#prerequisites) och [WKND Delat exempelinnehåll har installerats](./overview.md#install-sample-content).
+Det här är en självstudiekurs i flera delar och det antas att en [AEM är tillgänglig](./overview.md#prerequisites)
 
 ## Mål {#objectives}
 
@@ -39,7 +39,7 @@ Det här är en självstudiekurs i flera delar och det antas att en [AEM är til
 
 En projektkonfiguration innehåller alla innehållsfragmentsmodeller som är kopplade till ett visst projekt och erbjuder ett sätt att ordna modeller. Minst ett projekt måste skapas **före** skapar ny modell för innehållsfragment.
 
-1. Logga in på AEM **Upphovsman** miljö.
+1. Logga in på AEM **Upphovsman** miljö (ex. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
 1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
    ![Navigera till Configuration Browser](assets/content-fragment-models/navigate-config-browser.png)
@@ -65,7 +65,6 @@ Skapa en ny modell för en **Person**, som är datamodellen som representerar en
 
    ![Navigera till Content Fragment Models](assets/content-fragment-models/navigate-cf-models.png)
 
-   Om du har installerat [exempelinnehåll](overview.md#install-sample-content) visas två mappar: **Mitt projekt** och **WKND delad**.
 1. Navigera till **Mitt projekt** mapp.
 1. Tryck **Skapa** i det övre högra hörnet för att visa **Skapa modell** guide.
 1. För **Modelltitel** ange: **Person** och trycka **Skapa**.
@@ -165,23 +164,23 @@ Skapa en ny modell för en **Team**, som är datamodellen för ett team med män
 
    ![Två modeller](assets/content-fragment-models/two-new-models.png)
 
-## Inspect WKND Content Fragment Models (tillval)
+## Publicera projektkonfigurationer och modeller för innehållsfragment
 
-Om du [installerade WKND Shared-exempelinnehåll](./overview.md#install-sample-content) kan ni inspektera Adventure-, Article- och Author-modellerna för att få fler idéer om datamodelleringstekniker.
+Publicera `Project Configuration` &amp; `Content Fragment Model`
 
-1. Från **AEM** gå till **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
-1. Navigera till **WKND delad** och du bör se tre modeller: Article, Adventure, and Author.
+1. Tryck på kryssrutan bredvid **Mitt projekt** och trycka **Publicera**
 
-1. Inspect modellerna genom att hålla pekaren över kortet och trycka på redigeringsikonen (pennan)
+   ![Publicera projektkonfiguration](assets/content-fragment-models/publish-project-config.png)
 
-   ![WKND-modeller](assets/content-fragment-models/wknd-shared-models.png)
+1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
-1. Då öppnas **Modellredigerare för innehållsfragment** för modellen och du kan kontrollera de olika datatyper som används.
+1. Navigera till **Mitt projekt** mapp.
 
-   >[!CAUTION]
-   >
-   > Ändra modellen **efter** Innehållsfragment har skapats, har underordnade effekter. Fältvärden i befintliga fragment kommer inte längre att refereras och datarammet som exponeras av GraphQL ändras, vilket påverkar befintliga program.
+1. Tryck **Person** och **Team** modeller och knacka **Publicera**
+
+   ![Publicera modeller för innehållsfragment](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## Grattis! {#congratulations}
 
