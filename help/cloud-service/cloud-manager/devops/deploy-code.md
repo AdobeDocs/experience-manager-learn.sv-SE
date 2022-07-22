@@ -1,31 +1,30 @@
 ---
-title: Distribuera AEM kodprojekt till AEM som en Cloud Service
-description: Utforska hur du distribuerar ett AEM kodprojekt till AEM som en Cloud Service med Cloud Manager.
+title: Distribuera AEM kodprojekt till AEM as a Cloud Service
+description: Utforska hur du distribuerar ett AEM kodprojekt till AEM as a Cloud Service med Cloud Manager.
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Utveckling
-feature: Utvecklarverktyg
+topic: Development
+feature: Developer Tools
 kt: 6912
 thumbnail: 330534.jpg
-translation-type: tm+mt
-source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
+exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-
-# Distribuera kod
+# Distribuera kod {#deploying-code}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_deploycode"
 >title="Distribuera kod"
->abstract="Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM som en Cloud Service"
+>abstract="Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="Sammanfoga projekt"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#how-to-use" text="Distribuera kod med Cloud Manager"
 
-Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM som en Cloud Service
+Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/330534/?quality=12&learn=on)

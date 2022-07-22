@@ -1,5 +1,5 @@
 ---
-title: Konfigurera utvecklingsverktygen för AEM som en Cloud Service
+title: Konfigurera utvecklingsverktygen för AEM as a Cloud Service utveckling
 description: Konfigurera en lokal utvecklingsmaskin med alla grundläggande verktyg som behövs för att utveckla mot AEM lokalt.
 feature: Developer Tools
 version: Cloud Service
@@ -8,15 +8,15 @@ thumbnail: 25907.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera utvecklingsverktyg
+# Konfigurera utvecklingsverktyg {#set-up-development-tools}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
@@ -31,12 +31,12 @@ Observera att `~` används som kortskrift för användarens katalog. I Windows m
 
 ## Installera Java
 
-Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utveckling och AEM som en Cloud Service SDK.
+Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utveckling och AEM as a Cloud Service SDK.
 
 1. [Hämta och installera den senaste versionen av Java 11 SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Kontrollera att Java 11 SDK är installerat genom att köra kommandot:
    + Windows: `java -version`
-   + macOS / Linux: `java --version`
+   + macOS/Linux: `java --version`
 
 ![Java](./assets/development-tools/java.png)
 
@@ -50,7 +50,7 @@ Homebrew är en pakethanterare med öppen källkod för macOS, Windows och Linux
 1. Kontrollera om Homebrew redan är installerat genom att köra kommandot: `brew --version`.
 1. Installera Homebrew om det inte finns installerat
    + [Installera homebrew på macOS](https://brew.sh/)
-      + Homebrew i macOS kräver [Xcode](https://apps.apple.com/us/app/xcode/id497799835) eller [Command Line Tools](https://developer.apple.com/download/more/), kan installeras via kommandot:
+      + Hemma på macOS kräver [Xcode](https://apps.apple.com/us/app/xcode/id497799835) eller [Kommandoradsverktyg](https://developer.apple.com/download/more/), kan installeras via kommandot:
          + `xcode-select --install`
    + [Installera Homebrew i Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
    + [Installera homebrew i Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
@@ -58,11 +58,11 @@ Homebrew är en pakethanterare med öppen källkod för macOS, Windows och Linux
 
 ![Homebreiska](./assets/development-tools/homebrew.png)
 
-Om du använder Homebrew följer du instruktionerna i avsnitten nedan för __Installera med Homebrew__. Om du __inte__ använder Homebrew installerar du verktygen med operativsystemspecifika länkar.
+Om du använder Homebrew ska du följa __Installera med Homebrew__ instruktionerna i avsnitten nedan. Om du __not__ installera verktygen med hjälp av operativsystemspecifika länkar med Homebrew.
 
 ## Installera Git
 
-[Det ](https://git-scm.com/) här är det system för källkontroll som används av  [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html), och därför krävs för utveckling.
+[Git](https://git-scm.com/) är det system för hantering av källkontroll som används av [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)och därför krävs för utveckling.
 
 + Installera Git med Homebrew
    1. Öppna terminalen/kommandotolken
@@ -77,7 +77,7 @@ Om du använder Homebrew följer du instruktionerna i avsnitten nedan för __Ins
 
 ## Installera Node.js (och npm){#node-js}
 
-[Node.](https://nodejs.org) jis a JavaScript runtime environment used to work with the front-end assets of an AEM project’s  __ui.__ front-sub-project. Node.js distribueras med [npm](https://www.npmjs.com/), är den defacto-pakethanterare för Node.js som används för att hantera JavaScript-beroenden.
+[Node.js](https://nodejs.org) är en JavaScript-körningsmiljö som används för att arbeta med de viktigaste resurserna i ett AEM __ui.front__ delprojekt. Node.js distribueras med [npm](https://www.npmjs.com/), är defacto-pakethanteraren Node.js som används för att hantera JavaScript-beroenden.
 
 + Installera Node.js med Homebrew
    1. Öppna terminalen/kommandotolken
@@ -94,13 +94,13 @@ Om du använder Homebrew följer du instruktionerna i avsnitten nedan för __Ins
 
 >[!TIP]
 >
->[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)-baserade AEM Projects installerar en isolerad version av Node.js vid byggtillfället. Det är bra att ha det lokala utvecklingssystemets version synkroniserad (eller nära) med de Node.js- och npm-versioner som anges i ditt AEM Maven-projekts Reactor pom.xml.
+>[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)-baserade AEM installerar en isolerad version av Node.js vid byggtillfället. Det är bra att ha det lokala utvecklingssystemets version synkroniserad (eller nära) med de Node.js- och npm-versioner som anges i ditt AEM Maven-projekts Reactor pom.xml.
 >
->I det här exemplet [AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) hittar du var du hittar byggversionerna Node.js och npm.
+>Se det här exemplet [AEM projektreaktor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) för att hitta byggversionerna av Node.js och npm.
 
 ## Installera Maven
 
-Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som används för att skapa AEM projekt som genereras från AEM Project Maven Archetype. Alla större IDE:er ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/), osv.) har integrerat stöd för Maven.
+Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som används för att skapa AEM projekt som genereras från AEM Project Maven Archetype. Alla viktiga IDE:er ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/), osv.) har integrerat stöd för Maven.
 
 + Installera Maven med Homebrew
    1. Öppna terminalen/kommandotolken
@@ -116,44 +116,44 @@ Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som anvä
 
 ## Konfigurera Adobe I/O CLI{#aio-cli}
 
-Med [Adobe I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, får du kommandoradsåtkomst till en mängd olika Adobe-tjänster, inklusive [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) och [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). CLI för Adobe I/O spelar en viktig roll när det gäller utveckling av AEM som en Cloud Service eftersom den ger utvecklarna möjlighet att
+The [Adobe I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, ger kommandoradsåtkomst till en mängd olika Adobe-tjänster, inklusive [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) och [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). CLI för Adobe I/O spelar en viktig roll för utvecklingen på AEM as a Cloud Service eftersom den ger utvecklarna möjlighet att
 
 + Loggar från AEM som Cloud Services
 + Hantera Cloud Manager-pipelines från CLI
 
 ### Installera Adobe I/O CLI
 
-1. Kontrollera att [Node.js är installerat](#node-js) eftersom Adobe I/O CLI är en npm-modul
+1. Säkerställ [Node.js är installerat](#node-js) eftersom CLI för Adobe I/O är en npm-modul
    + Kör `node --version` för att bekräfta
-1. Kör `npm install -g @adobe/aio-cli` om du vill installera npm-modulen globalt`aio`
+1. Kör `npm install -g @adobe/aio-cli` för att installera `aio` npm-modul globalt
 
 ### Konfigurera plugin-programmet Adobe I/O CLI Cloud Manager{#aio-cloud-manager}
 
-Med plugin-programmet Adobe I/O Cloud Manager kan AIO CLI interagera med Adobe Cloud Manager via kommandot `aio cloudmanager`.
+Med pluginprogrammet Adobe I/O Cloud Manager kan AIO CLI interagera med Adobe Cloud Manager via `aio cloudmanager` -kommando.
 
-1. Kör `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` för att installera [aio Cloud Manager-plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+1. Kör `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` för att installera [Insticksprogram för aio Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 ### Konfigurera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
 
-Med plugin-programmet Adobe I/O Cloud Manager kan AIO CLI generera och köra Asset compute-arbetare via kommandot `aio asset-compute`.
+Adobe I/O Cloud Manager-pluginen gör det möjligt för aio CLI att generera och köra Asset compute-arbetare via `aio asset-compute` -kommando.
 
 1. Kör `aio plugins:install @adobe/aio-cli-plugin-asset-compute` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
 
 ### Ställa in Adobe I/O CLI-autentisering
 
-För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste en [Cloud Manager-integrering skapas i Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager) och autentiseringsuppgifter måste hämtas för att autentiseringen ska lyckas.
+För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste [Integrering med Cloud Manager måste skapas i Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager)och autentiseringsuppgifter måste hämtas för att autentiseringen ska lyckas.
 
 1. Logga in på [console.adobe.io](https://console.adobe.io)
 1. Se till att din organisation som innehåller den Cloud Manager-produkt som du vill ansluta till är aktiv i Adobe Org-växlaren
-1. Skapa ett nytt eller öppna ett befintligt [Adobe I/O-program](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
+1. Skapa ett nytt eller öppna ett befintligt [Adobe I/O](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
    + Adobe I/O Console-program är helt enkelt grupperingar av integreringar, skapar eller använder befintliga program baserat på hur du vill hantera dina integreringar
    + Om du skapar ett nytt projekt väljer du Tomt projekt om du uppmanas till det (jämfört med &quot;Skapa från mall&quot;)
    + Adobe I/O Console-program är olika koncept för Cloud Manager-program
 1. Skapa en ny API-integrering för Cloud Manager med profilen &quot;Developer - Cloud Service&quot;
-1. Hämta JWT-autentiseringsuppgifterna (Service Account) måste fylla i Adobe I/O CLI:s [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
-1. Läs in `config.json`-filen i Adobe I/O CLI
+1. Hämta JWT-autentiseringsuppgifterna (Service Account) måste fylla i Adobe I/O CLI:ns [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
+1. Läs in `config.json` till Adobe I/O CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
-1. Läs in `private.key`-filen i Adobe I/O CLI
+1. Läs in `private.key` till Adobe I/O CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 Börja [köra kommandon](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) för Cloud Manager via Adobe I/O CLI.
@@ -164,7 +164,7 @@ AEM består främst av utveckling av Java och Front-end (JavaScript, CSS osv.) s
 
 ### IntelliJ IDEA
 
-__[IntelliJ ](https://www.jetbrains.com/idea/)__ IDEA är en kraftfull utvecklingsmiljö för Java-utveckling. IntelliJ IDEA finns i två versioner: en kostnadsfri utgåva av gemenskapen och en kommersiell (betald) version av Ultimate. Den kostnadsfria communityversionen räcker AEM utvecklingen, men Ultimate [utökar sin funktionsuppsättning](https://www.jetbrains.com/idea/download).
+__[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ är en kraftfull utvecklingsmiljö för Java-utveckling. IntelliJ IDEA finns i två versioner: en kostnadsfri utgåva av gemenskapen och en kommersiell (betald) version av Ultimate. Den kostnadsfria gemenskapsversionen räcker AEM utvecklingen, men Ultimate [utökar sin funktionsuppsättning](https://www.jetbrains.com/idea/download).
 
 >[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
 
@@ -173,9 +173,9 @@ __[IntelliJ ](https://www.jetbrains.com/idea/)__ IDEA är en kraftfull utvecklin
 
 ### Microsoft Visual Studio Code
 
-__[Visual Studio Code](https://code.visualstudio.com/)__  (VS Code) är ett kostnadsfritt verktyg med öppen källkod för gränssnittsutvecklare. Visual Studio Code kan konfigureras för att integrera innehållssynkronisering med AEM med hjälp av ett Adobe-verktyg, __[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__.
+__[Visual Studio Code](https://code.visualstudio.com/)__ (VS Code) är ett kostnadsfritt verktyg med öppen källkod för gränssnittsutvecklare. Visual Studio Code kan konfigureras för att integrera innehållssynkronisering med AEM med hjälp av ett Adobe-verktyg, __[repa](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__.
 
-Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare som i första hand vill skapa kod i gränssnittet. JavaScript, CSS och HTML. VS-koden har Java-stöd via [tillägg](https://code.visualstudio.com/docs/java/java-tutorial), men saknar kanske vissa avancerade funktioner som finns i mer Java-specifika.
+Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare som i första hand vill skapa kod i gränssnittet. JavaScript, CSS och HTML. VS-koden har Java-stöd via [tillägg](https://code.visualstudio.com/docs/java/java-tutorial), kanske saknar vissa av de avancerade funktioner som finns i mer Java-specifika.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
@@ -186,7 +186,7 @@ Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare so
 
 ### Eclipse
 
-__[Eclipse ](https://www.eclipse.org/ide/)__ IDE är en populär IDE för Java-utveckling och har stöd för   __[AEM Developer ](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ Toolsplug-in från Adobe, som tillhandahåller ett in-IDE-gränssnitt för redigering och synkronisering av JCR-innehåll med en lokal AEM.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ är en populär IDE för Java-utveckling och stöder  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ plugin-program från Adobe som tillhandahåller ett in-IDE-GUI för redigering och synkronisering av JCR-innehåll med en lokal AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
