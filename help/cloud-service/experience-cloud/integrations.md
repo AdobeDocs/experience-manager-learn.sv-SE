@@ -8,13 +8,14 @@ role: Leader, Architect, Admin, Developer
 level: Beginner
 kt: 10718
 thumbnail: KT-10718.jpeg
-source-git-commit: 1c4ebdf78dd7107c7587b50e7476ea4b7ca3e812
+mini-toc-levels: 1
+exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
+source-git-commit: 4a902d838c99b3452581066ee568876ad16ec1a3
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 2%
 
 ---
-
 
 # AEM as a Cloud Service integreringar med Adobe Experience Cloud
 
@@ -105,7 +106,7 @@ Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt
 + [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform taggar, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
-## AEM Forms
+### AEM Forms
 
 + [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform taggar, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
@@ -115,7 +116,7 @@ Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt
 
 Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar arbetet med att skapa digitala resurser, samarbeta och livscykelhantering.
 
-## AEM Assets
+### AEM Assets
 
 + [Konfigurera den utökade Workfront-kontakten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
 + [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
