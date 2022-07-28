@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -46,15 +46,11 @@ Du måste följa den här självstudiekursen på följande sätt:
 
 ### AEM
 
-Det krävs en Adobe Experience Manager-miljö för att slutföra den här självstudiekursen. Du kan använda något av följande (skärmbilder spelas in från en AEM as a Cloud Service miljö):
-
-* AEM as a Cloud Service miljö med:
-   * [Åtkomst till AEM as a Cloud Service och Cloud Manager](/help/cloud-service/accessing/overview.md)
-      * **AEM** åtkomst till AEM as a Cloud Service
+För att slutföra den här självstudiekursen rekommenderas AEM administratörsåtkomst till en AEM as a Cloud Service miljö.  Om du inte har tillgång till AEM as a Cloud Service miljö kan du använda [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Det är dock viktigt att du är medveten om att vissa gränssnittsskärmar, som t.ex. navigering i innehållsfragment, kommer att vara annorlunda.
 
 ## Kom så börjar vi!
 
-1. Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
+Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
 
 ## GitHub-projekt
 
