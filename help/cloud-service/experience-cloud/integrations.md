@@ -10,9 +10,9 @@ kt: 10718
 thumbnail: KT-10718.jpeg
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: 4a902d838c99b3452581066ee568876ad16ec1a3
+source-git-commit: fda7b74e7659daf61a9f5478d6bfabe439b923ae
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -81,12 +81,9 @@ Tack vare Adobe Campaign Classic integrering med AEM as a Cloud Service kan ni h
 
 ### AEM Sites
 
-+ [Konfigurera Adobe Campaign Classic-integrering](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaignonpremise.html)
-   + __Dokumentationslänkar till AEM 6.5, men stegen är desamma på AEM as a Cloud Service__
-+ [Integrera AEM Sites med Adobe Campaign Classic](https://github.com/adobe/aem-core-email-components/wiki/Integrating-AEM-with-ACC)
-+ [Skicka e-post från AEM Sites med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/aem-adobe-campaign/campaign.html)
++ [Integrera med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
++ [Skapa ett Adobe Experience Manager Newsletter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
 + [Dokumentation AEM e-postkärnkomponenter](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
-
 
 ## Adobe Commerce
 
