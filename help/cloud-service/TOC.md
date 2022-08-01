@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 80dfe87f372425014c22ccf4f2d1190b4c202b8a
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '814'
 ht-degree: 10%
 
 ---
@@ -210,6 +210,8 @@ ht-degree: 10%
       + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
       + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
+   + Integrera med Microsoft Power Automate{#forms-cs-and-power-automate}
+      + [Konfigurera integreringen](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
    + Integrera med Microsoft Dynamics{#formscs-dynamics-crm}
       + [Skapa Dynamics-program](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [Konfigurera datakälla](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
