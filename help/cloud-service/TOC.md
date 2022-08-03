@@ -6,8 +6,8 @@ sub-product: cloud-service
 team: TM
 source-git-commit: 80dfe87f372425014c22ccf4f2d1190b4c202b8a
 workflow-type: tm+mt
-source-wordcount: '814'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

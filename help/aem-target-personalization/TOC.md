@@ -8,8 +8,8 @@ index: y
 kt: 2214
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

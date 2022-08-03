@@ -10,8 +10,8 @@ breadcrumb-title: AEM Sites WKND Tutorials
 index: y
 source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -6,8 +6,8 @@ feature-set: Experience Manager Assets, Experience Manager Sites, Experience Man
 team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
