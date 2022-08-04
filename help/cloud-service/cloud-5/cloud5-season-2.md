@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -140,14 +140,16 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
    </td>
      <td>
-            <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-MoCM-unit-tests.md">
+               <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/s2/009-thumb.png"/>
+            </a>
       <div>
-            <strong>Mysteries of Cloud Manager.. Enhetstester</strong>
+            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Mysteries of Cloud Manager.. Enhetstester</strong></a>
          <br/><em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Kommer 5 augusti 2022
+        Darin och Bryan diskuterar hur Cloud Manager integrerar körning av enhetstester och rapportering av kodtäckning i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
       </p>
    </td> 
   </tr>
