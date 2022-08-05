@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 5%
 
 ---
 
@@ -44,15 +44,27 @@ ht-degree: 0%
       + [3 - Utforska AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 - beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + Hur {#how-to}
-      + [RTF](./graphql/how-to/rich-text.md)
-      + [Bilder](./graphql/how-to/images.md)
-      + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
-      + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
++ Distributioner{#deployments}
+   + [Översikt](./graphql/deployment/overview.md)
+   + [Single-page app](./graphql/deployment/spa.md)
+   + [Webbkomponent](./graphql/deployment/web-component.md)
+   + [Mobil](./graphql/deployment/mobile.md)
+   + [Server-till-server](./graphql/deployment/server-to-server.md)
+   + Konfigurationer{#configurations}
+      + [AEM](./graphql/deployment/configurations/aem-hosts.md)
+      + [CORS](./graphql/deployment/configurations/cors.md)
+      + [Dispatcher-filter](./graphql/deployment/configurations/dispatcher-filters.md)
++ Hur {#how-to}
+   + [RTF](./graphql/how-to/rich-text.md)
+   + [Bilder](./graphql/how-to/images.md)
+   + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
+   + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
+      + [Webbkomponent](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
+      + [Server-till-server](./graphql/example-apps/server-to-server-app.md)
 + SPA{#spa-editor}
    + Reagera{#react}
       + [Översikt](./spa-editor/react/overview.md)

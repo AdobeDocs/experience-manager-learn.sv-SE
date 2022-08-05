@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 3ef802d4e87b7dc8132dae25c9dbb801dfdce0fe
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
@@ -61,7 +61,6 @@ Programmet React är utformat för att ansluta till en __AEM Publish__ -miljön 
    ```plain
    # Server namespace
    REACT_APP_HOST_URI=http://localhost:4503
-   REACT_APP_GRAPHQL_ENDPOINT=/content/_cq_graphql/wknd-shared/endpoint.json
    
    #AUTH (Choose one method)
    # Authentication methods: 'service-token', 'dev-token', 'basic' or leave blank to use no authentication

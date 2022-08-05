@@ -1,0 +1,191 @@
+---
+title: Webbkomponent/JS - Exempel AEM Headless
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Den här webbkomponenten/JS-applikationen visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er som använder beständiga frågor.
+version: Cloud Service
+feature: Content Fragments, GraphQL API
+topic: Headless, Content Management
+role: Developer
+level: Beginner
+kt: 10797
+thumbnail: kt-10797.jpg
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+workflow-type: tm+mt
+source-wordcount: '569'
+ht-degree: 1%
+
+---
+
+
+# Webbkomponent
+
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Detta Web Component-program visar hur man frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor och återger en del av användargränssnittet, vilket uppnås med ren JavaScript-kod.
+
+![Webbkomponent med AEM Headless](./assets/web-component/web-component.png)
+
+Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)
+
+## Förutsättningar {#prerequisites}
+
+Följande verktyg bör installeras lokalt:
+
++ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (vid anslutning till lokal AEM 6.5 eller AEM SDK)
++ [Node.js v10+](https://nodejs.org/en/)
++ [npm 6+](https://www.npmjs.com/)
++ [Git](https://git-scm.com/)
+
+## AEM
+
+Webbkomponenten fungerar med följande AEM distributionsalternativ.
+
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
+
+Alla distributioner kräver `tutorial-solution-content.zip` från [Lösningsfiler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) installeras och är nödvändiga [Distributionskonfigurationer](../deployment/web-component.md) utförs.
+
+
+>[!IMPORTANT]
+>
+>Webbkomponenten är utformad för att ansluta till en __AEM Publish__ -miljö, men den kan hämta innehåll från AEM Author om autentisering anges i webbkomponentens [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) -fil.
+
+## Så här använder du
+
+1. Klona `adobe/aem-guides-wknd-graphql` databas:
+
+   ```shell
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+   ```
+
+1. Navigera till `web-component` underkatalog.
+
+   ```shell
+   $ cd aem-guides-wknd-graphql/web-component
+   ```
+
+1. Redigera `.../src/person.js` filen som ska innehålla AEM anslutningsinformation:
+
+   I `aemHeadlessService` objekt, uppdatera `aemHost` för att hänvisa till din AEM-publiceringstjänst.
+
+   ```plain
+   # AEM Server namespace
+   aemHost=https://publish-p65804-e666805.adobeaemcloud.com
+   
+   # AEM GraphQL API and Persisted Query Details
+   graphqlAPIEndpoint=graphql/execute.json
+   projectName=my-project
+   persistedQueryName=person-by-name
+   queryParamName=name
+   ```
+
+   Om du ansluter till en AEM Author-tjänst går du till `aemCredentials` -objekt, ange lokala AEM.
+
+   ```plain
+   # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
+   username=admin
+   password=admin
+   ```
+
+1. Öppna en terminal och kör kommandona från `aem-guides-wknd-graphql/web-component`:
+
+   ```shell
+   $ npm install
+   $ npm start
+   ```
+
+1. Ett nytt webbläsarfönster öppnar den statiska HTML-sidan som bäddar in webbkomponenten i [http://localhost:8080](http://localhost:8080).
+1. The _Personinformation_ Webbkomponenten visas på webbsidan.
+
+## Koden
+
+Nedan visas en sammanfattning av hur webbkomponenten är uppbyggd, hur den ansluter till AEM Headless för att hämta innehåll med hjälp av beständiga GraphQL-frågor och hur data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+
+### HTML-tagg för webbkomponent
+
+En återanvändbar webbkomponent (även anpassat element) `<person-info>` läggs till i `../src/assets/aem-headless.html` HTML sida. Den har stöd för `host` och `query-param-value` attribut som styr komponentens beteende. The `host` attributets värdeåsidosättningar `aemHost` värde från `aemHeadlessService` objekt i `person.js`och `query-param-value` används för att markera den person som ska återges.
+
+```html
+    <person-info 
+        host="https://publish-p65804-e666805.adobeaemcloud.com"
+        query-param-value="John Doe">
+    </person-info>
+```
+
+### Implementering av webbkomponenter
+
+The `person.js` definierar Web Component-funktionen och nedan är viktiga högdagrar.
+
+#### Implementering av PersonInfo-element
+
+The `<person-info>` det anpassade elementets klassobjekt definierar funktionen med hjälp av `connectedCallback()` livscykelmetoder, bifoga en skuggrot, hämta en beständig GraphQL-fråga och DOM-manipulering för att skapa det anpassade elementets interna skugg-DOM-struktur.
+
+```javascript
+// Create a Class for our Custom Element (person-info)
+class PersonInfo extends HTMLElement {
+
+    constructor() {
+        ...
+        // Create a shadow root
+        const shadowRoot = this.attachShadow({ mode: "open" });
+        ...
+    }
+
+    ...
+
+    // lifecycle callback :: When custom element is appended to document
+    connectedCallback() {
+        ...
+        // Fetch GraphQL persisted query
+        this.fetchPersonByNamePersistedQuery(headlessAPIURL, queryParamValue).then(
+            ({ data, err }) => {
+                if (err) {
+                    console.log("Error while fetching data");
+                } else if (data?.personList?.items.length === 1) {
+                    // DOM manipulation
+                    this.renderPersonInfoViaTemplate(data.personList.items[0], host);
+                } else {
+                    console.log(`Cannot find person with name: ${queryParamValue}`);
+                }
+            }
+        );
+    }
+
+    ...
+
+    //Fetch API makes HTTP GET to AEM GraphQL persisted query
+    async fetchPersonByNamePersistedQuery(headlessAPIURL, queryParamValue) {
+        ...
+        const response = await fetch(
+            `${headlessAPIURL}/${aemHeadlessService.persistedQueryName}${encodedParam}`,
+            fetchOptions
+        );
+        ...
+    }
+
+    // DOM manipulation to create the custom element's internal shadow DOM structure
+    renderPersonInfoViaTemplate(person, host){
+        ...
+        const personTemplateElement = document.getElementById('person-template');
+        const templateContent = personTemplateElement.content;
+        const personImgElement = templateContent.querySelector('.person_image');
+        personImgElement.setAttribute('src', host + person.profilePicture._path);
+        personImgElement.setAttribute('alt', person.fullName);
+        ...
+        this.shadowRoot.appendChild(templateContent.cloneNode(true));
+    }
+}
+```
+
+#### Registrera `<person-info>` element
+
+```javascript
+    // Define the person-info element
+    customElements.define("person-info", PersonInfo);
+```
+
+### Cross-origin resource sharing (CORS)
+
+Den här webbkomponenten är beroende av en AEM baserad CORS-konfiguration som körs på AEM och förutsätter att värdsidan körs på `http://localhost:8080` i utvecklingsläge och nedan är ett exempel på CORS OSGi-konfiguration för den lokala AEM Author-tjänsten.
+
+Granska [distributionskonfigurationer](../deployment/web-component.md) för respektive AEM.
+
+![CORS-konfiguration](assets/react-app/cross-origin-resource-sharing-configuration.png)
