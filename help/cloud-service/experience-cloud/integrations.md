@@ -10,9 +10,9 @@ kt: 10718
 thumbnail: KT-10718.jpeg
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: fda7b74e7659daf61a9f5478d6bfabe439b923ae
+source-git-commit: 663075723da207242309c08feed42657b9e5188b
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '958'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,7 @@ Klicka på Experience Cloud för att få dokumentation om hur du konfigurerar oc
 |  | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
 | [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
+| Reklam |  |  |  |
 | [Analyser](#adobe-analytics) | ✔ | ✔ | ✔ |
 | Audience Manager |  |  |  |
 | [Campaign Classic](#adobe-campaign-classic) | ✔ |  |  |
@@ -33,7 +34,7 @@ Klicka på Experience Cloud för att få dokumentation om hur du konfigurerar oc
 | Customer Journey Analytics |  |  |  |
 | [Experience Platform-taggar](#adobe-experience-platform-tags) | ✔ |  | ✔ |
 | [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| Utbildningschef |  |  |  |
+| [Utbildningschef](#adobe-learning-manager) | ✔ |  |  |
 | Marketo Engage |  |  |  |
 | CDP i realtid |  |  |  |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
@@ -108,19 +109,21 @@ Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt
 + [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Experience Platform taggar, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
+## Adobe Journey Optimizer
 
-## Adobe Workfront
-
-Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar arbetet med att skapa digitala resurser, samarbeta och livscykelhantering.
+Adobe Journey Optimizer hjälper er att schemalägga flerkanalskampanjer och en-till-en-stund med miljontals kunder från ett och samma program - och hela kundresan optimeras med smarta beslut och insikter.
 
 ### AEM Assets
 
-+ [Konfigurera den utökade Workfront-kontakten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
-+ [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
-+ AEM Assets Essentials
++ [Integrera AEM Assets Essentials med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
 
-   + [Användarhandbok för Adobe Workfront for Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Adobe Workfront- och Assets Essentials-videor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+## Adobe Learning Manager
+
+Adobe Learning Manager (tidigare Adobe Captivate Prime) ger skräddarsydd inlärning till kunder och medarbetare.
+
+### AEM Sites
+
++ [Integrera AEM Sites med Adobe Learning Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
 
 ## Adobe Sensei
 
@@ -157,3 +160,16 @@ Adobe Target integreras med AEM as a Cloud Service för att leverera optimerad w
 
 + [Använd AEM kontextnav med mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
 + [Självstudiekurs om AEM Sites och Target](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
+
+## Adobe Workfront
+
+Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar arbetet med att skapa digitala resurser, samarbeta och livscykelhantering.
+
+### AEM Assets
+
++ [Konfigurera den utökade Workfront-kontakten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
++ [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
++ AEM Assets Essentials
+
+   + [Användarhandbok för Adobe Workfront for Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Adobe Workfront- och Assets Essentials-videor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
