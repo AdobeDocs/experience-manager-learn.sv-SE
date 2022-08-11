@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -332,3 +332,11 @@ Samma Maven-kommandon som användes för att skapa **ui.apps** kan användas fö
 ## Felsökning
 
 Om du har problem med att generera projektet med hjälp av den AEM projekttypen, se listan över [kända problem](https://github.com/adobe/aem-project-archetype#known-issues) och lista över öppna [problem](https://github.com/adobe/aem-project-archetype/issues).
+
+## Grattis igen! {#congratulations-bonus}
+
+Grattis, när du går igenom bonusmaterialet.
+
+### Nästa steg {#next-steps-bonus}
+
+Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel med [Grundläggande om komponenter](component-basics.md) självstudiekurs.
