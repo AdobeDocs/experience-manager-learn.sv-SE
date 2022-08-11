@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
+source-git-commit: 2cfa5039e69ef23e58428e17b45877170930820e
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,7 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
    </td>
      <td>
             <a href="season-2/cloud5-MoCM-unit-tests.md">
-               <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/s2/009-thumb.png"/>
+               <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
             <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Mysteries of Cloud Manager.. Enhetstester</strong></a>
@@ -155,13 +155,15 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
   </tr>
     <tr>
         <td>
-                <img alt="Mysteries of Cloud Manager.. Funktionstester" src="./imgs/coming-soon.png"/>
+               <a href="season-2/cloud5-MoCM-functional-tests.md">
+                   <img alt="Mysteries of Cloud Manager.. Funktionstester" src="./imgs/s2/009-thumb.png"/>
+               </a>
             <div>
-                <strong>Mysteries of Cloud Manager.. Funktionstester</strong><br/>        
+                <a href="season-2/cloud5-MoCM-functional-tests.md"><strong>Mysteries of Cloud Manager.. Funktionstester</strong><br/></a>        
                 <em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
             </div>
             <p><br/>
-                Kommer 12 augusti 2022
+                Darin och Bryan diskuterar olika typer av funktionstestning som är inbyggda i den AEM as a Cloud Service distributionsprocessen för att säkerställa kvaliteten och tillförlitligheten i koden.
             </p>
         </td>
         <td></td>
