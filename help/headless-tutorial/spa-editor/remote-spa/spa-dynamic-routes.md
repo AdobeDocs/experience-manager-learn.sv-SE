@@ -2,19 +2,18 @@
 title: Lägg till redigerbara komponenter i SPA dynamiska fjärrutter
 description: Lär dig hur du lägger till redigerbara komponenter i dynamiska vägar i en SPA.
 topic: Headless, SPA, Development
-feature: SPA, kärnkomponenter, API:er, utveckling
+feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
-translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
+source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
-
 
 # Dynamiska vägar och redigerbara komponenter
 
@@ -30,12 +29,12 @@ I de föregående två kapitlen mappades redigerbart komponentinnehåll från SP
 
 Att definiera mappning för redigerbara komponenter för de SPA dynamiska vägarna liknar varandra, men vi måste skapa ett 1:1-mappningsschema mellan instanser av flödet och AEM sidor.
 
-I den här självstudiekursen ska vi ta namnet på WKND Adventure Content Fragment, som är det sista segmentet i banan, och mappa det till en enkel sökväg under `/content/wknd-app/us/en/adventure`.
+I den här självstudiekursen tar vi namnet på WKND Adventure Content Fragment, som är det sista segmentet i banan, och mappar det till en enkel väg under `/content/wknd-app/us/en/adventure`.
 
 | SPA | AEM |
 |------------------------------------|--------------------------------------------|
 | / | /content/wknd-app/us/en/home |
-| /adventure/content/dam/wknd/en/adventures/bali-surf-camp/__bali-surf-camp__ | /content/wknd-app/us/en/home/adventure/__bali-surf-camp__ |
+| /adventure/content/dam/wknd/en/adventures/bali-surf-camp/__bali-surf-läger__ | /content/wknd-app/us/en/home/adventure/__bali-surf-läger__ |
 | /adventure/content/dam/wknd/en/adventures/beervana-portland/__beervana-portland__ | /content/wknd-app/us/en/home/adventure/__beervana-in-portland__ |
 
 På grundval av den här mappningen måste vi skapa två nya AEM sidor:
@@ -45,7 +44,7 @@ På grundval av den här mappningen måste vi skapa två nya AEM sidor:
 
 ## SPA
 
-Mappningen för begäranden som lämnar SPA konfigureras via konfigurationen `setupProxy` som görs i [Bootstrap i SPA](./spa-bootstrap.md).
+Mappningen för begäranden som lämnar SPA konfigureras via `setupProxy` konfiguration klar i [Bootstrap the SPA](./spa-bootstrap.md).
 
 ## SPA Editor-mappning
 
@@ -53,60 +52,60 @@ Mappningen för SPA begäranden när SPA öppnas via AEM SPA Editor konfigureras
 
 ## Skapa innehållssidor i AEM
 
-Skapa först sidsegmentet för mellanrummet `adventure`:
+Skapa först mellanhanden `adventure` Sidsegment:
 
 1. Logga in på AEM Author
 1. Navigera till __Sites > WKND App > us > en > WKND App Home Page__
    + Den här AEM är mappad som SPA rot, så här börjar vi skapa den AEM sidstrukturen för andra SPA.
-1. Tryck på __Skapa__ och välj __Sida__
-1. Välj mallen __SPA__ och tryck på __Nästa__
+1. Tryck __Skapa__ och markera __Sida__
+1. Välj __SPA__ och trycka på __Nästa__
 1. Fyll i Sidegenskaper
    + __Titel__: Adventure
-   + __Namn__:  `adventure`
+   + __Namn__: `adventure`
       + Det här värdet definierar AEM sidas URL och måste därför matcha SPA ruttsegment.
-1. Tryck på __Klar__
+1. Tryck __Klar__
 
 Skapa sedan AEM sidor som motsvarar var och en av de SPA URL:er som kräver redigerbara områden.
 
-1. Navigera till den nya __Adventure__-sidan i Webbplatsadministratören
-1. Tryck på __Skapa__ och välj __Sida__
-1. Välj mallen __SPA__ och tryck på __Nästa__
+1. Navigera till den nya __Adventure__ sidan i Webbplatsadministratör
+1. Tryck __Skapa__ och markera __Sida__
+1. Välj __SPA__ och trycka på __Nästa__
 1. Fyll i Sidegenskaper
    + __Titel__: Bali Surf Camp
-   + __Namn__:  `bali-surf-camp`
+   + __Namn__: `bali-surf-camp`
       + Det här värdet definierar AEM sidas URL och måste därför matcha SPA rutts sista segment
-1. Tryck på __Klar__
-1. Upprepa steg 3-6 för att skapa sidan __Beervana i Portland__ med:
+1. Tryck __Klar__
+1. Upprepa steg 3-6 för att skapa __Beervana i Portland__ sida, med:
    + __Titel__: Beervana i Portland
-   + __Namn__:  `beervana-in-portland`
+   + __Namn__: `beervana-in-portland`
       + Det här värdet definierar AEM sidas URL och måste därför matcha SPA rutts sista segment
 
-Dessa två AEM sidor innehåller respektive redigerat innehåll för sina matchande SPA. Om andra SPA kräver redigering måste nya AEM sidor skapas på SPA URL-adress under SPA fjärrsidans rotsida (`/content/wknd-app/us/en/home`) i AEM.
+Dessa två AEM sidor innehåller det innehåll som har skapats för respektive SPA. Om andra SPA kräver redigering måste nya AEM sidor skapas på SPA URL-adress under SPA fjärrsidans rotsida (`/content/wknd-app/us/en/home`) i AEM.
 
 ## Uppdatera WKND-appen
 
-Låt oss placera `<AEMResponsiveGrid...>`-komponenten som skapades i [det sista kapitlet](./spa-container-component.md) i vår `AdventureDetail`-SPA och skapa en redigerbar behållare.
+Låt oss placera `<AEMResponsiveGrid...>` som skapats i [sista kapitlet](./spa-container-component.md)i vår `AdventureDetail` SPA, skapa en redigerbar behållare.
 
 ### Placera SPA AEMResponsiveGrid
 
-Om du placerar `<AEMResponsiveGrid...>` i `AdventureDetail`-komponenten skapas en redigerbar behållare i den vägen. Tricket är att eftersom flera vägar använder komponenten `AdventureDetail` för att återge måste vi justera attributet `<AEMResponsiveGrid...>'s pagePath` dynamiskt. `pagePath` måste härledas till motsvarande AEM, baserat på äventyret som flödesinstansen visar.
+Placera `<AEMResponsiveGrid...>` i `AdventureDetail` skapar en redigerbar behållare i det flödet. Tricket är att flera rutter använder `AdventureDetail` måste vi dynamiskt justera  `<AEMResponsiveGrid...>'s pagePath` -attribut. The `pagePath` måste härledas till en punkt till motsvarande AEM, baserat på äventyret som flödesinstansen visar.
 
 1. Öppna och redigera `react-app/src/components/AdventureDetail.js`
-1. Lägg till följande rad före `AdventureDetail(..)'s`-andra `return(..)`-satsen, som härleder äventyrsnamnet från innehållsfragmentsökvägen.
+1. Lägg till följande rad före `AdventureDetail(..)'s` sekund `return(..)` -programsats, som härleder äventyrsnamnet från innehållsfragmentsökvägen.
 
    ```
    ...
    // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-   const adventureName = adventureData._path.split('/').pop();
+   const adventureName = _path.split('/').pop();
    ...
    ```
 
-1. Importera `AEMResponsiveGrid`-komponenten och placera den ovanför `<h2>Itinerary</h2>`-komponenten.
-1. Ange följande attribut för `<AEMResponsiveGrid...>`-komponenten
+1. Importera `AEMResponsiveGrid` och placera den ovanför `<h2>Itinerary</h2>` -komponenten.
+1. Ange följande attribut för `<AEMResponsiveGrid...>` komponent
    + `pagePath = '/content/wknd-app/us/en/home/adventure/${adventureName}'`
    + `itemPath = 'root/responsivegrid'`
 
-   Detta instruerar `AEMResponsiveGrid`-komponenten att hämta sitt innehåll från den AEM resursen:
+   Detta instruerar `AEMResponsiveGrid` för att hämta dess innehåll från AEM:
 
    + `/content/wknd-app/us/en/home/adventure/${adventureName}/jcr:content/root/responsivegrid`
 
@@ -121,7 +120,7 @@ import AEMResponsiveGrid from '../components/aem/AEMResponsiveGrid';
 function AdventureDetail(props) {
     ...
     // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-    const adventureName = adventureData._path.split('/').pop();
+    const adventureName = _path.split('/').pop();
 
     return(
         ...
@@ -135,24 +134,24 @@ function AdventureDetail(props) {
 }
 ```
 
-Filen `AdventureDetail.js` ska se ut så här:
+The `AdventureDetail.js` filen ska se ut så här:
 
 ![AdventureDetail.js](./assets/spa-dynamic-routes/adventure-detail-js.png)
 
 ## Skapa behållaren i AEM
 
-När `<AEMResponsiveGrid...>` är på plats och `pagePath` är dynamiskt inställt baserat på äventyret som återges, försöker vi att skapa innehåll i den.
+Med `<AEMResponsiveGrid...>` på plats, och `pagePath` dynamiskt inställda baserat på äventyret som återges, försöker vi skapa innehåll i det.
 
 1. Logga in på AEM Author
 1. Navigera till __Sites > WKND App > us > en__
-1. ____ Redigera startsidan för  __WKND-__ appen
-   + Navigera till vägen __Bali Surf Camp__ i SPA för att redigera den
-1. Välj __Förhandsgranska__ i lägesväljaren i det övre högra hörnet
-1. Tryck på __Bali Surf Camp__-kortet i SPA för att navigera till dess väg
-1. Välj __Redigera__ i lägesväljaren
-1. Gå till det redigerbara området __Layoutbehållare__ precis ovanför __resär__
-1. Öppna sidofältet __i sidredigeraren__ och välj vyn __Komponenter__
-1. Dra några av de aktiverade komponenterna till __layoutbehållaren__
+1. __Redigera__ den __WKND App - startsida__ page
+   + Navigera till __Bali Surf Camp__ för att redigera SPA
+1. Välj __Förhandsgranska__ från lägesväljaren i det övre högra hörnet
+1. Tryck på __Bali Surf Camp__ kortet i SPA för att navigera till dess väg
+1. Välj __Redigera__ från mode-selector
+1. Leta reda på __Layoutbehållare__ redigerbart område alldeles ovanför __Itinerary__
+1. Öppna __Sidredigerarens sidlist__ och väljer __Komponentvy__
+1. Dra några av de aktiverade komponenterna till __Layoutbehållare__
    + Bild
    + Text
    + Titel
@@ -161,12 +160,12 @@ När `<AEMResponsiveGrid...>` är på plats och `pagePath` är dynamiskt instäl
 
    ![Bali Adventure Detail Authoring](./assets/spa-dynamic-routes/adventure-detail-edit.png)
 
-1. ____ Förhandsgranska ändringarna AEM sidredigeraren
-1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000) genom att navigera till __Bali Surf Camp__-vägen för att se de skapade ändringarna!
+1. __Förhandsgranska__ dina ändringar AEM sidredigeraren
+1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000), navigera till __Bali Surf Camp__ för att se ändringarna!
 
    ![SPA](./assets/spa-dynamic-routes/remote-spa-final.png)
 
-När du navigerar till en äventyrsinformationsväg som inte har någon mappad AEM sida, kommer det inte att finnas någon redigeringsmöjlighet för den flödesinstansen. Om du vill aktivera redigering på de här sidorna skapar du bara en AEM sida med det matchande namnet under sidan __Adventure__!
+När du navigerar till en äventyrsinformationsväg som inte har någon mappad AEM finns det ingen redigeringsmöjlighet för den flödesinstansen. Om du vill aktivera redigering på de här sidorna skapar du en AEM sida med det matchande namnet under __Adventure__ sida!
 
 ## Grattis!
 
@@ -181,4 +180,4 @@ Du har nu gått igenom de första stegen i hur AEM kan användas för att lägga
 
 >[!NOTE]
 >
->Stanna kvar på kanalen! Den här självstudiekursen kommer att utökas för att omfatta Adobe bästa praxis och rekommendationer om hur SPA redigeringslösning ska AEM som Cloud Service och produktionsmiljöer.
+>Stanna kvar på kanalen! Den här självstudiekursen kommer att omfatta Adobe bästa praxis och rekommendationer för hur SPA kan distribueras till as a Cloud Service miljöer och produktionsmiljöer.
