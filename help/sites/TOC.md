@@ -3,9 +3,9 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '404'
 ht-degree: 5%
 
 ---
@@ -51,7 +51,6 @@ ht-degree: 5%
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [Komma igång med AEM SPA och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
    + [Bästa praxis för formatsystem](developing/style-organization-style-system-understand-article.md)
@@ -68,9 +67,7 @@ ht-degree: 5%
    + [Webbplatskartor](./seo/sitemaps.md)
 + Enkelsidiga program {#spa-editor}
    + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Självstudiekurs om Hello World](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
-   + [Komma igång med AEM SPA och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 + Hantering av flera webbplatser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)

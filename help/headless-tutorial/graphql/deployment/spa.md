@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 # AEM driftsättning av SPA utan headless
 
 
-AEM Headless single-page app (SPA) deployment omfattar JavaScript-baserade applikationer som byggts med ramverk som React, Vue eller Angular och som konsumerar och interagerar med AEM på ett headless sätt.
+AEM Headless single-page app (SPA) deployment omfattar JavaScript-baserade applikationer som byggts med ramverk som React eller Vue och som konsumerar och interagerar med AEM på ett headless sätt.
 
 För att driftsätta en SPA som interagerar AEM utan att vara i kö måste du vara värd för SPA och göra den tillgänglig via en webbläsare.
 

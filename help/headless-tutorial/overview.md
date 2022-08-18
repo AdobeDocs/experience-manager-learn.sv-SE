@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -162,23 +162,10 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <p>
   </td>
 </tr>
-<tr>
-  <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-      <img alt="Reaktion - utan huvud" src="./assets/angular-spa-editor.png" />
-    </a>
-    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html">
-    <strong>Angular - SPA</strong>
-    </a>
-    </div>
-    <p>
-    <em>Använd redigeraren för AEM SPA för att hantera hela Angularnas appupplevelse.</em>
-    <p>
-  </td>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-    <img alt="Angular - Innehållstjänster" src="./assets/android.png" />
+    <img alt="Android - Innehållstjänster" src="./assets/android.png" />
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
@@ -202,5 +189,6 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <em>Bygg en Node.js-app med utvecklare och tjänsttokens för autentisering.</em>
     <p>
   </td>
+  <td></td>
 </tr>
 </table>
