@@ -9,7 +9,7 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '3079'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträff
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-Steg på hög nivå för videon nedan:
+Stegen på hög nivå för videon ovan:
 
 ### Strukturkonfigurationer
 
@@ -161,7 +161,7 @@ Den AEM projekttypen genererade ett sidhuvud och en sidfot. Uppdatera sedan Expe
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-Steg på hög nivå för videon nedan:
+Stegen på hög nivå för videon ovan:
 
 1. Hämta exempelinnehållspaketet **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**.
 1. Överför och installera innehållspaketet med Package Manager på [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
@@ -207,7 +207,7 @@ Skapa sedan en ny sida med hjälp av mallen Artikelsida. Skriv innehållet på s
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-Steg på hög nivå för videon nedan:
+Stegen på hög nivå för videon ovan:
 
 1. Navigera till webbplatskonsolen på [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
 1. Skapa en ny sida under **WKND** > **USA** > **EN** > **Magazine**.
@@ -257,7 +257,7 @@ Använd verktyget CRXDE-Lite på en lokal AEM för att visa den underliggande no
 
    Observera att det bara finns två HTML-skript, `customfooterlibs.html` och `customheaderlibs.html` under sidkomponenten. *Hur återger den här komponenten sidan?*
 
-   The `sling:resourceSuperType` egenskapen pekar på `core/wcm/components/page/v2/page`. Den här egenskapen tillåter att WKND:s sidkomponent ärver **alla** av funktionaliteten hos komponenten för kärnkomponenten. Detta är det första exemplet på något som kallas [Proxykomponentmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Mer information finns [här.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
+   The `sling:resourceSuperType` egenskapen pekar på `core/wcm/components/page/v2/page`. Den här egenskapen tillåter att WKND:s sidkomponent ärver **alla** av funktionaliteten hos komponenten för kärnkomponenten. Detta är det första exemplet på något som kallas [Proxykomponentmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Mer information finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
 
 1. Inspect en annan komponent i WKND-komponenterna, `Breadcrumb` -komponent som finns på: `/apps/wknd/components/breadcrumb`. Observera att samma `sling:resourceSuperType` -egenskapen kan hittas, men den här gången pekar den på `core/wcm/components/breadcrumb/v2/breadcrumb`. Detta är ett annat exempel på hur du använder komponentmönstret Proxy för att inkludera en Core-komponent. Faktum är att alla komponenter i WKND-kodbasen är proxies av AEM Core Components (förutom vår kända HelloWorld-komponent). Det är en god vana att försöka återanvända så mycket som möjligt av funktionerna i kärnkomponenterna *före* skriva egen kod.
 

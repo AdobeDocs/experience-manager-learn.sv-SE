@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '2878'
 ht-degree: 0%
@@ -129,7 +129,7 @@ Bibliotek på klientsidan har vissa begränsningar när det gäller stöd för s
    ![main.scss - entrypoint](assets/client-side-libraries/main-scss.png)
 klient-side-libraries/main-scss
 
-   `main.scss` är startpunkten till alla Sass-filer i `ui.frontend` -modul. Den kommer att innehålla `_variables.scss` som innehåller en serie varumärkesvariabler som ska användas i olika Sass-filer i projektet. The `_base.scss` -filen ingår också och definierar några grundläggande format för elementen i HTML. Ett reguljärt uttryck innehåller alla format för enskilda komponentformat under `src/main/webpack/components`. Ett annat reguljärt uttryck innehåller alla filer under `src/main/webpack/site/styles`.
+   `main.scss` är startpunkten till alla Sass-filer i `ui.frontend` -modul. Den kommer att innehålla `_variables.scss` som innehåller en serie varumärkesvariabler som ska användas i olika Sass-filer i projektet. The `_base.scss` -filen ingår också och definierar vissa grundläggande format för elementen i HTML. Ett reguljärt uttryck innehåller alla format för enskilda komponentformat under `src/main/webpack/components`. Ett annat reguljärt uttryck innehåller alla filer under `src/main/webpack/site/styles`.
 
 1. Inspect filen `main.ts`. Den innehåller `main.scss` och ett reguljärt uttryck för att samla in `.js` eller `.ts` filer i projektet. Den här startpunkten används av [konfigurationsfiler för webbpaket](https://webpack.js.org/configuration/) som startpunkt för hela `ui.frontend` -modul.
 
@@ -333,7 +333,7 @@ Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) e
 
 ### Webpack DevServer - statisk kod {#webpack-dev-static}
 
-Under de föregående övningarna kunde vi uppdatera flera Sass-filer i **ui.front** och genom en byggprocess kan du se dessa ändringar återspeglas i AEM. Därefter ska vi titta på en teknik som utnyttjar [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla vår front end-stil mot **static** HTML.
+Under de föregående övningarna kunde vi uppdatera flera Sass-filer i **ui.front** och genom en byggprocess kan du se dessa ändringar återspeglas i AEM. Därefter ska vi titta på en teknik som utnyttjar en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla vår front end-stil mot **static** HTML.
 
 Den här tekniken är användbar om huvuddelen av formaten och frontkodningen kommer att utföras av en dedikerad Front End-utvecklare som kanske inte har enkel åtkomst till en AEM. Med denna teknik kan FED även göra ändringar direkt på HTML, som sedan kan skickas vidare till en AEM som ska implementeras som komponenter.
 
@@ -389,9 +389,9 @@ Den här tekniken är användbar om huvuddelen av formaten och frontkodningen ko
 
 [**aemfed**](https://aemfed.io/) är ett kommandoradsverktyg med öppen källkod som kan användas för att snabba upp frontendutvecklingen. Den drivs av  [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://www.npmjs.com/package/browser-sync) och [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
 
-På en hög nivå **aemfed** har utformats för att avlyssna filändringar i **ui.apps** och synkroniserar dem automatiskt direkt till en AEM som körs. Baserat på ändringarna uppdateras en lokal webbläsare automatiskt, vilket snabbar upp framtagningen. Den är även utformad för att fungera med Sling Log Tracer för att automatiskt visa eventuella serverfel direkt i terminalen.
+På en hög nivå **aemfed** har utformats för att avlyssna filändringar i **ui.apps** och synkronisera dem automatiskt direkt till en AEM som körs. Baserat på ändringarna uppdateras en lokal webbläsare automatiskt, vilket snabbar upp framtagningen. Den är även utformad för att fungera med Sling Log Tracer för att automatiskt visa eventuella serverfel direkt i terminalen.
 
-Om du gör mycket jobb i **ui.apps** modul, ändra HTML-skript och skapa anpassade komponenter, **aemfed** kan vara ett mycket kraftfullt verktyg att använda. [Fullständig dokumentation finns här.](https://github.com/abmaonline/aemfed).
+Om du gör mycket jobb i **ui.apps** modul, ändra HTML-skript och skapa anpassade komponenter, **aemfed** kan vara ett mycket kraftfullt verktyg att använda. [Fullständig dokumentation finns här](https://github.com/abmaonline/aemfed).
 
 ### Felsöka bibliotek på klientsidan {#debugging-clientlibs}
 

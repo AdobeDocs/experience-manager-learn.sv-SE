@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
 workflow-type: tm+mt
 source-wordcount: '4138'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Vad du ska bygga {#byline-component}
 
-I den här delen av WKND-självstudiekursen skapas en Byline-komponent som används för att visa redigerad information om en artikels medverkande.
+I den här delen av WKND-självstudiekursen skapas en Byline-komponent som ska användas för att visa redigerad information om en artikels medverkande.
 
 ![exempel på byline-komponent](assets/custom-component/byline-design.png)
 
@@ -447,7 +447,7 @@ Skapa ett publikt Java-gränssnitt för Byline. `Byline.java` definierar de publ
        import org.osgi.annotation.versioning.Version;
        &quot;
    
-   När filerna i det här paketet ändras [paketversionen måste justeras semantiskt](https://semver.org/). Om inte, Maven-projektets [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) identifierar en ogiltig paketversion och bryter den skapade versionen. Som tur är rapporterar plugin-programmet Maven den ogiltiga versionen av Java-paketet samt versionen som det ska vara. Uppdaterade just `@Version("...")` -deklarationen i Java-paketets `package-info.java` till den version som rekommenderas av det plugin-program som ska korrigeras.
+När filerna i det här paketet ändras [paketversionen måste justeras semantiskt](https://semver.org/). Om inte, Maven-projektets [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) identifierar en ogiltig paketversion och bryter den skapade versionen. Som tur är rapporterar plugin-programmet Maven den ogiltiga versionen av Java-paketet samt versionen som det ska vara. Uppdatera bara `@Version("...")` -deklarationen i Java-paketets `package-info.java` till den version som rekommenderas av det plugin-program som ska korrigeras.
 
 ### Byline-implementering {#byline-implementation}
 
