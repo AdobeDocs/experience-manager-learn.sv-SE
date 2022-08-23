@@ -1,18 +1,18 @@
 ---
 title: Använda transaktionsrapportering i AEM Forms
 description: Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution.
-feature: Adaptiv Forms
-version: 6.4.1,6.5
-topic: Utveckling
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
-
 
 # Använda transaktionsrapportering i AEM Forms{#using-transaction-reporting-in-aem-forms}
 
@@ -35,17 +35,16 @@ Om du vill visa transaktionsrapporten loggar du in på AEM Forms som administrat
 
 Välj verktyg | Forms | Visa transaktionsrapport
 
-eller visa transaktionsrapporten genom att klicka [här](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+eller visa transaktionsrapporten genom att klicka på [här](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
 ![TransctionReporting](assets/transactionreporting.gif)
 
 På skärmbilden ovan Dokumentbearbetat visas antalet dokument som genererats med hjälp av dokumenttjänster. Återgivna dokument är antalet interaktiva kommunikationsdokument (webb och utskrift) som återges. Forms som skickas in är antalet inskickade anpassade formulär.
 
-En transaktion finns kvar i bufferten under en angiven period (Tömningstid + Omvänd replikeringstid). Som standard tar det ca 90 sekunder för antalet transaktioner att återspeglas i transaktionsrapporten.
+En transaktion finns kvar i bufferten under en angiven period (Tömningstid för buffert + Omvänd replikeringstid). Som standard tar det ca 90 sekunder för antalet transaktioner att återspeglas i transaktionsrapporten.
 
-Åtgärder som att skicka ett PDF-formulär, använda agentgränssnittet för att förhandsgranska interaktiv kommunikation eller använda icke-standardiserade metoder för att skicka formulär räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att registrera sådana transaktioner. Anropa API:t från dina anpassade implementeringar för att registrera en transaktion.
+Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation eller använda icke-standardiserade metoder för att skicka formulär räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att registrera sådana transaktioner. Anropa API:t från dina anpassade implementeringar för att registrera en transaktion.
 
 Om du visar transaktionsrapporten för författarinstansen kontrollerar du att omvänd replikering har konfigurerats för alla publiceringsinstanser.
 
-Om du vill veta mer om transaktionsrapportering [klickar du här](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
-
+Mer information om transaktionsrapportering [klicka här](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

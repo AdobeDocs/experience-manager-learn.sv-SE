@@ -1,19 +1,19 @@
 ---
 title: Översikt över Dynamic Media med AEM Assets
 description: I den här videoserien får du en översikt över hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Med Dynamic Media kan ni hantera och publicera dynamiska digitala upplevelser - en funktion som är unik för Experience Manager Assets. Med vårt ramverk och våra komponenter kan marknadsförarna anpassa och leverera interaktiva multimedieupplevelser för alla enheter.
-sub-product: dynamiska medier
-feature: Smart beskärning, videoprofiler, bildprofiler, visningsförinställningar, 360 VR-video, bilduppsättningar, snurruppsättningar
-version: 6.3, 6.4, 6.5
-topic: Innehållshantering
+sub-product: dynamic-media
+feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
-
 
 # Använda Dynamic Media med AEM Assets {#understanding-aem-dynamic-media}
 
@@ -79,7 +79,7 @@ I den här videon beskrivs hur bildförinställningar skapas och vad som är en 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
 
-I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Media URL-modifierare.
+I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Medias URL-modifierare.
 
 * Använda URL-modifierare i fältet Dynamic Media Modifier
 * Ändra bakgrundsfärg på bilder med genomskinlighet
@@ -87,7 +87,7 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 * Beskära till en bildbana
 * Skapa en textmall från en Photoshop-fil
 
-## Dynamic Media Kontrollera JPEG-filstorleken i kB
+## Dynamic Media Kontrollera filstorleken JPEG i kB
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
 
@@ -96,7 +96,7 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 >
 >Bildkvaliteten mäts i procent vid omvänd komprimering, där 100 % kvalitet är minst komprimerad vilket resulterar i bilder av hög kvalitet men relativt stora filstorlekar. JPEG-komprimering är ett förlustgivande komprimeringsschema där komprimeringsinställningarna bestämmer bildkvalitet och filstorlek.
 
-Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) för att förbättra sidans inläsningshastighet, med 2 kommandon för att justera jpeg-komprimeringsinställningarna. QLT definierar bildkvaliteten genom att justera kvalitetsinställningarna för jpeg-komprimering. Med kommandot JPEG-storlek kan du ange vilken filstorlek som ska uppnås med komprimering.
+Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) för att förbättra sidans inläsningshastighet, med 2 kommandon för att justera jpeg-komprimeringsinställningarna. QLT definierar bildkvaliteten genom att justera kvalitetsinställningarna för jpeg-komprimering. Med kommandot Storlek på JPEG kan du ange vilken filstorlek som ska uppnås med komprimering.
 
 ## Lägga till CC-undertexter i Dynamic Media Video
 

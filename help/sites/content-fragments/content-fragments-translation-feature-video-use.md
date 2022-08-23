@@ -5,11 +5,11 @@ feature: Content Fragments, Multi Site Manager
 topic: Localization
 role: User
 level: Intermediate
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 201
 thumbnail: 18131.jpg
 exl-id: cc4ffbd0-207a-42e4-bfcb-d6c83fb97237
-source-git-commit: 1c2ee81c0d262f9e3f92f4907aba8e8787ce729f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%

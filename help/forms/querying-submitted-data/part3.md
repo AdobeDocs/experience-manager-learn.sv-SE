@@ -1,27 +1,26 @@
 ---
 title: AEM Forms med JSON-schema och data[del3]
-seo-title: AEM Forms med JSON-schema och data[del3]
+seo-title: AEM Forms with JSON Schema and Data[Part3]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
-seo-description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
-
-# Lagra JSON-schema i databasen {#storing-json-schema-in-database}
+# Lagra JSON-schema i databas {#storing-json-schema-in-database}
 
 
 För att kunna fråga efter skickade data måste vi lagra det JSON-schema som är associerat med det skickade formuläret. JSON-schemat används i frågebyggaren för att skapa frågan.
@@ -153,5 +152,3 @@ Sammanfattningsvis har vi gjort följande hittills
 * Vi lagrar bundna data i det adaptiva formuläret i databasen.
 
 Nästa steg skulle vara att använda QueryBuilder för att visa fälten som ska sökas baserat på JSON-schemat
-
-

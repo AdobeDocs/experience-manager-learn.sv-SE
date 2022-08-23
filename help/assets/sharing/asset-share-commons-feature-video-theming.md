@@ -1,18 +1,17 @@
 ---
 title: Introduktion till tema i Resursdelningskommentarer
 description: Material för både funktionell och teknisk förståelse Assets Share Commons
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 2%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
-
 
 # Introduktion till tema i Resursdelningskommentarer {#asset-share-commons-theme}
 
@@ -73,7 +72,7 @@ I den här videon kommer ett nytt tema att skapas baserat på det mörka temat R
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Hämta [tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
+Hämta [Tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
 
 ## Ytterligare resurser{#additional-resources}
 

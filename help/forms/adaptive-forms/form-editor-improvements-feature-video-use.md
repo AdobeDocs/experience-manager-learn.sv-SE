@@ -1,18 +1,18 @@
 ---
 title: Förbättringar av formulärredigeraren i AEM Forms
 description: I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versionen för att förenkla redigeringen av adaptiva formulär och dokument. Förbättringarna minskar time to market och gör det möjligt för företagsanvändare att arbeta med formulär och dokument
-feature: Adaptiv Forms
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
-
 
 # Förbättringar av formulärredigeraren i AEM Forms {#form-editor-improvements-in-aem-forms}
 

@@ -1,19 +1,19 @@
 ---
 title: Färghantering med AEM Dynamic Media
 description: I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
-sub-product: dynamiska medier
-feature: Bildprofiler, videoprofiler
-version: 6.3, 6.4, 6.5
-topic: Innehållshantering
+sub-product: dynamic-media
+feature: Image Profiles, Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '319'
 ht-degree: 4%
 
 ---
-
 
 # Färghantering med AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
@@ -23,7 +23,7 @@ I den här videon utforskar vi Dynamic Media Color Management och hur det kan an
 
 >[!NOTE]
 >
->[Aktivera Dynamic ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) Mediain-AEM för att använda den här funktionen.
+>[Aktivera Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) i AEM för att använda den här funktionen.
 
 Den här funktionen är tillgänglig för AEM 6.1- och 6.2-versioner som ett funktionspaket.
 
@@ -120,7 +120,7 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 | WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
 | WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5 Paper |
 | WebUncoated | CMYK | U.S. Web Uncoated v2 |
-| WideGamutRGB | RGB | Bred tryckbarhet, RGB |
+| WideGamutRGB | RGB | Bred färgomfång RGB |
 
 ## Ytterligare resurser{#additional-resources}
 

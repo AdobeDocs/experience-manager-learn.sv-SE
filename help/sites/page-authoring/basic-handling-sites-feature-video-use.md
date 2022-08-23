@@ -8,14 +8,14 @@ topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 kt: 4495
 thumbnail: 31784.jpg
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 4%

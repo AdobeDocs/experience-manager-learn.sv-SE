@@ -1,26 +1,26 @@
 ---
 title: Anpassa komponentikoner i Adobe Experience Manager Sites
-description: Med komponentikoner kan författare snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
+description: Med komponentikoner kan man snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
-feature: Kärnkomponenter
-topic: Utveckling
+version: 6.4, 6.5
+feature: Core Components
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa komponentikoner {#developing-component-icons-in-aem-sites}
 
-Med komponentikoner kan författare snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
+Med komponentikoner kan man snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
 
@@ -31,17 +31,17 @@ Komponentwebbläsaren visas nu i ett konsekvent grått tema och med följande:
 * **[!UICONTROL Component Description]**
 * **[!UICONTROL Component Icon]**
    * De två första bokstäverna i komponenttiteln *(standard)*
-   * Anpassad PNG-bild *(konfigurerad av en utvecklare)*
+   * Egen PNG-bild *(konfigurerad av en utvecklare)*
    * Anpassad SVG-bild *(konfigurerad av en utvecklare)*
-   * CoralUI-ikon *(konfigurerad av en utvecklare)*
+   * CoralUI, ikon *(konfigurerad av en utvecklare)*
 
 ## Konfigurationsalternativ för komponentikoner {#component-icon-configuration-options}
 
 ### Förkortningar {#abbreviations}
 
-Som standard används de två första tecknen i komponenttiteln (**[cq:Component]@jcr:title**) som förkortning. Om **[cq:Component]@jcr:title=Article List** skulle förkortningen visas som &quot;**Ar**&quot;.
+Som standard är de två första tecknen i komponenttiteln (**[cq:Component]@jcr:title**) används som förkortning. Om **[cq:Component]@jcr:title=Artikellista** förkortningen skulle visas som &quot;**Ar**&quot;.
 
-Förkortningen kan anpassas via egenskapen **[cq:Component]@abbreption**. Även om det här värdet kan innehålla fler än 2 tecken bör förkortningen begränsas till två tecken för att undvika eventuella visuella störningar.
+Förkortningen kan anpassas via **[cq:Component]@förkortning** -egenskap. Även om det här värdet kan innehålla fler än 2 tecken bör förkortningen begränsas till två tecken för att undvika eventuella visuella störningar.
 
 ```plain
 /apps/.../components/content/my-component
@@ -51,7 +51,7 @@ Förkortningen kan anpassas via egenskapen **[cq:Component]@abbreption**. Även 
 
 ### CoralUI-ikoner {#coralui-icons}
 
-CoralUI-ikoner från AEM kan användas för komponentikoner. Om du vill konfigurera en CoralUI-ikon anger du egenskapen **[cq:Component]@cq:icon** till önskat HTML-ikonattributvärde för CoralUI-ikonen (anges i [CoralUI-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html).
+CoralUI-ikoner från AEM kan användas för komponentikoner. Konfigurera en CoralUI-ikon genom att ange en **[cq:Component]@cq:ikon** till den önskade CoralUI-ikonens HTML-ikonattributvärde (anges i [CoralUI-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html).
 
 ```plain
 /apps/.../components/content/my-component
@@ -61,11 +61,11 @@ CoralUI-ikoner från AEM kan användas för komponentikoner. Om du vill konfigur
 
 ### PNG-bilder {#png-images}
 
-PNG-bilder kan användas för komponentikoner. Om du vill konfigurera en PNG-bild som en komponentikon lägger du till önskad bild som en **nt:file** med namnet **cq:icon.png** under **[cq:Component]**.
+PNG-bilder kan användas för komponentikoner. Om du vill konfigurera en PNG-bild som en komponentikon lägger du till önskad bild som en **nt:fil** namngiven **cq:icon.png** under **[cq:Component]**.
 
 PNG-filen ska ha en genomskinlig bakgrund eller en bakgrundsfärg inställd på **#707070**.
 
-PNG-bilderna skalas till **20px gånger 20px**. Det kan dock vara bättre att använda Retina-skärmar **40px** med **40px**.
+PNG-bilderna skalas till **20px x x 20px**. Men för att passa Retina-skärmar **40px** av **40px** kan vara att föredra.
 
 ```plain
 /apps/.../components/content/my-component
@@ -74,11 +74,11 @@ PNG-bilderna skalas till **20px gånger 20px**. Det kan dock vara bättre att an
      - jcr:primaryType = "nt:file"
 ```
 
-### SVG-bilder {#svg-images}
+### SVG bilder {#svg-images}
 
-SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till önskad SVG som en **nt:file** med namnet **cq:icon.svg** under **[cq:Component]**.
+SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till SVG som en **nt:fil** namngiven **cq:icon.svg** under **[cq:Component]**.
 
-SVG-bilder ska ha en bakgrundsfärg inställd på **#707070** och storleken **20px gånger 20px.**
+SVG-bilder bör ha en bakgrundsfärg inställd på **#707070** och en storlek på **20px x x 20px.**
 
 ```plain
 /apps/.../components/content/my-component

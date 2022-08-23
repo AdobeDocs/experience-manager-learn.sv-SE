@@ -1,27 +1,26 @@
 ---
 title: Anpassa anteckningar i AEM Assets
-description: AEM Assets format och format när du skriver ut till PDF kan konfigureras av AEM.
+description: AEM Assets format och format för utdata till PDF kan konfigureras av AEM.
 feature: Collaboration
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 topic: Collaboration
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 1%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
-
 # Anpassa anteckningar i AEM Assets{#using-annotations-in-aem-assets}
 
-AEM har stöd för anpassning av anteckningens utdata till PDF.
+AEM stöder anpassning av anteckningens utdata till PDF.
 
-## PDF-anteckningssling:OsgiConfig-definition
+## PDF, anteckningssling:OsgiConfig-definition
 
-Om du vill anpassa PDF-anteckningar skapar du en **sling:OsgiConfig**-nod i ditt AEM projekt under
+Skapa en **sling:OsgiConfig** nod i ditt AEM projekt under
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` och justera värdena efter behov:
 

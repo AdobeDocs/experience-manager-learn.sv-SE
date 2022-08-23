@@ -6,20 +6,19 @@ topics: development
 audience: developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 1%
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
-
-# Utveckla för siddifferens {#developing-for-page-difference}
+# Utveckla för sidskillnader {#developing-for-page-difference}
 
 I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
 
@@ -31,7 +30,7 @@ I den här videon visas hur du kan skapa anpassade format för funktionen Sidski
 >
 >I den här videon läggs anpassad CSS till i webbbiblioteket.Butiksklientbiblioteket, där dessa ändringar bör göras i anpassarens AEM Sites-projekt. i exempelkoden nedan: `my-project`.
 
-AEM sidskillnad hämtar OTB-CSS via en direkt inläsning på `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+AEM sidskillnad hämtar OTB-CSS via en direkt inläsning av `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
 
 På grund av den här direkta inläsningen av CSS i stället för att använda en klientbibliotekskategori, måste vi hitta en annan inmatningspunkt för de anpassade formaten, och den här anpassade inmatningspunkten är projektets redigeringsklient.
 
@@ -39,7 +38,7 @@ Fördelen med detta är att dessa anpassade åsidosättningar av stilar kan vara
 
 ### Förbered redigeringsklientlib {#prepare-the-authoring-clientlib}
 
-Kontrollera att det finns ett `authoring`-klientlib för ditt projekt på `/apps/my-project/clientlib/authoring.`
+Se till att det finns en `authoring` clientlib for your project at `/apps/my-project/clientlib/authoring.`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -50,7 +49,7 @@ Kontrollera att det finns ett `authoring`-klientlib för ditt projekt på `/apps
 
 ### Ange anpassad CSS {#provide-the-custom-css}
 
-Lägg till en `css.txt`-klient i projektets `authoring` som pekar på den mindre fil som kommer att innehålla de åsidosättande formaten. [](https://lesscss.org/) Lessis föredrog att använda eftersom de har många praktiska funktioner, bland annat klassomslutning som används i det här exemplet.
+Lägg till i projektets `authoring` klientlib a `css.txt` som pekar på den mindre fil som ger de åsidosättande formaten. [Mindre](https://lesscss.org/) är att föredra på grund av dess många praktiska funktioner, bland annat klassomslutning, som används i det här exemplet.
 
 ```shell
 base=./css
@@ -58,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-Skapa den `less`-fil som innehåller formatåsidosättningarna på `/apps/my-project/clientlibs/authoring/css/htmldiff.less` och ange de överliggande formaten efter behov.
+Skapa `less` filen som innehåller formatåsidosättningar i `/apps/my-project/clientlibs/authoring/css/htmldiff.less`och ange önskade format.
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -104,11 +103,11 @@ body {
 }
 ```
 
-### Inkludera CSS för redigeringsklientlib via sidkomponenten {#include-the-authoring-clientlib-css-via-the-page-component}
+### Inkludera redigeringsklientlib-CSS via sidkomponenten {#include-the-authoring-clientlib-css-via-the-page-component}
 
-Inkludera kategorin för redigeringsklienter i projektets bassidas `/apps/my-project/components/structure/page/customheaderlibs.html` direkt före taggen `</head>` för att säkerställa att formaten läses in.
+Inkludera kategorin för redigeringsklienter i projektets bassida `/apps/my-project/components/structure/page/customheaderlibs.html` direkt före `</head>` för att säkerställa att formaten läses in.
 
-Dessa format bör begränsas till WCM-lägena [!UICONTROL Edit] och [!UICONTROL preview].
+Dessa format bör begränsas till [!UICONTROL Edit] och [!UICONTROL preview] WCM-lägen.
 
 ```xml
 <head>
@@ -118,7 +117,7 @@ Dessa format bör begränsas till WCM-lägena [!UICONTROL Edit] och [!UICONTROL 
 </head>
 ```
 
-Slutresultatet av en annan d-sida med formaten ovan tillämpade skulle se ut så här (HTML-tillägg och komponent ändrat).
+Slutresultatet av en avvikande d-sida med formaten ovan tillämpade skulle se ut så här (HTML added och Component changed).
 
 ![Sidskillnad](assets/page-diff.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Stängda användargrupper i AEM Assets
 description: Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomsten till en viss mapp med resurser.
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -9,7 +9,7 @@ level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -36,9 +36,9 @@ Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används f
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Avsedd användning | Konfigurera och använd behörigheter för innehåll på den aktuella **AEM**-instansen. | Konfigurera CUG-principer för innehåll på AEM **författare**-instans. Använd CUG-principer för innehåll på AEM **publicera** instanser(er). |
+| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på **aktuell** AEM. | Konfigurera CUG-principer för innehåll på AEM **författare** -instans. Använd CUG-profiler för innehåll på AEM **publicera** instans(er). |
 | Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst till *alla andra* användare/grupper. |
-| Publicering | ACL:er är *inte* publicerade med innehåll. | CUG-profiler *är* publicerade med innehåll. |
+| Publicering | ACL:er är *not* publicerat med innehåll. | CUG-principer *är* publicerat med innehåll. |
 
 ## Stödlänkar {#supporting-links}
 

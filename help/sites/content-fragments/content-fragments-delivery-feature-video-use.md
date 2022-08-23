@@ -1,27 +1,27 @@
 ---
 title: Leverera innehållsfragment i AEM
-seo-title: Leverera innehållsfragment i Adobe Experience Manager
+seo-title: Delivering Content Fragments in Adobe Experience Manager
 description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivery in a headless channel channel.
-seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivery in a headless channel channel.
+seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivered in a headless manner to downstream channels.
 sub-product: content-services
-feature: Innehållsfragment
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
-
 
 # Leverera innehållsfragment {#delivering-content-fragments}
 
@@ -29,7 +29,7 @@ Adobe Experience Manager (AEM) Content Fragments är textbaserat redaktionellt i
 
 Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivery in a headless channel channel.
 
-Den här videoserien innehåller leveransalternativ för Content Fragments. Information om hur du definierar och [redigerar innehållsfragment finns här](content-fragments-feature-video-use.md).
+Den här videoserien innehåller leveransalternativ för Content Fragments. Information om definition och [skapa innehållsfragment här](content-fragments-feature-video-use.md).
 
 1. Använda innehållsfragment på webbsidor
 2. Visa innehållsfragment som JSON med AEM Content Services
@@ -39,7 +39,7 @@ Den här videoserien innehåller leveransalternativ för Content Fragments. Info
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-Innehållsfragment kan användas på AEM Sites-sidor, eller på liknande sätt, med Experience Fragments, med AEM WCM Core Components&#39; [Content Fragment component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
+Innehållsfragment kan användas på AEM Sites-sidor, eller på liknande sätt, i Experience Fragments, med AEM WCM Core Components [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
 Innehållsfragmentskomponenter kan formateras med AEM Style System för att visa innehållet efter behov.
 
@@ -49,7 +49,7 @@ Innehållsfragmentskomponenter kan formateras med AEM Style System för att visa
 
 AEM Content Services underlättar skapandet av AEM sidbaserade HTTP-slutpunkter som återger innehåll till ett normaliserat JSON-format.
 
-I videon ovan används [Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) för att visa enskilda innehållsfragment. [Listkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) är en ny komponent som gör att en författare kan definiera en fråga som dynamiskt fyller sidan med en lista med innehållsfragment. Komponenten Lista med innehållsfragment är att föredra när flera innehållsfragment behöver visas.
+I videon ovan används [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) för att visa enskilda innehållsfragment. The [Content Fragment List Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) är en ny komponent som gör att en författare kan definiera en fråga som dynamiskt fyller sidan med en lista med innehållsfragment. Komponenten Lista med innehållsfragment är att föredra när flera innehållsfragment behöver visas.
 
 *Exempel på JSON-nyttolast för Content Services-slutpunkt:*\
 **[athletes.json](assets/athletes.json)**
@@ -60,7 +60,7 @@ I videon ovan används [Content Fragment Component](https://experienceleague.ado
 
 Den första introduktionen i AEM 6.5 har utökat stöd för innehållsfragment med Assets HTTP API. Detta är ett enkelt sätt för utvecklare att utföra Create-, Read-, Update- och Delete-åtgärder (CRUD) mot innehållsfragment.
 
-*Exempel på POSTMAN-begäranden:*
+*Exempel på POSTMAN-förfrågningar:*
 **[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
 
 ## Vilken leveransmetod som ska användas

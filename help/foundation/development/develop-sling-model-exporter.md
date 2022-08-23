@@ -1,8 +1,8 @@
 ---
 title: Utveckla export av försäljningsmodeller i AEM
 description: Den här tekniska genomgången går igenom hur du ställer in AEM för Sling Model Exporter, förbättrar en befintlig Sling Model med hjälp av exportramverket för att rendera som JSON, och hur du använder Exporter-alternativ och Jackson-anteckningar för att anpassa utdata ytterligare.
-version: 6.3, 6.4, 6.5
-sub-product: grund, innehållstjänster
+version: 6.4, 6.5
+sub-product: foundation, content-services
 feature: APIs
 topics: content-delivery, development, headless
 activity: develop
@@ -11,14 +11,13 @@ doc-type: technical video
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla export av försäljningsmodeller
 
@@ -32,25 +31,25 @@ Apache Sling erbjuder en Jackson JSON-exportör som täcker det vanligaste falle
 
 >[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] är en funktion i  [!DNL Apache Sling] projektet och är inte direkt knuten till AEM produktlanseringscykel. [!DNL Sling Model Exporter] är kompatibelt med AEM 6.3 och senare.
+[!DNL Sling Model Exporter] är en egenskap i [!DNL Apache Sling] -projekt och inte direkt bundet till AEM produktlanseringscykel. [!DNL Sling Model Exporter] är kompatibelt med AEM 6.3 och senare.
 
-## Användningsfall för [!DNL Sling Model Exporter]
+## Användningsexempel för [!DNL Sling Model Exporter]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] är perfekt för användning av Sling-modeller som redan innehåller affärslogik som stöder HTML-återgivningar via HTML (eller tidigare JSP) och som visar samma företagsrepresentation som JSON för användning av programmatiska webbtjänster eller JavaScript-program.
+[!DNL Sling Model Exporter] är perfekt för användning av Sling-modeller som redan innehåller affärslogik som stöder återgivningar av HTML via HTML (eller tidigare JSP) och som visar samma företagsrepresentation som JSON för användning av programmatiska webbtjänster eller JavaScript-program.
 
 ## Skapa en export av en segmenteringsmodell
 
 >[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
 
-Det är lika enkelt att aktivera [!DNL Exporter]-stöd för en [!DNL Sling Model] som att lägga till `@Exporter`-anteckningen i Java-klassen.
+Aktivering [!DNL Exporter] support på en [!DNL Sling Model] är lika enkelt som att lägga till `@Exporter` anteckning till Java-klassen.
 
 ## Använda exportalternativ för delningsmodell
 
 >[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
 
-[!DNL Sling Model Exporter] har stöd för att skicka exportalternativ per modell till exportörimplementeringen för att styra hur exportfunktionen slutligen  [!DNL Sling Model] exporteras. Dessa alternativ gäller vanligtvis&quot;globalt&quot; för hur [!DNL Sling Model] exporteras, jämfört med per datapunkt, vilket kan göras via textbundna anteckningar som beskrivs nedan.
+[!DNL Sling Model Exporter] stöder överföring av exportalternativ per modell till exportörimplementeringen för att styra hur [!DNL Sling Model] exporteras till slut. De här alternativen gäller vanligtvis&quot;globalt&quot; för hur [!DNL Sling Model] exporteras, jämfört med per datapunkt, vilket kan göras via textbundna anteckningar som beskrivs nedan.
 
 [!DNL Jackson Exporter] bland annat:
 
@@ -61,7 +60,7 @@ Det är lika enkelt att aktivera [!DNL Exporter]-stöd för en [!DNL Sling Model
 
 >[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
 
-Exportörimplementeringar kan även ha stöd för anteckningar som kan användas infogat i klassen [!DNL Sling Model], som ger en bättre kontrollnivå för hur data exporteras.
+Exportörernas implementeringar kan även ha stöd för anteckningar som kan användas internt på [!DNL Sling Model] -klass, som kan ge en bättre kontrollnivå för hur data exporteras.
 
 * [[!DNL Jackson Exporter] anteckningar](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)
 

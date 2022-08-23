@@ -2,12 +2,12 @@
 title: Använda Geolocation-API:er i Adaptive Forms
 description: Fyll i adressfält i formuläret med hjälp av API:n för geopositionering
 feature: Adaptive Forms
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

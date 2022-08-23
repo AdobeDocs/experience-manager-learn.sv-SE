@@ -1,27 +1,27 @@
 ---
 title: Ställ in dynamisk SSLING-inkludering för AEM
 description: En videogenomgång av hur du installerar och använder Apache Sling Dynamic Include med AEM Dispatcher som körs på Apache HTTP Web Server.
-version: 6.3, 6.4, 6.5
-sub-product: grund, platser
-feature: API:er
+version: 6.4, 6.5
+sub-product: foundation, sites
+feature: APIs
 topics: caching
 activity: develop
 audience: architect, developer
 doc-type: technical video
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera [!DNL Sling Dynamic Include]
 
-En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) som körs på [!DNL Apache HTTP Web Server].
+En videogenomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) körs [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -29,10 +29,10 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 >
 > Kontrollera att den senaste versionen av AEM Dispatcher är installerad lokalt.
 
-1. Hämta och installera [[!DNL Sling Dynamic Include] paketet](https://sling.apache.org/downloads.cgi).
+1. Hämta och installera [[!DNL Sling Dynamic Include] paket](https://sling.apache.org/downloads.cgi).
 1. Konfigurera [!DNL Sling Dynamic Include] via [!DNL OSGi Configuration Factory] på **http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
 
-   Eller, om du vill lägga till en AEM kodbas, skapar du lämplig **sling:OsgiConfig**-nod på:
+   Eller, om du vill lägga till i en AEM kodbas, skapa **sling:OsgiConfig** nod vid:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,7 +56,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    -->
    ```
 
-1. (Valfritt) Upprepa det sista steget för att även tillåta att komponenter i [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) kan hanteras via [!DNL SDI]. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
+1. (Valfritt) Upprepa det sista steget för att tillåta komponenter på [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) att delges via [!DNL SDI] också. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -80,7 +80,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    -->
    ```
 
-1. Uppdatera `httpd.conf`-filen för [!DNL Apache HTTPD Web server] för att aktivera modulen [!DNL Include].
+1. Uppdatera [!DNL Apache HTTPD Web server]&#39;s `httpd.conf` fil för att aktivera [!DNL Include] -modul.
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -90,7 +90,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. Uppdatera [!DNL vhost]-filen så att den respekterar direktiv om inkludering.
+1. Uppdatera [!DNL vhost] fil som ska följas innehåller direktiv.
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -115,7 +115,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    </VirtualHost>
    ```
 
-1. Uppdatera dispatcher.any-konfigurationsfilen så att den stöder (1) `nocache`-väljare och (2) aktivera stöd för TTL.
+1. Uppdatera dispatcher.alla konfigurationsfiler som stöds (1) `nocache` väljare och (2) aktivera stöd för TTL.
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -133,7 +133,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 
    >[!TIP]
    >
-   > Om du lämnar det avslutande `*` i glob `*.nocache.html*`-regeln ovan kan det leda till [problem i begäranden för underresurser](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
+   > Lämna efterföljande `*` av i glob `*.nocache.html*` linje före, kan resultera i [problem vid begäran om underresurser](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
 
    ```shell
    /cache {
@@ -142,7 +142,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    }
    ```
 
-1. Starta alltid om [!DNL Apache HTTP Web Server] när du har gjort ändringar i konfigurationsfilerna eller i `dispatcher.any`.
+1. Starta alltid om [!DNL Apache HTTP Web Server] efter att ha gjort ändringar i konfigurationsfilerna eller `dispatcher.any`.
 
    ```shell
    $ sudo apachectl restart
@@ -150,7 +150,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 
 >[!NOTE]
 >
->Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du se till att cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
+>Om du använder [!DNL Sling Dynamic Includes] för servering av SSI (edge-side includes), se till att cachelagra relevanta [svarshuvuden i dispatchercachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
@@ -160,9 +160,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 >* &quot;ETag&quot;
 >* &quot;X-content-type-options&quot;
 >* &quot;Senast ändrad&quot;
-
 >
-
 
 
 ## Stödmaterial

@@ -1,18 +1,18 @@
 ---
 title: Skriva en anpassad sändning i AEM Forms
 description: Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för anpassat formulär
-feature: Adaptiv Forms
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '206'
 ht-degree: 1%
 
 ---
-
 
 # Skriva en anpassad sändning i AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
@@ -24,10 +24,10 @@ I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd 
 * Skapa en nod av typen &quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
 * Spara den nyskapade noden.
 * Lägg till följande två egenskaper i den nya noden
-* PropertyName       | Egenskapsvärde
+* PropertyName | Egenskapsvärde
 * guideComponentType | fd/af/components/guidepittype
-* guideDataModel     | xfa,xsd,grundläggande
-* jcr:description   | CustomSubmitHelpx
+* guideDataModel | xfa,xsd,grundläggande
+* jcr:description | CustomSubmitHelpx
 * Spara ändringarna
 * Skapa en ny fil med namnet post.POST.jsp under noden CustomSubmitHelpx. När ett anpassat formulär skickas anropas denna JSP. Du kan skriva JSP-koden enligt dina önskemål i den här filen. Följande kod vidarebefordrar begäran till servern.
 
@@ -64,4 +64,3 @@ I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd 
 Nu ska du se&quot;CustomSubmitHelpx&quot; i skicka-åtgärderna i ditt adaptiva formulär som i den här bilden.
 
 ![Anpassat formulär med anpassad inskickning](assets/capture-2.gif)
-

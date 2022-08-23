@@ -2,12 +2,12 @@
 title: AEM Forms med Marketo (del 2)
 description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -199,5 +199,5 @@ public class MarketoConfigurationService {
 ```
 
 1. Bygg och distribuera paketet på din AEM.
-1. [Peka din webbläsare på ](http://localhost:4502/system/console/configMgr) configMgrand-sökningen efter &quot;Tjänskonfiguration för Marketo Credentials&quot;
+1. [Peka webbläsaren på configMgr](http://localhost:4502/system/console/configMgr) och sök efter&quot;Marketo Credentials Service Configuration&quot;
 1. Ange lämpliga egenskaper för din Marketo-instans

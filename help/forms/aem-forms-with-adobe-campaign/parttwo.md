@@ -1,18 +1,18 @@
 ---
 title: Skapa kampanjprofil för inskickning av adaptiva formulär
 description: I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
-feature: Adaptiv Forms, formulärdatamodell
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
-
 
 # Skapa kampanjprofil för inskickning av adaptiva formulär {#creating-campaign-profile-on-adaptive-form-submission}
 
@@ -243,7 +243,7 @@ return null;
 
 Skapa en anpassad överföringshanterare som hanterar överföringen av adaptiva formulär. I den här anpassade överföringshanteraren ska vi anropa metoden createProfile för CampaignService. Metoden createProfile accepterar ett JSONObject som representerar den profil som behöver skapas.
 
-Följ den här [länken](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md) om du vill veta mer om den anpassade överföringshanteraren i AEM Forms
+Om du vill veta mer om en anpassad hanterare för Skicka i AEM Forms följer du den här [link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
 Koden i den anpassade sändningen
 
@@ -264,7 +264,7 @@ När vi har definierat tjänsten och den anpassade sändningsåtgärden är vi r
 
 
 * [Kontrollera att du har följt de steg som beskrivs här](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [Importera anpassat formulär och anpassad överföringshanterare med hjälp av pakethanteraren](assets/create-acs-profile-on-af-submission.zip). Paketet innehåller anpassat formulär som har konfigurerats för att skicka till en anpassad sändningsåtgärd.
-* Förhandsgranska [formuläret](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [Importera anpassat formulär och anpassad överföringshanterare med hjälp av pakethanteraren](assets/create-acs-profile-on-af-submission.zip)Det här paketet innehåller anpassat formulär som har konfigurerats för att skicka till en anpassad åtgärd.
+* Förhandsgranska [formulär](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * Fyll i alla fält och skicka
 * En ny profil skapas i ACS-instansen

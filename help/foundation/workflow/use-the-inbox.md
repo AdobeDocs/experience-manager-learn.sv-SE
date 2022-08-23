@@ -1,7 +1,7 @@
 ---
 title: Så här använder du Inkorgen i AEM
 description: AEM underlättar samarbete och synlighet i uppgifter och arbetsflöden.
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Collaboration
 feature: Workflow
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
 exl-id: bc1e0187-e8bd-4d56-91d0-2f1465b5e95c
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%

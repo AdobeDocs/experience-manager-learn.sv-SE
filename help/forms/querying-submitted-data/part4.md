@@ -1,25 +1,24 @@
 ---
 title: AEM Forms med JSON-schema och data [del 4]
-seo-title: AEM Forms med JSON-schema och data [del 4]
+seo-title: AEM Forms with JSON Schema and Data[Part4]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
-seo-description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
-
 
 # Frågar skickade data
 
@@ -28,7 +27,7 @@ Nästa steg är att fråga efter skickade data och visa resultaten i tabellform.
 
 [QueryBuilder](https://querybuilder.js.org/) - UI-komponent för att skapa frågor
 
-[Datatabeller](https://datatables.net/) - Visar frågeresultaten i tabellformat.
+[Datatabeller](https://datatables.net/)- Visa frågeresultaten i tabellformat.
 
 Följande användargränssnitt har skapats för att aktivera frågor om skickade data. Endast de element som markerats som obligatoriska i JSON-schemat är tillgängliga för att fråga mot. På skärmbilden nedan frågar vi efter alla sändningar där deliverypref är SMS.
 
@@ -67,7 +66,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
 
 När du klickar på knappen GetResult görs ett Get-anrop till **&quot;/bin/querydata&quot;**. Vi skickar frågan som skapats av QueryBuilder-användargränssnittet till servern via frågeparametern. Servern masserar sedan frågan till SQL-fråga som kan användas för att fråga databasen. Om du till exempel söker efter alla produkter med namnet &quot;Mouse&quot; kommer frågesträngen i Query Builder att vara $.productname = &quot;Mouse&quot;. Den här frågan kommer sedan att konverteras till följande
 
-SELECT * from aemformswithjson .  formsending where JSON_EXTRACT( formsending.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
+MARKERA &#42; från aemformswithjson .  formsending where JSON_EXTRACT( formsending.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 
 Resultatet av den här frågan returneras för att fylla i tabellen i användargränssnittet.
 
@@ -78,6 +77,5 @@ Utför följande steg om du vill att exemplet ska köras på ditt lokala system
 1. Skapa ett adaptivt formulär med JSON-exempelschemat
 1. Konfigurera det adaptiva formuläret att skicka till den anpassade åtgärden för att skicka till&quot;customSubmitPx&quot;
 1. Fyll i formuläret och skicka in
-1. Peka webbläsaren på [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. Peka webbläsaren till [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
 1. Markera formuläret och gör en enkel fråga
-

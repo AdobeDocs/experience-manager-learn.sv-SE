@@ -1,18 +1,18 @@
 ---
 title: Använda LDAP med AEM Forms Workflow
 description: Tilldela AEM Forms-arbetsflödesuppgift till den som skickar in formuläret
-feature: Adaptiv Forms, arbetsflöde
-topic: Integreringar
+feature: Adaptive Forms, Workflow
+topic: Integrations
 role: Developer
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2e9754ff-49fe-4260-b911-796bcc4fd266
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
-
 
 # Använda LDAP med AEM Forms Workflow
 
@@ -20,7 +20,7 @@ Tilldela AEM Forms-arbetsflödesuppgift till den som skickar in formuläret.
 
 När du använder Adaptivt formulär i AEM arbetsflöde vill du dynamiskt tilldela en uppgift till formulärskickarens hanterare. För att uppnå detta måste vi konfigurera AEM med Ldap.
 
-De steg som krävs för att konfigurera AEM med LDAP beskrivs i [detalj här.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+Hur du konfigurerar AEM med LDAP beskrivs i [här.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 I den här artikeln bifogas konfigurationsfiler som används för att konfigurera AEM med Adobe Ldap. Dessa filer ingår i paketet som kan importeras med hjälp av pakethanteraren.
 
@@ -60,13 +60,13 @@ Vi får tag i den person som initierade arbetsflödet. Sedan får vi värdet fö
 
 Beroende på hur hanteraregenskapen lagras i LDAP kan du behöva göra någon strängändring för att få hanterar-ID:t.
 
-Läs den här artikeln för att implementera din egen [ ParticipantChooser.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+Läs den här artikeln för att implementera din egen [  ParticipantChooser .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 Om du vill testa detta på datorn (för anställda på Adobe kan du använda det här exemplet direkt)
 
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet för att ställa in chefens egendom.
 * [Hämta och installera DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [Importera de resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren](assets/aem-forms-ldap.zip). Som en del av det här paketet ingår LDAP-konfigurationsfiler, arbetsflöde och ett anpassat formulär.
+* [Importera de resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren](assets/aem-forms-ldap.zip).Ingår i detta paket som LDAP-konfigurationsfiler, arbetsflöde och en anpassningsbar form.
 * Konfigurera AEM med LDAP med lämpliga LDAP-autentiseringsuppgifter.
 * Logga in på AEM med dina LDAP-autentiseringsuppgifter.
 * Öppna [timeoffrequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)

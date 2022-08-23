@@ -1,20 +1,20 @@
 ---
 title: AEM
 description: Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som hanteras i AEM på datorn, för alla program och filformat.
-version: 6.5, 6.4, 6.3
-topic: Innehållshantering
-feature: Skrivbordsapp
+version: 6.5, 6.4
+topic: Content Management
+feature: Desktop App
 role: User
 level: Beginner
 kt: 2551
 thumbnail: 28868.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
-
 
 # Använd AEM datorprogram
 
@@ -29,7 +29,7 @@ Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som ha
 
 >[!NOTE]
 >
-> [Adobe Asset ](./adobe-asset-link.md) Linkis Adobe är en dedikerad lösning för att arbeta med AEM material i Adobe Creative Cloud-program: Photoshop, Illustrator, InDesign. När du använder AEM Assets i dessa program är Adobe Asset Link att föredra framför AEM skrivbordsapp.
+> [Adobe Asset Link](./adobe-asset-link.md) är en dedikerad Adobe-lösning för att arbeta med AEM material i Adobe Creative Cloud-program: Photoshop, Illustrator, InDesign. När du använder AEM Assets i dessa program är Adobe Asset Link att föredra framför AEM skrivbordsapp.
 
 ## Ytterligare resurser
 

@@ -1,15 +1,16 @@
 ---
 title: Förifyll anpassat formulär med ACS-profil
 description: Förifyll adaptiv Forms med ACS-profil
-feature: Adaptiv Forms, formulärdatamodell
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 1%
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 1%
 
 I den här delen fyller vi i det anpassade formuläret i förväg med profilinformation som hämtats från ACS. AEM Forms har denna kraftfulla funktion för att förifylla anpassningsbara formulär.
 
-Läs den här självstudiekursen[om du vill veta mer om hur du fyller i adaptiva formulär i förväg.](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html)
+Läs detta om du vill veta mer om hur du fyller i adaptiva formulär i förväg [självstudiekurs](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
 Om du vill fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM. Om e-post-ID:t för den person som är inloggad AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
 
@@ -233,4 +234,3 @@ Följ följande anvisningar för att få det här att fungera i ditt system:
 * [Importera ett anpassat formulär till AEM med hjälp av pakethanteraren](assets/pre-fill-af-from-campaign.zip)
 * Se till att du loggar in på AEM med en användare vars e-post-ID delas av en profil i Adobe Campaign. Om e-post-ID:t för den AEM användaren till exempel är johndoe@adobe.com, måste du ha en profil i ACS vars e-postadress är johndoe@adobe.com.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
-

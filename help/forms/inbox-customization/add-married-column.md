@@ -6,13 +6,13 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.5.5
+version: 6.5
 kt: 5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%

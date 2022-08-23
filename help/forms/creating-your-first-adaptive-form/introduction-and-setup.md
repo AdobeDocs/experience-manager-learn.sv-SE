@@ -1,18 +1,18 @@
 ---
 title: Komma igång med adaptiva Forms
-description: 'I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler. '
-feature: Adaptiv Forms
-version: 6.3,6.4,6.5
-topic: Utveckling
+description: I den här självstudiekursen får du hjälp med att skapa anpassade formulär med flera flikar. Du får lära dig att använda tabeller, dragspelslayout och regelredigerare för att skapa affärsregler.
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 8c90fe1c-0c83-4287-9766-08d806b8815a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med adaptiva Forms {#getting-started-with-adaptive-forms}
 
@@ -30,8 +30,6 @@ Du behöver följande:
 
 * **Du måste köra AEM Forms version 6.4 eller senare på localhost:4502.**
 
-* [Ladda ned klient-libs-and-](assets/client-libs-and-logo.zip) logo och  [getting-started-](assets/getting-started-fragment.zip) fragment till hårddisken.
+* [Ladda ned client-libs-and-logo](assets/client-libs-and-logo.zip) och [getting-started-fragment](assets/getting-started-fragment.zip) till hårddisken.
 
-* Importera zip-filer till AEM med [pakethanteraren ](http://localhost:4502/crx/packmgr/index.jsp)
-
-
+* Importera zip-filer till AEM med [pakethanterare ](http://localhost:4502/crx/packmgr/index.jsp)

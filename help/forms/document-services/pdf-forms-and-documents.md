@@ -4,12 +4,12 @@ description: PDF är faktiskt en familj med filformat, och i den här artikeln b
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: 6.3,6.4, 6.5
+version: 6.4, 6.5
 feature: PDF Generator
 kt: 7071
 topic: Development
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Exempelfiler kan vara [hämtad härifrån](assets/pdf-file-types.zip)
 
 ## XML Forms Architecture PDF(XFA PDF)
 
-Adobe använder termen XFA PDF för att hänvisa till den interaktiva och dynamiska Forms som du skapar med AEM Forms Designer. Forms och de filer du skapar med Designer är baserade på Adobe’s XML Forms Architecture (XFA). På många sätt ligger filformatet XFA PDF närmare en HTML-fil än en traditionell PDF. Följande kod visar hur ett enkelt textobjekt ser ut i en XFA PDF-fil.
+Adobe använder termen XFA PDF för att hänvisa till den interaktiva och dynamiska Forms som du skapar med AEM Forms Designer. De Forms-filer och filer du skapar med Designer är baserade på Adobe XML Forms Architecture (XFA). På många sätt ligger filformatet XFA PDF närmare en HTML-fil än en traditionell PDF. Följande kod visar hur ett enkelt textobjekt ser ut i en XFA PDF-fil.
 
 ![Textfält](assets/text-field.JPG)
 
@@ -82,7 +82,7 @@ Ett certifierat dokument ger PDF dokument och formulärmottagare ytterligare gar
 
 ### Acroforms
 
-Acroforms är Adobe&#39;s older interactive form technology; de återgår till Acrobat version 3. Adobe tillhandahåller [API-referens för Acrobat Forms](assets/FormsAPIReference.pdf), daterat i maj 2003, för att ge de tekniska detaljerna om denna teknik. Acrobat är en kombination av följande objekt:
+Acroforms är AdobeÄldre interaktiv formulärteknik. de återgår till Acrobat version 3. Adobe tillhandahåller [API-referens för Acrobat Forms](assets/FormsAPIReference.pdf), daterat i maj 2003, för att ge de tekniska detaljerna om denna teknik. Acrobat är en kombination av följande objekt:
 
 * Ett traditionellt PDF som definierar formulärets statiska layout och grafik.
 * Interaktiva formulärfält som markeras ovanpå formulärverktygen i Adobe Acrobat. Dessa formulärverktyg utgör en liten del av vad som är tillgängligt i AEM Forms Designer.
@@ -109,7 +109,7 @@ Två filer i exempelfilerna skapades från samma Microsoft Word-fil. Den ena ska
 * simpleWordFile.pdf
 * simpleWordFilePDFA.pdf
 
-Dokumenten ser likadana ut, men PDF/A-filen öppnas med ett blått fält längst upp, vilket anger att dokumentet visas i PDF/A-läge. Det blå fältet är Acrobat dokumentmeddelandefält som visas när du öppnar vissa typer av PDF-filer.
+Dokumenten ser likadana ut, men PDF/A-filen öppnas med ett blått fält längst upp, vilket anger att dokumentet visas i PDF/A-läge. Det här blå fältet är Acrobat dokumentmeddelandefält som visas när du öppnar vissa typer av PDF-filer.
 
 ![PDF-img](assets/pdfa-message.png)
 

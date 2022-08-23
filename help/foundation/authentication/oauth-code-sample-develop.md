@@ -1,18 +1,18 @@
 ---
 title: Utveckla OAuth-omfång i AEM
 description: Adobe Experience Manager utökningsbara OAuth-scope ger åtkomstkontroll för resurser från ett klientprogram som är auktoriserat av en slutanvändare. Diagrammet nedan visar hur förfrågningen flödar i samband med AEM.
-version: 6.3, 6.4, 6.5
-feature: Användare och grupper
-topic: Utveckling
+version: 6.4, 6.5
+feature: User and Groups
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: dd37355e-cfc7-4581-ac22-d89c951c22cf
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla OAuth-scope
 

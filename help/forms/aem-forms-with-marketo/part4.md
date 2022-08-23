@@ -2,12 +2,12 @@
 title: AEM Forms med Marketo (del 4)
 description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Användaren anger lead-ID:t och när Marketo-tjänsten tabbas anropas lead by ID
 1. Ange namn och titel för de två TextField-komponenterna som FirstName och LastName
 1. Konfigurera panelkomponenten så att den är en repeterbar komponent genom att ange Minimum till 1 och Maximum till -1. Detta krävs eftersom Marketo-tjänsten returnerar en array med Lead-objekt och du måste ha en upprepningsbar komponent för att kunna visa resultatet. I det här fallet får vi bara tillbaka ett Lead-objekt eftersom vi söker efter Lead-objekt med dess ID.
 1. Skapa en regel i fältet LeadId så som visas i bilden nedan
-1. Förhandsgranska formuläret och ange ett giltigt lead-ID i fältet LeadID och tabba ut. Fälten Förnamn och Efternamn ska fyllas i med resultatet av serviceanropet.
+1. Förhandsgranska formuläret och ange ett giltigt lead-ID i fältet LeadID och tabba ut. Fälten Förnamn och Efternamn ska fyllas i med resultatet av anropet.
 
 I följande skärmbild förklaras inställningarna för regelredigeraren
 
@@ -34,7 +34,7 @@ I följande skärmbild förklaras inställningarna för regelredigeraren
 
 ## Felsökning
 
-Om du använder de paket som ingår i den här artikeln kan du aktivera [felsökningsloggar](http://localhost:4502/system/console/slinglog) för följande klasser:
+Om du använder de paket som ingår i den här artikeln kanske du vill aktivera [felsökningsloggar](http://localhost:4502/system/console/slinglog) för följande klasser:
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`

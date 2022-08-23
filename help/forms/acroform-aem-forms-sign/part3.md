@@ -1,17 +1,16 @@
 ---
 title: Acrobat med AEM Forms
-seo-title: Sammanfoga data i anpassat format med Acrobat
+seo-title: Merge Adaptive Form data with Acroform
 description: Del 3 i en självstudiekurs om hur du integrerar Acrobat med AEM Forms. Testa arbetsflödet och det adaptiva formuläret på datorn.
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '230'
 ht-degree: 1%
 
 ---
@@ -19,8 +18,8 @@ ht-degree: 1%
 
 # Testa den här funktionen på datorn
 
-[Hämta och importera det här paketet till ](assets/acro-form-aem-form.zip)
-AEMTet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa schemat från den överförda Acrobat.
+[Hämta och importera det här paketet till AEM](assets/acro-form-aem-form.zip)
+Det här paketet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa schemat från det överförda Acrobat.
 
 ## Konfigurera arbetsflöde
 
@@ -37,7 +36,7 @@ AEMTet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa
 3. Konfigurera skicka-åtgärden för det adaptiva formuläret som ska skickas till AEM (MergeAcrobatData).
 4. **Se till att du anger sökvägen till datafilen som &quot;Data.xml&quot;. Detta är mycket viktigt eftersom exempelkoden söker efter filen Data.xml i arbetsflödets nyttolast.**
 5. Förhandsgranska anpassat formulär, fyll i formuläret och skicka in det.
-6. Du bör se PDF-filen med de data som sammanfogats sparade i den mapp som anges i steg 4 under konfigurationsarbetsflödet
+6. Du bör se PDF med data som sammanfogats sparade i den mapp som anges i steg 4 under konfigurationsarbetsflödet
 
 >[!NOTE]
 >

@@ -1,25 +1,24 @@
 ---
 title: AEM Forms med JSON-schema och data[del2]
-seo-title: AEM Forms med JSON-schema och data[del2]
+seo-title: AEM Forms with JSON Schema and Data[Part2]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
-seo-description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
-
 
 # Lagra skickade data i databasen
 
@@ -30,9 +29,9 @@ ht-degree: 0%
 
 Om du vill lagra skickade data i databasen skriver vi en serverlet som extraherar bundna data och formulärnamnet och arkivet. Den fullständiga koden för att hantera formuläröverföringen och lagra afBoundData i databasen anges nedan.
 
-Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår serverdator.
+Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår tjänstserver.
 
-Läs den här [artikeln](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html) om du vill veta mer om anpassade inlämningsförfrågningar
+Läs det här om du vill veta mer om anpassade inlämningsförfrågningar [artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/stoconfirmSubmit&quot;,null,null);
 

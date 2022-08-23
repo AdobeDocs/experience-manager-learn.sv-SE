@@ -1,43 +1,42 @@
 ---
 title: Visar anpassade tillgångstyper i AEM Forms
-seo-title: Visar anpassade tillgångstyper i AEM Forms
+seo-title: Listing Custom Asset Types in AEM Forms
 description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
-seo-description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
+seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
+# Visar anpassade tillgångstyper i AEM Forms {#listing-custom-asset-types-in-aem-forms}
 
-# Visar anpassade resurstyper i AEM Forms {#listing-custom-asset-types-in-aem-forms}
-
-## Skapar anpassad mall {#creating-custom-template}
+## Skapa anpassad mall {#creating-custom-template}
 
 
 I den här artikeln kommer vi att skapa en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
 
 1. Skapa en sling: under /apps. Ge den namnet &quot;myportalcomponent&quot;
-1. Lägg till en fpContentType-egenskap. Ange värdet som **/libs/fd/ fp/formTemplate&quot;.**
+1. Lägg till en fpContentType-egenskap. Ange värdet till **/libs/fd/ fp/formTemplate&quot;.**
 1. Lägg till en title-egenskap och ställ in dess värde på &quot;custom template&quot;. Det här namnet visas i listrutan för sök- och listkomponenten
 1. Skapa en&quot;template.html&quot; under den här mappen. Den här filen innehåller koden för att formatera och visa de olika resurstyperna.
 
 ![appsmapp](assets/appsfolder_.png)
 
-I följande kod visas de olika typerna av resurser som använder söknings- och listkomponenten. Vi skapar separata html-element för varje typ av resurs, vilket visas med taggen data-type = &quot;videos&quot;. För resurstypen &quot;videor&quot; använder vi elementet &lt;video> för att spela upp den infogade videon. För resurstypen &quot;worddocuments&quot; använder vi olika html-markeringar.
+I följande kod visas de olika typerna av resurser som använder söknings- och listkomponenten. Vi skapar separata html-element för varje typ av resurs, vilket visas med taggen data-type = &quot;videos&quot;. För resurstypen&quot;videor&quot; använder vi &lt;video> -element för att spela upp den infogade videon. För resurstypen &quot;worddocuments&quot; använder vi olika html-markeringar.
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -77,11 +76,11 @@ I följande kod visas de olika typerna av resurser som använder söknings- och 
 >
 >Rad 11 - Ändra bildens src till att peka på en bild som du väljer i DAM.
 >
->Om du vill visa Adaptiv Forms i den här mallen skapar du en ny div och ställer in dess datatypsattribut till &quot;guide&quot;. Du kan kopiera och klistra in den div vars data-type=&quot;printForm&quot; och ange datatypen för den nyligen kopierade div som &quot;guide&quot;
+>Om du vill visa Adaptiv Forms i den här mallen skapar du en ny div och anger datatypsattributet till &quot;guide&quot;. Du kan kopiera och klistra in den div vars data-type=&quot;printForm&quot; och ange datatypen för den nyligen kopierade div som &quot;guide&quot;
 
 ## Konfigurera sök- och listkomponenten {#configure-search-and-lister-component}
 
-När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka webbläsaren [på den här URL:en ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka på webbläsaren [till denna URL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 Växla till designläge och konfigurera styckesystemet så att det inkluderar Search and Lister-komponenten i den tillåtna komponentgruppen. Komponenten Sök och Lister ingår i Document Services-gruppen.
 
@@ -111,11 +110,11 @@ I följande skärmbild visas resurstyperna som är konfigurerade för listning
 
 ![tillgångstyper](assets/assettypes.png)
 
-Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka webbläsaren [på den här URL:en ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
+Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka på webbläsaren [till denna URL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
 
 >[!NOTE]
 >
->Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att du ger&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
+>Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att ge&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
 
-![Resurstyper ](assets/assettypeslistings.png)
+![tillgångstyper](assets/assettypeslistings.png)
 [Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som ska användas som resurstyper för att lista med hjälp av sök- och listkomponenten

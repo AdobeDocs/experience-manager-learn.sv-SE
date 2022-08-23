@@ -4,19 +4,19 @@ description: Med komponentkonsolen kan utvecklare och administratörer hantera a
 topics: components
 audience: all
 doc-type: feature video
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 activity: use
-feature: Kärnkomponenter
-topic: Innehållshantering
+feature: Core Components
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
-
 
 # Använda komponentkonsolen {#using-the-components-console-with-aem-sites}
 

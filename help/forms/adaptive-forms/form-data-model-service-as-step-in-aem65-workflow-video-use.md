@@ -1,19 +1,19 @@
 ---
 title: Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde
 description: I AEM Forms 6.5 introducerades möjligheten att skapa variabler i AEM. Med den här nya funktionen som använder tjänsten Anropa formulärdatamodell i AEM arbetsflöde har det blivit mycket enkelt. I följande video får du hjälp med att använda tjänsten Anropa formulärdatamodell i AEM arbetsflöde.
-feature: Arbetsflöde
+feature: Workflow
 type: Tutorial
-version: 6.5.
-topic: Utveckling
+version: 6.5
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
-
 
 # Använda datamodelltjänst som steg i AEM 6.5-arbetsflöde {#using-form-data-model-service-as-step-in-workflow}
 
@@ -26,7 +26,7 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att använda Form Data Model Se
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern
 
-* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html). Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html).Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
 * [ Importera resurser till AEM med pakethanteraren](assets/aem65-loanapplication.zip)
 * Paketet innehåller följande:
@@ -34,7 +34,7 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
    * Arbetsflödesmodell som använder FDM-steg.
    * Formulärdatamodell som används i FDM-steget.
    * Anpassad form som utlöser arbetsflödet när det skickas.
-* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas utlöses arbetsflödet [för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html).
+* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas in [arbetsflöde för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) aktiveras.
 
-![ arbetsflöde  ](assets/invokefdm651.PNG).
+![ arbetsflöde ](assets/invokefdm651.PNG).
 Arbetsflödet använder eller delar komponenten för att dirigera programmet till administratören om kreditpoängen är över 500. Om kreditpoängen är mindre än 500 dirigeras programmet till klotter.

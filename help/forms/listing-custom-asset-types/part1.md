@@ -1,27 +1,26 @@
 ---
 title: Registrerar anpassade resurstyper
-seo-title: Registrerar anpassade resurstyper
+seo-title: Registering Custom Asset Types
 description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
-seo-description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
+seo-description: Enabling custom asset types for listing in AEMForms Portal
 uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
 feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
 topic: Development
 role: Developer
 level: Experienced
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: da613092-e03b-467c-9b9e-668142df4634
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '653'
 ht-degree: 1%
 
 ---
-
 
 # Registrerar anpassade resurstyper {#registering-custom-asset-types}
 
@@ -33,7 +32,7 @@ Aktivera anpassade resurstyper för listning i AEMForms-portalen
 
 ## Ange grundsökväg {#specify-base-path}
 
-Bassökvägen är den översta databassökvägen som innehåller alla resurser som en användare kan vilja visa i söknings- och listkomponenten. Om så önskas kan användaren även konfigurera specifika platser i bassökvägen från dialogrutan för komponentredigering, så att sökningen utlöses på specifika platser i stället för att söka igenom alla noder i bassökvägen. Som standard används grundsökvägen som sökvägskriterier för att hämta resurserna, såvida inte användaren konfigurerar en uppsättning specifika sökvägar från den här platsen. Det är viktigt att du har ett optimalt värde för den här sökvägen för att kunna göra en prestandasökning. Standardvärdet för bassökvägen förblir **_/content/dam/formsanddocuments_** eftersom alla AEM Forms-resurser finns i **_/content/dam/formsanddocuments._**
+Bassökvägen är databassökvägen på den översta nivån som innehåller alla resurser som en användare kan vilja visa i söknings- och listkomponenten. Om så önskas kan användaren även konfigurera specifika platser i bassökvägen från dialogrutan för komponentredigering, så att sökningen utlöses på specifika platser i stället för att söka igenom alla noder i bassökvägen. Som standard används grundsökvägen som sökvägskriterier för att hämta resurserna, såvida inte användaren konfigurerar en uppsättning specifika sökvägar från den här platsen. Det är viktigt att du har ett optimalt värde för den här sökvägen för att kunna göra en prestandasökning. Standardvärdet för bassökvägen förblir som **_/content/dam/formSanddocuments_** eftersom alla AEM Forms-resurser finns i **_/content/dam/formSanddocuments._**
 
 Steg för att konfigurera bassökvägen
 
@@ -41,7 +40,7 @@ Steg för att konfigurera bassökvägen
 1. Navigera till **/libs/fd/fp/extensions/querybuilder/basepath**
 
 1. Klicka på &quot;Overlay Node&quot; i verktygsfältet
-1. Kontrollera att överläggsplatsen är /apps/
+1. Kontrollera att överläggsplatsen är &quot;/apps/&quot;
 1. Klicka på OK
 1. Klicka på Spara
 1. Navigera till den nya strukturen som skapades på **/apps/fd/fp/extensions/querybuilder/basepath**
@@ -49,7 +48,7 @@ Steg för att konfigurera bassökvägen
 1. Ändra värdet för egenskapen path till **&quot;/content/dam&quot;**
 1. Klicka på Spara
 
-Genom att ange path-egenskapen som **&quot;/content/dam&quot;** anger du i princip Base Path som /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
+Genom att ange egenskapen path till **&quot;/content/dam&quot;** Du anger i princip Bas-sökvägen till /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
 
 ![basepath](assets/basepath.png)
 
@@ -60,7 +59,7 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
 1. Adaptiv Forms
 1. Formulärmallar
 1. PDF forms
-1. Dokument (statiska PDF-filer)
+1. Dokument (statiskt PDF)
 
 **Steg för att registrera en anpassad resurstyp**
 
@@ -69,7 +68,7 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
 1. Ställ in övertäckningsplatsen till &quot;/apps&quot;
 1. Navigera till den nya strukturen som skapats på **/apps/fd/fp/extensions/querybuilder/assettypes **
 
-1. Under den här platsen skapar du en nod av typen &quot;nt:unstructed&quot; för den typ som ska registreras, namnge noden **mp4files. Lägg till följande två egenskaper i den här mp4files-noden**
+1. Skapa en nod av typen &quot;nt:unStructed&quot; under den här platsen för den typ som ska registreras, namnge noden **mp4files. Lägg till följande två egenskaper i den här mp4files-noden**
 
    1. Lägg till jcr:title-egenskap för att ange resurstypens visningsnamn. Ställ in värdet för jcr:title på &quot;Mp4 Files&quot;.
    1. Lägg till egenskapen type och ange värdet till videos. Det här är värdet som vi använder i vår mall för att lista resurser av typen videor. Spara ändringarna.
@@ -90,7 +89,6 @@ När du har utfört stegen ovan börjar den nya resurstypen (Mp4-filer) visas i 
 
 ![mp4files](assets/mp4files.png)
 
-[Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tittar på **/apps/fd/fp/extensions/querybuilder/assettypes**
+[Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tar en titt på **/apps/fd/fp/extensions/querybuilder/assettypes**
 
 [Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan kommer att användas i del 2 av den här självstudiekursen
-

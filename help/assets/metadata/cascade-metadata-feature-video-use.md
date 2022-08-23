@@ -1,7 +1,7 @@
 ---
 title: Använda Cascading Metadata i AEM Assets
 description: Med avancerad metadatahantering kan användare skapa överlappande fältregler för att skapa sammanhangsberoende relationer mellan metadata i AEM Assets. I videon nedan visas nya dynamiska regler för fältkrav, synlighet och sammanhangsberoende val. I videon finns även information om de steg som en administratör behöver för att tillämpa dessa regler på ett anpassat metadataschema.
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Content Management
 feature: Metadata
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -28,4 +28,4 @@ Det finns tre dynamiska regeluppsättningar som kan aktiveras för ett givet met
 
 2. **Synlighet** : fält kan alltid vara synliga eller bara synliga baserat på värdet i ett annat listrutefält.
 
-3. **Alternativ** : (endast tillgängligt för listrutefält) filtrera de alternativ som visas för användaren baserat på det valda värdet för ett annat listrutefält.
+3. **Val** : (endast tillgängligt för listrutefält) filtrera de alternativ som visas för användaren baserat på det valda värdet för ett annat listrutefält.

@@ -1,18 +1,18 @@
 ---
 title: Samla in arbetsflödeskommentarer i adaptiv Forms Workflow
 description: Samla in arbetsflödeskommentarer i AEM arbetsflöde
-feature: Arbetsflöde
-version: 6.3,6.4
-topic: Utveckling
+feature: Workflow
+version: 6.4
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # Samla in arbetsflödeskommentarer i adaptiv Forms Workflow{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
@@ -22,7 +22,7 @@ En vanlig begäran är möjligheten att inkludera kommentarer som har angetts av
 
 För att uppfylla detta krav finns ett exempel på ett OSGi-paket som kan användas för att samla in kommentarer och lagra dessa kommentarer som arbetsflödets metadataegenskap.
 
-I följande skärmbild visas hur du använder processsteg i [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) för att samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
+I följande skärmbild visas hur du använder processteg i [AEM](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) om du vill samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
 
 ![arbetsflödenkommentarer1](assets/workflowcomments1.gif)
 
@@ -31,9 +31,9 @@ Så här testar du den här funktionen på datorn:
 
 * [Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Distribuera paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar) SetValue. Paketet innehåller exempelkoden som fångar in kommentarerna och lagrar den som en metadataegenskap
+* [Distribuera paketet SetValue](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Paketet innehåller exempelkoden som fångar in kommentarerna och lagrar den som en metadataegenskap
 
-* [Ladda ned och zippa upp resurser som hör till den här artikeln i ](assets/capturecomments.zip) filsystemetResurserna innehåller en arbetsflödesmodell och ett exempel på adaptiv form.
+* [Ladda ned och zippa upp resurser som hör till den här artikeln i ditt filsystem](assets/capturecomments.zip) Resurserna innehåller en arbetsflödesmodell och ett exempel på adaptiv form.
 
 * Importera de två ZIP-filerna till AEM med hjälp av pakethanteraren
 
@@ -50,4 +50,3 @@ Kommentarerna lagras i metadataegenskapen managerComments i crx. Om du vill sök
 /var/workflow/instances/server0
 
 Välj lämplig arbetsflödesinstans och sök efter egenskapen managerComments i metadatanoden.
-

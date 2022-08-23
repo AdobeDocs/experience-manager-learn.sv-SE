@@ -1,22 +1,21 @@
 ---
 title: Använda tjänstdatamodeller med AEM Forms
 description: Den AEM adaptiva Forms regelredigeraren kan utnyttja de tjänster som har skapats i formulärdatamodellen.
-feature: Adaptiv Forms, formulärdatamodell
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: eef3df8f-1a49-44af-9feb-44be62bd83e8
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # Använda tjänstdatamodeller med AEM Forms{#using-service-data-models-with-aem-forms}
 
 Den AEM adaptiva Forms regelredigeraren kan utnyttja de tjänster som har skapats i formulärdatamodellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17739/?quality=9&learn=on)
-

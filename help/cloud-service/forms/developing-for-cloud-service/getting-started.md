@@ -5,16 +5,16 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 topic: Development
 kt: 8842
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
-
 
 # Installera nödvändig programvara
 
@@ -34,8 +34,3 @@ Den här självstudiekursen visar mappstrukturen framåt.
 * Öppna kommandotolkfönstret och navigera till **c:\cloudmanager**
 * Kopiera och klistra in innehållet i [textfil](assets/creating-maven-project.txt) i kommandotolken. Du kan behöva ändra DarchetypeVersion=30 beroende på vilken [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 30 när den här artikeln skrevs.
 * Kör kommandot genom att trycka på tangenten enter.Om allt är rätt ska du se meddelandet om att det lyckades.
-
-
-
-
-

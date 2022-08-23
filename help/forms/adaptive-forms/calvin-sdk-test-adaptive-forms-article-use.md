@@ -1,26 +1,26 @@
 ---
-title: 'Använda automatiska tester med AEM Adaptive Forms '
+title: Använda automatiska tester med AEM Adaptive Forms
 description: Automatiserad testning av Adaptive Forms med Calvin SDK
-feature: Adaptiv Forms
+feature: Adaptive Forms
 doc-type: article
 activity: develop
-version: 6.3,6.4,6.5
-topic: Utveckling
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
-
 
 # Använda automatiska tester med AEM Adaptive Forms {#using-automated-tests-with-aem-adaptive-forms}
 
 Automatiserad testning av Adaptive Forms med Calvin SDK
 
-Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Hobbes.js testramverk](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
+Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Testramverket i Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
 
 I den här självstudiekursen skapar du följande:
 
@@ -30,7 +30,7 @@ I den här självstudiekursen skapar du följande:
 
 ## Komma igång {#getting-started}
 
-[Hämta och installera resurserna med Package ](assets/testingadaptiveformsusingcalvinsdk1.zip)ManagerPaketet innehåller exempelskript och flera adaptiva Forms.Dessa adaptiva Forms har byggts med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK API:er som finns för att testa Adaptive Forms. De allmänna stegen för testning AEM Adaptive Forms är:
+[Hämta och installera resurser med Package Manager](assets/testingadaptiveformsusingcalvinsdk1.zip)Paketet innehåller exempelskript och flera adaptiva Forms.Dessa adaptiva Forms har byggts med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK API:er som finns för att testa Adaptive Forms. De allmänna stegen för testning AEM Adaptive Forms är:
 
 * Navigera till formuläret som behöver testas
 * Ange fältets värde
@@ -38,7 +38,7 @@ I den här självstudiekursen skapar du följande:
 * Sök efter felmeddelanden
 
 Exempelskripten i paketet visar alla ovanstående åtgärder.
-Låt oss utforska koden för `mortgageForm.js`
+Låt oss utforska koden i `mortgageForm.js`
 
 ```javascript
 var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
@@ -49,9 +49,9 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 Koden ovan skapar en ny testsvit.
 
-* Namnet på TestSuite är i det här fallet `Mortgage Form Test`.
+* Namnet på TestSuite i det här fallet är `Mortgage Form Test` &#39;.
 * Anges som absolut sökväg i AEM till JS-filen som innehåller testsviten.
-* Registerparametern när den anges till `true` är testsviten tillgänglig i testgränssnittet.
+* Registerparametern när den anges till &#39; `true` &#39;, gör testsviten tillgänglig i testgränssnittet.
 
 ```javascript
 .addTestCase(new hobs.TestCase("Calculate amount to borrow")
@@ -68,16 +68,16 @@ Koden ovan skapar en ny testsvit.
 
 Testfall kan läggas till för testsviten som ska köras mot en adaptiv form.
 
-* Om du vill lägga till ett testfall till testsviten använder du metoden `addTestCase` för TestSuite-objektet.
-* Metoden `addTestCase` har ett TestCase-objekt som parameter.
-* Använd metoden `hobs.TestCase(..)` för att skapa TestCase.
+* Om du vill lägga till ett testfall till testsviten använder du `addTestCase` metoden för TestSuite-objektet.
+* The `addTestCase` metoden tar ett TestCase-objekt som parameter.
+* Skapa TestCase med `hobs.TestCase(..)` -metod.
 * Obs! Den första parametern är namnet på det testfall som ska visas i användargränssnittet.
 * När du har skapat ett testfall kan du lägga till åtgärder i testfallet.
-* Åtgärder som `navigateTo`, `asserts.isTrue` kan läggas till som åtgärder i testfallet.
+* Åtgärder som omfattar `navigateTo`, `asserts.isTrue` kan läggas till som åtgärder i testfallet.
 
 ## Köra automatiska tester {#running-the-automated-tests}
 
-[Öppna ](http://localhost:4502/libs/granite/testing/hobbes.html)testsvitenUtöka testsviten och kör testerna. Om allt fungerar som det ska visas följande utdata.
+[OpenThetestsuite](http://localhost:4502/libs/granite/testing/hobbes.html)Expandera Test Suite och kör testerna. Om allt fungerar som det ska visas följande utdata.
 
 ![kalvinsdk](assets/calvinimage.png)
 

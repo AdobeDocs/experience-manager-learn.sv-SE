@@ -1,18 +1,18 @@
 ---
-title: 'Genererar JSON-webbtoken och åtkomsttoken '
+title: Genererar JSON-webbtoken och åtkomsttoken
 description: I den här artikeln förklaras koden som behövs för att skapa JWT och Access Token som behövs för att göra REST-anrop till Adobe Campaign Standard
-feature: Adaptiv Forms, formulärdatamodell
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Genererar JSON-webbtoken och åtkomsttoken {#generating-json-web-token-and-access-token}
 
@@ -26,7 +26,7 @@ För att kunna använda ACS API med AEM Forms måste vi skapa JWT i ett OSGi-pak
 
 ![konfiguration](assets/campaignconfiguration.gif)
 
-**A.** De värden som visas här är &quot;dummy&quot;-värden
+**S.** Värdena som visas här är &quot;dummy&quot;-värden
 
 Följande kod hämtar information om Adobe Campaign Server från OSGI-konfigurationen. Vi skapar en privat nyckel från raderna 80 till 104.
 

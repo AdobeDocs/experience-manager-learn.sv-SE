@@ -1,18 +1,18 @@
 ---
 title: Använda smart översättningssökning med AEM Assets
 description: Smart Translation Search möjliggör sökning och identifiering på flera språk automatiskt i AEM, både Assets och Pages, och stöder över 50 språk vilket minskar behovet av manuell översättning.
-version: 6.3, 6.4, 6.5
-feature: Sökning
-topic: Innehållshantering
+version: 6.4, 6.5
+feature: Search
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 0%
 
 ---
-
 
 # Använda smart översättningssökning med AEM Assets{#using-smart-translation-search-with-aem-assets}
 
@@ -24,7 +24,7 @@ Med AEM Smart Translation Search kan användare söka efter innehåll i AEM med 
 
 Smart Translation Search är en perfekt komplementation till AEM smarta taggar som används för resurser på engelska.
 
-I den här videon antas [AEM sökningen efter smart översättning](smart-translation-search-technical-video-setup.md) har konfigurerats.
+Den här videon förutsätter [AEM smart översättningssökning](smart-translation-search-technical-video-setup.md) har konfigurerats.
 
 ## Så här fungerar Smart Translation Search {#how-smart-translation-search-works}
 

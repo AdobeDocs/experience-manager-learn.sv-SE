@@ -2,7 +2,7 @@
 title: Använda SSL-guiden i AEM
 description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
-version: 6.3, 6,4, 6.5
+version: 6,4, 6.5
 topics: security, operations
 activity: use
 audience: administrator
@@ -13,9 +13,9 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 2d5446197b9b81a4dbe4eaa5a7cb4fcdd5d63f67
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---

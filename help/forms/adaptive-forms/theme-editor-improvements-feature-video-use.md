@@ -1,18 +1,18 @@
 ---
 title: Förbättringar av Theme Editor i AEM Forms
 description: Förbättringar av Theme Editor för anpassningsbara formulär i AEM 6.3
-feature: Adaptiv Forms
-version: 6.3,6.4,6.5
-topic: Utveckling
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6518aacb-97bf-4038-ab3c-1dbc2277eb9e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 2%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # Förbättringar av Theme Editor i AEM Forms{#theme-editor-improvements-in-aem-forms}
 
@@ -23,4 +23,3 @@ Förbättringar av Theme Editor för anpassningsbara formulär i AEM 6.3
 >[!NOTE]
 >
 >Den här funktionen är endast tillgänglig med AEM 6.3 och senare.
-

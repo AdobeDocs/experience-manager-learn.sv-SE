@@ -1,17 +1,16 @@
 ---
 title: Acrobat med AEM Forms
-seo-title: Sammanfoga data i anpassat format med Acrobat
-description: Del 1 av Integrering av Acrobat med AEM Forms. Skapa ett adaptivt formulär med Acrobat och sammanfoga data för att få en PDF-fil.
+seo-title: Merge Adaptive Form data with Acroform
+description: Del 1 av Integrering av Acrobat med AEM Forms. Skapa ett adaptivt formulär med Acrobat och sammanfoga data för att få ett PDF.
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -30,7 +29,7 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 
 >[!NOTE]
 >
->Om du vill skicka det ifyllbara makroformuläret för signering med Adobe Sign, måste du namnge fälten därefter. Du kan till exempel namnge ett fält **Sig_es_:signer1:signature**. Det här är syntaxen som Adobe Sign förstår.
+>Om du vill skicka det ifyllbara makroformuläret för signering med Adobe Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **Sig_es_:signer1:signatur**. Det här är syntaxen som Adobe Sign förstår.
 
 >[!NOTE]
 >
