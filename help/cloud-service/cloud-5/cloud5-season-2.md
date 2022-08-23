@@ -5,7 +5,7 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 2cfa5039e69ef23e58428e17b45877170930820e
+source-git-commit: 197f7e18f0d229698048cb06c2a49c019d420217
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Cloud 5
 
 ![AEM Experts Series](./imgs/masthead-s2.png)
->[!VIDEO](https://video.tv.adobe.com/v/343127)
+>[!VIDEO](https://video.tv.adobe.com/v/346567)
 
 ## Introduktion
 
