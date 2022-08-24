@@ -9,13 +9,13 @@ topics: authoring
 audience: author
 doc-type: technical video
 activity: use
-version: 6.4,6.5.
+version: 6.4,6.5
 discoiquuid: 51750b3f-1fda-43ae-b3ed-1eede83b19d5
 topic: Administration
 role: Developer
 level: Beginner
 exl-id: 98a35bd9-a659-41f9-a772-267730c1f579
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
