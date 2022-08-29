@@ -4,9 +4,9 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b04e247c091634030e5377fdb8a159f8c7cce904
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '823'
 ht-degree: 10%
 
 ---
@@ -213,6 +213,7 @@ ht-degree: 10%
    + Integrera med Microsoft Power Automate{#forms-cs-and-power-automate}
       + [Konfigurera integreringen](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [Tolka skickade formulärdata](./forms/forms-cs-and-power-automate/send-email-notification.md)
+      + [Skicka DoR som e-postbilaga](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
    + Integrera med Microsoft Dynamics{#formscs-dynamics-crm}
       + [Skapa Dynamics-program](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [Konfigurera datakälla](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
