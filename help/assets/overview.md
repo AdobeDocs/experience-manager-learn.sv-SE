@@ -3,16 +3,22 @@ title: AEM Assets Videos och Tutorials
 description: Titta på våra videor för att få AEM och hjälp.
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '205'
+ht-degree: 3%
 
 ---
 
 # AEM Assets Videos och Tutorials {#overview}
 
 Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshantering på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_assets_overview"
+>title="AEM Assets"
+>abstract="Lär dig att snabbt hitta och redigera de resurser du behöver."
+>additional-url="https://video.tv.adobe.com/v/336196" text="AEM Assets genomgång"
 
 ## AEM Assets genomgång
 

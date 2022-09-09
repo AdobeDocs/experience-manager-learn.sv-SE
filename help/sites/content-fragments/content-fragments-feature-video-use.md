@@ -12,9 +12,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -25,18 +25,23 @@ Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att 
 
 AEM innehållsfragment är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
 
-Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om [leverans av innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
+Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om [som levererar innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivera och definiera modeller för innehållsfragment
 2. Skapa innehållsfragment
 3. Hämta innehållsfragment
 4. Redigeringsfunktioner
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_admin_content_fragments"
+>title="Hantera fragment"
+>abstract="Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll."
+
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfigurationsbas.
+AEM Content Fragments Models, the data schemas of Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfiguration.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -68,7 +73,7 @@ AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som inneh�
 
 ## Nästa steg
 
-Läs om hur du [levererar innehållsfragment](content-fragments-delivery-feature-video-use.md).
+Läs mer om [leverera innehållsfragment](content-fragments-delivery-feature-video-use.md).
 
 ## Ytterligare resurser {#additional-resources}
 
