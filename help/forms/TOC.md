@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 614db8b03a823b60846ab8ccfa8fbc29a41f7791
+source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -279,6 +279,7 @@ ht-degree: 0%
    + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part1](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-1.md)
    + [Dokumenttjänster: Steg för att justera bmc-poolstorleken för XMLFormService part2](troubleshooting/steps-to-tweak-bmc-pool-size-for-xmlformservice-2.md)
    + [Dokumenttjänster: Steg för att justera parametrar på JMX-konsolen](troubleshooting/steps-to-tweak-parameters-on-jmx-console.md)
+   + [Aktivera sammanslagning av stora XML-datafiler med mallar](troubleshooting/fix-timeout-errors-when-merging-large-xml-wth-template.md)
    + [PDFG: Ändra tidsgränser för transaktioner i PDFG](troubleshooting/how-to-change-the-transaction-timeout-in-pdfg.md)
    + [PDFG: Så här uppdaterar du CORBA-timeout i PDFG](troubleshooting/how-to-update-corba-timeout-in-pdfg.md)
    + [PDFG: Så här uppdaterar du tidsgränser i PDFG](troubleshooting/how-to-update-the-timeouts-in-pdfg.md)
