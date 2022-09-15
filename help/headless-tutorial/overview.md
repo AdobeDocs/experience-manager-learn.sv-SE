@@ -7,20 +7,25 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
-# AEM Headless Tutorials
+# AEM Headless Tutorials{#aem-headless-tutorials}
 
 Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-slutpunkter och leverera dess innehåll som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
 >[!TIP]
 >
 >Den här samlingen självstudiekurser är utformad för dem som föredrar att **lära sig göra**. Om du föredrar att lära dig koncept från grunden kan du kolla in [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_edit_inline_content"
+>title="Redigera infogat innehåll"
+>abstract="Lär dig hur du redigerar innehåll direkt på sidan som det refereras till med hjälp av den headless-funktionsuppsättningen."
 
 ## Tutorials efter API
 

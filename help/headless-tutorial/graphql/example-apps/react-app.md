@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
 
-# Reagera app
+# Reagera app{#react-app}
 
 Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här React-programmet visas hur du frågar efter innehåll med hjälp AEM GraphQL-API:er med beständiga frågor. Den AEM Headless-klienten för JavaScript används för att köra de GraphQL-beständiga frågor som stöder programmet.
 
@@ -26,6 +26,11 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
 Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [steg för steg, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) Det finns en beskrivning av hur React-appen skapades.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_react_app"
+>title="Anpassa innehåll i en exempelapp för React"
+>abstract="Vi har skapat en modern React-app som du kan använda för att lära dig hur du anpassar innehåll med hjälp av den headless-funktionsuppsättningen."
 
 ## Förutsättningar {#prerequisites}
 
