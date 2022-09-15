@@ -6,9 +6,9 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+source-git-commit: efb15b8eda84c68614e2fba9e4adc7680cb080f1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '246'
 ht-degree: 5%
 
 ---
@@ -75,6 +75,14 @@ ht-degree: 5%
       + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
+   + Angular{#angular}
+      + [Översikt](./spa-editor/angular/overview.md)
+      + [1 - SPA](./spa-editor/angular/create-project.md)
+      + [2 - Integrera SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 - Mappa SPA](./spa-editor/angular/map-components.md)
+      + [4 - Navigering och routning](./spa-editor/angular/navigation-routing.md)
+      + [5 - Anpassad komponent](./spa-editor/angular/custom-component.md)
+      + [6 - Utöka komponent](./spa-editor/angular/extend-component.md)
    + SPA{#remote-spa}
       + [Översikt](./spa-editor/remote-spa/overview.md)
       + [Snabbinställningar](./spa-editor/remote-spa/quick-setup.md)
