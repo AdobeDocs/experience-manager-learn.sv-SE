@@ -5,10 +5,10 @@ version: Cloud Service
 activity: develop
 audience: developer
 user-guide-title: Komma igång med AEM Sites - WKND självstudiekurs
-user-guide-description: En självstudiekurs i flera delar för utvecklare som inte är AEM. Implementera en AEM sajt för ett fiktivt livsstilsmärke, WKND.
+user-guide-description: En självstudiekurs i flera delar för utvecklare som inte är AEM. Implementera en AEM sajt för ett fiktivt livsstilsmärke, WKND. Aktivera frontendpipeline för att snabba upp utvecklingscykeln till driftsättningscykeln.
 breadcrumb-title: AEM Sites WKND Tutorials
 index: y
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -33,5 +33,9 @@ ht-degree: 0%
    + [1 - Skapa en webbplats](./site-template/create-site.md)
    + [2 - Introduktion till framtagning och publicering](./site-template/author-content-publish.md)
    + [3 - UI-planering med Adobe XD](./site-template/ui-planning-adobe-xd.md)
-   + [3 - Sidmallar](./site-template/page-templates.md)
-   + [4 - Tema](./site-template/theming.md)
+   + [4 - Sidmallar](./site-template/page-templates.md)
+   + [5 - Tema](./site-template/theming.md)
++ Aktivera frontpipeline - devOps{#enable-frontend-pipeline-devops}
+   + [Översikt](./enable-frontend-pipeline/overview.md)
+
+
