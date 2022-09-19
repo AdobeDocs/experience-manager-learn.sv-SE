@@ -3,9 +3,9 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 552e5fbeb5dafc6d82763d5c3b31cc6d17131739
+source-git-commit: 798b366a5add2831bf60a8d89968bad16e48802c
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '434'
 ht-degree: 5%
 
 ---
@@ -48,6 +48,8 @@ ht-degree: 5%
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
    + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + Expertråd {#expert-advice}
+      + [Tips för innehållsfragment](content-fragments/expert-advice/content-fragments.md)
 + Utveckling {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
@@ -113,3 +115,8 @@ ht-degree: 5%
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
++ Expertresurser {#expert-resources}
+   + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
+   + [Platsunderhåll](expert-resources/site-maintenance.md)
+   + [AEM Champion Tips and Tricks: Session 1](expert-resources/champion-tips-1.md)
+   + [AEM Champion Tips and Tricks: Session 2](expert-resources/champion-tips-2.md)
