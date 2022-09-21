@@ -3,7 +3,7 @@ title: Webbplatshierarki, taxonomi och taggningstips
 description: Bästa praxis för webbplatshierarki, taxonomi och taggningstips
 hide: true
 hidefromtoc: true
-source-git-commit: 6f4d811e796b34985fa9d5af335239948e59c1ef
+source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -34,3 +34,4 @@ I de flesta fall kommer utvärderingen av AEM mognad att bidra till att genomfö
 Rekommenderade områden AEM mognadsbedömning: Design och arkitektur, produkthantering och -strategi, hantering och leverans av digitala resurser, analys, testning och säkerhet.
 
 Mycket bra AEM Champion Greg Dimeris för att han har samlat ihop den här informationen från olika Experience League-artiklar och sina egna rutiner!
+
