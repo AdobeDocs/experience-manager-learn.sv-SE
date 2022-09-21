@@ -8,10 +8,10 @@ user-guide-title: Komma igång med AEM Sites - WKND självstudiekurs
 user-guide-description: En självstudiekurs i flera delar för utvecklare som inte är AEM. Implementera en AEM sajt för ett fiktivt livsstilsmärke, WKND. Aktivera frontendpipeline för att snabba upp utvecklingscykeln till driftsättningscykeln.
 breadcrumb-title: AEM Sites WKND Tutorials
 index: y
-source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
+source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 2%
 
 ---
 
@@ -37,5 +37,8 @@ ht-degree: 0%
    + [5 - Tema](./site-template/theming.md)
 + Aktivera frontpipeline - devOps{#enable-frontend-pipeline-devops}
    + [Översikt](./enable-frontend-pipeline/overview.md)
-
+   + [1 - Granska projekt i full hög](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 - Uppdatera projektet så att det använder frontdelspipelinen](./enable-frontend-pipeline/update-project.md)
+   + [3 - Driftsätt med frontpipeline](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 - Överväganden](./enable-frontend-pipeline/considerations.md)
 
