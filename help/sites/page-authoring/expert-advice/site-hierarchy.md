@@ -1,11 +1,24 @@
 ---
 title: Webbplatshierarki, taxonomi och taggningstips
-description: Bästa praxis för webbplatshierarki, taxonomi och taggningstips
+seo-title: Overview of Authoring in AEM Sites
+description: I följande video visas en översikt över grundläggande redigeringsbegrepp i en AEM författarmiljö. Den använder platskonsolen som grund.
+seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
+topics: authoring, publishing
+audience: author, marketer
+doc-type: feature video
+activity: use
+version: 6.4, 6.5, Cloud Service
+kt: 4242
+thumbnail: 33594.jpg
+topic: Content Management
+role: User
+level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -16,8 +29,6 @@ ht-degree: 0%
 Metadata och taggar är avgörande för att öka effektiviteten i AEM. Användare, chefer och chefer inser att det finns ett behov av en holistisk strategi, men de tycker att det är svårt att göra framsteg. Kunskaperna är ofta isolerade bland användarna, vilket gör en holistisk strategi svår - och gör justeringarna ännu mer problematiska.
 
 Vad är skillnaden mellan metadata och taggar? Vilka affärsaspekter ska beaktas när er strategi utvecklas?
-
-En mer intensiv sammanfattning finns [här](https://adobe.sharepoint.com/:w:/r/sites/ACSSuccessServices/_layouts/15/Doc.aspx?sourcedoc=%7BFE5E873A-A3B6-4F40-BF22-A2C9F1269802%7D&amp;file=AEM_TagTaxonomyAndMetadata_BestPractice_en%20(2).docx&amp;action=default&amp;mobileredirect=true).
 
 ## Vad är syftet med metadata?
 

@@ -1,11 +1,12 @@
 ---
-title: Webbplatshierarki, taxonomi och taggningstips
-description: Bästa praxis för webbplatshierarki, taxonomi och taggningstips
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: Din AEM Sites-utvärdering av mognad
+seo-title: AEM Sites Maturity Assessment
+description: Denna checklista ger en översikt över viktiga frågor som du och ditt team bör besvara när de utvärderar mognaden för din AEM Sites-instans
+seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
+audience: author, marketer, developer
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
