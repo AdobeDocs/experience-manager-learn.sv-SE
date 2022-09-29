@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
+source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -151,15 +151,16 @@ ht-degree: 0%
    + [Skapa OSGi-tjänst](sign-multiple-documents/create-osgi-service.md)
    + [Skapa huvudarbetsflöde](sign-multiple-documents/create-main-workflow.md)
    + [Uppdatera arbetsflöde för signaturstatus](sign-multiple-documents/update-signature-status.md)
-   + [Anpassa komponenten Sammanfattning](sign-multiple-documents/customize-summary-component.md)
+   + [Anpassa sammanfattningskomponent](sign-multiple-documents/customize-summary-component.md)
    + [Skapa klientbibliotek](sign-multiple-documents/create-client-lib.md)
    + [Skapa formulärmall](sign-multiple-documents/create-af-template.md)
    + [Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
-   + [Skapa Forms för signering](sign-multiple-documents/create-forms-for-signing.md)
+   + [Skapa formulär för signering](sign-multiple-documents/create-forms-for-signing.md)
    + [Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
 + Anpassade arbetsflödessteg{#custom-workflow-steps}
    + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
-   + [Spara dokument i filsystemet](custom-workflow-steps/write-payload-document.md)
+   + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
+   + [Spara skickade data i strängvariabel](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + Variabler i AEM{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
