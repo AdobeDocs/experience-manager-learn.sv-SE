@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Den här självstudiekursen använder `curl` för att göra API-konfigurationer 
 
 Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
-1. Först identifierar du i vilken region det avancerade nätverket ska konfigureras med hjälp av Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. The `region name` krävs för att göra efterföljande API-anrop för Cloud Manager. Normalt används regionen där produktionsmiljön finns.
+1. Kontrollera först att regionen Advanced Networking är konfigurerad i med hjälp av Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. The `region name` krävs för att göra efterföljande API-anrop för Cloud Manager. Normalt används regionen där produktionsmiljön finns.
 
    __listRegions HTTP request__
 

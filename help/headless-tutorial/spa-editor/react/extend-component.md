@@ -11,9 +11,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SP
 
 1. Utöka en befintlig Core Component med ytterligare egenskaper och innehåll.
 2. Förstå grunderna för komponentarv med användning av `sling:resourceSuperType`.
-3. Lär dig hur du återanvänder befintlig logik och funktionalitet med hjälp av [delegeringsmönstret](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) för Sling-modeller.
+3. Lär dig använda [Delegeringsmönster](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) för Sling Models att återanvända befintlig logik och funktionalitet.
 
 ## Vad du ska bygga
 
-I det här kapitlet visas den ytterligare kod som behövs för att lägga till en extra egenskap i en `Image`-standardkomponent för att uppfylla kraven för en ny `Banner`-komponent. Komponenten `Banner` innehåller alla samma egenskaper som standardkomponenten `Image`, men innehåller en extra egenskap som användare kan använda för att fylla i **banderolltexten**.
+I det här kapitlet visas den ytterligare kod som behövs för att lägga till en extra egenskap i en standard `Image` för att uppfylla kraven för en ny `Banner` -komponenten. The `Banner` -komponenten innehåller alla samma egenskaper som standarden `Image` men innehåller en extra egenskap som användare kan använda för att fylla i **Banderolltext**.
 
 ![Slutgiltig banderollkomponent](assets/extend-component/final-author-banner-component.png)
 
@@ -40,12 +40,12 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 ## Arv med SSling Resource Super Type {#sling-resource-super-type}
 
-Om du vill utöka en befintlig komponentuppsättning anger du en egenskap med namnet `sling:resourceSuperType` i komponentdefinitionen.  `sling:resourceSuperType`är en  [](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) egenskap som kan anges för en AEM-komponents definition som pekar på en annan komponent. Detta anger uttryckligen att komponenten ska ärva alla funktioner i komponenten som identifieras som `sling:resourceSuperType`.
+Utöka en befintlig komponentuppsättning med en egenskap med namnet `sling:resourceSuperType` på komponentens definition.  `sling:resourceSuperType`är en [property](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) som kan anges för en AEM som pekar på en annan komponent. Detta anger uttryckligen att komponenten ska ärva alla funktioner i komponenten som identifieras som `sling:resourceSuperType`.
 
-Om vi vill utöka `Image`-komponenten på `wknd-spa-react/components/image` måste vi uppdatera koden i `ui.apps`-modulen.
+Om vi vill utöka `Image` komponent vid `wknd-spa-react/components/image` måste koden i `ui.apps` -modul.
 
-1. Skapa en ny mapp under `ui.apps`-modulen för `banner` på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
-1. Under `banner` skapar du en komponentdefinition (`.content.xml`) enligt följande:
+1. Skapa en ny mapp under `ui.apps` modul för `banner` på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/banner`.
+1. Under `banner` skapa en komponentdefinition (`.content.xml`) på följande sätt:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -56,14 +56,14 @@ Om vi vill utöka `Image`-komponenten på `wknd-spa-react/components/image` mås
        componentGroup="WKND SPA React - Content"/>
    ```
 
-   Detta anger att `wknd-spa-react/components/banner` ska ärva alla funktioner i `wknd-spa-react/components/image`.
+   Den här uppsättningen `wknd-spa-react/components/banner` ärva alla funktioner i `wknd-spa-react/components/image`.
 
 ## cq:editConfig {#cq-edit-config}
 
-Filen `_cq_editConfig.xml` styr dra och släpp-beteendet i AEM redigeringsgränssnitt. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten.
+The `_cq_editConfig.xml` -filen styr dra och släpp-beteendet i det AEM redigeringsgränssnittet. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten.
 
-1. I modulen `ui.apps` skapar du en annan fil under `banner` med namnet `_cq_editConfig.xml`.
-1. Fyll i `_cq_editConfig.xml` med följande XML:
+1. I `ui.apps` skapa en annan fil under `banner` namngiven `_cq_editConfig.xml`.
+1. Fylla `_cq_editConfig.xml` med följande XML:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -159,7 +159,7 @@ Filen `_cq_editConfig.xml` styr dra och släpp-beteendet i AEM redigeringsgräns
    </jcr:root>
    ```
 
-1. Den unika aspekten av filen är noden `<parameters>` som anger resourceType till `wknd-spa-react/components/banner`.
+1. Den unika aspekten av filen är `<parameters>` nod som ställer in resourceType på `wknd-spa-react/components/banner`.
 
    ```xml
    <parameters
@@ -170,14 +170,14 @@ Filen `_cq_editConfig.xml` styr dra och släpp-beteendet i AEM redigeringsgräns
        imageRotate=""/>
    ```
 
-   De flesta komponenter kräver inte en `_cq_editConfig`. Bildkomponenter och underordnade är undantag.
+   De flesta komponenter kräver ingen `_cq_editConfig`. Bildkomponenter och underordnade är undantag.
 
 ## Utöka dialogrutan {#extend-dialog}
 
-Vår `Banner`-komponent kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder ling-arv kan vi använda funktioner i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
+Våra `Banner` -komponenten kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder arv från Sling kan vi använda funktionerna i [Samla resurser](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) om du vill åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
-1. Skapa en mapp med namnet `_cq_dialog` i modulen `ui.apps` under mappen `banner`.
-1. Under `_cq_dialog` skapar du en dialogrutedefinitionsfil `.content.xml`. Fyll den med följande:
+1. I `ui.apps` -modul, under `banner` mapp, skapa en mapp med namnet `_cq_dialog`.
+1. Under `_cq_dialog` skapa en dialogrutedefinitionsfil `.content.xml`. Fyll den med följande:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -231,22 +231,22 @@ Vår `Banner`-komponent kräver ett extra textfält i dialogrutan för att hämt
    </jcr:root>
    ```
 
-   Ovanstående XML-definition skapar en ny flik med namnet **Text** och sorterar den *före* den befintliga fliken **Resurs**. Det kommer att innehålla ett enda fält **Banderolltext**.
+   XML-definitionen ovan skapar en ny flik med namnet **Text** och beställa *före* befintlig **Tillgång** -fliken. Det kommer att innehålla ett enda fält **Banderolltext**.
 
 1. Dialogrutan ser ut så här:
 
    ![Slutlig dialogruta för banderoll](assets/extend-component/banner-dialog.png)
 
-   Observera att vi inte behövde definiera flikarna för **Resurs** eller **Metadata**. Dessa ärvs via egenskapen `sling:resourceSuperType`.
+   Observera att vi inte behövde definiera flikarna för **Tillgång** eller **Metadata**. Dessa ärvs via `sling:resourceSuperType` -egenskap.
 
-   Innan vi kan förhandsgranska dialogrutan måste vi implementera SPA och funktionen `MapTo`.
+   Innan vi kan förhandsgranska dialogen måste vi implementera SPA och `MapTo` funktion.
 
 ## Implementera SPA {#implement-spa-component}
 
-För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny SPA skapas som ska mappas till `wknd-spa-react/components/banner`. Detta görs i modulen `ui.frontend`.
+För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny SPA skapas som ska mappas till `wknd-spa-react/components/banner`. Detta görs i `ui.frontend` -modul.
 
-1. Skapa en ny mapp för `Banner` på `ui.frontend/src/components/Banner` i modulen `ui.frontend`.
-1. Skapa en ny fil med namnet `Banner.js` under mappen `Banner`. Fyll den med följande:
+1. I `ui.frontend` skapa en ny mapp för `Banner` på `ui.frontend/src/components/Banner`.
+1. Skapa en ny fil med namnet `Banner.js` under `Banner` mapp. Fyll den med följande:
 
    ```js
    import React, {Component} from 'react';
@@ -297,9 +297,9 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
    MapTo('wknd-spa-react/components/banner')(Banner, BannerEditConfig);
    ```
 
-   Den här SPA-komponenten mappar till AEM `wknd-spa-react/components/banner` som skapades tidigare.
+   Den här SPA-komponenten mappar till AEM `wknd-spa-react/components/banner` skapades tidigare.
 
-1. Uppdatera `import-components.js` på `ui.frontend/src/components/import-components.js` för att inkludera den nya SPA `Banner`-komponenten:
+1. Uppdatera `import-components.js` på `ui.frontend/src/components/import-components.js` att inkludera nya `Banner` SPA:
 
    ```diff
      import './ExperienceFragment/ExperienceFragment';
@@ -314,24 +314,24 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. Uppdatera SPA-mallens princip för att lägga till `Banner`-komponenten som en **tillåten komponent**.
+1. Uppdatera SPA-mallens princip för att lägga till `Banner` som **tillåten komponent**.
 
-1. Navigera till en SPA sida och lägg till komponenten `Banner` på en av SPA sidor:
+1. Navigera till en SPA och lägg till `Banner` till någon av de SPA sidorna:
 
    ![Lägg till banderollkomponent](assets/extend-component/add-banner-component.png)
 
    >[!NOTE]
    >
-   > I dialogrutan kan du spara ett värde för **banderolltext**, men det här värdet återspeglas inte i SPA. För att aktivera måste vi utöka komponentens Sling-modell.
+   > I dialogrutan kan du spara ett värde för **Banderolltext** men det här värdet återspeglas inte i SPA. För att aktivera måste vi utöka komponentens Sling-modell.
 
 ## Lägg till Java-gränssnitt {#java-interface}
 
-För att slutligen visa värdena från komponentdialogrutan för React-komponenten måste vi uppdatera Sling-modellen som fyller i JSON för `Banner`-komponenten. Detta görs i modulen `core` som innehåller all Java-kod för vårt SPA projekt.
+För att slutligen visa värdena från komponentdialogen för React-komponenten måste vi uppdatera Sling-modellen som fyller i JSON för `Banner` -komponenten. Detta görs i `core` -modul som innehåller all Java-kod för vårt SPA.
 
-Först skapar vi ett nytt Java-gränssnitt för `Banner` som utökar Java-gränssnittet.`Image`
+Först skapar vi ett nytt Java-gränssnitt för `Banner` som utökar `Image` Java-gränssnitt.
 
-1. I modulen `core` skapar du en ny fil med namnet `BannerModel.java` på `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
-1. Fyll i `BannerModel.java` med följande:
+1. I `core` modul skapa en ny fil med namnet `BannerModel.java` på `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models`.
+1. Fylla `BannerModel.java` med följande:
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models;
@@ -347,15 +347,15 @@ Först skapar vi ett nytt Java-gränssnitt för `Banner` som utökar Java-gräns
    }
    ```
 
-   Detta ärver alla metoder från Core Component `Image`-gränssnittet och lägger till en ny metod `getBannerText()`.
+   Detta ärver alla metoder från kärnkomponenten `Image` gränssnitt och en ny metod `getBannerText()`.
 
 ## Implementera segmenteringsmodell {#sling-model}
 
-Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
+Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
 
-1. I modulen `core` skapar du en ny fil med namnet `BannerModelImpl.java` på `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`.
+1. I `core` modul skapa en ny fil med namnet `BannerModelImpl.java` på `core/src/main/java/com/adobe/aem/guides/wkndspa/react/core/models/impl`.
 
-1. Fyll i `BannerModelImpl.java` med följande:
+1. Fylla `BannerModelImpl.java` med följande:
 
    ```java
    package com.adobe.aem.guides.wkndspa.react.core.models.impl;
@@ -432,9 +432,9 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
    }
    ```
 
-   Lägg märke till att anteckningarna `@Model` och `@Exporter` används för att säkerställa att Sling Model kan serialiseras som JSON via Sling Model Exporter.
+   Lägg märke till att `@Model` och `@Exporter` kommentarer för att säkerställa att Sling Model kan serialiseras som JSON via Sling Model Exporter.
 
-   `BannerModelImpl.java` använder  [delegeringsmönstret för ](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) delningsläge för att undvika att skriva om all logik från huvudkomponenten i Image.
+   `BannerModelImpl.java` använder [Delegeringsmönster för segmenteringsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) för att undvika att skriva om all logik från Image-kärnkomponenten.
 
 1. Observera följande rader:
 
@@ -444,7 +444,7 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
    private Image image;
    ```
 
-   Anteckningen ovan instansierar ett bildobjekt med namnet `image` baserat på `sling:resourceSuperType`-arvet för komponenten `Banner`.
+   Anteckningen ovan instansierar ett bildobjekt med namnet `image` baserat på `sling:resourceSuperType` arv av `Banner` -komponenten.
 
    ```java
    @Override
@@ -453,9 +453,9 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
    }
    ```
 
-   Sedan kan du helt enkelt använda objektet `image` för att implementera metoder som definieras av gränssnittet `Image`, utan att behöva skriva logiken själv. Den här tekniken används för `getSrc()`, `getAlt()` och `getTitle()`.
+   Då kan du helt enkelt använda `image` -objekt som implementerar metoder som definieras av `Image` utan att behöva skriva själva logiken. Den här tekniken används för `getSrc()`, `getAlt()` och `getTitle()`.
 
-1. Öppna ett terminalfönster och distribuera bara uppdateringarna till modulen `core` med profilen Maven `autoInstallBundle` från katalogen `core`.
+1. Öppna ett terminalfönster och distribuera bara uppdateringarna till `core` modul som använder Maven `autoInstallBundle` från `core` katalog.
 
    ```shell
    $ cd core/
@@ -464,8 +464,8 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
 
 ## Sammanställ allt {#put-together}
 
-1. Gå tillbaka till AEM och öppna den SPA sidan som innehåller komponenten `Banner`.
-1. Uppdatera `Banner`-komponenten så att den innehåller **banderolltext**:
+1. Återgå till AEM och öppna SPA som har `Banner` -komponenten.
+1. Uppdatera `Banner` komponent som ska inkluderas **Banderolltext**:
 
    ![Banderolltext](assets/extend-component/banner-text-dialog.png)
 
@@ -475,11 +475,11 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
 
    Spara uppdateringarna i dialogrutan.
 
-1. Du bör nu se det återgivna värdet **Banderolltext**:
+1. Du bör nu se det återgivna värdet för **Banderolltext**:
 
    ![Banderolltext visas](assets/extend-component/banner-text-displayed.png)
 
-1. Visa JSON-modellsvaret på: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) och sök efter `wknd-spa-react/components/card`:
+1. Visa JSON-modellsvaret på: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) och söka efter `wknd-spa-react/components/card`:
 
    ```json
    "banner": {
@@ -490,7 +490,7 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
     },
    ```
 
-   Observera att JSON-modellen uppdateras med ytterligare nyckel-/värdepar när Sling-modellen har implementerats i `BannerModelImpl.java`.
+   Observera att JSON-modellen uppdateras med ytterligare nyckel/värde-par efter implementering av Sling-modellen i `BannerModelImpl.java`.
 
 ## Grattis! {#congratulations}
 

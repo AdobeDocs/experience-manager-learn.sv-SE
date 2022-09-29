@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Förstå hur källkoden för ett Single Page-program (SPA) skrivet i React kan i
 ## Vad du ska bygga
 
 I det här kapitlet gör du flera små ändringar av SPA för att förstå hur den är integrerad med AEM.
-I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att bygga ut **static** `Header` AEM kommer att användas.
+I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att bygga ut **static** `Header` flera metoder AEM utveckling av SPA används.
 
 ![Nytt sidhuvud i AEM](./assets/integrate-spa/final-header-component.png)
 
@@ -44,7 +44,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 Två moduler skapades som en del av AEM: `ui.apps` och `ui.frontend`.
 
-The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning kommer att ske i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
+The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning görs i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
 
 ![ui.frontHigh-level architecture](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -132,7 +132,7 @@ Kontrollera sedan `ui.frontend` för att förstå SPA som har genererats automat
 
 ## Lägga till en statisk SPA {#static-spa-component}
 
-Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM. Detta blir en enkel förändring, bara för att illustrera hur SPA uppdateras.
+Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM. Det här är en enkel förändring, bara för att illustrera hur SPA uppdateras.
 
 1. I `ui.frontend` modul, under `ui.frontend/src/components` skapa en ny mapp med namnet `Header`.
 1. Skapa en fil med namnet `Header.js` under `Header` mapp.
@@ -227,7 +227,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
 
 Som vi har sett i tidigare övningar tar det några minuter att skapa och synkronisera klientbiblioteket till en lokal instans av AEM. Detta är godtagbart för sluttestning, men är inte idealiskt för större delen av SPA.
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen kommer JSON-innehållet från en instans av AEM som körs att **proxibel** till utvecklingsservern.
+A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen är JSON-innehållet från en instans av AEM som körs **proxibel** till utvecklingsservern.
 
 1. Återgå till utvecklingsmiljön och öppna filen `ui.frontend/package.json`.
 
@@ -237,7 +237,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan anv
    "proxy": "http://localhost:4502",
    ```
 
-   The [Skapa React App](https://create-react-app.dev/docs/proxying-api-requests-in-development) har en enkel mekanism för proxy-API-begäranden. Alla okända förfrågningar kommer att proxyvis `localhost:4502`, den lokala AEM snabbstarten.
+   The [Skapa React App](https://create-react-app.dev/docs/proxying-api-requests-in-development) har en enkel mekanism för proxy-API-begäranden. Alla okända förfrågningar proxyvis `localhost:4502`, den lokala AEM snabbstarten.
 
 1. Öppna ett terminalfönster och navigera till `ui.frontend` mapp. Kör kommandot `npm start`:
 

@@ -13,20 +13,20 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
 # Skapa din första interaktiva kommunikation för webbkanalen
 
-Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du stegvisa instruktioner för att skapa en interaktiv kommunikation för tryckkanalen.
+Interactive Communications är nytt för AEM Forms 6.4. Det här dokumentet guidar dig genom de steg som behövs för att skapa en interaktiv kommunikation för tryckkanalen.
 
 ## Förutsättningar {#prerequistes}
 
-[Hämta och importera mediefilen som är relaterad till den här självstudiekursen till AEM med pakethanteraren.](assets/gettingstartedassets.zip). Den här ZIP-filen innehåller bilder och dokumentfragment som kommer att användas i den här självstudiekursen
+[Hämta och importera mediefilen som är relaterad till den här självstudiekursen till AEM med pakethanteraren.](assets/gettingstartedassets.zip). Den här ZIP-filen innehåller bilder och dokumentfragment som används i den här självstudiekursen
 
 [Ladda ned och zippa upp den här filen.](assets/warfileandswaggerfile.zip) Den här filen innehåller filen SampleRest.war som måste distribueras till Tomcat och swagger som ska användas för att konfigurera datakällan.
 

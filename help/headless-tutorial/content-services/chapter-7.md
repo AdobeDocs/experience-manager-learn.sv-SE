@@ -1,51 +1,51 @@
 ---
-title: Kapitel 7 - Använda AEM innehållstjänster från en Mobile-app - Innehållstjänster
-description: Kapitel 7 i självstudiekursen innehåller Android-appen Mobile som kan användas för innehåll som skapats AEM Content Services.
+title: Kapitel 7 - Använda AEM innehållstjänster från en mobilapp - Innehållstjänster
+description: Kapitel 7 i självstudiekursen innehåller Android-mobilappen som kan använda redigerat innehåll från AEM Content Services.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
 
 # Kapitel 7 - Använda AEM innehållstjänster från en mobilapp
 
-I kapitel 7 i självstudiekursen används en Android Mobile-app för att konsumera innehåll från AEM Content Services.
+I kapitel 7 i självstudiekursen används en Android-mobilapp för att förbruka innehåll från AEM Content Services.
 
-## Android-appen för Mobile
+## Android-mobilappen
 
-I den här självstudiekursen används en **enkelt Android Mobile-program** för att förbruka och visa händelseinnehåll som exponeras av AEM Content Services.
+I den här självstudiekursen används en **enkelt Android-mobilapp** för att förbruka och visa händelseinnehåll som exponeras av AEM Content Services.
 
 Användning av [Android](https://developer.android.com/) är i stort sett oviktigt, och den förbrukande mobilappen kan skrivas i vilket ramverk som helst för vilken mobilplattform som helst, till exempel iOS.
 
 Android används som självstudiekurs eftersom det går att köra en Android-emulator på Windows, macOS och Linux, dess popularitet och att det kan skrivas som Java, ett språk som utvecklarna förstår väl AEM.
 
-*Självstudiekursens Android Mobile-app är **not**som är avsedda att instruera dig hur du bygger Android-Mobile-appar eller förmedlar metodtips för Android-utveckling, men snarare att illustrera hur AEM Content Services kan användas från ett Mobile-program.*
+*Självstudiekursens Android-mobilapp är **not**är avsedda att instruera dig hur du bygger Android-mobilappar eller förmedlar vedertagna standarder för Android-utveckling, men snarare att illustrera hur AEM Content Services kan användas från ett mobilprogram.*
 
-### Hur AEM innehållstjänster driver Mobile appupplevelse
+### Hur AEM innehållstjänster driver mobilappsupplevelsen
 
-![Mappning av Mobile-program till innehållstjänster](assets/chapter-7/content-services-mapping.png)
+![Mappning av mobilapp till innehållstjänster](assets/chapter-7/content-services-mapping.png)
 
 1. The **logo** enligt definitionen i [!DNL Events API] sida **Bildkomponent**.
 1. The **tagg** enligt definition i [!DNL Events API] sida **Textkomponent**.
 1. Detta **Händelselista** härleds från serialiseringen av händelseinnehållsfragment som visas via den konfigurerade **Content Fragment List-komponent**.
 
-## Demonstration av Mobile App
+## Demonstration av mobilappar
 
 >[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
 
-### Konfigurera Mobile App för icke-lokal värdanvändning
+### Konfigurera mobilappen för icke-lokal värdanvändning
 
-Om AEM Publish inte körs **http://localhost:4503** värddatorn och porten kan uppdateras i Mobile-appens [!DNL Settings] för att peka på egenskapen AEM Publish host/port.
+Om AEM Publish inte körs **http://localhost:4503** värden och port kan uppdateras i mobilappens [!DNL Settings] för att peka på egenskapen AEM Publish host/port.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
 
-## Köra Mobile App lokalt
+## Kör mobilappen lokalt
 
 1. Hämta och installera [Android Studio](https://developer.android.com/studio/install) för att installera Android-emulatorn.
 1. **Hämta** Android [!DNL APK] fil [GitHub > Assets > wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
@@ -63,7 +63,7 @@ Om AEM Publish inte körs **http://localhost:4503** värddatorn och porten kan u
    1. Välj en **Pixel 2**.
    1. Klicka på **Nästa** -knappen.
    1. Välj **Q** med **API-nivå 29**.
-      * När AVD Manager startas första gången ombeds du ladda ned den versionshanterade API:n. Klicka på nedladdningslänken bredvid Q-versionen och slutför nedladdningen och installationen.
+      * När du startar AVD Manager första gången ombeds du ladda ned det versionshanterade API:t. Klicka på nedladdningslänken bredvid Q-versionen och slutför nedladdningen och installationen.
    1. Klicka på **Nästa** -knappen.
    1. Klicka på **Slutför** -knappen.
 1. Stäng **AVD Manager** -fönstret.
@@ -77,27 +77,27 @@ Om AEM Publish inte körs **http://localhost:4503** värddatorn och porten kan u
 
 >[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
 
-## Mobile App Code
+## Koden för mobilappar
 
-I det här avsnittet markeras den Android Mobile App-kod som de flesta interagerar med och som är beroende av AEM Content Services och JSON-utdata.
+I det här avsnittet beskrivs den Android-kod för mobilappar som de flesta interagerar med och är beroende av AEM Content Services och JSON-utdata.
 
-Vid inläsning skapar Mobile App `HTTP GET` till `/content/wknd-mobile/en/api/events.model.json` som är AEM Content Services slutpunkt konfigurerad att tillhandahålla innehållet som driver Mobile App.
+Vid inläsning skapar mobilappen `HTTP GET` till `/content/wknd-mobile/en/api/events.model.json` som är AEM Content Services slutpunkt konfigurerad att tillhandahålla innehållet som driver mobilappen.
 
-På grund av den redigerbara mallen för API:t för händelser (`/content/wknd-mobile/en/api/events.model.json`) är låst kan Mobile App kodas för att söka efter specifik information på specifika platser i JSON-svaret.
+På grund av den redigerbara mallen för API:t för händelser (`/content/wknd-mobile/en/api/events.model.json`) är låst kan mobilappen kodas för att söka efter specifik information på specifika platser i JSON-svaret.
 
 ### Kodflöde på hög nivå
 
-1. Öppna [!DNL WKND Mobile] Appen anropar en `HTTP GET` begäran till AEM Publish på `/content/wknd-mobile/en/api/events.model.json` för att samla in innehåll för att fylla i Mobile-appens användargränssnitt.
-2. När du har tagit emot innehåll från AEM, var och en av de tre vyelementen i Mobile App, **logotyp, taggrad och händelselista**, initieras med innehåll från AEM.
-   * För att binda AEM till visningselementet i Mobile App är det JSON som representerar varje AEM objekt mappat till ett Java POJO, som i sin tur är bundet till Android-visningselementet.
+1. Öppna [!DNL WKND Mobile] Appen anropar en `HTTP GET` begäran till AEM Publish på `/content/wknd-mobile/en/api/events.model.json` för att samla in innehållet för att fylla i mobilappens användargränssnitt.
+2. När du har tagit emot innehåll från AEM, var och en av de tre vyelementen i mobilappen, **logotyp, taggrad och händelselista**, initieras med innehåll från AEM.
+   * För att binda AEM till visningselementet i mobilappen är det JSON som representerar varje AEM objekt mappat till ett Java POJO, som i sin tur är bundet till Android-visningselementet.
       * Image Component JSON → Logo POJO → Logo ImageView
       * Textkomponent JSON → TagLine POJO → Text ImageView
       * Content Fragment List JSON → Events POJO→Events RecyclerView
-   * *Mobile App-koden kan mappa JSON till POJO på grund av de välkända platserna i det större JSON-svaret. Kom ihåg att JSON-tangenterna för&quot;image&quot;,&quot;text&quot; och&quot;contentfragmentlist&quot; styrs av AEM komponenters nodnamn. Om dessa nodnamn ändras kommer Mobile App att brytas eftersom den inte kommer att kunna hämta nödvändigt innehåll från JSON-data.*
+   * *Koden för mobilappen kan mappa JSON till POJO på grund av de välkända platserna i det större JSON-svaret. Kom ihåg att JSON-tangenterna för&quot;image&quot;,&quot;text&quot; och&quot;contentfragmentlist&quot; styrs av AEM komponenters nodnamn. Om dessa nodnamn ändras kommer mobilappen att brytas eftersom den inte kommer att kunna hämta nödvändigt innehåll från JSON-data.*
 
 #### AEM Content Services-slutpunkten anropas
 
-Nedan följer en destillation av koden i Mobile-appens `MainActivity` Ansvarig för att anropa AEM Content Services för att samla in det innehåll som driver upplevelsen av Mobile App.
+Nedan följer en destillation av koden i mobilappens `MainActivity` Ansvarig för att anropa AEM Content Services för att samla in innehåll som driver upplevelsen av mobilappar.
 
 ```
 protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +128,7 @@ private void initApp(final List<ViewBinder> viewBinders) {
 }
 ```
 
-`onCreate(..)` är initieringsgaffeln för Mobile App och registrerar de 3 anpassade `ViewBinders` ansvarar för parsning av JSON och bindning av värdena till `View` -element.
+`onCreate(..)` är initieringsgaffeln för mobilappen och registrerar de 3 anpassade `ViewBinders` ansvarar för parsning av JSON och bindning av värdena till `View` -element.
 
 `initApp(...)` anropas sedan vilket gör att HTTP-GET-begäran skickas till AEM Content Services-slutpunkten på AEM Publish för att samla in innehållet. När ett giltigt JSON-svar tas emot, skickas JSON-svaret till varje `ViewBinder` som ansvarar för att analysera JSON och binda den till mobilen `View` -element.
 
@@ -183,11 +183,11 @@ public class Image {
 
 Event POJO, som kräver att du väljer många fler datapunkter från JSON-objektet, har fler fördelar än den här tekniken, som vi bara vill ha är `src`.
 
-## Utforska Mobile App Experience
+## Utforska upplevelsen av mobilappar
 
-Nu när du har en förståelse för hur AEM Content Services kan skapa en egen Mobile-upplevelse kan du använda det du lärt dig för att utföra följande steg och se ändringarna återspeglas i Mobile App.
+Nu när du har en förståelse för hur AEM Content Services kan skapa en mobil upplevelse kan du använda det du lärt dig för att utföra följande steg och se ändringarna återspeglas i mobilappen.
 
-Efter varje steg uppdaterar du Mobile-appen och verifierar uppdateringen av mobilupplevelsen.
+Uppdatera mobilappen efter varje steg och bekräfta uppdateringen av mobilupplevelsen.
 
 1. Skapa och publicera **new [!DNL Event] Innehållsfragment**
 1. Avpublicera **befintlig [!DNL Event] Innehållsfragment**

@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
-source-git-commit: 8e8991d128ff40f7873dd8666460e761356c2dd9
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -74,10 +74,10 @@ public class HttpExternalServiceImpl implements ExternalService {
         if (System.getenv("AEM_PROXY_HOST") != null) {
             // Create a ProxySelector that uses to AEM's provided AEM_PROXY_HOST, with a fallback of proxy.tunnel, and proxy port using the AEM_HTTP_PROXY_PORT variable. 
             // If the destination requires HTTPS, then use the variable AEM_HTTPS_PROXY_PORT instead of AEM_HTTP_PROXY_PORT.
-            // The explicit fallback of 3128 will be obsoleted in Jan 2022, and only the AEM_HTTP_PROXY_PORT/AEM_HTTPS_PROXY_PORT variable will be required
+ 
             ProxySelector proxySelector = ProxySelector.of(new InetSocketAddress(
                 System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel"), 
-                Integer.parseInt(System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", "3128"))));
+                Integer.parseInt(System.getenv().get("AEM_HTTP_PROXY_PORT"))));
 
             client = HttpClient.newBuilder().proxy(proxySelector).build();
             log.debug("Using HTTPClient with AEM_PROXY_HOST");

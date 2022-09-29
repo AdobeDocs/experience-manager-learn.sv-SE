@@ -1,5 +1,5 @@
 ---
-title: Testa din förståelse
+title: Testa din förståelse för Forms-september
 description: Utföra övningar
 type: Documentation
 role: Developer
@@ -9,7 +9,7 @@ feature: Adaptive Forms
 topic: Development
 kt: 9980
 exl-id: 6bd47a37-5a4e-47a9-9be7-782f611d8f13
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 0%
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 ## Sammanställ filer i PDF
 
-Ändra filen assemble2pdfs.ddx för att sätta ihop 3 PDF-filer.Du måste placera den tredje PDF-filen under mappen resources/pdffiles
+Ändra `assemble2pdfs.ddx` för att sammanställa 3 PDF-filer.
 
-
+Du placerar den tredje PDF-filen i mappen resources/pdffiles.

@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Möjligheten att skapa Adaptiv Forms baserat på JSON-schema introducerades i AE
 
 När du har skapat ett adaptivt formulär baserat på JSON-schema är nästa steg att lagra skickade data i databasen. I detta syfte kommer vi att använda den nya JSON-datatypen som introducerats av olika databasleverantörer. För den här artikeln använder vi MySQL 8-databasen för att lagra inskickade data.
 
-MySql 8-databasen användes för den här artikeln. MySQL introducerade en ny datatyp som heter [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). Detta gör det enklare att lagra och fråga JSON-objekt. Vi kommer att lagra inskickade data i en kolumn av typen JSON i vår databas.
+MySql 8-databasen användes för den här artikeln. MySQL introducerade en ny datatyp som heter [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). Detta gör det enklare att lagra och fråga JSON-objekt. Vi lagrar inskickade data i en kolumn av typen JSON i vår databas.
 
 Följande skärmbild visar de skickade formulärdata som lagras i datatypen JSON. Kolumnen &quot;formdata&quot; är av typen JSON. Vi lagrade också namnet på formuläret som är associerat med data i kolumnformulärnamnet
 

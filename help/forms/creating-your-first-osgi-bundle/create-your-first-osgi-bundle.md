@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Installera den senaste versionen av [förmörka](https://www.eclipse.org/downloa
 
 ## Skapa ditt första projekt
 
-Arketype är en Maven-projektmallverktygslåda. En arkityp definieras som ett ursprungligt mönster eller en modell från vilken alla andra saker av samma typ görs. Namnet passar ihop med att vi försöker skapa ett system som ger ett konsekvent sätt att generera Maven-projekt. Med Archetype kan man skapa Maven-projektmallar för användarna och ge användarna möjlighet att generera parametriserade versioner av dessa projektmallar.
+Arketype är en Maven-projektmallverktygslåda. En arkityp definieras som ett ursprungligt mönster eller en modell från vilken alla andra saker av samma typ görs. Namnet passar ihop med att vi försöker skapa ett system som ger ett konsekvent sätt att generera Maven-projekt. Arketype hjälper författare att skapa Maven-projektmallar för användare och ger användarna möjlighet att generera parametriserade versioner av dessa projektmallar.
 Så här skapar du ditt första maven-projekt:
 
 * Skapa en ny mapp med namnet `aemformsbundles` i C-enheten
@@ -72,7 +72,7 @@ När du är klar bör du se ett meddelande om att bygget lyckades i kommandofön
 ## Skapa förmörkande projekt från ditt maven-projekt
 
 * Ändra arbetskatalogen till `mysite`
-* Kör `mvn eclipse:eclipse` från kommandoraden. Kommandot läser din pom-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse kan förstå projekttyper, relationer, klassökväg osv.
+* Kör `mvn eclipse:eclipse` från kommandoraden. Kommandot läser din pom-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse förstår projekttyper, relationer, klassökväg osv.
 
 ## Importera projektet till förmörkning
 

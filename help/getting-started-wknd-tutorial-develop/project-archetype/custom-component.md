@@ -12,9 +12,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4131'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Vad du ska bygga {#byline-component}
 
-I den här delen av WKND-självstudiekursen skapas en Byline-komponent som ska användas för att visa redigerad information om en artikels medverkande.
+I den här delen av WKND-självstudiekursen skapas en Byline-komponent som används för att visa redigerad information om en artikels medverkande.
 
 ![exempel på byline-komponent](assets/custom-component/byline-design.png)
 
@@ -82,7 +82,7 @@ Implementeringen av komponenten Byline innehåller en dialogruta som samlar in b
 
 Skapa först nodstrukturen för Byline-komponenten och definiera en dialogruta. Detta representerar komponenten i AEM och definierar implicit komponentens resurstyp genom sin placering i JCR-läsaren.
 
-Dialogrutan visar gränssnittet som innehållsförfattare kan använda. För den här implementeringen AEM WCM Core Component&#39;s **Bild** -komponenten används för att hantera redigering och återgivning av Bylines bild, så den ställs in som vår komponents `sling:resourceSuperType`.
+Dialogrutan visar gränssnittet som innehållsförfattare kan använda. För den här implementeringen AEM WCM Core Component&#39;s **Bild** -komponenten används för att hantera redigering och återgivning av Byline-bilden, så den måste anges som vår komponents `sling:resourceSuperType`.
 
 ### Skapa komponentdefinition {#create-component-definition}
 
@@ -372,7 +372,7 @@ Byline Sling Model förlitar sig på flera Java-API:er som tillhandahålls av AE
    ...
    ```
 
-   The `uber-jar` tas endast med när `classic` profilen anropas, dvs `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genererats av AEM Project Archetype `uber-jar` är standardvärdet om den angivna AEM är 6.5 eller 6.4.
+   The `uber-jar` tas endast med när `classic` profilen anropas, dvs `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genererats av AEM Project Archetype `uber-jar` är standard om den angivna versionen av AEM är 6.5 eller 6.4.
 
    The [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla publika Java-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen som finns i projektets rot `aem-guides-wknd/pom.xml`.
 
@@ -616,7 +616,7 @@ Det finns två sätt att ta itu med detta:
 
 Kontrollera om `fileReference` JCR-egenskapen löses till en resurs. *ELLER* Konvertera den här resursen till en Core Component Image Sling-modell och kontrollera att `getSrc()` metoden är inte tom.
 
-Vi väljer **sekund** strategi. Det första tillvägagångssättet är förmodligen tillräckligt, men i den här självstudien kommer det senare att användas för att vi ska kunna utforska andra funktioner i Sling Models.
+Vi väljer **sekund** strategi. Det första tillvägagångssättet är förmodligen tillräckligt, men i den här självstudien används det senare för att vi ska kunna utforska andra funktioner i Sling Models.
 
 1. Skapa en privat metod som hämtar bilden. Den här metoden är privat eftersom vi inte behöver visa bildobjektet i själva HTML-koden och bara använder den för att köra `isEmpty().`
 
@@ -705,7 +705,7 @@ Vi väljer **sekund** strategi. Det första tillvägagångssättet är förmodli
 
    Kom ihåg att Sling Models är **NOT** OSGi Services, så det är säkert att underhålla klasstillstånd. Ojämna `@PostConstruct` hämtar och ställer in Sling Model-klasstillstånd för senare användning, på samma sätt som en vanlig konstruktor gör.
 
-   Observera att om `@PostConstruct` metoden genererar ett undantag. Sling Model instansierar inte (den blir null).
+   Observera att om `@PostConstruct` metoden genererar ett undantag. Sling Model instansierar inte (den är null).
 
 1. **getImage()** kan nu uppdateras för att returnera bildobjektet.
 
@@ -790,7 +790,7 @@ Vi väljer **sekund** strategi. Det första tillvägagångssättet är förmodli
        /**
        * @PostConstruct is immediately called after the class has been initialized
        * but BEFORE any of the other public methods. 
-       * It is a good method to initialize variables that will be used by methods in the rest of the model
+       * It is a good method to initialize variables that is used by methods in the rest of the model
        *
        */
        @PostConstruct

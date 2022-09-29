@@ -1,38 +1,38 @@
 ---
 title: Om Adobe IMS-autentisering med AEM på Adobes hanterade tjänster
-description: Adobe Experience Manager introducerar stöd för Admin Console för AEM instanser och Adobe IMS-baserad (Identity Management System) AEM i Managed Services.   Tack vare den här integreringen kan AEM Managed Services-kunder hantera alla Experience Cloud-användare i en enda enhetlig webbkonsol. Användare och grupper kan tilldelas produktprofiler som är kopplade till AEM instanser, vilket ger centralt hanterad åtkomst till specifika AEM.
+description: Adobe Experience Manager introducerar stöd för Admin Console för AEM och Adobe IMS-baserad (Identity Management System) autentisering för AEM på Managed Services.   Tack vare den här integreringen kan AEM Managed Services-kunder hantera alla Experience Cloud-användare i en enda enhetlig webbkonsol. Användare och grupper kan tilldelas produktprofiler som är kopplade till AEM instanser, vilket ger centralt hanterad åtkomst till specifika AEM.
 version: 6.4, 6.5
-feature: Användare och grupper
+feature: User and Groups
 topics: authentication, security
 activity: understand
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 kt: 781
-topic: Arkitektur
+topic: Architecture
 role: Architect
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
 
-
 # Om Adobe IMS-autentisering med AEM på Adobes hanterade tjänster{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
-Adobe Experience Manager introducerar stöd för Admin Console för AEM instanser och Adobe IMS-baserad (Identity Management System) AEM i Managed Services.   Tack vare den här integreringen kan AEM Managed Services-kunder hantera alla Experience Cloud-användare i en enda enhetlig webbkonsol. Användare och grupper kan tilldelas produktprofiler som är kopplade till AEM instanser, vilket ger centralt hanterad åtkomst till specifika AEM.
+Adobe Experience Manager introducerar stöd för Admin Console för AEM och Adobe IMS-baserad (Identity Management System) autentisering för AEM på Managed Services.   Tack vare den här integreringen kan AEM Managed Services-kunder hantera alla Experience Cloud-användare i en enda enhetlig webbkonsol. Användare och grupper kan tilldelas produktprofiler som är kopplade till AEM instanser, vilket ger centralt hanterad åtkomst till specifika AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Stöd för Adobe Experience Manager IMS-autentisering gäller endast för&quot;interna&quot; användare (författare, granskare, administratörer, utvecklare osv.) och inte för externa slutanvändare, som besökare på webbplatser.
-* [Admin ](https://adminconsole.adobe.com/) Console representerar AEM Managed Services-kunder som IMS-organisationer och AEM som produktkontexter. Admin Console system- och produktadministratörer kan definiera och hantera.
+* [Admin Console](https://adminconsole.adobe.com/) kommer att representera AEM Managed Services-kunder som IMS-organisationer och de AEM instanserna som produktkontexter. Admin Console system- och produktadministratörer kan definiera och hantera.
 * AEM Managed Services synkronisera din topologi med Admin Console och skapa en 1:1-mappning mellan en produktkontext och AEM.
 * Produktprofilen i Admin Console avgör vilka AEM som en användare kan komma åt.
 * Autentiseringsstödet innefattar kundens SAML2-kompatibla IDP för enkel inloggning.
 * Endast Enterprise ID:n eller Federated ID:n (för kundens SSO) stöds (personliga Adobe ID:n stöds inte).
 
-** Den här funktionen stöds för AEM 6.4 SP3 och senare för Adobe Managed Services-kunder.*
+*&#42;Den här funktionen stöds för AEM 6.4 SP3 och senare för Adobe Managed Services-kunder.*
 
 ## God praxis {#best-practices}
 
@@ -44,8 +44,8 @@ I Admin Console bör användare ges åtkomst via användargrupper på produktkon
 
 >[!NOTE]
 >
-> Om du använder AEM som Cloud Service ska du tilldela Admin Console användare direkt till produktprofiler. Transitiva behörigheter mellan Admin Console-användare och produktprofiler via Admin Console-användargrupper stöds inte för AEM som Cloud Service.
+> Om du använder AEM as a Cloud Service tilldelar du Admin Console-användare direkt till produktprofiler. Transitiva behörigheter mellan Admin Console-användare och produktprofiler via användargrupper i Admin Console stöds inte för AEM as a Cloud Service.
 
 ### Tillämpa behörigheter i Adobe Experience Manager
 
-I Adobe Experience Manager ska användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html), som är förkonfigurerade med rätt behörighet för att köra vissa uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html).
+I Adobe Experience Manager bör användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html), som är förkonfigurerad med lämplig behörighet för att köra specifika uppsättningar uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html).

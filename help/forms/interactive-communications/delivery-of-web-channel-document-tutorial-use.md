@@ -1,25 +1,20 @@
 ---
 title: Delivery Interactive Communication Document - Web Channel AEM Forms
-seo-title: Delivery Interactive Communication Document - Web Channel AEM Forms
 description: Skicka webbkanalsdokument via länk i e-post
-seo-description: Skicka webbkanalsdokument via länk i e-post
 feature: Interactive Communication
-topics: development
 audience: developer
-doc-type: article
 activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
-
 
 # E-postleverans av webbkanalsdokument
 
@@ -29,7 +24,7 @@ I den här artikeln tittar vi på e-post som en leveransmekanism för dokument i
 
 Låt oss titta på följande kodfragment. Den här koden är en del av GET.jsp som aktiveras när användaren klickar på länken i e-postmeddelandet för att visa webbkanalsdokumentet. Vi får den inloggade användaren med den schackanin UserManager. När vi får den inloggade användaren får vi värdet för egenskapen accountNumber som är associerad med användarens profil.
 
-Sedan associerar vi värdet accountNumber med en nyckel som kallas kontonummer på kartan. Nyckeln **kontonummer** definieras i formulärdata som ett Request Attribute. Värdet för det här attributet skickas som en indataparameter till lästjänstmetoden Form Data Modal.
+Sedan associerar vi värdet accountNumber med en nyckel som kallas kontonummer på kartan. Nyckeln **kontonummer** är definierad i formulärdata modal som ett Request Attribute. Värdet för det här attributet skickas som en indataparameter till lästjänstmetoden Form Data Modal.
 
 Rad 7: Vi skickar den mottagna begäran till en annan server, baserat på resurstypen som identifieras av URL:en för interaktivt kommunikationsdokument. Svaret som returneras av den här andra servern inkluderas i den första serverns svar.
 
@@ -43,13 +38,12 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatement/channels/web.html").include(wrapperRequest, response);
 ```
 
-![includeMethod](assets/includemethod.jpg)
+![Inkludera metod](assets/includemethod.jpg)
 
 Visuell representation av rad 7-kod
 
-![requestParameter](assets/requestparameter.png)
+![Parameterkonfiguration för begäran](assets/requestparameter.png)
 
 Begärandeattribut definierat för lästjänsten för modala formulärdata
 
-
-[Exempel AEM paket](assets/webchanneldelivery.zip).
+[AEM](assets/webchanneldelivery.zip).

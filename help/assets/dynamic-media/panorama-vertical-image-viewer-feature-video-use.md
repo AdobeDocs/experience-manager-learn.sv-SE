@@ -1,19 +1,19 @@
 ---
 title: Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media
 description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
-sub-product: dynamiska medier
-feature: Videoprofiler, videoprofiler, 360 VR-video
+sub-product: dynamic-media
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '533'
 ht-degree: 1%
 
 ---
-
 
 # Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
@@ -27,7 +27,7 @@ Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabild
 
 ## VR-visningsprogram för panoramor och panoramor
 
-En bild betraktas som panoramabild baserat på dess proportioner eller nyckelord. Som standard betraktas en bild med proportionerna 2 som en panoramabild. Förinställningar för panoramabildsvisningsprogram blir tillgängliga för förhandsvisningar av bilder om de uppfyller ovanstående villkor. Proportionerna för panoramabilder kan ändras i företagets DMS7-konfiguration genom att du anger den dubbla egenskapen s7PanoramicAR på /conf/global/settings/cloudconfigs/dmscene7/jcr:content. Nyckelorden lagras i egenskapen dc:keyword i objektets metadatanod. Om nyckelorden innehåller någon av följande kombinationer:
+En bild betraktas som panoramabild baserat på dess proportioner eller nyckelord. Som standard betraktas en bild med proportionerna 2 som en panoramabild. Förinställningar för panoramabildsvisningsprogram blir tillgängliga för förhandsvisningar av bilder om de uppfyller villkoren ovan. Proportionerna för panoramabilder kan ändras i företagets DMS7-konfiguration genom att du anger den dubbla egenskapen s7PanoramicAR på /conf/global/settings/cloudconfigs/dmscene7/jcr:content. Nyckelorden lagras i egenskapen dc:keyword i objektets metadatanod. Om nyckelorden innehåller någon av följande kombinationer:
 
 * ekvirektangulära,
 * sfärisk + panoramabild,
@@ -37,7 +37,7 @@ den betraktas som en panoramabild oavsett dess proportioner.
 
 ## Lodrät bildvisare
 
-När det gäller vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det hända att färgrutorna inte visas förrän användaren rullar nedåt på sidan. Genom att använda lodrätt bildvisningsprogram och placera lodräta färgrutor ser det till att färgrutorna visas oavsett skärmstorleken. Den maximerar också huvudbildens storlek. Med vågräta färgrutor var det nödvändigt att reservera utrymme på sidan för att säkerställa att de med stor sannolikhet är synliga och skulle minska storleken på huvudbilden. Med en lodrät layout behöver du inte bekymra dig om att tilldela detta utrymme och kan därför maximera huvudbildstorleken.
+Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det hända att färgrutorna inte visas förrän användaren rullar nedåt på sidan. Genom att använda lodrätt bildvisningsprogram och placera lodräta färgrutor ser det till att färgrutorna visas oavsett skärmstorleken. Den maximerar också huvudbildens storlek. Med vågräta färgrutor var det nödvändigt att reservera utrymme på sidan för att säkerställa att de med stor sannolikhet är synliga och skulle minska storleken på huvudbilden. Med en lodrät layout behöver du inte bekymra dig om att tilldela detta utrymme och kan därför maximera huvudbildstorleken.
 
 <table> 
  <tbody>

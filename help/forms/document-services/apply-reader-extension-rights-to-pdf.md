@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 
 ## Skapa servlet för direktuppspelning av läsarens utökade PDF
 
-Nästa steg är att skapa en serverlet med en POST-metod som returnerar läsaren extended PDF till användaren. I så fall uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
+Nästa steg är att skapa en serverlet med en POST-metod som returnerar läsaren extended PDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
 Här följer koden för servleten. Servern anropas från anpassad skickaåtgärd i adaptiv form.
 Servlet skapar UsageRights-objektet och ställer in dess egenskaper baserat på de värden som användaren anger i det adaptiva formuläret. Servern anropar sedan metoden applyUsageRights för den tjänst som skapats för detta ändamål.

@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Rad 6 exporterar xmlData från PDF-filen
 1. /content/AemFormsSamples/exportdata
 1. /content/help/seFormsSamples/outputService
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan man begära POST från servern. Installera appen Postman på datorn.
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan du göra POSTER till servern. Installera Postman på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 
 Se till att du har valt &quot;POST&quot; i listrutan http://localhost:4502/content/AemFormsSamples/exportdata.html Kontrollera att du har angett &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för begäran enligt bilden nedan
@@ -76,7 +76,7 @@ Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänst
 * **Begäranparametrar -**
 
    * **xdp_or_pdf_file** : Den xdp- eller pdf-fil som du vill sammanfoga data med
-   * **xmlfile**: XML-datafilen som ska sammanfogas med xdp_or_pdf_file
+   * **xmlfile**: XML-datafilen som sammanfogas med xdp_or_pdf_file
    * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\documents\\sample.pdf
 
 ### Importera data till PDF-fil
@@ -86,8 +86,8 @@ Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänst
 * **Begärandeparametrar:**
 
    * **pdffile** : PDF-filen som du vill sammanfoga data med
-   * **xmlfile**: XML-datafilen som ska sammanfogas med PDF-filen
-   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\outputsample.pdf.
+   * **xmlfile**: XML-datafilen som sammanfogas med PDF-filen
+   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel `c:\\outputsample.pdf`.
 
 **Exportera data från PDF-fil**
 * Använd FormsService för att exportera data från PDF-fil

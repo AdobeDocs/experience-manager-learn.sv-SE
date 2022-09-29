@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1838'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-I det här kapitlet genererar du ett nytt Adobe Experience Manager-projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Ditt AEM innehåller all kod, allt innehåll och alla konfigurationer som används för en webbplatsimplementering. Det projekt som skapas i detta kapitel kommer att fungera som grund för en implementering av WKND-webbplatsen och kommer att byggas vidare i framtida kapitel.
+I det här kapitlet skapar du ett nytt Adobe Experience Manager-projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Ditt AEM innehåller all kod, allt innehåll och alla konfigurationer som används för en webbplatsimplementering. Det projekt som genereras i detta kapitel utgör grunden för en implementering av WKND-webbplatsen och är byggt på i framtida kapitel.
 
 **Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager* implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod utöver AEM.
 
@@ -90,7 +90,7 @@ Nästa serie steg kommer att utföras med en UNIX-baserad kommandoradsterminal, 
 
    En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. Följande mapp- och filstruktur genereras av Maven-arkivtypen i det lokala filsystemet:
+1. Följande mapp- och filstruktur genereras av arkivtypen Maven i det lokala filsystemet:
 
    ```plain
     ~/code/
@@ -155,11 +155,11 @@ Skapa och distribuera projektkoden till en lokal instans av AEM.
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Profilen Maven `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på porten **4502** och med inloggningsuppgifterna för `admin:admin`.
+   Profilen Maven `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Det här paketet distribueras som standard till en AEM som körs lokalt på porten **4502** och med inloggningsuppgifterna för `admin:admin`.
 
 1. Navigera till Package Manager på den lokala AEM instansen: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Paket för `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`och `aem-guides-wknd.all`.
 
-1. Gå till webbplatskonsolen: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND-platsen blir en av platserna. Den kommer att innehålla en webbplatsstruktur med hierarkin USA och Språkmallsidor. Den här platshierarkin baseras på värdena för `language_country` och `isSingleCountryWebsite` när du genererar projektet med arkitypen.
+1. Gå till webbplatskonsolen: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). WKND-platsen är en av platserna. Den kommer att innehålla en webbplatsstruktur med hierarkin USA och Språkmallsidor. Den här platshierarkin baseras på värdena för `language_country` och `isSingleCountryWebsite` när du genererar projektet med arkitypen.
 
 1. Öppna **USA** `>` **Engelska** genom att markera sidan och klicka på **Redigera** på menyraden:
 

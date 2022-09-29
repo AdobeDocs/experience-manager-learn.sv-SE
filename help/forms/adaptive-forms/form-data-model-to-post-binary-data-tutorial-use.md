@@ -1,18 +1,18 @@
 ---
 title: Bokför binära data med formulärdatamodellen
 description: Bokföra binära data till AEM DAM med hjälp av formulärdatamodellen
-feature: Arbetsflöde
+feature: Workflow
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
-
 
 # Bokför binära data med formulärdatamodellen{#using-form-data-model-to-post-binary-data}
 
@@ -30,9 +30,9 @@ Fliken Formulärdatamodell - Egenskaper
 
 På fliken Service Input mappar vi följande
 
-* file(Det binära objekt som behöver lagras) med egenskapen DOR.pdf i förhållande till nyttolasten. Det innebär att när det adaptiva formuläret skickas kommer det dokument som skapas att lagras i en fil som heter DOR.pdf i förhållande till arbetsflödets nyttolast.**Kontrollera att den här DOR.pdf-filen är densamma som du anger när du konfigurerar det adaptiva formulärets överföringsegenskap.**
+* file(Det binära objekt som behöver lagras) med egenskapen DOR.pdf i förhållande till nyttolasten. Det innebär att när det adaptiva formuläret skickas, lagras det postdokument som skapas i en fil som heter DOR.pdf i förhållande till arbetsflödets nyttolast.**Kontrollera att den här DOR.pdf-filen är densamma som du anger när du konfigurerar det adaptiva formulärets överföringsegenskap.**
 
-* fileName - Detta är namnet som det binära objektet ska lagras med i DAM. Du vill alltså att den här egenskapen ska genereras dynamiskt, så att varje fileName blir unikt per sändning. Därför har vi använt processteget i arbetsflödet för att skapa metadataegenskapen filename och ange dess värde till en kombination av medlemsnamn och kontonummer för den person som skickar formuläret. Om personens medlemsnamn till exempel är John Jacobs och kontonumret är 9846 blir filnamnet John Jacobs_9846.pdf
+* fileName - Detta är namnet som det binära objektet lagras med i DAM. Du vill alltså att den här egenskapen ska genereras dynamiskt, så att varje fileName blir unikt per sändning. Därför har vi använt processteget i arbetsflödet för att skapa metadataegenskapen filename och ange dess värde till en kombination av medlemsnamn och kontonummer för den person som skickar formuläret. Om personens medlemsnamn till exempel är John Jacobs och kontonumret är 9846 blir filnamnet John Jacobs_9846.pdf
 
 ![fdmservice input](assets/fdminputservice.png)
 
@@ -40,24 +40,24 @@ Tjänstindata
 
 >[!NOTE]
 >
->Felsökningstips - Om DOR.pdf av någon anledning inte har skapats i DAM återställer du autentiseringsinställningarna för datakällan genom att klicka [här](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). Det här är AEM autentiseringsinställningar, som som standard är admin/admin.
+>Felsökningstips - Om DOR.pdf av någon anledning inte har skapats i DAM återställer du autentiseringsinställningarna för datakällan genom att klicka på [här](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). Det här är AEM autentiseringsinställningar, som som standard är admin/admin.
 
 Följ stegen nedan för att testa den här funktionen på servern:
 
 1.[Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här anpassade OSGI-paketet används för att skapa en metadataegenskap och ange dess värde från skickade formulärdata.
+1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).Det här anpassade OSGI-paketet används för att skapa en metadataegenskap och ange dess värde utifrån skickade formulärdata.
 
-1. [Importera de ](assets/postdortodam.zip) resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren. Du får följande
+1. [Importera resurserna](assets/postdortodam.zip) som är kopplad till den här artikeln i AEM med hjälp av pakethanteraren.Du får följande
 
    1. Arbetsflödesmodell
    1. Anpassat formulär har konfigurerats för att skickas till AEM arbetsflöde
    1. Datakällan har konfigurerats att använda filen PostToDam.JSON
    1. Formulärdatamodell som använder datakällan
 
-1. Peka på din [webbläsare för att öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+1. Peka på [webbläsare som öppnar det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och skicka in det.
 1. Kontrollera Assets-programmet om arkivdokumentet skapas och lagras.
 
 
-[Swagger ](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) Fileused in creating the data source is available for your reference
+[Swagger-fil](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) som används för att skapa datakällan är tillgänglig som referens

@@ -3,9 +3,9 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
@@ -75,11 +75,11 @@ För att illustrera detta ska vi titta på ett exempel på en företagsorganisat
 
 Frågan är om ni kommer att vänta med att omarbeta innehållet tills alla varumärken fungerar på ett enhetligt sätt? Är det klokt att lösa förändringen för dem alla?
 
-Svaret är nej. Detta skulle öka komplexiteten. Dessutom kommer många intressenter att bli frustrerade av att aldrig ha avslutat konversationer runt om i världen, vilket kommer att skapa frustrerande försök att skapa det nya. En kommer att låsas in i en konversation _om_ i stället för att göra det.
+Svaret är nej. Detta skulle öka komplexiteten. Dessutom kommer många intressenter att bli frustrerade av att aldrig ha avslutat konversationer runt om i världen, vilket kommer att skapa frustrerande försök att skapa det nya. En låses in i en konversation _om_ i stället för att göra det.
 
 Det som behövs är ett konkret ramverk. Ett nytt paradigm att arbeta för. Något som folk kan se och känna. Tidigare kan innehåll ha betraktats som en sida, en kampanj eller något annat som föreställt sig i en enda. Den grundläggande förändringen är att se innehåll som innehåll i sig: som ska återanvändas, formateras om och återanvändas till redigeringsgruppen. Den viktigaste nya utvecklingen bör användas för målrika upplevelser.
 
-För många kunder är det bästa sättet att införa förändringar att skapa en miniwebbplats, ett varumärke eller en separat del av webbplatsen som kan användas som testfall för det nya ramverket. Om du väljer en del av organisationen som konceptbevis kan du:
+För många kunder är det bästa sättet att införa förändringar att skapa en miniwebbplats, ett varumärke eller en separat del av webbplatsen som kan användas som testfall för det nya ramverket. Genom att välja en del av organisationen som konceptbevis kan du:
 
 * Skapa en inbyggd grupp intressenter som vill förstå det nya ramverket
 * Minska antalet cykler i sessionerna och bygg snabbare
@@ -94,19 +94,19 @@ _&quot;Vi visste att det kom ut för mycket innehåll. Så vi forskade lite med 
 
 AEM är en företagslösning som berör många delar av företaget eller varumärket och dess effektivitet, som ett CMS-verktyg, är beroende av tidigare versioner.
 
-När du bygger ut ramverket finns det några gemensamma paradigmer som du måste hitta den rätta lösningen för. En del av dessa element kan vara utmanande, men beslut måste fattas - det är därför det grundläggande paradigmet ovan är så viktigt. Det ramverk som håller på att byggas kommer att utnyttjas för att byggas ut i hela organisationen.
+När du bygger ut ramverket finns det några gemensamma paradigmer som du måste hitta den rätta lösningen för. En del av dessa element kan vara utmanande, men beslut måste fattas - det är därför det grundläggande paradigmet ovan är så viktigt. Det ramverk som håller på att byggas är det som utnyttjas för att skalas över hela organisationen.
 
 Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
 1. **Definiera grunden för er globala taxonomi.**
 
-   När vi pratar om taxonomi refererar vi inte bara till mappstrukturen, utan snarare till vem som kommer att skapa vad och när. Dessutom måste vi överväga [annan behörighet](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) strukturer som måste utformas för varje typ av författare.
+   När vi pratar om taxonomi refererar vi inte bara till mappstrukturen, utan snarare till vem som skapar vad och när. Dessutom måste vi överväga [annan behörighet](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) strukturer som måste utformas för varje typ av författare.
 
    I det här skedet bör du fundera över om du vill ha en centraliserad styrningsmodell eller en decentraliserad modell. Å ena sidan skapar en centraliserad styrningsmodell en konsoliderad taxonomistrategi som erbjuder tätare kvalitetskontroll och processinsikter som är omöjliga, eller åtminstone minst svåra i en decentraliserad ram.
 
    Å andra sidan kan en centraliserad modell, särskilt om den kommer från en redigeringsupplevelse som för närvarande är alltför flexibel, vara ett stort hinder för teamet. Strukturen måste möjliggöra gemensamma språkliga och regionala differentieringsmetoder samt rutiner för kvalitetskontroll. Dessutom kan det bli mindre självständigt för varje del av redigeringsprocessen, det vill säga bara vissa författare får arbeta i specifika grupper av sidor och endast begränsade författare har redigeringsbar behörighet.
 
-   Även om ett centraliserat styrningssätt till en början kan verka långsammare, i slutänden med insamlade processinsikter och transparent ansvarsskyldighet för företagsanvändare, kommer det övergripande arbetsflödet att bli snabbare.
+   Även om ett centraliserat styrningssätt till en början kan verka långsammare, i slutänden med insamlade processinsikter och en öppen ansvarsfördelning mellan företagsanvändare, är den övergripande strategin snabbare.
 
    Vilken riktning man ska ta beror i slutändan på organisationens övergripande strategiska mål. Det kan handla om att välja mellan förbättrad flexibilitet för företagsanvändare eller en enhetlig upplevelse över alla varumärken. Att justera efter rätt modell är avgörande för en ljudkörning.
 
@@ -116,7 +116,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    Interaktivt innehåll (som ofta finns på hemsidan) kan kräva mycket interaktiva upplevelser, och därför krävs det att gränssnittsdesigners arbetar med företagsförfattare för att uppdatera. Underhåll av hemsidan kräver en annan behörighetsstruktur och godkännandeprocess än en referenssida, vilket är enklare att uppdatera. Ljudstyrning, effektivitet och kvalitet börjar med ett tydligt ägarskap av innehållet. Överväg att utföra en innehållsgranskning som besvarar följande frågor:
 
-   * Vem kommer att skriva vad? Och när?
+   * Vem skapar vad? Och när?
    * Vilka olika behörighetsstrukturer måste tillämpas för varje typ av innehåll?
    * Vilka är upplevelserna på webbplatsen som kommer att förändras och vilka kommer att förbli relativt statiska?
    * Vem kommer att äga vilket innehåll?
@@ -177,4 +177,4 @@ Här är några möjliga fallgropar att undvika:
 
 Om du vill ha en mer djupgående diskussion om innehållets hastighet kan du lyssna på den här timmen [paneldiskussion](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) med Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) och Adobe Anuradha Pentareddy.
 
-Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) nav.
+Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) nav.

@@ -1,6 +1,6 @@
 ---
 title: Sidmallar
-description: Lär dig hur du skapar och ändrar sidmallar. Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i tidskriften kommer att skapas utifrån en dummy från Adobe XD.
+description: Lär dig hur du skapar och ändrar sidmallar. Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i Magazine skapas utifrån en dummy från Adobe XD.
 sub-product: sites
 version: Cloud Service
 type: Tutorial
@@ -11,9 +11,9 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -34,17 +34,17 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 
 ## Vad du ska bygga {#what-you-will-build}
 
-I den här delen av självstudiekursen ska du skapa en ny mall för artikelsida för tidskrifter som kan användas för att skapa nya tidskriftsartiklar och anpassa sig till en gemensam struktur. Mallen kommer att baseras på design och ett användargränssnittspaket som producerats i AdobeXD. Det här kapitlet handlar endast om att bygga ut mallens struktur eller skelett. Inga format kommer att implementeras, men mallen och sidorna kommer att fungera.
+I den här delen av självstudiekursen ska du skapa en ny mall för artikelsida för tidskrifter som kan användas för att skapa nya tidskriftsartiklar och anpassa sig till en gemensam struktur. Mallen är baserad på design och ett UI Kit som producerats i AdobeXD. Det här kapitlet handlar endast om att bygga ut mallens struktur eller skelett. Inga format implementeras, men mallen och sidorna fungerar.
 
 ## Skapa sidmall för tidskriftsartikel
 
-När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
+När du skapar en sida måste du välja en mall, som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
 
 Det finns tre huvudområden [Sidmallar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html):
 
 1. **Struktur** - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
-1. **Ursprungligt innehåll** - definierar komponenter som mallen börjar med, som kan redigeras och/eller tas bort av innehållsförfattare
-1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare har tillgängliga.
+1. **Ursprungligt innehåll** - definierar komponenter som mallen börjar med, de kan redigeras och/eller tas bort av innehållsförfattare
+1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare kommer att ha tillgängliga.
 
 Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträffar i en lokal instans av AEM. Följ stegen i videon nedan:
 

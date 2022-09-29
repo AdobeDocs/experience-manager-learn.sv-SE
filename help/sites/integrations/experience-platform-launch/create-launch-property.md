@@ -12,16 +12,16 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '106'
 ht-degree: 1%
 
 ---
 
 # Skapa en startegenskap {#create-launch-property}
 
-Lär dig hur du skapar en Launch-egenskap med lägsta möjliga konfiguration som behövs för att konfigurera resten av integreringen med Adobe Experience Manager. Användarna kommer att få tillgång till startgränssnittet och lära sig mer om tillägg, regler och publiceringsarbetsflöden.
+Lär dig hur du skapar en Launch-egenskap med lägsta möjliga konfiguration som behövs för att konfigurera resten av integreringen med Adobe Experience Manager. Användarna introduceras i startgränssnittet och får lära sig mer om tillägg, regler och publiceringsarbetsflöden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
 

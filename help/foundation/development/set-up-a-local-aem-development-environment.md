@@ -1,6 +1,6 @@
 ---
 title: Konfigurera en lokal AEM utvecklingsmiljö
-description: 'Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Experience Manager. Bekanta dig med lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning och felsökning. Använd Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ. '
+description: Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Experience Manager. Bekanta dig med lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning och felsökning. Använd Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ.
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2547'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen fö
 
 När vi syftar på en lokal AEM talar vi om en kopia av Adobe Experience Manager som körs på en utvecklares personliga maskin. ***Alla*** AEM ska börja med att skriva och köra kod mot en lokal AEM.
 
-Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Upphovsman*** och ***Publicera***. The ***Upphovsman*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  är den miljö som digitala marknadsförare kommer att använda för att skapa och hantera innehåll. Vid utveckling **mest** av den tid du distribuerar kod till en Author-instans. På så sätt kan du skapa nya sidor samt lägga till och konfigurera komponenter. AEM Sites är ett CMS för WYSIWYG-redigering och därför kan merparten av CSS och JavaScript testas mot en -redigeringsinstans.
+Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Upphovsman*** och ***Publicera***. The ***Upphovsman*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  är den miljö som digitala marknadsförare kommer att använda för att skapa och hantera innehåll. Vid utveckling **mest** den tid du distribuerar kod till en Author-instans. På så sätt kan du skapa nya sidor samt lägga till och konfigurera komponenter. AEM Sites är ett CMS för WYSIWYG-redigering och därför kan merparten av CSS och JavaScript testas mot en -redigeringsinstans.
 
 Det är också *kritisk* testa kod mot en lokal ***Publicera*** -instans. The ***Publicera*** -instans är den AEM miljö som besökare på din webbplats kommer att interagera med. Med ***Publicera*** -instansen är samma teknologi som ***Upphovsman*** Det finns till exempel några viktiga skillnader när det gäller konfigurationer och behörigheter. Kod bör *alltid* testas mot en lokal ***Publicera*** innan den befordras till miljöer på högre nivå.
 
@@ -191,7 +191,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 
 ## Felsökning
 
-***Hjälp!*** Min kod fungerar inte! Precis som med all utveckling kommer det att finnas tillfällen (förmodligen många) där koden helt enkelt inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan följer några viktiga startpunkter när det gäller felsökning och spårning av problem (men långt ifrån en fullständig lista över saker som kan gå fel):
+***Hjälp!*** Min kod fungerar inte! Precis som med all utveckling finns det tillfällen (förmodligen många) där koden helt enkelt inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan följer några viktiga startpunkter när det gäller felsökning och spårning av problem (men långt ifrån en fullständig lista över saker som kan gå fel):
 
 ### Verifiera koddistribution
 

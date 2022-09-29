@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: 18a414b847a7353eebcfad4bcc125920258948b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -164,7 +164,7 @@ const EditableExample = (props) => {
 
 /**
  * Map the editable component to a resourceType and export it as default.
- * If this component will be embedded in another editable component (as show below), make sure to 
+ * If this component is embedded in another editable component (as show below), make sure to 
  * import the "non-editable" component instance for use in the embedding component.
  */
 export default MapTo("wknd-examples/components/example")(EditableExample);

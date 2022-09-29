@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ En profil väljs genom att jämföra
 * `Allowed Origin` med `Origin` begärandehuvud
 * och `Allowed Paths` med sökvägen till begäran.
 
-Den första principen som matchar dessa värden används. Om inga hittas, [!DNL CORS] begäran kommer att nekas.
+Den första principen som matchar dessa värden används. Om inga hittas, [!DNL CORS] begäran nekas.
 
-Om ingen princip har konfigurerats alls [!DNL CORS] förfrågningar kommer inte heller att besvaras eftersom hanteraren inaktiveras och därmed nekas - så länge ingen annan modul på servern svarar på [!DNL CORS].
+Om ingen princip har konfigurerats alls [!DNL CORS] förfrågningar kommer inte heller att besvaras eftersom hanteraren är inaktiverad och därmed nekas - så länge ingen annan modul på servern svarar på [!DNL CORS].
 
 ### Principegenskaper
 
@@ -155,7 +155,7 @@ Om du vill tillåta cachelagring av CORS-huvuden lägger du till följande konfi
 
 Kom ihåg **starta om webbserverprogrammet** efter att ha ändrat `dispatcher.any` -fil.
 
-Det är troligt att cacheminnet behöver rensas helt för att säkerställa att rubrikerna cachelagras korrekt på nästa begäran efter en `/cache/headers` konfigurationsuppdatering.
+Det är troligt att cache-minnet behöver rensas helt för att säkerställa att rubrikerna cachas korrekt på nästa begäran efter en `/cache/headers` konfigurationsuppdatering.
 
 ## Felsökning av CORS
 

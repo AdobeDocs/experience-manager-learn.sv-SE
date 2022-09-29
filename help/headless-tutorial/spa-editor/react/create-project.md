@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
@@ -28,21 +28,21 @@ Lär dig hur du skapar ett Adobe Experience Manager (AEM) Maven-projekt som utg�
 
 ## Vad du ska bygga {#what-build}
 
-I det här kapitlet skapas ett nytt AEM baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet kommer att inledas med en mycket enkel utgångspunkt för SPA React.
+I det här kapitlet skapas ett nytt AEM baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet inleds med en mycket enkel utgångspunkt för SPA React.
 
-**Vad är ett Maven-projekt?** -  [Apache ](https://maven.apache.org/) Mavenis är ett programhanteringsverktyg för att skapa projekt. *Alla implementeringar av Adobe Experience* Manager använder Maven-projekt för att skapa, hantera och driftsätta anpassad kod utöver AEM.
+**Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager* implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod utöver AEM.
 
-**Vad är en Maven-arketype?** - En  [Maven-](https://maven.apache.org/archetype/index.html) arketypeär en mall eller ett mönster för att generera nya projekt. Med den AEM projekttypen kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
+**Vad är en Maven-arketype?** - A [Maven Archetype](https://maven.apache.org/archetype/index.html) är en mall eller ett mönster för generering av nya projekt. Med den AEM projekttypen kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Kontrollera att en ny instans av Adobe Experience Manager, som startades i läget **författare**, körs lokalt.
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
 
 ## Skapa projektet {#create}
 
 >[!NOTE]
 >
->I den här självstudiekursen används version **27** av arketypen. Det är alltid en god vana att använda den **senaste** versionen av arkitypen för att generera ett nytt projekt.
+>Den här självstudiekursen använder version **27** av arkitypen. Det är alltid en god vana att använda **senaste** version av arkitypen för att generera ett nytt projekt.
 
 1. Öppna en kommandoradsterminal och ange följande Maven-kommando:
 
@@ -61,18 +61,17 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
    >[!NOTE]
    >
-   > Om mål AEM 6.5.5+ ersätter `aemVersion="cloud"` med `aemVersion="6.5.5"`. Om du har 6.4.8+ som mål ska du använda `aemVersion="6.4.8"`.
+   > Om mål AEM 6.5.5+ ersätts `aemVersion="cloud"` med `aemVersion="6.5.5"`. Om mål är 6.4.8+, använd `aemVersion="6.4.8"`.
 
-   Observera egenskapen `frontendModule=react`. Detta anger att AEM Project Archetype ska starta projektet med startmetoden [React code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId` och `groupId` används för att identifiera projektet och syftet.
+   Lägg märke till `frontendModule=react` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Reaktionskodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId`och `groupId` används för att identifiera projektet och syftet.
 
-   En fullständig lista över tillgängliga egenskaper för konfigurering av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
+   En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. Följande mapp- och filstruktur genereras av Maven-arkivtypen i det lokala filsystemet:
+1. Följande mapp- och filstruktur genereras av arkivtypen Maven i det lokala filsystemet:
 
    ```plain
    |--- aem-guides-wknd-spa.react/
        |--- all/
-       |--- analyse/
        |--- core/
        |--- ui.apps/
        |--- ui.apps.structure/
@@ -82,20 +81,19 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
        |--- ui.tests /
        |--- it.tests/
        |--- dispatcher/
-       |--- analyse/
        |--- pom.xml
        |--- README.md
        |--- .gitignore
    ```
 
-   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen arbetar vi primärt med modulen `ui.frontend`, som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen kommer vi i första hand att arbeta med `ui.frontend` som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ## Distribuera och skapa projektet
 
 Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal instans av AEM med Maven.
 
-1. Kontrollera att en instans av AEM körs lokalt på port **4502**.
-1. Gå till projektkatalogen `aem-guides-wknd-spa.react` från kommandoraden.
+1. Kontrollera att en instans av AEM körs lokalt på porten **4502**.
+1. Navigera från kommandoraden till `aem-guides-wknd-spa.react` projektkatalog.
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -131,11 +129,11 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven-profilen `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna `admin:admin`.
+   Profilen Maven `autoInstallSinglePackage` kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Det här paketet distribueras som standard till en AEM som körs lokalt på porten **4502** och med inloggningsuppgifterna för `admin:admin`.
 
-1. Navigera till **Package Manager** på din lokala AEM: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+1. Navigera till **Pakethanteraren** på din lokala AEM: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
 
-1. Du bör se flera paket som har prefixet `aem-guides-wknd-spa.react`.
+1. Du bör se flera paket som är prefix med `aem-guides-wknd-spa.react`.
 
    ![WKND-SPA](assets/create-project/package-manager.png)
 
@@ -147,33 +145,33 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
 Öppna sedan SPA som skapades av arkivtypen och uppdatera en del av innehållet.
 
-1. Navigera till konsolen **Platser**: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. Navigera till **Webbplatser** konsol: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
 
    WKND-SPA innehåller en grundläggande webbplatsstruktur med land, språk och hemsida. Den här hierarkin baseras på arkivtypens standardvärden för `language_country` och `isSingleCountryWebsite`. Dessa värden kan skrivas över genom att uppdatera [tillgängliga egenskaper](https://github.com/adobe/aem-project-archetype#available-properties) när ett projekt genereras.
 
-2. Öppna sidan **us** > **en** > **WKND SPA React Home Page** genom att markera sidan och klicka på knappen **Redigera** i menyraden:
+2. Öppna **oss** > **en** > **WKND SPA React Home Page** genom att markera sidan och klicka på **Redigera** på menyraden:
 
    ![webbplatskonsol](./assets/create-project/open-home-page.png)
 
-3. En **Text**-komponent har redan lagts till på sidan. Du kan redigera den här komponenten på samma sätt som andra komponenter i AEM.
+3. A **Text** har redan lagts till på sidan. Du kan redigera den här komponenten på samma sätt som andra komponenter i AEM.
 
    ![Uppdatera textkomponent](./assets/create-project/update-text-component.gif)
 
-4. Lägg till ytterligare en **Text**-komponent på sidan.
+4. Lägg till ytterligare **Text** till sidan.
 
-   Observera att redigeringsupplevelsen liknar den på en traditionell AEM Sites-sida. För närvarande finns ett begränsat antal komponenter att använda. Mer kommer att läggas till under kursen.
+   Observera att redigeringsupplevelsen liknar den på en traditionell AEM Sites-sida. För närvarande finns ett begränsat antal komponenter att använda. Mer läggs till under kursen.
 
 ## Inspect för Single Page
 
 Kontrollera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
 
-1. I **sidredigeraren** klickar du på knappen **Sidinformation** > **Visa som publicerad**:
+1. I **Page Editor** klickar du på **Sidinformation** knapp > **Visa som publicerad**:
 
    ![Knappen Visa som publicerad](./assets/create-project/view-as-published.png)
 
-   Då öppnas en ny flik med frågeparametern `?wcmmode=disabled` som i praktiken stänger av AEM: [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+   Då öppnas en ny flik med frågeparametern `?wcmmode=disabled` som i praktiken stänger av AEM redigerare: [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
 
-2. Visa sidans källa och lägg märke till att textinnehållet **[!DNL Hello World]** eller något annat innehåll inte hittas. I stället ska du se HTML så här:
+2. Visa sidans källa och lägg märke till att textinnehållet **[!DNL Hello World]** eller något annat innehåll inte hittas. Du ska i stället se HTML så här:
 
    ```html
    ...
@@ -187,18 +185,18 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
 
    `clientlib-react.min.js` är SPA som läses in på sidan och som ansvarar för återgivningen av innehållet.
 
-   *Varifrån kommer innehållet?*
+   Men *varifrån kommer innehållet?*
 
 3. Återgå till fliken: [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
-4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR**-begäranden:
+4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR** begäranden:
 
    ![XHR-begäranden](./assets/create-project/xhr-requests.png)
 
-   Det ska finnas en begäran till [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Detta innehåller allt innehåll, formaterat i JSON, som SPA.
+   Det bör finnas en begäran om att [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Detta innehåller allt innehåll, formaterat i JSON, som SPA.
 
-5. Öppna [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) på en ny flik
+5. Öppna en ny flik [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json)
 
-   Begäran `en.model.json` representerar innehållsmodellen som ska köra programmet. Inspect JSON-utdata och du bör kunna hitta kodfragmentet som representerar **[!UICONTROL Text]**-komponenterna.
+   Begäran `en.model.json` representerar innehållsmodellen som ska köra programmet. Inspect JSON-utdata och du bör kunna hitta kodavsnittet som representerar **[!UICONTROL Text]** komponenter.
 
    ```json
    ...
@@ -227,8 +225,8 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
 
 Grattis, du har precis skapat ditt första AEM SPA Editor Project!
 
-SPA är ganska enkel. I de kommande kapitlen kommer fler funktioner att läggas till.
+SPA är ganska enkel. I de följande kapitlen läggs fler funktioner till.
 
 ### Nästa steg {#next-steps}
 
-[Integrera en SPA](integrate-spa.md) - Lär dig hur SPA källkod är integrerad med AEM Project och förstå vilka verktyg som finns för att snabbt utveckla SPA.
+[Integrera en SPA](integrate-spa.md) - Lär dig hur SPA källkod är integrerad med det AEM projektet och förstå vilka verktyg som finns för att snabbt utveckla SPA.

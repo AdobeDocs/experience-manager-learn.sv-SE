@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media Classic - huvudarbetsflöde och förhandsgranskning av resurser
-description: Lär dig mer om huvudarbetsflödet i Dynamic Media Classic, som innehåller tre steg - Skapa (och ladda upp), Författare (och Publicera) och Leverera. Lär dig sedan hur du förhandsgranskar resurser i Dynamic Media Classic.
+title: Dynamic Media Classic huvudsakliga arbetsflöde och förhandsgranskning av resurser
+description: Lär dig mer om huvudarbetsflödet i Dynamic Media Classic, som innehåller tre steg - Skapa (och Överför), Författare (och Publicera) och Leverera. Lär dig sedan hur du förhandsgranskar mediefiler i Dynamic Media Classic.
 sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
@@ -10,21 +10,21 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2710'
+source-wordcount: '2703'
 ht-degree: 0%
 
 ---
 
-
-# Dynamic Media Classic - huvudarbetsflöde och förhandsgranskning av resurser {#main-workflow}
+# Dynamic Media Classic huvudsakliga arbetsflöde och förhandsgranskning av resurser {#main-workflow}
 
 Dynamic Media har stöd för arbetsflödena Skapa (och Överför), Författare (och Publicera) och Leverera. Du börjar med att ladda upp resurser, sedan göra något med dessa resurser, som att skapa en bilduppsättning och slutligen publicera för att göra dem levande. Steget Skapa är valfritt för vissa arbetsflöden. Om målet till exempel är att bara göra dynamiska storleksändringar och zooma in bilder eller konvertera och publicera video för direktuppspelning, finns det inga nödvändiga konstruktionssteg.
 
 ![bild](assets/main-workflow/create-author-deliver.jpg)
 
-Arbetsflödet i Dynamic Media Classic består av tre huvudsteg:
+Arbetsflödet i Dynamic Media Classic lösningar består av tre huvudsteg:
 
 1. Skapa (och överföra) SourceContent
 2. Skapa (och publicera) resurser
@@ -32,14 +32,14 @@ Arbetsflödet i Dynamic Media Classic består av tre huvudsteg:
 
 ## Steg 1: Skapa (och överföra)
 
-Detta är början på arbetsflödet. I det här steget samlar du in eller skapar det källinnehåll som passar i arbetsflödet som du använder och överför det till Dynamic Media Classic. Systemet har stöd för flera filtyper för bilder, video och teckensnitt, men också för PDF, Adobe Illustrator och Adobe InDesign.
+Detta är början på arbetsflödet. I det här steget samlar du in eller skapar det källinnehåll som passar i arbetsflödet som du använder och överför det till Dynamic Media Classic. Systemet har stöd för flera filtyper för bilder, video och teckensnitt, men även för PDF, Adobe Illustrator och Adobe InDesign.
 
-Se den fullständiga listan med [Filtyper som stöds](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
+Se hela listan med [Filtyper som stöds](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
 
 Du kan överföra källinnehåll på flera olika sätt:
 
-- Direkt från ditt skrivbord eller lokala nätverk. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
-- Från en Dynamic Media Classic FTP-server. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+- Direkt från ditt skrivbord eller lokala nätverk. [Lär dig mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
+- Från en Dynamic Media Classic FTP-server. [Lär dig mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
 
 Standardläget är Från skrivbord, där du bläddrar efter filer i det lokala nätverket och startar överföringen.
 
@@ -47,15 +47,15 @@ Standardläget är Från skrivbord, där du bläddrar efter filer i det lokala n
 
 >[!TIP]
 >
->Lägg inte till dina mappar manuellt. Kör i stället en överföring från FTP och använd alternativet **Inkludera undermappar** för att återskapa mappstrukturen i Dynamic Media Classic.
+>Lägg inte till dina mappar manuellt. Kör i stället en överföring från FTP och använd **Inkludera undermappar** för att återskapa mappstrukturen i Dynamic Media Classic.
 
-De två viktigaste överföringsalternativen är aktiverade som standard - **Markera för Publish**, som vi har diskuterat tidigare, och **Skriv över**. Skriv över innebär att om filen som överförs har samma namn som en fil som redan finns i systemet kommer den nya filen att ersätta den befintliga versionen. Om du avmarkerar det här alternativet kanske filen inte kan överföras.
+De två viktigaste överföringsalternativen är aktiverade som standard — **Markera för publicering** som vi har diskuterat tidigare, och **Skriv över**. Skriv över innebär att om filen som överförs har samma namn som en fil som redan finns i systemet kommer den nya filen att ersätta den befintliga versionen. Om du avmarkerar det här alternativet kanske filen inte kan överföras.
 
 ### Skriv över vid överföring av bilder
 
-Det finns fyra varianter av alternativet Skriv över bild som kan ställas in för hela företaget, och de är ofta missförstådda. I korthet anger du reglerna så att du vill att resurser som har samma namn ska skrivas över oftare eller så vill du att överskrivningar ska ske mindre ofta (då får den nya bilden ett &quot;-1&quot;- eller &quot;-2&quot;-tillägg).
+Det finns fyra varianter av alternativet Skriv över bild som kan ställas in för hela företaget, och de är ofta missförstådda. Kort och gott: antingen anger du reglerna så att du vill att resurser med samma namn ska skrivas över oftare eller så vill du att överskrivningar ska ske mindre ofta (då får den nya bilden ett &quot;-1&quot;- eller &quot;-2&quot;-tillägg).
 
-- **Skriv över i den aktuella mappen, samma basbildnamn/tillägg**.
+- **Skriv över i den aktuella mappen, samma basbildens namn/tillägg**.
 Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
 
 - **Skriv över i den aktuella mappen, samma basresursnamn oavsett tillägg**.
@@ -67,38 +67,38 @@ Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga b
 - **Skriv över i valfri mapp, samma basresursnamn oavsett tillägg**.
 Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
 
-Läs mer om [Skriv över bilder](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
+Läs mer om [Skriv över bilder, alternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
 
 Även om det inte är nödvändigt kan du vid överföring med någon av de två metoderna ovan ange jobbalternativ för just den överföringen, till exempel för att schemalägga en återkommande överföring, ange beskärningsalternativ vid överföring och många andra. Dessa kan vara värdefulla för vissa arbetsflöden, så det är värt att fundera över om de kan vara till för dig.
 
 Läs mer om [Jobbalternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
 
-Överföring är det första nödvändiga steget i ett arbetsflöde eftersom Dynamic Media Classic inte kan arbeta med innehåll som inte redan finns i systemet. Bakom scenerna under överföringen registreras alla överförda resurser i den centraliserade Dynamic Media Classic-databasen, ett ID tilldelas och kopieras till lagringsutrymmet. Dessutom konverterar systemet bildfiler till ett format som tillåter dynamisk storleksändring och zoomning och konverterar videofiler till MP4-format (webbvänligt format).
+Överföring är det första nödvändiga steget i ett arbetsflöde eftersom Dynamic Media Classic inte kan arbeta med innehåll som inte redan finns i systemet. Bakom scenerna under överföringen registrerar systemet alla överförda resurser i den centraliserade Dynamic Media Classic-databasen, tilldelar ett ID och kopierar det till lagringsutrymmet. Dessutom konverterar systemet bildfiler till ett format som tillåter dynamisk storleksändring och zoomning och konverterar videofiler till MP4-format (webbvänligt format).
 
 ### Koncept: Det här händer med bilder när du överför dem till Dynamic Media Classic
 
-När du överför en bild av någon typ till Dynamic Media Classic konverteras den till ett överordnad bildformat som kallas Pyramid TIFF eller P-TIFF. Ett P-TIFF-format liknar formatet för en TIFF-bitmappsbild med lager, förutom att filen i stället för att innehålla olika lager innehåller flera storlekar (upplösningar) för samma bild.
+När du överför en bild av någon typ till Dynamic Media Classic konverteras den till ett överordnad bildformat som kallas Pyramid TIFF eller P-TIFF. Ett P-TIFF liknar formatet för en bitmappsbild i TIFF, förutom att filen i stället för att innehålla olika lager innehåller flera storlekar (upplösningar) för samma bild.
 
 ![bild](assets/main-workflow/pyramid-p-tiff.png)
 
-När bilden konverteras tar Dynamic Media Classic en&quot;ögonblicksbild&quot; av hela bildstorleken, skalar den till hälften och sparar, skalar den till hälften igen och sparar den, och så vidare tills den fylls med jämna multipler av originalstorleken. En P-TIFF på 2 000 pixlar har till exempel storlekar på 1 000, 500, 250 och 125 pixlar (och mindre) i samma fil. P-TIFF-filen har samma format som en&quot;överordnad image&quot; i Dynamic Media Classic.
+När bilden konverteras tar Dynamic Media Classic en&quot;ögonblicksbild&quot; av hela bildstorleken, skalar den till hälften och sparar den, skalar den till hälften igen och sparar den, och så vidare tills den fylls med jämna multiplar av originalstorleken. En P-TIFF med 2 000 pixlar har till exempel storlekar på 1 000, 500, 250 och 125 pixlar (och mindre) i samma fil. P-TIFF är formatet på vad som kallas&quot;överordnad image&quot; i Dynamic Media Classic.
 
-När du begär en viss storleksbild kan du med P-TIFF snabbt hitta nästa större storlek och skala ned den i Image Server for Dynamic Media Classic. Om du till exempel överför en bild med 2 000 pixlar och begär en bild med 100 pixlar, hittar Dynamic Media Classic versionen med 125 pixlar och skalar ned den till 100 pixlar i stället för att skala från 2 000 till 100 pixlar. Detta gör att operationen går mycket snabbt. När du zoomar in en bild kan zoomningsvisningsprogrammet dessutom endast begära en del av bilden som zoomas, i stället för hela bilden med full upplösning. Det är så det överordnad bildformatet, P-TIFF-filen, har stöd för både dynamisk storlek och zoomning.
+När du begär en viss storleksbild kan du med P-TIFF skapa Image Server för Dynamic Media Classic för att snabbt hitta nästa större storlek och skala ned den. Om du till exempel överför en bild med 2 000 pixlar och begär en bild med 100 pixlar, hittar Dynamic Media Classic versionen med 125 pixlar och skalar ned den till 100 pixlar i stället för att skala från 2 000 till 100 pixlar. Detta gör att operationen går mycket snabbt. När du zoomar in en bild kan zoomningsvisningsprogrammet dessutom endast begära en del av bilden som zoomas, i stället för hela bilden med full upplösning. Det är så det överordnad bildformatet P-TIFF stöder både dynamisk storleksändring och zoomning.
 
-På samma sätt kan du överföra din överordnad källvideo till Dynamic Media Classic, och när du överför Dynamic Media Classic kan du automatiskt ändra storlek på den och konvertera den till ett webbanpassat MP4-format.
+På samma sätt kan du överföra din överordnad källvideo till Dynamic Media Classic, och när du överför den kan Dynamic Media Classic automatiskt ändra storlek på den och konvertera den till det webbanpassade MP4-formatet.
 
 ### Regler för reglaget för att fastställa optimal storlek för de bilder du överför
 
 **Ladda upp bilder i den största storlek du behöver.**
 
-- Om du behöver zooma överför du en högupplöst bild med ett intervall på 1 500-2 500 pixlar i det längsta måttet. Tänk på hur mycket detaljskärpa du vill ge, källbildens kvalitet och storleken på den produkt som visas. Du kan till exempel överföra en bild på 1 000 pixlar för en liten ring, men en bild på 3 000 pixlar för en hel rumscen.
-- Om du inte behöver zooma kan du överföra den i exakt den storlek som du kommer att se. Om du t.ex. har logotyper eller splash/banner-bilder att montera på sidorna, överför dem exakt i 1:1-storlek och anropar dem exakt i den storleken.
+- Om du behöver zooma överför du en högupplöst bild med ett intervall på 1 500-2 500 pixlar i det längsta måttet. Tänk på hur mycket detaljskärpa du vill ge, källbildens kvalitet och storleken på den produkt som visas. Du kan till exempel överföra en bild på 1 000 pixlar för en liten ring, men en bild på 3 000 pixlar för en hel rumsscen.
+- Om du inte behöver zooma kan du överföra den i exakt den storlek som visas. Om du t.ex. har logotyper eller splash/banner-bilder att montera på sidorna, överför dem exakt i 1:1-storlek och anropar dem exakt i den storleken.
 
-**Du kan aldrig sampla upp eller ta bort bilder innan du överför dem till Dynamic Media Classic.** Uppsampla till exempel inte en mindre bild så att den blir en bild med 2 000 pixlar. Det kommer inte att se bra ut. Gör bilderna så nära att de blir perfekta som möjligt innan du laddar upp dem.
+**Uppsampla aldrig eller spränga bilderna innan du skickar dem till Dynamic Media Classic.** Uppsampla till exempel inte en mindre bild så att den blir en bild med 2 000 pixlar. Det kommer inte att se bra ut. Gör bilderna så nära att de blir perfekta som möjligt innan du laddar upp dem.
 
-**Det finns ingen minimistorlek för zoomning, men som standard zoomas inte visningsprogrammen in över 100 %.** Om bilden är för liten zoomar den inte alls eller zoomar bara en liten bit för att förhindra att den ser dålig ut.
+**Det finns ingen minimistorlek för zoomning, men som standard zoomas inte visningsprogrammen in över 100 %.** Om bilden är för liten zoomar den inte alls eller bara in en liten mängd så att den inte ser dålig ut.
 
-**Även om det inte finns något minimivärde för bildstorlek rekommenderar vi inte att du överför gigantiska bilder.** En enorm bild kan anses vara över 4 000 pixlar. Om du överför bilder i den här storleken kan det uppstå fel, t.ex. dammkorn eller hårkors i bilden. Sådana bilder tar också upp mer utrymme på Dynamic Media Classic-servern, vilket kan göra att du överskrider de avtalade lagringsgränserna.
+**Även om det inte finns något minimivärde för bildstorlek rekommenderar vi inte att du överför gigantiska bilder.** En enorm bild kan anses vara över 4 000 pixlar. Om du överför bilder i den här storleken kan det uppstå fel, t.ex. dammkorn eller hårkors i bilden. Sådana bilder tar upp mer utrymme på Dynamic Media Classic-servern, vilket kan göra att du överskrider de avtalade lagringsgränserna.
 
 Läs mer om [Överför filer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
 
@@ -110,7 +110,7 @@ När du har skapat och överfört ditt innehåll kan du skapa nya multimedieresu
 >
 >Se till att allt material är markerat för publicering. Som standard markeras alla resurser automatiskt för publicering vid överföring, men alla nyskapade resurser från ditt överförda innehåll måste också markeras för publicering.
 
-När du har skapat din nya resurs kör du ett publiceringsjobb. Du kan göra det manuellt eller schemalägga ett publiceringsjobb som körs automatiskt. När du publicerar kopieras allt innehåll från den privata, Dynamic Media Classic-sfären till den offentliga, publiceringsserversfären för ekvationen. Produkten av ett Dynamic Media Publish-jobb är en unik URL för varje publicerad resurs.
+När du har skapat din nya resurs kör du ett publiceringsjobb. Du kan göra det manuellt eller schemalägga ett publiceringsjobb som körs automatiskt. När du publicerar kopieras allt innehåll från den privata, Dynamic Media Classic-sfären till den publika, publiceringsserversfären i ekvationen. Produkten av ett Dynamic Media Publish-jobb är en unik URL för varje publicerad resurs.
 
 Vilken server du publicerar på beror på innehållets och arbetsflödets typ. Alla bilder går till exempel till Image Server och direktuppspelande video till FMS-servern. För enkelhetens skull talar vi om ett&quot;publiceringsevenemang&quot; för en enda server.
 
@@ -120,9 +120,9 @@ Publicering publicerar allt innehåll som är markerat för publicering - inte b
 >
 >Automatisera publiceringsjobben och schemalägg en fullständig publicering som ska köras varje dag kl. 02.00 eller någon gång sent på kvällen.
 
-### Koncept: Förstå Dynamic Media Classic-URL:en
+### Koncept: Om Dynamic Media Classic URL
 
-Slutprodukten i ett Dynamic Media Classic-arbetsflöde är en URL som pekar på resursen (vare sig det är en bilduppsättning eller en adaptiv videouppsättning). Dessa URL:er är mycket förutsägbara och följer samma mönster. När det gäller bilder genereras varje bild från den överordnad bilden P-TIFF.
+Slutprodukten i ett Dynamic Media Classic-arbetsflöde är en URL som pekar på resursen (vare sig det är en bilduppsättning eller en adaptiv videouppsättning). Dessa URL:er är mycket förutsägbara och följer samma mönster. För bilder genereras varje bild från den överordnad bilden P-TIFF.
 
 Här är syntaxen för en bilds URL med några exempel:
 
@@ -134,15 +134,15 @@ I det första exemplet är den virtuella sökvägen till bilden &quot;Backpack_A
 
 I det andra exemplet används det som kallas &quot;bildförinställning&quot; för samma Backpack_A-bild, vilket anges av $!_template300$. $-symbolerna på båda sidor av uttrycket anger att en bildförinställning, en paketerad uppsättning bildmodifierare, används på bilden.
 
-När du förstår hur Dynamic Media Classic-URL:er sätts ihop förstår du hur du ändrar dem programmatiskt och hur du integrerar dem djupare i dina webbplats- och backend-system.
+När ni väl förstår hur Dynamic Media Classic URL:er sätts ihop förstår ni hur ni ändrar dem programmatiskt och hur ni integrerar dem djupare i era webbplats- och backend-system.
 
 ### Koncept: Förstå cachefördröjning
 
-Nyligen överförda och publicerade mediefiler visas direkt, medan uppdaterade mediefiler kan fördröjas med 10 timmars cachelagring. Som standard har alla publicerade resurser minst 10 timmar innan de förfaller. Vi säger minimum, eftersom varje gång bilden visas startar den en klocka som inte går ut förrän tio timmar har gått ut och ingen har sett den bilden. Denna 10-timmarsperiod är&quot;Time to Live&quot; för en mediefil. När cacheminnet för resursen har upphört att gälla kan den uppdaterade versionen levereras.
+Nyligen överförda och publicerade mediefiler visas direkt, medan uppdaterade mediefiler kan fördröjas med 10 timmars cachelagring. Som standard har alla publicerade resurser minst 10 timmar innan de förfaller. Vi säger minimum, eftersom varje gång bilden visas startar den en klocka som inte går ut förrän tio timmar har gått ut och där ingen har sett den bilden. Denna 10-timmarsperiod är&quot;Time to Live&quot; för en mediefil. När cacheminnet för resursen har upphört att gälla kan den uppdaterade versionen levereras.
 
 Detta är vanligtvis inget problem om det inte har inträffat ett fel och bilden/resursen har samma namn som den tidigare publicerade versionen, men det finns ett problem med bilden. Du kanske av misstag överförde en version med låg upplösning eller så godkändes bilden inte av art director. I det här fallet vill du återkalla originalbilden och ersätta den med en ny version med samma resurs-ID.
 
-Lär dig hur du [Rensa cachen manuellt för de URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en).
+Lär dig hur [Rensa cachen manuellt för de URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en).
 
 >[!TIP]
 >
@@ -153,17 +153,17 @@ Lär dig hur du [Rensa cachen manuellt för de URL:er som behöver uppdateras](h
 
 ## Steg 3: Leverera
 
-Kom ihåg att slutprodukten i ett Dynamic Media Classic-arbetsflöde är en URL som pekar på resursen. URL:en kan peka på en enskild bild, en bilduppsättning, en snurruppsättning eller någon annan bilduppsättningssamling eller video. Du måste ta den URL-adressen och göra något med den, till exempel redigera HTML-koden så att `<IMG>`-taggarna pekar på Dynamic Media Classic-bilden i stället för att peka på en bild som kommer från den aktuella webbplatsen.
+Kom ihåg att slutprodukten i ett Dynamic Media Classic-arbetsflöde är en URL som pekar på resursen. URL:en kan peka på en enskild bild, en bilduppsättning, en snurruppsättning eller någon annan bilduppsättningssamling eller video. Du måste ta den URL:en och göra något med den, till exempel redigera HTML så att `<IMG>` -taggar pekar på Dynamic Media Classic-bilden i stället för att peka på en bild som kommer från din nuvarande webbplats.
 
 I leveransen måste du integrera dessa URL:er i din webbplats, mobilapp, e-postkampanj eller någon annan digital kontaktyta där du vill visa resursen.
 
-Exempel på hur du integrerar Dynamic Media Classic-URL:en för en bild i en webbplats:
+Exempel på hur du integrerar Dynamic Media Classic URL för en bild i en webbplats:
 
 ![bild](assets/main-workflow/example-url-1.png)
 
 Den röda URL:en är det enda specifika elementet för Dynamic Media Classic.
 
-IT-teamet eller integreringspartnern kan ta ledningen när det gäller att skriva och ändra kod för att integrera Dynamic Media Classic-URL:er på er webbplats. Adobe har ett konsultteam som kan hjälpa till med detta, antingen genom att tillhandahålla teknisk, kreativ eller allmän vägledning.
+IT-teamet eller integreringspartnern kan ta ledningen när det gäller att skriva och ändra kod för att integrera Dynamic Media Classic URL:er på er webbplats. Adobe har ett konsultteam som kan hjälpa till med detta, antingen genom att tillhandahålla teknisk, kreativ eller allmän vägledning.
 
 För mer komplexa lösningar som zoomningsvisningsprogram, eller visningsprogram som kombinerar zoomning med alternativa vyer, pekar URL-adressen vanligtvis på ett visningsprogram som finns på Dynamic Media Classic, och inom den URL-adressen är en referens till ett resurs-ID.
 
@@ -173,18 +173,18 @@ Exempel på en länk (i rött) som öppnar en bilduppsättning i ett visningspro
 
 >[!IMPORTANT]
 >
->Du måste integrera Dynamic Media Classic-URL:erna i webbplatser, mobilappar, e-post och andra digitala kontaktytor - Dynamic Media Classic kan inte göra det åt dig!
+>Ni måste integrera Dynamic Media Classic URL:er i er webbplats, mobilapp, e-post och andra digitala kontaktytor - Dynamic Media Classic kan inte göra det åt er!
 
 ## Förhandsgranska resurser
 
-Du vill antagligen förhandsgranska de mediefiler som du har överfört eller skapar eller redigerar för att vara säker på att de visas som du vill när kunderna tittar på dem. Du kommer åt förhandsgranskningsfönstret genom att klicka på en **Förhandsgranska**-knapp, antingen på miniatyrbilden av resursen, högst upp på **panelen Bläddra/Skapa**, eller genom att gå till **Arkiv > Förhandsgranska**. I ett webbläsarfönster förhandsvisas den resurs som för närvarande finns på panelen, oavsett om det är en bild, en video eller en inbyggd resurs som en bilduppsättning.
+Du vill antagligen förhandsgranska de mediefiler som du har överfört eller skapar eller redigerar för att vara säker på att de visas som du vill när kunderna tittar på dem. Du kommer åt förhandsgranskningsfönstret genom att klicka på **Förhandsgranska** , antingen på miniatyrbilden av resursen, högst upp i **Panelen Bläddra/bygg** eller genom att gå till **Arkiv > Förhandsgranska**. I ett webbläsarfönster förhandsvisas den resurs som för närvarande finns på panelen, oavsett om det är en bild, en video eller en inbyggd resurs som en bilduppsättning.
 
 ### Förhandsvisning av dynamisk storlek (bildförinställningar)
 
-Du kan förhandsvisa dina bilder i flera storlekar med förhandsvisningen av **storlekar**. Då visas en lista med tillgängliga bildförinställningar. Vi diskuterar bildförinställningar senare, men tänk på dem som recept för att läsa in bilden i en namngiven storlek med specifika mängder skärpa och bildkvalitet.
+Du kan förhandsgranska dina bilder i flera storlekar med **Storlekar** förhandsgranska. Då visas en lista med tillgängliga bildförinställningar. Vi diskuterar bildförinställningar senare, men tänk på dem som recept för att läsa in bilden i en namngiven storlek med specifika mängder skärpa och bildkvalitet.
 
 ### Förhandsgranska zoomning
 
-Du kan också använda alternativet **Zooma** för att förhandsvisa bilden i en av många fördefinierade zoomförinställningar, som baseras på olika inbyggda zoomningsvisningsprogram.
+Du kan också använda **Zooma** om du vill förhandsvisa bilden i en av många fördefinierade zoominställningar, som baseras på olika inbyggda zoomningsvisningsprogram.
 
 Läs mer om [Förhandsgranska resurser](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html).

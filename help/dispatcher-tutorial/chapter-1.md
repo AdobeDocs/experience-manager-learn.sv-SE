@@ -1,14 +1,14 @@
 ---
-title: '"Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"'
+title: "Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"
 description: I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
 feature: Dispatcher
 topic: Architecture
 role: Architect
 level: Beginner
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '17468'
+source-wordcount: '17460'
 ht-degree: 0%
 
 ---
@@ -198,7 +198,7 @@ och
 
 `http://domain.com/home.html/suffix.html`
 
-De är helt giltiga i AEM. Du skulle inte se några problem på din lokala utvecklingsdator (utan en Dispatcher). Troligen kommer du inte heller att få några problem med UAT- eller inläsningstestning. Det problem vi står inför är så subtilt att det glider igenom de flesta tester.  Den kommer att drabba dig hårt när du är i toppläge och du kommer att begränsas till att ta itu med den, troligen inte har någon serveråtkomst eller resurser att åtgärda den. Vi har varit där..
+De är helt giltiga i AEM. Du skulle inte se några problem på din lokala utvecklingsdator (utan en Dispatcher). Troligen kommer du inte heller att få några problem med UAT- eller inläsningstestning. Det problem vi står inför är så subtilt att det glider igenom de flesta tester.  Den kommer att drabba dig hårt när du är i toppläge och du har begränsad tid att ta itu med den, troligen inte har någon serveråtkomst eller resurser att åtgärda den. Vi har varit där..
 
 Så.. vad är problemet?
 
@@ -361,11 +361,11 @@ Vad hände? Dispatcher lagrar en statisk version av en sida som innehåller allt
 
 Dispatcher är en webbserver som bara är baserad på filsystem och är snabb men också ganska enkel. Om en inkluderad resurs ändras inser den inte det. Det håller fortfarande fast vid innehållet som fanns där när inkluderingssidan renderades.
 
-Sidan &quot;Vinter special&quot; har inte renderats än, så det finns ingen statisk version på Dispatcher och kommer därför att visas med den nya teaser som kommer att renderas på begäran.
+Sidan&quot;Vinter special&quot; har inte renderats än, så det finns ingen statisk version på Dispatcher och den visas därför med det nya teaser som den renderas på begäran.
 
 Du kanske tror att Dispatcher håller reda på alla resurser som den rör vid återgivningen och tömmer alla sidor som har använt den här resursen när resursen ändras. Men Dispatcher återger inte sidorna. Återgivningen utförs av publiceringssystemet. Dispatcher vet inte vilka resurser som går till en återgiven HTML-fil.
 
-Fortfarande inte övertygad? Du kanske tror *&quot;det måste finnas ett sätt att implementera någon form av beroendespårning&quot;*. Well there is, or more accurately there *was*. Communiqué 3, AEM gammelfarfar, hade en beroendespårare implementerad i _session_ som användes för att återge en sida.
+Fortfarande inte övertygad? Du kanske tror *&quot;det måste finnas ett sätt att implementera någon form av beroendespårning&quot;*. Det finns, eller mer exakt där *var*. Communiqué 3, AEM gammelfarfar, hade en beroendespårare implementerad i _session_ som användes för att återge en sida.
 
 Under en begäran spårades varje resurs som hämtades via den här sessionen som ett beroende av den URL som för närvarande återges.
 
@@ -445,7 +445,7 @@ Självständiga resurser ska betjänas på den resursens sökväg. Det hjälper 
 
 Inaktiveringsbegäran för Dispatcher utlöses vanligtvis av en replikeringsagent från publiceringssystemet.
 
-Om du känner dig säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
+Om du känner dig riktigt säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
 
 Det skulle gå lite längre än den här guiden för att gå in på detaljerna, men vi vill ge dig åtminstone några tips.
 
@@ -481,17 +481,17 @@ Resurserna överförs bara till DAM-området i AEM _refererad_ i komponenten res
 
 Responskomponenten tar hand om både återgivningen av markeringen och leveransen av binära bilddata.
 
-Det sätt vi implementerar det här är ett gemensamt mönster som vi har sett i många projekt, och till och med en av de AEM kärnkomponenterna är baserad på det mönstret. Därför är det mycket troligt att du som utvecklare kan anpassa det mönstret. Den har sina ljuvliga fläckar när det gäller inkapsling, men det kräver en hel del arbete för att få den klar för Dispatcher. We will discuss several options how to mitigate the problem later.
+Det sätt vi implementerar det här är ett gemensamt mönster som vi har sett i många projekt, och till och med en av de AEM kärnkomponenterna är baserad på det mönstret. Därför är det mycket troligt att du som utvecklare kan anpassa det mönstret. Den har sina ljuvliga fläckar när det gäller inkapsling, men det kräver en hel del arbete för att få den klar för Dispatcher. Vi kommer att diskutera flera olika alternativ för att minska problemet senare.
 
 Vi kallar det mönster som används här för &quot;Utskriftsmönster&quot;, eftersom problemet är en del av de tidiga dagarna i Communiqué 3 där det fanns en metod som kunde anropas på en resurs för att strömma dess binära rådata till svaret.
 
-Den ursprungliga termen &quot;mellanlagring&quot; avser egentligen delad kringutrustning som är offline, som skrivare, så den används inte korrekt här. Men vi gillar termen i alla fall eftersom den sällan finns i onlinevärlden och därmed är urskiljbar. Och varje mönster ska ändå ha ett unikt namn. It&#39;s up to you to decide if this is a pattern or an anti-pattern.
+Den ursprungliga termen &quot;mellanlagring&quot; avser egentligen delad kringutrustning som är offline, som skrivare, så den används inte korrekt här. Men vi gillar termen i alla fall eftersom den sällan finns i onlinevärlden och därmed är urskiljbar. Och varje mönster ska ändå ha ett unikt namn. Det är upp till dig att bestämma om detta är ett mönster eller ett antimönster.
 
 #### Implementering
 
 Så här implementeras vår komponent för responsiv bild:
 
-The component has two parts; the first part renders the image&#39;s HTML markup, the second part &quot;spools&quot; the referenced image&#39;s binary data. Eftersom det här är en modern webbplats med responsiv design renderar vi inte en enkel `<img src"…">` -tagg, men en uppsättning bilder i `<picture/>` -tagg. För varje enhet överför vi två olika bilder till DAM och refererar till dem från vår bildkomponent.
+Komponenten har två delar. den första delen återger bildens HTML-kod, den andra delen &quot;mellanlagras&quot; den refererade bildens binära data. Eftersom det här är en modern webbplats med responsiv design renderar vi inte en enkel `<img src"…">` -tagg, men en uppsättning bilder i `<picture/>` -tagg. För varje enhet överför vi två olika bilder till DAM och refererar till dem från vår bildkomponent.
 
 Komponenten har tre återgivningsskript (implementerade i JSP, HTL eller som en servlet) som var och en är adresserad med en dedikerad väljare:
 
@@ -582,7 +582,7 @@ Ser du? &quot;M&quot; i DAM står för &quot;Management&quot; - som i Digital As
 
 Ur AEM perspektiv såg mönstret superelegant ut. Men med Dispatcher i ekvationen kanske du håller med om att det naiva tillvägagångssättet kanske inte räcker.
 
-Vi låter dig bestämma om det är ett mönster eller ett antimönster för tillfället. Och du kanske redan har bra idéer i åtanke om hur du kan mildra problemen som beskrivs ovan? Bra. Sedan kommer du att vara angelägen om att se hur andra projekt har löst dessa problem.
+Vi låter dig bestämma om det är ett mönster eller ett antimönster för tillfället. Och du kanske redan har bra idéer i åtanke om hur du kan mildra problemen som beskrivs ovan? Bra. Då ska du vara angelägen om att se hur andra projekt har löst dessa problem.
 
 ### Lösa vanliga utskicksproblem
 
@@ -706,27 +706,27 @@ Invalidate-path /content/mysite/dummy
 
 #### Behovet av rensning
 
-Phew. Finished. Hurray!
+Phew. Slutförd. Hurra!
 
 Inte riktigt än.
 
-The path,
+Banan
 
 `/content/mysite/home/jcr:content/par/respi.img.fp-2018-31-12-23-59.jpg`
 
-inte avser någon av de ogiltiga resurserna. Kommer du ihåg? Vi ogiltigförklarade bara en &quot;dummy&quot;-resurs och förlitade oss på automatisk ogiltigförklaring för att anse &quot;home&quot; som ogiltig. The image itself might never be _physically_ deleted. So, the cache will grow and grow and grow. När bilder ändras och aktiveras får de nya filnamn i filsystemet i Dispatcher.
+inte avser någon av de ogiltiga resurserna. Kommer du ihåg? Vi ogiltigförklarade bara en &quot;dummy&quot;-resurs och förlitade oss på automatisk ogiltigförklaring för att anse &quot;home&quot; som ogiltig. Själva bilden kanske aldrig _fysiskt_ borttagen. Så cacheminnet kommer att växa och växa och växa. När bilder ändras och aktiveras får de nya filnamn i filsystemet i Dispatcher.
 
 Det finns tre problem med att inte ta bort de cachelagrade filerna fysiskt och behålla dem i oändlighet:
 
 1. Du slösar helt klart bort lagringskapacitet. Beviljad - lagringsutrymmet har blivit billigare och billigare under de senaste åren. Men bildupplösningar och filstorlekar har också växt under de senaste åren - med näthinneliknande skärmar som är hungriga efter kristallskarpa bilder.
 
-2. Trots att hårddiskarna har blivit billigare har &quot;lagring&quot; kanske inte blivit billigare. Vi har sett en trend där din datacenterleverantör inte har tillgång till (billig) lagring i rent metall utan hyr ut virtuell lagring på en NAS. Den här typen av lagring är lite mer tillförlitlig och skalbar men också lite dyrare. Du kanske inte vill slösa bort den genom att lagra föråldrad skräp. Detta gäller inte bara den primära lagringen - tänk också på säkerhetskopieringar. Om du har en färdig lösning för säkerhetskopiering kanske du inte kan utesluta cachekatalogerna. In the end you are also backing up garbage data.
+2. Trots att hårddiskarna har blivit billigare har &quot;lagring&quot; kanske inte blivit billigare. Vi har sett en trend där din datacenterleverantör inte har tillgång till (billig) lagring i rent metall utan hyr ut virtuell lagring på en NAS. Den här typen av lagring är lite mer tillförlitlig och skalbar men också lite dyrare. Du kanske inte vill slösa bort den genom att lagra föråldrad skräp. Detta gäller inte bara den primära lagringen - tänk också på säkerhetskopieringar. Om du har en färdig lösning för säkerhetskopiering kanske du inte kan utesluta cachekatalogerna. Till slut säkerhetskopierar du också skräpdata.
 
 3. Ännu värre: Du kan ha köpt användningslicenser för vissa bilder endast under en begränsad tid - så länge du behöver dem. Om du fortfarande lagrar bilden efter att en licens har upphört att gälla kan detta ses som en upphovsrättsöverträdelse. Du kanske inte längre använder bilden på dina webbsidor, men Google hittar dem fortfarande.
 
-So finally, you will come up with some housekeeping cronjob to clean all files older than... let&#39;s say a week to keep this kind of littering under control.
+Till slut kommer du att få lite jobb att städa alla filer som är äldre än... en vecka för att hålla den här typen av strö under kontroll.
 
-#### Abusing URL Fingerprints for Denial of Service Attacks
+#### Förskjuter URL-fingeravtryck för denial of service-attacker
 
 Men vänta, det finns ett annat fel i den här lösningen:
 
@@ -756,7 +756,7 @@ Men här kan du stå inför en annan kavaat med URL-fingeravtryck: Den kopplar U
 
 Wow - Det är en hel del detaljer att tänka på, eller hur? Och den vägrar att vara lätt att förstå, testa och felsöka. Och allt för en till synes elegant lösning. Visserligen är det elegant - men bara ur ett AEM perspektiv. Tillsammans med Dispatcher blir det otrevligt.
 
-Och ändå - det löser inte ett enkelt cavat, om en bild används flera gånger på olika sidor, kommer de att cachas under dessa sidor. Det finns inte mycket cachelagring av synergi där.
+Och ändå - det löser inte ett enkelt cavat, om en bild används flera gånger på olika sidor cachelagras de under dessa sidor. Det finns inte mycket cachelagring av synergi där.
 
 I allmänhet är URL-fingeravtryck ett bra verktyg i verktygslådan, men du måste använda det med försiktighet, eftersom det kan orsaka nya problem medan du bara löser några få befintliga.
 
@@ -886,7 +886,7 @@ Det här är en dålig idé. Kommer du ihåg? Begäranden med frågeparametrar �
 
 ![Skicka komponentegenskaper som väljare](assets/chapter-1/passing-component-properties.png)
 
-*Passing Component Properties as Selectors*
+*Skicka komponentegenskaper som väljare*
 
 <br> 
 
@@ -1308,9 +1308,9 @@ En tillförlitligare inställning skickar en begäran om ogiltigförklaring frå
 
 ### HTTP Header and Header Caching
 
-På den gamla tiden lagrade Dispatcher bara oformaterade filer i filsystemet. Om du behövde HTTP-headers för att kunna levereras till kunden gjorde du det genom att konfigurera Apache baserat på den lilla information du hade från filen eller platsen. That was especially annoying when you implemented a web application in AEM that heavily relied on HTTP headers. Allt fungerade bra i den AEM förekomsten, men inte när du använde en Dispatcher.
+På den gamla tiden lagrade Dispatcher bara oformaterade filer i filsystemet. Om du behövde HTTP-headers för att kunna levereras till kunden gjorde du det genom att konfigurera Apache baserat på den lilla information du hade från filen eller platsen. Det var särskilt irriterande när du implementerade ett webbprogram i AEM som var starkt beroende av HTTP-huvuden. Allt fungerade bra i den AEM förekomsten, men inte när du använde en Dispatcher.
 
-Vanligtvis började du återanvända de saknade rubrikerna på resurserna på Apache-servern med `mod_headers` genom att använda information som kan härledas av resurssökvägen och suffixet. But that was not always sufficient.
+Vanligtvis började du återanvända de saknade rubrikerna på resurserna på Apache-servern med `mod_headers` genom att använda information som kan härledas av resurssökvägen och suffixet. Men det var inte alltid tillräckligt.
 
 Särskilt irriterande var att även med Dispatcher var det första _ocachelagrad_ svar på webbläsaren kom från publiceringssystemet med ett stort antal rubriker, medan de efterföljande svaren genererades av Dispatcher med en begränsad uppsättning rubriker.
 
@@ -1502,9 +1502,9 @@ Och du kan förstås välja en egen blandning av alla tre metoderna.
 >Det här mönstret kräver en _Gateway_ att _spärrar_ varje begäran och utför de faktiska _auktorisation_ - att bevilja eller neka förfrågningar till Dispatcher. Om SSO-systemet är en _autentiserare_, som bara fastställer identiteten för en användare som du måste implementera alternativ 3. Om du läser termer som &quot;SAML&quot; eller &quot;OAauth&quot; i SSO-systemets handbok är det en stark indikator på att du måste implementera alternativ 3.
 
 
-**Alternativ 2**. &quot;Not caching&quot; generally is a bad idea. Om du gör det ska du se till att mängden trafik och antalet känsliga resurser som är undantagna är små. Or make sure to have some in-memory cache in the Publish system installed, that the Publish systems can handle the resulting load - more on that in Part III of this series.
+**Alternativ 2**. &quot;Att inte cacha&quot; är vanligtvis en dålig idé. Om du gör det ska du se till att mängden trafik och antalet känsliga resurser som är undantagna är små. Eller se till att du har ett visst minnescache i publiceringssystemet installerat, att publiceringssystemen kan hantera den resulterande belastningen - mer därtill i del III i den här serien.
 
-**Option 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM om den kan göra det. Detta skapar en extra begäran från Dispatcher till Publish (Publicera), men medför vanligtvis att Publish-systemet inte kan återge en sida om den redan är cache-lagrad. Though, this approach requires some custom implementation. Find details here in the article [Permission sensitive caching](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html).
+**Alternativ 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM om den kan göra det. Detta skapar en extra begäran från Dispatcher till Publish (Publicera), men medför vanligtvis att Publish-systemet inte kan återge en sida om den redan är cache-lagrad. Den här metoden kräver dock en viss anpassad implementering. Mer information finns här i artikeln [Behörighetskänslig cachelagring](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html).
 
 **Referenser**
 
@@ -1526,7 +1526,7 @@ För att minska problemet med den här &quot;cache invalidation storm&quot; som 
 
 Du kan ange att Dispatcher ska använda en `grace period` för automatisk ogiltigförklaring. Detta skulle lägga till extra tid internt i `statfiles` ändringsdatum.
 
-Säg: `statfile` har en ändringstid på idag kl. 12:00 och `gracePeriod` är inställt på 2 minuter. Därefter betraktas alla automatiskt ogiltigförklarade filer som giltiga kl. 12.01 och kl. 12.02. De återges igen efter 12:02.
+Säg: `statfile` har en ändringstid på idag kl. 12:00 och `gracePeriod` är inställt på 2 minuter. Därefter betraktas alla automatiskt ogiltigförklarade filer som giltiga kl. 12:01 och kl. 12:02. De återges efter 12:02.
 
 Referenskonfigurationen föreslår en `gracePeriod` av två minuter av goda skäl. Du kanske tror &quot;Två minuter? Det är nästan ingenting. Jag kan enkelt vänta i 10 minuter på att innehållet ska visas ...&quot;.  Så du kan vara frestad att ange en längre period, till exempel tio minuter, under förutsättning att ditt innehåll visas minst efter dessa tio minuter.
 
@@ -1740,7 +1740,7 @@ För en inledande nekanderegel, som
 
 `/0001  { /glob "\*" /type "deny" }`
 
-this is fine. But for the subsequent allows, it is better and clearer more expressive and way more secure to use the individual parts of a request:
+Det här är bra. Men för den efterföljande metoden är det bättre och tydligare och mer uttrycksfullt och säkrare att använda de enskilda delarna i en begäran:
 
 ```
 /method

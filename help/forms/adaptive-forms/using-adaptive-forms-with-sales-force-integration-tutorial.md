@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Krav för den här självstudiekursen:
 * Ange lämpliga OAuth-scope för appen (jag har valt alla tillgängliga OAuth-scope för testning)
 * Ange återanrops-URL. Återanrops-URL:en i mitt fall var
 
-   * Om du använder **AEM Forms 6.3** kommer återanrops-URL:en att vara https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. I den här URL:en är creatlead namnet på min formulärdatamodell.
+   * Om du använder **AEM Forms 6.3**&#x200B;är återanrops-URL:en https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. I den här URL:en är creatlead namnet på min formulärdatamodell.
 
    * Om du använder** AEM Forms 6.4** är återanrops-URL:en https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
@@ -42,7 +42,7 @@ I det här exemplet är gbedekar -w7-1:6443 namnet på min server och den port s
 
 När du har skapat anteckningen Kopplad app kan du **Konsumentnyckel och hemlig nyckel**. Du behöver dessa när du skapar datakällan i AEM Forms.
 
-Nu när du har skapat din anslutna app måste du skapa en swagger-fil för de åtgärder du behöver utföra i Salesforce. En swagger-exempelfil inkluderas som en del av de hämtningsbara resurserna. Med den här swagger-filen kan du skapa Lead-objekt när du skickar adaptiva formulär. Utforska den här växlingsfilen.
+Nu när du har skapat ditt anslutna program måste du skapa en swagger-fil för de åtgärder som du måste utföra i Salesforce. En swagger-exempelfil inkluderas som en del av de hämtningsbara resurserna. Med den här swagger-filen kan du skapa Lead-objekt när du skickar adaptiva formulär. Utforska den här växlingsfilen.
 
 Nästa steg är att skapa en datakälla i AEM Forms. Följ de här stegen enligt din AEM Forms-version
 

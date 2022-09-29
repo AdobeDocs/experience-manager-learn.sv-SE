@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -89,15 +89,13 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
    // TODO Auto-generated catch block
    e1.printStackTrace();
   }
-
  }
-
 }
 ```
 
-Följande kod är en del av klientbiblioteket som det adaptiva formuläret refererar till. När en användare lägger till den bifogade filen i det adaptiva formuläret aktiveras den här koden. Koden gör ett GET-anrop till servern med sökvägen till den bifogade filen som skickas i parametern request. Data som tas emot från serverletanropet används sedan för att fylla i det adaptiva formuläret.
+Följande kod är en del av klientbiblioteket som det adaptiva formuläret refererar till. När en användare lägger till den bifogade filen i det adaptiva formuläret utlöses den här koden. Koden gör ett GET-anrop till servern med sökvägen till den bifogade filen som skickas i parametern request. Data som tas emot från serverletanropet används sedan för att fylla i det adaptiva formuläret.
 
-```
+```javascript
 $(document).ready(function()
    {
        guideBridge.on("elementValueChanged",function(event,data){

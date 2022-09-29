@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakäl
 1. SOAP-baserade webbtjänster
 1. OData-tjänster
 
-För integreringen av AEM Forms med Marketo kommer vi att använda RESTful-webbtjänster. Det första steget i integreringen är att konfigurera en [datakälla.](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) Använd swagger-filen som ingår i kursen. I följande skärmbild visas de viktiga egenskaper som måste anges när datakällan konfigureras.
+För integreringen av AEM Forms med Marketo använder vi RESTful-webbtjänster. Det första steget i integreringen är att konfigurera en [datakälla.](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) Använd swagger-filen som ingår i kursen. I följande skärmbild visas de viktiga egenskaper som måste anges när datakällan konfigureras.
 ![datakälla](assets/datasource.jfif)
 
 &quot;marketo.json&quot; är swagger-filen som du får som en del av kursens resurser.

@@ -1,6 +1,6 @@
 ---
-title: Autentisera till AEM som en Cloud Service från ett externt program
-description: Upptäck hur ett externt program kan autentisera och interagera med AEM som en Cloud Service via HTTP med hjälp av Local Development Access-token och inloggningsuppgifter.
+title: Autentisering till AEM as a Cloud Service från ett externt program
+description: Upptäck hur ett externt program kan autentisera och interagera med AEM as a Cloud Service via HTTP med hjälp av Local Development Access-token och inloggningsuppgifter.
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,18 +13,18 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
-# Tokenbaserad autentisering som AEM som Cloud Service
+# Tokenbaserad autentisering till AEM as a Cloud Service
 
 AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan kanter, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
 
-I den här självstudiekursen kan du utforska hur ett externt program kan autentisera och interagera med till AEM som en Cloud Service via HTTP med hjälp av åtkomsttoken.
+I den här självstudiekursen kan du utforska hur ett externt program kan autentisera och interagera med för att AEM as a Cloud Service via HTTP med hjälp av åtkomsttoken.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
@@ -32,14 +32,14 @@ I den här självstudiekursen kan du utforska hur ett externt program kan autent
 
 Kontrollera att följande finns på plats innan du följer med i den här självstudiekursen:
 
-1. Tillgång till am AEM som Cloud Service (helst en utvecklingsmiljö eller ett sandlådeprogram)
-1. Medlemskap i AEM som Cloud Service-miljöns Author services AEM Administrator Product Profile
-1. Medlemskap i, eller åtkomst till, din Adobe IMS-organisationsadministratör (de måste initiera [tjänstens inloggningsuppgifter](./service-credentials.md)) en gång)
-1. Den senaste [WKND-platsen](https://github.com/adobe/aem-guides-wknd) som distribuerats till din Cloud Service-miljö
+1. Tillgång till AEM as a Cloud Service miljö (helst en utvecklingsmiljö eller ett sandlådeprogram)
+1. Medlemskap i AEM as a Cloud Service miljöns Author Services AEM Administrator Product Profile
+1. Medlemskap i, eller åtkomst till, din Adobe IMS-organisationsadministratör (de måste initiera [Tjänstautentiseringsuppgifter](./service-credentials.md))
+1. De senaste [WKND-plats](https://github.com/adobe/aem-guides-wknd) distribueras till din Cloud Service
 
 ## Översikt över externt program
 
-I den här självstudien används ett [enkelt Node.js-program](./assets/aem-guides_token-authentication-external-application.zip) som körs från kommandoraden för att uppdatera metadata för resurser på AEM som en Cloud Service med [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html).
+I den här självstudiekursen används en [simple Node.js application](./assets/aem-guides_token-authentication-external-application.zip) köra från kommandoraden för att uppdatera metadata för resurser på AEM as a Cloud Service med [Resurser för HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html).
 
 Körningsflödet för programmet Node.js är följande:
 
@@ -47,10 +47,10 @@ Körningsflödet för programmet Node.js är följande:
 
 1. Programmet Node.js anropas från kommandoraden
 1. Parametrar för kommandorad definierar:
-   + AEM som Cloud Service Author Service Host att ansluta till (`aem`)
-   + Den AEM resursmapp vars resurser ska uppdateras (`folder`)
+   + Den AEM as a Cloud Service författartjänstvärden som ska anslutas till (`aem`)
+   + Den AEM resursmappen vars resurser uppdateras (`folder`)
    + Egenskapen och värdet för metadata som ska uppdateras (`propertyName` och `propertyValue`)
-   + Den lokala sökvägen till filen med de autentiseringsuppgifter som krävs för att få åtkomst till AEM som Cloud Service (`file`)
+   + Den lokala sökvägen till filen med de autentiseringsuppgifter som krävs för att få åtkomst AEM as a Cloud Service (`file`)
 1. Åtkomsttoken som används för att autentisera AEM härleds från JSON-filen som tillhandahålls via kommandoradsparametern `file`
 
    a. Om tjänstautentiseringsuppgifter som används för icke-lokal utveckling anges i JSON-filen (`file`) hämtas åtkomsttoken från Adobe IMS API:er
@@ -61,13 +61,13 @@ Körningsflödet för programmet Node.js är följande:
 
 ## Åtkomsttoken för lokal utveckling
 
-Token för lokal utvecklingsåtkomst genereras för en specifik AEM som en Cloud Service och ger tillgång till författar- och publiceringstjänster.  Dessa åtkomsttoken är temporära och ska bara användas under utvecklingen av externa program eller system som interagerar med AEM via HTTP. Istället för att utvecklaren behöver skaffa och hantera äkta Service Credentials kan han eller hon snabbt och enkelt generera en temporär åtkomsttoken så att han eller hon kan utveckla sin integrering.
+Token för lokal utvecklingsåtkomst genereras för en viss AEM as a Cloud Service miljö och ger åtkomst till författar- och publiceringstjänster.  Dessa åtkomsttoken är temporära och ska bara användas under utvecklingen av externa program eller system som interagerar med AEM via HTTP. Istället för att utvecklaren behöver skaffa och hantera äkta Service Credentials kan han eller hon snabbt och enkelt generera en temporär åtkomsttoken så att han eller hon kan utveckla sin integrering.
 
 + [Så här använder du Local Development Access Token](./local-development-access-token.md)
 
 ## Tjänstautentiseringsuppgifter
 
-Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till och interagera med AEM som en Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan i det externa programmet används dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _för_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden som AEM som en Cloud Service.
+Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till, och interagera med, AEM as a Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan det externa programmet använder dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _for_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden till AEM as a Cloud Service.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
 

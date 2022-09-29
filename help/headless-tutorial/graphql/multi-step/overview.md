@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 93d50e79853429f420803c28807ee8018d0ff78f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Du måste följa den här självstudiekursen på följande sätt:
 
 ### AEM
 
-För att slutföra den här självstudiekursen rekommenderas AEM administratörsåtkomst till en AEM as a Cloud Service miljö.  Om du inte har tillgång till AEM as a Cloud Service miljö kan du använda [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Det är dock viktigt att du är medveten om att vissa gränssnittsskärmar, som t.ex. navigering i innehållsfragment, kommer att vara annorlunda.
+För att slutföra den här självstudiekursen rekommenderas AEM administratörsåtkomst till en AEM as a Cloud Service miljö.  Om du inte har tillgång till AEM as a Cloud Service miljö kan du använda [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Det är dock viktigt att du är medveten om att en del användargränssnittsskärmar, som t.ex. navigering i innehållsfragment, är annorlunda.
 
 ## Kom så börjar vi!
 

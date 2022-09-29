@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -83,7 +83,7 @@ För att uppnå detta måste vi göra följande.
 
 I följande skärmbild visas de konfigurationsegenskaper som visas. De flesta vanliga användningsrättigheter visas genom den här konfigurationen.
 
-![](assets/configurationproperties.gif)
+![Konfigurationsegenskaper](assets/configurationproperties.gif)
 
 I följande kod visas koden som används för att skapa OSGi-konfigurationsinställningarna
 
@@ -122,7 +122,7 @@ public @interface DocSvcConfiguration {
 
 ## Skapa serverström för att strömma PDF {#create-servlet-to-stream-the-pdf}
 
-Nästa steg är att skapa en servlet med en GET-metod som returnerar läsaren extended PDF till användaren. I så fall uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
+Nästa steg är att skapa en servlet med en GET-metod som returnerar läsaren extended PDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
 Här följer koden för serverleten. Vi skickar sökvägen till XDP i CRX-databasen till den här servern.
 

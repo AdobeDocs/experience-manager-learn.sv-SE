@@ -11,9 +11,9 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ PNG-bilder kan användas för komponentikoner. Om du vill konfigurera en PNG-bil
 
 PNG-filen ska ha en genomskinlig bakgrund eller en bakgrundsfärg inställd på **#707070**.
 
-PNG-bilderna skalas till **20px x x 20px**. Men för att passa Retina-skärmar **40px** av **40px** kan vara att föredra.
+PNG-bilder skalas till **20px x x 20px**. Men för att passa Retina-skärmar **40px** av **40px** kan vara att föredra.
 
 ```plain
 /apps/.../components/content/my-component

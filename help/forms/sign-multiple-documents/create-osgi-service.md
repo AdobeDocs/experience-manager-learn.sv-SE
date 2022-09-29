@@ -1,20 +1,20 @@
 ---
 title: Skapa OSGi-tjänst
 description: Skapa OSGi-tjänst för att lagra formulären som ska signeras
-feature: Arbetsflöde
+feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
-
 
 # Skapa OSGi-tjänst
 
@@ -204,4 +204,4 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-OSGi-paketet med ovannämnda tjänster kan [laddas ned här](assets/sign-multiple-forms.jar)
+OSGi-paketet med ovannämnda tjänster kan [hämtad härifrån](assets/sign-multiple-forms.jar)

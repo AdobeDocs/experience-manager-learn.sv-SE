@@ -6,9 +6,9 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ En kort introduktion till temat i Resursdelningskommentarer. Videon går igenom 
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572/?quality=9&learn=on)
 
-I den här videon kommer ett nytt tema att skapas baserat på det mörka temat Resursdelningskomponenter. Färgschemat kommer att matcha en egen logotyp för att ge webbplatsen ett konsekvent utseende och känsla.
+I den här videon skapas ett nytt tema baserat på det mörka temat Resursdelningar. Färgschemat kommer att matcha en egen logotyp för att ge webbplatsen ett konsekvent utseende och känsla.
 
 ## Temavariabler
 

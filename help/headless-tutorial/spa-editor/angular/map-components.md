@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ I det här kapitlet finns en djupdykning i AEM JSON-modell-API:t och hur JSON-in
 
 ## Vad du ska bygga
 
-I det här kapitlet granskas hur `Text` SPA är mappad till AEM `Text`-komponenten. En ny `Image` SPA kommer att skapas som kan användas i SPA och redigeras i AEM. Funktioner i **Layoutbehållare** och **Mallredigerare** kommer också att användas för att skapa en vy som ser lite mer varierad ut.
+I det här kapitlet granskas hur `Text` SPA är mappad till AEM `Text`-komponenten. En ny `Image` SPA som kan användas i SPA och redigeras i AEM skapas. Funktioner i **Layoutbehållare** och **Mallredigerare** kommer också att användas för att skapa en vy som ser lite mer varierad ut.
 
 ![Slutredigering av kapitelexempel](./assets/map-components/final-page.png)
 
@@ -92,7 +92,7 @@ Låt oss se hur komponenten fungerar.
 
    `:type` är en reserverad egenskap som visar `sling:resourceType` (eller sökväg) för AEM. Värdet för `:type` är vad som används för att mappa AEM till SPA.
 
-   `text` och `richText` är ytterligare egenskaper som kommer att exponeras för SPA.
+   `text` och `richText` är ytterligare egenskaper som exponeras för SPA.
 
 ### Inspect komponenten Text
 
@@ -146,7 +146,7 @@ Låt oss se hur komponenten fungerar.
    };
    ```
 
-   Koden ovan avgör när platshållaren ska återges i AEM redigeringsmiljö. Om `isEmpty` metodreturer **true** kommer platshållaren att återges.
+   Koden ovan avgör när platshållaren ska återges i AEM redigeringsmiljö. Om `isEmpty` metodreturer **true** återges platshållaren.
 
 6. Ta en titt på `MapTo` ring på ~rad 53:
 
@@ -178,7 +178,7 @@ Låt oss se hur komponenten fungerar.
 
 8. Inspect **text.component.html** på `ui.frontend/src/app/components/text/text.component.html`.
 
-   Den här filen är tom eftersom hela innehållet i komponenten kommer att anges av `innerHTML` -egenskap.
+   Den här filen är tom eftersom hela innehållet i komponenten anges av `innerHTML` -egenskap.
 
 9. Inspect **app.module.ts** på `ui.frontend/src/app/app.module.ts`.
 
@@ -215,7 +215,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    >[!NOTE]
    >
-   > Andra bildegenskaper visas (`lazyEnabled`, `widths`) som gör att utvecklare kan skapa en adaptiv och lat laddande komponent. Komponenten som är inbyggd i den här självstudiekursen är enkel och kommer att **not** använder dessa avancerade egenskaper.
+   > Andra bildegenskaper visas (`lazyEnabled`, `widths`) som gör att utvecklare kan skapa en adaptiv och lat laddande komponent. Komponenten som är inbyggd i den här självstudiekursen är enkel och gör **not** använder dessa avancerade egenskaper.
 
 2. Återgå till din utvecklingsmiljö och öppna `en.model.json` på `ui.frontend/src/mocks/json/en.model.json`. Eftersom det här är en ny komponent i vårt projekt måste vi&quot;göra dummy&quot; av Image JSON.
 
@@ -244,7 +244,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
            ],
    ```
 
-   Projektet innehåller en exempelbild på `/mock-content/adobestock-140634652.jpeg` som kommer att användas med **dev-server för webbpaket**.
+   Projektet innehåller en exempelbild på `/mock-content/adobestock-140634652.jpeg` som används med **dev-server för webbpaket**.
 
    Du kan visa hela [en.model.json här](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/map-components-solution/ui.frontend/src/mocks/json/en.model.json).
 
@@ -498,6 +498,6 @@ Nästa steg är att utföra med Visual Studio Code IDE och [Synkronisering AEM V
     </workspaceFilter>
    ```
 
-   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som ska installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
+   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
 
    Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` för att förstå de olika noder som hanteras av varje modul.

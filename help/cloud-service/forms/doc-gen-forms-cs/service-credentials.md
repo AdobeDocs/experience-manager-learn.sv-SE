@@ -1,5 +1,5 @@
 ---
-title: AEM
+title: Autentiseringsuppgifter för AEM Forms-tjänsten
 description: Hämta autentiseringsuppgifter för tjänsten från AEM Developer Console.
 type: Documentation
 role: Developer
@@ -9,17 +9,17 @@ feature: Adaptive Forms
 topic: Development
 kt: 8192
 thumbnail: 330519.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
+# Autentiseringsuppgifter för AEM Forms-tjänsten
 
-# Tjänstautentiseringsuppgifter
-
-Integrationer med AEM som Cloud Service måste kunna autentiseras säkert till AEM. AEM Developer Console genererar autentiseringsuppgifter som används av externa program, system och tjänster för att programmässigt interagera med AEM Author eller Publish services via HTTP.
+Integrationer med AEM as a Cloud Service måste kunna autentiseras säkert till AEM. AEM Developer Console genererar autentiseringsuppgifter som används av externa program, system och tjänster för att programmässigt interagera med AEM Author eller Publiceringstjänster via HTTP.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
 

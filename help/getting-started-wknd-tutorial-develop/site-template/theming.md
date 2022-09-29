@@ -11,18 +11,18 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # Arbetsflöde för teman {#theming}
 
-I det här kapitlet ska vi uppdatera temakällorna för en Adobe Experience Manager-webbplats så att de använder varumärkesspecifika format. Vi kommer att lära oss att använda en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
+I det här kapitlet uppdaterar vi temakällorna för en Adobe Experience Manager-webbplats för att tillämpa varumärkesspecifika format. Vi lär oss hur du använder en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
 
-Slutligen kommer vår webbplats att uppdateras och innehålla format som matchar WKND-varumärket.
+Slutligen uppdateras vår webbplats med format som matchar WKND-varumärket.
 
 ## Förutsättningar {#prerequisites}
 

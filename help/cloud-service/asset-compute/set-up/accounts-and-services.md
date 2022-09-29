@@ -13,9 +13,9 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '621'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
 1. Tryck __+ Lägg till__ för att skapa ett nytt Blob Storage-konto
 1. Skapa ett nytt __Resursgrupp__ efter behov, till exempel: `aem-as-a-cloud-service`
 1. Ange en __Lagringskontonamn__, till exempel: `aemguideswkndassetcomput`
-   + The __Lagringskontonamn__ kommer att användas för [konfigurera molnlagring](../develop/environment-variables.md) för det lokala utvecklingsverktyget Asset compute
+   + The __Lagringskontonamn__  används för [konfigurera molnlagring](../develop/environment-variables.md) i det lokala utvecklingsverktyget Asset compute
    + The __Åtkomstnycklar__ som är kopplade till lagringskontot krävs också när [konfigurera molnlagring](../develop/environment-variables.md).
 1. Lämna allt annat som standard och tryck på __Granska och skapa__ knapp
    + Om du vill kan du markera __plats__ nära dig.

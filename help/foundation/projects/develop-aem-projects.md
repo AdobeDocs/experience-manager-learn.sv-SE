@@ -11,9 +11,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4582'
+source-wordcount: '4571'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Ett av de mest lockande skälen till att du skapar en anpassad projektmall är a
 
 ## Skapa en projektmall {#creating-project-template}
 
-Eftersom vi främst kommer att kopiera/konfigurera noder kommer vi att använda CRXDE Lite. Öppna den lokala AEM instansen [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRXDE Lite. Öppna den lokala AEM instansen [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
 1. Börja med att skapa en ny mapp under `/apps/&lt;your-app-folder&gt;` namngiven `projects`. Skapa en annan mapp under namnet `templates`.
 
@@ -324,7 +324,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
    >
    >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Se [här för mer information.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
 
-   Om AEM 6.4+ används skapas arbetsflödesmodellen i `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
+   Om AEM 6.4+ används skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
 
    ![Modern definitionsplats för arbetsflöde](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 Placering av arbetsflödesmodell i 6.4+
@@ -345,7 +345,7 @@ Placering av arbetsflödesmodell i 6.4+
 
    Förloppsindikatorn för arbetsflödet som visas i AEM Inkorg.
 
-   Du kan också ladda upp en **Bild** till de sidegenskaper som ska användas som arbetsflödesminiatyrbild när användare markerar den. Bilddimensionerna ska vara 319 x 319 pixlar. Lägga till en **Beskrivning** i Sidegenskaper visas också när en användare väljer arbetsflödet.
+   Du kan också ladda upp en **Bild** till Sidegenskaper som används som arbetsflödesminiatyrbild när användare markerar den. Bilddimensionerna ska vara 319 x 319 pixlar. Lägga till en **Beskrivning** i Sidegenskaper visas också när en användare väljer arbetsflödet.
 
 1. Arbetsflödet Skapa projektuppgift är utformat för att skapa en uppgift som ett steg i arbetsflödet. Arbetsflödet går framåt först när uppgiften har slutförts. En kraftfull aspekt av steget Skapa projektuppgift är att det går att läsa metadatavärden för arbetsflödet och använda dem för att dynamiskt skapa uppgiften.
 
@@ -418,7 +418,7 @@ Placering av arbetsflödesmodell i 6.4+
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. Gå tillbaka till arbetsflödet för godkännande av innehåll. Dra och släpp **ELLER Dela** -komponenten (finns i Sidespark under kategorin &#39;Arbetsflöde&#39;) under **Starta aktivitet** Steg. I dialogrutan Allmänt väljer du alternativknappen för 3 grenar. OR-delningen läser arbetsflödets metadatavärde **&quot;lastTaskAction&quot;** för att fastställa arbetsflödets väg. The **&quot;lastTaskAction&quot;** egenskapen ställs in på ett av värdena från fliken Routning som konfigurerats i steg 4. För var och en av förgreningsflikarna fyller du i **Skript** textområde med följande värden:
+1. Gå tillbaka till arbetsflödet för godkännande av innehåll. Dra och släpp **ELLER Dela** -komponenten (finns i Sidespark under kategorin &#39;Arbetsflöde&#39;) under **Starta aktivitet** Steg. I dialogrutan Allmänt väljer du alternativknappen för 3 grenar. OR-delningen läser arbetsflödets metadatavärde **&quot;lastTaskAction&quot;** för att fastställa arbetsflödets väg. The **&quot;lastTaskAction&quot;** egenskapen är inställd på ett av värdena från fliken Routning som konfigurerats i steg 4. För var och en av förgreningsflikarna fyller du i **Skript** textområde med följande värden:
 
    ```
    function check() {
@@ -635,7 +635,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
    ![arbetsflödesguide för godkännande av innehåll](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
-1. Vi ska lägga till ytterligare ett fält i guiden som ska användas för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
+1. Vi ska lägga till ytterligare ett fält i guiden som används för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
    Under `../content-approval-start/jcr:content/items/column2/items` skapa en ny nod av typen `nt:unstructured` namngiven **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på [Bevilja användarväljarkomponent](https://experienceleague.adobe.com/docs/)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
 

@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '645'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
 1. Skapa överläggsnod av **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. Ställ in övertäckningsplatsen till &quot;/apps&quot;
-1. Navigera till den nya strukturen som skapats på **/apps/fd/fp/extensions/querybuilder/assettypes **
+1. Navigera till den nya strukturen som skapades på `/apps/fd/fp/extensions/querybuilder/assettypes`
 
 1. Skapa en nod av typen &quot;nt:unStructed&quot; under den här platsen för den typ som ska registreras, namnge noden **mp4files. Lägg till följande två egenskaper i den här mp4files-noden**
 
@@ -81,7 +81,7 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
    1. name: ./jcr:content/metadata/dc:format
    1. värde: video/mp4
 
-1. Det innebär att resurser med egenskapen dc:format som är lika med video/mp4 kommer att betraktas som resurstypen&quot;Mp4-videor&quot;. Du kan använda valfri egenskap i noden&quot;jcr:content/metadata&quot; för sökvillkoren
+1. Det innebär att resurser med egenskapen dc:format som är lika med video/mp4 betraktas som en resurstyp,&quot;Mp4-videor&quot;. Du kan använda valfri egenskap i noden&quot;jcr:content/metadata&quot; för sökvillkoren
 
 1. **Spara ditt arbete**
 
@@ -91,4 +91,4 @@ När du har utfört stegen ovan börjar den nya resurstypen (Mp4-filer) visas i 
 
 [Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tar en titt på **/apps/fd/fp/extensions/querybuilder/assettypes**
 
-[Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan kommer att användas i del 2 av den här självstudiekursen
+[Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan används i del 2 av den här självstudiekursen

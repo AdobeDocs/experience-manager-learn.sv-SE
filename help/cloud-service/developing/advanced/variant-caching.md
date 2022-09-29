@@ -4,9 +4,10 @@ description: Lär dig hur du konfigurerar och använder AEM som en molntjänst f
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
-source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
+exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Exempel på användningsområden
 
-+ Alla tjänsteleverantörer som erbjuder en annan uppsättning tjänster och motsvarande prisalternativ baserade på användarens geografiska plats och cache för sidor med dynamiskt innehåll bör hanteras på CDN och Dispatcher.
++ Alla tjänsteleverantörer som erbjuder en annan uppsättning tjänster och motsvarande prisalternativ baserade på användarens geografiska plats och cachen med sidor med dynamiskt innehåll bör hanteras på CDN och Dispatcher.
 
 + En kund hos detaljhandeln har butiker i hela landet och varje butik har olika erbjudanden beroende på var de finns och cachen med sidor med dynamiskt innehåll bör hanteras på CDN och Dispatcher.
 
@@ -27,7 +28,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 + AEM måste ange cookie-filen __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den initiala HTTP-begärans motsvarande HTTP-svar.
 
-+ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `“Cookie: x-aem-variant=NY”`) och cookien kommer att omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till avsändaren.
++ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookie-filen omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till avsändaren.
 
 + En regel för omskrivning av Apache ändrar sökvägen till begäran så att den inkluderar rubrikvärdet i sidans URL som en Apache Sling-väljare (t.ex. `/page.variant=NY.html`). Detta gör att AEM Publish kan leverera olika innehåll baserat på väljaren och avsändaren kan cachelagra en sida per variant.
 

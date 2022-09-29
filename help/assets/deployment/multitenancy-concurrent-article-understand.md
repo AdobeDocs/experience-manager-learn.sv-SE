@@ -6,16 +6,15 @@ version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
 
-
-# Förstå utveckling av flera innehavare och samtidig användning {#understanding-multitenancy-and-concurrent-development}
+# Understanding Multitenancy and Concurrent Development {#understanding-multitenancy-and-concurrent-development}
 
 ## Introduktion {#introduction}
 
@@ -62,7 +61,7 @@ I det här scenariot, om teamet som arbetar med projekt B behöver funktioner i 
 
 Observera att detta inte eliminerar behovet av att dessa team delar detta beroende - det bara sätter fokus på frågor snabbt och tidigt så att teamen kan diskutera eventuella risker och komma överens om en lösning.
 
-### Förhindrar kodduplicering {#preventing-code-duplication-nbsp-br}
+### Förhindra kodduplicering {#preventing-code-duplication-nbsp-br}
 
 När du arbetar med flera projekt är det viktigt att se till att koden inte dupliceras. Kodduplicering ökar sannolikheten för felhändelser, kostnaden för systemändringar och den övergripande stelheten i kodbasen. För att undvika dubbelarbete kan du lägga in den vanliga logiken i återanvändbara bibliotek som kan användas i flera projekt.
 
@@ -91,9 +90,9 @@ Detta eliminerar inte behovet av att flera team är beroende av och kan uppdater
 
 För att säkerställa att de ändringar som görs i detta kärnpaket inte stör systemets funktion rekommenderar vi att en högre utvecklare eller grupp av utvecklare upprätthåller tillsyn. Ett alternativ är att ha ett enda team som hanterar alla ändringar av detta paket. ett annat är att låta team skicka in förfrågningar som granskas och sammanfogas av dessa resurser. Det är viktigt att en styrningsmodell utformas och godkänns av teamen och att utvecklarna följer den.
 
-## Hantera distributions&amp;omfång {#managing-deployment-scope}
+## Hantera distributionsomfång  {#managing-deployment-scope}
 
-När olika team distribuerar sin kod till samma databas är det viktigt att de inte skriver över varandras ändringar. AEM har en funktion som styr detta när innehållspaket distribueras, filtret. xml-fil. Det är viktigt att det inte finns någon överlappning mellan filtren.  xml-filer, annars kan en grupps distribution radera ett annat teams tidigare distribution. Se följande exempel på välutformade respektive problematiska filterfiler för att illustrera detta:
+När olika team distribuerar sin kod till samma databas är det viktigt att de inte skriver över varandras ändringar. AEM har en funktion som styr detta när innehållspaket distribueras, filtret. xml-fil. Det är viktigt att det inte finns någon överlappning mellan filtren.  xml-filer, annars kan distributionen av ett team radera ett annat teams tidigare distribution. Se följande exempel på välutformade respektive problematiska filterfiler för att illustrera detta:
 
 /apps/my-company vs /apps/my-company/my-site
 
@@ -109,13 +108,13 @@ Eftersom det är en global systemsökväg som inte är specifik för en webbplat
 
 ### Övertäckningar {#overlays}
 
-Övertäckningar används ofta för att utöka eller ersätta AEM, men om du använder en övertäckning påverkas hela AEM (d.v.s. alla funktionsändringar är tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupperna samarbeta för att komma överens om funktionaliteten och utseendet för AEM administrativa konsoler.
+Övertäckningar används ofta för att utöka eller ersätta AEM, men om du använder en övertäckning påverkas hela AEM (dvs. alla funktionsändringar görs tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupperna samarbeta för att komma överens om funktionaliteten och utseendet hos AEM administrativa konsoler.
 
 Om konsensus inte kan nås mellan de olika affärsenheterna är en möjlig lösning att helt enkelt inte använda övertäckningar. Skapa i stället en egen kopia av funktionen och visa den via olika sökvägar för varje klientorganisation. På så sätt kan varje klientorganisation ha en helt annan användarupplevelse, men det här tillvägagångssättet ökar också kostnaden för implementering och efterföljande uppgraderingar.
 
 ### Starta arbetsflöden {#workflow-launchers}
 
-AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, till exempel för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster inte påverkas. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
+AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, till exempel för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
 
 ### Alternativa URL:er {#vanity-urls}
 
@@ -129,17 +128,17 @@ När du utvecklar komponenter och mallar för flera redigeringsgrupper är det v
 
 En bra arkitektur och öppna kommunikationskanaler kan förhindra att defekter introduceras i oväntade delar av sajten, men dessa metoder är inte förifyllda. Därför är det viktigt att till fullo testa vad som distribueras på plattformen innan något släpps i produktionen. Detta kräver samordning mellan teamen om deras lanseringscykler och förstärker behovet av en serie automatiska tester som täcker så mycket funktionalitet som möjligt. Och eftersom ett system delas av flera team blir prestanda, säkerhet och belastningstestning viktigare än någonsin.
 
-## Användningsöverväganden {#operational-considerations}
+## Verksamhetsöverväganden {#operational-considerations}
 
 ### Delade resurser {#shared-resources}
 
-AEM körs inom en enda JVM. alla distribuerade AEM delar resurser med varandra, utöver de resurser som redan använts i den normala AEM. I själva JVM-utrymmet kommer det inte att finnas någon logisk separation av trådarna och de begränsade resurser som är tillgängliga för AEM, som minne, processor och disk-i/o, kommer också att delas. Eventuella resurser som förbrukas av hyresgäster kommer oundvikligen att påverka andra systeminnehavare.
+AEM körs inom en enda JVM. alla distribuerade AEM delar resurser med varandra, utöver de resurser som redan använts i den normala AEM. I själva JVM-rymden finns ingen logisk separation av trådar, och de begränsade resurser som är tillgängliga för AEM, som minne, processor och disk-I/O, delas också. Eventuella resurser som förbrukas av hyresgäster kommer oundvikligen att påverka andra systeminnehavare.
 
 ### Prestanda {#performance}
 
 Om du inte följer AEM bästa praxis är det möjligt att utveckla program som förbrukar resurser utöver vad som anses vara normalt. Exempel på detta är att utlösa många omfattande arbetsflödesåtgärder (till exempel DAM Update Asset), använda MSM push-on-modify-åtgärder över många noder eller använda dyra JCR-frågor för att återge innehåll i realtid. Dessa kommer oundvikligen att påverka prestanda för andra klientapplikationer.
 
-### Loggar {#logging}
+### Loggning {#logging}
 
 AEM tillhandahåller färdiga gränssnitt för robust loggkonfiguration som kan användas till våra fördelar i delade utvecklingsscenarier. Genom att ange separata loggare för varje varumärke, per paketnamn, kan vi uppnå en viss grad av loggseparation. Medan systemomfattande åtgärder som replikering och autentisering fortfarande loggas på en central plats, kan icke-delad anpassad kod loggas separat, vilket underlättar övervakning och felsökning för varje varumärkes tekniska team.
 
@@ -150,6 +149,6 @@ Metoderna omfattar inte så lätt konfigurationsinställningar eller programlogi
 
 ## Säkerhetsaspekter {#security-considerations}
 
-### ACL:er {#acls}
+### ACL {#acls}
 
 Det går förstås att använda åtkomstkontrollistor för att styra vilka som har åtkomst att visa, skapa och ta bort innehåll baserat på innehållssökvägar, vilket kräver att användargrupper skapas och hanteras. Svårigheten med att underhålla åtkomstkontrollistor och grupper beror på vikten av att se till att varje klientorganisation inte har någon kunskap om andra och huruvida de distribuerade programmen är beroende av delade resurser. För att säkerställa effektiv åtkomstkontroll, användar- och gruppadministration rekommenderar vi att ni har en centraliserad grupp med nödvändig tillsyn för att säkerställa att dessa åtkomstkontroller och principer överlappar (eller inte överlappar) på ett sätt som främjar effektivitet och säkerhet.

@@ -7,21 +7,21 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 8507
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # Konverterar kommaavgränsad sträng till strängarray {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-När formuläret baseras på en formulärdatamodell som har en array med strängar som indataparameter, måste du ändra skickade adaptiva formulärdata för att infoga en array med strängar. Om du till exempel har bundit ett kryssrutefält till ett formulärdatamodellselement av typen strängarray, kommer data från kryssrutefältet att vara i ett kommaseparerat strängformat. I exempelkoden nedan visas hur du ersätter den kommaavgränsade strängen med en array med strängar.
+När formuläret baseras på en formulärdatamodell som har en array med strängar som indataparameter, måste du ändra skickade adaptiva formulärdata för att infoga en array med strängar. Om du till exempel har bundit ett kryssrutefält till ett element i en formulärdatamodell av typen strängarray, kommer data från kryssrutefältet att vara i ett kommaavgränsat strängformat. I exempelkoden nedan visas hur du ersätter den kommaavgränsade strängen med en array med strängar.
 
 ## Skapa ett processsteg
 
-Ett processsteg används i ett AEM arbetsflöde när vi vill att arbetsflödet ska köra en viss logik. Processsteget kan associeras med ett ECMA-skript eller en OSGi-tjänst. Vårt anpassade processteg kommer att köra OSGi-tjänsten
+Ett processsteg används i ett AEM arbetsflöde när vi vill att arbetsflödet ska köra en viss logik. Processsteget kan associeras med ett ECMA-skript eller en OSGi-tjänst. Vårt anpassade processteg kör OSGi-tjänsten.
 
 De data som skickas har följande format. Värdet för elementet businessUnits är en kommaavgränsad sträng som måste konverteras till en array med strängar.
 
@@ -140,4 +140,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-Exempelpaketet kan [hämtas här](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+Exempelpaketet kan [hämtad härifrån](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

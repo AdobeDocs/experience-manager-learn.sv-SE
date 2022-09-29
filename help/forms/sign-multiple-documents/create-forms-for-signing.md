@@ -1,39 +1,39 @@
 ---
 title: Skapa Forms för signering
 description: Skapa formulär som måste inkluderas i signeringspaketet.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6893
 thumbnail: 6893.jpg
-topic: Utveckling
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Skapa formulär för signering
 
 Nästa steg är att skapa de adaptiva formulär som du vill ska ingå i paketet. Tänk på följande när du skapar formulär för signering:
 
-* Kontrollera att formulären är baserade på mallen **SignMultipleForms**. Detta garanterar att formulären är förifyllda med data som hämtats från databasen.
+* Kontrollera att formulären är baserade på **SignMultipleForms** mall. Detta garanterar att formulären är förifyllda med data som hämtats från databasen.
 
 * Formulären måste konfigureras för att använda Adobe Sign och signerarfältet1 måste associeras med kundens e-postfält
-* Formulären måste också kopplas till clientLib med namnet **getnextform**
+* Formulären måste också kopplas till clientLib som anropas **getnextform**
 * Formulären måste använda komponenten Signature Step.
-* Formuläret måste också använda den anpassade **Signera flera formulär**-komponenten. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.
-* Överföringen av formuläret måste konfigureras för att AEM arbetsflödet **Uppdatera signaturstatus**
-* Kontrollera att sökvägen till datafilen är **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
+* Formuläret måste även använda den anpassade **Signera flera formulär** -komponenten. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.
+* Överföringen av formuläret måste konfigureras för att starta AEM arbetsflöde **Uppdatera signaturstatus**
+* Kontrollera att sökvägen till datafilen är inställd på **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
 
-När du har skapat formuläret inkluderar du det adaptiva formulärfragmentet **CommonField** i formuläret. Fragmentet markeras som dolt. Detta fragment innehåller följande fält.
+När du har skrivit formuläret ska du inkludera **vanliga** adaptivt formulärfragment i formuläret. Fragmentet är markerat som dolt. Detta fragment innehåller följande fält.
 
-* **signerad**  - Det fält som innehåller signaturens status
-* **GUID**  - Unik identifierare för att identifiera formuläret i paketet
-* **customerEmail**  - Det här fältet innehåller kundens e-postadress
+* **signerad** - Det fält som innehåller signaturens status
+* **guid** - Unik identifierare som identifierar formuläret i paketet
+* **customerEmail** - Det här fältet innehåller kundens e-postadress
 
 
 
@@ -46,4 +46,4 @@ När alla formulär i paketet är ifyllda och signerade måste vi visa rätt med
 
 ## Assets
 
-Exempelformulären, inklusive de som används i den här självstudiekursen, kan [hämtas här](assets/forms-for-signing.zip)
+Exempelformulären som innehåller de som används i den här självstudiekursen kan [hämtad härifrån](assets/forms-for-signing.zip)

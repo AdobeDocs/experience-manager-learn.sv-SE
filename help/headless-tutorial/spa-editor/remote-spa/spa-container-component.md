@@ -8,9 +8,9 @@ level: Beginner
 kt: 7635
 thumbnail: kt-7635.jpeg
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -323,4 +323,4 @@ Du har lagt till en behållarkomponent som gör att redigerbara komponenter kan 
 
 ## Nästa steg
 
-Nästa steg blir att använda samma teknik för att [lägga till en redigerbar komponent i en Adventure Details-väg](./spa-dynamic-routes.md) i SPA.
+I nästa steg används samma teknik för att [lägga till en redigerbar komponent i en Adventure Details-väg](./spa-dynamic-routes.md) i SPA.

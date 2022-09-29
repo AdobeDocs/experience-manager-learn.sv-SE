@@ -11,9 +11,9 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1330'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ En webbplats delas vanligtvis upp i sidor för att skapa en flersidig upplevelse
 
 1. Välj **Artikelsida** mall och klicka på **Nästa**.
 
-   Sidor i AEM skapas utifrån en sidmall. Sidmallar utforskas mer ingående i [Sidmallar](page-templates.md) kapitel.
+   Sidor i AEM skapas utifrån en sidmall. Sidmallar utforskas i detalj i [Sidmallar](page-templates.md) kapitel.
 
 1. Under **Egenskaper** ange **Titel** &quot;Hello World&quot;.
 1. Ange **Namn** att `hello-world` och klicka **Skapa**.
@@ -87,7 +87,7 @@ Skapa sedan några komponenter med AEM Page Editor.
 
    ![Lägg till resurs i dialogruta](assets/author-content-publish/add-asset-dialog.png)
 
-1. Observera att det finns komponenter på sidan, som **Titel**, **Navigering**, **Sök** som är fasta. De här områdena är konfigurerade som en del av sidmallen och kan inte ändras på en enskild sida. Detta kommer att utforskas mer i nästa kapitel.
+1. Observera att det finns komponenter på sidan, som **Titel**, **Navigering**, **Sök** som är fasta. De här områdena är konfigurerade som en del av sidmallen och kan inte ändras på en enskild sida. Detta beskrivs mer i nästa kapitel.
 
 Experimentera med några andra komponenter. Dokumentation om varje [Kärnkomponenten finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). En detaljerad videoserie om [Här finns sidredigering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 

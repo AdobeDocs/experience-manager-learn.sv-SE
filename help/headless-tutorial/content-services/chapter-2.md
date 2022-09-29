@@ -8,9 +8,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: cfb7ed39ecb85998192ba854b34161f7e1dba19a
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Om modeller för innehållsfragment är **not** aktiverad för en konfiguration 
    >    1. Ta bort `models` nod
 
    >    
-   >Alla befintliga modeller för innehållsfragment som skapas med den här konfigurationen tas bort och deras definitioner lagras under `/conf/wknd-mobile/settings/dam/cfm/models`.
+   >Alla befintliga modeller för innehållsfragment som skapas med den här konfigurationen tas bort, och deras definitioner lagras under `/conf/wknd-mobile/settings/dam/cfm/models`.
 
 1. Använd **[!DNL WKND Mobile]** till **[!DNL WKND Mobile]Resursmapp** om du vill tillåta att innehållsfragment från modeller för innehållsfragment skapas i mapphierarkin för resurser:
 
@@ -84,7 +84,7 @@ Vi kan dela upp datapunkter som definierar en händelse på följande sätt:
 
 ![Skapa innehållsfragmentmodellen](assets/chapter-2/design-to-model-mapping.png)
 
-Med mappningen kan vi definiera innehållsfragment som ska användas för att samla in och visa händelsedata.
+Med mappningen kan vi definiera innehållsfragment som används för att samla in och exponera händelsedata.
 
 ## Skapa innehållsfragmentmodellen
 
@@ -173,7 +173,7 @@ Upprepa dessa steg med indatadefinitionerna som definieras nedan för att skapa 
 
 >[!NOTE]
 >
->The **[!UICONTROL Property Name]** anger **båda** JCR-egenskapsnamnet där det här värdet ska lagras samt nyckeln i JSON-filen. Det ska vara ett semantiskt namn som inte ändras under Content Fragment Model.
+>The **[!UICONTROL Property Name]** anger **båda** JCR-egenskapsnamnet där värdet lagras samt nyckeln i JSON-filen. Det ska vara ett semantiskt namn som inte ändras under Content Fragment Model.
 
 När du är klar med att skapa innehållsfragmentmodellen bör du avsluta med en definition som ser ut så här:
 

@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Förstå hur källkoden för ett enkelsidigt program (SPA) skrivet i Angular kan
 
 ## Vad du ska bygga
 
-I det här kapitlet kommer ett enkelt `Header` till SPA. Under processen att bygga ut denna statiska `Header` AEM kommer att användas.
+I det här kapitlet kommer ett enkelt `Header` till SPA. Under processen att bygga ut denna statiska `Header` flera metoder AEM utveckling av SPA används.
 
 ![Nytt sidhuvud i AEM](./assets/integrate-spa/final-header-component.png)
 
@@ -71,7 +71,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 Två moduler skapades som en del av AEM: `ui.apps` och `ui.frontend`.
 
-The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning kommer att ske i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
+The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning görs i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
 
 ![ui.frontHigh-level architecture](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -269,7 +269,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
 
 Som vi har sett i tidigare övningar tar det några minuter att skapa och synkronisera klientbiblioteket till en lokal instans av AEM. Detta är godtagbart för sluttestning, men är inte idealiskt för större delen av SPA.
 
-A [dev-server för webbpaket](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen kommer JSON-innehållet från en instans av AEM som körs att **proxibel** till utvecklingsservern som konfigurerats av [Angular](https://angular.io/guide/build).
+A [dev-server för webbpaket](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen är JSON-innehållet från en instans av AEM som körs **proxibel** till utvecklingsservern som konfigurerats av [Angular](https://angular.io/guide/build).
 
 1. Återgå till utvecklingsmiljön och öppna filen **proxy.conf.json** på `ui.frontend/proxy.conf.json`.
 
@@ -458,7 +458,7 @@ Den första konfigurationen av JSON-modellen gör **kräver en lokal AEM**.
 
 ## Lägg till format med Sass
 
-Därefter kommer en del uppdaterade format att läggas till i projektet. Det här projektet lägger till [Sass](https://sass-lang.com/) har stöd för några användbara funktioner som variabler.
+Därefter läggs en del uppdaterade format till i projektet. Det här projektet lägger till [Sass](https://sass-lang.com/) har stöd för några användbara funktioner som variabler.
 
 1. Öppna ett terminalfönster och stoppa **dev-server för webbpaket** om det startas. inifrån `ui.frontend` mapp Ange följande kommando för att uppdatera Angularna till **.scss** filer.
 

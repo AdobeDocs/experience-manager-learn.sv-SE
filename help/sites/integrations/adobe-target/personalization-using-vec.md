@@ -12,9 +12,9 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,36 +36,36 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
-1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till fliken __Aktiviteter__
+1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till __Verksamhet__ tab
 
-   + Om du inte ser __Mål__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Om du inte ser __Mål__ Kontrollera att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet på kontrollpanelen Experience Cloud och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. Klicka på knappen **Skapa aktivitet** och välj sedan **A/B Test** aktivitet
+1. Klicka **Skapa aktivitet** och sedan välja **A/B-test** aktivitet
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
 
-1. Välj alternativet **Visual Experience Composer**, ange aktivitets-URL:en och klicka sedan på **Nästa**
+1. Välj **Visual Experience Composer** anger du aktivitets-URL:en och klickar sedan på **Nästa**
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplev A* och *Upplev B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda knappen **Lägg till upplevelse**.
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda **Lägg till upplevelse** -knappen.
 
    ![Upplevelse A](assets/experience.png)
 
-1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda HTML-element.
+1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda elementet HTML.
 
    ![Element](assets/select-element.png)
 
-1. Ändra texten från *Camping i Western Australia* till *Adventures of Australia*. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
+1. Ändra texten från *Camping i Western Australia* till *Australiens äventyr*. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
 
    ![Annonser](assets/adventures.png)
 
-1. Byt namn på *Upplev A* till *Adventure*
-1. Uppdatera texten på *Experience B* från *Camping i Western Australia* till *Explore the Australian Wilderness*.
+1. Byt namn *Upplevelse A* till *Adventure*
+1. Uppdatera texten på samma sätt *Upplevelse B* från *Camping i Western Australia* till *Utforska Australiens vildhet*.
 
    ![Utforska](assets/explore.png)
 
-1. Klicka på **Nästa** för att gå över till Riktning och låt oss behålla en manuell trafikallokering på 50-50 mellan de två upplevelserna.
+1. Klicka **Nästa** för att gå över till Targeting och vi behåller en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
 
    ![Målinriktning](assets/targeting.png)
 

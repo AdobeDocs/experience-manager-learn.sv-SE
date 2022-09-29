@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Det första steget i integreringen av Marketo med AEM Forms är att hämta de AP
 1. client_id
 1. client_secrets
 1. identity_endpoint
-1. autentiserings-URL.
+1. autentiserings-URL
 
 [Följ den officiella Marketo-dokumentationen för att få tillgång till ovanstående egenskaper.](https://developers.marketo.com/rest-api/) Du kan också kontakta administratören för din Marketo-instans.
 
@@ -52,5 +52,5 @@ Det första steget i integreringen av Marketo med AEM Forms är att hämta de AP
 [Hämta och zippa upp resurser som hör till den här artikeln.](assets/aemformsandmarketo.zip) ZIP-filen innehåller följande:
 
 1. BlankTemplatePackage.zip - Det här är den adaptiva formulärmallen. Importera detta med pakethanteraren.
-1. marketo.json - Det här är swagger-filen som ska användas för att konfigurera datakällan.
+1. marketo.json - Det här är swagger-filen som används för att konfigurera datakällan.
 1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar - Detta är paketet som utför den anpassade autentiseringen. Du kan använda det här alternativet om du inte kan slutföra självstudiekursen eller om ditt paket inte fungerar som det ska.

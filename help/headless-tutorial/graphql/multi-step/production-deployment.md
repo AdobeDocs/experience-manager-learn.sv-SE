@@ -10,9 +10,9 @@ mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2357'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,14 @@ Det vanligaste distributionsmönstret med AEM headless-program är att ha produk
 
 Diagrammet ovan visar det här vanliga distributionsmönstret.
 
-1. En **innehållsförfattare** använder AEM författartjänst för att skapa, redigera och hantera innehåll.
-2. **Innehållsförfattaren** och andra interna användare kan förhandsgranska innehållet direkt i författartjänsten. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till författartjänsten.
-3. När innehållet har godkänts kan det **publiceras** till AEM Publish-tjänsten.
-4. **Slutanvändare** interagerar med produktionsversionen av programmet. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL-API:erna för att begära och använda innehåll.
+1. A **Innehållsförfattare** använder AEM författartjänst för att skapa, redigera och hantera innehåll.
+2. The **Innehållsförfattare** och andra interna användare kan förhandsgranska innehållet direkt i författartjänsten. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till författartjänsten.
+3. När innehållet har godkänts kan det **publicerad** till AEM Publish-tjänsten.
+4. **Slutanvändare** interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL-API:erna för att begära och använda innehåll.
 
 Självstudiekursen simulerar distributionen ovan genom att lägga till en AEM Publish-instans i den aktuella installationen. I tidigare kapitel fungerade React App som en förhandsgranskning genom att ansluta direkt till Author-instansen. En produktionsversion av React App distribueras till en statisk Node.js-server som ansluter till den nya Publish-instansen.
 
-Slutligen kommer tre lokala servrar att köras:
+Slutligen körs tre lokala servrar:
 
 * http://localhost:4502 - Författarinstans
 * http://localhost:4503 - Publiceringsinstans
@@ -58,15 +58,15 @@ Slutligen kommer tre lokala servrar att köras:
 
 ## Installera AEM SDK - publiceringsläge {#aem-sdk-publish}
 
-För närvarande har vi en instans av SDK som körs i **redigeringsläge**. SDK kan också startas i **Publicera**-läge för att simulera en AEM-publiceringsmiljö.
+För närvarande har vi en instans av SDK som körs i **Upphovsman** läge. SDK kan också startas i **Publicera** läge för att simulera en AEM-publiceringsmiljö.
 
 En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up).
 
-1. Skapa en dedikerad mapp på det lokala filsystemet för att installera Publish-instansen, d.v.s. `~/aem-sdk/publish`.
-1. Kopiera Quickstart jar-filen som används för Author-instansen i tidigare kapitel och klistra in den i katalogen `publish`. Du kan även navigera till [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och hämta den senaste SDK:n och extrahera QuickStart jar-filen.
+1. I det lokala filsystemet skapar du en dedikerad mapp för att installera Publish-instansen, d.v.s. med namnet `~/aem-sdk/publish`.
+1. Kopiera filen Quickstart jar som används för Author-instansen i tidigare kapitel och klistra in den i `publish` katalog. Du kan även navigera till [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och ladda ned den senaste SDK:n och extrahera Quickstart jar-filen.
 1. Byt namn på filen jar till `aem-publish-p4503.jar`.
 
-   Strängen `publish` anger att QuickStart jar startar i publiceringsläge. `p4503` anger att QuickStart-servern körs på port 4503.
+   The `publish` sträng anger att QuickStart jar startar i publiceringsläge. The `p4503` anger att QuickStart-servern körs på port 4503.
 
 1. Öppna ett nytt terminalfönster och navigera till mappen som innehåller filen jar. Installera och starta AEM:
 
@@ -76,7 +76,7 @@ En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [fin
    ```
 
 1. Ange ett administratörslösenord som `admin`. Alla administratörslösenord accepteras, men du bör använda standardvärdet för lokal utveckling för att undvika extra konfigurationer.
-1. När AEM har installerat klart öppnas ett nytt webbläsarfönster på [http://localhost:4503/content.html](http://localhost:4503/content.html)
+1. När AEM har installerat klart öppnas ett nytt webbläsarfönster i [http://localhost:4503/content.html](http://localhost:4503/content.html)
 
    Den förväntas returnera en sida som inte kunde hittas 404. Detta är en helt ny AEM och inget innehåll har installerats.
 
@@ -88,13 +88,13 @@ Precis som för Author-instansen måste GraphQL-slutpunkterna vara aktiverade f�
 
    >[!NOTE]
    >
-   > Se till att hämta standardversionen som är kompatibel med AEM som Cloud Service och **inte** `classic`-versionen.
+   > Glöm inte att hämta standardversionen som är kompatibel med AEM as a Cloud Service och **not** den `classic` version.
 
-1. Logga in på Publish-instansen genom att gå direkt till: [http://localhost:4503/libs/granite/core/content/login.html](http://localhost:4503/libs/granite/core/content/login.html) med användarnamnet `admin` och lösenordet `admin`.
+1. Logga in på Publish-instansen genom att navigera direkt till: [http://localhost:4503/libs/granite/core/content/login.html](http://localhost:4503/libs/granite/core/content/login.html) med användarnamnet `admin` och lösenord `admin`.
 1. Gå sedan till Package Manager på [http://localhost:4503/crx/packmgr/index.jsp](http://localhost:4503/crx/packmgr/index.jsp).
-1. Klicka på **Överför paket** och välj det WKND-paket som hämtades i föregående steg. Klicka på **Installera** för att installera paketet.
-1. När du har installerat paketet är WKND-referensplatsen nu tillgänglig på [http://localhost:4503/content/wknd/us/en.html](http://localhost:4503/content/wknd/us/en.html).
-1. Logga ut som `admin`-användare genom att klicka på knappen Logga ut på menyraden.
+1. Klicka **Överför paket** och väljer det WKND-paket som hämtades i föregående steg. Klicka **Installera** för att installera paketet.
+1. När paketet har installerats är WKND-referensplatsen nu tillgänglig på [http://localhost:4503/content/wknd/us/en.html](http://localhost:4503/content/wknd/us/en.html).
+1. Logga ut som `admin` genom att klicka på knappen Logga ut på menyraden.
 
    ![WKND Referenswebbplats för utloggning](assets/publish-deployment/sign-out-wknd-reference-site.png)
 
@@ -102,14 +102,14 @@ Precis som för Author-instansen måste GraphQL-slutpunkterna vara aktiverade f�
 
 ## Uppdatera miljövariabler för att peka på Publish-instansen {#react-app-publish}
 
-Uppdatera sedan de miljövariabler som används av React-programmet så att de pekar på Publish-instansen. React App ska **bara** ansluta till Publish-instansen i produktionsläge.
+Uppdatera sedan de miljövariabler som används av React-programmet så att de pekar på Publish-instansen. Reaktionsappen bör **endast** ansluta till publiceringsinstansen i produktionsläge.
 
 Lägg sedan till en ny fil `.env.production.local` för att simulera produktionsupplevelsen.
 
 1. Öppna appen WKND GraphQL React i din utvecklingsmiljö.
 
-1. Lägg till en fil med namnet `.env.production.local` under `aem-guides-wknd-graphql/react-app`.
-1. Fyll i `.env.production.local` med följande:
+1. Under `aem-guides-wknd-graphql/react-app`, lägga till en fil med namnet `.env.production.local`.
+1. Fylla `.env.production.local` med följande:
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4503
@@ -126,9 +126,9 @@ Lägg sedan till en ny fil `.env.production.local` för att simulera produktions
 
 ## Distribuera en statisk nodserver {#static-server}
 
-Appen React kan startas med webbpaketservern, men detta är endast till för utveckling. Därefter simulerar du en produktionsdistribution genom att använda [server](https://github.com/vercel/serve) som värd för en produktionsversion av React-appen med Node.js.
+Appen React kan startas med webbpaketservern, men detta är endast till för utveckling. Därefter simulerar du en produktionsdistribution med [server](https://github.com/vercel/serve) som värd för en produktionsversion av React-appen med Node.js.
 
-1. Öppna ett nytt terminalfönster och navigera till katalogen `aem-guides-wknd-graphql/react-app`
+1. Öppna ett nytt terminalfönster och navigera till `aem-guides-wknd-graphql/react-app` katalog
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
@@ -140,7 +140,7 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
    $ npm install serve --save-dev
    ```
 
-1. Öppna filen `package.json` på `react-app/package.json`. Lägg till ett skript med namnet `serve`:
+1. Öppna filen `package.json` på `react-app/package.json`. Lägga till ett skript med namnet `serve`:
 
    ```diff
     "scripts": {
@@ -152,7 +152,7 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
    },
    ```
 
-   Skriptet `serve` utför två åtgärder. Först skapas en produktionsversion av React App. För det andra startar Node.js-servern och använder produktionsbygget.
+   The `serve` skript utför två åtgärder. Först skapas en produktionsversion av React App. För det andra startar Node.js-servern och använder produktionsbygget.
 
 1. Återgå till terminalen och ange kommandot för att starta den statiska servern:
 
@@ -171,11 +171,11 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
    └────────────────────────────────────────────────────┘
    ```
 
-1. Öppna en ny webbläsare och gå till [http://localhost:5000/](http://localhost:5000/). Du bör se hur React App används.
+1. Öppna en ny webbläsare och navigera till [http://localhost:5000/](http://localhost:5000/). Du bör se hur React App används.
 
    ![React App Served](assets/publish-deployment/react-app-served-port5000.png)
 
-   Observera att GraphQL-frågan fungerar på hemsidan. Inspect **XHR**-förfrågan med utvecklingsverktygen. Observera att GraphQL-POSTEN är till Publish-instansen på `http://localhost:4503/content/graphql/global/endpoint.json`.
+   Observera att GraphQL-frågan fungerar på hemsidan. Inspect **XHR** begär med hjälp av utvecklarverktygen. Observera att GraphQL-POSTEN är till Publish-instansen vid `http://localhost:4503/content/graphql/global/endpoint.json`.
 
    Alla bilder är emellertid brutna på startsidan!
 
@@ -183,17 +183,17 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
 
    ![Adventure Detail Error](assets/publish-deployment/adventure-detail-error.png)
 
-   Observera att ett GraphQL-fel genereras för `adventureContributor`. I nästa övning är de brutna bilderna och `adventureContributor`-problemen åtgärdade.
+   Observera att ett GraphQL-fel genereras för `adventureContributor`. I nästa övning, de trasiga bilderna och `adventureContributor` problem har åtgärdats.
 
 ## Absoluta bildreferenser {#absolute-image-references}
 
-Bilderna visas som brutna eftersom attributet `<img src` är inställt på en relativ sökväg och slutar som pekar på den statiska nodservern `http://localhost:5000/`. I stället bör dessa bilder peka på AEM Publish-instansen. Det finns flera möjliga lösningar på detta. När du använder webbpaketets dev-server konfigurerar filen `react-app/src/setupProxy.js` en proxy mellan webbpaketservern och den AEM författarinstansen för eventuella begäranden till `/content`. En proxykonfiguration kan användas i en produktionsmiljö men måste konfigureras på webbservernivå. Exempel: [Apache proxy-modul](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
+Bilderna ser brutna ut eftersom `<img src` är inställt på en relativ sökväg och slutar upp som pekar på den statiska nodservern vid `http://localhost:5000/`. I stället bör dessa bilder peka på AEM Publish-instansen. Det finns flera möjliga lösningar på detta. När du använder webbpaketets dev-server kan du `react-app/src/setupProxy.js` skapa en proxy mellan webbpaketservern och AEM författarinstans för alla förfrågningar till `/content`. En proxykonfiguration kan användas i en produktionsmiljö men måste konfigureras på webbservernivå. Till exempel: [Apache&#39;s proxy module](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
 
-Appen kunde uppdateras för att inkludera en absolut URL med miljövariabeln `REACT_APP_HOST_URI`. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
+Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_URI` miljövariabel. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
 
 1. Stoppa Node.js-servern.
-1. Gå tillbaka till IDE och öppna filen `Adventures.js` `react-app/src/components/Adventures.js`.
-1. Lägg till egenskapen `_publishUrl` i `ImageRef` i `allAdventuresQuery`:
+1. Återgå till utvecklingsmiljön och öppna filen `Adventures.js` på `react-app/src/components/Adventures.js`.
+1. Lägg till `_publishUrl` egenskapen till `ImageRef` inom `allAdventuresQuery`:
 
    ```diff
    const allAdventuresQuery = `
@@ -219,10 +219,10 @@ Appen kunde uppdateras för att inkludera en absolut URL med miljövariabeln `RE
    `;
    ```
 
-   `_publishUrl` och  `_authorUrl` är värden som är inbyggda i  `ImageRef` objektet för att göra det enklare att ta med absoluta URL:er.
+   `_publishUrl` och `_authorUrl` är värden inbyggda i `ImageRef` så att det blir enklare att ta med absoluta URL:er.
 
-1. Upprepa stegen ovan om du vill ändra frågan som används i funktionen `filterQuery(activity)` så att den innehåller egenskapen `_publishUrl`.
-1. Ändra `AdventureItem`-komponenten på `function AdventureItem(props)` så att den refererar till `_publishUrl` i stället för egenskapen `_path` när du skapar taggen `<img src=''>`:
+1. Upprepa stegen ovan om du vill ändra frågan som används i dialogrutan `filterQuery(activity)` funktionen som ska innehålla `_publishUrl` -egenskap.
+1. Ändra `AdventureItem` komponent vid `function AdventureItem(props)` för att referera till `_publishUrl` i stället för `_path` egenskapen när `<img src=''>` tagg:
 
    ```diff
    - <img className="adventure-item-image" src={props.adventurePrimaryImage._path} alt={props.adventureTitle}/>
@@ -230,7 +230,7 @@ Appen kunde uppdateras för att inkludera en absolut URL med miljövariabeln `RE
    ```
 
 1. Öppna filen `AdventureDetail.js` på `react-app/src/components/AdventureDetail.js`.
-1. Upprepa samma steg för att ändra GraphQL-frågan och lägga till egenskapen `_publishUrl` för Adventure
+1. Upprepa samma steg för att ändra GraphQL-frågan och lägga till `_publishUrl` egendom för Adventure
 
    ```diff
     adventureByPath (_path: "${_path}") {
@@ -274,7 +274,7 @@ Appen kunde uppdateras för att inkludera en absolut URL med miljövariabeln `RE
    } 
    ```
 
-1. Ändra de två `<img>`-taggarna för Adventure Primary Image och Contributor Picture Reference i `AdventureDetail.js`:
+1. Ändra de två `<img>` taggar för Adventure Primary Image och Contributor Picture i `AdventureDetail.js`:
 
    ```diff
    /* AdventureDetail.js */
@@ -296,13 +296,13 @@ Appen kunde uppdateras för att inkludera en absolut URL med miljövariabeln `RE
    $ npm run serve
    ```
 
-1. Navigera till [http://localhost:5000/](http://localhost:5000/) och observera att bilderna visas och att attributet `<img src''>` pekar på `http://localhost:4503`.
+1. Navigera till [http://localhost:5000/](http://localhost:5000/) och observera att bilderna visas och att `<img src''>` attributpoäng till `http://localhost:4503`.
 
    ![Brutna bilder har åtgärdats](assets/publish-deployment/broken-images-fixed.png)
 
 ## Simulera innehållspublicering {#content-publish}
 
-Kom ihåg att ett GraphQL-fel genereras för `adventureContributor` när en Adventure Details-sida begärs. **Contributor** Content Fragment Model finns ännu inte på Publish-instansen. Uppdateringar som görs i **Adventure** Content Fragment Model är inte heller tillgängliga i Publish-instansen. Dessa ändringar gjordes direkt i Author-instansen och måste distribueras till Publish-instansen.
+Kom ihåg att ett GraphQL-fel genereras för `adventureContributor` när en Adventure Details-sida begärs. The **Medarbetare** Content Fragment Model finns ännu inte på Publish-instansen. Uppdateringar av **Adventure** Content Fragment Model är inte heller tillgängliga i Publish-instansen. Dessa ändringar gjordes direkt i Author-instansen och måste distribueras till Publish-instansen.
 
 Detta är något att tänka på när du distribuerar nya uppdateringar till ett program som är beroende av uppdateringar av ett innehållsfragment eller en innehållsfragmentmodell.
 
@@ -315,34 +315,34 @@ Sedan kan du simulera innehållspublicering mellan de lokala författarinstanser
 
    >[!NOTE]
    >
-   > I en AEM som en Cloud Service ställs redigerarnivån automatiskt in för att distribuera innehåll till publiceringsnivån.
+   > I en AEM as a Cloud Service miljö ställs redigerarnivån automatiskt in för att distribuera innehåll till publiceringsnivån.
 
-1. Gå till **Verktyg** > **Resurser** > **Modeller för innehållsfragment** på menyn **AEM Start**.
+1. Från **AEM** meny, navigera till **verktyg** > **Resurser** > **Modeller för innehållsfragment**.
 
-1. Klicka i mappen **WKND Site**.
+1. Klicka på **WKND-plats** mapp.
 
 1. Markera alla tre modellerna och klicka på **Publicera**:
 
    ![Publicera modeller för innehållsfragment](assets/publish-deployment/publish-contentfragment-models.png)
 
-   En bekräftelsedialogruta visas. Klicka på **Publicera**.
+   En bekräftelsedialogruta visas. Klicka **Publicera**.
 
-1. Gå till Bali Surf Camp Content Fragment på [http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp).
+1. Navigera till innehållsfragmentet för Bali Surf-videokameran på [http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp).
 
-1. Klicka på knappen **Publicera** på den övre menyraden.
+1. Klicka på **Publicera** i den övre menyraden.
 
    ![Klicka på knappen Publicera i Content Fragment Editor](assets/publish-deployment/publish-bali-content-fragment.png)
 
-1. Publiceringsguiden visar alla beroende resurser som ska publiceras. I det här fallet visas det refererade fragmentet **stacey-roswells** och flera bilder refereras också. De refererade resurserna publiceras tillsammans med fragmentet.
+1. Publiceringsguiden visar alla beroende resurser som ska publiceras. I det här fallet det refererade fragmentet **stacey-roswells** visas och flera bilder refereras också. De refererade resurserna publiceras tillsammans med fragmentet.
 
    ![Refererade resurser att publicera](assets/publish-deployment/referenced-assets.png)
 
-   Klicka på knappen **Publicera** igen för att publicera innehållsfragmentet och beroende resurser.
+   Klicka på **Publicera** om du vill publicera innehållsfragment och beroende resurser.
 
 1. Återgå till React App som körs på [http://localhost:5000/](http://localhost:5000/). Nu kan du klicka i Bali Surf Camp för att se äventyrsinformationen.
 
-1. Växla tillbaka till AEM Author-instansen på [http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp) och uppdatera **titeln** för fragmentet. **Spara och** stäng fragmentet. **publicera sedan fragmentet**.
-1. Gå tillbaka till [http://localhost:5000/adventure:/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:5000/adventure:/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp) och observera de publicerade ändringarna.
+1. Växla tillbaka till AEM Author-instansen på [http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp) och uppdatera **Titel** av fragmentet. **Spara och stäng** fragmentet. Sedan **publicera** fragmentet.
+1. Återgå till [http://localhost:5000/adventure:/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp](http://localhost:5000/adventure:/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp) och observera de publicerade ändringarna.
 
    ![Publiceringsuppdatering för Bali Surf Camp](assets/publish-deployment/bali-surf-camp-update.png)
 
@@ -352,7 +352,7 @@ AEM är säkert som standard och tillåter inte att icke-AEM webbegenskaper anro
 
 Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
 
-1. Återgå till det terminalfönster där React App körs med kommandot `npm run serve`:
+1. Återgå till terminalfönstret där React App körs med kommandot `npm run serve`:
 
    ```shell
    ┌────────────────────────────────────────────────────┐
@@ -367,25 +367,25 @@ Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
    └────────────────────────────────────────────────────┘
    ```
 
-   Observera att två URL-adresser anges. En som använder `localhost` och en annan som använder den lokala nätverkets IP-adress.
+   Observera att två URL-adresser anges. En som använder `localhost` och en annan som använder det lokala nätverkets IP-adress.
 
-1. Navigera till adressen som börjar med [http://192.168.86.XXX:5000](http://192.168.86.XXX:5000). Adressen är något annorlunda för varje lokal dator. Observera att det finns ett CORS-fel när data hämtas. Detta beror på att den aktuella CORS-konfigurationen bara tillåter begäranden från `localhost`.
+1. Navigera till adressen som börjar med [http://192.168.86.XXX:5000](http://192.168.86.XXX:5000). Adressen är något annorlunda för varje lokal dator. Observera att det finns ett CORS-fel när data hämtas. Detta beror på att den aktuella CORS-konfigurationen bara tillåter förfrågningar från `localhost`.
 
    ![CORS-fel](assets/publish-deployment/cors-error-not-fetched.png)
 
    Uppdatera sedan AEM Publish CORS-konfigurationen så att begäranden från nätverkets IP-adress tillåts.
 
-1. Navigera till [http://localhost:4503/content/wknd/us/en/errors/sign-in.html](http://localhost:4503/content/wknd/us/en/errors/sign-in.html) och logga in med användarnamnet `admin` och lösenordet `admin`.
+1. Navigera till [http://localhost:4503/content/wknd/us/en/errors/sign-in.html](http://localhost:4503/content/wknd/us/en/errors/sign-in.html) och logga in med användarnamnet `admin` och lösenord `admin`.
 
 1. Navigera till [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr) och hitta WKND GraphQL-konfigurationen på `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`.
 
-1. Uppdatera fältet **Tillåtna ursprung** så att det innehåller nätverkets IP-adress:
+1. Uppdatera **Tillåtna original** fält som ska innehålla nätverkets IP-adress:
 
    ![Uppdatera CORS-konfiguration](assets/publish-deployment/cors-update.png)
 
    Det går också att inkludera ett reguljärt uttryck för att tillåta alla begäranden från en viss underdomän. Spara ändringarna.
 
-1. Sök efter **Refererarfilter för Apache Sling** och granska konfigurationen. Konfigurationen **Tillåt tom** krävs också för att aktivera GraphQL-begäranden från en extern domän.
+1. Sök efter **Apache Sling Referer-filter** och granska konfigurationen. The **Tillåt tomt** konfiguration krävs också för att aktivera GraphQL-begäranden från en extern domän.
 
    ![Sling-referensfilter](assets/publish-deployment/sling-referrer-filter.png)
 
@@ -393,7 +393,7 @@ Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
 
    >[!NOTE]
    >
-   > OSGi-konfigurationer hanteras i ett AEM projekt som är implementerat för källkontroll. Ett AEM projekt kan distribueras till AEM som Cloud Service med hjälp av Cloud Manager. [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan hjälpa dig att generera ett projekt för en viss implementering.
+   > OSGi-konfigurationer hanteras i ett AEM projekt som är implementerat för källkontroll. Ett AEM projekt kan distribueras till AEM som Cloud Service med hjälp av Cloud Manager. The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan hjälpa till att generera ett projekt för en viss implementering.
 
 1. Återgå till React App från [http://192.168.86.XXX:5000](http://192.168.86.XXX:5000) och observera att programmet inte längre orsakar ett CORS-fel.
 
@@ -410,4 +410,4 @@ Mer information om innehållsfragment och GraphQL finns i följande resurser:
 * [Headless Content Delivery using Content Fragments with GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
 * [AEM GraphQL API för användning med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
 * [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
-* [Distribuera kod till AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)
+* [Distribuera kod till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)

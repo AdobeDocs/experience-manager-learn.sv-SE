@@ -1,8 +1,7 @@
 ---
 title: Installera och konfigurera Tomcat-video
 seo-title: Install and Configure Tomcat
-description: Detta är en del av en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
-seo-description: This is part 1 of multistep tutorial for creating your first interactive communications document.In this part, we will install TOMCAT and deploy the sampleRest.war file in TOMCAT. The REST endpoint exposed by this WAR file will be the basis for our Data Source and Form Data Model.
+description: Detta är en del av en flerstegskurs som lär dig skapa ditt första interaktiva kommunikationsdokument.
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
 topics: development
@@ -16,16 +15,16 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
 # Installera och konfigurera Tomcat {#install-and-configure-tomcat}
 
-I den här delen ska vi installera TOMCAT och distribuera filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen kommer att utgöra grunden för vår datakälla och formulärdatamodell.
+I den här delen installerar vi TOMCAT och distribuerar filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen utgör grunden för vår datakälla och formulärdatamodell.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
 

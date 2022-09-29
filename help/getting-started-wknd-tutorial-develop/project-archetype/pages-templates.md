@@ -9,9 +9,9 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3064'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Vad du ska bygga {#what-you-will-build}
 
-I den här delen av självstudiekursen skapar du en ny artikelsidmall som kan användas för att skapa nya artikelsidor och anpassa sig till en gemensam struktur. Artikelsidmallen baseras på design och ett användargränssnittspaket som skapats i AdobeXD. Det här kapitlet handlar endast om att bygga ut mallens struktur eller skelett. Inga format kommer att implementeras, men mallen och sidorna kommer att fungera.
+I den här delen av självstudiekursen skapar du en ny artikelsidmall som kan användas för att skapa nya artikelsidor och anpassa sig till en gemensam struktur. Artikelsidmallen baseras på design och ett användargränssnittspaket som skapats i AdobeXD. Det här kapitlet handlar endast om att bygga ut mallens struktur eller skelett. Inga format implementeras, men mallen och sidorna fungerar.
 
 ![Artikelsiddesign och ej formaterad version](assets/pages-templates/what-you-will-build.png)
 
@@ -81,13 +81,13 @@ I de flesta fall börjar planering av en ny webbplats med dummies och statisk de
 
 ## Skapa artikelsidmall
 
-När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
+När du skapar en sida måste du välja en mall, som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
 
 Det finns tre huvudområden [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html):
 
 1. **Struktur** - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
 1. **Ursprungligt innehåll** - definierar komponenter som mallen börjar med, som kan redigeras och/eller tas bort av innehållsförfattare
-1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare har tillgängliga.
+1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare kommer att ha tillgängliga.
 
 Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträffar i en lokal instans av AEM. Följ stegen i videon nedan:
 
@@ -101,12 +101,12 @@ Stegen på hög nivå för videon ovan:
 1. Växla till **Struktur** läge.
 1. Lägg till en **Experience Fragment** som fungerar som **Sidhuvud** högst upp i mallen.
    * Konfigurera komponenten att peka på `/content/experience-fragments/wknd/us/en/site/header/master`.
-   * Ställ in profilen på **Sidhuvud** och se till att **Standardelement** är inställd på `header`. The `header`-elementet kommer att användas med CSS i nästa kapitel.
+   * Ställ in profilen på **Sidhuvud** och se till att **Standardelement** är inställd på `header`. The `header`-elementet har CSS som mål i nästa kapitel.
 1. Lägg till en **Experience Fragment** som fungerar som **Sidfot** längst ned i mallen.
    * Konfigurera komponenten att peka på `/content/experience-fragments/wknd/us/en/site/footer/master`.
-   * Ställ in profilen på **Sidfot** och se till att **Standardelement** är inställd på `footer`. The `footer` -elementet kommer att användas med CSS i nästa kapitel.
+   * Ställ in profilen på **Sidfot** och se till att **Standardelement** är inställd på `footer`. The `footer` -elementet har CSS som mål i nästa kapitel.
 1. Lås **main** behållare som inkluderades när mallen skapades.
-   * Ställ in profilen på **Sidans huvudsida** och se till att **Standardelement** är inställd på `main`. The `main` -elementet kommer att användas med CSS i nästa kapitel.
+   * Ställ in profilen på **Sidans huvudsida** och se till att **Standardelement** är inställd på `main`. The `main` -elementet har CSS som mål i nästa kapitel.
 1. Lägg till en **Bild** till **main** behållare.
    * Lås upp **Bild** -komponenten.
 1. Lägg till en **Breadcrumb** -komponenten under **Bild** i huvudbehållaren.
@@ -132,7 +132,7 @@ Stegen på hög nivå för videon ovan:
 1. Växla till **Ursprungligt innehåll** läge.
 1. Lägg till en **Titel** till **Innehållsbehållare**. Detta fungerar som artikelrubrik. När den lämnas tom visas den aktuella sidans titel automatiskt.
 1. Lägg till en sekund **Titel** -komponenten under den första Title-komponenten.
-   * Konfigurera komponenten med texten: &quot;Av författare&quot;. Det här blir en textplatshållare.
+   * Konfigurera komponenten med texten: &quot;Av författare&quot;. Det här är en textplatshållare.
    * Ange vilken typ som ska användas `H4`.
 1. Lägg till en **Text** -komponenten under **Efter författare** Rubrikkomponent.
 1. Lägg till en **Titel** till **Side Rail Container**.
@@ -348,13 +348,13 @@ Nästa steg kommer att utföras med VSCode IDE med [Synkronisering AEM VSCode](h
    </workspaceFilter>
    ```
 
-   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som ska installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
+   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
 
    Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` för att förstå de olika noder som hanteras av varje modul.
 
    >[!WARNING]
    >
-   > För att säkerställa konsekventa distributioner för WKND-referensplatsen har vissa delar av projektet konfigurerats så att `ui.content` kommer att skriva över ändringar i den gemensamma handboken. Detta är utformat, dvs. för Solution Branches, eftersom kod/format skrivs för specifika profiler.
+   > För att säkerställa konsekventa distributioner för WKND-referensplatsen har vissa delar av projektet konfigurerats så att `ui.content` skriver över alla ändringar i JCR-filen. Detta är utformat, dvs. för Solution Branches, eftersom kod/format skrivs för specifika profiler.
 
 ## Grattis! {#congratulations}
 

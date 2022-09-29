@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som s
 
 ## Vad du ska bygga
 
-I det här kapitlet kommer ett nytt AEM att distribueras baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet kommer att inledas med en mycket enkel startpunkt för SPA. Det projekt som används i detta kapitel kommer att fungera som grund för genomförandet av WKND-SPA och kommer att byggas vidare i framtida kapitel.
+I det här kapitlet distribueras ett nytt AEM baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet har en mycket enkel startpunkt för SPA. Det projekt som används i detta kapitel kommer att utgöra grunden för en implementering av WKND-SPA och är byggt på i framtida kapitel.
 
 ![WKND SPA Angular Starter Project](./assets/create-project/what-you-will-build.png)
 
@@ -40,15 +40,15 @@ I det här kapitlet kommer ett nytt AEM att distribueras baserat på [AEM Projec
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Kontrollera att en ny instans av Adobe Experience Manager, som startades i läget **författare**, körs lokalt.
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
 
 ## Hämta projektet
 
-Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM. I den här självstudien användes den senaste [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som grund för självstudiekurskoden. Projektkoden har ändrats för att stödja flera versioner av AEM. Läs [anteckningen om bakåtkompatibilitet](overview.md#compatibility).
+Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudien använde den senaste [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som grund för självstudiekurskoden. Projektkoden har ändrats för att stödja flera versioner av AEM. Granska [anmärkningen om bakåtkompatibilitet](overview.md#compatibility).
 
 >[!CAUTION]
 >
->Det är en god vana att använda den **senaste** versionen av [arkivtypen](https://github.com/adobe/aem-project-archetype) för att generera ett nytt projekt för en implementering i verkligheten. AEM ska ha en enda version av AEM som mål med hjälp av egenskapen `aemVersion` för arkitypen.
+>Det är bäst att använda **senaste** version av [arketype](https://github.com/adobe/aem-project-archetype) för att skapa ett nytt projekt för en implementering i verkligheten. AEM ska ha en enda version av AEM som mål med `aemVersion` egenskapen för arkitypen.
 
 1. Hämta startpunkten för den här självstudiekursen via Git:
 
@@ -76,7 +76,7 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
        |--- archetype.properties
    ```
 
-3. Följande egenskaper användes när det AEM projektet genererades från [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14):
+3. Följande egenskaper användes när det AEM projektet genererades från [AEM](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14):
 
    | Egenskap | Värde |
    |-----------------|---------------------------------------|
@@ -90,13 +90,13 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
+   > Lägg märke till `frontendModule=angular` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Angularnas kodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
 Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal instans av AEM med Maven.
 
-1. Kontrollera att en instans av AEM körs lokalt på port **4502**.
+1. Kontrollera att en instans av AEM körs lokalt på porten **4502**.
 2. Kontrollera att Maven är installerad från kommandoradsterminalen:
 
    ```shell
@@ -106,7 +106,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-3. Kör kommandot nedan Maven från katalogen `aem-guides-wknd-spa` för att skapa och distribuera projektet till AEM:
+3. Kör kommandot under Maven från `aem-guides-wknd-spa` katalog för att skapa och distribuera projektet till AEM:
 
    ```shell
    $ mvn -PautoInstallSinglePackage clean install
@@ -139,11 +139,11 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Maven-profilen ***autoInstallSinglePackage*** kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Som standard distribueras det här paketet till en AEM som körs lokalt på port **4502** och med autentiseringsuppgifterna **admin:admin**.
+   Profilen Maven ***autoInstallSinglePackage*** kompilerar de enskilda modulerna i projektet och distribuerar ett paket till AEM. Det här paketet distribueras som standard till en AEM som körs lokalt på porten **4502** och med inloggningsuppgifterna för **admin:admin**.
 
-4. Navigera till **[!UICONTROL Package Manager]** på den lokala AEM instansen: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+4. Navigera till **[!UICONTROL Package Manager]** på din lokala AEM: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
 
-5. Du bör se tre paket för `wknd-spa-angular.all`, `wknd-spa-angular.ui.apps` och `wknd-spa-angular.ui.content`.
+5. Tre paket för `wknd-spa-angular.all`, `wknd-spa-angular.ui.apps` och `wknd-spa-angular.ui.content`.
 
    ![WKND-SPA](./assets/create-project/package-manager.png)
 
@@ -155,33 +155,33 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
 Öppna sedan SPA som skapades av arkivtypen och uppdatera en del av innehållet.
 
-1. Navigera till **[!UICONTROL Sites]**-konsolen: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
+1. Navigera till **[!UICONTROL Sites]** konsol: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content).
 
    WKND-SPA innehåller en grundläggande webbplatsstruktur med land, språk och hemsida. Den här hierarkin baseras på arkivtypens standardvärden för `language_country` och `isSingleCountryWebsite`. Dessa värden kan skrivas över genom att uppdatera [tillgängliga egenskaper](https://github.com/adobe/aem-project-archetype#available-properties) när ett projekt genereras.
 
-2. Öppna sidan **[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]** genom att markera sidan och klicka på knappen **[!UICONTROL Edit]** i menyraden:
+2. Öppna **[!DNL us]** > **[!DNL en]** > **[!DNL WKND SPA Angular Home Page]** genom att markera sidan och klicka på **[!UICONTROL Edit]** på menyraden:
 
    ![webbplatskonsol](./assets/create-project/open-home-page.png)
 
-3. En **[!UICONTROL Text]**-komponent har redan lagts till på sidan. Du kan redigera den här komponenten på samma sätt som andra komponenter i AEM.
+3. A **[!UICONTROL Text]** har redan lagts till på sidan. Du kan redigera den här komponenten på samma sätt som andra komponenter i AEM.
 
    ![Uppdatera textkomponent](./assets/create-project/update-text-component.gif)
 
-4. Lägg till ytterligare en **[!UICONTROL Text]**-komponent på sidan.
+4. Lägg till ytterligare **[!UICONTROL Text]** till sidan.
 
-   Observera att redigeringsupplevelsen liknar den på en traditionell AEM Sites-sida. För närvarande finns ett begränsat antal komponenter att använda. Mer kommer att läggas till under kursen.
+   Observera att redigeringsupplevelsen liknar den på en traditionell AEM Sites-sida. För närvarande finns ett begränsat antal komponenter att använda. Mer läggs till under kursen.
 
 ## Inspect för Single Page
 
 Kontrollera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
 
-1. I **[!UICONTROL Page Editor]** klickar du på menyn **[!UICONTROL Page Information]** > **[!UICONTROL View as Published]**:
+1. I **[!UICONTROL Page Editor]** klickar du på **[!UICONTROL Page Information]** meny > **[!UICONTROL View as Published]**:
 
    ![Knappen Visa som publicerad](./assets/create-project/view-as-published.png)
 
-   Då öppnas en ny flik med frågeparametern `?wcmmode=disabled` som i praktiken stänger av AEM: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
+   Då öppnas en ny flik med frågeparametern `?wcmmode=disabled` som i praktiken stänger av AEM redigerare: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
 
-2. Visa sidans källa och lägg märke till att textinnehållet **[!DNL Hello World]** eller något annat innehåll inte hittas. I stället ska du se HTML så här:
+2. Visa sidans källa och lägg märke till att textinnehållet **[!DNL Hello World]** eller något annat innehåll inte hittas. Du ska i stället se HTML så här:
 
    ```html
    ...
@@ -199,15 +199,15 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
    *Var kommer innehållet ifrån?*
 
 3. Återgå till fliken: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
-4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR**-begäranden:
+4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR** begäranden:
 
    ![XHR-begäranden](./assets/create-project/xhr-requests.png)
 
-   Det ska finnas en begäran till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Detta innehåller allt innehåll, formaterat i JSON, som SPA.
+   Det bör finnas en begäran om att [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Detta innehåller allt innehåll, formaterat i JSON, som SPA.
 
-5. Öppna [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) på en ny flik
+5. Öppna på en ny flik [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
-   Begäran `en.model.json` representerar innehållsmodellen som ska köra programmet. Inspect JSON-utdata och du bör kunna hitta kodfragmentet som representerar **[!UICONTROL Text]**-komponenterna.
+   Begäran `en.model.json` representerar innehållsmodellen som ska köra programmet. Inspect JSON-utdata och du bör kunna hitta kodavsnittet som representerar **[!UICONTROL Text]** komponenter.
 
    ```json
    ...
@@ -235,7 +235,7 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
 
 Grattis, du har precis skapat ditt första AEM SPA Editor Project!
 
-Det är ganska enkelt just nu, men i de kommande kapitlen kommer fler funktioner att läggas till.
+Det är ganska enkelt just nu, men i de kommande kapitlen läggs fler funktioner till.
 
 ### Nästa steg {#next-steps}
 

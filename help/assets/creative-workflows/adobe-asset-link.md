@@ -8,9 +8,9 @@ role: User
 level: Beginner
 thumbnail: 28988.jpg
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlig
 
 >[!TIP]
 >
-> Läs mer om hur [Adobe XD Premium Training Program](https://spark.adobe.com/page/wU7OXv8qKGugO/) kan hjälpa dig att integrera Asset Link i ditt Adobe Experience Manager-arbetsflöde.
+> Läs mer om hur [Adobe XD Premium Training Program](https://spark.adobe.com/page/wU7OXv8qKGugO/) kan hjälpa dig att integrera Asset Link med ditt Adobe Experience Manager-arbetsflöde.
 
 ## Adobe Asset Link och AEM kreativa arbetsflöden
 
@@ -34,7 +34,7 @@ I följande video visas ett vanligt arbetsflöde som används av kreatörer som 
 ## Adobe Asset Link-funktioner
 
 + Adobe Asset Link kan integreras med AEM Assets och Assets Essentials.
-+ Adobe Asset Link konfigurerar automatiskt anslutning till molnbaserade AEM (AEM Assets som Cloud Service och Assets Essentials)
++ Adobe Asset Link konfigurerar automatiskt anslutning till molnbaserade AEM (AEM Assets as a Cloud Service och Assets Essentials)
 + Adobe Asset Link är ett tillägg som fungerar i Adobe Creative Cloud-program:
 
    + Adobe XD
@@ -58,23 +58,23 @@ I följande video visas ett vanligt arbetsflöde som används av kreatörer som 
 
 ## Placera resurser i InDesign
 
-Adobe Asset Link har stöd för InDesign-direktlänkning mellan Adobe Asset Link och AEM. Med stöd för direktlänkning i InDesign kan du montera (__Montera länkade__ eller __Montera kopia__) eller dra-och-släppa digitala resurser till InDesign från AEM via panelen Adobe-resurslänk. Dessutom introduceras återgivningen av *For Placement Only+ (FPO).
+Adobe Asset Link har stöd för InDesign-direktlänkning mellan Adobe Asset Link och AEM. Med stöd för direktlänkning från InDesign kan du montera (__Montera länkad__ eller __Montera kopia__) eller dra-och-släpp digitala resurser till InDesign från AEM via panelen Adobe Asset Link. Dessutom introduceras återgivningen av *For Placement Only+ (FPO).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
 
 >[!NOTE]
 >
->Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurera AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
 
 Du kan montera en resurs i din InDesign-layout med något av följande alternativ:
 
-+ **Montera kopia**  - När du bäddar in en resurs (med alternativet Montera kopia) placeras en kopia av den ursprungliga resursen i InDesign-layouten när binärfilerna har hämtats till det lokala systemet. Adobe Asset Link bevarar ingen länk mellan den inbäddade kopian och den ursprungliga resursen. Om den ursprungliga resursen ändras i AEM måste du ta bort den inbäddade resursen från InDesign-filen och bädda in resursen på nytt från AEM.
++ **Montera kopia** - När du bäddar in en resurs (med alternativet Montera kopia) placeras en kopia av den ursprungliga resursen i InDesign-layouten när binärfilerna har hämtats till det lokala systemet. Adobe Asset Link bevarar ingen länk mellan den inbäddade kopian och den ursprungliga resursen. Om den ursprungliga resursen ändras i AEM måste du ta bort den inbäddade resursen från InDesign-filen och bädda in resursen på nytt från AEM.
 
-+ **Montera länkad**  - När du arbetar med InDesign-dokument kan du referera till resurser från AEM förutom att direkt bädda in resurserna (med alternativet Montera kopia på snabbmenyn). Genom att referera till resurser kan du samarbeta med andra användare och införliva uppdateringar som gjorts i den ursprungliga resursen i AEM. Om du vill referera till en resurs från AEM använder du alternativet Montera länkad på snabbmenyn.
++ **Montera länkad** - När du arbetar med InDesign-dokument kan du referera till resurser från AEM förutom att bädda in dem direkt (med alternativet Montera kopia på snabbmenyn). Genom att referera till resurser kan du samarbeta med andra användare och införliva uppdateringar som gjorts i den ursprungliga resursen i AEM. Om du vill referera till en resurs från AEM använder du alternativet Montera länkad på snabbmenyn.
 
 ### Endast för placeringsbilder
 
-När stora resursfiler placeras i InDesign-dokument från AEM med Adobe Asset Link måste användare vänta i några sekunder efter att monteringsåtgärden initierats. Detta påverkar den övergripande användarupplevelsen. Med Adobe Asset Link kan du tillfälligt montera en lågupplöst bild av den ursprungliga resursen från AEM, vilket minskar tiden det tar att montera en bild. Samtidigt ökar det den övergripande användarupplevelsen och produktiviteten. Bilden med lägre upplösning placeras tillfälligt och när den slutliga versionen krävs för utskrift eller publicering måste du ersätta FPO-återgivningarna med originalen. Om du vill ersätta flera FPO-bilder med respektive originalbilder går du till panelen **_Fönster > Länkar_** och hämtar sedan originalresurserna. När originalbilderna har laddats ned väljer du Ersätt alla FPO:er med original.
+När stora resursfiler placeras i InDesign-dokument från AEM med Adobe Asset Link måste användare vänta i några sekunder efter att monteringsåtgärden initierats. Detta påverkar den övergripande användarupplevelsen. Med Adobe Asset Link kan du tillfälligt montera en lågupplöst bild av den ursprungliga resursen från AEM, vilket minskar tiden det tar att montera en bild. Samtidigt ökar det den övergripande användarupplevelsen och produktiviteten. Bilden med lägre upplösning placeras tillfälligt och när den slutliga versionen krävs för utskrift eller publicering måste du ersätta FPO-återgivningarna med originalen. Om du vill ersätta flera FPO-bilder med respektive originalbilder går du till **_Fönster > Länkar_** och hämta de ursprungliga resurserna. När originalbilderna har laddats ned väljer du Ersätt alla FPO:er med original.
 
 FPO-återgivningar är enkla ersättningar av de ursprungliga resurserna. De har samma proportioner, men har mindre storlek än originalbilderna. För närvarande stöder InDesign import av FPO-renderingar endast för följande bildtyper:
 
@@ -94,14 +94,14 @@ Hur Adobe Asset Link-autentisering fungerar i samband med Adobe Identity Managem
 ![Adobe Asset Link Architecture](assets/adobe-asset-link-article-understand.png)
 
 1. Tillägget Adobe Asset Link skickar en auktoriseringsbegäran via Adobe Creative Cloud-datorprogrammet till IMS-tjänsten (Adobe Identity Manage Service) och får en Bearer-token när den lyckas.
-1. Tillägget Adobe Asset Link ansluter till AEM Author via HTTP(S), inklusive den Bearer-token som fås i **Steg 1**, med schemat (HTTP/HTTPS), värd och port som finns i tilläggets JSON-inställningar.
+1. Tillägget Adobe Asset Link ansluter till AEM Author via HTTP(S), inklusive Bearer-token som fås i **Steg 1**, med hjälp av schemat (HTTP/HTTPS), värd och port som finns i tilläggets JSON-inställningar.
 1. AEM Bearer Authentication Handler extraherar Bearer-token från begäran och validerar den med Adobe IMS.
 1. När Adobe IMS validerar Bearer-token skapas en användare i AEM (om den inte redan finns) och synkroniserar profil- och grupp-/medlemskapsdata från Adobe IMS. Den AEM användaren får en AEM inloggningstoken som skickas tillbaka till tillägget Adobe Asset Link som cookie i HTTP(S)-svaret.
 1. Efterföljande interaktioner (t.ex. bläddra, söka, checka in/ut resurser osv.) med tillägget Adobe Asset Link resulterar i HTTP(S)-begäranden till AEM Author som valideras med AEM inloggningstoken, med hjälp av AEM Token Authentication Handler.
 
 >[!NOTE]
 >
->När inloggningstoken har upphört att gälla anropas **steg 1-5** automatiskt, Adobe Asset Link-tillägget autentiseras med Bearer-token och en ny, giltig inloggningstoken utfärdas på nytt.
+>När inloggningstoken har upphört att gälla **Steg 1-5** anropar automatiskt, autentiserar tillägget Adobe Asset Link med hjälp av Bearer-token och utfärdar en ny, giltig inloggningstoken på nytt.
 
 ## Ytterligare resurser
 

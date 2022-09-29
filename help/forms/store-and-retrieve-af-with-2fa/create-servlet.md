@@ -1,24 +1,25 @@
 ---
 title: Skapa servlet
 description: Skapa en serverdator som hanterar POSTENS begäranden om att spara formulärdata
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 1%
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
 # Skapa servlet
 
-Nästa steg är att skapa en servett som anropar rätt metoder för vår anpassade OSGi-tjänst. Servern har åtkomst till adaptiva formulärdata, information om bifogade filer. Servern returnerar ett unikt program-ID som kan användas för att hämta det delvis ifyllda adaptiva formuläret.
+Nästa steg är att skapa en servlet som anropar lämpliga metoder för vår anpassade OSGi-tjänst. Servern har åtkomst till adaptiva formulärdata, information om bifogade filer. Servern returnerar ett unikt program-ID som kan användas för att hämta det delvis ifyllda adaptiva formuläret.
 
 Den här servern anropas när användaren klickar på knappen Spara och avsluta i det adaptiva formuläret
 

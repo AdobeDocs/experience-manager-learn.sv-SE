@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # Frågar skickade data
 
 
-Nästa steg är att fråga efter skickade data och visa resultaten i tabellform. För att uppnå detta kommer vi att använda följande programvara
+Nästa steg är att fråga efter skickade data och visa resultaten i tabellform. För att uppnå detta använder vi följande program:
 
 [QueryBuilder](https://querybuilder.js.org/) - UI-komponent för att skapa frågor
 
@@ -64,7 +64,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-När du klickar på knappen GetResult görs ett Get-anrop till **&quot;/bin/querydata&quot;**. Vi skickar frågan som skapats av QueryBuilder-användargränssnittet till servern via frågeparametern. Servern masserar sedan frågan till SQL-fråga som kan användas för att fråga databasen. Om du till exempel söker efter alla produkter med namnet &quot;Mouse&quot; kommer frågesträngen i Query Builder att vara $.productname = &quot;Mouse&quot;. Den här frågan kommer sedan att konverteras till följande
+När du klickar på knappen GetResult görs ett Get-anrop till **&quot;/bin/querydata&quot;**. Vi skickar frågan som skapats av QueryBuilder-användargränssnittet till servern via frågeparametern. Servern masserar sedan frågan till SQL-fråga som kan användas för att fråga databasen. Om du till exempel söker efter alla produkter med namnet &quot;Mouse&quot; är frågesträngen i Frågebyggaren `$.productname = 'Mouse'`. Den här frågan kommer sedan att konverteras till följande
 
 MARKERA &#42; från aemformswithjson .  formsending where JSON_EXTRACT( formsending.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 

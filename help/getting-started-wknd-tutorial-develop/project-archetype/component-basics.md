@@ -12,16 +12,16 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om komponenter {#component-basics}
 
-I det här kapitlet ska vi utforska den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel. Små ändringar kommer att göras i en befintlig komponent, som omfattar ämnen som utveckling, HTML, segmenteringsmodeller och klientbibliotek.
+I det här kapitlet ska vi utforska den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel. Små ändringar görs i en befintlig komponent, som omfattar ämnen som redigering, HTML, segmenteringsmodeller och klientbibliotek.
 
 ## Förutsättningar {#prerequisites}
 
@@ -282,7 +282,7 @@ Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss af
 
 Klientbibliotek, clientlibs for short, erbjuder en funktion för att organisera och hantera CSS- och JavaScript-filer som behövs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
 
-The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modulen är en frikopplad [webbpaket](https://webpack.js.org/) projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. The `ui.frontend` kommer att utforskas mer ingående i [Kapitel om bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modulen är en frikopplad [webbpaket](https://webpack.js.org/) projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. The `ui.frontend` finns mer detaljerad information om modulen i [Kapitel om bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 Uppdatera sedan CSS-formaten för `HelloWorld` -komponenten.
 

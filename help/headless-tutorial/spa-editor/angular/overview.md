@@ -14,16 +14,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: 825124bc6c3be10e6822fb5fb8bd9645d242da76
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
 
 # Skapa din första Angular SPA i AEM {#introduction}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular kommer att utvecklas och utformas för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular har utvecklats och utformats för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
 ![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
 
@@ -31,7 +31,7 @@ Välkommen till en självstudiekurs i flera delar som är utformad för utveckla
 
 ## Om
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en Angular som fungerar med SPA redigeringsfunktion i AEM. I ett verkligt scenario delas utvecklingsverksamheterna upp efter personlighet, ofta med en **Front End-utvecklare** och **Back End-utvecklare**. Vi tror att det är bra att alla utvecklare som kommer att delta i ett AEM SPA Editor-projekt slutför kursen.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en Angular som fungerar med SPA redigeringsfunktion i AEM. I ett verkligt scenario delas utvecklingsverksamheterna upp efter personlighet, ofta med en **Front End-utvecklare** och **Back End-utvecklare**. Vi anser att det är bra att alla utvecklare som arbetar med ett AEM redigeringsprojekt kan slutföra den här självstudiekursen.
 
 Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.4+** och **AEM 6.4.8+**. SPA implementeras med:
 

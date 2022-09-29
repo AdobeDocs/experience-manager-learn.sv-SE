@@ -1,5 +1,5 @@
 ---
-title: Testa lösningen
+title: Testa Forms assembler-lösningen
 description: Kör ExecuteAssemblerService.java för att testa lösningen
 type: Documentation
 role: Developer
@@ -8,9 +8,9 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---

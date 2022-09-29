@@ -1,8 +1,6 @@
 ---
 title: Visar anpassade tillgångstyper i AEM Forms
-seo-title: Listing Custom Asset Types in AEM Forms
 description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
-seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
@@ -15,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -26,8 +24,7 @@ ht-degree: 0%
 
 ## Skapa anpassad mall {#creating-custom-template}
 
-
-I den här artikeln kommer vi att skapa en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
+I den här artikeln skapar vi en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
 
 1. Skapa en sling: under /apps. Ge den namnet &quot;myportalcomponent&quot;
 1. Lägg till en fpContentType-egenskap. Ange värdet till **/libs/fd/ fp/formTemplate&quot;.**
@@ -117,4 +114,4 @@ Nu när du har konfigurerat söknings- och listportalkomponenten är det dags at
 >Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att ge&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
 
 ![tillgångstyper](assets/assettypeslistings.png)
-[Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som ska användas som resurstyper för att lista med hjälp av sök- och listkomponenten
+[Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som används som resurstyper för att lista med hjälp av sök- och listkomponenten

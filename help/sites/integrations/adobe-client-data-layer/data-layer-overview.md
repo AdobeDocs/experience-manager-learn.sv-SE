@@ -1,19 +1,19 @@
 ---
 title: Använda Adobe-klientdatalagret med AEM kärnkomponenter
 description: Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökarupplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
-topic: Integreringar
+topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate
 kt: 6261
 thumbnail: 41195.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
-
 
 # Använda Adobe-klientdatalagret med AEM kärnkomponenter {#overview}
 
@@ -27,14 +27,14 @@ Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra 
 
 ## Utforska datalagret
 
-Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att bara använda utvecklarverktygen i din webbläsare och den aktiva [WKND-referensplatsen](https://wknd.site/).
+Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att bara använda utvecklarverktygen i din webbläsare och live [WKND-referensplats](https://wknd.site/).
 
 >[!NOTE]
 >
 > Skärmbilder nedan tagna från webbläsaren Chrome.
 
 1. Navigera till [https://wknd.site](https://wknd.site)
-1. Öppna dina utvecklingsverktyg och ange följande kommando i **konsolen**:
+1. Öppna utvecklingsverktygen och ange följande kommando i **Konsol**:
 
    ```js
    window.adobeDataLayer.getState();
@@ -57,7 +57,7 @@ Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer 
    });
    ```
 
-1. Kör kommandot `adobeDataLayer.getState()` igen och sök efter posten för `training-data`.
+1. Kör kommandot `adobeDataLayer.getState()` igen och hitta posten för `training-data`.
 1. Lägg sedan till en path-parameter som returnerar bara ett specifikt läge för en komponent:
 
    ```js
@@ -89,13 +89,13 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   Ovanstående kod undersöker `event`-objektet och använder metoden `adobeDataLayer.getState` för att hämta det aktuella tillståndet för det objekt som utlöste händelsen. Hjälpmetoden kontrollerar sedan `filter`-villkoren och bara om det aktuella `dataObject` uppfyller filtret returneras det.
+   Ovanstående kod kommer att granska `event` -objektet och använder `adobeDataLayer.getState` metod för att hämta det aktuella läget för objektet som utlöste händelsen. Hjälpmetoden kontrollerar sedan `filter` villkor och bara om aktuell `dataObject` uppfyller filtret kommer det att returneras.
 
    >[!CAUTION]
    >
-   > Det är viktigt att **inte** uppdatera webbläsaren under övningen, annars försvinner konsolens JavaScript.
+   > Det är viktigt **not** om du vill uppdatera webbläsaren under övningen, annars försvinner konsolens JavaScript.
 
-1. Ange sedan en händelsehanterare som ska anropas när en **Teaser**-komponent visas i en **Carousel**.
+1. Ange sedan en händelsehanterare som anropas när en **Teaser** -komponenten visas i en **Carousel**.
 
    ```js
    function teaserShownHandler(event) {
@@ -107,9 +107,9 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   `teaserShownHandler` anropar metoden `getDataObjectHelper` och skickar ett filter av `wknd/components/teaser` som `@type` för att filtrera bort händelser som utlöses av andra komponenter.
+   The `teaserShownHandler` ringer `getDataObjectHelper` metoden och skicka in ett filter med `wknd/components/teaser` som `@type` för att filtrera bort händelser som utlöses av andra komponenter.
 
-1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna händelsen `cmp:show`.
+1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna `cmp:show` -händelse.
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -117,13 +117,13 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    });
    ```
 
-   Händelsen `cmp:show` aktiveras av många olika komponenter, till exempel när en ny bildruta visas i **Carousel** eller när en ny flik väljs i komponenten **Tabb**.
+   The `cmp:show` -händelsen aktiveras av många olika komponenter, som när en ny bildruta visas i **Carousel** eller när en ny flik markeras i **Tabb** -komponenten.
 
 1. På sidan växlar du karusellbildrutorna och följer konsolsatserna:
 
    ![Växla Carousel och se händelseavlyssnare](assets/teaser-console-slides.png)
 
-1. Ta bort händelseavlyssnaren från datalagret för att sluta lyssna efter händelsen `cmp:show`:
+1. Ta bort händelseavlyssnaren från datalagret för att sluta lyssna efter `cmp:show` händelse:
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -134,7 +134,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
 1. Gå tillbaka till sidan och växla karusellbilderna. Observera att inga fler programsatser loggas och att ingen lyssnar på händelsen.
 
-1. Ange sedan en händelsehanterare som ska anropas när händelsen för sidan som visas aktiveras:
+1. Skapa sedan en händelsehanterare som anropas när händelsen som visas på sidan utlöses:
 
    ```js
    function pageShownHandler(event) {
@@ -148,7 +148,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    Observera att resurstypen `wknd/components/page` används för att filtrera händelsen.
 
-1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna händelsen `cmp:show` och anropar `pageShownHandler`.
+1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna `cmp:show` händelse, anropa `pageShownHandler`.
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -161,18 +161,18 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    ![Visa data](assets/page-show-console-data.png)
 
-   Händelsen `cmp:show` för sidan aktiveras för varje sida som läses in högst upp på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
+   The `cmp:show` -händelsen för sidan aktiveras för varje sidinläsning högst upp på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
 
-   Detta är en av de unika funktionerna i datalagret för klienten i Adobe, eftersom du kan registrera händelseavlyssnare **före** eller **efter att datalagret har initierats.** Detta är en viktig funktion för att undvika konkurrensförhållanden.
+   Detta är en av de unika funktionerna i Adobe Client Data Layer, där du kan registrera händelseavlyssnare **före** eller **efter** datalagret har initierats. Detta är en viktig funktion för att undvika konkurrensförhållanden.
 
-   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Datalagret kommer som standard att utlösa händelseåteranrop för händelser som inträffade i **förbi** samt händelser i **framtiden**. Det går att filtrera händelserna så att de bara är äldre eller framtida. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Som standard utlöser datalagret händelseåteranrop för händelser som inträffar i **förfluten** samt händelser i **future**. Det går att filtrera händelserna så att de bara är äldre eller framtida. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nästa steg
 
 Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [samla in siddata och skicka till Adobe Analytics](../analytics/collect-data-analytics.md).
 
-Eller läs hur du [anpassar Adobe-klientdatalagret med AEM komponenter](./data-layer-customize.md)
+Eller lär dig mer om [Anpassa Adobe-klientdatalagret med AEM](./data-layer-customize.md)
 
 
 ## Ytterligare resurser {#additional-resources}

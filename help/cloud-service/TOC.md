@@ -4,7 +4,7 @@ user-guide-description: En samling självstudiekurser för Adobe Experience Mana
 breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: cloud-service
 team: TM
-source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%
@@ -214,7 +214,7 @@ ht-degree: 10%
    + Integrera med Microsoft Power Automate{#forms-cs-and-power-automate}
       + [Konfigurera integreringen](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [Tolka skickade formulärdata](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [Skicka DoR som e-postbilaga](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
+      + [Skicka DoR som e-postbilaga](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [Extrahera formulärbilagor från inskickade data](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + Integrera med Microsoft Dynamics{#formscs-dynamics-crm}
       + [Skapa Dynamics-program](./forms/formscs-dynamics-crm/create-dynamics-account.md)
@@ -272,9 +272,9 @@ ht-degree: 10%
       + [Sling Job Scheduler](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
       + [Korrigera din cache](./cloud-5/season-2/cloud5-fix-your-cache.md)
       + [Korrigera återskrivningar](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
-      + [Cloud Manager - enhetstester](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
-      + [Cloud Manager - funktionstester](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
+      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
+      + [Cloud Manager - enhetstester](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
+      + [Cloud Manager - funktionstester](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM Experts Series](./aem-experts-series.md)
 + Tutorials i flera steg{#multi-step-tutorials}
    + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)

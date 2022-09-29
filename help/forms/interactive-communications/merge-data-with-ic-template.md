@@ -1,8 +1,6 @@
 ---
 title: Generera dokument för utskriftskanal genom att sammanfoga data
-seo-title: Generera dokument för utskriftskanal genom att sammanfoga data
 description: Lär dig hur du genererar dokument för utskriftskanaler genom att sammanfoga data som finns i indataströmmen
-seo-description: Lär dig hur du genererar dokument för utskriftskanaler genom att sammanfoga data som finns i indataströmmen
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -12,10 +10,10 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ Skriv ut kanaldokument genereras vanligtvis genom att data hämtas från en back
 
 ## Skapa förifyllningstjänst
 
-Tjänstnamnet &quot;ccm-print-test&quot; används för att komma åt den här tjänsten. När den här förifyllda tjänsten har definierats kan du komma åt den här tjänsten antingen i serverns eller arbetsflödets processstegsimplementering för att generera dokumentet för tryckkanalen.
+Tjänstnamnet &quot;ccm-print-test&quot; används för att få åtkomst till den här tjänsten. När den här förifyllda tjänsten har definierats kan du komma åt den här tjänsten antingen i serverns eller arbetsflödets processstegsimplementering för att generera dokumentet för tryckkanalen.
 
 ```java
 import java.io.InputStream;

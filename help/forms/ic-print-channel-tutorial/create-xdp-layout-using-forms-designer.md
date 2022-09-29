@@ -1,8 +1,8 @@
 ---
 title: Skapa layout med Forms Designer
-seo-title: Skapa layout med Forms Designer
+seo-title: Create Layout using Forms Designer
 description: Detta är en del av 4 av en flerdelssjälvstudiekurs för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I det här avsnittet tittar vi på layoutfilen som skapats med AEM Forms Designer.
-seo-description: Detta är en del av 4 av en flerdelssjälvstudiekurs för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I det här avsnittet tittar vi på layoutfilen som skapats med AEM Forms Designer.
+seo-description: This is part 4 of multipart tutorial for creating your first interactive communication document for the print channel.In this part, we look at the layout file created using AEM Forms Designer.
 uuid: 2f014c58-1ae1-40e8-a45d-7ffe9c86f693
 feature: Interactive Communication
 topics: development
@@ -16,24 +16,20 @@ thumbnail: 37890.jpg
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1bda648c-01be-44f1-aa73-3f5e7365d094
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 1%
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
-
 
 # Skapa layout med Forms Designer {#create-layout-using-forms-designer}
 
 Här tittar vi på layoutfilen som skapats med AEM Forms Designer.
 
-Alla dokument i tryckkanaler baseras på en mall som skapats med verktyget AEM Forms Designer. Vanligtvis skapar du avsnitt eller målområden i mallen som kan innehålla dokumentfragment, bilder eller layoutfragment. Helst har layouten inget definierat innehåll. Detta frigör layouten från det innehåll som rekommenderas.
+Alla dokument i tryckkanaler baseras på en mall som skapats med verktyget AEM Forms Designer. Vanligtvis skapar du avsnitt eller målområden i mallen för att lagra dokumentfragment, bilder eller layoutfragment. Helst har layouten inget definierat innehåll. Detta frigör layouten från det innehåll som rekommenderas.
 
-I följande video visas de avsnitt eller målområden som definieras i den layout som ska användas i kursen.
+I följande video markeras de avsnitt eller målområden som definieras i den layout som används i den här självstudiekursen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37890/?quality=9)
-
-
-

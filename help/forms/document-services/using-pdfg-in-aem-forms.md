@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
-source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Så här installerar du demoresurserna:
 1. [Navigera till post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) i din CRX
 1. Ändra platsen där du vill spara (rad 9)
 1. Spara ändringarna.
-1. Öppna [  html-sida](http://localhost:4502/content/DocumentServices/CreatePDFG.html) för att dra och släppa filer för konvertering.
+1. Öppna [html-sida](http://localhost:4502/content/DocumentServices/CreatePDFG.html) för att dra och släppa filer för konvertering.
 1. Släpp en ordfil eller jpg i släppzonen.
 1. Indatadokumentet konverteras till PDF och sparas på samma plats som anges i punkt 4.
 

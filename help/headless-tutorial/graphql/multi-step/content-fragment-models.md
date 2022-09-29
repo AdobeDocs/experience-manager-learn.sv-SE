@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I det här kapitlet får du lära dig att modellera innehåll och skapa ett schema med **Modeller för innehållsfragment**. Du får lära dig mer om de olika datatyper som kan användas för att definiera ett schema som en del av modellen.
 
-I det här kapitlet kommer två enkla modeller att skapas: **Team** och **Person**. The **Team** datamodellen har namn, kort namn och beskrivning och refererar till **Person** datamodell med fullständigt namn, bioinformation, profilbild och yrkeslista.
+I det här kapitlet skapas två enkla modeller, **Team** och **Person**. The **Team** datamodellen har namn, kort namn och beskrivning och refererar till **Person** datamodell med fullständigt namn, bioinformation, profilbild och yrkeslista.
 
 Du kan också skapa en egen modell som följer de grundläggande stegen och justera respektive steg som GraphQL-frågor och React App-kod eller helt enkelt följa stegen som beskrivs i dessa kapitel.
 
@@ -79,7 +79,7 @@ Skapa en ny modell för en **Person**, som är datamodellen som representerar en
 
    ![Egenskapsfältet Fullständigt namn](assets/content-fragment-models/full-name-property-field.png)
 
-   The **Egenskapsnamn** definierar namnet på den egenskap som är beständig för AEM. The **Egenskapsnamn** definierar även **key** den här egenskapens namn som en del av dataschemat. Detta **key** används när Content Fragment-data visas via GraphQL-API:er.
+   The **Egenskapsnamn** definierar namnet på den egenskap som är beständig för AEM. The **Egenskapsnamn** definierar även **key** den här egenskapens namn som en del av dataschemat. Detta **key** används när Content Fragment-data visas via GraphQL API:er.
 
 1. Tryck på **Datatyper** och dra och släppa **Flerradstext** fält under **Fullständigt namn** fält. Ange följande egenskaper:
 

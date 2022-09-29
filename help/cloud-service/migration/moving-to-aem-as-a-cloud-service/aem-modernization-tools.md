@@ -8,7 +8,7 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -91,4 +91,4 @@ Se även till att du har fullföljt tidigare övningar:
 
 
 1. Distribuera den nymoderniserade äldre webbplatsen på den lokala AEM SDK. AEM ASK finns att ladda ned här:
-+ [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).
+   + [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

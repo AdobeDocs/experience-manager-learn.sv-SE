@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Eftersom vi skapar det nya maven-projektet i molnhanterarmappen som redan har et
 
 >[!NOTE]
 >
->Om du distribuerar det nya projektet som det är i molntjänstinstansen kommer HandleFormSubmission och SubmitToAEMServlet inte att finnas. Det beror på att varje gång du distribuerar ett projekt med hjälp av molnhanteraren tas allt under programmappen bort och skrivs över.
+>Om du distribuerar det nya projektet som det är i molntjänstinstansen kommer HandleFormSubmission och SubmitToAEMServlet inte att finnas. Det beror på att varje gång du distribuerar ett projekt med Cloud Manager finns det något under `/apps` mappen tas bort och skrivs över.
 
 ## Kopiera din java-kod
 

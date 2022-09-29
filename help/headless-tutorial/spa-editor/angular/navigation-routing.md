@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2636'
+source-wordcount: '2635'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installera det färdiga paketet för det traditionella [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest). Bilderna från [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest) kommer att återanvändas på WKND-SPA. Paketet kan installeras med [AEM](http://localhost:4502/crx/packmgr/index.jsp).
+3. Installera det färdiga paketet för det traditionella [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest). Bilderna från [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest) används på WKND-SPA. Paketet kan installeras med [AEM](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
@@ -313,7 +313,7 @@ Implementera sedan navigeringsmenyn med en ny `NavigationComponent`. Vi kan läg
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   De AEM sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att `Header` -komponenten ärver alla funktioner i [Kärnkomponent för navigering](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och det innehåll som exponeras via JSON mappas automatiskt till Angularna `@Input` anteckning.
+   De AEM sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att `Header` -komponenten ärver alla funktioner i [Kärnkomponent för navigering](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och det innehåll som visas via JSON mappas automatiskt till Angularna `@Input` anteckning.
 
 2. Öppna ett nytt terminalfönster och navigera till `ui.frontend` SPA. Skapa ett nytt `NavigationComponent` med Angular CLI-verktyget:
 
@@ -637,7 +637,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
 
    `AemPageMatcher` är en anpassad Angular router [UrlMatcher](https://angular.io/api/router/UrlMatcher), som matchar allt som &quot;ser ut som&quot; på en sida i AEM som är en del av det här Angularna.
 
-   `PageComponent` är den sidkomponent som representerar en Angular i AEM, och de matchande flödena kommer att anropas. The `PageComponent` kommer att inspekteras ytterligare.
+   `PageComponent` är den sidkomponent som representerar en Angular i AEM och som används för att återge de matchande vägarna. The `PageComponent` senare i självstudiekursen.
 
    `AemPageDataResolver`, som tillhandahålls av AEM JS SDK, är en anpassad [Angular Router Resolver](https://angular.io/api/router/Resolve) som används för att omforma väg-URL:en, som är sökvägen i AEM inklusive tillägget .html, till resurssökvägen i AEM, som är sidsökvägen minus tillägget.
 

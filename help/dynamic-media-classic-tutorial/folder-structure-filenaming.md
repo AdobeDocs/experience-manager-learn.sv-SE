@@ -1,22 +1,22 @@
 ---
 title: Ange mappstruktur och namngivningskonvention för filer
-description: Filnamngivning är kanske det viktigaste beslutet när du implementerar Dynamic Media Classic. Mappstrukturen är också viktig. Lär dig varför det är så viktigt och möjligt att använda metoder för mappstruktur och filnamn.
-sub-product: dynamiska medier
+description: Namngivning av filer är kanske det viktigaste beslutet när du implementerar Dynamic Media Classic. Mappstrukturen är också viktig. Lär dig varför det är så viktigt och möjligt att använda metoder för mappstruktur och filnamn.
+sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
-topic: Innehållshantering
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 15121896-9196-4ce0-aff2-9178563326b4
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
-
 
 # Ange mappstruktur och namngivningskonvention för filer {#folder-structure-filenaming}
 
@@ -24,15 +24,15 @@ Innan du börjar ladda upp allt ditt innehåll är det klokt att fundera över m
 
 ## Mapphierarki och namngivningskonvention för filer
 
-Namngivning är vanligtvis det viktigaste beslutet när det gäller implementering av Dynamic Media Classic. Men för att förstå varför det är viktigt måste vi först prata om mappstrukturen.
+Namngivning av filer är i allmänhet det viktigaste beslutet när det gäller Dynamic Media Classic. Men för att förstå varför det är viktigt måste vi först prata om mappstrukturen.
 
 ### Mapphierarki
 
-Mapphierarkin är bara viktig för dig och ditt företag i organiseringssyfte - dina Dynamic Media Classic-URL:er refererar bara till resursnamnet, inte mappen eller sökvägen. Oavsett var du överför en fil kommer URL:en att vara densamma. Detta skiljer sig helt från hur de flesta organiserar sina bilder och sitt innehåll för webben, men med Dynamic Media Classic spelar det ingen roll.
+Mapphierarkin är bara viktig för dig och ditt företag i organiseringssyfte - dina Dynamic Media Classic-URL:er refererar bara till resursnamnet, inte mappen eller sökvägen. Oavsett var du överför en fil är URL:en densamma. Detta skiljer sig helt från hur de flesta organiserar sina bilder och sitt innehåll för webben, men med Dynamic Media Classic gör det ingen skillnad.
 
-En annan viktig faktor är antalet resurser eller mappar som ska lagras i varje mapp. Om många resurser lagras i en mapp försämras prestanda när du visar resurser i Dynamic Media Classic. Lagra inte tusentals resurser i en mapp. Utveckla i stället en organisationshierarki med färre än ca 500 resurser eller mappar inom en viss gren i hierarkin. Detta är inte ett strikt krav, men det hjälper till att behålla godtagbara svarstider vid visning eller sökning av resurser. Rekommendationen är i själva verket att skapa hierarkier som är breda och tunna snarare än smala och djupa.
+En annan viktig faktor är antalet resurser eller mappar som ska lagras i varje mapp. Om många resurser lagras i en mapp försämras prestanda när du visar resurser i Dynamic Media Classic. Lagra inte tusentals resurser i en mapp. Utveckla i stället en organisationshierarki med färre än ca 500 resurser eller mappar inom en viss gren i hierarkin. Detta är inte ett strikt krav, men det hjälper till att behålla godtagbara svarstider när du visar eller söker resurser. Rekommendationen är i själva verket att skapa hierarkier som är breda och tunna snarare än smala och djupa.
 
-Det enklaste sättet att skapa mappar är att överföra hela mappstrukturen med FTP och aktivera alternativet **Inkludera undermappar**. Med det här alternativet återskapar Dynamic Media Classic mappstrukturen på FTP-platsen i Dynamic Media Classic.
+Det enklaste sättet att skapa mappar är att överföra hela mappstrukturen med FTP och aktivera alternativet **Inkludera undermappar**. Med det här alternativet återskapar Dynamic Media Classic mappstrukturen på FTP-webbplatsen i Dynamic Media Classic.
 
 Vi vill att du ska tänka på mappstrukturen innan du börjar överföra alla filer, eftersom det är mycket enklare att ordna och hantera filer och mappar lokalt på datorn än i Dynamic Media Classic. Du kan till exempel bara dra och släppa filer, men inte hela mappar, inuti Dynamic Media Classic.
 
@@ -44,11 +44,11 @@ För er mappstrategi bör ni fundera över vad som passar er organisation bäst.
 - SKU- eller produkt-ID-baserad strategi. Om återförsäljarna till exempel har tusentals objekt kan det vara bra att använda SKU-nummer eller produkt-ID som mappnamn.
 - Varumärkesstrategi. Tillverkare som har flera varumärken kan till exempel välja sina märkesnamn som mappar på den översta nivån.
 
-## Konvention om namngivning av filer
+## Namngivningskonvention
 
-Det sätt du väljer att namnge filerna är kanske det viktigaste beslutet du kommer att fatta när det gäller Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
+Hur du namnger filerna är kanske det viktigaste beslutet du kommer att fatta om Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
 
-Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett tillgångs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Till exempel _896649.jpg_ hämtar resurs _ID 896649_.
+Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett tillgångs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Till exempel: _896649.jpg_ hämtar resurs _ID 896649_.
 
 Regler för tillgångs-ID:
 

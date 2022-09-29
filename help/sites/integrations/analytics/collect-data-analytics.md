@@ -9,22 +9,22 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2371'
 ht-degree: 1%
 
 ---
 
 # Samla in siddata med Adobe Analytics
 
-Lär dig använda de inbyggda funktionerna i [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att samla in data om en sida i Adobe Experience Manager Sites. [Experience Platform ](https://www.adobe.com/experience-platform/launch.html) Launchoch  [Adobe Analytics-](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) tillägget används för att skapa regler för att skicka siddata till Adobe Analytics.
+Lär dig använda de inbyggda funktionerna i [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att samla in data om en sida i Adobe Experience Manager Sites. [Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) och [Adobe Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) används för att skapa regler för att skicka siddata till Adobe Analytics.
 
 ## Vad du ska bygga
 
 ![Spårning av siddata](assets/collect-data-analytics/analytics-page-data-tracking.png)
 
-I den här självstudiekursen utlöser du en startregel baserad på en händelse från Adobe-klientdatalagret, lägger till villkor för när regeln ska utlösas och skickar **sidnamnet** och **sidmallen** för en AEM till Adobe Analytics.
+I den här självstudiekursen utlöser du en startregel baserad på en händelse från Adobe-klientdatalagret, lägger till villkor för när regeln ska utlösas och skickar sedan **Sidnamn** och **Sidmall** en AEM till Adobe Analytics.
 
 ### Mål {#objective}
 
@@ -36,10 +36,10 @@ I den här självstudiekursen utlöser du en startregel baserad på en händelse
 
 Följande krävs:
 
-* **Experience Platform** LaunchProperty
-* **Adobe** AnalyticsTest/Dev-rapportsprogram-ID och spårningsserver. Se följande dokumentation för [hur du skapar en ny rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debuggerbrowser-tillägg. Skärmbilder i den här självstudiekursen som tagits från webbläsaren Chrome.
-* (Valfritt) AEM Plats med [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudien används den offentliga webbplatsen [https://wknd.site/us/en.html](https://wknd.site/us/en.html), men du är välkommen att använda din egen webbplats.
+* **Experience Platform Launch** Egenskap
+* **Adobe Analytics** test/dev report suite ID and tracking server. Se följande dokumentation för [skapa en ny rapportserie](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Felsökning för Experience Platform](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) webbläsartillägg. Skärmbilder i den här självstudiekursen som tagits från webbläsaren Chrome.
+* (Valfritt) AEM webbplatsen med [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudiekursen används den offentliga webbplatsen [https://wknd.site/us/en.html](https://wknd.site/us/en.html) men du är välkommen att använda din egen webbplats.
 
 >[!NOTE]
 >
@@ -47,12 +47,12 @@ Följande krävs:
 
 ## Switch Launch Environment for WKND Site
 
-[https://wknd.](https://wknd.site) site är en offentlig webbplats som byggts utifrån  [ett ](https://github.com/adobe/aem-guides-wknd) projekt med öppen källkod som utformats som referens och  [](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) självstudiekurser för AEM implementeringar.
+[https://wknd.site](https://wknd.site) är en publik webbplats som bygger på [ett öppen källkodsprojekt](https://github.com/adobe/aem-guides-wknd) som utformats som referens och [självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) för AEM implementeringar.
 
-I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökaren Experience Platform för att **växla** live [https://wknd.site/](https://wknd.site/) till *din* startegenskap. Naturligtvis kan du använda en egen AEM om den redan har [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
+I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökningsprogrammet Experience Platform för att **switch** live [https://wknd.site/](https://wknd.site/) till *din* Starta egenskap. Naturligtvis kan du använda din egen AEM om den redan har [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Logga in på Experience Platform Launch och [skapa en startegenskap](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (om du inte redan gjort det).
-1. Kontrollera att ett initialt startbibliotek [har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och befordrats till en startmiljö[miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
+1. Se till att en inledande start [Biblioteket har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och befordrades till en Launch [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
 1. Kopiera startkoden för inbäddning från miljön som biblioteket har publicerats i.
 
    ![Copy Launch Embed Code](assets/collect-data-analytics/launch-environment-copy.png)
@@ -72,10 +72,10 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
 
 ## Verifiera Adobe klientdatalager på WKND-plats
 
-[WKND Reference-projektet](https://github.com/adobe/aem-guides-wknd) har skapats med AEM Core Components och har [Adobe Client Data Layer aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
+The [WKND-referensprojekt](https://github.com/adobe/aem-guides-wknd) byggs med AEM kärnkomponenter och har [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
 
 1. Navigera till [https://wknd.site](https://wknd.site).
-1. Öppna webbläsarens utvecklarverktyg och gå till **konsolen**. Kör följande kommando:
+1. Öppna webbläsarens utvecklarverktyg och gå till **Konsol**. Kör följande kommando:
 
    ```js
    adobeDataLayer.getState();
@@ -85,7 +85,7 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
 
    ![Adobe datalagrets läge](assets/collect-data-analytics/adobe-data-layer-state.png)
 
-1. Expandera svaret och kontrollera `page`-posten. Du bör se ett dataschema som följande:
+1. Expandera svaret och inspektera `page` post. Du bör se ett dataschema som följande:
 
    ```json
    page-2eee4f8914:
@@ -99,28 +99,28 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   Vi använder standardegenskaper som härletts från [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), `dc:title`, `xdm:language` och `xdm:template` för datalagret för att skicka siddata till Adobe Analytics.
+   Vi kommer att använda standardegenskaper från [Sidschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page),  `dc:title`, `xdm:language` och `xdm:template` av datalagret för att skicka siddata till Adobe Analytics.
 
    >[!NOTE]
    >
-   > Ser du inte JavaScript-objektet `adobeDataLayer`? Kontrollera att [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) på din plats.
+   > Se inte `adobeDataLayer` javascript-objekt? Se till att [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) på din webbplats.
 
 ## Skapa en inläst sidregel
 
-Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **Sida**-datalagret har lästs in utlöser det en händelse `cmp:show`. Skapa en regel som ska aktiveras baserat på händelsen `cmp:show`.
+Adobe-klientdatalagret är ett **event** datalager. När AEM **Sida** datalagret läses in och utlöser en händelse `cmp:show`. Skapa en regel som aktiveras baserat på `cmp:show` -händelse.
 
 1. Navigera till Experience Platform Launch och till den webbegenskap som är integrerad med AEM.
-1. Navigera till avsnittet **Regler** i startgränssnittet och klicka sedan på **Skapa ny regel**.
+1. Navigera till **Regler** i startgränssnittet och klicka sedan på **Skapa ny regel**.
 
    ![Skapa regel](assets/collect-data-analytics/analytics-create-rule.png)
 
 1. Namnge regeln **Inläst sida**.
-1. Klicka på **Händelser** **Lägg till** för att öppna guiden **Händelsekonfiguration**.
-1. Under **Händelsetyp** väljer du **Anpassad kod**.
+1. Klicka **Händelser** **Lägg till** för att öppna **Händelsekonfiguration** guide.
+1. Under **Händelsetyp** välj **Egen kod**.
 
    ![Namnge regeln och lägg till en anpassad kodhändelse](assets/collect-data-analytics/custom-code-event.png)
 
-1. Klicka på **Öppna redigeraren** i huvudpanelen och ange följande kodfragment:
+1. Klicka **Öppna redigeraren** i huvudpanelen och ange följande kodfragment:
 
    ```js
    var pageShownEventHandler = function(evt) {
@@ -151,17 +151,17 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
    });
    ```
 
-   Ovanstående kodfragment lägger till en händelseavlyssnare genom att [föra in en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) i datalagret. När händelsen `cmp:show` aktiveras anropas funktionen `pageShownEventHandler`. I den här funktionen läggs några säkerhetskontroller till och en ny `event` skapas med det senaste [tillståndet för datalagret](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
+   Ovanstående kodfragment lägger till en händelseavlyssnare med [trycka en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) till datalagret. När `cmp:show` -händelsen aktiveras `pageShownEventHandler` funktionen anropas. I den här funktionen läggs några säkerhetskontroller till och en ny `event` är konstruerad med den senaste [datalagrets läge](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
 
-   Efter att `trigger(event)` har anropats. `trigger()` är ett reserverat namn i Launch och kommer att utlösa startregeln. Vi skickar `event`-objektet som en parameter som i sin tur kommer att visas med ett annat reserverat namn i Launch med namnet `event`. Dataelement i Launch kan nu referera till olika egenskaper som: `event.component['someKey']`.
+   Efter det `trigger(event)` anropas. `trigger()` är ett reserverat namn i Launch och kommer att utlösa startregeln. Vi skickar `event` objekt som en parameter som i sin tur exponeras av ett annat reserverat namn i Launch med namnet `event`. Dataelement i Launch kan nu referera till olika egenskaper som: `event.component['someKey']`.
 
 1. Spara ändringarna.
-1. Klicka på **Lägg till** under **Åtgärder** för att öppna guiden **Åtgärdskonfiguration**.
-1. Under **Åtgärdstyp** väljer du **Anpassad kod**.
+1. Nästa under **Åtgärder** klicka **Lägg till** för att öppna **Åtgärdskonfiguration** guide.
+1. Under **Åtgärdstyp** välj **Egen kod**.
 
    ![Åtgärdstyp för anpassad kod](assets/collect-data-analytics/action-custom-code.png)
 
-1. Klicka på **Öppna redigeraren** i huvudpanelen och ange följande kodfragment:
+1. Klicka **Öppna redigeraren** i huvudpanelen och ange följande kodfragment:
 
    ```js
    console.debug("Page Loaded ");
@@ -170,13 +170,13 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. `component` är den aktuella sidan som härleds från datalagret  `getState` i den anpassade händelsen. Återkalla från tidigare [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret för att se de olika nycklarna som visas utanför rutan.
+   The `event` objektet skickas från `trigger()` metoden anropas i den anpassade händelsen. `component` är den aktuella sidan som härleds från datalagret `getState` i den anpassade händelsen. Återkalla tidigare [Sidschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) exponeras av datalagret för att visa de olika tangenterna som visas utanför rutan.
 
-1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att befordra koden till [miljön](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [bygga](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i Launch för att marknadsföra koden till [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
-   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Development**-miljö.
+   > Det kan vara mycket användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) för att växla inbäddningskoden till en **Utveckling** miljö.
 
 1. Navigera till AEM webbplats och öppna utvecklarverktygen för att visa konsolen. Uppdatera sidan så ser du att konsolmeddelandena har loggats:
 
@@ -186,20 +186,20 @@ Adobe-klientdatalagret är ett **händelsedatalager som styrs av**. När AEM **S
 
 Skapa sedan flera dataelement för att hämta olika värden från datalagret för klienten i Adobe. Som vi tidigare sett är det möjligt att komma åt egenskaperna för datalagret direkt via anpassad kod. Fördelen med att använda dataelement är att de kan återanvändas i alla Launch-regler.
 
-Återkalla från tidigare [sidschemat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) som exponeras av datalagret:
+Återkalla tidigare [Sidschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) exponeras av datalagret:
 
-Dataelement mappas till egenskaperna `@type`, `dc:title` och `xdm:template`.
+Dataelement mappas till `@type`, `dc:title`och `xdm:template` egenskaper.
 
 ### Komponentresurstyp
 
 1. Navigera till Experience Platform Launch och till den webbegenskap som är integrerad med AEM.
-1. Navigera till avsnittet **Dataelement** och klicka på **Skapa nytt dataelement**.
-1. För **Namn** anger du **Komponentresurstyp**.
-1. För **Dataelementtyp** väljer du **Anpassad kod**.
+1. Navigera till **Dataelement** och klicka **Skapa nytt dataelement**.
+1. För **Namn** enter **Komponentresurstyp**.
+1. För **Dataelementtyp** välj **Egen kod**.
 
    ![Komponentresurstyp](assets/collect-data-analytics/component-resource-type-form.png)
 
-1. Klicka på **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
+1. Klicka **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -211,14 +211,14 @@ Dataelement mappas till egenskaperna `@type`, `dc:title` och `xdm:template`.
 
    >[!NOTE]
    >
-   > Kom ihåg att `event`-objektet är tillgängligt och omfång baserat på händelsen som utlöste **regeln** i Launch. Värdet för ett dataelement anges inte förrän dataelementet är *refererat* i en regel. Det är därför säkert att använda det här dataelementet i en regel som **Page Loaded**-regeln som skapades i föregående steg *men* kan inte användas i andra sammanhang utan risk.
+   > Kom ihåg att `event` objektet görs tillgängligt och omfång baserat på den händelse som utlöste **Regel** i Launch. Värdet för ett dataelement anges inte förrän dataelementet är *refererad* inom en regel. Det är därför säkert att använda det här dataelementet i en regel som **Inläst sida** regel som skapades i föregående steg *men* inte är säkert att använda i andra sammanhang.
 
 ### Sidnamn
 
-1. Klicka på **Lägg till dataelement**.
-1. För **Namn** anger du **Sidnamn**.
-1. För **Dataelementtyp** väljer du **Anpassad kod**.
-1. Klicka på **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
+1. Klicka **Lägg till dataelement**.
+1. För **Namn** enter **Sidnamn**.
+1. För **Dataelementtyp** välj **Egen kod**.
+1. Klicka **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -230,10 +230,10 @@ Dataelement mappas till egenskaperna `@type`, `dc:title` och `xdm:template`.
 
 ### Sidmall
 
-1. Klicka på **Lägg till dataelement**.
-1. För **Namn** anger du **Sidmall**.
-1. För **Dataelementtyp** väljer du **Anpassad kod**.
-1. Klicka på **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
+1. Klicka **Lägg till dataelement**.
+1. För **Namn** enter **Sidmall**.
+1. För **Dataelementtyp** välj **Egen kod**.
+1. Klicka **Öppna redigeraren** och ange följande i den anpassade kodredigeraren:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('xdm:template')) {
@@ -253,11 +253,11 @@ Lägg sedan till Analytics-tillägget i Launch-egenskapen. Vi måste skicka dess
 
 1. Navigera till Experience Platform Launch och till den webbegenskap som är integrerad med AEM.
 1. Gå till **Tillägg** > **Katalog**
-1. Leta reda på tillägget **Adobe Analytics** och klicka på **Installera**
+1. Leta reda på **Adobe Analytics** och klicka **Installera**
 
    ![Adobe Analytics Extension](assets/collect-data-analytics/analytics-catalog-install.png)
 
-1. Under **Bibliotekshantering** > **Rapportsviter** anger du de ID:n för rapportsviten som du vill använda för varje startmiljö.
+1. Under **Bibliotekshantering** > **Rapportsviter** anger du de ID:n för rapportsviten som du vill använda för varje Launch-miljö.
 
    ![Ange rapportsvitens ID:n](assets/collect-data-analytics/analytics-config-reportSuite.png)
 
@@ -267,7 +267,7 @@ Lägg sedan till Analytics-tillägget i Launch-egenskapen. Vi måste skicka dess
 
    >[!TIP]
    >
-   >Vi rekommenderar att du använder alternativet *Hantera biblioteket åt mig* som inställning för Bibliotekshantering eftersom det gör det mycket enklare att hålla `AppMeasurement.js`-biblioteket uppdaterat.
+   >Vi rekommenderar att du använder *Hantera biblioteket åt mig, alternativ* eftersom bibliotekshanteringen gör det mycket enklare att behålla `AppMeasurement.js` biblioteket är uppdaterat.
 
 1. Markera kryssrutan för att aktivera **Använd Activity Map**.
 
@@ -277,79 +277,79 @@ Lägg sedan till Analytics-tillägget i Launch-egenskapen. Vi måste skicka dess
 
    ![Ange spårningsservrarna](assets/collect-data-analytics/analytics-config-trackingServer.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
 ## Lägga till ett villkor i regeln Sidinläst
 
-Uppdatera sedan regeln **Inläst sida** så att den använder dataelementet **Component Resource Type** för att säkerställa att regeln bara aktiveras när händelsen `cmp:show` är för **sidan**. Andra komponenter kan utlösa händelsen `cmp:show`, till exempel utlöser komponenten Carousel den när bildrutorna ändras. Därför är det viktigt att lägga till ett villkor för den här regeln.
+Uppdatera sedan **Inläst sida** regel som ska använda **Komponentresurstyp** dataelement för att säkerställa att regeln bara aktiveras när `cmp:show` händelsen är för **Sida**. Andra komponenter kan utlösa `cmp:show` -händelsen. Carousel-komponenten kommer till exempel att utlösa den när bildrutorna ändras. Därför är det viktigt att lägga till ett villkor för den här regeln.
 
-1. Navigera till regeln **Page Loaded** som skapades tidigare i startgränssnittet.
-1. Under **Villkor** klickar du på **Lägg till** för att öppna guiden **Villkorskonfiguration**.
-1. För **Villkorstyp** väljer du **Värdejämförelse**.
-1. Ställ in det första värdet i formulärfältet på `%Component Resource Type%`. Du kan använda dataelementikonen ![dataelementsikon](assets/collect-data-analytics/cylinder-icon.png) för att välja dataelementet **komponentresurstyp**. Lämna jämförelseobjektet inställt på `Equals`.
-1. Ange det andra värdet som `wknd/components/page`.
+1. I startgränssnittet går du till **Inläst sida** regeln skapades tidigare.
+1. Under **Villkor** klicka **Lägg till** för att öppna **Villkorskonfiguration** guide.
+1. För **Villkorstyp** välj **Värdejämförelse**.
+1. Ange det första värdet i formulärfältet till `%Component Resource Type%`. Du kan använda ikonen Dataelement ![data-element, ikon](assets/collect-data-analytics/cylinder-icon.png) för att välja **Komponentresurstyp** dataelement. Låt jämförelseobjektet vara inställt på `Equals`.
+1. Ange det andra värdet till `wknd/components/page`.
 
    ![Villkorskonfiguration för regel för sidinläst](assets/collect-data-analytics/condition-configuration-page-loaded.png)
 
    >[!NOTE]
    >
-   > Det går att lägga till det här villkoret i den anpassade kodfunktionen som avlyssnar händelsen `cmp:show` som skapades tidigare i självstudien. Om du lägger till den i användargränssnittet blir den synligare för ytterligare användare som kan behöva göra ändringar i regeln. Dessutom kan vi använda vårt dataelement!
+   > Det går att lägga till det här villkoret i den anpassade kodfunktionen som avlyssnar `cmp:show` händelse som skapades tidigare i självstudiekursen. Om du lägger till den i användargränssnittet blir den synligare för ytterligare användare som kan behöva göra ändringar i regeln. Dessutom kan vi använda vårt dataelement!
 
 1. Spara ändringarna.
 
 ## Ange analysvariabler och aktivera sidvisningsfunktionen
 
-För närvarande ger regeln **Inläst sida** bara en konsolsats. Sedan använder du dataelementen och Analytics-tillägget för att ange Analytics-variabler som en **åtgärd** i **regeln för inläst sida**. Vi kommer också att ange en ytterligare åtgärd som ska utlösa **sidvisningsbeacon** och skicka insamlade data till Adobe Analytics.
+För närvarande **Inläst sida** regeln returnerar bara en konsolsats. Använd sedan dataelementen och Analytics-tillägget för att ange Analytics-variabler som **åtgärd** i **Inläst sida** regel. Vi kommer också att vidta ytterligare åtgärder för att aktivera **Sidvisningsfyr** och skicka insamlade data till Adobe Analytics.
 
-1. I **regeln** för inläst sida **tar du bort** åtgärden **Core - Custom Code** (konsolsatserna):
+1. I **Inläst sida** regel **ta bort** den **Core - anpassad kod** åtgärd (konsolprogramsatser):
 
    ![Ta bort anpassad kodsåtgärd](assets/collect-data-analytics/remove-console-statements.png)
 
-1. Klicka på **Lägg till** under Åtgärder för att lägga till en ny åtgärd.
-1. Ställ in typen **Tillägg** till **Adobe Analytics** och ställ in **åtgärdstypen** till **Ange variabler**
+1. Klicka på under Åtgärder **Lägg till** för att lägga till en ny åtgärd.
+1. Ange **Tillägg** skriv till **Adobe Analytics** och ange **Åtgärdstyp** till  **Ange variabler**
 
    ![Ange åtgärdstillägg för analysuppsättningsvariabler](assets/collect-data-analytics/analytics-set-variables-action.png)
 
-1. I huvudpanelen väljer du en tillgänglig **eVar** och anger som värde för dataelementet **Sidmall**. Använd ikonen Dataelement ![Ikon för dataelement](assets/collect-data-analytics/cylinder-icon.png) för att välja elementet **Sidmall**.
+1. Välj en tillgänglig **eVar** och anges som värdet för dataelementet **Sidmall**. Använda ikonen Dataelement ![Ikon för dataelement](assets/collect-data-analytics/cylinder-icon.png) för att välja **Sidmall** -element.
 
    ![Ange som eVar](assets/collect-data-analytics/set-evar-page-template.png)
 
-1. Bläddra nedåt, under **Ytterligare inställningar** anger **Sidnamn** till dataelementet **Sidnamn**:
+1. Bläddra nedåt, under **Ytterligare inställningar** set **Sidnamn** till dataelementet **Sidnamn**:
 
    ![Variabeluppsättning för sidnamnsmiljö](assets/collect-data-analytics/page-name-env-variable-set.png)
 
    Spara ändringarna.
 
-1. Lägg sedan till ytterligare en åtgärd till höger om **Adobe Analytics - Ange variabler** genom att trycka på ikonen **plus**:
+1. Lägg sedan till ytterligare en åtgärd till höger om **Adobe Analytics - Ange variabler** genom att trycka på **plus** ikon:
 
    ![Lägg till ytterligare en startåtgärd](assets/collect-data-analytics/add-additional-launch-action.png)
 
-1. Ange typen **Tillägg** till **Adobe Analytics** och ställ in **åtgärdstypen** till **Skicka fyr**. Eftersom detta betraktas som en sidvy bör du låta standardspårningsinställningen vara **`s.t()`**.
+1. Ange **Tillägg** skriv till **Adobe Analytics** och ange **Åtgärdstyp** till  **Skicka Beacon**. Eftersom det här anses vara en sidvy låter du standardspårningsinställningen vara **`s.t()`**.
 
    ![Åtgärden Skicka Beacon Adobe Analytics](assets/track-clicked-component/send-page-view-beacon-config.png)
 
-1. Spara ändringarna. Regeln **Inläst sida** bör nu ha följande konfiguration:
+1. Spara ändringarna. The **Inläst sida** regeln ska nu ha följande konfiguration:
 
    ![Konfiguration för slutgiltig start](assets/collect-data-analytics/final-page-loaded-config.png)
 
-   * **1.** Lyssna efter  `cmp:show` händelsen.
+   * **1.** Lyssna på `cmp:show` -händelse.
    * **2.** Kontrollera att händelsen utlöstes av en sida.
-   * **3.** Ange analysvariabler för  **sidnamn** och  **sidmall**
+   * **3.** Ange analysvariabler för **Sidnamn** och **Sidmall**
    * **4.** Skicka analyssidans vy
 1. Spara alla ändringar och bygg ett Launch-bibliotek, och marknadsför till rätt miljö.
 
 ## Validera sidvyns beacon- och analysanrop
 
-Nu när regeln **Inläst sida** skickar analysfyren, bör du kunna se analysspårningsvariablerna med Experience Platform-felsökaren.
+Nu när **Inläst sida** regel skickar analysfyren, så du bör kunna se analysspårningsvariablerna med Experience Platform-felsökaren.
 
-1. Öppna [WKND-platsen](https://wknd.site/us/en.html) i webbläsaren.
-1. Klicka på felsökningsikonen ![Experience platform Debugger icon](assets/collect-data-analytics/experience-cloud-debugger.png) för att öppna Experience Platform Debugger.
-1. Kontrollera att felsökaren mappar Launch-egenskapen till *din*-utvecklingsmiljö, enligt beskrivningen ovan, och **Konsolloggning** är markerad.
-1. Öppna Analytics-menyn och kontrollera att rapportsviten är inställd på *din*-rapportsvit. Sidnamnet ska också fyllas i:
+1. Öppna [WKND-plats](https://wknd.site/us/en.html) i webbläsaren.
+1. Klicka på felsökningsikonen ![Experience platform Debugger, ikon](assets/collect-data-analytics/experience-cloud-debugger.png) för att öppna felsökningsprogrammet för Experience Platform.
+1. Kontrollera att felsökaren mappar Launch-egenskapen till *din* Utvecklingsmiljö, enligt beskrivningen ovan, och **Konsolloggning** är markerad.
+1. Öppna Analytics-menyn och kontrollera att rapportsviten är inställd på *din* rapportsvit. Sidnamnet ska också fyllas i:
 
    ![Felsökning på fliken Analytics](assets/collect-data-analytics/analytics-tab-debugger.png)
 
-1. Bläddra nedåt och expandera **Nätverksbegäranden**. Du bör kunna hitta **evar**-uppsättningen för **sidmallen**:
+1. Bläddra nedåt och expandera **Nätverksförfrågningar**. Du bör kunna hitta **evar** för **Sidmall**:
 
    ![Evar och Page Name](assets/collect-data-analytics/evar-page-name-set.png)
 
@@ -361,11 +361,11 @@ Nu när regeln **Inläst sida** skickar analysfyren, bör du kunna se analysspå
 
    ![Villkoret är inte uppfyllt](assets/collect-data-analytics/condition-not-met.png)
 
-   Detta beror på att Carousel inte utlöser en `cmp:show`-händelse *men* på grund av kontrollen av **komponentresurstypen** utlöses ingen händelse.
+   Det beror på att Carousel utlöser en `cmp:show` event *men* på grund av vår check på **Komponentresurstyp**, ingen händelse utlöses.
 
    >[!NOTE]
    >
-   > Om du inte ser några konsolloggar kontrollerar du att **konsolloggning** är markerad under **Starta** i Felsökning för Experience Platform.
+   > Om inga konsolloggar visas kontrollerar du att **Konsolloggning** är incheckad **Starta** i Experience Platform Debugger.
 
 1. Navigera till en artikelsida som [Western Australia](https://wknd.site/us/en/magazine/western-australia.html). Lägg märke till att sidnamnet och malltypen ändras.
 
@@ -375,4 +375,4 @@ Du har precis använt det händelsestyrda klientdatalagret Adobe och Experience 
 
 ### Nästa steg
 
-Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [spåra klick på specifika komponenter på en Adobe Experience Manager-plats](track-clicked-component.md).
+Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [spåra klick på specifika komponenter på en Adobe Experience Manager-webbplats](track-clicked-component.md).

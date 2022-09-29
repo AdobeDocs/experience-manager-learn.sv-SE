@@ -12,9 +12,9 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3014'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 I den här självstudiekursen ska vi utforska hur man skriver [Enhetstester](https://en.wikipedia.org/wiki/Unit_testing) för vår Byline-komponents [Sling Model](https://sling.apache.org/documentation/bundles/models.html) (skapade i [Skapa en anpassad AEM](custom-component.md)). Enhetstester är körtidstester skrivna i Java som verifierar det förväntade beteendet hos Java-kod. Varje enhetstest är vanligen litet och validerar resultatet av en metod (eller arbetsenheter) mot förväntade resultat.
 
-Vi kommer att använda AEM bästa praxis och använda:
+Vi använder AEM bästa praxis och använder:
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito Testing Framework](https://site.mockito.org/)
@@ -238,7 +238,7 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
 
    Denna variabel, `ctx`, visar ett AEM som innehåller ett antal AEM- och Sling-abstraktioner:
 
-   * BylineImpl Sling Model kommer att registreras i den här kontexten
+   * BylineImpl Sling Model är registrerad i den här kontexten
    * Mock JCR-innehållsstrukturer skapas i det här sammanhanget
    * Anpassade OSGi-tjänster kan registreras i den här kontexten
    * Innehåller en mängd vanliga nödvändiga modellobjekt och hjälpmedel, till exempel SlingHttpServletRequest-objekt, en mängd olika tjänster för modellering och AEM OSGi, till exempel ModelFactory, PageManager, Page, Template, ComponentManager, Component, TagManager, Tag osv.
@@ -382,7 +382,7 @@ Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva v�
    * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med [Mockito JUnit Jupiter Extension](https://www.javadoc.io/page/org.mockito/mockito-junit-jupiter/latest/org/mockito/junit/jupiter/MockitoExtension.html) som gör det möjligt att använda @Mock-anteckningar för att definiera modellobjekt på klassnivå.
    * **`@Mock private Image`** skapar ett modellobjekt av typen `com.adobe.cq.wcm.core.components.models.Image`. Observera att detta definieras på klassnivå så att, efter behov, `@Test` -metoder kan ändra deras beteende efter behov.
    * **`@Mock private ModelFactory`** skapar ett modellobjekt av typen ModelFactory. Observera att det här är en ren Mockito-mock och att inga metoder har implementerats på den. Observera att detta definieras på klassnivå så att, efter behov, `@Test`-metoder kan ändra deras beteende efter behov.
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar dummybeteenden för när `getModelFromWrappedRequest(..)` anropas i modellmodellobjektet ModelFactory. Resultatet som definierats i `thenReturn (..)` är att returnera modellbildobjektet. Observera att det här beteendet bara anropas när: den första parametern är lika med `ctx`Den andra parametern är ett resursobjekt och den tredje parametern måste vara huvudkomponentens bildklass. Vi accepterar alla resurser eftersom vi under testerna kommer att ställa in `ctx.currentResource(...)` till olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till **leenient()** Styrka eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar dummybeteenden för när `getModelFromWrappedRequest(..)` anropas i modellmodellobjektet ModelFactory. Resultatet som definierats i `thenReturn (..)` är att returnera modellbildobjektet. Observera att det här beteendet bara anropas när: den första parametern är lika med `ctx`Den andra parametern är ett resursobjekt och den tredje parametern måste vara huvudkomponentens bildklass. Vi accepterar alla resurser eftersom vi under testerna ställer in `ctx.currentResource(...)` till olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till **leenient()** Styrka eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
    * **`ctx.registerService(..)`.** registrerar Mock ModelFactory-objektet i AemContext, med den högsta rangordningen. Detta är obligatoriskt eftersom ModelFactory används i BylineImpl:er `init()` injiceras via `@OSGiService ModelFactory model` fält. För att AemContext ska kunna injiceras **vår** mock-objekt, som hanterar anrop till `getModelFromWrappedRequest(..)`måste vi registrera den som den högsta rangordningstjänsten av den typen (ModelFactory).
 
 1. Kör testet igen och misslyckas igen, men den här gången är det tydligt att meddelandet misslyckades.
@@ -412,7 +412,7 @@ Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva v�
 
 ## Testar getOccupations() {#testing-get-occupations}
 
-Bra! Vårt första test har passerat! Låt oss gå vidare och testa `getOccupations()`. Sedan initieringen av modellkontexten gjordes i `@Before setUp()`den här metoden är tillgänglig för alla `@Test` metoder i detta testfall, inklusive `getOccupations()`.
+Bra! Vårt första test har passerat! Låt oss gå vidare och testa `getOccupations()`. Sedan initieringen av modellkontexten gjordes i `@Before setUp()`-metod, är den tillgänglig för alla `@Test` metoder i detta testfall, inklusive `getOccupations()`.
 
 Kom ihåg att den här metoden måste returnera en alfabetiskt sorterad lista med befattningar (fallande) som lagras i egenskapen ockupationer.
 
@@ -447,7 +447,7 @@ Kom ihåg att den här metoden måste returnera en alfabetiskt sorterad lista me
 
 1. Kom ihåg, precis som **`getName()`** ovan, **BylineImplTest.json** definierar inte yrken, så det här testet misslyckas om vi kör det, eftersom `byline.getOccupations()` returnerar en tom lista.
 
-   Uppdatera **BylineImplTest.json** för att inkludera en lista över yrken, och de kommer att anges i icke-alfabetisk ordning för att säkerställa att våra tester validerar att yrkesutövningarna sorteras alfabetiskt efter **`getOccupations()`**.
+   Uppdatera **BylineImplTest.json** för att inkludera en lista över yrken, och de är inställda i icke-alfabetisk ordning för att säkerställa att våra tester validerar att yrkesutövarnas positioner sorteras i alfabetisk ordning efter **`getOccupations()`**.
 
    ```json
    {

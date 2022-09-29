@@ -1,5 +1,5 @@
 ---
-title: Tjänstautentiseringsuppgifter
+title: AEM autentiseringsuppgifter för tjänsten Developer Console
 description: AEM Service Credentials används för att underlätta för externa program, system och tjänster att programmässigt interagera med AEM Author eller Publish services via HTTP.
 version: Cloud Service
 doc-type: tutorial
@@ -13,14 +13,14 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef4579a44c1c940a3b7441e336db3790a0c7afd7
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%
 
 ---
 
-# Tjänstautentiseringsuppgifter
+# Autentiseringsuppgifter för tjänsten
 
 Integrationer med AEM as a Cloud Service måste kunna autentiseras säkert till AEM. AEM Developer Console ger åtkomst till tjänstens autentiseringsuppgifter, som används för att underlätta för externa program, system och tjänster att programmässigt interagera med AEM Author eller Publish services via HTTP.
 
@@ -69,7 +69,7 @@ När AEM som Cloud Service-miljöns tjänstautentiseringsuppgifter har initierat
 
 ![Hämta tjänstens autentiseringsuppgifter](assets/service-credentials/download-service-credentials.png)
 
-När du hämtar tjänstens autentiseringsuppgifter följer du samma steg som initieringen. Om initieringen ännu inte har utförts visas ett fel för användaren när användaren trycker på __Hämta tjänstautentiseringsuppgifter__ -knappen.
+När du hämtar tjänstens autentiseringsuppgifter följer du samma steg som initieringen. Om initieringen ännu inte har utförts visas ett fel när användaren trycker på __Hämta tjänstautentiseringsuppgifter__ -knappen.
 
 1. Se till att du är inloggad som:
    + Medlem i __Cloud Manager - utvecklare__ IMS-produktprofil (som ger åtkomst till AEM Developer Console)

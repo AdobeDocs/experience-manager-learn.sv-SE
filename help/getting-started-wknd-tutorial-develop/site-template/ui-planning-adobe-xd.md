@@ -10,9 +10,10 @@ role: Developer
 level: Beginner
 kt: 9371
 thumbnail: 338680.jpg
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -64,6 +65,6 @@ Ytterligare [UI-paket finns tillgängliga](https://www.adobe.com/products/xd/fea
 
 ### Nästa steg {#next-steps}
 
-I nästa kapitel skapas en ny sidmall som bygger på WKND-artikeldesignen.
+I nästa kapitel skapas en ny sidmall baserad på WKND-artikeldesignen.
 
-Lär dig hur du skapar och ändrar [Sidmallar](./page-templates.md). Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i tidskriften kommer att skapas utifrån en dummy från Adobe XD.
+Lär dig hur du skapar och ändrar [Sidmallar](./page-templates.md). Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i Magazine skapas utifrån en dummy från Adobe XD.

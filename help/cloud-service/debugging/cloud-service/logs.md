@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: 2685f2553349d6f0b48e03f2ed24dcea7ad9ac70
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ $ aio cloudmanager:download-logs <ENVIRONMENT> <SERVICE> <NAME> <DAYS>
 
 ## Förstå loggar
 
-Inloggningar AEM as a Cloud Service innehåller flera pods som skriver loggsatser. Eftersom flera AEM-instanser skriver till samma loggfil är det viktigt att du förstår hur du analyserar och minskar bruset vid felsökning. Förklara följande: `aemerror` loggutdrag kommer att användas:
+Inloggningar AEM as a Cloud Service innehåller flera pods som skriver loggsatser. Eftersom flera AEM-instanser skriver till samma loggfil är det viktigt att du förstår hur du analyserar och minskar bruset vid felsökning. Förklara följande: `aemerror` loggfragment används:
 
 ```
 01.01.2020 12:00:00.000 [cm-p12345-e56789-aem-author-abcdefg-1111] *DEBUG* [qtp2078364989-269] com.example.components.impl.ExampleModelImpl Preparing to collect resources

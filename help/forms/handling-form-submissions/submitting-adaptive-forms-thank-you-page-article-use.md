@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -28,16 +28,15 @@ Alternativet Skicka till REST-slutpunkt skickar data som är ifyllda i formulär
 
 \{fieldName\} = \{parameterName\}. SubmitName är till exempel namnet på ett adaptivt formulärfält och avsändaren är namnet på parametern. På tacksidan kan du komma åt parametern Submit med hjälp av request.getParameter(&quot;Submitter&quot;) för att få tag i värdet i fältet för avsändarens namn.
 
-sändareNamn=avsändare
+`submitterName=submitter`
 
 På skärmbilden nedan skickar vi det adaptiva formuläret för att tacka dig på sidan /content/thankyou. Till denna tacksida skickar vi tre attribut som innehåller formulärfältets värden.
 
-![tack](assets/thankyoupage.gif)
+![Tack](assets/thankyoupage.gif)
 
 Du kan också skicka till den externa slutpunkten via POST. För att uppnå detta behöver du bara markera kryssrutan&quot;aktivera efterbeställning&quot; och ange URL:en för den externa slutpunkten. När du skickar in formuläret får du en tacksida och POSTENS slutpunkt anropas samtidigt.
 
-![hämtning](assets/capture.gif)
-
+![Hämtningskonfiguration](assets/capture.gif)
 
 Följ instruktionerna nedan för att testa den här funktionen på servern:
 

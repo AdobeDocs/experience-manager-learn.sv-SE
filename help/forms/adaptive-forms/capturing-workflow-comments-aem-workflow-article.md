@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,8 @@ Så här testar du den här funktionen på datorn:
 
 * Öppna uppgiften från inkorgen och skicka formuläret. Ange några kommentarer när du uppmanas till det.
 
-Kommentarerna lagras i metadataegenskapen managerComments i crx. Om du vill söka efter kommentarer loggar du in som administratör. Arbetsflödesinstanserna lagras i följande sökväg
+Kommentarerna lagras i metadataegenskapen som kallas `managerComments` i AEM. Om du vill söka efter kommentarer loggar du in som administratör. Arbetsflödesinstanserna lagras i följande sökväg:
 
-/var/workflow/instances/server0
+`/var/workflow/instances/server0`
 
 Välj lämplig arbetsflödesinstans och sök efter egenskapen managerComments i metadatanoden.

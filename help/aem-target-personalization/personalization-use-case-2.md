@@ -7,17 +7,17 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 53cafd06-3a0a-4995-947d-179146b89234
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
 
-
 # Personalisering av helwebbsidesupplevelser med Adobe Target
 
-I det föregående kapitlet lärde vi oss att skapa en geoplatsbaserad aktivitet i Adobe Target med innehåll som skapats som Experience Fragments och exporterats från AEM som HTML-erbjudanden.
+I det föregående kapitlet lärde vi oss att skapa en geoplatsbaserad aktivitet i Adobe Target med innehåll som skapats som Experience Fragments och exporterats från AEM som HTML Offers.
 
 I det här kapitlet ska vi undersöka hur du skapar aktivitet för att dirigera om de webbsidor som finns på AEM till en ny sida med Adobe Target.
 
@@ -29,8 +29,8 @@ WKND:s webbplats har gjort om sin hemsida och vill dirigera om sina nuvarande be
 
 För den här övningen måste följande användare vara involverade och för att kunna utföra vissa uppgifter måste du ha administratörsbehörighet.
 
-* **Content Producer/Content Editor**  (Adobe Experience Manager)
-* **Marketer**  (Adobe Target/optimeringsteamet)
+* **Content Producer/Content Editor** (Adobe Experience Manager)
+* **Marknadsförare** (Adobe Target/optimeringsteamet)
 
 ### Startsida för WKND-webbplats
 
@@ -39,10 +39,10 @@ För den här övningen måste följande användare vara involverade och för at
 ### Förutsättningar
 
 * **AEM**
-   * [AEM skapar och publicerar ](./implementation.md#getting-aem) instancerunning på localhost 4502 respektive 4503.
+   * [AEM författare och publicera instans](./implementation.md#getting-aem) som körs på localhost 4502 respektive 4503.
    * [AEM integrerat med Adobe Target med Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * Tillgång till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -55,29 +55,29 @@ För den här övningen måste följande användare vara involverade och för at
 ## Marknadsföringsaktiviteter
 
 1. Marknadsföraren skapar en A/B-målaktivitet med omdirigeringserbjudandet som en upplevelse och 100 % webbplatstrafik som tilldelats den nya startsidan med framgångsmål och mätvärden tillagda.
-   1. I Adobe Target-fönstret går du till fliken **Aktiviteter**.
-   2. Klicka på knappen **Skapa aktivitet** och välj aktivitetstypen som **A/B-test**
+   1. I Adobe Target-fönstret går du till **Verksamhet** -fliken.
+   2. Klicka **Skapa aktivitet** och välj aktivitetstyp som **A/B-test**
 
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-ab-activity.png)
-   3. Markera kanalen **Webb** och välj **Visual Experience Composer**.
-   4. Ange **aktivitets-URL** och klicka på **Nästa** för att öppna Visual Experience Composer.
+   3. Välj **Webb** kanal och välj **Visual Experience Composer**.
+   4. Ange **Aktivitets-URL** och klicka **Nästa** för att öppna Visual Experience Composer.
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. Aktivera **Tillåt inläsning av osäkra skript** i webbläsaren och läs in sidan igen för att **Visual Experience Composer** ska kunna läsas in.
+   5. För **Visual Experience Composer** att läsa in, aktivera **Tillåt inläsning av osäkra skript** i webbläsaren och läsa in sidan igen.
       ![Experience Targeting Activity](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Observera att WKND-webbplatsens hemsida är öppen i Visual Experience Composer-redigeraren.
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. Håll muspekaren över **Upplev B** och välj visa andra alternativ.
+   7. Hovra över **Upplevelse B** och välj visa andra alternativ.
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url.png)
-   8. Välj alternativet **Omdirigera till URL** och ange URL:en till den nya WKND-startsidan. (http://localhost:4503/content/wknd/en1.html)
+   8. Välj **Omdirigera till URL** och ange URL:en till den nya WKND-startsidan. (http://localhost:4503/content/wknd/en1.html)
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url-2.png)
-   9. **Spara** ändringarna och fortsätt med nästa steg i Skapa aktivitet.
-   10. Välj **Trafikallokeringsmetod** som manuell och tilldela 100 % trafik till **upplevelse B**.
+   9. **Spara** ändringarna och fortsätta med nästa steg i Skapa aktivitet.
+   10. Välj **Trafikallokeringsmetod** som manuell och tillåt 100 % trafik till **Upplevelse B**.
       ![Experience B Traffic](assets/personalization-use-case-2/traffic.png)
    11. Klicka på **Nästa**.
-   12. Ange **Målmått** för din aktivitet och Spara och stäng A/B-testet.
+   12. Ange **Målmått** för din aktivitet och spara och stäng A/B-testet.
       ![Mätning av A/B-testmål](assets/personalization-use-case-2/goal-metric.png)
-   13. Ange ett namn (**WKND Home Page Redesign**) för aktiviteten och spara ändringarna.
-   14. På skärmen Aktivitetsinformation ser du till att **aktivera** din aktivitet.
+   13. Ange ett namn (**WKND Home Page Redesign**) för din aktivitet och spara ändringarna.
+   14. På skärmen Aktivitetsinformation ser du till att **Aktivera** din aktivitet.
       ![Aktivera aktivitet](assets/personalization-use-case-2/ab-activate.png)
    15. Navigera till WKND-startsidan (http://localhost:4503/content/wknd/en.html) så dirigeras du till den omdesignade startsidan för WKND-webbplatsen (http://localhost:4503/content/wknd/en1.html).
       ![WKND Home Page Redesignad](assets/personalization-use-case-2/WKND-home-page-redesign.png)

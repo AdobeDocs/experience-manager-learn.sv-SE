@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 197f7e18f0d229698048cb06c2a49c019d420217
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Besök [Förslagsruta](https://forms.office.com/r/74P5Xz4UH0) för att skicka in
 
 ## Säsong 2
 
-Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. Ämnen för andra säsongen bygger i första hand på tidigare förfrågningar som vi har stött på i våra dagliga kontakter med kunder och partner. Besök den här sidan om du vill ha uppdateringar varje vecka eller följ oss på det sociala nätverk du väljer.
+Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för andra säsongen bygger i första hand på tidigare förfrågningar som vi har stött på i våra dagliga kontakter med kunder och partner. Besök den här sidan om du vill ha uppdateringar varje vecka eller följ oss på det sociala nätverk du väljer.
 
 <table>
     <tr>
@@ -127,11 +127,11 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
      </td>   
      <td>
-            <a href="season-2/cloud5-MoCM-experience-audit.md">
+            <a href="season-2/cloud5-mocm-experience-audit.md">
                <img alt="Mysteries of Cloud Manager.. Experience Audit" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-MoCM-experience-audit.md"><strong>Mysteries of Cloud Manager.. Experience Audit</strong></a>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Mysteries of Cloud Manager.. Experience Audit</strong></a>
          <br/><em>med Darin Kuntze, Senior Cloud Architect</em>
       </div>
       <p>
@@ -140,11 +140,11 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
       </p>
    </td>
      <td>
-            <a href="season-2/cloud5-MoCM-unit-tests.md">
+            <a href="season-2/cloud5-mocm-unit-tests.md">
                <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Mysteries of Cloud Manager.. Enhetstester</strong></a>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Mysteries of Cloud Manager.. Enhetstester</strong></a>
          <br/><em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
       </div>
       <p>
@@ -155,11 +155,11 @@ Varje säsong varierar i längd och kommer att släppas enligt ett fast schema. 
   </tr>
     <tr>
         <td>
-               <a href="season-2/cloud5-MoCM-functional-tests.md">
+               <a href="season-2/cloud5-mocm-functional-tests.md">
                    <img alt="Mysteries of Cloud Manager.. Funktionstester" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-MoCM-functional-tests.md"><strong>Mysteries of Cloud Manager.. Funktionstester</strong><br/></a>        
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Mysteries of Cloud Manager.. Funktionstester</strong><br/></a>        
                 <em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
             </div>
             <p><br/>

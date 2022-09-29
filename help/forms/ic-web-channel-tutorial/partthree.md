@@ -7,9 +7,9 @@ version: 6.4,6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ I den här delen skapar vi en formulärdatamodell. Med formulärdatamodellen kan
 
 Formulärdatamodellen är beroende av en korrekt konfigurerad datakälla. Den datakälla som konfigurerats i föregående steg kommer att användas som bas för den här formulärdatamodellen.
 
-Form Data Model är grunden för all interaktiv kommunikation. Funktionen Hämta/läs för formulärdatamodellen hämtar data från backend-datakällan och används för att fylla i dokumentet för interaktiv kommunikation.
+Form Data Model är grunden för all interaktiv kommunikation. Åtgärden Hämta/läs i formulärdatamodellen hämtar data från backend-datakällan och används för att fylla i dokumentet för interaktiv kommunikation.
 
 Mer information finns i [Konfigurera datakällor](parttwo.md).
 
