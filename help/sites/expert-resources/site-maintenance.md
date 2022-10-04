@@ -1,11 +1,12 @@
 ---
-title: Tips och tricks för webbplatsunderhåll
-description: Tips och tricks för webbplatsunderhåll
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: Handbok för webbplatsunderhåll
+seo-title: Your Routine Site Maintenance Guide
+description: Oavsett om du är administratör, författare eller utvecklare gäller webbplatsunderhållet alla delar av din AEM Sites-instans. Använd den här guiden för att säkerställa att strategin är klar för framgång.
+seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+audience: author, marketer, developer
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
