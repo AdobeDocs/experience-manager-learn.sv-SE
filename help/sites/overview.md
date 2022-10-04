@@ -4,7 +4,7 @@ description: Läs om Experience Manager Sites i våra videor och självstudiekur
 sub-product: sites, content-services
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b6c92ca49eaa68f9a0374a5ad79fe69047ffa27c
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 1%
@@ -14,6 +14,9 @@ ht-degree: 1%
 # AEM Sites Videos och Tutorials {#overview}
 
 Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehantering. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Sites.
+
+
+<div id="whats-new-section">
 
 ## Nyheter
 
@@ -36,6 +39,8 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 * **[Använda SPA (video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
 
    *Läs om AEM redigeringsfunktioner för single page-applikationer (SPA).*
+
+</div>
 
 ## Personalval
 
