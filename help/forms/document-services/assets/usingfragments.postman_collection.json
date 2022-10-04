@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "22bcc0f7-c1f0-48b9-a66f-4120de9426a8",
+		"name": "usingfragments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "321409"
+	},
+	"item": [
+		{
+			"name": "usingfragments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "contentRootURI",
+							"value": "crx:///content/dam/formsanddocuments/xdpdocuments",
+							"type": "text"
+						},
+						{
+							"key": "saveLocation",
+							"value": "c:\\\\usingfragments\\\\generatedpdf.pdf",
+							"type": "text"
+						},
+						{
+							"key": "xmlDataFile",
+							"type": "file",
+							"src": "/C:/xdptemplates/sampleData.xml"
+						},
+						{
+							"key": "xdpName",
+							"value": "main.xdp",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/AemFormsSamples/usingfragments.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"AemFormsSamples",
+						"usingfragments.html"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
