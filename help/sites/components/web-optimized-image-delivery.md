@@ -6,9 +6,10 @@ feature: Core Components, Configuring, Editable Templates
 topic: Performance, Administration
 role: Developer
 level: Intermediate
+last-substantial-update: 2022-08-11T00:00:00Z
 kt: 10843
 thumbnail: 346064.jpeg
-source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

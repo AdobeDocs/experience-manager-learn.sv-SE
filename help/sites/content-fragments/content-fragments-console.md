@@ -6,9 +6,10 @@ feature: Content Fragments
 topic: Content Management
 role: Data Architect, User
 level: Beginner
+last-substantial-update: 2022-09-22T00:00:00Z
 kt: 11164
 thumbnail: 3409492.jpeg
-source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

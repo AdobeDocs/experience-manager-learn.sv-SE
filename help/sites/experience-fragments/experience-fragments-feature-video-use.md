@@ -10,8 +10,9 @@ doc-type: feature video
 version: Cloud Service
 kt: 194
 thumbnail: 331785.jpg
+last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -24,7 +25,7 @@ Med Experience Fragments kan innehållsförfattare återanvända innehåll i oli
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785/?quality=12&learn=on)
 
-En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. En *titel*, *Bild*, *Beskrivning* och *Knapp för att anropa åtgärd* kan till exempel kombineras för att skapa en helhetsbild.
+En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. Till exempel en *Titel*, *Bild*, *Beskrivning* och *Knappen Anrop till åtgärd* kan kombineras för att skapa en teaserupplevelse.
 
 Med Experience Fragments kan marknadsförarna
 
