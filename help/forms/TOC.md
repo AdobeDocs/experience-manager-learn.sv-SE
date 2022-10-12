@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 747d1823ce1bc6670d1e80abcf6483ac921c0a01
+source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1714'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,7 @@ ht-degree: 0%
    + [Använda PDFG-tjänsten i AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Använda xdp-fragment i utdatatjänsten](document-services/using-fragments-in-output-service.md)
+   + [ECMA-skript för att generera PDF med fragment](document-services/using-fragments-in-output-service-watched-folder.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
    + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
