@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
+source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 0%
    + [Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
+   + [Inklusive paket från tredje part](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Installera 32-bitarspaket i Linux](adaptive-forms/installing-aem-form-on-linux.md)
