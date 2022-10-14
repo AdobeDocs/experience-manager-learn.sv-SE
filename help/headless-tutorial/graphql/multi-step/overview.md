@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ En komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll
 
 I den här självstudiekursen utforskas hur AEM GraphQL API:er och headless-funktioner kan användas för att ge kraft åt upplevelser som upplevs i en extern app.
 
-Den här självstudiekursen kommer att omfatta följande ämnen:
+Den här självstudiekursen handlar om följande ämnen:
 
-* Skapa en ny projektkonfiguration
-* Skapa nya modeller för innehållsfragment för att modellera data
-* Skapa nya innehållsfragment baserat på de tidigare modellerna.
+* Skapa en projektkonfiguration
+* Skapa modeller för innehållsfragment för att modellera data
+* Skapa innehållsfragment baserat på de tidigare modellerna.
 * Se hur AEM kan efterfrågas med det integrerade utvecklingsverktyget GraphiQL.
 * Lagra eller behålla de GraphQL-frågor som ska AEM
 * Förbruka beständiga GraphQL-frågor från en provapp för React
@@ -39,14 +39,14 @@ Du måste följa den här självstudiekursen på följande sätt:
 
 * Baskunskaper i HTML och JavaScript
 * Följande verktyg måste installeras lokalt:
-   * [Node.js v10+](https://nodejs.org/en/)
+   * [Node.js v14+](https://nodejs.org/en/)
    * [npm 6+](https://www.npmjs.com/)
    * [Git](https://git-scm.com/)
    * En IDE (till exempel [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ### AEM
 
-För att slutföra den här självstudiekursen rekommenderas AEM administratörsåtkomst till en AEM as a Cloud Service miljö.  Om du inte har tillgång till AEM as a Cloud Service miljö kan du använda [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Det är dock viktigt att du är medveten om att en del användargränssnittsskärmar, som t.ex. navigering i innehållsfragment, är annorlunda.
+För att slutföra den här självstudiekursen rekommenderas AEM administratörsåtkomst till en AEM as a Cloud Service miljö. Om du inte har tillgång till AEM as a Cloud Service miljö kan du använda [Local AEM as a Cloud Service QuickStart SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Det är dock viktigt att komma ihåg att vissa användargränssnittsskärmar, som t.ex. navigering i innehållsfragment, är annorlunda.
 
 ## Kom så börjar vi!
 

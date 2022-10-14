@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
 
 # Skapa innehållsfragment {#authoring-content-fragments}
 
-I det här kapitlet skapar och redigerar du ett nytt innehållsfragment baserat på [nydefinierad modell för innehållsfragment](./content-fragment-models.md). Du får också lära dig hur du skapar varianter av innehållsfragment.
+I det här kapitlet skapar och redigerar du ett nytt innehållsfragment baserat på [nydefinierad modell för innehållsfragment](./content-fragment-models.md). Du får även lära dig hur du skapar varianter av innehållsfragment.
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,7 +38,7 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
 
    ![Navigera till resursfiler](assets/author-content-fragments/navigate-assets-files.png)
 
-1. Tryck **Skapa** i hörnet och tryck **Mapp**. I dialogrutan som visas skriver du:
+1. Tryck **Skapa** i det övre högra hörnet och tryck på **Mapp**. I dialogrutan som visas anger du:
 
    * Titel*: **Mitt projekt**
    * Namn: **mitt projekt**
@@ -49,17 +49,17 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
 
    ![Öppna mappegenskaper](assets/author-content-fragments/open-folder-properties.png)
 
-1. Tryck på **Cloud Services** -fliken. Under **Molnkonfiguration** använda sökaren för att markera **Mitt projekt** konfiguration. Värdet ska vara `/conf/my-project`.
+1. Tryck på **Cloud Services** -fliken. Använd sökvägssökaren på fliken Konfiguration i molnet för att välja **Mitt projekt** konfiguration. Värdet ska vara `/conf/my-project`.
 
    ![Ange molnkonfiguration](assets/author-content-fragments/set-cloud-config-my-project.png)
 
-   Om du anger den här egenskapen kan innehållsfragment skapas med hjälp av modellerna som skapades i föregående kapitel.
+   Om du anger den här egenskapen kan innehållsfragment skapas med hjälp av de modeller som skapades i föregående kapitel.
 
-1. Tryck på **Profiler** -fliken. Under **Tillåtna modeller för innehållsfragment** använda sökaren för att markera **Person** och **Team** modell skapades tidigare.
+1. Tryck på **Profiler** -fliken, under **Tillåtna modeller för innehållsfragment** fältet använder sökaren för att markera **Person** och **Team** modell skapades tidigare.
 
    ![Tillåtna modeller för innehållsfragment](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   Dessa profiler ärvs automatiskt av alla undermappar och kan åsidosättas. Observera att du även kan tillåta modeller efter taggar eller aktivera modeller från andra projektkonfigurationer. Den här mekanismen är ett kraftfullt sätt att hantera innehållshierarkin.
+   Dessa profiler ärvs automatiskt av alla undermappar och kan åsidosättas. Du kan också tillåta modeller efter taggar eller aktivera modeller från andra projektkonfigurationer. Den här mekanismen är ett kraftfullt sätt att hantera innehållshierarkin.
 
 1. Tryck **Spara och stäng** om du vill spara ändringarna i mappegenskaperna.
 
@@ -77,11 +77,11 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
 
 Därefter skapas flera innehållsfragment baserat på **Team** och **Person** modeller.
 
-1. Tryck på AEM Start Screen (Starta skärm) **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
+1. Tryck på AEM startskärmen **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
 
    ![Gränssnitt för innehållsfragment](assets/author-content-fragments/cf-fragment-ui.png)
 
-1. I den vänstra listen expanderar du **Mitt projekt** och trycka **Engelska**.
+1. Expandera i den vänstra listen **Mitt projekt** och trycka **Engelska**.
 1. Tryck **Skapa** för att ta fram **Nytt innehållsfragment** och ange följande värden:
 
    * Plats: `/content/dam/my-project/en`
@@ -91,25 +91,25 @@ Därefter skapas flera innehållsfragment baserat på **Team** och **Person** mo
 
    ![Nytt innehållsfragment](assets/author-content-fragments/new-content-fragment-john-doe.png)
 1. Tryck **Skapa**.
-1. Upprepa stegen ovan för att skapa ett nytt fragment som representerar **Alison Smith**:
+1. Upprepa stegen ovan för att skapa ett fragment som representerar **Alison Smith**:
 
    * Plats: `/content/dam/my-project/en`
    * Modell för innehållsfragment: **Person**
    * Titel: **Alison Smith**
    * Namn: `alison-smith`
 
-   Tryck **Skapa** för att skapa det nya personfragmentet.
+   Tryck **Skapa** för att skapa personfragmentet.
 
-1. Upprepa sedan stegen för att skapa en ny **Team** fragment som representerar **Team Alpha**:
+1. Upprepa sedan stegen för att skapa en **Team** fragment som representerar **Team Alpha**:
 
    * Plats: `/content/dam/my-project/en`
    * Modell för innehållsfragment: **Team**
    * Titel: **Team Alpha**
    * Namn: `team-alpha`
 
-   Tryck **Skapa** för att skapa det nya teamfragmentet.
+   Tryck **Skapa** för att skapa teamfragmentet.
 
-1. Det ska nu finnas tre innehållsfragment under **Mitt projekt** > **Engelska**:
+1. Det ska finnas tre innehållsfragment under **Mitt projekt** > **Engelska**:
 
    ![Nya innehållsfragment](assets/author-content-fragments/new-content-fragments.png)
 
@@ -139,7 +139,7 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 
    >[!NOTE]
    >
-   >Du kan också skapa nya innehållsfragment online med hjälp av **Nytt innehållsfragment** -knappen.
+   >Du kan också skapa innehållsfragment online med **Nytt innehållsfragment** -knappen.
 
 1. Tryck **Spara och stäng** om du vill spara ändringarna i Team Alpha-fragmentet.
 
@@ -147,17 +147,16 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 
 Publicera den skapade `Content Fragments`
 
-1. Tryck på AEM Start Screen (Starta skärm) **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
+1. Tryck på AEM startskärmen **Innehållsfragment** för att öppna gränssnittet för innehållsfragment.
 
-1. I den vänstra listen expanderar du **Mitt projekt** och trycka **Engelska**.
+1. Expandera i den vänstra listen **Mitt projekt** och trycka **Engelska**.
 
-1. Tryck på kryssrutan bredvid innehållsfragmenten och tryck på **Publicera**
-
+1. Tryck på kryssrutan bredvid innehållsfragmenten och tryck på **Publicera**.
    ![Publicera innehållsfragment](assets/author-content-fragments/publish-content-fragment.png)
 
 ## Grattis! {#congratulations}
 
-Grattis, du har just skapat flera innehållsfragment och skapat en variant.
+Grattis! Du har skapat flera innehållsfragment och skapat en variant.
 
 ## Nästa steg {#next-steps}
 
