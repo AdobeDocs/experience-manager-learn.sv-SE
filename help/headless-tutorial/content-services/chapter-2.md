@@ -8,7 +8,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 1%
@@ -78,7 +78,7 @@ Om modeller för innehållsfragment är **not** aktiverad för en konfiguration 
 
 ## Förstå innehållsfragmentmodellen som ska skapas
 
-Innan vi definierar modellen för innehållsfragment ska vi granska upplevelsen vi ska köra för att säkerställa att vi hämtar alla nödvändiga datapunkter. Därför ska vi gå igenom designen av mobilappar och mappa designelementen till innehåll som ska samlas in.
+Innan vi definierar vår Content Fragment-modell ska vi granska upplevelsen vi ska köra för att säkerställa att vi hämtar alla nödvändiga datapunkter. Därför ska vi gå igenom designen av mobilappar och mappa designelementen till innehåll som ska samlas in.
 
 Vi kan dela upp datapunkter som definierar en händelse på följande sätt:
 
