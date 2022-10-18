@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,21 @@ ht-degree: 1%
 
 Läs om hur AEM modernisaliseringsverktyg används för att uppgradera befintligt AEM Sites-innehåll så att det är AEM as a Cloud Service kompatibelt och följer vedertagna standarder.
 
->[!VIDEO](https://video.tv.adobe.com/v/336965/?quality=12&learn=on)
+## All-in-One Converter
+
+>[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+
+## Sidkonvertering
+
+>[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+
+## Komponentkonvertering
+
+>[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+
+## Principimport
+
+>[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
 
 ## Använda AEM
 
@@ -88,7 +102,6 @@ Se även till att du har fullföljt tidigare övningar:
 + [Ladda ned verktyg för AEM](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [Dokumentation för AEM Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems - Introduktion till AEM Modernization Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
-
 
 1. Distribuera den nymoderniserade äldre webbplatsen på den lokala AEM SDK. AEM ASK finns att ladda ned här:
    + [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

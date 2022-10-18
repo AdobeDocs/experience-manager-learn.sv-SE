@@ -11,7 +11,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -253,7 +253,6 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
    import {MapTo} from '@adobe/aem-react-editable-components';
    
    export const BannerEditConfig = {
-   
        emptyLabel: 'Banner',
    
        isEmpty: function(props) {
@@ -281,7 +280,7 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
        }
    
        render() {
-           if(BannerEditConfig.isEmpty(this.props)) {
+           if (BannerEditConfig.isEmpty(this.props)) {
                return null;
            }
    
@@ -376,7 +375,7 @@ Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
        adapters = { BannerModel.class,ComponentExporter.class}, 
        resourceType = BannerModelImpl.RESOURCE_TYPE, 
        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-       )
+   )
    @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
    public class BannerModelImpl implements BannerModel {
    
@@ -420,7 +419,6 @@ Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
            return null != image ? image.getTitle() : null;
        }
    
-   
        // method required by `ComponentExporter` interface
        // exposes a JSON property named `:type` with a value of `wknd-spa-react/components/banner`
        // required to map the JSON export to the SPA component props via the `MapTo`
@@ -428,7 +426,6 @@ Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
        public String getExportedType() {
            return BannerModelImpl.RESOURCE_TYPE;
        }
-   
    }
    ```
 
@@ -436,7 +433,7 @@ Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
 
    `BannerModelImpl.java` använder [Delegeringsmönster för segmenteringsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) för att undvika att skriva om all logik från Image-kärnkomponenten.
 
-1. Observera följande rader:
+1. Granska följande rader:
 
    ```java
    @Self
@@ -477,7 +474,7 @@ Implementera sedan Sling-modellen för `BannerModel` gränssnitt.
 
 1. Du bör nu se det återgivna värdet för **Banderolltext**:
 
-   ![Banderolltext visas](assets/extend-component/banner-text-displayed.png)
+![Banderolltext visas](assets/extend-component/banner-text-displayed.png)
 
 1. Visa JSON-modellsvaret på: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) och söka efter `wknd-spa-react/components/card`:
 

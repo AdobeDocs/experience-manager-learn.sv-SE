@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%
@@ -36,7 +36,7 @@ I den här självstudiekursen går du igenom hur du skapar en enkel Asset comput
 
 1. Tillhandahålla och upprätta nödvändiga konton och tjänster för att bygga och driftsätta en Asset compute-arbetare
 1. Skapa och konfigurera ett Asset compute-projekt
-1. Utveckla am Asset compute-arbetare som skapar en anpassad återgivning
+1. Utveckla en Asset compute-arbetare som skapar en anpassad återgivning
 1. Skriv tester för och lär dig hur du felsöker den anpassade Asset compute-arbetaren
 1. Distribuera Asset compute-arbetaren och integrera den AEM as a Cloud Service Author-tjänsten via Bearbeta profiler
 
@@ -58,7 +58,7 @@ Lokal utveckling av projekt i Asset compute kräver en särskild uppsättning ut
 
 ### App Builder
 
-asset compute-projekt är särskilt definierade App Builder-projekt, och därför måste du ha tillgång till App Builder på Adobe Developer Console för att kunna konfigurera och distribuera dem.
+asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
 
 + [Konfigurera App Builder](./set-up/app-builder.md)
 

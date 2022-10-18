@@ -8,9 +8,9 @@ topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
-source-git-commit: 5c53919dd038c0992e1fe5dd85053f26c03c5111
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,8 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 * Leta reda på AEMQuickStart.Jar och flytta den till mappen AEMForms
 * Kopiera filen license.properties till den här AEMForms-mappen
 * Skapa en gruppfil med namnet&quot;StartAemForms.bat&quot; med följande innehåll:
-   * java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui. Här AEM_6.5_Quickstart.jar är namnet på min AEM snabbrubb.
+   * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
+      * Här AEM_6.5_Quickstart.jar är namnet på min AEM snabbrubb.
    * Du kan byta namn på behållaren till vilket namn som helst, men se till att namnet återspeglas i gruppfilen. Spara gruppfilen i mappen AEMForms.
 
 * Öppna en ny kommandotolk och navigera till _c:\aemforms_.

@@ -13,9 +13,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2257'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Låt oss se hur komponenten fungerar.
 
    För att undvika en eventuell XSS-attack, skickas RTF-texten via `DOMPurify` innan du använder [hazerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) för att återge innehållet. Återkalla `richText` och `text` egenskaper från JSON-modellen tidigare i övningen.
 
-1. Ta en titt på `TextEditConfig` på ~rad 29:
+1. Nästa, öppna `ui.frontend/src/components/import-components.js` ta en titt på `TextEditConfig` på ~rad 86:
 
    ```js
    const TextEditConfig = {
@@ -126,10 +126,10 @@ Låt oss se hur komponenten fungerar.
 
    Koden ovan avgör när platshållaren ska återges i AEM redigeringsmiljö. Om `isEmpty` metodreturer **true** återges platshållaren.
 
-1. Ta en titt på `MapTo` ring på ~rad 62:
+1. Ta en titt på `MapTo` ring på ~rad 94:
 
    ```js
-   export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
+   export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
    `MapTo` tillhandahålls av AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`). Banan `wknd-spa-react/components/text` representerar `sling:resourceType` för AEM. Den här sökvägen matchas med `:type` exponeras av JSON-modellen som observerats tidigare. `MapTo` hanterar tolkningen av JSON-modellens svar och skickar de korrekta värdena som `props` till SPA.

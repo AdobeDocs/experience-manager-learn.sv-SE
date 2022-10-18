@@ -1,5 +1,5 @@
 ---
-title: Klientbibliotek och frontarbetsflöde
+title: Klientbibliotek och arbetsflöde
 description: Lär dig hur du använder klientbibliotek eller klientbibliotek för att distribuera och hantera CSS och JavaScript för en implementering av Adobe Experience Manager (AEM) Sites. Se hur modulen ui.front, ett webbpaketprojekt, kan integreras i hela byggprocessen.
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
@@ -11,14 +11,14 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '2825'
 ht-degree: 0%
 
 ---
 
-# Klientbibliotek och frontarbetsflöde {#client-side-libraries}
+# Klientbibliotek och arbetsflöde {#client-side-libraries}
 
 Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av en Adobe Experience Manager (AEM) Sites. Den här självstudiekursen handlar också om hur [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modul, en frikopplad [webbpaket](https://webpack.js.org/) -projektet kan integreras i hela byggprocessen.
 

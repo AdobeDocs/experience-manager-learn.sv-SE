@@ -12,7 +12,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -164,13 +164,9 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    
    // Sling Models intended to be used with SPA Editor must extend ComponentExporter interface
    public interface OpenWeatherModel extends ComponentExporter {
-   
        public String getLabel();
-   
        public double getLat();
-   
        public double getLon();
-   
    }
    ```
 
@@ -196,11 +192,11 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
        adapters = { OpenWeatherModel.class, ComponentExporter.class }, 
        resourceType = OpenWeatherModelImpl.RESOURCE_TYPE, 
        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-       )
+   )
    @Exporter( //Exporter annotation that serializes the modoel as JSON
        name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, 
        extensions = ExporterConstants.SLING_MODEL_EXTENSION
-       )
+   )
    public class OpenWeatherModelImpl implements OpenWeatherModel {
    
        @ValueMapValue
@@ -306,7 +302,7 @@ Uppdatera sedan React-koden så att den innehåller [Reagera på komponenten Öp
    export default function OpenWeather(props) {
    
            // render nothing if component not configured
-           if(OpenWeatherEditConfig.isEmpty(props)) {
+           if (OpenWeatherEditConfig.isEmpty(props)) {
                return null;
            }
    
