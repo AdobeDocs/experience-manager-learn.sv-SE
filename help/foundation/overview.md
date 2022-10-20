@@ -4,9 +4,9 @@ description: Titta på våra videor och självstudiekurser för att få hjälp m
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,6 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 ## Ytterligare resurser
 
-* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Sites videor och självstudiekurser](/help/sites/overview.md)
 * [AEM Assets videor och självstudiekurser](/help/assets/overview.md)

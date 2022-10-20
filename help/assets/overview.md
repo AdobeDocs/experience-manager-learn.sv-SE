@@ -3,10 +3,10 @@ title: AEM Assets videor och självstudiekurser
 description: Titta på våra videor för att få AEM och hjälp.
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshanteri
 
 ## AEM Assets genomgång
 
-Titta på den här heltäckande genomgången av AEM Assets som förklarar vad AEM Assets är och hur det kan användas för att uppnå organisationens affärsmål.
+Lär dig vad AEM Assets är och hur det kan användas för att uppnå din organisations affärsmål.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
@@ -83,7 +83,6 @@ Titta på den här heltäckande genomgången av AEM Assets som förklarar vad AE
 
 ## Ytterligare resurser
 
-* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
 * [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Sites självstudiekurser](/help/sites/overview.md)

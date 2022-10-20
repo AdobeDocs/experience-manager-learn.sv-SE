@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Manager som videor och självstudiekurser för Cloud Service
+title: Adobe Experience Manager as a Cloud Service videor och självstudiekurser
 description: En samling självstudiekurser för Adobe Experience Manager (AEM) as a Cloud Service
 sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
+source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# AEM som videoklipp och självstudiekurser om Cloud Service {#overview}
+# AEM as a Cloud Service videor och självstudiekurser {#overview}
 
 Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
@@ -100,5 +100,4 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
 
 ## Ytterligare resurser
 
-* [Experience League - Utforska Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
 * [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
