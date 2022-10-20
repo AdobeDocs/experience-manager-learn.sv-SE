@@ -5,9 +5,9 @@ user-guide-title: AEM Forms Videos och Tutorials
 user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
 breadcrumb-title: AEM Forms Tutorials
 index: y
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 0%
    + [Skicka e-postkomponent i AEM Forms Workflow](adaptive-forms/email-step-aem-workflow-video-use.md)
    + [Generera DocumentOfRecord med API](adaptive-forms/document-of-record-api-tutorial-use.md)
    + [Visa textbundna bilder](adaptive-forms/inline-images-adaptive-forms.md)
+   + [Visa DAM-bilder textbundet](adaptive-forms/inline-images-from-dam.md)
    + [Använda GeoLocation API](adaptive-forms/using-geolocation-api-in-aem-forms-article.md)
    + [Använda transaktionsrapportering](adaptive-forms/transaction-reporting-aem-forms-article-use.md)
    + [Integrering av användarprofildata i AEM Forms](adaptive-forms/user-profile-data-integration-feature-video-use.md)
