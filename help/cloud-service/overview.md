@@ -1,21 +1,23 @@
 ---
-title: Adobe Experience Manager som Cloud Service Videos och Tutorials
+title: Adobe Experience Manager som videor och självstudiekurser för Cloud Service
 description: En samling självstudiekurser för Adobe Experience Manager (AEM) as a Cloud Service
 sub-product: sites, cloud-manager, foundation, assets
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '276'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
-# AEM som Cloud Service Videos och Tutorials {#overview}
+# AEM som videoklipp och självstudiekurser om Cloud Service {#overview}
 
 Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+
+<div id="whats-new-section">
 
 ## Nyheter
 
@@ -39,6 +41,17 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
 
    *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
 
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
+
 ## Personalval
 
 <table>
@@ -61,7 +74,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>Självstudiekurs om installation av lokal utvecklingsmiljö</strong>
+         <strong>Självstudiekurs för installation av lokal utvecklingsmiljö</strong>
          </a>
       </div>
       <p>
@@ -70,7 +83,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
    </td>   
    <td>
       <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-      <img alt="Felsöka AEM SDK:s lokala snabbstart" src="./assets/overview/staff-pick__debugging.png"/>
+      <img alt="Felsökning AEM SDK:s lokala snabbstart" src="./assets/overview/staff-pick__debugging.png"/>
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
@@ -83,7 +96,9 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
    </td>
 </table>
 
+</div>
+
 ## Ytterligare resurser
 
 * [Experience League - Utforska Adobe Experience Manager](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager as a Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)
+* [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/landing/home.html)

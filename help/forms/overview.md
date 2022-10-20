@@ -1,20 +1,22 @@
 ---
-title: AEM Forms Tutorials och videor
+title: AEM Forms självstudiekurser och videofilmer
 description: Bläddra bland våra videor och självstudiekurser för AEM Forms, med resurser och dokumentation som kan besvara dina frågor.
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# AEM Forms Tutorials och videor {#overview}
+# AEM Forms självstudiekurser och videofilmer {#overview}
 
 Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hantera, publicera och uppdatera komplexa digitala formulär och samtidigt integrera med back-end-processer, affärsregler och data. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Forms
+
+<div id="whats-new-section">
 
 ## Nyheter
 
@@ -29,6 +31,17 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 * **[Skapa återanvändbara arbetsflödesmodeller](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
    *Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## Personalval
 
@@ -76,6 +89,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 </tr>
 </table>
 
+</div>
 
 
 
@@ -83,11 +97,11 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 ## Ytterligare resurser
 
 * [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites Authoring Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites Administering Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites driftsättningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Assets Tutorials](/help/assets/overview.md)
-* [AEM Forms Tutorials](/help/forms/overview.md)
-* [AEM Foundation Tutorials](/help/foundation/overview.md)
+* [AEM Sites Authoring documentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [AEM Sites Administering - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites Distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [AEM Assets självstudiekurser](/help/assets/overview.md)
+* [AEM Forms självstudiekurser](/help/forms/overview.md)
+* [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

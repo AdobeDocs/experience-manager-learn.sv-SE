@@ -1,16 +1,16 @@
 ---
-title: AEM Assets Videos och Tutorials
+title: AEM Assets videor och självstudiekurser
 description: Titta på våra videor för att få AEM och hjälp.
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 3%
 
 ---
 
-# AEM Assets Videos och Tutorials {#overview}
+# AEM Assets videor och självstudiekurser {#overview}
 
 Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshantering på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
@@ -25,6 +25,15 @@ Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshanteri
 Titta på den här heltäckande genomgången av AEM Assets som förklarar vad AEM Assets är och hur det kan användas för att uppnå organisationens affärsmål.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## Personalval
 
@@ -70,11 +79,13 @@ Titta på den här heltäckande genomgången av AEM Assets som förklarar vad AE
 </td>
 </table>
 
+</div>
+
 ## Ytterligare resurser
 
 * [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Sites Tutorials](/help/sites/overview.md)
-* [AEM Forms Tutorials](/help/forms/overview.md)
-* [AEM Foundation Tutorials](/help/foundation/overview.md)
+* [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [AEM Sites självstudiekurser](/help/sites/overview.md)
+* [AEM Forms självstudiekurser](/help/forms/overview.md)
+* [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

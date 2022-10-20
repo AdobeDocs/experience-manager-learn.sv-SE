@@ -1,19 +1,21 @@
 ---
-title: AEM Foundation Videos och Tutorials
+title: AEM Foundation videor och självstudiekurser
 description: Titta på våra videor och självstudiekurser för att få hjälp med Adobe Experience Manager Foundation.
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# AEM Foundation Videos och Tutorials {#overview}
+# AEM Foundation videor och självstudiekurser {#overview}
 
 Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgängliga för användare av AEM Sites, Assets och Forms.
+
+<div id="whats-new-section">
 
 ## Nyheter
 
@@ -29,6 +31,17 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 * **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## Personalval
 
@@ -76,10 +89,12 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 </tr>
 </table>
 
+</div>
+
 ## Ytterligare resurser
 
 * [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Sites Videos och Tutorials](/help/sites/overview.md)
-* [AEM Assets Videos och Tutorials](/help/assets/overview.md)
-* [AEM Forms Videos och Tutorials](/help/forms/overview.md)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [AEM Sites videor och självstudiekurser](/help/sites/overview.md)
+* [AEM Assets videor och självstudiekurser](/help/assets/overview.md)
+* [AEM Forms videor och självstudiekurser](/help/forms/overview.md)
