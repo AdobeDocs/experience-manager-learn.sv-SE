@@ -7,13 +7,14 @@ role: Admin, Developer
 level: Intermediate
 kt: 9782
 thumbnail: 340667.jpeg
-source-git-commit: 0848419e4da935787c351469925cc900d4eb21df
+last-substantial-update: 2022-10-01T00:00:00Z
+exl-id: 5dc40184-15d3-483a-885e-1b241e6514ba
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion till Cloud 5
 

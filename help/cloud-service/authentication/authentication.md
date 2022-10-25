@@ -7,14 +7,15 @@ topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
 kt: 10436
-thumbnail: KT-10436.jpeg
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+thumbnail: KT-10436.png
+last-substantial-update: 2022-10-14T00:00:00Z
+exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
-
 
 # AEM as a Cloud Service autentisering
 

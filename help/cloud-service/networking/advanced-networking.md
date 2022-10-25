@@ -7,9 +7,10 @@ topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
 kt: 9354
-thumbnail: KT-9354.jpeg
+thumbnail: KT-9354.png
+last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%

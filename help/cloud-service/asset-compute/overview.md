@@ -12,8 +12,9 @@ thumbnail: KT-5802.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2022-08-15T00:00:00Z
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%

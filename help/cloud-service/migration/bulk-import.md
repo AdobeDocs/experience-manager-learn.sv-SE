@@ -12,8 +12,9 @@ thumbnail: 329680.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
+last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: 27a8cc66a8c6a9b30e3b39fe64a33c9de07d5c5b
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
