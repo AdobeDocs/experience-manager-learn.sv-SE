@@ -6,8 +6,10 @@ feature: Search
 topic: Content Management
 role: User
 level: Beginner
+last-substantial-update: 2022-09-03T00:00:00Z
+thumbnail: 21297.jpg
 exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%

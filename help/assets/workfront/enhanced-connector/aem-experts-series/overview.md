@@ -7,13 +7,14 @@ role: Admin, User
 level: Beginner
 kt: 9754
 thumbnail: kt-9754.jpeg
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+last-substantial-update: 2022-09-02T00:00:00Z
+exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
-
 
 # Workfront for Experience Manager förbättrad Connector Expert Series
 
@@ -90,6 +91,3 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
    </td>
   </tr>  
 </tbody></table>
-
-
-

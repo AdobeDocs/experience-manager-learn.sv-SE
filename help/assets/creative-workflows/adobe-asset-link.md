@@ -7,8 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
+last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%

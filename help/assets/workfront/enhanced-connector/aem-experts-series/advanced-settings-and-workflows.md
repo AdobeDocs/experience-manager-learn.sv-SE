@@ -8,13 +8,14 @@ level: Beginner
 kt: 9733
 thumbnail: 340397.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+last-substantial-update: 2022-09-02T00:00:00Z
+exl-id: 7d44e1b7-7216-431d-b866-6adcc8673d53
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
-
 
 # Avancerade inställningar och arbetsflöden
 

@@ -8,13 +8,14 @@ level: Beginner
 kt: 9717
 thumbnail: 340331.jpeg
 hidefromtoc: false
-source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
+last-substantial-update: 2022-09-02T00:00:00Z
+exl-id: f0018d16-af96-4b92-b0fc-6130d812bf8f
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
-
 
 # Inledande konfiguration och konfiguration
 

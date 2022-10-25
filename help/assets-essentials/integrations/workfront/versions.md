@@ -1,5 +1,5 @@
 ---
-title: Bevara versionshistorik med Adobe Workfront och Assets Essentials
+title: Underhålla versionshistorik med Adobe Workfront och Assets Essentials
 description: Läs om hur Adobe Workfront och Experience Manager Assets Essentials hjälper dig att underhålla versioner av Workfront-dokument och Assets Essentials-resurser.
 version: Cloud Service
 feature: Assets Essentials
@@ -8,13 +8,14 @@ role: User
 level: Beginner
 kt: 8221
 thumbnail: 336314.jpeg
-source-git-commit: 2edcaa0e10121f75ac3081eb00e8c1419400a205
+last-substantial-update: 2022-10-14T00:00:00Z
+exl-id: 42c0e51d-abb2-4445-98bd-65d813f580ca
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
-
 
 # Bevara versionshistorik
 

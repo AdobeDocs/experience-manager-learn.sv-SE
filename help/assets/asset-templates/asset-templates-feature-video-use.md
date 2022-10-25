@@ -5,8 +5,10 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+last-substantial-update: 2022-09-01T00:00:00Z
+thumbnail: 25170.jpg
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

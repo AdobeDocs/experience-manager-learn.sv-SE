@@ -8,13 +8,14 @@ role: User
 level: Beginner
 kt: 9763
 thumbnail: 341025.jpeg
-source-git-commit: 00647ec3e2cf0ead5d6f427fd12b9d0f777f6890
+last-substantial-update: 2022-10-08T00:00:00Z
+exl-id: 719d3101-2c27-4165-a9d7-97e6f637d71f
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
-
 
 # Delning av offentlig länk
 

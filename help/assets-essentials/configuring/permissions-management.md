@@ -8,13 +8,14 @@ role: User
 level: Beginner
 kt: 9818
 thumbnail: 342113.jpeg
-source-git-commit: e3ff8c16a62a8e79345c384baf3b24f53eed93b3
+last-substantial-update: 2022-10-11T00:00:00Z
+exl-id: d4d80678-e2e2-4e17-8ce5-6db8651ae59e
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
-
 
 # Behörighetshantering i Assets Essentials
 
