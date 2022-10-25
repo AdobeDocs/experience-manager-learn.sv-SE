@@ -3,9 +3,9 @@ user-guide-title: AEM Sites Videos och Tutorials
 user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 8343ce6e3c9f144dddfc9f5bc80b436542f5be02
+source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '436'
 ht-degree: 5%
 
 ---
@@ -93,6 +93,8 @@ ht-degree: 5%
    + [Konfigurera översättningsregler](translation/translation-rules-editor-technical-video-setup.md)
    + [Översättningsförbättringar](translation/translation-enhancements-feature-video-use.md)
 + Integreringar {#integrations}
+   + Experience Platform {#experience-platform}
+      + [Generera FPID](integrations/platform/fpid.md)
    + Experience Platform Launch {#experience-platform-launch}
       + [Översikt](integrations/experience-platform-launch/overview.md)
       + [Skapa en startegenskap](integrations/experience-platform-launch/create-launch-property.md)
