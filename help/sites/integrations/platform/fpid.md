@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
+source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -42,7 +42,7 @@ I följande diagram beskrivs hur AEM Publish-tjänsten hanterar FPID:n.
 1. Om webbsidan inte kan hanteras från cacheminnen för CDN eller AEM Dispatcher når förfrågan AEM Publish-tjänsten, som genererar den begärda webbsidan.
 1. Webbsidan skickas sedan tillbaka till webbläsaren och fyller i de cacheminnen som inte kunde hantera begäran. Med AEM förväntas antalet träffar i CDN och AEM Dispatcher-cachen vara större än 90 %.
 1. Webbsidan innehåller JavaScript som gör en otillgänglig asynkron XHR-begäran (AJAX) till en anpassad FPID-server i AEM Publish-tjänsten. Eftersom detta är en otillgänglig begäran (på grund av dess slumpmässiga frågeparameter och Cache-Control-headers) cachelagras den aldrig av CDN eller AEM Dispatcher och når alltid AEM Publish-tjänsten för att generera svaret.
-1. Den anpassade FPID-servern i AEM Publish-tjänsten bearbetar begäran och skapar en ny FPID när ingen befintlig FPID-cookie hittas, eller utökar direktuppspelningen för en befintlig FPID-cookie. Servern returnerar också FPID i svarstexten som ska användas av JavaScript på klientsidan. Lyckligtvis är den anpassade FPID-serverlogiken liten, vilket förhindrar att den här begäran påverkar AEM Publish-tjänstens prestanda.
+1. Den anpassade FPID-servern i AEM Publish-tjänsten bearbetar begäran och genererar ett nytt FPID när ingen befintlig FPID-cookie hittas, eller förlänger livscykeln för en befintlig FPID-cookie. Servern returnerar också FPID i svarstexten som ska användas av JavaScript på klientsidan. Lyckligtvis är den anpassade FPID-serverlogiken liten, vilket förhindrar att den här begäran påverkar AEM Publish-tjänstens prestanda.
 1. Svaret på XHR-begäran återgår till webbläsaren med FPID-cookien och FPID som JSON i svarstexten för användning av Platform Web SDK.
 
 ## Kodexempel
@@ -62,7 +62,9 @@ När en HTTP-begäran når servern kontrollerar servern om det finns en FPID-coo
 + Om det inte finns någon FPID-cookie skapar du en ny FPID-cookie och sparar värdet för att skriva till svaret.
 
 Servern skriver sedan FPID till svaret som ett JSON-objekt i formatet: `{ fpid: "<FPID VALUE>" }`.
+
 Det är viktigt att ange FPID till klienten i brödtexten eftersom FPID-cookien är markerad `HttpOnly`, vilket innebär att bara servern kan läsa dess värde, och JavaScript på klientsidan kan inte göra det.
+
 FPID-värdet från svarstexten används för att parametrisera anrop med Platform Web SDK.
 
 Nedan visas exempelkod för en AEM serverslutpunkt (tillgänglig via `HTTP GET /bin/aep/fpid`) som genererar eller uppdaterar en FPID-cookie och returnerar FPID som JSON.
