@@ -10,7 +10,8 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+recommendations: noDisplay, noCatalog
+source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%

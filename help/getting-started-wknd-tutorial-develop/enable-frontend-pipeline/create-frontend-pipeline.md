@@ -10,8 +10,8 @@ level: Intermediate
 kt: 10689
 mini-toc-levels: 1
 index: y
-recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+recommendations: noDisplay, noCatalog
+source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
