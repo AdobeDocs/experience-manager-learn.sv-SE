@@ -2,9 +2,10 @@
 user-guide-title: Självstudiekurser om Adobe Experience Manager as a Cloud Service
 user-guide-description: En samling självstudiekurser för Adobe Experience Manager as a Cloud Service.
 breadcrumb-title: AEM as a Cloud Service Tutorials
-sub-product: cloud-service
+sub-product: Experience Manager
+version: Cloud Service
 team: TM
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%

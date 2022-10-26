@@ -1,7 +1,6 @@
 ---
 title: Kom igång med AEM Sites - WKND, genomgång
 description: Lär dig implementera en AEM sajt för ett fiktivt livsstilsmärke som kallas WKND. Få en genomgång av grundläggande Experience Manager-teman som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-sub-product: sites
 topics: development
 version: Cloud Service
 activity: develop
@@ -16,7 +15,7 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%

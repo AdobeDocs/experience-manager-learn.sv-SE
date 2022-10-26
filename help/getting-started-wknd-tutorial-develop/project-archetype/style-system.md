@@ -2,7 +2,6 @@
 title: Utveckla med Style System
 seo-title: Developing with the Style System
 description: Lär dig hur du implementerar enskilda format och återanvänder kärnkomponenter med Experience Manager Style System. I den här självstudien beskrivs hur du utvecklar för Style System för att utöka grundkomponenterna med varumärkesspecifik CSS och avancerade principkonfigurationer för mallredigeraren.
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Style System
@@ -13,7 +12,7 @@ kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1681'
 ht-degree: 0%
@@ -103,7 +102,7 @@ Lägg till en ny princip för rubrikkomponenter så att innehållsförfattare ka
 
 1. Skapa en ny princip för komponenten Title med följande värden:
 
-   *Policytitel **: **WKND**
+   *Policytitel&#42;*: **WKND**
 
    *Egenskaper* > *Fliken Format* > *Lägga till ett nytt format*
 
@@ -213,7 +212,7 @@ Lägg sedan till en ny princip för textkomponenterna.
 
 1. Uppdatera Text-komponentprincipen med följande värden:
 
-   *Policytitel **: **Innehållstext**
+   *Policytitel&#42;*: **Innehållstext**
 
    *Plugins* > *Styckeformat* > *Aktivera styckeformat*
 

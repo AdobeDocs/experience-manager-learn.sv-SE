@@ -1,7 +1,6 @@
 ---
 title: Arbetsflöde för teman | AEM Skapa snabbt webbplatser
 description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: Core Components
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%

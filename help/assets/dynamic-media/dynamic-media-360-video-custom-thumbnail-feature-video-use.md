@@ -1,14 +1,13 @@
 ---
 title: Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
 description: Förbättringarna i Dynamic Media Viewer i AEM 6.5 inkluderar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
-sub-product: dynamic-media
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%

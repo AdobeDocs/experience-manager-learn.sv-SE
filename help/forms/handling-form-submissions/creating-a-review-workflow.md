@@ -1,8 +1,7 @@
 ---
 title: Skapa arbetsflöde för granskning av skickade data
 description: Skapa AEM arbetsflödesmodell med AEM Forms arbetsflödeskomponenter för att granska skickade data.
-sub-product: formulär
-feature: Arbetsflöde
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,16 +9,16 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 1%
+source-wordcount: '138'
+ht-degree: 0%
 
 ---
-
 
 # Skapa arbetsflöde för granskning av skickade data
 
@@ -27,13 +26,10 @@ Arbetsflöden används vanligtvis för att skicka inskickade data för gransknin
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationshandboken](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguide](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) installera och konfigurera AEM Forms
 
 I följande video förklaras hur du skapar arbetsflöden för granskning och godkännande med AEM Forms Components
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-Om du av någon anledning inte kan skapa arbetsflödet kan du hämta det slutförda arbetsflödet från [här](assets/review-submitted-data-workflow.zip) och importera det med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp) till din AEM.
-
-
-
+Om du av någon anledning inte kan skapa arbetsflödet kan du hämta det färdiga arbetsflödet från [här](assets/review-submitted-data-workflow.zip) och importera samma [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp) i AEM.

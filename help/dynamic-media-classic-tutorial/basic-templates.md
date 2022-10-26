@@ -1,7 +1,6 @@
 ---
 title: Introduktion till grundläggande mallar
 description: Lär dig mer om grundläggande mallar i Dynamic Media Classic, bildbaserade mallar som anropas från Image Server och består av bilder och återgiven text. En mall kan ändras dynamiskt via URL:en när mallen har publicerats. Du får lära dig hur du överför ett Photoshop PSD till Dynamic Media Classic för att använda det som grund för en mall. Skapa en enkel mall som består av bildlager. Lägg till textlager och gör dem variabla med hjälp av parametrar. Skapa en mall-URL och ändra bilden dynamiskt i webbläsaren.
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 0%

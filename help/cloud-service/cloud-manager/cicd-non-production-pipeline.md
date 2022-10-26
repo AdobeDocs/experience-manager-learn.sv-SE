@@ -1,7 +1,6 @@
 ---
 title: Använda Adobe Cloud Manager - CI/CD Non-Production Pipeline
 description: Rörledningar för komprimerad/cd-produktion delas upp i två kategorier, nämligen pipelines för kodkvalitet och distributionsrörledningar. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Managers skanning av kodkvalitet. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
-sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%

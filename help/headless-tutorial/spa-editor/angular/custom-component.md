@@ -1,7 +1,6 @@
 ---
 title: Skapa en anpassad komponent | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
-sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -14,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%

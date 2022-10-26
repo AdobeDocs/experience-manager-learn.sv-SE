@@ -1,7 +1,6 @@
 ---
 title: Aktivera frontendpipeline för standardprojekttypen AEM
 description: Lär dig hur du aktiverar en frontpipeline för AEM standardprojekt för snabbare distribution av statiska resurser som CSS, JavaScript, teckensnitt och ikoner. Dessutom separeras front-end-utveckling från backend-utveckling i full stack på AEM.
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -12,7 +11,9 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
-source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
+thumbnail: 53409343.jpg
+last-substantial-update: 2022-09-23T00:00:00Z
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%

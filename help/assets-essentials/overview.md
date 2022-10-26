@@ -1,12 +1,11 @@
 ---
 title: AEM Assets Essentials - videor
 description: En samling videor för Adobe Experience Manager Assets Essentials
-sub-product: assets
 recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%

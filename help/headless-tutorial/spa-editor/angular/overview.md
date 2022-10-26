@@ -1,7 +1,6 @@
 ---
 title: Komma igång med AEM SPA Editor och Angular
 description: Skapa ett program med en Angular (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA.
-sub-product: sites
 topics: development
 version: Cloud Service
 doc-type: tutorial
@@ -14,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 0%

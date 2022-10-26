@@ -1,7 +1,6 @@
 ---
 title: Komma igång med AEM Sites - Project Archetype
 description: Komma igång med AEM Sites - Project Archetype. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
@@ -12,7 +11,7 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%

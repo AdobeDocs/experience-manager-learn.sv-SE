@@ -1,7 +1,6 @@
 ---
 title: Använda Adobe Cloud Manager - CI/CD Production Pipeline
 description: CI/CD Production Pipeline används för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar time to value. CI/CD Production Pipeline-konfigurationen definierar den utlösare som initierar pipelinen, parametrar som styr produktionsdistributionen och parametrar för prestandatestning.
-sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%

@@ -1,12 +1,13 @@
 ---
 title: AEM Assets videor och självstudiekurser
 description: Titta på våra videor för att få AEM och hjälp.
-sub-product: assets, dynamic-media
+sub-product: Experience Manager Assets
+version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 3%
 
 ---
 
