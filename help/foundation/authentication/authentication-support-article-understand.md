@@ -12,7 +12,9 @@ topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2022-09-10T00:00:00Z
+thumbnail: KT-406.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

@@ -1,24 +1,26 @@
 ---
-title: Java API Best Practices in AEM
-description: AEM bygger på en programhög med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
+title: Java&trade; API - bästa praxis inom AEM
+description: AEM bygger på en rik programstack med öppen källkod som exponerar många Java&trade; API:er som ska användas under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 version: 6.4, 6.5
 feature: APIs
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+last-substantial-update: 2022-06-24T00:00:00Z
+thumbnail: aem-java-bp.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
 
-# Java API Best Practices
+# Java™ API Best Practices
 
-Adobe Experience Manager (AEM) bygger på en omfattande programstack med öppen källkod som visar många Java API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
+Adobe Experience Manager (AEM) bygger på en omfattande programstack med öppen källkod som visar många Java™-API:er för användning under utveckling. I den här artikeln utforskas de viktigaste API:erna och när och varför de ska användas.
 
-AEM bygger på fyra primära Java API-uppsättningar.
+AEM bygger på fyra primära Java™ API-uppsättningar.
 
 * **Adobe Experience Manager (AEM)**
 
@@ -36,7 +38,7 @@ AEM bygger på fyra primära Java API-uppsättningar.
 
    * OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter.
 
-## Java API-inställningen &quot;rule of thumb&quot;
+## Java™ API-inställning för&quot;tumregel&quot;
 
 Den allmänna regeln är att föredra API:erna/abstraktionerna i följande ordning:
 
@@ -57,7 +59,7 @@ Den här ordningen är en allmän regel, vilket innebär undantag. Godtagbara or
 
 ## AEM API:er
 
-* [**AEM API JavaDocs**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)
+* [**AEM API JavaDocs**](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html)
 
 AEM API:er innehåller abstraktioner och funktioner som är specifika för produkterade användningsfall.
 
@@ -67,39 +69,39 @@ Dessa noder är tillgängliga via [!DNL Sling] API:er som resurser och JCR-API:e
 
 ### com.adobe.&#42; jämfört med com.day.&#42; API:er
 
-AEM-API:er har en paketintern inställning som identifieras av följande Java-paket, i prioritetsordning:
+AEM-API:er har en paketintern inställning som identifieras av följande Java™-paket, i prioritetsordning:
 
 1. `com.adobe.cq`
 1. `com.adobe.granite`
 1. `com.day.cq`
 
-`com.adobe.cq` stöder produktanvändningsexempel `com.adobe.granite` har stöd för användning på olika plattformar, t.ex. arbetsflöden eller uppgifter (som används i olika produkter: AEM Assets, Sites osv.).
+The `com.adobe.cq` paketet har stöd för produktanvändning. `com.adobe.granite` har stöd för användning på olika plattformar, t.ex. arbetsflöden eller uppgifter (som används i olika produkter: AEM Assets, Sites osv.).
 
-`com.day.cq` innehåller &quot;original&quot;-API:er. Dessa API:er åtgärdar viktiga abstraktioner och funktioner som fanns före och/eller runt Adobe förvärv av [!DNL Day CQ]. Dessa API:er stöds och bör inte undvikas om inte `com.adobe.cq` eller `com.adobe.granite` tillhandahåller ett (nyare) alternativ.
+The `com.day.cq` paketet innehåller &quot;original&quot;-API:er. Dessa API:er åtgärdar viktiga abstraktioner och funktioner som fanns före och/eller runt Adobe förvärv av [!DNL Day CQ]. Dessa API:er stöds och bör undvikas om inte `com.adobe.cq` eller `com.adobe.granite` paket har INTE ett (nyare) alternativ.
 
 Nya abstraktioner som [!DNL Content Fragments] och [!DNL Experience Fragments] är inbyggd i `com.adobe.cq` blanksteg i stället för `com.day.cq` beskrivs nedan.
 
 ### Fråga API:er
 
-AEM har stöd för flera frågespråk. De tre huvudspråken är [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath och [AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html).
+AEM har stöd för flera frågespråk. De tre huvudspråken är [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath och [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
 
 Det viktigaste problemet är att ha ett konsekvent frågespråk i hela kodbasen, vilket minskar komplexiteten och gör att du lättare kan förstå kostnaderna.
 
 Alla frågespråk har i princip samma prestandaprofiler som [!DNL Apache Oak] överför dem till JCR-SQL2 för slutlig frågekörning, och konverteringstiden till JCR-SQL2 är försumbar jämfört med själva frågetiden.
 
-Rekommenderat API är [AEM Query Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html), som är den högsta nivån för abstraktion och ger ett robust API för att skapa, köra och hämta resultat för frågor, och som ger följande:
+Rekommenderat API är [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html), som är den högsta nivån för abstraktion och ger ett robust API för att skapa, köra och hämta resultat för frågor, och som ger följande:
 
 * Enkel, parametriserad frågekonstruktion (frågeparametrar som modelleras som en karta)
-* Inbyggt [Java API och HTTP API:er](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
-* [AEM Query Debugger](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
-* [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) stöder gemensamma frågekrav
+* Inbyggt [Java™ API och HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
+* [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html) stöder gemensamma frågekrav
 
-* Utbyggbart API, som möjliggör utveckling av anpassat [frågepredikat](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html)
+* Utbyggbart API, som möjliggör utveckling av anpassat [frågepredikat](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 * JCR-SQL2 och XPath kan köras direkt via [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) och [JCR-API:er](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)returnerar resultaten [[!DNL Sling] Resurser](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) eller [JCR-noder](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html), respektive.
 
 >[!CAUTION]
 >
->AEM QueryBuilder API läcker ett ResourceResolver-objekt. För att minska läckan följer du detta [kodexempel](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164).
+>AEM QueryBuilder API läcker ett ResourceResolver-objekt. Följ detta för att minska läckan [kodexempel](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/search/querybuilder/impl/SampleQueryBuilder.java#L164).
 
 ## [!DNL Sling] API:er
 
@@ -127,25 +129,25 @@ Rekommenderat API är [AEM Query Builder](https://helpx.adobe.com/experience-man
    * [Schemaläggare](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
-* [Tjänstanvändare](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/security-service-users.html)
+* [Tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 
 ## JCR-API:er
 
 * **[JCR 2.0 JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-The [JCR (Java Content Repository) 2.0 API:er](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) ingår i en specifikation för JCR-implementeringar (i AEM fall, [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)). All JCR-implementering måste följa och implementera dessa API:er, och är därför den lägsta nivån för API för interaktion med AEM.
+The [JCR (Java™ Content Repository) 2.0 API:er](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) ingår i en specifikation för JCR-implementeringar (i AEM fall, [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/)). All JCR-implementering måste följa och implementera dessa API:er, och är därför den lägsta nivån för API för interaktion med AEM.
 
-Själva JCR är en hierarkisk/trädbaserad NoSQL-AEM som används som innehållsdatabas. JCR har en mängd API:er som stöds, från innehålls-CRUD till frågor om innehåll. Trots detta robusta API är det sällan de föredras framför AEM och [!DNL Sling] abstraktioner.
+Själva JCR är en hierarkisk/trädbaserad NoSQL-AEM som används som innehållsdatabas. JCR har en mängd API:er som stöds, från innehålls-CRUD till frågor om innehåll. Trots detta robusta API är det sällan de föredras framför AEM på högre nivå och [!DNL Sling] abstraktioner.
 
 Använd alltid JCR-API:erna framför API:erna för Apache Jackrabbit Oak. JCR-API:erna är för ***interagera*** med en JCR-databas, medan Oak API:er är för ***implementera*** en JCR-databas.
 
 ### Vanliga missuppfattningar om JCR-API:er
 
-Även om JCR är AEM innehållsdatabas är dess API:er INTE den föredragna metoden för interaktion med innehållet. Använd i stället AEM API:er (Sida, Resurser, Tagg osv.) eller Sling Resource APIs eftersom de ger bättre abstraktioner.
+Även om JCR är AEM innehållsdatabas är dess API:er INTE den föredragna metoden för interaktion med innehållet. Använd i stället AEM API:er (Sida, Resurser, Tagg o.s.v.) eller Sling Resource API:er för att få bättre abstraktioner.
 
 >[!CAUTION]
 >
->En stor användning av JCR-API:ernas Session- och Node-gränssnitt i ett AEM program är kodlukt. Säkerställ [!DNL Sling] API:er bör inte användas i stället.
+>En stor användning av JCR-API:ernas Session- och Node-gränssnitt i ett AEM program är kodlukt. Säkerställ [!DNL Sling] API:er bör användas i stället.
 
 ### Vanliga användningsområden för JCR-API:er
 
@@ -154,16 +156,16 @@ Använd alltid JCR-API:erna framför API:erna för Apache Jackrabbit Oak. JCR-AP
 * JCR-observation (lyssnar efter JCR-händelser)
 * Skapa djupnodsstrukturer
 
-   * Även om Sling-API:erna har stöd för att skapa resurser har JCR-API:erna praktiska metoder i [JCRUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) och [JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/jcr/JcrUtil.html) som gör det lättare att skapa djupgående strukturer.
+   * Även om Sling-API:erna har stöd för att skapa resurser har JCR-API:erna praktiska metoder i [JCRUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) och [JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/jcr/JcrUtil.html) som gör det lättare att skapa djupgående strukturer.
 
 ## OSGi API:er
 
-* [**OSGi R6 JavaDocs**](https://osgi.org/javadoc/r6/cmpn/index.html?overview-summary.html)
-* **[OSGi Declarative Services 1.2 Component Annotations JavaDocs](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)**
-* **[OSGi Declarative Services 1.2 Metatype Annotations JavaDocs](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
-* [**OSGi Framework JavaDocs**](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
+* [**OSGi R6 JavaDocs**](https://docs.osgi.org/javadoc/r6/cmpn/index.html?overview-summary.html)
+* **[OSGi Declarative Services 1.2 Component Annotations JavaDocs](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html)**
+* **[OSGi Declarative Services 1.2 Metatype Annotations JavaDocs](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/metatype/annotations/package-summary.html)**
+* [**OSGi Framework JavaDocs**](https://docs.osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html)
 
-Det finns liten överlappning mellan OSGi-API:erna och API:erna på den högre nivån (AEM, [!DNL Sling], och JCR) och behovet av att använda API:er för OSGi är sällsynt och kräver hög AEM utvecklingskompetens.
+Det finns liten överlappning mellan OSGi-API:erna och API:erna på den högre nivån (AEM, [!DNL Sling], och JCR) och behovet av att använda API:er för OSGi är sällsynt och kräver stor AEM utvecklingskompetens.
 
 ### API:er för OSGi och Apache Felix
 
@@ -175,9 +177,9 @@ OSGi definierar en specifikation som alla OSGi-behållare måste implementera oc
 
 * OSGi-anteckningar för att deklarera OSGi-tjänster och -komponenter.
 
-   * Föredra [OSGi Declarative Services (DS) 1.2 Anteckningar](https://osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) över [Felix SCR Annotations](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) för att deklarera OSGi-tjänster och -komponenter
+   * Föredra [OSGi Declarative Services (DS) 1.2 Anteckningar](https://docs.osgi.org/javadoc/r6/cmpn/org/osgi/service/component/annotations/package-summary.html) över [Felix SCR Annotations](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html) för att deklarera OSGi-tjänster och -komponenter
 
-* OSGi-API:er för dynamiskt kodning [Kör/registrera OSGi-tjänster/komponenter](https://osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html).
+* OSGi-API:er för dynamiskt kodning [Kör/registrera OSGi-tjänster/komponenter](https://docs.osgi.org/javadoc/r6/core/org/osgi/framework/package-summary.html).
 
    * Föredra användningen av OSGi DS 1.2-anteckningar när villkorlig OSGi Service/Component Management inte behövs (vilket oftast är fallet).
 
@@ -187,20 +189,20 @@ Följande är vanliga undantag till reglerna som definieras ovan.
 
 ### OSGi API:er
 
-När det gäller OSGi-abstraktioner på låg nivå, som att definiera eller läsa i OSGi-komponentegenskaper, finns de nyare abstreringarna i `org.osgi` framför Sling-funktioner på högre nivå. De konkurrerande Sling-abstraktionerna har inte markerats som `@Deprecated` och föreslå `org.osgi` alternativ.
+När det gäller OSGi-abstraktioner på låg nivå, som att definiera eller läsa i OSGi-komponentegenskaper, finns de nyare abstreringarna i `org.osgi` är att föredra framför Sling-abstraktioner på högre nivå. De konkurrerande Sling-abstraktionerna har inte markerats som `@Deprecated` och föreslå `org.osgi` alternativ.
 
 Observera även att noddefinitionen för OSGi-konfigurationen föredrar `cfg.json` över `sling:OsgiConfig` format.
 
 ### AEM resurs-API:er
 
-* Föredra [ `com.day.cq.dam.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/package-summary.html) över [ `com.adobe.granite.asset.api`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/package-summary.html).
+* Föredra [ `com.day.cq.dam.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/dam/api/package-summary.html) över [ `com.adobe.granite.asset.api`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/asset/api/package-summary.html).
 
    * Med `com.day.cq` Med Assets API:er får du mer kostnadsfria verktyg för att AEM användningsfall för resurshantering.
    * Granite Assets API:er har stöd för resurshanteringsfall på låg nivå (version, relationer).
 
 ### Fråga API:er
 
-* AEM QueryBuilder stöder inte vissa frågefunktioner som [förslag](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), stavningskontroll och indextips bland andra mindre vanliga funktioner. Du bör använda JCR-SQL2 för att fråga med dessa funktioner.
+* AEM QueryBuilder stöder inte vissa frågefunktioner som [förslag](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), stavningskontroll och indextips med andra mindre vanliga funktioner. Du bör använda JCR-SQL2 för att fråga med dessa funktioner.
 
 ### [!DNL Sling] Registrering av serverdel {#sling-servlet-registration}
 
@@ -212,7 +214,7 @@ Observera även att noddefinitionen för OSGi-konfigurationen föredrar `cfg.jso
 
 ## Användbara kodfragment
 
-Nedan följer några praktiska Java-kodfragment som illustrerar de effektivaste strategierna för vanliga användningsområden med hjälp av beskrivna API:er. De här fragmenten visar också hur du går från mindre prioriterade API:er till mer önskade API:er.
+Nedan följer några praktiska Java™-kodfragment som illustrerar de effektivaste strategierna för vanliga användningsområden med hjälp av beskrivna API:er. De här fragmenten visar också hur du går från mindre prioriterade API:er till mer önskade API:er.
 
 ### JCR-session till [!DNL Sling] ResursResolver
 
@@ -271,7 +273,7 @@ Resource resource = resourceResolver.getResource(node.getPath());
 
 #### Rekommenderad metod
 
-`DamUtil.resolveToAsset(..)`löser alla resurser under `dam:Asset` till objektet Asset genom att gå upp i trädet efter behov.
+The `DamUtil.resolveToAsset(..)` funktionen löser alla resurser under `dam:Asset` till objektet Asset genom att gå upp i trädet efter behov.
 
 ```java
 Asset asset = DamUtil.resolveToAsset(resource);
@@ -307,7 +309,7 @@ Page page = resource.adaptTo(Page.class);
 
 ### AEM sidegenskaper
 
-Använd get-metoder för sidobjektet för att få välkända egenskaper (`getTitle()`, `getDescription()`, osv.) och `page.getProperties()` för att få `[cq:Page]/jcr:content` ValueMap för att hämta andra egenskaper.
+Använd Page-objektets get-metoder för att få välkända egenskaper (`getTitle()`, `getDescription()`och så vidare) och `page.getProperties()` för att få `[cq:Page]/jcr:content` ValueMap för att hämta andra egenskaper.
 
 ```java
 Page page = resource.adaptTo(Page.class);
@@ -317,7 +319,7 @@ Calendar value = page.getProperties().get("cq:lastModified", Calendar.getInstanc
 
 ### Läs AEM Resursmetadataegenskaper
 
-Resurs-API:t innehåller praktiska metoder för att läsa egenskaper från `[dam:Asset]/jcr:content/metadata` nod. Observera att detta inte är en ValueMap. Den andra parametern (standardvärde och datatypsbyte) stöds inte.
+Resurs-API:t innehåller praktiska metoder för att läsa egenskaper från `[dam:Asset]/jcr:content/metadata` nod. Detta är inte en ValueMap, den andra parametern (standardvärde och datatypsbyte) stöds inte.
 
 ```java
 Asset asset = resource.adaptTo(Asset.class);
@@ -381,7 +383,7 @@ if (!autoSave) { resourceResolver.commit(); }
 
 ### Skapa en [!DNL Sling] Resurs
 
-ResourceResolver stöder grundläggande åtgärder för att skapa resurser. När du skapar abstraktioner på högre nivå (AEM sidor, resurser, taggar osv.) använda de metoder som deras respektive chefer tillhandahåller.
+ResourceResolver stöder grundläggande åtgärder för att skapa resurser. När du skapar abstraktioner på högre nivå (AEM sidor, resurser, taggar och så vidare) använder du de metoder som deras respektive hanterare tillhandahåller.
 
 ```java
 resourceResolver.create(parentResource, "my-node-name", new ImmutableMap.Builder<String, Object>()
@@ -395,7 +397,7 @@ resourceResolver.commit();
 
 ### Ta bort en [!DNL Sling] Resurs
 
-ResourceResolver stöder borttagning av en resurs. När du skapar abstraktioner på högre nivå (AEM sidor, resurser, taggar osv.) använda de metoder som deras respektive chefer tillhandahåller.
+ResourceResolver stöder borttagning av en resurs. När du skapar abstraktioner på högre nivå (AEM sidor, resurser, taggar och så vidare) använder du de metoder som deras respektive hanterare tillhandahåller.
 
 ```java
 resourceResolver.delete(resource);

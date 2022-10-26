@@ -1,27 +1,29 @@
 ---
 seo: Set up public and private keys for use with AEM and Adobe I/O
-description: 'AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I/O och andra webbtjänster. Den här korta självstudiekursen visar hur kompatibla tangenter och nyckelbehållare kan genereras med kommandoradsverktyget openssl som fungerar med både AEM och Adobe I/O. '
+description: AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I/O och andra webbtjänster. Den här korta självstudiekursen visar hur kompatibla tangenter och nyckelbehållare kan genereras med kommandoradsverktyget openssl som fungerar med både AEM och Adobe I/O.
 version: 6.4, 6.5
-feature: Användare och grupper
+feature: User and Groups
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 62ed9dcc-6b8a-48ff-8efe-57dabdf4aa66
+last-substantial-update: 2022-07-17T00:00:00Z
+thumbnail: KT-2450.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera offentliga och privata nycklar för användning med Adobe I/O
 
-AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I/O och andra webbtjänster. Den här korta självstudiekursen visar hur kompatibla tangenter och nyckelbehållare kan genereras med kommandoradsverktyget [!DNL openssl] som fungerar med både AEM och Adobe I/O.
+AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I/O och andra webbtjänster. Den här korta självstudiekursen visar hur kompatibla nycklar och nyckelbehållare kan genereras med [!DNL openssl] kommandoradsverktyg som fungerar med både AEM och Adobe I/O.
 
 >[!CAUTION]
 >
@@ -29,13 +31,13 @@ AEM använder publika/privata nyckelpar för att kommunicera säkert med Adobe I
 
 ## Generera nyckelparet offentlig/privat {#generate-the-public-private-key-pair}
 
-Kommandoradsverktyget [[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html) [[!DNL req] command](https://www.openssl.org/docs/man1.0.2/man1/req.html) kan användas för att generera ett nyckelpar som är kompatibelt med Adobe I/O och Adobe Experience Manager.
+The [[!DNL openssl]](https://www.openssl.org/docs/man1.0.2/man1/openssl.html) kommandoradsverktygets [[!DNL req] kommando](https://www.openssl.org/docs/man1.0.2/man1/req.html) kan användas för att generera nyckelpar som är kompatibla med Adobe I/O och Adobe Experience Manager.
 
 ```shell
 $ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate.crt
 ```
 
-Om du vill slutföra kommandot [!DNL openssl generate] anger du certifikatinformationen när du begär det. Adobe I/O och AEM bryr sig inte om vilka dessa värden är, men de bör anpassas efter och beskriva din nyckel.
+Slutför [!DNL openssl generate] anger du certifikatinformationen när det efterfrågas. Adobe I/O och AEM bryr sig inte om vilka dessa värden är, men de bör anpassas efter och beskriva din nyckel.
 
 ```
 Generating a 2048 bit RSA private key
@@ -61,7 +63,7 @@ Email Address []:me@example.com
 
 ## Lägg till nyckelpar i en ny nyckelbehållare {#add-key-pair-to-a-new-keystore}
 
-Nyckelpar kan läggas till i en ny [!DNL PKCS12]-nyckelbehållare. Som en del av [[!DNL openssl]'s [!DNL pcks12] kommandot](https://www.openssl.org/docs/man1.0.2/man1/pkcs12.html) definieras namnet på nyckelbehållaren (via `-  caname`), namnet på nyckeln (via `-name`) och nyckelbehållarens lösenord (via `-  passout`).
+Nyckelpar kan läggas till i ett nytt [!DNL PKCS12] nyckelbehållare. Som en del av [[!DNL openssl]'s [!DNL pcks12] kommando,](https://www.openssl.org/docs/man1.0.2/man1/pkcs12.html) namnet på nyckelbehållaren (via `-  caname`), namnet på nyckeln (via `-name`) och nyckelbehållarens lösenord (via `-  passout`) är definierade.
 
 Dessa värden krävs för att läsa in nyckelbehållaren och nycklarna i AEM.
 
@@ -69,15 +71,15 @@ Dessa värden krävs för att läsa in nyckelbehållaren och nycklarna i AEM.
 $ openssl pkcs12 -export -caname my-keystore -in certificate.crt -name my-key -inkey private.key -out keystore.p12 -passout pass:my-password
 ```
 
-Kommandots utdata är en `keystore.p12`-fil.
+Kommandots utdata är en `keystore.p12` -fil.
 
 >[!NOTE]
 >
->Parametervärdena **[!DNL my-keystore]**, **[!DNL my-key]** och **[!DNL my-password]** ska ersättas med dina egna värden.
+>Parametervärdena för **[!DNL my-keystore]**, **[!DNL my-key]** och **[!DNL my-password]** ersätts med dina egna värden.
 
 ## Verifiera innehållet i nyckelbehållaren {#verify-the-keystore-contents}
 
-Kommandoradsverktyget [[!DNL keytool] från Java ](https://docs.oracle.com/middleware/1213/wls/SECMG/keytool-summary-appx.htm#SECMG818) ger synlighet i en nyckelbehållare för att säkerställa att nycklarna läses in korrekt i nyckelbehållarfilen ([!DNL keystore.p12]).
+Java™ [[!DNL keytool] kommandoradsverktyg](https://docs.oracle.com/middleware/1213/wls/SECMG/keytool-summary-appx.htm#SECMG818) ger synlighet i en nyckelbehållare för att säkerställa att nycklarna har lästs in i nyckelfilen ([!DNL keystore.p12]).
 
 ```shell
 $ keytool -keystore keystore.p12 -list
@@ -97,29 +99,29 @@ Certificate fingerprint (SHA1): 7C:6C:25:BD:52:D3:3B:29:83:FD:A2:93:A8:53:91:6A:
 
 ## Lägga till nyckelbehållaren i AEM {#adding-the-keystore-to-aem}
 
-AEM använder den genererade **privata nyckeln** för att kommunicera säkert med Adobe I/O och andra webbtjänster. För att den privata nyckeln ska vara tillgänglig för AEM måste den installeras i en AEM nyckelbehållare.
+AEM använder den genererade **privat nyckel** för säker kommunikation med Adobe I/O och andra webbtjänster. För att den privata nyckeln ska vara tillgänglig för AEM måste den installeras i en AEM nyckelbehållare.
 
-Navigera till **AEM > [!UICONTROL Tools] > [!UICONTROL Security] >[!UICONTROL Users]** och **redigera användaren** som den privata nyckeln ska kopplas till.
+Navigera till **AEM > [!UICONTROL Tools] > [!UICONTROL Security] >[!UICONTROL Users]** och **redigera användaren** den privata nyckeln ska kopplas till.
 
 ### Skapa en AEM nyckelbehållare {#create-an-aem-keystore}
 
-![Create KeyStore in ](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--create-keystore.png)
-*AEMAEM >  [!UICONTROL Tools] >  [!UICONTROL Security] >  [!UICONTROL Users] > Edit user*
+![Skapa KeyStore i AEM](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--create-keystore.png)
+*AEM > [!UICONTROL Tools] > [!UICONTROL Security] > [!UICONTROL Users] > Redigera användare*
 
-Om du uppmanas att skapa en nyckelbehållare gör du det. Den här nyckelbehållaren finns bara i AEM och är INTE den nyckelbehållare som skapas via openssl. Lösenordet kan vara vad som helst och behöver inte vara samma som lösenordet som används i kommandot [!DNL openssl].
+Gör det när du uppmanas att skapa en nyckelbehållare. Den här nyckelbehållaren finns bara i AEM och är INTE den nyckelbehållare som skapas via openssl. Lösenordet kan vara vad som helst och behöver inte vara samma som lösenordet som används i [!DNL openssl] -kommando.
 
 ### Installera den privata nyckeln via nyckelbehållaren {#install-the-private-key-via-the-keystore}
 
 ![Lägg till privat nyckel i AEM](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--add-private-key.png)
-*[!UICONTROL User]>  [!UICONTROL Keystore] >[!UICONTROL Add private key from keystore]*
+*[!UICONTROL User]> [!UICONTROL Keystore] >[!UICONTROL Add private key from keystore]*
 
-Klicka på **[!UICONTROL Add Private Key form KeyStore file]** i användarens nyckelbehållare och lägg till följande information:
+Klicka på **[!UICONTROL Add Private Key form KeyStore file]** och lägga till följande information:
 
 * **[!UICONTROL New Alias]**: nyckelns alias i AEM. Detta kan vara vad som helst och behöver inte motsvara namnet på nyckelbehållaren som skapades med kommandot openssl.
 * **[!UICONTROL KeyStore File]**: utdata för kommandot openssl pkcs12 (keystore.p12)
-* **[!UICONTROL KeyStore File Password]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-passout` argument.
-* **[!UICONTROL Private Key Alias]**: Värdet som anges för  `-name` argumentet i openssl pkcs12-kommandot ovan (dvs.  `my-key`).
-* **[!UICONTROL Private Key Password]**: Lösenordet som anges i openssl pkcs12-kommandot via  `-passout` argument.
+* **[!UICONTROL KeyStore File Password]**: Lösenordet som anges i openssl pkcs12-kommandot via `-passout` argument.
+* **[!UICONTROL Private Key Alias]**: Värdet som anges för `-name` argument i openssl pkcs12-kommandot ovan (dvs. `my-key`).
+* **[!UICONTROL Private Key Password]**: Lösenordet som anges i openssl pkcs12-kommandot via `-passout` argument.
 
 >[!CAUTION]
 >
@@ -127,7 +129,7 @@ Klicka på **[!UICONTROL Add Private Key form KeyStore file]** i användarens ny
 
 ### Kontrollera att den privata nyckeln har lästs in i AEM nyckelbehållare {#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
-![Verifiera privat nyckel i AEM](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
+![Bekräfta privat nyckel i AEM](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
 *[!UICONTROL User]>[!UICONTROL Keystore]*
 
 När den privata nyckeln har lästs in från den angivna nyckelbehållaren till AEM nyckelbehållare visas den privata nyckelns metadata i användarens nyckelbehållarkonsol.
@@ -136,18 +138,18 @@ När den privata nyckeln har lästs in från den angivna nyckelbehållaren till 
 
 Den matchande offentliga nyckeln måste överföras till Adobe I/O för att AEM som har den offentliga nyckelns motsvarande privata nyckel ska kunna kommunicera säkert.
 
-### Skapa integrering med Adobe I/O {#create-a-adobe-i-o-new-integration}
+### Skapa en ny integrering för Adobe I/O {#create-a-adobe-i-o-new-integration}
 
 ![Skapa integrering med Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
 
-*[[!UICONTROL Create Adobe I/O Integration]](https://console.adobe.io/) >[!UICONTROL New Integration]*
+*[[!UICONTROL Create Adobe I/O Integration]](https://developer.adobe.com/console/) >[!UICONTROL New Integration]*
 
-Om du vill skapa en ny integrering i Adobe I/O måste du överföra ett offentligt certifikat. Överför **certificate.crt** som genererats av kommandot `openssl req`.
+Om du vill skapa en integrering i Adobe I/O måste du överföra ett offentligt certifikat. Överför **certificate.crt** genereras av `openssl req` -kommando.
 
-### Verifiera att de publika nycklarna har lästs in i Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o}
+### Verifiera att de offentliga nycklarna har lästs in i Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o}
 
 ![Verifiera offentliga nycklar i Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
-De installerade offentliga nycklarna och deras förfallodatum visas i konsolen [!UICONTROL Integrations] på Adobe I/O. Du kan lägga till flera offentliga nycklar via knappen **[!UICONTROL Add a public key]**.
+De installerade offentliga nycklarna och deras förfallodatum listas i [!UICONTROL Integrations] konsol på Adobe I/O. Flera publika nycklar kan läggas till via **[!UICONTROL Add a public key]** -knappen.
 
-Nu AEM den privata nyckeln och Adobe I/O-integreringen innehåller motsvarande offentliga nyckel, vilket gör att AEM kan kommunicera säkert med Adobe I/O.
+Nu innehåller AEM den privata nyckeln och integreringen av Adobe I/O innehåller motsvarande offentliga nyckel, vilket gör att AEM kan kommunicera säkert med Adobe I/O.

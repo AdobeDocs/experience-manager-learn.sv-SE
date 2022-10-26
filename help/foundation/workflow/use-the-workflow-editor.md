@@ -7,9 +7,10 @@ topic: Content Management
 level: Intermediate
 role: Admin, Developer
 kt: 657
-thumbnail: 22201.jpg
 exl-id: 8ec12629-3acd-4958-b25c-0ae0b97ce244
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+last-substantial-update: 2022-08-10T00:00:00Z
+thumbnail: KT-657.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%

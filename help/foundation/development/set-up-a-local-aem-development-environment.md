@@ -10,20 +10,22 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2022-07-20T00:00:00Z
+thumbnail: aem-local-dev-env.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
 
 # Konfigurera en lokal AEM utvecklingsmiljö
 
-Guide to setting up a local development for Adobe Experience Manager, AEM. Omfattar viktiga ämnen som rör lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning/felsökning. Utveckling med **[!DNL Eclipse IDE], [!DNL CRXDE Lite], [!DNL Visual Studio Code] och[!DNL IntelliJ]** diskuteras.
+Guide to setting up a local development for Adobe Experience Manager, AEM. Omfattar viktiga ämnen som rör lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning/felsökning. Utveckling med **Eclipse IDE, CRXDE Lite, Visual Studio Code och IntelliJ** diskuteras.
 
 ## Översikt
 
-Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen för Adobe Experience Manager eller AEM. Ta dig tid att konfigurera en kvalitetsutvecklingsmiljö för att öka produktiviteten och skriva bättre kod snabbare. Vi kan bryta en AEM lokal utvecklingsmiljö i fyra områden:
+Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen för Adobe Experience Manager eller AEM. Ta dig tid att konfigurera en kvalitetsutvecklingsmiljö för att öka produktiviteten och skriva bättre kod snabbare. Vi kan bryta ned en AEM lokal utvecklingsmiljö i fyra områden:
 
 * Lokala AEM
 * [!DNL Apache Maven] projekt
@@ -34,16 +36,16 @@ Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen fö
 
 När vi syftar på en lokal AEM talar vi om en kopia av Adobe Experience Manager som körs på en utvecklares personliga maskin. ***Alla*** AEM ska börja med att skriva och köra kod mot en lokal AEM.
 
-Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Upphovsman*** och ***Publicera***. The ***Upphovsman*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  är den miljö som digitala marknadsförare kommer att använda för att skapa och hantera innehåll. Vid utveckling **mest** den tid du distribuerar kod till en Author-instans. På så sätt kan du skapa nya sidor samt lägga till och konfigurera komponenter. AEM Sites är ett CMS för WYSIWYG-redigering och därför kan merparten av CSS och JavaScript testas mot en -redigeringsinstans.
+Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Upphovsman*** och ***Publicera***. The ***Upphovsman*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)  är den miljö som digitala marknadsförare använder för att skapa och hantera innehåll. När du oftast utvecklar kod distribuerar du kod till en Author-instans. På så sätt kan du skapa sidor och lägga till och konfigurera komponenter. AEM Sites är ett CMS för WYSIWYG-redigering och därför kan merparten av CSS och JavaScript testas mot en -redigeringsinstans.
 
-Det är också *kritisk* testa kod mot en lokal ***Publicera*** -instans. The ***Publicera*** -instans är den AEM miljö som besökare på din webbplats kommer att interagera med. Med ***Publicera*** -instansen är samma teknologi som ***Upphovsman*** Det finns till exempel några viktiga skillnader när det gäller konfigurationer och behörigheter. Kod bör *alltid* testas mot en lokal ***Publicera*** innan den befordras till miljöer på högre nivå.
+Det är också *kritisk* testa kod mot en lokal ***Publicera*** -instans. The ***Publicera*** -instans är den AEM miljö som besökare på webbplatsen interagerar med. Med ***Publicera*** -instansen är samma teknologi som ***Upphovsman*** Det finns till exempel några viktiga skillnader när det gäller konfigurationer och behörigheter. Koden måste testas mot en lokal ***Publicera*** innan den befordras till miljöer på högre nivå.
 
 ### Steg
 
-1. Säkerställ [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) är installerat.
-   * Föredra [Java JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=14) för AEM 6.5+
-   * [Java JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html#JDK8) för AEM versioner före AEM 6.5
-2. Få en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware).
+1. Kontrollera att Java™ är installerat.
+   * Föredra [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=14) för AEM 6.5+
+   * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) för AEM versioner före AEM 6.5
+2. Få en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
 3. Skapa en mappstruktur på datorn enligt följande:
 
    ```plain
@@ -65,21 +67,21 @@ Det är också *kritisk* testa kod mot en lokal ***Publicera*** -instans. The **
            + license.properties
    ```
 
-6. Dubbelklicka på ***aem-author-p4502.jar*** filen som ska installeras **Upphovsman** -instans. Detta startar författarinstansen, körs på port **4502** på den lokala datorn.
+6. Dubbelklicka på ***aem-author-p4502.jar*** filen som ska installeras **Upphovsman** -instans. Detta startar författarinstansen, som körs på port **4502** på den lokala datorn.
 
    Dubbelklicka på ***aem-publish-p4503.jar*** filen som ska installeras **Publicera** -instans. Detta startar Publish-instansen, som körs på port **4503** på den lokala datorn.
 
    >[!NOTE]
    >
-   >Beroende på utvecklingsmaskinvaran kan det vara svårt att ha både en **Skapa och publicera** -instans som körs samtidigt. I sällsynta fall behöver du köra båda samtidigt på en lokal installation.
+   >Beroende på vilken maskinvara som används i utvecklingsdatorn kan det vara svårt att ha både en **Skapa och publicera** -instans som körs samtidigt. I sällsynta fall behöver du köra båda samtidigt på en lokal installation.
 
-   Mer information finns i [Distribuera och underhålla en AEM instans](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html).
+   Mer information finns i [Distribuera och underhålla en AEM instans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
 
 ## Installera Apache Maven
 
 ***[!DNL Apache Maven]*** är ett verktyg för att hantera bygg- och distributionsproceduren för Java-baserade projekt. AEM är en Java-baserad plattform och [!DNL Maven] är standardsättet att hantera kod för ett AEM projekt. När vi säger ***AEM Maven Project*** eller bara ***AEM***, menar vi ett Maven-projekt som innehåller alla *anpassad* kod för din webbplats.
 
-Alla AEM ska bygga på den senaste versionen av **[!DNL AEM Project Archetype]**: [https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype). The [!DNL AEM Project Archetype] kommer att skapa en startsversion av ett AEM med exempelkod och innehåll. The [!DNL AEM Project Archetype] innehåller **[!DNL AEM WCM Core Components]** konfigurerad att användas i ditt projekt.
+Alla AEM ska byggas av den senaste versionen av **[!DNL AEM Project Archetype]**: [https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype). The [!DNL AEM Project Archetype] innehåller en startfas för ett AEM med exempelkod och innehåll. The [!DNL AEM Project Archetype] innehåller **[!DNL AEM WCM Core Components]** konfigurerad att användas i ditt projekt.
 
 >[!CAUTION]
 >
@@ -103,11 +105,11 @@ Alla AEM ska bygga på den senaste versionen av **[!DNL AEM Project Archetype]**
 
    >[!NOTE]
    >
-   > Tidigare lades `adobe-public` Maven-profilen behövdes för att peka `nexus.adobe.com` för att hämta AEM. Alla AEM artefakter är nu tillgängliga via Maven Central och `adobe-public` ingen profil behövs.
+   > Tidigare tillägg av `adobe-public` Maven-profilen behövdes för att peka `nexus.adobe.com` för att hämta AEM. Alla AEM artefakter är nu tillgängliga via Maven Central och `adobe-public` ingen profil behövs.
 
 ## Konfigurera en integrerad utvecklingsmiljö
 
-En integrerad utvecklingsmiljö eller IDE är ett program som kombinerar en textredigerare, syntaxstöd och byggverktyg. Beroende på vilken typ av utveckling du håller på med kan en utvecklingsmiljö vara att föredra framför en annan. Oavsett utvecklingsmiljö är det viktigt att du regelbundet kan ***push*** koda till en lokal AEM för att testa den. Det kommer också att vara viktigt att ***pull*** konfigurationer från en lokal AEM till ditt AEM projekt för att fortsätta till ett källkontrollshanteringssystem som Git.
+En integrerad utvecklingsmiljö eller IDE är ett program som kombinerar en textredigerare, syntaxstöd och byggverktyg. Beroende på vilken typ av utveckling du håller på med kan en utvecklingsmiljö vara att föredra framför en annan. Oavsett utvecklingsmiljö är det viktigt att du regelbundet kan ***push*** koda till en lokal AEM för att testa den. Det är viktigt att ***pull*** konfigurationer från en lokal AEM till ditt AEM projekt för att fortsätta till ett källkontrollshanteringssystem som Git.
 
 Nedan visas några av de populäraste IDE:erna som används för AEM med motsvarande videofilmer som visar integrationen med en lokal AEM.
 
@@ -119,7 +121,7 @@ Nedan visas några av de populäraste IDE:erna som används för AEM med motsvar
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-När du använder en integrerad utvecklingsmiljö ska du kontrollera `classic` på fliken Maven Profile.
+När ska du använda en IDE-indikator ska du kontrollera `classic` på fliken Maven Profile.
 
 ![Maven Profile Tab](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
 
@@ -127,11 +129,11 @@ När du använder en integrerad utvecklingsmiljö ska du kontrollera `classic` p
 
 ### [!DNL Eclipse] IDE
 
-The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de mer populära IDE:erna för Java-utveckling, till stor del eftersom den har öppen källkod och ***kostnadsfritt***! Adobe har ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM. The [!DNL Eclipse] IDE rekommenderas för utvecklare som inte AEM alls på grund av det grafiska användargränssnittet hos [!DNL AEM Developer Tools].
+The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de vanligaste utvecklingsmiljöerna för Java™-utveckling, till stor del eftersom den har öppen källkod och ***kostnadsfritt***! Adobe har ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM. The [!DNL Eclipse] IDE rekommenderas för utvecklare som inte AEM alls på grund av det grafiska användargränssnittet hos [!DNL AEM Developer Tools].
 
 #### Installation och installation
 
-1. Hämta och installera [!DNL Eclipse] IDE for [!DNL Java EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
+1. Hämta och installera [!DNL Eclipse] IDE for [!DNL Java™™™™™™™™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
 1. Följ instruktionerna för att installera [!DNL AEM Developer Tools] plugin-program: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
@@ -144,7 +146,7 @@ The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de mer popu
 
 ### IntelliJ IDEA
 
-The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE för professionell Java-utveckling. [!DNL IntelliJ IDEA] finns i två smaker, ***kostnadsfritt*** [!DNL Community] och en kommersiell (betald) utgåva [!DNL Ultimate] version. Kostnadsfria [!DNL Community] version av [!DNL IntellIJ IDEA] är tillräckligt för en mer AEM utveckling, men [!DNL Ultimate] [utökar sin funktionsuppsättning](https://www.jetbrains.com/idea/download).
+The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE för professionell Java™-utveckling. [!DNL IntelliJ IDEA] finns i två smaker, ***kostnadsfritt*** [!DNL Community] och en kommersiell (betald) utgåva [!DNL Ultimate] version. Kostnadsfria [!DNL Community] version av [!DNL IntellIJ IDEA] är tillräckligt för en mer AEM utveckling, men [!DNL Ultimate] [utökar sin funktionsuppsättning](https://www.jetbrains.com/idea/download).
 
 #### [!DNL Installation and Setup]
 
@@ -163,7 +165,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 
 **[Visual Studio Code](https://code.visualstudio.com/)** har snabbt blivit ett favoritverktyg för ***gränssnittsutvecklare*** med förbättrat JavaScript-stöd, [!DNL Intellisense]och stöd för webbläsarfelsökning. **[!DNL Visual Studio Code]** har kostnadsfri öppen källkod med många kraftfulla tillägg. [!DNL Visual Studio Code] kan konfigureras för att integreras med AEM med hjälp av ett Adobe-verktyg, **[repa](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code).** Det finns också flera tillägg som stöds av communityn som kan installeras för att integreras med AEM.
 
-[!DNL Visual Studio Code] är ett bra val för gränssnittsutvecklare som primärt skriver CSS/LESS- och JavaScript-kod för att skapa AEM klientbibliotek. Det här verktyget kanske inte är det bästa alternativet för nya AEM eftersom noddefinitioner (dialogrutor, komponenter) måste redigeras i rå XML. Det finns flera Java-tillägg tillgängliga för [!DNL Visual Studio Code]men om det främst handlar om Java-utveckling [!DNL Eclipse IDE] eller [!DNL IntelliJ] är att föredra.
+[!DNL Visual Studio Code] är ett bra val för gränssnittsutvecklare som primärt skriver CSS/LESS och JavaScript-kod för att skapa AEM klientbibliotek. Det här verktyget kanske inte är det bästa alternativet för nya AEM eftersom noddefinitioner (dialogrutor, komponenter) måste redigeras i rå XML. Det finns flera Java™-tillägg för [!DNL Visual Studio Code]men om det främst handlar om Java™-utveckling [!DNL Eclipse IDE] eller [!DNL IntelliJ] är att föredra.
 
 #### Viktiga länkar
 
@@ -177,21 +179,21 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 * 00:30 - Importera Maven Project
 * 00:53 - Skapa och distribuera källkod med Maven
 * 04:03 - Skjut upp kodändringar med kommandoradsverktyget Repo
-* 08:29 - Dra in kodändringar med Repo-kommandoradsverktyget
+* 08:29 - Dra in kodändringar med kommandoradsverktyget Repo
 * 10:40 - Skjut upp kodändringar med det inmatade verktyget
 * 14:24 - Felsökning, Återskapa klientbibliotek
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/developing-with-crxde-lite.html) är en webbläsarbaserad vy av AEM. [!DNL CRXDE Lite] är inbäddat i AEM och gör det möjligt för utvecklare att utföra standardutvecklingsåtgärder som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***not*** är avsedd att vara en fullständig utvecklingsmiljö, men mycket effektiv som ett felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) är en webbläsarbaserad vy av AEM. [!DNL CRXDE Lite] är inbäddat i AEM och gör det möjligt för utvecklare att utföra standardutvecklingsåtgärder som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***not*** är avsedd att vara en fullständig utvecklingsmiljö, men är effektiv som ett felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
 
-[!DNL CRXDE Lite] ska alltid användas tillsammans med andra utvecklingsmiljöer för att testa och felsöka kod, men aldrig som det primära utvecklingsverktyget. Den har begränsat syntaxstöd, inga funktioner för automatisk komplettering och begränsad integrering med system för källkodshantering.
+[!DNL CRXDE Lite] ska användas tillsammans med andra utvecklingsmiljöer för att testa och felsöka kod, men aldrig som det primära utvecklingsverktyget. Den har begränsat syntaxstöd, inga funktioner för automatisk komplettering och begränsad integrering med system för källkodshantering.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25917?quality=12&learn=on)
 
 ## Felsökning
 
-***Hjälp!*** Min kod fungerar inte! Precis som med all utveckling finns det tillfällen (förmodligen många) där koden helt enkelt inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan följer några viktiga startpunkter när det gäller felsökning och spårning av problem (men långt ifrån en fullständig lista över saker som kan gå fel):
+***Hjälp!*** Min kod fungerar inte! Precis som med all utveckling finns det tillfällen (förmodligen många) där koden inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan visas några viktiga startpunkter när du felsöker och spårar problem (men långt ifrån en fullständig lista över saker som kan gå fel):
 
 ### Verifiera koddistribution
 
@@ -199,13 +201,13 @@ Ett bra första steg när du stöter på ett problem är att kontrollera att kod
 
 1. **Kontrollera[!UICONTROL Package Manager]** för att se till att kodpaketet har överförts och installerats: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Kontrollera tidsstämpeln för att bekräfta att paketet har installerats nyligen.
 1. Om du utför inkrementella filuppdateringar med ett verktyg som [!DNL Repo] eller [!DNL AEM Developer Tools], **check[!DNL CRXDE Lite]** att filen har skickats till den lokala AEM och att filinnehållet har uppdaterats: [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. **Kontrollera att paketet har överförts** om det uppstår problem med Java-kod i ett OSGi-paket. Öppna [!UICONTROL Adobe Experience Manager Web Console]: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) och söka efter ditt paket. Kontrollera att paketet har en **[!UICONTROL Active]** status. Se nedan för mer information om felsökning av ett paket i en **[!UICONTROL Installed]** tillstånd.
+1. **Kontrollera att paketet har överförts** om du ser problem med Java™-kod i ett OSGi-paket. Öppna [!UICONTROL Adobe Experience Manager Web Console]: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) och söka efter ditt paket. Kontrollera att paketet har en **[!UICONTROL Active]** status. Se nedan för mer information om felsökning av ett paket i en **[!UICONTROL Installed]** tillstånd.
 
 #### Kontrollera loggarna
 
-AEM är en chattingplattform och loggar mycket användbar information i **error.log**. The **error.log** finns där AEM har installerats: &lt; `aem-installation-folder>/crx-quickstart/logs/error.log`.
+AEM är en chattplattform och loggar användbar information i **error.log**. The **error.log** finns där AEM har installerats: &lt; `aem-installation-folder>/crx-quickstart/logs/error.log`.
 
-En användbar teknik för att spåra problem är att lägga till loggsatser i Java-koden:
+En användbar teknik för att spåra problem är att lägga till loggsatser i Java™-koden:
 
 ```java
 import org.slf4j.Logger;
@@ -225,7 +227,7 @@ public class MyClass {
 }
 ```
 
-Som standard är **error.log** är konfigurerad för loggning *[!DNL INFO]* -programsatser. Om du vill ändra loggnivån kan du göra det genom att gå till [!UICONTROL Log Support]: [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog). Du kan också se att **error.log** är för kattlig. Du kan använda [!UICONTROL Log Support] för att konfigurera loggsatser för endast ett angivet Java-paket. Detta är en god vana för projekt för att enkelt kunna skilja skräddarsydda kodproblem från OTB-AEM.
+Som standard är **error.log** är konfigurerad för loggning *[!DNL INFO]* -programsatser. Om du vill ändra loggnivån kan du göra det genom att gå till [!UICONTROL Log Support]: [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog). Du kan också se att **error.log** är för kattlig. Du kan använda [!UICONTROL Log Support] för att konfigurera loggsatser för ett specifikt Java™-paket. Detta är en god vana för projekt för att enkelt kunna skilja skräddarsydda kodproblem från OTB-AEM.
 
 ![Loggningskonfiguration i AEM](./assets/set-up-a-local-aem-development-environment/logging.png)
 
@@ -235,9 +237,9 @@ Alla paket (utom fragment) ska finnas i **[!UICONTROL Active]** tillstånd. Om d
 
 ![Paketfel i AEM](assets/set-up-a-local-aem-development-environment/bundle-error.png)
 
-Skärmbilden ovan visar [!DNL WKND Core bundle] är en [!UICONTROL Installed] tillstånd. Detta beror på att paketet förväntas ha en annan version av `com.adobe.cq.wcm.core.components.models` än är tillgängligt på AEM.
+På skärmbilden ovan visas [!DNL WKND Core bundle] är en [!UICONTROL Installed] tillstånd. Detta beror på att paketet förväntas ha en annan version av `com.adobe.cq.wcm.core.components.models` än är tillgängligt på AEM.
 
-Ett användbart verktyg som du kan använda är [!UICONTROL Dependency Finder]: [http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder). Lägg till Java-paketnamnet för att kontrollera vilken version som är tillgänglig på AEM:
+Ett användbart verktyg som du kan använda är [!UICONTROL Dependency Finder]: [http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder). Lägg till Java™-paketnamnet för att kontrollera vilken version som är tillgänglig på AEM:
 
 ![Kärnkomponenter](assets/set-up-a-local-aem-development-environment/core-components.png)
 
@@ -245,7 +247,7 @@ Vi kan fortsätta med exemplet ovan och se att den version som är installerad p
 
 #### Verifiera registrering av försäljningsmodeller {#osgi-component-sling-models}
 
-AEM ska alltid backas upp av en [!DNL Sling Model] för att kapsla in affärslogik och se till att HTML-återgivningsskriptet förblir rent. Om du får problem där Sling Model inte kan hittas kan det vara praktiskt att kontrollera [!DNL Sling Models] från konsolen: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). Detta anger om din Sling-modell har registrerats och vilken resurstyp (komponentsökvägen) den är kopplad till.
+AEM måste backas upp av en [!DNL Sling Model] för att kapsla in affärslogik och se till att HTML-återgivningsskriptet förblir rent. Om du får problem där Sling Model inte kan hittas kan det vara praktiskt att kontrollera [!DNL Sling Models] från konsolen: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). Detta anger om din Sling-modell har registrerats och vilken resurstyp (komponentsökvägen) den är kopplad till.
 
 ![Status för försäljningsmodell](assets/set-up-a-local-aem-development-environment/sling-model-status.png)
 
@@ -253,25 +255,25 @@ Visar registrering av en [!DNL Sling Model], `BylineImpl` som är knuten till en
 
 #### CSS- eller JavaScript-problem
 
-För de flesta CSS- och JavaScript-problem är det mest effektiva sättet att felsöka webbläsarens utvecklingsverktyg. Om du vill begränsa problemet när du utvecklar mot en AEM författarinstans kan det vara bra att visa sidan&quot;som publicerad&quot;.
+För de flesta CSS- och JavaScript-problem är det mest effektiva sättet att felsöka webbläsarens utvecklingsverktyg. Om du vill begränsa problemet när du utvecklar mot en AEM författarinstans kan det vara bra att visa sidan&quot;Publicerad&quot;.
 
 ![CSS- eller JS-problem](assets/set-up-a-local-aem-development-environment/css-and-js-issues.png)
 
-Öppna [!UICONTROL Page Properties] meny och klicka [!UICONTROL View as Published]. Sidan öppnas utan AEM och en frågeparameter ställs in på **wcmmode=disabled**. Detta inaktiverar effektivt gränssnittet för AEM och gör det enklare att felsöka/felsöka frontend-problem.
+Öppna [!UICONTROL Page Properties] meny och klicka [!UICONTROL View as Published]. Då öppnas sidan utan AEM Editor och med en frågeparameter inställd på **wcmmode=disabled**. Detta inaktiverar effektivt gränssnittet för AEM och gör det mycket enklare att felsöka/felsöka frontend-problem.
 
 Ett annat vanligt fel uppstod när front end-kod utvecklades. CSS/JS läses in. Som ett första steg måste du kontrollera att webbläsarhistoriken har rensats och vid behov starta en webbläsare som inte känner av eller en ny session.
 
 #### Felsöka klientbibliotek
 
-Med olika metoder för kategorier och inbäddning för att inkludera flera klientbibliotek kan det vara besvärligt att felsöka. AEM visar flera verktyg som kan hjälpa dig med detta. Ett av de viktigaste verktygen är [!UICONTROL Rebuild Client Libraries] som tvingar AEM att kompilera om LESS-filer och generera CSS.
+Med de olika metoderna för kategorier och inbäddning för att inkludera flera klientbibliotek kan det vara besvärligt att felsöka. AEM visar flera verktyg som kan hjälpa dig med detta. Ett av de viktigaste verktygen är [!UICONTROL Rebuild Client Libraries] som tvingar AEM att kompilera om LESS-filer och generera CSS.
 
-* [Dumpa läppar](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - Visar en lista över alla klientbibliotek som är registrerade i AEM. &lt;host>/libs/granite/ui/content/dumplibs.html
+* [Dumpa läppar](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - Visar alla klientbibliotek som är registrerade i AEM. &lt;host>/libs/granite/ui/content/dumplibs.html
 * [Testutdata](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - gör att en användare kan se förväntade utdata från HTML för clientlib includes baserat på kategori. &lt;host>/libs/granite/ui/content/dumplibs.test.html
 * [Validering av biblioteksberoenden](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) - markerar eventuella beroenden eller inbäddade kategorier som inte kan hittas. &lt;host>/libs/granite/ui/content/dumplibs.validate.html
-* [Återskapa klientbibliotek](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - gör att en användare kan tvinga AEM att återskapa alla klientbibliotek eller göra cachen i klientbiblioteken ogiltig. Det här verktyget är särskilt effektivt när du utvecklar med LESS eftersom det kan tvinga AEM att kompilera om den genererade CSS-koden. I allmänhet är det effektivare att validera cacheminnen och sedan utföra en siduppdatering jämfört med att återskapa alla bibliotek. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
+* [Återskapa klientbibliotek](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - gör att en användare kan tvinga AEM att återskapa alla klientbibliotek eller göra cachen i klientbiblioteken ogiltig. Det här verktyget är effektivt när du utvecklar med LESS eftersom det kan tvinga AEM att kompilera om den genererade CSS-koden. I allmänhet är det effektivare att validera cacheminnen och sedan utföra en siduppdatering jämfört med att återskapa alla bibliotek. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
 
 ![Felsöka Clientlibs](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
 
 >[!NOTE]
 >
->Om du hela tiden måste göra cachen ogiltig med [!UICONTROL Rebuild Client Libraries] kan det vara värt att göra en enda gång för att återskapa alla klientbibliotek. Detta kan ta ca 15 minuter, men eliminerar vanligtvis eventuella problem med cachelagring i framtiden.
+>Om du hela tiden måste göra cachen ogiltig med [!UICONTROL Rebuild Client Libraries] kan det vara värt att göra om alla klientbibliotek en gång. Detta kan ta ca 15 minuter, men eliminerar vanligtvis eventuella problem med cachelagring i framtiden.
