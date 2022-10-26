@@ -9,7 +9,8 @@ role: Developer
 level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+last-substantial-update: 2022-10-03T00:00:00Z
+source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%

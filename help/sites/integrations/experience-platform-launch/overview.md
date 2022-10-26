@@ -11,8 +11,9 @@ thumbnail: 39090.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
+last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%

@@ -8,7 +8,8 @@ role: Developer, Architect
 level: Intermediate
 kt: 10794
 thumbnail: kt-10794.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+last-substantial-update: 2022-08-26T00:00:00Z
+source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
