@@ -6,9 +6,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
-source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
+source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Den här videon är en översikt över GraphQL API som implementeras i AEM. Grap
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
->title="Kom igång med AEM headless"
+>title="Komma igång med AEM Headless - GraphQL"
 >abstract="Lär dig hur du levererar innehållsfragment med GraphQL."
 >additional-url="https://video.tv.adobe.com/v/328618" text="Översikt över GraphQL i AEM"
 
