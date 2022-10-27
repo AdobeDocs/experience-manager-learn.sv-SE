@@ -6,7 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 7238a211663edcf36e8812826ece3242502329b9
+last-substantial-update: 2022-09-07T00:00:00Z
+thumbnail: ecma-fragments.jpg
+source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%

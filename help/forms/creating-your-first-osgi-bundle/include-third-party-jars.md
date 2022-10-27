@@ -6,10 +6,12 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: kt-11245
-source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
+kt: 11245
+last-substantial-update: 2022-10-15T00:00:00Z
+thumbnail: third-party.jpg
+source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -30,7 +32,7 @@ I den här artikeln går vi igenom de steg som ingår i att ta med OSGi-paket fr
 </dependency>
 ```
 
-Om ditt OSGi-paket finns i ditt filsystem ser beroendet ut ungefär så här
+Om ditt OSGi-paket finns i filsystemet skapar du en mapp med namnet **localjar** under projektets baskatalog (C:\aemformsbundles\AEMFormsProcessStep\localjar) ser beroendet ut ungefär så här
 
 ```java
 <dependency>

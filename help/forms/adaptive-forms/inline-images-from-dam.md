@@ -8,8 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2022-10-20T00:00:00Z
+thumbnail: inline-dam.jpg
 kt: kt-11307
-source-git-commit: 853c4fedd4b8db594aa0b53fd2d27d996811f14e
+source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%

@@ -6,10 +6,12 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: kt-11199
-source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
+kt: 11199
+last-substantial-update: 2022-10-02T00:00:00Z
+thumbnail: string-variable.jpg
+source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
