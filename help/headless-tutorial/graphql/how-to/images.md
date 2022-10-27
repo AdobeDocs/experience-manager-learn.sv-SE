@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
+source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
@@ -116,24 +116,24 @@ AEM Assets-administratörer definierar anpassade återgivningar med Bearbeta pro
 
 #### Bearbetar profiler
 
-Specifikationer för resursåtergivningar definieras i [Bearbetar profiler](../../../assets/configuring//processing-profiles.md) av AEM Assets administratörer.
+Specifikationer för resursåtergivningar definieras i [Bearbetar profiler](../../../assets/configuring/processing-profiles.md) av AEM Assets administratörer.
 
 Skapa eller uppdatera en Bearbetningsprofil och lägg till återgivningsdefinitioner för de bildstorlekar som krävs för det headless-programmet. Återgivningar kan namnges vad som helst, men bör namnges semantiskt.
 
-![AEM Headless-optimerade renderingar](./assets/images/processing-profiles.jpg)
+![AEM Headless-optimerade renderingar](./assets/images/processing-profiles.png)
 
 I det här exemplet skapas tre renderingar:
 
 | Återgivningsnamn | Tillägg | Maximal bredd |
-|----------------|:---------:|----------:|
-| stor | jpeg | 1 200 px |
-| medium | jpeg | 900 px |
-| liten | jpeg | 600 px |
+|-----------------------|:---------:|----------:|
+| webboptimerad-stor | webp | 1 200 px |
+| webboptimerad-medel | webp | 900 px |
+| webboptimerad-liten | webp | 600 px |
 
 Attributen som anropas i tabellen ovan är viktiga:
 
 + __Återgivningsnamn__ används för att begära återgivningen.
-+ __Tillägg__ är tillägget som används för att begära __renderingsnamn__.
++ __Tillägg__ är tillägget som används för att begära __renderingsnamn__. Föredra `webp` renderingar eftersom dessa är optimerade för webben.
 + __Maximal bredd__ används för att informera utvecklaren om vilken återgivning som ska användas baserat på dess användning i den headless-applikationen.
 
 Återgivningsdefinitioner beror på ditt headless-programs behov, så se till att definiera den optimala återgivningsuppsättningen för ditt användningsfall och att de får semantiska namn med avseende på hur de används.
@@ -152,7 +152,7 @@ När Bearbetningsprofilen har skapats (eller uppdaterats) bearbetar du om materi
 
 Återgivningar kan valideras av [öppna en återgivningsvy för en resurs](../../../assets/authoring/renditions.md)och välja de nya renderingarna för förhandsgranskning i renderingslisten. Om återgivningarna saknas [se till att resurserna bearbetas med bearbetningsprofilen](#reprocess-assets).
 
-![Granska återgivningar](./assets/images/review-renditions.jpg)
+![Granska återgivningar](./assets/images/review-renditions.png)
 
 #### Publicera resurser
 
@@ -164,9 +164,9 @@ Kontrollera att resurserna med de nya återgivningarna är [(re)publicerad](../.
 
 | Resurs-URL | Delbana för återgivningar | Återgivningsnamn | Återgivningstillägg |  | Återgivnings-URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | stor | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | medium | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | liten | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-stor | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-medel | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-liten | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ AEM GraphQL kräver extra syntax för att begära bildåtergivningar. Istället 
 
 ### Reaktionsexempel
 
-Låt oss skapa ett enkelt React-program som visar tre renderingar, små, medelstora och stora, av en enda bildresurs.
+Låt oss skapa ett enkelt React-program som visar tre renderingar, webboptimerade små, webboptimerade, medelstora och webboptimerade stora, av en enda bildresurs.
 
 ![Exempel på återgivningar av bildresurser](./assets/images/react-example-renditions.jpg)
 
@@ -216,7 +216,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 #### Definiera `App.js`{#app-js}
 
-Detta enkla `App.js` frågar AEM efter en Adventure-bild och visar sedan bildens tre renderingar: liten, medelstor och stor.
+Detta enkla `App.js` frågar AEM efter en Adventure-bild och visar sedan bildens tre renderingar: webboptimerad - liten, webboptimerad - medel och webboptimerad - stor.
 
 Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
 
@@ -242,33 +242,33 @@ function App() {
     <div className="app">
       
       <h2>Small rendition</h2>
-      {/* Render the small rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="small"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-small"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Medium rendition</h2>
-      {/* Render the medium rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="medium"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-medium"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Large rendition</h2>
-      {/* Render the large rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="large"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-large"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
     </div>
