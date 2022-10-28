@@ -1,6 +1,6 @@
 ---
 title: Hantera inskickning av HTML5-formulär
-description: Skapa hanterare för att skicka HTML5-formulär
+description: Skapa HTML5-formulärshanterare
 feature: Mobile Forms
 topics: development
 audience: developer
@@ -9,16 +9,17 @@ activity: implement
 version: 6.4,6.5
 kt: 5269
 thumbnail: kt-5269.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
-
 
 # Hantera inskickning av HTML5-formulär
 
@@ -26,9 +27,9 @@ HTML5-formulär kan skickas till en server som finns i AEM. De data som skickas 
 
 ## Skapa en Skicka-hanterare
 
-Du kan skapa en enkel servett som hanterar inskickandet av HTML5-formulär. De data som skickas kan sedan extraheras med följande kod. Den här [servleten](assets/html5-submit-handler.zip) är tillgänglig som en del av den här självstudiekursen. Installera [servleten](assets/html5-submit-handler.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+Du kan skapa en enkel servett som hanterar HTML5-formuläröverföringen. De data som skickas kan sedan extraheras med följande kod. Detta [servlet](assets/html5-submit-handler.zip) som ingår i den här självstudiekursen. Installera [servlet](assets/html5-submit-handler.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 
-Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [SDK-konfiguration för LiveCycle-klient](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
+Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [SDK-konfiguration för Adobe LiveCycle-klient](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -58,13 +59,13 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 ```
 
 
-## Konfigurera HTML5-formulärets Skicka-URL
+## Konfigurera Skicka-URL:en för formuläret HTML 5
 
 ![submit-url](assets/submit-url.PNG)
 
 * Tryck på xdp och klicka på _Egenskaper_->_Avancerat_
 * kopiera http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html och klistra in detta i textfältet Skicka URL
-* Klicka på _Spara och stäng_.
+* Klicka _SparaOchStäng_ -knappen.
 
 ### Lägg till post i Uteslut banor
 
@@ -83,8 +84,4 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### Ytterligare läsning
 
-Den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) om att generera PDF från HTML5-formulär rekommenderas också.
-
-
-
-
+Detta [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) Vi rekommenderar också att man genererar PDF från HTML5-formulär.

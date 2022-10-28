@@ -1,8 +1,8 @@
 ---
 title: Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad mappmekanism
-seo-title: Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad mappmekanism
+seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: Använd bevakad mapp för att generera dokument för utskriftskanaler
-seo-description: Använd bevakad mapp för att generera dokument för utskriftskanaler
+seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -12,14 +12,14 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
-
 
 # Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad mappmekanism
 
@@ -113,9 +113,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **Följ följande anvisningar för att testa detta på din lokala dator:**
 
-* Konfigurera Tomcat enligt beskrivningen i den här [artikeln.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat har krigsfilen som genererar exempeldata.
-* Konfigurera en tjänst via en systemanvändare enligt beskrivningen i den här [artikeln](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-Kontrollera att den här systemanvändaren har läsbehörighet för följande nod. Om du vill ge behörighet att logga in på [användaradministratör](https://localhost:4502/useradmin) och söka efter systemanvändarens&quot;data&quot; och ge läsbehörighet på följande nod genom att tabba till fliken Behörigheter
+* Konfigurera Tomcat enligt beskrivningen i detta [artikel.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat har krigsfilen som genererar exempeldata.
+* Konfigurera tjänst-a-systemanvändare enligt beskrivningen i detta [artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+Kontrollera att den här systemanvändaren har läsbehörighet för följande nod. Så här ger du behörighet att logga in på [användaradministratör](https://localhost:4502/useradmin) och söka efter systemanvändaren &quot;data&quot; och ge läsbehörighet på följande nod genom att tabba till fliken permissions
    * /content/dam/formSanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -153,4 +153,3 @@ Kontrollera att den här systemanvändaren har läsbehörighet för följande no
 >Om du tänker använda detta i ett operativsystem som inte är ett Windows-operativsystem går du till
 >
 >/etc/fd/watchfolder /config/PrintChannelDocument och ändra folderPath enligt dina önskemål
-

@@ -1,19 +1,20 @@
 ---
 title: Skicka anpassade formulärbilagor
 description: Skicka adaptiva formulärbilagor med skicka-e-postkomponent
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: bd9e1fc1-2fc7-452c-9a4a-2e16f6821760
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 1%
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
-
 
 # Introduktion
 
@@ -24,7 +25,7 @@ Kunderna skulle normalt packa de bifogade filerna eller skicka dem som enskilda 
 
 ## Skicka formulärbilagor i en ZIP-fil
 
-Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfallet. I det här anpassade steget skapas en ZIP-fil med formulärbilagor i och lagras under nyttolastmappen i en fil med namnet *zipped_attachments.zip*
+Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfallet. I det här anpassade steget skapas en ZIP-fil med de bifogade formulären och lagras under nyttolastmappen i en fil med namnet *zipped_attachments.zip*
 
 ![send-form-attachments](assets/send-form-attachments.JPG)
 
@@ -33,6 +34,3 @@ Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfalle
 Ett anpassat arbetsflödesprocesssteg har skrivits för att det här användningsexemplet ska kunna användas. I det här anpassade steget fyller vi i arbetsflödesvariabler av typen ArrayList of Documents and ArrayList of Strings.
 
 ![skicka-lista-för-dokument](assets/send-list-of-documents.JPG)
-
-
-

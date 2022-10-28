@@ -1,22 +1,23 @@
 ---
 title: Använda batch-API för att generera interaktiva kommunikationsdokument
 description: Exempelresurser för generering av tryckta kanalsdokument med batch-API
-feature: Interaktiv kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 2cdf37e6-42ad-469a-a6e4-a693ab2ca908
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # Batch-API
 
@@ -28,8 +29,8 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 
 ## Gruppgenerering med bevakad mapp
 
-* Importera [mallen för interaktiv kommunikation](assets/Beneficiaries-confirmation.zip) till din AEM Forms-server.
-* Importera [konfigurationen för bevakad mapp](assets/batch-generation-api.zip). Detta skapar en mapp med namnet `batchAPI` i C-enheten.
+* Importera [Mall för interaktiv kommunikation](assets/Beneficiaries-confirmation.zip) till din AEM Forms-server.
+* Importera [konfiguration av bevakad mapp](assets/batch-generation-api.zip). Detta skapar en mapp med namnet `batchAPI` i C-enheten.
 
 **Om du kör AEM Forms på ett operativsystem som inte är ett Windows-operativsystem, följ de tre stegen nedan:**
 
@@ -39,14 +40,14 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 
 ![path](assets/watched-folder-batch-api-basic.PNG)
 
-* Hämta och extrahera innehållet i [zip-filen](assets/jsonfile.zip). ZIP-filen innehåller mappen `jsonfile` som innehåller filen `beneficiaries.json`. Den här filen innehåller data för att generera 3 dokument.
+* Hämta och extrahera innehållet i [zip-fil](assets/jsonfile.zip). ZIP-filen innehåller en mapp med namnet `jsonfile` som innehåller `beneficiaries.json` -fil. Den här filen innehåller data för att generera 3 dokument.
 
-* Släpp mappen `jsonfile` i indatamappen för den bevakade mappen.
-* När mappen har tagits upp för bearbetning kontrollerar du resultatmappen för den bevakade mappen. Tre PDF-filer bör genereras
+* Släpp `jsonfile` till indatamappen för den bevakade mappen.
+* När mappen har tagits upp för bearbetning kontrollerar du resultatmappen för den bevakade mappen. Du bör se 3 genererade PDF-filer
 
 ## Batchgenerering med REST-begäranden
 
-Du kan anropa [batch-API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) via REST-begäranden. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
+Du kan anropa [Batch-API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) via REST-begäran. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
 De exempelresurser som tillhandahålls visar REST-slutpunkten för generering av interaktiva kommunikationsdokument. Servern accepterar följande parametrar:
 
 * fileName - Sökväg till datafilen i filsystemet.
@@ -60,8 +61,8 @@ På följande skärmbild visas parametrarna och deras värden
 
 ## Distribuera exempelresurser på servern
 
-* Importera [ICT-mall](assets/ICTemplate.zip) med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera [anpassad överföringshanterare](assets/BatchAPICustomSubmit.zip) med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera [adaptiv form](assets/BatchGenerationAPIAF.zip) med [Forms- och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Distribuera och starta [Anpassat OSGI-paket](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+* Importera [ICTemplate](assets/ICTemplate.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera [Anpassad överföringshanterare](assets/BatchAPICustomSubmit.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera [Adaptiv form](assets/BatchGenerationAPIAF.zip) med [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Distribuera och starta [Anpassat OSGI-paket](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) använda [Felix webbkonsol](http://localhost:4502/system/console/bundles)
 * [Utlös batchgenerering genom att skicka formuläret](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)

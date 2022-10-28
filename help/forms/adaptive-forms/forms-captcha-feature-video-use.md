@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -42,12 +43,13 @@ Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * Kopiera HMAC-filer och överordnad filer
+>
 Öppna [felix-webbkonsol](http://localhost:4502/system/console/bundles) på din publiceringsinstans. Sök efter paketet com.adobe.granite.crypto.file. Observera paket-ID
 Navigera till paket-ID:t i filsystemet för din publiceringsinstans
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * ta bort befintliga HMAC- och överordnad filer.
 * klistra in HMAC-filer och överordnad filer som kopierats från författarinstansen
-
+>
 Starta om AEM publiceringsserver
 
 ## Stödmaterial {#supporting-materials}

@@ -1,20 +1,21 @@
 ---
 title: Installera AEM Forms i Linux
 description: Lär dig hur du installerar 32-bitars bibliotek så att AEM Forms kan användas vid Linux-installation.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4, 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
 kt: 7593
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b9809561-e9bd-4c67-bc18-5cab3e4aa138
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
-
 
 # Installera 32-bitarsversionen av delade bibliotek
 
@@ -35,13 +36,12 @@ När AEM FORMS OSGi eller AEM Forms j2EE distribueras i Linux måste du se till 
 * libXext (Bibliotek för vanliga tillägg till X11-protokollet)
 * libXinerama (X11-tillägg som har stöd för att utöka en stationär dator över flera skärmar. Namnet heter Cinerama, ett widescreen-filmsformat med flera projektorer. libXtreama är biblioteket som interagerar med RandR-tillägget)
 * libXrandr (tillägget Xinerama är i stort sett föråldrat nuförtiden - det har ersatts av tillägget RandR)
-* libXrender (klientbiblioteket X Rendering Extension)
-nss-softokn-free (Freebl-bibliotek för Network Security Services)
+* libXrender (klientbibliotek för X Rendering Extension) nss-softokn-free (Freebl-bibliotek för Network Security Services)
 * zlib (allmänt, patentfritt, förlustfritt datakomprimeringsbibliotek)
 
 Från och med Red Hat Enterprise Linux 6 har 32-bitarsversionen av ett bibliotek filnamnstillägget .686 medan 64-bitarsversionen har .x86_64. Exempel: expat.i686. Före RHEL 6 hade 32-bitarsversionerna filnamnstillägget .i386. Innan du installerar 32-bitarsutgåvorna kontrollerar du att de senaste 64-bitarsutgåvorna är installerade. Om 64-bitarsversionen av ett bibliotek är äldre än den 32-bitarsversion som installeras visas ett felmeddelande enligt nedan:
 
-0mFel: Skyddade versioner för flera bibliotek: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mError: Problem med multifunktionsversion hittades.]
+0mFel: Skyddade versioner för flera bibliotek: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mFel: Versionsproblem för multifunktionsverktyget hittades.]
 
 ## Första gången du installerar
 
@@ -69,60 +69,29 @@ I Red Hat Enterprise Linux använder du YUM (YellowDog Update Modifier) för att
 
 ## Symlänkar
 
-Dessutom måste du skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på de senaste 32-bitarsversionerna av biblioteken libcurl, libcrypto och libssl. Du kan hitta filerna i /usr/lib/
-ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so
-ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so
-ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
+Dessutom måste du skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på de senaste 32-bitarsversionerna av biblioteken libcurl, libcrypto och libssl. Du hittar filerna i /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
 
 ## Uppdateringar av befintligt system
 
-Det kan finnas konflikter mellan x86_64- och i686-arkitekturer under uppdateringar, som:
-Fel: Transaktionskontrollfel:
-filen /lib/ld-2.28.so från installation av glibc-2.28-72.el8.i686 står i konflikt med filen från paketet glibc32-2.28-42.1.el8.x86_64
+Det kan finnas konflikter mellan x86_64- och i686-arkitekturer under uppdateringar, som: Fel: Transaktionskontrollfel: filen /lib/ld-2.28.so från installation av glibc-2.28-72.el8.i686 står i konflikt med filen från paketet glibc32-2.28-42.1.el8.x86_64
 
-Om du stöter på detta avinstallerar du först det felaktiga paketet, som i det här fallet:
-yum remove glibc32-2.28-42.1.el8.x86_64
+Om du stöter på detta avinstallerar du först det felaktiga paketet, som i det här fallet: yum remove glibc32-2.28-42.1.el8.x86_64
 
-Du vill att versionerna x86_64 och i686 ska vara exakt desamma, som till exempel utdata till kommandot:
-yum info glibc
+Du vill att versionerna x86_64 och i686 ska vara exakt desamma, som till exempel utdata till kommandot: yum info glibc
 
-Senaste kontroll av förfallodatum för metadata: 0:41:För 33 sedan den 18 jan 2020 11:37:08:00 EST.
-Installerade paket
-Namn: glibc
-Version: 2.28
-Version: 72.el8
-Arkitektur: i686
-Storlek: 13 MB
-Källa: glibc-2.28-72.el8.src.rpm
-Databas: @System
-Från repo: BaseOS
-Sammanfattning: GNU-bibliotek
-URL: http://www.gnu.org/software/glibc/
-Licens: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL
-Beskrivning: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och: minne, och dessutom göra uppgraderingen enklare, är vanlig systemkod: förvaras på ett och samma ställe och delas mellan programmen. Det här paketet: innehåller de viktigaste uppsättningarna med delade bibliotek: standard C : och standardbiblioteket för matematik. Utan dessa två bibliotek kan du Linux-systemet kommer inte att fungera.
+Senaste kontroll av förfallodatum för metadata: 0:41:För 33 år sedan den 18 januari 2020 11:37:08:00 EST.
+Namn på installerade paket: glibc-version: 2.28 Version: 72.el8 Arkitektur: i686-storlek: 13 MB källa: glibc-2.28-72.el8.src.rpm Repository: @System från repo : Sammanfattning av BaseOS: GNU-bibliotekets URL: http://www.gnu.org/software/glibc/ License: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och: minne, och dessutom göra uppgraderingen enklare, är vanlig systemkod: förvaras på ett och samma ställe och delas mellan programmen. Det här paketet: innehåller de viktigaste uppsättningarna med delade bibliotek: standard C : och standardbiblioteket för matematik. Utan dessa två bibliotek kan du Linux-systemet kommer inte att fungera.
 
-Namn: glibc
-Version: 2.28
-Version: 72.el8
-Arkitektur: x86_64
-Storlek: 15 MB
-Källa: glibc-2.28-72.el8.src.rpm
-Databas: @System
-Från repo: BaseOS
-Sammanfattning: GNU-bibliotek
-URL: http://www.gnu.org/software/glibc/
-Licens: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL
-Beskrivning: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och: minne, och dessutom göra uppgraderingen enklare, är vanlig systemkod: förvaras på ett och samma ställe och delas mellan programmen. Det här paketet: innehåller de viktigaste uppsättningarna med delade bibliotek: standard C : och standardbiblioteket för matematik. Utan dessa två bibliotek kan du Linux-systemet kommer inte att fungera.
+Namn: glibc-version: 2.28 Version: 72.el8 Arkitektur: x86_64 Storlek: 15 M källa: glibc-2.28-72.el8.src.rpm Repository: @System från repo : Sammanfattning av BaseOS: GNU-bibliotekets URL: http://www.gnu.org/software/glibc/ License: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och: minne, och dessutom göra uppgraderingen enklare, är vanlig systemkod: förvaras på ett och samma ställe och delas mellan programmen. Det här paketet: innehåller de viktigaste uppsättningarna med delade bibliotek: standard C : och standardbiblioteket för matematik. Utan dessa två bibliotek kan du Linux-systemet kommer inte att fungera.
 
 ## Några praktiska yum-kommandon
 
-yumlistan är installerad
-yum search [part_of_package_name]
-yum what provides [package_name]
-yum install [package_name]
-yum reinstall [package_name]
+yumlista installerad yumsökning [part_of_package_name]
+yum what [package_name]
+yum-installation [package_name]
+ominstallation [package_name]
 yum info [package_name]
 yum deplist [package_name]
-yum remove [package_name]
+yumborttagning [package_name]
 yum check-update [package_name]
-yum update [package_name]
+yumuppdatering [package_name]

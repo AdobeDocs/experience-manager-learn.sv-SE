@@ -1,21 +1,22 @@
 ---
 title: Lagra och hämta formulärdata med bilagor från MySQL-databasen
 description: Flera delars självstudiekurser som visar hur du lagrar och hämtar formulärdata med bilagor
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
+last-substantial-update: 2020-11-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Lagra och hämta adaptiva formulärdata med 2FA
 
@@ -25,7 +26,7 @@ I den här självstudiekursen får du hjälp med att spara och hämta adaptiva f
 
 * Ring en POST till en servett. Den här servern lagrar data i databasen och formulärbilagor i CRX-databasen. De lagrade data i databasen är kopplade till ett GUID.
 
-* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med metoden **request.setAttribute**.
+* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med hjälp av **request.setAttribute** -metod.
 
 ## Demonstration av användningsfallet
 

@@ -1,6 +1,6 @@
 ---
 title: Använda tabellkomponent i AEM Forms Print Channel-dokument
-seo-title: Använda tabellkomponent i AEM Forms Print Channel-dokument
+seo-title: Using Table Component in AEM Forms Print Channel Document
 description: I följande videofilm visas de steg som krävs för att använda tabellkomponenten i Interactive Communications för dokument i tryckkanaler.
 feature: Interactive Communication
 topics: development
@@ -11,14 +11,14 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 54afd047-c6e6-4557-9336-39420f30df88
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
-
 
 # Använda tabellkomponent i AEM Forms Print Channel-dokument {#using-table-component-in-aem-forms-print-channel-document}
 
@@ -53,4 +53,3 @@ Tabeller används för att visa data i tabelläge. Raderna i tabellen måste fö
 * Binda tabellcellerna till lämpliga formulärets datamodellelement som de visas i videon
 
 * Förhandsgranska interaktivt kommunikationsdokument med JSON-exempeldatafilen som du har fått
-

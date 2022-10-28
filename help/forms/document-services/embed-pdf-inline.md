@@ -1,5 +1,5 @@
 ---
-title: 'Visa dokument med post textbundet '
+title: Visa dokument med post textbundet
 description: Sammanfoga adaptiva formulärdata med XDP-mall och visa PDF textbundet med dokumentmolnets inbäddade PDF-API.
 version: 6.4,6.5
 feature: Forms Service
@@ -7,13 +7,14 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9411
-source-git-commit: 7f9a7951b2d9bb780d5374f17bb289c38b2e2ae7
+exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
+last-substantial-update: 2021-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
 
 ---
-
 
 # Visa DoR textbundet
 

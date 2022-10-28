@@ -1,17 +1,18 @@
 ---
 title: Använda setValue i AEM Forms-arbetsflödet
 description: Ange värdet för element i adaptiva Forms-inskickade data i AEM Forms OSGI
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3919efee-6998-48e8-85d7-91b6943d23f9
+last-substantial-update: 2020-01-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
-
 
 # Använda setValue i AEM Forms-arbetsflödet
 
@@ -41,9 +42,9 @@ Så här distribuerar du resurserna på ditt lokala system:
 * [Distribuera exempelpaketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet som gör att du kan ange värden för ett element i skickade XML-data
 
 * [Hämta och extrahera innehållet i zip-filen](assets/setvalueassets.zip)
-* Peka webbläsaren på [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Peka webbläsaren till [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 * Importera och installera setValueWorkflow.zip. Detta är en exempelarbetsflödesmodell.
-* Peka webbläsaren på [Forms och Documents](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Peka webbläsaren till [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring
 * Överför TimeOfRequestForm.zip
 * Öppna [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)

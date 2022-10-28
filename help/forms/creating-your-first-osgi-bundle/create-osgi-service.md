@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+last-substantial-update: 2021-04-23T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -31,7 +32,7 @@ import com.adobe.aemfd.docmanager.Document;
 
 public interface MyfirstInterface
 {
-	public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
+    public Document mergeDataWithXDPTemplate(Document xdpTemplate, Document xmlDocument);
 }
  
 ```

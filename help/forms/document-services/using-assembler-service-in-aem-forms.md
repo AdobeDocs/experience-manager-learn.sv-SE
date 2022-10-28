@@ -3,16 +3,17 @@ title: Använda Assembler Service i AEM Forms
 description: Använda Assembler Service i AEM Forms för att sammanställa flera PDF-filer
 feature: Assembler
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Använda Assembler Service i AEM Forms{#using-assembler-service-in-aem-forms}
 
@@ -101,32 +102,25 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 För att få den här funktionen att fungera på din AEM
 
-* Hämta [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
-* Överför och installera paketet med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* Hämta[paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Ladda ned [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Distribuera och starta paketen med [felix-webbkonsolen](http://localhost:4502/system/console/bundles)
-* Peka webbläsaren på [Sammanställ PDF.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* Dra och släpp några filer i PDF-filer
+* Ladda ned [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
+* Överför och installera paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Hämta[Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Hämta [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Distribuera och starta paketen med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
+* Peka webbläsaren till [SammanställPDF.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* Dra och släpp några filer med PDF-filer
 
 >[!NOTE]
 >
 >Kontrollera att AEM Forms-installationen är klar. Alla paket måste vara i aktivt läge.
 >
->Se till att du har lagt till - Boot delegate RSA- och BouncyCastle-bibliotek som nämns i denna [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Se till att du har lagt till - Boot delegera RSA- och BouncyCastle-bibliotek enligt vad som anges i detta [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
 >**Caveats for this Demo**
 >
 > * Koden hanterar inte XFA-baserade PDF-dokument
-   >
-   > 
-* Se till att du bara drar och släpper PDF-filer
+>
+> * Se till att du bara drar och släpper PDF-filer
 >
 >
-
-
-
-
-
-
 

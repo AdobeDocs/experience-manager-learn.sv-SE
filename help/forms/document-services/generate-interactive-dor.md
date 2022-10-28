@@ -8,7 +8,8 @@ role: Developer
 level: Experienced
 kt: 9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
-source-git-commit: eb2a807587ab918be82d00d50bf1b338df58e84c
+last-substantial-update: 2020-02-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -119,91 +120,91 @@ Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
-	private static final long serialVersionUID = 1 L;
-	@Reference
-	DocumentServices documentServices;
-	@Reference
-	FormsService formsService;
-	private static final Logger log = LoggerFactory.getLogger(GenerateIInteractiveDor.class);
+    private static final long serialVersionUID = 1 L;
+    @Reference
+    DocumentServices documentServices;
+    @Reference
+    FormsService formsService;
+    private static final Logger log = LoggerFactory.getLogger(GenerateIInteractiveDor.class);
 
-	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
-		doPost(request, response);
-	}
-	protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
-		String xdpName = request.getParameter("xdpName");
+    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+        doPost(request, response);
+    }
+    protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+        String xdpName = request.getParameter("xdpName");
 
-		boolean formBasedOnXSD = Boolean.parseBoolean(request.getParameter("formBasedOnSchema"));
+        boolean formBasedOnXSD = Boolean.parseBoolean(request.getParameter("formBasedOnSchema"));
 
-		XPathFactory xfact = XPathFactory.newInstance();
-		XPath xpath = xfact.newXPath();
-		String dataXml = request.getParameter("dataXml");
-		log.debug("The data xml is " + dataXml);
-		org.w3c.dom.Document xmlDataDoc = documentServices.w3cDocumentFromStrng(dataXml);
-		Document renderedPDF = null;
-		try {
-			if (!formBasedOnXSD) {
-				String xfaRootElement = request.getParameter("xfaRootElement");
-				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-				org.w3c.dom.Document newXMLDocument = dBuilder.newDocument();
-				Element rootElement = newXMLDocument.createElement(xfaRootElement);
-				String unboundData = "afData/afUnboundData/data";
-				Node dataNode = (Node) xpath.evaluate(unboundData, xmlDataDoc, XPathConstants.NODE);
-				NodeList dataChildNodes = dataNode.getChildNodes();
-				for (int i = 0; i<dataChildNodes.getLength(); i++) {
-					Node childNode = dataChildNodes.item(i);
-					if (childNode.getNodeType() == 1) {
-						Element newElement = newXMLDocument.createElement(childNode.getNodeName());
-						newElement.setTextContent(childNode.getTextContent());
-						rootElement.appendChild(newElement);
-						log.debug("the node name is  " + childNode.getNodeName() + " and its value is " + childNode.getTextContent());
-					}
-				}
-				newXMLDocument.appendChild(rootElement);
-				Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(newXMLDocument);
-				String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
-				com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
-				renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
-				renderOptions.setContentRoot(xdpTemplatePath);
-				renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
-				renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
+        XPathFactory xfact = XPathFactory.newInstance();
+        XPath xpath = xfact.newXPath();
+        String dataXml = request.getParameter("dataXml");
+        log.debug("The data xml is " + dataXml);
+        org.w3c.dom.Document xmlDataDoc = documentServices.w3cDocumentFromStrng(dataXml);
+        Document renderedPDF = null;
+        try {
+            if (!formBasedOnXSD) {
+                String xfaRootElement = request.getParameter("xfaRootElement");
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                org.w3c.dom.Document newXMLDocument = dBuilder.newDocument();
+                Element rootElement = newXMLDocument.createElement(xfaRootElement);
+                String unboundData = "afData/afUnboundData/data";
+                Node dataNode = (Node) xpath.evaluate(unboundData, xmlDataDoc, XPathConstants.NODE);
+                NodeList dataChildNodes = dataNode.getChildNodes();
+                for (int i = 0; i<dataChildNodes.getLength(); i++) {
+                    Node childNode = dataChildNodes.item(i);
+                    if (childNode.getNodeType() == 1) {
+                        Element newElement = newXMLDocument.createElement(childNode.getNodeName());
+                        newElement.setTextContent(childNode.getTextContent());
+                        rootElement.appendChild(newElement);
+                        log.debug("the node name is  " + childNode.getNodeName() + " and its value is " + childNode.getTextContent());
+                    }
+                }
+                newXMLDocument.appendChild(rootElement);
+                Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(newXMLDocument);
+                String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
+                com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
+                renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
+                renderOptions.setContentRoot(xdpTemplatePath);
+                renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
+                renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
 
-			} else {
-				// form is based on xsd
-				// get the actual xml data that needs to be merged with the template. This can be made more generic
-				String nodeToExtract = request.getParameter("dataNodeToExtract");
-				Node dataNode = (Node) xpath.evaluate(nodeToExtract, xmlDataDoc, XPathConstants.NODE);
-				StringWriter writer = new StringWriter();
-				Transformer transformer = TransformerFactory.newInstance().newTransformer();
-				transformer.transform(new DOMSource(dataNode), new StreamResult(writer));
-				String xml = writer.toString();
-				System.out.println(xml);
-				xmlDataDoc = documentServices.w3cDocumentFromStrng(xml);
-				Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(xmlDataDoc);
-				String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
-				com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
-				renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
-				renderOptions.setContentRoot(xdpTemplatePath);
-				renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
-				renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
-			}
-			InputStream fileInputStream = renderedPDF.getInputStream();
-			response.setContentType("application/pdf");
-			response.addHeader("Content-Disposition", "attachment; filename=" + xdpName.replace("xdp", "pdf"));
-			response.setContentLength((int) fileInputStream.available());
-			OutputStream responseOutputStream = response.getOutputStream();
-			int bytes;
-			while ((bytes = fileInputStream.read()) != -1) {
-				responseOutputStream.write(bytes);
-			}
-			responseOutputStream.flush();
-			responseOutputStream.close();
+            } else {
+                // form is based on xsd
+                // get the actual xml data that needs to be merged with the template. This can be made more generic
+                String nodeToExtract = request.getParameter("dataNodeToExtract");
+                Node dataNode = (Node) xpath.evaluate(nodeToExtract, xmlDataDoc, XPathConstants.NODE);
+                StringWriter writer = new StringWriter();
+                Transformer transformer = TransformerFactory.newInstance().newTransformer();
+                transformer.transform(new DOMSource(dataNode), new StreamResult(writer));
+                String xml = writer.toString();
+                System.out.println(xml);
+                xmlDataDoc = documentServices.w3cDocumentFromStrng(xml);
+                Document xmlDataDocument = documentServices.orgw3cDocumentToAEMFDDocument(xmlDataDoc);
+                String xdpTemplatePath = "crx:///content/dam/formsanddocuments";
+                com.adobe.fd.forms.api.PDFFormRenderOptions renderOptions = new com.adobe.fd.forms.api.PDFFormRenderOptions();
+                renderOptions.setAcrobatVersion(com.adobe.fd.forms.api.AcrobatVersion.Acrobat_11);
+                renderOptions.setContentRoot(xdpTemplatePath);
+                renderOptions.setRenderAtClient(com.adobe.fd.forms.api.RenderAtClient.NO);
+                renderedPDF = formsService.renderPDFForm(xdpName, xmlDataDocument, renderOptions);
+            }
+            InputStream fileInputStream = renderedPDF.getInputStream();
+            response.setContentType("application/pdf");
+            response.addHeader("Content-Disposition", "attachment; filename=" + xdpName.replace("xdp", "pdf"));
+            response.setContentLength((int) fileInputStream.available());
+            OutputStream responseOutputStream = response.getOutputStream();
+            int bytes;
+            while ((bytes = fileInputStream.read()) != -1) {
+                responseOutputStream.write(bytes);
+            }
+            responseOutputStream.flush();
+            responseOutputStream.close();
 
-		} catch (XPathExpressionException | TransformerException | FormsServiceException | IOException | ParserConfigurationException e) {
-			log.debug(e.getMessage());
-		}
+        } catch (XPathExpressionException | TransformerException | FormsServiceException | IOException | ParserConfigurationException e) {
+            log.debug(e.getMessage());
+        }
 
-	}
+    }
 
 }
 ```

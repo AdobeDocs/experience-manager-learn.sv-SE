@@ -1,8 +1,8 @@
 ---
 title: Använda förminskningsfunktioner i diagram
-seo-title: Använda Reducer-funktioner i AEM Forms - Charts
+seo-title: Using Reducer Functions in AEM Forms - Charts
 description: Reduceringsfunktioner används för att samla in eller gruppera värden som visas i diagrammet. I följande videofilm visas stegen som används för att använda reduceringsfunktioner.
-seo-description: Reduceringsfunktioner används för att samla in eller gruppera värden som visas i diagrammet. I följande videofilm visas stegen som används för att använda reduceringsfunktioner.
+seo-description: Reducer functions are used to aggregate or group values that are displayed in the chart.The following video walks through the steps involved in using reducer functions.
 uuid: e9bd8bda-48ea-4a02-95c4-02aedafdb640
 discoiquuid: 6fef8341-8fd5-4d82-9f69-2b8be7cd22db
 feature: Interactive Communication
@@ -14,16 +14,16 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 866749d9-0f62-470b-afeb-4dece4e0b169
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 1%
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
-
-# Använda Reducer-funktioner i AEM Forms - Diagram{#using-reducer-functions-in-aem-forms-charts}
+# Använda Reducer-funktioner i AEM Forms - Charts{#using-reducer-functions-in-aem-forms-charts}
 
 Reduceringsfunktioner används för att samla värden eller gruppera värden som visas i diagrammet.
 
@@ -65,4 +65,3 @@ Vi kan till exempel använda reduceringsfunktionerna för att visa antalet trans
 I följande videofilm visas de steg som används för att använda reduceringsfunktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21368/?quality=9&learn=on)
-

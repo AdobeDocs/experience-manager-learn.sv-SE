@@ -1,15 +1,17 @@
 ---
 title: Använda AEM Forms med Adobe Sign
 description: Med Adobe Sign och AEM Forms kan man automatisera komplexa transaktioner och inkludera juridiskt bindande e-signaturer som en del av en smidig digital upplevelse.
-feature: Adaptiv Forms,Adobe Sign
+feature: Adaptive Forms,Adobe Sign
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
+last-substantial-update: 2020-03-20T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 1%
+source-wordcount: '158'
+ht-degree: 0%
 
 ---
 
@@ -30,4 +32,3 @@ Du behöver följande för att kunna integrera Adobe Sign med AEM Forms:
 * Ett aktivt Adobe Sign-utvecklarkonto.
 * Ett Adobe Sign API-program
 * Autentiseringsuppgifter (klient-ID och klienthemlighet) för Adobe Sign API-program.
-

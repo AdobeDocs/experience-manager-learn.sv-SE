@@ -1,8 +1,8 @@
 ---
 title: Skapa layouter med två kolumner för tryckta kanaldokument
-seo-title: Skapa layouter med två kolumner för tryckta kanaldokument
+seo-title: Creating two column layouts for print channel documents
 description: Skapa layouter med två kolumner för dokument med utskriftskanaler
-seo-description: Skapa layouter med två kolumner för dokument med utskriftskanaler
+seo-description: Create 2 column layouts for print channel document
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -12,16 +12,16 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 416e3401-ba9f-4da3-8b07-2d39f9128571
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 1%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
-
-# Layouter med två kolumner i dokument för utskriftskanal
+# Layouter med två kolumner i ett dokument för utskriftskanaler
 
 Den här korta artikeln visar de steg som behövs för att skapa en layout med två kolumner i en tryckkanal. Det är praktiskt att generera 2 siddokument med sidlayouten 2 kolumner och sidan 2 med standardlayouten 1 kolumn.
 

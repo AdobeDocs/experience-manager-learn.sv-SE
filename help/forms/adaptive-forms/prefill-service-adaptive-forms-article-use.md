@@ -1,24 +1,25 @@
 ---
 title: Prefill Service in Adaptive Forms
 description: Fyll i anpassningsbara formulär i förväg genom att hämta data från backend-datakällor.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
-
 
 # Använda förifyllningstjänsten i adaptiv Forms
 
 Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Det finns flera sätt att förifylla adaptiva formulärfält. I den här artikeln ska vi titta närmare på hur man fyller i anpassningsbara formulär med AEM Forms förifyllningstjänst.
 
-[Följ denna dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice) om du vill veta mer om olika metoder för att förifylla adaptiva formulär
+Om du vill veta mer om olika metoder för att förifylla adaptiva formulär, [följ den här dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 Om du vill förifylla anpassningsbara formulär med förifyllningstjänsten måste du skapa en klass som implementerar DataProvider-gränssnittet. Metoden getPrefillData har logiken för att skapa och returnera data som anpassningsbara formulär använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataström för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
 
@@ -81,7 +82,7 @@ public class PrefillAdaptiveForm implements DataProvider {
 Utför följande för att testa den här funktionen på servern:
 
 * [Hämta och extrahera innehållet i zip-filen till datorn](assets/prefillservice.zip)
-* Kontrollera att den inloggade [användarens profil](http://localhost:4502/libs/granite/security/content/useradmin)-informationen är fullständigt ifylld. Detta är ett krav för att exemplet ska fungera. Exemplet innehåller inte någon felsökning för saknade användarprofilsegenskaper.
+* Kontrollera att du är inloggad [användarens profil](http://localhost:4502/libs/granite/security/content/useradmin) uppgifterna fylls i fullständigt. Detta är ett krav för att exemplet ska fungera. Exemplet innehåller inte någon felsökning för saknade användarprofilsegenskaper.
 * Distribuera paketet med [AEM webbkonsol](http://localhost:4502/system/console/bundles)
 * Skapa anpassat formulär med XSD
 * Associera&quot;Custom AEM Form Pre Fill Service&quot; som förifyllningstjänst för ditt adaptiva formulär
@@ -92,5 +93,4 @@ Utför följande för att testa den här funktionen på servern:
 >
 >Om det adaptiva formuläret är baserat på XSD kontrollerar du att det XML-dokument som returneras av förifyllningstjänsten matchar det XSD som det adaptiva formuläret är baserat på.
 >
->Om det adaptiva formuläret inte är baserat på XSD måste du binda fälten manuellt. Om du till exempel vill binda ett adaptivt formulärfält till fname-element i XML-data använder du `/data/fname` i bindningsreferensen för det adaptiva formulärfältet.
-
+>Om det adaptiva formuläret inte är baserat på XSD måste du binda fälten manuellt. Om du till exempel vill binda ett adaptivt formulärfält till elementet fname i XML-data använder du `/data/fname`  i bindningsreferensen för det adaptiva formulärfältet.

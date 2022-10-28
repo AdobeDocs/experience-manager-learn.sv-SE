@@ -8,7 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9359
-source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
+exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 7%
@@ -33,17 +35,9 @@ The [ikoner som används i den här artikeln](assets/icons.zip) kan hämtas här
 Du är i standardläget när du öppnar formatredigeraren för fliken så som visas på skärmbilden nedan
 ![navigeringsflik](assets/navigation-tab.png)
 
-Set the CSS properties for the default state as shown below
-| Category | Property Name  |  Property Value |
-|:---|:---|:---|
-| Dimensions and Position | Width | 50px |
-| Text | Font Weight| Bold |
-| Text | Color | #FFF |
-|Text | Line Height| 3 |
-|Text  | Text Align | Left |
-|Background| Color | #056dae |
+Ange CSS-egenskaper för standardläget enligt nedan | Kategori | Egenskapsnamn | Egenskapsvärde | |:—|:—|:—| | Dimensioner och position | Bredd | 50px | | Text | Teckenbredd | Fet | | Text | Färg | #FFF | |Text | Radhöjd| 3 | |Text | Textjustering | Vänster | |Bakgrund| Färg | #056dae |
 
-Save your changes
+Spara ändringarna
 
 ## Formatera det aktiva läget
 
@@ -68,15 +62,15 @@ Spara ändringarna.
 
 ## Formatera besöksstatus
 
-Make sure you are in the visited state and style the following properties
+Se till att du är i besökt läge och formatera följande egenskaper
 
 | Kategori | Egenskapsnamn | Egenskapsvärde |
 |:---|:---|:---|
 | Dimensioner och position | Bredd | 50px |
 | Text | Teckenbredd | Fet |
-| Text | Color | #FFF |
+| Text | Färg | #FFF |
 | Text | Radhöjd | 3 |
-| Text | Text Align | Vänster |
+| Text | Textjustering | Vänster |
 | Bakgrund | Färg | #056dae |
 
 Formatera bakgrundsbilden som den visas på bilden nedan
@@ -86,4 +80,4 @@ Formatera bakgrundsbilden som den visas på bilden nedan
 
 Spara ändringarna
 
-Preview the form and test the icons are working as expected.
+Förhandsgranska formuläret och testa att ikonerna fungerar som förväntat.

@@ -1,18 +1,19 @@
 ---
 title: Användbara tjänster
 description: Några användbara verktygstjänster för AEM Forms-utvecklare
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: add06b73-18bb-4963-b91f-d8e1eb144842
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 1%
+source-wordcount: '155'
+ht-degree: 0%
 
 ---
-
 
 # Användbara tjänster
 
@@ -33,7 +34,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-Exempelpaketet kan [hämtas här](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
+Exempelpaketet kan [hämtad härifrån](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
 
 ## Exempelkod som använder verktygstjänsten/verktygen
 
@@ -51,5 +52,4 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 Du måste distribuera [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) och starta paketet.
 
 
-Om du ska spara dokument i CRX-databasen med dessa verktygstjänster följer du [Utveckla med tjänstanvändarens artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Se till att du anger [nödvändiga behörigheter](http://localhost:4502/useradmin) för respektive CRX-mapp till fd-service-användaren.
-
+Om du tänker spara dokument i CRX-databasen med hjälp av denna verktygstjänst följer du [utveckla med tjänstanvändarens artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Se till att du anger [nödvändiga behörigheter](http://localhost:4502/useradmin) till rätt CRX-mappar för Fd-service-användaren.

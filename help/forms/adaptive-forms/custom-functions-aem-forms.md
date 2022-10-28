@@ -7,7 +7,9 @@ topic: Development
 role: User
 level: Beginner
 kt: 9685
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
+last-substantial-update: 2021-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -46,13 +48,13 @@ Kopiera följande kod till functions.js och spara ändringarna.
 function getCountyNamesList()
 {
     var countyNames= [];
-	countyNames[0] = "Santa Clara";
-	countyNames[1] = "Alameda";
-	countyNames[2] = "Buxor";
+    countyNames[0] = "Santa Clara";
+    countyNames[1] = "Alameda";
+    countyNames[2] = "Buxor";
     countyNames[3] = "Contra Costa";
     countyNames[4] = "Merced";
 
-	return countyNames;
+    return countyNames;
 
 }
 /**
@@ -64,7 +66,7 @@ function getCountyNamesList()
 function convertUTC(strUTCString)
 {
     var dt = new Date(strUTCString);
-	console.log(dt.toLocaleString());
+    console.log(dt.toLocaleString());
     return dt.toLocaleString();
 }
 ```
