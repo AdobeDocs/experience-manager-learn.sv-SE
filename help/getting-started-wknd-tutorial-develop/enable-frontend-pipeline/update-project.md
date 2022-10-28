@@ -11,9 +11,9 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Uppdatera AEM i full hög för att använda frontendpipeline {#update-project-enable-frontend-pipeline}
 
-I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projekt__ för att använda frontpipeline för att distribuera JavaScript och CSS, i stället för att kräva en fullständig pipeline-körning i hela stacken. Detta gör att utvecklingsfasen och driftsättningslivscykeln för front-end- och back-end-artefakter kan dubbleras, vilket ger en snabbare, iterativ utvecklingsprocess som helhet.
+I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projekt__ för att använda frontpipeline för att distribuera JavaScript och CSS, i stället för att kräva en fullständig pipeline-körning i hela stacken. Detta försvårar utvecklingsfasen och driftsättningslivscykeln för front-end- och back-end-artefakter, vilket ger en snabbare, iterativ utvecklingsprocess som helhet.
 
 ## Mål {#objectives}
 
@@ -77,7 +77,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
 
 1. Förbered `ui.frontend` för det rörliga säljprojektskontraktet genom att lägga till två nya webbpaketkonfigurationsfiler.
 
-   * Kopiera befintlig `webpack.common.js` as `webpack.theme.common.js`, ändra `output` egenskap och `MiniCssExtractPlugin`, `CopyWebpackPlugin` plug-in-konfigurationsparametrar enligt nedan:
+   * Kopiera befintlig `webpack.common.js` as `webpack.theme.common.js`, och ändra `output` egenskap och `MiniCssExtractPlugin`, `CopyWebpackPlugin` plug-in-konfigurationsparametrar enligt nedan:
 
    ```javascript
    ...
@@ -89,7 +89,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
    
    ...
        new MiniCssExtractPlugin({
-               filename: 'clientlib-[name]/[name].css'
+               filename: 'theme/[name].css'
            }),
        new CopyWebpackPlugin({
            patterns: [
@@ -134,7 +134,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
 
 1. Förbered `ui.content` för frontendpipeline genom att lägga till två Sling-konfigurationer.
 
-   * Skapa en ny fil på `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig` - detta inkluderar alla filer i gränssnittet som `ui.frontend` modulen genereras under `dist` mapp med webbpaketets byggprocess.
+   * Skapa en fil på `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig` - detta inkluderar alla filer i gränssnittet som `ui.frontend` modulen genereras under `dist` mapp med webbpaketets byggprocess.
 
    ```xml
    ...
@@ -157,7 +157,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
 
    >[!TIP]
    >
-   >    Se [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) i __AEM WKND Sites-projekt__.
+   >    Se hela [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) i __AEM WKND Sites-projekt__.
 
 
    * Andra `com.adobe.aem.wcm.site.manager.config.SiteConfig` med `themePackageName` värdet är detsamma som `package.json` och `name` egenskapsvärde och `siteTemplatePath` peka på en `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` stub-sökvägsvärde.
@@ -191,6 +191,14 @@ Slutligen kan du överföra dessa ändringar till Adobe i programmets Git-databa
 >
 > Dessa ändringar är tillgängliga på GitHub i [__rörledning för frontend__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) gren av __AEM WKND Sites-projekt__.
 
+
+## Varning - _Aktivera frontdelspipeline_ knapp
+
+The [Järnvägsväljare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) &#39;s [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) alternativet visar **Aktivera frontdelspipeline** när du väljer platsroten eller webbplatssidan. Klicka **Aktivera frontdelspipeline** knappen åsidosätter ovanstående **Sling-konfigurationer**, kontrollera **du inte klickar** den här knappen efter distributionen av ovanstående ändringar via molnhanterarens pipeline-körning.
+
+![Knappen Aktivera främre rörledning](assets/enable-front-end-Pipeline-button.png)
+
+Om du klickar på den av misstag måste du köra pipelines igen för att se till att slutavtalet för pipeline och ändringarna återställs.
 
 ## Grattis! {#congratulations}
 
