@@ -1,0 +1,83 @@
+---
+title: Komplettera automatiskt i AEM Forms
+description: Gör det möjligt för användare att snabbt hitta och välja från en ifylld lista med värden när de skriver, med hjälp av sökning och filtrering.
+feature: Adaptive Forms
+type: Tutorial
+version: 6.5
+topic: Development
+role: Developer
+level: Beginner
+kt: 11374
+last-substantial-update: 2022-11-01T00:00:00Z
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
+
+---
+
+# Automatisk komplettering
+
+Implementera funktioner för automatisk ifyllnad i AEM formulär med hjälp av Jquery funktion för automatisk ifyllnad.
+I exemplet som ingår i den här artikeln används en rad olika datakällor (statisk array, dynamisk array ifylld från ett REST API-svar) för att fylla i förslagen när användaren börjar skriva i textfältet.
+
+Den kod som används för att utföra funktionen för automatisk komplettering är associerad med händelsen initialize för fältet.
+
+
+## Tillhandahålla förslag för landsnamn
+
+![landsförslag](assets/auto-complete1.png)
+
+## Ange förslag för adress
+
+![landsförslag](assets/auto-complete2.png)
+
+Följande kod används för att ge förslag på gatuadresser
+
+```javascript
+$(".streetAddress input").autocomplete({
+    source: function(request, response) {
+        $.ajax({
+            url: "https://api.geoapify.com/v1/geocode/autocomplete?text=" + request.term + "&apiKey=Your API Key", //please get your own API key with geoapify.com
+            responseType: "application/json",
+            success: function(data) {
+                console.log(data.features.length);
+                response($.map(data.features, function(item) {
+                    return {
+                        label: [item.properties.formatted],
+                        value: [item.properties.formatted]
+                    };
+                }));
+            },
+        });
+    },
+    minLength: 5,
+    select: function(event, ui) {
+        console.log(ui.item ?
+            "Selected: " + ui.item.label :
+            "Nothing selected, input was " + this.value);
+    }
+
+});
+```
+
+## Förslag med känslolägesikoner
+
+![landsförslag](assets/auto-complete3.png)
+
+Följande kod användes för att visa känslolägesikoner i förslagslistan
+
+```javascript
+var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];
+$(".Animals input").autocomplete( {
+minLength: 1, source: values, delay: 0
+}
+
+);
+```
+
+The [exempelformulär kan hämtas](assets/auto-complete-form.zip) härifrån. Se till att du anger din egen användarnamn/API-nyckel med kodredigeraren för koden för att kunna göra REST-anrop.
+
+>[!NOTE]
+>
+> För att automatisk ifyllning ska fungera måste formuläret använda följande klientbibliotek **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.

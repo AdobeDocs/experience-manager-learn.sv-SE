@@ -1,6 +1,6 @@
 ---
-title: Visa textbundna bilder i Adaptive Forms
-description: Visa överförda bilder i adaptiv Forms
+title: Visa DAM-bilder i Adaptive Forms
+description: Visa DAM-bilder i adaptiv Forms
 feature: Adaptive Forms
 topics: development
 version: 6.4,6.5
@@ -10,9 +10,9 @@ level: Experienced
 last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
