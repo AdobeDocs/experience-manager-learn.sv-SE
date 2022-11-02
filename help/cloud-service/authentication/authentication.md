@@ -10,9 +10,9 @@ kt: 10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: ad9aa172d37741207dabcbc705efaa851fd17e7c
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,7 @@ AEM as a Cloud Service stöder flera autentiseringsalternativ och varierar beroe
 |  | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
+| ・ [SAML 2.0 via Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
 | [Tokenautentisering](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 
