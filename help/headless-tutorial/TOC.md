@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: a21b78456354c18ad137e69a5d18258d652169b1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 4%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 4%
    + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
 + Kodexempel {#code-samples}
    + [Filtrera React-app](./graphql/code-samples/filtering-react-app.md)
+   + [Filtrera preact-program](./graphql/code-samples/filtering-preact-app.md)
    + [Program för filtrering av Angular](./graphql/code-samples/filtering-angular-app.md)
    + [Filtrera Vue-app](./graphql/code-samples/filtering-vue-app.md)
    + [Filtrera med jQuery och Handtag](./graphql/code-samples/filtering-jquery-handlebars.md)
