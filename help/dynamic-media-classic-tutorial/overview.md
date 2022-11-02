@@ -2,7 +2,6 @@
 title: Självstudiekurs om bästa praxis för Dynamic Media Classic
 description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om bästa praxis har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort titt på dess kärnfunktioner och användargränssnitt.
 doc-type: tutorial
-topics: best-practices, development, authoring, configuring
 audience: all
 activity: develop, use
 feature: Dynamic Media Classic
@@ -10,7 +9,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%

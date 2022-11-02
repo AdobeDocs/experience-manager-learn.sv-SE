@@ -1,7 +1,7 @@
 ---
 title: Granska uppgift
 description: Se hur AEM Assets' Review Task underlättar de vanligaste arbetsflödena för granskning och godkännande.
-sub-product: assets
+sub-product: Experience Manager Assets
 feature: Collaboration
 version: Cloud Service
 kt: 4670
@@ -10,7 +10,7 @@ topic: Collaboration
 role: User
 level: Beginner
 exl-id: f0ce734b-c342-4005-96c7-185245a1a3d7
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%

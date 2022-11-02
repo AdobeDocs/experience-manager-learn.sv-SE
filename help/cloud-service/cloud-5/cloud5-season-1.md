@@ -1,11 +1,11 @@
 ---
 title: Moln 5 - Årstid 1
 description: Lär dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe expertingenjörer som bygger den och experttjänsterna som levererar den.
-sub-product: sites, cloud-manager, assets
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%

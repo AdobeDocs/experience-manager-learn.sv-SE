@@ -1,7 +1,7 @@
 ---
 title: Förstå innehållsfragment och upplevelsefragment
 description: Lär dig likheterna och skillnaderna mellan innehållsfragment och Experience Fragments, och när och hur du använder varje typ.
-sub-product: assets, sites, content services
+sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.4, 6.5
@@ -12,7 +12,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%

@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Manager as a Cloud Service videor och självstudiekurser
 description: En samling självstudiekurser för Adobe Experience Manager (AEM) as a Cloud Service
-sub-product: sites, cloud-manager, foundation, assets
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager, Experience Manager Assets
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '267'
+ht-degree: 4%
 
 ---
 

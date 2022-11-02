@@ -2,7 +2,7 @@
 title: Förstå Sling Model Exporter i AEM
 description: I Apache Sling Models 1.3.0 introduceras Sling Model Exporter, ett elegant sätt att exportera eller serialisera Sling Model-objekt till anpassade abstraktioner. I den här artikeln beskrivs det traditionella sättet att använda Sling-modeller för att fylla i HTML-skript, med hjälp av Sling Model Exporter-ramverket för att serialisera en Sling-modell till JSON.
 version: 6.4, 6.5
-sub-product: foundation, content-services
+sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 topics: development, content-delivery, headless
 activity: understand
@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%

@@ -1,20 +1,17 @@
 ---
 title: Komma igång med AEM och Adobe Target
-seo-title: Komma igång med AEM och Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager och Adobe Target. I den här självstudiekursen får du även lära dig mer om olika personer som deltar i den sista processen och hur de samarbetar med varandra
-seo-description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager och Adobe Target. I den här självstudiekursen får du även lära dig mer om olika personer som deltar i den sista processen och hur de samarbetar med varandra
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med AEM och Adobe Target {#getting-started-with-aem-target}
 
@@ -28,13 +25,13 @@ I den här självstudiekursen beskriver vi tre olika scenarier för AEM och Targ
 
 ## Personalisering med AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
-I det här scenariot kommer vi att använda AEM och Target. Det är tydligt att båda produkterna har sina egna styrkor, och när det gäller att leverera personaliserade upplevelser till webbplatsens användare behöver du **personaliserat innehåll (innehåll från AEM)** och ett **intelligent sätt (Target)** för att leverera innehållet baserat på en viss användare.
+I det här scenariot kommer vi att använda AEM och Target. Det är tydligt att båda produkterna har sina egna styrkor, och när det gäller att leverera personaliserade upplevelser till användarna på webbplatsen behöver ni **personaliserat innehåll (innehåll från AEM)** och **intelligent way (Target)** för att leverera innehållet baserat på en viss användare.
 
-AEM hjälper er att skapa personaliserat innehåll och samla allt innehåll och alla resurser på en central plats för att understödja er personaliseringsstrategi. AEM gör det enkelt att skapa innehåll för datorer, surfplattor och mobila enheter på ett och samma ställe utan att behöva skriva kod. Du behöver inte skapa sidor för alla enheter - AEM justerar automatiskt varje upplevelse med ditt innehåll. Du kan också exportera innehåll från AEM till Adobe Target som erbjudanden med en knapptryckning.
+AEM hjälper er att skapa personaliserat innehåll och samla allt innehåll och alla resurser på en central plats för att understödja er personaliseringsstrategi. AEM gör det enkelt att skapa innehåll för datorer, surfplattor och mobila enheter på ett och samma ställe utan att behöva skriva kod. Du behöver inte skapa sidor för alla enheter. AEM justerar automatiskt varje upplevelse med ditt innehåll. Du kan också exportera innehåll från AEM till Adobe Target som erbjudanden med en knapptryckning.
 
 Vi har nu personaliserat innehåll i form av erbjudanden från AEM i Target. Med Target kan ni leverera dessa erbjudanden i stor skala baserat på en kombination av regelbaserade och AI-drivna maskininlärningsstrategier som innehåller beteendevariabler, sammanhangsbaserade variabler och offlinevariabler.  Med Target kan ni enkelt konfigurera och köra A/B- och Multivariate-aktiviteter (MVT) för att fastställa de bästa erbjudandena, innehållet och upplevelserna.
 
-**Upplevelsefragmentering** är ett stort steg framåt när det gäller att länka samman innehåll-/upplevelseskaparna med personaliseringsproffsen som driver affärsresultaten med Target.
+**Upplevelsefragment** utgör ett stort steg framåt för att länka samman de som skapar innehåll/upplevelser med de som arbetar med personalisering och som driver affärsresultaten med Target.
 
 * AEM skapar personaliserat innehåll som Experience Fragments och dess varianter
 * AEM exporterar Experience Fragment HTML till &#x200B;
@@ -48,7 +45,7 @@ Vi har nu personaliserat innehåll i form av erbjudanden från AEM i Target. Med
 * [Integrera AEM och Adobe Target med Launch och Adobe I/O](./implementation.md#integrating-aem-target-options)
 * [AEM och Adobe Target med äldre Cloud Services](./implementation.md#integrating-aem-target-options)
 
-***När du har implementerat integreringarna ovan kan du utforska  [scenariot i detalj](./personalization-use-case-1.md).***
+***När du har implementerat integreringarna ovan kan du [scenario i detalj](./personalization-use-case-1.md).***
 
 ## Personalisering med Visual Experience Composer
 
@@ -68,7 +65,7 @@ VEC är en av huvudfunktionerna i Adobe Target. Med VEC kan marknadsförare och 
 
 * [Integrera AEM och Adobe Target med Launch och Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-***När du har implementerat integreringen ovan kan du utforska  [scenariot i detalj.](./personalization-use-case-3.md)***
+***När du har implementerat integreringen ovan kan du [scenario i detalj.](./personalization-use-case-3.md)***
 
 ## Personalisering av fullständiga webbsidesupplevelser
 
@@ -86,4 +83,4 @@ Genom att integrera Adobe Experience Manager med Adobe Target kan ni leverera pe
 
 * [Integrera AEM och Adobe Target med Launch och Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-***När du har implementerat integreringen ovan kan du utforska  [scenariot i detalj.](./personalization-use-case-2.md)***
+***När du har implementerat integreringen ovan kan du [scenario i detalj.](./personalization-use-case-2.md)***
