@@ -9,7 +9,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Nästa steg är att skapa de adaptiva formulär som du vill ska ingå i paketet.
 
 * Kontrollera att formulären är baserade på **SignMultipleForms** mall. Detta garanterar att formulären är förifyllda med data som hämtats från databasen.
 
-* Formulären måste konfigureras för att använda Adobe Sign och signerarfältet1 måste associeras med kundens e-postfält
+* Formulären måste konfigureras för att använda Acrobat Sign och signerarfältet1 måste associeras med kundens e-postfält
 * Formulären måste också kopplas till clientLib som anropas **getnextform**
 * Formulären måste använda komponenten Signature Step.
 * Formuläret måste även använda den anpassade **Signera flera formulär** -komponenten. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.

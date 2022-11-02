@@ -7,7 +7,7 @@ breadcrumb-title: AEM Forms Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 0%
@@ -136,11 +136,11 @@ ht-degree: 0%
 + HTML5 Forms{#html5-forms}
    + [Skapa HTML5-formulär](html5-forms/create-html5-form.md)
    + [Hantera inskickning av HTML5-formulär](html5-forms/handle-html5-form-submission.md)
-+ AEM Forms och Adobe Sign{#forms-and-sign}
++ AEM Forms och Acrobat Sign{#forms-and-sign}
    + [Introduktion](aem-forms-and-adobe-sign/introduction.md)
    + [Konfigurera SSL](aem-forms-and-adobe-sign/set-up-ssl.md)
-   + [Skapa Adobe Sign API-program](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
-   + [Skapa Adobe Sign Cloud-konfiguration](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
+   + [Skapa Acrobat Sign API-program](aem-forms-and-adobe-sign/create-adobe-sign-api-application.md)
+   + [Skapa Acrobat Sign Cloud-konfiguration](aem-forms-and-adobe-sign/create-adobe-sign-cloud-configuration.md)
    + [Skapa arbetsflöde för att skicka dokument för signering](aem-forms-and-adobe-sign/create-workflow-to-send-document-for-signing.md)
    + [Skapa och konfigurera anpassningsbara formulär](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [Konfigurera anpassat formulär för en signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
@@ -148,7 +148,7 @@ ht-degree: 0%
    + [Konfigurera tjänsten Automated forms conversion](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
    + [Konvertera PDF-formulär till anpassat format](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
-   + [Använda XDP-mallar med Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [Använda XDP-mallar med Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + Signera flera Forms{#sign-multiple-documents}
    + [Introduktion](sign-multiple-documents/introduction.md)
    + [Konfigurera datakälla](sign-multiple-documents/configure-data-source.md)

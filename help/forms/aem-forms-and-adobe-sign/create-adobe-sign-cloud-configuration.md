@@ -1,23 +1,24 @@
 ---
-title: Skapa Adobe Sign Cloud-konfiguration
-description: Med konfigurationen av molntjänster i AEM kan du skapa integrering mellan AEM och andra molnprogram. I följande video får du hjälp med att skapa en konfiguration för molntjänster för att integrera AEM med Adobe Sign.
-feature: Adaptiv Forms
+title: Skapa Acrobat Sign Cloud-konfiguration
+description: Med konfigurationen av molntjänster i AEM kan du skapa integrering mellan AEM och andra molnprogram. I följande video får du hjälp med att skapa en konfiguration för molntjänster för att integrera AEM med Acrobat Sign.
+feature: Adaptive Forms
 thumbnail: 38179.jpg
 kt: 6033
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7a62ae37-d391-4136-99f3-b32181afd475
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 1%
+source-wordcount: '84'
+ht-degree: 0%
 
 ---
 
-# Skapa Adobe Sign Cloud-konfiguration
+# Skapa Acrobat Sign Cloud-konfiguration
 
 Med konfigurationen av molntjänster i AEM kan du skapa integrering mellan AEM och andra molnprogram.
 
-I följande video får du hjälp med att skapa en konfiguration för molntjänster för att integrera AEM med Adobe Sign
+I följande video får du hjälp med att skapa en konfiguration för molntjänster för att integrera AEM med Acrobat Sign
 
 >[!VIDEO](https://video.tv.adobe.com/v/38179/?quality=9&learn=on)

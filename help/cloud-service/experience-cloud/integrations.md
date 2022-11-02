@@ -11,7 +11,7 @@ thumbnail: KT-10718.png
 last-substantial-update: 2022-10-02T00:00:00Z
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 2%
@@ -45,7 +45,7 @@ Klicka på Experience Cloud för att få dokumentation om hur du konfigurerar oc
 
 ## Adobe Acrobat Sign
 
-Adobe Acrobat Sign (tidigare Adobe Sign) möjliggör e-signaturarbetsflöden för AEM Forms adaptiva formulär genom att förbättra arbetsflödena för att bearbeta dokument inom juridik, försäljning, lön, HR och andra områden.
+Adobe Acrobat Sign (tidigare Acrobat Sign) möjliggör e-signaturarbetsflöden för AEM Forms adaptiva formulär genom att förbättra arbetsflödena för att bearbeta dokument inom juridik, försäljning, lön, HR och andra områden.
 
 ### AEM Forms
 

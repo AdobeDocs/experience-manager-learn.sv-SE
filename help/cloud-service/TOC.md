@@ -5,7 +5,7 @@ breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: Experience Manager
 version: Cloud Service
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%
@@ -206,10 +206,10 @@ ht-degree: 10%
       + [Extern arbetsflödeslagring](./forms/create-aem-workflow/externalize-workflow.md)
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
       + [Arbetsflöde för utlösare](./forms/create-aem-workflow/configure-af.md)
-   + Adobe Sign med AEM Forms{#forms-and-sign}
+   + Acrobat Sign med AEM Forms{#forms-and-sign}
       + [Introduktion](./forms/forms-and-sign/introduction.md)
-      + [Adobe Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
-      + [Konfiguration av Adobe Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
+      + [Acrobat Sign API-program](./forms/forms-and-sign/create-sign-api-application.md)
+      + [Konfiguration av Acrobat Sign Cloud](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Skapa anpassat formulär](./forms/forms-and-sign/create-adaptive-form.md)
       + [Konfigurera för fyllning och signering](./forms/forms-and-sign/configure-form-fill-and-sign.md)
    + Integrera med Microsoft Power Automate{#forms-cs-and-power-automate}

@@ -8,7 +8,7 @@ audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 
 >[!NOTE]
 >
->Om du vill skicka det ifyllbara makroformuläret för signering med Adobe Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **Sig_es_:signer1:signatur**. Det här är syntaxen som Adobe Sign förstår.
+>Om du vill skicka det ifyllbara makroformuläret för signering med Acrobat Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **Sig_es_:signer1:signatur**. Det här är syntaxen som Acrobat Sign förstår.
 
 >[!NOTE]
 >
->Om du skickar ett XFA-baserat dokument måste du förenkla dokumentet och Adobe Sign-signaturtaggarna måste finnas som statisk text i dokumentet.
+>Om du skickar ett XFA-baserat dokument måste du förenkla dokumentet och Acrobat Sign-signaturtaggarna måste finnas som statisk text i dokumentet.
 
-[Adobe Sign-dokument för texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign-dokument för texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

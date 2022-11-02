@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # Introduktion
 
-Oavsett om du ansöker om en inteckning eller öppnar ett nytt bankkonto måste du fylla i och signera flera formulär. Integrationen mellan AEM Forms och Adobe Sign gör det enkelt att fylla i och signera flera formulär.
+Oavsett om du ansöker om en inteckning eller öppnar ett nytt bankkonto måste du fylla i och signera flera formulär. Integrationen mellan AEM Forms och Acrobat Sign gör det enkelt att fylla i och signera flera formulär.
 I följande video får du hjälp med att signera flera formulär.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=9&learn=on)
@@ -28,7 +28,7 @@ I följande video får du hjälp med att signera flera formulär.
 Kursen förutsätter följande:
 
 * Du har åtkomst till AEM 6.4- eller 6.5-server med Forms Add on-paketet installerat och konfigurerat
-* AEM konfigurerad med Adobe Sign
+* AEM konfigurerad med Acrobat Sign
 * Åtkomst till SMTP-server
 * Viss erfarenhet av AEM/AEM Forms
 

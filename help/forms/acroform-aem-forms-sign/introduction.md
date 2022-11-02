@@ -1,13 +1,13 @@
 ---
 title: Acrobat med AEM Forms
-description: En självstudiekurs som visar hur du skapar ett adaptivt formulär med Acrobat och sammanfogar data för att få ett PDF. PDF med sammanfogade data kan sedan skickas för signering med Adobe Sign.
+description: En självstudiekurs som visar hur du skapar ett adaptivt formulär med Acrobat och sammanfogar data för att få ett PDF. PDF med sammanfogade data kan sedan skickas för signering med Acrobat Sign.
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Skapa adaptiv Forms från Acrobat
 
-Organisationer har en mängd olika typer av formulär. Vissa av dessa formulär skapas i Microsoft Word och konverteras till PDF. Dessa formulär kan som standard inte fyllas i med Adobe Reader eller Acrobat. För att göra dessa formulär ifyllbara med Acrobat eller Reader måste vi konvertera formulären till Acrobat. Acrobat är formulär som skapats med Acrobat. I den här artikeln går vi igenom hur du skapar ett adaptivt formulär från Acrobat och sammanfogar data i Acrobat för att få PDF. PDF med sammanfogade data kan också skickas för signering med Adobe Sign.
+Organisationer har en mängd olika typer av formulär. Vissa av dessa formulär skapas i Microsoft Word och konverteras till PDF. Dessa formulär kan som standard inte fyllas i med Adobe Reader eller Acrobat. För att göra dessa formulär ifyllbara med Acrobat eller Reader måste vi konvertera formulären till Acrobat. Acrobat är formulär som skapats med Acrobat. I den här artikeln går vi igenom hur du skapar ett adaptivt formulär från Acrobat och sammanfogar data i Acrobat för att få PDF. PDF med sammanfogade data kan också skickas för signering med Acrobat Sign.
 
 >[!NOTE]
 >

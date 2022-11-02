@@ -1,23 +1,24 @@
 ---
-title: Skapa Adobe Sign API-program
-description: Med Adobe Sign API Application kan du integrera AEM Forms med Adobe Sign
-feature: Adaptiv Forms,Adobe Sign
+title: Skapa Acrobat Sign API-program
+description: Med Acrobat Sign API Application kan du integrera AEM Forms med Acrobat Sign
+feature: Adaptive Forms,Acrobat Sign
 kt: 6032
 thumbnail: 38178.jpg
-topic: Utveckling
+topic: Development
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0fea826c-b481-4c8f-872f-e429430ed3a6
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
-# Skapa Adobe Sign API-program
+# Skapa Acrobat Sign API-program
 
-Du måste skapa ett API-program på din Adobe Sign för att kunna integrera med din Adobe Sign-plattform. API-programmet fungerar som en representant för ett klientprogram och interagerar med Adobe Sign-plattformen. Du kan skapa API-programmet på kund- eller partnerdomänen.
+Du måste skapa ett API-program på din Acrobat Sign för att kunna integrera med din Acrobat Sign-plattform. API-programmet fungerar som en representant för ett klientprogram och interagerar med Acrobat Sign-plattformen. Du kan skapa API-programmet på kund- eller partnerdomänen.
 
-I följande video förklaras de steg som krävs för att skapa ett Adobe Sign API-program
+I följande video förklaras de steg som krävs för att skapa ett Acrobat Sign API-program
 
 >[!VIDEO](https://video.tv.adobe.com/v/38178/?quality=9&learn=on)

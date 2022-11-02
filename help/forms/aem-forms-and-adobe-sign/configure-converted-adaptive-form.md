@@ -1,24 +1,24 @@
 ---
 title: Konfigurera konverterad adaptiv form
 description: Konfigurera konverterad adaptiv form
-feature: Adaptiv Forms
+feature: Adaptive Forms
 thumbnail: 39574.jpg
 kt: 6126
-topic: Utveckling
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 1%
+source-wordcount: '74'
+ht-degree: 0%
 
 ---
 
 # Konfigurera konverterad adaptiv form
 
-När du har konverterat ett PDF-formulär till ett adaptivt format behöver du vanligtvis skapa meningsfulla titlar och du kan också behöva ordna om vissa fält. Formuläret måste även konfigureras för att använda Adobe Sign-integrering för signering på plats.
+När du har konverterat PDF-formulär till anpassningsbara formulär behöver du vanligtvis skapa meningsfulla titlar och du kan också behöva ordna om vissa fält. Formuläret måste även konfigureras för att använda Acrobat Sign-integrering för signering på plats.
 
 I följande video förklaras de steg som krävs för att konfigurera formuläret för signering på plats
 
 >[!VIDEO](https://video.tv.adobe.com/v/39574/?quality=9&learn=on)
-
