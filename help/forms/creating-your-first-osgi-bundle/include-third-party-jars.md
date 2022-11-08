@@ -9,7 +9,7 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som
 * Öppna kommandotolken. Navigera till projektmappen (c:\aemformsbundles\AEMFormsProcessStep) i mitt fall. Kör följande kommando
 
 ```java
-mvn clean install -pAutoInstallSinglePackage
+mvn clean install -PautoInstallSinglePackage
 ```
 
 Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med [felix-webbkonsol](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i `crx` databas enligt nedan

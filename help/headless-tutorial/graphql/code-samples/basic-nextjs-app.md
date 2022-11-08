@@ -12,9 +12,9 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ Den här koden:
 + Använder WKND:s beständiga frågor: `wknd-shared/adventures-all` och `wknd-shared/adventures-by-slug`
 
 Om du vill ha en mer detaljerad genomgång av hur den här appen Next.js byggs kan du gå igenom [Exempel på dokumentation för appen Next.js](../example-apps/next-js.md).
+
+>[!IMPORTANT]
+>
+> Codesandbox.io stöder inte redigering av Next.js-programmet i den inbäddade IDE:n. Om du vill redigera det här kodexemplet [öppna appen Next.js direkt i codesandbox.io](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).

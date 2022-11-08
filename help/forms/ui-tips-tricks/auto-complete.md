@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 11374
 last-substantial-update: 2022-11-01T00:00:00Z
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,11 @@ I exemplet som ingår i den här artikeln används en rad olika datakällor (sta
 
 Den kod som används för att utföra funktionen för automatisk komplettering är associerad med händelsen initialize för fältet.
 
-
-## Tillhandahålla förslag för landsnamn
-
-![landsförslag](assets/auto-complete1.png)
-
 ## Ange förslag för adress
 
 ![landsförslag](assets/auto-complete2.png)
+
+
 
 Följande kod används för att ge förslag på gatuadresser
 
@@ -60,6 +57,10 @@ $(".streetAddress input").autocomplete({
 
 });
 ```
+
+
+
+
 
 ## Förslag med känslolägesikoner
 
