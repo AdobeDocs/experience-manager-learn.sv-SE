@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%

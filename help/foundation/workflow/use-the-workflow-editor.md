@@ -10,7 +10,7 @@ kt: 657
 exl-id: 8ec12629-3acd-4958-b25c-0ae0b97ce244
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: KT-657.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
