@@ -6,22 +6,23 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: bd7916be-8caa-4321-add0-4c9031306d60
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # Utforska AEM GraphQL API
 
-Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)har du utforskat GraphiQL Integrated Development Environment (IDE) där du har testat och finslipat några vanliga GraphQL-frågor. I det här kapitlet ska du använda GraphiQL IDE för att utforska mer avancerade frågor för att samla in data om de innehållsfragment som du skapade i föregående kapitel.
+Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågor.
+
+I det här kapitlet använder du GraphiQL Explorer för att definiera mer avancerade frågor för att samla in data om de innehållsfragment som du har skapat i [föregående kapitel](../advanced-graphql/author-content-fragments.md).
 
 ## Förutsättningar {#prerequisites}
 
 Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att föregående kapitel har fyllts i innan du fortsätter med det här kapitlet.
-
-GraphiQL IDE måste vara installerat innan du slutför det här kapitlet. Följ installationsanvisningarna i föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md) för mer information.
 
 ## Mål {#objectives}
 
@@ -33,11 +34,33 @@ I det här kapitlet får du lära dig att:
 * Fråga med direktiv
 * Fråga efter JSON-objektets innehållstyp
 
+## Använda GraphiQL Explorer
+
+
+The [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) gör att utvecklare kan skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL kan man också **bevara eller spara** frågor som ska användas av klientprogram i en produktionsinställning.
+
+Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL Explorer.
+
+1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**.
+
+   ![Navigera till GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+
+>[!IMPORTANT]
+>
+>I vissa versioner av AEM (6.X.X) måste GraphiQL Explorer-verktyget (även GraphiQL IDE) installeras manuellt. Följ [instruktion härifrån](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+
+1. Kontrollera att slutpunkten är inställd på i det övre högra hörnet **WKND delad slutpunkt**. Ändra _Slutpunkt_ här visas det befintliga _Beständiga frågor_ i det övre vänstra hörnet.
+
+   ![Ange GraphQL-slutpunkt](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
+
+Detta kommer att omfatta alla frågor till modeller som skapats i **WKND delad** projekt.
+
+
 ## Filtrera en lista med innehållsfragment med frågevariabler
 
-I föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)har du lärt dig att filtrera en lista med innehållsfragment. Här utökar du kunskapen och filtrerar med hjälp av variabler.
+I föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md), har du definierat och använt grundläggande beständiga frågor för att hämta information om innehållsfragment. Här utökar du kunskapen och filtrerar Content Fragments-data genom att skicka variabler till de beständiga frågorna.
 
-När du utvecklar klientprogram måste du i de flesta fall filtrera innehållsfragment baserat på dynamiska argument. Med AEM GraphQL API kan du skicka dessa argument som variabler i en fråga för att undvika strängkonstruktion på klientsidan vid körning. Mer information om GraphQL-variabler finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#variables).
+När du utvecklar klientprogram behöver du vanligtvis filtrera innehållsfragment baserat på dynamiska argument. Med AEM GraphQL API kan du skicka dessa argument som variabler i en fråga för att undvika strängkonstruktion på klientsidan vid körning. Mer information om GraphQL-variabler finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#variables).
 
 I det här exemplet frågar du alla instruktörer som har en viss kompetens.
 
@@ -72,7 +95,7 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
 
    The `listPersonBySkill` en variabel accepteras i frågan ovan (`skillFilter`) som krävs `String`. Den här frågan utför en sökning mot alla personinnehållsfragment och filtrerar dem baserat på `skills` fält och strängen som skickas `skillFilter`.
 
-   Observera att `listPersonBySkill` innehåller `contactInfo` -egenskap, som är en fragmentreferens till kontaktinformationsmodellen som definieras i föregående kapitel. Kontaktinformationsmodellen innehåller `phone` och `email` fält. Du måste inkludera minst ett av dessa fält i frågan för att det ska fungera korrekt.
+   The `listPersonBySkill` innehåller `contactInfo` -egenskap, som är en fragmentreferens till kontaktinformationsmodellen som definieras i föregående kapitel. Kontaktinformationsmodellen innehåller `phone` och `email` fält. Minst ett av dessa fält i frågan måste finnas för att den ska fungera korrekt.
 
    ```graphql
    contactInfo {
@@ -85,7 +108,7 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
 
    ```json
    {
-   	    "skillFilter": "Skiing"
+       "skillFilter": "Skiing"
    }
    ```
 
@@ -103,10 +126,10 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
                "email": "sroswells@wknd.com"
              },
              "profilePicture": {
-               "_path": "/content/dam/wknd/en/contributors/stacey-roswells.jpg"
+               "_path": "/content/dam/wknd-shared/en/contributors/stacey-roswells.jpg"
              },
              "biography": {
-               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer.\nBorn in Baltimore, Maryland, Stacey is the youngest of six children. Her father was a lieutenant colonel in the US Navy and her mother was a modern dance instructor. Her family moved frequently with her father’s duty assignments, and she took her first pictures when he was stationed in Thailand. This is also where Stacey learned to rock climb."
+               "plaintext": "Stacey Roswells is an accomplished rock climber and alpine adventurer. Born in Baltimore, Maryland, Stacey is the youngest of six children. Stacey's father was a lieutenant colonel in the US Navy and mother was a modern dance instructor. Stacey's family moved frequently with father's duty assignments and took the first pictures when father was stationed in Thailand. This is also where Stacey learned to rock climb."
              },
              "instructorExperienceLevel": "Advanced",
              "skills": [
@@ -120,6 +143,10 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
      }
    }
    ```
+
+Tryck på **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från föregående kapitel:
+
+![Person efter kunskapsresultat](assets/explore-graphql-api/person-by-skill.png)
 
 ## Filter för innehåll i en fragmentreferens
 
@@ -138,7 +165,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
        filter: {administrator: {fullName: {_expressions: [{value: $name}]}}}
      ) {
        items {
-         adventureTitle
+         title
          administrator {
            fullName
            contactInfo {
@@ -158,7 +185,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
 
    ```json
    {
-   	    "name": "Jacob Wester"
+       "name": "Jacob Wester"
    }
    ```
 
@@ -172,7 +199,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
        "adventureList": {
          "items": [
            {
-             "adventureTitle": "Yosemite Backpacking",
+             "title": "Yosemite Backpacking",
              "administrator": {
                "fullName": "Jacob Wester",
                "contactInfo": {
@@ -186,7 +213,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
                      "content": [
                        {
                          "nodeType": "text",
-                         "value": "Jacob Wester has been coordinating backpacking adventures for 3 years."
+                         "value": "Jacob Wester has been coordinating backpacking adventures for three years."
                        }
                      ]
                    }
@@ -254,13 +281,13 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
 
    The `getTeamByAdventurePath` hämtar flera referenser. Först används den inbyggda `ImageRef` objekt som hämtar `_path` och `__typename` av bilder som infogats som innehållsreferenser i textfältet med flera rader. Därefter används `LocationModel` om du vill hämta data för det platsinnehållsfragment som infogats i samma fält.
 
-   Observera att frågan även innehåller `_metadata` fält. På så sätt kan du hämta namnet på teaminnehållsfragmentet och visa det senare i WKND-appen.
+   Frågan innehåller även `_metadata` fält. På så sätt kan du hämta namnet på teaminnehållsfragmentet och visa det senare i WKND-appen.
 
 1. Klistra sedan in följande JSON-sträng på panelen Frågevariabler för att hämta Yosemite Backpackaging Adventure:
 
    ```json
    {
-   	    "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+       "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking"
    }
    ```
 
@@ -293,7 +320,7 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -308,7 +335,7 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -316,14 +343,14 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
    }
    ```
 
-   Observera att `_references` visas både logotypbilden och Yosemite Valley Lodge Content Fragment som infogades i **Beskrivning** fält.
+   The `_references` visas både logotypbilden och Yosemite Valley Lodge Content Fragment som infogades i **Beskrivning** fält.
 
 
 ## Fråga med direktiv
 
 När du utvecklar klientprogram måste du ibland ändra strukturen för dina frågor på ett villkor. I det här fallet kan du med AEM GraphQL API använda GraphQL-direktiv för att ändra beteendet på dina frågor baserat på de angivna villkoren. Mer information om GraphQL-direktiv finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#directives).
 
-I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter textbundna referenser i textfält med flera rader. Observera att innehållet hämtades från `description` i `plaintext` format. Nu ska vi utöka frågan och använda ett direktiv för att hämta villkorligt `description` i `json` också.
+I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter textbundna referenser i textfält med flera rader. Innehållet hämtades från `description` i `plaintext` format. Nu ska vi utöka frågan och använda ett direktiv för att hämta villkorligt `description` i `json` också.
 
 1. Klistra in följande fråga i den vänstra panelen i GraphiQL IDE:
 
@@ -376,7 +403,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking",
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/yosemite-backpacking/yosemite-backpacking",
      "includeJson": false
    }
    ```
@@ -413,7 +440,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
                      {
                        "nodeType": "reference",
                        "data": {
-                         "path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
+                         "path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png",
                          "mimetype": "image/png"
                        }
                      }
@@ -434,7 +461,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
                      {
                        "nodeType": "reference",
                        "data": {
-                         "href": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+                         "href": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
                          "type": "fragment"
                        },
                        "value": "Yosemite Valley Lodge"
@@ -448,7 +475,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
          "_references": [
            {
              "__typename": "LocationModel",
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge",
              "name": "Yosemite Valley Lodge",
              "address": {
                "streetAddress": "9006 Yosemite Lodge Drive",
@@ -463,7 +490,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
            },
            {
              "__typename": "ImageRef",
-             "_path": "/content/dam/wknd/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
+             "_path": "/content/dam/wknd-shared/en/adventures/teams/yosemite-team/team-yosemite-logo.png"
            }
          ]
        }
@@ -511,7 +538,7 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
 
    ```json
    {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park"
+     "fragmentPath": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park"
    }
    ```
 
@@ -530,7 +557,7 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
                  "content": [
                    {
                      "nodeType": "text",
-                     "value": "Yosemite National Park is in California’s Sierra Nevada mountains. It’s famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
+                     "value": "Yosemite National Park is in California's Sierra Nevada mountains. It's famous for its gorgeous waterfalls, giant sequoia trees, and iconic views of El Capitan and Half Dome cliffs."
                    }
                  ]
                },
@@ -550,7 +577,7 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
              "email": "yosemite@wknd.com"
            },
            "locationImage": {
-             "_path": "/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
+             "_path": "/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park.jpeg"
            },
            "weatherBySeason": {
              "summer": "81 / 89°F",
@@ -571,38 +598,39 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
    }
    ```
 
-   Observera att `weatherBySeason` -fältet innehåller det JSON-objekt som lagts till i föregående kapitel.
+   The `weatherBySeason` -fältet innehåller det JSON-objekt som lagts till i föregående kapitel.
 
 ## Fråga om allt innehåll samtidigt
 
-Hittills har flera frågor körts för att illustrera funktionerna i AEM GraphQL API. Samma data kunde bara hämtas med en enda fråga:
+Hittills har flera frågor körts för att illustrera funktionerna i AEM GraphQL API.
+
+Samma data kunde bara hämtas med en enda fråga och den här frågan används senare i klientprogrammet för att hämta ytterligare information som plats, teamnamn, teammedlemmar i ett äventyr:
 
 ```graphql
-query getAllAdventureDetails($fragmentPath: String!) {
-  adventureByPath(_path: $fragmentPath){
-    item {
+query getAdventureDetailsBySlug($slug: String!) {
+  adventureList(filter: {slug: {_expressions: [{value: $slug}]}}) {
+    items {
       _path
-      adventureTitle
-      adventureActivity
+      title
+      activity
       adventureType
-      adventurePrice
-      adventureTripLength
-      adventureGroupSize
-      adventureDifficulty
-      adventurePrice
-      adventurePrimaryImage{
-        ...on ImageRef{
+      price
+      tripLength
+      groupSize
+      difficulty
+      primaryImage {
+        ... on ImageRef {
           _path
           mimeType
           width
           height
         }
       }
-      adventureDescription {
+      description {
         html
         json
       }
-      adventureItinerary {
+      itinerary {
         html
         json
       }
@@ -613,171 +641,83 @@ query getAllAdventureDetails($fragmentPath: String!) {
           html
           json
         }
-        contactInfo{
+        contactInfo {
           phone
           email
         }
-        locationImage{
-          ...on ImageRef{
+        locationImage {
+          ... on ImageRef {
             _path
           }
         }
         weatherBySeason
-        address{
-            streetAddress
-            city
-            state
-            zipCode
-            country
+        address {
+          streetAddress
+          city
+          state
+          zipCode
+          country
         }
       }
       instructorTeam {
-        _metadata{
-            stringMetadata{
-                name
-                value
-            }
-        }        
+        _metadata {
+          stringMetadata {
+            name
+            value
+          }
+        }
         teamFoundingDate
         description {
-            json
+          json
         }
         teamMembers {
-            fullName
-            contactInfo {
-                phone
-                email
+          fullName
+          contactInfo {
+            phone
+            email
+          }
+          profilePicture {
+            ... on ImageRef {
+              _path
             }
-            profilePicture{
-                ...on ImageRef {
-                    _path
-                }
-            }
-            instructorExperienceLevel
-            skills
-            biography {
-                html
-            }
-        }       
-     }
-      administrator {
-            fullName
-            contactInfo {
-                phone
-                email
-            }
-            biography {
-                html
-            }
+          }
+          instructorExperienceLevel
+          skills
+          biography {
+            html
+          }
         }
+      }
+      administrator {
+        fullName
+        contactInfo {
+          phone
+          email
+        }
+        biography {
+          html
+        }
+      }
     }
     _references {
-        ...on ImageRef {
-            _path
+      ... on ImageRef {
+        _path
         mimeType
-        }
-        ...on LocationModel {
-            _path
-                __typename
-        }
+      }
+      ... on LocationModel {
+        _path
+        __typename
+      }
     }
   }
 }
 
+
 # in Query Variables
 {
-  "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
+  "slug": "yosemite-backpacking"
 }
 ```
-
-## Ytterligare frågor för WKND-appen
-
-Följande frågor visas för att hämta alla data som behövs i WKND-appen. De här frågorna demonstrerar inga nya koncept och tillhandahålls bara som referens för att hjälpa dig att bygga implementeringen.
-
-1. **Hämta teammedlemmar för en specifik Adventure**:
-
-   ```graphql
-   query getTeamMembersByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath ) {
-       item {
-         instructorTeam {
-           teamMembers{
-             fullName
-             contactInfo{
-               phone
-               email
-             }
-           profilePicture {
-               ... on ImageRef {
-                 _path
-               }
-           }
-             instructorExperienceLevel
-             skills
-             biography{
-               plaintext
-             }
-           }
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **Hämta platssökväg för en specifik Adventure**
-
-   ```graphql
-   query getLocationPathByAdventurePath ($fragmentPath: String!){
-     adventureByPath (_path: $fragmentPath){
-       item {
-         location{
-           _path  
-         } 
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking"
-   }
-   ```
-
-1. **Hämta teamets plats via dess sökväg**
-
-   ```graphql
-   query getTeamLocationByLocationPath ($fragmentPath: String!){
-     locationByPath (_path: $fragmentPath) {
-       item {
-         name
-         description{
-           json
-         }
-         contactInfo{
-           phone
-           email
-         }
-           address{
-           streetAddress
-           city
-           state
-           zipCode
-           country
-         }
-       }
-     }
-   }
-   
-   # in Query Variables
-   {
-     "fragmentPath": "/content/dam/wknd/en/adventures/locations/yosemite-valley-lodge/yosemite-valley-lodge"
-   }
-   ```
 
 ## Grattis!
 

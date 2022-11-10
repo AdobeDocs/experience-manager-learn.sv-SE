@@ -6,9 +6,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '2911'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ I [föregående kapitel](/help/headless-tutorial/graphql/advanced-graphql/create
 
 ## Förutsättningar {#prerequisites}
 
-Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att föregående kapitel har fyllts i innan du fortsätter med det här kapitlet.
+Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att [föregående kapitel](create-content-fragment-models.md) har slutförts innan du fortsätter med detta kapitel.
 
 ## Mål {#objectives}
 
@@ -36,7 +37,7 @@ Läs om hur du gör följande i det här kapitlet:
 
 Installera ett AEM som innehåller flera mappar och exempelbilder som används för att snabba upp självstudiekursen.
 
-1. Hämta [Advanced-GraphQL-Tutorial-Starter-Package-1.0.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.0.zip)
+1. Hämta [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)
 1. I AEM navigerar du till **verktyg** > **Distribution** > **Paket** för åtkomst **Pakethanteraren**.
 1. Överför och installera det paket (zip-fil) som hämtades i föregående steg.
 
@@ -44,7 +45,7 @@ Installera ett AEM som innehåller flera mappar och exempelbilder som används f
 
 ## Skapa mappar och ange gränser med mappprofiler
 
-På AEM hemsida väljer du **Resurser** > **Filer** > **WKND-plats** > **Engelska**. Här ser du de olika kategorierna för innehållsfragment, inklusive tillägg och medarbetare som utforskades i föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/overview.md).
+På AEM hemsida väljer du **Resurser** > **Filer** > **WKND delad** > **Engelska**. Här ser du de olika kategorierna för innehållsfragment, inklusive Anvisningar och Medarbetare.
 
 ### Skapa mappar {#create-folders}
 
@@ -70,11 +71,11 @@ AEM gör att du kan definiera behörigheter och profiler för mapparna för inne
 
    ![Egenskaper](assets/author-content-fragments/properties.png)
 
-1. Välj **Profiler** och sedan avmarkera **Ärvs från /content/dam/wknd**. I **Tillåtna modeller för innehållsfragment efter sökväg** markerar du mappikonen.
+1. Välj **Profiler** och sedan avmarkera **Ärvs från /content/dam/wknd-shared**. I **Tillåtna modeller för innehållsfragment efter sökväg** markerar du mappikonen.
 
    ![Mappikon](assets/author-content-fragments/folder-icon.png)
 
-1. I dialogrutan Välj bana som öppnas följer du banan **conf** > **WKND-plats**. Personinnehållsfragmentmodellen, som skapades i föregående kapitel, innehåller en referens till kontaktinformationens innehållsfragmentmodell. Både person- och kontaktinformationsmodeller måste tillåtas i mappen Instruktörer för att ett instruktörsinnehållsfragment ska kunna skapas. Välj **Person** och **Kontaktinformation** och sedan trycka **Välj** för att stänga dialogrutan.
+1. I dialogrutan Välj bana som öppnas följer du banan **conf** > **WKND delad**. Personinnehållsfragmentmodellen, som skapades i föregående kapitel, innehåller en referens till kontaktinformationens innehållsfragmentmodell. Både person- och kontaktinformationsmodeller måste tillåtas i mappen Instruktörer för att ett instruktörsinnehållsfragment ska kunna skapas. Välj **Person** och **Kontaktinformation** och sedan trycka **Välj** för att stänga dialogrutan.
 
    ![Markera bana](assets/author-content-fragments/select-path.png)
 
@@ -88,13 +89,13 @@ AEM gör att du kan definiera behörigheter och profiler för mapparna för inne
 
 Navigera till **Instruktörer** mapp. Här skapar vi en kapslad mapp där du kan lagra kontaktinformationen för instruktörerna.
 
-Följ stegen som beskrivs i avsnittet på [skapa mappar](#create-folders) om du vill skapa en mapp med namnet&quot;Kontaktinformation&quot;. Observera att den kapslade mappen ärver mapprinciper för den överordnade mappen. Du kan konfigurera mer specifika profiler så att den nya mappen bara tillåter att kontaktinformationsmodellen används.
+Följ stegen som beskrivs i avsnittet på [skapa mappar](#create-folders) om du vill skapa en mapp med namnet&quot;Kontaktinformation&quot;. Den kapslade mappen ärver mapprinciper för den överordnade mappen. Du kan konfigurera mer specifika profiler så att den nya mappen bara tillåter att kontaktinformationsmodellen används.
 
 ### Skapa ett innehåll för instruktörer
 
-Låt oss skapa fyra personer som kan läggas till i ett team med Adventure Instructors. Återanvända bilder och namn på Contributors innehållsfragment som skapades i föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/author-content-fragments.md). I den föregående självstudiekursen beskrivs hur du skapar grundläggande innehållsfragment, men den här självstudiekursen fokuserar på mer avancerade funktioner.
+Låt oss skapa fyra personer som kan läggas till i ett team med Adventure Instructors.
 
-1. I mappen Instruktörer skapar du ett nytt innehållsfragment baserat på personinnehållsfragmentmodellen och ger det titeln&quot;Jacob Wester&quot;.
+1. I mappen Instruktörer skapar du ett innehållsfragment baserat på modellen Personinnehållsfragment och ger det titeln&quot;Jacob Wester&quot;.
 
    Det nya innehållsfragmentet ser ut så här:
 
@@ -103,14 +104,14 @@ Låt oss skapa fyra personer som kan läggas till i ett team med Adventure Instr
 1. Ange följande innehåll i fälten:
 
    * **Fullständigt namn**: Jacob Wester
-   * **Biografi**: Jacob Wester har varit vandrande instruktör i tio år och har älskat varenda minut! Han är en äventyrssökande med talang för klättring och ryggsäck. Jacob är vinnare i klättertävlingar, bland annat i strid med tävlingen i Bay. Han bor för närvarande i Kalifornien.
+   * **Biografi**: Jacob Wester har varit vandrande instruktör i tio år och har älskat varenda minut! Jacob är en äventyrssökande med talang för klättring och ryggsäck. Jacob är vinnare i klättertävlingar, bland annat i strid med tävlingen i Bay. Jacob bor för närvarande i Kalifornien.
    * **Upplevelsenivå för lärare**: Expert
    * **Kompetens**: Klimatning av sten, Surfning, Backpackaging
-   * **Administratörsinformation**: Jacob Wester har samordnat bakomliggande äventyr i 3 år.
+   * **Administratörsinformation**: Jacob Wester har samordnat bakomliggande äventyr i tre år.
 
-1. I **Profilbild** lägger du till en innehållsreferens till en bild. Bläddra till **WKND-plats** > **Engelska** > **Medarbetare** > **jacob_wester.jpg** för att skapa en bana till bilden.
+1. I **Profilbild** lägger du till en innehållsreferens till en bild. Bläddra till **WKND delad** > **Engelska** > **Medarbetare** > **jacob_wester.jpg** för att skapa en bana till bilden.
 
-### Skapa en ny fragmentreferens från redigeraren för innehållsfragment {#fragment-reference-from-editor}
+### Skapa en fragmentreferens från redigeraren för innehållsfragment {#fragment-reference-from-editor}
 
 AEM gör att du kan skapa en fragmentreferens direkt från redigeraren för innehållsfragment. Låt oss skapa en referens till Jakobs kontaktinformation.
 
@@ -135,7 +136,7 @@ AEM gör att du kan skapa en fragmentreferens direkt från redigeraren för inne
    * **Telefon**: 209-888-0000
    * **E-post**: jwester@wknd.com
 
-   När du är klar väljer du **Spara**. Du har nu skapat ett nytt innehållsfragment för kontaktinformation.
+   När du är klar väljer du **Spara**. Du har nu skapat ett innehållsfragment för kontaktinformation.
 
 1. Om du vill gå tillbaka till Instruktörens innehållsfragment väljer du **Jacob Wester** i det övre vänstra hörnet av redigeraren.
 
@@ -157,9 +158,9 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | --- | --- |
 | Content Fragment Title | Stacey Roswells |
 | Fullständigt namn | Stacey Roswells |
-| Kontaktinformation | /content/dam/wknd/en/adventures/instructors/contact-info/stacey-roswells-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/stacey-roswells.jpg |
-| Biografi | Stacey Roswells är en skicklig klippare och alfanäventyrare. Stacey är född i Baltimore, Maryland, och är yngst av sex barn. Hennes far var överste i USA:s flotta och hennes mor var en modern dansinstruktör. Hennes familj flyttade ofta med sin fars arbetsuppgifter och hon tog hennes första bilder när han var stationerad i Thailand. Det här är också där Stacey lärde sig att klättra. |
+| Kontaktinformation | /content/dam/wknd-shared/en/adventures/instructors/contact-info/stacey-roswells-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/stacey-roswells.jpg |
+| Biografi | Stacey Roswells är en skicklig klippare och alfanäventyrare. Stacey är född i Baltimore, Maryland, och är yngst av sex barn. Staceys far var överste i USA:s flotta och mor var en modern dansinstruktör. Staceys familj flyttade ofta med faderns arbetsuppgifter och tog de första bilderna när fadern var stationerad i Thailand. Det här är också där Stacey lärde sig att klättra. |
 | Upplevelsenivå för lärare | Avancerat |
 | Kompetens | Groda klättrar | Skickar | Bakåt |
 
@@ -169,8 +170,8 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | --- | --- |
 | Content Fragment Title | Kumar Selvaraj |
 | Fullständigt namn | Kumar Selvaraj |
-| Kontaktinformation | /content/dam/wknd/en/adventures/instructors/contact-info/kumar-selvaraj-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/Kumar_Selvaraj.JPG |
+| Kontaktinformation | /content/dam/wknd-shared/en/adventures/instructors/contact-info/kumar-selvaraj-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg |
 | Biografi | Kumar Selvaraj är en erfaren AMGA Certified Professional-instruktör vars främsta mål är att hjälpa eleverna att förbättra sina klättring- och vandringsfärdigheter. |
 | Upplevelsenivå för lärare | Avancerat |
 | Kompetens | Groda klättrar | Bakåt |
@@ -181,9 +182,9 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | --- | --- |
 | Content Fragment Title | Ayo Ogunseinde |
 | Fullständigt namn | Ayo Ogunseinde |
-| Kontaktinformation | /content/dam/wknd/en/adventures/instructors/contact-info/ayo-ogunseinde-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/ayo-ogunseinde-237739.jpg |
-| Biografi | Ayo Ogunseinde är en professionell timmerlärare och handledare i Fresno i CentralKalifornien. Hennes mål är att vägleda vandrarna mot deras mest episka nationalparksäventyr. |
+| Kontaktinformation | /content/dam/wknd-shared/en/adventures/instructors/contact-info/ayo-ogunseinde-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg |
+| Biografi | Ayo Ogunseinde är en professionell timmerlärare och handledare i Fresno i CentralKalifornien. Ayos mål är att vägleda de anställda i deras mest episnationella parkäventyr. |
 | Upplevelsenivå för lärare | Avancerat |
 | Kompetens | Groda klättrar | Cykler | Bakåt |
 
@@ -205,9 +206,9 @@ Navigera till **Platser** mapp. Här visas två kapslade mappar som redan har sk
 
 ![Platsmapp](assets/author-content-fragments/locations-folder.png)
 
-Ignorera mappen Yosemite Valley Lodge för tillfället. Vi återkommer till det senare i det här avsnittet när vi skapar en ny plats som fungerar som hembas för vårt team med instruktörer.
+Ignorera mappen Yosemite Valley Lodge för tillfället. Vi kommer tillbaka till det senare i det här avsnittet när vi skapar en plats som fungerar som hembas för vårt team med instruktörer.
 
-Navigera till **Yosemite nationalpark** mapp. För närvarande innehåller den bara en bild på Yosemite nationalpark. Låt oss skapa ett nytt innehållsfragment med Location Content Fragment Model och ge det namnet&quot;Yosemite National Park&quot;.
+Navigera till **Yosemite nationalpark** mapp. För närvarande innehåller den bara en bild på Yosemite nationalpark. Låt oss skapa ett innehållsfragment med Location Content Fragment Model och ge det namnet&quot;Yosemite National Park&quot;.
 
 ### Platshållare för flikar
 
@@ -247,22 +248,22 @@ Låt oss lägga till resten av innehållet i Location Content Fragment för att 
 1. I **Platsinformation** anger du följande information i fälten:
 
    * **Namn**: Yosemite nationalpark
-   * **Beskrivning**: Yosemite National Park ligger i California’s Sierra Nevada-bergen. Det är känt för sina fantastiska vattenfall, enorma sekvoiaträd och ikoniska vyer över klippen El Capitan och Half Dome. Att gå på vandring och tält är det bästa sättet att uppleva Yosemite. Många spår ger oändliga möjligheter till äventyr och utforskande.
+   * **Beskrivning**: Yosemite National Park ligger i California&#39;s Sierra Nevada-bergen. Det är känt för sina fantastiska vattenfall, enorma sekvoiaträd och ikoniska vyer av klippen El Capitan och Half Dome. Att gå på vandring och tält är det bästa sättet att uppleva Yosemite. Många spår ger oändliga möjligheter till äventyr och utforskande.
 
-1. Från **Kontaktinformation** skapar du ett nytt innehållsfragment baserat på kontaktinformationsmodellen och ger det rubriken&quot;Yosemite National Park Contact Info&quot;. Följ samma process som beskrivs i föregående avsnitt om [skapa en ny fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
+1. Från **Kontaktinformation** skapar du ett innehållsfragment baserat på kontaktinformationsmodellen och ger det rubriken&quot;Yosemite National Park Contact Info&quot;. Följ samma process som beskrivs i föregående avsnitt om [skapa en fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
 
    * **Telefon**: 209-999-0000
    * **E-post**: yosemite@wknd.com
 
 1. Från **Platsbild** fält, bläddra till **Annonser** > **Platser** > **Yosemite nationalpark** > **yosemite-national-park.jpeg** för att skapa en bana till bilden.
 
-   Kom ihåg att i föregående kapitel konfigurerade du bildvalideringen, så att platsbildens mått måste vara mindre än 2 560 x 1 800 och dess filstorlek måste vara mindre än 3 MB.
+   Kom ihåg, i föregående kapitel som du konfigurerade bildvalideringen, att platsbildens mått måste vara mindre än 2 560 x 1 800 och att filstorleken måste vara mindre än 3 MB.
 
 1. Med all information tillagd **Platsinformation** ser nu ut så här:
 
    ![Fliken Platsinformation har slutförts](assets/author-content-fragments/location-details-tab-completed.png)
 
-1. Navigera till **Platsadress** -fliken. Från **Adress** skapar du ett nytt innehållsfragment med namnet&quot;Yosemite National Park Address&quot; med adressfragmentmodellen som du skapade i föregående kapitel. Följ samma process som beskrivs i avsnittet om [skapa en ny fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
+1. Navigera till **Platsadress** -fliken. Från **Adress** skapar du ett innehållsfragment med namnet&quot;Yosemite National Park Address&quot; med adressfragmentmodellen som du skapade i föregående kapitel. Följ samma process som beskrivs i avsnittet om [skapa en fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
 
    * **Gatuadress**: 9010 CFUND Village Drive
    * **Ort**: Yosemite Valley
@@ -276,23 +277,23 @@ Låt oss lägga till resten av innehållet i Location Content Fragment för att 
 
 1. Välj **Spara och stäng**.
 
-### Skapa ytterligare ett fragment
+### Skapa ett fragment till
 
-1. Navigera till **Yosemite Valley Lodge** mapp. Skapa ett nytt innehållsfragment med Location Content Fragment Model och ge det rubriken&quot;Yosemite Valley Lodge&quot;.
+1. Navigera till **Yosemite Valley Lodge** mapp. Skapa ett innehållsfragment med Location Content Fragment Model och ge det rubriken&quot;Yosemite Valley Lodge&quot;.
 
 1. I **Platsinformation** anger du följande information i fälten:
 
    * **Namn**: Yosemite Valley Lodge
    * **Beskrivning**: Yosemite Valley Lodge är ett nav för gruppmöten och alla typer av aktiviteter, som att handla, äta, fiska, vandra och mycket annat.
 
-1. Från **Kontaktinformation** skapar du ett nytt innehållsfragment baserat på modellen Kontaktinformation och ger det rubriken&quot;Yosemite Valley Lodge Contact Info&quot;. Följ samma process som beskrivs i avsnittet om [skapa en ny fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten för det nya innehållsfragmentet:
+1. Från **Kontaktinformation** skapar du ett innehållsfragment baserat på modellen Kontaktinformation och ger det rubriken&quot;Yosemite Valley Lodge Contact Info&quot;. Följ samma process som beskrivs i avsnittet om [skapa en fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten för det nya innehållsfragmentet:
 
    * **Telefon**: 209-992-0000
    * **E-post**: yosemitelodge@wknd.com
 
    Spara det nya innehållsfragmentet.
 
-1. Navigera tillbaka till **Yosemite Valley Lodge** och går till **Platsadress** -fliken. Från **Adress** skapar du ett nytt innehållsfragment med namnet&quot;Yosemite Valley Lodge Address&quot; med adressfragmentmodellen som du skapade i föregående kapitel. Följ samma process som beskrivs i avsnittet om [skapa en ny fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
+1. Navigera tillbaka till **Yosemite Valley Lodge** och går till **Platsadress** -fliken. Från **Adress** skapar du ett innehållsfragment med namnet&quot;Yosemite Valley Lodge Address&quot; med adressfragmentmodellen som du skapade i föregående kapitel. Följ samma process som beskrivs i avsnittet om [skapa en fragmentreferens från redigeraren](#fragment-reference-from-editor) och ange följande data i fälten:
 
    * **Gatuadress**: 9006 Yosemite-logotyp
    * **Ort**: Yosemite nationalpark
@@ -312,7 +313,7 @@ Bläddra bland mappar till **Team** > **Yosemite Team**. Du ser att Yosemite Tea
 
 ![Yosemite Team-mapp](assets/author-content-fragments/yosemite-team-folder.png)
 
-Låt oss skapa ett nytt innehållsfragment med teamets innehållsfragmentmodell och ge det namnet&quot;Yosemite Team&quot;.
+Låt oss skapa ett innehållsfragment med teamets innehållsfragmentmodell och ge det namnet&quot;Yosemite Team&quot;.
 
 ### Innehålls- och fragmentreferenser i en textredigerare med flera rader
 
@@ -330,13 +331,13 @@ Med AEM kan du lägga till innehåll och fragmentreferenser direkt i textrediger
 
    Innehållsreferensen har nu lagts till i **Beskrivning** fält.
 
-Kom ihåg att i föregående kapitel tillät du fragmentreferenser att läggas till i **Beskrivning** fält. Vi lägger till en här.
+Kom ihåg att du i föregående kapitel tillät att fragmentreferenser läggs till i **Beskrivning** fält. Vi lägger till en här.
 
 1. Välj **Infoga innehållsfragment** i verktygsfältet i textredigeraren med flera rader.
 
    ![Ikonen Infoga innehållsfragment](assets/author-content-fragments/insert-content-fragment-icon.png)
 
-1. Bläddra till **WKND-plats** > **Engelska** > **Annonser** > **Platser** > **Yosemite Valley Lodge** > **Yosemite Valley Lodge**. Tryck **Välj** om du vill infoga innehållsfragmentet.
+1. Bläddra till **WKND delad** > **Engelska** > **Annonser** > **Platser** > **Yosemite Valley Lodge** > **Yosemite Valley Lodge**. Tryck **Välj** om du vill infoga innehållsfragmentet.
 
    ![Infoga modalt innehållsfragment](assets/author-content-fragments/insert-content-fragment-modal.png)
 
@@ -362,7 +363,7 @@ Låt oss lägga till instruktörer i fragmentreferensen för teammedlemmar.
 
    ![Knappen Lägg till](assets/author-content-fragments/add-button.png)
 
-1. I det nya fältet som visas väljer du mappikonen för att öppna modal Välj sökväg. Bläddra bland mappar till **WKND-plats** > **Engelska** > **Annonser** > **Instruktörer** markerar du kryssrutan bredvid **jacob-wester**. Tryck **Välj** för att spara banan.
+1. I det nya fältet som visas väljer du mappikonen för att öppna modal Välj sökväg. Bläddra bland mappar till **WKND delad** > **Engelska** > **Annonser** > **Instruktörer** markerar du kryssrutan bredvid **jacob-wester**. Tryck **Välj** för att spara banan.
 
    ![Fragmentreferenssökväg](assets/author-content-fragments/fragment-reference-path.png)
 
@@ -378,11 +379,11 @@ Låt oss slutligen lägga till våra nya innehållsfragment i en äventyr.
 
 1. Navigera till **Annonser** > **Yosemite Backpackaging** och öppna Yosemite Backpackaging Content Fragment. Längst ned i formuläret kan du se de tre fält som du har skapat i föregående kapitel: **Plats**, **Lärarteam** och **Administratör**.
 
-1. Lägg till fragmentreferensen i **Plats** fält. Sökvägen till platsen ska hänvisa till det Yosemite National Park Content Fragment som du skapade: `/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park`.
+1. Lägg till fragmentreferensen i **Plats** fält. Sökvägen till platsen ska hänvisa till det Yosemite National Park Content Fragment som du skapade: `/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park`.
 
-1. Lägg till fragmentreferensen i **Lärarteam** fält. Teamsökvägen ska referera till det Yosemite Team Content Fragment som du skapade: `/content/dam/wknd/en/adventures/teams/yosemite-team/yosemite-team`. Detta är en kapslad fragmentreferens. Team Content Fragment innehåller en referens till personmodellen som refererar till kontaktinformation och adressmodeller. Därför har du kapslat innehållsfragment tre nivåer ned.
+1. Lägg till fragmentreferensen i **Lärarteam** fält. Teamsökvägen ska referera till det Yosemite Team Content Fragment som du skapade: `/content/dam/wknd-shared/en/adventures/teams/yosemite-team/yosemite-team`. Detta är en kapslad fragmentreferens. Team Content Fragment innehåller en referens till personmodellen som refererar till kontaktinformation och adressmodeller. Därför har du kapslat innehållsfragment tre nivåer ned.
 
-1. Lägg till fragmentreferensen i **Administratör** fält. Låt oss säga att Jacob Wester är administratör för Yosemite Backpackaging Adventure. Sökvägen ska leda till Jacob Wester Content Fragment och visas enligt följande: `/content/dam/wknd/en/adventures/instructors/jacob-wester`.
+1. Lägg till fragmentreferensen i **Administratör** fält. Låt oss säga att Jacob Wester är administratör för Yosemite Backpackaging Adventure. Sökvägen ska leda till Jacob Wester Content Fragment och visas enligt följande: `/content/dam/wknd-shared/en/adventures/instructors/jacob-wester`.
 
 1. Du har nu lagt till tre fragmentreferenser till ett Adventure Content Fragment. Fälten ser ut så här:
 
@@ -396,6 +397,4 @@ Grattis! Du har nu skapat innehållsfragment baserat på de avancerade modeller 
 
 ## Nästa steg
 
-I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)får du lära dig att skicka avancerade GraphQL-frågor med GraphiQL Integrated Development Environment (IDE). Dessa frågor gör att vi kan visa de data som skapas i det här kapitlet och till slut lägga till de här frågorna i WKND-appen.
-
-Det är valfritt för den här självstudiekursen, men se till att publicera allt innehåll i verkliga produktionssituationer. Mer information om redigerings- och publiceringsmiljöerna finns i [headless video series](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md)
+I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)får du lära dig att skicka avancerade GraphQL-frågor med GraphiQL Integrated Development Environment (IDE). Med hjälp av de här frågorna kan vi visa de data som skapas i det här kapitlet och till slut lägga till de här frågorna i WKND-appen.

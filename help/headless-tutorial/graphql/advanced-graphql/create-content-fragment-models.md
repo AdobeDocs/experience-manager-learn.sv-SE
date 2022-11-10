@@ -7,9 +7,9 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: 7631432881de3deabbe831b2aec40d924b393442
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1989'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ I det här kapitlet beskrivs även hur du förbättrar valideringsregler för in
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en avancerad självstudiekurs. Innan du fortsätter med det här kapitlet bör du kontrollera att du har slutfört [snabbinställningar](../quick-setup/cloud-service.md). Se till att du även har läst igenom det föregående översiktskapitlet för mer information om hur du ställer in den avancerade självstudiekursen.
+Det här är en avancerad självstudiekurs. Innan du fortsätter med det här kapitlet bör du kontrollera att du har slutfört [snabbinställningar](../quick-setup/cloud-service.md). Se till att du även har läst igenom föregående [översikt](../overview.md) om du vill ha mer information om hur du ställer in den avancerade självstudiekursen.
 
 ## Mål {#objectives}
 
@@ -48,11 +48,11 @@ I följande video ges en kort introduktion till modeller för innehållsfragment
 
 Låt oss skapa några innehållsfragmentmodeller för WKND-appen. Om du behöver en grundläggande introduktion till att skapa modeller för innehållsfragment, se motsvarande kapitel i [grundläggande självstudiekurs](../multi-step/content-fragment-models.md).
 
-1. Navigera till **verktyg** > **Resurser** > **Modeller för innehållsfragment**.
+1. Navigera till **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
    ![Sökväg till modeller för innehållsfragment](assets/define-content-fragment-models/content-fragment-models-path.png)
 
-1. Välj **WKND-plats** om du vill visa en lista över befintliga modeller för innehållsfragment för webbplatsen.
+1. Välj **WKND delad** om du vill visa en lista över befintliga modeller för innehållsfragment för webbplatsen.
 
 ### Kontaktinformationsmodell {#contact-info-model}
 
@@ -78,11 +78,9 @@ När du är klar väljer du **Spara** för att bekräfta ändringarna och stäng
 
 Skapa sedan en modell för en adress.
 
-1. Från **WKND-plats**, markera **Skapa** från det övre högra hörnet.
+1. Från **WKND delad**, markera **Skapa** från det övre högra hörnet.
 
-1. Ange en titel på &quot;Adress&quot; och välj **Skapa**.
-
-   i. Välj **Öppna** för att redigera den nya modellen.
+1. Ange en titel på &quot;Adress&quot; och välj **Skapa**. Välj **Öppna** för att redigera den nya modellen.
 
 1. Dra och släpp en **Enkelradig text** till modellen och ge den en **Fältetikett** på&quot;Gatuadress&quot;. Egenskapsnamnet fylls sedan i som `streetAddress`. Välj **Obligatoriskt** kryssrutan.
 
@@ -114,7 +112,7 @@ Skapa sedan en modell som innehåller information om en person.
 
 1. I **Egenskaper** -fliken, under **Tillåtna modeller för innehållsfragment** markerar du mappikonen och väljer **Kontaktinformation** fragmentmodellen skapades tidigare.
 
-1. Lägg till en **Innehållsreferens** fält och ge det en **Fältetikett** av &quot;Profilbild&quot;. Markera mappikonen under **Rotsökväg** om du vill öppna banmarkeringen modal. Välj en rotsökväg genom att välja **innehåll** > **Resurser** markerar du kryssrutan för **WKND-plats**. Använd **Välj** längst upp till höger för att spara banan. Den slutliga textbanan ska vara `/content/dam/wknd`.
+1. Lägg till en **Innehållsreferens** fält och ge det en **Fältetikett** av &quot;Profilbild&quot;. Markera mappikonen under **Rotsökväg** om du vill öppna banmarkeringen modal. Välj en rotsökväg genom att välja **innehåll** > **Resurser** markerar du kryssrutan för **WKND delad**. Använd **Välj** längst upp till höger för att spara banan. Den slutliga textbanan ska vara `/content/dam/wknd-shared`.
 
    ![Rotsökväg för innehållsreferens](assets/define-content-fragment-models/content-reference-root-path.png)
 
@@ -129,18 +127,19 @@ Skapa sedan en modell som innehåller information om en person.
 
 1. För **Max**, ange &quot;5&quot; och för **Välj enhet** väljer du &quot;Megabyte (MB)&quot;. Valideringen tillåter bara att bilder med den angivna storleken väljs.
 
-1. Under **Acceptera endast angiven bildbredd** väljer du &quot;Maximal bredd&quot;. I **Max (pixlar)** anger du &quot;500&quot;. Välj samma alternativ för **Acceptera endast en angiven bildhöjd**.
+1. Under **Acceptera endast angiven bildbredd** väljer du &quot;Maximal bredd&quot;. I **Max (pixlar)** anger du &quot;10000&quot;. Välj samma alternativ för **Acceptera endast en angiven bildhöjd**.
 
    Dessa valideringar säkerställer att tillagda bilder inte överskrider de angivna värdena. Valideringsreglerna ska nu se ut så här:
+
    ![Valideringsregler för innehållsreferens](assets/define-content-fragment-models/content-reference-validation.png)
 
 1. Lägg till en **Flerradstext** fält och ge det en **Fältetikett** av &quot;Biografi&quot;. Lämna **Standardtyp** som standardalternativ för RTF.
 
    ![Alternativ för biografi](assets/define-content-fragment-models/biography.png)
 
-1. Navigera till **Datatyper** och sedan dra en **Uppräkning** under &quot;Profilbild&quot;. I stället för standardinställningen **Återge som** alternativ, markera **Listruta**. Ange ett urval av alternativ på lärarupplevelsenivå, t.ex. Expert, Advanced, Intermediate.
+1. Navigera till **Datatyper** och sedan dra en **Uppräkning** fält under &quot;Biografi&quot;. I stället för standardinställningen **Återge som** alternativ, markera **Listruta** och ge den en **Fältetikett** för&quot;Instruktörsupplevelsenivå&quot;. Ange ett urval av alternativ på lärarupplevelsenivå, till exempel _Expert, avancerad, mellanliggande_.
 
-1. Dra sedan en annan **Uppräkning** under &quot;Instruktörsupplevelsenivå&quot; och välj &quot;kryssrutor&quot; under **Återge som** alternativ. Ange olika kunskaper, t.ex. Klimatning av sten, Surfing, Cycling, Skiing och Backpackaging. Alternativets etikett och alternativvärde ska matcha följande:
+1. Dra sedan en annan **Uppräkning** under &quot;Instruktörsupplevelsenivå&quot; och välj &quot;kryssrutor&quot; under **Återge som** alternativ. Ge den en **Fältetikett** av&quot;Skills&quot;. Ange olika kunskaper, t.ex. Klimatning av sten, Surfing, Cycling, Skiing och Backpackaging. Alternativets etikett och alternativvärde ska matcha följande:
 
    ![Kunskapsuppräkning](assets/define-content-fragment-models/skills-enum.png)
 
@@ -160,7 +159,7 @@ Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen anv
 
 1. Lägg sedan till en **Fragmentreferens** och ge den etiketten&quot;Kontaktinformation&quot;. På fliken Egenskaper, under **Tillåtna modeller för innehållsfragment** väljer du **Mappikon** och välj fragmentmodellen &quot;Kontaktinformation&quot; som skapades tidigare.
 
-1. Lägg till en **Innehållsreferens** under Kontaktinformation. Ge den etiketten&quot;Platsbild&quot;. The **Rotsökväg** bör `/content/dam/wknd.` Under **Acceptera endast angivna innehållstyper** väljer du &quot;Bild&quot;.
+1. Lägg till en **Innehållsreferens** under Kontaktinformation. Ge den etiketten&quot;Platsbild&quot;. The **Rotsökväg** bör `/content/dam/wknd-shared.` Under **Acceptera endast angivna innehållstyper** väljer du &quot;Bild&quot;.
 
 1. Låt oss också lägga till en **JSON-objekt** -fältet under &quot;Location Image (Platsbild)&quot;. Eftersom den här datatypen är flexibel kan den användas för att visa alla data som du vill inkludera i ditt innehåll. I det här fallet används JSON-objektet för att visa information om vädret. Märk JSON-objektet &quot;Väder efter säsong&quot;. I **Egenskaper** flik, lägga till **Beskrivning** så att användaren vet vilka data som ska anges här: &quot;JSON-data om händelsens läge (väder, sommar, höst, vinter).&quot;
 
@@ -168,7 +167,7 @@ Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen anv
 
 1. Om du vill skapa fliken Platsadress lägger du till en **Platshållare för flik** till modellen och ge den etiketten&quot;Platsadress&quot;.
 
-1. Dra och släpp en **Fragmentreferens** fält och från egenskapsfliken, under **Tillåtna modeller för innehållsfragment** väljer du **Adress** modell.
+1. Dra och släpp en **Fragmentreferens** och etikettera den som&quot;Adress&quot; och under egenskapsfliken **Tillåtna modeller för innehållsfragment** väljer du **Adress** modell.
 
 1. Välj **Spara** för att bekräfta ändringarna och stänga Modellredigeraren för innehållsfragment. Den färdiga platsmodellen ska se ut så här:
 
@@ -178,7 +177,7 @@ Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen anv
 
 Skapa slutligen en modell som beskriver ett team med människor.
 
-1. Från **WKND-plats** sida, markera **Skapa** om du vill skapa en annan innehållsfragmentmodell. Skriv&quot;Team&quot; i Modelltitel. Som tidigare, markera **Skapa** följt av **Öppna** i den framgångstrafik som visas.
+1. Från **WKND delad** sida, markera **Skapa** om du vill skapa en annan innehållsfragmentmodell. Skriv&quot;Team&quot; i Modelltitel. Som tidigare, markera **Skapa** följt av **Öppna** i den framgångstrafik som visas.
 
 1. Lägg till en **Flerradstext** till formuläret. Under **Fältetikett**, ange&quot;Beskrivning&quot;.
 
@@ -186,7 +185,7 @@ Skapa slutligen en modell som beskriver ett team med människor.
 
    ![Alternativ för datum och tid](assets/define-content-fragment-models/date-and-time.png)
 
-1. Navigera till **Datatyper** -fliken. Lägg till en **Fragmentreferens**. I **Återge som** väljer du &quot;multifield&quot;. För **Fältetikett**, ange&quot;Teammedlemmar&quot;. Det här fältet länkar till den personmodell som skapats tidigare. Eftersom datatypen består av flera fält kan flera personfragment läggas till, vilket gör det möjligt att skapa ett team med personer.
+1. Navigera till **Datatyper** -fliken. Lägg till en **Fragmentreferens**. I **Återge som** väljer du &quot;multifield&quot;. För **Fältetikett**, ange&quot;Teammedlemmar&quot;. Det här fältet länkar till _Person_ tidigare skapad modell. Eftersom datatypen består av flera fält kan flera personfragment läggas till, vilket gör det möjligt att skapa ett team med personer.
 
    ![Alternativ för fragmentreferens](assets/define-content-fragment-models/fragment-reference.png)
 
@@ -200,7 +199,7 @@ Skapa slutligen en modell som beskriver ett team med människor.
 
 På liknande sätt som Team-modellen har en fragmentreferens till personmodellen, måste Team- och Location-modellerna refereras från Adventure-modellen för att dessa nya modeller ska kunna visas i WKND-appen.
 
-1. Från **WKND-plats** väljer du **Adventure** modell, välj sedan **Redigera** i den övre navigeringen.
+1. Från **WKND delad** väljer du **Adventure** modell, välj sedan **Redigera** i den övre navigeringen.
 
    ![Adventure edit path](assets/define-content-fragment-models/adventure-edit-path.png)
 
