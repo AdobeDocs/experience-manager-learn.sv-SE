@@ -1,6 +1,6 @@
 ---
 title: GraphQL-beständiga frågor
-description: Lär dig hur du aktiverar, skapar uppdateringar och kör permanenta frågor i AEM.
+description: Lär dig hur du aktiverar, skapar, uppdaterar och kör permanenta frågor i AEM.
 version: Cloud Service
 topic: Headless, Content Management
 feature: GraphQL API
@@ -9,16 +9,16 @@ level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
 exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a627de5a2edfeb4416f1166a44bbd1d51be55c91
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # GraphQL-beständiga frågor
 
-Lär dig hur du aktiverar, skapar uppdateringar och kör permanenta frågor i AEM.
+Lär dig hur du aktiverar, skapar, uppdaterar och kör permanenta frågor i AEM.
 
 I den här videon kommer du att:
 
@@ -26,6 +26,11 @@ I den här videon kommer du att:
 + Lär dig hur du skapar, uppdaterar och kör GraphQL-frågor
 + Förstå fördelar och nackdelar med frågor på serversidan jämfört med klientsidan
 
+>[!CAUTION]
+>
+>The **Skapa, uppdatera och köra permanenta frågor** kapitel från 2:05 användning [Postman](https://www.postman.com/) för att utföra uppgiften. Men i de nyare versionerna av AEM som Cloud Service finns en inbyggd **GraphiQL Explorer** finns på [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) för mer information.
+
+
 >[!VIDEO](https://video.tv.adobe.com/v/333429/?quality=12&learn=on)
 
-_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
+_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._
