@@ -9,10 +9,11 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
 
 Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
-A [steg för steg, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) Det finns en beskrivning av hur React-appen skapades.
+A [stegvis självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) Det finns en beskrivning av hur React-appen skapades.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app"
@@ -43,7 +44,7 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Programmet React fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) som ska installeras.
+Programmet React fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0) som ska installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
@@ -141,7 +142,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -187,46 +188,67 @@ query($slug: String!) {
 
 AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för JavaScript](https://github.com/adobe/aem-headless-client-js) används för [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) mot AEM och läsa in äventyrsinnehållet i appen.
 
-Varje beständig fråga har en motsvarande funktion i `src/api/persistedQueries.js`, som asynkront anropar AEM HTTP GET-slutpunkten och returnerar äventyrsdata.
+Varje beständig fråga har en motsvarande React [useEffect](https://reactjs.org/docs/hooks-effect.html) krok in `src/api/usePersistedQueries.js`, som asynkront anropar den AEM HTTP-GETEN beständiga frågans slutpunkt och returnerar äventyrsdata.
 
 Varje funktion i sin tur anropar `aemHeadlessClient.runPersistedQuery(...)`, kör den beständiga GraphQL-frågan.
 
 ```js
-// src/api/persistedQueries.js
+// src/api/usePersistedQueries.js
 
 /**
- * Queries a list of all Adventures using the persisted path "wknd-shared/adventures-all"
- * @returns {data, errors}
+ * React custom hook that returns a list of adevntures by activity. If no activity is provided, all adventures are returned.
+ * 
+ * Custom hook that calls the 'wknd-shared/adventures-all' or 'wknd-shared/adventures-by-activity' persisted query.
+ *
+ * @returns an array of Adventure JSON objects, and array of errors
  */
-export const getAllAdventures = async function() {
-    return executePersistedQuery('wknd-shared/adventures-all');
+export function useAdventuresByActivity(adventureActivity) {
+  ...
+  // If an activity is provided (i.e "Camping", "Hiking"...) call wknd-shared/adventures-by-activity query
+  if (adventureActivity) {
+    // The key is 'activity' as defined in the persisted query
+    const queryParameters = { activity: adventureActivity };
+
+    // Call the AEM GraphQL persisted query named "wknd-shared/adventures-by-activity" with parameters
+    response = await fetchPersistedQuery("wknd-shared/adventures-by-activity", queryParameters);
+  } else {
+    // Else call the AEM GraphQL persisted query named "wknd-shared/adventures-all" to get all adventures
+    response = await fetchPersistedQuery("wknd-shared/adventures-all");
+  }
+  
+  ... 
 }
 
 ...
-
 /**
- * Uses the AEM Headless SDK to execute a query besed on a persistedQueryPath and optional query variables
- * @param {*} persistedQueryPath 
- * @param {*} queryVariables 
- * @returns 
+ * Private function that invokes the AEM Headless client.
+ * 
+ * @param {String} persistedQueryName the fully qualified name of the persisted query
+ * @param {*} queryParameters an optional JavaScript object containing query parameters
+ * @returns the GraphQL data or an error message 
  */
- const executePersistedQuery = async function(persistedQueryPath, queryVariables) {
+async function fetchPersistedQuery(persistedQueryName, queryParameters) {
+  let data;
+  let err;
 
-    let data;
-    let errors;
+  try {
+    // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
+    const response = await aemHeadlessClient.runPersistedQuery(
+      persistedQueryName,
+      queryParameters
+    );
+    // The GraphQL data is stored on the response's data field
+    data = response?.data;
+  } catch (e) {
+    // An error occurred, return the error messages
+    err = e
+      .toJSON()
+      ?.map((error) => error.message)
+      ?.join(", ");
+    console.error(e.toJSON());
+  }
 
-    try {
-        // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
-        const response = await aemHeadlessClient.runPersistedQuery(persistedQueryPath, queryVariables);
-        // The GraphQL data is stored on the response's data field
-        data = response.data;
-        errors = response.errors ? mapErrors(response.errors) : undefined;
-    } catch (e) {
-        console.error(e.toJSON());
-        errors = e;
-    }
-
-    return {data, errors}; 
+  return { data, err };
 }
 ```
 
@@ -236,16 +258,15 @@ I React-programmet används två vyer för att presentera äventyrsdata i webbup
 
 + `src/components/Adventures.js`
 
-   Anropar `getAllAdventures()` från `src/api/persistedQueries.js`  och visar de returnerade äventyren i en lista.
+   Anropar `getAdventuresByActivity(..)` från `src/api/usePersistedQueries.js` och visar de returnerade äventyren i en lista.
 
 + `src/components/AdventureDetail.js`
 
    Anropar `getAdventureBySlug(..)` med `slug` param som skickas via äventyret på `Adventures` och visar information om ett enskilt äventyr.
 
-
 ### Miljövariabler
 
-Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environment-variables) används för att ansluta till en AEM. Standardanslutningar till AEM-publicering som körs på `http://localhost:4503`. Uppdatera AEM `.env.development` fil:
+Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environment-variables) används för att ansluta till en AEM. Standardanslutningar till AEM-publicering som körs på `http://localhost:4503`. Uppdatera `.env.development` för att ändra AEM:
 
 + `REACT_APP_HOST_URI=http://localhost:4502`: Ange som AEM målvärd
 + `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`: Ange slutpunktsbanan för GraphQL. Detta används inte av React-appen eftersom den bara använder beständiga frågor.
@@ -255,7 +276,7 @@ Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environm
    + `basic`: Använd användare/pass för lokal utveckling med lokal AEM Author
    + Lämna tomt om du vill ansluta till AEM utan autentisering
 + `REACT_APP_AUTHORIZATION=admin:admin`: Ange grundläggande autentiseringsuppgifter som ska användas vid anslutning till en AEM Author-miljö (endast för utveckling). Om du ansluter till en publiceringsmiljö är den här inställningen inte nödvändig.
-+ `REACT_APP_DEV_TOKEN`: Dev-tokensträng. Om du vill ansluta till en fjärrinstans kan du förutom grundläggande autentisering (user:pass) använda Bearer-autentisering med DEV-token från molnkonsolen
++ `REACT_APP_DEV_TOKEN`: Dev-tokensträng. Om du vill ansluta till en fjärrinstans kan du förutom grundläggande autentisering (användare:pass) använda Bearer-autentisering med DEV-token från molnkonsolen
 + `REACT_APP_SERVICE_TOKEN`: Sökväg till tjänstens autentiseringsfil. Om du vill ansluta till en fjärrinstans kan du autentisera med Service Token (hämta fil från Developer Console).
 
 ### AEM
@@ -266,6 +287,6 @@ Om du ansluter till en AEM författarmiljö, [autentiseringsmetoden måste konfi
 
 ### Cross-origin resource sharing (CORS)
 
-Det här React-programmet använder en AEM CORS-konfiguration som körs i AEM och förutsätter att React-appen körs på `http://localhost:3000` i utvecklingsläge. The [CORS-konfiguration](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) är en del av [WKND-webbplats](https://github.com/adobe/aem-guides-wknd).
+Det här React-programmet använder en AEM CORS-konfiguration som körs i AEM och förutsätter att React-appen körs på `http://localhost:3000` i utvecklingsläge. The [CORS-konfiguration](https://github.com/adobe/aem-guides-wknd/blob/main/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) är en del av [WKND-webbplats](https://github.com/adobe/aem-guides-wknd).
 
 ![CORS-konfiguration](assets/react-app/cross-origin-resource-sharing-configuration.png)
