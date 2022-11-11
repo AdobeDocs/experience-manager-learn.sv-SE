@@ -7,10 +7,11 @@ role: Developer, Architect
 level: Beginner
 kt: 7630
 thumbnail: 333272.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '618'
 ht-degree: 1%
 
 ---
@@ -36,7 +37,7 @@ Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** 
 
 ## Senaste kod
 
-+ Den här självstudiekursens kod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) på `feature/spa-editor` förgrening.
++ Startpunkten för den här självstudiekursens kod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa) i `remote-spa-tutorial` mapp.
 
 ## Förutsättningar
 
@@ -49,12 +50,12 @@ Den här självstudiekursen kräver följande:
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
 + [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
-+ [källkoden aem-guides-wknd-graphql (gren: feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [källkoden aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 I den här självstudiekursen förutsätts:
 
 + [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) som IDE
-+ En arbetskatalog för `~/Code/wknd-app`
++ En arbetskatalog för `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
 + Köra AEM SDK som en författartjänst på `http://localhost:4502`
 + Köra AEM SDK med lokala `admin` konto med lösenord `admin`
 + Köra SPA på `http://localhost:3000`
@@ -62,13 +63,6 @@ I den här självstudiekursen förutsätts:
 >[!NOTE]
 >
 > **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
-
-
-## Snabbinställningar
-
-Med Snabbinstallation kommer du igång med WKND App SPA och AEM SPA Editor på 15 minuter. Den här snabbredigerade installationen tar dig direkt till självstudiekursens slutläge så att du kan utforska redigeringen av SPA i AEM SPA.
-
-+ [Läs om snabbinställningar](./quick-setup.md)
 
 ## 1. Konfigurera AEM för SPA Editor
 
@@ -102,6 +96,4 @@ Slutligen bör de begrepp som beskrivs i tidigare kapitel användas för dynamis
 
 ## Ytterligare resurser
 
-+ [Redigera en extern SPA i AEM dokument](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/editing-external-spa.html)
-+ [AEM WCM-komponenter - React Core-implementering](https://www.npmjs.com/package/@adobe/aem-core-components-react-base)
-+ [AEM WCM-komponenter - Spa editor - React Core-implementering](https://www.npmjs.com/package/@adobe/aem-core-components-react-spa)
++ [AEM SPA React Editable Components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)

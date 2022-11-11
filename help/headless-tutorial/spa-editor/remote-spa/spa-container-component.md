@@ -1,5 +1,5 @@
 ---
-title: Lägg till redigerbara behållarkomponenter i en SPA
+title: Lägga till redigerbara React-behållarkomponenter i en SPA
 description: Lär dig hur du lägger till redigerbara behållarkomponenter i en SPA som gör att AEM kan dra och släppa komponenter i dem.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7635
 thumbnail: kt-7635.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -21,97 +23,49 @@ ht-degree: 0%
 
 ![Redigerbara behållarkomponenter](./assets/spa-container-component/intro.png)
 
-I det här kapitlet lägger vi till en redigerbar behållare i hemvyn som gör att författare kan skapa och layouta avancerat innehåll med hjälp AEM React Core Components direkt i SPA.
+I det här kapitlet lägger vi till en redigerbar behållare i hemvyn som gör att författare kan skapa och layouta avancerat innehåll med hjälp av redigerbara React-komponenter direkt i SPA.
 
 ## Uppdatera WKND-appen
 
 Så här lägger du till en behållarkomponent i hemvyn:
 
-+ Importera AEM React Editable-komponentens ResponsiveGrid-komponent
-+ Importera och registrera AEM React Core-komponenter (text och bild) för användning i behållarkomponenten
++ Importera AEM React Editable-komponentens `ResponsiveGrid` komponent
++ Importera och registrera anpassade redigerbara React-komponenter (text och bild) för användning i ResponsiveGrid-komponenten
 
-### Importera i behållarkomponenten ResponsiveGrid
+### Använda komponenten ResponsiveGrid
 
-Om du vill placera ett redigerbart område i hemvyn måste du:
+Så här lägger du till ett redigerbart område i hemvyn:
 
-1. Importera komponenten ResponsiveGrid från `@adobe/aem-react-editable-components`
-1. Registrera det med `withMappable` så att utvecklare kan placera den i SPA
-1. Registrera dig även med `MapTo` så att det kan återanvändas i andra Container-komponenter, vilket effektivt kapslar in behållare.
-
-Så här gör du:
-
-1. Öppna SPA i din utvecklingsmiljö
-1. Skapa en React-komponent på `src/components/aem/AEMResponsiveGrid.js`
-1. Lägg till följande kod i `AEMResponsiveGrid.js`
-
-   ```
-   // Import the withMappable API provided bu the AEM SPA Editor JS SDK
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   
-   // Import the base ResponsiveGrid component
-   import { ResponsiveGrid } from "@adobe/aem-react-editable-components";
-   
-   // The sling:resourceType for which this Core Component is registered with in AEM
-   const RESOURCE_TYPE = "wcm/foundation/components/responsivegrid";
-   
-   // Create an EditConfig to allow the AEM SPA Editor to properly render the component in the Editor's context
-   const EditConfig = {
-       emptyLabel: "Layout Container",  // The component placeholder in AEM SPA Editor
-       isEmpty: function(props) { 
-           return props.cqItemsOrder == null || props.cqItemsOrder.length === 0;
-       },                              // The function to determine if this component has been authored
-       resourceType: RESOURCE_TYPE     // The sling:resourceType this SPA component is mapped to
-   };
-   
-   // MapTo allows the AEM SPA Editor JS SDK to dynamically render components added to SPA Editor Containers
-   MapTo(RESOURCE_TYPE)(ResponsiveGrid, EditConfig);
-   
-   // withMappable allows the component to be hardcoded into the SPA; <AEMResponsiveGrid .../>
-   const AEMResponsiveGrid = withMappable(ResponsiveGrid, EditConfig);
-   
-   export default AEMResponsiveGrid;
-   ```
-
-Koden är liknande `AEMTitle.js` att [importerade komponenten AEM kärnkärnkomponenterna](./spa-fixed-component.md).
-
-
-The `AEMResponsiveGrid.js` filen ska se ut så här:
-
-![AEMResponsiveGrid.js](./assets/spa-container-component/aem-responsive-grid-js.png)
-
-### Använda SPA AEMResponsiveGrid
-
-Nu när AEM ResponsiveGrid-komponenten är registrerad i och tillgänglig för användning i SPA kan vi placera den i hemvyn.
-
-1. Öppna och redigera `react-app/src/Home.js`
-1. Importera `AEMResponsiveGrid` och placera den ovanför `<AEMTitle ...>` -komponenten.
-1. Ange följande attribut för `<AEMResponsiveGrid...>` komponent
+1. Öppna och redigera `react-app/src/components/Home.js`
+1. Importera `ResponsiveGrid` komponent från `@adobe/aem-react-editable-components` och lägg till det i `Home` -komponenten.
+1. Ange följande attribut för `<ResponsiveGrid...>` komponent
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   Detta instruerar `AEMResponsiveGrid` för att hämta dess innehåll från AEM:
+   Detta instruerar `ResponsiveGrid` för att hämta dess innehåll från AEM:
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    The `itemPath` mappar till `responsivegrid` noden som definieras i `Remote SPA Page` AEM och skapas automatiskt på nya AEM sidor som skapas från `Remote SPA Page` AEM.
 
-   Uppdatera `Home.js` för att lägga till `<AEMResponsiveGrid...>` -komponenten.
+   Uppdatera `Home.js` för att lägga till `<ResponsiveGrid...>` -komponenten.
 
-   ```
+   ```javascript
    ...
-   import AEMResponsiveGrid from './aem/AEMResponsiveGrid';
+   import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
    ...
    
    function Home() {
        return (
            <div className="Home">
-               <AEMResponsiveGrid
+               <ResponsiveGrid
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='root/responsivegrid'/>
    
-               <AEMTitle
+               <EditableTitle
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='title'/>
+   
                <Adventures />
            </div>
        );
@@ -124,66 +78,164 @@ The `Home.js` filen ska se ut så här:
 
 ## Skapa redigerbara komponenter
 
-För att få full effekt av de flexibla redigeringsfunktionerna i SPA Editor. Vi har redan skapat en redigerbar Title-komponent, men vi ska göra några till så att författarna kan använda Text och Image AEM WCM Core Components i den nya behållarkomponenten.
+För att få full effekt av de flexibla redigeringsfunktionerna i SPA Editor. Vi har redan skapat en redigerbar Title-komponent, men vi ska göra några till så att författarna kan använda redigerbar text och bilder i den nyligen tillagda ResponsiveGrid-komponenten.
 
-### Textkomponent
+De nya redigerbara komponenterna Text och Bildredigering skapas med det redigerbara komponentdefinitionsmönstret som exporteras i [redigerbara fasta komponenter](./spa-fixed-component.md).
+
+### Redigerbar textkomponent
 
 1. Öppna SPA i din utvecklingsmiljö
-1. Skapa en React-komponent på `src/components/aem/AEMText.js`
-1. Lägg till följande kod i `AEMText.js`
+1. Skapa en React-komponent på `src/components/editable/core/Text.js`
+1. Lägg till följande kod i `Text.js`
 
+   ```javascript
+   import React from 'react'
+   
+   const TextPlain = (props) => <div className={props.baseCssClass}><p className="cmp-text__paragraph">{props.text}</p></div>;
+   const TextRich = (props) => {
+   const text = props.text;
+   const id = (props.id) ? props.id : (props.cqPath ? props.cqPath.substr(props.cqPath.lastIndexOf('/') + 1) : "");
+       return <div className={props.baseCssClass} id={id} data-rte-editelement dangerouslySetInnerHTML={{ __html: text }} />
+   };
+   
+   export const Text = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-text'
+       }
+   
+       const { richText = false } = props
+   
+       return richText ? <TextRich {...props} /> : <TextPlain {...props} />
+       }
+   
+       export function textIsEmpty(props) {
+       return props.text == null || props.text.length === 0;
+   }
    ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { TextV2, TextV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+
+1. Skapa en redigerbar React-komponent på `src/components/editable/EditableText.js`
+1. Lägg till följande kod i `EditableText.js`
+
+   ```javascript
+   import React from 'react'
+   import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+   import { Text, textIsEmpty } from "./core/Text";
+   import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+   import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
    
    const RESOURCE_TYPE = "wknd-app/components/text";
    
-   const EditConfig = {    
+   const EditConfig = {
        emptyLabel: "Text",
-       isEmpty: TextV2IsEmptyFn,
+       isEmpty: textIsEmpty,
        resourceType: RESOURCE_TYPE
    };
    
-   MapTo(RESOURCE_TYPE)(TextV2, EditConfig);
+   export const WrappedText = (props) => {
+       const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Text, "cmp-text"), textIsEmpty, "Text V2")
+       return <Wrapped {...props} />
+   };
    
-   const AEMText = withMappable(TextV2, EditConfig);
+   const EditableText = (props) => <EditableComponent config={EditConfig} {...props}><WrappedText /></EditableComponent>
    
-   export default AEMText;
+   MapTo(RESOURCE_TYPE)(EditableText);
+   
+   export default EditableText;
    ```
 
-The `AEMText.js` filen ska se ut så här:
+Implementeringen av den redigerbara textkomponenten ska se ut så här:
 
-![AEMText.js](./assets/spa-container-component/aem-text-js.png)
+![Redigerbar textkomponent](./assets/spa-container-component/text-js.png)
 
 ### Bildkomponent
 
 1. Öppna SPA i din utvecklingsmiljö
-1. Skapa en React-komponent på `src/components/aem/AEMImage.js`
-1. Lägg till följande kod i `AEMImage.js`
+1. Skapa en React-komponent på `src/components/editable/core/Image.js`
+1. Lägg till följande kod i `Image.js`
 
-   ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { ImageV2, ImageV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+   ```javascript
+   import React from 'react'
+   import { RoutedLink } from "./RoutedLink";
    
-   const RESOURCE_TYPE = "wknd-app/components/image";
+   export const imageIsEmpty = (props) => (!props.src) || props.src.trim().length === 0
    
-   const EditConfig = {    
-       emptyLabel: "Image",
-       isEmpty: ImageV2IsEmptyFn,
-       resourceType: RESOURCE_TYPE
+   const ImageInnerContents = (props) => {
+   return (<>
+       <img src={props.src}
+           className={props.baseCssClass + '__image'}
+           alt={props.alt} />
+       {
+           !!(props.title) && <span className={props.baseCssClass + '__title'} itemProp="caption">{props.title}</span>
+       }
+       {
+           props.displayPopupTitle && (!!props.title) && <meta itemProp="caption" content={props.title} />
+       }
+       </>);
    };
    
-   MapTo(RESOURCE_TYPE)(ImageV2, EditConfig);
+   const ImageContents = (props) => {
+       if (props.link && props.link.trim().length > 0) {
+           return (
+           <RoutedLink className={props.baseCssClass + '__link'} isRouted={props.routed} to={props.link}>
+               <ImageInnerContents {...props} />
+           </RoutedLink>
+           )
+       }
+       return <ImageInnerContents {...props} />
+   };
    
-   const AEMImage = withMappable(ImageV2, EditConfig);
+   export const Image = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-image'
+       }
    
-   export default AEMImage;
+       const { isInEditor = false } = props;
+       const cssClassName = (isInEditor) ? props.baseCssClass + ' cq-dd-image' : props.baseCssClass;
+   
+       return (
+           <div className={cssClassName}>
+               <ImageContents {...props} />
+           </div>
+       )
+   };
    ```
 
-1. Skapa en SCSS-fil `src/components/aem/AEMImage.scss` som innehåller anpassade format för `AEMImage.scss`. Dessa format har CSS-klasserna BEM-notation för AEM React Core-komponenten.
-1. Lägg till följande SCSS i `AEMImage.scss`
+1. Skapa en redigerbar React-komponent på `src/components/editable/EditableImage.js`
+1. Lägg till följande kod i `EditableImage.js`
 
-   ```
+```javascript
+import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+import { Image, imageIsEmpty } from "./core/Image";
+import React from 'react'
+
+import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
+
+const RESOURCE_TYPE = "wknd-app/components/image";
+
+const EditConfig = {
+    emptyLabel: "Image",
+    isEmpty: imageIsEmpty,
+    resourceType: RESOURCE_TYPE
+};
+
+const WrappedImage = (props) => {
+    const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Image, "cmp-image"), imageIsEmpty, "Image V2");
+    return <Wrapped {...props}/>
+}
+
+const EditableImage = (props) => <EditableComponent config={EditConfig} {...props}><WrappedImage /></EditableComponent>
+
+MapTo(RESOURCE_TYPE)(EditableImage);
+
+export default EditableImage;
+```
+
+
+1. Skapa en SCSS-fil `src/components/editable/EditableImage.scss` som innehåller anpassade format för `EditableImage.scss`. Dessa format har CSS-klasserna för den redigerbara React-komponenten som mål.
+1. Lägg till följande SCSS i `EditableImage.scss`
+
+   ```css
    .cmp-image__image {
        margin: 1rem 0;
        width: 100%;
@@ -191,47 +243,48 @@ The `AEMText.js` filen ska se ut så här:
     }
    ```
 
-1. Importera `AEMImage.scss` in `AEMImage.js`
+1. Importera `EditableImage.scss` in `EditableImage.js`
 
-   ```
+   ```javascript
    ...
-   import './AEMImage.scss';
+   import './EditableImage.scss';
    ...
    ```
 
-The `AEMImage.js` och `AEMImage.scss` ska se ut så här:
+Implementeringen av den redigerbara bildkomponenten ska se ut så här:
 
-![AEMImage.js och AEMImage.scss](./assets/spa-container-component/aem-image-js-scss.png)
+![Redigerbar bildkomponent](./assets/spa-container-component/image-js.png)
+
 
 ### Importera redigerbara komponenter
 
-Den nyskapade `AEMText` och `AEMImage` SPA komponenter refereras i SPA och instansieras dynamiskt baserat på den JSON som returneras av AEM. Om du vill vara säker på att de här komponenterna är tillgängliga för SPA skapar du importprogramsatser för dem i `Home.js`
+Den nyskapade `EditableText` och `EditableImage` Reaktionskomponenter refereras i SPA och instansieras dynamiskt baserat på den JSON som returneras av AEM. Om du vill vara säker på att de här komponenterna är tillgängliga för SPA skapar du importprogramsatser för dem i `Home.js`
 
 1. Öppna SPA i din utvecklingsmiljö
 1. Öppna filen `src/Home.js`
 1. Lägg till importprogramsatser för `AEMText` och `AEMImage`
 
-   ```
+   ```javascript
    ...
-   import AEMText from './components/aem/AEMText';
-   import AEMImage from './components/aem/AEMImage';
+   // The following need to be imported, so that MapTo is run for the components
+   import EditableText from './editable/EditableText';
+   import EditableImage from './editable/EditableImage';
    ...
    ```
-
 
 Resultatet ska se ut så här:
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-Om denna import _not_ har lagts till, `AEMText` och `AEMImage` Koden anropas inte av SPA och komponenterna registreras därför inte mot de angivna resurstyperna.
+Om denna import _not_ har lagts till, `EditableText` och `EditableImage` Koden anropas inte av SPA och komponenterna mappas därför inte till de angivna resurstyperna.
 
 ## Konfigurera behållaren i AEM
 
-AEM behållarkomponenter använder profiler för att styra deras tillåtna komponenter. Detta är en viktig konfiguration när du använder SPA Editor, eftersom endast AEM WCM Core Components som har mappade SPA komponentmotsvarigheter kan återges av SPA. Se till att endast de komponenter som vi har SPA implementeringar för tillåts:
+AEM behållarkomponenter använder profiler för att styra deras tillåtna komponenter. Detta är en viktig konfiguration när du använder SPA Editor, eftersom endast AEM komponenter som har mappade SPA komponentmotsvarigheter kan återges av SPA. Se till att endast de komponenter som vi har SPA implementeringar för tillåts:
 
-+ `AEMTitle` mappad till `wknd-app/components/title`
-+ `AEMText` mappad till `wknd-app/components/text`
-+ `AEMImage` mappad till `wknd-app/components/image`
++ `EditableTitle` mappad till `wknd-app/components/title`
++ `EditableText` mappad till `wknd-app/components/text`
++ `EditableImage` mappad till `wknd-app/components/image`
 
 Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
@@ -259,7 +312,7 @@ Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
 ## Redigera behållaren i AEM
 
-Efter att SPA uppdaterats för att bädda in `<AEMResponsiveGrid...>`, omslag för tre AEM React Core-komponenter (`AEMTitle`, `AEMText`och `AEMImage`), och AEM uppdateras med en matchande mallprincip, kan vi börja skapa innehåll i behållarkomponenten.
+Efter att SPA uppdaterats för att bädda in `<ResponsiveGrid...>`, omslag för tre redigerbara React-komponenter (`EditableTitle`, `EditableText`och `EditableImage`), och AEM uppdateras med en matchande mallprincip, kan vi börja skapa innehåll i behållarkomponenten.
 
 1. Logga in på AEM Author
 1. Navigera till __Sites > WKND App__
@@ -296,7 +349,7 @@ Efter att SPA uppdaterats för att bädda in `<AEMResponsiveGrid...>`, omslag f�
 
    ![Skapade komponenter](./assets/spa-container-component/authored-components.png)
 
-   Använd AEM layoutläge för att justera komponenternas storlek och layout.
+Använd AEM layoutläge för att justera komponenternas storlek och layout.
 
 1. Växla till __Layoutläge__ med lägesväljaren i det övre högra hörnet
 1. __Ändra storlek__ Bild- och textkomponenterna, så att de visas sida vid sida
@@ -315,9 +368,9 @@ Efter att SPA uppdaterats för att bädda in `<AEMResponsiveGrid...>`, omslag f�
 
 Du har lagt till en behållarkomponent som gör att redigerbara komponenter kan läggas till av författare i WKND-appen! Nu kan du:
 
-+ Använd AEM React Editable Components ResponsiveGrid-komponent i SPA
-+ Registrera AEM React Core-komponenter (text och bild) för användning i SPA via behållarkomponenten
-+ Konfigurera SPA för att tillåta de SPA kärnkomponenterna
++ Använda AEM React Editable Components `ResponsiveGrid` i SPA
++ Skapa och registrera redigerbara React-komponenter (text och bild) för användning i SPA via behållarkomponenten
++ Konfigurera SPA för att tillåta de SPA komponenterna
 + Lägga till redigerbara komponenter i behållarkomponenten
 + Författar och layoutkomponenter i SPA Editor
 

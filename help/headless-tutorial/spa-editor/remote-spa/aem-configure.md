@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7631
 thumbnail: kt-7631.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -26,26 +28,34 @@ SPA-kodbasen hanteras utanför AEM, men det krävs ett AEM för att ställa in k
 + Delprojekt för att definiera SPA till AEM URL-mappningar
 + Konfigurationsmappar för OSGi
 
+## Hämta basprojektet från GitHub
+
+Ladda ned `aem-guides-wknd-graphql` från Github.com. Detta kommer att innehålla vissa baslinjefiler som används i det här projektet.
+
+```
+$ mkdir -p ~/Code
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd remote-spa-tutorial
+```
+
 ## Skapa ett AEM projekt
 
-Skapa ett AEM projekt där konfigurationer och baslinjeinnehåll hanteras.
+Skapa ett AEM projekt där konfigurationer och baslinjeinnehåll hanteras. Det här projektet genereras i den klonade `aem-guides-wknd-graphql` projekt `remote-spa-tutorial` mapp.
 
 _Använd alltid den senaste versionen av [AEM](https://github.com/adobe/aem-project-archetype)._
 
-
 ```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
 $ mvn -B archetype:generate \
  -D archetypeGroupId=com.adobe.aem \
  -D archetypeArtifactId=aem-project-archetype \
- -D archetypeVersion=27 \
+ -D archetypeVersion=39 \
  -D aemVersion=cloud \
  -D appTitle="WKND App" \
  -D appId="wknd-app" \
  -D groupId="com.adobe.aem.guides.wkndapp" \
  -D frontendModule="react"
-$ mv ~/Code/wknd-app/wknd-app ~/Code/wknd-app/com.adobe.aem.guides.wknd-app
+$ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
 _Det sista kommandot byter bara namn på den AEM projektmappen så att det är klart att det är det AEM projektet och inte ska blandas ihop med SPA__
@@ -67,7 +77,7 @@ När AEM grundprojekt genereras kan du med några justeringar säkerställa SPA 
 
 Eftersom SPA är en SPA, anta att den har utvecklats och hanteras utanför det AEM projektet. Undvik konflikter genom att ta bort `ui.frontend` från distribution. Om `ui.frontend` -projektet tas inte bort, två SPA, SPA som är standard i `ui.frontend` projekt och SPA läses in samtidigt i AEM SPA.
 
-1. Öppna AEM (`~/Code/wknd-app/com.adobe.aem.guides.wknd-app`) i din IDE
+1. Öppna AEM (`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`) i din IDE
 1. Öppna roten `pom.xml`
 1. Kommentera `<module>ui.frontend</module` från `<modules>` list
 

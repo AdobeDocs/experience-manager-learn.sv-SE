@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -21,7 +23,7 @@ I detta kapitel aktiverar vi två dynamiska informationsvägar för Adventure De
 
 ![Dynamiska vägar och redigerbara komponenter](./assets/spa-dynamic-routes/intro.png)
 
-SPA för Adventure Detail definieras som `/adventure:path` där `path` är sökvägen till WKND Adventure (Content Fragment) för att visa information om.
+SPA för Adventure Detail definieras som `/adventure/:slug` där `slug` är en unik identifieraregenskap i Adventure Content Fragment.
 
 ## Mappa SPA URL:er till AEM sidor
 
@@ -34,8 +36,8 @@ I den här självstudiekursen tar vi namnet på WKND Adventure Content Fragment,
 | SPA | AEM |
 |------------------------------------|--------------------------------------------|
 | / | /content/wknd-app/us/en/home |
-| /adventure/content/dam/wknd/en/adventures/bali-surf-camp/__bali-surf-läger__ | /content/wknd-app/us/en/home/adventure/__bali-surf-läger__ |
-| /adventure/content/dam/wknd/en/adventures/beervana-portland/__beervana-portland__ | /content/wknd-app/us/en/home/adventure/__beervana-in-portland__ |
+| /adventure/__bali-surf-läger__ | /content/wknd-app/us/en/home/adventure/__bali-surf-läger__ |
+| /adventure/__beervana-portland__ | /content/wknd-app/us/en/home/adventure/__beervana-in-portland__ |
 
 På grundval av den här mappningen måste vi skapa två nya AEM sidor:
 
@@ -84,52 +86,51 @@ Dessa två AEM sidor innehåller det innehåll som har skapats för respektive S
 
 ## Uppdatera WKND-appen
 
-Låt oss placera `<AEMResponsiveGrid...>` som skapats i [sista kapitlet](./spa-container-component.md)i vår `AdventureDetail` SPA, skapa en redigerbar behållare.
+Låt oss placera `<ResponsiveGrid...>` som skapats i [sista kapitlet](./spa-container-component.md)i vår `AdventureDetail` SPA, skapa en redigerbar behållare.
 
-### Placera SPA AEMResponsiveGrid
+### Placera SPA för ResponsiveGrid
 
-Placera `<AEMResponsiveGrid...>` i `AdventureDetail` skapar en redigerbar behållare i det flödet. Tricket är att flera rutter använder `AdventureDetail` måste vi dynamiskt justera  `<AEMResponsiveGrid...>'s pagePath` -attribut. The `pagePath` måste härledas till en punkt till motsvarande AEM, baserat på äventyret som flödesinstansen visar.
+Placera `<ResponsiveGrid...>` i `AdventureDetail` skapar en redigerbar behållare i det flödet. Tricket är att flera rutter använder `AdventureDetail` måste vi dynamiskt justera  `<ResponsiveGrid...>'s pagePath` -attribut. The `pagePath` måste härledas till en punkt till motsvarande AEM, baserat på äventyret som flödesinstansen visar.
 
-1. Öppna och redigera `react-app/src/components/AdventureDetail.js`
-1. Lägg till följande rad före `AdventureDetail(..)'s` sekund `return(..)` -programsats, som härleder äventyrsnamnet från innehållsfragmentsökvägen.
-
-   ```
-   ...
-   // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-   const adventureName = _path.split('/').pop();
-   ...
-   ```
-
-1. Importera `AEMResponsiveGrid` och placera den ovanför `<h2>Itinerary</h2>` -komponenten.
-1. Ange följande attribut för `<AEMResponsiveGrid...>` komponent
-   + `pagePath = '/content/wknd-app/us/en/home/adventure/${adventureName}'`
+1. Öppna och redigera `react-app-/src/components/AdventureDetail.js`
+1. Importera `ResponsiveGrid` och placera den ovanför `<h2>Itinerary</h2>` -komponenten.
+1. Ange följande attribut för `<ResponsiveGrid...>` -komponenten. Anteckna `pagePath` attributet lägger till det aktuella `slug` som mappar till äventyrssidan enligt mappningen ovan.
+   + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    + `itemPath = 'root/responsivegrid'`
 
-   Detta instruerar `AEMResponsiveGrid` för att hämta dess innehåll från AEM:
+   Detta instruerar `ResponsiveGrid` för att hämta dess innehåll från AEM:
 
-   + `/content/wknd-app/us/en/home/adventure/${adventureName}/jcr:content/root/responsivegrid`
+   + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 
 
 Uppdatera `AdventureDetail.js` med följande rader:
 
-```
+```javascript
 ...
-import AEMResponsiveGrid from '../components/aem/AEMResponsiveGrid';
+import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
 ...
 
-function AdventureDetail(props) {
+function AdventureDetailRender(props) {
     ...
-    // Get the last segment of the Adventure Content Fragment path to used to generate the pagePath for the AEMResponsiveGrid
-    const adventureName = _path.split('/').pop();
+    // Get the slug from the React route parameter, this will be used to specify the AEM Page to store/read editable content from
+    const { slug } = useParams();
 
     return(
         ...
-        <AEMResponsiveGrid 
-            pagePath={`/content/wknd-app/us/en/home/adventure/${adventureName}`}
-            itemPath="root/responsivegrid"/>
-            
-        <h2>Itinerary</h2>
-        ...
+        // Pass the slug in
+        function AdventureDetailRender({ title, primaryImage, activity, adventureType, tripLength, 
+                groupSize, difficulty, price, description, itinerary, references, slug }) {
+            ...
+            return (
+                ...
+                <ResponsiveGrid 
+                    pagePath={`/content/wknd-app/us/en/home/adventure/${slug}`}
+                    itemPath="root/responsivegrid"/>
+                    
+                <h2>Itinerary</h2>
+                ...
+            )
+        }
     )
 }
 ```
@@ -140,7 +141,7 @@ The `AdventureDetail.js` filen ska se ut så här:
 
 ## Skapa behållaren i AEM
 
-Med `<AEMResponsiveGrid...>` på plats, och `pagePath` dynamiskt inställda baserat på äventyret som återges, försöker vi skapa innehåll i det.
+Med `<ResponsiveGrid...>` på plats, och `pagePath` dynamiskt inställda baserat på äventyret som återges, försöker vi skapa innehåll i det.
 
 1. Logga in på AEM Author
 1. Navigera till __Sites > WKND App > us > en__

@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -125,7 +125,7 @@ Två AEM **paket** är tillgängliga och kan installeras via [Pakethanteraren](/
 * [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) innehåller den färdiga lösningen för kapitel 1-4 inklusive nya modeller för innehållsfragment, innehållsfragment och beständiga GraphQL-frågor. Användbar för dem som vill hoppa direkt in i [Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) kapitel.
 
 
-The **React App - Advanced Tutorial - WKND Adventures**(https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) kan du granska och utforska exempelprogrammet. Det här exempelprogrammet hämtar innehållet från AEM genom att anropa de beständiga GraphQL-frågorna och återger det i en engagerande upplevelse.
+The [React App - Advanced Tutorial - WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) kan du granska och utforska exempelprogrammet. Det här exempelprogrammet hämtar innehållet från AEM genom att anropa de beständiga GraphQL-frågorna och återger det i en engagerande upplevelse.
 
 ## Komma igång
 
