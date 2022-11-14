@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
+source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Varje AEM as a Cloud Service miljö har en egen Developer Console.
 För att få tillgång till och använda Developer Console måste utvecklarens Adobe ID ha följande behörigheter via [Adobe Admin Console](https://adminconsole.adobe.com).
 
 1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM as a Cloud Service produkter är aktiv i Adobe Org-växlaren.
-1. Utvecklaren måste vara medlem i Cloud Manager-produktens __Utvecklare - Cloud Service__ Produktprofil.
+1. Utvecklaren måste vara medlem i [Cloud Manager Product&#39;s __Utvecklare - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
    + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
-1. Utvecklaren måste vara medlem i __AEM__ eller __AEM administratörer__ Produktprofil för AEM Author och/eller Publish.
+1. Utvecklaren måste vara medlem i [__AEM__ eller __AEM administratörer__ Produktprofil på AEM Author och/eller Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + Om det här medlemskapet inte finns [status](#status) dumpar timeout med 401 Unauthorized error error.
 
 ### Felsökning: Developer Console-åtkomst
