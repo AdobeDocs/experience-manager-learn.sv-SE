@@ -1,0 +1,58 @@
+---
+title: Fyll i Adaptiv Forms med hjälp av frågeparametrar.
+description: Fyll i Adaptiv Forms med data från frågeparametrar.
+feature: Adaptive Forms
+version: 6.5
+topic: Development
+role: Developer
+level: Experienced
+kt: 11470
+last-substantial-update: 2020-11-12T00:00:00Z
+source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
+
+---
+
+# PreFyll i anpassad Forms med frågeparametrar
+
+En av våra kunder behövde fylla i anpassningsbara formulär med frågeparametrarna. I följande url är fälten FirstName och LastName i det adaptiva formuläret inställda på John respektive Doe
+
+```html
+https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=John&LastName=Doe
+```
+
+För att uppnå detta skapades en ny adaptiv formulärmall som är kopplad till en sidkomponent. I den här sidkomponenten har vi en jsp som kan hämta information om frågeparametrarna och skapa en XML-struktur som kan användas för att fylla i det adaptiva formuläret.
+
+Information om hur du skapar en ny adaptiv formulärmall och sidkomponent är [förklaras i den här videon.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+
+Följande kod används på jsp-sidan
+
+```java
+java.util.Enumeration enumeration = request.getParameterNames();
+String dataXml = "<afData><afUnboundData><data>";
+while (enumeration.hasMoreElements())
+{
+   String parameterName = (String) enumeration.nextElement();
+   dataXml = dataXml + "<" + parameterName + ">" + request.getParameter(parameterName) + "</" + parameterName + ">";
+
+}
+
+dataXml = dataXml + "</data></afUnboundData></afData>";
+//System.out.println("The data xml is "+dataXml);
+slingRequest.setAttribute("data", dataXml);
+```
+
+>[!NOTE]
+>
+>Om ditt formulär använder ett schema kommer XML-strukturen att vara annorlunda och du måste skapa XML utifrån detta.
+
+
+## Distribuera resurserna på ditt system
+
+* [Hämta och installera den adaptiva formulärmallen med hjälp av Package Manager](assets/populate-with-xml.zip)
+* [Hämta och installera exempelformuläret för adaptiv installation](assets/populate-af-with-query-paramters-form.zip)
+
+* [Förhandsgranska det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/testingxml/jcr:content?wcmmode=disabled&amp;FirstName=John&amp;LastName=Doe)
+Du bör se det adaptiva formuläret ifyllt med värdet John och Doe
