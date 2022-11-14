@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b74dc2693071313a80ccaaea839b8e2087c9edaa
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Vänta i 15 minuter tills Cloud Manager-programmet etablerar nätverksinfrastrukturen.
 
-1. Kontrollera att miljön är klar __dedikerad IP-adress för egress__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returnerades från createNetworkInfrastructure HTTP-begäran i föregående steg.
+1. Kontrollera att programmet har slutförts __dedikerad IP-adress för egress__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returnerades från createNetworkInfrastructure HTTP-begäran i föregående steg.
 
    __getNetworkInfrastructure HTTP-begäran__
 
@@ -91,11 +91,11 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
        -H 'Content-Type: application/json'
    ```
 
-   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kan du kontrollera status var minut.
+   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kontrollerar du statusen var minut.
 
 ## Konfigurera IP-adressproxy för dedikerad egress per miljö
 
-1. Aktivera och konfigurera __dedikerad IP-adress för egress__ konfiguration för varje AEM as a Cloud Service miljö med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation.
+1. Konfigurera __dedikerad IP-adress för egress__ konfiguration för varje AEM as a Cloud Service miljö med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation.
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP-begäran__
 
@@ -164,6 +164,8 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
    ```
 
    Värdnamnet får inte vara `pinged`, eftersom det är en egress och _not_ och ingress.
+
+   Anteckna __dedikerad IP-adress för egress__ delas av alla AEM as a Cloud Service miljöer i programmet.
 
 1. Nu kan du använda den dedikerade IP-adressen för utgångar i din anpassade AEM och konfiguration. När du använder en dedikerad IP-adress för utgångar är de externa AEM as a Cloud Service anslutningarna ofta konfigurerade att endast tillåta trafik från den här dedikerade IP-adressen.
 
