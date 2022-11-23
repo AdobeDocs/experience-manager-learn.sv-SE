@@ -9,9 +9,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c489a033f34aecaa0af10e3868c258feba6aaae6
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -41,15 +41,15 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 >[!NOTE]
 >
->Den här självstudiekursen använder version **39** av arkitypen. Det är alltid en god vana att använda **senaste** version av arkitypen för att generera ett nytt projekt.
+>Den här självstudiekursen använder version **35** av arkitypen.
 
 1. Öppna en kommandoradsterminal och ange följande Maven-kommando:
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
     -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=39 \
+    -D archetypeVersion=35 \
     -D appTitle="WKND SPA React" \
     -D appId="wknd-spa-react" \
     -D artifactId="aem-guides-wknd-spa.react" \
