@@ -5,7 +5,7 @@ breadcrumb-title: AEM Managed Services Tutorials
 sub-product: Experience Manager
 version: 6.5
 team: TM
-source-git-commit: ebc4f5936bfa91a2df2e7011bbb7a72082368cee
+source-git-commit: 4a46754557bcf26fc4ac11ae9e106d2250a06f07
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 1%

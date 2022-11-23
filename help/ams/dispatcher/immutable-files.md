@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -311,3 +311,5 @@ Nu läser vi bara in webbservertjänsten igen och använder vår nya domän!
 
 Observera att vi bara ändrade de delar vi behövde för att ändra och utnyttja den befintliga inkluderings- och koden som medföljde konfigurationsfilerna för baslinjen.  Vi behöver bara dra slutsatser om det vi behöver ändra.  Gör det enklare och gör att vi kan underhålla mindre kod
 </div>
+
+[Nästa -> Sändningshälsokontroll](./health-check.md)
