@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: fad7630d2d91d03b98a3982f73a689ef48700319
+source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1741'
 ht-degree: 0%
 
 ---
@@ -167,6 +167,10 @@ ht-degree: 0%
    + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
    + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
    + [Spara skickade data i strängvariabel](custom-workflow-steps/save-submitted-data-in-string-variable.md)
++ Anpassad arbetsflödeskomponent{#custom-workflow-component}
+   + [Introduktion](custom-workflow-component/introduction.md)
+   + [Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [Skapa arbetsflödeskomponent](custom-workflow-component/custom-workflow-component.md)
 + Variabler i AEM{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
