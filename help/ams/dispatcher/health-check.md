@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
+source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
@@ -209,3 +209,5 @@ Det här skriptet används för att kontrollera och logga alla förekomster det 
 Skriptet kontrollerar och loggar alla instanser som körs men returnerar bara felfritt oavsett om AEM returnerar ett fel eller inte.
 
 > `Note:` Det här skriptet används när hälsokontrollen inte fungerar som du vill och tillåter en åsidosättning för att behålla AEM instanser i belastningsutjämnaren.
+
+[Nästa -> GIT-symboler](./git-symlinks.md)
