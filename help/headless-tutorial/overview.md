@@ -1,20 +1,20 @@
 ---
-title: AEM Headless Tutorials
-description: En samling självstudiekurser om hur du använder Adobe Experience Manager som Headless CMS.
+title: Tutorials för Headless i AEM
+description: En samling Headless CMS-självstudiekurser för Adobe Experience Manager. Utforska självstudiekurser per API, ramverk och exempelprogram.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
+source-git-commit: 567f0ae80d79796fc50994d31a64fb0ca79879f6
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-# AEM Headless Tutorials{#aem-headless-tutorials}
+# Tutorials för Headless i AEM{#aem-headless-tutorials}
 
 Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-slutpunkter och leverera dess innehåll som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
@@ -102,7 +102,7 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     </div>
     <p>
-    <em>Ett Android™-program med AEM GraphQL API:er.</em>
+    <em>En Android™-applikation med AEM GraphQL API:er.</em>
     </p>
   </td>
   <td>
@@ -115,7 +115,7 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
       </a>
     </div>
     <p>
-    <em>Ett React-program med AEM GraphQL API:er.</em>
+    <em>Ett React-program som drivs av AEM GraphQL API:er.</em>
     <p>
   </td>
 </tr>
