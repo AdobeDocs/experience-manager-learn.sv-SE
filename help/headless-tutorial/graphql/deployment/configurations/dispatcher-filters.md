@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,16 @@ Filterkonfigurationen för AEM Publish Dispatcher definierar de URL-mönster som
 Lägg till en `allow` linje med URL-mönstret `/graphql/execute.json/*`och kontrollera fil-ID:t (till exempel `/0600`, är unik i exempelfilen för servergruppen).
 Detta tillåter HTTP GET-begäran till den beständiga frågeslutpunkten, som `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` till AEM Publish.
 
+Om du använder Experience Fragments i din AEM Headless-upplevelse ska du göra samma sak för de här sökvägarna.
+
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
 ```
 ...
-/0600 { /type "allow" /url "/graphql/execute.json/*" }
+# Allow headless requests for Persisted Query endpoints
+/0600 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
+# Allow headless requests for Experience Fragments
+/0601 { /type "allow" /method '(GET|OPTIONS)' /url "/content/experience-fragments/*" }
 ...
 ```
 
