@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,6 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
 Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [stegvis självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) Det finns en beskrivning av hur React-appen skapades.
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_react_app"
->title="Anpassa innehåll i en exempelapp för React"
->abstract="Vi har skapat en modern React-app som du kan använda för att lära dig hur du anpassar innehåll med hjälp av den headless-funktionsuppsättningen."
 
 ## Förutsättningar {#prerequisites}
 
@@ -96,7 +91,7 @@ Programmet React är utformat för att ansluta till en __AEM Publish__ -miljön 
 
 ## Koden
 
-Nedan visas en sammanfattning av hur React-programmet byggs, hur det ansluter till AEM Headless för att hämta innehåll med hjälp av beständiga GraphQL-frågor och hur data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+Nedan följer en sammanfattning av hur React-programmet byggs, hur det ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 
 ### Beständiga frågor
