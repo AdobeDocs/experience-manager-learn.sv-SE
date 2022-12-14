@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -78,7 +78,10 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 
 1. AEM Content Fragment Console läses in med den lokala versionen av tillägget insatt i den för testning och ändringar som kan läsas in under tiden som den lokala appen App Builder körs.
 
-När du använder den här metoden påverkar tillägget under utveckling bara din upplevelse, och alla andra användare av konsolen AEM innehållsfragment får åtkomst till det utan det injicerade tillägget.
+>[!IMPORTANT]
+>
+>När du använder den här metoden påverkar tillägget under utveckling bara din upplevelse, och alla andra användare av konsolen AEM innehållsfragment får åtkomst till det utan det injicerade tillägget.
+
 
 ## Testa scenbyggen
 

@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -55,15 +55,15 @@ function App(props) {
 `ExtensionRegistration.js` måste omedelbart läsas in via tilläggets indexflöde, och fungerar som registreringspunkt för tillägget och definierar
 
 1. Tilläggstypen. a [rubrikmeny](./header-menu.md) eller [åtgärdsfält](./action-bar.md) -knappen.
-   + [Sidhuvudsmenyn](./header-menu.md) tillägg anges av `headerMenu` egenskap under `methods`.
-   + [Åtgärdsfält](./action-bar.md) tillägg anges av `actionBar` egenskap under `methods`.
+   + [Sidhuvudsmenyn](./header-menu.md#extension-registration) tillägg anges av `headerMenu` egenskap under `methods`.
+   + [Åtgärdsfält](./action-bar.md#extension-registration) tillägg anges av `actionBar` egenskap under `methods`.
 1. Tilläggsknappens definition i `getButton()` funktion. Den här funktionen returnerar ett objekt med fält:
    + `id` är ett unikt ID för knappen
    + `label` är tilläggsknappens etikett i konsolen AEM innehållsfragment
    + `icon` är tilläggsknappens ikon i AEM Content Fragment-konsolen. Ikonen är en [Reagera spektrum](https://spectrum.adobe.com/page/icons/) ikonnamn, med blanksteg borttagna.
 1. Knappens klickningshanterare, som definieras i en `onClick()` funktion.
-   + [Sidhuvud-menyn](./header-menu.md) extensions skickar inte parametrar till click-hanteraren.
-   + [Åtgärdsfält](./action-bar.md) tillägg innehåller en lista med valda sökvägar för innehållsfragment i `selections` parameter.
+   + [Sidhuvud-menyn](./header-menu.md#extension-registration) extensions skickar inte parametrar till click-hanteraren.
+   + [Åtgärdsfält](./action-bar.md#extension-registration) tillägg innehåller en lista med valda sökvägar för innehållsfragment i `selections` parameter.
 
 ### Tillägg för rubrikmeny
 
