@@ -13,9 +13,9 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -32,10 +32,10 @@ Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM 
 
 Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
 
-1. I [Adobe AdminConsole](https://adminconsole.adobe.com/) säkerställa att du, utvecklaren, är medlem i
+1. I [Adobe Admin Console](https://adminconsole.adobe.com/) säkerställa att du, utvecklaren, är medlem i
    + __Cloud Manager - utvecklare__ IMS-produktprofil (ger åtkomst till AEM Developer Console)
-   + Antingen __AEM administratörer__ eller __AEM__ IMS-produktprofil för AEM tjänst som åtkomsttoken ska integrera med
-   + För sandlådemiljöer AEM as a Cloud Service miljöer krävs endast medlemskap i __AEM administratörer__ eller __AEM__ Produktprofil
+   + Antingen __AEM administratörer__ eller __AEM__ IMS-produktprofil för AEM tjänst som åtkomsttoken kan integreras med
+   + Sandbox AEM as a Cloud Service environment require membership in either __AEM administratörer__ eller __AEM__ Produktprofil
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller den AEM as a Cloud Service miljön att integrera med
 1. Tryck på __ellips__ bredvid miljön i __Miljö__ och markera __Developer Console__
@@ -59,14 +59,14 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-t
 
 ### Externt exempelprogram
 
-Vi ska skapa ett enkelt externt JavaScript-program som visar hur du programmässigt får åtkomst AEM as a Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_ program eller system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att programmässigt autentisera till, och komma åt, AEM as a Cloud Service. I [nästa avsnitt](./service-credentials.md) vi uppdaterar den här programkoden som stöd för metoden att generera en token för användning i produktionen.
+Vi ska skapa ett enkelt externt JavaScript-program som visar hur du programmässigt får åtkomst AEM as a Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_ program eller system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att programmässigt autentisera till, och komma åt, AEM as a Cloud Service. I [nästa avsnitt](./service-credentials.md)uppdaterar vi den här programkoden så att den stöder metoden att generera en token för användning i produktionen.
 
 Det här exempelprogrammet körs från kommandoraden och uppdaterar metadata AEM resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
 
 1. Läser in parametrar från kommandoraden (`getCommandLineParams()`)
 1. Hämtar åtkomsttoken som används för att autentisera till AEM as a Cloud Service (`getAccessToken(...)`)
 1. Visar alla resurser i en AEM resursmapp som anges i kommandoradsparametrar (`listAssetsByFolder(...)`)
-1. Uppdatera metadata för resurser i listan med värden som anges i kommandoradsparametrarna (`updateMetadata(...)`)
+1. Uppdatera metadata för resurser i listan med värden som anges i kommandoradsparametrar (`updateMetadata(...)`)
 
 Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är att lägga till en HTTP-begäranderubrik för auktorisering till alla HTTP-begäranden som görs till AEM, i följande format:
 
@@ -96,7 +96,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    * Application entry point function
    */
    (async () => {
-       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd/en/adventures/napa-wine-tasting file=credentials-file.json' );
+       console.log('Example usage: node index.js aem=https://author-p1234-e5678.adobeaemcloud.com propertyName=metadata/dc:rights "propertyValue=WKND Limited Use" folder=/wknd-shared/en/adventures/napa-wine-tasting file=credentials-file.json' );
    
        // Parse the command line parameters
        params = getCommandLineParams();
@@ -173,7 +173,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    * - aem = The AEM as a Cloud Service hostname to connect to.
    *              Example: https://author-p12345-e67890.adobeaemcloud.com
    * - folder = The asset folder to update assets in. Note that the Assets HTTP API do NOT use the JCR `/content/dam` path prefix.
-   *              Example: '/wknd/en/adventures/napa-wine-tasting'
+   *              Example: '/wknd-shared/en/adventures/napa-wine-tasting'
    * - propertyName = The asset property name to update. Note this is relative to the [dam:Asset]/jcr:content node of the asset.
    *              Example: metadata/dc:rights
    * - propertyValue = The value to update the asset property (specified by propertyName) with.
@@ -230,7 +230,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    ```shell
    $ node index.js \
        aem=https://author-p1234-e5678.adobeaemcloud.com \
-       folder=/wknd/en/adventures/napa-wine-tasting \
+       folder=/wknd-shared/en/adventures/napa-wine-tasting \
        propertyName=metadata/dc:rights \
        propertyValue="WKND Limited Use" \
        file=local_development_token.json
@@ -238,8 +238,8 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 
    Följande parametrar skickas:
 
-   + `aem`: Schemat och värdnamnet för den AEM as a Cloud Service miljön som programmet ska interagera med (t.ex. `https://author-p1234-e5678.adobeaemcloud.com`).
-   + `folder`: Resursmappens sökväg vars resurser uppdateras med `propertyValue`; lägg INTE till `/content/dam` prefix (ex. `/wknd/en/adventures/napa-wine-tasting`)
+   + `aem`: Schemat och värdnamnet för den AEM as a Cloud Service miljön som programmet interagerar med (t.ex. `https://author-p1234-e5678.adobeaemcloud.com`).
+   + `folder`: Resursmappens sökväg vars resurser uppdateras med `propertyValue`; lägg INTE till `/content/dam` prefix (ex. `/wknd-shared/en/adventures/napa-wine-tasting`)
    + `propertyName`: Namnet på resursegenskapen som ska uppdateras, relativt till `[dam:Asset]/jcr:content` (ex. `metadata/dc:rights`).
    + `propertyValue`: Värdet som anger `propertyName` till värden med blanksteg måste kapslas in med `"` (ex. `"WKND Limited Use"`)
    + `file`: Den relativa sökvägen till JSON-filen som hämtats från AEM Developer Console.
@@ -247,16 +247,16 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    En lyckad körning av programresultatet för varje resurs som har uppdaterats:
 
    ```shell
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
-   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_277654931.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_239751461.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_280313729.jpg.json
+   200 - OK @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
 ### Verifiera metadatauppdatering i AEM
 
-Kontrollera att metadata har uppdaterats genom att logga in i den AEM as a Cloud Service miljön (se till att samma värd skickas till `aem` kommandoradsparametern används).
+Kontrollera att metadata har uppdaterats genom att logga in i den AEM as a Cloud Service miljön (se till att samma värd skickas till `aem` kommandoradsparameter används).
 
 1. Logga in i den AEM as a Cloud Service miljön som det externa programmet interagerade med (använd samma värd som finns i `aem` kommandoradsparameter)
 1. Navigera till __Resurser__ > __Filer__
@@ -269,6 +269,6 @@ Kontrollera att metadata har uppdaterats genom att logga in i den AEM as a Cloud
 
 ## Nästa steg
 
-Nu när vi programmässigt har kommit åt AEM as a Cloud Service med hjälp av den lokala utvecklingstoken, måste vi uppdatera programmet så att det kan hanteras med tjänstens autentiseringsuppgifter, så att programmet kan användas i ett produktionssammanhang.
+Nu när vi programmässigt har kommit åt AEM as a Cloud Service med hjälp av den lokala utvecklingstoken. Därefter måste vi uppdatera programmet så att det kan hanteras med tjänstens autentiseringsuppgifter, så att det här programmet kan användas i ett produktionssammanhang.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
