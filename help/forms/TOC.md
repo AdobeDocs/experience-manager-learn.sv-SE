@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -214,6 +214,13 @@ ht-degree: 0%
    + [Del 2 - Skapa ACS-profil vid formuläröverföring](aem-forms-with-adobe-campaign/parttwo.md)
    + [Del3 - Fylla i formulär i förväg med ACS-profilinformation](aem-forms-with-adobe-campaign/partthree.md)
    + [Del 4 - Skapa ACS-profil med hjälp av formulärdatamodell](aem-forms-with-adobe-campaign/partfour.md)
+
++ Välkomstpaket {#welcome-kit}
+   + [Introduktion](welcome-kit/introduction.md)
+   + [Skapa välkomstpaketkomponent](welcome-kit/create-welcomekit-component.md)
+   + [Skapa arbetsflödeskomponent](welcome-kit/create-workflow-component.md)
+   + [Testa lösningen](welcome-kit/testing-the-solution.md)
+
 
 + Dokumenttjänster {#document-services}
    + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
