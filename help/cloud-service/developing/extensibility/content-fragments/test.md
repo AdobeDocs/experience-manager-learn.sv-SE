@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,12 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, vanligtvis `&ext=https://localhost:9080`.
 
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __först__ frågeparametrar i URL:en eftersom Content Fragment Console använder en hash-väg (`#/@wknd/aem/...`), så att parametrarna efterkorrigeras felaktigt efter `#` kommer inte att fungera.
+
    Test-URL:en ska se ut så här:
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://localhost:9080
+   https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. Kopiera och klistra in test-URL:en i webbläsaren.
@@ -112,10 +114,12 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __först__ frågeparametrar i URL:en eftersom Content Fragment Console använder en hash-väg (`#/@wknd/aem/...`), så att parametrarna efterkorrigeras felaktigt efter `#` kommer inte att fungera.
+
    Test-URL:en ska se ut så här:
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html
+   https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. Kopiera och klistra in test-URL:en i webbläsaren.
