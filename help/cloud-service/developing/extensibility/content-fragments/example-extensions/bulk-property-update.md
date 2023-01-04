@@ -9,7 +9,7 @@ level: Beginner
 kt: 11604
 thumbnail: KT-11604.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Det funktionella flödet för exempeltillägget är följande:
 1. När du skickar formuläret skickas listan med markerade innehållsfragment och AEM värd till [anpassad Adobe I/O Runtime-åtgärd](#adobe-io-runtime-action).
 1. The [Adobe I/O Runtime action](#adobe-io-runtime-action) validerar indata och gör HTTP PUT-begäranden om att AEM uppdatera de markerade innehållsfragmenten.
 1. En serie HTTP-PUT för varje innehållsfragment som ska uppdatera den angivna egenskapen.
-1. AEM as a Cloud Service kvarstår egenskapsuppdateringarna för innehållsfragmentet och returnerar lyckade svar på Adobe I/O Runtime-åtgärden.
+1. AEM as a Cloud Service kvarstår egenskapsuppdateringarna för innehållsfragmentet och returnerar svar om Adobe I/O Runtime-åtgärden om huruvida åtgärden lyckades eller inte.
 1. modal fick svaret från Adobe I/O Runtime-åtgärden och visar en lista över lyckade bulkuppdateringar.
 
 I den här videon visas exempel på uppdateringstillägg för massegenskaper, hur det fungerar och hur det utvecklas.
@@ -69,7 +69,7 @@ Det finns två logiska uppsättningar vägar:
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. The `:selection` param representerar en avgränsad lista med innehållsfragmentsökvägar.
+1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. The `:selection` -param representerar en avgränsad sökväg för innehållsfragment.
 
    Om tillägget har flera knappar för att anropa diskreta åtgärder ska varje [tilläggsregistrering](#extension-registration) mappar till en väg som definieras här.
 
@@ -147,7 +147,7 @@ I det här exemplet finns det en modal React-komponent (`BulkPropertyUpdateModal
 Viktigt är att all interaktion med AEM från tillägget ska delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Adobe I/O Runtime-åtgärder används för att kommunicera med AEM för att undvika anslutningsproblem mellan olika ursprung (CORS).
 
-När formuläret för uppdatering av massegenskaper skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden och skickar den aktuella AEM (domänen) och användarens AEM åtkomsttoken, som i sin tur anropar [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/content-fragments-api.html) för att uppdatera innehållsfragmenten.
+När formuläret för uppdatering av massegenskaper skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden och skickar den aktuella AEM (domänen) och användarens AEM åtkomsttoken, som i sin tur anropar [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modal-åtgärden så att resultatet av bulkegenskapsuppdateringen visas.
 

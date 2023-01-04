@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 | Sidhuvudsmenyn | Lägger till en knapp i sidhuvudet som visas när __noll__ Innehållsfragment markeras. | Inget. |
 | Åtgärdsfält | Lägger till en knapp i åtgärdsfältet som visas när __en eller flera__ Innehållsfragment markeras. | En array med de markerade innehållsfragmentens sökvägar. |
 
-Ett enda tillägg AEM Content Fragments Console kan innehålla noll eller en rubrikmeny och noll eller en typ av tillägg i åtgärdsfältet. Om flera tilläggstyper av samma typ krävs måste flera AEM Content Fragments Console-tillägg skapas.
+Ett enda tillägg AEM Content Fragments Console kan innehålla noll eller en rubrikmeny och noll eller en tilläggstyp för åtgärdsfältet. Om flera tilläggstyper av samma typ krävs måste flera AEM Content Fragments Console-tillägg skapas.
 
 AEM Content Fragments Console-tillägg, kräver en [Adobe Developer Console-projekt](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) och [App Builder-app](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med `@adobe/aem-cf-admin-ui-ext-tpl` -mall som är kopplad till Adobe Developer Console-projektet.
 
@@ -67,7 +67,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">1. Skapa ett projekt</p>
-                    <p class="is-size-6">Skapa ett Adobe Developer Console-projekt som definierar åtkomst till andra Adobe-tjänster och hanterar distributionen av det.</p>
+                    <p class="is-size-6">Skapa ett Adobe Developer Console-projekt som definierar åtkomsten till andra Adobe-tjänster och hanterar distributionerna.</p>
                     <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_adobe-developer-com">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Skapa ett Adobe Developer-projekt</span>
                     </a>
@@ -130,7 +130,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">4a. Sidhuvud-menyn</p>
-                    <p class="is-size-6">Lär dig hur du skapar ett AEM Content Fragment Console-huvudmenytillägg.</p>
+                    <p class="is-size-6">Lär dig hur du skapar ett AEM Content Fragment Console-rubrikmenytillägg.</p>
                     <a href="./header-menu.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Utöka rubrikmenyn</span>
                     </a>
@@ -151,7 +151,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">4b. Åtgärdsfält</p>
-                    <p class="is-size-6">Lär dig hur du skapar AEM tillägg för åtgärdsfältet för innehållsfragmentkonsolen.</p>
+                    <p class="is-size-6">Lär dig hur du skapar ett AEM tillägg till åtgärdsfältet för innehållsfragmentkonsolen.</p>
                     <a href="./action-bar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Utöka åtgärdsfältet</span>
                     </a>
@@ -214,7 +214,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">7. Testa</p>
-                    <p class="is-size-6">Testa tilläggen under utvecklingen och dela färdiga tillägg till QA- eller UAT-testare med en särskild URL.</p>
+                    <p class="is-size-6">Testa tilläggen under utveckling och dela färdiga tillägg till QA- eller UAT-testare med en särskild URL.</p>
                     <a href="./test.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testa tillägget</span>
                     </a>
@@ -271,4 +271,28 @@ Exempel AEM tillägg för Content Fragment Console.
             </div>
         </div>
     </div>
+    <!-- Bulk property update extension -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Image generation and upload to AEM extension">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-16by9">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="Bildgenerering och överföring till AEM" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="Bildgenerering och överföring till AEM">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small">
+                <div class="content">
+                    <p class="headline is-size-5 has-text-weight-bold">Bildgenerering och överföring till AEM</p>
+                    <p class="is-size-6">Utforska ett exempel på ett åtgärdsfälttillägg som genererar en bild med OpenAI, överför den till AEM och uppdaterar bildegenskapen för det valda innehållsfragmentet.</p>
+                    <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Utforska exempeltillägget</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
