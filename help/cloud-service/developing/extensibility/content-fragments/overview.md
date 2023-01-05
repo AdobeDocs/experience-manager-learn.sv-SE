@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console" title="Skapa Adobe Developer Project" tabindex="-1" target="_adobe-developer-com">
+                    <a href="./adobe-developer-console-project.md" title="Skapa Adobe Developer Project" tabindex="-1">
                         <img class="is-bordered-r-small" src="./assets/project/card.png" alt="Skapa Adobe Developer Project">
                     </a>
                 </figure>
@@ -67,8 +67,8 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">1. Skapa ett projekt</p>
-                    <p class="is-size-6">Skapa ett Adobe Developer Console-projekt som definierar åtkomsten till andra Adobe-tjänster och hanterar distributionerna.</p>
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_adobe-developer-com">
+                    <p class="is-size-6">Skapa ett Adobe Developer Console-projekt som definierar åtkomst till andra Adobe-tjänster och hanterar distributionen av det.</p>
+                    <a href="./adobe-developer-console-project.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Skapa ett Adobe Developer-projekt</span>
                     </a>
                 </div>
@@ -80,7 +80,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization" title="Skapa en tilläggsapp" tabindex="-1" target="_adobe-developer-com">
+                    <a href="./app-initialization.md" title="Skapa en tilläggsapp" tabindex="-1">
                         <img class="is-bordered-r-small" src="./assets/initialize-app/card.png" alt="Initiera en tilläggsapp">
                     </a>
                 </figure>
@@ -89,7 +89,7 @@ Följ stegen nedan för att lära dig hur du genererar, utvecklar och distribuer
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">2. Initiera en tilläggsapp</p>
                     <p class="is-size-6">Initiera ett AEM Content Fragment Console-tillägg i App Builder som definierar var tillägget visas och hur det fungerar.</p>
-                    <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation/#launch-code-generation-during-project-initialization" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_adobe-developer-com">
+                    <a href="./app-initialization.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Initiera en tilläggsapp</span>
                     </a>
                 </div>

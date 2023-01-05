@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '880'
 ht-degree: 9%
 
 ---
@@ -56,6 +56,8 @@ ht-degree: 9%
    + Utbyggbarhet{#extensibility}
       + Konsol för innehållsfragment{#content-fragments}
          + [Översikt](./developing/extensibility/content-fragments/overview.md)
+         + [Adobe Developer Console-projekt](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
+         + [App-initiering](./developing/extensibility/content-fragments/app-initialization.md)
          + [Tilläggsregistrering](./developing/extensibility/content-fragments/extension-registration.md)
          + [Sidhuvudsmenyn](./developing/extensibility/content-fragments/header-menu.md)
          + [Åtgärdsfält](./developing/extensibility/content-fragments/action-bar.md)
