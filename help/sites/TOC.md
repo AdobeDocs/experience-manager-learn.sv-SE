@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites Tutorials
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 5%
    + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
+   + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
    + [Bästa praxis för formatsystem](developing/style-organization-style-system-understand-article.md)
    + [Utveckla för sidskillnader](developing/page-diff-technical-video-develop.md)
