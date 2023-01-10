@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
+source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
 workflow-type: tm+mt
-source-wordcount: '1759'
-ht-degree: 0%
+source-wordcount: '1776'
+ht-degree: 1%
 
 ---
 
@@ -100,6 +100,11 @@ ht-degree: 0%
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ Välja och samla ihop innehåll i DAM-mappen{#select-dam-folder-content}
+   + [Introduktion](display-and-assemble-dam-folder-contents/introduction.md)
+   + [Fyll i alternativgrupp](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [Sammanställa valda resurser](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [Distribuera resurserna lokalt](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
    + [Introduktion](prefill-fdm-db/introduction.md)
    + [Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
