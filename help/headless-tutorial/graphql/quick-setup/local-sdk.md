@@ -1,6 +1,6 @@
 ---
 title: AEM Headless-snabbinställning med lokal SDK
-description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Installera AEM SDK, lägg till exempelinnehåll och distribuera ett program som använder innehåll från AEM med GraphQL API:er. Se hur AEM driver flerkanalsupplevelser.
+description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Installera AEM SDK, lägg till exempelinnehåll och distribuera ett program som använder innehåll från AEM med dess GraphQL API:er. Se hur AEM driver flerkanalsupplevelser.
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
@@ -10,24 +10,23 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 64086f3f7b340b143bd281e2f6f802af07554ecf
+source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1256'
 ht-degree: 0%
 
 ---
 
 # AEM Headless-snabbinställning med lokal SDK {#setup}
 
-Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och ett exempel på React App (SPA) som förbrukar innehållet framför Headless GraphQL API:er. Den här guiden använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
+Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och ett exempel på React App (SPA) som förbrukar innehållet i AEM Headless GraphQL API:er. Den här guiden använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
 ## Förutsättningar {#prerequisites}
 
 Följande verktyg bör installeras lokalt:
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
+* [Node.js v14.x](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1. Installera AEM SDK {#aem-sdk}
@@ -62,7 +61,7 @@ Den här inställningen använder [AEM as a Cloud Service SDK](https://experienc
 
 Exempelinnehåll från **WKND-referensplats** används för att snabba upp självstudiekursen. WKND är ett fiktivt vardagsmärke som ofta används med AEM utbildning.
 
-WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL-slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL-slutpunkter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) i kundprojektet. A [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program, mer information om [CORS](#cors-config) finns nedan.
+WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL slutpunkter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) i kundprojektet. A [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program, mer information om [CORS](#cors-config) finns nedan.
 
 1. Ladda ned det senaste kompilerade AEM-paketet för WKND-webbplatsen: [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
@@ -102,7 +101,7 @@ WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQ
 
 ## 3. Ladda ned och kör appen WKND React {#sample-app}
 
-Ett av målen med den här självstudiekursen är att visa hur du använder AEM innehåll från ett externt program med GraphQL API:er. I den här självstudien används ett exempel på React App (Reagera-app). React-appen är avsiktligt enkel att fokusera på integrationen med AEM GraphQL API:er.
+Ett av målen med den här självstudiekursen är att visa hur du använder AEM innehåll från ett externt program med GraphQL API:er. I den här självstudien används ett exempel på React App (Reagera-app). Reaktionsappen är avsiktligt enkel att fokusera på integrationen med AEM GraphQL API:er.
 
 1. Öppna en ny kommandotolk och klona exempelappen React från GitHub:
 
@@ -148,7 +147,7 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
 
 1. Använd webbläsarens utvecklarverktyg för att inspektera **Nätverk** förfrågningar. Visa **XHR** begär och observera flera GETTER `/graphql/execute.json/...`. Det här sökvägsprefixet anropar AEM beständiga frågeslutpunkten och väljer den beständiga frågan som ska köras med namnet och de kodade parametrarna efter prefixet.
 
-   ![XHR-begäran för GraphQL Endpoint](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
+   ![GraphQL Endpoint XHR-begäran](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
 ## 4. Redigera innehåll i AEM
 
