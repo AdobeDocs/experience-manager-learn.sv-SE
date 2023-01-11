@@ -10,9 +10,9 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -271,19 +271,19 @@ Exempel AEM tillägg för Content Fragment Console.
             </div>
         </div>
     </div>
-    <!-- Bulk property update extension -->
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Image generation and upload to AEM extension">
+    <!-- Image Generartion update extension -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="OpenAI-based image generation and upload to AEM extension">
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./example-extensions/image-generation-and-image-upload.md" title="Bildgenerering och överföring till AEM" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="Bildgenerering och överföring till AEM">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="OpenAI-baserad bildgenerering och överföring till AEM">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">Bildgenerering och överföring till AEM</p>
+                    <p class="headline is-size-5 has-text-weight-bold">OpenAI-baserad bildgenerering och överföring till AEM</p>
                     <p class="is-size-6">Utforska ett exempel på ett åtgärdsfälttillägg som genererar en bild med OpenAI, överför den till AEM och uppdaterar bildegenskapen för det valda innehållsfragmentet.</p>
                     <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Utforska exempeltillägget</span>

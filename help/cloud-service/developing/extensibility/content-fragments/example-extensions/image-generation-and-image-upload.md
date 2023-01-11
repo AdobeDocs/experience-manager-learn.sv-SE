@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
 
 
-# Generering av digitala bilder, ladda upp till AEM exempeltillägg
+# OpenAI-baserad digital bildgenerering, ladda upp till AEM exempeltillägg
 
 ![Generering av digitala bilder](./assets/digital-image-generation/screenshot.png){align="center"}
 
@@ -43,6 +43,10 @@ Det funktionella flödet för exempeltillägget är följande:
 1. Därefter initieras bildöverföringen från App Builder-miljön till AEM DAM under en fördefinierad sökväg.
 1. Den AEM as a Cloud Service sparar bilden i DAM och returnerar om Adobe I/O Runtime-åtgärden lyckades eller misslyckades. Det överförda svaret uppdaterar det valda Content Fragments image-egenskapsvärde med en annan HTTP-begäran som AEM från Adobe I/O Runtime-åtgärden.
 1. modalen tar emot svar från Adobe I/O Runtime-åtgärden och tillhandahåller länken AEM resursinformation för den nyligen genererade, överförda bilden.
+
+I den här videon visas exempel på bildgenerering med tillägget OpenAI eller DALL.E 2, hur det fungerar och hur det utvecklas. Videon har kapitelmarkeringar som __Funktionell demo, installation och Tech-Code__ för att snabbt se på vad det rör sig om.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
 
 
 ## App Builder-tilläggsappen
