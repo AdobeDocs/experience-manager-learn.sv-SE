@@ -5,9 +5,9 @@ breadcrumb-title: AEM as a Cloud Service Tutorials
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: 3a77f99de25ad6dab37d4ee12b31f12b94f0ec73
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '879'
 ht-degree: 9%
 
 ---
@@ -66,8 +66,8 @@ ht-degree: 9%
          + [Testa](./developing/extensibility/content-fragments/test.md)
          + [Distribuera](./developing/extensibility/content-fragments/deploy.md)
          + Exempel på tillägg{#example-extensions}
-            + [Uppdateringstillägg för massegenskap](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
-            + [Bildgenerering och överföring till AEM](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
+            + [Uppdatering av massegenskap](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
+            + [Generera AEM bildresurser med OpenAI](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
    + Grundläggande om utveckling{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [Lokal utvecklingsmiljö](./developing/basics/local-development-environment.md)
