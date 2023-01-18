@@ -8,8 +8,9 @@ role: Developer
 level: Beginner
 kt: 11604
 thumbnail: KT-11604.png
+doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
