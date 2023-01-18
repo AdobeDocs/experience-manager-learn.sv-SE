@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -251,7 +251,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 När det finns någon FILENAME_farm.eventuella filer från `/etc/httpd/conf.dispatcher.d/available_farms/` katalogen får en länk till `/etc/httpd/conf.dispatcher.d/enabled_farms/` katalogen som de ska användas i den konfiguration som körs.
 
-Servergruppsfilerna har undergrupper baserade på [toppnivåavsnitt i servergruppen](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-farms-farms) som cache, clientheaders, filters, renders och vhosts.
+Servergruppsfilerna har undergrupper baserade på [toppnivåavsnitt i servergruppen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) som cache, clientheaders, filters, renders och vhosts.
 
 The `FILENAME_farm.any` filerna kommer att innehålla programsatser för varje fil baserat på var de måste inkluderas i servergruppsfilen.  Här är ett exempel på syntax för en `FILENAME_farm.any` som en bra referens:
 

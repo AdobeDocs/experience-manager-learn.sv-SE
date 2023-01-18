@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1161'
 ht-degree: 1%
 
 ---
@@ -146,7 +146,7 @@ Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du
 
 #### Katalog för klientrubriker
 
-Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar som innehåller listor med klientrubriker som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns här [här](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar som innehåller listor med klientrubriker som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
