@@ -12,10 +12,11 @@ thumbnail: 330519.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1931'
 ht-degree: 0%
 
 ---
@@ -28,10 +29,11 @@ Integrationer med Adobe Experience Manager (AEM) as a Cloud Service måste kunna
 
 Tjänstautentiseringsuppgifterna kan se ut som liknande [Åtkomsttoken för lokal utveckling](./local-development-access-token.md) men skiljer sig på några viktiga sätt:
 
++ Tjänstreferenser är associerade med tekniska konton. Flera autentiseringsuppgifter för tjänsten kan vara aktiva för ett tekniskt konto.
 + Tjänstautentiseringsuppgifterna är _not_ få åtkomst till tokens, i stället för att vara inloggningsuppgifter som används för _hämta_ åtkomsttoken.
-+ Autentiseringsuppgifterna för tjänsten är mer permanenta (upphör att gälla var 365:e dag) och ändras inte om de inte återkallas, medan token för lokal utvecklingsåtkomst upphör att gälla dagligen.
++ Tjänstautentiseringsuppgifterna är mer permanenta (certifikatet upphör att gälla var 365:e dag) och ändras inte om det inte återkallas, medan token för lokal utvecklingsåtkomst upphör att gälla dagligen.
 + Tjänstautentiseringsuppgifter för en AEM as a Cloud Service miljö mappas till en enskild AEM användare, medan Local Development Access-token autentiseras som den AEM användaren som genererade åtkomsttoken.
-+ En AEM as a Cloud Service miljö har en Service Credentials som mappar till ett tekniskt konto AEM användare. Tjänstautentiseringsuppgifter kan inte användas för att autentisera till samma AEM as a Cloud Service miljö som andra tekniska AEM.
++ En AEM as a Cloud Service miljö kan ha upp till tio tekniska konton, var och en med sina egna Service Credentials, där varje mappning görs till ett diskret tekniskt konto AEM användaren.
 
 Både tjänstautentiseringsuppgifter och åtkomsttoken som de genererar, och token för lokal utvecklingsåtkomst, ska hållas hemliga. Som alla tre kan användas för att få tillgång till sin AEM as a Cloud Service miljö.
 
@@ -39,27 +41,27 @@ Både tjänstautentiseringsuppgifter och åtkomsttoken som de genererar, och tok
 
 Generering av servicereferenser delas upp i två steg:
 
-1. En engångstjänstinloggningsinitiering av en Adobe IMS-organisationsadministratör
-1. Hämtning och användning av JSON för tjänstautentiseringsuppgifter
+1. Ett tekniskt konto som skapas en gång av en Adobe IMS-organisationsadministratör
+1. Hämtning och användning av JSON för tjänstreferenser för det tekniska kontot
 
-### Initiering av tjänstautentiseringsuppgifter
+### Skapa ett tekniskt konto
 
-Tjänstautentiseringsuppgifter, till skillnad från token för lokal utvecklingsåtkomst, kräver en _engångsinitiering_ av din IMS-administratör för Adobe Org innan de kan hämtas.
+Till skillnad från token för lokal utvecklingsåtkomst kräver tjänstautentiseringsuppgifter att ett tekniskt konto skapas av en IMS-administratör för Adobe Org innan de kan hämtas. Separata tekniska konton bör skapas för varje klient som kräver programmatisk åtkomst till AEM.
 
-![Initiera autentiseringsuppgifter för tjänsten](assets/service-credentials/initialize-service-credentials.png)
+![Skapa ett tekniskt konto](assets/service-credentials/initialize-service-credentials.png)
 
-__Detta är en engångsinitiering per AEM as a Cloud Service miljö__
+Tekniska konton skapas en gång, men de privata nycklarna använder för att hantera tjänstens autentiseringsuppgifter som är kopplade till det tekniska kontot. De kan hanteras med tiden. Till exempel måste nya privata nycklar/autentiseringsuppgifter för tjänsten genereras innan den aktuella privata nyckeln förfaller, så att en användare av tjänstautentiseringsuppgifterna kan få tillgång utan avbrott.
 
 1. Se till att du är inloggad som:
-   + Din Adobe IMS-organisations administratör
-   + Medlem i __Cloud Manager - utvecklare__ IMS-produktprofil
-   + Medlem i __AEM__ eller __AEM administratörer__ IMS-produktprofil på __AEM Author__
+   + __Administratör för Adobe IMS-organisation__
+   + Medlem i __AEM administratörer__ IMS-produktprofil på __AEM Author__
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller den AEM as a Cloud Service miljön för att integrera inställningarna för tjänstens autentiseringsuppgifter för
 1. Tryck på ellipsen bredvid omgivningen i __Miljö__ och markera __Developer Console__
 1. Tryck på __Integreringar__ tab
-1. Tryck __Hämta tjänstautentiseringsuppgifter__ knapp
-1. Tjänstautentiseringsuppgifterna initieras och visas som JSON
+1. Tryck på __Tekniska konton__ tab
+1. Tryck __Skapa nytt tekniskt konto__ knapp
+1. Det tekniska kontots inloggningsuppgifter initieras och visas som JSON
 
 ![AEM Developer Console - Integreringar - Hämta tjänstautentiseringsuppgifter](./assets/service-credentials/developer-console.png)
 
@@ -69,20 +71,20 @@ När AEM som Cloud Service-miljöns tjänstautentiseringsuppgifter har initierat
 
 ![Hämta tjänstens autentiseringsuppgifter](assets/service-credentials/download-service-credentials.png)
 
-När du hämtar tjänstens autentiseringsuppgifter följer du samma steg som initieringen. Om initieringen ännu inte har utförts visas ett fel när användaren trycker på __Hämta tjänstautentiseringsuppgifter__ -knappen.
+När du hämtar tjänstens autentiseringsuppgifter följer du stegen som är desamma som initieringen.
 
 1. Se till att du är inloggad som:
-   + Medlem i __Cloud Manager - utvecklare__ IMS-produktprofil (som ger åtkomst till AEM Developer Console)
-      + Den as a Cloud Service sandlådemiljön AEM inte kräver det här  __Cloud Manager - utvecklare__ medlemskap
-   + Medlem i __AEM__ eller __AEM administratörer__ IMS-produktprofil på __AEM Author__
+   + __Administratör för Adobe IMS-organisation__
+   + Medlem i __AEM administratörer__ IMS-produktprofil på __AEM Author__
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller den AEM as a Cloud Service miljön att integrera med
 1. Tryck på ellipsen bredvid omgivningen i __Miljö__ och markera __Developer Console__
 1. Tryck på __Integreringar__ tab
-1. Tryck __Hämta tjänstautentiseringsuppgifter__ knapp
-1. Tryck på nedladdningsknappen i det övre vänstra hörnet om du vill hämta JSON-filen som innehåller värdet för tjänstens autentiseringsuppgifter och spara filen på en säker plats.
-
-+ _Om inloggningsuppgifterna är i konflikt kontaktar du Adobe Support omedelbart för att få dem återkallade_
+1. Tryck på __Tekniska konton__ tab
+1. Expandera __Tekniskt konto__ som ska användas
+1. Expandera __Privat nyckel__ vars inloggningsuppgifter hämtas och verifiera att statusen är __Aktiv__
+1. Tryck på __...__ > __Visa__ som är kopplade till __Privat nyckel__, som visar JSON för tjänstinloggningsuppgifter
+1. Tryck på nedladdningsknappen i det övre vänstra hörnet för att hämta JSON-filen som innehåller värdet för tjänstens autentiseringsuppgifter och spara filen på en säker plats
 
 ## Installera tjänstens autentiseringsuppgifter
 
@@ -91,7 +93,7 @@ Tjänstautentiseringsuppgifterna innehåller den information som behövs för at
 För enkelhetens skull skickar den här självstudiekursen tjänstens autentiseringsuppgifter via kommandoraden. Samarbeta dock med IT-säkerhetsteamet för att förstå hur du ska lagra och få tillgång till dessa uppgifter i enlighet med organisationens säkerhetsriktlinjer.
 
 1. Kopiera [hämtade JSON för tjänstinloggningsuppgifter](#download-service-credentials) till en fil med namnet `service_token.json` i projektets rot
-   + Men kom ihåg att aldrig binda några referenser till Git!
+   + Kom ihåg, aldrig implementera _valfri inloggningsinformation_ till Git!
 
 ## Använd tjänstens autentiseringsuppgifter
 
@@ -100,7 +102,7 @@ Tjänstautentiseringsuppgifterna, som är ett fullständigt JSON-objekt, är int
 ![Tjänstautentiseringsuppgifter - externt program](assets/service-credentials/service-credentials-external-application.png)
 
 1. Hämta tjänstautentiseringsuppgifterna från AEM Developer Console till en säker plats
-1. Ett externt program måste programmera interaktionen med AEM as a Cloud Service miljö
+1. Det externa programmet behöver interagera programmatiskt med AEM as a Cloud Service miljö
 1. Det externa programmet läser i tjänstens autentiseringsuppgifter från en säker plats
 1. Det externa programmet använder information från tjänstens autentiseringsuppgifter för att skapa en JWT-token
 1. JWT-token skickas till Adobe IMS för utbyte mot en åtkomsttoken
@@ -111,22 +113,22 @@ Tjänstautentiseringsuppgifterna, som är ett fullständigt JSON-objekt, är int
 
 ### Uppdateringar till det externa programmet
 
-Om du vill få åtkomst till AEM as a Cloud Service med hjälp av de tjänstautentiseringsuppgifter som det externa programmet måste uppdateras på tre sätt:
+Om du vill få åtkomst till AEM as a Cloud Service med hjälp av tjänstens autentiseringsuppgifter måste det externa programmet uppdateras på tre sätt:
 
 1. Läs i tjänstens autentiseringsuppgifter
 
-+ För enkelhetens skull läser vi dessa från den hämtade JSON-filen, men i realtidsscenarier måste inloggningsuppgifterna lagras på ett säkert sätt i enlighet med organisationens säkerhetsriktlinjer
++ För enkelhetens skull läses tjänstens autentiseringsuppgifter in från den hämtade JSON-filen, men i realtidsscenarier måste tjänstens autentiseringsuppgifter lagras på ett säkert sätt i enlighet med organisationens säkerhetsriktlinjer
 
 1. Generera en JWT från tjänstens autentiseringsuppgifter
 1. Byt ut JWT för en åtkomsttoken
 
-+ När det finns inloggningsuppgifter använder vårt externa program denna åtkomsttoken i stället för den lokala utvecklingsåtkomsttoken vid åtkomst till AEM as a Cloud Service
++ När tjänstautentiseringsuppgifter finns använder det externa programmet denna åtkomsttoken i stället för den lokala utvecklingsåtkomsttoken vid åtkomst till AEM as a Cloud Service
 
 I den här självstudiekursen, Adobe `@adobe/jwt-auth` npm-modulen används för att både (1) generera JWT från tjänstens autentiseringsuppgifter och (2) byta ut det mot en åtkomsttoken i ett enda funktionsanrop. Om ditt program inte är JavaScript-baserat kan du läsa [exempelkod på andra språk](https://developer.adobe.com/developer-console/docs/guides/) om du vill veta hur du skapar en JWT-fil från tjänstens autentiseringsuppgifter och byter ut den mot en åtkomsttoken med Adobe IMS.
 
 ## Läs autentiseringsuppgifterna för tjänsten
 
-Granska `getCommandLineParams()` och se att vi kan läsa JSON-filer för tjänstinloggningsuppgifter med samma kod som används för att läsa i JSON-token för lokal utvecklingsåtkomst.
+Granska `getCommandLineParams()` så se hur JSON-filen för tjänstinloggningsuppgifter läses med samma kod som används för att läsa i JSON-token för lokal utvecklingsåtkomst.
 
 ```javascript
 function getCommandLineParams() {
@@ -151,7 +153,7 @@ Det här exempelprogrammet är Node.js-baserat, så det är bäst att använda [
 
 1. Uppdatera `getAccessToken(..)` om du vill inspektera JSON-filens innehåll och avgöra om den representerar en Local Development Access-token eller tjänstautentiseringsuppgifter. Detta kan enkelt uppnås genom att kontrollera om `.accessToken` som bara finns för JSON för Local Development Access-token.
 
-   Om Service Credentials anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Vi använder [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` som båda genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop. Parametrarna till `auth(..)` -metoden är en [JSON-objekt som består av specifik information](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som finns i JSON för tjänstinloggningsuppgifter, vilket beskrivs nedan i koden.
+   Om Service Credentials anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Använd [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)&#39;s `auth(...)` som genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop. Parametrarna till `auth(..)` -metoden är en [JSON-objekt som består av specifik information](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som finns i JSON för tjänstinloggningsuppgifter, vilket beskrivs nedan i koden.
 
 ```javascript
  async function getAccessToken(developerConsoleCredentials) {
@@ -211,7 +213,7 @@ Det här exempelprogrammet är Node.js-baserat, så det är bäst att använda [
 
 ## Konfigurera åtkomst i AEM
 
-En token härledd för tjänstinloggningsinformation använder ett tekniskt konto AEM Användare som har medlemskap i AEM användargruppen.
+Tjänstautentiseringsuppgifthärledd åtkomsttoken använder ett tekniskt konto AEM Användare som har medlemskap i __Medarbetare__ AEM användargrupp.
 
 ![Tjänstautentiseringsuppgifter - Tekniskt konto AEM användare](./assets/service-credentials/technical-account-user.png)
 

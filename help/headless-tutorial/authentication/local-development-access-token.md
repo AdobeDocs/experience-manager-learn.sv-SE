@@ -12,10 +12,11 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -40,6 +41,7 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-t
 1. Öppna programmet som innehåller den AEM as a Cloud Service miljön att integrera med
 1. Tryck på __ellips__ bredvid miljön i __Miljö__ och markera __Developer Console__
 1. Tryck på __Integreringar__ tab
+1. Tryck på __Lokal token__ tab
 1. Tryck __Hämta lokal utvecklingstoken__ knapp
 1. Tryck på __hämtningsknapp__ i det övre vänstra hörnet för att ladda ned JSON-filen som innehåller `accessToken` och spara JSON-filen på en säker plats på utvecklingsdatorn.
    + Detta är din dygnet-runt-token för utvecklaråtkomst till den AEM as a Cloud Service miljön.
