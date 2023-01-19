@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 2b188cbe0ba968b553a20629b89edf5ed377f300
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2574'
 ht-degree: 0%
 
 ---
@@ -45,37 +45,46 @@ Det är också *kritisk* testa kod mot en lokal ***Publicera*** -instans. The **
 1. Kontrollera att Java™ är installerat.
    * Föredra [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=14) för AEM 6.5+
    * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) för AEM versioner före AEM 6.5
-2. Få en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
-3. Skapa en mappstruktur på datorn enligt följande:
+1. Få en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+1. Skapa en mappstruktur på datorn enligt följande:
 
-   ```plain
-   ~/aem-sdk
-       /author
-       /publish
-   ```
+```plain
+~/aem-sdk
+    /author
+    /publish
+```
 
-4. Byt namn på [!DNL QuickStart] JAR till ***aem-author-p4502.jar*** och placera den under `/author` katalog. Lägg till ***[!DNL license.properties]*** filen under `/author` katalog.
-5. Skapa en kopia av [!DNL QuickStart] JAR, byt namn på den till ***aem-publish-p4503.jar*** och placera den under `/publish` katalog. Lägg till en kopia av ***[!DNL license.properties]*** filen under `/publish` katalog.
+1. Byt namn på [!DNL QuickStart] JAR till ***aem-author-p4502.jar*** och placera den under `/author` katalog. Lägg till ***[!DNL license.properties]*** filen under `/author` katalog.
 
-   ```plain
-   ~/aem-sdk
-       /author
-           + aem-author-p4502.jar
-           + license.properties
-       /publish
-           + aem-publish-p4503.jar
-           + license.properties
-   ```
+1. Skapa en kopia av [!DNL QuickStart] JAR, byt namn på den till ***aem-publish-p4503.jar*** och placera den under `/publish` katalog. Lägg till en kopia av ***[!DNL license.properties]*** filen under `/publish` katalog.
 
-6. Dubbelklicka på ***aem-author-p4502.jar*** filen som ska installeras **Upphovsman** -instans. Detta startar författarinstansen, som körs på port **4502** på den lokala datorn.
+```plain
+~/aem-sdk
+    /author
+        + aem-author-p4502.jar
+        + license.properties
+    /publish
+        + aem-publish-p4503.jar
+        + license.properties
+```
 
-   Dubbelklicka på ***aem-publish-p4503.jar*** filen som ska installeras **Publicera** -instans. Detta startar Publish-instansen, som körs på port **4503** på den lokala datorn.
+1. Dubbelklicka på ***aem-author-p4502.jar*** filen som ska installeras **Upphovsman** -instans. Detta startar författarinstansen, som körs på port **4502** på den lokala datorn.
 
-   >[!NOTE]
-   >
-   >Beroende på vilken maskinvara som används i utvecklingsdatorn kan det vara svårt att ha både en **Skapa och publicera** -instans som körs samtidigt. I sällsynta fall behöver du köra båda samtidigt på en lokal installation.
+Dubbelklicka på ***aem-publish-p4503.jar*** filen som ska installeras **Publicera** -instans. Detta startar Publish-instansen, som körs på port **4503** på den lokala datorn.
 
-   Mer information finns i [Distribuera och underhålla en AEM instans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+>[!NOTE]
+>
+>Beroende på vilken maskinvara som används i utvecklingsdatorn kan det vara svårt att ha både en **Skapa och publicera** -instans som körs samtidigt. I sällsynta fall behöver du köra båda samtidigt på en lokal installation.
+
+### Använda kommandorad
+
+Ett alternativ till att dubbelklicka på JAR-filen är att starta AEM från kommandoraden eller skapa ett skript (`.bat` eller `.sh`) beroende på det lokala operativsystemets smak. Nedan visas ett exempel på exempelkommandot:
+
+```shell
+$ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
+```
+
+Här är `-X` är JVM-alternativ och `-D` finns ytterligare ramverksegenskaper, mer information finns i [Distribuera och underhålla en AEM instans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html) och [Fler alternativ är tillgängliga från QuickStart-filen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
 
 ## Installera Apache Maven
 
@@ -94,18 +103,18 @@ Alla AEM ska byggas av den senaste versionen av **[!DNL AEM Project Archetype]**
    * [!DNL macOS] användare kan installera Maven med [Homebreiska](https://brew.sh/)
 3. Verifiera att **[!DNL Maven]** installeras genom att en ny kommandoradsterminal öppnas och följande körs:
 
-   ```shell
-   $ mvn --version
-   Apache Maven 3.3.9
-   Maven home: /Library/apache-maven-3.3.9
-   Java version: 1.8.0_111, vendor: Oracle Corporation
-   Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
-   Default locale: en_US, platform encoding: UTF-8
-   ```
+```shell
+$ mvn --version
+Apache Maven 3.3.9
+Maven home: /Library/apache-maven-3.3.9
+Java version: 1.8.0_111, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+```
 
-   >[!NOTE]
-   >
-   > Tidigare tillägg av `adobe-public` Maven-profilen behövdes för att peka `nexus.adobe.com` för att hämta AEM. Alla AEM artefakter är nu tillgängliga via Maven Central och `adobe-public` ingen profil behövs.
+>[!NOTE]
+>
+> Tidigare tillägg av `adobe-public` Maven-profilen behövdes för att peka `nexus.adobe.com` för att hämta AEM. Alla AEM artefakter är nu tillgängliga via Maven Central och `adobe-public` ingen profil behövs.
 
 ## Konfigurera en integrerad utvecklingsmiljö
 
@@ -133,7 +142,7 @@ The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de vanligas
 
 #### Installation och installation
 
-1. Hämta och installera [!DNL Eclipse] IDE for [!DNL Java™™™™™™™™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
+1. Hämta och installera [!DNL Eclipse] IDE for [!DNL Java™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
 1. Följ instruktionerna för att installera [!DNL AEM Developer Tools] plugin-program: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
