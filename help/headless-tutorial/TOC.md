@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '273'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 4%
       + [4 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL-slutpunkter](./graphql/video-series/graphql-endpoints.md)
       + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
-      + [7 - Persistenta GraphQL-frågor](./graphql/video-series/graphql-persisted-queries.md)
+      + [7 - GraphQL: Beständiga frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Grundläggande självstudiekurs{#multi-step}
       + [Översikt](./graphql/multi-step/overview.md)
       + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
@@ -43,7 +43,7 @@ ht-degree: 4%
       + [1 - Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 - Skapa innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
       + [3 - Utforska AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
-      + [4 - beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [4 - Beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
 + Distributioner{#deployments}
    + [Översikt](./graphql/deployment/overview.md)
@@ -60,6 +60,7 @@ ht-degree: 4%
    + [Bilder](./graphql/how-to/images.md)
    + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
+   + [Installera GraphiQL på AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
       + [Next.js](./graphql/example-apps/next-js.md)

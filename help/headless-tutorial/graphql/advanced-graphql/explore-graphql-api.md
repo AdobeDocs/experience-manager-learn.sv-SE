@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Utforska AEM GraphQL API
 
-Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågor.
+Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågorna.
 
 I det här kapitlet använder du GraphiQL Explorer för att definiera mer avancerade frågor för att samla in data om de innehållsfragment som du har skapat i [föregående kapitel](../advanced-graphql/author-content-fragments.md).
 
@@ -47,7 +47,7 @@ Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL Explorer.
 
 >[!IMPORTANT]
 >
->I vissa versioner av AEM (6.X.X) måste GraphiQL Explorer-verktyget (även GraphiQL IDE) installeras manuellt. Följ [instruktion härifrån](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+>I vissa versioner av AEM (6.X.X) måste GraphiQL Explorer-verktyget (även GraphiQL IDE) installeras manuellt. Följ [instruktion härifrån](../how-to/install-graphiql-aem-6-5.md).
 
 1. Kontrollera att slutpunkten är inställd på i det övre högra hörnet **WKND delad slutpunkt**. Ändra _Slutpunkt_ här visas det befintliga _Beständiga frågor_ i det övre vänstra hörnet.
 
@@ -602,7 +602,7 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
 
 ## Fråga om allt innehåll samtidigt
 
-Hittills har flera frågor körts för att illustrera funktionerna i AEM GraphQL API.
+Hittills har flera frågor genomförts för att illustrera funktionerna i AEM GraphQL API.
 
 Samma data kunde bara hämtas med en enda fråga och den här frågan används senare i klientprogrammet för att hämta ytterligare information som plats, teamnamn, teammedlemmar i ett äventyr:
 
@@ -725,4 +725,4 @@ Grattis! Du har nu testat avancerade frågor för att samla in data om de inneh�
 
 ## Nästa steg
 
-I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)kommer du att lära dig att behålla GraphQL-frågor och varför det är bäst att använda beständiga frågor i dina program.
+I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)kommer du att lära dig hur du behåller GraphQL-frågor och varför det är bäst att använda beständiga frågor i dina program.
