@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -70,14 +70,14 @@ The `JWT_PRIVATE_KEY` måste vara särskilt formaterad eftersom det är ett inte
 
 1. Öppna `Terminal`
 1. `$ base64 -i /path/to/private.key | pbcopy`
-
-Base64-utdata kopieras automatiskt till Urklipp
+1. Base64-utdata kopieras automatiskt till Urklipp
 
 >[!TAB Windows]
 
 1. Öppna `Command Prompt`
 1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. Kopiera innehållet i `encoded-private.key` till Urklipp
+1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. Kopiera base64-utdata till Urklipp
 
 >[!TAB Linux®]
 
@@ -87,14 +87,14 @@ Base64-utdata kopieras automatiskt till Urklipp
 
 >[!ENDTABS]
 
-Följande värde kan till exempel läggas till i `JWT_PRIVATE_KEY` i `.env`:
+Följande base64-kodade privata nyckel kan till exempel läggas till i `JWT_PRIVATE_KEY` i `.env`:
 
 ```
 ...
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-## Tilläggskonfiguration
+## Indatamappning
 
 Med JWT-autentiseringsvärdet inställt i `.env` måste de mappas till AppBuilder-åtgärdsindata så att de kan läsas i själva åtgärden. Det gör du genom att lägga till poster för varje variabel i `ext.config.yaml` åtgärd `inputs` i formatet: `INPUT_NAME=$ENV_KEY`.
 
@@ -130,7 +130,7 @@ runtimeManifest:
 De tangenter som definieras under `inputs` finns på `params` -objekt som anges för App Builder-åtgärden.
 
 
-## Konverterar JWT-autentiseringsuppgifter till åtkomsttoken
+## JWT-autentiseringsuppgifter för att komma åt token
 
 I App Builder-åtgärden är JWT-inloggningsuppgifterna tillgängliga i `params` objekt och kan användas av [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) för att generera en åtkomsttoken, som i sin tur kan komma åt andra Adobe-API:er och -tjänster.
 
