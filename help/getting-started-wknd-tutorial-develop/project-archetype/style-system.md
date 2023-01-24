@@ -13,9 +13,9 @@ mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 1. Lär dig mer om BEM-notation och hur det kan användas för att skapa mer detaljerade omfång för format.
 1. Använd avancerade principkonfigurationer med redigerbara mallar.
 
-## Vad du ska bygga {#what-you-will-build}
+## Vad du ska bygga {#what-build}
 
-I det här kapitlet ska vi använda [Formatsystemfunktion](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) för att skapa variationer av **Titel** och **Text** komponenter som används på artikelsidan.
+I det här kapitlet används [Formatsystemfunktion](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) för att skapa variationer av **Titel** och **Text** komponenter som används på artikelsidan.
 
 ![Tillgängliga format för titel](assets/style-system/styles-added-title.png)
 
@@ -77,15 +77,15 @@ I det här kapitlet ska vi använda [Formatsystemfunktion](https://experiencelea
 
 ## Bakgrund {#background}
 
-The [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) gör att utvecklare och mallredigerare kan skapa flera visuella varianter av en komponent. Författare kan sedan i sin tur bestämma vilket format som ska användas när en sida disponeras. Vi utnyttjar Style System i resten av självstudiekursen för att få fram flera unika format, samtidigt som vi utnyttjar kärnkomponenterna i en lågkodsstrategi.
+The [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) gör att utvecklare och mallredigerare kan skapa flera visuella varianter av en komponent. Författare kan sedan i sin tur bestämma vilket format som ska användas när en sida disponeras. Style System används i resten av självstudiekursen för att uppnå flera unika format när du använder kärnkomponenter i en lågkodsstrategi.
 
 Den allmänna idén med Style System är att författare kan välja olika stilar för hur en komponent ska se ut. &quot;Styles&quot; backas upp av ytterligare CSS-klasser som injiceras i en komponents yttre div. I klientbiblioteken läggs CSS-regler till baserat på dessa formatklasser så att komponenten ändrar utseende.
 
-Du kan hitta [utförlig dokumentation om Style System här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html). Det finns också [teknisk video för att förstå Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+Du kan hitta [utförlig dokumentation om Style System här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html). Det finns också [teknisk video för att förstå Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
 
 ## Understrykningsformat - rubrik {#underline-style}
 
-The [Titelkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html) har proxynerats in i det projekt som `/apps/wknd/components/title` som en del av **ui.apps** -modul. Standardformat för rubrikelement (`H1`, `H2`, `H3`...) redan har implementerats i **ui.front** -modul.
+The [Titelkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html) har proxynerats in i det projekt som `/apps/wknd/components/title` som en del av **ui.apps** -modul. Standardformat för rubrikelement (`H1`, `H2`, `H3`...) redan har implementerats i **ui.front** -modul.
 
 The [WKND Artikeldesign](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för komponenten Title med en understrykning. I stället för att skapa två komponenter eller ändra komponentdialogrutan kan du använda Style System för att ge författarna möjlighet att lägga till ett understruket format.
 
@@ -93,15 +93,15 @@ The [WKND Artikeldesign](assets/pages-templates/wknd-article-design.xd) innehål
 
 ### Lägg till en titelprincip
 
-Lägg till en ny princip för rubrikkomponenter så att innehållsförfattare kan välja understrykningsformatet som ska gälla för specifika komponenter. Detta görs med mallredigeraren i AEM.
+Låt oss lägga till en princip för rubrikkomponenterna så att innehållsförfattare kan välja understrykningsformatet som ska användas för specifika komponenter. Detta görs med mallredigeraren i AEM.
 
-1. Navigera till **Artikelsida** mall på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
+1. Navigera till **Artikelsida** mall från: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
 
 1. I **Struktur** läge, i huvudläget **Layoutbehållare** väljer du **Policy** -ikonen bredvid **Titel** som anges under *Tillåtna komponenter*:
 
    ![Titelprincipkonfiguration](assets/style-system/article-template-title-policy-icon.png)
 
-1. Skapa en ny princip för komponenten Title med följande värden:
+1. Skapa en profil för komponenten Title med följande värden:
 
    *Policytitel&#42;*: **WKND**
 
@@ -119,7 +119,7 @@ Lägg till en ny princip för rubrikkomponenter så att innehållsförfattare ka
 
 ### Använda understrykningsformat
 
-Som författare använder du understrykningsformatet på vissa rubrikkomponenter.
+Som författare kan vi använda understrykningsformatet på vissa rubrikkomponenter.
 
 1. Navigera till **La Skateparks** artikel i AEM Sites Editor på: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
 1. I **Redigera** väljer du en titelkomponent. Klicka på **pensel** -ikonen och välj **Understruken** format:
@@ -128,10 +128,10 @@ Som författare använder du understrykningsformatet på vissa rubrikkomponenter
 
    >[!NOTE]
    >
-   > Vid den här tidpunkten ändras inte synligt eftersom `underline` stilen har inte implementerats. I nästa övning implementeras den här stilen.
+   > Vid den här tidpunkten sker ingen synlig förändring som `underline` stilen har inte implementerats. I nästa övning implementeras den här stilen.
 
 1. Klicka på **Sidinformation** ikon > **Visa som publicerad** för att inspektera sidan utanför AEM redigerare.
-1. Använd webbläsarutvecklarverktygen för att verifiera koden runt Title-komponenten som har CSS-klassen `cmp-title--underline` som används på den yttre diven.
+1. Använd webbläsarutvecklarverktygen för att verifiera att markeringen runt komponenten Title har CSS-klassen `cmp-title--underline` som används på den yttre diven.
 
    ![Div med understruken klass tillämpad](assets/style-system/div-underline-class-applied.png)
 
@@ -146,7 +146,7 @@ Som författare använder du understrykningsformatet på vissa rubrikkomponenter
 
 ### Implementera understrykning - ui.front
 
-Implementera sedan understrykningsformatet med **ui.front** -modulen i vårt projekt. Vi använder webbpaketets utvecklingsserver som medföljer **ui.front** för att förhandsgranska formaten *före* distribuera till en lokal instans av AEM.
+Implementera sedan understrykningsformatet med **ui.front** i AEM. Webbpaketets utvecklingsserver som medföljer **ui.front** för att förhandsgranska formaten *före* distribuering till en lokal instans av AEM används.
 
 1. Starta `watch` från **ui.front** modul:
 
@@ -158,7 +158,7 @@ Implementera sedan understrykningsformatet med **ui.front** -modulen i vårt pro
    Detta startar en process som övervakar ändringar i `ui.frontend` och synkronisera ändringarna till AEM.
 
 
-1. Returnera din utvecklingsmiljö och öppna filen `_title.scss` på: `ui.frontend/src/main/webpack/components/_title.scss`.
+1. Returnera din utvecklingsmiljö och öppna filen `_title.scss` från: `ui.frontend/src/main/webpack/components/_title.scss`.
 1. Lägg in en ny regel för `cmp-title--underline` klass:
 
    ```scss
@@ -187,15 +187,15 @@ Implementera sedan understrykningsformatet med **ui.front** -modulen i vårt pro
    >
    >Alla kärnkomponenter följer **[BEM-notation](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. Det är bäst att ha den yttre CSS-klassen som mål när du skapar ett standardformat för en komponent. Ett annat bra tillvägagångssätt är att ange klassnamn som anges av BEM-notationen för kärnkomponenten i stället för HTML-element som mål.
 
-1. Återgå till webbläsaren och AEM. Du bör se understrykningsformatet som lagts till:
+1. Återgå till webbläsaren och AEM. Du ser att understrykningsformatet har lagts till:
 
    ![Understrykningsformat som visas på webbpaketets dev-server](assets/style-system/underline-implemented-webpack.png)
 
-1. I AEM bör du nu kunna aktivera och inaktivera **Understruken** och se ändringarna visuellt.
+1. I AEM Editor bör du nu kunna aktivera och inaktivera **Understruken** och se att ändringarna visas visuellt.
 
 ## Blockformat för citat - text {#text-component}
 
-Upprepa sedan liknande steg för att tillämpa ett unikt format på [Textkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Textkomponenten har proxiderats in i projektet under `/apps/wknd/components/text` som en del av **ui.apps** -modul. Standardformaten för styckeelement har redan implementerats i **ui.front**.
+Upprepa sedan liknande steg för att tillämpa ett unikt format på [Textkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html). Textkomponenten har proxiderats in i projektet under `/apps/wknd/components/text` som en del av **ui.apps** -modul. Standardformaten för styckeelement har redan implementerats i **ui.front**.
 
 The [WKND Artikeldesign](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för Text-komponenten med ett citattecken:
 
@@ -203,9 +203,9 @@ The [WKND Artikeldesign](assets/pages-templates/wknd-article-design.xd) innehål
 
 ### Lägg till en textprofil
 
-Lägg sedan till en ny princip för textkomponenterna.
+Lägg sedan till en profil för textkomponenterna.
 
-1. Navigera till **Artikelsidmall** på: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html).
+1. Navigera till **Artikelsidmall** från: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html).
 
 1. I **Struktur** läge, i huvudläget **Layoutbehållare** väljer du **Policy** -ikonen bredvid **Text** som anges under *Tillåtna komponenter*:
 
@@ -252,7 +252,7 @@ Lägg sedan till en ny princip för textkomponenterna.
 
 ### Implementera formatet Offertblock - ui.front
 
-Därefter implementerar vi formatet Offertblock med **ui.front** -modulen i vårt projekt.
+Låt oss implementera formatet Citatblock med **ui.front** i AEM.
 
 1. Om den inte redan körs startar du `watch` från **ui.front** modul:
 
@@ -260,7 +260,7 @@ Därefter implementerar vi formatet Offertblock med **ui.front** -modulen i vår
    $ npm run watch
    ```
 
-1. Uppdatera filen `text.scss` på: `ui.frontend/src/main/webpack/components/_text.scss`:
+1. Uppdatera filen `text.scss` från: `ui.frontend/src/main/webpack/components/_text.scss`:
 
    ```css
    /* Default text style */
@@ -302,7 +302,7 @@ Därefter implementerar vi formatet Offertblock med **ui.front** -modulen i vår
    >
    > I det här fallet används formaten som mål för element i Raw-HTML. Det beror på att komponenten Text har en RTF-redigerare för innehållsförfattare. Du bör skapa format direkt mot RTE-innehåll med försiktighet och det är ännu viktigare att formaten är täta.
 
-1. Återgå till webbläsaren en gång till så bör du se det nya formatet för offertblock:
+1. Återgå till webbläsaren en gång till och se att blockformatet Offert har lagts till:
 
    ![Blockformat för citat visas](assets/style-system/quoteblock-implemented.png)
 
@@ -310,7 +310,7 @@ Därefter implementerar vi formatet Offertblock med **ui.front** -modulen i vår
 
 ## Fast bredd - behållare (Bonus) {#layout-container}
 
-Behållarkomponenter har använts för att skapa artikelsidmallens grundläggande struktur och ange släppzoner där innehållsförfattare kan lägga till innehåll på en sida. Behållare kan också utnyttja Style System och ge innehållsförfattarna ännu fler alternativ för att utforma layouter.
+Behållarkomponenter har använts för att skapa artikelsidmallens grundläggande struktur och ange släppzoner där innehållsförfattare kan lägga till innehåll på en sida. Behållare kan också använda Style System, vilket ger innehållsförfattare ännu fler alternativ för att utforma layouter.
 
 The **Huvudbehållare** i artikelsidmallen innehåller de två skrivbara behållarna med fast bredd.
 
@@ -340,13 +340,13 @@ Istället för att målinrikta `main` Formatsystemet kan användas för att skap
 
 ## Grattis! {#congratulations}
 
-Artikelsidan är nästan helt formaterad och du har fått en praktisk upplevelse med AEM Style System.
+Artikelsidan är nästan formaterad och du har fått en praktisk upplevelse med AEM Style System.
 
 ### Nästa steg {#next-steps}
 
 Lär dig stegen från början till slut för att skapa en [anpassad AEM](custom-component.md) som visar innehåll som har skapats i en dialogruta och utforskar utvecklingen av en segmentmodell för att kapsla in affärslogik som fyller i komponentens HTML-kod.
 
-Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-stacken `tutorial/style-system-solution`.
+Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `tutorial/style-system-solution`.
 
 1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) databas.
 1. Kolla in `tutorial/style-system-solution` förgrening.

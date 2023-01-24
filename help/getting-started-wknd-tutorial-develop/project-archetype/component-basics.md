@@ -12,16 +12,16 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om komponenter {#component-basics}
 
-I det här kapitlet ska vi utforska den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel. Små ändringar görs i en befintlig komponent, som omfattar ämnen som redigering, HTML, segmenteringsmodeller och klientbibliotek.
+I det här kapitlet ska vi titta närmare på den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel. Små ändringar görs i en befintlig komponent, som omfattar ämnen som redigering, HTML, segmenteringsmodeller och klientbibliotek.
 
 ## Förutsättningar {#prerequisites}
 
@@ -35,9 +35,9 @@ Den utvecklingsmiljö som används i videoklippen är [Visual Studio Code](https
 1. Förstå hur dialogrutor används för att underlätta framtagning av innehåll.
 1. Lär dig grunderna i bibliotek på klientsidan som inkluderar CSS och JavaScript som stöd för en komponent.
 
-## Vad du ska bygga {#what-you-will-build}
+## Vad du ska bygga {#what-build}
 
-I det här kapitlet gör du flera ändringar i en mycket enkel `HelloWorld` -komponenten. Uppdateringar av `HelloWorld` kommer du att lära dig mer om de viktigaste områdena AEM komponentutveckling.
+I det här kapitlet gör du flera ändringar av en enkel `HelloWorld` -komponenten. När du uppdaterar `HelloWorld` om du vill veta mer om de viktigaste områdena AEM komponentutveckling.
 
 ## Startprojekt för kapitel {#starter-project}
 
@@ -85,32 +85,32 @@ Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project
 
 ## Komponentredigering {#component-authoring}
 
-Komponenter kan ses som små modulära byggstenar på en webbsida. För att återanvända komponenter måste komponenterna vara konfigurerbara. Detta sker via författardialogrutan. Därefter skapar vi en enkel komponent och kontrollerar hur värden från dialogrutan bevaras i AEM.
+Komponenter kan ses som små modulära byggstenar på en webbsida. Komponenterna måste vara konfigurerbara för att kunna återanvända dem. Detta sker via författardialogrutan. Låt oss sedan skapa en enkel komponent och kontrollera hur värden från dialogrutan bevaras i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
-1. Skapa en ny sida med namnet **Grundläggande om komponenter** under **WKND-plats** `>` **USA** `>` **en**.
+1. Skapa en sida med namnet **Grundläggande om komponenter** under **WKND-plats** `>` **USA** `>` **en**.
 1. Lägg till **Hello World-komponent** till den nya sidan.
 1. Öppna komponentens dialogruta och ange text. Spara ändringarna för att visa meddelandet på sidan.
 1. Växla till utvecklarläge, visa innehållssökvägen i CRXDE-Lite och kontrollera komponentinstansens egenskaper.
-1. Använd CRXDE-Lite för att visa `cq:dialog` och `helloworld.html` skript på `/apps/wknd/components/content/helloworld`.
+1. Använd CRXDE-Lite för att visa `cq:dialog` och `helloworld.html` skript från `/apps/wknd/components/content/helloworld`.
 
 ## HTML (HTML Template Language) och dialogrutor {#htl-dialogs}
 
-HTML mallspråk eller **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM komponenter för att återge innehåll.
+HTML mallspråk eller **[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM komponenter för att återge innehåll.
 
 **Dialogrutor** Definiera de konfigurationer som är tillgängliga för en komponent.
 
-Nästa steg är att uppdatera `HelloWorld` HTML-skript om du vill visa ytterligare en hälsning före textmeddelandet.
+Nästa steg är att uppdatera `HelloWorld` HTML-skript om du vill visa en extra hälsning före textmeddelandet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 1. Växla till IDE och öppna projektet till `ui.apps` -modul.
-1. Öppna `helloworld.html` och ändra HTML Markup.
+1. Öppna `helloworld.html` och uppdatera HTML Markup.
 1. Använd IDE-verktygen som [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) om du vill synkronisera filändringen med den lokala AEM.
 1. Återgå till webbläsaren och observera att komponentåtergivningen har ändrats.
 1. Öppna `.content.xml` som definierar dialogrutan för `HelloWorld` komponent vid:
@@ -119,7 +119,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. Uppdatera dialogrutan för att lägga till ytterligare ett textfält med namnet **Titel** med namnet `./title`:
+1. Uppdatera dialogrutan för att lägga till ett extra textfält med namnet **Titel** med namnet `./title`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +152,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
    </jcr:root>
    ```
 
-1. Öppna filen igen `helloworld.html`, som representerar det huvudsakliga HTML-skriptet som ansvarar för återgivningen av `HelloWorld` -komponent, som finns på:
+1. Öppna filen igen `helloworld.html`, som representerar det huvudsakliga HTML-skriptet som ansvarar för återgivningen av `HelloWorld` komponent från nedanför bana:
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
@@ -171,9 +171,9 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## Sling Models {#sling-models}
 
-Sling Models är anteckningsdrivna Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) som underlättar mappningen av data från JCR till Java-variabler och som ger ett antal andra instanser vid utveckling i AEM.
+Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. De erbjuder också flera andra institutioner när de utvecklas i samband med AEM.
 
-Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss affärslogik på de värden som lagras i JCR innan de skrivs ut på sidan.
+Nu ska vi göra några uppdateringar i `HelloWorldModel` Sling Model för att tillämpa viss affärslogik på de värden som lagras i JCR innan de skrivs ut på sidan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
 
@@ -199,7 +199,7 @@ Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss af
       ...
    ```
 
-1. Lägg till följande rader i `HelloWorldModel` klass för att mappa värdena för komponentens JCR-egenskaper `title` och `text` till Java-variabler:
+1. Lägg till följande rader i `HelloWorldModel` klass för att mappa värdena för komponentens JCR-egenskaper `title` och `text` till Java™-variabler:
 
    ```java
    ...
@@ -253,7 +253,7 @@ Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss af
 
    >[!NOTE]
    >
-   > Om AEM 6.4/6.5 används `mvn clean install -PautoInstallBundle -Pclassic`
+   > För AEM 6.4/6.5 `mvn clean install -PautoInstallBundle -Pclassic`
 
 1. Uppdatera filen `helloworld.html` på `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` för att använda de nya metoderna i `HelloWorld` modell:
 
@@ -280,7 +280,7 @@ Därefter uppdaterar vi `HelloWorldModel` Sling Model för att tillämpa viss af
 
 ## Klientbibliotek {#client-side-libraries}
 
-Klientbibliotek, clientlibs for short, erbjuder en funktion för att organisera och hantera CSS- och JavaScript-filer som behövs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
+Bibliotek på klientsidan, `clientlibs` kort och gott: innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som behövs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
 
 The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modulen är en frikopplad [webbpaket](https://webpack.js.org/) projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. The `ui.frontend` finns mer detaljerad information om modulen i [Kapitel om bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
@@ -290,13 +290,16 @@ Uppdatera sedan CSS-formaten för `HelloWorld` -komponenten.
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
-1. Öppna ett terminalfönster och navigera till `ui.frontend` katalog och
+1. Öppna ett terminalfönster och navigera till `ui.frontend` katalog
 
-1. I `ui.frontend` katalogen kör `npm run watch` kommando:
+1. Jag är `ui.frontend` katalogen kör `npm install npm-run-all --save-dev` för att installera [npm-run-all](https://www.npmjs.com/package/npm-run-all) nodmodul. Det här steget är **krävs för Archetype 39-genererat AEM** i kommande version av Archetype krävs inte detta.
+
+1. Kör sedan `npm run watch` kommando:
 
    ```shell
    $ npm run watch
    ```
+
 1. Växla till IDE och öppna projektet till `ui.frontend` -modul.
 1. Öppna filen `ui.frontend/src/main/webpack/components/_helloworld.scss`.
 1. Uppdatera filen så att den visar en röd titel:
@@ -330,7 +333,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## Grattis! {#congratulations}
 
-Grattis, du har just lärt dig grunderna i komponentutveckling i Adobe Experience Manager!
+Grattis, du har lärt dig grunderna i komponentutveckling i Adobe Experience Manager!
 
 ### Nästa steg {#next-steps}
 

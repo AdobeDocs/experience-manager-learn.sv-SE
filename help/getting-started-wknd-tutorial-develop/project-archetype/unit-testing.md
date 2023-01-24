@@ -12,9 +12,9 @@ mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '3014'
+source-wordcount: '2980'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ I den här självstudiekursen beskrivs implementeringen av ett enhetstest som va
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
-_Om både Java 8 och Java 11 är installerade på systemet kan VS-kodens testkörare välja den lägre Java-miljön när testerna utförs, vilket resulterar i testfel. Om detta inträffar avinstallerar du Java 8._
+_Om både Java™ 8 och Java™ 11 är installerade i systemet kan VS Code test runner välja den lägre Java™-miljön när testerna utförs, vilket resulterar i testfel. Om detta inträffar avinstallerar du Java™ 8._
 
 ### Startprojekt
 
@@ -68,7 +68,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Bakgrund {#unit-testing-background}
 
-I den här självstudiekursen ska vi utforska hur man skriver [Enhetstester](https://en.wikipedia.org/wiki/Unit_testing) för vår Byline-komponents [Sling Model](https://sling.apache.org/documentation/bundles/models.html) (skapade i [Skapa en anpassad AEM](custom-component.md)). Enhetstester är körtidstester skrivna i Java som verifierar det förväntade beteendet hos Java-kod. Varje enhetstest är vanligen litet och validerar resultatet av en metod (eller arbetsenheter) mot förväntade resultat.
+I den här självstudiekursen ska vi utforska hur man skriver [Enhetstester](https://en.wikipedia.org/wiki/Unit_testing) för vår Byline-komponents [Sling Model](https://sling.apache.org/documentation/bundles/models.html) (skapade i [Skapa en anpassad AEM](custom-component.md)). Enhetstester är körtidstester skrivna i Java™ som verifierar förväntade beteenden hos Java™-kod. Varje enhetstest är vanligen litet och validerar resultatet av en metod (eller arbetsenheter) mot förväntade resultat.
 
 Vi använder AEM bästa praxis och använder:
 
@@ -78,7 +78,7 @@ Vi använder AEM bästa praxis och använder:
 
 ## Enhetstestning och Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) integrerar körning av enhetstest och [rapportering om täckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) i sin pipeline för CI/CD för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) integrerar körning av enhetstest och [rapportering om täckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) i sin pipeline för CI/CD för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
 
 Även om kod för enhetstestning är en bra vana för alla kodbaser är det viktigt att kunna dra nytta av dess funktioner för kodkvalitetstestning och rapportering när du använder Cloud Manager genom att tillhandahålla enhetstester som Cloud Manager kan köra.
 
@@ -91,7 +91,7 @@ Det första steget är att undersöka Maven-beroenden för att stödja skrivande
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework (av io.wcm)
 
-The **JUnit5**, **Mockito** och **AEM Mocks** testberoenden läggs automatiskt till i projektet under installationen med [AEM Maven Archetype](project-setup.md).
+The **JUnit5**, **Mockito och **AEM Mocks** testberoenden läggs automatiskt till i projektet under installationen med [AEM Maven Archetype](project-setup.md).
 
 1. Om du vill visa beroendena öppnar du den överordnade reaktorns POM på **aem-guides-wknd/pom.xml**, navigera till `<dependencies>..</dependencies>` och se beroendena för JUnit, Mockito, Apache Sling Mocks och AEM Mock Tests av io.wcm under `<!-- Testing -->`.
 1. Se till att `io.wcm.testing.aem-mock.junit5` är inställd på **4.1.0**:
@@ -115,13 +115,13 @@ The **JUnit5**, **Mockito** och **AEM Mocks** testberoenden läggs automatiskt t
 
 ## Skapa JUnit-testet {#creating-the-junit-test}
 
-Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet ska vi skriva ett JUnit-test för **BylineImpl.java**, som är den Sling-modell som ligger till grund för Byline-komponenten.
+Enhetstester kan normalt mappa 1 till 1 med Java™-klasser. I det här kapitlet ska vi skriva ett JUnit-test för **BylineImpl.java**, som är den Sling-modell som ligger till grund för Byline-komponenten.
 
 ![Enhetstestets src-mapp](assets/unit-testing/core-src-test-folder.png)
 
 *Plats där enhetstester lagras.*
 
-1. Skapa ett enhetstest för `BylineImpl.java` genom att skapa en ny Java-klass under `src/test/java` i en mappstruktur för Java-paket som speglar platsen för den Java-klass som ska testas.
+1. Skapa ett enhetstest för `BylineImpl.java` genom att skapa en ny Java™-klass under `src/test/java` i en mappstruktur för Java™-paket som speglar platsen för den Java™-klass som ska testas.
 
    ![Skapa en ny BylineImplTest.java-fil](assets/unit-testing/new-bylineimpltest.png)
 
@@ -129,7 +129,7 @@ Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet sk
 
    * `src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`
 
-   skapa en motsvarande enhetstest för Java-klass på
+   skapa motsvarande enhetstest Java™-klass på
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
@@ -142,7 +142,7 @@ Enhetstester mappas vanligtvis 1 till 1 med Java-klasser. I det här kapitlet sk
 
 ## Granska BylineImplTest.java {#reviewing-bylineimpltest-java}
 
-Nu är JUnit-testfilen en tom Java-klass.
+Nu är JUnit-testfilen en tom Java™-klass.
 
 1. Uppdatera filen med följande kod:
 
@@ -212,7 +212,7 @@ När enhetstester skrivs finns det två primära metoder:
 * [TDD eller testdriven utveckling](https://en.wikipedia.org/wiki/Test-driven_development), vilket innebär att enhetstesterna skrivs stegvis, omedelbart innan genomförandet utvecklas, skriva ett test, skriva implementeringen för att göra testet godkänt.
 * Utveckling av implementering först, vilket innebär att först utveckla arbetskoden och sedan skriva tester som validerar den koden.
 
-I den här självstudiekursen används den senare metoden (eftersom vi redan har skapat en fungerande **BylineImpl.java** i ett tidigare kapitel). På grund av detta måste vi granska och förstå hur dess publika metoder fungerar, men också en del av dess implementeringsdetaljer. Detta kan låta tvärtom, eftersom ett bra test endast bör omfatta in- och utdata, men när AEM utförs finns det en mängd olika implementeringsöverväganden som måste förstås för att kunna konstruera arbetstester.
+I den här självstudiekursen används den senare metoden (eftersom vi redan har skapat en fungerande **BylineImpl.java** i ett tidigare kapitel). På grund av detta måste vi granska och förstå hur dess publika metoder fungerar, men också en del av dess implementeringsdetaljer. Detta kan låta tvärtom, eftersom ett bra test endast bör omfatta in- och utdata, men när AEM utförs måste olika implementeringsöverväganden göras för att man ska kunna konstruera arbetstester.
 
 TDD krävs inom ramen för AEM och är bäst lämpat för AEM utvecklare som är skickliga på AEM utveckling och enhetstestning av AEM kod.
 
@@ -236,13 +236,13 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
        private final AemContext ctx = new AemContext();
    ```
 
-   Denna variabel, `ctx`, visar ett AEM som innehåller ett antal AEM- och Sling-abstraktioner:
+   Denna variabel, `ctx`, visar en AEM som innehåller vissa AEM- och Sling-abstraktioner:
 
    * BylineImpl Sling Model är registrerad i den här kontexten
    * Mock JCR-innehållsstrukturer skapas i det här sammanhanget
    * Anpassade OSGi-tjänster kan registreras i den här kontexten
-   * Innehåller en mängd vanliga nödvändiga modellobjekt och hjälpmedel, till exempel SlingHttpServletRequest-objekt, en mängd olika tjänster för modellering och AEM OSGi, till exempel ModelFactory, PageManager, Page, Template, ComponentManager, Component, TagManager, Tag osv.
-      * *Observera att inte alla metoder för dessa objekt implementeras!*
+   * Innehåller olika vanliga nödvändiga modellobjekt och hjälpmedel, till exempel SlingHttpServletRequest-objekt, olika tjänster för modelldelning och AEM OSGi, till exempel ModelFactory, PageManager, Page, Template, ComponentManager, Component, TagManager, Tag, etc.
+      * *Alla metoder för dessa objekt implementeras inte.*
    * Och [mycket mer](https://wcm.io/testing/aem-mock/usage.html)!
 
    The **`ctx`** -objektet fungerar som ingångspunkt för större delen av vår modellkontext.
@@ -261,9 +261,9 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
    * **`load().json`** läser in resursstrukturer i standardkontexten, vilket gör att koden kan interagera med dessa resurser som om de vore från en verklig databas. Resursdefinitionerna i filen **`BylineImplTest.json`** läses in i JCR-kontexten för dummy under **/content**.
    * **`BylineImplTest.json`** finns inte än, så vi skapar den och definierar de JCR-resursstrukturer som behövs för testet.
 
-1. JSON-filerna som representerar modellresursstrukturerna lagras under **core/src/test/resources** följer samma paketsökväg som JUnit Java-testfilen.
+1. JSON-filerna som representerar modellresursstrukturerna lagras under **core/src/test/resources** följer samma paketsökväg som JUnit Java™-testfilen.
 
-   Skapa en ny JSON-fil på `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` namngiven **BylineImplTest.json** med följande innehåll:
+   Skapa en JSON-fil på `core/test/resources/com/adobe/aem/guides/wknd/core/models/impl` namngiven **BylineImplTest.json** med följande innehåll:
 
    ```json
    {
@@ -284,7 +284,7 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
 
 ## Testar getName() {#testing-get-name}
 
-Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva vårt första test för **BylineImpl&#39;s getName()**. Detta test måste säkerställa metoden **getName()** returnerar rätt skrivet namn som lagras på resursens &quot;**name&quot;** -egenskap.
+Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva vårt första test för **BylineImpl&#39;s getName()**. Detta test måste säkerställa metoden **getName()** returnerar det korrekt skrivna namnet som lagras på resursens **name&quot;** -egenskap.
 
 1. Uppdatera **testGetName**() i **BylineImplTest.java** enligt följande:
 
@@ -312,7 +312,7 @@ Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva v�
 
 1. Kör testet.. och misslyckas med `NullPointerException`.
 
-   Observera att det här testet INTE misslyckas eftersom vi aldrig har definierat en `name` egenskapen i JSON-dummyn, som gör att testet misslyckas, men testkörningen har inte kommit till den punkten! Testet misslyckas på grund av en `NullPointerException` på själva benypobjektet.
+   Det här testet misslyckas INTE eftersom vi aldrig har definierat en `name` egenskapen i JSON-dummyn, som gör att testet misslyckas, men testkörningen har inte kommit till den punkten! Testet misslyckas på grund av en `NullPointerException` på själva benypobjektet.
 
 1. I `BylineImpl.java`, if `@PostConstruct init()` genererar ett undantag som förhindrar att Sling Model instansieras och gör att Sling Model-objektet blir null.
 
@@ -379,13 +379,13 @@ Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva v�
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med [Mockito JUnit Jupiter Extension](https://www.javadoc.io/page/org.mockito/mockito-junit-jupiter/latest/org/mockito/junit/jupiter/MockitoExtension.html) som gör det möjligt att använda @Mock-anteckningar för att definiera modellobjekt på klassnivå.
-   * **`@Mock private Image`** skapar ett modellobjekt av typen `com.adobe.cq.wcm.core.components.models.Image`. Observera att detta definieras på klassnivå så att, efter behov, `@Test` -metoder kan ändra deras beteende efter behov.
-   * **`@Mock private ModelFactory`** skapar ett modellobjekt av typen ModelFactory. Observera att det här är en ren Mockito-mock och att inga metoder har implementerats på den. Observera att detta definieras på klassnivå så att, efter behov, `@Test`-metoder kan ändra deras beteende efter behov.
-   * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar dummybeteenden för när `getModelFromWrappedRequest(..)` anropas i modellmodellobjektet ModelFactory. Resultatet som definierats i `thenReturn (..)` är att returnera modellbildobjektet. Observera att det här beteendet bara anropas när: den första parametern är lika med `ctx`Den andra parametern är ett resursobjekt och den tredje parametern måste vara huvudkomponentens bildklass. Vi accepterar alla resurser eftersom vi under testerna ställer in `ctx.currentResource(...)` till olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till **leenient()** Styrka eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
-   * **`ctx.registerService(..)`.** registrerar Mock ModelFactory-objektet i AemContext, med den högsta rangordningen. Detta är obligatoriskt eftersom ModelFactory används i BylineImpl:er `init()` injiceras via `@OSGiService ModelFactory model` fält. För att AemContext ska kunna injiceras **vår** mock-objekt, som hanterar anrop till `getModelFromWrappedRequest(..)`måste vi registrera den som den högsta rangordningstjänsten av den typen (ModelFactory).
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med [Mockito JUnit Jupiter Extension](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) som gör det möjligt att använda @Mock-anteckningar för att definiera modellobjekt på klassnivå.
+   * **`@Mock private Image`** skapar ett modellobjekt av typen `com.adobe.cq.wcm.core.components.models.Image`. Detta definieras på klassnivå så att, efter behov, `@Test` -metoder kan ändra deras beteende efter behov.
+   * **`@Mock private ModelFactory`** skapar ett modellobjekt av typen ModelFactory. Det här är en helt sann Mockito-mock och har inga metoder implementerade på den. Detta definieras på klassnivå så att, efter behov, `@Test`-metoder kan ändra deras beteende efter behov.
+   * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar dummybeteenden för när `getModelFromWrappedRequest(..)` anropas i modellmodellobjektet ModelFactory. Resultatet som definierats i `thenReturn (..)` är att returnera modellbildobjektet. Det här beteendet anropas bara när: den första parametern är lika med `ctx`&#39;s request object, the second param is any Resource object, and the third param must be the Core Components Image class. Vi accepterar alla resurser eftersom vi under testerna ställer in `ctx.currentResource(...)` till olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till **leenient()** Styrka eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
+   * **`ctx.registerService(..)`.** registrerar Mock ModelFactory-objektet i AemContext, med den högsta rangordningen. Detta är obligatoriskt eftersom ModelFactory används i BylineImpl:er `init()` injiceras via `@OSGiService ModelFactory model` fält. För AemContext som ska injiceras **vår** mock-objekt, som hanterar anrop till `getModelFromWrappedRequest(..)`måste vi registrera den som den högsta rangordningstjänsten av den typen (ModelFactory).
 
-1. Kör testet igen och misslyckas igen, men den här gången är det tydligt att meddelandet misslyckades.
+1. Kör testet igen och det misslyckas igen, men den här gången är det tydligt att meddelandet misslyckades.
 
    ![test name failed assertion](assets/unit-testing/testgetname-failure-assertion.png)
 
@@ -412,7 +412,7 @@ Nu när vi har en grundläggande konfiguration av modellkontext kan vi skriva v�
 
 ## Testar getOccupations() {#testing-get-occupations}
 
-Bra! Vårt första test har passerat! Låt oss gå vidare och testa `getOccupations()`. Sedan initieringen av modellkontexten gjordes i `@Before setUp()`-metod, är den tillgänglig för alla `@Test` metoder i detta testfall, inklusive `getOccupations()`.
+Bra! Det första testet har klarat! Låt oss gå vidare och testa `getOccupations()`. Sedan modellkontexten initierades i `@Before setUp()`-metod, är den tillgänglig för alla `@Test` metoder i detta testfall, inklusive `getOccupations()`.
 
 Kom ihåg att den här metoden måste returnera en alfabetiskt sorterad lista med befattningar (fallande) som lagras i egenskapen ockupationer.
 
@@ -470,16 +470,16 @@ Kom ihåg att den här metoden måste returnera en alfabetiskt sorterad lista me
 
 Den sista metoden som ska testas **`isEmpty()`**.
 
-Testning `isEmpty()` är intressant eftersom det kräver testning av olika villkor. Granskning **BylineImpl.java**&#39;s `isEmpty()` metod skall följande villkor provas:
+Testning `isEmpty()` är intressant eftersom den kräver testning för olika villkor. Granskning **BylineImpl.java**&#39;s `isEmpty()` metod skall följande villkor provas:
 
 * Returnera true när namnet är tomt
 * Returnera true när yrken är null eller tomma
 * Returnera true när bilden är null eller saknar src-URL
 * Returnera falskt när namnet, befattningarna och bilden (med en src-URL) finns
 
-Därför måste vi skapa nya testmetoder, där varje testning av ett specifikt villkor och nya modellresursstrukturer i `BylineImplTest.json` att köra dessa tester.
+Därför måste vi skapa testmetoder, där varje testning av ett specifikt villkor och nya modellresursstrukturer i `BylineImplTest.json` att köra dessa tester.
 
-Observera att den här kontrollen gjorde att vi kunde hoppa över testning när `getName()`, `getOccupations()` och `getImage()` är tomma eftersom det förväntade beteendet för det läget testas via `isEmpty()`.
+Den här kontrollen gjorde att vi kunde hoppa över testning när `getName()`, `getOccupations()` och `getImage()` är tomma eftersom det förväntade beteendet för det läget testas via `isEmpty()`.
 
 1. Det första testet testar villkoret för en helt ny komponent som inte har några egenskaper angivna.
 
@@ -612,7 +612,7 @@ Observera att den här kontrollen gjorde att vi kunde hoppa över testning när 
 
    **`testIsEmpty_WithoutImageSrc()`** testar mot en modellresursdefinition med ett namn och en funktion, men ställer in att modellbilden ska returnera en tom sträng när `getSrc()` anropas.
 
-1. Slutligen bör man göra ett test för att säkerställa att **isEmpty()** returnerar false när komponenten är korrekt konfigurerad. För detta villkor kan vi återanvända **/content/byline** som representerar en fullt konfigurerad Byline-komponent.
+1. Slutligen bör man göra ett test för att säkerställa att **isEmpty()** returnerar false när komponenten är korrekt konfigurerad. För det här villkoret kan vi återanvända **/content/byline** som representerar en fullt konfigurerad Byline-komponent.
 
    ```java
    @Test
@@ -626,13 +626,13 @@ Observera att den här kontrollen gjorde att vi kunde hoppa över testning när 
    }
    ```
 
-1. Kör nu alla enhetstester i filen BylineImplTest.java och granska Java Test Report-utdata.
+1. Kör nu alla enhetstester i filen BylineImplTest.java och granska Java™ Test Report-utdata.
 
 ![Alla tester godkänns](./assets/unit-testing/all-tests-pass.png)
 
 ## Kör enhetstester som en del av bygget {#running-unit-tests-as-part-of-the-build}
 
-Enhetstester måste utföras som en del av maven-byggnaden. Detta garanterar att alla tester lyckas innan ett program distribueras. För att köra Maven-mål som paketering eller installation anropas automatiskt och alla enhetstester i projektet måste godkännas.
+Enhetstester utförs och krävs för att passera som en del av maven-byggnaden. Detta garanterar att alla tester lyckas innan ett program distribueras. För att köra Maven-mål som paketering eller installation anropas automatiskt och alla enhetstester i projektet måste godkännas.
 
 ```shell
 $ mvn package
@@ -650,4 +650,4 @@ Om vi ändrar en testmetod till att misslyckas, misslyckas också bygget och rap
 
 ## Granska koden {#review-the-code}
 
-Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-stacken `tutorial/unit-testing-solution`.
+Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `tutorial/unit-testing-solution`.
