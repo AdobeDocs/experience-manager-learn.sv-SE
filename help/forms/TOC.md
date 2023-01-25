@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1784'
 ht-degree: 1%
 
 ---
@@ -184,6 +184,10 @@ ht-degree: 1%
    + [ArrayList-variabel](variables-aem-workflow/part4.md)
    + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
++ Granska formulärdata{#review-form-data}
+   + [Introduktion](review-form-data/introduction.md)
+   + [Skapa komponent](review-form-data/create-component.md)
+   + [Distribuera resurser](review-form-data/deploy-on-your-system.md)
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Introduktion](storing-retrieving-form-data/introduction.md)
    + [Konfigurera datakälla](storing-retrieving-form-data/part1.md)
