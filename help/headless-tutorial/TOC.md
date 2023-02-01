@@ -7,9 +7,9 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '281'
 ht-degree: 4%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 4%
       + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
       + [4 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
-      + [5 - GraphQL-slutpunkter](./graphql/video-series/graphql-endpoints.md)
+      + [5 - GraphQL Endpoints](./graphql/video-series/graphql-endpoints.md)
       + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL: Beständiga frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Grundläggande självstudiekurs{#multi-step}
@@ -113,5 +113,8 @@ ht-degree: 4%
    + [Program för filtrering av Angular](./graphql/code-samples/filtering-angular-app.md)
    + [Filtrera Vue-app](./graphql/code-samples/filtering-vue-app.md)
    + [Filtrera med jQuery och Handtag](./graphql/code-samples/filtering-jquery-handlebars.md)
+   + [Filtrera appen SvelteKit](./graphql/code-samples/filtering-sveltekit-app.md)
+   + [Filtrera appen ExpressJS och Pug](./graphql/code-samples/filtering-express-pug-app.md)
    + [Basic React-app](./graphql/code-samples/basic-react-app.md)
    + [Basic Next.js-app](./graphql/code-samples/basic-nextjs-app.md)
+
