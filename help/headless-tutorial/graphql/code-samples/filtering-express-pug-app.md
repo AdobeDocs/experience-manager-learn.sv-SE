@@ -1,6 +1,6 @@
 ---
-title: Filtrera appen ExpressJS och Pug
-description: En enkel ExpressJS/Pug-app som filtrerar WKND-äventyr med hjälp av Content Fragments.
+title: Filtrera Express-app
+description: En enkel Express-app som filtrerar WKND-äventyr med Content Fragments.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -11,21 +11,22 @@ thumbnail: KT-11812.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
+recommendations: noCatalog, noDisplay
+source-git-commit: ac2b3a766caea1013165aedd3478bf859212cc89
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
 
-# Filtrera appen ExpressJS och Pug
+# Filtrera Express-app
 
-Utforska AEM Headless GraphQL API:er för att filtrera data med en [ExpressJS](https://expressjs.com/)/[Pug](https://pugjs.org/) app. Den här ExpressJS/Pug-appen skapar en lista över WKND-äventyr som kan filtreras efter aktivitetstyp.
+Utforska AEM Headless GraphQL API:er för att filtrera data med en [Express](https://expressjs.com/) och [Pug](https://pugjs.org/) app. Den här Express-appen skapar en lista över WKND-äventyr som kan filtreras efter aktivitetstyp.
 
-Den här koden visar hur du använder Adobe [AEM Headless Client för NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) för att anropa beständiga GraphQL-frågor med Node.js-baserad JavaScript. Den här appen använder `wknd-shared/adventures-all` beständig fråga för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till `wknd-shared/adventures-by-activity` beständig fråga och hämtar äventyrsinformation endast för äventyren med den angivna aktivitetstypen.
+Den här koden visar hur du använder Adobe [AEM Headless Client för NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) för att anropa beständiga GraphQL-frågor med Node.js-baserad JavaScript. Den här appen använder `wknd-shared/adventures-all` beständig fråga för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till `wknd-shared/adventures-by-activity` beständig fråga och hämtar äventyrsinformation endast för äventyren med den angivna aktivitetstypen. Äventyrsinformation hämtas från AEM via `wknd-shared/adventures-by-slug` beständig fråga.
 
 Den här koden:
 
 + Ansluter till en AEM Publish-tjänst och kräver ingen autentisering
-+ Använder WKND:s beständiga frågor: `wknd-shared/adventures-all` och `wknd-shared/adventures-by-activity`
++ Använder WKND:s beständiga frågor: `wknd-shared/adventures-all`, `wknd-shared/adventures-by-activity`och `wknd-shared/adventures-by-slug`

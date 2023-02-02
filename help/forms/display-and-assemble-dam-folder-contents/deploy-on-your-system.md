@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '158'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 2%
 
 Följ stegen nedan för att få det här användningsexemplet att fungera på din lokala AEM.
 
-* [Konfigurera för att använda fd-service-användare genom att följa stegen som nämns i den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en). Kontrollera att du har distribuerat paketet DevelopingWithServiceUser.
+* [Distribuera paketet DevelopingWithServiceUser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) som finns i zip-filen.
+
+* Lägg till följande post i användarmappningstjänsten för Apache Sling **DevelopingWithServiceUser.core:getformsresourceReser=fd-service** med [configMgr](http://localhost:4502/system/console/configMgr).
 
 * [Distribuera nyhetsbrevet](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). Paketet innehåller koden som listar mappinnehållet och sätter ihop de valda nyhetsbreven.
 
