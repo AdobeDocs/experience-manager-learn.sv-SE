@@ -1,6 +1,6 @@
 ---
 title: OpenAI-bildgenerering via ett anpassat tillägg för Content Fragment Console
-description: Ett exempel AEM tillägget Content Fragments Console som genererar digital bild från naturliga språkbeskrivningar med OpenAI eller DALL-E 2 och överför genererad bild till AEM och kopplar den till innehållsfragmentet.
+description: Lär dig hur du genererar digitala bilder från en beskrivning på ett naturligt språk med OpenAI eller DALL-E 2 och överför genererade bilder till AEM med ett anpassat tillägg för Content Fragment Console.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,9 +10,9 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,11 @@ ht-degree: 0%
 
 # Generera AEM bildresurser med OpenAI
 
-![Generering av digitala bilder](./assets/digital-image-generation/screenshot.png){align="center"}
+Lär dig hur du skapar en bild med OpenAI eller DALL.E 2 och överför den till AEM DAM för snabb innehållshantering.
 
-Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfält](../action-bar.md) tillägg som genererar digitala bilder från indata på naturspråket med [OpenAI API](https://openai.com/api/) eller [DALL.E 2](https://openai.com/dall-e-2/). Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
+![Generering av digitala bilder](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
+
+Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfält](../action-bar.md) tillägg som genererar digital bild från indata på naturens språk med [OpenAI API](https://openai.com/api/) eller [DALL.E 2](https://openai.com/dall-e-2/). Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
 
 I det här exemplet lär du dig:
 
@@ -108,6 +110,12 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
 1. Installera under Node.js-bibliotek
    1. [OpenAI Node.js-biblioteket](https://github.com/openai/openai-node#installation) - för att enkelt anropa OpenAI API:t
    1. [AEM](https://github.com/adobe/aem-upload#install) - för att överföra bilder till AEM-CS-instanser.
+
+
+>[!TIP]
+>
+>I följande avsnitt får du lära dig mer om nyckelfilerna React och Adobe I/O Runtime Action JavaScript. Nyckelfilerna från `web-src` och  `actions` finns i AppBuilder-projektmappen [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+
 
 ## Appvägar{#app-routes}
 
@@ -198,7 +206,7 @@ I det här exemplet finns det en modal React-komponent (`GenerateImageModal.js`)
 1. Svaret på bildgenereringsåtgärden, som tillhandahåller länken AEM resursinformation för den nyligen genererade, överförda bilden.
 
 Viktigt är att all interaktion med AEM från tillägget ska delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-Adobe I/O Runtime-åtgärder används för att kommunicera med AEM för att undvika anslutningsproblem mellan olika ursprung (CORS).
+Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsdomänsdelning (CORS).
 
 När _Generera bild_ formulär skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden, skickar bildbeskrivningen, aktuell AEM (domän) och användarens AEM åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) API för att generera en bild med den inskickade bildbeskrivningen. Nästa användning [AEM](https://github.com/adobe/aem-upload) nodmodulens `DirectBinaryUpload` klass som den överför genererad bild till AEM och slutligen använder [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
@@ -458,6 +466,11 @@ export default function GenerateImageModal() {
   }
 }
 ```
+
+>[!NOTE]
+>
+>I `buildAssetDetailsURL()` funktionen, `aemAssetdetailsURL` variabelvärdet förutsätter att [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
+
 
 ## Adobe I/O Runtime action
 
