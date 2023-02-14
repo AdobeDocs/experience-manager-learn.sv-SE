@@ -1,14 +1,14 @@
 ---
 user-guide-title: Självstudiekurser om Adobe Experience Manager as a Cloud Service
-user-guide-description: En samling självstudiekurser för Adobe Experience Manager as a Cloud Service.
-breadcrumb-title: AEM as a Cloud Service Tutorials
+user-guide-description: En samling självstudiekurser om Adobe Experience Manager as a Cloud Service.
+breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 9%
+source-wordcount: '897'
+ht-degree: 11%
 
 ---
 
@@ -92,6 +92,11 @@ ht-degree: 9%
       + [Tjänstanvändare](./developing/advanced/service-users.md)
       + [Anpassade namnutrymmen](./developing/advanced/custom-namespaces.md)
       + [Cachelagrar sidvarianter](./developing/advanced/variant-caching.md)
+   + Rapid Development Environment{#rde}
+      + [Översikt](./developing/rde/overview.md)
+      + [Så här konfigurerar du](./developing/rde/how-to-setup.md)
+      + [Så här använder du](./developing/rde/how-to-use.md)
+      + [Utveckling/livscykeln](./developing/rde/development-life-cycle.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
