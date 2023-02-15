@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 1%
@@ -31,6 +31,11 @@ Använda [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-w
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491/?quality=12&learn=on)
 
+## Nästa steg
+
+Läs mer om [livscykeln för utveckling/driftsättning med RDE](./development-life-cycle.md) för att leverera funktioner snabbt.
+
+
 ## Ytterligare resurser
 
 [Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
@@ -38,7 +43,3 @@ Använda [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-w
 [Adobe I/O Runtime CLI Plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
-
-## Nästa steg
-
-Läs mer om [livscykeln för utveckling/driftsättning med RDE](./development-life-cycle.md) för att leverera funktioner snabbt.
