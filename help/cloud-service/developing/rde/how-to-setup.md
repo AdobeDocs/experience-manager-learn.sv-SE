@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -45,19 +45,19 @@ Så här distribuerar du [WKND Sites Project&#39;s](https://github.com/adobe/aem
 
 Installera Adobe I/O Runtime Extensible CLI, även kallat `aio CLI` genom att köra följande kommando från kommandoraden.
 
-    &quot;shell
-    $ npm install -g @adobe/aio-cli
-    &quot;
+```shell
+$ npm install -g @adobe/aio-cli
+```
 
 ### AEM
 
 Installera plugin-program för Cloud Manager och AEM RDE med `aio cli`&#39;s `plugins:install` -kommando.
 
-    &quot;shell
-    $ aio-plugin-program:installera @adobe/aio-cli-plugin-cloudmanager
-    
-    $ aio-plugin-program:installera @adobe/aio-cli-plugin-aem-rde
-    &quot;
+```shell
+$ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+$ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+```
 
 Med plugin-programmet Cloud Manager kan utvecklare interagera med Cloud Manager från kommandoraden.
 
@@ -91,23 +91,23 @@ AEM plugin-program måste konfigureras för att interagera med din RDE. Först k
 
 Du kan verifiera de aktuella konfigurationsvärdena genom att köra följande kommando.
 
-    &quot;shell
-    $ aio config:list
-    &quot;
+```shell
+$ aio config:list
+```
 
 Om du vill växla eller veta vilken organisation du är inloggad på kan du använda kommandot nedan.
 
-    &quot;shell
-    $ aio where
-    &quot;
+```shell
+$ aio where
+```
 
 ## Verifiera RDE-åtkomst
 
 Kontrollera installationen och konfigurationen av AEM RDE-plugin-programmet genom att köra följande kommando.
 
-    &quot;shell
-    $ aio aem:rde:status
-    &quot;
+```shell
+$ aio aem:rde:status
+```
 
 Statusinformationen för RDE visas som miljöstatus, listan med _ditt AEM_ paket och konfigurationer för författare och publiceringstjänst.
 

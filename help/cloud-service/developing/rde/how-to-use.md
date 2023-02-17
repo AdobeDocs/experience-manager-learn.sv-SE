@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ Använda [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-w
 
 Klona [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) och öppna den i din favoritutvecklingsmiljö för att distribuera de AEM artefakterna till den lokala utvecklingsmiljön.
 
-    &quot;shell
-    $ git-klon git@github.com:adobe/aem-guides-wknd.git
-    &quot;
+```shell
+$ git clone git@github.com:adobe/aem-guides-wknd.git
+```
 
 Bygg och distribuera den sedan till det lokala AEM-SDK:t genom att köra följande maven-kommando.
 
-    &quot;
-    $ cd aem-guides-wknd/
-    $ mvn ren installation -PautoInstallSinglePackage
-    &quot;
+```
+$ cd aem-guides-wknd/
+$ mvn clean install -PautoInstallSinglePackage
+```
 
 ## Distribuera AEM med plugin-programmet AEM-RDE
 
@@ -54,13 +54,13 @@ Använda `aem:rde:install` kommandot, låt oss distribuera olika AEM.
 
 En vanlig utgångspunkt är att först distribuera `all` och `dispatcher` paket genom att köra följande kommandon.
 
-    &quot;shell
-    # Installera paketet &#39;all&#39;
-    $ aio aem:rde:installera all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
-    
-    # Installera zip-filen &#39;dispatcher&#39;
-    $ aio aem:rde:installera dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
-    &quot;
+```shell
+# Install the 'all' package
+$ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
+
+# Install the 'dispatcher' zip
+$ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
+```
 
 Kontrollera WKND-webbplatsen på både författaren och publiceringstjänsterna när distributionen är klar. Du bör kunna lägga till och redigera innehållet på WKND-webbplatsens sidor och publicera det.
 
@@ -118,9 +118,9 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
 
 I exemplet med det ovan enskilda fildistributionskommandot `-t` och `-p` flaggor används för att ange JCR-sökvägens typ och mål. Låt oss titta på det tillgängliga `install` genom att köra följande kommando.
 
-    &quot;shell
-    $ aio aem:rde:install —help
-    &quot;
+```shell
+$ aio aem:rde:install --help
+```
 
 Flaggorna är självförklarande, `-s` -flaggan är användbar för att rikta distributionen enbart till författaren eller publiceringstjänsterna. Använd `-t` flagga vid distribution av **content-file eller content-xml** filer tillsammans med `-p` för att ange mål-JCR-sökvägen i AEM RDE-miljö.
 
@@ -155,15 +155,15 @@ Om du vill lära dig hur man driftsätter OSGi-paketet kan vi förbättra `Hello
 
 Du kan distribuera de enskilda config-filerna eller hela config-paketet, till exempel:
 
-    &quot;shell
-    # Distribuera en enskild konfigurationsfil
-    $ aio aem:rde:installera ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.Commons.log.LogManager.factory.config~wknd.cfg.json
-    
-    # Eller distribuera hela konfigurationspaketet
-    $ cd ui.config
-    $ mvn rent paket
-    $ aio aem:rde:installera target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
-    &quot;
+```shell
+# Deploy individual config file
+$ aio aem:rde:install ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config/org.apache.sling.commons.log.LogManager.factory.config~wknd.cfg.json
+
+# Or deploy the complete config package
+$ cd ui.config
+$ mvn clean package
+$ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
+```
 
 >[!TIP]
 >
@@ -202,21 +202,21 @@ Konfigurationsfilerna för Apache eller Dispatcher **kan inte distribueras indiv
 
 Låt oss granska de extra kommandona för AEM RDE-plugin som du kan hantera och interagera med RDE från din lokala dator.
 
-    &quot;shell
-    $ aio aem:rde —help
-    Interagera med RapidDev-miljöer.
-    
-    ANVÄNDNING
-    $ aio aem, KOMMANDO
-    
-    KOMMANDON
-    aem rde delete Delete bundles and configs from the current rde.
-    aem rde history Hämta en lista över de uppdateringar som har gjorts för den aktuella raden.
-    aem rde install/update bundles, configs, and content-packages.
-    aem rde reset Återställ RDE
-    aem rde restart Starta om författaren och publicera en RDE
-    aem rde status Hämta en lista över paket och konfigurationer som distribuerats till den aktuella rden.
-    &quot;
+```shell
+$ aio aem:rde --help
+Interact with RapidDev Environments.
+
+USAGE
+$ aio aem rde COMMAND
+
+COMMANDS
+aem rde delete   Delete bundles and configs from the current rde.
+aem rde history  Get a list of the updates done to the current rde.
+aem rde install  Install/update bundles, configs, and content-packages.
+aem rde reset    Reset the RDE
+aem rde restart  Restart the author and publish of an RDE
+aem rde status   Get a list of the bundles and configs deployed to the current rde.
+```
 
 Med ovanstående kommandon kan din utvecklingsmiljö hanteras från din favoritutvecklingsmiljö för snabbare utveckling/driftsättning.
 
