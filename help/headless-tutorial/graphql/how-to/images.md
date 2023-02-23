@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Bilder är en viktig aspekt av [utveckla multimediala, övertygande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
 
-Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ge URL:er till bilder baserat på varifrån bilden refereras.
+Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ange URL:er till bilder baserat på varifrån bilden refereras.
 
 The `ImageRef` -typen har tre URL-alternativ för innehållsreferenser:
 
@@ -38,7 +38,7 @@ Fälten används bäst utifrån följande kriterier:
 | `_authorUrl` | ✘ | ✔ | ✘ |
 | `_publishUrl` | ✘ | ✘ | ✔ |
 
-Användning av `_authorUrl` och `_publishUrl` ska justeras mot den AEM GraphQL-slutpunkt som används för att hämta GraphQL-svaret.
+Användning av `_authorUrl` och `_publishUrl` ska anpassas till den AEM GraphQL-slutpunkt som används för att hämta GraphQL-svar.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -53,9 +53,9 @@ Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.
 
 ![Content Fragment Model med innehållsreferens till en bild](./assets/images/content-fragment-model.jpeg)
 
-## Beständig GraphQL-fråga
+## GraphQL beständig fråga
 
-I GraphQL-frågan returnerar du fältet som `ImageRef` skriv och begära lämpliga fält `_path`, `_authorUrl`, eller `_publishUrl` krävs av ditt program. Du kan till exempel ställa frågor till ett äventyr i [WKND-referensdemoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
+I GraphQL-frågan returnerar du fältet som `ImageRef` skriv och begära lämpliga fält `_path`, `_authorUrl`, eller `_publishUrl` krävs av ditt program. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
 
 ```graphql
 query ($path: String!) {
@@ -76,7 +76,7 @@ query ($path: String!) {
 
 The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
 
-## GraphQL-svar
+## GraphQL svar
 
 Det resulterande JSON-svaret innehåller de begärda fälten som innehåller URL:erna till bildresurserna.
 
@@ -170,9 +170,9 @@ Kontrollera att resurserna med de nya återgivningarna är [(re)publicerad](../.
 
 {style=&quot;table-layout:auto&quot;}
 
-### GraphQL-fråga{#renditions-graphl-query}
+### GraphQL query{#renditions-graphl-query}
 
-AEM GraphQL kräver extra syntax för att begära bildåtergivningar. Istället [bilderna efterfrågas](#images-graphql-query) på vanligt sätt och önskad återgivning anges i koden. Det är viktigt att [se till att bildresurser som används av det headless-programmet har samma namn på återgivningar](#reprocess-assets).
+AEM GraphQL kräver ingen extra syntax för att begära bildåtergivningar. Istället [bilderna efterfrågas](#images-graphql-query) på vanligt sätt och önskad återgivning anges i koden. Det är viktigt att [se till att bildresurser som används av det headless-programmet har samma namn på återgivningar](#reprocess-assets).
 
 ### Reaktionsexempel
 
@@ -184,7 +184,7 @@ Låt oss skapa ett enkelt React-program som visar tre renderingar, webboptimerad
 
 Skapa en React-komponent som återger bilderna. Komponenten accepterar fyra egenskaper:
 
-+ `assetUrl`: URL för bildresurs som anges via GraphQL-frågans svar.
++ `assetUrl`: URL:en för bildresursen som anges via svaret från GraphQL-frågan.
 + `renditionName`: Namnet på den återgivning som ska läsas in.
 + `renditionExtension`: Tillägget för återgivningen som ska läsas in.
 + `alt`: Alt-texten för bilden. tillgänglighet är viktigt!

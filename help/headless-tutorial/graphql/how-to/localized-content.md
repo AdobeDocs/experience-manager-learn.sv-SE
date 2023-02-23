@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Språkinställningskoden är också det värde som används för att filtrera de
 | en | /content/dam/../**en**/... | Engelskt innehåll |
 | es | /content/dam/../**es**/... | Spansk innehåll |
 
-## Beständig GraphQL-fråga
+## GraphQL beständig fråga
 
-AEM tillhandahåller en `_locale` GraphQL-filter som automatiskt filtrerar innehåll efter språkkod. Du kan till exempel ställa frågor om alla engelska äventyr i [WKND-referensdemoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) kan utföras med en ny beständig fråga `wknd-shared/adventures-by-locale` definieras som:
+AEM tillhandahåller en `_locale` GraphQL-filter som automatiskt filtrerar innehåll efter språkkod. Du kan till exempel ställa frågor om alla engelska äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) kan utföras med en ny beständig fråga `wknd-shared/adventures-by-locale` definieras som:
 
 ```graphql
 query($locale: String!) {
@@ -84,7 +84,7 @@ export default LocaleContext;
 
 Skapa sedan en React-komponent för språkområdesväljaren som är [LocaleContext&#39;s](#locale-context) värdet efter användarens val.
 
-Det här språkvärdet används för att driva GraphQL-frågor så att de bara returnerar innehåll som matchar det valda språkområdet.
+Det här språkvärdet används för att köra GraphQL-frågor och säkerställa att de bara returnerar innehåll som matchar det valda språkområdet.
 
 ```javascript
 // src/LocaleSwitcher.js
