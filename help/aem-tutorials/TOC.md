@@ -1,13 +1,13 @@
 ---
 doc-type: tutorial
-user-guide-title: AEM Tutorials
+user-guide-title: Självstudiekurser om AEM
 sub-product: Experience Manager
 version: 6.4, 6.5, Cloud Service
 index: y
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -25,6 +25,6 @@ ht-degree: 3%
 + Tutorials i flera steg {#multi}
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Komma igång med AEM och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
+   + [Kom igång med AEM och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [AEM 6.x Dynamic Media Classic Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/dynamic-media-classic-tutorial/overview.html)
    + [AEM 6.x Dispatcher Cache - självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)

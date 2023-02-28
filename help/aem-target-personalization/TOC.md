@@ -1,6 +1,6 @@
 ---
-user-guide-title: Komma igång med AEM och Adobe Target
-user-guide-description: En komplett självstudiekurs som visar hur ni kan leverera personaliserade upplevelser med Experience Manager och Target.
+user-guide-title: Kom igång med AEM och Adobe Target
+user-guide-description: En komplett självstudiekurs som visar hur du kan leverera personanpassade upplevelser med Experience Manager och Target.
 product: experience manager
 sub-product: Experience Manager Sites
 version: 6.5
@@ -9,12 +9,12 @@ kt: 2214
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 3%
+ht-degree: 45%
 
 ---
 
 
-# Komma igång med AEM och mål {#aem-target-tutorial}
+# Kom igång med AEM och Target {#aem-target-tutorial}
 
 + [Översikt](./overview.md)
 + [Personalisering med AEM Experience Fragments](./personalization-use-case-1.md)

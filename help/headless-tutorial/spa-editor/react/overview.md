@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM SPA Editor och React
-description: Skapa ditt första React Single Page-program (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA. Lär dig hur du skapar en SPA med React JS-ramverket med AEM SPA Editor. Denna självstudiekurs i flera delar går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela SPA och integreringen med AEM.
+description: Skapa ditt första React Single Page Application (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND SPA. Lär dig hur du skapar en SPA med hjälp av React JS-ramverket med AEM:s SPA Editor. Denna självstudiekurs i flera delar går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Självstudiekursen täcker hela skapandet av SPA och integreringen med AEM.
 topics: development
 version: Cloud Service
 doc-type: tutorial
@@ -17,7 +17,7 @@ last-substantial-update: 2022-08-25T00:00:00Z
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 

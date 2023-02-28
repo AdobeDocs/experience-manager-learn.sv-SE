@@ -1,18 +1,18 @@
 ---
-user-guide-title: AEM Foundation Videos och Tutorials
-breadcrumb-title: AEM Foundation Tutorials
-user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Foundation.
+user-guide-title: Videor och självstudiekurser om AEM Foundation
+breadcrumb-title: Självstudiekurser om AEM Foundation
+user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
 source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 2%
+ht-degree: 13%
 
 ---
 
 
-# AEM Foundation Videos och Tutorials {#foundation}
+# Videor och självstudiekurser om AEM Foundation {#foundation}
 
 + [Översikt](./overview.md)
 + Administration {#administration}

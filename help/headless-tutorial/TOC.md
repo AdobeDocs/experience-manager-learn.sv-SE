@@ -1,7 +1,7 @@
 ---
-user-guide-title: Komma igång med AEM Headless
+user-guide-title: Kom igång med AEM Headless
 user-guide-description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
-breadcrumb-title: AEM Headless Tutorial
+breadcrumb-title: Självstudiekurs om AEM Headless
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
@@ -10,12 +10,12 @@ index: y
 source-git-commit: c96b8c9761ff9477fda40d641db5021994b32754
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
 
-# Komma igång med AEM Headless{#getting-started-with-aem-headless}
+# Kom igång med AEM Headless{#getting-started-with-aem-headless}
 
 + [AEM Headless Overview](./overview.md)
 + GraphQL {#graphql}

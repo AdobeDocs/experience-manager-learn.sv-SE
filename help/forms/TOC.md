@@ -1,21 +1,21 @@
 ---
 feature-set: Experience Manager Forms, Experience Manager
 role: Developer
-user-guide-title: AEM Forms Videos och Tutorials
-user-guide-description: En samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare.
-breadcrumb-title: AEM Forms Tutorials
+user-guide-title: Videor och självstudiekurser om AEM Forms
+user-guide-description: En samling resurser om AEM Forms för nybörjare och erfarna utvecklare av AEM-formulär.
+breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
 workflow-type: tm+mt
 source-wordcount: '1784'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# AEM Forms Videos och Tutorials {#forms}
+# Videor och självstudiekurser om AEM Forms {#forms}
 
 + [Översikt](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)

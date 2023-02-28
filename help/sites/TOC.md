@@ -1,19 +1,19 @@
 ---
-user-guide-title: AEM Sites Videos och Tutorials
-user-guide-description: En samling videor och självstudiekurser för Adobe Experience Manager Sites.
-breadcrumb-title: AEM Sites Tutorials
+user-guide-title: Videor och självstudiekurser om AEM Sites
+user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Sites.
+breadcrumb-title: Självstudiekurser om AEM Sites
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
 
-# AEM Sites Videos och Tutorials {#sites}
+# Videor och självstudiekurser om AEM Sites {#sites}
 
 + [Översikt](overview.md)
 + Sidredigering {#page-authoring}
@@ -55,7 +55,7 @@ ht-degree: 5%
 + Utveckling {#developing}
    + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+   + [Kom igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
