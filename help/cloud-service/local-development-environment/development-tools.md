@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,7 @@ The [Adobe I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, ger kommando
 
 + Loggar från AEM som Cloud Services
 + Hantera Cloud Manager-pipelines från CLI
++ Distribuera till [AEM miljöer för snabb utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
 ### Installera Adobe I/O CLI
 
@@ -134,13 +135,7 @@ Med pluginprogrammet Adobe I/O Cloud Manager kan AIO CLI interagera med Adobe Cl
 
 1. Kör `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` för att installera [Insticksprogram för aio Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-### Konfigurera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
-
-Adobe I/O Cloud Manager-pluginen gör det möjligt för aio CLI att generera och köra Asset compute-arbetare via `aio asset-compute` -kommando.
-
-1. Kör `aio plugins:install @adobe/aio-cli-plugin-asset-compute` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
-
-### Ställa in Adobe I/O CLI-autentisering
+#### Ställa in Adobe I/O CLI-autentisering
 
 För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste [Integrering med Cloud Manager måste skapas i Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager)och autentiseringsuppgifter måste hämtas för att autentiseringen ska lyckas.
 
@@ -158,6 +153,19 @@ För att Adobe I/O CLI ska kunna kommunicera med Cloud Manager måste [Integreri
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 Börja [köra kommandon](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) för Cloud Manager via Adobe I/O CLI.
+
+### Konfigurera plugin-programmet AEM Rapid Development Environment{#rde}
+
+Med pluginen AEM Rapid Development Environment kan AIO CLI interagera med AEM as a Cloud Service [Snabba utvecklingsmiljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) via `aio aem:rde` -kommando.
+
+1. Kör `aio plugins:install @adobe/aio-cli-plugin-aem-rde` för att installera [AEM Rapid Development Environment plugin](https://github.com/adobe/aio-cli-plugin-aem-rde).
+
+### Konfigurera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
+
+Adobe I/O Cloud Manager-pluginen gör det möjligt för aio CLI att generera och köra Asset compute-arbetare via `aio asset-compute` -kommando.
+
+1. Kör `aio plugins:install @adobe/aio-cli-plugin-asset-compute` för att installera [aio Asset compute plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
+
 
 ## Konfigurera utvecklingsmiljön
 
