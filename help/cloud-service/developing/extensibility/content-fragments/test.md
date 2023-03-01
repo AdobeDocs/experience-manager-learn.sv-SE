@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -95,7 +95,9 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    ```shell
    $ aio app use -w Stage
    ```
+
    Sammanfoga alla ändringar i `.env` och `.aio`.
+
 1. Distribuera det uppdaterade tillägget i appen App Builder. Om du inte är inloggad kör du `aio login` först.
 
    ```shell
