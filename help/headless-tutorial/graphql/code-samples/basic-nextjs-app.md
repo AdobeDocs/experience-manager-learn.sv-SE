@@ -12,7 +12,7 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
+source-git-commit: 772acab316ba2ff463fa5cacff02013bea920579
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -33,4 +33,4 @@ Om du vill ha en mer detaljerad genomgång av hur den här appen Next.js byggs k
 
 >[!IMPORTANT]
 >
-> Codesandbox.io stöder inte redigering av Next.js-programmet i den inbäddade IDE:n. Om du vill redigera det här kodexemplet [öppna appen Next.js direkt i codesandbox.io](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
+> Codesandbox.io stöder inte redigering av Next.js-programmet i den inbäddade IDE:n. Om du vill redigera det här kodexemplet [öppna appen Next.js direkt i codesandbox.io](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
