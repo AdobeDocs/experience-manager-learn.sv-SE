@@ -3,9 +3,9 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: de31d6e97b84781aa05ca441fc6e9fc4bc59ccc3
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2814'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ AEM Sites: grundläggande körning och drift
 | --- | --- | --- | --- |
 | CSS-utvecklare | <ul><li>Webbutveckling (CSS eller front-end)</li>Återanvänd komponenter<li>Skapa upplevelseartefakter genom återanvändning eller skapa nya</li></ul> | <ul><li>Affärsägare av lösningen</li><li>Skapar underhållsuppgifter och förbättringar</li><li>Fungerar med BU när det gäller tekniska och strategiska visioner</li></ul> | Produktägare |
 | Back end developer | <ul><li>Djupa upplevelser som inte gjorts via enkel CSS på frontend</li>Arkitekttillsyn<li>Dynamiska integreringar/anpassning med Product owner efter strategiska mål</li></ul> | <ul><li>Hjälper innehållsförfattare</li><li>Styrningsroll</li><li>Koordinaterna startar, hanterar makroredigeringar</li></ul> | Administratörsförfattare |
-| Versionshanteraren | <ul><li>Versionshantering</li><li>Koddistributioner</li></li>Aktuell Customer Success Engineer</ul> | <ul><li>Använder innehåll (inklusive färdiga format)</li>Tiered owner<li>Levererar och förmedlar problem och problem i takt med att de uppstår med CSM</li></ul> | Innehållsförfattare |
+| Versionshanteraren | <ul><li>Versionshantering</li><li>Koddistributioner</li></li>Adobe Account Team</ul> | <ul><li>Använder innehåll (inklusive färdiga format)</li>Tiered owner<li>Levererar och förmedlar problem och problem i takt med att de uppstår med CSM</li></ul> | Innehållsförfattare |
 
 ## Potentiella fallgropar
 

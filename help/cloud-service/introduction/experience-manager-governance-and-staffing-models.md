@@ -3,7 +3,7 @@ title: Styrnings- och personalmodeller och arketyper
 description: Lär dig hur du kan driftsätta din Adobe Experience Manager-plattform (AEM) och få ut det mesta av dina insatser.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: dcd69c7444eae0f8c86464c1963bff35e6f11238
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Nedan följer några exempel på hur man arbetar med ett ljust (sportklädföret
 
    * CSS-utveckling - skapar upplevelseartefakter genom att återanvända komponenter med nya format.
    * Backend-utveckling - skapar nya komponenter eller kan utöka en kärnkomponent. Om det görs på rätt sätt bör den här rollen inte ha mer än en person, såvida det inte finns ett behov av stora animeringsuppgifter.
-   * Versionshantering - ansvarar för koddistributionen och fungerar som den nuvarande Customer Success Engineer.
+   * Versionshantering - ansvarar för koddistributionen och fungerar som kontoteamet för Adobe.
    * Produktägare - samarbetar med BU när det gäller att gifta sig med tekniska och strategiska visioner, skapar underhållsuppgifter och förbättringar och fungerar som affärsägare för lösningen.
    * Administratörsförfattare - uppdaterar CSS-skalet och ger vägledning till författare som uppdaterar och använder innehåll. Den här rollen fungerar på arbetsflödeskonfigurationer och skapar vägledningsdokumentation som författarna kan använda. OBS! I version 6.5 rekommenderar Adobe att du använder redigerbara mallar.
    * Innehållsförfattare - lägger in innehåll, nivåindelad äganderätt och levererar kommunikationsproblem och frågor allt eftersom de uppstår med CSM.
