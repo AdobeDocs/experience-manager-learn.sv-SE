@@ -5,9 +5,9 @@ breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
+source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '910'
 ht-degree: 11%
 
 ---
@@ -196,6 +196,11 @@ ht-degree: 11%
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
+      + AEM Forms och Analytics{#forms-and-analytics}
+         + [Introduktion](./forms/form-data-analytics/introduction.md)
+         + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
+         + [Skapa regler](./forms/form-data-analytics/rules.md)
+         + [Testa lösningen](./forms/form-data-analytics/test.md)
    + Skapa dokument i AEM Forms CS{#doc-gen-formscs}
       + [Introduktion](./forms/doc-gen-forms-cs/introduction.md)
       + [Skapa tjänstautentiseringsuppgifter](./forms/doc-gen-forms-cs/service-credentials.md)
