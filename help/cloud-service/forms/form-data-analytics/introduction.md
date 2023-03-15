@@ -9,14 +9,14 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
-# Rapportera formulärdatafältsvärden och valideringsfel för formulärfält med Adobe Analytics
+# Rapport om formulärdatafältsvärden och valideringsfel för formulärfält med Adobe Analytics
 
 Lär dig hur du implementerar analyser på dina adaptiva formulär med taggar och Adobe Analytics. I det här exemplet får du hjälp med konfiguration och implementering för att få insiktsfulla rapporter om hur besökarna interagerar med formulären.
 

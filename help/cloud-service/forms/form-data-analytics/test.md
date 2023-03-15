@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -22,7 +22,9 @@ Förhandsgranska och skicka formuläret med flera kombinationer av formulärvär
 
 ## Report Suite
 
-De formulärdata som samlas in i Adobe Analytics presenteras i donutformat som inskickat per stat
+De formulärdata som samlas in i Adobe Analytics presenteras i donut-format
+
+**Inlagor per stat**
 
 ![applicantsbystate](assets/donut.png)
 

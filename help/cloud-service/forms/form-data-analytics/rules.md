@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -18,14 +18,18 @@ ht-degree: 0%
 
 # Definiera regeln
 
-I taggegenskapen skapade vi 2 nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html)(**Fältvalideringsfel och FormSubmit**).
+I taggegenskapen skapade vi 2 nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**Fältvalideringsfel och FormSubmit**).
+
 ![adaptiv form](assets/rules.png)
 
 
 ## Fältvalideringsfel
 
 The **Fältvalideringsfel** Regeln aktiveras varje gång ett valideringsfel uppstår i ett anpassat formulärfält. I vårt formulär visas till exempel ett valideringsfelmeddelande om telefonnumret eller e-postadressen inte har det förväntade formatet.
+
 Regeln för fältverifieringsfel konfigureras genom att händelsen ställs in på _**Adobe Experience Manager Forms-Error**_ som på skärmbilden
+
+
 
 ![sökande-stat-bosättning](assets/field_validation_error_rule.png)
 
@@ -36,6 +40,7 @@ Adobe Analytics - Ange variabler är konfigurerat enligt följande
 ## Skicka formulär-regel
 
 Regeln Skicka formulär aktiveras varje gång ett anpassat formulär skickas.
+
 Regeln Skicka formulär konfigureras med _**Adobe Experience Manager Forms - skicka**_ event
 
 ![form-submit-rule](assets/form-submit-rule.png)
