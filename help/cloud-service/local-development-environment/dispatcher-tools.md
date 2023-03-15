@@ -8,11 +8,11 @@ role: Developer
 level: Beginner
 kt: 4679
 thumbnail: 30603.jpg
-last-substantial-update: 2022-09-01T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 370e15fdd96f1c33bc50ee72066381bec40d82c3
+source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1612'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen in
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
-*I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat*
+*I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat.*
 
 ## Förstå Dispatcher-konfigurationsfilerna
 
@@ -187,6 +187,11 @@ Den rekommenderade versionen av Dispatcher Tools är den som medföljer AEM as a
 ## Så här uppdaterar du baslinjeuppsättningen med Apache- och Dispatcher-konfigurationer
 
 Baslinjeuppsättningen av konfigurationen för Apache och Dispatcher förbättras regelbundet och släpps med den AEM as a Cloud Service SDK-versionen. Det är bästa sättet att införliva förbättringarna av baslinjekonfigurationen i AEM projekt och undvika [lokal validering](#validate-configurations) och fel i molnhanterarens pipeline. Uppdatera dem med `update_maven.sh` skript från `.../dispatcher-sdk-x.x.x/bin` mapp.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+
+*I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat.*
+
 
 Låt oss anta att du tidigare har skapat ett AEM projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)var de ursprungliga konfigurationerna för Apache och Dispatcher aktuella. Med hjälp av dessa baslinjekonfigurationer har dina projektspecifika konfigurationer skapats genom att återanvända och kopiera filer som `*.vhost`, `*.conf`, `*.farm` och `*.any` från `dispatcher/src/conf.d` och `dispatcher/src/conf.dispatcher.d` mappar. Din lokala Dispatcher-validering och Cloud Manager-pipelines fungerade bra.
 
