@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Om du vill få åtkomst till AEM as a Cloud Service med hjälp av tjänstens aut
 
 + När tjänstautentiseringsuppgifter finns använder det externa programmet denna åtkomsttoken i stället för den lokala utvecklingsåtkomsttoken vid åtkomst till AEM as a Cloud Service
 
-I den här självstudiekursen, Adobe `@adobe/jwt-auth` npm-modulen används för att både (1) generera JWT från tjänstens autentiseringsuppgifter och (2) byta ut det mot en åtkomsttoken i ett enda funktionsanrop. Om ditt program inte är JavaScript-baserat kan du läsa [exempelkod på andra språk](https://developer.adobe.com/developer-console/docs/guides/) om du vill veta hur du skapar en JWT-fil från tjänstens autentiseringsuppgifter och byter ut den mot en åtkomsttoken med Adobe IMS.
+I den här självstudiekursen, Adobe `@adobe/jwt-auth` npm-modulen används för att både (1) generera JWT från tjänstens autentiseringsuppgifter och (2) byta ut det mot en åtkomsttoken i ett enda funktionsanrop. Om ditt program inte är JavaScript-baserat kan du läsa [exempelkod på andra språk](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) om du vill veta hur du skapar en JWT-fil från tjänstens autentiseringsuppgifter och byter ut den mot en åtkomsttoken med Adobe IMS.
 
 ## Läs autentiseringsuppgifterna för tjänsten
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 När tjänstens autentiseringsuppgifter läses används de för att generera en JWT som sedan byts ut mot Adobe IMS API:er för en åtkomsttoken. Denna åtkomsttoken kan sedan användas för att komma åt AEM as a Cloud Service.
 
-Det här exempelprogrammet är Node.js-baserat, så det är bäst att använda [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-modulen för att underlätta (1) JWT-generering och (20 utbyte med Adobe IMS. Om ditt program har utvecklats på ett annat språk kan du läsa [lämpliga kodexempel](https://developer.adobe.com/developer-console/docs/guides/) om hur du konstruerar HTTP-begäran till Adobe IMS med andra programmeringsspråk.
+Det här exempelprogrammet är Node.js-baserat, så det är bäst att använda [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-modulen för att underlätta (1) JWT-generering och (20 utbyte med Adobe IMS. Om ditt program har utvecklats på ett annat språk kan du läsa [lämpliga kodexempel](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) om hur du konstruerar HTTP-begäran till Adobe IMS med andra programmeringsspråk.
 
 1. Uppdatera `getAccessToken(..)` om du vill inspektera JSON-filens innehåll och avgöra om den representerar en Local Development Access-token eller tjänstautentiseringsuppgifter. Detta kan enkelt uppnås genom att kontrollera om `.accessToken` som bara finns för JSON för Local Development Access-token.
 
