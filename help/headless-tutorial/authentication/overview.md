@@ -13,16 +13,16 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
 # Tokenbaserad autentisering till AEM as a Cloud Service
 
-AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan kanter, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
+AEM visar en mängd olika HTTP-slutpunkter som kan interagera med utan krångel, från GraphQL AEM Content Services till Assets HTTP API. Dessa headless-användare kan ofta behöva autentisera sig för AEM för att få tillgång till skyddat innehåll eller skyddade åtgärder. För att underlätta detta stöder AEM tokenbaserad autentisering av HTTP-begäranden från externa program, tjänster eller system.
 
 I den här självstudiekursen kan du utforska hur ett externt program kan autentisera och interagera med för att AEM as a Cloud Service via HTTP med hjälp av åtkomsttoken.
 
@@ -75,5 +75,5 @@ Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som anv�
 
 + [Hämta exempelprogrammet](./assets/aem-guides_token-authentication-external-application.zip)
 + Andra kodexempel på skapande och utbyte av JWT
-   + [Node.js, Java, Python, C#.NET och PHP-kodexempel](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md)
+   + [Node.js, Java, Python, C#.NET och PHP-kodexempel](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/)
    + [JavaScript/Axios-baserad kod](https://github.com/adobe/aemcs-api-client-lib)
