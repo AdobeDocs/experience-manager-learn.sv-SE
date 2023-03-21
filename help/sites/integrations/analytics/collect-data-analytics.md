@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Följande krävs:
 
 >[!NOTE]
 >
-> Behöver du hjälp med att integrera Launch och din AEM webbplats? [Se den här videoserien](../experience-platform-launch/overview.md).
+> Behöver du hjälp med att integrera Launch och din AEM webbplats? [Se den här videoserien](../experience-platform/data-collection/tags/overview.md).
 
 ## Switch Launch Environment for WKND Site
 
