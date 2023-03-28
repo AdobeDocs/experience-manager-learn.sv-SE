@@ -1,5 +1,5 @@
 ---
-title: Förstå innehållsfragment och upplevelsefragment
+title: Innehållsfragment och Upplevelsefragment
 description: Lär dig likheterna och skillnaderna mellan innehållsfragment och Experience Fragments, och när och hur du använder varje typ.
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
@@ -12,18 +12,18 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 84fdbaa173a929ae7467aecd031cacc4ce73538a
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
 
-# Förstå innehållsfragment och upplevelsefragment
+# Innehållsfragment och Upplevelsefragment
 
 Adobe Experience Manager Content Fragments och Experience Fragments kan se likadana ut på ytan, men de spelar en viktig roll i olika fall. Lär dig hur innehålls- och upplevelsefragment liknar varandra, skiljer sig åt och när och hur du använder varje fragment.
 
-## Jämförelser av innehållsfragment och upplevelsefragment
+## Jämförelse
 
 <table>
 <tbody><tr><td><strong> </strong></td>
@@ -92,17 +92,21 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 <li>Variationer</li>
 <li>Variationer som live-kopior</li>
 <li>Versioner</li>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en#building-blocks" target="_blank">Byggklossarna</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en#building-blocks" target="_blank">Byggblock</a></li>
 <li>Anteckningar</li>
 <li>Responsiv layout och förhandsgranskning</li>
 <li>Översättning/lokalisering</li>
+<li>Komplex datamodell via Content Fragment-referenser</li>
+<li>Förhandsgranskning i appen</li>
 </ul>
 </td>
-</tr><tr><td><strong>Användning</strong></td>
+</tr><tr><td><strong>Använd</strong></td>
 <td><ul>
+<li>JSON-export via <a href="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html">AEM Headless GraphQL API:er</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">Komponenten AEM kärnkomponenter för innehållsfragment</a> för användning i AEM Sites, AEM Screens eller i Experience Fragments.</li>
 <li>JSON-export via <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en" target="_blank">AEM Content Services</a> för förbrukning från tredje part</li>
-<li>JSON via AEM HTTP Assets API:er för användning av tredje part.</li>
+<li>JSON-export till Adobe Target för riktade erbjudanden</li>
+<li>JSON via AEM HTTP Assets API:er för användning av tredje part</li>
 </ul>
 </td>
 <td><ul>
@@ -114,7 +118,8 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </td>
 </tr><tr><td><strong>Vanliga användningsområden</strong></td>
 <td><ul>
-<li>Högstrukturerat datainmatnings-/formulärbaserat innehåll</li>
+<li>Effektiva användningsfall framför GraphQL</li>
+<li>Strukturerad datainmatning/formulärbaserat innehåll</li>
 <li>Långsiktigt redaktionellt innehåll (flerradselement)</li>
 <li>Innehåll som hanteras utanför livscykeln för de kanaler som levererar det</li>
 </ul>
@@ -142,20 +147,20 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 
 I följande diagram visas den övergripande arkitekturen för AEM innehållsfragment
 
-!![Arkitektur för innehållsfragment](./assets/content-fragments-architecture.png)
+![Arkitektur för innehållsfragment](./assets/content-fragments-architecture.png)
 
 + **Modeller för innehållsfragment** Definiera de element (eller fält) som definierar vilket innehåll som innehållsfragmentet kan fånga och visa.
 + The **Innehållsfragment** är en instans av en Content Fragment Model som representerar en logisk innehållsenhet.
 + Innehållsfragment **variationer** som följer innehållsfragmentmodellen har dock olika innehåll.
 + Innehållsfragment kan visas/användas av:
    + Använda innehållsfragment på **AEM Sites** (eller AEM Screens) via AEM WCM Core Components Content Fragment-komponent.
-   + Bädda in ett innehållsfragment i en **Experience Fragment** via AEM WCM Core Components Content Fragment-komponent, för användning i alla Experience Fragment-fall.
+   + Förbrukning **Innehållsfragment** från headless-appar med AEM Headless GraphQL API:er.
    + Visa ett innehållsfragment varierar innehåll som JSON via **AEM Content Services** och API-sidor för skrivskyddade användningsfall.
    + Exponera innehåll i innehållsfragment (alla varianter) direkt som JSON via direktanrop till AEM Assets via **AEM Assets HTTP API** för CRUD-användning.
 
 ## Experience Fragments arkitektur
 
-!![Experience Fragments arkitektur](./assets/experience-fragments-architecture.png)
+![Experience Fragments arkitektur](./assets/experience-fragments-architecture.png)
 
 + **Redigerbara mallar**, som i sin tur definieras av **Redigerbara malltyper** och **Implementering av AEM** definierar du de AEM komponenter som kan användas för att skapa en Experience Fragment.
 + The **Experience Fragment** är en instans av en redigerbar mall som representerar en logisk upplevelse.
@@ -167,15 +172,16 @@ I följande diagram visas den övergripande arkitekturen för AEM innehållsfrag
    + Exportera Experience Fragments till **Adobe Target** som antingen HTML eller JSON erbjuder.
    + AEM Sites stöder HTML erbjudanden, men JSON-erbjudanden kräver specialanpassad utveckling.
 
-## Supporting materials for Content Fragments
+## Stödresurs för innehållsfragment
 
 + [Användarhandbok för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [Introduktion till Adobe Experience Manager som headless CMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
 + [Använda innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=en)
 + [AEM WCM Core Components&#39; Content Fragment component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 + [Använda innehållsfragment och AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en)
 + [Komma igång med AEM Content Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
 
-## Supporting materials for Experience Fragments
+## Stöd för resurser för Experience Fragments
 
 + [Adobe dokumentation om Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en)
 + [AEM Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
