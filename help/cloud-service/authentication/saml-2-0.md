@@ -10,10 +10,10 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
 workflow-type: tm+mt
-source-wordcount: '2815'
-ht-degree: 1%
+source-wordcount: '2961'
+ht-degree: 0%
 
 ---
 
@@ -127,6 +127,21 @@ Global Trust Store är konfigurerad med IDP:s offentliga certifikat på AEM Auth
 1. Välj __Bygge__ för __Global Trust Store__ paket.
 1. Välj __Mer__ > __Replikera__ för att aktivera noden Global Trust Store (`/etc/truststore`) till AEM Publish.
 
+## Skapa nyckelbehållare för autentiseringstjänster{#authentication-service-keystore}
+
+_Du måste skapa en nyckelbehållare för autentiseringstjänsten när [SAML 2.0-autentiseringshanterare OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest signing/SAML assertion ecryption](#install-aem-public-private-key-pair) krävs_
+
+1. Logga in på AEM Author som AEM Administrator för att ladda upp den privata nyckeln.
+1. Navigera till __Verktyg > Säkerhet > Trust Store__ och markera __authentication-service__ användare och markera __Egenskaper__ i det övre åtgärdsfältet.
+1. Navigera till __Verktyg > Säkerhet > Användare__ och markera __authentication-service__ användare och markera __Egenskaper__ i det övre åtgärdsfältet.
+1. Välj __Nyckelbehållare__ -fliken.
+1. Skapa eller öppna nyckelbehållaren. Om du skapar en nyckelbehållare ska du skydda lösenordet.
+   + A [offentlig/privat nyckelbehållare har installerats i den här nyckelbehållaren](#install-aem-public-private-key-pair) endast om AuthnRequest-kryptering för signering/SAML-försäkran krävs.
+   + Om den här SAML-integreringen stöder utloggning, men inte AuthnRequest-signering/SAML-kontroll, räcker det med en tom nyckelbehållare.
+1. Välj __Spara och stäng__.
+1. Välj __authentication-service__ användare och markera __Aktivera__ i det övre åtgärdsfältet.
+
+
 ## Installera AEM publika/privata nyckelpar{#install-aem-public-private-key-pair}
 
 _Det är valfritt att installera det offentliga/privata nyckelparet AEM_
@@ -209,29 +224,29 @@ Konfigurationen är en OSGi-fabrikskonfiguration, vilket innebär att en enda AE
 
 ### Adobe Granite SAML 2.0 Authentication Handler OSGi configuration{#configure-saml-2-0-authentication-handler-osgi-configuration}
 
-|  | OSGi, egenskap | Krävs | Värdeformat | Standardvärde | Beskrivning |
+|  | OSGi, egenskap | Obligatoriskt | Värdeformat | Standardvärde | Beskrivning |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
 | Banor | `path` | ✔ | Strängarray | `/` | AEM sökvägar som den här autentiseringshanteraren används för. |
 | IDP-URL | `idpUrl` | ✔ | Sträng |  | IDP-URL som SAML-autentiseringsbegäran skickas till. |
 | ID-certifikatalias | `idpCertAlias` | ✔ | Sträng |  | Aliaset för IDP-certifikatet som finns i AEM Global Trust Store |
-| IDP HTTP-omdirigering | `idpHttpRedirect` | ✘ | Boolesk | `false` | Anger om en HTTP-omdirigering till IDP-URL:en används i stället för att en AuthnRequest skickas. Ange till `true` för IDP-initierad autentisering. |
+| IDP HTTP-omdirigering | `idpHttpRedirect` | ✘ | Boolean | `false` | Anger om en HTTP-omdirigering till IDP-URL:en används i stället för att en AuthnRequest skickas. Ange till `true` för IDP-initierad autentisering. |
 | IDP-identifierare | `idpIdentifier` | ✘ | Sträng |  | Unikt ID för att säkerställa att AEM användare och grupper är unika. Om den är tom visas `serviceProviderEntityId` används i stället. |
 | URL för konsumenttjänst för försäkran | `assertionConsumerServiceURL` | ✘ | Sträng |  | The `AssertionConsumerServiceURL` URL-attributet i AuthnRequest anger var `<Response>` meddelandet måste skickas till AEM. |
 | SP-enhets-ID | `serviceProviderEntityId` | ✔ | Sträng |  | Identifierar unikt AEM för IDP, vanligtvis AEM värdnamn. |
-| SP-kryptering | `useEncryption` | ✘ | Boolesk | `true` | Anger om IDP krypterar SAML-försäkringar. Kräver `spPrivateKeyAlias` och `keyStorePassword` som ska anges. |
+| SP-kryptering | `useEncryption` | ✘ | Boolean | `true` | Anger om IDP krypterar SAML-försäkringar. Kräver `spPrivateKeyAlias` och `keyStorePassword` som ska anges. |
 | Lösenordsalias för privat nyckel | `spPrivateKeyAlias` | ✘ | Sträng |  | Aliaset för den privata nyckeln i `authentication-service` användarens nyckelbehållare. Obligatoriskt om `useEncryption` är inställd på `true`. |
 | Lösenord för SP-nyckelarkiv | `keyStorePassword` | ✘ | Sträng |  | Lösenordet för användarens nyckellager för authentication-service. Obligatoriskt om `useEncryption` är inställd på `true`. |
 | Standardomdirigering | `defaultRedirectUrl` | ✘ | Sträng | `/` | Standardomdirigerings-URL efter lyckad autentisering. Kan vara relativ till AEM (t.ex. `/content/wknd/us/en/html`). |
 | Användar-ID-attribut | `userIDAttribute` | ✘ | Sträng | `uid` | Namnet på SAML-kontrollattributet som innehåller användar-ID:t för den AEM användaren. Lämna tomt för att använda `Subject:NameId`. |
-| Skapa AEM användare automatiskt | `createUser` | ✘ | Boolesk | `true` | Anger om AEM användare skapas vid lyckad autentisering. |
+| Skapa AEM användare automatiskt | `createUser` | ✘ | Boolean | `true` | Anger om AEM användare skapas vid lyckad autentisering. |
 | AEM användarens mellanliggande sökväg | `userIntermediatePath` | ✘ | Sträng |  | När du skapar AEM användare används det här värdet som mellanliggande sökväg (till exempel `/home/users/<userIntermediatePath>/jane@wknd.com`). Kräver `createUser` som ska anges till `true`. |
 | AEM | `synchronizeAttributes` | ✘ | Strängarray |  | Lista över SAML-attributmappningar som ska lagras på den AEM användaren i formatet `[ "saml-attribute-name=path/relative/to/user/node" ]` (t.ex. `[ "firstName=profile/givenName" ]`). Se [fullständig lista över AEM](#aem-user-attributes). |
-| Lägg till användare i AEM | `addGroupMemberships` | ✘ | Boolesk | `true` | Anger om en AEM automatiskt läggs till i AEM användargrupper efter lyckad autentisering. |
+| Lägg till användare i AEM | `addGroupMemberships` | ✘ | Boolean | `true` | Anger om en AEM automatiskt läggs till i AEM användargrupper efter lyckad autentisering. |
 | AEM | `groupMembershipAttribute` | ✘ | Sträng | `groupMembership` | Namnet på SAML-kontrollattributet som innehåller en lista AEM användargrupper som användaren ska läggas till i. Kräver `addGroupMemberships` som ska anges till `true`. |
 | AEM | `defaultGroups` | ✘ | Strängarray |  | En lista AEM användargrupper som autentiserats läggs alltid till i (till exempel `[ "wknd-user" ]`). Kräver `addGroupMemberships` som ska anges till `true`. |
 | NameIDPolicy-format | `nameIdFormat` | ✘ | Sträng | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | Värdet på formatparametern NameIDPolicy som ska skickas i AuthnRequest-meddelandet. |
-| Spara SAML-svar | `storeSAMLResponse` | ✘ | Boolesk | `false` | Anger om `samlResponse` värdet lagras på AEM `cq:User` nod. |
-| Hantera utloggning | `handleLogout` | ✘ | Boolesk | `false` | Anger om utloggningsbegäran hanteras av den här SAML-autentiseringshanteraren. Kräver `logoutUrl` som ska anges. |
+| Spara SAML-svar | `storeSAMLResponse` | ✘ | Boolean | `false` | Anger om `samlResponse` värdet lagras på AEM `cq:User` nod. |
+| Hantera utloggning | `handleLogout` | ✘ | Boolean | `false` | Anger om utloggningsbegäran hanteras av den här SAML-autentiseringshanteraren. Kräver `logoutUrl` som ska anges. |
 | Utloggnings-URL | `logoutUrl` | ✘ | Sträng |  | IDP:s URL dit SAML-utloggningsbegäran skickas. Obligatoriskt om `handleLogout` är inställd på `true`. |
 | Klocktolerans | `clockTolerance` | ✘ | Heltal | `60` | IDP och AEM (SP), klockskevningstolerans vid validering av SAML-försäkran. |
 | Sammanfattningsmetod | `digestMethod` | ✘ | Sträng | `http://www.w3.org/2001/04/xmlenc#sha256` | Den sammandragsalgoritm som IDP använder vid signering av ett SAML-meddelande. |
