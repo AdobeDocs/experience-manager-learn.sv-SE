@@ -12,10 +12,10 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 2%
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,34 @@ En introduktion till vanliga verktyg och tekniker som används för att felsöka
 
 >[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
 
+## Felsökning på klientsidan via satellitobjekt
+
+Felsökning på klientsidan är användbart för att verifiera inläsning av taggegenskapsregler eller körningsordning. När en taggegenskap läggs till på webbplatsen kan `_satellite` JavaScript-objekt finns i webbläsaren för att underlätta klientsidans händelse- och dataspårning.
+
+Aktivera felsökning på klientsidan genom att ringa `setDebug(true)` på `_satellite` -objekt.
+
+1. Öppna webbläsarkonsolen och kör kommandot nedan.
+
+   ```javascript
+       _satellite.setDebug(true);
+   ```
+
+1. Läs in AEM webbplats igen och verifiera konsolloggen _utlöst regel_ som nedan.
+
+   ![Tagga egenskap på författar- och publiceringssidor](assets/satellite-object-debugging.png)
+
+## Felsökning via Adobe Experience Platform Debugger
+
+Adobe tillhandahåller Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) och [Firefox-tillägg](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) att felsöka, förstå och få insikter i integreringen.
+
+1. Öppna Adobe Experience Platform Debugger-tillägget och öppna webbplatssidan i Publish-instansen
+
+1. I **Adobe Experience Platform Debugger > Summary > Adobe Experience Platform Tags** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
+
+   ![Information om Adobe Experience Platform Debugger and Tag Property](assets/tag-property-details.png)
+
 ## Ytterligare resurser {#additional-resources}
 
-* [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
+
++ [Satellitobjektreferens](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)

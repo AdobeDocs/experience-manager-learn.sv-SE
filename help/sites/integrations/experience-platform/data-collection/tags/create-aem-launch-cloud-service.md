@@ -12,9 +12,9 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,47 @@ ht-degree: 0%
 
 Lär dig hur du skapar en Launch Cloud Service-konfiguration i Adobe Experience Manager. Konfiguration AEM Launch Cloud Service kan sedan användas på en befintlig webbplats och taggbiblioteken kan läsas in både i Author- och Publish-miljöer.
 
->[!VIDEO](https://video.tv.adobe.com/v/38566?quality=12&learn=on)
+## Skapa molntjänsten Launch
+
+Skapa konfigurationen av molntjänsten Launch genom att följa stegen nedan.
+
+1. Från **verktyg** meny, välja **Cloud Services** och klicka **Adobe Launch Configurations**
+
+1. Välj platsens konfigurationsmapp eller välj **WKND-plats** (om du använder WKND-stödlinjeprojekt) och klicka på **Skapa**
+
+1. Från _Allmänt_ -fliken, namnge konfigurationen med **Titel** fält och markera **Adobe Launch** från _Associerad Adobe IMS-konfiguration_ listruta. Välj sedan ditt företagsnamn på menyn _Företag_ listrutan och välj en egenskap som skapats tidigare i _Egenskap_ listruta.
+
+1. Från _Mellanlagring_ och _Produktion_ behåller standardkonfigurationerna. Vi rekommenderar dock att du granskar och ändrar konfigurationerna för verkliga produktionsinställningar, särskilt _Läs in bibliotek asynkront_ växla baserat på prestanda och optimeringskrav. Observera även att _Biblioteks-URI_ värdet är annorlunda för Förproduktion och Förproduktion.
+
+1. Klicka slutligen **Skapa** för att slutföra tjänsterna i Launch-molnet.
+
+   ![Starta konfiguration av Cloud Services](assets/launch-cloud-services-config.png)
+
+## Använd molntjänsten Launch på webbplatsen
+
+Om du vill läsa in taggegenskapen och dess bibliotek på AEM webbplats används molntjänstkonfigurationen för Launch på webbplatsen. I föregående steg skapas molntjänstkonfigurationen under platsnamnmappen (WKND-plats) så att den ska tillämpas automatiskt. Vi måste verifiera den.
+
+1. Från **Navigering** meny, välja **Webbplatser** ikon.
+
+1. Markera rotsidan för AEM och klicka på **Egenskaper**. Navigera sedan till **Avancerat** tabb och under **Konfiguration** kontrollerar du att värdet för molnkonfiguration pekar på din platsspecifika `conf` mapp.
+
+   ![Använd konfigurationen för Cloud Services på platsen](assets/apply-cloud-services-config-to-site.png)
+
+## Verifiera inläsning av taggegenskap på författar- och publiceringssidor
+
+Nu är det dags att verifiera att taggegenskapen och dess bibliotek har lästs in på den AEM webbplatssidan.
+
+1. Öppna din favoritwebbplats i **Visa som publicerad** i webbläsarkonsolen ser du loggmeddelandet. Det är samma meddelande från JavaScript-kodfragmentet i taggegenskapsregeln som utlöses när _Bibliotek inläst (sidan ovanpå)_ -händelsen utlöses.
+
+1. Verifiera vid publicering genom att först publicera **Starta molntjänsten** konfigurera och öppna webbplatssidan i Publish-instansen.
+
+   ![Tagga egenskap på författar- och publiceringssidor](assets/tag-property-on-author-publish-pages.png)
+
+Grattis! Du har slutfört integreringen av taggar för AEM och datainsamling som injicerar JavaScript-kod i din AEM utan att uppdatera den AEM projektkoden.
+
+## Problem - uppdatera och publicera regel i tagg-egenskapen
+
+Använd lektioner från föregående [Skapa en taggegenskap](./create-tag-property.md) för att slutföra den enkla utmaningen, uppdatera den befintliga regeln för att lägga till ytterligare konsoluttryck och använda _Publiceringsflöde_ driftsätta den på AEM.
 
 ## Nästa steg
 

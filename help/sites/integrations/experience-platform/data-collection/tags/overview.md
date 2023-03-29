@@ -13,10 +13,10 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+source-wordcount: '336'
+ht-degree: 0%
 
 ---
 
@@ -31,21 +31,28 @@ Lär dig integrera Experience Platform _Taggar för datainsamling_ (tidigare Lau
 
 Taggar är Adobe Experience Platform nästa generation av tagghanteringsteknik. Taggar är det enklaste sättet att driftsätta Adobe Analytics, Target, Audience Manager och många andra lösningar. Få en översikt över taggar och den rekommenderade integreringen med Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/39090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
 
 
 ## Förutsättningar
 
-Följande krävs när du integrerar taggar för Experience Platform-datainsamling
+Följande krävs när du integrerar taggar för Experience Platform-datainsamling.
 
 + AEM administratörsåtkomst till AEM as a Cloud Service miljö
-+ En referenswebbplats som [WKND](https://github.com/adobe/aem-guides-wknd) distribueras till
++ En referenswebbplats som [WKND](https://github.com/adobe/aem-guides-wknd) distribueras på den.
++ Tillgång till Adobe Experience Platform datainsamlingslösning
 + Systemadministratörsåtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/)
 
 
+## Stegen på hög nivå
+
++ I Adobe Experience Platform Data Collection skapar du en taggegenskap och redigerar den till _Lägg till regel_. Sedan _Lägg till bibliotek_, markerar den nya regeln, godkänner och publicerar den.
++ Anslut AEM och taggar med befintlig (eller ny) IMS-konfiguration
++ I AEM skapar du en konfiguration för Launch-molntjänster, tillämpar den sedan på en befintlig webbplats och kontrollerar slutligen att taggegenskapen och dess bibliotek läses in på webbplatsen Publicerad eller Författare.
+
 ## Nästa steg
 
-[Skapa en taggegenskap (Launch)](create-tag-property.md)
+[Skapa en taggegenskap](create-tag-property.md)
 
 ## Ytterligare resurser {#additional-resources}
 

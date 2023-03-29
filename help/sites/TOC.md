@@ -5,7 +5,7 @@ breadcrumb-title: Självstudiekurser om AEM Sites
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 11%
@@ -101,7 +101,7 @@ ht-degree: 11%
    + Taggar för Experience Platform-datainsamling (Launch) {#experience-platform-data-collection-tags}
       + [Översikt](integrations/experience-platform/data-collection/tags/overview.md)
       + [Skapa en taggegenskap](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [Anslut AEM med taggar med hjälp av Developer Console](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [Koppla AEM och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [Cloud Servicen Skapa AEM start](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [Felsöka en taggimplementering (Launch)](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe-klientdatalager {#adobe-client-data-layer}
