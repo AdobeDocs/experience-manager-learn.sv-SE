@@ -1,6 +1,6 @@
 ---
 title: Använda Adobe-klientdatalagret med AEM kärnkomponenter
-description: Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökarupplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
+description: Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökares upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -9,16 +9,16 @@ kt: 6261
 thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Använda Adobe-klientdatalagret med AEM kärnkomponenter {#overview}
 
-Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökarupplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
+Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra data om en besökares upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data. Adobe Client Data Layer är plattformsoberoende, men är helt integrerad i de centrala komponenterna för användning med AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
@@ -28,20 +28,20 @@ Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra 
 
 ## Utforska datalagret
 
-Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att bara använda utvecklarverktygen i din webbläsare och live [WKND-referensplats](https://wknd.site/).
+Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer genom att bara använda utvecklarverktygen i din webbläsare och live [WKND-referensplats](https://wknd.site/us/en.html).
 
 >[!NOTE]
 >
 > Skärmbilder nedan tagna från webbläsaren Chrome.
 
-1. Navigera till [https://wknd.site](https://wknd.site)
+1. Navigera till [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. Öppna utvecklingsverktygen och ange följande kommando i **Konsol**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   Inspect svaret för att se det aktuella läget för datalagret på en AEM. Du bör se information om sidan och enskilda komponenter.
+   Om du vill se det aktuella läget för datalagret på en AEM plats kontrollerar du svaret. Du bör se information om sidan och enskilda komponenter.
 
    ![Adobe datalagersvar](assets/data-layer-state-response.png)
 
@@ -90,7 +90,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   Ovanstående kod kommer att granska `event` -objektet och använder `adobeDataLayer.getState` metod för att hämta det aktuella läget för objektet som utlöste händelsen. Hjälpmetoden kontrollerar sedan `filter` villkor och bara om aktuell `dataObject` uppfyller filtret kommer det att returneras.
+   Ovanstående kod kontrollerar `event` -objektet och använder `adobeDataLayer.getState` metod för att hämta det aktuella läget för objektet som utlöste händelsen. Sedan undersöker hjälpmetoden `filter` och bara om aktuell `dataObject` uppfyller filtervillkoren som returneras.
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    }
    ```
 
-   The `teaserShownHandler` ringer `getDataObjectHelper` metoden och skicka in ett filter med `wknd/components/teaser` som `@type` för att filtrera bort händelser som utlöses av andra komponenter.
+   The `teaserShownHandler` funktionen anropar `getDataObjectHelper` och skickar ett filter med `wknd/components/teaser` som `@type` för att filtrera bort händelser som utlöses av andra komponenter.
 
 1. Därefter skickar du en händelseavlyssnare till datalagret för att avlyssna `cmp:show` -händelse.
 
@@ -118,13 +118,13 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    });
    ```
 
-   The `cmp:show` -händelsen aktiveras av många olika komponenter, som när en ny bildruta visas i **Carousel** eller när en ny flik markeras i **Tabb** -komponenten.
+   The `cmp:show` -händelsen aktiveras av många olika komponenter, som när en ny bildruta visas i **Carousel** eller när en ny flik är markerad i **Tabb** -komponenten.
 
-1. På sidan växlar du karusellbildrutorna och följer konsolsatserna:
+1. På sidan växlar du på karusellbildrutorna och följer konsolsatserna:
 
    ![Växla Carousel och se händelseavlyssnare](assets/teaser-console-slides.png)
 
-1. Ta bort händelseavlyssnaren från datalagret för att sluta lyssna efter `cmp:show` händelse:
+1. Om du vill sluta lyssna efter `cmp:show` -händelse tar du bort händelseavlyssnaren från datalagret
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -162,18 +162,16 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    ![Visa data](assets/page-show-console-data.png)
 
-   The `cmp:show` -händelsen för sidan aktiveras för varje sidinläsning högst upp på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
+   The `cmp:show` -händelsen för sidan aktiveras för varje sida som läses in överst på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
 
-   Detta är en av de unika funktionerna i Adobe Client Data Layer, där du kan registrera händelseavlyssnare **före** eller **efter** datalagret har initierats. Detta är en viktig funktion för att undvika konkurrensförhållanden.
+   En av de unika funktionerna i Adobe Client Data Layer är att du kan registrera händelseavlyssnare **före** eller **efter** Om datalagret har initierats kan det hjälpa till att undvika konkurrensvillkoren.
 
-   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Som standard utlöser datalagret händelseåteranrop för händelser som inträffar i **förfluten** samt händelser i **future**. Det går att filtrera händelserna så att de bara är äldre eller framtida. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Som standard utlöser datalagret händelseåteranrop för händelser som inträffar i **förfluten** och händelser i **future**. Det går att filtrera händelser från tidigare eller framtida händelser. [Mer information finns i dokumentationen](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nästa steg
 
-Titta på följande självstudiekurs för att lära dig hur du använder det händelsestyrda Adobe-klientdatalagret för att [samla in siddata och skicka till Adobe Analytics](../analytics/collect-data-analytics.md).
-
-Eller lär dig mer om [Anpassa Adobe-klientdatalagret med AEM](./data-layer-customize.md)
+Det finns två alternativ att fortsätta lära sig: första ett, se [samla in siddata och skicka dem till Adobe Analytics](../analytics/collect-data-analytics.md) självstudiekurs som visar hur du använder datalagret Adobe Client. Det andra alternativet är att lära sig hur [Anpassa Adobe-klientdatalagret med AEM](./data-layer-customize.md)
 
 
 ## Ytterligare resurser {#additional-resources}
