@@ -3,6 +3,7 @@ title: Integrera taggar för Experience Platform-datainsamling (Launch) och AEM
 description: Taggar i Experience Platform Data Collection är nästa generations tagghanteringslösning för Adobe och det bästa sättet att driftsätta Adobe Analytics, Target, Audience Manager och många fler lösningar. Få en översikt över taggar (tidigare Launch) och den rekommenderade integrationen med Adobe Experience Manager.
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -13,7 +14,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%

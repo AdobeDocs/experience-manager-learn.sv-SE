@@ -3,6 +3,7 @@ title: Anslut AEM med taggegenskap med IMS
 description: Lär dig hur du ansluter AEM med taggegenskap med hjälp av IMS-konfigurationen i AEM. Den här installationen autentiserar AEM med Launch API och gör att AEM kan kommunicera via Launch API:er för att komma åt taggegenskaper.
 topics: integrations
 audience: administrator
+solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
 version: Cloud Service
@@ -12,7 +13,7 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
-source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
+source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
