@@ -1,5 +1,5 @@
 ---
-title: Webboptimerad leverans-&Java-handel; API:er
+title: Webboptimerad bildleverans Java&trade; API:er
 description: Lär dig hur du använder AEM as a Cloud Service webboptimerade Java&trade för bildleverans. API:er för att utveckla högpresterande webbupplevelser.
 version: Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
@@ -10,15 +10,15 @@ doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 14d89d1a3c424de044df4f6d74546788256fa383
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
 
 
-# Webboptimerade Java™-API:er
+# Webboptimerade Java™-API:er för bildleverans
 
 Lär dig använda AEM as a Cloud Service webboptimerade Java™-API:er för bildleverans för att utveckla högpresterande webbupplevelser.
 
@@ -30,34 +30,38 @@ AEM as a Cloud Service stöd [webboptimerad bildleverans](https://experienceleag
 
 I den här artikeln utforskas hur du använder Java™-API:er för webboptimerade bilder i en anpassad komponent, på ett sätt som gör att kodbaserade funktioner kan användas på både AEM as a Cloud Service och AEM SDK.
 
-## API:er
+## Java™ API:er
 
 The [AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) är en OSGi-tjänst som genererar webboptimerade URL:er för bildresurser. `AssetDelivery.getDeliveryURL(...)` tillåtna alternativ är [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 
 The `AssetDelivery` OSGi-tjänsten är bara uppfylld när den körs AEM as a Cloud Service. I AEM SDK finns referenser till `AssetDelivery` OSGi-serviceretur `null`. Det är bäst att villkorligt använda den webboptimerade URL:en när AEM körs på as a Cloud Service och använda en URL för reservbild på AEM SDK. Resursens webbåtergivning är vanligtvis ett tillräckligt reservläge.
 
 
-### OSGi Service
+### API-användning i OSGi-tjänsten
 
 Markera`AssetDelivery` som valfri referens i anpassade OSGi-tjänster så att den anpassade OSGi-tjänsten fortfarande är tillgänglig i AEM SDK.
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @Reference(cardinality = ReferenceCardinality.OPTIONAL)
 private volatile AssetDelivery assetDelivery;
 ```
 
-### Sling Model
+### API-användning i Sling Model
 
 Markera`AssetDelivery` som valfri referens i anpassade Sling-modeller så att den anpassade Sling-modellen förblir tillgänglig AEM SDK.
 
 ```java
+import com.adobe.cq.wcm.spi.AssetDelivery;
+...
 @OSGiService(injectionStrategy = InjectionStrategy.OPTIONAL)
 private AssetDelivery assetDelivery;
 ```
 
-### Använd AssetDelivery villkorligt
+### Villkorlig användning av API
 
-Returnera den webboptimerade bild-URL:en eller reservwebbadressen baserat på om `AssetDelivery` är tillgänglig. Den villkorliga användningen ger en obruten upplevelse när koden körs på AEM SDK.
+Returnera den webboptimerade bild-URL:en eller reservwebbadressen baserat på `AssetDelivery` OSGi-tjänstens tillgänglighet. Med den villkorliga användningen kan koden fungera när den körs i AEM SDK.
 
 ```java
 if (assetDelivery != null ) {
@@ -78,15 +82,19 @@ När koden körs AEM as a Cloud Service används webboptimerade bildåtergivning
 
 ![Webboptimerade bilder på AEM as a Cloud Service](./assets/web-optimized-image-delivery-java-apis/cloud-service.png)
 
+_AEM as a Cloud Service har stöd för AssetDelivery API, så den webboptimerade återgivningen används_
+
 När koden körs på AEM SDK används de mindre optimala statiska webbåtergivningarna, vilket gör att komponenten kan fungera under lokal utveckling.
 
-![Webboptimerade reservbilder på AEM as a Cloud Service](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+![Webboptimerade reservbilder på AEM SDK](./assets/web-optimized-image-delivery-java-apis/aem-sdk.png)
+
+_AEM SDK stöder inte AssetDelivery API, så den statiska standardwebbåtergivningen (PNG eller JPEG) används_
 
 Implementeringen är uppdelad i tre logiska delar:
 
 1. The `WebOptimizedImage` OSGi-tjänsten fungerar som en&quot;smart proxy&quot; för den AEM `AssetDelivery` OSGi-tjänst som kan hantera körning i både AEM as a Cloud Service och AEM SDK.
 2. The `ExampleWebOptimizedImages` Sling Model innehåller affärslogik för att samla in listan över bildresurser och webboptimerade URL:er som ska visas.
-3. The `example-web-optimized-images` AEM Component, som implementerar HTML för att visa listan över webboptimerade bilder.
+3. The `example-web-optimized-images` AEM Component (Komponent) implementerar HTML för att visa listan med webboptimerade bilder.
 
 Exempelkoden nedan kan kopieras i din kodbas och uppdateras vid behov.
 
