@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
+source-git-commit: 8ca9535866cc1a673a59ac3743847e68dfedd156
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,18 @@ ht-degree: 0%
 AEM as a Cloud Service tillhandahåller en Developer Console för varje miljö som visar olika detaljer om AEM som körs och som är till hjälp vid felsökning.
 
 Varje AEM as a Cloud Service miljö har en egen Developer Console.
+
+## Navigera till Developer Console
+
+Developer Console är tillgänglig per AEM as a Cloud Service miljö via Cloud Manager.
+
+![Navigera till Developer Console](./assets/developer-console/navigate.png)
+
+1. Navigera till __[Cloud Manager](https://my.cloudmanager.adobe.com/)__
+2. Öppna __Program__ som innehåller den AEM as a Cloud Service miljön för att öppna Developer Console.
+3. Leta reda på __Miljö__ och väljer `...`.
+4. Välj __Developer Console__ i listrutan.
+
 
 ## Åtkomst till Developer Console
 
@@ -110,7 +122,7 @@ Oak Indexes innehåller en dump av de noder som definieras under `/oak:index`. T
 
 Ta hjälp av index:
 
-+ En lista med alla indexdefinitioner för eko som ger insikter om hur sökfrågor körs i AEM. Tänk på att ändringar i AEM inte återspeglas här. Den här vyn är bara användbar för index som endast tillhandahålls av AEM, eller enbart av den anpassade koden.
++ En lista över alla indexdefinitioner för eko som ger insikter om hur sökfrågor körs i AEM. Tänk på att ändringar i AEM inte återspeglas här. Den här vyn är bara användbar för index som endast tillhandahålls av AEM, eller enbart av den anpassade koden.
 
 ### OSGi Services
 
