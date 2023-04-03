@@ -9,7 +9,7 @@ level: Intermediate
 kt: 2557
 thumbnail: 27848.jpg
 exl-id: 5a6bf1f2-1dd5-40b4-8ceb-03672a36869d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM Workflow är ett sätt att samarbeta, hantera och bearbeta innehåll i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/27848/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27848?quality=12&learn=on)
 
 >[!NOTE]
 >

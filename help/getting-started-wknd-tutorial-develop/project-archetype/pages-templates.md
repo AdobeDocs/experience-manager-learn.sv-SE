@@ -10,7 +10,7 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '3038'
 ht-degree: 0%
@@ -72,7 +72,7 @@ I den här delen av självstudiekursen skapar du en ny artikelsidmall som kan an
 
 Vanligtvis börjar planering för en ny webbplats med dummies och statisk design. [Adobe XD](https://helpx.adobe.com/support/xd.html) är ett designverktyg för att bygga upp användarupplevelser. Sedan undersöker vi ett gränssnittspaket och dummies för att planera strukturen för artikelsidmallen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
 **Ladda ned [WKND-artikeldesignfil](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**.
 
@@ -92,7 +92,7 @@ Det finns tre huvudområden: [Redigerbara mallar](https://experienceleague.adobe
 
 Skapa sedan en mall i AEM som matchar strukturen i modellerna. Detta inträffar i en lokal instans av AEM. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330991?quality=12&learn=on)
 
 Steg på hög nivå för videon ovan:
 
@@ -160,7 +160,7 @@ Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel 
 
 Den AEM projekttypen genererade ett sidhuvud och en sidfot. Uppdatera sedan Experience Fragments så att de matchar dummyerna. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
 
 Steg på hög nivå för videon ovan:
 
@@ -206,7 +206,7 @@ Steg på hög nivå för videon ovan:
 
 Skapa sedan en sida med hjälp av mallen Artikelsida. Skriv innehållet på sidan så att det matchar webbplatsens dummies. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
 
 Steg på hög nivå för videon ovan:
 

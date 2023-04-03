@@ -8,7 +8,7 @@ role: User
 level: Beginner
 kt: 6630
 exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Image-komponenten, som ingår i Experience Manager Core Components, har inbyggt stöd för Dynamic Media. Med bildkomponenten kan en innehållsförfattare använda funktioner i Dynamic Media som Bildförinställningar, Smart beskärning och Bildmodifierare på en AEM Sites-sida.
 
->[!VIDEO](https://video.tv.adobe.com/v/329331/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
 
 ## Ytterligare resurser
 

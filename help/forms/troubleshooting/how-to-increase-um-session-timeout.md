@@ -8,9 +8,9 @@ version: 6.5
 topic: Administration
 index: y
 exl-id: edb97c88-2689-4508-82a6-256b344133c0
-source-git-commit: 29eeb3331c0152c5ae9a0779f61286edd266d640
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *Den här videon går igenom processen att öka tidsgränsen för UM-sessioner.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335503?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335503?quality=12&learn=on)

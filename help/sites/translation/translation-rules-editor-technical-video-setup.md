@@ -1,22 +1,22 @@
 ---
 title: Ställ in översättningsregler i AEM
 description: Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur du skapar en ny översättningsregel för en anpassad komponent.
-feature: Språkkopia
+feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: Lokalisering
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 359da531-839c-4680-abf9-c880cc700159
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera översättningsregler {#set-up-translation-rules-in-aem}
 
@@ -24,9 +24,9 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 >[!NOTE]
 >
-> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder gränssnittet för översättningskonfiguration i AEM 6.4+ sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll att översätta](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
+> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder gränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Se [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) för mer information.
 
->[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
 Översättningsregler identifierar innehåll i AEM som ska extraheras för översättning. Översättningsreglerna som finns i kartongen omfattar vanliga användningsområden som textkomponenter och alternativ text för bildkomponenter. Beroende på ett projekts översättningskrav kan ytterligare regler behövas. I allmänhet tillåter översättningsregler användare att ange:
 
@@ -38,7 +38,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 Gå till gränssnittet för översättningskonfiguration:
 
-* **[!UICONTROL AEM Start Menu]>  [!UICONTROL Tools] >  [!UICONTROL General] >  [[!UICONTROL Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM Start Menu]> [!UICONTROL Tools] > [!UICONTROL General] > [[!UICONTROL Translation Configuration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## Före AEM 6.3 {#prior-to-aem}
 

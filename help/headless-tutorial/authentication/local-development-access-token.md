@@ -14,7 +14,7 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM as a Cloud Service behöver ett enkelt och snabbt sätt att få temporära åtkomsttoken för AEM för att underlätta lokala utvecklingsaktiviteter. För att tillgodose detta behov kan AEM Developer Console låta utvecklare generera tillfälliga åtkomsttoken som kan användas för programmässig åtkomst till AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/330477/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
 ## Generera en lokal åtkomsttoken för utveckling
 

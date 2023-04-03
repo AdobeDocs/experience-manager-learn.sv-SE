@@ -1,6 +1,6 @@
 ---
 title: AEM Headless-konfiguration för AEM as a Cloud Service
-description: Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site och en React App som förbrukar innehållet AEM Headless GraphQL API:er.
+description: Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och en React App som förbrukar innehållet AEM Headless GraphQL API:er.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -9,7 +9,7 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # AEM Headless-konfiguration för AEM as a Cloud Service
 
-Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och ett exempel på React App (SPA) som förbrukar innehållet framför Headless GraphQL API:er.
+Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och ett exempel på React App (SPA) som förbrukar innehållet i AEM Headless GraphQL API:er.
 
 ## Förutsättningar
 
@@ -36,10 +36,10 @@ Följande krävs för att följa den här snabbinstallationen:
 
 ## 1. Skapa en Cloud Manager Git-databas
 
-Skapa först en Cloud Manager Git-databas som används för att distribuera WKND-webbplatsen. WKND-platsen är ett exempel AEM ett webbplatsprojekt som innehåller innehåll (innehållsfragment) och en GraphQL-AEM som används av snabbinställningens React App.
+Skapa först en Cloud Manager Git-databas som används för att distribuera WKND-webbplatsen. WKND-webbplatsen är ett exempel AEM ett webbplatsprojekt som innehåller innehåll (innehållsfragment) och en GraphQL AEM-slutpunkt som används av snabbinställningens React App (Reagera-app).
 
 _Genomgång av steg_
->[!VIDEO](https://video.tv.adobe.com/v/339073/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
 
 1. Navigera till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
 1. Välj Cloud Manager __Program__ som innehåller den AEM as a Cloud Service miljön som ska användas för den här snabbinstallationen
@@ -55,7 +55,7 @@ _Genomgång av steg_
 När Cloud Manager Git-databasen har skapats klonar du WKND-webbplatsens källkod från GitHub och skickar den till Cloud Manager Git-databasen. Nu kan Cloud Manager komma åt och driftsätta WKND Site-projektet i den AEM as a Cloud Service miljön.
 
 _Genomgång av steg_
->[!VIDEO](https://video.tv.adobe.com/v/339074/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339074?quality=12&learn=on)
 
 1. Klona WKND-webbplatsprojektets källkod från GitHub från kommandoraden
 
@@ -87,10 +87,10 @@ _Genomgång av steg_
 
 Med WKND-webbplatsprojektet överfört till Cloud Manager Git-databasen kan det inte distribueras till AEM as a Cloud Service med hjälp av Cloud Manager-pipelines.
 
-Tänk på att WKND Site-projektet innehåller exempelinnehåll som React-appen förbrukar AEM Headless GraphQL API:er.
+Kom ihåg att WKND Site-projektet innehåller exempelinnehåll som React-appen förbrukar AEM Headless GraphQL API:er.
 
 _Genomgång av steg_
->[!VIDEO](https://video.tv.adobe.com/v/339075/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
 1. Bifoga en __Distributionsförlopp som inte är i produktion__ till den nya Git-databasen
    1. Välj __Pipelines__ i den övre navigeringen
@@ -118,10 +118,10 @@ _Genomgång av steg_
 
 ## 4. Ladda ned och kör appen WKND React
 
-När AEM as a Cloud Service har startats med innehållet från WKND Site-projektet hämtar och startar du exempelappen WKND React som använder WKND Site-innehållet i AEM Headless GraphQL API:er.
+När AEM as a Cloud Service har startat med innehållet från WKND Site-projektet hämtar och startar du exempelappen WKND React som använder WKND-webbplatsens innehåll i AEM Headless GraphQL API:er.
 
 _Genomgång av steg_
->[!VIDEO](https://video.tv.adobe.com/v/339076/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339076?quality=12&learn=on)
 
 1. Från kommandoraden klonar du React Apps källkod från GitHub.
 
@@ -155,14 +155,14 @@ _Genomgång av steg_
    $ npm start
    ```
 
-1. React-appen som körs lokalt börjar på [http://localhost:3000](http://localhost:3000) och visar en lista med äventyr, som kommer från AEM as a Cloud Service med AEM Headless&#39; GraphQL API:er.
+1. React-appen som körs lokalt börjar på [http://localhost:3000](http://localhost:3000) och visar en lista med äventyr, som kommer från AEM as a Cloud Service med AEM Headless GraphQL API:er.
 
 ## 5. Redigera innehåll i AEM
 
-Med exempelappen WKND React App som ansluter till och förbrukar innehåll från de AEM Headless GraphQL API:erna kan du skapa innehåll i AEM Author-tjänsten och se hur React Apps upplevelse uppdateras i samförstånd.
+Med exempelappen WKND React App som ansluter till och förbrukar innehåll från de AEM Headless-API:erna för GraphQL kan du skapa innehåll i AEM Author-tjänsten och se hur React Apps upplevelse uppdateras i samförstånd.
 
 _Genomgång av steg_
->[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
 
 1. Logga in på AEM as a Cloud Service Author Service
 1. Navigera till __Assets > Files > WKND Shared > English > Adventures__

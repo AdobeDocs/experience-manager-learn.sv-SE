@@ -10,7 +10,7 @@ kt: 2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som hanteras i AEM på datorn, för alla program och filformat.
 
->[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 
 + Identifiera resurser i AEM via sökning och sökning med ett dedikerat datorprogram
 + Optimerad bandbreddshantering möjliggör överföring och hämtning av många stora resurser

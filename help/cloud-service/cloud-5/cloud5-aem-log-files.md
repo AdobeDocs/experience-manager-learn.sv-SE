@@ -8,7 +8,7 @@ kt: 9927
 hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
-source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Detta är en djupdykning i hur du får åtkomst till loggar på AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
 
->[!VIDEO](https://video.tv.adobe.com/v/341156/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

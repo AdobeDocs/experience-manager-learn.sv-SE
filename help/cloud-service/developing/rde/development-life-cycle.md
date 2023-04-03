@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Lär dig mer om utvecklingscykeln/driftsättningens livscykel med RDE och hur de
 
 I videon nedan utforskas den RDE-baserade utvecklingscykeln genom driftsättningen. I videon visas viktiga underuppgifter och utvecklingsflöde för en effektiv användning av RDE.
 
->[!VIDEO](https://video.tv.adobe.com/v/3415492/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
 
 ## Fördelar med RDE
@@ -36,7 +36,7 @@ De viktigaste fördelarna med RDE för att hålla takten i utvecklingen.
 - Förbättrat samarbete
 - Ökad produktivitet
 
->[!VIDEO](https://video.tv.adobe.com/v/3415493/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## Ytterligare resurser
 

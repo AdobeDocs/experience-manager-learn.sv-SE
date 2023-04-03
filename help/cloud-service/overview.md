@@ -4,7 +4,7 @@ description: En samling självstudiekurser för Adobe Experience Manager (AEM) a
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 757749305a017d682322b2c2e024c2fbb3604fc2
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
->[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
 <div id="whats-new-section">
 
@@ -27,7 +27,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
 
 * **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *Lär dig använda AEM GraphQL-API:er för att ge kraft åt upplevelser i ett externt program.*
+   *Lär dig hur du kan använda AEM GraphQL API:er för att skapa bättre upplevelser i ett externt program.*
 
 * **[Massimport (video)](./migration/bulk-import.md)**
 

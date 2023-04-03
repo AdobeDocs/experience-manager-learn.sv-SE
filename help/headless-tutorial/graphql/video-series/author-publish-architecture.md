@@ -9,7 +9,7 @@ level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
 exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -26,6 +26,6 @@ I den här videon kommer du att:
 + Lär dig de bästa sätten för headless-leverans med en AEM-publiceringsmiljö
 + Utforska hur redigeringsmiljön kan användas som förhandsgranskning för ett program
 
->[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
 
-_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
+_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._

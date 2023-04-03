@@ -7,16 +7,16 @@ level: Intermediate
 version: 6.5
 topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: cfadacf9-ec54-433b-beaa-d38dbe003438
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '35'
 ht-degree: 0%
 
 ---
-
 
 # Så här fångar du VAR-loggar (HTTP-arkiv)
 
 *I den här videon går du igenom stegen för att hämta VR-loggar (HTTP archive).*
 
->[!VIDEO](https://video.tv.adobe.com/v/335488?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335488?quality=12&learn=on)

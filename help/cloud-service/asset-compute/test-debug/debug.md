@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -46,7 +46,7 @@ De här loggsatserna är tillgängliga för granskning på olika sätt beroende 
 
 The [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm-modulen har stöd för att bifoga en felsökare till Asset compute-arbetare, inklusive möjligheten att ange brytpunkter i VS-koden och stega igenom koden.
 
->[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40383?quality=12&learn=on)
 
 _Klicka igenom felsökningen av en Asset compute-arbetare med wskdebug (inget ljud)_
 

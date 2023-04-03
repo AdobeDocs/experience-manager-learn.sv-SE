@@ -9,7 +9,7 @@ feature: Developer Tools
 topic: Administration
 index: y
 exl-id: 6477e9df-f33f-46b1-aa9b-535063da65dd
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att lösa minnesrelaterade problem i AEM.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335473?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335473?quality=12&learn=on)

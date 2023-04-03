@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: e82c30e7f1a1fe04fd43ee639d74788f9bf100f6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 0%
@@ -175,7 +175,7 @@ AEM består främst av utveckling av Java och Front-end (JavaScript, CSS osv.) s
 
 __[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ är en kraftfull utvecklingsmiljö för Java-utveckling. IntelliJ IDEA finns i två versioner: en kostnadsfri utgåva av gemenskapen och en kommersiell (betald) version av Ultimate. Den kostnadsfria gemenskapsversionen räcker AEM utvecklingen, men Ultimate [utökar sin funktionsuppsättning](https://www.jetbrains.com/idea/download).
 
->[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 + [Ladda ned IntelliJ IDEA](https://www.jetbrains.com/idea/download)
 + [Ladda ned Repo-verktyget](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)

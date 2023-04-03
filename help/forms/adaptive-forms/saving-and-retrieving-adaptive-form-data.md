@@ -7,7 +7,7 @@ role: Developer
 type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 0%
@@ -405,11 +405,11 @@ $(document).ready(function()
 ## Skapa adaptiv formulärmall och sidkomponent {#form-template-and-page-component}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
 ### Demonstration av förmågan {#capability-demo}
 
->[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27829?quality=12&learn=on)
 
 #### Distribuera på servern {#deploy-on-your-server}
 

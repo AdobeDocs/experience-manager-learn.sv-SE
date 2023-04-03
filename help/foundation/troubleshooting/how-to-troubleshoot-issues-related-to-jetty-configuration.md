@@ -9,7 +9,7 @@ feature: Developer Tools
 topic: Administration
 index: y
 exl-id: 9025f5a7-1602-47d2-8287-42b5cfd18265
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att felsöka problem med Jetty-konfigurationen i AEM.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335470?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335470?quality=12&learn=on)

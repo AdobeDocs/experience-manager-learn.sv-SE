@@ -1,13 +1,13 @@
 ---
-title: Avancerade koncept för AEM Headless - GraphQL
-description: En komplett självstudiekurs som illustrerar avancerade koncept för Adobe Experience Manager (AEM) GraphQL API:er.
+title: Advanced Concepts of AEM Headless - GraphQL
+description: En komplett självstudiekurs som illustrerar avancerade koncept för API:er i Adobe Experience Manager (AEM) GraphQL.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: ee6f65fba8db5ae30cc14aacdefbeba39803527b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Avancerade begrepp för AEM Headless
 
-Den kompletta självstudiekursen fortsätter med [grundläggande självstudiekurs](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och beständiga AEM GraphQL-frågor, inklusive användning av beständiga GraphQL-frågor i ett klientprogram.
+Den kompletta självstudiekursen fortsätter med [grundläggande självstudiekurs](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och de AEM GraphQL beständiga frågorna, inklusive användning av GraphQL beständiga frågor i ett klientprogram.
 
 ## Förutsättningar
 
@@ -36,7 +36,7 @@ Den här självstudiekursen handlar om följande ämnen:
 
 * Skapa modeller för innehållsfragment med valideringsregler och mer avancerade datatyper som platshållare för flikar, kapslade fragmentreferenser, JSON-objekt och datatyperna Datum och tid.
 * Skapa innehållsfragment när du arbetar med kapslat innehåll och fragmentreferenser och konfigurera mappprinciper för styrning av innehållsfragmentutveckling.
-* Utforska AEM GraphQL API-funktioner med GraphQL-frågor med variabler och direktiv.
+* Utforska AEM GraphQL API-funktioner med GraphQL queries med variabler och direktiv.
 * Behåll GraphQL-frågor med parametrar i AEM och lär dig hur du använder cachekontrollparametrar med beständiga frågor.
 * Integrera begäran om beständiga frågor i exempelappen WKND GraphQL React med AEM Headless JavaScript SDK.
 
@@ -44,11 +44,11 @@ Den här självstudiekursen handlar om följande ämnen:
 
 I följande video visas en översikt på hög nivå över de koncept som beskrivs i den här självstudiekursen. Självstudiekursen innehåller definition av modeller för innehållsfragment med mer avancerade datatyper, kapsling av innehållsfragment och beständiga GraphQL-frågor i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/340035/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
 
 >[!CAUTION]
 >
->I den här videon (kl. 2:25) omnämns hur du installerar GraphiQL-frågeredigeraren via Package Manager för att utforska GraphQL-frågor. Men i nyare versioner av AEM som Cloud Service är det inbyggda **GraphiQL Explorer** tillhandahålls, vilket innebär att paketinstallation inte krävs. Se [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) för mer information.
+>I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. Men i nyare versioner av AEM som Cloud Service är det inbyggda **GraphiQL Explorer** tillhandahålls, vilket innebär att paketinstallation inte krävs. Se [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) för mer information.
 
 
 ## Projektinställningar
@@ -58,7 +58,7 @@ WKND Site-projektet har alla konfigurationer som behövs, så du kan starta sjä
 
 ### Granska befintlig konfiguration
 
-Det första steget för att starta ett nytt projekt i AEM är att skapa dess konfiguration, som en arbetsyta och för att skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+Det första steget till att starta ett nytt projekt i AEM är att skapa dess konfiguration, som en arbetsyta och att skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
 ![Navigera till Configuration Browser](assets/overview/create-configuration.png)
 

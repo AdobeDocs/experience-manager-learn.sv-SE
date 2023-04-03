@@ -8,7 +8,8 @@ kt: 10271
 thumbnail: 342358.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 0b6e16d7263bc14c1824643b77678071694bcb7e
+exl-id: e95e7530-100d-4495-abae-4c568e7978b3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 Ett snabbt exempel på hur du kan använda dispatchervalideraren i dina AEM utvecklingsarbetsflöden.
 
->[!VIDEO](https://video.tv.adobe.com/v/342358)
+>[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

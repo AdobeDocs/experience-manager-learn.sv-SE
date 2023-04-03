@@ -9,7 +9,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: 06f2ae4d-c18e-45ed-96d7-ddc6f9c8d829
-source-git-commit: d7b1ab815d9c8a0d0342f7b57d1efb08fb39a26a
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 Med anpassade smarta taggar för bilder kan smarta taggar anpassas med kundspecifika termer.
 Anpassade smarta taggar, eller förbättrade smarta taggar, kan sedan utnyttjas för att förbättra användarsökningen och hjälpa till att hitta resurserna vid rätt tidpunkt.
 
->[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22254?quality=12&learn=on)
 
 ## Konfigurera egna smarta taggar för bilder för AEM 6.x{#set-up}
 
@@ -32,7 +32,7 @@ Anpassade smarta taggar för bilder kräver [Smarta taggar för bilder som ska k
 
 Lär dig hur du konfigurerar utbildning för smarta taggar i AEM Assets med hjälp av smarta innehållstjänster och Adobe I/O. Anpassade smarta taggar för bilder
 
->[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
 
 ## Ytterligare resurser
 

@@ -10,7 +10,7 @@ topic: Administration
 role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 En kort introduktion till rensning av onlineversioner som minskar behovet av att ofta rensa online-versioner.
 
->[!VIDEO](https://video.tv.adobe.com/v/17004/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
 
 ## Stödmaterial
 

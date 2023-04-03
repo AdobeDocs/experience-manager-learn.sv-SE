@@ -10,7 +10,7 @@ kt: 9763
 thumbnail: 341025.jpeg
 last-substantial-update: 2022-10-08T00:00:00Z
 exl-id: 719d3101-2c27-4165-a9d7-97e6f637d71f
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om hur Assets Essentials&#39; Share Link gör det möjligt för användare att dela resurser med interna och externa intressenter samtidigt som risken att dela fel resurser eller information minimeras.
 
->[!VIDEO](https://video.tv.adobe.com/v/341025/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)

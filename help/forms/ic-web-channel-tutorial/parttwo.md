@@ -15,7 +15,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 11145e87-7eef-4183-ac6f-efc8d35d0670
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -26,6 +26,6 @@ ht-degree: 0%
 
 I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
 
->[!VIDEO](https://video.tv.adobe.com/v/22344/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
 Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudiekursen.

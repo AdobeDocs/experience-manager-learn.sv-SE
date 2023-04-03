@@ -1,8 +1,8 @@
 ---
 title: Skapa DataSource-konfiguration i AEM Forms
-seo-title: Skapa DataSource-konfiguration i AEM Forms
+seo-title: Creating DataSource Configuration in AEM Forms
 description: Detta är en del 2 av självstudiekursen i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
-seo-description: Detta är en del 2 av självstudiekursen i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
+seo-description: This is part 2 of multistep tutorial for creating your first interactive communications document. In this part, we will create a REST backed data source.  The following video walks thru the steps to create the data source.
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
 feature: Interactive Communication
 topics: development
@@ -16,19 +16,18 @@ kt: 5954
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1f4d88ad-ace1-4f78-be40-da80b3b4d40c
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 1%
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
-
-# Skapar DataSource-konfiguration i AEM Forms{#creating-datasource-configuration-in-aem-forms}
+# Skapa DataSource-konfiguration i AEM Forms{#creating-datasource-configuration-in-aem-forms}
 
 I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm visas stegen för att skapa datakällan.
 
->[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
 
 Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudiekursen.

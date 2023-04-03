@@ -10,7 +10,7 @@ level: Beginner
 kt: 8390
 exl-id: 068e38df-9c71-4f55-b6d6-e1486c29d0a9
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla 
 
 I följande video förklaras stegen som krävs för att bädda in ett adaptivt eller HTML5-formulär på en webbsida.
 Se [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-64/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=en) för bästa förutsättningar, bästa praxis osv.
->[!VIDEO](https://video.tv.adobe.com/v/335893?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
 Du kan hämta exempelfilerna som används i videon [härifrån](assets/embedding-af-web-page.zip)
 

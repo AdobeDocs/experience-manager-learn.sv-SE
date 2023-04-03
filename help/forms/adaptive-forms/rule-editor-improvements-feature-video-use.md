@@ -16,7 +16,7 @@ role: Developer
 level: Beginner
 exl-id: 98a35bd9-a659-41f9-a772-267730c1f579
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Regelredigeraren gör det möjligt för användare att lägga till logik i AEM Adaptiv Forms. AEM 6.3 förbättrar regelredigeraren på flera sätt, vilket gör det enklare och snabbare för både tekniska och icke-tekniska användare att lägga in intelligens.
 
->[!VIDEO](https://video.tv.adobe.com/v/19653?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
 
 **Några av förbättringarna i regelredigeraren är:**
 

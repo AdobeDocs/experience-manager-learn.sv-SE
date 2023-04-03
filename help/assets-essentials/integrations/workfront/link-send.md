@@ -10,7 +10,7 @@ kt: 8220
 thumbnail: 336255.jpeg
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: e1ec3560-2c74-47ac-ba8a-f05412b6b3e5
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur du skickar Workfront-dokument till Assets Essentials och länkar Assets Essentials-material till Workfront.
 
->[!VIDEO](https://video.tv.adobe.com/v/336255/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336255?quality=12&learn=on)

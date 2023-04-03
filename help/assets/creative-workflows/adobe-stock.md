@@ -8,7 +8,7 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/24678/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 
 I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. I den här videon får du snabbt veta hur du ställer in Adobe Stocks med AEM Assets via Adobe I/O Console.
 
->[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
 >[!NOTE]
 >

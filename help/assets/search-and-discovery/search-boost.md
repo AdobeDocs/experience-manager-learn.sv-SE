@@ -10,7 +10,7 @@ kt: 103
 thumbnail: 16766.jpg
 last-substantial-update: 2022-06-02T00:00:00Z
 exl-id: 3020f040-4d61-4cb6-ad46-e8a188335cec
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '27'
 ht-degree: 0%
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 # Sökökning
 
->[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)

@@ -13,7 +13,7 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 586d982e-0128-47a1-b945-7d99298db3fd
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 En introduktion till redigerings- och publiceringsnivåerna som en del av arkitekturen i Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/32033/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)

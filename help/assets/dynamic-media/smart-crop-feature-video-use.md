@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
 
->[!VIDEO](https://video.tv.adobe.com/v/21519/)
+>[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
 
 >[!NOTE]
 >

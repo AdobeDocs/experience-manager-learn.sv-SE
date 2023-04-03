@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2a27d8bc-ee7b-4d13-8512-8f3dc1eb8f13
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 AEM Assets kan nu skapa interaktiva videor där användarna kan dela upp en video i mindre segment eller kombinera små segment för att skapa ett stort segment, vilket gör att användarna kan koppla en uppmaning till handling.
 
->[!VIDEO](https://video.tv.adobe.com/v/16516/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16516?quality=12&learn=on)

@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 404c345b-efc3-44b9-bc38-6d911627ff5a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Alla anpassningsbara formulär bygger på en adaptiv formulärmall. Mallen defin
 Mallen som skapas här ligger till grund för vårt adaptiva formulär som utvecklas framåt.
 I följande video visas den grundläggande processen att skapa en adaptiv formulärmall
 
->[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
 Se [dokumentation för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) för mer information
 

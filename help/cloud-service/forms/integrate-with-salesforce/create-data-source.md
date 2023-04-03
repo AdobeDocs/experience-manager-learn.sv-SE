@@ -10,7 +10,7 @@ topic: Development
 kt: 7148
 thumbnail: 331755.jpg
 exl-id: c0a875bd-55b6-4f63-a58d-eecb62ae703b
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Skapa en REST-baserad datakälla med swagger-filen som skapades i det tidigare steget
 
->[!VIDEO](https://video.tv.adobe.com/v/331755/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)

@@ -1,17 +1,18 @@
 ---
 title: Steg för att felsöka problem med PDFG-konvertering för flera användare i en Windows-installation
-description: Felsök problem med PDF-generator för flera användare i Windows Setup.
+description: Felsök problem med PDF Generator för flera användare i Windows-installationen.
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'PDF Generator '
-topic: 'Utveckling   '
+feature: PDF Generator
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2fddb3a9-570c-4b50-a685-4287a1ddafe1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 2%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
 
@@ -19,5 +20,4 @@ ht-degree: 2%
 
 *I den här videon beskrivs processen att felsöka problem med PDFG-konvertering för flera användare i en Windows-installation.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335550?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)

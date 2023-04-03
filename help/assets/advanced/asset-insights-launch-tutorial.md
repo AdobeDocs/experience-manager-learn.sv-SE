@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
@@ -23,7 +23,7 @@ I denna 5-delars videoserie går vi igenom konfigurationen och konfigurationen a
 
 Översikt över tillgångsinsikter. Installera Core Components, Sample Image Component och andra innehållspaket för att göra miljön klar.
 
->[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
 ### Arkitekturdiagram {#architecture-diagram}
 
@@ -42,7 +42,7 @@ I videon används Core Components v2.2.2 som inte längre är den senaste versio
 
 Förbättringar av kärnkomponenter och användning av proxykomponent (exempelbildkomponent) för tillgångsinsikter. Redigera mallprofiler för innehållssidor för att aktivera exempelbildkomponenten för referenswebbplatsen.
 
->[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Komponenten Core Image använder ***data-asset-id*** attribut inom överordnad &
 
 Rapportsviten med datainsamling i realtid skapas för att spåra tillgångar. Konfigurationen av AEM Assets Insights konfigureras med Adobe Analytics inloggningsuppgifter.
 
->[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
 Datainsamling i realtid och rapportering av AEM tillgångar måste aktiveras för din Adobe Analytics Report Suite. Om du aktiverar AEM Asset Reporting reserveras analysvariabler för att spåra tillgångsinsikter.
@@ -80,7 +80,7 @@ För AEM Assets Insights-konfigurationen behöver du följande autentiseringsupp
 
 Lägga till Adobe Analytics Extension, skapa sidladdningsregler och integrera AEM med Launch med Adobe IMS-konto.
 
->[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 Se till att replikera alla ändringar från författarinstansen till publiceringsinstansen.
@@ -193,4 +193,4 @@ Det går också att växla DTM till felsökningsläge med följande Chrome-till�
 
 Konfigurera AEM synkroniseringsrapport för jobbschemaläggning och resursinsikter
 
->[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

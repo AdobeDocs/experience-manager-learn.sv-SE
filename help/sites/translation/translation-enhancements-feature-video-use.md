@@ -7,7 +7,7 @@ feature: Multi Site Manager, Language Copy
 role: User
 level: Beginner
 exl-id: 21633308-ffe4-4023-affe-59269504da69
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -20,7 +20,7 @@ AEM robusta översättningsramverk gör att AEM kan översättas smidigt av öve
 
 ## Översättningsförbättringar i AEM 6.5
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
 
 AEM 6.5-översättningsförbättringar:
 
@@ -34,7 +34,7 @@ AEM 6.5-översättningsförbättringar:
 
 ## Översättningsförbättringar i AEM 6.4
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
 
 Nu kan man snabbt och enkelt skapa flerspråkiga översättningsprojekt direkt från antingen Sites-administratören eller Projects-administratören, ställa in dessa projekt för att automatiskt marknadsföra starter och till och med ställa in scheman för automatisering.
 

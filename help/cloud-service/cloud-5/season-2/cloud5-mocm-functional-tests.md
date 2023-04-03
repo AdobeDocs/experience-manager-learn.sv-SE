@@ -7,7 +7,7 @@ level: Intermediate
 thumbnail: 343624.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 AEM as a Cloud Service slutför många funktionstester som standard med programmet som är inbyggt överst. Dessa tester kanske inte täcker alla tester som krävs och som du kan behöva. Anpassade funktionstester hjälper till.
 
->[!VIDEO](https://video.tv.adobe.com/v/343624)
+>[!VIDEO](https://video.tv.adobe.com/v/343624?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

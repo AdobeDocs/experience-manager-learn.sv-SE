@@ -1,8 +1,8 @@
 ---
 title: Lägga till tabell på kontosaldopanelen
-seo-title: Lägga till tabell på kontosaldopanelen
+seo-title: Adding table to account balance panel
 description: Detta är en del av 9-stegssjälvstudiekursen för att skapa ditt första interaktiva kommunikationsdokument.I det här avsnittet kommer vi att lägga till en tabell på panelen Kontosaldo.
-seo-description: Detta är en del av 9-stegssjälvstudiekursen för att skapa ditt första interaktiva kommunikationsdokument.I det här avsnittet kommer vi att lägga till en tabell på panelen Kontosaldo.
+seo-description: This is part 9 of multistep tutorial for creating your first interactive communication document.In this part, we will add a table to the Account Balance panel.
 uuid: 8f268c73-c543-418d-b65e-5beaf9660e42
 feature: Interactive Communication
 topics: development
@@ -14,16 +14,15 @@ discoiquuid: 28a9d88d-635b-47a2-8a78-54ddeabc4406
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1e43c459-8824-40e8-8f05-24b8b0646346
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 1%
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
-
-# Lägger till tabell på kontosaldopanelen{#adding-table-to-account-balance-panel}
+# Lägga till tabell på kontosaldopanelen{#adding-table-to-account-balance-panel}
 
 I den här delen ska vi lägga till en tabell på panelen Kontosaldo.
 
@@ -41,10 +40,8 @@ Möjligheten att visa tabelldata med hjälp av tabeller i Interactive Communicat
 
 **Konfigurera tabell i webbkanalsdokument - AEM Forms 6.4**
 
->[!VIDEO](https://video.tv.adobe.com/v/22360/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22360?quality=12&learn=on)
 
 Konfigurera tabell i webbkanalsdokument - AEM formulär 6.5
 
->[!VIDEO](https://video.tv.adobe.com/v/27847?quality=9&learn=on)
-
-
+>[!VIDEO](https://video.tv.adobe.com/v/27847?quality=12&learn=on)

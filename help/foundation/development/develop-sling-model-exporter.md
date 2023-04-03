@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: fc321ed1-5cf7-4bbe-adc6-c4905af7b43c
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -29,25 +29,25 @@ Apache Sling erbjuder en Jackson JSON-exportör som täcker det vanligaste falle
 
 ## Konfigurera AEM för Sling Model Exporter
 
->[!VIDEO](https://video.tv.adobe.com/v/16862/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16862?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] är en egenskap i [!DNL Apache Sling] -projekt och inte direkt bundet till AEM produktlanseringscykel. [!DNL Sling Model Exporter] är kompatibelt med AEM 6.3 och senare.
 
 ## Användningsexempel för [!DNL Sling Model Exporter]
 
->[!VIDEO](https://video.tv.adobe.com/v/16863/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16863?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] är perfekt för användning av Sling-modeller som redan innehåller affärslogik som stöder återgivningar av HTML via HTML (eller tidigare JSP) och som visar samma företagsrepresentation som JSON för användning av programmatiska webbtjänster eller JavaScript-program.
 
 ## Skapa en export av en segmenteringsmodell
 
->[!VIDEO](https://video.tv.adobe.com/v/16864/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16864?quality=12&learn=on)
 
 Aktivering [!DNL Exporter] support på en [!DNL Sling Model] är lika enkelt som att lägga till `@Exporter` anteckning till Java-klassen.
 
 ## Använda exportalternativ för delningsmodell
 
->[!VIDEO](https://video.tv.adobe.com/v/16865/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16865?quality=12&learn=on)
 
 [!DNL Sling Model Exporter] stöder överföring av exportalternativ per modell till exportörimplementeringen för att styra hur [!DNL Sling Model] exporteras till slut. De här alternativen gäller vanligtvis&quot;globalt&quot; för hur [!DNL Sling Model] exporteras, jämfört med per datapunkt, vilket kan göras via textbundna anteckningar som beskrivs nedan.
 
@@ -58,7 +58,7 @@ Aktivering [!DNL Exporter] support på en [!DNL Sling Model] är lika enkelt som
 
 ## Använder [!DNL Jackson] anteckningar
 
->[!VIDEO](https://video.tv.adobe.com/v/16866/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16866?quality=12&learn=on)
 
 Exportörernas implementeringar kan även ha stöd för anteckningar som kan användas internt på [!DNL Sling Model] -klass, som kan ge en bättre kontrollnivå för hur data exporteras.
 

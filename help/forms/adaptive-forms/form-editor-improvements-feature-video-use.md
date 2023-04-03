@@ -8,7 +8,7 @@ role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versionen för att förenkla redigeringen av adaptiva formulär och dokument. Förbättringarna minskar time to market och gör det möjligt för företagsanvändare att arbeta med formulär och dokument
 
->[!VIDEO](https://video.tv.adobe.com/v/19500/)
+>[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
 
 **Några av de stora förbättringarna för Adaptiv formulärredigerare:**
 

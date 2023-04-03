@@ -10,7 +10,7 @@ kt: 7910
 thumbnail: 336254.jpeg
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar integreringen mellan Adobe Workfront och Assets Essentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/336254/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336254?quality=12&learn=on)

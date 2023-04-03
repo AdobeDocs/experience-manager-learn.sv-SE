@@ -12,7 +12,7 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 ## Vad du ska bygga {#what-build}
 
->[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
 
 I det här kapitlet skapar du ett nytt Adobe Experience Manager-projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Ditt AEM innehåller fullständig kod, fullständigt innehåll och konfigurationer som används för en webbplatsimplementering. Det projekt som genereras i detta kapitel utgör grunden för en implementering av WKND-webbplatsen och är byggt på i framtida kapitel.
 

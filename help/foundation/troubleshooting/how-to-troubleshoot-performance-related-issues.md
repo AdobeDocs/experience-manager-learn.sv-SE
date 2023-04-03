@@ -9,7 +9,7 @@ feature: Developer Tools
 topic: Administration
 index: y
 exl-id: 6cb60f32-d366-4677-8745-9da7176b782f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att felsöka prestandarelaterade problem i AEM.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335472?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335472?quality=12&learn=on)

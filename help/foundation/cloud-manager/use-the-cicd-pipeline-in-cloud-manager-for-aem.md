@@ -12,7 +12,7 @@ level: Beginner
 exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
 last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,19 +31,19 @@ En introduktion till programmen Cloud Manager och Cloud Manager.
 >
 >I alla dessa videoklipp har tiden för att skapa, testa och distribuera videon ökat för att minska tiden. En fullständig pipeline-körning tar normalt 45 minuter eller mer (inklusive den obligatoriska 30-minuters prestandatestningen), beroende på projektstorlek, antal AEM och UAT-processer.
 
->[!VIDEO](https://video.tv.adobe.com/v/23082/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23082?quality=12&learn=on)
 
 ## Konfigurera CI/CD-pipeline
 
 I den här videon utforskas hur du konfigurerar pipeline för programmet i Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/23083/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23083?quality=12&learn=on)
 
 ## Felaktig pipeline-körning
 
 I den här videon utforskas körningen av CI/CD Pipeline med kod som inte klarar Cloud Managers nödvändiga kvalitetskontroller med hjälp av **[!DNL yellow]** databasgren.
 
->[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
 ## Slutförd pipeline-körning
 
@@ -51,7 +51,7 @@ I den här videon utforskas den lyckade körningen av CI/CD-pipeline med hjälp 
 
 Den här videon vidrör även [!UICONTROL Activity] i Cloud Manager, som gör det möjligt att komma in på nytt i aktiva körningar eller granska slutförda eller misslyckade körningar.
 
->[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
 ## Stödmaterial
 

@@ -1,23 +1,23 @@
 ---
-title: 'Steg för att samla in nödvändig information för att felsöka PDF/A-problem '
+title: Steg för att samla in nödvändig information för att felsöka problem med PDF/A
 description: Felsöka problem med konvertering och validering av Assembler
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Assembler '
-topic: 'Utveckling   '
+feature: Assembler
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2753326a-2f8c-49f8-91a4-88cc8d500f66
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '50'
+ht-degree: 0%
 
 ---
-
 
 # Steg för att felsöka PDFA-konverterings- och valideringsproblem
 
 *I den här videon går du igenom stegen för att hämta den information som krävs för att felsöka PDF/A-konverterings- och valideringsproblem i tjänsten Forms Assembler.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335518?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)

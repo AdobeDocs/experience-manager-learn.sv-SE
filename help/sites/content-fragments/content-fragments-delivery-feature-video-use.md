@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Den här videoserien innehåller leveransalternativ för Content Fragments. Info
 
 ## Använda innehållsfragment på webbsidor {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
 Innehållsfragment kan användas på AEM Sites-sidor, eller på liknande sätt, i Experience Fragments, med AEM WCM Core Components [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
@@ -44,7 +44,7 @@ Innehållsfragmentskomponenter kan formateras med AEM Style System för att visa
 
 ## Visa innehållsfragment som JSON {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
 AEM Content Services underlättar skapandet av AEM sidbaserade HTTP-slutpunkter som återger innehåll till ett normaliserat JSON-format.
 
@@ -55,7 +55,7 @@ I videon ovan används [Innehållsfragmentkomponent](https://experienceleague.ad
 
 ## Använda Assets HTTP API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
 Den första introduktionen i AEM 6.5 har utökat stöd för innehållsfragment med Assets HTTP API. Detta är ett enkelt sätt för utvecklare att utföra Create-, Read-, Update- och Delete-åtgärder (CRUD) mot innehållsfragment.
 

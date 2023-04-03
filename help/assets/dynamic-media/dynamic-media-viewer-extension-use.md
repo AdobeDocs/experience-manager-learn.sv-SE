@@ -7,23 +7,23 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 3%
 
 ---
 
-
 # Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
 För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen av Dynamic Media Viewer på din webbplats med Dynamic Media Viewer Extension.
 
->[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29308?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med din AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
 
 I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med visningsprogram från Dynamic Media (5.13), vilket ger mer detaljkontroll över händelsespårningen när ett Dynamic Media Viewer används på en Sites-sida.
 

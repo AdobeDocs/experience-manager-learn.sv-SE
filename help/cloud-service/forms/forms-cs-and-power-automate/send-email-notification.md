@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 10828
-source-git-commit: 043842912132336a4ec52b54776fab1525b09d16
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Skicka e-postmeddelanden till en formuläravsändare med Microsoft Power Automate genom att extrahera fältvärden från formulärinlämningen.
 
->[!VIDEO](https://video.tv.adobe.com/v/345957/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)

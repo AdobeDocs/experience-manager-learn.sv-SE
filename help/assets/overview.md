@@ -4,10 +4,10 @@ description: Titta på våra videor för att få AEM och hjälp.
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshanteri
 
 Lär dig vad AEM Assets är och hur det kan användas för att uppnå din organisations affärsmål.
 
->[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

@@ -1,8 +1,8 @@
 ---
 title: Lägga till text- och bildinnehåll i dokument för tryckkanaler
-seo-title: Lägga till text- och bildinnehåll i dokument för tryckkanaler
-description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de målområden som definieras i layout(xdp). '
-seo-description: 'Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de målområden som definieras i layout(xdp). '
+seo-title: Adding text and image content to print channel document
+description: Detta är en del av 7 i en flerstegskurs där du kan skapa ditt första interaktiva kommunikationsdokument. I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de målområden som definieras i layout(xdp).
+seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the target areas defined in the layout(xdp).
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
 feature: Interactive Communication
 topics: development
@@ -16,14 +16,13 @@ thumbnail: 22379.jpg
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till text- och bildinnehåll i dokument för tryckkanaler
 
@@ -37,5 +36,4 @@ Följ videon nedan om du vill lägga till innehåll i utskriftskanalsdokumentet.
 
 I videon får du hjälp med att lägga till innehåll i lämpliga målområden i dokumentet för utskriftskanalen.
 
->[!VIDEO](https://video.tv.adobe.com/v/22379t2/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22379?quality=12&learn=on)

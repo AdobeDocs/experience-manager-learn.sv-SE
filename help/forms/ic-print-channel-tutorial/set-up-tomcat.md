@@ -15,7 +15,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 I den här delen installerar vi TOMCAT och distribuerar filen sampleRest.war i TOMCAT. REST-slutpunkten som exponeras av den här WAR-filen utgör grunden för vår datakälla och formulärdatamodell.
 
->[!VIDEO](https://video.tv.adobe.com/v/37815/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 Så här ställer du in tomcat:
 
@@ -46,4 +46,4 @@ Så här ställer du in tomcat:
 Grattis!!!! Du har konfigurerat för att katt och distribuerat filen SampleRest.war.
 
 I följande video förklaras distributionen av exempelprogrammet i Tomcat
->[!VIDEO](https://video.tv.adobe.com/v/37815)
+>[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)

@@ -11,7 +11,7 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 49613808-6369-4e43-bc26-fd3041265339
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 Med AEM 6.3 Create Language Copy Wizard kan man skapa en språkkopia av överordnad språk utan att behöva skapa en rotsida.
 
->[!VIDEO](https://video.tv.adobe.com/v/17116/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17116?quality=12&learn=on)
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -15,7 +15,7 @@ level: Intermediate
 kt: 10208
 exl-id: e032070b-7332-4c2f-97ee-7e887a61aa7a
 last-substantial-update: 2022-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -30,7 +30,7 @@ I den här artikeln används MySQL-databasen för att lagra metadata för boksta
 
 I följande videofilm visas hur du använder gemener/VERSALER:
 
->[!VIDEO](https://video.tv.adobe.com/v/342129/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/342129?quality=12&learn=on)
 
 ## Krav
 

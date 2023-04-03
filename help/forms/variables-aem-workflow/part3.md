@@ -2,13 +2,14 @@
 title: Variabler i AEM [del3]
 description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 849bfe6c-6b7f-44d0-85bc-5df0287a9bca
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,4 +20,4 @@ Variabler av typen dokument används för att lagra bifogade filer i formatet Do
 
 I den här videon markeras användningen av dokumenttypsvariabeln för att lagra den genererade DoR-filen och sedan används dokumentvariabeln i e-poststeget i ett AEM arbetsflöde.
 
->[!VIDEO](https://video.tv.adobe.com/v/26452)
+>[!VIDEO](https://video.tv.adobe.com/v/26452?quality=12&learn=on)

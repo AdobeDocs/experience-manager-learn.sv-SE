@@ -7,19 +7,19 @@ level: Intermediate
 kt: 9981
 hidefromtoc: true
 thumbnail: 341277.jpeg
-source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
+exl-id: 41d78e6b-7076-4f4f-8d2c-4bf969b61024
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Hämta en inloggningstoken för integreringar
 
 En djupguide om hur du får en inloggningstoken för Cloud Service-integreringar och vissa användningsexempel.
 
->[!VIDEO](https://video.tv.adobe.com/v/341277/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

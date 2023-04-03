@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -32,10 +32,10 @@ ht-degree: 0%
 
 The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) konfiguration definierar den utlösare som initierar pipelinen, parametrar som styr produktionsdistributionen och parametrar för prestandatestning.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Körning av pipeline
 
 The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) används för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar tiden till värde.
 
->[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

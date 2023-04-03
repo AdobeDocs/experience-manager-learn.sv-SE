@@ -9,7 +9,7 @@ feature: Developer Tools
 kt: 6912
 thumbnail: 330534.jpg
 exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
@@ -27,4 +27,4 @@ ht-degree: 0%
 
 Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service
 
->[!VIDEO](https://video.tv.adobe.com/v/330534/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330534?quality=12&learn=on)

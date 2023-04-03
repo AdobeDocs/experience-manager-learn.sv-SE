@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 2ee1efe7-ba7a-42a1-baaf-8c3b9d4e69ec
 last-substantial-update: 2020-02-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I den här videon visas hur du skapar en formulärdatamodell baserad på en JDBC-datakälla, ett adaptivt formulär baserat på formulärdatamodellen och hur du använder åtgärden INSERT med hjälp av formulärdatamodellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/17736/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17736?quality=12&learn=on)
 
 >[!NOTE]
 >

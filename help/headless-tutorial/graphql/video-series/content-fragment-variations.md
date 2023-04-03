@@ -9,7 +9,7 @@ level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
 exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
@@ -24,8 +24,8 @@ I den här videon kommer du att:
 
 + Lär dig hur du skapar en variant av ett innehållsfragment
 + Lär dig hur variationer kan användas i ett verkligt scenario
-+ Granska GraphQL-syntaxen för att begära en specifik variation
++ Granska GraphQL-syntaxen för att begära en viss ändring
 
->[!VIDEO](https://video.tv.adobe.com/v/333295/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
 
-_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
+_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._

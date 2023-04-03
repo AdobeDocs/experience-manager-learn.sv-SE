@@ -10,7 +10,7 @@ kt: 7914
 thumbnail: 335746.jpeg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 18e600b6-bc4f-4045-a932-ed72d4ed3ef3
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur du överför resurser, skapar versioner och till och med redigerar resurser med Adobe Photoshop Express.
 
->[!VIDEO](https://video.tv.adobe.com/v/335746/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)

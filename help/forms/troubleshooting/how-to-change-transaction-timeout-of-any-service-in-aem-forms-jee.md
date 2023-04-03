@@ -7,16 +7,16 @@ level: Intermediate
 version: 6.5
 topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3f30b17b-2e69-4b77-97fc-3df5a273d002
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '57'
+source-wordcount: '56'
 ht-degree: 0%
 
 ---
-
 
 # Så här ändrar du tidsgränsen för en transaktion för en tjänst i AEM Forms JEE
 
 *I den här videon går du igenom stegen för att ändra tidsgränsen för en transaktion för en tjänst i AEM Forms JEE.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335495?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)

@@ -10,7 +10,7 @@ kt: 648
 thumbnail: 22140.jpg
 last-substantial-update: 2022-06-05T00:00:00Z
 exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse.
 
->[!VIDEO](https://video.tv.adobe.com/v/22140/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22140?quality=12&learn=on)

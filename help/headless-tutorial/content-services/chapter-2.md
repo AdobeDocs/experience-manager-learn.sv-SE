@@ -8,7 +8,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 1%
@@ -70,7 +70,7 @@ Om modeller för innehållsfragment är **not** aktiverad för en konfiguration 
    1. Verifiera **[!UICONTROL Cloud Configuration]** fältet är inställt på **/conf/wknd-mobile**
    1. Tryck **[!UICONTROL Save & Close]** i det övre högra hörnet om du vill behålla ändringarna
 
->[!VIDEO](https://video.tv.adobe.com/v/28336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
@@ -93,7 +93,7 @@ Med mappningen kan vi definiera innehållsfragment som används för att samla i
 1. Tryck **[!UICONTROL Create]** om du vill öppna guiden Skapa modell för innehållsfragment.
 1. Retur **[!DNL Event]** som **[!UICONTROL Model Title]** *(description is optional)* och trycka **[!UICONTROL Create]** att spara.
 
->[!VIDEO](https://video.tv.adobe.com/v/28337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## Definiera strukturen för innehållsfragmentmodellen
 
@@ -169,7 +169,7 @@ Upprepa dessa steg med indatadefinitionerna som definieras nedan för att skapa 
 * [!UICONTROL Property Name] : `venueCity`
 * [!UICONTROL Options] : `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
->[!VIDEO](https://video.tv.adobe.com/v/28335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)
 
 >[!NOTE]
 >

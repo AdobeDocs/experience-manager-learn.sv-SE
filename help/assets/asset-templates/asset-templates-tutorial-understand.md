@@ -6,7 +6,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 
 ## Skapa mallfilen InDesign {#constructing-the-indesign-template-file}
 
->[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
 1. Hämta och öppna [**InDesign-filmall**](assets/asset-templates-tutorial-video--supporting-files.zip)
 2. **Öppna märkordspanelen,** Granska namnkonventionen för taggar och observera att elementen som kan redigeras i filen InDesign redan är taggade. Kom ihåg att bara taggade element kan redigeras i AEM.
@@ -51,7 +51,7 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 
 ## Skapa och redigera en resursmall i AEM Assets {#creating-and-authoring-an-asset-template-in-aem-assets}
 
->[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
 1. **Starta InDesign Server** på hamn 8080.
 2. Se till att **AEM Author-instansen är konfigurerad att interagera med InDesign Server**(och vice versa).

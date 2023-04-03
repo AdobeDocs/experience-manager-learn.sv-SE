@@ -8,7 +8,7 @@ level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Lär dig hur verktyget Innehållsöverföring hjälper dig att migrera innehåll till AEM as a Cloud Service från AEM 6.3+.
 
->[!VIDEO](https://video.tv.adobe.com/v/336970/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
 ## Använda verktyget Innehållsöverföring
 

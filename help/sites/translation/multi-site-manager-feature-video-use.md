@@ -15,7 +15,7 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 1%
@@ -28,13 +28,13 @@ ht-degree: 1%
 
 ## Live Copy - översikt {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
 *Live Copy Overview är ett Touch-gränssnitt som används för att hantera live-kopior och deras respektive utkast. Den här funktionen, som introducerades i AEM 6.3, ersätter det klassiska gränssnittets kontrollcenter för utkast.*
 
 ## Konfigurationshanteraren för utkast - Touchgränssnitt {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
 *I AEM 6.3 introduceras ett Touch UI-gränssnitt för hantering av designkonfigurationer för användning i Multi Site Manager.*
 

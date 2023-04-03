@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM innehåller många OSGi-konsoler, där var och en ger viktiga insikter i oli
 
 ## Paket
 
->[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
 Bundles-konsolen är en katalog över OSGi-paketen och deras information, som distribueras till AEM, tillsammans med ad hoc-möjligheten att starta och stoppa dem.
 
@@ -44,7 +44,7 @@ Om du klickar i varje paket får du information som kan hjälpa dig med felsökn
 
 ## Komponenter
 
->[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
 Komponentkonsolen är en katalog över alla OSGi-komponenter som distribueras till AEM och ger all information om dem, från deras definierade OSGi-komponentlivscykel till vilka OSGi-tjänster de kan referera till
 
@@ -63,7 +63,7 @@ Viktiga aspekter som kan vara till hjälp vid felsökning:
 
 ## Sling Models
 
->[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
 
 Sling Models-konsolen finns på:
 

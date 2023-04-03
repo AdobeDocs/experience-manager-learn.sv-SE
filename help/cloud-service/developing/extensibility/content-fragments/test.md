@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM Content Fragment Console-tillägg kan testas mot alla AEM as a Cloud Service
 
 Testning av ett tillägg görs via en URL som skapats för ändamålet och som instruerar konsolen AEM innehållsfragment att läsa in tillägget.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412877/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
 
 ## URL för AEM Content Fragment Console
 

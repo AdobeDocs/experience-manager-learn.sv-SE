@@ -13,7 +13,7 @@ index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -39,7 +39,7 @@ En relaterad [flerstegskurs](https://experienceleague.adobe.com/docs/experience-
 
 ## Översikt, fördelar och överväganden för frontendpipeline
 
->[!VIDEO](https://video.tv.adobe.com/v/3409343/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409343?quality=12&learn=on)
 
 
 >[!NOTE]

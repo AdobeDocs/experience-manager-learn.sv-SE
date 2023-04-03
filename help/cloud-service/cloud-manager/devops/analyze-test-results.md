@@ -9,7 +9,7 @@ feature: Developer Tools
 kt: 6917
 thumbnail: 330540.jpg
 exl-id: 2ddd241a-0e8a-4397-8006-6f807be4fb12
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 4%
@@ -26,4 +26,4 @@ ht-degree: 4%
 
 Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service eller inte
 
->[!VIDEO](https://video.tv.adobe.com/v/330540/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)

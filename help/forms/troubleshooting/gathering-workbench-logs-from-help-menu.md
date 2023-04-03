@@ -6,18 +6,18 @@ role: Developer
 level: Beginner
 version: 6.5
 feature: Workbench
-topic: 'Utveckling '
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c0078e02-34b0-496c-9c06-b7b5fc0304f7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 2%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # Samla in Workbench-loggar från Hjälp-menyn
 
 *I den här videon går du igenom processen för att samla in Workbench-loggar från Hjälp-menyn .*
 
->[!VIDEO](https://video.tv.adobe.com/v/335501?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

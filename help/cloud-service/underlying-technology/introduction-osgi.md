@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Introduktion till [!DNL OSGi] {#introduction-osgi}
 
-En introduktion till [!DNL OSGi], en dynamisk modulär arkitektur för [!DNL Java]-program som är grunden för Adobe Experience Manager.
+En introduktion till [!DNL OSGi], en dynamisk modulär arkitektur för [!DNL Java] program som utgör grunden för Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/32031/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)

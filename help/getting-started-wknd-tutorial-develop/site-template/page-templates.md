@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Det finns tre huvudområden [Sidmallar](https://experienceleague.adobe.com/docs/
 
 Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträffar i en lokal instans av AEM. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/332915/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
 Du kan använda följande miniatyrbild för att identifiera mallen (eller överföra din egen!)
 
@@ -65,7 +65,7 @@ Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel 
 
 Webbplatsmallen genererade ett sidhuvud och en sidfot. Uppdatera sedan Experience Fragments så att de matchar dummyerna. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/332916/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
 Steg på hög nivå för videon nedan:
 
@@ -77,7 +77,7 @@ Steg på hög nivå för videon nedan:
 
 Skapa sedan en ny sida med mallen Artikelsida för tidskrift. Skriv innehållet på sidan så att det matchar webbplatsens dummies. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/332917/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
 Använd [angiven text](./assets/page-templates/la-skateparks-copy.txt) för att fylla i artikeltexten.
 

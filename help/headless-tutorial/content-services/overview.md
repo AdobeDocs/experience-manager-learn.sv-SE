@@ -1,19 +1,19 @@
 ---
 title: Komma igång med AEM utan rubriker - Innehållstjänster
 description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
-feature: Innehållsfragment, API:er
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 5aa32791-861a-48e3-913c-36028373b788
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 0%
+source-wordcount: '334'
+ht-degree: 5%
 
 ---
 
-
-# Komma igång med AEM utan rubriker - Innehållstjänster
+# Kom igång med AEM Headless - Innehållstjänster
 
 AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
 
@@ -23,7 +23,7 @@ AEM Content Services tillåter att samma innehållsavvikelser som används för 
 
 En heltäckande självstudiekurs som visar hur man bygger upp och exponerar innehåll med hjälp av AEM och som används av en intern mobilapp i ett headless CMS-scenario.
 
->[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
 I den här självstudiekursen utforskas hur AEM Content Services kan användas för att driva upplevelsen av en mobilapp som visar händelseinformation (musik, prestanda, konst osv.) som struktureras av WKND-teamet.
 
@@ -33,15 +33,15 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 * Definiera AEM Content Services-slutpunkter med hjälp av mallar och sidor för AEM Sites som visar händelsedata som JSON
 * Se hur AEM WCM Core Components kan användas för att marknadsförarna ska kunna skapa JSON-slutpunkter
 * Förbruka AEM Content Services JSON från en mobilapp
-   * Android används eftersom det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra den inbyggda appen.
+   * Android används för att det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra den inbyggda appen.
 
 ## GitHub-projekt
 
-Källkoden och innehållspaketen finns i [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
+Källkoden och innehållspaketen finns på [AEM - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
 
-Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
-## AEM GraphQL vs. AEM Content Services
+## AEM GraphQL jämfört med AEM Content Services
 
 |  | AEM GraphQL API:er | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|

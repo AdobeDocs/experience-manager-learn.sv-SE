@@ -9,7 +9,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 261135af-4d26-4b07-8ec9-6e9875a158ba
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Adobe Asset Link stärker samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Du kan komma åt innehåll som lagras i Adobe Experience Manager Assets (AEM Assets) utan att lämna de Creative Cloud-program du är mest bekant med. Lär dig hur du startar panelen Adobe Asset Link från ditt Creative Cloud-datorprogram.
 
->[!VIDEO](https://video.tv.adobe.com/v/33733/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33733?quality=12&learn=on)

@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Det här är en avancerad självstudiekurs. Innan du fortsätter med det här ka
 
 I följande video ges en kort introduktion till modeller för innehållsfragment och hur de används i den här självstudiekursen.
 
->[!VIDEO](https://video.tv.adobe.com/v/340037/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
 
 ## Skapa modeller för innehållsfragment {#create-models}
 
@@ -236,4 +236,4 @@ Grattis! Du har nu lagt till flikar, använt datatyperna date-and-time och JSON-
 Nästa kapitel i serien kommer att omfatta [skapa innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) från de modeller som du har skapat i det här kapitlet. Lär dig hur du använder de datatyper som introduceras i det här kapitlet och skapa mappprofiler för att begränsa vad Content Fragment-modeller kan skapa i en resursmapp.
 
 Det är valfritt för den här självstudiekursen, men se till att publicera allt innehåll i verkliga produktionssituationer. En recension av redigerings- och publiceringsmiljöer i AEM finns i
-[AEM Headless- och GraphQL-videoserien](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEM Headless och GraphQL videoserie](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

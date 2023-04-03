@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 AEM Dynamic Media videospelare använde Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter, och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan innehåll nu strömmas utan att förlita sig på flash.
 
->[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
 ## Snabb sökning i videospelare utan Flash {#quick-look-into-non-flash-video-player}
 
->[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
 Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds används progressiv videoleverans
 

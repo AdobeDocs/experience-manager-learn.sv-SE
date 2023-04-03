@@ -5,19 +5,19 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-feature: Utdatatjänst,Forms-tjänst
+feature: Output Service,Forms Service
 topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6ccb3053-c28e-4c23-8fc0-e188b3873c36
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
-
 
 # Så här aktiverar du Performance Logging i AEM Forms för att felsöka problem med Forms &amp; utdatatjänst
 
 *I den här videon går du igenom processen för att aktivera prestandaloggning i AEM Forms för att felsöka problem som rör Forms &amp; utdatatjänsten.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)

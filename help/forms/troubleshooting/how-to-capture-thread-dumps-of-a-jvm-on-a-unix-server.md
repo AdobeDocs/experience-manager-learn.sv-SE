@@ -7,16 +7,16 @@ level: Intermediate
 version: 6.5
 topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: cfd42f2c-71d0-4e1d-adc9-2c45ea6954d4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '55'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
-
 
 # Så här hämtar du tråddumpar för en JVM på en unix-server
 
 *I den här videon går du igenom stegen för att hämta stackdumpar för en JVM på en unix-server.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335492?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335492?quality=12&learn=on)

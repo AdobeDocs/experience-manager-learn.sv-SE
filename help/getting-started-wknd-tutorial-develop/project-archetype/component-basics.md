@@ -12,7 +12,7 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project
 >
 > Om du har slutfört det föregående kapitlet kan du återanvända projektet och hoppa över stegen för att checka ut startprojektet.
 
->[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330985?quality=12&learn=on)
 
 Öppna en ny kommandoradsterminal och utför följande åtgärder.
 
@@ -87,7 +87,7 @@ Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project
 
 Komponenter kan ses som små modulära byggstenar på en webbsida. Komponenterna måste vara konfigurerbara för att kunna återanvända dem. Detta sker via författardialogrutan. Låt oss sedan skapa en enkel komponent och kontrollera hur värden från dialogrutan bevaras i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330986?quality=12&learn=on)
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
@@ -105,7 +105,7 @@ HTML mallspråk eller **[HTL](https://experienceleague.adobe.com/docs/experience
 
 Nästa steg är att uppdatera `HelloWorld` HTML-skript om du vill visa en extra hälsning före textmeddelandet.
 
->[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 
@@ -175,7 +175,7 @@ Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ 
 
 Nu ska vi göra några uppdateringar i `HelloWorldModel` Sling Model för att tillämpa viss affärslogik på de värden som lagras i JCR innan de skrivs ut på sidan.
 
->[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330988?quality=12&learn=on)
 
 1. Öppna filen `HelloWorldModel.java`, som används med `HelloWorld` -komponenten.
 
@@ -286,7 +286,7 @@ The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-c
 
 Uppdatera sedan CSS-formaten för `HelloWorld` -komponenten.
 
->[!VIDEO](https://video.tv.adobe.com/v/340750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340750?quality=12&learn=on)
 
 Nedan visas de steg på hög nivå som utförs i videon ovan.
 

@@ -8,7 +8,7 @@ version: Cloud Service
 kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: 94a29a78edff17ec8089f7056dc118fd335ae484
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Att anpassa metadatafälten för Sidegenskaper är ett vanligt krav i alla implementeringar av Sites. I den här videon beskrivs det mest effektiva sättet att uppnå detta med funktionerna i Sling Resource Merger.
 
->[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
 I videon ovan visas hur du anpassar sidegenskaperna för [WKND-referensplats](https://github.com/adobe/aem-guides-wknd).
 

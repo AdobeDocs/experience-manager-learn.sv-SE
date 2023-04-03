@@ -2,16 +2,16 @@
 title: Variabler i AEM [del5]
 description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ecd43765-455c-4f8b-acf2-6ea34495c311
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
-
 
 # Regelredigerare i AEM
 
@@ -19,4 +19,4 @@ Komponenten Eller-Dela används för att dirigera i AEM. Före AEM 6.5 behövde 
 
 I följande video visas möjligheten att använda regelredigeraren för att utföra villkorsstyrd bearbetning i ditt AEM arbetsflöde
 
->[!VIDEO](https://video.tv.adobe.com/v/26362/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/26362?quality=12&learn=on)

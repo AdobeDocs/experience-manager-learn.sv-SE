@@ -10,7 +10,7 @@ topic: Development
 thumbnail: 331891.jpg
 kt: 7192
 exl-id: 5be2fec1-fd65-4ac8-876f-c3d754279b04
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 2%
@@ -21,4 +21,4 @@ ht-degree: 2%
 
 Introduktion till integrationen mellan Adobe Experience Manager Forms som molntjänst och Salesforce.
 
->[!VIDEO](https://video.tv.adobe.com/v/331891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331891?quality=12&learn=on)

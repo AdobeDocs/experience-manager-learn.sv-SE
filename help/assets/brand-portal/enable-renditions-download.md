@@ -8,7 +8,7 @@ feature: Brand Portal
 topic: Development
 last-substantial-update: 2022-06-19T00:00:00Z
 exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att aktivera hämtning av renderingar i Brand Portal.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335449?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335449?quality=12&learn=on)

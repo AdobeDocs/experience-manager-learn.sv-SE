@@ -9,7 +9,7 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 1%
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 Välkommen till flerdelssjälvstudiekursen för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) SPA med redigerbart AEM med AEM SPA Editor.
 
-Den här självstudiekursen bygger vidare på [WKND GraphQL-app](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder innehåll AEM innehållsfragment över AEM GraphQL-API:er, men som inte innehåller någon sammanhangsbaserad redigering av SPA.
+Den här självstudiekursen bygger vidare på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder innehåll AEM innehållsfragment över GraphQL-API:er, men som inte innehåller någon sammanhangsbaserad redigering av SPA.
 
->[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Om självstudiekursen
 

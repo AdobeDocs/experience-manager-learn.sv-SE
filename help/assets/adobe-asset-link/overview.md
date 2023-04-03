@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlig
 
 Adobe Asset Link har stöd för InDesign-direktlänkning mellan Adobe Asset Link och AEM. Med stöd för direktlänkning från InDesign kan du montera (__Montera länkad__ eller __Montera kopia__) eller dra-och-släpp digitala resurser till InDesign från AEM via panelen Adobe Asset Link. Dessutom introduceras återgivningen av *For Placement Only+ (FPO).
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >

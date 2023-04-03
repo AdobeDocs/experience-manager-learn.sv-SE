@@ -10,7 +10,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -69,4 +69,4 @@ Ange ditt mobilnummer inklusive landskoden, fyll i dina användaruppgifter och l
 
 ## Demonstration av användningsfallet
 
->[!VIDEO](https://video.tv.adobe.com/v/327122?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327122?quality=12&learn=on)

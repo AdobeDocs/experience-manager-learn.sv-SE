@@ -10,7 +10,7 @@ kt: 645
 thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 30%
@@ -21,14 +21,14 @@ ht-degree: 30%
 
 Smarta taggar för bilder i AEM Assets förbättrar sökningen i AEM Assets genom att automatiskt lägga till härledda metadatataggar i bildresurser, vilket förbättrar redigeringsupplevelsen genom att göra det enklare och snabbare att hitta rätt bild.
 
->[!VIDEO](https://video.tv.adobe.com/v/17019/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
 
 ## Konfigurera för AEM 6.x{#set-up}
 
 >[!NOTE]
 > Smarta taggar för bilder etableras automatiskt för AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/17023/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
 
 Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med Adobe I/O:
 

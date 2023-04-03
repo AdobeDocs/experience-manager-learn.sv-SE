@@ -8,7 +8,7 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-15T00:00:00Z
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Brand Portal introducerar i september 2019 främst resurshantering, som ökar in
 
 Brand Portal Assets Sourcing används för att samla in resurser från tredjepartsorgan och -team och synka dem smidigt tillbaka till Experience Manager Author för granskning och användning.
 
->[!VIDEO](https://video.tv.adobe.com/v/29365/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
 *Experience Manager Author 6.5 SP2 (6.5.2) eller senare krävs för att använda Resurser*
 
@@ -35,7 +35,7 @@ Granska [Aktivera Experience Manager författare för resurskälla](https://expe
 
 ## Brand Portal februari 2019 Funktioner och förbättringar{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 Brand Portal februari 2019-utgåvan fokuserar på förbättringar av textsökning och de vanligaste kundförfrågningarna.
 
@@ -116,7 +116,7 @@ AEM Author-instansen kan dock vara [konfigurerad](https://helpx.adobe.com/experi
 
 ## Brand Portal December 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-642}
 
->[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23707?quality=12&learn=on)
 
 ### Gäståtkomst
 
@@ -163,7 +163,7 @@ Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://
 
 Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 ### Navigeringsförbättringar
 

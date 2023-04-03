@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 1%
@@ -40,19 +40,19 @@ En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://
 
 [Cloud Manager-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) representerar uppsättningar AEM miljöer som stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
 
 ## Miljöer {#environments}
 
 [Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) består av instanser av AEM Author, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipelines (beskrivs nedan). Cloud Manager-miljöer har vanligtvis en produktionsmiljö och en scenmiljö.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
 
 ## Rapporter {#reports}
 
 [Cloud Manager-rapporter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) ge en översikt över programmets miljöer och AEM genom en uppsättning diagram som rapporterar och håller reda på olika mätvärden för varje AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
 ## CI/CD Production Pipeline {#cicd-production-pipeline}
 
@@ -66,19 +66,19 @@ En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://
 
 The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) konfiguration definierar den utlösare som initierar pipelinen och parametrar som styr produktionsdistributionen och prestandatestparametrarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Körning av pipeline
 
 The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) används för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar tiden till värde.
 
->[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
 
 ## Icke-produktionsförlopp för CI/CD {#cicd-non-production-pipeline}
 
 [Rörledningar för CI/CD, ej produktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) är uppdelade i två kategorier, Kodkvalitetsledningar och distributionsledningar. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Managers skanning av kodkvalitet. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
 
 ## Aktivitet {#activity}
 
@@ -86,4 +86,4 @@ Cloud Manager ger en samlad vy över en aktivitet i ett program, med en lista ö
 
 Cloud Manager kan även integreras per användare med [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html), som ger en heltäckande bild av händelser och intressanta åtgärder.
 
->[!VIDEO](https://video.tv.adobe.com/v/26319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

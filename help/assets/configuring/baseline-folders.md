@@ -10,7 +10,7 @@ role: User
 level: Beginner
 last-substantial-update: 2021-09-14T00:00:00Z
 exl-id: 9d11156d-1ea4-42a6-8e0d-cbc4aae4e34c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Genom att definiera basmappar i AEM Assets kan du skapa en stabil innehållsarkitektur och grund för din digitala resurshantering.
 
->[!VIDEO](https://video.tv.adobe.com/v/33496/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/33496?quality=12&learn=on)

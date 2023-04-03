@@ -13,7 +13,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9f46ce7e-9c6d-429d-9d8a-c93c274f70d7
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 Det AEM projektet innehåller all kod och alla konfigurationer för en implementering. The [!DNL AEM Project Archetype] skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt som utgångspunkt för dina egna AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/32550/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32550?quality=12&learn=on)
 
 ## Ytterligare resurser {#additional-resources}
 

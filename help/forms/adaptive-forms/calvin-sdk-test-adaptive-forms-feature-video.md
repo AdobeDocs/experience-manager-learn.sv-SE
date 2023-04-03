@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 6122859a-35eb-49d9-a146-3b304fa40413
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 AEM 6.3 Forms introducerar möjligheten att låta användare skapa testfall i AEM för Adaptiv Forms med Calvin SDK som är byggt ovanpå hobbes.js-ramverket.
 
->[!VIDEO](https://video.tv.adobe.com/v/19700/)
+>[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
 
 >[!NOTE]
 >

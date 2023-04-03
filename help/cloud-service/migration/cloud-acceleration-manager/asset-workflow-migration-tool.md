@@ -1,6 +1,6 @@
 ---
 title: Verktyg för resursarbetsflödesmigrering
-description: Lär dig hur verktyget för migrering av arbetsflöden hjälper dig att migrera dina befintliga AEM Assets-arbetsflöden till AEM som en Cloud Service.
+description: Lär dig hur verktyget för migrering av arbetsflöden hjälper dig att migrera dina befintliga AEM Assets-arbetsflöden till AEM as a Cloud Service.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -8,16 +8,16 @@ role: Architect, Developer
 level: Intermediate
 kt: 8666
 thumbnail: 336697.jpeg
-source-git-commit: 4c9d836881ad7cccd31c55fa5eddc24dff1200cd
+exl-id: aa37cc02-d58e-4f40-9b7d-de97b50d7efc
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 16%
 
 ---
 
-
 # Verktyg för resursarbetsflödesmigrering
 
-Lär dig hur verktyget för migrering av arbetsflöden hjälper dig att migrera dina befintliga AEM Assets-arbetsflöden till AEM som en Cloud Service.
+Lär dig hur verktyget för migrering av arbetsflöden hjälper dig att migrera dina befintliga AEM Assets-arbetsflöden till AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/336697/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)

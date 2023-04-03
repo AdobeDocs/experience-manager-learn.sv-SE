@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: 2b188cbe0ba968b553a20629b89edf5ed377f300
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '2574'
 ht-degree: 0%
@@ -162,7 +162,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 1. Hämta och installera [!DNL IntelliJ IDEA]: [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
 1. Installera [!DNL Repo] (kommandoradsverktyg): [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
 
->[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 * 00:00 - Importera Maven Project
 * 05:47 - Skapa och distribuera källkod med Maven
@@ -202,7 +202,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 
 ## Felsökning
 
-***Hjälp!*** Min kod fungerar inte! Precis som med all utveckling finns det tillfällen (förmodligen många) där koden inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan visas några viktiga startpunkter när du felsöker och spårar problem (men långt ifrån en fullständig lista över saker som kan gå fel):
+***Hjälp mig!*** Min kod fungerar inte! Precis som med all utveckling finns det tillfällen (förmodligen många) där koden inte fungerar som förväntat. AEM är en kraftfull plattform, men med stor kraft ... är mycket komplext. Nedan visas några viktiga startpunkter när du felsöker och spårar problem (men långt ifrån en fullständig lista över saker som kan gå fel):
 
 ### Verifiera koddistribution
 

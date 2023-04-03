@@ -10,7 +10,7 @@ level: Beginner
 kt: 7985
 thumbnail: 333477.jpg
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
 
->[!VIDEO](https://video.tv.adobe.com/v/333477/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI Kit](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM webbplatsmall](https://github.com/adobe/aem-site-template-basic)

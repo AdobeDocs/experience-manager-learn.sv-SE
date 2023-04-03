@@ -1,27 +1,27 @@
 ---
 title: Konfigurera en lokal AEM utvecklingsmiljö
-description: Lär dig hur du hämtar och konfigurerar en lokal utvecklingsmiljö med AEM som Cloud Service-SDK.
+description: Lär dig hur du hämtar och konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK.
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Utveckling
-feature: Utvecklarverktyg
+topic: Development
+feature: Developer Tools
 kt: 6933
 thumbnail: 330558.jpg
-source-git-commit: f707c8e7cce413ecdcfb5d406fd1b38f26d965c4
+exl-id: 73fe8fb8-ff8a-4070-bc0c-384387d0a25e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '88'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera lokal utvecklingsmiljö
 
-Lär dig hur du hämtar och konfigurerar en lokal utvecklingsmiljö med AEM som Cloud Service-SDK.
+Lär dig hur du hämtar och konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK.
 
->[!VIDEO](https://video.tv.adobe.com/v/330558/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330558?quality=12&learn=on)
 
-_Det  `license.properties` som visas i den här videon behövs inte längre för att köra AEM SDK._
+_The `license.properties` som visas i den här videon behövs inte längre för att köra AEM SDK._
 
-Granska dessa instruktioner för att [konfigurera en fullständig lokal utvecklingsmiljö med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+Läs instruktionerna på [konfigurera en fullständig lokal utvecklingsmiljö med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).

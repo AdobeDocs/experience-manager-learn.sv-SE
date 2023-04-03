@@ -7,7 +7,7 @@ role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%
@@ -20,13 +20,13 @@ En introduktion till Assset Share Commons användar- och redigeringsupplevelser.
 
 ## Användarupplevelse
 
->[!VIDEO](https://video.tv.adobe.com/v/20497/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20497?quality=12&learn=on)
 
 I videon visas en förkortad genomgång av användarupplevelsen för Assets Share Commons. Granskningen rör funktionerna på sidan Sök, sidan Tillgångsinformation samt flera åtgärder som Hämta, Dela och Lägg till i kundvagnen.
 
 ## Redigeringsupplevelser
 
->[!VIDEO](https://video.tv.adobe.com/v/20498/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20498?quality=12&learn=on)
 
 I den här videon finns en förkortad översikt över de grundläggande funktionerna för att skapa komponenter i Assets Share Commons, som ger en uppfattning om nivån på författarmöjligheten.
 

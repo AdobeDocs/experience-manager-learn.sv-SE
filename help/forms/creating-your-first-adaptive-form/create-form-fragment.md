@@ -1,34 +1,29 @@
 ---
 title: Skapa formulärfragment
 description: AEM är en praktisk funktion för att skapa formulärsegment som en panel eller en grupp fält endast en gång och återanvända dem i anpassade formulär.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 kt: 5862
 thumbnail: 37325.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 86a67f43-882f-4e97-b528-17492689fcfc
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 14%
+source-wordcount: '105'
+ht-degree: 0%
 
 ---
 
-
 # Skapa formulärfragment
 
-Ett fragment är en återanvändbar del av ett formulär. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text. Att använda fragment underlättar och påskyndar processen att skapa och underhålla stora mängder formulär.
+Ett fragment är en återanvändbar del av ett formulär. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text. Med fragment blir det enklare och snabbare att skapa och underhålla stora mängder formulär.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/37325/quality=9)
-
-
-
-Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
-
-Vid behov kan du hämta [Spouse-details-fragment ](assets/spouse-details-fragment.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+>[!VIDEO](https://video.tv.adobe.com/v/37325?quality=12&learn=on)
 
 
 
+Se [dokumentation för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) för mer information
 
-
+Vid behov kan du ladda ned [Maka-details-fragment ](assets/spouse-details-fragment.zip) och importera till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)

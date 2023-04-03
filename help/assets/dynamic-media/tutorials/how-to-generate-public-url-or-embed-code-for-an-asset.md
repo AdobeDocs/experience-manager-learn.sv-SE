@@ -7,7 +7,7 @@ version: Cloud Service
 topic: Development
 index: y
 exl-id: 2b526f92-17b4-4a69-9c1c-d8ca42334433
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 I den här videon går du igenom stegen för att generera en offentlig URL eller bädda in kod för en resurs.
 
->[!VIDEO](https://video.tv.adobe.com/v/335364?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335364?quality=12&learn=on)

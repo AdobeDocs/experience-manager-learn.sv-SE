@@ -9,7 +9,7 @@ kt: 6920
 thumbnail: 330543.jpg
 last-substantial-update: 2022-01-01T00:00:00Z
 exl-id: 32390a8d-8257-44b7-9009-bfa5e518a1e0
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Se historiken över AEM och skillnaderna mellan AEM, Adobes hanterade tjänster AEM och AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/330543/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330543?quality=12&learn=on)

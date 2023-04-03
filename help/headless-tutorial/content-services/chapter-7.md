@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -37,13 +37,13 @@ Android används som självstudiekurs eftersom det går att köra en Android-emu
 
 ## Demonstration av mobilappar
 
->[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28345?quality=12&learn=on)
 
 ### Konfigurera mobilappen för icke-lokal värdanvändning
 
 Om AEM Publish inte körs **http://localhost:4503** värden och port kan uppdateras i mobilappens [!DNL Settings] för att peka på egenskapen AEM Publish host/port.
 
->[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## Kör mobilappen lokalt
 
@@ -75,7 +75,7 @@ Om AEM Publish inte körs **http://localhost:4503** värden och port kan uppdate
    * Klicka och håll ned musknappen och dra om du vill bläddra i den virtuella enheten.
    * Uppdatera innehållet från AEM genom att dra nedåt från överkanten tills ikonen Uppdatera visas och sedan släppa.
 
->[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28341?quality=12&learn=on)
 
 ## Koden för mobilappar
 

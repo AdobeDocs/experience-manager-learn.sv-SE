@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -38,13 +38,13 @@ Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM.
 
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
 AEM Content Fragments Models, the data schemas of Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfiguration.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
 AEM konfigurationer tillämpas på AEM Assets mapphierarkier så att deras Content Fragment Models kan skapas som Content Fragments. Content Fragments har stöd för en omfattande formulärbaserad redigeringsfunktion som gör att innehållet kan modelleras som en samling element.
 
@@ -55,7 +55,7 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 
 ## Hämta innehållsfragment {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
 AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som innehåller Varianter, Elements och Metadata.
 
@@ -64,7 +64,7 @@ AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som inneh�
 
 ## Redigeringsfunktioner för innehållsfragment {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
 >[!NOTE]
 >

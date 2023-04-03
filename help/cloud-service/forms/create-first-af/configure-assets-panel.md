@@ -11,7 +11,7 @@ topic: Development
 kt: 7380
 thumbnail: 22200.jpg
 exl-id: fac57513-c5e4-4497-bcb6-9ed3094baa5b
-source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '26'
 ht-degree: 0%
@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Samla in den sökandes resurser med en repeterbar panel med dragspelslayout.
 
->[!VIDEO](https://video.tv.adobe.com/v/336473?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)

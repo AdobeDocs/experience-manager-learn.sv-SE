@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -25,37 +25,37 @@ Via loggarna för AEM SDK kan AEM SDK:s lokala snabbstartsverktyg eller Dispatch
 
 ## AEM
 
->[!VIDEO](https://video.tv.adobe.com/v/34334/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
-Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM. Adobe rekommenderar att du behåller lokal utveckling och AEM som en Cloud Service Dev-loggningskonfigurationer så lika som möjligt, eftersom det normaliserar loggsynligheten på AEM SDK:s lokala snabbstart och AEM som en Cloud Services Dev-miljöer, vilket minskar behovet av att ändra konfigurationen och omdistribuera den.
+Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM. Adobe rekommenderar att konfigurationerna för lokal utveckling och AEM as a Cloud Service Dev-loggning är så lika som möjligt, eftersom det normaliserar loggsynligheten i AEM SDK:s lokala snabbstart och AEM as a Cloud Service Dev-miljöer, vilket minskar behovet av konfigurationssvängningar och omdistribution.
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
+The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
 som loggar till `error.log`.
 
-Om standardloggningen inte är tillräcklig för lokal utveckling kan ad hoc-loggning konfigureras via AEM SDK:s lokala snabbstartswebbkonsol, på ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)), men det rekommenderas inte att ad hoc-ändringar sparas i Git om inte samma loggkonfigurationer behövs i AEM som en Cloud Service Dev-miljö. Tänk på att ändringar via loggsupportkonsolen sparas direkt i AEM SDK:s lokala snabbstartdatabas.
+Om standardloggningen inte är tillräcklig för lokal utveckling kan ad hoc-loggning konfigureras via AEM SDK:s lokala snabbstartswebbkonsol, på ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)), men det rekommenderas inte att ad hoc-ändringar sparas i Git om inte samma loggkonfigurationer behövs i AEM as a Cloud Service Dev-miljöer. Tänk på att ändringar via loggsupportkonsolen sparas direkt i AEM SDK:s lokala snabbstartdatabas.
 
-Java-loggsatser kan visas i filen `error.log`:
+Java-loggsatser kan visas i `error.log` fil:
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-Det är ofta användbart att &quot;svansen&quot; av `error.log` som direktuppspelar utdata till terminalen.
+Det är ofta praktiskt att &quot;svansa&quot; `error.log` som direktuppspelar utdata till terminalen.
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windows kräver [program från tredje part](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) eller [PowerShell-kommandot Get-Content](https://stackoverflow.com/a/46444596/133936).
++ Windows kräver [Slutapplikationer från tredje part](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) eller användning av [Kommandot Get-Content i PowerShell](https://stackoverflow.com/a/46444596/133936).
 
 ## Dispatcher-loggar
 
-Sändningsloggar skrivs ut till timeout när `bin/docker_run` anropas, men loggarna kan nås direkt från Docker.
+Sändningsloggar skrivs ut för att stoppas när `bin/docker_run` anropas, men loggarna kan ha direkt åtkomst till dem i Docker-behållaren.
 
 ### Åtkomst till loggar i Docker-behållaren{#dispatcher-tools-access-logs}
 
-Sändningsloggar kan användas direkt i Docker-behållaren på `/etc/httpd/logs`.
+Dispatcher-loggar kan nås direkt i Docker-behållaren på `/etc/httpd/logs`.
 
 ```shell
 $ docker ps
@@ -75,12 +75,12 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-_Inmatningen  `<CONTAINER ID>` i  `docker exec -it <CONTAINER ID> /bin/sh` måste ersättas med det Docker CONTAINER ID som anges från  `docker ps` kommandot._
+_The `<CONTAINER ID>` in `docker exec -it <CONTAINER ID> /bin/sh` måste ersättas med det Docker CONTAINER ID som anges i `docker ps` -kommando._
 
 
 ### Kopiera Docker-loggarna till det lokala filsystemet{#dispatcher-tools-copy-logs}
 
-Sändningsloggar kan kopieras ut från Docker-behållaren på `/etc/httpd/logs` till det lokala filsystemet för kontroll med ditt favoritlogganalysverktyg. Observera att detta är en kopia som skickas vid en viss tidpunkt och inte innehåller realtidsuppdateringar av loggarna.
+Sändningsloggar kan kopieras ut från Docker-behållaren på `/etc/httpd/logs` till det lokala filsystemet för kontroll med det logganalysverktyg du föredrar. Observera att detta är en kopia som skickas vid en viss tidpunkt och inte innehåller realtidsuppdateringar av loggarna.
 
 ```shell
 $ docker ps
@@ -95,4 +95,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
-_Inmatningen  `<CONTAINER_ID>` i  `docker cp <CONTAINER_ID>:/var/log/apache2 ./` måste ersättas med det Docker CONTAINER ID som anges från  `docker ps` kommandot._
+_The `<CONTAINER_ID>` in `docker cp <CONTAINER_ID>:/var/log/apache2 ./` måste ersättas med det Docker CONTAINER ID som anges i `docker ps` -kommando._

@@ -10,10 +10,10 @@ kt: 9113
 thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 2%
 
 Lär dig hur du skapar och använder tjänstanvändare i din AEM kod för att ge kontrollerad, programmatisk åtkomst till AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/337530/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 
 ## Resurser
 
 + [Dokumentation om initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)
 + [Autentiseringsdokumentation för Sling-tjänsten](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
-## Kod
+## Code
 
 ### ContentStatisticsImpl.java
 

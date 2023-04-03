@@ -8,7 +8,7 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 839152aa67ba7ab2929f2c8093bfdc873761a645
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -21,7 +21,7 @@ asset compute-projekt är Node.js-projekt som genereras med Adobe I/O CLI och so
 
 ## Generera ett projekt
 
->[!VIDEO](https://video.tv.adobe.com/v/40197/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40197?quality=12&learn=on)
 
 _Klicka igenom för att generera ett Asset compute-projekt (inget ljud)_
 

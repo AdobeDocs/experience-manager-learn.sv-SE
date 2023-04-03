@@ -10,7 +10,7 @@ thumbnail: 340333.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du använder AEM taggar på resurser via Workfront-data, konfigurerar och använder projektlänkade mappar och Workfront-data för att AEM metadatamappsscheman.
 
->[!VIDEO](https://video.tv.adobe.com/v/340333/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
 _Del tre av en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
 

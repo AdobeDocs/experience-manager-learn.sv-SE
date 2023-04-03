@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -36,7 +36,7 @@ I det här kapitlet går vi igenom utveckling, driftsättning och leverans av fr
 >
 >I den här videon förklaras och demonstreras frontend-flödet för båda **Skapa i hög och snabb takt** projekt för att få en överblick över den subtila skillnaden i frontend-resurser för att bygga, driftsätta och leverera.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409344/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## Förutsättningar {#prerequisites}
 

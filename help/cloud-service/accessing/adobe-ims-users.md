@@ -9,10 +9,10 @@ level: Beginner
 kt: 4997
 thumbnail: 39149.jpg
 exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 6%
 
 Användare som behöver åtkomst till AEM Author-tjänsten hanteras som [Adobe IMS-användare](https://helpx.adobe.com/enterprise/using/set-up-identity.html) in [Adobe Admin Console](https://adminconsole.adobe.com). Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
 
->[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
 
 ## Ytterligare resurser
 

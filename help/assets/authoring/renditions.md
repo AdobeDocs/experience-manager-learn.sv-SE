@@ -10,7 +10,7 @@ thumbnail: 32047.jpg
 topic: Content Management
 last-substantial-update: 2021-09-26T00:00:00Z
 exl-id: 1df0ffd7-fe22-4eef-9428-b228ed0dcf31
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '26'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig mer om renderingar i AEM Assets och hur de kan förhandsgranskas.
 
->[!VIDEO](https://video.tv.adobe.com/v/32047/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)

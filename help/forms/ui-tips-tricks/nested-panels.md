@@ -10,7 +10,7 @@ level: Beginner
 kt: 9335
 exl-id: c60d019e-da26-4f67-8579-ef707e2348bb
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Standardbeteendet för det här formuläret är att visa alla paneler till väns
 
 Om du vill ändra det här standardbeteendet måste du göra följande
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
 
 
 Lägg till följande kod i click-händelsen för **Nästa** med kodredigeraren
@@ -56,7 +56,7 @@ Koden ovan hjälper dig att navigera mellan flikarna och de underordnade paneler
 
 Använd formatredigeraren för att dölja titeln på flikarnas underordnade paneler.
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
 
 >[!NOTE]
 >

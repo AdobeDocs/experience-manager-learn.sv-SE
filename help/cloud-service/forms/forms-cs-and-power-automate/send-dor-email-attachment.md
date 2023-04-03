@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11019
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Extrahera DoR och skicka som e-postbilaga i ett automatiserat arbetsflöde.
 I följande video förklaras stegen som krävs för att extrahera DoR från skickade data
->[!VIDEO](https://video.tv.adobe.com/v/346731/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346731?quality=12&learn=on)

@@ -1,22 +1,23 @@
 ---
-title: Hur man gör ett webbtjänstanrop från HTML5-formulär
+title: Hur man gör ett webbtjänstanrop från HTML5-formuläret
 description: steg för att konfigurera webbtjänsten från HTML5-formuläret
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
 feature: Mobile Forms
-topic: 'Utveckling  '
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 28fa5597-bab5-4fb9-8d30-e9fd41820749
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 2%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
-# Hur man gör ett webbtjänstanrop från HTML5-formulär
+# Hur man gör ett webbtjänstanrop från HTML5-formuläret
 
-*I den här videon går du igenom processen för att göra webbtjänstanrop från HTML5-formulär.*
+*Den här videon går igenom processen för att ringa webbtjänstanrop från HTML5-formuläret.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335505?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

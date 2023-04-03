@@ -11,7 +11,7 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Med komponentikoner kan man snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
 
->[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
 
 Komponentwebbläsaren visas nu i ett konsekvent grått tema och med följande:
 

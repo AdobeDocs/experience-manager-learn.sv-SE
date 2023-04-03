@@ -14,7 +14,7 @@ role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -41,8 +41,8 @@ Exempelformuläret som används i det här arbetsflödet är baserat på en anpa
 * Det adaptiva exempelformuläret placeras i en mapp som heter [Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 I följande video förklaras hur du konfigurerar ett adaptivt formulär för att aktivera ett AEM arbetsflöde
->[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
 
 I följande video visas arbetsflödets nyttolast och annan information i crx-databasen
 
->[!VIDEO](https://video.tv.adobe.com/v/40259/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)

@@ -1,23 +1,23 @@
 ---
 title: Steg för att aktivera strängspårning (Unix-konfiguration)
-description: 'Konfigurera strängloggar för felsökning av PDF Generator-problem '
+description: Konfigurera strängloggar för felsökning av problem med PDF Generator
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
 feature: PDF Generator
-topic: 'Administration  '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e7a3f63e-549a-493c-a8f1-cb0bca2c07e0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
-
 
 # Steg för att aktivera strängspårning i Unix-inställningar
 
 *I den här videon går du igenom stegen för att aktivera spårningsfunktionen i Unix-inställningarna för AEM Forms PDFG.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335525?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)

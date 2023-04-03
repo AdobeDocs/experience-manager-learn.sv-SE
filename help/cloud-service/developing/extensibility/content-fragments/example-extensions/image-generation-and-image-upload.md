@@ -10,7 +10,7 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Det funktionella flödet för exempeltillägget är följande:
 
 I den här videon visas exempel på bildgenerering med tillägget OpenAI eller DALL.E 2, hur det fungerar och hur det utvecklas. Videon har kapitelmarkeringar som __Funktionell demo, installation och Tech-Code__ för att snabbt se på vad det rör sig om.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
 
 ## App Builder-tilläggsappen

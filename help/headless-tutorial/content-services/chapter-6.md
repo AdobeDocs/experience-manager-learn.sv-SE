@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b33d1509-531d-40c3-9b26-1d18c8d86a97
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 1%
@@ -55,7 +55,7 @@ Eftersom AEM Content Services byggs från Configuration (Content Fragment Models
    1. Välj **[!DNL Events]** page
    1. Tryck **[!DNL Publish]** i det övre åtgärdsfältet
 
->[!VIDEO](https://video.tv.adobe.com/v/28343/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28343?quality=12&learn=on)
 
 ## Verifiera AEM-publicering
 

@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
@@ -29,4 +29,4 @@ ht-degree: 0%
 
 [Rörledningar för CI/CD, ej produktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#non-production-%26-code-quality-only-pipelines) är uppdelade i två kategorier, Kodkvalitetsledningar och distributionsledningar. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Managers skanning av kodkvalitet. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)

@@ -1,41 +1,41 @@
 ---
 title: Använda funktioner och kodredigerare
 description: Använda funktioner och kodredigerare för att skapa affärsregler
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4270
 thumbnail: 22282.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
-
 
 # Använda anpassade funktioner och kodredigerare {#using-functions-and-code-editor}
 
 I den här delen använder vi anpassade funktioner och kodredigeraren för att skapa affärsregler.
 
-du har redan installerat [ClientLib med den anpassade funktionen](assets/client-libs-and-logo.zip) tidigare i den här självstudien.
+du redan har installerat [ClientLib med anpassad funktion](assets/client-libs-and-logo.zip) tidigare i den här självstudiekursen.
 
 Ett klientbibliotek består vanligtvis av CSS- och JavaScript-filer. Det här klientbiblioteket innehåller javascript-filen som visar en funktion för att fylla i värden i listrutor.
 
 
 ## Funktion för att fylla i nedrullningsbar lista {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
 ### Ange panelens sammanfattningsrubrik {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
 #### Validera panel {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
 Följande kod används för att validera panelfält
 

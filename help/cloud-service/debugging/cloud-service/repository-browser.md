@@ -12,19 +12,19 @@ thumbnail: 341464.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+exl-id: 88af40fc-deff-4b92-84b1-88df2dbdd90b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
 # Felsöka AEM as a Cloud Service med Databasläsaren
 
 Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service miljö. Databasläsaren har stöd för en skrivskyddad vy över resurser och egenskaper för AEM på produktions-, scen- och utvecklingsstadiet samt författar-, publicerings- och förhandsgranskningstjänster.
 
->[!VIDEO](https://video.tv.adobe.com/v/341464/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
 Databasläsaren är __ENDAST__ tillgängliga i AEM as a Cloud Service miljöer (användning [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) för att felsöka den lokala AEM SDK).
 
@@ -48,4 +48,3 @@ Databasläsaren öppnas för den valda tjänstnivån (Författare, Publicera ell
 ## Åtkomst till publicera och förhandsgranska
 
 Som standard är åtkomsten till Publicera eller Förhandsgranska begränsad, vilket minskar antalet tillgängliga resurser i Databasläsaren. [Om du vill visa alla resurser för Publicera (eller Förhandsgranska) lägger du till användare i en administratörsroll för Publicera (eller Förhandsgranska).](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
-

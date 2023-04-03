@@ -1,6 +1,6 @@
 ---
 title: Använda RTF med AEM Headless
-description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av AEM GraphQL API:er som JSON som ska användas av headless-program.
+description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av GraphQL API:er som JSON som kan användas av headless-program.
 version: Cloud Service
 doc-type: article
 kt: 9985
@@ -8,7 +8,7 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1464'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Flerradigt textfält är en datatyp i Content Fragments som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, till exempel bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. Textfältet En rad är en annan datatyp för innehållsfragment som ska användas för enkla textelement.
 
-AEM GraphQL API har en robust funktion för att returnera RTF som HTML, ren text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
+AEM GraphQL API har en robust funktion för att returnera RTF som HTML, oformaterad text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
 
 ## Flerradsredigerare
 
->[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
 I Content Fragment Editor har menyraden för flerradiga textfält försetts med formateringsfunktioner som **fet**, *kursiv* och understrykning. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
@@ -47,7 +47,7 @@ The **Återge som** kan anges till:
 
 The **Standardtyp** kan anges till:
 
-* RTF-text
+* RTF
 * Markdown
 * Oformaterad text
 
@@ -63,7 +63,7 @@ När du skapar en GraphQL-fråga kan utvecklare välja olika svarstyper från `h
 
 Utvecklare kan använda [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) i Content Fragment-redigeraren för att visa alla värden för det aktuella innehållsfragmentet som kan returneras med GraphQL API.
 
-## Beständig GraphQL-fråga
+## GraphQL beständig fråga
 
 Markera `json` svarsformatet för flerradsfältet ger den flexibilitet som krävs när du arbetar med RTF-innehåll. RTF-innehållet levereras som en array med JSON-nodtyper som kan bearbetas unikt baserat på klientplattformen.
 
@@ -85,7 +85,7 @@ query ($path: String!) {
 
 The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd/en/magazine/sample-article`).
 
-**GraphQL-svar:**
+**GraphQL svar:**
 
 ```json
 {
@@ -131,7 +131,7 @@ Nedan visas flera exempel på svarstyper för ett flerradigt fält med namnet `m
 
 +++HTML, exempel
 
-**Persisterad GraphQL-fråga:**
+**GraphQL beständiga fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -147,7 +147,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL-svar:**
+**GraphQL svar:**
 
 ```json
 {
@@ -168,7 +168,7 @@ query ($path: String!) {
 
 +++Exempel på markering
 
-**Persisterad GraphQL-fråga:**
+**GraphQL beständiga fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -184,7 +184,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL-svar:**
+**GraphQL svar:**
 
 ```json
 {
@@ -205,7 +205,7 @@ query ($path: String!) {
 
 +++Exempel på oformaterad text
 
-**Persisterad GraphQL-fråga:**
+**GraphQL beständiga fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -221,7 +221,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL-svar:**
+**GraphQL svar:**
 
 ```json
 {
@@ -334,7 +334,7 @@ The `nodeMap` är en JavaScript-objektlitteral som används som en karta. Var oc
 Ett återanvändbart RTF-återgivningsverktyg finns i [WKND GraphQL React-exempel](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 * [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js) - återanvändbart verktyg som visar en funktion `mapJsonRichText`. Det här verktyget kan användas av komponenter som vill återge ett JSON-svar med RTF-text som React JSX.
-* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - Exempelkomponent som gör en GraphQL-begäran som innehåller RTF-text. Komponenten använder `mapJsonRichText` för att återge den formaterade texten och eventuella referenser.
+* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - Exempelkomponent som gör en GraphQL-förfrågan som innehåller RTF-text. Komponenten använder `mapJsonRichText` för att återge den formaterade texten och eventuella referenser.
 
 
 ## Lägga till textbundna referenser i formaterad text {#insert-fragment-references}
@@ -351,7 +351,7 @@ Referenser till andra innehållsfragment kan också länkas eller infogas i fler
 
 Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide till LA Skate Parks, som infogas i fältet med flera rader. De typer av innehållsfragment som kan infogas i fält styrs av **Tillåtna modeller för innehållsfragment** i [datatyp med flera rader](#multi-line-data-type) i Content Fragment Model.
 
-## Fråga efter textbundna referenser med GraphQL
+## Fråga textbundna referenser med GraphQL
 
 Med GraphQL API kan utvecklare skapa en fråga som innehåller ytterligare egenskaper om referenser som infogats i ett flerradsfält. JSON-svaret innehåller ett separat `_references` objekt som listar de här extra egenskaperna. JSON-svaret ger utvecklarna full kontroll över hur referenserna eller länkarna ska återges i stället för att de ska behöva hantera åskådliggjorda HTML.
 
@@ -361,9 +361,9 @@ Du kanske vill:
 * Rendera en textbunden bild med den absoluta sökvägen till en AEM-publiceringsmiljö som `src` värde.
 * Bestäm hur en inbäddad referens ska återges till ett annat innehållsfragment med ytterligare anpassade egenskaper.
 
-Använd `json` returtyp och inkludera `_references` objekt när en GraphQL-fråga skapas:
+Använd `json` returtyp och inkludera `_references` -objekt när en GraphQL-fråga skapas:
 
-**Persisterad GraphQL-fråga:**
+**GraphQL beständiga fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -509,7 +509,7 @@ const nodeMap = {
     }
 ```
 
-Det övergripande tillvägagångssättet är att inspektera närhelst en `nodeType` är lika med `reference` i Mutli Line JSON-svaret. En anpassad återgivningsfunktion kan sedan anropas som innehåller `_references` returneras i GraphQL-svaret.
+Det övergripande tillvägagångssättet är att inspektera närhelst en `nodeType` är lika med `reference` i Mutli Line JSON-svaret. En anpassad återgivningsfunktion kan sedan anropas som innehåller `_references` som returneras i GraphQL-svaret.
 
 Den textbundna referenssökvägen kan sedan jämföras med motsvarande post i `_references` objekt och en annan anpassad karta `renderReference` kan anropas.
 
@@ -536,11 +536,11 @@ Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns
 
 ## Exempel från början till slut
 
->[!VIDEO](https://video.tv.adobe.com/v/342105/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
 I föregående video visas ett exempel från början till slut:
 
 1. Uppdatera ett textfält med flera rader i en innehållsfragmentmodell så att fragmentreferenser tillåts
 1. Använd Content Fragment Editor för att inkludera en bild och referera till ett annat fragment i ett textfält med flera rader.
-1. Skapa en GraphQL-fråga som innehåller flerradssvaret som JSON och alla `_references` används.
+1. Skapa en GraphQL-fråga som innehåller flerradstextsvar som JSON och alla `_references` används.
 1. Skriva en SPA som återger textbundna referenser för RTF-svaret.

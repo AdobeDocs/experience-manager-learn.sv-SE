@@ -1,8 +1,8 @@
 ---
 title: Skapar AEM Forms för dokumentmall för webbkanal
-seo-title: Skapar AEM Forms för dokumentmall för webbkanal
+seo-title: Creating Web Channel Document Template AEM Forms
 description: Detta är en del av 4 i den flerstegskurs som du använder för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en mall för webbkanalsdokument.
-seo-description: Detta är en del av 4 i den flerstegskurs som du använder för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en mall för webbkanalsdokument.
+seo-description: This is part 4 of the multistep tutorial for creating your first interactive communications document. In this part, we will create a template for web channel document.
 uuid: b4c9f68b-3091-4f87-988d-705f0296a8d8
 feature: Interactive Communication
 topics: development
@@ -14,23 +14,22 @@ discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d742d77b-a064-46e8-862a-2d3e1cc56f63
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 1%
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
-
-# Skapar dokumentmall för webbkanal AEM Forms {#creating-web-channel-document-template-aem-forms}
+# Skapar AEM Forms för dokumentmall för webbkanal {#creating-web-channel-document-template-aem-forms}
 
 I den här delen skapar vi en mall för webbkanalsdokument.
 Skapa dokumentmall för webbkanal i AEM Forms 6.4
->[!VIDEO](https://video.tv.adobe.com/v/22342?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22342?quality=12&learn=on)
 
 Skapa dokumentmall för webbkanal i AEM Forms 6.5
->[!VIDEO](https://video.tv.adobe.com/v/27807?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27807?quality=12&learn=on)
 
 Mallen kommer att ha målområden/platshållare som kommer att innehålla olika typer av dokumentfragment. En mall kan till exempel ha målområden för logotyper och ett annat målområde för textinnehåll.
 

@@ -1,22 +1,22 @@
 ---
 title: Bearbetar material för AEM Dynamic Media
-description: 'Steg för att köra arbetsflödet för DAM-uppdatering av resurser på en resurs som har Dynamic Media aktiverat.  '
+description: Steg för att köra arbetsflödet för DAM-uppdatering av resurser på en resurs som har Dynamic Media aktiverat.
 role: Developer
 level: Intermediate
 version: 6.5
-feature: Arbetsflöde
-topic: Utveckling
+feature: Workflow
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 4e55d3fe-68fd-4d41-a4b1-e73290e0934b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 4%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # Bearbetar material för AEM Dynamic Media
 
 I den här videon går du igenom processen för att köra arbetsflödet DAM Update Asset på en resurs med Dynamic Media aktiverat.
 
->[!VIDEO](https://video.tv.adobe.com/v/335456?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335456?quality=12&learn=on)

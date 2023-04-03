@@ -9,7 +9,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
-source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips och skillnader från AMS/On-Prem. De rör också vid migrering till molnet. Special gäst- och molnexpert, [Dr. Applesmith](https://twitter.com/DrApplesmith) skapar ett utseende.
 
->[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

@@ -14,7 +14,7 @@ role: Developer
 level: Experienced
 exl-id: 9342bd2f-2ba9-42ee-9224-055649ac3c90
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -34,11 +34,11 @@ För att uppfylla ovanstående krav använder vi ett dolt fält som kallas **ini
 
 **Konfigurera formuläret för att utlösa AEM arbetsflöde**
 
->[!VIDEO](https://video.tv.adobe.com/v/28406?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
 **Genomgång av arbetsflöden**
 
->[!VIDEO](https://video.tv.adobe.com/v/28407?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
 
 **Avsändarens vy över formuläret Tid för avbeställning**
 

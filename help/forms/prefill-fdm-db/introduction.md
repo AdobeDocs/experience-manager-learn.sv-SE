@@ -10,7 +10,7 @@ role: User
 level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -28,7 +28,7 @@ När kursen är slut har du lärt dig följande.
 * Använd formulärdatamodellens attribut för begäran
 
 I följande video visas en översikt över kursen
->[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
 
 ## Förutsättningar
 

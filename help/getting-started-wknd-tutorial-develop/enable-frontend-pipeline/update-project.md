@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -29,7 +29,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projekt__ f�
 
 ## Översikt över konfigurationsändringar i AEM
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Förutsättningar {#prerequisites}
 

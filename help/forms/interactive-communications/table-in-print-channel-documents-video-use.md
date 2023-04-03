@@ -13,7 +13,7 @@ role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 I följande videofilm visas de steg som krävs för att använda tabellkomponenten i Interactive Communications för dokument i tryckkanaler.
 
->[!VIDEO](https://video.tv.adobe.com/v/27769?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
 Tabeller används för att visa data i tabelläge. Raderna i tabellen måste förstoras eller förminskas beroende på vilka data som returneras av datakällan. Om du vill använda en tabell i ett dokument för tryckkanaler måste du skapa en layoutfil (xdp-fil) med AEM Forms Designer. I den här layoutfilen lägger vi till tabellen med det antal kolumner som krävs. Kontrollera att kolumnfältets objekttyp är antingen TextField eller Numeric Field beroende på dina krav. För var och en av kolumnerna ska du kontrollera att databindningen är inställd på Använd namn.
 

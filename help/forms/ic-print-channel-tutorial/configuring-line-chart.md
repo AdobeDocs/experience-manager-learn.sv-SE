@@ -1,8 +1,8 @@
 ---
 title: Konfigurera linjediagram för ditt första interaktiva kommunikationsdokument
-seo-title: Konfigurera linjediagram för ditt första interaktiva kommunikationsdokument
+seo-title: Configuring line chart for your first interactive communication document
 description: Detta är en del av 8-stegssjälvstudiekurser för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen ska vi lägga till ett linjediagram för att visa kontosaldot.
-seo-description: Detta är en del av 8-stegssjälvstudiekurser för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen ska vi lägga till ett linjediagram för att visa kontosaldot.
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will add a Line chart to display the account balance.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
 feature: Interactive Communication
 topics: development
@@ -16,14 +16,13 @@ thumbnail: 22386.jpg
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 1%
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera linjediagram för ditt första interaktiva kommunikationsdokument {#configuring-line-chart-for-your-first-interactive-communication-document}
 
@@ -39,5 +38,4 @@ Från och med AEM Forms 6.4 är det mycket enkelt att visa data med olika typer 
 
 I följande videofilm får du hjälp med att lägga till och konfigurera diagramkomponenten
 
->[!VIDEO](https://video.tv.adobe.com/v/22386/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22386?quality=12&learn=on)

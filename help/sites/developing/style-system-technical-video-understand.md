@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -21,7 +21,7 @@ I den här videon ska vi titta närmare på CSS-analysens (eller [!DNL LESS]) oc
 
 ## Så här kodar du för formatsystemet {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
 
 Det medföljande AEM (**technical-review.sites.style-system-1.0.0.zip**) installerar exempeltitelformatet, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
 

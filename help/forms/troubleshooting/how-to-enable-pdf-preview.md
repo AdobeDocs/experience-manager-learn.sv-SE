@@ -1,23 +1,23 @@
 ---
-title: PDF-förhandsgranskning för Designer inaktiverad - hur du aktiverar förhandsgranskning av PDF
-description: Steg för att konfigurera PDF-förhandsgranskning i Designer
+title: Designer Preview PDF inaktiverat - hur du aktiverar Preview PDF
+description: Steg för att konfigurera PDF Preview i Designer
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
 feature: Designer
-topic: Utveckling
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0d5fb8d1-5aa2-40c7-b1c9-e4b5319e8d36
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 5%
+source-wordcount: '33'
+ht-degree: 0%
 
 ---
 
+# Aktivera Förhandsgranska PDF
 
-# Så här aktiverar du Förhandsgranska PDF
+*I den här videon går du igenom stegen för att aktivera PDF för förhandsgranskning i Designer.*
 
-*I den här videon går du igenom stegen för att aktivera förhandsgranskning av PDF i Designer.*
-
->[!VIDEO](https://video.tv.adobe.com/v/335500?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335500?quality=12&learn=on)

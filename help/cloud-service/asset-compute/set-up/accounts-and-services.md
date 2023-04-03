@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Om du inte redan har tillgång till Microsoft Azure Blob Storage, registrera dig
 
 I den här självstudiekursen används dock Azure Blob Storage [Amazon S3](#amazon-s3) kan även användas för mindre ändringar av självstudiekursen.
 
->[!VIDEO](https://video.tv.adobe.com/v/40377/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40377?quality=12&learn=on)
 
 _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
 

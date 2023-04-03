@@ -8,7 +8,7 @@ role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas hur du konfigurerar komponenten för att skicka e-post.
 
->[!VIDEO](https://video.tv.adobe.com/v/21499/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21499?quality=12&learn=on)
 
 Som en del av den här artikeln ska vi ta dig igenom följande exempel:
 

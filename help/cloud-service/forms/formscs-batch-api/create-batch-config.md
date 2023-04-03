@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9673
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -23,7 +24,7 @@ Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en k�
 >Kontrollera att AEM tillhör ```forms-users``` grupp för att göra API-anrop.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/340241/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
 
 ## Skapa batchkonfiguration
 
@@ -57,4 +58,3 @@ Du kan göra ett anrop till följande slutpunkt om du vill verifiera att batchko
 ```
 
 Du behöver bara skicka ett tomt JSON-objekt i HTTP-begärans brödtext
-

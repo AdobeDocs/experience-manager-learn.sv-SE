@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Den här videoserien i flera delar ger dig en översikt över hur mediematerial 
 
 ## Dynamic Media - översikt
 
->[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experie
 
 ## Dynamic Media med AEM Sites och andra CMS-system
 
->[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ I den här videon beskrivs hur mediematerial hanteras i Adobe Experience Manager
 
 ## Dynamic Media för att skapa blandad mediesamling och anpassat visningsprogram
 
->[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ I den här videon beskrivs den enkla processen att skapa för en samling mediere
 
 ## Dynamic Media-bildförinställningar
 
->[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 I den här videon beskrivs hur bildförinställningar skapas och vad som är en bildförinställning, en URL-förkortning till en serie Image Server-argument som används på en bild när en URL begär det. Lär dig värdefulla tekniker för att utöka och redigera bildförinställningar.
 
@@ -76,7 +76,7 @@ I den här videon beskrivs hur bildförinställningar skapas och vad som är en 
 
 ## Dynamic Media Advanced URL modifiers
 
->[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Medias URL-modifierare.
 
@@ -88,7 +88,7 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 
 ## Dynamic Media Kontrollera filstorleken JPEG i kB
 
->[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -99,7 +99,7 @@ Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) f
 
 ## Lägga till CC-undertexter i Dynamic Media Video
 
->[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 Lägg enkelt till undertextning i Dynamic Media-video genom att lägga till URL-adressen till en länk till ett annat dokument för undertextningsfilen web.VTT, som innehåller CC-informationen för alla videofilmer.
 

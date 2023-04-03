@@ -9,7 +9,7 @@ level: Beginner
 kt: 7619
 thumbnail: 332858.jpg
 exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
@@ -26,6 +26,6 @@ I den här videon kommer du att:
 + Lär dig mer om de olika datatyperna och valideringarna som används för att skapa Content Fragment Model
 + Förstå hur innehållsfragmentmodellen driver GraphQL API
 
->[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332858?quality=12&learn=on)
 
-_Ladda ned  [Postman ](./assets/aem-headless-video-series.postman_collection.json) Collection som används i AEM Headless Video Series._
+_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._

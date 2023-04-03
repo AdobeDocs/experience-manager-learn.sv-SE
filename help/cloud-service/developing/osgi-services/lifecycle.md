@@ -3,17 +3,17 @@ title: OSGi Component Lifecycle
 description: Läs om OSGi-komponentens livscykel, inklusive hur du binder en OSGi-tjänst till händelserna activate, modified och deactivate lifecycle.
 role: Developer
 level: Beginner
-topic: Utveckling
+topic: Development
 feature: OSGI
 kt: 8228
 thumbnail: 335475.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 5a65dbcd-649b-464c-9c78-d31c2b6c49c3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 3%
+source-wordcount: '94'
+ht-degree: 1%
 
 ---
-
 
 # OSGi-komponentens livscykel
 
@@ -25,7 +25,7 @@ Läs om OSGi-komponenternas livscykel, inklusive hur du binder en OSGi-tjänst t
 
 ...livscykelhändelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/335475/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
 
 ## Resurser
 
@@ -33,7 +33,7 @@ Läs om OSGi-komponenternas livscykel, inklusive hur du binder en OSGi-tjänst t
 + [@Modified JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Modified.html)
 + [@Inaktivera JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Deactivate.html)
 
-## Kod
+## Code
 
 ### ActivitiesImpl.java
 

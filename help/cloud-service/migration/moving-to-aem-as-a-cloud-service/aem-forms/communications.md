@@ -1,6 +1,6 @@
 ---
-title: AEM Forms som Cloud Service Communications
-description: Läs om hur AEM Forms som Cloud Service stöder användningsexemplet för kommunikation.
+title: AEM Forms as a Cloud Service Communications
+description: Läs om hur AEM Forms as a Cloud Service stöder användningsexemplet för kommunikation.
 version: Cloud Service
 feature: Output Service
 topic: Migration, Upgrade
@@ -8,16 +8,16 @@ role: Developer
 level: Experienced
 kt: 8917
 thumbnail: 336967.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: ef5864cb-69e1-454b-9d9b-fa14983d80e3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%
 
 ---
 
-
 # Kommunikation (utdatatjänst)
 
-Läs om hur AEM Forms som Cloud Service stöder kommunikationsexemplet.
+Läs om hur AEM Forms as a Cloud Service stöder kommunikationsanvändningen.
 
->[!VIDEO](https://video.tv.adobe.com/v/336967/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336967?quality=12&learn=on)

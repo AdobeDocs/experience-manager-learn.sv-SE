@@ -13,7 +13,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 1%
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 AEM Core Components är standardkomponenter som ska användas med Adobe Experience Manager. Core Components bygger med Adobe bästa praxis och standarder och ger basfunktioner för alla implementeringar av Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/18926/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18926?quality=12&learn=on)
 
 ## Ytterligare resurser {#additional-resources}
 

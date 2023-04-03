@@ -7,7 +7,8 @@ level: Intermediate
 thumbnail: 343475.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 87d19ba3388b4a2ac3db1d2cf3838ed12dbbd2bc
+exl-id: 591ed430-80b3-49fa-b52f-0d07a2e5ac0e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 I två delar av säsongen utforskar vi några saker som du kan titta på som snabbar upp cachningen AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/343475)
+>[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

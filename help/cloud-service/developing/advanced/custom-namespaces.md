@@ -9,7 +9,7 @@ level: Intermediate
 kt: 11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -33,13 +33,13 @@ Namnutrymmen kan användas för att ange en egenskaps omfång och avsikt. Om du 
 
 Anpassade namnutrymmen hanteras i [Initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) skript och distribuerar till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` projekt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## Resurser
 
 + [Dokumentation om initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
 
-## Kod
+## Code
 
 Följande kod används för att konfigurera en `wknd` namnutrymme.
 

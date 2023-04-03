@@ -9,7 +9,7 @@ level: Experienced
 kt: 8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 Lär dig mer om att komma igång med AEM as a Cloud Service från avtalsfasen genom att konfigurera miljöerna med Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336959/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
 
 ## Cloud Manager och Admin Console
 

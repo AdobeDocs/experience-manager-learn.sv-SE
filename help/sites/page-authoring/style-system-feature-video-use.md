@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
@@ -26,11 +26,11 @@ ht-degree: 1%
 
 Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 
 I den här videon visas hur Style System kan användas för att skapa helt olika visuella utseenden för en enskild komponent, med enbart CSS.
 
-Formaten som visas tillhandahålls av [WKND-programmet](https://github.com/adobe/aem-guides-wknd). Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTML-skriptet eller Sling Model.
+Formaten som visas tillhandahålls av [WKND-program](https://github.com/adobe/aem-guides-wknd). Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTML-skriptet eller Sling Model.
 
 ## Ytterligare resurser {#additional-resources}
 

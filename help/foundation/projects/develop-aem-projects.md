@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Det här är en självstudiekurs om utveckling som visar hur du utvecklar för [!DNL AEM Projects].  I den här självstudiekursen skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/16904/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
 *Den här videon ger en kort demonstration av det färdiga arbetsflödet som skapas i självstudien nedan.*
 

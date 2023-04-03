@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Följande krävs när du konfigurerar flexibel portutgång:
 
 Mer information finns i följande genomgång om hur du konfigurerar, konfigurerar och hämtar API-autentiseringsuppgifter för Cloud Manager och hur du använder dem för att göra ett API-anrop för Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
 Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ska du ersätta `\` radbrytningstecken med `^`.
 

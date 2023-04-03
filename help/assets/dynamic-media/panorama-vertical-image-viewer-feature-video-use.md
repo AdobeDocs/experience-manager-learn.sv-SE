@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
 
->[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >

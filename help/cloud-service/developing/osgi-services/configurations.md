@@ -3,30 +3,30 @@ title: Konfigurationsegenskaper för OSGi
 description: Lär dig grunderna i OSGi-konfigurationsegenskaper och hur du använder dem i OSGi-tjänster.
 role: Developer
 level: Beginner
-topic: Utveckling
+topic: Development
 feature: OSGI
 kt: 8268
 thumbnail: 335729.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '75'
+ht-degree: 1%
 
 ---
-
 
 # Konfigurationsegenskaper för OSGi
 
 Lär dig lågnivåmetoden att använda OSGi-konfigurationsnyckel/värde-par för att definiera och exponera OSGi-konfigurationsdata för OSGi-tjänster.
 
->[!VIDEO](https://video.tv.adobe.com/v/335729/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
 ## Resurser
 
 + [@Component JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.html)
 + [@Aktivera JavaDocs](https://javadoc.io/static/com.adobe.aem/aem-sdk-api/2021.7.5658.20210723T140305Z-210600/org/osgi/service/component/annotations/Activate.html)
 
-## Kod
+## Code
 
 ### ActivitiesImpl.java
 

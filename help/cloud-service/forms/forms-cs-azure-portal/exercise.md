@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Integrationa
 thumbnail: 335800.jpg
 kt: 8481
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
@@ -20,5 +20,5 @@ ht-degree: 0%
 
 Förbättra användningsexemplet som det visas i den här videon
 
->[!VIDEO](https://video.tv.adobe.com/v/335800/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335800?quality=12&learn=on)
 

@@ -1,8 +1,8 @@
 ---
 title: Öppnar användargränssnittet för agenten när POST skickas
-seo-title: Öppnar användargränssnittet för agenten när POST skickas
+seo-title: Opening Agent UI On POST Submission
 description: Detta är en del av en självstudiekurs i flera steg som du kan använda för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
-seo-description: Detta är en del av en självstudiekurs i flera steg som du kan använda för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
+seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will launch the agent ui interface for creating ad-hoc correspondence on form submission.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
 feature: Interactive Communication
 topics: development
@@ -15,14 +15,13 @@ thumbnail: 40122.jpg
 topic: Development
 role: Developer
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Öppnar användargränssnittet för agenten när POST skickas
 
@@ -32,7 +31,7 @@ I den här artikeln får du hjälp att gå igenom de steg som ingår i gränssni
 
 I följande video visas exempel
 
->[!VIDEO](https://video.tv.adobe.com/v/40122/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
 
 ```java
 String accountNumber = request.getParameter("accountnumber"))
@@ -65,13 +64,12 @@ Testa den här funktionen på servern
 * [Importera och installera resurser som är relaterade till den här artikeln med hjälp av pakethanteraren.](assets/launch-agent-ui.zip)
 * [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
 * Sök efter _Adobe Granite CSRF-filter_
-* Lägg till _/content/getprintchannel_ i Uteslutna sökvägar
+* Lägg till _/content/getprintchannel_ i de uteslutna banorna
 * Spara ändringarna.
 * [Öppna POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). Kontrollera att strängen som skickas till FormFieldRequestParameter är ett giltigt documentId.(Rad 19).
-* [Öppna ](http://localhost:4502/content/OpenPrintChannel.html) webbsidan, ange kontonummer och skicka formuläret.
+* [Öppna webbsidan](http://localhost:4502/content/OpenPrintChannel.html) och ange kontonummer och skicka in formuläret.
 * Användargränssnittet för agenten ska öppnas med data som är förifyllda och specifika för det kontonummer som anges i formuläret.
 
 >[!NOTE]
 >
 >Kontrollera att formulärdatamodellens Get-åtgärdsparameter är bunden till Request Attribute med namnet &quot;accountNumber&quot; för att detta ska fungera. Om du ändrar namnet på bindningsvärdet till något annat namn måste ändringen återspeglas på rad 25 i POST.jsp
-

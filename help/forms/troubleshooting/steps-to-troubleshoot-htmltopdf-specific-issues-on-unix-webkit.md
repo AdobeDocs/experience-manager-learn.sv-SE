@@ -5,13 +5,14 @@ type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'PDF Generator '
-topic: 'Utveckling   '
+feature: PDF Generator
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 6afe3b69-1422-4832-a189-57cbc0658ac1
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
 
@@ -19,5 +20,4 @@ ht-degree: 1%
 
 *I den här videon går vi igenom processen att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (WebKit-konvertering).*
 
->[!VIDEO](https://video.tv.adobe.com/v/335548?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)

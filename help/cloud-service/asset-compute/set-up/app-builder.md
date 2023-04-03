@@ -1,6 +1,6 @@
 ---
 title: Konfigurera App Builder för Asset compute-utbyggbarhet
-description: asset compute-projekt är särskilt definierade App Builder-projekt, och därför måste du ha tillgång till App Builder på Adobe Developer Console för att kunna konfigurera och distribuera dem.
+description: asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 # Konfigurera App Builder
 
-asset compute-projekt är särskilt definierade App Builder-projekt, och därför måste du ha tillgång till App Builder på Adobe Developer Console för att kunna konfigurera och distribuera dem.
+asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
 
 ## Skapa och konfigurera App Builder i Adobe Developer Console{#set-up}
 
->[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40183?quality=12&learn=on)
 
 _Klicka igenom konfigurationen av App Builder (inget ljud)_
 
@@ -63,7 +63,7 @@ När du ställer in [API-integrering för asset compute](#set-up) ett nytt nycke
 
 Det här Adobe I/O-projektets autentiseringsuppgifter används av den lokala [asset compute Development Tool](../develop/development-tool.md) för att interagera med Adobe I/O Runtime och måste införlivas i Asset compute. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
 
-![Adobe Developer Service Account-autentiseringsuppgifter](./assets/app-builder/service-account.png)
+![Autentiseringsuppgifter för Adobe Developer-tjänstkonto](./assets/app-builder/service-account.png)
 
 1. I Adobe I/O Project App Builder-projektet ser du till att `Development` arbetsytan är markerad
 1. Tryck på __Tjänstkonto (JWT)__ under __Autentiseringsuppgifter__

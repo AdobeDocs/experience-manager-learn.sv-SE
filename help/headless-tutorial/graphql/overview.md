@@ -1,6 +1,6 @@
 ---
 title: Kom igång med AEM Headless - GraphQL
-description: Läs mer om API:erna för GraphQL och deras funktioner i Experience Manager.
+description: Läs mer om Experience Manager GraphQL API:er och deras funktioner.
 feature: Content Fragments, GraphQL API, APIs
 topic: Headless, Content Management
 role: Developer
@@ -8,10 +8,10 @@ level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -24,11 +24,11 @@ Ett modernt API för innehållsleverans är avgörande för effektiviteten och p
 * Ett stort antal begäranden om att hämta ett objekt i taget
 * Innehåll som ofta&quot;överlevererar&quot;, vilket innebär att programmet får mer än det behöver
 
-För att övervinna dessa utmaningar tillhandahåller GraphQL ett frågebaserat API som gör att klienter kan fråga AEM efter endast det innehåll som behövs och ta emot via ett enda API-anrop.
+För att lösa dessa problem tillhandahåller GraphQL ett frågebaserat API som gör det möjligt för kunderna att fråga AEM efter endast det innehåll de behöver och att ta emot via ett enda API-anrop.
 
->[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
-Den här videon är en översikt över GraphQL API som implementeras i AEM. GraphQL-API:t i AEM är främst utformat för att leverera AEM Content Fragment-program till program längre fram i kedjan som en del av en headlessdistribution.
+Den här videon är en översikt över GraphQL API som implementerats i AEM. GraphQL API i AEM är främst utformat för att leverera AEM Content Fragment till program längre fram i kedjan som en del av en headless-driftsättning.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
@@ -38,17 +38,17 @@ Den här videon är en översikt över GraphQL API som implementeras i AEM. Grap
 
 ## AEM Headless GraphQL Video Series
 
-Lär dig mer om AEM GraphQL-funktioner genom ingående genomgång av Content Fragments och AEM GraphQL API:er och utvecklingsverktyg.
+Lär dig mer om AEM funktioner i GraphQL genom den djupgående genomgången av Content Fragments och AEM GraphQL API:er och utvecklingsverktyg.
 
 * [AEM Headless GraphQL Video Series](./video-series/modeling-basics.md)
 
 ## AEM Headless GraphQL Hands-on Tutorial
 
-Utforska AEM GraphQL-funktioner genom att bygga ut en React App som förbrukar innehållsfragment via AEM GraphQL API:er.
+Utforska AEM GraphQL funktioner genom att bygga ut en React App som förbrukar innehållsfragment via AEM GraphQL API:er.
 
 * [AEM Headless GraphQL Hands-on Tutorial](./multi-step/overview.md)
 
-## AEM GraphQL vs. AEM Content Services
+## AEM GraphQL jämfört med AEM Content Services
 
 |  | AEM GraphQL API:er | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|

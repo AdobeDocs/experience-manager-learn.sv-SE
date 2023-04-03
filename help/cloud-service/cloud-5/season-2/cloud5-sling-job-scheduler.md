@@ -7,7 +7,8 @@ level: Intermediate
 thumbnail: 343473.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+exl-id: 8784d77f-1c70-4694-bd08-79b71adbda48
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 Jobbschemaläggning och förbrukning skiljer sig från en icke-grupperad AEM-distribution. I den här videon visas några saker och saker som du bör hålla utkik efter när du kör dessa åtgärder.
 
->[!VIDEO](https://video.tv.adobe.com/v/343473)
+>[!VIDEO](https://video.tv.adobe.com/v/343473?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 

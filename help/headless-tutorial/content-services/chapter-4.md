@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '759'
 ht-degree: 0%
@@ -89,7 +89,7 @@ För att göra detta kan vi mappa dessa krav till AEM (och i vårt fall AEM WCM 
 1. Se dock till att **layoutbehållare** är **låst** för att förhindra att andra komponenter läggs till eller att dessa tre komponenter tas bort.
 1. Tryck **[!UICONTROL Page Information]>[!UICONTROL View in Admin]** för att gå tillbaka till [!DNL WKND Mobile] malllista. Markera den nyskapade **[!DNL Events API]** mall och knacka **[!UICONTROL Enable]** i det övre åtgärdsfältet.
 
->[!VIDEO](https://video.tv.adobe.com/v/28342/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >

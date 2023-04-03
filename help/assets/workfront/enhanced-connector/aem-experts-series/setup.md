@@ -10,7 +10,7 @@ thumbnail: 340331.jpeg
 hidefromtoc: false
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: f0018d16-af96-4b92-b0fc-6130d812bf8f
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar och konfigurerar den utökade Workfront-anslutningen för Experience Manager och frigör den kombinerade kraften hos AEM Assets och Workfront.
 
->[!VIDEO](https://video.tv.adobe.com/v/340331/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340331?quality=12&learn=on)
 
 _Detta är en del av en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_

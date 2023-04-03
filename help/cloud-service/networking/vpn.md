@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Följande krävs när du konfigurerar ett virtuellt privat nätverk:
 
 Mer information finns i följande genomgång om hur du konfigurerar, konfigurerar och hämtar API-autentiseringsuppgifter för Cloud Manager och hur du använder dem för att göra ett API-anrop för Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
 Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ska du ersätta `\` radbrytningstecken med `^`.
 
