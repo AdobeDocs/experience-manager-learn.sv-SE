@@ -8,9 +8,9 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -35,5 +35,6 @@ Tjänsten för massimport används för att överföra filer som lagras i Azure 
 
 ## Andra resurser
 
-+ [Adobe Developers Live session om tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
++ [Konfigurationsalternativ för bulkimporttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
++ [Adobe Developers Live session om tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
 

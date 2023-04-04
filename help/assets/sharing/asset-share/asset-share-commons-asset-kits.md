@@ -1,6 +1,6 @@
 ---
 title: Resursdelningskommentar Tillgångspaket
-description: Lär dig hur du använder funktionen Resursdelnings-resurs för att generera skräddarsydda, delningsbara webbsidor som listar resurser från AEM Assets-mappar eller -samlingar.
+description: Lär dig hur du använder resursresurspaketet för Asset Share Common för att generera skräddarsydda, delningsbara webbsidor med resurser från AEM Assets-mappar eller samlingar.
 version: Cloud Service
 topic: Content Management
 role: Admin, Architect, Developer, User
@@ -9,9 +9,9 @@ doc-type: Feature Video
 last-substantial-update: 2023-02-13T00:00:00Z
 jira: KT-11868
 thumbnail: 3415467.jpeg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 
 # Resursdelningskommentar Tillgångspaket
 
-Lär dig hur du använder funktionen Resursdelnings-resurs för att generera skräddarsydda, delningsbara webbsidor som listar resurser från AEM Assets-mappar eller -samlingar.
+Lär dig hur du använder resurser i Dela gemensamt [tillgångspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) för att generera skräddarsydda, delbara webbsidor som listar resurser från AEM Assets-mappar eller samlingar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
+
+_[Tillgångspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) är bara tillgängligt på Assets Share Commands 2.5.4+_

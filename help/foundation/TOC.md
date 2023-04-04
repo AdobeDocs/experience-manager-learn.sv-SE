@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: de9377236016066cc62819f1c307aac82331a0b6
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 13%
 + Autentisering {#authentication}
    + [OKTA och AEM](authentication/okta-saml-integration.md)
    + [OAuth-scope](authentication/oauth-code-sample-develop.md)
-   + [Konfigurera offentliga/privata nycklar som ska användas med Adobe I/O](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [Förstå autentisering](authentication/authentication-support-article-understand.md)
    + [Förstå IMS-autentisering på AMS](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}

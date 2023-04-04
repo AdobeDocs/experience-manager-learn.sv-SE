@@ -1,5 +1,5 @@
 ---
-title: Använda Multi-Site Manager med AEM Sites
+title: Använda Multi Site Manager med AEM Sites
 seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
 description: Översikt över Live Copy och Konfigurationshanteraren för utkast är gränssnitt aktiverade för Touch-gränssnitt för arbete med Multi Site Manager.
 seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
@@ -15,16 +15,16 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Använda Multi-Site Manager {#using-multi-site-manager-with-aem-sites}
+# Använda Multi Site Manager {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy Overview] och [!UICONTROL Blueprint Configuration Manager] är gränssnitt för AEM Author som används med funktionen Multi Site Manager i Adobe Experience Manager Sites.
+Live Copy Overview och Blueprint Configuration Manager är gränssnitt för AEM Author som används med [Multi Site Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) i Adobe Experience Manager Sites.
 
 ## Live Copy - översikt {#live-copy-overview}
 

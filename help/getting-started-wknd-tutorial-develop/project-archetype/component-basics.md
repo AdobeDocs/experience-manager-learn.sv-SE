@@ -12,9 +12,9 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -255,11 +255,17 @@ Nu ska vi göra några uppdateringar i `HelloWorldModel` Sling Model för att ti
    >
    > För AEM 6.4/6.5 `mvn clean install -PautoInstallBundle -Pclassic`
 
-1. Uppdatera filen `helloworld.html` på `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` för att använda de nya metoderna i `HelloWorld` modell:
+1. Uppdatera filen `helloworld.html` på `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html` för att använda de nya metoderna i `HelloWorld` modell.
+
+   The `HelloWorld` Modellen instansieras för den här komponentinstansen via HTL-direktivet: `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"`, sparar instansen i variabeln `model`.
+
+   The `HelloWorld` modellinstansen är nu tillgänglig i HTML via `model` variabeln med `HelloWord`. De här metoderna kan anropa med förkortad metodsyntax: `${model.getTitle()}` kan kortas till `${model.title}`.
+
+   På samma sätt injiceras alla HTML-skript med [globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) som kan nås med samma syntax som Sling Model-objekten.
 
    ```html
-   <div class="cmp-helloworld" data-cmp-is="helloworld"
-   data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
+   <div class="cmp-helloworld" data-cmp-is="helloworld" 
+       data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel">
        <h1 class="cmp-helloworld__title">${model.title}</h1>
        <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
            <p class="cmp-helloworld__item-label">Text property:</p>
@@ -268,10 +274,6 @@ Nu ska vi göra några uppdateringar i `HelloWorldModel` Sling Model för att ti
        <div class="cmp-helloworld__item" data-sly-test="${model.text}">
            <p class="cmp-helloworld__item-label">Sling Model getText() property:</p>
            <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${model.text}</pre>
-       </div>
-       <div class="cmp-helloworld__item"  data-sly-test="${model.message}">
-           <p class="cmp-helloworld__item-label">Model message:</p>
-           <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
        </div>
    </div>
    ```

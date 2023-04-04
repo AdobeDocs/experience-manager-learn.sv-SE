@@ -12,9 +12,9 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,8 @@ Nästa serie steg kommer att utföras med en UNIX®-baserad kommandoradsterminal
    >[!NOTE]
    >
    > För AEM 6.5.14+ Ersätt `aemVersion="cloud"` med `aemVersion="6.5.14"`.
+   >
+   > Använd alltid den senaste `archetypeVersion` genom att referera till [AEM Project Archetype > Usage](https://github.com/adobe/aem-project-archetype#usage)
 
    En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
