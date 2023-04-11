@@ -1,6 +1,6 @@
 ---
 title: Server-till-server-appen Node.js - AEM Headless-exempel
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Node.js-programmet på serversidan visar hur du kan fråga innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Node.js-programmet på serversidan visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,16 +8,16 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
 
 # Server-till-server-appen Node.js
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här server-till-server-programmet visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor och skriva ut det på terminalen.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här server-till-server-programmet visar hur du ställer frågor till innehåll med hjälp AEM GraphQL API:er med beständiga frågor och skriver ut det på terminalen.
 
 ![Server-till-server-appen Node.js med AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
 
@@ -27,8 +27,7 @@ Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree
 
 Följande verktyg bör installeras lokalt:
 
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -77,13 +76,13 @@ Det här Node.js-programmet kan ansluta till AEM Author eller AEM Publish basera
 
 ## Koden
 
-Nedan visas en sammanfattning av hur programmet Node.js från server till server har skapats, hur det ansluter till AEM Headless för att hämta innehåll med hjälp av beständiga GraphQL-frågor och hur data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+Nedan följer en sammanfattning av hur programmet Node.js från server till server har skapats, hur det ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
 
 Det vanligaste användningsexemplet för server-till-server-AEM Headless-appar är att synkronisera Content Fragment-data från AEM till andra system, men det här programmet är avsiktligt enkelt och skriver ut JSON-resultaten från den beständiga frågan.
 
 ### Beständiga frågor
 
-Efter AEM Headless-metodtips används beständiga GraphQL-frågor AEM programmet för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
+Efter AEM Headless-metodtips används AEM GraphQL beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
 
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
@@ -141,11 +140,11 @@ async function run() {
 ```
 
 
-### Kör beständig GraphQL-fråga
+### Kör GraphQL beständig fråga
 
 AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för Node.js](https://github.com/adobe/aem-headless-client-nodejs) används för [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) mot AEM och hämtar äventyrsinnehållet.
 
-Den beständiga frågan anropas genom anrop `aemHeadlessClient.runPersistedQuery(...)`och skickar det beständiga GraphQL-frågenamnet. När GraphQL returnerar data skickar du den till det förenklade `doSomethingWithDataFromAEM(..)` som skriver ut resultaten, men vanligtvis skickar data till ett annat system, eller skapar utdata baserat på hämtade data.
+Den beständiga frågan anropas genom anrop `aemHeadlessClient.runPersistedQuery(...)`och skickar det beständiga GraphQL-frågenamnet. När GraphQL har skickat in uppgifterna skickar du dem till den förenklade `doSomethingWithDataFromAEM(..)` som skriver ut resultaten, men vanligtvis skickar data till ett annat system, eller skapar utdata baserat på hämtade data.
 
 ```js
 // index.js

@@ -9,9 +9,9 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,7 @@ Följande krävs för att följa den här snabbinstallationen:
    + __AEM__ åtkomst till AEM as a Cloud Service
    + __Cloud Manager - Distributionshanteraren__ åtkomst till Cloud Manager
 + Följande verktyg måste installeras lokalt:
-   + [Node.js v10+](https://nodejs.org/en/)
-   + [npm 6+](https://www.npmjs.com/)
+   + [Node.js v18](https://nodejs.org/en/)
    + [Git](https://git-scm.com/)
    + En IDE (till exempel [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 

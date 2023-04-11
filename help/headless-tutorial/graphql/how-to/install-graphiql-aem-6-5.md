@@ -1,6 +1,6 @@
 ---
-title: Installera GraphiQL IDE på AEM 6.5.X
-description: Lär dig installera och konfigurera GraphiQL IDE i AEM 6.5.X
+title: Installera GraphiQL IDE på AEM 6.5
+description: Lär dig installera och konfigurera GraphiQL IDE på AEM 6.5
 version: 6.5
 topic: Headless
 feature: GraphQL API
@@ -8,21 +8,21 @@ role: Developer
 level: Intermediate
 kt: 11614
 thumbnail: KT-10253.jpeg
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '210'
 ht-degree: 3%
 
 ---
 
 
-# Installera GraphiQL IDE på AEM 6.5.X
+# Installera GraphiQL IDE på AEM 6.5
 
-I AEM 6.5 måste GraphiQL IDE-verktyget installeras manuellt. Följ stegen nedan för installation och konfigurationer.
+I AEM 6.5 måste GraphiQL IDE-verktyget installeras manuellt.
 
 1. Navigera till **[Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
-1. Sök efter &quot;GraphiQL&quot; (se till att inkludera **i** in **GraphiQL**.
-1. Ladda ned den senaste **Innehållspaket för GraphiQL v.x.x.x**
+1. Sök efter &quot;GraphiQL&quot; (se till att inkludera **i** in **GraphiQL**).
+1. Ladda ned den senaste **Innehållspaket för GraphiQL v.x.x.x**.
 
    ![Hämta GraphiQL-paket](assets/graphiql/software-distribution.png)
 
@@ -39,7 +39,8 @@ I AEM 6.5 måste GraphiQL IDE-verktyget installeras manuellt. Följ stegen nedan
 
 1. Navigera till **Konfiguration av webbkonsol** Gränssnitt > Sök efter **CSRF-filter** konfiguration (till exempel<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
 1. I `Excluded Paths` egenskapsnamnfältsuppdatering, WKND-slutpunktssökvägen för GraphQL till `/content/cq:graphql/wknd-shared/endpoint`.
-   ![Uteslut ändringar i egenskapsvärde för sökvägar](assets/graphiql/exclude-paths-value-change.png)
+
+![Uteslut ändringar i egenskapsvärde för sökvägar](assets/graphiql/exclude-paths-value-change.png)
 
 1. Få åtkomst till GraphiQL-redigeraren med `//HOST:PORT/content/graphiql.html`och verifiera att du kan skapa en ny fråga eller köra en befintlig fråga. (t.ex. <http://localhost:4502/content/graphiql.html>)
 

@@ -1,6 +1,6 @@
 ---
 title: Webbkomponent/JS - Exempel AEM Headless
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Den här webbkomponenten/JS-applikationen visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er som använder beständiga frågor.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Den här webbkomponenten/JS-applikationen visar hur du ställer frågor till innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Webbkomponent
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Detta Web Component-program visar hur man frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor och återger en del av användargränssnittet, vilket uppnås med ren JavaScript-kod.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Detta Web Component-program visar hur man frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor och återger en del av användargränssnittet, med hjälp av ren JavaScript-kod.
 
 ![Webbkomponent med AEM Headless](./assets/web-component/web-component.png)
 
@@ -29,8 +29,7 @@ Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree
 Följande verktyg bör installeras lokalt:
 
 + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (vid anslutning till lokal AEM 6.5 eller AEM SDK)
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -97,7 +96,7 @@ Alla distributioner kräver `tutorial-solution-content.zip` från [Lösningsfile
 
 ## Koden
 
-Nedan visas en sammanfattning av hur webbkomponenten är uppbyggd, hur den ansluter till AEM Headless för att hämta innehåll med hjälp av beständiga GraphQL-frågor och hur data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+Nedan följer en sammanfattning av hur webbkomponenten är uppbyggd, hur den ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
 ### HTML-tagg för webbkomponent
 
@@ -116,7 +115,7 @@ The `person.js` definierar Web Component-funktionen och nedan är viktiga högda
 
 #### Implementering av PersonInfo-element
 
-The `<person-info>` det anpassade elementets klassobjekt definierar funktionen med hjälp av `connectedCallback()` livscykelmetoder, bifoga en skuggrot, hämta en beständig GraphQL-fråga och DOM-manipulering för att skapa det anpassade elementets interna skugg-DOM-struktur.
+The `<person-info>` det anpassade elementets klassobjekt definierar funktionen med hjälp av `connectedCallback()` livscykelmetoder, bifoga en skuggrot, hämta GraphQL beständiga fråga och DOM-manipulering för att skapa det anpassade elementets interna skuggstruktur i DOM.
 
 ```javascript
 // Create a Class for our Custom Element (person-info)

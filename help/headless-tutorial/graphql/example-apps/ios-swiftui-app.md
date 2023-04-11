@@ -1,6 +1,6 @@
 ---
 title: iOS App - AEM Headless-exempel
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här iOS-programmet visas hur du använder AEM GraphQL API:er med beständiga frågor.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här iOS-programmet visas hur du använder AEM GraphQL-API:er med beständiga frågor.
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10587
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # iOS
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här iOS-programmet visas hur du använder AEM GraphQL API:er med beständiga frågor.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här iOS-programmet visas hur du använder AEM GraphQL-API:er med beständiga frågor.
 
 ![iOS SwiftUI-app med AEM Headless](./assets/ios-swiftui-app/ios-app.png)
 
@@ -29,7 +29,7 @@ Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree
 
 Följande verktyg bör installeras lokalt:
 
-+ [Xcode 9.3+](https://developer.apple.com/xcode/) (kräver macOS)
++ [Xcode](https://developer.apple.com/xcode/) (kräver macOS)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -86,11 +86,11 @@ iOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock 
 
 ## Koden
 
-Nedan följer en sammanfattning av hur iOS-programmet byggs, hur det ansluter till AEM Headless för att hämta innehåll med hjälp av beständiga GraphQL-frågor och hur data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
+Nedan följer en sammanfattning av hur iOS-programmet byggs, hur det ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### Beständiga frågor
 
-Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL-beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
+Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
 
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
@@ -173,9 +173,9 @@ query($slug: String!) {
 }
 ```
 
-### Kör beständig GraphQL-fråga
+### Kör GraphQL beständig fråga
 
-AEM beständiga frågor körs över HTTP-GET och därför kan vanliga GraphQL-bibliotek som använder HTTP-POST som Apollo inte användas. Skapa i stället en anpassad klass som kör den beständiga frågan från HTTP GET till AEM.
+AEM beständiga frågor körs via HTTP-GET och därför kan vanliga GraphQL-bibliotek som använder HTTP-POST som Apollo inte användas. Skapa i stället en anpassad klass som kör den beständiga frågan från HTTP GET till AEM.
 
 `AEM/Aem.swift` instansierar `Aem` klass som används för all interaktion med AEM Headless. Mönstret är:
 
@@ -240,7 +240,7 @@ AEM beständiga frågor körs över HTTP-GET och därför kan vanliga GraphQL-bi
     ...
 ```
 
-### GraphQL-svarsdatamodeller
+### GraphQL svarsdatamodeller
 
 iOS föredrar att mappa JSON-objekt till datamodeller.
 
@@ -268,7 +268,7 @@ SwiftUI används för de olika vyerna i programmet. Apple har en självstudiekur
 
 ### Fjärrbilder
 
-Bilder som refereras av äventyrliga innehållsfragment hanteras av AEM. Den här iOS-appen använder sökvägen `_path` i GraphQL-svaret och prefixerar `AEM_SCHEME` och `AEM_HOST` för att skapa en fullständig URL.
+Bilder som refereras av äventyrliga innehållsfragment hanteras av AEM. Den här iOS-appen använder sökvägen `_path` i GraphQL och prefix `AEM_SCHEME` och `AEM_HOST` för att skapa en fullständig URL.
 
 Om du ansluter till skyddade resurser på AEM som kräver auktorisering, måste autentiseringsuppgifter också läggas till i bildbegäranden.
 
@@ -324,5 +324,5 @@ Ett liknande tillvägagångssätt kan användas med SwiftUI-inbyggt [AsyncImage]
 
 ## Ytterligare resurser
 
-+ [Komma igång med AEM Headless - kursen GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [Komma igång med AEM Headless - självstudiekurs om GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
 + [SwiftUI Lists and Navigation Tutorial](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

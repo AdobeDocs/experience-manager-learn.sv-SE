@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -93,15 +93,11 @@ function App() {
             </Link>        
             <hr />
         </header>
-        <Switch>
+        <Routes>
           {/* The route's path must match the Adventure Model's Preview URL expression. In React since the path has `/` you must use wildcards to match instead of the usual `:path` */}
-          <Route path='/adventure/*'>
-            <AdventureDetail />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+          <Route path='/adventure/*' element={<AdventureDetail />}/>
+          <Route path="/" element={<Home />}/>
+        </Routes>
       </div>
     </Router>
   );
@@ -120,11 +116,14 @@ The `AdventureDetail` analyserar bara sökvägen för innehållsfragment, som ma
 ...
 function AdventureDetail() {
 
-    // Read the content fragment path value which is the parameter used to query for the adventure's details
-    
-    // Add the leading '/' back on since the params value captures the `*` wildcard in `/adventure/*`, or everything after the first `/` in the Content Fragment path.
-    const path = '/' + useParams()[0];
+    // Read the `path` value which is the parameter used to query for the adventure's details
+    // since the params value captures the `*` wildcard in `/adventure/*`, or everything after the first `/` in the Content Fragment path.
+    const params = useParams();
+    const pathParam = params["*"];
 
+    // Add the leading '/' back on 
+    const path = '/' + pathParam;
+    
     // Query AEM for the Adventures's details, using the Content Fragment's `path`
     const { adventure, references, error } = useAdventureByPath(path);
 

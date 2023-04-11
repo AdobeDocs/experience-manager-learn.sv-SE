@@ -1,5 +1,5 @@
 ---
-title: AEM Headless-snabbinställning med lokal SDK
+title: AEM Headless-konfiguration med det lokala AEM SDK
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Installera AEM SDK, lägg till exempelinnehåll och distribuera ett program som använder innehåll från AEM med dess GraphQL API:er. Se hur AEM driver flerkanalsupplevelser.
 version: Cloud Service
 mini-toc-levels: 1
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
-# AEM Headless-snabbinställning med lokal SDK {#setup}
+# AEM Headless-konfiguration med det lokala AEM SDK {#setup}
 
 Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med innehåll från exempelprojektet WKND Site, och ett exempel på React App (SPA) som förbrukar innehållet i AEM Headless GraphQL API:er. Den här guiden använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
@@ -26,7 +26,7 @@ Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med inn
 Följande verktyg bör installeras lokalt:
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v14.x](https://nodejs.org/en/)
+* [Node.js v18](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1. Installera AEM SDK {#aem-sdk}
@@ -175,7 +175,7 @@ När React-appen är igång uppdaterar du innehållet i AEM och ser att ändring
 
    >[!NOTE]
    >
-   > GraphiQL-verktyget och GraphQL API är [utforskad i detalj senare i självstudiekursen](../multi-step/explore-graphql-api.md).
+   > Verktyget GraphiQL och GraphQL API är [utforskad i detalj senare i självstudiekursen](../multi-step/explore-graphql-api.md).
 
 ## Grattis!{#congratulations}
 

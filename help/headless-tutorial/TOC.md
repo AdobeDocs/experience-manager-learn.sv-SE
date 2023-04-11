@@ -7,7 +7,7 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: ea7cd118d9cba97d2b497f6659f74d2fe8331c66
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 12%
@@ -23,7 +23,7 @@ ht-degree: 12%
    + [Översikt](./graphql/overview.md)
    + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
-      + [Lokal SDK](./graphql/quick-setup/local-sdk.md)
+      + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
       + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
       + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)

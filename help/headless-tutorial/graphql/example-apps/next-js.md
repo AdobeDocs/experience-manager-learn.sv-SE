@@ -10,9 +10,9 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,7 @@ Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree
 
 Följande verktyg bör installeras lokalt:
 
-+ [Node.js v16+](https://nodejs.org/en/)
-+ [npm 8+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/)
 + [Git](https://git-scm.com/)
 
 ## AEM

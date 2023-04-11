@@ -1,6 +1,6 @@
 ---
 title: Bygg en React-app som AEM frågor med GraphQL API - Komma igång med AEM Headless - GraphQL
-description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Bygg en React-app som hämtar innehåll/data från AEM GraphQL API. Se även hur AEM Headless JS SDK används.
+description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Bygg en React-app som hämtar innehåll/data från AEM GraphQL API, och se även hur AEM Headless JS SDK används.
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6716
@@ -10,19 +10,19 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
 
 
-# Bygg en React-app som använder API:er AEM GraphQL
+# Bygg en React-app som använder AEM GraphQL API:er
 
-I det här kapitlet utforskar du hur AEM GraphQL API:er kan styra upplevelsen i ett externt program.
+I det här kapitlet tittar du närmare på hur AEM GraphQL API:er kan styra upplevelsen i ett externt program.
 
-En enkel React-app används för att fråga efter och visa **Team** och **Person** innehåll som exponeras AEM GraphQL API:er. Användningen av React är i stort sett oviktig, och den uppladdande externa applikationen kan skrivas i vilket ramverk som helst för vilken plattform som helst.
+En enkel React-app används för att fråga efter och visa **Team** och **Person** innehåll som exponeras av AEM GraphQL API:er. Användningen av React är i stort sett oviktig, och den uppladdande externa applikationen kan skrivas i vilket ramverk som helst för vilken plattform som helst.
 
 ## Förutsättningar
 
@@ -32,8 +32,7 @@ _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code](ht
 
 Följande programvara måste vara installerad:
 
-- [Node.js v14+](https://nodejs.org/en/)
-- [npm 6.4+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Node.js v18](https://nodejs.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Mål
@@ -41,7 +40,7 @@ Följande programvara måste vara installerad:
 Lär dig mer om:
 
 - Hämta och starta exempelappen React
-- Fråga AEM GraphQL-slutpunkter med [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
+- Fråga AEM GraphQL slutpunkter med [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
 - Fråga AEM efter en lista över team och deras refererade medlemmar
 - AEM för information om en gruppmedlem
 
@@ -74,7 +73,7 @@ Så här skaffar du React-appen:
    - Ange `REACT_APP_HOST_URI`är AEM as a Cloud Service publicerings-URL (ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD`&#39;s value to `none`
    >[!NOTE]
    >
-   > Kontrollera att du har publicerat projektkonfigurationen, Content Fragment-modeller, redigerade innehållsfragment, GraphQL-slutpunkter och beständiga frågor från föregående steg.
+   > Kontrollera att du har publicerat projektkonfigurationen, Content Fragment-modeller, redigerade innehållsfragment, GraphQL slutpunkter och beständiga frågor från tidigare steg.
    >
    > Om du utförde stegen ovan för lokal AEM Author SDK kan du peka på `http://localhost:4502` och `REACT_APP_AUTH_METHOD`&#39;s value to `basic`.
 
@@ -95,16 +94,14 @@ Så här skaffar du React-appen:
 
 >[!IMPORTANT]
 >
->   Detta är en delvis implementerad React App, som följer stegen för att slutföra den. JavaScript-filer som behöver implementeras har följande kommentar. Se till att du lägger till/uppdaterar koden i de filerna med koden som anges i den här självstudiekursen.
+>   Den här React-appen är delvis implementerad. Följ stegen i den här självstudiekursen för att slutföra implementeringen. JavaScript-filer som behöver implementeras har följande kommentar. Se till att du lägger till/uppdaterar koden i de filerna med koden som anges i den här självstudiekursen.
 >
 >
 > //************************************
 >
 >  // TODO : Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
->  //************************************
-
-
+>  //*********************************
 
 ## Anatomi i React-appen
 
@@ -112,7 +109,7 @@ Exempelappen React består av tre huvuddelar:
 
 1. The `src/api` -mappen innehåller filer som används för att göra GraphQL-frågor till AEM.
    - `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
-   - `src/api/usePersistedQueries.js` implements [anpassade React-kopplingar](https://reactjs.org/docs/hooks-custom.html) returnera data från AEM GraphQL till `Teams.js` och `Person.js` visa komponenter.
+   - `src/api/usePersistedQueries.js` implements [anpassade React-kopplingar](https://react.dev/docs/hooks-custom.html) returnera data från AEM GraphQL till `Teams.js` och `Person.js` visa komponenter.
 
 1. The `src/components/Teams.js` filen visar en lista med team och deras medlemmar med hjälp av en listfråga.
 1. The `src/components/Person.js` -filen visar information om en person med hjälp av en parametriserad fråga med ett resultat.
@@ -146,7 +143,7 @@ export default aemHeadlessClient;
 
 ## Implementera för att köra AEM GraphQL beständiga frågor
 
-Öppna `usePersistedQueries.js` fil som ska implementera den generiska `fetchPersistedQuery(..)` för att köra de beständiga AEM GraphQL-frågorna. The `fetchPersistedQuery(..)` funktionen använder `aemHeadlessClient` objektets `runPersistedQuery()` funktion för att köra frågor asynkront, löftesbaserat beteende.
+Så här implementerar du det generiska `fetchPersistedQuery(..)` funktionen för att köra de beständiga AEM GraphQL-frågorna öppnar `usePersistedQueries.js` -fil. The `fetchPersistedQuery(..)` funktionen använder `aemHeadlessClient` objektets `runPersistedQuery()` funktion för att köra frågor asynkront, löftesbaserat beteende.
 
 Senare, anpassad reaktion `useEffect` krok anropar den här funktionen för att hämta specifika data från AEM.
 
@@ -190,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 Bygg sedan upp funktionaliteten för att visa teamen och deras medlemmar i React-appens huvudvy. Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar `my-project/all-teams` beständig fråga, returnera en lista över gruppinnehållsfragment i AEM.
+- En ny [anpassad React useEffect-krok](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar `my-project/all-teams` beständig fråga, returnera en lista över gruppinnehållsfragment i AEM.
 - En React-komponent vid `src/components/Teams.js` som anropar den nya anpassade reaktionen `useEffect` och återger teamdata.
 
 När det är klart fylls programmets huvudvy i med teamdata från AEM.
@@ -203,7 +200,7 @@ När det är klart fylls programmets huvudvy i med teamdata från AEM.
 
 1. Leta reda på funktionen `useAllTeams()`
 
-1. Skapa en `useEffect` krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)`lägger du till följande kod. Haken returnerar också bara relevanta data från det AEM GraphQL-svaret vid `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
+1. Skapa en `useEffect` krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)`lägger du till följande kod. Haken returnerar också endast relevanta data från AEM GraphQL-svar vid `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
 
    ```javascript
    /**
@@ -270,7 +267,7 @@ När det är klart fylls programmets huvudvy i med teamdata från AEM.
    }
    ```
 
-1. Återge slutligen teamdata. Varje team som returneras från en GraphQL-fråga återges med hjälp av `Team` Reaktionskomponent.
+1. Återge slutligen teamdata. Varje team som returneras från GraphQL-frågan återges med `Team` Reaktionskomponent.
 
    ```javascript
    import React from "react";
@@ -340,7 +337,7 @@ Med [Teamfunktioner](#implement-teams-functionality) complete, låt oss implemen
 
 Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar parametern `my-project/person-by-name` beständig fråga och returnerar en enskild personpost.
+- En ny [anpassad React useEffect-krok](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar parametern `my-project/person-by-name` beständig fråga och returnerar en enskild personpost.
 
 - En React-komponent vid `src/components/Person.js` som använder en persons fullständiga namn som en frågeparameter, anropar den nya anpassade reaktionen `useEffect` och återger persondata.
 
@@ -352,7 +349,7 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
 
 1. Leta reda på funktionen `usePersonByName(fullName)`
 
-1. Skapa en `useEffect` krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)`lägger du till följande kod. Haken returnerar också bara relevanta data från det AEM GraphQL-svaret vid `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
+1. Skapa en `useEffect` krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)`lägger du till följande kod. Haken returnerar också endast relevanta data från AEM GraphQL-svar vid `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
 
    ```javascript
    /**
@@ -493,7 +490,7 @@ Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medle
 
 ## Under hålet
 
-Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` förfrågan, observera GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI`(t.ex. <https://publish-p123-e456.adobeaemcloud.com>), det beror på att [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) använda `http-proxy-middleware` -modul.
+Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` begäran. Lägg märke till GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI` (t.ex. <https://publish-p123-e456.adobeaemcloud.com>). Begärandena görs mot React-appens domän eftersom [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) är aktiverad med `http-proxy-middleware` -modul.
 
 
 ![GraphQL API-begäran via Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
@@ -508,8 +505,8 @@ module.exports = function(app) {
   ...
 ```
 
-Det här är dock inte ett lämpligt alternativ för produktionsdistribution och mer information finns på _Produktionsdistribution_ -avsnitt.
+Att använda den lokala proxyn är inte ett lämpligt alternativ för produktionsdistribution och mer information finns på _Produktionsdistribution_ -avsnitt.
 
 ## Grattis!{#congratulations}
 
-Grattis! Du har skapat React-appen för att använda och visa data från AEM GraphQL API:er som en del av den grundläggande självstudiekursen!
+Grattis! Du har nu skapat React-appen för att använda och visa data från AEM GraphQL API:er som en del av den grundläggande självstudiekursen!
