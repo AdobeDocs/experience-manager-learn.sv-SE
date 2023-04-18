@@ -7,10 +7,10 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
+source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
 workflow-type: tm+mt
-source-wordcount: '1784'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -230,7 +230,12 @@ ht-degree: 2%
    + [Skapa arbetsflödeskomponent](welcome-kit/create-workflow-component.md)
    + [Testa lösningen](welcome-kit/testing-the-solution.md)
 
-
++ Reagera app med Forms och Acrobat Sign {#react-ic-sign}
+   + [Introduktion](react-ic-sign/introduction.md)
+   + [Generera konc.int. dokument](react-ic-sign/create-ic-document.md)
+   + [Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
+   + [Generera signeringswidget](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [Distribuera exempelresurserna](react-ic-sign/deploy-assets-on-your-server.md)
 + Dokumenttjänster {#document-services}
    + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
    + [Bädda in PDF i anpassad form](document-services/embed-pdf-inline.md)
