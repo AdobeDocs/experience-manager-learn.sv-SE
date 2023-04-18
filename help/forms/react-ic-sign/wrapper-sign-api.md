@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,8 @@ Ett anpassat AEM utvecklades för att skapa och returnera webbformulär till slu
 ## Skapa Acrobat Sign OSGi-konfiguration
 
 Acrobat Sign REST API kräver den integrationsnyckel och det e-postmeddelande som är kopplat till integrationsnyckeln. Dessa två värden tillhandahålls som OSGi-konfigurationsegenskaper enligt nedan
-![sign-configuration](assets/sign-configuration.jpg)
+
+![sign-configuration](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;

@@ -5,9 +5,9 @@ breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '932'
 ht-degree: 11%
 
 ---
@@ -114,7 +114,7 @@ ht-degree: 11%
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [Databasläsare](./debugging/cloud-service/repository-browser.md)
       + Risker{#risks}
-         + [Traversionsvarningar](./debugging/cloud-service/risks/traversals.md)
+         + [Traversal-varningar](./debugging/cloud-service/risks/traversals.md)
 + Innehållsleverans{#content-delivery}
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
 + Åtkomst till AEM{#accessing}
@@ -259,6 +259,9 @@ ht-degree: 11%
       + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + Spara formulärinskick i en och samma enhet{#one-drive}
+      + [Lagra formulärdata på en enhet](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
+      + [Lagra formulärdata i SharePoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
