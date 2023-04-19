@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 595d990b7d8ed3c801a085892fef38d780082a15
+source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ AEM Headless SDK finns för olika plattformar:
 
 ## Beständiga GraphQL-frågor
 
-Fråga AEM med GraphQL med beständiga frågor (i motsats till [klientdefinierade GraphQL-frågor](#graphl-queries)) gör att utvecklare kan behålla en fråga (men inte dess resultat) i AEM och sedan begära att frågan ska köras efter namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
+Fråga AEM använda GraphQL med beständiga frågor (i motsats till [klientdefinierade GraphQL-frågor](#graphl-queries)) gör att utvecklare kan behålla en fråga (men inte dess resultat) i AEM och sedan begära att frågan ska köras efter namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
 
-Beständiga frågor är bättre än klientdefinierade GraphQL-frågor, eftersom beständiga frågor körs med HTTP-GET, som kan cachelagras på CDN- och AEM Dispatcher-nivåer. Beständiga frågor är också aktiva, definiera ett API och frigör behovet av att utvecklaren förstår detaljerna för varje modell för innehållsfragment.
+Beständiga frågor är bättre än klientdefinierade GraphQL-frågor, eftersom beständiga frågor körs med HTTP GET, som kan cachelagras på CDN- och AEM Dispatcher-nivåer. Beständiga frågor är också aktiva, definiera ett API och frigör behovet av att utvecklaren förstår detaljerna för varje modell för innehållsfragment.
 
 ### Exempel på koder{#persisted-graphql-queries-code-examples}
 
-Nedan följer kodexempel på hur du kör en beständig GraphQL-fråga mot AEM.
+Nedan följer kodexempel på hur du kör en GraphQL-beständig fråga mot AEM.
 
 +++ JavaScript-exempel
 
@@ -95,7 +95,7 @@ Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless
 $ npm i @adobe/aem-headless-client-js
 ```
 
-I det här kodexemplet visas hur du använder [Reagera useEffect(..) krok](https://reactjs.org/docs/hooks-effect.html) för att köra ett asynkront anrop till AEM GraphQL.
+I det här kodexemplet visas hur du använder [Reagera useEffect(..) krok](https://reactjs.org/docs/hooks-effect.html) för att utföra ett asynkront anrop till AEM GraphQL.
 
 Använda `useEffect` om du vill göra det asynkrona GraphQL-anropet i React användbart eftersom:
 
@@ -203,3 +203,37 @@ Nytt `useEffect` Det går att skapa kopplingar för varje beständig fråga som 
 
 AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa sättet att använda [beständiga GraphQL-frågor](#persisted-graphql-queries).
 
+## Webpack 5+
+
+AEM Headless JS SDK är beroende av `util` som inte ingår i Webpack 5+ som standard. Om du använder Webpack 5+ får du följande fel:
+
+```
+Compiled with problems:
+× ERROR in ./node_modules/@adobe/aio-lib-core-errors/src/AioCoreSDKErrorWrapper.js 12:13-28
+Module not found: Error: Can't resolve 'util' in '/Users/me/Code/wknd-headless-examples/node_modules/@adobe/aio-lib-core-errors/src'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+    - add a fallback 'resolve.fallback: { "util": require.resolve("util/") }'
+    - install 'util'
+If you don't want to include a polyfill, you can use an empty module like this:
+    resolve.fallback: { "util": false }
+```
+
+Lägg till följande `devDependencies` till `package.json` fil:
+
+```json
+  "devDependencies": {
+    "buffer": "npm:buffer@^6.0.3",
+    "crypto": "npm:crypto-browserify@^3.12.0",
+    "http": "npm:stream-http@^3.2.0",
+    "https": "npm:https-browserify@^1.0.0",
+    "stream": "npm:stream-browserify@^3.0.0",
+    "util": "npm:util@^0.12.5",
+    "zlib": "npm:browserify-zlib@^0.2.0"
+  },
+```
+
+Kör sedan `npm install` för att installera beroenden.
