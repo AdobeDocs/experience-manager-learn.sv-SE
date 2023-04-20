@@ -1,6 +1,6 @@
 ---
-title: Använda bilder med AEM Headless
-description: Lär dig hur du begär en referens till URL:er för bildinnehåll och använder anpassade återgivningar med AEM Headless.
+title: Använda optimerade bilder med AEM Headless
+description: Lär dig hur du begär optimerade bild-URL:er med AEM Headless.
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -8,37 +8,32 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
+last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '918'
 ht-degree: 0%
 
 ---
 
-# Bilder med AEM Headless {#images-with-aem-headless}
+# Optimerade bilder med AEM Headless {#images-with-aem-headless}
 
 Bilder är en viktig aspekt av [utveckla multimediala, övertygande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
 
 Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ange URL:er till bilder baserat på varifrån bilden refereras.
 
-The `ImageRef` -typen har tre URL-alternativ för innehållsreferenser:
+The `ImageRef` -typen har fyra URL-alternativ för innehållsreferenser:
 
 + `_path` är den refererade sökvägen i AEM och innehåller inte AEM (värdnamn)
++ `_dynamicUrl` är den fullständiga URL:en till den webboptimerade bildresursen.
+   + The `_dynamicUrl` innehåller inte något AEM ursprung, så domänen (AEM Author eller AEM Publish service) måste tillhandahållas av klientprogrammet.
 + `_authorUrl` är den fullständiga URL:en till bildresursen på AEM Author
    + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsvisning av programmet utan huvud.
 + `_publishUrl` är den fullständiga URL:en till bildresursen på AEM Publish
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
-Fälten används bäst utifrån följande kriterier:
-
-| ImageRef-fält | Klientwebbprogram som hanteras från AEM | Kundappar frågar AEM Author | Kundappfrågor AEM Publish |
-|--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
-| `_path` | ✔ | ✔ (App måste ange värd i URL) | ✔ (App måste ange värd i URL) |
-| `_authorUrl` | ✘ | ✔ | ✘ |
-| `_publishUrl` | ✘ | ✘ | ✔ |
-
-Användning av `_authorUrl` och `_publishUrl` ska anpassas till den AEM GraphQL-slutpunkt som används för att hämta GraphQL-svar.
+The `_dynamicUrl` är den URL som ska användas för bildresurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -55,18 +50,20 @@ Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.
 
 ## GraphQL beständig fråga
 
-I GraphQL-frågan returnerar du fältet som `ImageRef` skriv och begära lämpliga fält `_path`, `_authorUrl`, eller `_publishUrl` krävs av ditt program. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
+I GraphQL-frågan returnerar du fältet som `ImageRef` och begär `_dynamicUrl` fält. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
 
 ```graphql
-query ($path: String!) {
-  adventureByPath(_path: $path) {
+query($path: String!, $assetTransform: AssetTransform!) {
+  adventureByPath(
+    _path: $path
+    _assetTransform: $assetTransform
+  ) {
     item {
-      title,
+      _path
+      title
       primaryImage {
         ... on ImageRef {
-          _path
-          _authorUrl
-          _publishUrl
+          _dynamicUrl
         }
       }
     }
@@ -74,21 +71,44 @@ query ($path: String!) {
 }
 ```
 
+### Frågevariabler
+
+```json
+{ 
+  "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+}
+```
+
 The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
+
+The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
+
+| GraphQL-parameter | URL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden | URL-parametervärden | Exempel på GraphQL-variabel | Exempel på URL-parameter |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
+| `format` | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | `{ format: JPG }` | Ej tillämpligt |
+| `seoName` | Ej tillämpligt | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` | Ej tillämpligt | `{ seoName: "bali-surf-camp" }` | Ej tillämpligt |
+| `crop` | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna | Kommaavgränsad sträng med numeriska koordinater `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
+| `size` | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal | Kommaavgränsade positiva heltal i ordningen `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
+| `rotation` | `rotate` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `{ rotation: R90 }` | `?rotate=90` |
+| `flip` | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `{ flip: horizontal }` | `?flip=h` |
+| `quality` | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
+| `width` | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal | Positivt heltal | `{ width: 1600 }` | `?width=1600` |
+| `preferWebP` | `preferwebp` | If `true` och AEM skickar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `{ preferWebp: true }` | `?preferwebp=true` |
 
 ## GraphQL svar
 
-Det resulterande JSON-svaret innehåller de begärda fälten som innehåller URL:erna till bildresurserna.
+Det resulterande JSON-svaret innehåller de begärda fälten som innehåller den webboptimerade URL:en till bildresurserna.
 
 ```json
 {
   "data": {
     "adventureByPath": {
       "item": {
-        "adventurePrimaryImage": {
-          "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_authorUrl": "https://author-p123-e456.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg",
-          "_publishUrl": "https://publish-p123-e789.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/bali-surf-camp/adobestock-175749320.jpg"
+        "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
+        "title": "Bali Surf Camp",
+        "primaryImage": {
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
         }
       }
     }
@@ -96,181 +116,139 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller URL
 }
 ```
 
-Använd lämpligt fält för att läsa in den refererade bilden i programmet `_path`, `_authorUrl`, eller `_publishUrl` i `adventurePrimaryImage` som bildens käll-URL.
+Om du vill läsa in den webboptimerade bilden av den refererade bilden i ditt program använder du `_dynamicUrl` i `primaryImage` som bildens käll-URL.
 
-Domänerna för `_authorUrl` och `_publishUrl` definieras automatiskt av AEM as a Cloud Service med [Externalizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
+I Reagera ser det ut så här när en webboptimerad bild från AEM Publish visas:
 
-I Reagera ser bilden från AEM Publish ut så här:
-
-```html
-<img src={ data.adventureByPath.item.primaryImage._publishUrl } />
+```jsx
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+...
+<img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-## Bildåtergivningar
+Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange det önskade ursprunget för den bild-URL som ska matchas.
 
-Bildresurser kan anpassas [återgivningar](../../../assets/authoring/renditions.md), som är alternativa representationer av den ursprungliga resursen. Anpassade renderingar kan underlätta optimeringen av en headless-upplevelse. I stället för att begära den ursprungliga bildresursen, som ofta är en stor högupplöst fil, kan optimerade återgivningar begäras av programmet utan rubriker.
+### Responsiva URL:er
 
-### Skapa återgivningar
+Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som en baserad bild, och som tillägg till olika breddparametrar, för att driva olika responsiva vyer. Inte bara `width` frågeparametern kan användas, men andra frågeparametrar kan läggas till av klienten för att ytterligare optimera bildresursen utifrån dess behov.
 
-AEM Assets-administratörer definierar anpassade återgivningar med Bearbeta profiler. Bearbetningsprofilerna kan sedan användas direkt på specifika mappträd eller resurser för att generera återgivningarna för dessa resurser.
-
-#### Bearbetar profiler
-
-Specifikationer för resursåtergivningar definieras i [Bearbetar profiler](../../../assets/configuring/processing-profiles.md) av AEM Assets administratörer.
-
-Skapa eller uppdatera en Bearbetningsprofil och lägg till återgivningsdefinitioner för de bildstorlekar som krävs för det headless-programmet. Återgivningar kan namnges vad som helst, men bör namnges semantiskt.
-
-![AEM Headless-optimerade renderingar](./assets/images/processing-profiles.png)
-
-I det här exemplet skapas tre renderingar:
-
-| Återgivningsnamn | Tillägg | Maximal bredd |
-|-----------------------|:---------:|----------:|
-| webboptimerad-stor | webp | 1 200 px |
-| webboptimerad-medel | webp | 900 px |
-| webboptimerad-liten | webp | 600 px |
-
-Attributen som anropas i tabellen ovan är viktiga:
-
-+ __Återgivningsnamn__ används för att begära återgivningen.
-+ __Tillägg__ är tillägget som används för att begära __renderingsnamn__. Föredra `webp` renderingar eftersom dessa är optimerade för webben.
-+ __Maximal bredd__ används för att informera utvecklaren om vilken återgivning som ska användas baserat på dess användning i den headless-applikationen.
-
-Återgivningsdefinitioner beror på ditt headless-programs behov, så se till att definiera den optimala återgivningsuppsättningen för ditt användningsfall och att de får semantiska namn med avseende på hur de används.
-
-#### Bearbeta resurser{#reprocess-assets}
-
-När Bearbetningsprofilen har skapats (eller uppdaterats) bearbetar du om materialet för att generera de nya återgivningarna som har definierats i Bearbetningsprofilen. Det finns inga nya återgivningar förrän resurserna har bearbetats med bearbetningsprofilen.
-
-+ Helst [tilldelat bearbetningsprofilen till en mapp](../../../assets/configuring//processing-profiles.md) så att alla nya resurser som överförs till den mappen automatiskt genererar återgivningarna. Befintliga mediefiler måste bearbetas på nytt enligt metoden&quot;a hoc&quot; nedan.
-
-+ Eller, vid behov, genom att välja en mapp eller resurs, välja __Bearbeta resurser igen__ och väljer det nya namnet på bearbetningsprofilen.
-
-   ![Ad hoc-resurser för ombearbetning](./assets/images/ad-hoc-reprocess-assets.jpg)
-
-#### Granska återgivningar
-
-Återgivningar kan valideras av [öppna en återgivningsvy för en resurs](../../../assets/authoring/renditions.md)och välja de nya renderingarna för förhandsgranskning i renderingslisten. Om återgivningarna saknas [se till att resurserna bearbetas med bearbetningsprofilen](#reprocess-assets).
-
-![Granska återgivningar](./assets/images/review-renditions.png)
-
-#### Publicera resurser
-
-Kontrollera att resurserna med de nya återgivningarna är [(re)publicerad](../../../assets/sharing/publish.md) så att de nya återgivningarna är tillgängliga i AEM Publish.
-
-### Åtkomst till renderingar
-
-Återgivningar nås direkt genom att lägga till __renderingsnamn__ och __återgivningstillägg__ som definieras i Bearbetningsprofilen till resursens URL.
-
-| Resurs-URL | Delbana för återgivningar | Återgivningsnamn | Återgivningstillägg |  | Återgivnings-URL |
-|-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-stor | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-medel | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | webboptimerad-liten | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
-
-{style=&quot;table-layout:auto&quot;}
-
-### GraphQL query{#renditions-graphl-query}
-
-AEM GraphQL kräver ingen extra syntax för att begära bildåtergivningar. Istället [bilderna efterfrågas](#images-graphql-query) på vanligt sätt och önskad återgivning anges i koden. Det är viktigt att [se till att bildresurser som används av det headless-programmet har samma namn på återgivningar](#reprocess-assets).
+```javascript
+const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
+...
+// Read the data from GraphQL response
+let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+let alt = data.adventureByPath.item.title;
+...
+{/*-- Example img srcset --*/}
+document.body.innerHTML=`<img>
+    alt="${alt}"
+    src="${${dynamicUrl}&width=1000}"
+    srcset="`
+      ${dynamicUrl}&width=1000 1000w,
+      ${dynamicUrl}&width=1600 1600w,
+      ${dynamicUrl}&width=2000 2000w,
+      `"
+    sizes="calc(100vw - 10rem)"/>`;
+...
+{/*-- Example picture --*/}
+document.body.innerHTML=`<picture>
+      <source srcset="${dynamicUrl}&width=2600" media="(min-width: 2001px)"/>
+      <source srcset="${dynamicUrl}&width=2000" media="(min-width: 1000px)"/>
+      <img src="${dynamicUrl}&width=400" alt="${alt}"/>
+    </picture>`;
+```
 
 ### Reaktionsexempel
 
-Låt oss skapa ett enkelt React-program som visar tre renderingar, webboptimerade små, webboptimerade, medelstora och webboptimerade stora, av en enda bildresurs.
+Låt oss skapa ett enkelt React-program som visar webboptimerade bilder efter [responsiva bildmönster](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). Det finns två huvudmönster för responsiva bilder:
 
-![Exempel på återgivningar av bildresurser](./assets/images/react-example-renditions.jpg)
++ [Img-element med srset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) för bättre prestanda
++ [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) för designkontroll
 
-#### Skapa bildkomponent{#react-example-image-component}
+#### Img-element med srset
 
-Skapa en React-komponent som återger bilderna. Komponenten accepterar fyra egenskaper:
+>[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-+ `assetUrl`: URL:en för bildresursen som anges via svaret från GraphQL-frågan.
-+ `renditionName`: Namnet på den återgivning som ska läsas in.
-+ `renditionExtension`: Tillägget för återgivningen som ska läsas in.
-+ `alt`: Alt-texten för bilden. tillgänglighet är viktigt!
+[Bildelement med skärpa](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) används med `sizes` för att tillhandahålla olika bildresurser för olika skärmstorlekar. Bilduppsättningar är användbara när du tillhandahåller olika bildresurser för olika skärmstorlekar.
 
-Den här komponenten konstruerar [återgivnings-URL med det format som beskrivs i __Åtkomst till renderingar__](#access-renditions). An `onError` hanteraren är inställd på att visa den ursprungliga resursen om återgivningen saknas.
+#### Bildelement
 
-I det här exemplet används den ursprungliga resursens URL som reserv i `onError` hanteraren, i händelse, saknas en återgivning.
+[Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) används med flera `source` -element om du vill ha olika bildresurser för olika skärmstorlekar. Bildelement är användbara när du vill ha olika bildåtergivningar för olika skärmstorlekar.
 
-```javascript
-// src/Image.js
+>[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-export default function Image({ assetUrl, renditionName, renditionExtension, alt }) {
-  // Construct the rendition Url in the format:
-  //   <ASSET URL>/_jcr_content/renditions<RENDITION NAME>.<RENDITION EXTENSION>
-  const renditionUrl = `${assetUrl}/_jcr_content/renditions/${renditionName}.${renditionExtension}`;
+#### Exempelkod
 
-  // Load the original image asset in the event the named rendition is missing
-  const handleOnError = (e) => { e.target.src = assetUrl; }
-
-  return (
-    <>
-      <img src={renditionUrl} 
-            alt={alt} 
-            onError={handleOnError}/>
-    </>
-  );
-}
-```
-
-#### Definiera `App.js`{#app-js}
-
-Detta enkla `App.js` frågar AEM efter en Adventure-bild och visar sedan bildens tre renderingar: webboptimerad - liten, webboptimerad - medel och webboptimerad - stor.
+Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless API:er om ett Adventure-innehåll och visa den webboptimerade bilden med [img-element med resurs](#img-element-with-srcset) och [bildelement](#picture-element). The `srcset` och `sources` använda en anpassad `setParams` funktion för att lägga till den webboptimerade parametern för leveransfråga i `_dynamicUrl` av bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
 
 Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
-
-Resultatet av frågan och de specifika återgivningsparametrarna skickas till [Bildreaktionskomponent](#react-example-image-component).
 
 ```javascript
 // src/App.js
 
 import "./App.css";
 import { useAdventureByPath } from './api/persistedQueries'
-import Image from "./Image";
+
+const AEM_HOST = process.env.AEM_HOST;
 
 function App() {
 
+  /**
+   * Update the dynamic URL with client-specific query parameters
+   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} params the AEM web-optimized image query parameters
+   * @returns the dynamic URL with the query parameters
+   */
+  function setParams(dynamicUrl, params) {
+    let url = new URL(dynamicUrl);
+    Object.keys(params).forEach(key => {
+      url.searchParams.set(key, params[key]);
+    });
+    return url.toString();
+  }
+
   // Get data from AEM using GraphQL persisted query as defined above 
   // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
-  let { data, error } = useAdventureByPath("/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp");
+  // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
+  let { data, error } = useAdventureByPath(
+        "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
+        { assetTransform: { format: "JPG", preferWebp: true } }
+      );
 
-  // Wait for GraphQL to provide data
+  // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
   return (
     <div className="app">
       
-      <h2>Small rendition</h2>
-      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-small"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <h1>Web-optimized images</h1>
 
-      <hr />
+      {/* Render the web-optimized image img with srcset for the Adventure Primary Image */}
+      <h2>Img srcset</h2>
 
-      <h2>Medium rendition</h2>
-      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-medium"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+      <img
+        alt={alt}
+        src={setParams(dynamicUrl, { width: 1000 })}
+        srcSet={
+            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
+             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
+             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+        }
+        sizes="calc(100vw - 10rem)"/>
 
-      <hr />
+       {/* Render the web-optimized picture for the Adventure Primary Image */}
+        <h2>Picture element</h2>
 
-      <h2>Large rendition</h2>
-      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
-      <Image
-        assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="web-optimized-large"
-        renditionExtension="webp"
-        alt={data.adventureByPath.item.title}
-      />
+        <picture>
+          {/* When viewport width is greater than 2001px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          {/* When viewport width is between 1000px and 2000px */}
+          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          {/* When viewport width is less than 799px */}
+          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+        </picture>
     </div>
   );
 }
