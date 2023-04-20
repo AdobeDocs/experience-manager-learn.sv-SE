@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -29,16 +29,16 @@ Apache Web Server bryr sig egentligen inte om vad filtillägget är för en fil 
 
 ## Filer i conf.d/
 
-| Arkiv | Filmål | Beskrivning |
+| Fil | Filmål | Beskrivning |
 | ---- | ---------------- | ----------- |
 | FILNAMN`.conf` | `/etc/httpd/conf.d/` | En standardinstallation av Enterprise Linux använder det här filtillägget och ta med mapp som en plats för att åsidosätta inställningar som deklarerats i httpd.conf och göra det möjligt att lägga till ytterligare funktioner på global nivå i Apache. |
 | FILNAMN`.vhost` | Mellanlagrad: `/etc/httpd/conf.d/available_vhosts/`<br>Aktiv: `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b> .vhost-filer ska inte kopieras till mappen enabled_vhosts, men använd symboler för en relativ sökväg till filen available_vhosts/\*.vhost</div></u><br><br> | \*.vhost-filer (Virtual Host) är `<VirtualHosts>`  poster som matchar värdnamn och som tillåter att Apache hanterar varje domäntrafik med olika regler. Från `.vhost` fil, andra filer som `rewrites`, `whitelisting`, `etc` kommer att ingå. |
 | FILNAMN`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` fillagring `mod_rewrite` regler som ska inkluderas och konsumeras uttryckligen av en `vhost` fil |
 | FILNAMN`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` -filer inkluderas inifrån `*.vhost` filer. Den innehåller IP-regex eller tillåter nekanderegler för att tillåta vitlistning av IP. Om du försöker begränsa visningen av ett virtuellt värdsystem baserat på IP-adresser genererar du en av dessa filer och tar med den från `*.vhost` fil |
 
-## Filer i conf.modules.d/
+## Filer i conf.dispatcher.d/
 
-| Arkiv | Filmål | Beskrivning |
+| Fil | Filmål | Beskrivning |
 | --- | --- | --- |
 | FILNAMN`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache Module hämtar inställningarna från `*.any` filer. Den överordnade inkluderingsfilen som är standard är `conf.dispatcher.d/dispatcher.any` |
 | FILNAMN`_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b> de här servergruppsfilerna ska inte kopieras till `enabled_farms` men använd `symlinks` till en relativ sökväg till `available_farms/*_farm.any` fil </div> <br/>`*_farm.any` -filer finns i `conf.dispatcher.d/dispatcher.any` -fil. Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i `available_farms` -katalog och aktiverad med en `symlink` till `enabled_farms` katalog.  <br/>Den tar automatiskt med dem efter namn från `dispatcher.any` -fil.<br/><b>Baslinje</b> gruppfiler börjar med `000_` för att se till att de läses in först.<br><b>Egen</b> servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. |
