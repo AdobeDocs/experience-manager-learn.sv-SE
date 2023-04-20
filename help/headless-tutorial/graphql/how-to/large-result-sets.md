@@ -10,9 +10,9 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -34,9 +34,11 @@ Du kan använda sidnumrering och sortering mot alla Content Fragment-modeller.
 
 När du arbetar med stora datauppsättningar kan både förskjutning, begränsning och markörbaserad sidnumrering användas för att hämta en viss delmängd av data. Det finns dock vissa skillnader mellan de två teknikerna som kan göra den ena mer lämplig än den andra i vissa situationer.
 
-### Listfråga
+### Förskjutning/gräns
 
 Listfrågor, använda `limit` och `offset` erbjuder en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
+
+#### GraphQL query
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -51,7 +53,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
   }
 ```
 
-#### Frågevariabler
+##### Frågevariabler
 
 ```json
 {
@@ -60,7 +62,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### Listsvar
+#### GraphQL svar
 
 Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500` så [listfråga](#list-queries) anger att äventyr med samma pris sedan sorteras efter titel i stigande ordning.)
 
@@ -99,10 +101,11 @@ Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte me
 
 Markörbaserad sidnumrering, som är tillgänglig i sidnumrerade frågor, innebär att du använder en markör (en referens till en viss post) för att hämta nästa resultatuppsättning. Det här arbetssättet är effektivare eftersom det inte behövs någon genomsökning av alla tidigare poster för att hämta den datadeluppsättning som krävs. Sidnumrerade frågor fungerar bra för att iterera genom stora resultatuppsättningar från början, till en punkt i mitten eller till slutet. Listfrågor, använda `limit` och `offset` erbjuder en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
 
+#### GraphQL query
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
-query adventuresByPaginated($first:Int!, $after:String) {
+query adventuresByPaginated($first:Int, $after:String) {
  adventurePaginated(first: $first, after: $after, sort: "price DESC, title ASC") {
        edges {
           cursor
@@ -120,7 +123,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
   }
 ```
 
-#### Frågevariabler
+##### Frågevariabler
 
 ```json
 {
@@ -128,7 +131,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### Sidnumrerat svar
+#### GraphQL svar
 
 Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500` så [listfråga](#list-queries) anger att äventyr med samma pris sedan sorteras efter titel i stigande ordning.)
 
@@ -171,11 +174,11 @@ Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte me
 }
 ```
 
-### Nästa uppsättning sidnumrerade resultat
+#### Nästa uppsättning sidnumrerade resultat
 
 Nästa resultatuppsättning kan hämtas med `after` -parametern och `endCursor` från föregående fråga. Om det inte finns fler resultat att hämta, `hasNextPage` är `false`.
 
-#### Frågevariabler
+##### Frågevariabler
 
 ```json
 {
