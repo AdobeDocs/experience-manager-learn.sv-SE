@@ -10,7 +10,7 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
+source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -141,7 +141,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 
 Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange det önskade ursprunget för den bild-URL som ska matchas.
 
-### Responsiva URL:er
+## Responsiva URL:er
 
 Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som en baserad bild, och som tillägg till olika breddparametrar, för att driva olika responsiva vyer. Inte bara `width` frågeparametern kan användas, men andra frågeparametrar kan läggas till av klienten för att ytterligare optimera bildresursen utifrån dess behov.
 
@@ -155,7 +155,7 @@ let alt = data.adventureByPath.item.title;
 {/*-- Example img srcset --*/}
 document.body.innerHTML=`<img>
     alt="${alt}"
-    src="${${dynamicUrl}&width=1000}"
+    src="${dynamicUrl}&width=1000}"
     srcset="`
       ${dynamicUrl}&width=1000 1000w,
       ${dynamicUrl}&width=1600 1600w,
@@ -171,26 +171,26 @@ document.body.innerHTML=`<picture>
     </picture>`;
 ```
 
-### Reaktionsexempel
+## Reaktionsexempel
 
 Låt oss skapa ett enkelt React-program som visar webboptimerade bilder efter [responsiva bildmönster](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). Det finns två huvudmönster för responsiva bilder:
 
 + [Img-element med srset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) för bättre prestanda
 + [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) för designkontroll
 
-#### Img-element med srset
+### Img-element med srset
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
 [Bildelement med skärpa](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) används med `sizes` för att tillhandahålla olika bildresurser för olika skärmstorlekar. Bilduppsättningar är användbara när du tillhandahåller olika bildresurser för olika skärmstorlekar.
 
-#### Bildelement
+### Bildelement
 
 [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) används med flera `source` -element om du vill ha olika bildresurser för olika skärmstorlekar. Bildelement är användbara när du vill ha olika bildåtergivningar för olika skärmstorlekar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-#### Exempelkod
+### Exempelkod
 
 Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless API:er om ett Adventure-innehåll och visa den webboptimerade bilden med [img-element med resurs](#img-element-with-srcset) och [bildelement](#picture-element). The `srcset` och `sources` använda en anpassad `setParams` funktion för att lägga till den webboptimerade parametern för leveransfråga i `_dynamicUrl` av bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
 
