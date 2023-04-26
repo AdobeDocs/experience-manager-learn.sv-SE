@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
+source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att opti
 
 | GraphQL-parameter | URL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden | URL-parametervärden | Exempel på URL-parameter |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | Ej tillämpligt |
+| `format` | Ej tillämpligt | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | Ej tillämpligt |
 | `seoName` | Ej tillämpligt | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` | Ej tillämpligt | Ej tillämpligt |
 | `crop` | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna | Kommaavgränsad sträng med numeriska koordinater `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal | Kommaavgränsade positiva heltal i ordningen `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
