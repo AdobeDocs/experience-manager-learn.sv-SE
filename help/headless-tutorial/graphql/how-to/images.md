@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
+source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -58,10 +58,15 @@ Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.
 I GraphQL-frågan returnerar du fältet som `ImageRef` och begär `_dynamicUrl` fält. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
 
 ```graphql {highlight="11"}
-query($path: String!, $assetTransform: AssetTransform!) {
+query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
   adventureByPath(
     _path: $path
-    _assetTransform: $assetTransform
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+    }
   ) {
     item {
       _path
@@ -81,7 +86,8 @@ query($path: String!, $assetTransform: AssetTransform!) {
 ```json
 { 
   "path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
-  "assetTransform": { "format": "JPG", "quality": 80, "preferWebp": true}
+  "imageFormat": "JPG",
+  "imageWidth": 1000,
 }
 ```
 
@@ -89,17 +95,17 @@ The `$path` variabel som används i `_path` filtret kräver den fullständiga s�
 
 The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
 
-| GraphQL-parameter | URL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden | URL-parametervärden | Exempel på GraphQL-variabel | Exempel på URL-parameter |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:---|:--|
-| `format` | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | `{ format: JPG }` | Ej tillämpligt |
-| `seoName` | Ej tillämpligt | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` | Ej tillämpligt | `{ seoName: "bali-surf-camp" }` | Ej tillämpligt |
-| `crop` | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna | Kommaavgränsad sträng med numeriska koordinater `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `{ crop: { xOrigin: 10, yOrigin: 20, width: 300, height: 400} }` | `?crop=10,20,300,400` |
-| `size` | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal | Kommaavgränsade positiva heltal i ordningen `<WIDTH>,<HEIGHT>` | `{ size: { width: 1200, height: 800 } }` | `?size=1200,800` |
-| `rotation` | `rotate` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `{ rotation: R90 }` | `?rotate=90` |
-| `flip` | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `{ flip: horizontal }` | `?flip=h` |
-| `quality` | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 | 1-100 | `{ quality: 80 }` | `?quality=80` |
-| `width` | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal | Positivt heltal | `{ width: 1600 }` | `?width=1600` |
-| `preferWebP` | `preferwebp` | If `true` och AEM skickar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `{ preferWebp: true }` | `?preferwebp=true` |
+| GraphQL-parameter | URL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden | URL-parametervärden | Exempel på URL-parameter |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
+| `format` | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | Ej tillämpligt |
+| `seoName` | Ej tillämpligt | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` | Ej tillämpligt | Ej tillämpligt |
+| `crop` | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna | Kommaavgränsad sträng med numeriska koordinater `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
+| `size` | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal | Kommaavgränsade positiva heltal i ordningen `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
+| `rotation` | `rotate` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
+| `flip` | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
+| `quality` | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 | 1-100 | `?quality=80` |
+| `width` | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal | Positivt heltal | `?width=1600` |
+| `preferWebP` | `preferwebp` | If `true` och AEM skickar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
 
 ## GraphQL svar
 
@@ -113,7 +119,7 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller den
         "_path": "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp",
         "title": "Bali Surf Camp",
         "primaryImage": {
-          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&quality=80"
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--a38886f7-4537-4791-aa20-3f6ef0ac3fcd/adobestock_175749320.jpg?preferwebp=true&width=1000&quality=80"
         }
       }
     }
@@ -219,7 +225,7 @@ function App() {
   // The 2nd parameter define the base GraphQL query parameters used to request the web-optimized image
   let { data, error } = useAdventureByPath(
         "/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp", 
-        { assetTransform: { format: "JPG", preferWebp: true } }
+        { imageFormat: "JPG" }
       );
 
   // Wait for AEM Headless APIs to provide data
