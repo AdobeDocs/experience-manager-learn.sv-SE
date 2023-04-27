@@ -5,10 +5,10 @@ breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fc6c225f30132baec6245955318c7ca180d3ad62
+source-git-commit: e9422231b8237abe7e2e3703764b2fdc253f33d3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '935'
+ht-degree: 11%
 
 ---
 
@@ -16,7 +16,8 @@ ht-degree: 0%
 # Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Översikt](./overview.md)
-+ [AEM](./aem-trials/index.md)
++ AEM {#aem-trials}
+   + [Bilder](./aem-trials/images.md)
 + Introduktion till AEM as a Cloud Service{#introduction}
    + [Vad är AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Utveckling](./introduction/evolution.md)
