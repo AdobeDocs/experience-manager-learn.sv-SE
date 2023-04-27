@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 3f129fb4fc53e55d118802d3a0e566a9a9bcb9a2
+source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Lär dig mer om XDM-schema och relaterade koncept som fältgrupper, typer, klass
 
 The [XDM - systemöversikt](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) är en bra resurs att lära sig om XDM-schema och relaterade koncept som fältgrupper, typer, klasser och datatyper. Det ger en omfattande förståelse för XDM-datamodellen och hur man skapar och hanterar XDM-scheman för att standardisera data i hela företaget. Utforska den för att få en djupare förståelse för XDM-schemat och hur det kan hjälpa er med datainsamling och datahantering.
 
-## Skapa DataStream - Experience Platform
+## Skapa dataström - Experience Platform
 
 En DataStream instruerar Platform Edge Network var insamlade data ska skickas. Den kan till exempel skickas till Experience Platform, Analytics eller Adobe Target.
 
@@ -196,7 +196,7 @@ Efter installationen av Web SDK med AEM, särskilt på WKND-webbplatsen, är det
 
 ## Sammanfattning
 
-Bra jobbat! Du har slutfört konfigurationen av AEM med Adobe Experience Platform (Experience Platform) Web SDK för att samla in och importera data från en webbplats. Med denna grund kan ni nu utforska fler möjligheter att förbättra och integrera produkter som Analytics, Target, Customer Journey Analytics (CJA) och många andra för att skapa innehållsrika, personaliserade upplevelser för era kunder. Fortsätt lära dig och utforska Adobe Experience Cloud fulla potential.
+Bra jobbat! Du har slutfört konfigurationen av AEM med Experience Platform Web SDK för att samla in och importera data från en webbplats. Med denna grund kan ni nu utforska fler möjligheter att förbättra och integrera produkter som Analytics, Target, Customer Journey Analytics (CJA) och många andra för att skapa innehållsrika, personaliserade upplevelser för era kunder. Fortsätt lära dig och utforska Adobe Experience Cloud fulla potential.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
 
