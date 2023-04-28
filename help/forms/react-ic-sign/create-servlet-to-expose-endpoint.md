@@ -8,14 +8,15 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
-# Skapa servlet
+# Skapa webbformulär-URL för Acrobat Sign
 
 Följande kod skrevs för att visa en POST-slutpunkt. Den här slutpunkten extraherar icTemplateName från skickade data och returnerar en webbformulärs-URL för Acrobat Sign så att slutanvändaren kan signera.
 
@@ -85,3 +86,8 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 
 }
 ```
+
+## Nästa steg
+
+[Distribuera självstudieresurserna på ditt lokala system](./deploy-assets-on-your-server.md)
+

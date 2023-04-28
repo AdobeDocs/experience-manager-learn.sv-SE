@@ -7,9 +7,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1808'
 ht-degree: 2%
 
 ---
@@ -231,11 +231,11 @@ ht-degree: 2%
    + [Testa lösningen](welcome-kit/testing-the-solution.md)
 
 + Reagera app med Forms och Acrobat Sign {#react-ic-sign}
-   + [Introduktion](react-ic-sign/introduction.md)
-   + [Generera konc.int. dokument](react-ic-sign/create-ic-document.md)
-   + [Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
-   + [Generera signeringswidget](react-ic-sign/create-servlet-to-expose-endpoint.md)
-   + [Distribuera exempelresurserna](react-ic-sign/deploy-assets-on-your-server.md)
+   + [1-Introduktion](react-ic-sign/introduction.md)
+   + [2-generera dokument](react-ic-sign/create-ic-document.md)
+   + [API-wrapper för 3-Acrobat Sign](react-ic-sign/wrapper-sign-api.md)
+   + [4-generera signeringswidget](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [5-Distribuera exempelresurserna](react-ic-sign/deploy-assets-on-your-server.md)
 + Dokumenttjänster {#document-services}
    + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
    + [Bädda in PDF i anpassad form](document-services/embed-pdf-inline.md)

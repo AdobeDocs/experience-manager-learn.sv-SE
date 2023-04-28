@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
+exl-id: b7ddc0bd-db93-44e0-83cc-bccde604bd91
+source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -194,3 +195,7 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
         
     }
 ```
+
+## Nästa steg
+
+[Generera Acrobat Sign Widget URL](./create-servlet-to-expose-endpoint.md)
