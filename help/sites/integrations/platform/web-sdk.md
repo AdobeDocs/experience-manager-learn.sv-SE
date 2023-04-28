@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
+exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
+source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
-
 
 # Integrera Experience Platform Web SDK
 
@@ -24,7 +24,7 @@ Lär dig integrera AEM as a Cloud Service med Experience Platform [Web SDK](http
 
 Du får även lära dig hur du samlar in och skickar [WKND - exempel på Adobe Experience Manager-projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvisningsdata i [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html).
 
-När du är klar med den här konfigurationen kan du gå vidare till att implementera Experience Platform och relaterade program som [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) och [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). Att öka kundengagemanget genom att standardisera webb- och kunddata.
+När du är klar med konfigurationen har du implementerat en stabil grund. Du är också redo att fortsätta implementeringen av Experience Platform med program som [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)och [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). Den avancerade implementeringen bidrar till att öka kundengagemanget genom att standardisera webb- och kunddata.
 
 ## Förutsättningar
 
@@ -52,6 +52,8 @@ Om du inte har nödvändig behörighet använder systemadministratören [Adobe A
 
 XDM-schemat (Experience Data Model) hjälper er att standardisera kundupplevelsedata. För att samla in **WKND-sidvy** data, skapa ett XDM-schema och använda fältgrupper som tillhandahålls av Adobe `AEP Web SDK ExperienceEvent` för insamling av webbdata.
 
+Det finns generiska och specifika branscher, t.ex. Retail, Financial Services, Healthcare med flera, en serie referensdatamodeller, se [Översikt över branschdatamodeller](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) för mer information.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
@@ -76,8 +78,14 @@ Lär dig hur du skapar en taggegenskap (tidigare kallad Launch) i Experience Pla
 + Dataelement: Data-element av anpassad kodtyp som extraherar sidnamn, webbplatsavsnitt och värdnamn med WKND-platsens Adobe-klientdatalager. XDM-objektets datatypselement som överensstämmer med det nya WKND XDM-schemabygget som skapades tidigare [Skapa XDM-schema](#create-xdm-schema---experience-platform) steg.
 + Regel: Skicka data till plattforms-Edge-nätverket när en WKND-webbsida besöks med hjälp av Adobe-klientdatalagret som utlöses `cmp:show` -händelse.
 
+När du skapar och publicerar taggbiblioteket med **Publiceringsflöde** kan du använda **Lägg till alla ändrade resurser** -knappen. Om du vill välja alla resurser som dataelement, regel och taggtillägg i stället för att identifiera och välja en enskild resurs. Under utvecklingsfasen kan du dessutom publicera biblioteket endast på _Utveckling_ miljö, verifiera och marknadsför den sedan till _Scen_ eller _Produktion_ miljö.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
+
+
+>[!TIP]
+>
+>Det dataelement och den regelhändelsekod som visas i videon är tillgängliga som referens, **expandera dragspelselementet nedan**. Om du emellertid INTE använder Adobe-klientdatalagret måste du ändra nedanstående kod, men begreppet att definiera dataelementen och använda dem i regeldefinitionen gäller fortfarande.
 
 
 +++ Dataelement och regelhändelsekod
@@ -207,4 +215,3 @@ Bra jobbat! Du har slutfört konfigurationen av AEM med Experience Platform Web 
 + [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [Självstudiekurser om datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
-
