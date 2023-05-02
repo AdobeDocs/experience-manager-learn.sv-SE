@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
 workflow-type: tm+mt
-source-wordcount: '4066'
+source-wordcount: '4061'
 ht-degree: 0%
 
 ---
@@ -439,13 +439,13 @@ Skapa ett publikt Java™-gränssnitt för Byline. The `Byline.java` definierar 
 
    Sedan WKND-källans Java™-paket `com.adobe.aem.guides.wknd.core.models` deklarerar version av `1.0.0`, och ett hårt offentligt gränssnitt och metoder läggs till, måste versionen ökas till `1.1.0`. Öppna filen på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` och uppdatera `@Version("1.0.0")` till `@Version("2.1.0")`.
 
-       &quot;
-       @Version(&quot;2.1.0&quot;)
-       package com.adobe.aem.guides.wknd.core.models;
-       
-       import org.osgi.annotation.versioning.Version;
-       &quot;
+   ```
+   @Version("2.1.0")
+   package com.adobe.aem.guides.wknd.core.models;
    
+   import org.osgi.annotation.versioning.Version;
+   ```
+
 När filerna i det här paketet ändras [paketversionen måste justeras semantiskt](https://semver.org/). Om inte, Maven-projektets [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) identifierar en ogiltig paketversion och bryter den skapade versionen. Som tur är rapporterar Maven-pluginen den ogiltiga Java™-paketversionen och den version den ska vara. Uppdatera `@Version("...")` -deklarationen i Java™-paketets `package-info.java` till den version som rekommenderas av det plugin-program som ska korrigeras.
 
 ### Byline-implementering {#byline-implementation}
