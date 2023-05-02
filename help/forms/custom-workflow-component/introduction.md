@@ -7,9 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-11-28T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+exl-id: 9f00a2f9-d388-4bcc-bdd6-66531dbb3ed2
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '80'
 ht-degree: 1%
 
 ---
@@ -26,5 +27,6 @@ Du behöver följande:
 
 * [Utvecklingsmiljö som konfigurerats enligt det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
+## Nästa steg
 
-
+Skriv [egen java-kod genom att implementera gränssnittet WorkflowProcess](./custom-process-step-aem-workflow.md)

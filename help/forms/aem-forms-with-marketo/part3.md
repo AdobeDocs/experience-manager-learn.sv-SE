@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -49,3 +49,8 @@ Peka webbläsaren mot [dataintegreringssida.](http://localhost:4502/aem/forms.ht
 1. Välj den enda tjänst som visas och klicka på Test Service
 1. Ange ett giltigt leadId och klicka på Test. Om allt blir bra bör du få tillbaka leadinformationen som visas på skärmbilden nedan
    ![testresultat](assets/testresults.jfif)
+
+## Nästa steg
+
+[Sammanställ allt för testning](./part4.md)
+

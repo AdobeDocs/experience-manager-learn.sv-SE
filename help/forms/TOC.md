@@ -7,9 +7,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 2%
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
 + Skapa ditt första adaptiva formulär {#creating-your-first-adaptive-form}
-   + [Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
-   + [Skapa anpassad formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
-   + [Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
-   + [Skapa anpassat formulär](creating-your-first-adaptive-form/create-adaptive-form.md)
-   + [Konfigurera rotpanelen och lägga till underordnade paneler](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
-   + [Lägga till komponenter i panelen Personer](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
-   + [Lägga till tabell på resultatpanelen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
-   + [Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
-   + [Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
+   + [1 - Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
+   + [2 - Skapa adaptiv formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
+   + [3 - Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
+   + [4 - Skapa adaptiv form](creating-your-first-adaptive-form/create-adaptive-form.md)
+   + [5 - Konfigurera rotpanelen och lägga till underordnade paneler](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
+   + [6 - Lägga till komponenter i panelen Personer](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
+   + [7 - Lägg till tabell i resultatpanelen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
+   + [8 - Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
+   + [9 - Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + Hantera inskickning av formulär {#handling-af-form-submissions}
    + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
@@ -173,9 +173,9 @@ ht-degree: 2%
    + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
    + [Spara skickade data i strängvariabel](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + Anpassad arbetsflödeskomponent{#custom-workflow-component}
-   + [Introduktion](custom-workflow-component/introduction.md)
-   + [Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
-   + [Skapa arbetsflödeskomponent](custom-workflow-component/custom-workflow-component.md)
+   + [1-Introduktion](custom-workflow-component/introduction.md)
+   + [2-Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
+   + [Komponent för 3-Skapa arbetsflöde](custom-workflow-component/custom-workflow-component.md)
 + Variabler i AEM{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
@@ -218,11 +218,11 @@ ht-degree: 2%
    + [Del 4 - Sammanfoga allt](aem-forms-with-marketo/part4.md)
 
 + AEM Forms med Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
-   + [Introduktion](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
-   + [Del1 - Generera token](aem-forms-with-adobe-campaign/partone.md)
-   + [Del 2 - Skapa ACS-profil vid formuläröverföring](aem-forms-with-adobe-campaign/parttwo.md)
-   + [Del3 - Fylla i formulär i förväg med ACS-profilinformation](aem-forms-with-adobe-campaign/partthree.md)
-   + [Del 4 - Skapa ACS-profil med hjälp av formulärdatamodell](aem-forms-with-adobe-campaign/partfour.md)
+   + [1 - Introduktion](aem-forms-with-adobe-campaign/aem-forms-with-campaign-standard-getting-started-tutorial.md)
+   + [2 - Generera token](aem-forms-with-adobe-campaign/partone.md)
+   + [3 - Skapa ACS-profil när formulär skickas](aem-forms-with-adobe-campaign/parttwo.md)
+   + [4 - Fyll i formulär i förväg med ACS-profilinformation](aem-forms-with-adobe-campaign/partthree.md)
+   + [5 - Skapa ACS-profil med hjälp av formulärdatamodell](aem-forms-with-adobe-campaign/partfour.md)
 
 + Välkomstpaket {#welcome-kit}
    + [Introduktion](welcome-kit/introduction.md)
@@ -231,11 +231,11 @@ ht-degree: 2%
    + [Testa lösningen](welcome-kit/testing-the-solution.md)
 
 + Reagera app med Forms och Acrobat Sign {#react-ic-sign}
-   + [1-Introduktion](react-ic-sign/introduction.md)
-   + [2-generera dokument](react-ic-sign/create-ic-document.md)
-   + [API-wrapper för 3-Acrobat Sign](react-ic-sign/wrapper-sign-api.md)
-   + [4-generera signeringswidget](react-ic-sign/create-servlet-to-expose-endpoint.md)
-   + [5-Distribuera exempelresurserna](react-ic-sign/deploy-assets-on-your-server.md)
+   + [1 - Introduktion](react-ic-sign/introduction.md)
+   + [2 - Generera dokument](react-ic-sign/create-ic-document.md)
+   + [3 - Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
+   + [4 - Generera signeringswidget](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [5 - Distribuera exempelresurserna](react-ic-sign/deploy-assets-on-your-server.md)
 + Dokumenttjänster {#document-services}
    + [Typer av PDF forms](document-services/pdf-forms-and-documents.md)
    + [Bädda in PDF i anpassad form](document-services/embed-pdf-inline.md)

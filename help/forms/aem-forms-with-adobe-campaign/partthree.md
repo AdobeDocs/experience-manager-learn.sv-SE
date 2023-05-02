@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -234,3 +234,8 @@ Följ följande anvisningar för att få det här att fungera i ditt system:
 * [Importera ett anpassat formulär till AEM med hjälp av pakethanteraren](assets/pre-fill-af-from-campaign.zip)
 * Se till att du loggar in på AEM med en användare vars e-post-ID delas av en profil i Adobe Campaign. Om e-post-ID:t för den AEM användaren till exempel är johndoe@adobe.com, måste du ha en profil i ACS vars e-postadress är johndoe@adobe.com.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
+
+## Nästa steg
+
+[Skapa Adobe Campaign-profil med hjälp av formulärdatamodell](./partfour.md)
+

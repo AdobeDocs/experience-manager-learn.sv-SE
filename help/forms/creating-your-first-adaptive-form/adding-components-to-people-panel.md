@@ -9,9 +9,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 16170f0d-6933-47f2-aefa-951599d163c0
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
@@ -31,3 +31,7 @@ Konfigurera panelen Personer genom att lägga till fragmentet med information om
 **Regler för info om make/maka**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
+
+## Nästa steg
+
+[Lägga till register och andra komponenter i resultatpanelen](./adding-table-to-income-panel.md)

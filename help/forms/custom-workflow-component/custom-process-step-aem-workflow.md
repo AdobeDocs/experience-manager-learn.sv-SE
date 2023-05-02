@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 00257efe045eb85fb192bbb47f8e178cf909eb86
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -143,3 +143,8 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 
 [Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 [Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
+
+## Nästa steg
+
+Skapa [anpassad arbetsflödeskomponent](./custom-workflow-component.md)
+

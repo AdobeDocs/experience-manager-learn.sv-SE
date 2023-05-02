@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 404c345b-efc3-44b9-bc38-6d911627ff5a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -25,3 +25,8 @@ I följande video visas den grundläggande processen att skapa en adaptiv formul
 Se [dokumentation för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) för mer information
 
 Vid behov kan du ladda ned [adaptiv formulärmall](assets/peak-application-template.zip) och importera till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+
+## Nästa steg
+
+[Skapa anpassat formulärfragment](./create-form-fragment.md)
+
