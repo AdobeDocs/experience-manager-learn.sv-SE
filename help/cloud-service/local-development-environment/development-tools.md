@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -195,9 +195,9 @@ Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare so
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ är en populär IDE för Java-utveckling och stöder  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ plugin-program från Adobe som tillhandahåller ett in-IDE-GUI för redigering och synkronisering av JCR-innehåll med en lokal AEM.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ är en populär IDE för Java-utveckling och stöder  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__ plugin-program från Adobe som tillhandahåller ett in-IDE-GUI för redigering och synkronisering av JCR-innehåll med en lokal AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Hämta Eclipse](https://www.eclipse.org/ide/)
-+ [Hämta Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
++ [Hämta Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)

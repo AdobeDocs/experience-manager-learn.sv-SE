@@ -14,7 +14,7 @@ level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
@@ -50,4 +50,4 @@ I Admin Console bör användare ges åtkomst via användargrupper på produktkon
 
 ### Tillämpa behörigheter i Adobe Experience Manager
 
-I Adobe Experience Manager bör användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html), som är förkonfigurerad med lämplig behörighet för att köra specifika uppsättningar uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html).
+I Adobe Experience Manager bör användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html), som är förkonfigurerad med lämplig behörighet för att köra specifika uppsättningar uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).

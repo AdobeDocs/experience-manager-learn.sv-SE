@@ -4,13 +4,13 @@ seo-title: Your Routine Site Maintenance Guide
 description: Oavsett om du är administratör, författare eller utvecklare gäller webbplatsunderhållet alla delar av din AEM Sites-instans. Använd den här guiden för att säkerställa att strategin är klar för framgång.
 seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
 audience: author, marketer, developer
-source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
+exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
-
 
 # Tips och tricks för webbplatsunderhåll
 
@@ -44,19 +44,19 @@ Med index kan frågor köras så snabbt de kan, vilket frigör resurser för and
 
 Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla versioner rensas bort för att frigöra diskutrymme.
 
-#### [Rensa Lucene-binärfiler](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-dashboard.html?lang=en#automated-maintenance-tasks)
+#### [Rensa Lucene-binärfiler](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
 
 Rensa lucene-binärfiler och minska storlekskraven för det datalager som körs.
 
-#### [Skräpning för datalager](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/data-store-garbage-collection.html?lang=en)
+#### [Skräpning för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
 
 När en resurs i AEM tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir&quot;skräp&quot; som inte behöver behållas. Om det finns ett antal resurser som inte refereras är det bra att ta bort dem, bevara utrymme, optimera säkerhetskopieringen och prestanda för filsystemsunderhåll.
 
-#### [Rensa arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/workflows-administering.html?lang=en)
+#### [Rensa arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-64/administering/operations/operations-audit-log.html?lang=en)
+#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
 
 AEM som är kvalificerade för granskningsloggning genererar mycket arkiverade data. Dessa data kan snabbt växa med tiden på grund av replikeringar, överföringar av resurser och andra systemaktiviteter.
 
@@ -80,7 +80,7 @@ Med formatsystem kan de centrala komponenterna, och även de anpassade komponent
 
 Med lanseringar kan du slutföra arbetet för att lansera en ny kampanj, försäljning eller webbplats utan att påverka de distribuerade sidorna. Dessutom kan man schemalägga att publicera dem automatiskt utan närvaro eller övervakning, så att författarna kan göra nästa veckas (eller nästa kvarts) arbete idag och inte skynda sig in i sidutvecklingen dagen innan det ska publiceras - det är verkligen TIME-presenten!)
 
-### [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html?lang=en)
+### [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
 
 Innehållsfragment är anpassningsbara informationsdelar som enkelt kan återanvändas på hela webbplatsen. Om du behöver ändra något ändrar du bara det ursprungliga segmentet så visas uppdateringen var den än används - omedelbart!
 

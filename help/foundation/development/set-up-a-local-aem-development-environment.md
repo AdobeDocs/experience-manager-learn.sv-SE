@@ -1,7 +1,7 @@
 ---
 title: Konfigurera en lokal AEM utvecklingsmiljö
 description: Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Experience Manager. Bekanta dig med lokal installation, Apache Maven, integrerade utvecklingsmiljöer samt felsökning och felsökning. Använd Eclipse IDE, CRXDE-Lite, Visual Studio Code och IntelliJ.
-version: 6.4, 6.5
+version: 6.5
 feature: Developer Tools
 topics: development
 activity: develop
@@ -12,7 +12,7 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2574'
 ht-degree: 0%
@@ -138,7 +138,7 @@ När ska du använda en IDE-indikator ska du kontrollera `classic` på fliken Ma
 
 ### [!DNL Eclipse] IDE
 
-The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de vanligaste utvecklingsmiljöerna för Java™-utveckling, till stor del eftersom den har öppen källkod och ***kostnadsfritt***! Adobe har ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM. The [!DNL Eclipse] IDE rekommenderas för utvecklare som inte AEM alls på grund av det grafiska användargränssnittet hos [!DNL AEM Developer Tools].
+The **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de vanligaste utvecklingsmiljöerna för Java™-utveckling, till stor del eftersom den har öppen källkod och ***kostnadsfritt***! Adobe har ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM. The [!DNL Eclipse] IDE rekommenderas för utvecklare som inte AEM alls på grund av det grafiska användargränssnittet hos [!DNL AEM Developer Tools].
 
 #### Installation och installation
 
@@ -194,7 +194,7 @@ The **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** är en kraftfull IDE f�
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) är en webbläsarbaserad vy av AEM. [!DNL CRXDE Lite] är inbäddat i AEM och gör det möjligt för utvecklare att utföra standardutvecklingsåtgärder som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***not*** är avsedd att vara en fullständig utvecklingsmiljö, men är effektiv som ett felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) är en webbläsarbaserad vy av AEM. [!DNL CRXDE Lite] är inbäddat i AEM och gör det möjligt för utvecklare att utföra standardutvecklingsåtgärder som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***not*** är avsedd att vara en fullständig utvecklingsmiljö, men är effektiv som ett felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
 
 [!DNL CRXDE Lite] ska användas tillsammans med andra utvecklingsmiljöer för att testa och felsöka kod, men aldrig som det primära utvecklingsverktyget. Den har begränsat syntaxstöd, inga funktioner för automatisk komplettering och begränsad integrering med system för källkodshantering.
 

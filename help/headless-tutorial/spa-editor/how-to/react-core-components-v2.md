@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: f02d5e01388ee61228254951b05c37c336423348
+exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
 
 ---
-
 
 # Så här använder du AEM React Editable Components v2
 
@@ -33,7 +33,7 @@ Mer information och kodexempel för AEM React Editable Components v2 finns i den
 
 ## AEM sidor
 
-AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM sidor som utökar [SPA](https://experienceleague.adobe.com/docs/experience-manager-64/developing/headless/spas/spa-page-component.html). AEM komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Komponentexportramverk](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) - som [WCM-komponenter AEM kärna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM sidor som utökar [SPA](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Komponentexportramverk](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) - som [WCM-komponenter AEM kärna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 
 ## Beroenden
@@ -231,6 +231,3 @@ const EditableEmbedding = (props) => {
 // Export as default the mapped EditableEmbedding
 export default MapTo("wknd-examples/components/embedding")(EditableEmbedding);
 ```
-
-
-

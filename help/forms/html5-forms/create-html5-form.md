@@ -6,7 +6,7 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.4,6.5
+version: 6.5
 kt: 4419
 thumbnail: kt-4419.jpg
 topic: Development
@@ -14,16 +14,16 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
 # Skapa HTML5-formulär
 
-HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder återgivning av XFA-formulärmallar (xdp) i HTML5-format. Detta gör det möjligt att återge formulär på mobila enheter och skrivbordswebbläsare som inte har stöd för XFA-baserade PDF-filer. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
+HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder återgivning av XFA-formulärmallar (xdp) i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
 ## Förutsättning
 
@@ -59,6 +59,6 @@ Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, sk
 
 **Skicka URL** - Det här är den URL som kommer att hantera din inskickning av HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
 
-**Återgivningsprofil för HTML** - HTML5-formulär har en uppfattning om profiler som visas som REST-slutpunkter för att möjliggöra mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan du [egen profil](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html) kan skapas och kopplas till formuläret.
+**Återgivningsprofil för HTML** - HTML5-formulär har en uppfattning om profiler som visas som REST-slutpunkter för att möjliggöra mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan du [egen profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) kan skapas och kopplas till formuläret.
 
 **Förifyllningstjänst** - förifyllningstjänsten används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.

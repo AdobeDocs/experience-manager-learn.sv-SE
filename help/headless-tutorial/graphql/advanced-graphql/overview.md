@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Observera att `WKND Shared Endpoint` har redan skapats. Om du vill skapa en slut
 
 >[!NOTE]
 >
-> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html).
+> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 
 ### Granska WKND-innehållets struktur och språkets rotmapp
 

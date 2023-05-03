@@ -3,15 +3,15 @@ title: Förenklade steg för installation av AEM Forms i Windows
 description: Snabba och enkla steg för att installera AEM Forms i Windows
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -87,4 +87,4 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 4. Spara ändringarna.
 
 Grattis! Du har nu installerat och konfigurerat AEM Forms på datorn.
-Beroende på dina behov kan du konfigurera  [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=en) eller [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en) på servern
+Beroende på dina behov kan du konfigurera  [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) eller [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) på servern

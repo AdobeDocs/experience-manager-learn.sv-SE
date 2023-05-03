@@ -2,15 +2,15 @@
 title: Använda Adobe Stock-resurser med AEM Assets
 description: AEM ger användarna möjlighet att söka, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
 feature: Adobe Stock
-version: 6.4, 6.5
+version: 6.5
 topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera 
 ### Ytterligare resurser
 
 * [Enterprise Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [Versionsinformation för AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/sp-release-notes.html?lang=en)
+* [Versionsinformation för AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Integrera AEM och Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
 * [API för integrering med Adobe I/O Console](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API Docs](https://www.adobe.io/apis/creativecloud/stock/docs.html)

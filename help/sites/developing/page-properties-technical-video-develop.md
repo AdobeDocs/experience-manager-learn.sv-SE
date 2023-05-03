@@ -8,7 +8,7 @@ version: Cloud Service
 kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -27,6 +27,6 @@ I videon ovan visas hur du anpassar sidegenskaperna för [WKND-referensplats](ht
 
 Du kan använda följande [exempelpaket för WKND-sidegenskaper](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) innehållande **WKND** och **Grundläggande** de tabbanpassningar som visas i videon ovan. The **SocialMedia** tabbanpassning tillhandahålls inte som [WKND-sidkomponent](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) använder nu V3-versionen av WCM Core Components och i V3-versionen av [social delning är föråldrad](https://github.com/adobe/aem-core-wcm-components/pull/1930).
 
-I utbildningssyfte kan du dock peka WKND-sidkomponenten mot V2-versionen av WCM Core Components med `sling:resourceSuperType` egenskapsvärde och täcka över [Sociala medier](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) -fliken. Mer information finns i [Konfigurera dina sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-64/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+I utbildningssyfte kan du dock peka WKND-sidkomponenten mot V2-versionen av WCM Core Components med `sling:resourceSuperType` egenskapsvärde och täcka över [Sociala medier](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) -fliken. Mer information finns i [Konfigurera dina sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
 Det här exempelpaketet ska installeras på en lokal AEM SDK- eller AEM 6.X.X-instans i utbildningssyfte.
