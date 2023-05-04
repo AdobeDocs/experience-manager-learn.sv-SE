@@ -9,9 +9,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -85,3 +85,7 @@ Vår formulärdatamodell har nu **_get_** tjänst som godkänner empID och retur
 * Ange ett giltigt empID och klicka på _Testa_
 * Du bör få resultat enligt bilden nedan
 * ![test-fdm](assets/test-form-data-model.png)
+
+## Nästa steg
+
+[Hämta empID från URL:en](./get-request-parameter.md)

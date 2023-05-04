@@ -1,31 +1,31 @@
 ---
 title: Anpassat processsteg för att fylla i listvariabler
 description: Anpassat processsteg för att fylla i listvariabler av typen dokument och sträng
-feature: Arbetsflöde
-topic: Utveckling
+feature: Workflow
+topic: Development
 version: 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # Anpassat processsteg
 
 
-Ett anpassat processsteg implementerades för att fylla i arbetsflödesvariabler i arraylistan. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa OSGi-paketet
+Ett anpassat processsteg implementerades för att fylla i arbetsflödesvariabler av typen Array List med bilagor och bilagenamn. Den här variabeln används sedan i arbetsflödeskomponenten Skicka e-post. Om du inte är bekant med att skapa OSGi-paket kan du [Följ dessa anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 Koden i det anpassade processsteget gör följande
 
 * Fråga efter alla adaptiva formulärbilagor under nyttolastmappen. Mappnamnet skickas som ett processargument till processsteget.
 
-* Fyll i arbetsflödesvariabeln `listOfDocuments`
-* Fyll i arbetsflödesvariabeln `attachmentNames`
+* Fylla `listOfDocuments` arbetsflödesvariabel
+* Fylla `attachmentNames` arbetsflödesvariabel
 * Ange värdet för arbetsflödesvariabeln (`no_of_attachments`)
 
 ```java
@@ -115,3 +115,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 > *listOfDocuments* - variabel av typen ArrayList med dokument
 > *attachmentNames* - variabel av typen ArrayList of String
 > *no_of_attachments* - variabel av typen Double
+
+## Nästa steg
+
+[Testa lösningen på ditt lokala system](./test.md)

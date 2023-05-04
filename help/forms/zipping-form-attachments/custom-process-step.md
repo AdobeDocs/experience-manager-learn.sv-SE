@@ -1,24 +1,24 @@
 ---
 title: Anpassat steg för att zippa upp bifogade filer
 description: Anpassat steg för att lägga till adaptiva formulärbilagor i en ZIP-fil och lagra ZIP-filen i en arbetsflödesvariabel
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1131dca8-882d-4904-8691-95468fb708b7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Anpassat processsteg
 
 
-Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa OSGi-paketet
+Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. Om du inte är bekant med att skapa OSGi-paket kan du [Följ dessa anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 Koden i det anpassade processsteget gör följande
 
@@ -70,7 +70,7 @@ import com.day.cq.search.result.SearchResult;
 
 public class ZipFormAttachments implements WorkflowProcess {
 
-	 private static final Logger log = LoggerFactory.getLogger(ZipFormAttachments.class);
+     private static final Logger log = LoggerFactory.getLogger(ZipFormAttachments.class);
      @Reference
      QueryBuilder queryBuilder;
 
@@ -127,18 +127,18 @@ public class ZipFormAttachments implements WorkflowProcess {
                     Node payloadNode = session.getNode(payloadPath);
                     Node zippedFileNode =  payloadNode.addNode("zipped_attachments.zip", "nt:file");
                     javax.jcr.Node resNode = zippedFileNode.addNode("jcr:content", "nt:resource");
-        		
-        			ValueFactory valueFactory = session.getValueFactory();
-        			Document zippedDocument = new Document(baos.toByteArray());
+                
+                    ValueFactory valueFactory = session.getValueFactory();
+                    Document zippedDocument = new Document(baos.toByteArray());
 
-        			Binary contentValue = valueFactory.createBinary(zippedDocument.getInputStream());
-        			metaDataMap.put("no_of_attachments", no_of_attachments);
+                    Binary contentValue = valueFactory.createBinary(zippedDocument.getInputStream());
+                    metaDataMap.put("no_of_attachments", no_of_attachments);
 
                     workflowSession.updateWorkflowData(workItem.getWorkflow(), workItem.getWorkflow().getWorkflowData());
                     log.debug("Updated workflow");
-        			resNode.setProperty("jcr:data", contentValue);
-        			session.save();
-        			zippedDocument.close();
+                    resNode.setProperty("jcr:data", contentValue);
+                    session.save();
+                    zippedDocument.close();
 
 
 
@@ -159,5 +159,8 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Kontrollera att du har en variabel som heter *no_of_attachments* av typen Double i arbetsflödet för att koden ska fungera.
+> Kontrollera att du har en variabel som heter  *no_of_attachments* av typen Double i ditt arbetsflöde för att koden ska fungera.
 
+## Nästa steg
+
+[Fylla i arbetsflödesvariabler för ArrayList med bilagor och namn på bifogad fil](./custom-process-step.md)

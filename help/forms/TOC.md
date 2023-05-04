@@ -7,10 +7,10 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -45,10 +45,10 @@ ht-degree: 2%
    + [Listrutor för överlappande](some-useful-integrations/geonames-org.md)
    + [Integrera med ServiceNow](some-useful-integrations/service-now.md)
 + Skapa OSGi-paket {#creating-your-first-osgi-bundle}
-   + [Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
-   + [Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
-   + [Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
-   + [Inklusive paket från tredje part](creating-your-first-osgi-bundle/include-third-party-jars.md)
+   + [1 - Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [2 - Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [3 - Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
+   + [4 - Inkludera paket från tredje part](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + Adaptiv Forms {#adaptive-forms}
    + [Installera AEM Forms i Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Installera 32-bitarspaket i Linux](adaptive-forms/installing-aem-form-on-linux.md)
@@ -101,16 +101,16 @@ ht-degree: 2%
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + Välja och samla ihop innehåll i DAM-mappen{#select-dam-folder-content}
-   + [Introduktion](display-and-assemble-dam-folder-contents/introduction.md)
-   + [Fyll i alternativgrupp](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [Sammanställa valda resurser](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
-   + [Distribuera resurserna lokalt](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
+   + [1 - Introduktion](display-and-assemble-dam-folder-contents/introduction.md)
+   + [2 - Fyll i alternativgrupp](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [3 - Sammanställa valda resurser](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [4 - Distribuera resurserna lokalt](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
-   + [Introduktion](prefill-fdm-db/introduction.md)
-   + [Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
-   + [Konfigurerar formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
-   + [Hämta begäranparameter](prefill-fdm-db/get-request-parameter.md)
-   + [Skapa anpassat formulär](prefill-fdm-db/create-adaptive-form.md)
+   + [1 - Introduktion](prefill-fdm-db/introduction.md)
+   + [2 - Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
+   + [3 - Konfigurera formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
+   + [4 - Hämta begärandeparameter](prefill-fdm-db/get-request-parameter.md)
+   + [5 - Skapa anpassningsbara formulär](prefill-fdm-db/create-adaptive-form.md)
 + Tips och tricks för användargränssnittet{#ui-tips-and-tricks}
    + [Växla text i lösenordsfält](ui-tips-tricks/toggle-password.md)
    + [Blanksteg (verktygsfältsknappar)](ui-tips-tricks/toolbar-buttons.md)
@@ -118,14 +118,14 @@ ht-degree: 2%
    + [Lägg till ikoner på navigeringsflikar](ui-tips-tricks/active-complete.md)
    + [Fyll i fält automatiskt](ui-tips-tricks/auto-complete.md)
 + Anpassa inkorg{#inbox-customization}
-   + [Introduktion](inbox-customization/introduction.md)
-   + [Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
-   + [Använda enkel mall](inbox-customization/use-sightly-template.md)
+   + [1 - Introduktion](inbox-customization/introduction.md)
+   + [2 - Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
+   + [3 - Använda enkel mall](inbox-customization/use-sightly-template.md)
 + Bifogade e-postformulär{#zipping-form-attachments}
-   + [Introduktion](zipping-form-attachments/introduction.md)
-   + [Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
-   + [Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
-   + [Testa lösningen](zipping-form-attachments/test.md)
+   + [1 - Introduktion](zipping-form-attachments/introduction.md)
+   + [2 - Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
+   + [3 - Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
+   + [4 - Testa lösningen](zipping-form-attachments/test.md)
 + Lagra och hämta adaptiv form{#store-and-retrieve-af-with-2fa}
    + [Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
    + [Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)

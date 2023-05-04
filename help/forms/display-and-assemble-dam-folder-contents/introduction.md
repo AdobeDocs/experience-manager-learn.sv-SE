@@ -7,10 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+exl-id: 91fbea23-4886-4892-87ad-1bc4fff5896a
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,5 +29,6 @@ Du behöver följande:
 
 * [Utvecklingsmiljö som konfigurerats enligt det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 
+## Nästa steg
 
-
+[Fyll i alternativgrupp](./populating-choice-group-with-dam-folder-content.md)

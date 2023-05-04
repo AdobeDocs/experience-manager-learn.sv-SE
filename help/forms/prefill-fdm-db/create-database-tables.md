@@ -1,32 +1,36 @@
 ---
 title: Skapa databastabeller
 description: Skapa databas som ska användas av formulärdatamodell
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5811
 thumbnail: kt-5811.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1136244a-c3e6-45f6-8af8-eb3c100f838e
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Skapa databastabeller
 
 Formulärdatamodellen kan baseras på RDBMS-, RESTfull-, SOAP- eller OData-källor. Kursen fokuserar på att förfylla adaptiva formulär med hjälp av formulärdatamodell som stöds av RDBMS-datakällan. I den här självstudiekursen användes MYSQL-databasen. Vi skapade följande två tabeller för att visa användningsfallet
 
-* **** newhiretable - Den här tabellen lagrar all information
+* **newhire** table - This table stores the newhere information
 
    ![newhire](assets/newhire-table.png)
 
 
-* **Kan** användas - Här lagras alla mottagare
+* **stödmottagare** table - Här lagras alla mottagare
 
    ![stödmottagare](assets/beneficiaries-table.png)
 
-Du kan importera [sql-filen](assets/db-schema.sql) med MySQL workbench för att skapa till tabeller med exempeldata.
+Du kan importera [sql-fil](assets/db-schema.sql) använda MySQL workbench för att skapa till tabeller med exempeldata.
+
+## Nästa steg
+
+[Konfigurera formulärdatamodell](./configuring-form-data-model.md)

@@ -7,9 +7,10 @@ topic: Development
 role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -113,3 +114,7 @@ Skapa ett anpassat formulär och koppla formuläret till klientbiblioteket **lis
 ![set-options](assets/set-options-newsletter.png)
 
 Vi anropar javascript-funktionen som anropas **getDAMFolderAssets** och skickar sökvägen till resursen i DAM-mappen till listan i formuläret.
+
+## Nästa steg
+
+[Sammanställ markerade resurser](./assemble-selected-newsletters.md)

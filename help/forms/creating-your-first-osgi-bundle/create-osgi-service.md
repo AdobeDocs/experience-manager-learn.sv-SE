@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -110,3 +110,8 @@ Importera och installera paketet i AEM med [pakethanterare](http://localhost:450
 
 Använd postman för att ringa ett POST-samtal och ange indataparametrarna som visas på bilden nedan
 ![postman](assets/test-service-postman.JPG)
+
+## Nästa steg
+
+[Skapa Sling Servlet](./create-servlet.md)
+
