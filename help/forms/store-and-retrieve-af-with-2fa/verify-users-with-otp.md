@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: d486d5de-efd9-4dd3-9d9c-1bef510c6073
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -55,3 +55,5 @@ AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa 
 Den ifyllda formulärdatamodellen kan [hämtad härifrån](assets/sms-2fa-fdm.zip)
 
 ![fdm](assets/2FA-fdm.PNG)
+
+[Skapa huvudformuläret](./create-the-main-adaptive-form.md)

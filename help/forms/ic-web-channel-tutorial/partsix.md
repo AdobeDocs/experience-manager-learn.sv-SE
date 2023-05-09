@@ -1,8 +1,8 @@
 ---
 title: Skapa interaktiv kommunikation för webbkanal
-seo-title: Skapa interaktiv kommunikation för webbkanal
+seo-title: Create Interactive Communication for Web Channel
 description: Detta är en del av 6 i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I den här delen ska vi skapa interaktiv kommunikation för webbkanalen.
-seo-description: Detta är en del av 6 i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. I den här delen ska vi skapa interaktiv kommunikation för webbkanalen.
+seo-description: This is part 6 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create Interactive Communication for Web Channel.
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
 feature: Interactive Communication
@@ -14,14 +14,13 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a0a0c8dc-5302-446c-9fec-e23fe1320e34
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
-
 
 # Skapa interaktiv kommunikation för webbkanal
 
@@ -48,3 +47,6 @@ I den här delen ska vi skapa interaktiv kommunikation för webbkanalen.
 1. Tryck på Skapa
 1. Du kan antingen klicka på Klar eller Redigera för att stänga dialogrutan.
 
+## Nästa steg
+
+[Lägga till text och bild i dokumentet](./partseven.md)

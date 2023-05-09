@@ -17,9 +17,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
@@ -37,3 +37,7 @@ Följ videon nedan om du vill lägga till innehåll i utskriftskanalsdokumentet.
 I videon får du hjälp med att lägga till innehåll i lämpliga målområden i dokumentet för utskriftskanalen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22379?quality=12&learn=on)
+
+## Nästa steg
+
+[Konfigurera linjediagram](./configuring-line-chart.md)

@@ -16,9 +16,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -36,3 +36,7 @@ Formulärdatamodellen är beroende av en korrekt konfigurerad datakälla. Den da
 Form Data Model är grunden för all interaktiv kommunikation. Funktionen Hämta/läs för formulärdatamodellen hämtar data från backend-datakällan och används för att fylla i Interactive Communications-dokumentet.
 
 När du har skapat en formulärdatamodell kan du sedan använda den som bas för att skapa dokumentfragment och interaktiva kommunikationsdokument.
+
+## Nästa steg
+
+[Skapa mall med hjälp av designer](./create-xdp-layout-using-forms-designer.md)

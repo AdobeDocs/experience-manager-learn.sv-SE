@@ -1,20 +1,20 @@
 ---
 title: Skapa huvudarbetsflöde för att utlösa signaturprocessen
 description: Skapa ett arbetsflöde för att lagra formulären för signering i databasen
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 1%
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
-
 
 # Skapa huvudarbetsflöde
 
@@ -22,11 +22,11 @@ Huvudarbetsflödet aktiveras när användaren skickar det ursprungliga formulär
 
 ![huvudarbetsflöde](assets/main-workflow.PNG)
 
-**Lagra Forms To** Signis a custom process step.
+**Lagra Forms att signera** är ett anpassat processsteg.
 
-Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM arbetsflöde. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till metoden `insertData` i tjänsten SignMultipleForms. Metoden `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
+Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM arbetsflöde. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till `insertData` i tjänsten SignMultipleForms. The `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
 
-Koden i det här anpassade processteget refererar till tjänsten `SignMultipleForms`.
+Koden i det här anpassade processsteget refererar till `SignMultipleForms` service.
 
 
 
@@ -117,7 +117,11 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Arbetsflödet Signera flera Forms som används i den här artikeln kan [hämtas här](assets/sign-multiple-forms-workflows.zip)
+Arbetsflödet Signera flera Forms som används i den här artikeln kan [hämtad härifrån](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
 > Konfigurera Day CQ Mail Service för att skicka e-postmeddelanden. E-postmallen finns också i ovanstående paket.
+
+## Nästa steg
+
+[Uppdatera signaturstatus vid dokumentsignering](./update-signature-status.md)

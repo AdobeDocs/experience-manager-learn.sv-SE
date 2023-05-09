@@ -9,7 +9,7 @@ role: Developer
 level: Experienced
 exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -29,3 +29,5 @@ I den här självstudiekursen får du hjälp med att spara och hämta anpassade 
 ## Demonstration av användningsfallet
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=12&learn=on)
+
+

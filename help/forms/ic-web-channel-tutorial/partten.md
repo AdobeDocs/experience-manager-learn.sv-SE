@@ -14,13 +14,13 @@ discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar Outlook-panel för pensionering{#configuring-retirement-outlook-panel}
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 * Markera pennikonen om du vill redigera standardtexten.
 
-* Ersätt standardtexten med &quot;**Din pensionsintäkt i Outlook&quot;**
+* Ersätt standardtexten med &quot;**Din intäkt för pensionerade Outlook&quot;**
 
 **Konfigurera målområde för höger panel**
 
@@ -60,11 +60,11 @@ ht-degree: 0%
 
 * Klicka på ikonen Resurser och använd filtret för att visa resurser av typen &quot;Dokumentfragment&quot;. Dra och släpp dokumentfragmentet RetirementIncomeOutlook på målområdet för den vänstra panelen.
 
-* Du kan referera [till den här sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) när du lägger till dokumentfragment i innehållsområden.
+* Du kan referera till [till denna sida](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) när dokumentfragment läggs till i innehållsområden.
 
 ## Ökning av uppskattad månadsinkomst {#adding-estimated-monthly-income-chart}
 
-* Klicka på målområdet för högerpanelen på den högra sidan. Klicka på plustecknet (+) för att infoga diagramkomponenten. Vi använder ett kolumndiagram för att visa den beräknade månadsinkomsten. Tryck försiktigt på den nyligen infogade diagramkomponenten. Klicka på ikonen &quot;Wrench&quot; för att öppna konfigurationsbladet.Konfigurera diagrammet med följande egenskaper så som visas på skärmbilden nedan.
+* Klicka på målområdet för högerpanelen på den högra sidan. Klicka på plustecknet (+) för att infoga diagramkomponenten. Vi använder ett kolumndiagram för att visa den beräknade månadsinkomsten. Tryck försiktigt på den nyligen infogade diagramkomponenten. Välj ikonen &quot;Wrench&quot; för att öppna konfigurationsbladet.Konfigurera diagrammet med följande egenskaper, som visas på skärmbilden nedan.
 
 **AEM Forms 6.4 - Konfigurera uppskattad månadsinkomst (kolumndiagram)**
 
@@ -74,6 +74,6 @@ ht-degree: 0%
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
+## Nästa steg
 
-
-
+[Konfigurera cirkeldiagram](./parteleven.md)

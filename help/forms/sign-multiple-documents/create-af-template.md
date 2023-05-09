@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ Vi ska skapa en ny mall för adaptiva formulär för den här självstudiekursen
 ## Assets
 
 Mallen och sidkomponenten som används i den här självstudiekursen kan [hämtad härifrån](assets/sign-multiple-forms-template.zip)
+
+## Nästa steg
+
+[Välj de formulär som ska signeras av de som används](./create-initial-form.md)

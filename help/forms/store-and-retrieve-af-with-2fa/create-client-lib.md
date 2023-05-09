@@ -1,24 +1,25 @@
 ---
 title: Skapa klientbibliotek
 description: Skapa klientbibliotek för att hantera klickhändelsen för knappen "Spara och avsluta"
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c90eea73-bd44-40af-aa98-d766aa572415
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
 # Skapa klientbibliotek
 
-Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för API:t `guideBridge` för händelsen click för knappen som identifieras av CSS-klassen **savebutton**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
+Skapa [klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` i `guideBridge` API för click-händelsen för knappen som identifieras av CSS-klassen **sparebutton**.  Vi skickar de anpassningsbara formulärdata, `fileMap`och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
 
 När formulärdata har sparats genereras ett unikt program-ID som visas för användaren i en dialogruta. När dialogrutan stängs dirigeras användaren till formuläret som gör att användaren kan hämta det sparade adaptiva formuläret med det unika program-ID:t.
 
@@ -66,6 +67,10 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Vi har använt [javascript-biblioteket](http://bootboxjs.com/examples.html) för att visa dialogrutan
+> Vi har använt [bootbox javascript-bibliotek](http://bootboxjs.com/examples.html) för att visa dialogrutan
 
-Klientbiblioteken som används i det här exemplet kan [hämtas här](assets/client-libraries.zip)
+Klientbiblioteken som används i det här exemplet kan [hämtad härifrån](assets/client-libraries.zip)
+
+## Nästa steg
+
+[Verifiera användare med tjänsten för engångslösenord](./verify-users-with-otp.md)

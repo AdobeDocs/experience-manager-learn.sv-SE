@@ -7,10 +7,10 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1804'
+ht-degree: 1%
 
 ---
 
@@ -127,17 +127,17 @@ ht-degree: 0%
    + [3 - Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - Testa lösningen](zipping-form-attachments/test.md)
 + Lagra och hämta adaptiv form{#store-and-retrieve-af-with-2fa}
-   + [Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
-   + [Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)
-   + [Lagra bifogade formulär](store-and-retrieve-af-with-2fa/store-form-attachments.md)
-   + [Lagra formulärdata](store-and-retrieve-af-with-2fa/store-form-data.md)
-   + [Skapa server](store-and-retrieve-af-with-2fa/create-servlet.md)
-   + [Återge formulär med sparade data](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
-   + [Skapa klientbibliotek](store-and-retrieve-af-with-2fa/create-client-lib.md)
-   + [Integrera med OTP-tjänst](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
-   + [Skapa huvudformuläret](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
-   + [Skapa formuläret Mitt konto](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
-   + [Distribuera exemplet](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
+   + [1 - Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
+   + [2 - Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)
+   + [3 - Lagra bifogade formulär](store-and-retrieve-af-with-2fa/store-form-attachments.md)
+   + [4 - Lagra formulärdata](store-and-retrieve-af-with-2fa/store-form-data.md)
+   + [5 - Skapa server](store-and-retrieve-af-with-2fa/create-servlet.md)
+   + [6 - Återge formulär med sparade data](store-and-retrieve-af-with-2fa/retrieve-saved-form.md)
+   + [7 - Skapa klientbibliotek](store-and-retrieve-af-with-2fa/create-client-lib.md)
+   + [8 - Integrera med OTP-tjänsten](store-and-retrieve-af-with-2fa/verify-users-with-otp.md)
+   + [9 - Skapa huvudformuläret](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
+   + [10 - Skapa formuläret Mitt konto](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
+   + [11 - Distribuera exemplet](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
 + Exporterar skickade data i CSV-format{#export-submitted-data-csv-format}
    + [Exportera skickade data](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
@@ -157,17 +157,17 @@ ht-degree: 0%
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + Signera flera Forms{#sign-multiple-documents}
-   + [Introduktion](sign-multiple-documents/introduction.md)
-   + [Konfigurera datakälla](sign-multiple-documents/configure-data-source.md)
-   + [Skapa OSGi-tjänst](sign-multiple-documents/create-osgi-service.md)
-   + [Skapa huvudarbetsflöde](sign-multiple-documents/create-main-workflow.md)
-   + [Uppdatera arbetsflöde för signaturstatus](sign-multiple-documents/update-signature-status.md)
-   + [Anpassa sammanfattningskomponent](sign-multiple-documents/customize-summary-component.md)
-   + [Skapa klientbibliotek](sign-multiple-documents/create-client-lib.md)
-   + [Skapa formulärmall](sign-multiple-documents/create-af-template.md)
-   + [Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
-   + [Skapa formulär för signering](sign-multiple-documents/create-forms-for-signing.md)
-   + [Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
+   + [1 - Introduktion](sign-multiple-documents/introduction.md)
+   + [2 - Konfigurera datakälla](sign-multiple-documents/configure-data-source.md)
+   + [3 - Skapa OSGi-tjänst](sign-multiple-documents/create-osgi-service.md)
+   + [4 - Skapa huvudarbetsflöde](sign-multiple-documents/create-main-workflow.md)
+   + [5 - Uppdatera signaturstatusarbetsflöde](sign-multiple-documents/update-signature-status.md)
+   + [6 - Anpassa sammanfattningskomponent](sign-multiple-documents/customize-summary-component.md)
+   + [7 - Skapa klientlib](sign-multiple-documents/create-client-lib.md)
+   + [8 - Skapa formulärmall](sign-multiple-documents/create-af-template.md)
+   + [9 - Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
+   + [10 - Skapa formulär för signering](sign-multiple-documents/create-forms-for-signing.md)
+   + [11 - Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
 + Anpassade arbetsflödessteg{#custom-workflow-steps}
    + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
    + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
@@ -185,9 +185,9 @@ ht-degree: 0%
    + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
 + Granska formulärdata{#review-form-data}
-   + [Introduktion](review-form-data/introduction.md)
-   + [Skapa komponent](review-form-data/create-component.md)
-   + [Distribuera resurser](review-form-data/deploy-on-your-system.md)
+   + [1 - Introduktion](review-form-data/introduction.md)
+   + [2 - Skapa komponent](review-form-data/create-component.md)
+   + [3 - Distribuera resurser](review-form-data/deploy-on-your-system.md)
 + Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Introduktion](storing-retrieving-form-data/introduction.md)
    + [Konfigurera datakälla](storing-retrieving-form-data/part1.md)
@@ -260,18 +260,18 @@ ht-degree: 0%
    + [Användbara verktygstjänster](document-services/useful-utility-services.md)
 + Interaktiv kommunikation för tryckkanaler
 {#ic-print-channel-tutorial}
-   + [Introduktion](ic-print-channel-tutorial/introduction.md)
-   + [Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
-   + [Skapa datakälla](ic-print-channel-tutorial/create-data-source.md)
-   + [Skapa formulärdatamodell](ic-print-channel-tutorial/create-form-data-model.md)
-   + [Skapa XDP-layout med Forms Designer](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
-   + [Skapa dokumentfragment](ic-print-channel-tutorial/create-document-fragment.md)
-   + [Skapa dokument för utskriftskanal](ic-print-channel-tutorial/create-print-channel-document.md)
-   + [Lägga till innehåll i målområden](ic-print-channel-tutorial/add-content-to-target-areas.md)
-   + [Konfigurera linjediagram](ic-print-channel-tutorial/configuring-line-chart.md)
-   + [Lägger till tabell i utskriftskanalen](ic-print-channel-tutorial/adding-table-to-print-channel.md)
-   + [Använda bevakad mapp för att generera dokument](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
-   + [Öppnar användargränssnittet för agenten vid formuläröverföring](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
+   + [1 - Introduktion](ic-print-channel-tutorial/introduction.md)
+   + [2 - Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
+   + [3 - Skapa datakälla](ic-print-channel-tutorial/create-data-source.md)
+   + [4 - Skapa formulärdatamodell](ic-print-channel-tutorial/create-form-data-model.md)
+   + [5 - Skapa XDP-layout med Forms Designer](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
+   + [6 - Skapa dokumentfragment](ic-print-channel-tutorial/create-document-fragment.md)
+   + [7 - Skapa dokument för utskriftskanal](ic-print-channel-tutorial/create-print-channel-document.md)
+   + [8 - Lägga till innehåll i målområden](ic-print-channel-tutorial/add-content-to-target-areas.md)
+   + [9 - Konfigurera linjediagram](ic-print-channel-tutorial/configuring-line-chart.md)
+   + [10 - Lägger till tabell i utskriftskanalen](ic-print-channel-tutorial/adding-table-to-print-channel.md)
+   + [11 - Använda bevakad mapp för att generera dokument](ic-print-channel-tutorial/using-watched-folder-to-generate-document.md)
+   + [12 - Öppnar användargränssnittet för agent när formulär skickas](ic-print-channel-tutorial/opening-agent-ui-on-form-submission.md)
 + Spara och hämta utkast {#store-retrieve-letters}
    + [Introduktion](store-retrieve-letters/introduction.md)
    + [Implementering](store-retrieve-letters/save-draft-letters.md)
@@ -287,19 +287,19 @@ ht-degree: 0%
    + [Anpassa textredigeraren](interactive-communications/customize-text-editor.md)
 
 + Interaktiv kommunikation för webbkanal {#ic-web-channel-tutorial}
-   + [Introduktion](ic-web-channel-tutorial/introduction.md)
-   + [Konfigurera Tomcat](ic-web-channel-tutorial/partone.md)
-   + [Skapa datakälla](ic-web-channel-tutorial/parttwo.md)
-   + [Skapa formulärdatamodell](ic-web-channel-tutorial/partthree.md)
-   + [Skapar dokumentmall för webbkanal](ic-web-channel-tutorial/partfour.md)
-   + [Skapa dokumentfragment](ic-web-channel-tutorial/partfive.md)
-   + [Skapa interaktivt kommunikationsdokument](ic-web-channel-tutorial/partsix.md)
-   + [Lägga till text och bilder](ic-web-channel-tutorial/partseven.md)
-   + [Konfigurera linjediagram](ic-web-channel-tutorial/parteight.md)
-   + [Konfigurerar tabell](ic-web-channel-tutorial/partnine.md)
-   + [Konfigurerar kolumndiagram](ic-web-channel-tutorial/partten.md)
-   + [Konfigurera cirkeldiagram](ic-web-channel-tutorial/parteleven.md)
-   + [Leverans av webbkanalsdokument](ic-web-channel-tutorial/parttwelve.md)
+   + [1 - Introduktion](ic-web-channel-tutorial/introduction.md)
+   + [2 - Konfigurera Tomcat](ic-web-channel-tutorial/partone.md)
+   + [3 - Skapa datakälla](ic-web-channel-tutorial/parttwo.md)
+   + [4 - Skapa formulärdatamodell](ic-web-channel-tutorial/partthree.md)
+   + [5 - Skapar dokumentmall för webbkanal](ic-web-channel-tutorial/partfour.md)
+   + [6 - Skapa dokumentfragment](ic-web-channel-tutorial/partfive.md)
+   + [7 - Skapa interaktivt kommunikationsdokument](ic-web-channel-tutorial/partsix.md)
+   + [8 - Lägga till text och bilder](ic-web-channel-tutorial/partseven.md)
+   + [9 - Konfigurera linjediagram](ic-web-channel-tutorial/parteight.md)
+   + [10 - Konfigurerar tabell](ic-web-channel-tutorial/partnine.md)
+   + [11 - Konfigurera stapeldiagram](ic-web-channel-tutorial/partten.md)
+   + [12 - Konfigurera cirkeldiagram](ic-web-channel-tutorial/parteleven.md)
+   + [13 - Leverans av webbkanalsdokument](ic-web-channel-tutorial/parttwelve.md)
    + [E-postleverans av webbkanalsdokument](interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
 + Felsökning {#troubleshooting}

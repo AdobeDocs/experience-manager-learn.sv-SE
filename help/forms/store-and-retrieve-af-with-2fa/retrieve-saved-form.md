@@ -1,17 +1,18 @@
 ---
 title: Hämta sparat anpassat formulär
 description: Servern som återger det adaptiva formuläret med sparade data
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: d722cb9c-6c8a-44de-aaea-fc07a555b864
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 # Hämta sparat formulär
 
 Nästa steg är att skapa en server som återger det adaptiva formuläret med sparade data och bilagor.
-Följande serletkod körs efter att koden för engångslösenord har verifierats. De adaptiva formulärdata och tillhörande bifogade filer som är kopplade till det unika program-ID:t hämtas från databasen. Begäranobjektet fylls i med sparade adaptiva formulärdata och mappningen av bifogade filer. Begäran vidarebefordras sedan för att återge formuläret&quot;store-confirmwithattachments&quot; ifyllt med originaldata och dess bilagor.
+Följande serletkod körs efter att koden för engångslösenord har verifierats. De adaptiva formulärdata och tillhörande bifogade filer som är kopplade till det unika program-ID:t hämtas från databasen. Begäranobjektet fylls i med sparade adaptiva formulärdata och mappningen av bifogade filer. Begäran vidarebefordras sedan för att återge formuläret&quot;store-withattachments&quot; ifyllt med originaldata och dess bilagor.
 
 ```java
 package store.and.fetch.core.servlets;
@@ -103,3 +104,7 @@ public class RenderForm extends SlingAllMethodsServlet {
 
 }
 ```
+
+## Nästa steg
+
+[Skapa klientlib för att anropa servleten för att lagra formulärdata](./create-client-lib.md)

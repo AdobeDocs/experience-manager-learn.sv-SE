@@ -1,22 +1,21 @@
 ---
 title: Skapa MyAccountForm
 description: Skapa myaccount-formuläret för att hämta det delvis ifyllda formuläret vid lyckad verifiering av program-ID och telefonnummer.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6599
 thumbnail: 6599.jpg
-topic: Utveckling
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1ecd8bc0-068f-4557-bce4-85347c295ce0
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
-
-
 
 # Skapa MyAccountForm
 
@@ -24,28 +23,32 @@ Formuläret **MyAccountForm** används för att hämta det delvis ifyllda adapti
 
 ![mitt kontoformulär](assets/6599.JPG)
 
-När användaren anger program-ID:t och klickar på knappen **Hämta program** hämtas det mobilnummer som är associerat med program-ID:t från databasen med åtgärden Hämta i formulärdatamodellen.
+När användaren anger program-ID:t och klickar på **FetchApplication** -knappen hämtas det mobilnummer som är associerat med program-id:t från databasen med åtgärden Hämta i formulärdatamodellen.
 
-I det här formuläret används POSTENS anrop av formulärdatamodellen för att verifiera mobilnumret med hjälp av engångslösenord. Formulärets sändningsåtgärd aktiveras när mobilnumret har verifierats med följande kod. Vi utlöser klickhändelsen för skicka-knappen **submitForm**.
+I det här formuläret används POSTENS anrop av formulärdatamodellen för att verifiera mobilnumret med hjälp av engångslösenord. Formulärets sändningsåtgärd aktiveras när mobilnumret har verifierats med följande kod. Vi utlöser klickhändelsen för skicka-knappen med namnet **submitForm**.
 
 >[!NOTE]
-> Du måste ange API-nyckeln och API-hemlighetsvärdena som är specifika för ditt [Nexmo](https://dashboard.nexmo.com/)-konto i fälten i MyAccountForm
+> Du måste ange API-nyckeln och API-hemlighetsvärdena som är specifika för din [Nexmo](https://dashboard.nexmo.com/) konto i lämpliga fält i MyAccountForm
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-Det här formuläret är kopplat till en anpassad skickaåtgärd som vidarebefordrar formuläröverföringen till serverleten som är monterad på **/bin/renderaf**
+Det här formuläret är associerat med en anpassad skickaåtgärd som vidarebefordrar formuläröverföringen till servern som är monterad på **/bin/renderaf**
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-Koden i serverutrymmet som är monterad på **/bin/renderaf** vidarebefordrar begäran om att återge butiken med bilagor i adaptiv form ifyllda med sparade data.
+Koden i serverutrymmet som är monterat på **/bin/renderaf** vidarebefordrar begäran om att återge lagret tillsammans med bilagor med adaptiv form förifyllda med sparade data.
 
 
-* MyAccountForm kan [laddas ned här](assets/my-account-form.zip)
+* MyAccountForm kan vara [hämtad härifrån](assets/my-account-form.zip)
 
-* Exempelformulär baseras på [en anpassad adaptiv formulärmall](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
+* Exempelformulär bygger på [anpassad mall för anpassningsbara formulär](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
 
-* [En anpassad ](assets/custom-submit-my-account-form.zip) hanterare som är associerad med MyAccountForm-överföringen måste importeras till AEM.
+* [Anpassad överföringshanterare](assets/custom-submit-my-account-form.zip) som är associerat med MyAccountForm-inlämningen måste importeras till AEM.
+
+## Nästa steg
+
+[Testa lösningen genom att distribuera exempelresurserna](./deploy-this-sample.md)

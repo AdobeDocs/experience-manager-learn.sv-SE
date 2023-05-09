@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 11145e87-7eef-4183-ac6f-efc8d35d0670
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -29,3 +29,7 @@ I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm vi
 >[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
 Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudiekursen.
+
+## Nästa steg
+
+[Skapa formulärdatamodell](./partthree.md)

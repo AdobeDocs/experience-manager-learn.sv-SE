@@ -1,24 +1,25 @@
 ---
 title: Konfigurera AEM datakälla
 description: Konfigurera den MySQL-baserade datakällan för att lagra och hämta formulärdata
-feature: Adaptiv Forms
-topic: Utveckling
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
 version: 6.4,6.5
 kt: 6899
 thumbnail: 6899.jpg
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 1%
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 # Konfigurera datakälla
 
-Det finns många sätt att integrera AEM med en extern databas. Ett av de vanligaste sätten att integrera en databas är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
-Det första steget är att hämta och distribuera lämpliga [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) i AEM.
+Det finns många sätt att integrera AEM med en extern databas. Ett av de vanligaste sätten att integrera en databas är att använda konfigurationsegenskaperna för Apache Sling Connection Pooled DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
+Det första steget är att ladda ned och installera rätt [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEM.
 Skapa den poolade datakällan för Apache Sling-anslutningen och ange de egenskaper som anges i skärmbilden nedan. Databasschemat är en del av den här självstudiekursen.
 
 ![datakälla](assets/data-source.PNG)
@@ -29,7 +30,7 @@ Databasen har en tabell som heter formdata med de tre kolumnerna som visas på s
 
 
 >[!NOTE]
->Ange ett namn för datakällan **aemformstutorial**. Exempelkoden använder namnet för att ansluta till databasen.
+>Ge datakällan ett namn **aemformstutorial**. Exempelkoden använder namnet för att ansluta till databasen.
 
 | Egenskapsnamn | Värde |
 | ------------------------|--------------------------------------- |
@@ -39,4 +40,8 @@ Databasen har en tabell som heter formdata med de tre kolumnerna som visas på s
 
 ## Assets
 
-SQL-filen som schemat ska skapas från kan [hämtas här](assets/sign-multiple-forms.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
+SQL-filen som ska skapa schemat kan vara [hämtad härifrån](assets/sign-multiple-forms.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
+
+## Nästa steg
+
+[Skapa en OSGi-tjänst för att lagra och hämta data i databasen](./create-osgi-service.md)

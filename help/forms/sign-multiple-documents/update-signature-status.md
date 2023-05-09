@@ -1,20 +1,20 @@
 ---
 title: Uppdatera signaturstatusen för formuläret i databasen
 description: Uppdatera signaturstatusen för det signerade formuläret i databasen med hjälp av AEM arbetsflöde
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 1%
+source-wordcount: '116'
+ht-degree: 0%
 
 ---
-
 
 # Uppdatera signaturstatus
 
@@ -70,5 +70,8 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Arbetsflödet för signaturuppdateringsstatus kan [hämtas här](assets/update-signature-status-workflow.zip)
+Arbetsflödet för signaturuppdateringsstatus kan vara [hämtad härifrån](assets/update-signature-status-workflow.zip)
 
+## Nästa steg
+
+[Anpassa sammanfattningssteget för att visa nästa formulär för signering](./customize-summary-component.md)

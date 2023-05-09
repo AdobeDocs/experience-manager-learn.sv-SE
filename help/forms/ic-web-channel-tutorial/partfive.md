@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 1d7093a8-3765-46ec-912a-b5a5503fd5af
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -37,3 +37,7 @@ Dokumentfragmentredigeraren kan även infoga infogade villkor i texten, vilket v
 >[!NOTE]
 >
 >Kontrollera att elementen i formulärdatamodellen som du infogar i ett dokumentfragment är underordnade rotelementet. I det här fallet ska du till exempel kontrollera att det användarobjekt du väljer är underordnat saldoobjektet
+
+## Nästa steg
+
+[Skapa interaktivt kommunikationsdokument](./partsix.md)

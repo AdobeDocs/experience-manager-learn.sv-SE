@@ -1,20 +1,20 @@
 ---
 title: Anpassa komponenten Sammanfattning
 description: Utöka komponenten för sammanfattningssteg så att den kan navigera till nästa formulär i paketet.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: Utveckling
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fb68579d-241c-414d-92f4-13194f4d1923
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 1%
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
-
 
 # Anpassa sammanfattningssteg
 
@@ -46,6 +46,8 @@ Summary.jsp har följande kod. Den har en referens till klientbiblioteket som id
 
 ## Assets
 
-Den anpassade sammanfattningskomponenten kan [hämtas här](assets/custom-summary-step.zip)
+Den anpassade sammanfattningskomponenten kan [hämtad härifrån](assets/custom-summary-step.zip)
 
+## Nästa steg
 
+[Hämta nästa formulär för signering](./create-client-lib.md)

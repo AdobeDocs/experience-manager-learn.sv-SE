@@ -1,8 +1,8 @@
 ---
 title: Konfigurera leverans av webbkanalsdokument
-seo-title: Konfigurera leverans av webbkanalsdokument
+seo-title: Setting up the delivery of web channel document
 description: Det här är den sista delen i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. Här tittar vi på hur vi levererar webbkanalsdokument via e-post.
-seo-description: Det här är den sista delen i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. Här tittar vi på hur vi levererar webbkanalsdokument via e-post.
+seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
 feature: Interactive Communication
 topics: development
@@ -14,14 +14,13 @@ discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 topic: Development
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera leverans av webbkanalsdokument {#setting-up-the-delivery-of-web-channel-document}
 
@@ -74,4 +73,8 @@ Logga in på AEM Forms.
 
 >[!NOTE]
 >
->Ta en titt på filen **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
+>Ta en titt på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
+
+## Nästa steg
+
+[Konfigurera e-postleverans](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)

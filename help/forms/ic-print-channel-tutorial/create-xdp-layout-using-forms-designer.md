@@ -17,9 +17,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 1bda648c-01be-44f1-aa73-3f5e7365d094
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ Alla dokument i tryckkanaler baseras på en mall som skapats med verktyget AEM F
 I följande video markeras de avsnitt eller målområden som definieras i den layout som används i den här självstudiekursen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37890?quality=12&learn=on)
+
+## Nästa steg
+
+[Skapa dokumentfragment](./create-document-fragment.md)

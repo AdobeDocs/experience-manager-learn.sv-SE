@@ -14,9 +14,9 @@ role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ När du är klar med den här självstudiekursen har du lärt dig följande:
 * Skapa dokumentfragment
 * Konfigurera tabeller och diagram
 * Leverera webbkanalsdokument
+
+## Nästa steg
+
+[Installera Tomcat](./partone.md)

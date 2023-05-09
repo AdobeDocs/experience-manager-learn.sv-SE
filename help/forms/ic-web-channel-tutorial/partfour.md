@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d742d77b-a064-46e8-862a-2d3e1cc56f63
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -34,3 +34,7 @@ Skapa dokumentmall för webbkanal i AEM Forms 6.5
 Mallen kommer att ha målområden/platshållare som kommer att innehålla olika typer av dokumentfragment. En mall kan till exempel ha målområden för logotyper och ett annat målområde för textinnehåll.
 
 När webbkanalens dokumentmall har skapats kan du skapa interaktiva kommunikationsdokument som är baserade på mallen.
+
+## Nästa steg
+
+[Skapa dokumentfragment](./partfive.md)
