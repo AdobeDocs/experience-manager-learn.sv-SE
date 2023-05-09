@@ -5,9 +5,9 @@ breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e9422231b8237abe7e2e3703764b2fdc253f33d3
+source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 11%
 
 ---
@@ -27,7 +27,9 @@ ht-degree: 11%
       + [Experience Manager - Styrnings- och personalmodeller och arkitekter](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Skapa innehåll snabbare med Adobe Experience Manager](./introduction/drive-content-velocity-for-sites.md)
       + [Snabba upp materialets hastighet med AEM](./introduction/accelerate-content-velocity-aem.md)
-+ [Experience Cloud-integreringar](./experience-cloud/integrations.md)
++ Experience Cloud-integreringar{#integrations}
+   + [Integreringar](./integrations/experience-cloud.md)
+   + [Adobe Target](./integrations/target.md)
 + Underliggande teknik {#underlying-technology}
    + [AEM](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
