@@ -9,7 +9,7 @@ role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -40,10 +40,9 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 
 * Kontrollera att rätt JDK är installerat
    * AEM 6.2: Oracle SE 8 JDK 1.8.x (64 bitar)
-* 
    * AEM 6.3 och AEM 6.4: Oracle SE 8 JDK 1.8.x (64 bitar)
-* AEM 6.5 behöver du JDK 8 eller JDK 11
-* [Officiella JDK-krav](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=en) anges här
+   * AEM 6.5 behöver du JDK 8 eller JDK 11
+   * [Officiella JDK-krav](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=en) anges här
 * Kontrollera att JAVA_HOME är inställt på att peka på den JDK som du har installerat.
    * Följ stegen nedan för att skapa variabeln JAVA_HOME i Windows:
       * Högerklicka på Den här datorn och välj Egenskaper
@@ -71,20 +70,20 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 * Dessa två egenskaper krävs för att dokumenttjänster ska fungera
 * Spara filen sling.properties
 * [Ladda ned ett formulärtilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
-* Installera formulären som läggs till i paketet med [pakethanteraren.](http://localhost:4502/crx/packmgr/index.jsp)
+* Installera formulären som läggs till i paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp).
 * När du har installerat add-on package måste du följa följande steg
 
-       **Kontrollera att alla paket är i aktivt läge. (Förutom för AEMFD-signaturpaket).**
-       **Det tar normalt fem minuter för alla paket att aktiveras.**
-   
+   * **Kontrollera att alla paket är i aktivt läge. (Förutom för AEMFD-signaturpaket).**
+   * **Det tar vanligtvis fem eller fler minuter för alla paket att aktiveras.**
+
    * **När alla paket är aktiva (förutom AEMFD Signatures-paketet) startar du om datorn för att slutföra AEM Forms-installationen**
 
 ## sun.util.calendar-paketet till tillåtelselista
 
 1. Öppna Felix webbkonsol i din [webbläsarfönster](http://localhost:4502/system/console/configMgr)
-2. Sök och öppna Firewall Configuration (Brandväggskonfiguration för deserialisering): `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-3. Lägg till `sun.util.calendar` som ny post under `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
-4. Spara ändringarna.
+1. Sök och öppna Firewall Configuration (Brandväggskonfiguration för deserialisering): `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+1. Lägg till `sun.util.calendar` som ny post under `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.firewall.deserialization.whitelist.name`
+1. Spara ändringarna.
 
 Grattis! Du har nu installerat och konfigurerat AEM Forms på datorn.
 Beroende på dina behov kan du konfigurera  [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) eller [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) på servern
