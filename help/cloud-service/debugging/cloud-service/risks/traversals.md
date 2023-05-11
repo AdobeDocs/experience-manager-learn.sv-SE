@@ -11,9 +11,9 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ Du kan åtgärda genomgångsvarningar i tre enkla steg: analysera, justera och v
 
 ## 1. Analysera{#analyze}
 
-Börja med att identifiera vilka AEM Publish-tjänster som har resvägsvarningar. Om du vill göra det går du till Cloud Manager, [ladda ned Publish services `aemerror` loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target=&quot;_blank&quot;} från alla miljöer (Dev, Stage och Production) sedan tidigare __tre dagar__.
+Börja med att identifiera vilka AEM Publish-tjänster som har resvägsvarningar. Om du vill göra det går du till Cloud Manager, [ladda ned Publish services `aemerror` loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} från alla miljöer (Dev, Stage och Production) sedan tidigare __tre dagar__.
 
 ![Hämta AEM as a Cloud Service loggar](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ När de felaktiga frågorna och deras anropande kod har identifierats måste jus
 
 __Ändra frågan__ om du vill lägga till nya frågebegränsningar som leder till befintliga indexbegränsningar. Om det är möjligt bör du helst ändra frågan till att ändra index.
 
-+ [Lär dig hur du justerar frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
++ [Lär dig hur du justerar frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### Justera indexvärdet
 
 __Ändra (eller skapa) ett AEM__ så att befintliga frågebegränsningar kan matchas mot indexuppdateringarna.
 
-+ [Lär dig hur du trimmar befintliga index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
-+ [Lär dig hur du skapar index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target=&quot;_blank&quot;}
++ [Lär dig hur du trimmar befintliga index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [Lär dig hur du skapar index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3. Verifiera{#verify}
 
@@ -174,9 +174,9 @@ Justeringar av frågor, index eller båda måste verifieras för att säkerstäl
 
 ![Förklara fråga](./assets/traversals/verify.gif)
 
-Endast [justeringar av frågan](#adjust-the-query) när du gör det kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;}. Förklara fråga körs mot AEM Author-tjänsten, men eftersom indexdefinitionerna är desamma i alla författar- och publiceringstjänster räcker det att validera frågor mot AEM Author-tjänsten.
+Endast [justeringar av frågan](#adjust-the-query) när du gör det kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Förklara fråga körs mot AEM Author-tjänsten, men eftersom indexdefinitionerna är desamma i alla författar- och publiceringstjänster räcker det att validera frågor mot AEM Author-tjänsten.
 
-If [justeringar av index](#adjust-the-index) måste indexet distribueras till AEM as a Cloud Service. När indexjusteringarna är distribuerade är det Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;} kan användas för att köra och finjustera frågan ytterligare.
+If [justeringar av index](#adjust-the-index) måste indexet distribueras till AEM as a Cloud Service. När indexjusteringarna är distribuerade är det Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} kan användas för att köra och finjustera frågan ytterligare.
 
 I slutändan implementeras alla ändringar (fråga och kod) i Git och distribueras till AEM as a Cloud Service med hjälp av Cloud Manager. Testa kodsökvägarna som är kopplade till de ursprungliga varningarna för genomgång och kontrollera att varningar för genomgång inte längre visas i `aemerror` log.
 
@@ -191,7 +191,7 @@ Här finns andra användbara resurser för att förstå AEM, söka och bläddra 
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - sökning och indexering" tabindex="-1"><img class="is-bordered-r-small" src="../../../cloud-5/imgs/009-thumb.png" alt="Cloud 5 - sökning och indexering"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - sökning och indexering" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - sökning och indexering"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">

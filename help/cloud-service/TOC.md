@@ -5,7 +5,7 @@ breadcrumb-title: Självstudiekurser om AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 31d6b75f481bbc1a716974b2188a0f4f460c1df6
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 11%
@@ -287,32 +287,7 @@ ht-degree: 11%
    + Avancerat{#advanced}
       + [Metadataarbetare](./asset-compute/advanced/metadata.md)
    + [Felsökning](./asset-compute/troubleshooting.md)
-+ Cloud 5{#cloud-5}
-   + [Introduktion](./cloud-5/cloud5-introduction.md)
-   + [Säsong 1](./cloud-5/cloud5-season-1.md)
-   + [Säsong 2](./cloud-5/cloud5-season-2.md)
-   + [AEM CDN del 1](./cloud-5/cloud5-aem-cdn-part1.md)
-   + [AEM CDN del 2](./cloud-5/cloud5-aem-cdn-part2.md)
-   + [AEM loggfiler](./cloud-5/cloud5-aem-log-files.md)
-   + [Inloggningstoken](./cloud-5/cloud5-getting-login-token-integrations.md)
-   + [Cloud Dispatcher](./cloud-5/cloud5-aem-dispatcher-cloud.md)
-   + [Migrering 1](./cloud-5/cloud5-aem-content-migration-part-1.md)
-   + [Migrering 2](./cloud-5/cloud5-aem-content-migration-part-2.md)
-   + [Dispatcher Validator](./cloud-5/cloud5-aem-dispatcher-validator.md)
-   + [Sökning och indexering](./cloud-5/cloud5-aem-search-and-indexing.md)
-   + [Adobe App Builder](./cloud-5/cloud5-adobe-app-builder.md)
-   + Säsong 2{#season-2}
-      + [Fragment](./cloud-5/season-2/cloud5-experience-v-content-fragments.md)
-      + [Repo Modernizer](./cloud-5/season-2/cloud5-repo-modernizer.md)
-      + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
-      + [ÅTERSTÄLL](./cloud-5/season-2/cloud5-repoinit.md)
-      + [Sling Job Scheduler](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
-      + [Korrigera din cache](./cloud-5/season-2/cloud5-fix-your-cache.md)
-      + [Korrigera återskrivningar](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
-      + [Cloud Manager - enhetstester](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
-      + [Cloud Manager - funktionstester](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
-+ [AEM Experts Series](./aem-experts-series.md)
+
 + Tutorials i flera steg{#multi-step-tutorials}
    + [Utveckling av AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)
@@ -321,6 +296,32 @@ ht-degree: 11%
    + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 + Expertresurser {#expert-resources}
    + AEM Champions {#aem-champions}
-      + [Cloud Manager Onboarding Playbook](./expert-resources/onboarding-playbook.md)
-      + [Miljötyper för Cloud Manager](./expert-resources/environment-types.md)
-      + [Användargränssnitt för Cloud Manager](./expert-resources/cloud-manager-ui.md)
+      + [Cloud Manager Onboarding Playbook](./expert-resources/aem-champions/onboarding-playbook.md)
+      + [Miljötyper för Cloud Manager](./expert-resources/aem-champions/environment-types.md)
+      + [Användargränssnitt för Cloud Manager](./expert-resources/aem-champions/cloud-manager-ui.md)
+   + [AEM Experts Series](./expert-resources/expert-series/aem-experts-series.md)
+   + Cloud 5{#cloud-5}
+      + [Introduktion](./expert-resources/cloud-5/cloud5-introduction.md)
+      + [Säsong 1](./expert-resources/cloud-5/cloud5-season-1.md)
+      + [Säsong 2](./expert-resources/cloud-5/cloud5-season-2.md)
+      + [AEM CDN del 1](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
+      + [AEM CDN del 2](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
+      + [AEM loggfiler](./expert-resources/cloud-5/cloud5-aem-log-files.md)
+      + [Inloggningstoken](./expert-resources/cloud-5/cloud5-getting-login-token-integrations.md)
+      + [Cloud Dispatcher](./expert-resources/cloud-5/cloud5-aem-dispatcher-cloud.md)
+      + [Migrering 1](./expert-resources/cloud-5/cloud5-aem-content-migration-part-1.md)
+      + [Migrering 2](./expert-resources/cloud-5/cloud5-aem-content-migration-part-2.md)
+      + [Dispatcher Validator](./expert-resources/cloud-5/cloud5-aem-dispatcher-validator.md)
+      + [Sökning och indexering](./expert-resources/cloud-5/cloud5-aem-search-and-indexing.md)
+      + [Adobe App Builder](./expert-resources/cloud-5/cloud5-adobe-app-builder.md)
+      + Säsong 2{#season-2}
+         + [Fragment](./expert-resources/cloud-5/season-2/cloud5-experience-v-content-fragments.md)
+         + [Repo Modernizer](./expert-resources/cloud-5/season-2/cloud5-repo-modernizer.md)
+         + [Admin Console](./expert-resources/cloud-5/season-2/cloud5-admin-console.md)
+         + [ÅTERSTÄLL](./expert-resources/cloud-5/season-2/cloud5-repoinit.md)
+         + [Sling Job Scheduler](./expert-resources/cloud-5/season-2/cloud5-sling-job-scheduler.md)
+         + [Korrigera din cache](./expert-resources/cloud-5/season-2/cloud5-fix-your-cache.md)
+         + [Korrigera återskrivningar](./expert-resources/cloud-5/season-2/cloud5-fix-your-rewrites.md)
+         + [Cloud Manager - Experience Audit](./expert-resources/cloud-5/season-2/cloud5-mocm-experience-audit.md)
+         + [Cloud Manager - enhetstester](./expert-resources/cloud-5/season-2/cloud5-mocm-unit-tests.md)
+         + [Cloud Manager - funktionstester](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
