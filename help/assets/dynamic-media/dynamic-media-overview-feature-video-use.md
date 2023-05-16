@@ -7,9 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experie
 * Kopiera URL:er till bilder och responsiva visningsprogram
 * Variationer för smart beskärning till URL-adresser
 
-## Dynamic Media med AEM Sites och andra CMS-system
+## Använd med AEM Sites
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -48,7 +48,7 @@ I den här videon beskrivs hur mediematerial hanteras i Adobe Experience Manager
 * Hämta lokalt med bildförinställningar
 * Skapa och publicera interaktiv banderoll
 
-## Dynamic Media för att skapa blandad mediesamling och anpassat visningsprogram
+## Bygg en samling med blandade media
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
@@ -63,7 +63,7 @@ I den här videon beskrivs den enkla processen att skapa för en samling mediere
 * Skapa en uppsättning med blandade media från snurra, video och foton
 * Redigera och använda anpassat visningsprogram för blandade media
 
-## Dynamic Media-bildförinställningar
+## Bildförinställningar
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
@@ -74,7 +74,7 @@ I den här videon beskrivs hur bildförinställningar skapas och vad som är en 
 * Använd alltid skärpa
 * Fältet URL-modifierare om du vill lägga till extra kommandon för att ändra storlek på bildförinställningen
 
-## Dynamic Media Advanced URL modifiers
+## Avancerade URL-modifierare
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 * Beskära till en bildbana
 * Skapa en textmall från en Photoshop-fil
 
-## Dynamic Media Kontrollera filstorleken JPEG i kB
+## Filstorlekshantering för JPEG
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ I den här videon beskrivs mer än att ändra storlek på bilder för att utnytt
 
 Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) för att förbättra sidans inläsningshastighet, med 2 kommandon för att justera jpeg-komprimeringsinställningarna. QLT definierar bildkvaliteten genom att justera kvalitetsinställningarna för jpeg-komprimering. Med kommandot Storlek på JPEG kan du ange vilken filstorlek som ska uppnås med komprimering.
 
-## Lägga till CC-undertexter i Dynamic Media Video
+## Undertexter
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 Lägg enkelt till undertextning i Dynamic Media-video genom att lägga till URL-adressen till en länk till ett annat dokument för undertextningsfilen web.VTT, som innehåller CC-informationen för alla videofilmer.
 
-## Använda bildskärpa med AEM Dynamic Media
+## Bildskärpa
 
 I den här videon beskrivs varför det är viktigt att göra en bild skarpare för att bibehålla bildens återgivning och hur du använder avancerade inställningar för att skapa den perfekta bilden.
 
