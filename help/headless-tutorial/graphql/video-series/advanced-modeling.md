@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 084e2d49c2790188b4f02bfad5b3ae7099820457
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -27,5 +28,3 @@ I den här videon kommer du att:
 + Skapa GraphQL-frågor som returnerar data från refererade innehållsfragment
 
 >[!VIDEO](https://video.tv.adobe.com/v/332859?quality=12&learn=on)
-
-_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._
