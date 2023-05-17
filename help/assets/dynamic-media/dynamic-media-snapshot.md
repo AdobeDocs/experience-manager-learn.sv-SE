@@ -1,5 +1,5 @@
 ---
-title: Upptäck fördelarna med Dynamic Media för bilder
+title: Utforska Dynamic Media bildhantering med ögonblicksbild
 description: Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som illustrerar kraften i Dynamic Media för optimerad och dynamisk bildleverans.
 feature: Smart Services, Image Sets, Image Profiles
 version: Cloud Service
@@ -8,18 +8,22 @@ thumbnail: 3419421.jpeg
 topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
+source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Upptäck fördelarna med Dynamic Media för bilder {#snapshot}
+# Dynamic Media Snapshot {#snapshot}
 
-Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som illustrerar kraften i Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media och optimera smart bildbehandling för filstorlek (med WebP- och AVIF-leverans), nätverk och enhets-pixelproportioner (DPR).
+Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som illustrerar kraften i Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media och optimera smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverk och DPR (Device Pixel Ratio).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
+
+<a href="https://snapshot.scene7.com/" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+  <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Starta Dynamic Media Snapshot</span>
+</a>
 
 ## Ytterligare resurser
 
