@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7874
 thumbnail: 333295.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30f6d3fb736f2db045e812c40f84d09eba96db6a
 workflow-type: tm+mt
-source-wordcount: '79'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
@@ -28,4 +29,3 @@ I den här videon kommer du att:
 
 >[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
 
-_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._
