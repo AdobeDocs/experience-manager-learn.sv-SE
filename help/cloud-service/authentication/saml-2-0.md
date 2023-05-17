@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
+source-git-commit: f6a9e7b32d876a8cd5ce7bf6a2e13aeb5faaf35b
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3123'
 ht-degree: 0%
 
 ---
@@ -138,8 +138,21 @@ _Du måste skapa en nyckelbehållare för autentiseringstjänsten när [SAML 2.0
    + A [offentlig/privat nyckelbehållare har installerats i den här nyckelbehållaren](#install-aem-public-private-key-pair) endast om AuthnRequest-kryptering för signering/SAML-försäkran krävs.
    + Om den här SAML-integreringen stöder utloggning, men inte AuthnRequest-signering/SAML-kontroll, räcker det med en tom nyckelbehållare.
 1. Välj __Spara och stäng__.
-1. Välj __authentication-service__ användare och markera __Aktivera__ i det övre åtgärdsfältet.
+1. Skapa ett paket som innehåller den uppdaterade __authentication-service__ användare.
 
+   _Använd följande tillfälliga lösning med paket:_
+
+   1. Navigera till __Verktyg > Distribution > Paket__.
+   1. Skapa ett paket
+      + Paketnamn: `Authentication Service`
+      + Version: `1.0.0`
+      + Grupp: `com.your.company`
+   1. Redigera det nya __Nyckelarkiv för autentiseringstjänst__ paket.
+   1. Välj __Filter__ och lägga till ett filter för rotsökvägen `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + The `<AUTHENTICATION SERVICE UUID>` kan hittas genom att navigera till __Verktyg > Säkerhet > Användare__ och markera __authentication-service__ användare. UUID är den sista delen av URL:en.
+   1. Välj __Klar__ och sedan __Spara__.
+   1. Välj __Bygge__ för __Nyckelarkiv för autentiseringstjänst__ paket.
+   1. Välj __Mer__ > __Replikera__ om du vill aktivera autentiseringstjänstens nyckelarkiv för AEM Publish.
 
 ## Installera AEM publika/privata nyckelpar{#install-aem-public-private-key-pair}
 
@@ -212,7 +225,21 @@ Både AuthnRequest-signering och SAML-verifieringskryptering är valfria, men b�
 1. Det nya certifikatet visas ovanför __Lägg till certifikat från CRT-fil__ -avsnitt.
    + Anteckna __alias__ eftersom detta används i [SAML 2.0-autentiseringshanterare OSGi-konfiguration](#saml-20-authentication-handler-osgi-configuration)
 1. Välj __Spara och stäng__.
-1. Välj __authentication-service__ användare och markera __Aktivera__ i det övre åtgärdsfältet.
+1. Skapa ett paket som innehåller den uppdaterade __authentication-service__ användare.
+
+   _Använd följande tillfälliga lösning med paket:_
+
+   1. Navigera till __Verktyg > Distribution > Paket__.
+   1. Skapa ett paket
+      + Paketnamn: `Authentication Service`
+      + Version: `1.0.0`
+      + Grupp: `com.your.company`
+   1. Redigera det nya __Nyckelarkiv för autentiseringstjänst__ paket.
+   1. Välj __Filter__ och lägga till ett filter för rotsökvägen `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + The `<AUTHENTICATION SERVICE UUID>` kan hittas genom att navigera till __Verktyg > Säkerhet > Användare__ och markera __authentication-service__ användare. UUID är den sista delen av URL:en.
+   1. Välj __Klar__ och sedan __Spara__.
+   1. Välj __Bygge__ för __Nyckelarkiv för autentiseringstjänst__ paket.
+   1. Välj __Mer__ > __Replikera__ om du vill aktivera autentiseringstjänstens nyckelarkiv för AEM Publish.
 
 ## Konfigurera autentiseringshanteraren för SAML 2.0{#configure-saml-2-0-authentication-handler}
 
