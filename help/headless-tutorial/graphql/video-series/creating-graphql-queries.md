@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: d146586332a467fdbc7fda4ffcb54fc7d7b51bcc
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
@@ -25,13 +26,6 @@ I den här videon kommer du att:
 + Förstå styrkan med GraphQL språk
 + Lär dig hur du hämtar en lista med innehållsfragment och ett enda innehållsfragment
 + Lär dig hur du filtrerar och begär specifika dataattribut
-+ Lär dig hur du installerar och använder verktyget GraphiQL
-
->[!CAUTION]
->
->The **GraphiQL-installation** kapitel som börjar vid 1:06 behövs inte i de nyare versionerna av AEM som Cloud Service. En inbyggd **GraphiQL Explorer** finns på [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) för mer information.
-
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
 
-_Ladda ned [Postman Collection](./assets/aem-headless-video-series.postman_collection.json) används i hela AEM Headless Video Series._
