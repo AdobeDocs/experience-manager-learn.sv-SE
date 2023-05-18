@@ -6,7 +6,6 @@ audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
 doc-type: technical video
 activity: setup
-version: Cloud Service
 kt: 5979
 thumbnail: 39090.jpg
 topic: Integrations
@@ -14,7 +13,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: 18a72187290d26007cdc09c45a050df8f152833b
+source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
