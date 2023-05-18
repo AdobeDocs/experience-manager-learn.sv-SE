@@ -7,9 +7,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1816'
 ht-degree: 1%
 
 ---
@@ -229,6 +229,10 @@ ht-degree: 1%
    + [Skapa välkomstpaketkomponent](welcome-kit/create-welcomekit-component.md)
    + [Skapa arbetsflödeskomponent](welcome-kit/create-workflow-component.md)
    + [Testa lösningen](welcome-kit/testing-the-solution.md)
++ Bädda in anpassningsbara formulär i SPA {#embed-form-spa}
+   + [1 - Introduktion](headless-forms/introduction.md)
+   + [2 - Installera beroenden](headless-forms/install-af-react-libraries.md)
+   + [3 - Hämta formuläret](headless-forms/fetch-the-form.md)
 
 + Reagera app med Forms och Acrobat Sign {#react-ic-sign}
    + [1 - Introduktion](react-ic-sign/introduction.md)
