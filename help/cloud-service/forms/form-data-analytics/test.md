@@ -9,7 +9,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -54,8 +55,3 @@ Interagera med formuläret och håll konsolfönstret öppet. Du borde se något 
 Lägg till [AEP-felsökningstillägg](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) till din webbläsare (du måste logga in) för att få mer felsökningsinformation
 
 ![platform-debugger](assets/platform-debugger.png)
-
-
-
-
-

@@ -28,19 +28,19 @@ Lär dig hur du läser in, skickar parametrar till sidförfrågningar och starta
 
 ## Inläsningsregel för sida
 
-Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager har lästs in utlöser det en händelse `cmp:show`. I videon anropas regeln `Launch Library Loaded` med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
+Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager läses in utlöser det en händelse `cmp:show` . I videon `Launch Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
 ![Händelsekonfiguration som visas på sidan och anpassad kod](assets/load-and-fire-target-call.png)
 
-I Launch-egenskapen lägger du till en ny **Event** i **regeln**
+Lägg till en ny i Launch-egenskapen **Händelse** till **Regel**
 
-+ __tillägg:__ Core
-+ __händelsetyp:__ egen kod
-+ __Namn:__ Händelsehanterare för sidvisning (eller något beskrivande)
++ __Tillägg:__ Core
++ __Händelsetyp:__ Egen kod
++ __Namn:__ Visa sidhändelsehanterare (eller något beskrivande)
 
-Tryck på knappen __Öppna redigeraren__ och klistra in följande kodfragment. Den här koden __måste__ läggas till i __händelsekonfigurationen__ och en efterföljande __åtgärd__.
+Tryck på __Öppna redigeraren__ och klistra in i följande kodfragment. Den här koden __måste__ läggs till i __Händelsekonfiguration__ och en efterföljande __Åtgärd__.
 
 ```javascript
 // Define the event handler function
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-En anpassad funktion definierar `pageShownEventHandler` och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
+En anpassad funktion definierar `pageShownEventHandler`, och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
 
-Startregeln aktiveras med Launch-funktionen `trigger(...)` som är __endast__ som är tillgänglig från en Regels definition av anpassat kodfragment för en händelse.
+Startregeln aktiveras med Launch-funktionen `trigger(...)` funktion som __endast__ som är tillgängliga från en Regels egen kodfragmentsdefinition för händelsen.
 
-Funktionen `trigger(...)` tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements med ett annat reserverat namn i Launch med namnet `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event`-objektet med syntax som `event.component['someKey']`.
+The `trigger(...)` funktionen tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements av ett annat reserverat namn i Launch med namnet `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event` objekt med syntax som `event.component['someKey']`.
 
-Om `trigger(...)` används utanför kontexten för händelsetypen Custom Code (till exempel i en Action) genereras JavaScript-felet `trigger is undefined` på den webbplats som är integrerad med egenskapen Launch.
+If `trigger(...)` används utanför kontexten för händelsetypen Custom Code (t.ex. i en Action), JavaScript-felet `trigger is undefined` genereras på den webbplats som är integrerad med Launch-egenskapen.
 
 
 ### Dataelement
 
 ![Dataelement](assets/data-elements.png)
 
-Adobe Launch Data Elements mappar data från händelseobjektet [som utlöstes i den anpassade sidvisningshändelsen](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
+Adobe Launch Data Elements mappar data från händelseobjektet [utlöses i den anpassade händelsen Visa sida](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
 
 #### Dataelement för sid-ID
 
@@ -146,7 +146,7 @@ Den här koden returnerar AEM sidtitel.
 #### Lösning
 
 Målgrupper använder ibland molnbaserade instanser med Target för testning eller för enkla konceptbevis. Dessa domäner, och många andra, ingår i Public Suffix-listan .
-Moderna webbläsare sparar inte cookies om du använder dessa domäner om du inte anpassar inställningen `cookieDomain` med `targetGlobalSettings()`.
+I moderna webbläsare sparas inte cookies om du använder dessa domäner om du inte anpassar `cookieDomain` ställa in med `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  

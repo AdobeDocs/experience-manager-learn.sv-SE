@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -51,6 +52,3 @@ Du måste ändra slutpunkts-URL:en så att den matchar din miljö. Öppna filen 
 Om du vill aktivera anrop av POSTEN till AEM-slutpunkten från REACT-appen måste du ange rätt poster i fältet Tillåtna ursprung i konfigurationen av resursdelningsprincipen för korsursprung i Adobe Granite
 
 ![cors-setting](assets/cors-settings.png)
-
-
-

@@ -9,13 +9,13 @@ level: Intermediate
 kt: 11466
 last-substantial-update: 2022-10-14T00:00:00Z
 index: y
-source-git-commit: 00ea3a8e6b69cd99cf293093d38b59df51f6a26d
+exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 0%
 
 ---
-
 
 # URL-omdirigeringar
 
@@ -82,4 +82,3 @@ Nedan finns några kriterier som avgör vilken lösning som är rätt. Dessutom 
 1. Gör det möjligt för marknadsföringsteamet eller superanvändare att hantera omdirigeringsregler utan AEM utvecklingsteam och AEM driftsättningar.
 1. Processen för att hantera, verifiera, spåra och återställa ändringar eller riskreducering.
 1. Tillgänglighet för _Ämnesexpertis_ for **At Edge via CDN Service** lösning.
-

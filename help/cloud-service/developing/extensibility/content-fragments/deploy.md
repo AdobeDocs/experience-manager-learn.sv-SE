@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 0%
 
 ---
-
 
 # Distribuera ett tillägg
 

@@ -6,13 +6,13 @@ kt: 5918
 topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+exl-id: f0adf7a6-c7c2-449a-9fa5-402c54b812e5
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
-
 
 # Debugging Dispatcher Tools
 
@@ -26,9 +26,9 @@ Debugging Dispatcher Tools loggar och cacheinnehåll kan vara avgörande för at
 
 ## Loggar för Dispatcher Tools
 
-Loggar för Dispatcher Tools finns tillgängliga via kommandot `stdout` eller `bin/docker_run`, eller med mer information, som finns i Docker-behållaren på `/etc/https/logs`.
+Loggarna för Dispatcher Tools är tillgängliga via `stdout` eller `bin/docker_run` eller med fler detaljer, tillgängliga i Docker-behållaren på `/etc/https/logs`.
 
-Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du får direktåtkomst till Dispatcher Tools&#39; Docker-behållarens loggar.
+Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du får direktåtkomst till Dispatcher Tools Docker-behållarens loggar.
 
 ## Cacheminne för Dispatcher Tools
 
@@ -54,7 +54,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopiera Docker-loggarna till det lokala filsystemet
 
-Sändningsloggar kan kopieras ut från Docker-behållaren på `/mnt/var/www/html` till det lokala filsystemet för kontroll med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
+Sändningsloggar kan kopieras ut från Docker-behållaren på `/mnt/var/www/html` till det lokala filsystemet för granskning med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
 
 ```shell
 $ docker ps
@@ -66,4 +66,3 @@ CONTAINER ID        IMAGE                                       COMMAND         
 $ docker cp -L <CONTAINER ID>:/mnt/var/www/html cache 
 $ cd cache
 ```
-

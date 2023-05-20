@@ -10,13 +10,13 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
+exl-id: f47ce344-310f-4b4c-9340-b0506289f468
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
 
 ---
-
 
 # Stora resultatuppsättningar i AEM Headless
 

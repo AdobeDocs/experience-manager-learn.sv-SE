@@ -1,5 +1,5 @@
 ---
-title: 'Externt arbetsflöde '
+title: Externt arbetsflöde
 description: Lagra arbetsflödesdata och bilagor i Azure-lagring
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
@@ -9,7 +9,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9542
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+exl-id: 06621fc7-afde-4073-8f15-fe9eeab1d084
+source-git-commit: 11e334545fee8d24ef0d90bb25caa61efe189376
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

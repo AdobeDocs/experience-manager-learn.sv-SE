@@ -97,7 +97,7 @@ The `src/index.js` filen ska se ut så här:
 
 ## Konfigurera en intern SPA
 
-När du skapar en redigerbar SPA är det bäst att skapa en [intern proxy i SPA](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually), som är konfigurerad att dirigera lämpliga begäranden till AEM. Detta görs genom att använda [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm-modulen, som redan har installerats av WKND-basgrafikkort (QL).
+När du skapar en redigerbar SPA är det bäst att skapa en [intern proxy i SPA](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually), som är konfigurerad att dirigera lämpliga begäranden till AEM. Detta görs genom att använda [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) npm-modulen, som redan är installerad av WKND-basappen för GraphQL.
 
 1. Öppna SPA i IDE
 1. Öppna filen på `src/proxy/setupProxy.spa-editor.auth.basic.js`

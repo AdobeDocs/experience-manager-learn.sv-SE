@@ -10,26 +10,26 @@ contentOwner: dgordon
 topic: Administration
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
 # Använda kontrollpanelen för systemöversikt
 
-Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för den AEM instansen från en enda kontrollpanel.
+Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för AEM från en enda kontrollpanel.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. Systemöversikten finns här: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
+1. Systemöversikten finns här: **AEM** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
 
-   Direkt **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   Direkt vid **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. Informationen från [!UICONTROL System Overview] kan exporteras genom att klicka på knappen [!UICONTROL Download]. Informationen visas även via följande [!DNL REST]-slutpunkt:
-1. Nedan visas ett exempel på JSON-utdata som exporteras från [!UICONTROL System Overview]:
+1. Information från [!UICONTROL System Overview] kan exporteras genom att klicka på [!UICONTROL Download] -knappen. Informationen visas också via följande [!DNL REST] slutpunkt:
+1. Nedan visas ett exempel på JSON som exporteras från [!UICONTROL System Overview]:
 
    ```json
    {

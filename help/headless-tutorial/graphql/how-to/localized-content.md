@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
+exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
 
 ---
-
 
 # Lokaliserat innehåll med AEM Headless
 

@@ -112,7 +112,7 @@ Du kan till och med tilldela ett &quot;namngivet&quot; format som standardformat
 * **Layoutstil**
    * Standard
 * **Visningsformat**
-   * Inget
+   * Ingen
 * **Effektiva CSS-klasser**: `.cmp-teaser--promo` eller `.cmp-teaser--default`
 
 ### Promo style {#promo-style}
@@ -129,7 +129,7 @@ För att uppnå detta **layoutstil** av **Promo** och **visningsformat** av **Gr
    * Formatnamn: **Promo**
    * CSS-klass: `cmp-teaser--promo`
 * **Visningsformat**
-   * Inget
+   * Ingen
 * **Effektiva CSS-klasser**: `.cmp-teaser--promo`
 
 #### Primär kampanj
@@ -180,7 +180,7 @@ Observera namnet på CSS-klassen, `cmp-teaser--alternate`, behöver inte matcha 
    * Formatnamn: **Promo (right-aligned)**
    * CSS-klasser: `cmp-teaser--promo cmp-teaser--alternate`
 * **Visningsformat**
-   * Inget
+   * Ingen
 * **Effektiva CSS-klasser**: `.cmp-teaser--promo.cmp-teaser--alternate`
 
 #### Högerjusterad primär kampanj
@@ -245,7 +245,7 @@ CSS för att färglägga texten i **Hero** layoutstil med den primära (gröna) 
    * Formatnamn: **Hero**
    * CSS-klass: `cmp-teaser--hero`
 * **Visningsformat**
-   * Inget
+   * Ingen
 * **Effektiva CSS-klasser**: `.cmp-teaser--hero`
 
 #### Hero Primary

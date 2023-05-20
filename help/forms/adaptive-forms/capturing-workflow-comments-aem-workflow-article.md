@@ -25,7 +25,7 @@ För att uppfylla detta krav finns ett exempel på ett OSGi-paket som kan använ
 
 I följande skärmbild visas hur du använder processteg i [AEM](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) om du vill samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
 
-![arbetsflödenkommentarer1](assets/workflowcomments1.gif)
+![workflowcomments1](assets/workflowcomments1.gif)
 
 Så här testar du den här funktionen på datorn:
 * [Kontrollera att processteget i arbetsflödet är konfigurerat att använda kommentarerna i arbetsflödet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)

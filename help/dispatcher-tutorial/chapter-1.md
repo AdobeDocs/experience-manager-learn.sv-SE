@@ -267,7 +267,7 @@ Låt oss titta på en kort sammanfattning av det sista kapitlet plus några andr
 
 I det sista kapitlet visas ett stort antal undantag när Dispatcher inte kan cachelagra en begäran. Men det finns fler saker att tänka på: Bara för att Dispatcher _kan_ cachelagra en begäran, det behöver inte innebära att den _bör_.
 
-Poängen är: Cachelagring är vanligtvis lätt. Dispatcher behöver bara lagra resultatet av ett svar och returnera det nästa gång samma begäran kommer. Höger? Fel!
+Poängen är: Cachelagring är vanligtvis lätt. Dispatcher behöver bara lagra resultatet av ett svar och returnera det nästa gång samma begäran kommer. Eller hur? Fel!
 
 Den svåra delen är _ogiltigförklaring_ eller _rodnad_ av cacheminnet. Dispatcher måste ta reda på när en resurs har ändrats - och måste återges igen.
 
@@ -445,7 +445,7 @@ Självständiga resurser ska betjänas på den resursens sökväg. Det hjälper 
 
 Inaktiveringsbegäran för Dispatcher utlöses vanligtvis av en replikeringsagent från publiceringssystemet.
 
-Om du känner dig riktigt säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
+Om du känner dig säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
 
 Det skulle gå lite längre än den här guiden för att gå in på detaljerna, men vi vill ge dig åtminstone några tips.
 

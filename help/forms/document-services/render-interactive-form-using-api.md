@@ -63,7 +63,7 @@ Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande progr
       * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
    1. Klicka på Spara
 1. [Öppna mobilformuläret](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. Fyll i några fält och klicka sedan på ***Hämta och fyll i....*** button
+1. Fyll i några fält och klicka sedan på ***Hämta och fyll i....*** knapp
 1. Den interaktiva PDF-filen bör laddas ned till ditt lokala system
 
 

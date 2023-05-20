@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 1%
 
 ---
-
 
 # Webbkomponent
 

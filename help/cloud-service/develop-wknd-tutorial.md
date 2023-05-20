@@ -18,7 +18,7 @@ ht-degree: 5%
 
 ## Översikt {#overview}
 
-Är du nybörjare på att utveckla Adobe Experience Manager som Cloud Service? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
+Har du inte använt Adobe Experience Manager as a Cloud Service tidigare? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
 
 Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna. Hoppas att du kommer att förstå grunderna i den AEM plattformen och kunskaper om några av de gemensamma designmönstren.
 
@@ -26,20 +26,20 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Självstudiekursen är utformad för att fungera med **AEM som en Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**.
+Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5+** och **AEM 6.4.2+**.
 
 **[Titta på självstudiekursen här!](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Distribuera WKND till AEM som Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Distribuerar WKND till AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-När du är klar med WKND-självstudiekursen kan du titta på videon nedan för att få en översikt över hur du distribuerar WKND-projektet till AEM som en Cloud Service.
+När du är klar med WKND-självstudiekursen kan du se en video nedan som visar hur du distribuerar WKND-projektet till AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
 Videon visar hur WKND Site-projektet kan vara:
 
 1. Köps från en Git-databas från tredje part, i det här fallet Github.com, men kan vara vilken Git-databas som helst
-2. Skickat till en Adobe Cloud Manager Git-databas som är registrerad med en AEM som ett Cloud Service-program
-3. Driftsätts via rörledningar för Cloud Manager för att AEM som en Cloud Service-miljö
+2. Publicerat till en Adobe Cloud Manager Git-databas som är uppströms och registrerad med ett AEM as a Cloud Service program
+3. Driftsätts via Cloud Manager-rörledningar till AEM as a Cloud Service miljöer
 
-Titta på videoserien om hur du [integrerar Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html) om du vill få en fullständig översikt över hur du distribuerar AEM till AEM som en molntjänst.
+Om du vill ha en fullständig översikt över hur du distribuerar AEM till AEM som en molntjänst kan du titta på videoserien om hur du [integrera Git med Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).

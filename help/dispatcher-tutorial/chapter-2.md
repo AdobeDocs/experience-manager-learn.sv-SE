@@ -1,18 +1,17 @@
 ---
-title: '"Kapitel 2 - Dispatcher Infrastructure"'
+title: "Kapitel 2 - Dispatcher Infrastructure"
 description: Förstå publicerings- och utgivartopologin. Lär dig mer om de vanligaste topologierna och inställningarna.
 feature: Dispatcher
 topic: Architecture
 role: Architect
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: a25b6f74-3686-40a9-a148-4dcafeda032f
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
-
 
 # Kapitel 2 - Infrastruktur
 
@@ -94,7 +93,7 @@ Till och med i ett lokalt datacenter har en&quot;Scale Out&quot;-topologi med fl
 
 #### Gränser för utskalningstopologin
 
-Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom &quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Detta är en användbar funktion - vi behandlade detta i [Kapitel 1](chapter-1.md) i den här serien - men det innebär också att när du ofta har gjort ändringar på webbplatsen gör du cacheminnet mycket ogiltigt. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
+Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom &quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Det här är en användbar funktion - vi gick igenom det här i [Kapitel 1](chapter-1.md) av den här serien - men det innebär också att när du ofta har gjort ändringar på webbplatsen blir cachen ofta ogiltig. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
 
 Om du har två utskickare har den andra besökaren 50 % chans att sidan inte cachelagras, och då får han en större fördröjning när sidan återges igen. Med ännu fler utskickare per publicering blir allt värre. Vad som händer är att publiceringsservern får mer belastning eftersom den måste återge sidan för varje Dispatcher separat.
 
@@ -110,11 +109,11 @@ Du kan överväga att använda en central delad lagring för alla utskickare ell
 
 Vi har experimenterat med NFS - men NFS introducerar stora prestandaproblem på grund av innehållslåsning. Detta minskade faktiskt det totala resultatet.
 
-**Sammanfattning**  - Att dela ett gemensamt filsystem mellan flera avsändare rekommenderas INTE.
+**Slutsats** - Att dela ett gemensamt filsystem mellan flera utskickare rekommenderas INTE.
 
 Om du har problem med prestandan kan du skala upp Publish och Dispatcher lika för att undvika belastningen på Publisher-instanserna. Det finns ingen gyllene regel om förhållandet mellan publicering och utskick - den beror i hög grad på hur förfrågningarna distribueras och hur ofta publikationer och cacheminnet blir ogiltiga.
 
-Om du också är orolig för den fördröjning som en besökare upplever bör du använda ett leveransnätverk, cachelagra om hämtning, förebyggande cacheuppvärmning, ange en respittid enligt beskrivningen i [Kapitel 1](chapter-1.md) i den här serien eller hänvisa till några avancerade idéer i [Del 3](chapter-3.md).
+Om du också är orolig för den fördröjning en besökare upplever kan du använda ett leveransnätverk, cachelagra omhämtning, förebyggande cachevärmare, ange en respittid enligt beskrivningen i [Kapitel 1](chapter-1.md) eller hänvisa till några avancerade idéer i [Del 3](chapter-3.md).
 
 ### Konfiguration av &quot;Cross Connected&quot;
 

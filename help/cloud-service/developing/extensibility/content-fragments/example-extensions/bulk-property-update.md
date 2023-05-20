@@ -10,13 +10,13 @@ kt: 11604
 thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på uppdatering av massegenskaper
 

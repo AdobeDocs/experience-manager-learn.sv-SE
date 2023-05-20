@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10798
 thumbnail: kt-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless server-to-server-driftsättningar
 
@@ -34,9 +34,9 @@ Följande distributionskonfiguration måste finnas på plats för programdistrib
 
 ## Krav för tillstånd
 
-Auktoriserade begäranden till AEM GraphQL API:er som vanligtvis görs i samband med server-till-server-appar, eftersom andra apptyper, som [enkelsidiga program](./spa.md), [mobil](./mobile.md), eller [Webbkomponenter](./web-component.md), använder vanligtvis auktorisering eftersom det är svårt att skydda inloggningsuppgifterna.
+Auktoriserade begäranden till AEM GraphQL API:er som de vanligtvis görs i samband med server-till-server-appar, eftersom andra apptyper, som [enkelsidiga program](./spa.md), [mobil](./mobile.md), eller [Webbkomponenter](./web-component.md), använder vanligtvis auktorisering eftersom det är svårt att skydda inloggningsuppgifterna.
 
-När du godkänner begäranden till AEM as a Cloud Service, använd [tokenautentisering baserad på autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). Om du vill veta mer om hur du autentiserar begäranden till AEM as a Cloud Service läser du i [självstudiekurs om tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). I självstudiekursen utforskas tokenbaserad autentisering med [AEM Assets HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) men samma koncept och tillvägagångssätt gäller för appar som interagerar med AEM Headless GraphQL API:er.
+När du godkänner begäranden till AEM as a Cloud Service, använd [tokenautentisering baserad på autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). Om du vill veta mer om hur du autentiserar begäranden till AEM as a Cloud Service läser du i [självstudiekurs om tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). I självstudiekursen utforskas tokenbaserad autentisering med [AEM Assets HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) men samma koncept och tillvägagångssätt gäller för program som interagerar med AEM Headless GraphQL API:er.
 
 ## Exempel på server-till-server-app
 
@@ -56,7 +56,7 @@ Adobe tillhandahåller ett exempel på en server-till-server-app som kodats i No
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/server-to-server-app.md" title="Server-till-server-app">Server-till-server-app</a></p>
-                   <p class="is-size-6">Ett exempel på en server-till-server-app, skrivet i Node.js, som förbrukar innehåll från AEM Headless GraphQL API:er.</p>
+                   <p class="is-size-6">Ett exempel på en server-till-server-app, skrivet i Node.js, som använder innehåll från AEM Headless GraphQL API:er.</p>
                    <a href="../example-apps/server-to-server-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
                    </a>

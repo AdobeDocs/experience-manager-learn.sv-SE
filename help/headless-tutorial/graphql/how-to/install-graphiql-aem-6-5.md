@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 11614
 thumbnail: KT-10253.jpeg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 3%
 
 ---
-
 
 # Installera GraphiQL IDE på AEM 6.5
 

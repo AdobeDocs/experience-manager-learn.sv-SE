@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Skapa anpassad profil
 
-I den här delen ska vi skapa en [egen profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP-filen som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Mobile Forms Rendition-tjänsten. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseendet, beteendet och interaktionen i Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar ett interaktivt PDF och strömmar tillbaka dem till det anropande programmet.
+I den här delen ska vi skapa en [egen profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP-filen som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar ett interaktivt PDF och strömmar tillbaka dem till det anropande programmet.
 
 Hämta formulärdata med `formBridge` JavaScript API. Vi använder `getDataXML()` metod:
 

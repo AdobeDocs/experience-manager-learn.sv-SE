@@ -10,7 +10,8 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 0%
@@ -247,4 +248,3 @@ Appen Next.js använder två sidor för att presentera äventyrsdata.
 Next.js-appar, särskilt när det gäller SSR (Server-side rendering) och SSG (Server-side generation), kräver inte avancerade säkerhetskonfigurationer som CORS (Cross-origin Resource Sharing).
 
 Om Next.js däremot gör HTTP-begäranden till AEM från klientens kontext kan säkerhetskonfigurationer i AEM behövas. Granska [AEM Headless single-page app deployment tutorial](../deployment/spa.md) för mer information.
-

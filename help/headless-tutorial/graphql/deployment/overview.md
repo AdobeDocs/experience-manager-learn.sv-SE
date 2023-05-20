@@ -9,13 +9,13 @@ level: Intermediate
 kt: 10794
 thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+exl-id: 6de58ca0-9444-4272-9487-15a9e3c89231
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
-
 
 # AEM driftsättningar utan headless
 

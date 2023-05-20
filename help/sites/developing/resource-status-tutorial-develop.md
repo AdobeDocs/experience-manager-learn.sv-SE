@@ -1,6 +1,6 @@
 ---
 title: Utveckla resursstatus i AEM Sites
-description: 'Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden AEM olika redigeringswebbgränssnitt. '
+description: Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden AEM olika redigeringswebbgränssnitt.
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,7 +9,7 @@ version: 6.4, 6.5
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 

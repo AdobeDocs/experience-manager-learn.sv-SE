@@ -7,13 +7,13 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
+exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # Förklaring av konfigurationsfiler
 

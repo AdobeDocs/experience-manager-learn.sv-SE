@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
 
 ---
-
 
 # Testa ett tillägg
 
@@ -133,6 +133,3 @@ Kom ihåg att när du använder den här metoden injiceras tillägget Mellanlagr
 
 1. Distribuerade tillägg kan uppdateras genom att köra `aio app deploy` och dessa ändringar återspeglas automatiskt när test-URL:en används.
 1. Om du vill ta bort ett tillägg för testning kör du `aio app undeploy`.
-
-
-

@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
-
 
 # AEM driftsättningar av webbkomponenter utan headless
 

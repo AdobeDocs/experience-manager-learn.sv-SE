@@ -60,7 +60,7 @@ Det allmänna tillvägagångssättet, som vanligtvis automatiseras av ett CI/CD-
 1. Ange miljövariablerna med de värden som motsvarar målarbetsytan (scen eller produktion)
    + De två variablerna som krävs är `AIO_runtime_namespace` och `AIO_runtime_auth` och hämtas per arbetsyta i Adobe I/O Developer Console via arbetsytans __Hämta alla__ -funktion.
 
-![Adobe Developer Console - Namespace och Auth för AIO Runtime](./assets/runtime/stage-auth-namespace.png)
+![Adobe Developer Console - Namnutrymme för AIO-miljön och autentisering](./assets/runtime/stage-auth-namespace.png)
 
 Du kan ange värden för dessa tangenter genom att ange exportkommandon från kommandoraden:
 

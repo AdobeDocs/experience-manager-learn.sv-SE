@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%

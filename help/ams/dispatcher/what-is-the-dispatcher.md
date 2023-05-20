@@ -7,13 +7,13 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 829ad9733b4326c79b9b574b13b1d4c691abf877
+exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 1%
 
 ---
-
 
 # Vad är &quot;The Dispatcher&quot;?
 

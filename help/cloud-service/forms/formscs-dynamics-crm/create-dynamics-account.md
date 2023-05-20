@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: ec4ed3e1-98ae-41ce-9891-09da3321edd5
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -26,4 +27,3 @@ ht-degree: 0%
 I följande video får du hjälp med att registrera Microsoft Dynamics med Azure Active Directory.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340743?quality=12&learn=on)
-

@@ -1,6 +1,6 @@
 ---
 title: Android-app - Exempel AEM Headless
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Android-programmet demonstrerar hur du frågar efter innehåll med hjälp av API:erna för GraphQL i AEM.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Android-programmet visar hur du frågar efter innehåll med hjälp av GraphQL API:er för AEM.
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10588
@@ -13,13 +13,13 @@ exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 source-git-commit: 985d52f02025dc9cb2b9c70ead4a88af07c63f29
 workflow-type: tm+mt
 source-wordcount: '765'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Android-app
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Android-programmet demonstrerar hur du frågar efter innehåll med hjälp av API:erna för GraphQL i AEM. The [AEM Headless Client for Java](https://github.com/adobe/aem-headless-client-java) används för att köra GraphQL-frågor och mappa data till Java-objekt för att styra programmet.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Android-programmet visar hur du frågar efter innehåll med hjälp av GraphQL API:er för AEM. The [AEM Headless Client for Java](https://github.com/adobe/aem-headless-client-java) används för att köra GraphQL-frågor och mappa data till Java-objekt för att styra programmet.
 
 ![Android Java-app med AEM Headless](./assets/android-java-app/android-app.png)
 
@@ -95,7 +95,7 @@ Nedan följer en kort sammanfattning av de filer och den kod som är viktiga fö
 
 ### Beständiga frågor
 
-Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL-beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
+Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
 
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
@@ -178,7 +178,7 @@ query($slug: String!) {
 }
 ```
 
-### Kör beständig GraphQL-fråga
+### Kör GraphQL beständig fråga
 
 AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för Java](https://github.com/adobe/aem-headless-client-java) används för att köra beständiga GraphQL-frågor mot AEM och läsa in äventyrsinnehållet i appen.
 
@@ -212,9 +212,9 @@ AEMHeadlessClient client = builder.build();
 GraphQlResponse response = client.runPersistedQuery(PERSISTED_QUERY_NAME);
 ```
 
-### GraphQL-svarsdatamodeller{#data-models}
+### GraphQL svarsdatamodeller{#data-models}
 
-`Adventure.java` är en Java POJO som initieras med JSON-data från GraphQL-begäran och modellerar ett äventyr som ska användas i vyerna i Android-programmet.
+`Adventure.java` är en Java POJO som initieras med JSON-data från GraphQL-begäran och modellerar ett äventyr för användning i Android-programmets vyer.
 
 ### Vyer
 
@@ -234,5 +234,5 @@ Android-programmet använder två vyer för att presentera äventyrsdata i mobil
 
 ## Ytterligare resurser
 
-+ [Komma igång med AEM Headless - kursen GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [Komma igång med AEM Headless - självstudiekurs om GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
 + [AEM Headless Client for Java](https://github.com/adobe/aem-headless-client-java)

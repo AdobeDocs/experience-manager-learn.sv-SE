@@ -9,13 +9,13 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Rapid Development Environment
 

@@ -4,13 +4,13 @@ seo-title: AEM Sites Maturity Assessment
 description: Denna checklista ger en översikt över viktiga frågor som du och ditt team bör besvara när de utvärderar mognaden för din AEM Sites-instans
 seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
 audience: author, marketer, developer
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
+exl-id: 22164a0e-7239-43f4-8356-c12f68133255
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
 
 ---
-
 
 # Din checklista för AEM Sites-utvärdering av mognad
 
@@ -35,4 +35,3 @@ I de flesta fall kommer utvärderingen av AEM mognad att bidra till att genomfö
 Rekommenderade områden AEM mognadsbedömning: Design och arkitektur, produkthantering och -strategi, hantering och leverans av digitala resurser, analys, testning och säkerhet.
 
 Mycket bra AEM Champion Greg Dimeris för att han har samlat ihop den här informationen från olika Experience League-artiklar och sina egna rutiner!
-

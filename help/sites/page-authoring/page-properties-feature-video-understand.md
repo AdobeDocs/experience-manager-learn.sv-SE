@@ -12,7 +12,7 @@ exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -38,7 +38,7 @@ I den här videon beskrivs följande sidegenskapselement:
    * Vanity URL
 * Avancerat
    * Inställningar
-      * Språk:
+      * Språk
       * Omdirigering
       * Design
       * Alias

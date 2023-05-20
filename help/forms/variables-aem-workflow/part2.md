@@ -2,12 +2,13 @@
 title: Variabler i AEM [del2]
 description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
 version: 6.5
-topic: Utveckling
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e7d3e0be-5194-47c2-a668-ce78e727986e
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ Du kan mappa schemat med variabeln av typen JSON i arbetsflödesmodellen. Du kan
 Följ de här stegen för att få resurserna att fungera i ditt system:
 
 * [Hämta och importera resurser till AEM med hjälp av pakethanteraren](assets/jsonandstringvariable.zip)
-* [Utforska arbetsflödesmodellen ](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) för att förstå de variabler som används i arbetsflödet
+* [Utforska arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) för att förstå variablerna som används i arbetsflödet
 * [Konfigurera e-posttjänsten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * Fyll i uppgifterna och skicka in formuläret

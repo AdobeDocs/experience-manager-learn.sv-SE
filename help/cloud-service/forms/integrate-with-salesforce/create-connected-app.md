@@ -25,4 +25,4 @@ Ett anslutet program är ett ramverk som gör att ett externt program kan integr
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 
 >[!NOTE]
->Se till att du skapar ett konto i [Salesforce Developer Edition](https://developer.salesforce.com/signup) eftersom REST API:erna är aktiverade som standard i utvecklarversionen.
+>Se till att du skapar ett konto i [Salesforce Developer Edition](https://developer.salesforce.com/signup) eftersom REST API:er är aktiverade som standard i utvecklarversionen.

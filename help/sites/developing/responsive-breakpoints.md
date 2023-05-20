@@ -10,13 +10,13 @@ doc-type: Article
 last-substantial-update: 2023-01-05T00:00:00Z
 kt: 11664
 thumbnail: kt-11664.jpeg
-source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
+exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
-
 
 # Responsiva brytpunkter
 

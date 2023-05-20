@@ -159,7 +159,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
 1. IP-adresskonfigurationer för dedikerade utgångar kan uppdateras med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Kom ihåg `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT` -åtgärd, så alla regler måste anges för varje anrop av den här åtgärden.
 
-1. Hämta __dedikerad IP-adress för egress__ med en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
+1. Hämta __dedikerad IP-adress för egress__ genom att använda en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com

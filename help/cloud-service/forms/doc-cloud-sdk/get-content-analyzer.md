@@ -13,7 +13,7 @@ exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '58'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -23,9 +23,9 @@ Skapa ett JSON-fragment som definierar:
 
 + input
 + parameters
-+ output.
++ utdata.
 
-Information om den här [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+Information om detta [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
 Den exempelkod som visas nedan genererar JSON-fragmentet för alla Office 365-dokumenttyper.
 

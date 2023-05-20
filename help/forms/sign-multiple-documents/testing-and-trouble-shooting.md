@@ -12,11 +12,11 @@ exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '388'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Testa och felsök
+# Testa och felsöka
 
 
 ## Förhandsgranska omfinansieringsformuläret

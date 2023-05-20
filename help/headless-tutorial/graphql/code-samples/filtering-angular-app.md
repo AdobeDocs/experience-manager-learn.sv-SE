@@ -11,19 +11,19 @@ thumbnail: KT-11133.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+exl-id: c238dd83-65d3-4b04-b90e-19ed250b8e36
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
-
 # Program för filtrering av Angular
 
 Utforska AEM Headless GraphQL API:er för att filtrera data med en [Angular](https://angular.io/) app. Den här Angularna skapar en lista med WKND-äventyr som kan filtreras efter aktivitetstyp.
 
-Den här koden visar hur du använder Adobe [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) om du vill anropa beständiga GraphQL-frågor från Angularna. Den här appen använder `wknd-shared/adventures-all` beständig fråga för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till `wknd-shared/adventures-by-activity` beständig fråga och hämtar äventyrsinformation endast för äventyren med den angivna aktivitetstypen.
+Den här koden visar hur du använder Adobe [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) för att anropa beständiga GraphQL-frågor från Angularna. Den här appen använder `wknd-shared/adventures-all` beständig fråga för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till `wknd-shared/adventures-by-activity` beständig fråga och hämtar äventyrsinformation endast för äventyren med den angivna aktivitetstypen.
 
 Den här koden:
 

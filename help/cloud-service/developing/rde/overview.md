@@ -9,13 +9,13 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
-
 
 # Snabba utvecklingsmiljöer
 

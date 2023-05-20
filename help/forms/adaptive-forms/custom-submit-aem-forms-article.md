@@ -22,7 +22,7 @@ Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för
 I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd för hantering av adaptiv inlämning av Forms.
 
 * Logga in på crx
-* Skapa en nod av typen &quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
+* Skapa en nod av typen&quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
 * Spara den nyskapade noden.
 * Lägg till följande två egenskaper i den nya noden
 * PropertyName | Egenskapsvärde

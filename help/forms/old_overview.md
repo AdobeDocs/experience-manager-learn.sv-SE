@@ -1,13 +1,13 @@
 ---
 title: AEM Forms Tutorials och videor
-description: Samling AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
+description: En samling resurser om AEM Forms för nybörjare och erfarna utvecklare av AEM-formulär
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -182,7 +182,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 * [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites Administering Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [AEM Sites driftsättningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Assets Tutorials](/help/assets/overview.md)
-* [AEM Forms Tutorials](/help/forms/overview.md)
-* [AEM Foundation Tutorials](/help/foundation/overview.md)
+* [Självstudiekurser om AEM as a Cloud Service](/help/cloud-service/overview.md)
+* [Självstudiekurser om AEM Assets](/help/assets/overview.md)
+* [Självstudiekurser om AEM Forms](/help/forms/overview.md)
+* [Självstudiekurser om AEM Foundation](/help/foundation/overview.md)

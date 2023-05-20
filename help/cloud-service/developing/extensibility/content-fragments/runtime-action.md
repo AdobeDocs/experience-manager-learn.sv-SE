@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
 
 ---
-
 
 # Adobe I/O Runtime action
 

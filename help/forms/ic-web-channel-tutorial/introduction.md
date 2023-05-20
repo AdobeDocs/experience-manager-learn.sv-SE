@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # Skapa din första interaktiva kommunikation för webbkanalen
 
-Interactive Communications är nytt för AEM Forms 6.4. Det här dokumentet guidar dig genom de steg som behövs för att skapa en interaktiv kommunikation för tryckkanalen.
+Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du hjälp med att skapa en interaktiv kommunikation för tryckkanalen.
 
 ## Förutsättningar {#prerequistes}
 

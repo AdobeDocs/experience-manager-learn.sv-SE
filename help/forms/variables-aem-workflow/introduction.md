@@ -11,7 +11,7 @@ last-substantial-update: 2020-01-26T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '109'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -23,16 +23,16 @@ Variablerna kan vara av följande typer
 
 * Lång
 * Dubbel
-* Boolesk
+* Boolean
 * Sträng
-* Date
+* Datum
 * JSON
 * XML
 * ArrayList
 * FormDataModel
 * Dokument
 
-## Tutorials
+## Självstudiekurser
 
 * [XML-variabler](part1.md)
 * [JSON-variabler](part2.md)

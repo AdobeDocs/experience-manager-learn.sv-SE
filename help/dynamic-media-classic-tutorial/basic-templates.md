@@ -356,7 +356,7 @@ En Basic-mall har samma grundläggande URL-syntax som ett normalt bildanrop, vil
 
 Till skillnad från bildförinställningar, som har ett dollartecken ($) på var sida om förinställningsnamnet, har parametrar ett dollartecken i början. Placeringen av dollartecknen är viktig.
 
-**Rätt:**
+**Korrekt:**
 
 `$text=46-inch LCD HDTV`
 

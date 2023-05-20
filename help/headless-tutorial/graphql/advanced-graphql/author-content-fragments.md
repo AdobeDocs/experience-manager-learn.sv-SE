@@ -154,7 +154,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 
 **Stacey Roswells**
 
-| fält | Värden |
+| Fält | Värden |
 | --- | --- |
 | Content Fragment Title | Stacey Roswells |
 | Fullständigt namn | Stacey Roswells |
@@ -166,7 +166,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 
 **Kumar Selvaraj**
 
-| fält | Värden |
+| Fält | Värden |
 | --- | --- |
 | Content Fragment Title | Kumar Selvaraj |
 | Fullständigt namn | Kumar Selvaraj |
@@ -178,7 +178,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 
 **Ayo Ogunseinde**
 
-| fält | Värden |
+| Fält | Värden |
 | --- | --- |
 | Content Fragment Title | Ayo Ogunseinde |
 | Fullständigt namn | Ayo Ogunseinde |
@@ -317,7 +317,7 @@ Låt oss skapa ett innehållsfragment med teamets innehållsfragmentmodell och g
 
 ### Innehålls- och fragmentreferenser i en textredigerare med flera rader
 
-Med AEM kan du lägga till innehåll och fragmentreferenser direkt i textredigeraren med flera rader och hämta dem senare med GraphQL-frågor. Vi lägger till både innehåll- och fragmentreferenser i **Beskrivning** fält.
+Med AEM kan du lägga till innehåll och fragmentreferenser direkt i textredigeraren med flera rader och hämta dem senare med hjälp av GraphQL-frågor. Vi lägger till både innehåll- och fragmentreferenser i **Beskrivning** fält.
 
 1. Lägg först till följande text i **Beskrivning** fält: &quot;Teamet med professionella äventyrare och vandrande instruktörer som arbetar i Yosemite National Park.&quot;
 

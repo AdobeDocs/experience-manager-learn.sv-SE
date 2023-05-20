@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
+exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
@@ -40,6 +41,3 @@ I följande kod visas resurserna på sidan:
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!ready}"></sly>
 ```
-
-
-

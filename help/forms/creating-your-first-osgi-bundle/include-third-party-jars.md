@@ -9,7 +9,8 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
+exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -61,6 +62,3 @@ mvn clean install -PautoInstallSinglePackage
 
 Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med [felix-webbkonsol](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i `crx` databas enligt nedan
 ![tredje part](assets/custom-bundle1.png)
-
-
-

@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Utforska AEM GraphQL API
 
-Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågorna.
+Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [GraphQL i flera steg](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågorna.
 
 I det här kapitlet använder du GraphiQL Explorer för att definiera mer avancerade frågor för att samla in data om de innehållsfragment som du har skapat i [föregående kapitel](../advanced-graphql/author-content-fragments.md).
 
@@ -58,7 +58,7 @@ Detta kommer att omfatta alla frågor till modeller som skapats i **WKND delad**
 
 ## Filtrera en lista med innehållsfragment med frågevariabler
 
-I föregående [flerstegssjälvstudiekurs för GraphQL](../multi-step/explore-graphql-api.md), har du definierat och använt grundläggande beständiga frågor för att hämta information om innehållsfragment. Här utökar du kunskapen och filtrerar Content Fragments-data genom att skicka variabler till de beständiga frågorna.
+I föregående [GraphQL i flera steg](../multi-step/explore-graphql-api.md), har du definierat och använt grundläggande beständiga frågor för att hämta information om innehållsfragment. Här utökar du kunskapen och filtrerar Content Fragments-data genom att skicka variabler till de beständiga frågorna.
 
 När du utvecklar klientprogram behöver du vanligtvis filtrera innehållsfragment baserat på dynamiska argument. Med AEM GraphQL API kan du skicka dessa argument som variabler i en fråga för att undvika strängkonstruktion på klientsidan vid körning. Mer information om GraphQL-variabler finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#variables).
 

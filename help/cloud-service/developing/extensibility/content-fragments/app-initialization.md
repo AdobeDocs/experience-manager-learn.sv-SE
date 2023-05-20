@@ -11,13 +11,13 @@ recommendations: noDisplay, noCatalog
 last-substantial-update: 2023-01-04T00:00:00Z
 kt: 11659
 thumbnail: 3412876.jpeg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: ef5ad335-7278-4c00-beb6-233a3d1e330e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
-
 
 # App-initiering
 

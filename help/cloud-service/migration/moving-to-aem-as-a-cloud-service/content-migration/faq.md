@@ -9,13 +9,13 @@ role: Architect, Developer
 level: Beginner
 kt: 11200
 thumbnail: kt-11200.jpg
-source-git-commit: b2656329270ac90458dbc25bb05f39bf76921f26
+exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '2283'
 ht-degree: 0%
 
 ---
-
 
 # Vanliga frågor om migrering av as a Cloud Service innehåll
 

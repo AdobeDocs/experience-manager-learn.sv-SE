@@ -1,5 +1,5 @@
 ---
-title: Persistent GraphQL-frågor - Avancerade koncept för AEM Headless - GraphQL
+title: Beständiga GraphQL-frågor - Avancerade AEM utan rubrik - GraphQL
 description: I det här kapitlet om avancerade begrepp i Adobe Experience Manager (AEM) Headless kan du lära dig hur du skapar och uppdaterar beständiga GraphQL-frågor med parametrar. Lär dig hur du skickar parametrar för cachekontroll i beständiga frågor.
 version: Cloud Service
 feature: GraphQL API
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 # Beständiga GraphQL-frågor
 
-Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan även köras med HTTP-POST-begäranden som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM har full kontroll över dem. Det är **god praxis och mycket rekommenderad** om du vill använda beständiga frågor när du arbetar med AEM GraphQL API.
+Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan också köras med HTTP-POST-begäranden som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM har full kontroll över dem. Det är **god praxis och mycket rekommenderad** om du vill använda beständiga frågor när du arbetar med AEM GraphQL API.
 
-I föregående kapitel har du utforskat några avancerade GraphQL-frågor för att samla in data för WKND-appen. I det här kapitlet kvarstår frågorna som ska AEM och du får lära dig hur du använder cachekontroll på beständiga frågor.
+I det föregående kapitlet har du utforskat några avancerade GraphQL-frågor för att samla in data för WKND-appen. I det här kapitlet kvarstår frågorna som ska AEM och du får lära dig hur du använder cachekontroll på beständiga frågor.
 
 ## Förutsättningar {#prerequisites}
 
@@ -31,19 +31,19 @@ Läs om hur du gör följande i det här kapitlet:
 * Behåll GraphQL-frågor med parametrar
 * Använd parametrar för cachekontroll med beständiga frågor
 
-## Granska _GraphQL-beständiga frågor_ konfigurationsinställning
+## Granska _GraphQL Beständiga frågor_ konfigurationsinställning
 
-Låt oss granska det _GraphQL-beständiga frågor_ är aktiverade för WKND Site-projektet i din AEM.
+Låt oss granska det _GraphQL Beständiga frågor_ är aktiverade för WKND Site-projektet i din AEM.
 
 1. Navigera till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
-1. Välj **WKND delad** väljer **Egenskaper** i det övre navigeringsfältet för att öppna konfigurationsegenskaper. På sidan Konfigurationsegenskaper ser du att **Beständiga GraphQL-frågor** behörighet är aktiverad.
+1. Välj **WKND delad** väljer **Egenskaper** i det övre navigeringsfältet för att öppna konfigurationsegenskaper. På sidan Konfigurationsegenskaper ser du att **GraphQL Beständiga frågor** behörighet är aktiverad.
 
    ![Konfigurationsegenskaper](assets/graphql-persisted-queries/configuration-properties.png)
 
-## Behåll GraphQL-frågor med det inbyggda GraphiQL-utforskarverktyget
+## Bevara GraphQL-frågor med inbyggda GraphiQL Explorer-verktyg
 
-I det här avsnittet ska vi behålla GraphQL-frågan som senare används i klientprogrammet för att hämta och återge Adventure Content Fragment-data.
+I det här avsnittet ska vi behålla den GraphQL-fråga som senare används i klientprogrammet för att hämta och återge Adventure Content Fragment-data.
 
 1. Ange följande fråga i GraphiQL Explorer:
 
@@ -158,7 +158,7 @@ I det här avsnittet ska vi behålla GraphQL-frågan som senare används i klien
 
 1. Tryck sedan på Save As (Spara som) och ange `adventure-details-by-slug` som frågenamn.
 
-   ![Beständig GraphQL-fråga](assets/graphql-persisted-queries/persist-graphql-query.png)
+   ![Behåll GraphQL-fråga](assets/graphql-persisted-queries/persist-graphql-query.png)
 
 ## Utför beständig fråga med variabler genom att koda specialtecken
 
@@ -222,7 +222,7 @@ Använd `adventures-all` fråga för att uppdatera parametrar för cachekontroll
 
 1. Öppna GraphiQL Explorer och klicka på **ellipser** (...) bredvid den beständiga frågan och klicka sedan på **Sidhuvuden** att öppna **Cachekonfiguration** modal.
 
-   ![Behåll rubrikalternativet GraphQL](assets/graphql-persisted-queries/persist-graphql-header-option.png)
+   ![Behåll GraphQL Header Option](assets/graphql-persisted-queries/persist-graphql-header-option.png)
 
 
 1. I **Cachekonfiguration** modal, uppdatera `max-age` rubrikvärde till `600 `sekunder (10 min) och klicka sedan **Spara**

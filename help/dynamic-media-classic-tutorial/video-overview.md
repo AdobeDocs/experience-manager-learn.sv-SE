@@ -116,7 +116,7 @@ Innan vi börjar ska vi diskutera några termer som du bör känna till för att
 - **Visa proportioner.** Förhållandet mellan videons bredd och videons höjd. När videofilens proportioner inte matchar spelarens proportioner kanske du ser&quot;svarta fält&quot; eller tomt utrymme. Två vanliga proportioner som används för att visa video är:
 
    - 4:3 (1.33:1). Används för nästan alla tv-sändningar i standardformat.
-   - 16:9 (1,78:1). Används för nästan alla HDTV-skärmar och filmer.
+   - 16:9 (1.78:1). Används för nästan alla HDTV-skärmar och filmer.
 
 - **Bithastighet/datahastighet.** Den datamängd som kodas för att skapa en enda sekund av videouppspelning (i kB per sekund).
 

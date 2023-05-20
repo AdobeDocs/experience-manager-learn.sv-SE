@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
+exl-id: 07a1a9fc-7224-4e2d-8b6d-d935b1125653
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -23,5 +24,3 @@ Konfigurera Day CQ Mail Service. Arbetsflödet skickar välkomstpaketlänken til
 Konfigurera Skicka e-post-komponenten för arbetsflödet enligt dina krav
 [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/co-operators/accountopeningform/jcr:content?wcmmode=disabled)
 Ange dina uppgifter och välj en eller flera gemensamma fonder och skicka in formuläret Du bör få ett e-postmeddelande med en länk till välkomstpaketet
-
-

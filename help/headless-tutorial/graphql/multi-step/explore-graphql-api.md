@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Utforska GraphQL API:er {#explore-graphql-apis}
 
-GraphQL API för AEM tillhandahåller ett kraftfullt frågespråk för att visa data från innehållsfragment för program längre fram i kedjan. Modeller för innehållsfragment definierar det dataschema som används av innehållsfragment. När en innehållsfragmentmodell skapas eller uppdateras, översätts och läggs schemat till i det diagram som utgör GraphQL-API:t.
+GraphQL-API:t för AEM innehåller ett kraftfullt frågespråk för att visa data från innehållsfragment för program längre fram i kedjan. Modeller för innehållsfragment definierar det dataschema som används av innehållsfragment. När en innehållsfragmentmodell skapas eller uppdateras, översätts och läggs schemat till i det diagram som utgör GraphQL-API:t.
 
 I det här kapitlet ska vi titta på några vanliga GraphQL-frågor för att samla in innehåll med en IDE som kallas [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. Den ger också enkel åtkomst till dokumentationen, vilket gör det enkelt att lära sig och förstå vilka metoder som är tillgängliga.
 
@@ -215,7 +215,7 @@ Sedan ska vi titta på hur det går att filtrera resultatet till en delmängd av
 
    ![Använd frågevariabler för att filtrera](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 1. Förbättra ovanstående fråga för att hämta profilbild
 
@@ -379,7 +379,7 @@ Publicera `GraphQL Endpoint` &amp; `Persisted Queries`
 
 1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och trycka **Publicera**
 
-   ![Publicera GraphQL-slutpunkt](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![Publicera GraphQL Endpoint](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
 1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**
 
@@ -395,7 +395,7 @@ Ladda ned innehåll, modeller och beständiga frågor som skapats i de tre senas
 
 ## Ytterligare resurser
 
-Läs mer om GraphQL frågor på [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+Läs mer om GraphQL frågor på [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## Grattis! {#congratulations}
 

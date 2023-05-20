@@ -10,7 +10,7 @@ exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Fo
 
 När du skapar en datakälla med swagger-filen stöder AEM Forms följande typer av autentisering
 
-* Inget
+* Ingen
 * OAuth 2.0
 * Grundläggande autentisering
 * API-nyckel

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Produktionsdistribution med en AEM-publiceringstjänst
 
-I den här självstudiekursen skapar du en lokal miljö för att simulera innehåll som distribueras från en Author-instans till en Publish-instans. Du genererar också en produktionsbygge av en React App som är konfigurerad att förbruka innehåll från AEM Publish-miljön med GraphQL API:er. Under tiden kommer du att lära dig hur du effektivt använder miljövariabler och hur du uppdaterar AEM CORS-konfigurationer.
+I den här självstudiekursen skapar du en lokal miljö för att simulera innehåll som distribueras från en Author-instans till en Publish-instans. Du kommer också att generera ett produktionsbygge av en React App som är konfigurerad att förbruka innehåll från AEM-publiceringsmiljön med GraphQL API:er. Under tiden kommer du att lära dig hur du effektivt använder miljövariabler och hur du uppdaterar AEM CORS-konfigurationer.
 
 ## Förutsättningar
 
@@ -46,7 +46,7 @@ Diagrammet ovan visar det här vanliga distributionsmönstret.
 1. A **Innehållsförfattare** använder AEM författartjänst för att skapa, redigera och hantera innehåll.
 2. The **Innehållsförfattare** och andra interna användare kan förhandsgranska innehållet direkt i författartjänsten. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till författartjänsten.
 3. När innehållet har godkänts kan det **publicerad** till AEM Publish-tjänsten.
-4. **Slutanvändare** interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL-API:erna för att begära och använda innehåll.
+4. **Slutanvändare** interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL API:er för att begära och använda innehåll.
 
 Självstudiekursen simulerar distributionen ovan genom att lägga till en AEM Publish-instans i den aktuella installationen. I tidigare kapitel fungerade React App som en förhandsgranskning genom att ansluta direkt till Author-instansen. En produktionsversion av React App distribueras till en statisk Node.js-server som ansluter till den nya Publish-instansen.
 
@@ -82,7 +82,7 @@ En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [fin
 
 ## Installera exempelinnehåll och GraphQL-slutpunkter {#wknd-site-content-endpoints}
 
-Precis som för Author-instansen måste GraphQL-slutpunkterna vara aktiverade för Publish-instansen och exempelinnehållet måste vara nödvändigt. Installera sedan WKND-referenswebbplatsen på Publish-instansen.
+Precis som i Author-instansen måste Publish-instansen ha GraphQL-slutpunkterna aktiverade och ha exempelinnehåll. Installera sedan WKND-referenswebbplatsen på Publish-instansen.
 
 1. Ladda ned det senaste kompilerade AEM-paketet för WKND-webbplatsen: [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
@@ -118,7 +118,7 @@ Lägg sedan till en ny fil `.env.production.local` för att simulera produktions
 
    ![Lägg till ny miljövariabelfil](assets/publish-deployment/env-production-local-file.png)
 
-   Med hjälp av miljövariabler är det enkelt att växla GraphQL-slutpunkt mellan en författar- eller publiceringsmiljö utan att lägga till extra logik i programkoden. Mer information om [anpassade miljövariabler för React finns här](https://create-react-app.dev/docs/adding-custom-environment-variables).
+   Med hjälp av miljövariabler är det enkelt att växla mellan en författar- eller publiceringsmiljö i GraphQL utan att lägga till extra logik i programkoden. Mer information om [anpassade miljövariabler för React finns här](https://create-react-app.dev/docs/adding-custom-environment-variables).
 
    >[!NOTE]
    >
@@ -175,7 +175,7 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
 
    ![React App Served](assets/publish-deployment/react-app-served-port5000.png)
 
-   Observera att GraphQL-frågan fungerar på hemsidan. Inspect **XHR** begär med hjälp av utvecklarverktygen. Observera att GraphQL-POSTEN är till Publish-instansen vid `http://localhost:4503/content/graphql/global/endpoint.json`.
+   Observera att GraphQL-frågan fungerar på hemsidan. Inspect **XHR** begär med hjälp av utvecklarverktygen. Observera att GraphQL-POSTEN är till Publish-instansen på `http://localhost:4503/content/graphql/global/endpoint.json`.
 
    Alla bilder är emellertid brutna på startsidan!
 
@@ -183,13 +183,13 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
 
    ![Adventure Detail Error](assets/publish-deployment/adventure-detail-error.png)
 
-   Observera att ett GraphQL-fel genereras för `adventureContributor`. I nästa övning, de trasiga bilderna och `adventureContributor` problem har åtgärdats.
+   Observera att ett GraphQL-fel inträffar för `adventureContributor`. I nästa övning, de trasiga bilderna och `adventureContributor` problem har åtgärdats.
 
 ## Absoluta bildreferenser {#absolute-image-references}
 
 Bilderna ser brutna ut eftersom `<img src` är inställt på en relativ sökväg och slutar upp som pekar på den statiska nodservern vid `http://localhost:5000/`. I stället bör dessa bilder peka på AEM Publish-instansen. Det finns flera möjliga lösningar på detta. När du använder webbpaketets dev-server kan du `react-app/src/setupProxy.js` skapa en proxy mellan webbpaketservern och AEM författarinstans för alla förfrågningar till `/content`. En proxykonfiguration kan användas i en produktionsmiljö men måste konfigureras på webbservernivå. Till exempel: [Apache&#39;s proxy module](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
 
-Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_URI` miljövariabel. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
+Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_URI` systemvariabel. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
 
 1. Stoppa Node.js-servern.
 1. Återgå till utvecklingsmiljön och öppna filen `Adventures.js` på `react-app/src/components/Adventures.js`.
@@ -302,7 +302,7 @@ Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_
 
 ## Simulera innehållspublicering {#content-publish}
 
-Kom ihåg att ett GraphQL-fel genereras för `adventureContributor` när en Adventure Details-sida begärs. The **Medarbetare** Content Fragment Model finns ännu inte på Publish-instansen. Uppdateringar av **Adventure** Content Fragment Model är inte heller tillgängliga i Publish-instansen. Dessa ändringar gjordes direkt i Author-instansen och måste distribueras till Publish-instansen.
+Kom ihåg att ett GraphQL-fel inträffar för `adventureContributor` när en Adventure Details-sida begärs. The **Medarbetare** Content Fragment Model finns ännu inte på Publish-instansen. Uppdateringar av **Adventure** Content Fragment Model är inte heller tillgängliga i Publish-instansen. Dessa ändringar gjordes direkt i Author-instansen och måste distribueras till Publish-instansen.
 
 Detta är något att tänka på när du distribuerar nya uppdateringar till ett program som är beroende av uppdateringar av ett innehållsfragment eller en innehållsfragmentmodell.
 

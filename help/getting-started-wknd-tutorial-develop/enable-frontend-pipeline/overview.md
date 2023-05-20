@@ -13,13 +13,13 @@ index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera frontendpipeline för standardprojekttypen AEM{#enable-front-end-pipeline-standard-aem-project}
 
@@ -57,4 +57,3 @@ Se till att du använder [Sandlådeprogram](https://experienceleague.adobe.com/d
 En stegvis självstudiekurs leder dig igenom [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) konvertering för att aktivera den för frontendpipeline.
 
 Vad väntar du på? Starta självstudiekursen genom att gå till [Granska projekt i full hög](review-uifrontend-module.md) kapitlet och dra nytta av utvecklingscykeln i början av AEM Sites Project.
-

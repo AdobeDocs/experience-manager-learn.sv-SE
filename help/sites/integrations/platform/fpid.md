@@ -9,7 +9,8 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
+exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -203,5 +204,3 @@ Läs följande Experience Platform-dokumentation för FPID (First-party device I
 + [Generera enhets-ID:n från första part](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
 + [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
 + [Identitetsdata i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
-
-

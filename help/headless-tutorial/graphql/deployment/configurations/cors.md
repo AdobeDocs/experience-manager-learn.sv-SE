@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
+exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
-
 
 # Cross-origin resource sharing (CORS)
 

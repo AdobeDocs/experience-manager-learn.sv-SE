@@ -7,10 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
+exl-id: d23b51ba-1efb-4505-b5b3-44a02177e467
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '158'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -30,7 +31,3 @@ Följ stegen nedan för att få det här användningsexemplet att fungera på di
 
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/downloadarchivednewsletters/jcr:content?wcmmode=disabled).
 Välj några nyhetsbrev att ladda ned.De valda nyhetsbreven kombineras till en PDF och returneras till dig.
-
-
-
-

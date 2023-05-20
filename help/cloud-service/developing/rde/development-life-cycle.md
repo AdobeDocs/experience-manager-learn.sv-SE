@@ -9,13 +9,13 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
-
 
 # Utvecklingscykel med hjälp av Rapid Development Environment
 
@@ -45,4 +45,3 @@ De viktigaste fördelarna med RDE för att hålla takten i utvecklingen.
 [Installation av lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
 [Använda Adobe Cloud Manager - CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
-

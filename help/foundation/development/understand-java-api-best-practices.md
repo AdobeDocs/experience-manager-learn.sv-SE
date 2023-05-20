@@ -153,7 +153,7 @@ Använd alltid JCR-API:erna framför API:erna för Apache Jackrabbit Oak. JCR-AP
 
 * [Hantering av åtkomstkontroll](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
 * [Auktoriserbar hantering (användare/grupper)](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
-* JCR-observation (lyssnar efter JCR-händelser)
+* JCR-observation (avlyssna JCR-händelser)
 * Skapa djupnodsstrukturer
 
    * Även om Sling-API:erna har stöd för att skapa resurser har JCR-API:erna praktiska metoder i [JCRUtils](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/commons/JcrUtils.html) och [JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/jcr/JcrUtil.html) som gör det lättare att skapa djupgående strukturer.

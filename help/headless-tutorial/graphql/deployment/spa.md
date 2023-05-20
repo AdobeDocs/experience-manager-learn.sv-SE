@@ -9,13 +9,13 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
 
 ---
-
 
 # AEM driftsättning av SPA utan headless
 
@@ -77,7 +77,7 @@ Nedan visas distributionskonfigurationer som krävs för SPA av produktionsdistr
 
 #### Exempel SPA distribution på olika domäner
 
-I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder AEM GraphQL API:er från AEM Publish-domänen (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
+I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder GraphQL API:er från AEM Publish-domänen (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
 
 1. SPA hanteras från en Netlify-domän, men gör ett XHR-anrop till AEM GraphQL API:er på en annan domän. Denna begäran över flera webbplatser kräver [CORS](./configurations/cors.md) som ska konfigureras AEM att tillåta begäran från Netlify-domänen att få åtkomst till dess innehåll.
 
@@ -107,7 +107,7 @@ Adobe tillhandahåller ett exempel på en enkelsidig app som kodats i React.
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="Reagera app">Reagera app</a></p>
-               <p class="is-size-6">Ett exempel på en sida, skrivet i React, som förbrukar innehåll från AEM Headless GraphQL API:er.</p>
+               <p class="is-size-6">Ett exempel på en enda sida, skrivet i React, som använder innehåll från AEM Headless GraphQL API:er.</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
                </a>
@@ -128,7 +128,7 @@ Adobe tillhandahåller ett exempel på en enkelsidig app som kodats i React.
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js-appen">Next.js-appen</a></p>
-               <p class="is-size-6">Ett exempel på enkelsidig app, skrivet i Next.js, som använder innehåll från AEM Headless GraphQL API:er.</p>
+               <p class="is-size-6">Ett exempel på en enkelsidig app, skrivet i Next.js, som använder innehåll från AEM Headless GraphQL API:er.</p>
                <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
                </a>

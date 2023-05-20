@@ -38,7 +38,7 @@ Spara ändringarna
 Markera knappen Nästa och se till att du öppnar formatmallarna för nästa knapp (inte nästa knapptext). Ange följande egenskaper
 * Dimensioner och position
    * position: absolut övre 1px höger 1px
-* Kantlinje
+* Kant
    * Kantradie: 4px(Överkant,Höger,Underkant,Vänster)
 
 Spara ändringarna

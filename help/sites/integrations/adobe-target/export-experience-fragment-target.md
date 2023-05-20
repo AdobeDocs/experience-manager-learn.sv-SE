@@ -40,7 +40,7 @@ Om du exporterar Experience Fragment till Adobe Target utan rätt behörighet i 
 
     ![Mål-API-gränssnittsfel](assets/error-target-offer.png)
 
-... och följande loggmeddelanden i `aemerror`-loggen:
+... och följande loggmeddelanden i `aemerror` log:
 
     ![Mål-API-konsolfel](assets/target-console-error.png)
 
@@ -48,8 +48,8 @@ Om du exporterar Experience Fragment till Adobe Target utan rätt behörighet i 
 
 1. Logga in på [Admin Console](https://adminconsole.adobe.com/) med administratörsbehörighet för Adobe Target produktprofil som används men AEM integreringen
 2. Välj __Produkter > Adobe Target > Produktprofil__
-3. Under fliken __Integrationer__ väljer du Cloud Service för AEM (samma namn som Adobe I/O-projektet)
-4. Tilldela rollen __Redigerare__ eller __Godkännare__
+3. Under __Integreringar__ väljer du integrering för din AEM as a Cloud Service miljö (samma namn som Adobe I/O-projektet)
+4. Tilldela __Redigerare__ eller __Godkännare__ roll
 
    ![Mål-API-fel](assets/target-permissions.png)
 

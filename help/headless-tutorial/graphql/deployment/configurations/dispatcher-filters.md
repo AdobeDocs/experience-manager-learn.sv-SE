@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
+exl-id: b76b7c46-5cbd-4039-8fd6-9f0f10a4a84f
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
-
 
 # Dispatcher-filter
 

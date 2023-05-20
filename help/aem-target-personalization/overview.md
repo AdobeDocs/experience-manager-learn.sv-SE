@@ -1,5 +1,5 @@
 ---
-title: Komma igång med AEM och Adobe Target
+title: Kom igång med AEM och Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager och Adobe Target. I den här självstudiekursen får du även lära dig mer om olika personer som deltar i den sista processen och hur de samarbetar med varandra
 feature: Experience Fragments
 topic: Personalization
@@ -9,11 +9,11 @@ exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '840'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Komma igång med AEM och Adobe Target {#getting-started-with-aem-target}
+# Kom igång med AEM och Adobe Target {#getting-started-with-aem-target}
 
 AEM och Target är båda kraftfulla lösningar med synbarligen överlappande funktioner. Kunderna kämpar ibland med att förstå hur och när de ska använda dessa produkter tillsammans för att leverera personaliserade upplevelser. För att leverera optimerad upplevelse för alla slutanvändare bör olika team i organisationen ha ett nära samarbete och definiera vem som ska göra vad.
 

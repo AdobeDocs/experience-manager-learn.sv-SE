@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
 
 ---
-
 
 # Förlängning modal
 

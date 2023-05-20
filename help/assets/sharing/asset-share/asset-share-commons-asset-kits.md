@@ -9,13 +9,13 @@ doc-type: Feature Video
 last-substantial-update: 2023-02-13T00:00:00Z
 jira: KT-11868
 thumbnail: 3415467.jpeg
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+exl-id: fb8adf75-02d7-44e5-a84e-e0731100dc58
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
-
 
 # Resursdelningskommentar Tillgångspaket
 

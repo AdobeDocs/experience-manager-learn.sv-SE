@@ -8,7 +8,8 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

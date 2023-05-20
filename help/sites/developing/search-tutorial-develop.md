@@ -29,7 +29,7 @@ Den enkla sökimplementeringen är materialet från **Adobe Summit lab AEM Searc
 
 ## Bokmärken {#bookmarks-1}
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 * [Indexhanteraren](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_oakindexmanager)
 * [Förklara fråga](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_queryperformance)

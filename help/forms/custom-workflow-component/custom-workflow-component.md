@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
-source-git-commit: 09b00a7edf2f4c90c6cb2178161c6d7e0c9432e8
+exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -65,9 +66,3 @@ Observera egenskaperna för cq:formParameters-noden
 ![from-parameters-properties](assets/form-parameters-properties.png)
 
 Värdet för egenskapen PROCESS anger den java-kod som ska associeras med arbetsflödeskomponenten.
-
-
-
-
-
-

@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 40679e80fd9270dd9fad8174a986fd1fdd5e3d29
+exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
 
 ---
-
 
 # Generera åtkomsttoken i App Builder-åtgärd
 

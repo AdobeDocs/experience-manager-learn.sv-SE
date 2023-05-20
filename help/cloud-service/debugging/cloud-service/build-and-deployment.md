@@ -221,7 +221,7 @@ Så här validerar du problemet:
    2020-01-01T01:01:02+0000 Begin deployment in aem-program-x-env-y-dev [CorrelationId: 1234]
    ```
 
-   ... and ...
+   ... och ...
 
    ```
    2020-01-01T02:04:10+0000 Failed deployment in aem-program-x-env-y-dev

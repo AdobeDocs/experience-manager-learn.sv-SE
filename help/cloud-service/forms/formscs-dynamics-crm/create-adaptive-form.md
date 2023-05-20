@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: 804b2fad-34a3-4bcb-913c-9070393a6c9c
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -21,4 +22,3 @@ ht-degree: 0%
 I följande video får du hjälp med att skapa och konfigurera adaptiva formulär för att skapa och visa lead-objekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
-

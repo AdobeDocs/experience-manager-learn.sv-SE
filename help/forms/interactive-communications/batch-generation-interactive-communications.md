@@ -38,7 +38,7 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 2. Välj BatchAPIWatchedFolder och klicka på Redigera.
 3. Ändra sökvägen så att den matchar ditt operativsystem.
 
-![path](assets/watched-folder-batch-api-basic.PNG)
+![bana](assets/watched-folder-batch-api-basic.PNG)
 
 * Hämta och extrahera innehållet i [zip-fil](assets/jsonfile.zip). ZIP-filen innehåller en mapp med namnet `jsonfile` som innehåller `beneficiaries.json` -fil. Den här filen innehåller data för att generera 3 dokument.
 

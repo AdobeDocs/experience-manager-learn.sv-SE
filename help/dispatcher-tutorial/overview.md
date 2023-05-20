@@ -1,5 +1,5 @@
 ---
-title: AEM Dispatcher Cache - självstudiekurs
+title: Självstudiekurs om AEM Dispatcher Cache
 description: Målet med den här självstudiekursen är att hjälpa dig att bättre förstå hur Dispatcher fungerar och hur du kan arbeta med den.
 feature: Dispatcher
 topic: Architecture
@@ -9,11 +9,11 @@ exl-id: 9780870e-9ac6-46f9-abc4-87c9470ef7e7
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '154'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# AEM Dispatcher Cache - självstudiekurs
+# Självstudiekurs om AEM Dispatcher Cache
 
 Dispatcher är en viktig del av de flesta, om inte alla AEM installationer. Målet med den här självstudiekursen är att hjälpa dig att bättre förstå hur Dispatcher fungerar och hur du kan arbeta med den.
 

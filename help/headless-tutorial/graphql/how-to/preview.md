@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
 
 ---
-
 
 # Förhandsgranska innehållsfragment
 

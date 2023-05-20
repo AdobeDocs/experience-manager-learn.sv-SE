@@ -7,13 +7,13 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
 
 ---
-
 
 # Gemensamma loggar
 

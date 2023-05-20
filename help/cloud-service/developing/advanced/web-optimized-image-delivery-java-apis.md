@@ -10,13 +10,13 @@ doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
-source-git-commit: 14d89d1a3c424de044df4f6d74546788256fa383
+exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
 
 ---
-
 
 # Webboptimerade Java™-API:er för bildleverans
 

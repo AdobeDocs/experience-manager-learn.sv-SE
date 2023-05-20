@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+exl-id: 97d26a1f-f9a7-4e57-a5ef-8bb2f3611088
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
 
 ---
-
 
 # Åtgärdsfältets tillägg
 

@@ -9,7 +9,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
+exl-id: 369c563e-c847-438a-a783-bc6a9f81b77c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
@@ -33,5 +34,3 @@ Vi rekommenderar att du uppfyller följande krav för att få ut så mycket som 
 I den här självstudiekursen används ett enkelt anpassat formulär som skapats i AEM Forms och som mäter formulärinlämningar för bostadsvärden samt fält som genererar valideringsfel.
 
 ![adaptiv form](assets/use-case.png)
-
-

@@ -12,7 +12,8 @@ level: Beginner
 feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 kt: 13126
-source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
+exl-id: f12ab119-ac8e-4cc8-af86-cbffa30e72c5
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%

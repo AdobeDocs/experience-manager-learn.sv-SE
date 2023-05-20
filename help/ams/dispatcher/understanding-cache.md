@@ -6,13 +6,13 @@ version: 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
 
 ---
-
 
 # Cachelagring
 

@@ -12,13 +12,13 @@ thumbnail: KT-11134.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
-
 
 # Basic React-app
 

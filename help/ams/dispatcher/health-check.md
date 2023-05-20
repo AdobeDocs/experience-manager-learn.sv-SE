@@ -7,10 +7,11 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
+exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -100,7 +101,7 @@ Listen 81
 
 Dessa filer har namn `000_` som prefix för syfte.  Det är avsiktligt konfigurerat att använda samma domännamn som den publicerade webbplatsen.  Avsikten är att den här filen ska aktiveras när hälsokontrollen upptäcker ett problem med en av de AEM.  Erbjud sedan en felsida istället för bara en 503 HTTP-svarskod utan någon sida.  Det kommer att stjäla trafik från det normala `.vhost` eftersom filen lästes in innan det `.vhost` samtidigt som samma `ServerName` eller `ServerAlias`.  Detta resulterar i sidor som är avsedda för en viss domän att gå till den ohälsosamma värden i stället för standardvärden, vilket är det normala trafikflödet.
 
-När hälsokontrollsskripten körs loggar de ut sin aktuella hälsostatus.  En gång i minuten körs ett cronjob på servern som söker efter felfria poster i loggen.  Om den upptäcker att AEM inte är felfri aktiverar den symbolen:
+När hälsokontrollsskripten körs loggar de ut sin aktuella hälsostatus.  En gång i minuten körs ett cronjob på servern som söker efter felfria poster i loggen.  Om den upptäcker att AEM inte är felfri kommer den att aktivera symbolen:
 
 Loggpost:
 
@@ -125,14 +126,14 @@ RELOAD_MODE='author'
 ```
 
 Giltiga alternativ:
-- author
+- författare
    - Det här är standardalternativet.
    - Detta skapar en underhållssida för författaren när den inte är felfri
 - publicera
    - Med det här alternativet skapas en underhållssida för utgivaren när den inte är felfri
-- all
+- alla
    - Med det här alternativet skapas en underhållssida för författaren eller utgivaren eller båda om de inte är felfria
-- inga
+- ingen
    - Det här alternativet hoppar över den här funktionen i hälsokontrollen
 
 När du tittar på `VirtualHost` om du anger dessa ser du att de läser in samma dokument som en felsida för varje begäran som kommer när den är aktiverad:

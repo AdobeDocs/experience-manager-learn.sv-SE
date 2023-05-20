@@ -9,13 +9,13 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+exl-id: 92d6e98e-24d0-4229-9d30-850f6b72ab43
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
-
 
 # Tillägg för rubrikmeny
 

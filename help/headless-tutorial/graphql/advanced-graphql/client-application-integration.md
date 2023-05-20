@@ -25,10 +25,10 @@ I det här kapitlet beskrivs de olika stegen för att integrera de beständiga f
 Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att föregående kapitel har fyllts i innan du fortsätter med det här kapitlet. WKND-klientprogrammet ansluter till AEM publiceringstjänst, så det är viktigt att du **publicerade följande till AEM publiceringstjänst**.
 
 * Projektkonfigurationer
-* GraphQL-slutpunkter
+* GraphQL slutpunkter
 * Modeller för innehållsfragment
 * Skapat innehåll
-* beständiga GraphQL-frågor
+* GraphQL beständiga frågor
 
 The _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -116,7 +116,7 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
 ## Granska koden
 
-I [Grundläggande självstudiekurs - Bygg en React-app som använder API:er AEM GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) steg som vi granskat och förbättrat några viktiga filer för att få expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
+I [Grundläggande självstudiekurs - Bygg en React-app som använder AEM GraphQL API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) steg som vi granskat och förbättrat några viktiga filer för att få expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
 
 * [Granska objektet AEMHeadless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 
@@ -132,7 +132,7 @@ Huvudvyn i appen WKND React är listan över alla annonser och du kan filtrera d
 
 * Haken använder huvudsidan `fetchPersistedQuery(..)` funktion som delegerar frågekörningen till `AEMHeadless` via `aemHeadlessClient.js`.
 
-* Haken returnerar också bara relevanta data från det AEM GraphQL-svaret vid `response.data?.adventureList?.items`, som tillåter `Adventures` Reaktionsvykomponenter som är agnostiska för de överordnade JSON-strukturerna.
+* Haken returnerar också endast relevanta data från AEM GraphQL-svar vid `response.data?.adventureList?.items`, som tillåter `Adventures` Reaktionsvykomponenter som är agnostiska för de överordnade JSON-strukturerna.
 
 * När frågan har körts `AdventureListItem(..)` återgivningsfunktion från `Adventures.js` lägger till HTML-element för att visa _Bild, klipplängd, pris och titel_ information.
 

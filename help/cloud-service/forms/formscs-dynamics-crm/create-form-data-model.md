@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 9839
-source-git-commit: cfbc9078abf790034ec485dd3a5efbfcb9723eaa
+exl-id: cb26970f-f975-4405-bef6-782d27ab2906
+source-git-commit: 3d182fb9b9002f9eb71d1e276ca77edd3277cdad
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
@@ -21,4 +22,3 @@ ht-degree: 0%
 I följande video får du hjälp med att skapa och konfigurera formulärdatamodellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)
-

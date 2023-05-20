@@ -23,7 +23,7 @@ I det här kapitlet får du lära dig att modellera innehåll och skapa ett sche
 
 Vi skapar två enkla modeller, **Team** och **Person**. The **Team** datamodellen har namn, kort namn, beskrivning och referenser till **Person** datamodell med fullständigt namn, bioinformation, profilbild och yrkeslista.
 
-Du kan också skapa en egen modell som följer de grundläggande stegen och justera respektive steg som GraphQL-frågor och React App-kod eller helt enkelt följa stegen som beskrivs i dessa kapitel.
+Du kan också skapa en egen modell som följer de grundläggande stegen och justera respektive steg som GraphQL queries och React App-kod eller helt enkelt följa stegen som beskrivs i dessa kapitel.
 
 ## Förutsättningar {#prerequisites}
 
@@ -47,9 +47,9 @@ En projektkonfiguration innehåller alla Content Fragment-modeller som är koppl
 1. I dialogrutan som visas anger du:
 
    * Titel*: **Mitt projekt**
-   * Namn*: **mitt projekt** (I stället för att använda enbart små bokstäver används bindestreck för att avgränsa ord. Den här strängen påverkar den unika GraphQL-slutpunkt som klientprogram utför begäranden mot.)
+   * Namn*: **mitt projekt** (I stället för att använda enbart små bokstäver används bindestreck för att avgränsa ord. Strängen påverkar den unika GraphQL-slutpunkt som klientprogram utför begäranden mot.)
    * Kontrollera **Modeller för innehållsfragment**
-   * Kontrollera **Beständiga GraphQL-frågor**
+   * Kontrollera **GraphQL Beständiga frågor**
 
    ![Min projektkonfiguration](assets/content-fragment-models/my-project-configuration.png)
 

@@ -19,9 +19,8 @@ ht-degree: 0%
 
 # Anpassat processsteg
 
-Här följer den fullständiga koden för det anpassade processsteget som konverterar och ersätter de ursprungliga filerna med de konverterade PDF-filerna.
-Det här anpassade steget söker efter alla bilagor under mappnamnet som anges som ett processargument i arbetsflödet.
-Det här anpassade processsteget använder metoderna i den anpassade DocumentCloudSDKService för att skapa PDF-filer.
+Här följer den fullständiga koden för det anpassade processsteget som konverterar och ersätter de ursprungliga filerna med de konverterade PDF-filerna. Det här anpassade steget söker efter alla bilagor under mappnamnet som anges som ett processargument i arbetsflödet.
+I det här anpassade processsteget används metoderna för den anpassade DocumentCloudSDKService för att skapa PDF.
 
 
 ```java

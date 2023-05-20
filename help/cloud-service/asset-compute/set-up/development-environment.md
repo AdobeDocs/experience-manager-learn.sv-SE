@@ -30,7 +30,7 @@ Följande verktyg måste vara installerade på den lokala utvecklingsdatorn för
 
 Här följer en instruktion för att konfigurera en förkortning. Information om dessa utvecklingsverktyg beskrivs i separata avsnitt nedan.
 
-1. [Installera Docker ](https://www.docker.com/products/docker-desktop) Desktop och hämta de Docker-bilder som behövs:
+1. [Installera Docker Desktop](https://www.docker.com/products/docker-desktop) och hämta de Docker-bilder som behövs:
 
    ```
    $ docker pull openwhisk/action-nodejs-v12:latest
@@ -50,13 +50,13 @@ Mer information om de förkortade installationsanvisningarna finns i avsnitten n
 
 ## Installera Visual Studio Code{#vscode}
 
-[Microsoft Visual Studio ](https://code.visualstudio.com/download) Codeis används för att utveckla och felsöka Asset compute. Medan annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, kan endast Visual Studio Code integreras med [debug](../test-debug/debug.md) Asset compute worker.
+[Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för att utveckla och felsöka Asset compute. Med annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, endast Visual Studio Code kan integreras i [debug](../test-debug/debug.md) asset compute-arbetare.
 
 I den här självstudiekursen antas att Visual Studio Code används som den bästa utvecklarupplevelsen för att utöka Asset compute.
 
 ## Installera Docker Desktop{#docker}
 
-Hämta och installera den senaste, stabila [Docker Desktop](https://www.docker.com/products/docker-desktop) eftersom detta krävs för att [testa](../test-debug/test.md) och [felsöka](../test-debug/debug.md) Asset compute-projekt lokalt.
+Ladda ned och installera den senaste, stabila [Docker Desktop](https://www.docker.com/products/docker-desktop), eftersom detta krävs för att [test](../test-debug/test.md) och [debug](../test-debug/debug.md) asset compute projekt lokalt.
 
 När du har installerat Docker Desktop startar du programmet och installerar följande Docker-bilder från kommandoraden:
 
@@ -65,28 +65,28 @@ $ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
-Utvecklare på Windows-datorer bör kontrollera att de använder Linux-behållare för bilderna ovan. Stegen för att växla till Linux-behållare beskrivs i [Docker för Windows-dokumentationen](https://docs.docker.com/docker-for-windows/).
+Utvecklare på Windows-datorer bör kontrollera att de använder Linux-behållare för bilderna ovan. Stegen för att växla till Linux-behållare beskrivs i [Dokumentation för Docker for Windows](https://docs.docker.com/docker-for-windows/).
 
 ## Installera Node.js (och npm){#node-js}
 
-asset compute är [Node.js](https://nodejs.org/)-baserade, och därför måste Node.js 10+ (och npm) utvecklas och byggas.
+asset compute arbetare är [Node.js](https://nodejs.org/)-baserat och därför krävs Node.js 10+ (och npm) för att utveckla och bygga.
 
-+ [Installera Node.js (och npm)](../../local-development-environment/development-tools.md#node-js) på samma sätt som för traditionell AEM.
++ [Installera Node.js (och npm)](../../local-development-environment/development-tools.md#node-js) på samma sätt som för den traditionella AEM utvecklingen.
 
 ## Installera Adobe I/O CLI{#aio}
 
-[Installera Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli), eller  ____ aiois an command-line (CLI) npm module, som underlättar användning av och interaktion med Adobe I/O, och som används både för att generera och lokalt utveckla skräddarsydda Asset compute-arbetare.
+[Installera Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli), eller __aio__ är en kommandoradsmodul (CLI) npm som underlättar användningen av och interaktionen med Adobe I/O och som används både för att generera och lokalt utveckla anpassade Asset compute-arbetare.
 
 ```
 $ npm install -g @adobe/aio-cli@7.1.0
 ```
 
-_Adobe I/O CLI version 7.1.0 krävs. Senare versioner av Adobe I/O CLI stöds inte just nu._
+_Adobe I/O CLI version 7.1.0 krävs. Senare versioner av Adobe I/O CLI stöds för närvarande inte._
 
 
 ## Installera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
 
-Insticksprogrammet [Adobe I/O CLI Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute)
+The [Adobe I/O CLI Asset compute plugin](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
 ```
 $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
@@ -94,9 +94,9 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## Installera wskdebug{#wskdebug}
 
-Ladda ned och installera [Apache OpenWhisk-felsökning](https://www.npmjs.com/package/@openwhisk/wskdebug) npm-modulen för att underlätta lokal felsökning av Asset compute.
+Hämta och installera [Apache OpenWhisk-felsökning](https://www.npmjs.com/package/@openwhisk/wskdebug) npm-modul för att underlätta lokal felsökning av Asset compute.
 
-_Visual Studio Code 1.48.x+ krävs för att  [](#wskdebug) wskdebugto ska fungera._
+_Visual Studio Code 1.48.x+ krävs för [wskdebug](#wskdebug) till jobbet._
 
 ```
 $ npm install -g @openwhisk/wskdebug
@@ -104,7 +104,7 @@ $ npm install -g @openwhisk/wskdebug
 
 ## Installera anteckning{#ngrok}
 
-Hämta och installera [ngrok](https://www.npmjs.com/package/ngrok) npm-modulen, som ger allmän tillgång till din lokala utvecklingsdator, för att underlätta lokal felsökning av Asset compute.
+Hämta och installera [ngrok](https://www.npmjs.com/package/ngrok) npm-modulen, som ger allmänheten tillgång till din lokala utvecklingsmaskin, för att underlätta lokal felsökning av Asset compute.
 
 ```
 $ npm install -g ngrok --unsafe-perm=true

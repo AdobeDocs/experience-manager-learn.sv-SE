@@ -291,7 +291,7 @@ Uppdatera sedan **Inläst sida** regel som ska använda **Komponentresurstyp** d
 1. I taggegenskapsgränssnittet går du till **Inläst sida** regeln skapades tidigare.
 1. Under **Villkor** klicka **Lägg till** för att öppna **Villkorskonfiguration** guide.
 1. För **Villkorstyp** fält, markera **Värdejämförelse** alternativ.
-1. Ange det första värdet i formulärfältet till `%Component Resource Type%`. Du kan använda ikonen Dataelement ![data-element, ikon](assets/collect-data-analytics/cylinder-icon.png) för att välja **Komponentresurstyp** dataelement. Låt jämförelseobjektet vara inställt på `Equals`.
+1. Ange det första värdet i formulärfältet till `%Component Resource Type%`. Du kan använda ikonen Dataelement ![data-element, ikon](assets/collect-data-analytics/cylinder-icon.png) för att välja **Komponentresurstyp** dataelement. Lämna jämförelseinställningen på `Equals`.
 1. Ange det andra värdet till `wknd/components/page`.
 
    ![Villkorskonfiguration för regel för sidinläst](assets/collect-data-analytics/condition-configuration-page-loaded.png)

@@ -10,13 +10,13 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 0%
 
 ---
-
 
 # Generera AEM bildresurser med OpenAI
 
@@ -904,4 +904,3 @@ module.exports = {
   updateContentFragmentToUseGeneratedImg,
 };
 ```
-

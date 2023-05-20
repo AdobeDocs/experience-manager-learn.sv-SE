@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10796
 thumbnail: KT-10796.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 1f536079-b3ce-4807-be88-804378e75d37
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
-
 
 # AEM Headless-driftsättningar
 
@@ -50,7 +50,7 @@ Adobe tillhandahåller exempel på iOS- och Android™-mobilappar.
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/ios-swiftui-app.md" title="iOS">iOS</a></p>
-                   <p class="is-size-6">Ett exempel på en iOS-app, skriven i SwiftUI, som förbrukar innehåll från AEM Headless GraphQL API:er.</p>
+                   <p class="is-size-6">Ett exempel på en iOS-app, skriven i SwiftUI, som konsumerar innehåll från AEM Headless GraphQL API:er.</p>
                    <a href="../example-apps/ios-swiftui-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
                    </a>
@@ -80,5 +80,3 @@ Adobe tillhandahåller exempel på iOS- och Android™-mobilappar.
        </div>
     </div>
 </div>
-
-

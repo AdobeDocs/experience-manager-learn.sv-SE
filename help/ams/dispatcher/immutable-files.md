@@ -7,13 +7,13 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
+exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '826'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Skrivskydda eller oföränderliga filer i AMS
 

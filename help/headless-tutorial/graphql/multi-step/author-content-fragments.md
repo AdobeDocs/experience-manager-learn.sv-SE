@@ -13,7 +13,7 @@ exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
 source-wordcount: '810'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -160,7 +160,7 @@ Grattis! Du har skapat flera innehållsfragment och skapat en variant.
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel [Utforska GraphQL API:er](explore-graphql-api.md)kommer du att utforska AEM GraphQL API:er med det inbyggda GrapiQL-verktyget. Lär dig hur AEM automatiskt genererar ett GraphQL-schema baserat på en Content Fragment-modell. Du kommer att experimentera med att skapa grundläggande frågor med GraphQL-syntaxen.
+I nästa kapitel [Utforska GraphQL API:er](explore-graphql-api.md)kommer du att utforska AEM GraphQL API:er med det inbyggda GrapiQL-verktyget. Lär dig hur AEM automatiskt genererar ett GraphQL-schema baserat på en Content Fragment-modell. Du kommer att experimentera med att skapa grundläggande frågor med GraphQL syntax.
 
 ## Relaterad dokumentation
 

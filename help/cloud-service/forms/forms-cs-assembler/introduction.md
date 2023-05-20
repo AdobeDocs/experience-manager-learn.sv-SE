@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9980
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
+exl-id: 713c4e9e-95ac-48e1-a7fc-2b3ec0b145e5
+source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 1%

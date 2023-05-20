@@ -11,13 +11,13 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
 
 ---
-
 
 # Granska modulen ui.front för AEM i fullstacksprojektet {#aem-full-stack-ui-frontent}
 
