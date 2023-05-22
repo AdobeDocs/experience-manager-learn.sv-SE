@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 481b8877e252b885da307fcf4d96f8a50f026fa6
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
    1. Lägg till ytterligare **nt:ostrukturerad** noden som kallas godkännare som underordnad till rollnoden.
    1. Lägg till String-egenskaper **jcr:title** = &quot;**Godkännare**&quot;, **roleclass** =&quot;**ägare**&quot;, **roleid**=&quot;**godkännare**&quot;.
       1. Namnet på godkännarnoden, samt jcr:title och roleid, kan vara vilket strängvärde som helst (så länge som roleid är unikt).
-      1. **roleclass** styr behörigheter för den rollen baserat på [3 OTB-roller](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User roller i ett projekt): **ägare**, **redigerare** och **observatör**.
+      1. **roleclass** styr behörigheter för den rollen baserat på [3 OTB-roller](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project): **ägare**, **redigerare** och **observatör**.
       1. I allmänhet kan rollklassen vara **Ägare.** om det är en mer specifik redigeringsroll som fotografen eller Designer **redigerare** bör det räcka med en rollklass. Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
 
    ```shell
