@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,11 @@ ht-degree: 0%
 
 # Bädda in Headless Adaptive Form
 
-Den här artikeln handlar om grunderna för hur du bäddar in ett headless adaptive-formulär på din spa-webbplats. I den här artikeln förutsätts att du har ett befintligt enkelsidigt program och vill bädda in ett adaptivt formulär som skapats i AEM Forms 6.5.16 med hjälp av kärnkomponenter.
-Om du inkluderar ett formulär i en Single Page App-app kan användarna enkelt mata in och skicka data utan att behöva uppdatera sidan. Detta förbättrar programmets interaktivitet och effektivitet.
+Detta [självstudiekursen kommer att omfatta de olika rubrikfria API:erna](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) som gör att du kan lista, visa och skicka formuläret.
+
+I den här artikeln beskrivs de olika rubrikfria API:erna som du kan använda för att lista, visa och skicka adaptiva formulär utan att behöva använda huvud.
+
+I den här artikeln förutsätts att du har ett befintligt enkelsidigt program och vill visa de Headless-anpassade formulären på din spa-webbplats.
 
 På följande skärmbild visas ett kontaktformulär som är inbäddat i SPA
 
