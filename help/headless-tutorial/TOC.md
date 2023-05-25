@@ -3,11 +3,12 @@ user-guide-title: Kom igång med AEM Headless
 user-guide-description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
 breadcrumb-title: Självstudiekurs om AEM Headless
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 12%

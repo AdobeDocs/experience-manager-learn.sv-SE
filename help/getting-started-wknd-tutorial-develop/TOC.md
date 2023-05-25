@@ -2,12 +2,13 @@
 user-guide-title: Kom igång med AEM Sites – självstudiekurs om WKND
 user-guide-description: En självstudiekurs i flera delar för utvecklare som är nya inom AEM. Implementera en AEM-sajt för ett fiktivt livsstilsmärke, WKND. Aktivera frontend-pipeline för att påskynda utvecklingen till distributionscykeln.
 breadcrumb-title: Självstudiekurser om AEM Sites WKND
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 activity: develop
 audience: developer
 index: y
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 46%
