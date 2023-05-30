@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ SDR-dokumentet ger en omfattande översikt över implementeringsplanen och säke
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Mer information om koncept och olika element som ska ingå i SDR-dokumentet finns på [Skapa och underhåll ett SDR-dokument (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Du kan också hämta en Excel-exempelmall, men en WKND-specifik version är också tillgänglig [här](./assets/Analytics-SDR-Template.xlsx).
+Mer information om koncept och olika element som ska ingå i SDR-dokumentet finns på [Skapa och underhåll ett SDR-dokument (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Du kan också hämta en Excel-exempelmall, men en WKND-specifik version är också tillgänglig [här](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Setup Analytics - report suite, Analysis Workspace
 
@@ -83,7 +83,7 @@ I den här självstudiekursen  `eVar5, eVar6, and eVar7` spår  _WKND-sidnamn, W
 
 För att analysera, samla in insikter och dela dessa insikter med andra från insamlade data skapas ett projekt i Analysis Workspace.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
 Om du vill veta mer om konfiguration och koncept för Analytics rekommenderar vi följande resurser:
 
@@ -121,6 +121,10 @@ I [tidigare självstudiekurs](./web-sdk.md), en taggegenskap skapas, har dataele
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
+
+>[!TIP]
+>
+>Det dataelement och den regelhändelsekod som visas i videon är tillgängliga som referens, **expandera dragspelselementet nedan**. Om du emellertid INTE använder Adobe-klientdatalagret måste du ändra nedanstående kod, men begreppet att definiera dataelementen och använda dem i regeldefinitionen gäller fortfarande.
 
 +++ Dataelement och regelhändelsekod
 
@@ -209,6 +213,13 @@ I [tidigare självstudiekurs](./web-sdk.md), en taggegenskap skapas, har dataele
 
 Mer information om hur du integrerar AEM med Adobe Client Data Layer finns i [Använda Adobe Client Data Layer med AEM Core Components Guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
+
+>[!INFO]
+>
+>För en heltäckande bild av **Variabelmappning** egenskapsinformation i Solution Design Reference-dokumentet (SDR), gå till den färdiga WKND-specifika versionen för nedladdning [här](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+
+
+
 ## Verifiera uppdaterad taggegenskap på WKND
 
 För att säkerställa att den uppdaterade taggegenskapen byggs, publiceras och fungerar korrekt på WKND-webbplatsens sidor. Använda webbläsarens Google Chrome [Adobe Experience Platform Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
@@ -235,7 +246,7 @@ Datauppsättningen är en lagrings- och hanteringskonstruktion för en samling d
 
 Analysis Workspace är ett kraftfullt verktyg i Adobe Analytics som gör det möjligt att utforska och visualisera data på ett flexibelt och interaktivt sätt. Det har ett dra-och-släpp-gränssnitt för att skapa anpassade rapporter, utföra avancerad segmentering och tillämpa olika datavisualiseringar.
 
-Vi öppnar Analysis Workspace-projektet som skapats i [Konfigurationsanalys](#setup-analytics---report-suite-analysis-workspace) steg. I **Övre sidor** kan du undersöka olika mätvärden, som besök, unika besökare, tävlingsbidrag, avhoppsfrekvens och mycket annat. Dra och släpp WKND-specifika mått (WKND-sidnamn, WKND CTA-namn) och mått (WKND CTA Click Event) för att utvärdera WKND-sidornas och hemsidans prestanda. Dessa insikter är värdefulla för marknadsförarna för att förstå vilka CTA-avtal som är mer effektiva och fatta datadrivna beslut som är anpassade till deras affärsmål.
+Vi öppnar Analysis Workspace-projektet som skapats i [Konfigurationsanalys](#setup-analytics---report-suite-analysis-workspace) steg. I **Övre sidor** kan du undersöka olika mätvärden, som besök, unika besökare, tävlingsbidrag, avhoppsfrekvens och mycket annat. Dra och släpp WKND-specifika mått (WKND-sidnamn, WKND CTA-namn) och mått (WKND CTA Click Event) för att utvärdera WKND-sidornas och hemsidans prestanda. Dessa insikter är värdefulla för marknadsförarna för att förstå vilka CTA-avtal som är mer effektiva och fatta datadrivna beslut i linje med deras affärsmål.
 
 Om du vill visualisera användarresor använder du Flödesvisualisering och börjar med **WKND-sidnamn** och expandera till olika banor.
 
@@ -250,6 +261,12 @@ Implementering av Adobe Analytics är avgörande för att marknadsföringsteamen
 Genom att implementera de rekommenderade stegen och använda de tillhandahållna resurserna, t.ex. dokumentet Solution Design Reference (SDR) och förstå viktiga Analytics-koncept, kan marknadsförarna effektivt samla in och analysera data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>Om du föredrar **video från början till slut** som täcker hela integrationsprocessen i stället för enskilda installationsstegsvideor kan du klicka på [här](https://video.tv.adobe.com/v/3419889/) för att komma åt den.
+
 
 ## Ytterligare resurser
 
