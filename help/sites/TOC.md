@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 733d640f7040aefdd98fa3b999428ef0aac1fd61
+source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '454'
 ht-degree: 11%
 
 ---
@@ -100,6 +100,7 @@ ht-degree: 11%
    + Experience Platform {#experience-platform}
       + [Generera FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
+      + [Analyser med Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
    + Taggar för Experience Platform-datainsamling (Launch) {#experience-platform-data-collection-tags}
       + [Översikt](integrations/experience-platform/data-collection/tags/overview.md)
       + [Skapa en taggegenskap](integrations/experience-platform/data-collection/tags/create-tag-property.md)
