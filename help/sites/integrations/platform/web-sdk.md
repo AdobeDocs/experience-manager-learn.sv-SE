@@ -11,9 +11,9 @@ last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
+source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -207,6 +207,11 @@ Efter installationen av Web SDK med AEM, särskilt på WKND-webbplatsen, är det
 Bra jobbat! Du har slutfört konfigurationen av AEM med Experience Platform Web SDK för att samla in och importera data från en webbplats. Med denna grund kan ni nu utforska fler möjligheter att förbättra och integrera produkter som Analytics, Target, Customer Journey Analytics (CJA) och många andra för att skapa innehållsrika, personaliserade upplevelser för era kunder. Fortsätt lära dig och utforska Adobe Experience Cloud fulla potential.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>Om du föredrar **video från början till slut** som täcker hela integrationsprocessen i stället för enskilda installationsstegsvideor kan du klicka på [här](https://video.tv.adobe.com/v/3418905/) för att komma åt den.
 
 ## Ytterligare resurser
 
