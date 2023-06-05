@@ -8,10 +8,10 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -236,6 +236,7 @@ ht-degree: 1%
    + [3 - Hämta formuläret](headless-forms/fetch-the-form.md)
    + [4 - Välj formulär att fylla i](headless-forms/select-form-from-drop-down-list.md)
    + [5 - Visa formulär i kortformat](headless-forms/display-forms-card-view.md)
+   + [6 - Visa markerat formulär](headless-forms/open-form-card-view.md)
 
 + Reagera app med Forms och Acrobat Sign {#react-ic-sign}
    + [1 - Introduktion](react-ic-sign/introduction.md)
