@@ -12,9 +12,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,12 @@ Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med S
 ## Syfte
 
 1. Förstå de alternativ för SPA modellroutning som är tillgängliga när du använder SPA Editor.
-1. Lär dig använda [Reagera router](https://reacttraining.com/react-router/) för att navigera mellan olika vyer av SPA.
+1. Lär dig använda [Reagera router](https://reacttraining.com/react-router) för att navigera mellan olika vyer av SPA.
 1. Använd AEM React Core Components för att implementera en dynamisk navigering som styrs av den AEM sidhierarkin.
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [Kärnkomponent för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
+I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [Kärnkomponent för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html).
 
 ![Navigering har lagts till](assets/navigation-routing/navigation-added.png)
 
@@ -209,9 +209,9 @@ Kontrollera sedan den JSON-modell som driver SPA upplevelse av flera vyer.
 
 ## Inspect React Routing  {#react-routing}
 
-Navigering och routning implementeras med [Reagera router](https://reactrouter.com/). React Router är en samling navigeringskomponenter för React-program. [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) använder funktionerna i React Router för att implementera **Navigering** -komponenten som användes i föregående steg.
+Navigering och routning implementeras med [Reagera router](https://reactrouter.com/en/main). React Router är en samling navigeringskomponenter för React-program. [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) använder funktionerna i React Router för att implementera **Navigering** -komponenten som användes i föregående steg.
 
-Kontrollera sedan hur React Router är integrerat med SPA och experimentera med React Routers [Länk](https://reactrouter.com/web/api/Link) -komponenten.
+Kontrollera sedan hur React Router är integrerat med SPA och experimentera med React Routers [Länk](https://reactrouter.com/en/main/components/link) -komponenten.
 
 1. Öppna filen i IDE `index.js` på `ui.frontend/src/index.js`.
 
@@ -238,7 +238,7 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
    });
    ```
 
-   Observera att `App` är omsluten i `Router` komponent från [Reagera router](https://reacttraining.com/react-router/). The `ModelManager`, som tillhandahålls av AEM JS SDK, lägger till dynamiska vägar till AEM sidor baserat på JSON-modellens API.
+   Observera att `App` är omsluten i `Router` komponent från [Reagera router](https://reacttraining.com/react-router). The `ModelManager`, som tillhandahålls av AEM JS SDK, lägger till dynamiska vägar till AEM sidor baserat på JSON-modellens API.
 
 1. Öppna filen `Page.js` på `ui.frontend/src/components/Page/Page.js`
 
@@ -260,7 +260,7 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
    The `Page` SPA använder `MapTo` funktion att mappa **Sidor** i AEM till en motsvarande SPA. The `withRoute` använder du för att dynamiskt dirigera SPA till rätt AEM underordnad sida baserat på `cqPath` -egenskap.
 
 1. Öppna `Header.js` komponent vid `ui.frontend/src/components/Header/Header.js`.
-1. Uppdatera `Header` för att radbryta `<h1>` i en [Länk](https://reactrouter.com/web/api/Link) till hemsidan:
+1. Uppdatera `Header` för att radbryta `<h1>` i en [Länk](https://reactrouter.com/en/main/components/link) till hemsidan:
 
    ```diff
      //Header.js

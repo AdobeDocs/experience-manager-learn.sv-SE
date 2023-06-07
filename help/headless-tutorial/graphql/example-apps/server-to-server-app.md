@@ -9,9 +9,9 @@ level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
@@ -22,18 +22,18 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
 
 ![Server-till-server-appen Node.js med AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
 
-Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)
+Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)
 
 ## Förutsättningar {#prerequisites}
 
 Följande verktyg bör installeras lokalt:
 
-+ [Node.js v18](https://nodejs.org/en/)
++ [Node.js v18](https://nodejs.org/en)
 + [Git](https://git-scm.com/)
 
 ## AEM
 
-Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) som ska installeras.
+Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases) som ska installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Valfritt, [autentiseringsuppgifter för tjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) om begäranden godkänns (till exempel anslutning till AEM Author-tjänsten).
@@ -77,7 +77,7 @@ Det här Node.js-programmet kan ansluta till AEM Author eller AEM Publish basera
 
 ## Koden
 
-Nedan följer en sammanfattning av hur programmet Node.js från server till server har skapats, hur det ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+Nedan följer en sammanfattning av hur programmet Node.js från server till server har skapats, hur det ansluter till AEM Headless för att hämta innehåll med GraphQL beständiga frågor och hur dessa data presenteras. Den fullständiga koden finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server).
 
 Det vanligaste användningsexemplet för server-till-server-AEM Headless-appar är att synkronisera Content Fragment-data från AEM till andra system, men det här programmet är avsiktligt enkelt och skriver ut JSON-resultaten från den beständiga frågan.
 

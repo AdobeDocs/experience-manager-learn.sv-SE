@@ -9,9 +9,9 @@ level: Beginner
 thumbnail: 28988.jpg
 last-substantial-update: 2022-06-25T00:00:00Z
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Tillägget Adobe Asset Link för Adobe Creative Cloud for enterprise ger möjlig
 
 >[!TIP]
 >
-> Läs mer om hur [Adobe XD Premium Training Program](https://spark.adobe.com/page/wU7OXv8qKGugO/) kan hjälpa dig att integrera Asset Link med ditt Adobe Experience Manager-arbetsflöde.
+> Läs mer om hur [Adobe XD Premium Training Program](https://helpx.adobe.com/support/xd.html) kan hjälpa dig att integrera Asset Link med ditt Adobe Experience Manager-arbetsflöde.
 
 ## Adobe Asset Link och AEM kreativa arbetsflöden
 
@@ -65,7 +65,7 @@ Adobe Asset Link har stöd för InDesign-direktlänkning mellan Adobe Asset Link
 
 >[!NOTE]
 >
->Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurera AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>Använd endast Adobe Creative Cloud-Enterprise ID eller Federated ID. Se till att du [konfigurera AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 Du kan montera en resurs i din InDesign-layout med något av följande alternativ:
 

@@ -10,9 +10,9 @@ level: Beginner
 kt: 11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2296'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Mer information finns i [krav för molnmigrering](https://experienceleague.adobe
 
 ### F: Jag har den senaste BPA-rapporten från mitt källsystem, vad ska jag göra med den?
 
-Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [som är kopplad till din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [som beskrivs i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [som är kopplad till din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [som beskrivs i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
 
 Granska den bedömning av kod och innehållskomplexitet som verktyget erbjuder och notera associerade åtgärdsobjekt som leder till eftersläpning i kodomfaktoriseringen eller utvärdering av molnmigrering.
 
@@ -80,7 +80,7 @@ Om klonmiljöer används för migrering kommer detta inte att påverka resursutn
 
 Det korta svaret är &quot;**Ja**&quot;.
 
-CTT-extrahering och -förtäring **utan** användarmappning migrerar bara innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
+CTT-extrahering och -förtäring **utan** användarmappning migrerar bara innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
 
 I det här fallet är SAML-identitetsleverantören konfigurerad mot Adobe IMS för att använda antingen Federated/Enterprise ID, i stället för direkt till AEM med autentiseringshanteraren.
 
@@ -88,15 +88,15 @@ I det här fallet är SAML-identitetsleverantören konfigurerad mot Adobe IMS f�
 
 Det korta svaret är &quot;**Ja**&quot;.
 
-CTT-extraheringen och -intaget utan användarmappning migrerar innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
+CTT-extraheringen och -intaget utan användarmappning migrerar innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
 
 I det här fallet använder man Adobe ID och Adobe ID används av IMS-administratören för att ge åtkomst till AEMaaCS.
 
 ### F: Vad betyder termerna&quot;svep&quot; och&quot;skriv över&quot; i samband med CTT?
 
-I samband med [extraheringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-servicemoving/cloud-migration/content-transfer-tool/extracting-content.html), är alternativen att antingen skriva över data i mellanlagringsbehållaren från tidigare extraheringscykler eller lägga till differentialen (tillagd/uppdaterad/borttagen) i den. Mellanlagringsbehållaren är ingenting, men den blob-lagringsbehållare som är associerad med migreringsuppsättningen. Varje migreringsuppsättning får en egen mellanlagringsbehållare.
+I samband med [extraheringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase), är alternativen att antingen skriva över data i mellanlagringsbehållaren från tidigare extraheringscykler eller lägga till differentialen (tillagd/uppdaterad/borttagen) i den. Mellanlagringsbehållaren är ingenting, men den blob-lagringsbehållare som är associerad med migreringsuppsättningen. Varje migreringsuppsättning får en egen mellanlagringsbehållare.
 
-I samband med [matningsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/ingesting-content.html), är alternativen + för att ersätta hela innehållsdatabasen i AEMaaCS eller för att synkronisera differentiellt (tillagt/uppdaterat/borttaget) innehåll från mellanlagringsmigreringsbehållaren.
+I samband med [matningsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html), är alternativen + för att ersätta hela innehållsdatabasen i AEMaaCS eller för att synkronisera differentiellt (tillagt/uppdaterat/borttaget) innehåll från mellanlagringsmigreringsbehållaren.
 
 ### F: Det finns flera webbplatser, associerade resurser, användare och grupper i källsystemet. Går det att migrera dem i faser till AEMaaCS?
 
@@ -224,6 +224,6 @@ Ovanstående metod kan bara användas för att mäta migreringstiden, men den m�
 
 + [Tips och tricks för migrering till Experience Manager i molnet (Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
-+ [Video om CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-servicemigration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
++ [Video om CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 
-+ [Videofilmer om andra AEMaaCS-ämnen från expertserier](https://experienceleague.adobe.com/docs/experience-manager-learncloud-service/aem-experts-series.html)
++ [Videofilmer om andra AEMaaCS-ämnen från expertserier](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)

@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code](ht
 
 Följande programvara måste vara installerad:
 
-- [Node.js v18](https://nodejs.org/)
+- [Node.js v18](https://nodejs.org/en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Mål
@@ -109,7 +109,7 @@ Exempelappen React består av tre huvuddelar:
 
 1. The `src/api` -mappen innehåller filer som används för att göra GraphQL-frågor till AEM.
    - `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
-   - `src/api/usePersistedQueries.js` implements [anpassade React-kopplingar](https://react.dev/docs/hooks-custom.html) returnera data från AEM GraphQL till `Teams.js` och `Person.js` visa komponenter.
+   - `src/api/usePersistedQueries.js` implements [anpassade React-kopplingar](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) returnera data från AEM GraphQL till `Teams.js` och `Person.js` visa komponenter.
 
 1. The `src/components/Teams.js` filen visar en lista med team och deras medlemmar med hjälp av en listfråga.
 1. The `src/components/Person.js` -filen visar information om en person med hjälp av en parametriserad fråga med ett resultat.
@@ -187,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 Bygg sedan upp funktionaliteten för att visa teamen och deras medlemmar i React-appens huvudvy. Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar `my-project/all-teams` beständig fråga, returnera en lista över gruppinnehållsfragment i AEM.
+- En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) in `src/api/usePersistedQueries.js` som anropar `my-project/all-teams` beständig fråga, returnera en lista över gruppinnehållsfragment i AEM.
 - En React-komponent vid `src/components/Teams.js` som anropar den nya anpassade reaktionen `useEffect` och återger teamdata.
 
 När det är klart fylls programmets huvudvy i med teamdata från AEM.
@@ -337,7 +337,7 @@ Med [Teamfunktioner](#implement-teams-functionality) complete, låt oss implemen
 
 Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` som anropar parametern `my-project/person-by-name` beständig fråga och returnerar en enskild personpost.
+- En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) in `src/api/usePersistedQueries.js` som anropar parametern `my-project/person-by-name` beständig fråga och returnerar en enskild personpost.
 
 - En React-komponent vid `src/components/Person.js` som använder en persons fullständiga namn som en frågeparameter, anropar den nya anpassade reaktionen `useEffect` och återger persondata.
 
