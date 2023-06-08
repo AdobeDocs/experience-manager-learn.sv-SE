@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 11%
@@ -61,20 +61,22 @@ ht-degree: 11%
    + Utbyggbarhet{#extensibility}
       + App Builder{#app-builder}
          + [Generera åtkomsttoken](./developing/extensibility/app-builder/jwt-auth.md)
-      + Konsol för innehållsfragment{#content-fragments}
-         + [Översikt](./developing/extensibility/content-fragments/overview.md)
-         + [Adobe Developer Console-projekt](./developing/extensibility/content-fragments/adobe-developer-console-project.md)
-         + [App-initiering](./developing/extensibility/content-fragments/app-initialization.md)
-         + [Tilläggsregistrering](./developing/extensibility/content-fragments/extension-registration.md)
-         + [Sidhuvudsmenyn](./developing/extensibility/content-fragments/header-menu.md)
-         + [Åtgärdsfält](./developing/extensibility/content-fragments/action-bar.md)
-         + [Modal](./developing/extensibility/content-fragments/modal.md)
-         + [Adobe I/O Runtime action](./developing/extensibility/content-fragments/runtime-action.md)
-         + [Testa](./developing/extensibility/content-fragments/test.md)
-         + [Distribuera](./developing/extensibility/content-fragments/deploy.md)
-         + Exempel på tillägg{#example-extensions}
-            + [Uppdatering av massegenskap](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
-            + [Generera AEM bildresurser med OpenAI](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
+      + Utbyggbarhet för användargränssnitt{#ui}
+         + [Översikt](./developing/extensibility/ui/overview.md)
+         + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
+         + [Initiera app](./developing/extensibility/ui/app-initialization.md)
+         + [Registrera tillägg](./developing/extensibility/ui/extension-registration.md)
+         + [Modal](./developing/extensibility/ui/modal.md)
+         + [Adobe I/O Runtime Action](./developing/extensibility/ui/runtime-action.md)
+         + [Verifiera](./developing/extensibility/ui/verify.md)
+         + [Distribuera](./developing/extensibility/ui/deploy.md)
+         + Innehållsfragment{#content-fragments}
+            + [Översikt](./developing/extensibility/ui/content-fragments/overview.md)
+            + Exempel{#examples}
+               + [Uppdatera massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
+               + [Generering av AI-bilder](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
+               + [Kolumner för anpassat stödraster](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
+               + [Exportera som XML](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
    + Grundläggande om utveckling{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [Lokal utvecklingsmiljö](./developing/basics/local-development-environment.md)
