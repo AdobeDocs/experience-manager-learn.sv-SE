@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '458'
 ht-degree: 11%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 11%
    + [Formatsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launches](page-authoring/launches.md)
-   + Expertråd {#expert-advice}
+   + Lär dig av andra {#expert-advice}
       + [Tips för webbplatshierarki](page-authoring/expert-advice/site-hierarchy.md)
 + Komponenter {#components}
    + [Komponentutveckling](components/component-development.md)
@@ -123,7 +123,7 @@ ht-degree: 11%
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
-+ Expertresurser {#expert-resources}
++ Lär dig av andra {#expert-resources}
    + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
    + [Platsunderhåll](expert-resources/site-maintenance.md)
    + [AEM Champion Tips and Tricks: Session 1](expert-resources/champion-tips-1.md)
