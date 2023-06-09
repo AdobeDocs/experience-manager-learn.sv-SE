@@ -7,13 +7,13 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 5953a1ad-0eaf-43f0-b356-6d20c0b59fee
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Hämta formulärets JSON
 
@@ -25,10 +25,12 @@ Följande kodfragment hämtar json för det adaptiva formuläret som kallas **ko
 
 ```javascript
 const getForm = async () => {
-        const resp = await fetch('/content/forms/af/contactus/jcr:content/guideContainer.model.json');
+        
+        const resp = await fetch('/adobe/forms/af/L2NvbnRlbnQvZm9ybXMvYWYvZmlyc3RoZWFkbGVzcw==');
+        // Get the form id manually using the listform api
         let formJSON = await resp.json();
-        console.log(formJSON);
-        setForm(formJSON);
+        console.log("The contact form json is "+formJSON);
+        setForm(formJSON.afModelDefinition)
       }
 ```
 
@@ -53,10 +55,10 @@ export default function Contact(){
       };
     const getForm = async () => {
         
-        const resp = await fetch('/content/forms/af/contactus/jcr:content/guideContainer.model.json');
+        const resp = await fetch('/adobe/forms/af/dor/L2NvbnRlbnQvZm9ybXMvYWYvcmlzaGk=');
         let formJSON = await resp.json();
-        console.log(formJSON);
-        setForm(formJSON);
+        setForm(formJSON.afModelDefinition)
+      
       }
       useEffect( ()=>{
         getForm();

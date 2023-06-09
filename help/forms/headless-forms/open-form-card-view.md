@@ -7,9 +7,9 @@ kt: 13372
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,6 @@ export default function DisplayForm()
 {
    const [selectedForm, setForm] = useState("");
    const params = useParams();
-   const pathParam = params["*"];
    const extendMappings =
     {
         'plain-text' : PlainText,
@@ -40,15 +39,14 @@ export default function DisplayForm()
         'form': Form
     };
     
-    // Add the leading '/' back on 
-   const path = '/' + pathParam;
+    
    const getAFForm = async () =>
     {
            
-        const resp = await fetch(`${path}/jcr:content/guideContainer.model.json`);
+        const resp = await fetch(`/adobe/forms/af/${params.formID}`);
         let formJSON = await resp.json();
         console.log("The contact form json is "+formJSON);
-        setForm(formJSON)
+        setForm(formJSON.afModelDefinition)
     }
     
     useEffect( ()=>{
@@ -62,12 +60,4 @@ export default function DisplayForm()
         </div>
     )
 }
-```
-
-I ovanstående kod extraheras sökvägen till det formulär som ska återges från webbadressen och används i hämtningsanropet för att hämta formulärets JSON. Den hämtade JSON-koden finns sedan i följande kod
-
-```javascript
-        <div>
-           <AdaptiveForm mappings={extendMappings} formJson={selectedForm}/>
-        </div>
 ```

@@ -8,9 +8,9 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
-source-git-commit: 3bbf80d5c301953b3a34ef8256702ac7445c40da
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -51,15 +51,14 @@ const extendMappings =
         'button' : Button,
         'form': Form
     };
-    const[formPath, setFormPath] = useState('');
-    const [selectedForm, setForm] = useState('');
+   
     return (
         
             <Grid item xs={3}>
                 <Paper elevation={3}>
                     <img src="/content/dam/formsanddocuments/registrationform/jcr:content/renditions/cq5dam.thumbnail.48.48.png" className="img"/>
                     <Box padding={3}>
-                        <Link style={{ textDecoration: 'none' }} to={`/displayForm${headlessForm.path}`}>
+                        <Link style={{ textDecoration: 'none' }} to={`/displayForm${headlessForm.id}`}>
                             <Typography variant="subtititle2" component="h2">
                                 {headlessForm.title}
                             </Typography>
@@ -80,7 +79,7 @@ const extendMappings =
 Följande väg definierades i Main.js för att navigera till DisplayForm.js
 
 ```javascript
-    <Route path="/displayForm/*" element={<DisplayForm/>} exact/>
+    <Route path="/displayForm/:formID" element={<DisplayForm/>} exact/>
 ```
 
 ## Hämta formulären
