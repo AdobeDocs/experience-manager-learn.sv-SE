@@ -10,20 +10,15 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
+source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
 
 # Anpassa AEM Headless-upplevelser med Content Fragments
-
->[!IMPORTANT]
->
-> Export av Adobe Experience Manager Content Fragment till Adobe Target finns i AEM as a Cloud Service [prerelease channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features).
-
-
 
 I den här självstudien utforskas hur AEM innehållsfragment exporteras till Adobe Target och sedan används för att personalisera headless-upplevelser med Adobe Web SDK. The [Reagera WKND-app](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
 
