@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -34,3 +34,7 @@ Den här självstudiekursen visar mappstrukturen framåt.
 * Öppna kommandotolkfönstret och navigera till **c:\cloudmanager**
 * Kopiera och klistra in innehållet i [textfil](assets/creating-maven-project.txt) i kommandotolken. Du kan behöva ändra DarchetypeVersion=30 beroende på vilken [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 30 när den här artikeln skrevs.
 * Kör kommandot genom att trycka på tangenten enter.Om allt är rätt ska du se meddelandet om att det lyckades.
+
+## Nästa steg
+
+[Installerar IntelliJ](./intellij-set-up.md)

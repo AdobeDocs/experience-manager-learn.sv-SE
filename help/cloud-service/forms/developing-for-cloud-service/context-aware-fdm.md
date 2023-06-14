@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ Kopiera följande text till filen som du skapade i föregående steg. Koden i de
 ![cloud-config-property](assets/cloud-config-properties.png)
 
 För REST-baserade molnkonfigurationer med grundläggande autentisering vill du vanligtvis skapa miljövariabler för egenskaperna serviceEndPoint, userName och password.
+
+## Nästa steg
+
+[Flytta ditt AEM till molnhanteraren](./push-project-to-cloud-manager-git.md)

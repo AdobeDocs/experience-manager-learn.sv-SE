@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8851
 exl-id: e61cea37-b931-49c6-9e5d-899628535480
-source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
@@ -39,3 +39,7 @@ git push -f bankingapp master:"MyFirstAF"
 ```
 
 I ovanstående kommando överför vi vår överordnad gren från vår lokala Git-databas till MyFirstAF-grenen i molnhanterardatabasen som identifieras av bankingapp-användarnamnet.
+
+## Nästa steg
+
+[Distribuera projektet till utvecklingsmiljön](./deploy-to-dev-environment.md)

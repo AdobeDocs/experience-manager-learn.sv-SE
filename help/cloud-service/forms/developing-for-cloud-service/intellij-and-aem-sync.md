@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Installera [Cygwin](https://www.cygwin.com/). Jag har installerat i C:\cygwin64 
 
 Skapa en mapp med namnet adoberepo under c:\cloudmanager.
 
-[Installera repo-verktyget].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing) Repo-verktyget är inget annat än att kopiera repo-filen och placera den i din c:\cloudmanger\adoberepo folder.
+[Installera repo-verktyget](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) Det finns inget annat att installera repo-verktyget än att kopiera repo-filen och placera den i din c:\cloudmanger\adoberepo folder.
 
 Lägg till följande i miljövariabeln Path C:\cygwin64\bin;C:\CloudManager\adoberepo;
 
@@ -35,7 +35,7 @@ Lägg till följande i miljövariabeln Path C:\cygwin64\bin;C:\CloudManager\adob
 * Starta IntelliJ
 * Tryck på Ctrl+Alt+S för att öppna inställningsfönstret.
 * Välj Verktyg ->Externa verktyg och klicka sedan på plustecknet (+) och ange följande som visas på skärmbilden.
-   ![rep](assets/repo.png)
+  ![rep](assets/repo.png)
 * Se till att du skapar en grupp med namnet repo genom att skriva&quot;repo&quot; i listrutan Grupp och alla kommandon du skapar tillhör **repa** grupp
 
 
@@ -85,3 +85,7 @@ Följande steg kan följas för att snabbt konfigurera en molnklar instans på d
 * Skapa följande mappstruktur.C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * Kopiera aem-forms-addon-xxxxxx.far till installationsmappen
 * Öppna kommandotolken och gå till c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar. Detta distribuerar formulären som läggs till i paketet i AEM.
+
+## Nästa steg
+
+[Synkronisera AEM formulär och mallar med AEM projekt](./deploy-your-first-form.md)

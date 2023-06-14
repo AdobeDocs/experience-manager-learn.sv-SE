@@ -7,9 +7,9 @@ kt: 13372
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '61'
 ht-degree: 0%
 
 ---
@@ -61,3 +61,7 @@ export default function DisplayForm()
     )
 }
 ```
+
+## Nästa steg
+
+[Visa tackmeddelande när formulär skickas](./display-thank-you-message.md)

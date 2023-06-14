@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '961'
 ht-degree: 11%
 
 ---
@@ -183,17 +183,18 @@ ht-degree: 11%
       + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + Forms{#forms}
    + Developing for Forms as a Cloud Service{#developing-for-cloud-service}
-      + [Komma igång](./forms/developing-for-cloud-service/getting-started.md)
-      + [Installera IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
-      + [Konfigurera Git](./forms/developing-for-cloud-service/setup-git.md)
-      + [Synkronisera IntelliJ med AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
-      + [Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [Uppdaterar makarnas arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [1 - Komma igång](./forms/developing-for-cloud-service/getting-started.md)
+      + [2 - Installera IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
+      + [3 - Konfigurera Git](./forms/developing-for-cloud-service/setup-git.md)
+      + [4 - Sync IntelliJ med AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
+      + [5 - Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
+      + [6 - Anpassad överföringshanterare](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
+      + [7 - Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [8 - Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [9 - Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [10 - Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [12 - Uppdaterar maven-arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
