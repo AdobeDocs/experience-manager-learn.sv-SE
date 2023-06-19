@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 11%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 11%
    + [Sökökning](./search-and-discovery/search-boost.md)
 
 + Avancerade funktioner{#advanced}
+   + [3D-resurser](./advanced/3d-assets.md)
    + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
    + [Asset Insights ](./advanced/asset-insights-launch-tutorial.md)
    + [Resursrapporter](./advanced/asset-reports.md)
@@ -72,13 +73,13 @@ ht-degree: 11%
       + [Konfigurera AEM Brand Portal](brand-portal/configure.md)
       + [Konfigurera resurskälla](brand-portal/configure-asset-sourcing.md)
       + [Aktivera återgivningshämtningar](brand-portal/enable-renditions-download.md)
+
    + Resursresurs{#assets-share}
       + [Kommandon för resursdelning](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Konfigurera resursdelningskommentarer på lokala AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Kommandon för att dela resurser med teman](./sharing/asset-share-commons-feature-video-theming.md)
       + [Resursdelningskommentarer Tillgångar](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Anslutna resurser](./sharing/connected-assets.md)
-
 
 + Integrera med kreativa arbetsflöden{#creative-workflows}
    + [AEM](./creative-workflows/aem-desktop-app.md)
@@ -126,6 +127,7 @@ ht-degree: 11%
    + Använda med AEM Sites {#dm-with-aem-sites}
       + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
+
    + Självstudiekurser {#tutorials}
       + [Skapa Carousel-uppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Skapa bilduppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -141,7 +143,6 @@ ht-degree: 11%
       + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Hämta resurser i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
-
 
 + Workfront Integration{#workfront}
    + Förbättrad anslutning{#enhanced-connector}
