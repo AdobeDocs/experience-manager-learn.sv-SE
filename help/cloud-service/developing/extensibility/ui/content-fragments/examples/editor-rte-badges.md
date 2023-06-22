@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Lägg till märken i textredigeraren
 
-![Exempel på emblem i Content Fragment Editor](./assets/rte/rte-badge-home.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [Rich Text Editor, märke](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  är tillägg som gör att text i textredigeraren inte kan redigeras. Det innebär att ett märke som deklarerats som sådant endast kan tas bort helt och inte delvis redigeras. Dessa märken har också stöd för specialfärgning i textredigeraren, vilket tydligt anger för innehållsförfattarna att texten är en bricka och därför inte kan redigeras. Dessutom ger de visuella indikeringar om märkningstextens betydelse.
 
