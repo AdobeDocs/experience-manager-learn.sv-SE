@@ -1,0 +1,1 @@
+mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=30 -DaemVersion="cloud" -DartifactId="aem-banking-application" -DappTitle="BankingApplication" -DappId="bankingapplication" -DgroupId="com.aem.bankingapplication" -DincludeForms="y"
