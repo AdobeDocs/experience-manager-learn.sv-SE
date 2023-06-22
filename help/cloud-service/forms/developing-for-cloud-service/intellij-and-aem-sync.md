@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Extrahera .repo-filen från [repo.zip](assets/repo.zip) och placera den i AEM pr
 
 Välj ett projekt i ett aem-Banking-applikationsprojekt, till exempel ui.content, och högerklicka så ser du repoalternativet och under repoalternativet ser du de fyra kommandona vi lade till tidigare.
 
-## Konfigurera AEM Author Instance
+## Konfigurera AEM Author Instance{#set-up-aem-author-instance}
 
 Följande steg kan följas för att snabbt konfigurera en molnklar instans på ditt lokala system.
 * [Ladda ned den senaste AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)

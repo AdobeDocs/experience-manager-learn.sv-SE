@@ -8,9 +8,9 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '207'
 ht-degree: 1%
 
 ---
@@ -22,13 +22,17 @@ Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för
 I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd för hantering av adaptiv inlämning av Forms.
 
 * Logga in på crx
-* Skapa en nod av typen&quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
+* Skapa en nod av typen &quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
 * Spara den nyskapade noden.
-* Lägg till följande två egenskaper i den nya noden
-* PropertyName | Egenskapsvärde
-* guideComponentType | fd/af/components/guidepittype
-* guideDataModel | xfa,xsd,grundläggande
-* jcr:description | CustomSubmitHelpx
+* Lägg till följande tre egenskaper i den nya noden
+
+| Egenskapsnamn | Egenskapsvärde |
+|----------------    | ---------------------------------|
+| guideComponentType | fd/af/components/guidepittype |
+| guideDataModel | xfa,xsd,grundläggande |
+| jcr:description | CustomSubmitHelpx |
+
+
 * Spara ändringarna
 * Skapa en ny fil med namnet post.POST.jsp under noden CustomSubmitHelpx. När ett anpassat formulär skickas anropas denna JSP. Du kan skriva JSP-koden enligt dina önskemål i den här filen. Följande kod vidarebefordrar begäran till servern.
 

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '977'
 ht-degree: 11%
 
 ---
@@ -208,6 +208,10 @@ ht-degree: 11%
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
+   + Anpassad sändningstjänst med headless-formulär{#custom-submit-headless-forms}
+      + [1 - Introduktion](./forms/custom-submit-headless-forms/introduction.md)
+      + [2 - Skapa en anpassad skicka-tjänst](./forms/custom-submit-headless-forms/custom-submit-service.md)
+      + [3 - Visa svaret](./forms/custom-submit-headless-forms/handle-response-react-app.md)
    + AEM Forms och Analytics{#forms-and-analytics}
       + [Introduktion](./forms/form-data-analytics/introduction.md)
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
