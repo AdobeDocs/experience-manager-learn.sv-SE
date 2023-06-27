@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: cdc34a11cf9f6edd54f7423218cb66a93a104a92
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '76'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 2%
    + [Hantera](basics/managing.md)
    + [Använda](basics/using.md)
    + [Skapa innehåll](basics/creating.md)
+   + [Snabb åtkomst](basics/quick-access.md)
    + [Samarbeta](basics/collaborating.md)
    + [Länkdelning](basics/link-sharing.md)
 
