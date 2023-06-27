@@ -4,6 +4,7 @@ description: Adobe Experience Manager Cross-Origin Resource Sharing (CORS) under
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 topics: security, development, content-delivery
+feature: Security, APIs
 activity: understand
 audience: architect, developer
 doc-type: article
@@ -11,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 2bd1b66dc28a6e591afda746e9d276cae7a29948
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%

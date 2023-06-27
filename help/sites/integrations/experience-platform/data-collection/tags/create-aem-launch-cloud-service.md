@@ -9,10 +9,11 @@ activity: setup
 kt: 5982
 thumbnail: 38566.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%

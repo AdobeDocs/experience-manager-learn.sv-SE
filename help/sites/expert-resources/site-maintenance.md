@@ -1,12 +1,13 @@
 ---
 title: Handbok för webbplatsunderhåll
-seo-title: Your Routine Site Maintenance Guide
 description: Oavsett om du är administratör, författare eller utvecklare gäller webbplatsunderhållet alla delar av din AEM Sites-instans. Använd den här guiden för att säkerställa att strategin är klar för framgång.
-seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+role: Admin
+level: Beginner, Intermediate
+topic: Administration
 audience: author, marketer, developer
 feature: Learn From Your Peers
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%

@@ -3,10 +3,11 @@ title: Förstå skäl att uppgradera
 description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager 6.
 version: 6.5
 topic: Upgrade
+feature: Release Information
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '2602'
 ht-degree: 1%
@@ -42,7 +43,7 @@ AEM fortsätter att anamma flytande upplevelser med nya och förbättrade verkty
 
 + **Innehållsfragment** stöd för versionsjämförelse/diff och anteckningar.
 + **AEM Assets HTTP API** stöder exponering **Innehållsfragment** direkt i DAM som **JSON**.
-   **Upplevelsefragment** support **Fulltextsökning** och **Invalidering av AEM Dispatcher Cache** för referens **Sidor**.
+  **Upplevelsefragment** support **Fulltextsökning** och **Invalidering av AEM Dispatcher Cache** för referens **Sidor**.
 
 ### Resurshantering
 

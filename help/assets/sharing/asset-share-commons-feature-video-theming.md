@@ -3,11 +3,12 @@ title: Introduktion till tema i Resursdelningskommentarer
 description: Material för både funktionell och teknisk förståelse Assets Share Commons
 version: 6.4, 6.5
 topic: Content Management
+feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-22T00:00:00Z
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%

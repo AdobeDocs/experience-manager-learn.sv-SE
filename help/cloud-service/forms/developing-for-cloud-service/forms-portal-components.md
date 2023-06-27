@@ -6,9 +6,10 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
+feature: Core Components
 kt: 10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%

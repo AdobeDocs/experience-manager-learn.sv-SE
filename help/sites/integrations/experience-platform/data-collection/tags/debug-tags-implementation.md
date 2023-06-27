@@ -9,10 +9,11 @@ activity: setup
 kt: 6047
 thumbnail: 38567.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -47,9 +48,9 @@ Adobe tillhandahåller Adobe Experience Platform Debugger [Kromtillägg](https:/
 
 1. Öppna Adobe Experience Platform Debugger-tillägget och öppna webbplatssidan i Publish-instansen
 
-1. I **Adobe Experience Platform Debugger > Summary > Adobe Experience Platform Tags** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
+1. I **Adobe Experience Platform Debugger > Sammanfattning > Adobe Experience Platform-taggar** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
 
-   ![Information om Adobe Experience Platform Debugger and Tag Property](assets/tag-property-details.png)
+   ![Egenskapsinformation för Adobe Experience Platform Debugger och tagg](assets/tag-property-details.png)
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -9,10 +9,11 @@ version: Cloud Service
 kt: 4642
 thumbnail: 32031.jpg
 topic: Architecture
+feature: OSGI
 role: Architect, Developer
 level: Beginner
 exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

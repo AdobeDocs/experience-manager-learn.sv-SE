@@ -7,9 +7,10 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
+feature: Code Deployment
 kt: 8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%

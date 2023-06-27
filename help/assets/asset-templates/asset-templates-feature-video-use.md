@@ -3,12 +3,13 @@ title: Använda resursmallar med AEM Assets och InDesign Server
 description: Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Det är mycket enklare att skapa markeringsbroschyrer, visitkort, flygblad, annonser och vykort med Assets Templates när de integreras med InDesign-servern.
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

@@ -9,10 +9,11 @@ version: Cloud Service
 kt: 4643
 thumbnail: 32030.jpg
 topic: Architecture
+feature: JCR
 role: Architect, Developer
 level: Beginner
 exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

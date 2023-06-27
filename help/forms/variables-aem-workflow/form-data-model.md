@@ -1,7 +1,7 @@
 ---
 title: Variabler av typen formulärdatamodell
 description: Använda variabler av typen formulärdatamodell i ett AEM arbetsflöde.
-feature: Adaptive Forms
+feature: Adaptive Forms, Workflow
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
@@ -9,7 +9,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: ca972ad4-bb23-43ab-8676-f2cccf1765ba
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

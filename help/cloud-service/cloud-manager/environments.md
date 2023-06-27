@@ -9,10 +9,11 @@ version: Cloud Service
 kt: 6871
 thumbnail: 26318.jpg
 topic: Architecture
+feature: Cloud Manager, Environments
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: f4311522-b8fb-4375-9ecc-73e0207a63b2
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%

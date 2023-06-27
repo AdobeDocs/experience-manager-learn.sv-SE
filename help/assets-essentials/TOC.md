@@ -6,8 +6,9 @@ solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
+feature: Assets Essentials
 team: TM
-source-git-commit: cdc34a11cf9f6edd54f7423218cb66a93a104a92
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 2%

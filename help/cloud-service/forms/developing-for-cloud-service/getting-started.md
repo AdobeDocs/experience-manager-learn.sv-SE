@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -19,6 +19,7 @@ ht-degree: 0%
 # Installera nödvändig programvara
 
 I den här självstudiekursen får du hjälp med att skapa ett AEM Forms-projekt, synkronisera AEM Forms-projektet med den lokala AEM med IntelliJ och Repoo. Du får även lära dig hur du lägger till ditt projekt i den lokala Git-databasen och överför den lokala Git-databasen till molnhanterardatabasen.
+
 
 
 

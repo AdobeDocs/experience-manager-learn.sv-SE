@@ -3,12 +3,13 @@ title: Innehållsmigrering med verktyget Innehållsöverföring
 description: Lär dig hur verktyget Innehållsöverföring hjälper dig att migrera innehåll till AEM as a Cloud Service från AEM 6.
 version: Cloud Service
 topic: Migration, Upgrade
+feature: Migration
 role: Developer
 level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%

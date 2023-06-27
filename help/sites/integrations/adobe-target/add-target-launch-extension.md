@@ -9,10 +9,11 @@ version: Cloud Service
 kt: 6131
 thumbnail: 41247.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%

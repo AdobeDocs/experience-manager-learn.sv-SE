@@ -4,11 +4,12 @@ description: Lär dig hur du utökar metadatafälten för Sidegenskaper i Adobe 
 topic: Development
 feature: Core Components
 role: Developer
+level: Intermediate
 version: Cloud Service
 kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%

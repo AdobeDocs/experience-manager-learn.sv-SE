@@ -3,10 +3,11 @@ title: Variabler i AEM [del2]
 description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
 version: 6.5
 topic: Development
+feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: e7d3e0be-5194-47c2-a668-ce78e727986e
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%

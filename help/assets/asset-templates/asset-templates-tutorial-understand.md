@@ -3,10 +3,11 @@ title: Om InDesign-filer och resursmallar i AEM Assets
 description: I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-fil och alla tillhörande överväganden som du kan använda i funktionen Resursmallar för AEM Resurser.
 version: 6.4, 6.5
 topic: Content Management
+feature: Templates
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -35,6 +36,7 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 4. Lägg till FPO-logotypbilden ([anges i zip-filen](assets/asset-templates-tutorial-video--supporting-files.zip)) till Logo-elementet på den Överordnad sidan.
 
    * **Högerklicka** och markera **Passning > Passningsalternativ för ram.. > Innehållspassning > Fyll ram proportionellt**
+
    [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)och som passar ditt sätt att arbeta.
 
 5. Kopiera rubriken (logotyp och företagsnamn) från den Överordnad mallen på sidan och sidan via Klistra in på plats.

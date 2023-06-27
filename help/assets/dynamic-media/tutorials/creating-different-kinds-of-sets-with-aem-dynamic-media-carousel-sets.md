@@ -5,9 +5,10 @@ version: Cloud Service
 role: Developer
 level: Intermediate
 topic: Development
+feature: Carousel Banners
 index: y
 exl-id: 4816c688-abec-4bd5-9215-59c16d8fe65d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%

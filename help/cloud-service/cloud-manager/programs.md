@@ -9,10 +9,11 @@ version: Cloud Service
 kt: 6845
 thumbnail: 26313.jpg
 topic: Architecture
+feature: Cloud Manager, Production Programs, Sandbox Programs
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
