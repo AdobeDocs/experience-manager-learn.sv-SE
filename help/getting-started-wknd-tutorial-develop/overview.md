@@ -5,7 +5,7 @@ topics: development
 version: Cloud Service
 activity: develop
 audience: developer
-KT: 4132
+jira: KT-13565
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
@@ -15,7 +15,7 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 5f43db64f68218ed3d349508a2c4fd232601a9ef
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%
