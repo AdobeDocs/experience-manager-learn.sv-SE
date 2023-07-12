@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: d0027647ce3157173d2592728757150199db930d
+source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 1%
@@ -35,6 +35,6 @@ Se [AEM för en fullständig översikt över funktionerna i Page Editor](https:/
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM för Page Editor[(https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
+* [Dokumentation för AEM Page Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
 * [Redigera dokumentation om sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [Användarhandbok för utveckling av webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
