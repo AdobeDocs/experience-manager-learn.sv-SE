@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: ea43023f454ec61c8df850e2d2d2fc48e53edb4e
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -94,26 +94,48 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
+### Tillåt CORS-begäranderubriker
+
+Om du vill tillåta att de nödvändiga rubrikerna för HTTP-begäran kommer åt AEM för bearbetning måste de vara tillåtna i Dispatcher:n `/clientheaders` konfiguration.
+
+```
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### Cachelagra CORS-svarshuvuden
+
 Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/clientheaders-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) till alla AEM Publish som stöds `dispatcher.any` filer.
 
 ```
-/myfarm { 
-  ...
-  /clientheaders {
-      "Access-Control-Allow-Origin"
-      "Access-Control-Expose-Headers"
-      "Access-Control-Max-Age"
-      "Access-Control-Allow-Credentials"
-      "Access-Control-Allow-Methods"
-      "Access-Control-Allow-Headers"
-  }
-  ...
+/publishfarm {
+    ...
+    /cache {
+        ...
+        # CORS HTTP response headers
+        # https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+        /headers {
+            ...
+            "Access-Control-Allow-Origin"
+            "Access-Control-Expose-Headers"
+            "Access-Control-Max-Age"
+            "Access-Control-Allow-Credentials"
+            "Access-Control-Allow-Methods"
+            "Access-Control-Allow-Headers"
+        }
+    ...
+    }
+...
 }
 ```
 
 **Starta om webbserverprogrammet** efter att ha ändrat `dispatcher.any` -fil.
 
-Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/clientheaders` konfigurationsuppdatering.
+Det är troligt att cache-minnet måste rensas helt för att huvuden ska kunna cachas korrekt på nästa begäran efter en `/cache /headers` konfigurationsuppdatering.
 
 ## Stödmaterial {#supporting-materials}
 
