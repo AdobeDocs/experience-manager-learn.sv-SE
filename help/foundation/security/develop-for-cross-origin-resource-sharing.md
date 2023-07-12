@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: ea43023f454ec61c8df850e2d2d2fc48e53edb4e
+source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### Tillåt CORS-begäranderubriker
 
-Om du vill tillåta att de nödvändiga rubrikerna för HTTP-begäran kommer åt AEM för bearbetning måste de vara tillåtna i Dispatcher:n `/clientheaders` konfiguration.
+För att tillåta [HTTP-begäranrubriker som skickas till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders), måste de vara tillåtna i Disaptcher&#39;s `/clientheaders` konfiguration.
 
 ```
 /clientheaders {
@@ -109,7 +109,7 @@ Om du vill tillåta att de nödvändiga rubrikerna för HTTP-begäran kommer åt
 
 ### Cachelagra CORS-svarshuvuden
 
-Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/clientheaders-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) till alla AEM Publish som stöds `dispatcher.any` filer.
+Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache/headers konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) till AEM Publish `dispatcher.any` -fil.
 
 ```
 /publishfarm {
