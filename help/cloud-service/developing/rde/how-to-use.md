@@ -10,7 +10,7 @@ jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 27d065761643030de68176ebb4ca10bc152844df
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Bygg och distribuera den sedan till det lokala AEM-SDK:t genom att köra följan
 
 ```
 $ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage
+$ mvn clean package
 ```
 
 ## Distribuera AEM med plugin-programmet AEM-RDE
