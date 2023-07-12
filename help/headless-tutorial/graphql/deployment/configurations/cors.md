@@ -9,7 +9,7 @@ level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 36b4217a899b462296d4389bc96a644da97d5da4
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -81,7 +81,6 @@ Det här exemplet har stöd för användning av AEM beständiga GraphQL-frågor.
   "supportedmethods":[
     "GET",
     "HEAD",
-    "OPTIONS"
   ],
   "maxage:Integer": 1800,
   "supportscredentials": false,
