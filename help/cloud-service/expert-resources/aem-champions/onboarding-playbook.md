@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: a52b253c-14b4-465b-9714-7f321435a945
+source-git-commit: 2e37a7ae14f98e2298bcb0a625f8ed55edcee6ad
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 1%
 
 ---
-
 
 # AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook
 
@@ -23,7 +23,7 @@ Med spelboken för introduktion kan du ta ansvar som ny administratör och utvec
 
 >[!TIP]
 >
->Ladda ned [introducerar spelbok här.](./assets/AEM-Cloud-Manager-Onboarding-Playbook.xlsx)
+>Ladda ned [introducerar spelbok här.](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
 
 Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är en Adobe Experience Manager-mästare och han delar med sig av sina idéer om hur man använder spelboken för onboarding.
 
