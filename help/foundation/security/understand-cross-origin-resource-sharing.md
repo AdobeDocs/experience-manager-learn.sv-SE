@@ -12,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: c6ca64d1b66bbf5bedf73736b5d94130bc21f6c8
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Om ingen princip har konfigurerats alls [!DNL CORS] förfrågningar kommer inte 
 #### [!UICONTROL Exposed Headers]
 
 * `"exposedheaders" <header>`
-* Lista med rubrikparametrar som anger begäranderubriker som webbläsare har åtkomst till.
+* Lista med rubrikparametrar som anger vilka svarshuvuden som webbläsare har åtkomst till.
 
 #### [!UICONTROL Maximum Age]
 
