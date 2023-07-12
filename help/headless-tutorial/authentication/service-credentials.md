@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Tjänstautentiseringsuppgifterna, som är ett fullständigt JSON-objekt, är int
 1. Det externa programmet använder information från tjänstens autentiseringsuppgifter för att skapa en JWT-token
 1. JWT-token skickas till Adobe IMS för utbyte mot en åtkomsttoken
 1. Adobe IMS returnerar en åtkomsttoken som kan användas för att komma åt AEM as a Cloud Service
-   + Åtkomsttoken kan ha ett begärt förfallodatum. Det är bäst att hålla åtkomsttoken så kort som möjligt och uppdatera vid behov.
+   + Åtkomsttoken kan inte ändra en förfallotid.
 1. Det externa programmet gör HTTP-begäranden till AEM as a Cloud Service och lägger till åtkomsttoken som en Bearer-token i HTTP-begäransens auktoriseringshuvud
 1. AEM as a Cloud Service tar emot HTTP-begäran, autentiserar begäran och utför det arbete som begärdes av HTTP-begäran och returnerar ett HTTP-svar till det externa programmet
 
