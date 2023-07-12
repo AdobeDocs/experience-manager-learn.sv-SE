@@ -12,9 +12,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 325c0204c33686e09deb82dd159557e0b8743df6
+source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Om ingen princip har konfigurerats alls [!DNL CORS] förfrågningar kommer inte 
 #### [!UICONTROL Exposed Headers]
 
 * `"exposedheaders" <header>`
-* Lista med rubrikparametrar som anger vilka svarshuvuden som webbläsare har åtkomst till.
+* Lista med rubrikparametrar som anger vilka svarshuvuden som webbläsare har åtkomst till. För CORS-begäranden (inte preflight) kopieras dessa värden till `Access-Control-Expose-Headers` svarshuvud. Värdena i listan (rubriknamn) görs sedan tillgängliga för webbläsaren. utan webbläsaren kan dessa rubriker inte läsas.
 
 #### [!UICONTROL Maximum Age]
 
@@ -74,7 +74,7 @@ Om ingen princip har konfigurerats alls [!DNL CORS] förfrågningar kommer inte 
 #### [!UICONTROL Supported Headers]
 
 * `"supportedheaders" <header>`
-* Lista över `header` parametrar som anger vilka HTTP-huvuden som kan användas när den faktiska begäran görs.
+* Lista över `header` parametrar som anger vilka rubriker i HTTP-begäran som kan användas när den faktiska begäran görs.
 
 #### [!UICONTROL Allowed Methods]
 
@@ -98,8 +98,7 @@ Webbplats 1 är ett grundläggande, anonym, skrivskyddat scenario där innehåll
   ],
   "supportedmethods":[
     "GET",
-    "HEAD",
-    "OPTIONS"
+    "HEAD"
   ],
   "alloworigin":[
     "http://127.0.0.1:3000",
@@ -140,7 +139,6 @@ Webbplats 2 är mer komplex och kräver godkännande och mutering (POST, PUT, DE
     "HEAD"
     "POST",
     "DELETE",
-    "OPTIONS",
     "PUT"
   ],
   "alloworigin":[
