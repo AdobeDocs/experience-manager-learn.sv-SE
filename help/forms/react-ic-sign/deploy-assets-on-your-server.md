@@ -9,9 +9,9 @@ level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 44f4261b-d6fe-42ad-a3aa-2a36ca897b5e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,21 @@ Följande resurser/konfigurationer har distribuerats på en AEM Forms-publicerin
 * [Exempel på mall för interaktiv kommunikation](assets/waiver-interactive-communication.zip)
 * [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * Lägg till följande post i användarmappningstjänsten för Apache Sling med OSGi configMgr
-   **DevelopingWithServiceUser.core:getformsresourceReser=fd-service**
-* [Här kan du hämta exempelkod för React App](assets/src.zip)
+  **DevelopingWithServiceUser.core:getformsresourceReser=fd-service**
 
+## Distribuera exempelappen
 
+* [Ladda ned exempelappen](assets/mult-step-form1.zip)
+* Zippa upp innehållet i den reaktionsapp som finns i en ny mapp
+* Navigera till mappen och kör följande kommandon
 
-Appen för samplingsrespons måste distribueras i din lokala miljö
+```java
+npm install
+npm start
+```
 
-Du måste ändra slutpunkts-URL:en så att den matchar din miljö. Öppna filen EmergencyContact.js och ändra URL:en i hämtningsmetoden
+Öppna filen EmergencyContact.js och ändra URL:en i hämtningsmetoden så att den matchar din miljö.
+
 
 ```javascript
  const getWebForm=async()=>
@@ -49,6 +56,6 @@ Du måste ändra slutpunkts-URL:en så att den matchar din miljö. Öppna filen 
  
 ```
 
-Om du vill aktivera anrop av POSTEN till AEM-slutpunkten från REACT-appen måste du ange rätt poster i fältet Tillåtna ursprung i konfigurationen av resursdelningsprincipen för korsursprung i Adobe Granite
+Om du vill att POSTEN ska kunna anropa AEM-slutpunkten från REACT-appen måste du ange rätt poster i fältet Tillåtna ursprung i konfigurationen av resursdelningsprincipen för korsursprung för Adobe Granite.
 
 ![cors-setting](assets/cors-settings.png)
