@@ -10,7 +10,7 @@ doc-type: Code Sample
 last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
-source-git-commit: b5f6314e0462b952b8749a766f55f34af625eb07
+source-git-commit: ebb4b6eaafff9eb1f3f1dc81beb1b21df18a6a04
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -61,7 +61,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     let csrfTokenInput = form.querySelector('input[name=":cq_csrf_token"]');
     if (!csrfTokenInput?.value) {
         // If the form does not have a CSRF token input, add one.
-        form.insertAdjacentHTML('afterend', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
+        form.insertAdjacentHTML('afterbegin', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
     } else {
         // If the form already has a CSRF token input, update the value.
         csrfTokenInput.value = json.token;
