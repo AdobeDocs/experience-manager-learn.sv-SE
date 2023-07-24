@@ -4,38 +4,7 @@
             "pattern": "^.*example.com"
         },
         {
-            "pattern": "^.*your_clientcode"
-        },
-        {
-            "pattern": "^.*INSERT-DOMAIN-AND-PATH-TO-CODE-HERE"
-        },
-        {
-            "pattern": "^.*training.adobe.com"
-        },
-        {
-            "pattern": "^.*homedepot.com"
-        },
-        {
-            "pattern": "^.*html2canvas.hertzen.com"
-        },
-        {
-            "pattern": "^.*adobe.io"
-        },
-        {
-            "pattern": "^.*developer.linkedin.com"
-        },
-        {
-            "pattern": "^.*developers.facebook.com"
-        },
-        {
-            "pattern": "^.*localhost:4502/"
-        },
-        {
-            "pattern": "^.*192.168."
-        },
-        {
-            "pattern": "^.*host:port/."
-        }
-
+            "pattern": "^.*example-end.com"
+        }          
     ]
 }
