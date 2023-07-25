@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
+source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1015'
 ht-degree: 11%
 
 ---
@@ -248,6 +248,15 @@ ht-degree: 11%
       + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
+   + Spara och återuppta ifyllning av formulär{#prefill-azure-storage}
+      + [1 - Introduktion](./forms/prefill-azure-storage/introduction.md)
+      + [2- komponenten Skapa sida](./forms/prefill-azure-storage/page-component.md)
+      + [3- Skapa adaptiv formulärmall](./forms/prefill-azure-storage/associate-page-component.md)
+      + [4- Skapa integrering med Azure Storage](./forms/prefill-azure-storage/create-fdm.md)
+      + [5 - Skapa integration med SendGrid](./forms/prefill-azure-storage/send-grid-fdm.md)
+      + [6 - Skapa det adaptiva formuläret](./forms/prefill-azure-storage/create-af.md)
+      + [7 - Distribuera exempelresurserna](./forms/prefill-azure-storage/deploy-sample-assets.md)
+
    + Skapa granskningsarbetsflöde{#create-aem-workflow}
       + [Extern arbetsflödeslagring](./forms/create-aem-workflow/externalize-workflow.md)
       + [Skapa arbetsflödesmodell](./forms/create-aem-workflow/create-workflow.md)
