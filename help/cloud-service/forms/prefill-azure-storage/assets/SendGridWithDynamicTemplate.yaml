@@ -1,0 +1,91 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Send Grid API
+  description: Send Emails using Send Grid
+host: api.sendgrid.com
+basePath: /v3
+schemes:
+  - https
+paths:
+  /mail/send:
+    post:
+      summary: Send Email
+      
+      
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      operationId: Send E-mail using SendGrid
+      parameters:
+        - in: body
+          name: body
+          description: Payload for Send Grind
+          required: true
+          schema:
+            $ref: '#/definitions/sendgridpayload'
+        
+          
+      responses:
+        '200':
+          description: Successfull Response
+          schema:
+            $ref: '#/definitions/returnvalue'
+        
+definitions:
+  toitems:
+    type: object
+    properties:
+      email:
+        type: string
+  personalizationsitems:
+    type: object
+    properties:
+      dynamic_template_data:
+        type: object
+        properties:
+          customerName:
+            type: string
+          blobID:
+            type: string
+      to:
+        type: array
+        items:
+          $ref: '#/definitions/toitems'
+  contentitem:
+    type: object
+    properties:
+      type:
+        type: string
+      value:
+        type: string
+      
+  sendgridpayload:
+    type: object
+    properties:
+      template_id:
+        type: string
+      personalizations:
+        type: array
+        items:
+          $ref: '#/definitions/personalizationsitems'
+      from:
+        type: object
+        properties:
+          email:
+            type: string
+      subject:
+        type: string
+      content:
+        type: array
+        items:
+          $ref: '#/definitions/contentitem'
+      
+  returnvalue:
+    type: object
+    properties:
+      request_id:
+        type: string
+      status:
+        type: string
