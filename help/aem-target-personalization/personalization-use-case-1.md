@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---

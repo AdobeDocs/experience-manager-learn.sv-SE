@@ -1,6 +1,6 @@
 ---
-title: Integrera Adobe Analytics med Platform Web SDK
-description: Lär dig det moderna sättet att integrera Adobe Experience Manager (AEM) och Adobe Analytics med Platform Web SDK. Den här självstudiekursen vägleder dig genom att samla in sidvy och CTA-klickdata för att få datainsikter i Adobe Analytics Workspace.
+title: Integrera AEM Sites och Adobe Analytics med Platform Web SDK
+description: Integrera AEM Sites och Adobe Analytics med modern Platform Web SDK.
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
 
-
-# Integrera Adobe Analytics med Platform Web SDK
+# Integrera AEM Sites och Adobe Analytics med Platform Web SDK
 
 Lär dig **modern strategi** om hur du integrerar Adobe Experience Manager (AEM) och Adobe Analytics med Platform Web SDK. Den här omfattande självstudiekursen vägleder dig genom processen att sömlöst samla in [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvy och CTA-klicka på data. Få värdefulla insikter genom att visualisera insamlade data i Adobe Analysis Workspace, där ni kan utforska olika mätvärden och dimensioner. Utforska även plattformsdatauppsättningen för att verifiera och analysera data. Följ oss på den här resan för att utnyttja kraften i AEM och Adobe Analytics för datadrivet beslutsfattande.
 
@@ -222,7 +224,7 @@ Mer information om hur du integrerar AEM med Adobe Client Data Layer finns i [An
 
 ## Verifiera uppdaterad taggegenskap på WKND
 
-För att säkerställa att den uppdaterade taggegenskapen byggs, publiceras och fungerar korrekt på WKND-webbplatsens sidor. Använda webbläsarens Google Chrome [Adobe Experience Platform Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
+För att säkerställa att den uppdaterade taggegenskapen byggs, publiceras och fungerar korrekt på WKND-webbplatsens sidor. Använda webbläsarens Google Chrome [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
 
 + Kontrollera byggdatumet för att se till att taggegenskapen är den senaste versionen.
 

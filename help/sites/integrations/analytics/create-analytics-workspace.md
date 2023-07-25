@@ -9,10 +9,11 @@ level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+badgeIntegration: label="Integrering" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2161'
+source-wordcount: '2162'
 ht-degree: 0%
 
 ---
@@ -152,12 +153,10 @@ Bygg sedan en tabell för att skapa en visuell representation av hur användarna
 1. Vi bryter ned sidan efter malltyp. Välj sidmallsmått från komponenter och dra och släpp måttet för sidmall till dimensionen Sidnamn. Nu kan du visa sidnamnet som är uppdelat efter malltyp.
 
    * **Före**
-
-      ![eVar5](assets/create-analytics-workspace/evar5.png)
+     ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **Efter**
-
-      ![eVar5-mått](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5-mått](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. För att förstå hur användare interagerar med CTA-knappar när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till eVar-mått (Button ID).
 
@@ -244,11 +243,9 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 1. I komponentsökaren söker du efter **WKND CTA-knappar** och dra-och-släpp **WKND CTA-knappar (Knapp-ID)** -dimensionen på Button Id-måttet och ersätt det.
 
    * **Före**
-
-      ![Knappen Arbetsyta före](assets/create-analytics-workspace/wknd-button-before.png)
+     ![Knappen Arbetsyta före](assets/create-analytics-workspace/wknd-button-before.png)
    * **Efter**
-
-      ![Knappen Arbetsyta efter](assets/create-analytics-workspace/wknd-button-after.png)
+     ![Knappen Arbetsyta efter](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. Du kan lägga märke till att det knapp-ID-mått som innehåller knapp-id:t för en CTA-knapp nu har ersatts med ett motsvarande namn i klassificeringsmallen.
 1. Låt oss jämföra tabellen Analytics Workspace med startsidan för WKND och förstå antalet klick i CTA-knappen och dess analys. Baserat på arbetsytans frihandstabelldata är det tydligt att 22 gånger användarna har klickat på **SKAL NU** och fyra gånger för WKND Home Page Camping i västra Australien **Läs mer** -knappen.

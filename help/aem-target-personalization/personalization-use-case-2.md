@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -57,7 +59,6 @@ För den här övningen måste följande användare vara involverade och för at
 1. Marknadsföraren skapar en A/B-målaktivitet med omdirigeringserbjudandet som en upplevelse och 100 % webbplatstrafik som tilldelats den nya startsidan med framgångsmål och mätvärden tillagda.
    1. I Adobe Target-fönstret går du till **Verksamhet** -fliken.
    2. Klicka **Skapa aktivitet** och välj aktivitetstyp som **A/B-test**
-
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-ab-activity.png)
    3. Välj **Webb** kanal och välj **Visual Experience Composer**.
    4. Ange **Aktivitets-URL** och klicka **Nästa** för att öppna Visual Experience Composer.

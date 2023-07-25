@@ -8,10 +8,12 @@ kt: 6046
 topic: Development
 role: Admin
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: e94cde31-e589-4b71-b5de-bcd898393b8a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
@@ -21,4 +23,9 @@ ht-degree: 0%
 En av förutsättningarna för att integrera AEM Forms med Acrobat Sign är att du har konfigurerat din AEM för att använda SSL. Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
 I följande video förklaras stegen som krävs för att konfigurera SSL med guiden
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17993&learn=on)
+
+## Nästa steg
+
+[Skapa Acrobat Sign API-program](./create-adobe-sign-api-application.md)
+

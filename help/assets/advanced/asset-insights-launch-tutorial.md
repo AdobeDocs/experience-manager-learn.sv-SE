@@ -7,10 +7,12 @@ topic: Integrations
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -66,6 +68,7 @@ Rapportsviten med datainsamling i realtid skapas för att spåra tillgångar. Ko
 >[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
+>
 Datainsamling i realtid och rapportering av AEM tillgångar måste aktiveras för din Adobe Analytics Report Suite. Om du aktiverar AEM Asset Reporting reserveras analysvariabler för att spåra tillgångsinsikter.
 
 För AEM Assets Insights-konfigurationen behöver du följande autentiseringsuppgifter
@@ -83,6 +86,7 @@ Lägga till Adobe Analytics Extension, skapa sidladdningsregler och integrera AE
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
+>
 Se till att replikera alla ändringar från författarinstansen till publiceringsinstansen.
 
 ### Regel 1: Page Tracker (pagetracker.js) {#rule-page-tracker-pagetracker-js}
@@ -105,7 +109,7 @@ Page tracker implements two call back (registered in asset-embed-code)
 Slutligen implementerar Pagetracker en initieringsfunktion som.
 
 * **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : anropas för att initiera Pagetracker-komponenten. Detta MÅSTE anropas innan något av materialet-insights-events (Impressions and/or Clicks) genereras från webbsidan.
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : kan också acceptera ett AppMeasurement-objekt - om det anges försöker det inte skapa en ny instans av AppMeasurement-objektet.
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : kan också acceptera ett AppMeasurement-objekt - om det anges försöker det inte skapa en ny instans av AppMeasurementen.
 
 ### Regel 2: Bildspårare - åtgärd 1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 

@@ -7,10 +7,12 @@ kt: 6114
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -38,3 +40,7 @@ Du behöver följande för att kunna använda tjänsten Automated forms conversi
 * I videon förklaras de steg som krävs för att ansluta din lokala AEM Forms-instans till tjänsten Automated forms conversion i Adobe Cloud.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
+
+## Nästa steg
+
+[Konvertera PDF-formulär till anpassat format](./convert-pdf-form-into-adaptive-form.md)

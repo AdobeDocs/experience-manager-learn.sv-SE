@@ -1,29 +1,30 @@
 ---
-title: Integrera Adobe Experience Manager med Adobe Target
-seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
+title: Integrera AEM Sites med Adobe Target
+seo-title: An article covering different ways to integrate Adobe Experience Manager (AEM) Sites with Adobe Target for delivering personalized content.
 description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
 seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
 
-# Integrera Adobe Experience Manager med Adobe Target
+# Integrera AEM Sites med Adobe Target
 
-I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier. Baserat på ditt scenario och organisationens krav.
+I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manager Sites med Adobe Target för olika scenarier. Baserat på ditt scenario och organisationens krav.
 
 * **Lägg till Adobe Target JavaScript Library (krävs för alla scenarier)**
 För webbplatser som finns på AEM kan du lägga till Target-bibliotek på din webbplats med, [Starta](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
 * **Lägg till Adobe Target-Cloud Services (krävs för scenariot Experience Fragments)**
-För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicens. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. 
-*Den här integreringen krävs för att implementera scenario 1.*
+För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicens. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. *Den här integreringen krävs för att implementera scenario 1.*
 
 ## Förutsättningar
 

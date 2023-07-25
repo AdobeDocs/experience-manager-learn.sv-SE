@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -48,7 +50,6 @@ För den här övningen måste följande användare vara involverade och för at
 1. Marketern skapar en A/B-målaktivitet inom Adobe Target.
    1. I Adobe Target-fönstret går du till **Verksamhet** -fliken.
    2. Klicka **Skapa aktivitet** och välj aktivitetstyp som **A/B-test**
-
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-ab-activity.png)
    3. Välj **Webb** kanal och välj **Visual Experience Composer**.
    4. Ange **Aktivitets-URL** och klicka **Nästa** för att öppna Visual Experience Composer.
@@ -63,7 +64,6 @@ För den här övningen måste följande användare vara involverade och för at
       ![Behållarval](assets/personalization-use-case-3/container-selection.png)
    9. Klicka på behållaren som du vill ändra ordning på och dra och släpp den till önskad plats. Vi ordnar om *Bästa roasters* behållare från första raden, första kolumnen till första raden, tredje kolumnen. Nu *Bästa roasters* behållaren är intill *Fotografiutställningar* behållare.
       ![Behållarväxling](assets/personalization-use-case-3/container-swap.png)
-
       **Efter växling**
       ![Behållaren har bytts ut](assets/personalization-use-case-3/after-swap-1-3.png)
    10. Du kan även ordna om positionerna för de andra kortbehållarna.

@@ -5,17 +5,18 @@ feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
-activity: use
 version: Cloud Service
 kt: 6350
 thumbnail: 41245.jpg
 topic: Integrations
 role: User
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '201'
 ht-degree: 1%
 
 ---

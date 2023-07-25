@@ -9,10 +9,12 @@ level: Beginner
 kt: 7910
 thumbnail: 336254.jpeg
 last-substantial-update: 2022-10-13T00:00:00Z
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Assets Essentials" before-title="false"
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '32'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---

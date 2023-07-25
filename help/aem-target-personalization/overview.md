@@ -5,15 +5,17 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 1%
+source-wordcount: '842'
+ht-degree: 0%
 
 ---
 
-# Kom igång med AEM och Adobe Target {#getting-started-with-aem-target}
+# Integrera AEM Sites och Adobe Target {#getting-started-with-aem-target}
 
 AEM och Target är båda kraftfulla lösningar med synbarligen överlappande funktioner. Kunderna kämpar ibland med att förstå hur och när de ska använda dessa produkter tillsammans för att leverera personaliserade upplevelser. För att leverera optimerad upplevelse för alla slutanvändare bör olika team i organisationen ha ett nära samarbete och definiera vem som ska göra vad.
 
@@ -38,7 +40,7 @@ Vi har nu personaliserat innehåll i form av erbjudanden från AEM i Target. Med
 * För &#x200B; används AEM Experience Fragment markup som erbjudanden i aktiviteter
 * Target levererar Experience Fragment HTML, AEM tillhandahåller refererade bilder
 
-   ![Personalisering med Experience Fragments-diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
+  ![Personalisering med Experience Fragments-diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
 
 **För att implementera detta scenario måste du:**
 
@@ -59,7 +61,7 @@ VEC är en av huvudfunktionerna i Adobe Target. Med VEC kan marknadsförare och 
 * Nytt innehåll netto skapas med Adobe Target VEC
 * Gäller både AEM värdbaserade webbplatser och icke-AEM värdbaserade webbplatser
 
-   ![Personalisering med Visual Experience Composer-diagram](assets/personalization-use-case-3/use-case-diagram-3.png)
+  ![Personalisering med Visual Experience Composer-diagram](assets/personalization-use-case-3/use-case-diagram-3.png)
 
 **För att implementera detta scenario måste du:**
 
@@ -77,7 +79,7 @@ Genom att integrera Adobe Experience Manager med Adobe Target kan ni leverera pe
 * Inget nytt nettoinnehåll skapas här
 * Gäller både AEM och icke-AEM webbplatser
 
-   ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
+  ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
 
 **För att implementera detta scenario måste du:**
 

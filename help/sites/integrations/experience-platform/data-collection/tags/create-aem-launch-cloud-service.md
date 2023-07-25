@@ -1,5 +1,5 @@
 ---
-title: Skapa en konfiguration för Starta Cloud Service i AEM
+title: Skapa en konfiguration för Starta Cloud Service i AEM Sites
 description: Lär dig hur du skapar en Launch Cloud Service-konfiguration i AEM. Konfigurationen av Launch-Cloud Servicen kan sedan tillämpas på en befintlig webbplats och taggbiblioteken kan läsas in både i författarmiljön och i publiceringsmiljön.
 topics: integrations
 audience: administrator
@@ -12,10 +12,12 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---

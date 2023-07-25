@@ -7,10 +7,12 @@ thumbnail: 38178.jpg
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0fea826c-b481-4c8f-872f-e429430ed3a6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
@@ -22,3 +24,7 @@ Du måste skapa ett API-program på din Acrobat Sign för att kunna integrera me
 I följande video förklaras de steg som krävs för att skapa ett Acrobat Sign API-program
 
 >[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)
+
+## Nästa steg
+
+[Skapa molnkonfiguration för Acrobat Sign](./create-adobe-sign-cloud-configuration.md)

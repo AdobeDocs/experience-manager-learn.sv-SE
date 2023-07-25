@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
+badgeIntegration: label="Integrering" type="positive"
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1886'
 ht-degree: 1%
 
 ---

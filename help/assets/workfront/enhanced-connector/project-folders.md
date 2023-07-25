@@ -9,10 +9,12 @@ level: Beginner
 kt: 9127
 thumbnail: 337586.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 0e9d056a-4eec-450c-a941-b9563634fe8a
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '57'
 ht-degree: 0%
 
 ---

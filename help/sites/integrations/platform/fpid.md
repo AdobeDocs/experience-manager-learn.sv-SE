@@ -1,6 +1,6 @@
 ---
-title: Generera Adobe Experience Platform FPID med AEM
-description: Lär dig hur du genererar eller uppdaterar Adobe Experience Platform FPID-cookies med AEM.
+title: Generera Adobe Experience Platform FPID:n med AEM Sites
+description: Lär dig hur du genererar eller uppdaterar Adobe Experience Platform FPID-cookies med AEM Sites.
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -9,17 +9,19 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
 
-# Generera Experience Platform FPID med AEM
+# Generera Experience Platform FPID:n med AEM Sites
 
-Att integrera Adobe Experience Manager (AEM) med Adobe Experience Platform (AEP) kräver AEM för att generera och underhålla en unik FPID-cookie (First-party device ID) för att unikt kunna spåra användaraktivitet.
+För att det ska gå att spåra användaraktivitet måste du skapa och underhålla en unik FPID-cookie (unique first-party device ID) (AEM) för att kunna integrera Adobe Experience Manager-webbplatser med Adobe Experience Platform (AEP).
 
 Läs dokumentationen till [lära dig mer om hur enhets-ID:n för första delen och Experience Cloud-ID:n fungerar tillsammans](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
 

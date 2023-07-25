@@ -1,6 +1,6 @@
 ---
-title: Workfront för Experience Manager utökade anslutningssessioner
-description: Lär dig grunderna i Adobe Workfront och Experience Manager Assets förbättrade anslutningsprogram.
+title: Integrera Workfront och AEM Assets med den förbättrade kontakten
+description: Läs om grunderna i Adobe Workfront och Experience Manager Assets förbättrade anslutningsintegrering.
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -9,19 +9,21 @@ level: Beginner
 kt: 9754
 thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
-# Workfront for Experience Manager förbättrad Connector Expert Series
+# Integrera Workfront och AEM Assets med den förbättrade kontakten
 
 ![AEM Experts Series](./assets/banner.png)
 
-Delta i Adobe Workfront- och Experience Manager Assets-experterna i den här videoserien. De demonstrerar och diskuterar Workfront in och ut för den förbättrade kontakten Experience Manager.
+Delta i Adobe Workfront- och Experience Manager Assets-experterna i den här videoserien, där de demonstrerar och diskuterar allt de behöver för att integrera Workfront och AEM Assets med hjälp av den förbättrade kontakten.
 
 Denna fyra expertserie följer en grupp från Adobe experter - från produktchefer till konsulter och Adobe-partners - som diskuterar:
 

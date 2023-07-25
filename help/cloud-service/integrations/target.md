@@ -1,6 +1,6 @@
 ---
-title: AEM Headless och Target personalization
-description: I den här självstudien utforskas hur AEM innehållsfragment exporteras till Adobe Target och sedan används för att personalisera headless-upplevelser med Adobe Web SDK.
+title: Integrera AEM Headless och Target
+description: Lär dig integrera AEM Headless och Adobe Target för att personalisera headless-upplevelser med Experience Platform Web SDK.
 version: Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
@@ -10,30 +10,32 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1679'
 ht-degree: 0%
 
 ---
 
-# Anpassa AEM Headless-upplevelser med Content Fragments
+# Integrera AEM Headless och Target
 
-I den här självstudien utforskas hur AEM innehållsfragment exporteras till Adobe Target och sedan används för att personalisera headless-upplevelser med Adobe Web SDK. The [Reagera WKND-app](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
+Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK:s alloy.js. The [Reagera WKND-app](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 Självstudiekursen beskriver de steg som krävs för att konfigurera AEM och Adobe Target:
 
 1. [Skapa Adobe IMS-konfiguration för Adobe Target](#adobe-ims-configuration) i AEM Author
-1. [Skapa Adobe Target-Cloud Service](#adobe-target-cloud-service) i AEM Author
-1. [Använd Adobe Target-Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM Author
-1. [Behörighet för Adobe Target-Cloud Servicen](#permission) i Adobe Admin Console
-1. [Exportera innehållsfragment](#export-content-fragments) från AEM Author till Target
-1. [Skapa en aktivitet med hjälp av erbjudanden för innehållsfragment](#activity) i Adobe Target
-1. [Skapa ett Experience Platform-datastream](#datastream-id) i Experience Platform
-1. [Integrera personalisering i en React-baserad AEM Headless-app](#code) med Adobe Web SDK.
+2. [Skapa Adobe Target-Cloud Service](#adobe-target-cloud-service) i AEM Author
+3. [Använd Adobe Target-Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM Author
+4. [Behörighet för Adobe Target-Cloud Servicen](#permission) i Adobe Admin Console
+5. [Exportera innehållsfragment](#export-content-fragments) från AEM Author till Target
+6. [Skapa en aktivitet med hjälp av erbjudanden för innehållsfragment](#activity) i Adobe Target
+7. [Skapa ett Experience Platform-datastream](#datastream-id) i Experience Platform
+8. [Integrera personalisering i en React-baserad AEM Headless-app](#code) med Adobe Web SDK.
 
 ## Adobe IMS-konfiguration{#adobe-ims-configuration}
 

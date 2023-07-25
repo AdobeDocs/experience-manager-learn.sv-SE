@@ -7,10 +7,12 @@ topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+version: 6.5
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---

@@ -3,13 +3,15 @@ title: Skapa kampanjprofil med hjälp av formulärdatamodell
 description: Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Form Data Model
 feature: Adaptive Forms
 version: 6.4,6.5
-topic: Development
+topic: Integrations, Development
 role: Developer
 level: Experienced
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---

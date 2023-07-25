@@ -7,12 +7,14 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 9982e041-fff7-4be6-91c9-e322d2fd3e01
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -52,3 +54,7 @@ Adobe Analytics - Ange variabler konfigureras enligt följande.
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
 När du är redo att testa taggar-koden[publicera dina ändringar av taggarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) publiceringsflödet.
+
+## Nästa steg
+
+[Testa lösningen](./test.md)

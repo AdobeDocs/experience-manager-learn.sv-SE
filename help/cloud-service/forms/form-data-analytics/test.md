@@ -7,12 +7,14 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
-topic: Development
+topic: Integrations, Development
 kt: 12557
+badgeIntegration: label="Integrering" type="positive"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -55,3 +57,7 @@ Interagera med formuläret och håll konsolfönstret öppet. Du borde se något 
 Lägg till [AEP-felsökningstillägg](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) till din webbläsare (du måste logga in) för att få mer felsökningsinformation
 
 ![platform-debugger](assets/platform-debugger.png)
+
+## Grattis
+
+Du har nu integrerat AEM Forms as a Cloud Service med Adobe Analytics för att rapportera formulärdatafält.
