@@ -1,5 +1,5 @@
 ---
-title: Lägg till märken i textredigeraren
+title: Lägg till märken i RTF-redigeraren
 description: Lär dig hur du lägger till märken i RTF-redigeraren i AEM Content Fragment Editor
 feature: Developer Tools, Content Fragments
 version: Cloud Service
@@ -10,15 +10,17 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
 
 
-# Lägg till märken i textredigeraren
+# Lägg till märken i RTF-redigeraren
+
+Lär dig hur du lägger till märken i RTF-redigeraren i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
@@ -30,9 +32,9 @@ Märken som är kopplade till widgetarna används vanligtvis för att lägga til
 
 The **emblem** läggs till i **RTE** i Content Fragment Editor med `rte` tilläggspunkt. Använda `rte` tilläggspunkter `getBadges()` metod ett eller flera emblem läggs till.
 
-I det här exemplet visas hur du lägger till en widget som kallas _Kundtjänst för stora koncernbokningar_ för att hitta, välja ut och lägga till WKND-äventyr, som **Representantnamn** och **Telefonnummer** inom ett RTE-innehåll. Använda märkesfunktionen i **Telefonnummer** görs **icke-redigerbar** men WKND-innehållsförfattare kan redigera det representativa namnet.
+I det här exemplet visas hur du lägger till en widget som kallas _Kundtjänst för stora koncernbokningar_ för att hitta, välja ut och lägga till WKND-äventyrsspecifik kundtjänstinformation som **Representantnamn** och **Telefonnummer** inom ett RTE-innehåll. Använda märkesfunktionen i **Telefonnummer** görs **icke-redigerbar** men WKND-innehållsförfattare kan redigera det representativa namnet.
 
-Dessutom **Telefonnummer** har olika format (blått) vilket är ett extra användningsfall för emblem-funktionen.
+Dessutom finns **Telefonnummer** har olika format (blått) vilket är ett extra användningsfall för emblem-funktionen.
 
 I det här exemplet används [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) för att utveckla widgeten eller dialoggränssnittet och hårdkodade telefonnummer till WKND-kundtjänst. Om du vill styra den icke-redigerade och andra formateringsaspekten av innehållet använder du `#` tecken används i `prefix` och `suffix` attribut för definitionen av emblem.
 
@@ -46,11 +48,11 @@ Det här exemplet utökar till tilläggspunkten `rte` om du vill lägga till ett
 
 ## Exempel på tillägg
 
-I följande exempel skapas en _Kundtjänst för stora koncernbokningar_ widget. Genom att trycka på `{` RTE-widgetarnas snabbmeny öppnas. Genom att välja _Kundtjänst för stora koncernbokningar_ på snabbmenyn öppnas det anpassade modala.
+I följande exempel skapas en _Kundtjänst för stora koncernbokningar_ widget. Tryck på `{` RTE-widgetarnas snabbmeny öppnas. Genom att välja _Kundtjänst för stora koncernbokningar_ på snabbmenyn öppnas det anpassade modala.
 
 När det önskade kundservicenumret har lagts till från modalen gör badgerna _Telefonnummer kan inte redigeras_ och formaterar den med blå färg.
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, mappas till `index.html` rutt, är ingångspunkten för AEM tillägg och definierar:
 
@@ -134,7 +136,7 @@ I huvudkomponenten React `App.js`, lägg till `largeBookingsCustomerService` fö
 
 Widgeten eller dialogrutans gränssnitt skapas med [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) ramverk.
 
-Komponentkoden Reagera när du lägger till kundtjänstinformation omger telefonnummervariabeln med `#` registrerat emblem-tecken för att konvertera det till emblem, som `#${phoneNumber}#`så att det inte går att redigera.
+Komponentkoden Reagera när du lägger till kundtjänstinformation omger telefonnummervariabeln med `#` registrerade emblem-tecken som konverteras till emblem, som `#${phoneNumber}#`så att det inte går att redigera.
 
 Här är viktiga högdagrar för `LargeBookingsCustomerService` kod:
 

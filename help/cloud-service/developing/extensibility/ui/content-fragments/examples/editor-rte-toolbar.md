@@ -11,14 +11,16 @@ thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 2b72c282-bce8-4f2a-bce6-f2f31e96ec88
-source-git-commit: 6f537a0c7605b96f6c6b43ff8c5bf634369171cc
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
 # Lägg till anpassad knapp i verktygsfältet RTF (Rich Text Editor)
+
+Lär dig hur du lägger till en anpassad knapp i verktygsfältet RTE (Rich Text Editor) i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
@@ -26,7 +28,7 @@ Anpassade knappar kan läggas till i **RTE-verktygsfält** i Content Fragment Ed
 
 Använda `rte` tilläggspunkter `getCustomButtons()` metod en eller flera anpassade knappar kan läggas till i **RTE-verktygsfält**. Det går också att lägga till eller ta bort standardknappar för RTE som _Kopiera, Klistra in, Fet och Kursiv_ använda `getCoreButtons()` och `removeButtons)` metoder.
 
-I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med hjälp av anpassad _Lägg till tips_ verktygsfältsknapp. Det markerade antecknings- eller tipsinnehållet har en speciell formatering som används via elementen HTML och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med `onClick()` callback-metoden för `getCustomButtons()`.
+I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med hjälp av anpassad _Lägg till tips_ i verktygsfältet. Det markerade antecknings- eller tipsinnehållet har en speciell formatering som används via elementen HTML och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med `onClick()` callback-metoden för `getCustomButtons()`.
 
 ## Tilläggspunkt
 
@@ -42,7 +44,7 @@ I följande exempel skapas en _Lägg till tips_ egen knapp i verktygsfältet fö
 
 I koden visas hur du lägger till den anpassade knappen med en ikon och registrerar klickhanterarfunktionen.
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
 

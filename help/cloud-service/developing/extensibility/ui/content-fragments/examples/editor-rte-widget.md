@@ -1,6 +1,6 @@
 ---
 title: Lägga till widgetar i RTF-redigeraren
-description: Lär dig hur du lägger till widgetar i RTF-redigeraren i AEM Content Fragment Editor
+description: Lär dig hur du lägger till widgetar i textredigeraren i AEM innehållsfragmentredigeraren
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -11,14 +11,16 @@ thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
-source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
 
 # Lägga till widgetar i RTF-redigeraren
+
+Lär dig hur du lägger till widgetar i RTF-redigeraren i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
@@ -42,11 +44,11 @@ Det här exemplet utökar till tilläggspunkten `rte` om du vill lägga till en 
 
 ## Exempel på tillägg
 
-I följande exempel skapas en _Rabattkodlista_ widget. Genom att trycka på `{` specialtangenten i textredigeraren öppnas snabbmenyn, och sedan väljer du _Rabattkodlista_ på snabbmenyn öppnas dialogrutans användargränssnitt.
+I följande exempel skapas en _Rabattkodlista_ widget. Tryck på `{` specialtangenten i textredigeraren öppnas snabbmenyn, och sedan väljer du _Rabattkodlista_ på snabbmenyn öppnas dialogrutans användargränssnitt.
 
 WKND-innehållsförfattarna kan hitta, välja och lägga till aktuell Adventure-specifik rabattkod, om sådan finns.
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
 
