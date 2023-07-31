@@ -9,10 +9,11 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -34,13 +35,12 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-iOS fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) som ska installeras.
+IOS fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
-iOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i iOS-programmets konfiguration.
+IOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i iOS-programmets konfiguration.
 
 ## Så här använder du
 
@@ -55,9 +55,9 @@ iOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock 
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST
-   AEM_SCHEME = http
+   AEM_SCHEME = https
    // Target hostname for AEM environment, do not include http:// or https://
-   AEM_HOST = localhost:4503
+   AEM_HOST = publish-p123-e456.adobeaemcloud.com
    ```
 
    Lägg till `AEM_AUTH_TYPE` och tillhörande autentiseringsegenskaper för `Config.xcconfig`.
@@ -95,43 +95,59 @@ Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL beständiga fr
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
 + `wknd/adventure-by-slug` beständig fråga, som returnerar ett enda äventyr av `slug` (en anpassad egenskap som unikt identifierar ett äventyr) med en komplett uppsättning egenskaper. Den här beständiga frågan styr äventyrsdetaljvyerna.
 
 ```
-# Retrieves an adventure Content Fragment based on it's slug
-# Example query variables: 
-# {"slug": "bali-surf-camp"} 
-# Technically returns an adventure list but since the the slug 
-# property is set to be unique in the CF Model, only a single CF is expected
-
-query($slug: String!) {
-  adventureList(filter: {
-        slug: {
-          _expressions: [ { value: $slug } ]
-        }
-      }) {
+query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    filter: {slug: {_expressions: [{value: $slug}]}}
+    _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
     items {
       _path
       title
@@ -146,22 +162,22 @@ query($slug: String!) {
       primaryImage {
         ... on ImageRef {
           _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
         json
         plaintext
+        html
       }
       itinerary {
         json
         plaintext
+        html
       }
     }
     _references {
-      ...on AdventureModel {
+      ... on AdventureModel {
         _path
         slug
         title
@@ -191,31 +207,23 @@ AEM beständiga frågor körs via HTTP-GET och därför kan vanliga GraphQL-bibl
     /// For this func call to work, the `wknd-shared/adventures-all` query must be deployed to the AEM environment/service specified by the host.
     /// 
     /// Since HTTP requests are async, the completion syntax is used.
-    func getAdventures(completion: @escaping ([Adventure]) ->  ()) {
+    func getAdventures(params: [String:String], completion: @escaping ([Adventure]) ->  ()) {
                
-        // Create the HTTP request object representing the persisted query to get all adventures
-        let request = makeRequest(persistedQueryName: "wknd-shared/adventures-all")
+        let request = makeRequest(persistedQueryName: "wknd-shared/adventures-all", params: params)
         
-        // Wait fo the HTTP request to return
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            // Error check as needed
             if ((error) != nil) {
                 print("Unable to connect to AEM GraphQL endpoint")
                 completion([])
-            }
-                                    
-            if (!data!.isEmpty) {
-                // Decode the JSON data into Swift objects
+            } else if (!data!.isEmpty) {
                 let adventures = try! JSONDecoder().decode(Adventures.self, from: data!)
-                
                 DispatchQueue.main.async {
-                    // Return the array of Adventure objects
                     completion(adventures.data.adventureList.items)
                 }
             }
         }.resume();
     }
-
+    
     ...
 
     /// #makeRequest(..)
@@ -252,23 +260,23 @@ SwiftUI används för de olika vyerna i programmet. Apple har en självstudiekur
 
 + `WKNDAdventuresApp.swift`
 
-   Ansökan innehåller följande uppgifter: `AdventureListView` vars `.onAppear` händelsehanteraren används för att hämta alla äventyrsdata via `aem.getAdventures()`. Den delade `aem` objektet initieras här och exponeras för andra vyer som ett [EnvironmentObject](https://developer.apple.com/documentation/swiftui/environmentobject).
+  Ansökan innehåller följande uppgifter: `AdventureListView` vars `.onAppear` händelsehanteraren används för att hämta alla äventyrsdata via `aem.getAdventures()`. Den delade `aem` objektet initieras här och exponeras för andra vyer som ett [EnvironmentObject](https://developer.apple.com/documentation/swiftui/environmentobject).
 
 + `Views/AdventureListView.swift`
 
-   Visar en lista över äventyr (baserat på data från `aem.getAdventures()`) och visar ett listobjekt för varje äventyr med `AdventureListItemView`.
+  Visar en lista över äventyr (baserat på data från `aem.getAdventures()`) och visar ett listobjekt för varje äventyr med `AdventureListItemView`.
 
 + `Views/AdventureListItemView.swift`
 
-   Visar varje objekt i äventyrslistan (`Views/AdventureListView.swift`).
+  Visar varje objekt i äventyrslistan (`Views/AdventureListView.swift`).
 
 + `Views/AdventureDetailView.swift`
 
-   Visar information om ett äventyr, inklusive titel, beskrivning, pris, aktivitetstyp och primär bild. Den här vyn AEM om du vill ha fullständig äventyrsinformation med `aem.getAdventureBySlug(slug: slug)`, där `slug` parametern skickas in baserat på urvalslisteraden.
+  Visar information om ett äventyr, inklusive titel, beskrivning, pris, aktivitetstyp och primär bild. Den här vyn AEM om du vill ha fullständig äventyrsinformation med `aem.getAdventureBySlug(slug: slug)`, där `slug` parametern skickas in baserat på urvalslisteraden.
 
 ### Fjärrbilder
 
-Bilder som refereras av äventyrliga innehållsfragment hanteras av AEM. Den här iOS-appen använder sökvägen `_path` i GraphQL och prefix `AEM_SCHEME` och `AEM_HOST` för att skapa en fullständig URL.
+Bilder som refereras av äventyrliga innehållsfragment hanteras av AEM. Den här iOS-appen använder sökvägen `_dynamicUrl` i GraphQL och prefix `AEM_SCHEME` och `AEM_HOST` för att skapa en fullständig URL. Om du utvecklar mot AE SDK `_dynamicUrl` returnerar null, så för utvecklarreserv till bildens `_path` fält.
 
 Om du ansluter till skyddade resurser på AEM som kräver auktorisering, måste autentiseringsuppgifter också läggas till i bildbegäranden.
 
@@ -279,9 +287,10 @@ The `aem` klass (in `AEM/Aem.swift`) underlättar användningen av AEM bilder p�
 1. `aem.imageUrl(path: String)` används i vyer för att lägga till prepend-schemat i AEM och vara värd för bildens sökväg, vilket skapar en fullständigt kvalificerad URL.
 
    ```swift
-   // adventure.image() => /content/dam/path/to/an/image.png
+   // adventure.image() => /adobe/dynamicmedia/deliver/dm-aid--741ed388-d5f8-4797-8095-10c896dc9f1d/example.jpg?quality=80&preferwebp=true
+   
    let imageUrl = aem.imageUrl(path: adventure.image()) 
-   // imageUrl => http://localhost:4503/content/dam/path/to/an/image.png
+   // imageUrl => https://publish-p123-e456.adobeaemcloud.com/adobe/dynamicmedia/deliver/dm-aid--741ed388-d5f8-4797-8095-10c896dc9f1d/example.jpg?quality=80&preferwebp=true
    ```
 
 2. The `convenience init(..)` in `Aem` ange rubriker för HTTP-auktorisering på image-HTTP-begäran, baserat på iOS-programkonfigurationen.
@@ -317,8 +326,6 @@ The `aem` klass (in `AEM/Aem.swift`) underlättar användningen av AEM bilder p�
    ```
 
    + If __ingen autentisering__ är konfigurerad, ingen autentisering är kopplad till bildbegäranden.
-
-
 
 Ett liknande tillvägagångssätt kan användas med SwiftUI-inbyggt [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage). `AsyncImage` stöds i iOS 15.0+.
 

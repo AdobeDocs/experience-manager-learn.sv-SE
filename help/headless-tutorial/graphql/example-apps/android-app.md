@@ -9,10 +9,11 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 985d52f02025dc9cb2b9c70ead4a88af07c63f29
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -35,11 +36,9 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Android-programmet fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) som ska installeras.
+Android-programmet fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
 
 Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i Android-programmets konfiguration.
 
@@ -55,7 +54,7 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
 1. Ändra filen `config.properties` på `app/src/main/assets/config.properties` och uppdatera `contentApi.endpoint` för att matcha AEM målmiljö:
 
    ```plain
-   contentApi.endpoint=http://10.0.2.2:4503
+   contentApi.endpoint=https://publish-p123-e456.adobeaemcloud.com
    ```
 
    __Grundläggande autentisering__
@@ -63,20 +62,18 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
    The `contentApi.user` och `contentApi.password` autentisera en lokal AEM med åtkomst till WKND GraphQL-innehåll.
 
    ```plain
-   contentApi.endpoint=http://10.0.2.2:4502
+   contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
    contentApi.user=admin
    contentApi.password=admin
    ```
 
-1. Ladda ned en [Virtuell Android-enhet](https://developer.android.com/studio/run/managing-avds) (minst API 28).
-1. Bygg och distribuera appen med Android-emulatorn.
+1. Hämta en [Virtuell Android-enhet](https://developer.android.com/studio/run/managing-avds) (minst API 28).
+1. Skapa och distribuera appen med Android-emulatorn.
 
 
 ### Ansluta till AEM
 
-`10.0.2.2` är en [IP för specialalias](https://developer.android.com/studio/run/emulator-networking) för localhost när emulatorn används `10.0.2.2:4502` motsvarar `localhost:4502`. Om du ansluter till en AEM publiceringsmiljö (rekommenderas) krävs ingen behörighet och `contentAPi.user` och `contentApi.password` kan lämnas tom.
-
-Om du ansluter till en AEM författarmiljö [auktorisation](https://github.com/adobe/aem-headless-client-java#using-authorization) krävs. Som standard är programmet konfigurerat att använda grundläggande autentisering med användarnamnet och lösenordet `admin:admin`. The [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
+Om du ansluter till en AEM författarmiljö [auktorisation](https://github.com/adobe/aem-headless-client-java#using-authorization) är obligatoriskt. The [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
 
 ```java
 /* Comment out basicAuth
@@ -111,10 +108,7 @@ Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL beständiga fr
             tripLength
             primaryImage {
                 ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
+                _dynamicUrl
                 }
             }
         }
@@ -150,10 +144,7 @@ query($slug: String!) {
       price
       primaryImage {
         ... on ImageRef {
-          _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
@@ -186,11 +177,11 @@ Varje beständig fråga har en motsvarande&quot;loader&quot;-klass, som asynkron
 
 + `loader/AdventuresLoader.java`
 
-   Hämtar listan med tillägg på programmets startsida med hjälp av `wknd-shared/adventures-all` beständig fråga.
+  Hämtar listan med tillägg på programmets startsida med hjälp av `wknd-shared/adventures-all` beständig fråga.
 
 + `loader/AdventureLoader.java`
 
-   Hämtar ett enskilt äventyr som markerar det via `slug` parameter, använda `wknd-shared/adventure-by-slug` beständig fråga.
+  Hämtar ett enskilt äventyr som markerar det via `slug` parameter, använda `wknd-shared/adventure-by-slug` beständig fråga.
 
 ```java
 //AdventuresLoader.java
@@ -222,11 +213,11 @@ Android-programmet använder två vyer för att presentera äventyrsdata i mobil
 
 + `AdventureListFragment.java`
 
-   Anropar `AdventuresLoader` och visar de returnerade äventyren i en lista.
+  Anropar `AdventuresLoader` och visar de returnerade äventyren i en lista.
 
 + `AdventureDetailFragment.java`
 
-   Anropar `AdventureLoader` med `slug` param som skickas via äventyret på `AdventureListFragment` och visar information om ett enskilt äventyr.
+  Anropar `AdventureLoader` med `slug` param som skickas via äventyret på `AdventureListFragment` och visar information om ett enskilt äventyr.
 
 ### Fjärrbilder
 

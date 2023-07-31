@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -26,7 +26,7 @@ En enkel React-app används för att fråga efter och visa **Team** och **Person
 
 ## Förutsättningar
 
-Det antas att de steg som beskrivs i de tidigare delarna av den här flerdelssjälvstudiekursen har slutförts, eller [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip) är installerat på AEM as a Cloud Service Author and Publish services.
+Det antas att de steg som beskrivs i de tidigare delarna av den här flerdelssjälvstudiekursen har slutförts, eller [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) är installerat på AEM as a Cloud Service Author and Publish services.
 
 _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -48,7 +48,7 @@ Lär dig mer om:
 
 I det här kapitlet implementeras en utbäddad exempelapp, React, med den kod som krävs för att interagera med AEM GraphQL API, och visa team- och persondata som hämtats från dem.
 
-Källkoden för exempelappen React finns på Github.com på <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
+Källkoden för programmet React finns på Github.com <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
 
 Så här skaffar du React-appen:
 
@@ -71,6 +71,7 @@ Så här skaffar du React-appen:
 1. Uppdatera `.env.development` för att ansluta till AEM as a Cloud Service Publish-tjänst.
 
    - Ange `REACT_APP_HOST_URI`är AEM as a Cloud Service publicerings-URL (ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD`&#39;s value to `none`
+
    >[!NOTE]
    >
    > Kontrollera att du har publicerat projektkonfigurationen, Content Fragment-modeller, redigerade innehållsfragment, GraphQL slutpunkter och beständiga frågor från tidigare steg.
@@ -80,7 +81,7 @@ Så här skaffar du React-appen:
 
 1. Gå till kommandoraden `aem-guides-wknd-graphql/basic-tutorial` mapp
 
-1. Starta appen React
+1. Starta React-appen
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/basic-tutorial
@@ -97,11 +98,12 @@ Så här skaffar du React-appen:
 >   Den här React-appen är delvis implementerad. Följ stegen i den här självstudiekursen för att slutföra implementeringen. JavaScript-filer som behöver implementeras har följande kommentar. Se till att du lägger till/uppdaterar koden i de filerna med koden som anges i den här självstudiekursen.
 >
 >
-> //************************************
+> //**********************************
 >
->  // TODO : Implementera detta genom att följa stegen från AEM Headless Tutorial
+>  // TODO :: Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
 >  //*********************************
+>
 
 ## Anatomi i React-appen
 
@@ -111,7 +113,7 @@ Exempelappen React består av tre huvuddelar:
    - `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
    - `src/api/usePersistedQueries.js` implements [anpassade React-kopplingar](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) returnera data från AEM GraphQL till `Teams.js` och `Person.js` visa komponenter.
 
-1. The `src/components/Teams.js` filen visar en lista med team och deras medlemmar med hjälp av en listfråga.
+1. The `src/components/Teams.js` -filen visar en lista med team och deras medlemmar med hjälp av en listfråga.
 1. The `src/components/Person.js` -filen visar information om en person med hjälp av en parametriserad fråga med ett resultat.
 
 ## Granska objektet AEMHeadless
@@ -143,7 +145,7 @@ export default aemHeadlessClient;
 
 ## Implementera för att köra AEM GraphQL beständiga frågor
 
-Så här implementerar du det generiska `fetchPersistedQuery(..)` funktionen för att köra de beständiga AEM GraphQL-frågorna öppnar `usePersistedQueries.js` -fil. The `fetchPersistedQuery(..)` funktionen använder `aemHeadlessClient` objektets `runPersistedQuery()` funktion för att köra frågor asynkront, löftesbaserat beteende.
+Så här implementerar du det allmänna `fetchPersistedQuery(..)` funktionen för att köra de beständiga AEM GraphQL-frågorna öppnar `usePersistedQueries.js` -fil. The `fetchPersistedQuery(..)` funktionen använder `aemHeadlessClient` objektets `runPersistedQuery()` funktion för att köra frågor asynkront, löftesbaserat beteende.
 
 Senare, anpassad reaktion `useEffect` krok anropar den här funktionen för att hämta specifika data från AEM.
 
@@ -484,13 +486,13 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
    export default Person;
    ```
 
-## Prova programmet
+## Prova appen
 
 Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medlemmar_ länkar. Du kan också lägga till fler team och/eller medlemmar i teamalfa genom att lägga till innehållsfragment i AEM.
 
 ## Under hålet
 
-Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` begäran. Lägg märke till GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI` (t.ex. <https://publish-p123-e456.adobeaemcloud.com>). Begärandena görs mot React-appens domän eftersom [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) är aktiverad med `http-proxy-middleware` -modul.
+Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` begäran. Lägg märke till GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI` (till exempel <https://publish-p123-e456.adobeaemcloud.com>). Begärandena görs mot React-appens domän eftersom [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) är aktiverad med `http-proxy-middleware` -modul.
 
 
 ![GraphQL API-begäran via Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

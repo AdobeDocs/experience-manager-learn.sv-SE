@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -33,7 +34,7 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases) som ska installeras.
+Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Valfritt, [autentiseringsuppgifter för tjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) om begäranden godkänns (till exempel anslutning till AEM Author-tjänsten).
@@ -88,25 +89,42 @@ Efter AEM Headless-metodtips används AEM GraphQL beständiga frågor för att f
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
@@ -143,7 +161,7 @@ async function run() {
 
 ### Kör GraphQL beständig fråga
 
-AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för Node.js](https://github.com/adobe/aem-headless-client-nodejs) används för [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) mot AEM och hämtar äventyrsinnehållet.
+AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för Node.js](https://github.com/adobe/aem-headless-client-nodejs) används för att [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) mot AEM och hämtar äventyrsinnehållet.
 
 Den beständiga frågan anropas genom anrop `aemHeadlessClient.runPersistedQuery(...)`och skickar det beständiga GraphQL-frågenamnet. När GraphQL har skickat in uppgifterna skickar du dem till den förenklade `doSomethingWithDataFromAEM(..)` som skriver ut resultaten, men vanligtvis skickar data till ett annat system, eller skapar utdata baserat på hämtade data.
 

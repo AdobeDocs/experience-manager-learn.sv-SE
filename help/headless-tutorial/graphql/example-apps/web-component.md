@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
+last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
@@ -28,7 +29,6 @@ Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree
 
 Följande verktyg bör installeras lokalt:
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (vid anslutning till lokal AEM 6.5 eller AEM SDK)
 + [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
@@ -38,9 +38,9 @@ Webbkomponenten fungerar med följande AEM distributionsalternativ.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=en#install-local-aem-instances)
+   + Kräver [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (vid anslutning till lokal AEM 6.5 eller AEM SDK)
 
-Alla distributioner kräver `tutorial-solution-content.zip` från [Lösningsfiler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) installeras och är nödvändiga [Distributionskonfigurationer](../deployment/web-component.md) utförs.
+Den här exempelappen använder [basic-tutorial-solution.content.zip](../multi-step/assets/explore-graphql-api/basic-tutorial-solution.content.zip) installeras och [distributionskonfigurationer](../deployment/web-component.md) är på plats.
 
 
 >[!IMPORTANT]
@@ -67,7 +67,7 @@ Alla distributioner kräver `tutorial-solution-content.zip` från [Lösningsfile
 
    ```plain
    # AEM Server namespace
-   aemHost=https://publish-p65804-e666805.adobeaemcloud.com
+   aemHost=https://publish-p123-e456.adobeaemcloud.com
    
    # AEM GraphQL API and Persisted Query Details
    graphqlAPIEndpoint=graphql/execute.json
@@ -76,7 +76,7 @@ Alla distributioner kräver `tutorial-solution-content.zip` från [Lösningsfile
    queryParamName=name
    ```
 
-   Om du ansluter till en AEM Author-tjänst går du till `aemCredentials` -objekt, ange lokala AEM.
+   Om du ansluter till en AEM Author-tjänst går du till `aemCredentials` -objekt, ange lokala AEM användaruppgifter.
 
    ```plain
    # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
@@ -100,11 +100,11 @@ Nedan följer en sammanfattning av hur webbkomponenten är uppbyggd, hur den ans
 
 ### HTML-tagg för webbkomponent
 
-En återanvändbar webbkomponent (även anpassat element) `<person-info>` läggs till i `../src/assets/aem-headless.html` HTML sida. Den har stöd för `host` och `query-param-value` attribut som styr komponentens beteende. The `host` attributets värdeåsidosättningar `aemHost` värde från `aemHeadlessService` objekt i `person.js`och `query-param-value` används för att markera den person som ska återges.
+En återanvändbar webbkomponent (även anpassat element) `<person-info>` läggs till i `../src/assets/aem-headless.html` HTML sida. Den har stöd för `host` och `query-param-value` -attribut för att driva komponentens beteende. The `host` attributets värdeåsidosättningar `aemHost` värde från `aemHeadlessService` objekt i `person.js`och `query-param-value` används för att markera den person som ska återges.
 
 ```html
     <person-info 
-        host="https://publish-p65804-e666805.adobeaemcloud.com"
+        host="https://publish-p123-e456.adobeaemcloud.com"
         query-param-value="John Doe">
     </person-info>
 ```
@@ -166,7 +166,8 @@ class PersonInfo extends HTMLElement {
         const personTemplateElement = document.getElementById('person-template');
         const templateContent = personTemplateElement.content;
         const personImgElement = templateContent.querySelector('.person_image');
-        personImgElement.setAttribute('src', host + person.profilePicture._path);
+        personImgElement.setAttribute('src',
+            host + (person.profilePicture._dynamicUrl || person.profilePicture._path));
         personImgElement.setAttribute('alt', person.fullName);
         ...
         this.shadowRoot.appendChild(templateContent.cloneNode(true));
@@ -186,5 +187,3 @@ class PersonInfo extends HTMLElement {
 Den här webbkomponenten är beroende av en AEM baserad CORS-konfiguration som körs på AEM och förutsätter att värdsidan körs på `http://localhost:8080` i utvecklingsläge och nedan är ett exempel på CORS OSGi-konfiguration för den lokala AEM Author-tjänsten.
 
 Granska [distributionskonfigurationer](../deployment/web-component.md) för respektive AEM.
-
-![CORS-konfiguration](assets/react-app/cross-origin-resource-sharing-configuration.png)

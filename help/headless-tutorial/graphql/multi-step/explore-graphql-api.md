@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 GraphQL-API:t för AEM innehåller ett kraftfullt frågespråk för att visa data från innehållsfragment för program längre fram i kedjan. Modeller för innehållsfragment definierar det dataschema som används av innehållsfragment. När en innehållsfragmentmodell skapas eller uppdateras, översätts och läggs schemat till i det diagram som utgör GraphQL-API:t.
 
-I det här kapitlet ska vi titta på några vanliga GraphQL-frågor för att samla in innehåll med en IDE som kallas [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. Den ger också enkel åtkomst till dokumentationen, vilket gör det enkelt att lära sig och förstå vilka metoder som är tillgängliga.
+I det här kapitlet ska vi titta på några vanliga GraphQL-frågor för att samla in innehåll med hjälp av en IDE som kallas [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. Den ger också enkel åtkomst till dokumentationen, vilket gör det enkelt att lära sig och förstå vilka metoder som är tillgängliga.
 
 ## Förutsättningar {#prerequisites}
 
@@ -64,7 +64,7 @@ En GraphQL-slutpunkt måste konfigureras för att aktivera GraphQL API-frågor f
 
 ## Använda GraphiQL IDE
 
-The [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) Med kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL kan man också **bevara eller spara** frågor som ska användas av klientprogram i en produktionsinställning.
+The [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) Med kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan man också **bevara eller spara** frågor som ska användas av klientprogram i en produktionsinställning.
 
 Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL IDE.
 
@@ -76,7 +76,7 @@ Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL IDE.
    >
    > I kan det hända att de äldre versionerna av GraphiQL IDE inte är inbyggda. Den kan installeras manuellt efter dessa [instruktioner](#install-graphiql).
 
-1. Kontrollera att slutpunkten är inställd på i det övre högra hörnet **Min projektslutpunkt**.
+1. Kontrollera att slutpunkten är inställd på längst upp till höger **Min projektslutpunkt**.
 
    ![Ange GraphQL-slutpunkt](assets/explore-graphql-api/set-my-project-endpoint.png)
 
@@ -99,7 +99,7 @@ Ett vanligt krav är att fråga efter flera innehållsfragment.
    } 
    ```
 
-1. Tryck på **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från föregående kapitel:
+1. Tryck på **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från det föregående kapitlet:
 
    ![Resultat av personlista](assets/explore-graphql-api/all-teams-list.png)
 
@@ -311,7 +311,7 @@ Behåll sedan två enkla frågor. De används i nästa kapitel.
    Frågan ska visas under **Beständiga frågor** till vänster.
 
    ![Fråga om alla team](assets/explore-graphql-api/all-teams-persisted-query.png)
-1. Tryck sedan på ellipserna **...** bredvid den beständiga frågan och tryck **Kopiera URL** om du vill kopiera sökvägen till Urklipp.
+1. Tryck sedan på ellipserna **...** bredvid den beständiga frågan och tryck på **Kopiera URL** om du vill kopiera sökvägen till Urklipp.
 
    ![Kopiera URL för beständig fråga](assets/explore-graphql-api/copy-persistent-query-url.png)
 
@@ -377,7 +377,7 @@ Publicera `GraphQL Endpoint` &amp; `Persisted Queries`
 
 1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL**.
 
-1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och trycka **Publicera**
+1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och knacka **Publicera**
 
    ![Publicera GraphQL Endpoint](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
@@ -391,7 +391,7 @@ Publicera `GraphQL Endpoint` &amp; `Persisted Queries`
 
 ## Lösningsfiler {#solution-files}
 
-Ladda ned innehåll, modeller och beständiga frågor som skapats i de tre senaste kapitlen: [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
+Ladda ned innehåll, modeller och beständiga frågor som skapats i de tre senaste kapitlen: [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
 
 ## Ytterligare resurser
 
