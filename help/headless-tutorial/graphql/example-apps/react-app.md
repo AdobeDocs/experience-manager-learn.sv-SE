@@ -11,9 +11,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
+source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Programmet React fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
+Programmet React fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
