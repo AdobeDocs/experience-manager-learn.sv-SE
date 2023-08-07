@@ -2,7 +2,8 @@
 title: Använda SSL-guiden i AEM
 description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
-version: 6.4, 6.5
+version: 6.5, Cloud Service
+jira: KT-13465
 topics: security, operations
 feature: Security
 activity: use
@@ -14,20 +15,19 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: f6e9d1f1991abf34765b28e6e05382a58a6203e3
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
 
 # Använda SSL-guiden i AEM
 
-Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
+Lär dig hur du konfigurerar SSL i Adobe Experience Manager så att det körs över HTTPS med den inbyggda SSL-guiden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
-Öppna __SSL-konfigurationsguide__ kan öppnas direkt genom att navigera till __AEM Author > Tools > Security > SSL Configuration__.
 
 >[!NOTE]
 >
@@ -35,19 +35,63 @@ Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera
 >
 >Självsignerade certifikat får endast användas i utvecklingssyfte.
 
-## Privat nyckel och självsignerad certifikatnedladdning
+## Använda SSL-konfigurationsguiden
 
-Följande ZIP innehåller [!DNL DER] och [!DNL CRT] filer som krävs för AEM konfigurera SSL på localhost och som endast är avsedda för lokal utveckling.
+Navigera till __AEM Author > Tools > Security > SSL Configuration__ och öppna __SSL-konfigurationsguide__.
+
+![SSL-konfigurationsguide](assets/use-the-ssl-wizard/ssl-config-wizard.png)
+
+### Skapa autentiseringsuppgifter för butik
+
+Skapa en _Nyckelarkiv_ som är kopplade till `ssl-service` systemanvändare och en global _Trust Store_, använder du __Lagra autentiseringsuppgifter__ guidesteg.
+
+1. Ange lösenordet och bekräfta lösenordet för __Nyckelarkiv__ som är kopplade till `ssl-service` systemanvändare.
+1. Ange lösenordet och bekräfta lösenordet för den globala __Trust Store__. Observera att det är ett systemomfattande förtroendearkiv och om det redan har skapats ignoreras det angivna lösenordet.
+
+   ![SSL-inställning - Lagra autentiseringsuppgifter](assets/use-the-ssl-wizard/store-credentials.png)
+
+### Överför privat nyckel och certifikat
+
+Ladda upp _privat nyckel_ och _SSL-certifikat_, använder du __Nyckel och certifikat__ guidesteg.
+
+Vanligtvis tillhandahåller din IT-avdelning det certifikatutfärdarbetrodda certifikatet och nyckeln, men självsignerade certifikat kan användas för __utveckling__ och __testning__ syften.
+
+Information om hur du skapar eller hämtar det självsignerade certifikatet finns i [Självsignerad privat nyckel och certifikat](#self-signed-private-key-and-certificate).
+
+1. Ladda upp __Privat nyckel__ i formatet DER (Distinguished Encoding Rules). Till skillnad från PEM innehåller DER-kodade filer inte vanliga textsatser som `-----BEGIN CERTIFICATE-----`
+1. Överför associerade __SSL-certifikat__ i `.crt` format.
+
+   ![SSL-installation - privat nyckel och certifikat](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
+
+### Uppdatera SSL-anslutningsinformation
+
+Uppdatera _värdnamn_ och _port_ använder __SSL-anslutning__ guidesteg.
+
+1. Uppdatera eller verifiera __HTTPS-värdnamn__ värde, det ska matcha `Common Name (CN)` från certifikatet.
+1. Uppdatera eller verifiera __HTTPS-port__ värde.
+
+   ![SSL-installation - SSL-anslutningsinformation](assets/use-the-ssl-wizard/ssl-connector-details.png)
+
+### Verifiera SSL-konfigurationen
+
+1. Verifiera SSL genom att klicka på __Gå till HTTPS-URL__ -knappen.
+1. Om du använder självsignerat certifikat visas `Your connection is not private` fel.
+
+   ![SSL-inställningar - Verifiera AEM över HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+
+## Självsignerad privat nyckel och certifikat
+
+Följande ZIP innehåller [!DNL DER] och [!DNL CRT] filer som krävs för att konfigurera AEM SSL lokalt och som endast är avsedda för lokal utveckling.
 
 The [!DNL DER] och [!DNL CERT] filerna tillhandahålls av praktiska skäl och genereras enligt de steg som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
 
 Om det behövs är certifikatets lösenfras **admin**.
 
-localhost - private key och self-signed certificate.zip (upphör i juli 2028)
+Den här lokala värden - privat nyckel och självsignerat certifikat.zip (upphör att gälla i juli 2028)
 
 [Hämta certifikatfilen](assets/use-the-ssl-wizard/certificate.zip)
 
-## Skapa privata nycklar och självsignerade certifikat
+### Skapa privata nycklar och självsignerade certifikat
 
 I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
 
