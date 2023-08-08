@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
+source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 11%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 11%
    + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 
 + Utveckling {#developing}
-   + [AEM Project Archetype](developing/aem-project-archetype.md)
+   + [AEM Project Archettype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Kom igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
@@ -112,7 +112,7 @@ ht-degree: 11%
       + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
       + [Samla in siddata med Adobe Analytics](integrations/analytics/collect-data-analytics.md)
-      + [Spåra klickad komponent med Adobe Analytics](integrations/analytics/track-clicked-component.md)
+      + [Spåra klickade komponenter med Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysera data med Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [Översikt](integrations/adobe-target/overview.md)
@@ -124,6 +124,7 @@ ht-degree: 11%
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
 + Lär dig av andra {#expert-resources}
+   + [Översikt](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
    + [Platsunderhåll](expert-resources/site-maintenance.md)
    + [AEM Champion Tips and Tricks: Session 1](expert-resources/champion-tips-1.md)
