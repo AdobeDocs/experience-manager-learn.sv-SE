@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,18 @@ Det finns många sätt på vilka AEM kan integreras med en extern databas. En av
 Det första steget är att ladda ned och installera rätt [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
 Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika för databasen. På följande skärmbild visas de inställningar som används för den här självstudiekursen. Databasschemat är en del av den här självstudiekursen.
 
-![datakälla](assets/data-source.JPG)
-
-
-* JDBC-drivrutinsklass: `com.mysql.cj.jdbc.Driver`
-* JDBC-anslutnings-URI: `jdbc:mysql://localhost:3306/aemformstutorial`
-
 >[!NOTE]
 >Ge datakällan ett namn `StoreAndRetrieveAfData` eftersom detta är namnet som används i OSGi-tjänsten.
+
+
+![datakälla](assets/data-source.JPG)
+
+| Egenskapsnamn | Egenskapsvärde |   |
+|---------------------|------------------------------------------------------------------------------------|---|
+| Datakällans namn | StoreAndRetrieveAfData |   |
+| JDBC-enhetsklass | jdbc:mysql://localhost:3306/aemformstutorial |   |
+| URI för JDBC-anslutning | jdbc:mysql://localhost:3306/aemformstutorial?serverTimezone=UTC&amp;autoReconnect=true |   |
+|                     |                                                                                    |   |
 
 
 ## Skapa databas

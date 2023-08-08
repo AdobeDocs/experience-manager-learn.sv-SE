@@ -1,6 +1,6 @@
 ---
 title: Distribuera exemplet
-description: Hämta användningsfall som körs på din lokala AEM Forms-instans
+description: Hämta användningsfall som körs på den lokala AEM Forms-instansen
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ I det här exemplet används MySQL-databasen för att lagra data för anpassade 
 
 ## Skapa datakälla
 
-Du måste skapa en datakälla med namnet **StoreAndRetrieveAfData**. Koden i OSGi-paketet använder det här datakällans namn
+Du måste skapa en sammanslagen datakälla för Apache Sling-anslutningen med namnet **StoreAndRetrieveAfData** peka på databasschemat som skapades i det tidigare steget. Koden i OSGi-paketet använder det här datakällnamnet.
 
 ## Skapa formulärdatamodell
 
@@ -43,13 +43,13 @@ Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skic
 
 ## Distribuera följande OSGi-paket
 
-Distribuera det paket som har [kod för att lagra och hämta data från databasen](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
+Distribuera det paket som har [kod för att lagra och hämta data från databasen](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
 Ladda ned och zippa upp [utvecklamed servicuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
 Distribuera filen DevelopingWithServiceUser.jar med Felix webbkonsol.
 
 ## Distribuera klientbiblioteket
 
-Exemplet använder två klientbibliotek. Importera dessa [klientbibliotek](assets/client-libraries.zip) till AEM.
+Exemplet använder två klientbibliotek. Importera dessa [klientbibliotek](assets/store-af-with-attachments-client-lib.zip) till AEM.
 
 ## Importera en anpassad formulärmall
 
@@ -59,7 +59,7 @@ Exempelformulären som används i den här demon är baserade på en anpassad ma
 
 De två formulär som utgör det här exemplet måste importeras till AEM. Exempelformulären kan [hämtad härifrån](assets/sample-forms.zip)
 
-Öppna [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) i redigeringsläge. Ange API-nyckel och API-hemlighet i lämpliga fält i det adaptiva formuläret.
+Öppna [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) i redigeringsläge. Ange Vonage API Key- och API Secret-värden i lämpliga fält i det adaptiva formuläret.
 
 ## Testa lösningen
 
