@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1792'
 ht-degree: 1%
 
 ---
@@ -28,29 +28,49 @@ ht-degree: 1%
 
 Adobe Experience Manager (AEM) kan köras lokalt med den AEM as a Cloud Service SDK:ns QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service miljö.
 
-Observera att `~` används som kortskrift för användarens katalog. I Windows motsvarar detta `%HOMEPATH%`.
+Observera att `~` används som kortskrift för användarkatalogen. I Windows motsvarar detta `%HOMEPATH%`.
 
 ## Installera Java
 
-Experience Manager är ett Java-program och kräver därför Java SDK för att stödja utvecklingsverktygen.
+Experience Manager är ett Java-program och kräver därför Oraclet Java SDK för att stödja utvecklingsverktygen.
 
 1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Kontrollera att Java 11 SDK är installerat genom att köra kommandot:
-   + Windows:`java -version`
-   + macOS/Linux: `java --version`
+1. Kontrollera att Oraclet Java 11 SDK är installerat genom att köra kommandot:
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java --version
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -version
+```
+
+>[!TAB Linux]
+
+```shell
+$ java --version
+```
+
+>[!ENDTABS]
 
 ![Java](./assets/aem-runtime/java.png)
 
-## Ladda ned AEM as a Cloud Service SDK
+## Hämta AEM as a Cloud Service SDK
 
 Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som används för att köra AEM Author och Publicera lokalt för utveckling, samt den kompatibla versionen av Dispatcher Tools.
 
 1. Logga in på [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) med din Adobe ID
    + Observera att din Adobe-organisation __måste__ etableras för AEM as a Cloud Service att hämta AEM as a Cloud Service SDK.
 1. Navigera till __AEM as a Cloud Service__ tab
-1. Sortera efter __Publiceringsdatum__ in __Fallande__ order
+1. Sortera efter __Publiceringsdatum__ in __Fallande__ beställa
 1. Klicka på den senaste __AEM SDK__ resultatrad
-1. Granska och godkänn slutanvändaravtalet och tryck på __Hämta__ knapp
+1. Granska och godkänn slutanvändaravtalet och tryck på __Ladda ned__ knapp
 
 ## Extrahera Quickstart Jar från AEM SDK-zip
 
@@ -69,7 +89,18 @@ Den lokala AEM Author Service ger utvecklare en lokal upplevelse som digitala ma
    Du *inte* starta AEM som Cloud Service QuickStart Jar [genom att dubbelklicka](#troubleshooting-double-click).
 1. Gå till den lokala AEM Author Service på [http://localhost:4502](http://localhost:4502) i en webbläsare
 
-Windows:
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ mkdir -p ~/aem-sdk/author
+$ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
+$ cd ~/aem-sdk/author
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Windows]
 
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
@@ -78,7 +109,7 @@ $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
 
-macOS/Linux:
+>[!TAB Linux]
 
 ```shell
 $ mkdir -p ~/aem-sdk/author
@@ -86,6 +117,9 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
+
+>[!ENDTABS]
+
 
 ## Konfigurera lokal AEM-publiceringstjänst
 
@@ -100,16 +134,9 @@ Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som sl
    Du *inte* starta AEM som Cloud Service QuickStart Jar [genom att dubbelklicka](#troubleshooting-double-click).
 1. Åtkomst till den lokala AEM-publiceringstjänsten på [http://localhost:4503](http://localhost:4503) i en webbläsare
 
-Windows:
+>[!BEGINTABS]
 
-```shell
-$ mkdir -p c:\Users\<My User>\aem-sdk\publish
-$ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ cd c:\Users\<My User>\aem-sdk\publish
-$ java -jar aem-publish-p4503.jar
-```
-
-macOS/Linux:
+>[!TAB macOS]
 
 ```shell
 $ mkdir -p ~/aem-sdk/publish
@@ -118,9 +145,35 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
+>[!TAB Windows]
+
+```shell
+$ mkdir -p c:\Users\<My User>\aem-sdk\publish
+$ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
+$ cd c:\Users\<My User>\aem-sdk\publish
+$ java -jar aem-publish-p4503.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ mkdir -p ~/aem-sdk/publish
+$ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
+$ cd ~/aem-sdk/publish
+$ java -jar aem-publish-p4503.jar
+```
+
+>[!ENDTABS]
+
+
 ## Konfigurera lokala AEM i förhandsversionsläge
 
-Den lokala AEM kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) som gör det möjligt för en utvecklare att bygga vidare på den AEM as a Cloud Service nästa releases funktioner. Förhandsversionen aktiveras genom att `-r prerelease` argument på den lokala AEM körtidens första start. Detta kan användas med både lokala AEM Author- och AEM Publish-tjänster.
+Den lokala AEM kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) som gör det möjligt för en utvecklare att bygga vidare på den AEM as a Cloud Service nästa releases funktioner. Förhandsversionen aktiveras genom att användaren skickar `-r prerelease` argument på den lokala AEM körtidens första start. Detta kan användas med både lokala AEM Author- och AEM Publish-tjänster.
+
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
 
 ```shell
 # For AEM Author service in prerelease mode
@@ -130,11 +183,33 @@ $ java -jar aem-author-p4502.jar -r prerelease
 $ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
+>[!TAB Windows]
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
+```
+
+>[!TAB Linux]
+
+```shell
+# For AEM Author service in prerelease mode
+$ java -jar aem-author-p4502.jar -r prerelease
+
+# For AEM Publish service in prerelease mode
+$ java -jar aem-publish-p4503.jar -r prerelease
+```
+
+>[!ENDTABS]
+
 ## Simulera innehållsdistribution {#content-distribution}
 
 I en riktig Cloud Service distribueras innehåll från författartjänsten till publiceringstjänsten med [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html) och Adobe Pipeline. The [Adobe Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) är en isolerad mikrotjänst som bara är tillgänglig i molnmiljön.
 
-Under utvecklingen kan det vara önskvärt att simulera distributionen av innehåll med hjälp av den lokala redigerings- och publiceringstjänsten. Detta kan uppnås genom att aktivera de tidigare replikeringsagenterna.
+Under utvecklingen kan det vara önskvärt att simulera distributionen av innehåll med hjälp av den lokala redigerings- och publiceringstjänsten. Detta kan uppnås genom att aktivera de äldre replikeringsagenterna.
 
 >[!NOTE]
 >
@@ -167,7 +242,7 @@ Under utvecklingen kan det vara önskvärt att simulera distributionen av inneh�
 
 Namnet på QuickStart Jar. `aem-<tier>_<environment>-p<port number>.jar` anger hur den kommer att starta. När AEM har startats i ett visst skikt, författare eller publicering kan det inte ändras till det alternativa skiktet. För att göra detta `crx-Quickstart` mappen som skapades under den första körningen måste tas bort och QuickStart Jar måste köras igen. Miljö och portar kan ändras, men de kräver stopp/start för den lokala AEM.
 
-Föränderliga miljöer `dev`, `stage` och `prod`, kan vara användbart för utvecklare för att säkerställa att miljöspecifika konfigurationer definieras och löses korrekt av AEM. Vi rekommenderar att lokal utveckling huvudsakligen görs mot standardinställningen `dev` miljö, körningsläge.
+Föränderliga miljöer, `dev`, `stage` och `prod`, kan vara användbart för utvecklare för att säkerställa att miljöspecifika konfigurationer definieras och löses korrekt av AEM. Vi rekommenderar att lokal utveckling huvudsakligen görs mot standardinställningen `dev` miljö, körningsläge.
 
 Tillgängliga permutationer är följande:
 
@@ -175,11 +250,11 @@ Tillgängliga permutationer är följande:
 |------------------------------|-----------------------------------------------------------------------------|
 | `aem-author-p4502.jar` | Som författare i Dev-körningsläge på port 4502 |
 | `aem-author_dev-p4502.jar` | Som författare i Dev-körningsläge på port 4502 (samma som `aem-author-p4502.jar`) |
-| `aem-author_stage-p4502.jar` | Som författare i mellanlagringskörningsläge på port 4502 |
+| `aem-author_stage-p4502.jar` | Som författare i mellanlagringsläge på port 4502 |
 | `aem-author_prod-p4502.jar` | Som författare i produktionskörningsläge på port 4502 |
 | `aem-publish-p4503.jar` | Vid publicering i Dev-körningsläge på port 4503 |
 | `aem-publish_dev-p4503.jar` | As Publish in Dev run mode on port 4503 (same as `aem-publish-p4503.jar`) |
-| `aem-publish_stage-p4503.jar` | Vid publicering i mellanlagringskörningsläge på port 4503 |
+| `aem-publish_stage-p4503.jar` | Vid publicering i mellanlagringsläge på port 4503 |
 | `aem-publish_prod-p4503.jar` | Vid publicering i produktionskörningsläge på port 4503 |
 
 Observera att portnumret kan vara vilken tillgänglig port som helst på den lokala utvecklingsdatorn, men enligt konvention:
@@ -203,7 +278,7 @@ Uppdatera AEM SDK minst en gång i månaden, eller kort efter, den sista torsdag
 
 >[!WARNING]
 >
-> Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM som AEM.
+> Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
 
 ### Så här undviker du innehållsförluster när du uppgraderar AEM SDK
 
@@ -211,7 +286,7 @@ Genom att uppgradera AEM SDK skapas en helt ny AEM, inklusive en ny databas, vil
 
 1. Skapa ett innehållspaket som är avsett för att innehålla exempelinnehåll som ska vara till hjälp vid utvecklingen, och behåll det i Git. Allt innehåll som ska bevaras genom AEM SDK-uppgraderingar kommer att finnas kvar i det här paketet och återdistribueras efter uppgraderingen av AEM SDK.
 1. Använd [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) med `includepaths` för att kopiera innehåll från den tidigare AEM SDK-databasen till den nya AEM SDK-databasen.
-1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på föregående AEM SDK och installera om dem på nya AEM SDK.
+1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på den tidigare AEM SDK:n och installera om dem på den nya AEM SDK:n.
 
 Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar, så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
 
@@ -227,11 +302,51 @@ Detta beror på att AEM as a Cloud Service QuickStart Jar inte stöder dubbelkli
 
 Så här startar du AEM Author-tjänsten: `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
 
-`$ java -jar aem-author-p4502.jar`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ java -jar aem-author-p4502.jar
+```
+
+>[!ENDTABS]
 
 för att starta AEM Publish-tjänsten, `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
 
-`$ java -jar aem-publish-p4503.jar`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!TAB Linux]
+
+```shell
+$ java -jar aem-author-p4503.jar
+```
+
+>[!ENDTABS]
 
 ### Starten av snabbstartsgaren från kommandoraden avbryts omedelbart{#troubleshooting-java-8}
 
@@ -248,13 +363,31 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Detta beror på att AEM as a Cloud Service kräver Java SDK 11 och du kör en annan version, troligen Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
-När Java SDK 11 har installerats kontrollerar du att det är den aktiva versionen genom att köra följande från kommandoraden.
+Detta beror på att AEM as a Cloud Service kräver Java SDK 11 och du kör en annan version, troligtvis Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 
-När Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
+När Oraclet Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
 
-+ Windows: `java -version`
-+ macOS/Linux: `java --version`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ java --version
+```
+
+>[!TAB Windows]
+
+```shell
+$ java -version
+```
+
+>[!TAB Linux]
+
+```shell
+$ java --version
+```
+
+>[!ENDTABS]
 
 ## Ytterligare resurser
 

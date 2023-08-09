@@ -10,9 +10,9 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1621'
 ht-degree: 1%
 
 ---
@@ -30,14 +30,14 @@ Adobe Experience Manager (AEM) Dispatcher är en Apache HTTP-webbservermodul som
 
 Den AEM as a Cloud Service SDK-versionen innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt. Dispatcher Tools består av:
 
-+ en basuppsättning med konfigurationsfiler för Apache HTTP-webbserver och Dispatcher som finns på `.../dispatcher-sdk-x.x.x/src`
++ en basuppsättning med konfigurationsfiler för Apache HTTP-webbserver och Dispatcher, som finns på `.../dispatcher-sdk-x.x.x/src`
 + en konfigurationsvaliderare för CLI-verktyg, som finns på `.../dispatcher-sdk-x.x.x/bin/validate`
 + ett CLI-verktyg för konfigurationsgenerering som finns på `.../dispatcher-sdk-x.x.x/bin/validator`
 + ett CLI-verktyg för konfigurationsdistribution, som finns på `.../dispatcher-sdk-x.x.x/bin/docker_run`
-+ en oföränderlig konfigurationsfil som skriver över CLI-verktyget, som finns på `.../dispatcher-sdk-x.x.x/bin/update_maven`
++ en oföränderlig konfigurationsfil som skriver över CLI-verktyget, finns på `.../dispatcher-sdk-x.x.x/bin/update_maven`
 + en Docker-bild som kör Apache HTTP Web Server med modulen Dispatcher
 
-Observera att `~` används som kortskrift för användarens katalog. I Windows motsvarar detta `%HOMEPATH%`.
+Observera att `~` används som kortskrift för användarkatalogen. I Windows motsvarar detta `%HOMEPATH%`.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller Dispatcher-verktygen 
 Om AEM as a Cloud Service SDK redan har hämtats till [konfigurera lokal AEM](./aem-runtime.md)behöver den inte laddas ned på nytt.
 
 1. Logga in på [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=1) med din Adobe ID
-   + Din Adobe-organisation __måste__ etableras för AEM as a Cloud Service för att hämta AEM as a Cloud Service SDK
+   + Din Adobe-organisation __måste__ etableras för AEM as a Cloud Service för att ladda ned AEM as a Cloud Service SDK
 1. Klicka på den senaste __AEM SDK__ resultatrad som ska hämtas
 
 ## Extrahera Dispatcher-verktygen från AEM SDK
@@ -71,11 +71,29 @@ Om AEM as a Cloud Service SDK redan har hämtats till [konfigurera lokal AEM](./
 Versionen av Dispatcher Tools skiljer sig från AEM SDK. Kontrollera att versionen av Dispatcher Tools finns i den AEM SDK-version som matchar den AEM as a Cloud Service versionen.
 
 1. Zippa upp det nedladdade `aem-sdk-xxx.zip` fil
-1. Packa upp Dispatcher-verktygen i `~/aem-sdk/dispatcher`
+1. Packa upp Dispatcher Tools i `~/aem-sdk/dispatcher`
 
-+ Windows: Zippa upp `aem-sdk-dispatcher-tools-x.x.x-windows.zip` till `C:\Users\<My User>\aem-sdk\dispatcher` (skapar saknade mappar efter behov)
-+ macOS Linux®: Kör det medföljande gränssnittsskriptet `aem-sdk-dispatcher-tools-x.x.x-unix.sh` för att packa upp Dispatcher-verktygen
-   + `chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh
+$ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
+```
+
+>[!TAB Windows]
+
+Zippa upp `aem-sdk-dispatcher-tools-x.x.x-windows.zip` till `C:\Users\<My User>\aem-sdk\dispatcher` (skapar saknade mappar efter behov).
+
+>[!TAB Linux]
+
+```shell
+$ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh
+$ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
+```
+
+>[!ENDTABS]
 
 Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen innehåller det expanderande Dispatcher-verktygsinnehållet.
 
@@ -96,19 +114,56 @@ En fullständig beskrivning av konfigurationsfilerna finns i de opackade Dispatc
 
 ## Validera konfigurationer
 
-Alternativt kan du konfigurera webbservern Dispatcher och Apache (via `httpd -t`) kan valideras med `validate` skript (ska inte blandas ihop med `validator` körbar). The `validate` -skript är ett bekvämt sätt att köra [tre faser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) i `validator`.
+Alternativt kan du konfigurera webbservern Dispatcher och Apache (via `httpd -t`) kan valideras med `validate` skript (ska inte blandas ihop med `validator` körbar). The `validate` är ett praktiskt sätt att köra [tre faser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) i `validator`.
 
-+ Användning:
-   + Windows: `bin\validate src`
-   + macOS Linux®: `./bin/validate.sh ./src`
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ ./bin/validate.sh ./src
+```
+
+>[!TAB Windows]
+
+```shell
+$ bin\validate src
+```
+
+>[!TAB Linux]
+
+```shell
+$ ./bin/validate.sh ./src
+```
+
+>[!ENDTABS]
 
 ## Kör Dispatcher lokalt
 
 AEM Dispatcher körs lokalt med Docker mot `src` Dispatcher och konfigurationsfiler för webbservern Apache.
 
-+ Användning:
-   + Windows: `bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
-   + macOS Linux®: `./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+```
+
+>[!TAB Windows]
+
+```shell
+$ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+```
+
+>[!TAB Linux]
+
+```shell
+$ ./bin/docker_run.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
+```
+
+>[!ENDTABS]
 
 The `<aem-publish-host>` kan anges till `host.docker.internal`, innehåller en särskild DNS-namnDocker i behållaren som matchar värddatorns IP-adress. Om `host.docker.internal` inte går att lösa, se [felsökning](#troubleshooting-host-docker-internal) nedan.
 
@@ -116,30 +171,60 @@ Om du till exempel vill starta Dispatcher Docker-behållaren med de standardkonf
 
 Starta Dispatcher Docker-behållaren med sökvägen till Dispatcher-konfigurationens src-mapp:
 
-+ Windows: `bin\docker_run src host.docker.internal:4503 8080`
-+ macOS Linux®: `./bin/docker_run.sh ./src host.docker.internal:4503 8080`
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+```shell
+$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+```
+
+>[!TAB Windows]
+
+```shell
+$ bin\docker_run src host.docker.internal:4503 8080
+```
+
+>[!TAB Linux]
+
+```shell
+$ ./bin/docker_run.sh ./src host.docker.internal:4503 8080
+```
+
+>[!ENDTABS]
 
 Den AEM as a Cloud Service SDK:s publiceringstjänst som körs lokalt på port 4503 är tillgänglig via Dispatcher på `http://localhost:8080`.
 
 Om du vill köra Dispatcher Tools mot Dispatcher-konfigurationen för ett Experience Manager-projekt pekar du på projektets `dispatcher/src` mapp.
 
-+ Windows:
+>[!BEGINTABS]
 
-   ```shell
-   $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
-   ```
+>[!TAB macOS]
 
-+ macOS Linux®:
+```shell
+$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
 
-   ```shell
-   $ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
-   ```
+>[!TAB Windows]
+
+```shell
+$ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
+
+>[!TAB Linux]
+
+```shell
+$ ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
+
+>[!ENDTABS]
+
 
 ## Loggar för Dispatcher Tools
 
-Distributionsloggar är användbara under lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan ställas in genom att prefix körs för `docker_run` med miljöparametrar.
+Distributionsloggar är användbara under lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan ställas in genom att prefix för körningen av `docker_run` med miljöparametrar.
 
-Loggar för utskicksverktyg skickas till standard-out när `docker_run` körs.
+Loggar för utskicksverktyg skickas till standard-out när `docker_run` är körd.
 
 Användbara parametrar för felsökning av Dispatcher är:
 
@@ -153,21 +238,31 @@ Användbara parametrar för felsökning av Dispatcher är:
 
 En eller flera parametrar kan skickas till `docker_run`
 
-+ Windows:
+>[!BEGINTABS]
 
-```shell
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
-```
-
-+ macOS Linux®:
+>[!TAB macOS]
 
 ```shell
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
+>[!TAB Windows]
+
+```shell
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
+
+>[!TAB Linux]
+
+```shell
+$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
+```
+
+>[!ENDTABS]
+
 ### Loggfilsåtkomst
 
-Webbservern och AEM Dispatcher-loggarna är tillgängliga direkt i Docker-behållaren:
+Du kan komma åt Apache-webbservern och AEM Dispatcher-loggarna direkt i Docker-behållaren:
 
 + [Åtkomst till loggar i Docker-behållaren](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [Kopiera Docker-loggarna till det lokala filsystemet](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
@@ -186,14 +281,14 @@ Den rekommenderade versionen av Dispatcher Tools är den som medföljer AEM as a
 
 ## Så här uppdaterar du baslinjeuppsättningen med Apache- och Dispatcher-konfigurationer
 
-Baslinjeuppsättningen av konfigurationen för Apache och Dispatcher förbättras regelbundet och släpps med den AEM as a Cloud Service SDK-versionen. Det är bästa sättet att införliva förbättringarna av baslinjekonfigurationen i AEM projekt och undvika [lokal validering](#validate-configurations) och fel i molnhanterarens pipeline. Uppdatera dem med `update_maven.sh` skript från `.../dispatcher-sdk-x.x.x/bin` mapp.
+Baslinjeuppsättningen av konfigurationen för Apache och Dispatcher förbättras regelbundet och släpps med den AEM as a Cloud Service SDK-versionen. Det är bästa sättet att införliva förbättringarna av baslinjekonfigurationen i AEM projekt och undvika [lokal validering](#validate-configurations) och fel i molnhanterarens pipeline. Uppdatera dem med `update_maven.sh` skript `.../dispatcher-sdk-x.x.x/bin` mapp.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat.*
 
 
-Låt oss anta att du tidigare har skapat ett AEM projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)var de ursprungliga konfigurationerna för Apache och Dispatcher aktuella. Med hjälp av dessa baslinjekonfigurationer har dina projektspecifika konfigurationer skapats genom att återanvända och kopiera filer som `*.vhost`, `*.conf`, `*.farm` och `*.any` från `dispatcher/src/conf.d` och `dispatcher/src/conf.dispatcher.d` mappar. Din lokala Dispatcher-validering och Cloud Manager-pipelines fungerade bra.
+Låt oss anta att du tidigare har skapat ett AEM projekt med [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)var de ursprungliga konfigurationerna för Apache och Dispatcher aktuella. Med hjälp av dessa baslinjekonfigurationer har dina projektspecifika konfigurationer skapats genom att återanvända och kopiera filer som `*.vhost`, `*.conf`, `*.farm` och `*.any` från `dispatcher/src/conf.d` och `dispatcher/src/conf.dispatcher.d` mappar. Din lokala Dispatcher-validering och Cloud Manager-pipelines fungerade som de ska.
 
 Samtidigt har Apache- och Dispatcher-konfigurationerna förbättrats för baslinjen av olika skäl, till exempel nya funktioner, säkerhetskorrigeringar och optimering. De släpps via en nyare version av Dispatcher Tools som en del av den AEM as a Cloud Service versionen.
 
@@ -201,32 +296,32 @@ När du validerar projektspecifika Dispatcher-konfigurationer mot den senaste Di
 
 + Verifiera att valideringen inte fungerar med den senaste versionen av Dispatcher Tools
 
-   ```shell
-   $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
-   
-   ...
-   Phase 3: Immutability check
-   empty mode param, assuming mode = 'check'
-   ...
-   ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
-   ```
+  ```shell
+  $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
+  
+  ...
+  Phase 3: Immutability check
+  empty mode param, assuming mode = 'check'
+  ...
+  ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
+  ```
 
 + Uppdatera oföränderliga filer med `update_maven.sh` script
 
-   ```shell
-   $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
-   
-   ...
-   Updating dispatcher configuration at folder 
-   running in 'extract' mode
-   running in 'extract' mode
-   reading immutable file list from /etc/httpd/immutable.files.txt
-   preparing 'conf.d/available_vhosts/default.vhost' immutable file extraction
-   ...
-   immutable files extraction COMPLETE
-   fd72f4521fa838daaaf006bb8c9c96ed33a142a2d63cc963ba4cc3dd228948fe
-   Cloud manager validator 2.0.53
-   ```
+  ```shell
+  $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
+  
+  ...
+  Updating dispatcher configuration at folder 
+  running in 'extract' mode
+  running in 'extract' mode
+  reading immutable file list from /etc/httpd/immutable.files.txt
+  preparing 'conf.d/available_vhosts/default.vhost' immutable file extraction
+  ...
+  immutable files extraction COMPLETE
+  fd72f4521fa838daaaf006bb8c9c96ed33a142a2d63cc963ba4cc3dd228948fe
+  Cloud manager validator 2.0.53
+  ```
 
 + Verifiera uppdaterade oföränderliga filer som `dispatcher_vhost.conf`, `default.vhost`och `default.farm` och vid behov göra relevanta ändringar i dina anpassade filer som härleds från dessa filer.
 
@@ -257,15 +352,26 @@ The `host.docker.internal` är ett värdnamn som tillhandahålls Docker-behålla
 När `bin/docker_run src host.docker.internal:4503 8080` i meddelandet __Väntar tills host.docker.internal är tillgänglig__ och sedan:
 
 1. Kontrollera att den installerade versionen av Docker är 18.03 eller senare
-2. Det kan finnas en lokal dator som förhindrar registrering/upplösning av `host.docker.internal` namn. Använd i stället din lokala IP-adress.
-   + Windows:
-   + Kör från kommandotolken `ipconfig`och registrera värddatorns __IPv4-adress__ värddatorn.
-   + Kör sedan `docker_run` med denna IP-adress:
-      `bin\docker_run src <HOST IP>:4503 8080`
-   + macOS Linux®:
-   + Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
-   + Kör sedan `docker_run` med hjälp av värdens IP-adress:
-      `bin/docker_run.sh src <HOST IP>:4503 8080`
+1. Det kan finnas en lokal dator som förhindrar registrering/upplösning av `host.docker.internal` namn. Använd i stället din lokala IP-adress.
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
++ Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
++ Kör sedan `docker_run` med hjälp av värdens IP-adress: `$ bin/docker_run.sh src <HOST IP>:4503 8080`
+
+>[!TAB Windows]
+
++ Kör från kommandotolken `ipconfig`och registrera värddatorns __IPv4-adress__ värddatorn.
++ Kör sedan `docker_run` med denna IP-adress: `$ bin\docker_run src <HOST IP>:4503 8080`
+
+>[!TAB Linux]
+
++ Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
++ Kör sedan `docker_run` med hjälp av värdens IP-adress: `$ bin/docker_run.sh src <HOST IP>:4503 8080`
+
+>[!ENDTABS]
 
 #### Exempel på fel
 
