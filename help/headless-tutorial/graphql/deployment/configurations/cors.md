@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 181023c9584bcd5084778ebf00d34f8ecaa74524
+source-git-commit: f8fd13d3f315aa0bd9f268b9fe81b9d9c17b243c
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -140,7 +140,7 @@ AEM Publish (och Preview)-tjänstens Dispatcher måste vara konfigurerad för CO
 1. Öppna värdkonfigurationsfilen för AEM Publish-tjänsten i Dispatcher-konfigurationsprojektet, som vanligtvis finns på `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
 2. Kopiera innehållet i `<IfDefine ENABLE_CORS>...</IfDefine>` nedan i den aktiverade värdkonfigurationsfilen.
 
-   ```{line-numbers="true"}
+   ```{ highlight="19"}
    <VirtualHost *:80>
      ...
      <IfModule mod_headers.c>
