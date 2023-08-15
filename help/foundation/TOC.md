@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: fc183d88bf772944562d0dd825b4d590266f3ffd
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 14%
+source-wordcount: '219'
+ht-degree: 13%
 
 ---
 
@@ -36,13 +36,14 @@ ht-degree: 14%
    + [Förstå bästa praxis för Java API](./development/understand-java-api-best-practices.md)
    + [Förstå export av försäljningsmodell](./development/understand-sling-model-exporter.md)
 + Projekt {#projects}
-   + [Utveckla AEM](./projects/develop-aem-projects.md)
+   + [AEM projekt](./projects/develop-aem-projects.md)
    + [Använd projektmallar](./projects/use-project-masters.md)
 + Dokumentskydd {#security}
    + [AEM säkerhetsmeddelande (november 2018)](./security/aem-security-notification-2018-11.md)
    + [Utveckla för Cross-Origin Resource Sharing (CORS)](./security/develop-for-cross-origin-resource-sharing.md)
    + [CORS (Cross-Origin Resource Sharing)](./security/understand-cross-origin-resource-sharing.md)
    + [Använda SSL-guiden](./security/use-the-ssl-wizard.md)
+   + [ModSecurity CRS DoS Attack Protection](./security/modsecurity-crs-dos-attack-protection.md)
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflöde](./workflow/use-workflow.md)
