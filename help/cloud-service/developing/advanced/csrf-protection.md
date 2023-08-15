@@ -10,7 +10,7 @@ doc-type: Code Sample
 last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 38db146129ceab83af50bf97cd6eb2d7179adbbf
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du skapar och lägger till AEM CSRF-token för tillåtna POST-, PUT och Delete-begäranden till AEM för autentiserade användare.
 
-AEM kräver att en giltig CSRF-token skickas för __autentiserad__ __POST__, __PUT, eller __DELETE__ HTTP-begäranden till både AEM Author och Publish Services.
+AEM kräver att en giltig CSRF-token skickas för __autentiserad__ __POST__, __PUT, eller __DELETE__ HTTP-begäranden till både AEM Author och Publish.
 
 CSRF-token krävs inte för __GET__ förfrågningar, eller __anonym__ förfrågningar.
 
@@ -44,7 +44,7 @@ Lägg till `granite.csrf.standalone` som ett beroende till klientbiblioteket som
 
 ## Skräddarsydd formulärinlämning med CSRF-skydd
 
-Om [`granite.csrf.standalone` klientbibliotek](#csrf-client-library) är inte aktiverat för ditt användningsfall, kan du lägga till en CSRF-token manuellt i ett formulär som skickas. I följande exempel visas hur du lägger till en CSRF-token i en formulärsändning.
+Om användning av [`granite.csrf.standalone` klientbibliotek](#csrf-client-library) är inte aktiverat för ditt användningsfall, kan du lägga till en CSRF-token manuellt i ett formulär som skickas. I följande exempel visas hur du lägger till en CSRF-token i en formulärsändning.
 
 Detta kodfragment visar hur CSRF-token kan hämtas från AEM när formulär skickas och läggas till i en formulärinmatning med namnet `:cq_csrf_token`. Eftersom CSRF-token har kort livslängd är det bäst att hämta och ställa in CSRF-token omedelbart innan formuläret skickas, vilket säkerställer dess giltighet.
 
@@ -61,7 +61,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     let csrfTokenInput = form.querySelector('input[name=":cq_csrf_token"]');
     if (!csrfTokenInput?.value) {
         // If the form does not have a CSRF token input, add one.
-        form.insertAdjacentHTML('afterend', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
+        form.insertAdjacentHTML('beforeend', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
     } else {
         // If the form already has a CSRF token input, update the value.
         csrfTokenInput.value = json.token;
@@ -73,7 +73,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 
 ## Hämta med CSRF-skydd
 
-Om [`granite.csrf.standalone` klientbibliotek](#csrf-client-library) är inte aktiverat för ditt användningsfall, kan du lägga till en CSRF-token manuellt i en XHR-begäran eller hämta begäranden. I följande exempel visas hur du lägger till en CSRF-token i en XHR som skapats med fetch.
+Om användning av [`granite.csrf.standalone` klientbibliotek](#csrf-client-library) är inte aktiverat för ditt användningsfall, kan du lägga till en CSRF-token manuellt i en XHR-begäran eller hämta begäranden. I följande exempel visas hur du lägger till en CSRF-token i en XHR som skapats med fetch.
 
 Detta kodfragment visar hur du hämtar en CSRF-token från AEM och lägger till den i en hämtningsbegäran `CSRF-Token` HTTP-begärandehuvud. Eftersom CSRF-token har kort livslängd är det bäst att hämta och ställa in CSRF-token omedelbart innan hämtningsbegäran görs, vilket säkerställer dess giltighet.
 
@@ -101,7 +101,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher-konfiguration
 
-När du använder CSRF-token i AEM Publish-tjänsten måste Dispatcher-konfigurationen uppdateras för att tillåta GET-begäranden till CSRF-tokenslutpunkten. Följande konfiguration tillåter GET-begäranden till CSRF-tokenslutpunkten i AEM Publish-tjänsten. Om den här konfigurationen inte läggs till returnerar CSRF-tokenslutpunkten ett 404-svar som inte hittades.
+När du använder CSRF-token på AEM Publiceringstjänst måste Dispatcher-konfigurationen uppdateras för att tillåta GET-begäranden till CSRF-tokenslutpunkten. Följande konfiguration tillåter GET-begäranden till CSRF-tokenslutpunkten i AEM Publiceringstjänst. Om den här konfigurationen inte läggs till returnerar CSRF-tokenslutpunkten ett 404-svar som inte hittades.
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
