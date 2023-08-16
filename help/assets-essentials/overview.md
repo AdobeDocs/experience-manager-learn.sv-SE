@@ -5,20 +5,20 @@ recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
 
-# Assets Essentials Videos
+# Assets Essentials-videor
 
 ![Assets Essentials](./assets/overview/hero.png)
 
 Experience Manager Assets Essentials har ett smidigt användargränssnitt för enklare filhantering och samarbete.
 
-Kolla in de här videofilmerna om hur du använder Assets Essentials för att hantera ditt material och hur du kan integrera det med Adobe Journey Orchestrator!
+Kolla in de här videofilmerna om hur du använder Assets Essentials för att hantera ditt material och hur du kan integrera det med Adobe Workfront och Adobe Journey Orchestrator!
 
 ## Läs mer om Assets Essentials
 
@@ -42,11 +42,11 @@ Kolla in de här videofilmerna om hur du använder Assets Essentials för att ha
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
-      <strong>Assets Essentials-dokumentation</strong>
+      <strong>Assets Essentials dokumentation</strong>
       </a>
    </div>
    <p>
-      <em>Läs Assets Essentials produktdokumentation!</em>
+      <em>Läs produktdokumentationen för Assets Essentials!</em>
    <p>
 </td>
 <td>
