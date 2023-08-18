@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
-source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,17 @@ ht-degree: 0%
 
 Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Det finns flera sätt att förifylla adaptiva formulärfält. I den här artikeln ska vi titta närmare på hur man fyller i anpassningsbara formulär med AEM Forms förifyllningstjänst.
 
-Om du vill veta mer om olika metoder för att förifylla adaptiva formulär, [följ den här dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+Om du vill veta mer om olika metoder för att förifylla adaptiva formulär, [följ dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 Om du vill förifylla ett anpassat formulär med förifyllningstjänsten måste du skapa en klass som implementerar `com.adobe.forms.common.service.DataXMLProvider` gränssnitt. Metoden `getDataXMLForDataRef` har den logik som krävs för att skapa och returnera data som det adaptiva formuläret använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataströmmen för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
 
 I kodfragmentet nedan har vi en klass som implementerar gränssnittet DataXMLProvider. Vi får åtkomst till den inloggade användaren och hämtar sedan den inloggade användarens profilinformation. Sedan skapar vi ett XML-dokument med ett rotelemente som kallas&quot;data&quot; och lägger till lämpliga element till den här datanoden. När XML-dokumentet har konstruerats returneras XML-dokumentets indataström.
 
 Den här klassen görs sedan i OSGi-paketet och distribueras till AEM. När paketet har distribuerats är den här förifyllningstjänsten sedan tillgänglig för att användas som förifyllningstjänst i ditt adaptiva formulär.
+
+>[!NOTE]
+>
+>Du kan förifylla formulär med xml- eller json-data på det sätt som anges i den här artikeln.
 
 ```java
 package com.aem.prefill.core;
