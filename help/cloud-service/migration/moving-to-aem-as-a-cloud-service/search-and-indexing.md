@@ -9,9 +9,9 @@ level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 77b960315c07ba194642a412a0cc6049edcf7bd2
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,9 @@ Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar AEM 6-index
 
 ![Indexkonverterare](./assets/index-converter.png)
 
-Använd [Indexkonverteringsverktyg](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) om du vill konvertera anpassade indexdefinitioner för ekv till AEM as a Cloud Service kompatibla indexdefinitioner.
+När du omfaktoriserar din kodbas använder du [Indexkonverteringsverktyg](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) om du vill konvertera anpassade indexdefinitioner för ekv till AEM as a Cloud Service kompatibla indexdefinitioner.
+
+Granska [dokumentation för konverterare av index](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html) för den kompletta och aktuella uppsättningen indexkonverterarfunktioner.
 
 ## Viktiga aktiviteter
 
@@ -64,7 +66,7 @@ Se även till att du har fullföljt tidigare övningar:
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes#cloud-acceleration-bootcamp---session-7-search-and-indexing" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testa indexering</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testa med indexering</span>
             </a>
         </td>
     </tr>
