@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Så här skaffar du React-appen:
    >
    > Kontrollera att du har publicerat projektkonfigurationen, Content Fragment-modeller, redigerade innehållsfragment, GraphQL slutpunkter och beständiga frågor från tidigare steg.
    >
-   > Om du utförde stegen ovan för lokal AEM Author SDK kan du peka på `http://localhost:4502` och `REACT_APP_AUTH_METHOD`&#39;s value to `basic`.
+   > Om du utförde ovanstående steg på AEM Author SDK kan du peka på `http://localhost:4502` och `REACT_APP_AUTH_METHOD`&#39;s value to `basic`.
 
 
 1. Gå till kommandoraden `aem-guides-wknd-graphql/basic-tutorial` mapp
@@ -489,6 +489,10 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
 ## Prova appen
 
 Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medlemmar_ länkar. Du kan också lägga till fler team och/eller medlemmar i teamalfa genom att lägga till innehållsfragment i AEM.
+
+>[!IMPORTANT]
+>
+>Om du vill verifiera implementeringsändringarna eller om du inte kan få programmet att fungera efter ändringarna ovan, se [självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) lösningsgren.
 
 ## Under hålet
 
