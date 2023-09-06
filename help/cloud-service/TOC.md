@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+source-git-commit: 6cbd8f3c49d44e75337715c35c198008da8ae7b9
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1023'
 ht-degree: 11%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 11%
             + [Översikt](./developing/extensibility/ui/content-fragments/overview.md)
             + Exempel{#examples}
                + [Generering av AI-bilder](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
-               + [Uppdatera massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
+               + [Uppdatering av massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [Kolumner för anpassat stödraster](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
                + [Exportera som XML](./developing/extensibility/ui/content-fragments/examples/editor-export-to-xml.md)
                + [Verktygsfältsknapp för textredigering](./developing/extensibility/ui/content-fragments/examples/editor-rte-toolbar.md)
@@ -83,7 +83,7 @@ ht-degree: 11%
    + Grundläggande om utveckling{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [Lokal utvecklingsmiljö](./developing/basics/local-development-environment.md)
-      + [AEM Project Archetype](./developing/basics/aem-project-archetype.md)
+      + [AEM Project Archettype](./developing/basics/aem-project-archetype.md)
       + [AEM-projektstruktur](./developing/basics/project-structure.md)
       + [Mutable vs. Immutable Content](./developing/basics/mutable-immutable.md)
       + [Databasstrukturpaket](./developing/basics/repository-structure-package.md)
@@ -128,7 +128,11 @@ ht-degree: 11%
          + [Traversal-varningar](./debugging/cloud-service/risks/traversals.md)
 + Innehållsleverans{#content-delivery}
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html)
-+ Åtkomst till AEM{#accessing}
++ Cachning{#caching}
+   + [Översikt](./caching/overview.md)
+   + [AEM Publiceringstjänst](./caching/publish.md)
+   + [AEM Author Service](./caching/author.md)
++ Åtkomst AEM{#accessing}
    + [Översikt](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
    + [Adobe IMS-användargrupper](./accessing/adobe-ims-user-groups.md)
@@ -159,7 +163,7 @@ ht-degree: 11%
       + [BPA och CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [Verktyg för AEM](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [Databasmodernisering](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [asset compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [Asset compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [Sökning och indexering](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + Innehållsmigrering {#content-migration}
@@ -193,7 +197,7 @@ ht-degree: 11%
       + [5 - Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 - Anpassad överföringshanterare](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
       + [7 - Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 - Inkludera Cloud Services och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [8 - Inkludera Cloud Service och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [9 - Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
       + [10 - Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [11 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
@@ -206,9 +210,9 @@ ht-degree: 11%
       + [Skapa formulär](./forms/create-first-af/create-af.md)
       + [Konfigurera rotpanel](./forms/create-first-af/configure-root-panel.md)
       + [Konfigurera personpanel](./forms/create-first-af/configure-people-panel.md)
-      + [Konfigurera inkomstpanelen](./forms/create-first-af/configure-income-panel.md)
+      + [Konfigurera inkomstpanel](./forms/create-first-af/configure-income-panel.md)
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
-      + [Konfigurera startpanelen](./forms/create-first-af/configure-start-panel.md)
+      + [Konfigurera startpanel](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
    + Anpassad sändningstjänst med headless-formulär{#custom-submit-headless-forms}
       + [1 - Introduktion](./forms/custom-submit-headless-forms/introduction.md)
@@ -238,7 +242,7 @@ ht-degree: 11%
       + [Skapa tjänstautentiseringsuppgifter](./forms/forms-cs-assembler/service-credentials.md)
       + [Skapa JWT-token](./forms/forms-cs-assembler/create-jwt.md)
       + [Skapa åtkomsttoken](./forms/forms-cs-assembler/create-access-token.md)
-      + [Sammanställ filer i PDF](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [Sammanställ PDF-filer](./forms/forms-cs-assembler/assemble-pdf-files.md)
       + [PDF/A-verktyg](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testa lösningen](./forms/forms-cs-assembler/test.md)
       + [Utmaning](./forms/forms-cs-assembler/challenge.md)
@@ -247,7 +251,7 @@ ht-degree: 11%
       + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)
       + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
-      + [Skicka frågor](./forms/forms-cs-azure-portal/query-submitted-data.md)
+      + [Frågeöverföringar](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + Spara och återuppta ifyllning av formulär{#prefill-azure-storage}
       + [1 - Introduktion](./forms/prefill-azure-storage/introduction.md)
       + [2- komponenten Skapa sida](./forms/prefill-azure-storage/page-component.md)
@@ -284,7 +288,7 @@ ht-degree: 11%
       + [Skapa datakälla](./forms/integrate-with-salesforce/create-data-source.md)
       + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
-      + [Testa klickningshändelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
+      + [Test click-händelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
    + Spara formulärinskick i en och samma enhet{#one-drive}
       + [Lagra formulärdata på en enhet](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Lagra formulärdata i SharePoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
