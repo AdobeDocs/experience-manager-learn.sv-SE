@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
+source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 1%
    + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Visar sidan Tack](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
+   + [Anpassa tacksidan](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [Skicka till extern slutpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Skickar e-post](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Betalningstid för begärandearbetsflöde](handling-form-submissions/paid-time-off-request-workflow.md)
