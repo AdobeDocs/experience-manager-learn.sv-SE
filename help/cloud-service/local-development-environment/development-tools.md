@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -70,11 +70,27 @@ Homebrew är en pakethanterare med öppen källkod för macOS, Windows och Linux
 1. Öppna terminalen
 1. Kontrollera om Homebrew redan är installerat genom att köra kommandot: `brew --version`.
 1. Installera Homebrew om det inte finns installerat
-   + [Installera homebrew på macOS](https://brew.sh/)
-      + Hemma på macOS kräver [Xcode](https://apps.apple.com/us/app/xcode/id497799835) eller [Kommandoradsverktyg](https://developer.apple.com/download/more/), kan installeras via kommandot:
-         + `xcode-select --install`
-   + [Installera Homebrew i Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [Installera homebrew i Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+[Homebrew on macOS](https://brew.sh/) kräver [Xcode](https://apps.apple.com/us/app/xcode/id497799835) eller [Kommandoradsverktyg](https://developer.apple.com/download/more/), kan installeras via kommandot:
+
+```shell
+$ xcode-select --install
+```
+
+>[!TAB Windows]
+
+[Installera homebrew i Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!TAB Linux]
+
+[Installera Homebrew i Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!ENDTABS]
+
 1. Kontrollera att Homebrew är installerat genom att köra kommandot: `brew --version`
 
 ![Homebreiska](./assets/development-tools/homebrew.png)
@@ -161,7 +177,7 @@ Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som anvä
 
 The [ADOBE I/O CLI](https://github.com/adobe/aio-cli), eller `aio`, ger kommandoradsåtkomst till en mängd olika Adobe-tjänster, inklusive [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) och [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). CLI för Adobe I/O spelar en viktig roll för utvecklingen på AEM as a Cloud Service eftersom den ger utvecklarna möjlighet att
 
-+ Loggar från AEM som Cloud Services
++ Loggar från AEM som Cloud Service
 + Hantera Cloud Manager-pipelines från CLI
 + Distribuera till [AEM miljöer för snabb utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
