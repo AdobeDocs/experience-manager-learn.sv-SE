@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1851'
 ht-degree: 1%
 
 ---
@@ -176,6 +176,7 @@ ht-degree: 1%
    + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
    + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
    + [Spara skickade data i strängvariabel](custom-workflow-steps/save-submitted-data-in-string-variable.md)
+   + [Extrahera dokument från listan med dokument](custom-workflow-steps/extract-document-from-list.md)
 + Anpassad arbetsflödeskomponent{#custom-workflow-component}
    + [1-Introduktion](custom-workflow-component/introduction.md)
    + [2-Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
