@@ -7,16 +7,21 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 46728ac6ad37590413e247d23262233626b0575b
+source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
 # Utveckla för Cross-Origin Resource Sharing (CORS)
 
-Ett kort exempel på hur man utnyttjar [!DNL CORS] för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan.
+Ett kort exempel på hur man utnyttjar [!DNL CORS] för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan. I det här exemplet används CORS OSGi-konfigurationen för att aktivera CORS-åtkomst på AEM. OSGi-konfigurationsmetoden är användbar när:
+
++ Ett enda ursprung är åtkomst AEM publiceringsinnehåll
++ CORS-åtkomst krävs för AEM författare
+
+Om åtkomst till AEM publicering krävs med flera ursprung finns mer information i [det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -37,7 +42,7 @@ Den här webbsidan har logik för att
 1. När du klickar på knappen
 1. Gör en [!DNL AJAX GET] begäran till `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
 1. Hämtar `jcr:title` från JSON-svaret
-1. Injicerar `jcr:title` till DOM
+1. Infogar `jcr:title` till DOM
 
 ```xml
 <html>
