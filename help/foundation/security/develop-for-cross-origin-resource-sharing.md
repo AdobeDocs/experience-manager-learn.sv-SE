@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 6754ccd7c17bcfa30b7200cb67f5ebd290912cb4
+source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 Ett kort exempel på hur man utnyttjar [!DNL CORS] för att komma åt AEM från ett externt webbprogram via JavaScript på klientsidan. I det här exemplet används CORS OSGi-konfigurationen för att aktivera CORS-åtkomst på AEM. OSGi-konfigurationsmetoden är användbar när:
 
-+ Ett enda ursprung är åtkomst AEM publiceringsinnehåll
-+ CORS-åtkomst krävs för AEM författare
+* Ett enda ursprung är åtkomst AEM publiceringsinnehåll
+* CORS-åtkomst krävs för AEM författare
 
 Om åtkomst till AEM publicering krävs med flera ursprung finns mer information i [det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
