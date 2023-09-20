@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: f619c431d91271b2031dcb233f3e08c3008b78ed
+source-git-commit: 58347d4f8ef50375385342671f68c26502aecba4
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -33,20 +33,20 @@ CORS krävs för webbläsarbaserade anslutningar till AEM GraphQL API:er när kl
 |----------------------------:|:---------------------:|:-------------:|:---------:|:----------------:|
 | Kräver CORS-konfiguration | ✔ | ✔ | ✘ | ✘ |
 
-## AEM Author
+## AEM
 
-Att aktivera CORS på AEM Author-tjänsten skiljer sig från tjänsterna AEM Publish och AEM Preview. AEM Author-tjänsten kräver att en OSGi-konfiguration läggs till i körlägesmappen för AEM Author-tjänsten och använder ingen Dispatcher-konfiguration.
+Att aktivera CORS på AEM Author-tjänsten skiljer sig från AEM Publish and AEM Preview-tjänster. AEM Author-tjänsten kräver att en OSGi-konfiguration läggs till i AEM Author-tjänstens körlägesmapp och använder inte en Dispatcher-konfiguration.
 
 ### OSGi-konfiguration
 
 Konfigurationsfabriken AEM CORS OSGi definierar villkoren för att tillåta CORS HTTP-begäranden.
 
-| Klienten ansluter till | AEM Author | AEM Publish | AEM |
+| Klienten ansluter till | AEM | AEM Publish | AEM |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | Kräver CORS OSGi-konfiguration | ✔ | ✘ | ✘ |
 
 
-I exemplet nedan definieras en OSGi-konfiguration för AEM Author (`../config.author/..`) så att det bara är aktivt på AEM Author-tjänsten.
+I exemplet nedan definieras en OSGi-konfiguration för AEM författare (`../config.author/..`) så att det bara är aktivt på AEM Author-tjänsten.
 
 Nyckelkonfigurationsegenskaperna är:
 
@@ -55,12 +55,12 @@ Nyckelkonfigurationsegenskaperna är:
    + Lägg till följande mönster om du vill ha stöd AEM GraphQL beständiga frågor: `/graphql/execute.json.*`
    + Lägg till följande mönster om du vill ha stöd för Experience Fragments: `/content/experience-fragments/.*`
 + `supportedmethods` Anger tillåtna HTTP-metoder för CORS-begäranden. Om du vill ha stöd AEM GraphQL beständiga frågor (och Experience Fragments) lägger du till `GET` .
-+ `supportedheaders` inkluderar `"Authorization"` som begäran till AEM Author ska auktoriseras.
-+ `supportscredentials` är inställd på `true` på begäran av AEM Author bör auktoriseras.
++ `supportedheaders` inkluderar `"Authorization"` som en begäran till AEM författare ska godkännas.
++ `supportscredentials` är inställd på `true` som begäran till AEM författare ska godkännas.
 
 [Läs mer om CORS OSGi-konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
-Följande exempel stöder användning av AEM GraphQL beständiga frågor på AEM Author. Om du vill använda klientdefinierade GraphQL-frågor lägger du till en GraphQL-slutpunkts-URL i `allowedpaths` och `POST` till `supportedmethods`.
+Följande exempel stöder användning av AEM GraphQL beständiga frågor på AEM författare. Om du vill använda klientdefinierade GraphQL-frågor lägger du till en GraphQL-slutpunkts-URL i `allowedpaths` och `POST` till `supportedmethods`.
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -101,27 +101,27 @@ Följande exempel stöder användning av AEM GraphQL beständiga frågor på AEM
 
 ## AEM Publish
 
-Att aktivera CORS för AEM Publish (och Preview) skiljer sig från AEM Author. AEM Publish-tjänsten kräver att en AEM Dispatcher-konfiguration läggs till i AEM Publish Dispatcher-konfigurationen. AEM Publish använder inte en [OSGi-konfiguration](#osgi-configuration).
+Att aktivera CORS för AEM publicerings- (och förhandsgranskningstjänster) skiljer sig från AEM författartjänst. AEM Publish-tjänsten kräver att en AEM Dispatcher-konfiguration läggs till i AEM Publish Dispatcher-konfiguration. AEM Publish använder inte en [OSGi-konfiguration](#osgi-configuration).
 
-Kontrollera följande när du konfigurerar CORS på AEM Publish:
+Kontrollera följande när du konfigurerar CORS vid AEM publicering:
 
-+ The `Origin` HTTP-begärandehuvudet kan inte skickas till AEM Publish-tjänsten genom att ta bort `Origin` rubrik (om den lagts till tidigare) från AEM Dispatcher-projektets `clientheaders.any` -fil. Alla `Access-Control-` sidhuvuden bör tas bort från `clientheaders.any` file och Dispatcher hanterar dem, inte AEM Publish-tjänsten.
++ The `Origin` HTTP-begärandehuvudet kan inte skickas till AEM Publish-tjänsten genom att ta bort `Origin` rubrik (om den lagts till tidigare) från AEM Dispatcher-projektets `clientheaders.any` -fil. Alla `Access-Control-` sidhuvuden bör tas bort från `clientheaders.any` fil och Dispatcher hanterar dem, inte AEM Publiceringstjänst.
 + Om du har [CORS OSGi-konfigurationer](#osgi-configuration) som är aktiverat i AEM Publish-tjänsten måste du ta bort dem och migrera deras konfigurationer till [Dispatcher-värdkonfiguration](#set-cors-headers-in-vhost) enligt nedan.
 
 ### Dispatcher-konfiguration
 
 AEM Publish (och Preview)-tjänstens Dispatcher måste vara konfigurerad för CORS.
 
-| Klienten ansluter till | AEM Author | AEM Publish | AEM |
+| Klienten ansluter till | AEM | AEM Publish | AEM |
 |-------------------------------------:|:----------:|:-------------:|:-------------:|
 | Kräver konfiguration av Dispatcher CORS | ✘ | ✔ | ✔ |
 
 #### Ange CORS-huvuden i värden
 
-1. Öppna värdkonfigurationsfilen för AEM Publish-tjänsten i Dispatcher-konfigurationsprojektet, som vanligtvis finns på `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
+1. Öppna värdkonfigurationsfilen för AEM Publish-tjänsten i Dispatcher-konfigurationsprojektet, vanligtvis på `dispatcher/src/conf.d/available_vhosts/<example>.vhost`
 2. Kopiera innehållet i `<IfDefine ENABLE_CORS>...</IfDefine>` nedan i den aktiverade värdkonfigurationsfilen.
 
-   ```{ highlight="19"}
+   ```{ highlight="17"}
    <VirtualHost *:80>
      ...
      <IfModule mod_headers.c>
@@ -176,7 +176,7 @@ AEM Publish (och Preview)-tjänstens Dispatcher måste vara konfigurerad för CO
    </VirtualHost>
    ```
 
-3. Matcha önskade original-användare som har åtkomst till din AEM Publish-tjänst genom att uppdatera det reguljära uttrycket på raden nedan. Om du behöver ha flera ursprung duplicerar du den här raden och uppdaterar för varje ursprungs-/ursprungsmönster.
+3. Matcha önskade original-användare som har åtkomst till tjänsten AEM Publish genom att uppdatera det reguljära uttrycket på raden nedan. Om du behöver ha flera ursprung duplicerar du den här raden och uppdaterar för varje ursprungs-/ursprungsmönster.
 
    ```
    SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*.your-domain.tld(:\d+)?$)#" CORSTrusted=true
