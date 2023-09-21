@@ -1,6 +1,6 @@
 ---
-title: Konfigurera lokal AEM för AEM as a Cloud Service utveckling
-description: Konfigurera den lokala AEM-miljön med hjälp av den AEM as a Cloud Service SDK:ns QuickStart Jar.
+title: Konfigurera lokal AEM SDK för AEM as a Cloud Service Development
+description: Konfigurera den lokala AEM SDK-miljön med hjälp av den AEM as a Cloud Service SDK:ns QuickStart Jar.
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -10,14 +10,14 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1793'
 ht-degree: 1%
 
 ---
 
-# Konfigurera lokal AEM {#set-up-local-aem-runtime}
+# Konfigurera lokal AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -63,7 +63,7 @@ $ java --version
 
 ## Hämta AEM as a Cloud Service SDK
 
-Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som används för att köra AEM Author och Publicera lokalt för utveckling, samt den kompatibla versionen av Dispatcher Tools.
+Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som används för att köra AEM författare och publicera lokalt för utveckling, samt den kompatibla versionen av Dispatcher Tools.
 
 1. Logga in på [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) med din Adobe ID
    + Observera att din Adobe-organisation __måste__ etableras för AEM as a Cloud Service att hämta AEM as a Cloud Service SDK.
@@ -76,9 +76,9 @@ Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar so
 
 1. Zippa upp det nedladdade `aem-sdk-XXX.zip` fil
 
-## Konfigurera lokal AEM Author-tjänst{#set-up-local-aem-author-service}
+## Konfigurera lokal AEM Author Service{#set-up-local-aem-author-service}
 
-Den lokala AEM Author Service ger utvecklare en lokal upplevelse som digitala marknadsförare/innehållsförfattare delar för att skapa och hantera innehåll.  AEM Author Service är utformad både som en redigerings- och förhandsvisningsmiljö, vilket gör att de flesta valideringar av funktionsutveckling kan utföras mot den, vilket gör den till en viktig del av den lokala utvecklingsprocessen.
+Den lokala AEM författartjänsten ger utvecklare en lokal upplevelse som digitala marknadsförare/innehållsförfattare delar för att skapa och hantera innehåll.  AEM Author Service är utformad både som en redigerings- och förhandsvisningsmiljö, vilket gör att de flesta valideringar av funktionsutveckling kan utföras mot den, vilket gör den till en viktig del i den lokala utvecklingsprocessen.
 
 1. Skapa mappen `~/aem-sdk/author`
 1. Kopiera __Quickstart JAR__ fil till  `~/aem-sdk/author` och ändra namnet till `aem-author-p4502.jar`
@@ -87,7 +87,7 @@ Den lokala AEM Author Service ger utvecklare en lokal upplevelse som digitala ma
       + Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 
    Du *inte* starta AEM som Cloud Service QuickStart Jar [genom att dubbelklicka](#troubleshooting-double-click).
-1. Gå till den lokala AEM Author Service på [http://localhost:4502](http://localhost:4502) i en webbläsare
+1. Gå till den lokala AEM författartjänsten på [http://localhost:4502](http://localhost:4502) i en webbläsare
 
 >[!BEGINTABS]
 
@@ -121,9 +121,9 @@ $ java -jar aem-author-p4502.jar
 >[!ENDTABS]
 
 
-## Konfigurera lokal AEM-publiceringstjänst
+## Konfigurera lokal AEM Publiceringstjänst
 
-Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som slutanvändarna av AEM har, till exempel den webbplats som är AEM. En lokal AEM-publiceringstjänst är viktig eftersom den är integrerad med AEM SDK:s [Dispatcher-verktyg](./dispatcher-tools.md) och gör det möjligt för utvecklare att röka och finjustera slutanvändarupplevelsen.
+Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som slutanvändarna av AEM har, till exempel den webbplats som är AEM. En lokal AEM är viktig eftersom den kan integreras med AEM SDK:er [Dispatcher-verktyg](./dispatcher-tools.md) och gör det möjligt för utvecklare att röka och finjustera slutanvändarupplevelsen.
 
 1. Skapa mappen `~/aem-sdk/publish`
 1. Kopiera __Quickstart JAR__ fil till  `~/aem-sdk/publish` och ändra namnet till `aem-publish-p4503.jar`
@@ -168,7 +168,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## Konfigurera lokala AEM i förhandsversionsläge
 
-Den lokala AEM kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) som gör det möjligt för en utvecklare att bygga vidare på den AEM as a Cloud Service nästa releases funktioner. Förhandsversionen aktiveras genom att användaren skickar `-r prerelease` argument på den lokala AEM körtidens första start. Detta kan användas med både lokala AEM Author- och AEM Publish-tjänster.
+Den lokala AEM kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html) som gör det möjligt för en utvecklare att bygga vidare på den AEM as a Cloud Service nästa releases funktioner. Förhandsversionen aktiveras genom att användaren skickar `-r prerelease` argument på den lokala AEM körtidens första start. Detta kan användas med både AEM och AEM publiceringstjänster.
 
 
 >[!BEGINTABS]
@@ -259,14 +259,14 @@ Tillgängliga permutationer är följande:
 
 Observera att portnumret kan vara vilken tillgänglig port som helst på den lokala utvecklingsdatorn, men enligt konvention:
 
-+ Port __4502__ används för __lokal AEM-författartjänst__
-+ Port __4503__ används för __lokal AEM-publiceringstjänst__
++ Port __4502__ används för __lokal AEM__
++ Port __4503__ används för __lokal AEM__
 
 Om du ändrar dessa kan du behöva justera AEM SDK-konfigurationer
 
 ## Stoppa en lokal AEM
 
-Om du vill stoppa en lokal AEM, antingen AEM Author eller Publish, öppnar du kommandoradsfönstret som användes för att starta AEM Runtime och trycker på `Ctrl-C`. Vänta på att AEM stängs av. Kommandoradsprompten är tillgänglig när avstängningsprocessen är slutförd.
+Om du vill stoppa en lokal AEM, antingen AEM författare eller publiceringstjänst, öppnar du kommandoradsfönstret som användes för att starta AEM körningsmiljö och trycker på `Ctrl-C`. Vänta på att AEM stängs av. Kommandoradsprompten är tillgänglig när avstängningsprocessen är slutförd.
 
 ## Inställningsåtgärder för lokal AEM
 
@@ -288,7 +288,7 @@ Genom att uppgradera AEM SDK skapas en helt ny AEM, inklusive en ny databas, vil
 1. Använd [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) med `includepaths` för att kopiera innehåll från den tidigare AEM SDK-databasen till den nya AEM SDK-databasen.
 1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på den tidigare AEM SDK:n och installera om dem på den nya AEM SDK:n.
 
-Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar, så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
+Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar, så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
 
 ## Felsökning
 
@@ -300,7 +300,7 @@ När du dubbelklickar på QuickStart Jar för att starta visas ett felmodalt fel
 
 Detta beror på att AEM as a Cloud Service QuickStart Jar inte stöder dubbelklickning av QuickStart Jar för att starta AEM lokalt. Du måste i stället köra JAR-filen från kommandoraden.
 
-Så här startar du AEM Author-tjänsten: `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
+Om du vill starta AEM författartjänsten `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
 
 >[!BEGINTABS]
 
@@ -324,7 +324,7 @@ $ java -jar aem-author-p4502.jar
 
 >[!ENDTABS]
 
-för att starta AEM Publish-tjänsten, `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
+eller, för att starta AEM Publish-tjänsten, `cd` till katalogen som innehåller QuickStart Jar och kör kommandot:
 
 >[!BEGINTABS]
 
