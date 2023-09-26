@@ -4,7 +4,7 @@ description: Titta på våra videor för att få AEM och hjälp.
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 2%
@@ -13,7 +13,9 @@ ht-degree: 2%
 
 # AEM Assets videor och självstudiekurser {#overview}
 
-Adobe Experience Manager (AEM) Assets är ett verktyg för digital resurshantering på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
+{{edge-delivery-services}}
+
+Adobe Experience Manager (AEM) Assets är ett verktyg för hantering av digitala resurser på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
@@ -85,7 +87,7 @@ Lär dig vad AEM Assets är och hur det kan användas för att uppnå din organi
 ## Ytterligare resurser
 
 * [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
 * [AEM Sites självstudiekurser](/help/sites/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
 * [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

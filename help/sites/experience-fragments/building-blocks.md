@@ -1,5 +1,5 @@
 ---
-title: Så här använder du Experience Fragment Building Blocks
+title: Använda Experience Fragment Building Blocks
 description: Byggblock är en underfunktion till Experience Fragments som gör det möjligt att återanvända skapade komponenter i olika varianter av Experience Fragments.
 sub-product: Experience Manager Sites
 version: Cloud Service
@@ -11,7 +11,7 @@ doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -20,6 +20,7 @@ ht-degree: 0%
 
 # Bygga block med upplevelsefragment {#building-blocks}
 
+{{edge-delivery-services-and-page-editor}}
 
 Byggblock är en underfunktion till Experience Fragments. Med byggblock kan skribenter återanvända komponenter i olika varianter av Experience Fragments.
 

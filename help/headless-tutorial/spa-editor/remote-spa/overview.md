@@ -9,7 +9,7 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 1%
@@ -18,9 +18,11 @@ ht-degree: 1%
 
 # Översikt
 
+{{edge-delivery-services}}
+
 Välkommen till flerdelssjälvstudiekursen för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) SPA med redigerbart AEM med AEM SPA Editor.
 
-Den här självstudiekursen bygger vidare på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder innehåll AEM innehållsfragment över GraphQL-API:er, men som inte innehåller någon sammanhangsbaserad redigering av SPA.
+Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder innehåll AEM innehållsfragment över GraphQL-API:er, men som inte innehåller någon sammanhangsbaserad redigering av SPA.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -51,13 +53,13 @@ Den här självstudiekursen kräver följande:
 + [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
 + [källkoden aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
-I den här självstudiekursen förutsätts:
+I den här självstudien förutsätts:
 
 + [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) som IDE
 + En arbetskatalog för `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
 + Köra AEM SDK som en författartjänst på `http://localhost:4502`
 + Köra AEM SDK med lokala `admin` konto med lösenord `admin`
-+ Köra SPA på `http://localhost:3000`
++ SPA körs på `http://localhost:3000`
 
 >[!NOTE]
 >
@@ -65,11 +67,11 @@ I den här självstudiekursen förutsätts:
 
 ## 1. Konfigurera AEM för SPA Editor
 
-AEM konfigurationer krävs för att integrera SPA med AEM SPA Editor. Dessa konfigurationer hanteras och distribueras via ett AEM projekt. Läs om vilka konfigurationer som är nödvändiga och hur du definierar dem i det här kapitlet.
+AEM konfigurationer krävs för att integrera SPA med AEM SPA. Dessa konfigurationer hanteras och distribueras via ett AEM projekt. Läs om vilka konfigurationer som är nödvändiga och hur du definierar dem i det här kapitlet.
 
-+ [Lär dig hur du konfigurerar AEM för SPA Editor](./aem-configure.md)
++ [Lär dig konfigurera AEM för SPA Editor](./aem-configure.md)
 
-## 2. Bootstrap the SPA
+## 2. Bootstrap SPA
 
 För att AEM redigeraren ska kunna integrera en SPA i sitt redigeringssammanhang måste några tillägg göras i SPA.
 
@@ -85,11 +87,11 @@ Börja med att utforska hur du lägger till en redigerbar&quot;fast komponent&qu
 
 Utforska sedan att lägga till en redigerbar&quot;behållarkomponent&quot; i SPA. Detta visar hur en utvecklare kan placera en behållarkomponent i SPA. Med behållarkomponenter kan författare placera tillåtna komponenter i den och justera komponenternas layout.
 
-+ [Lär dig mer om redigerbara behållarkomponenter](./spa-container-component.md)
++ [Läs om redigerbara behållarkomponenter](./spa-container-component.md)
 
 ## 5. Dynamiska vägar och redigerbara komponenter
 
-Slutligen bör de begrepp som beskrivs i tidigare kapitel användas för dynamiska rutter. vägar som visar olika innehåll baserat på flödets parameter. Detta visar hur AEM redigerare kan användas för att skapa innehåll på vägar som är programmässigt drivna och härledda.
+Slutligen bör du använda de koncept som beskrivs i tidigare kapitel för dynamiska vägar, dvs. vägar som visar olika innehåll baserat på flödets parameter. Detta visar hur AEM redigerare kan användas för att skapa innehåll på vägar som är programmässigt drivna och härledda.
 
 + [Lär dig mer om dynamiska vägar och redigerbara komponenter](./spa-dynamic-routes.md)
 

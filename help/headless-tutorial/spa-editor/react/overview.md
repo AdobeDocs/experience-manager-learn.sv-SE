@@ -14,7 +14,7 @@ role: Developer
 level: Beginner
 exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 15%
@@ -23,7 +23,9 @@ ht-degree: 15%
 
 # Skapa din första SPA i AEM {#overview}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Appen React har utvecklats och utformats för att användas med AEM SPA Editor, som mappar React-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+{{edge-delivery-services}}
+
+Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte använt **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Appen React har utvecklats och utformats för att användas med AEM SPA Editor, som mappar React-komponenter till AEM komponenter. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
 ![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
 

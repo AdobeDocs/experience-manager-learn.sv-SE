@@ -10,7 +10,7 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '3038'
 ht-degree: 0%
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 # Sidor och mallar {#pages-and-template}
 
+{{edge-delivery-services-and-page-editor}}
+
 I det här kapitlet tittar vi på förhållandet mellan en bassidkomponent och redigerbara mallar. Lär dig skapa en oformaterad artikelmall baserad på vissa dummies från [Adobe XD](https://helpx.adobe.com/support/xd.html). Under processen att skapa mallen beskrivs kärnkomponenter och avancerade principkonfigurationer för redigerbara mallar.
 
 ## Förutsättningar {#prerequisites}
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
 ### Startprojekt
 
@@ -108,7 +110,7 @@ Steg på hög nivå för videon ovan:
    * Ställ in profilen på **Sidfot** och se till att **Standardelement** är inställd på `footer`. The `footer` -elementet har CSS som mål i nästa kapitel.
 1. Lås **main** behållare som inkluderades när mallen skapades.
    * Ställ in profilen på **Sidans huvudsida** och se till att **Standardelement** är inställd på `main`. The `main` -elementet har CSS som mål i nästa kapitel.
-1. Lägg till en **Bild** till **main** behållare.
+1. Lägg till en **Bild** -komponenten till **main** behållare.
    * Lås upp **Bild** -komponenten.
 1. Lägg till en **Breadcrumb** -komponenten under **Bild** i huvudbehållaren.
    * Skapa en profil för **Breadcrumb** komponent namngiven **Artikelsida - vägbeskrivningar**. Ange **Startnivå för navigering** till **4**.
@@ -118,31 +120,31 @@ Steg på hög nivå för videon ovan:
 1. Lägg till ytterligare **Behållare** -komponenten under **Innehållsbehållare**. Detta fungerar som **Sidospår** -behållare för mallen.
    * Lås upp **Sidospår** behållare.
    * Skapa en princip med namnet **Artikelsida - sidospalt**.
-   * Konfigurera **Tillåtna komponenter** under **WKND Sites Project - Content** att inkludera: **Knapp**, **Hämta**, **Bild**, **Lista**, **Avgränsare**, **Delning av sociala medier**, **Text** och **Titel**.
-1. Uppdatera principen för sidrotsbehållaren. Det här är mallens yttre behållare. Ställ in profilen på **Sidrot**.
+   * Konfigurera **Tillåtna komponenter** under **WKND Sites Project - Content** att inkludera: **Knapp**, **Ladda ned**, **Bild**, **Lista**, **Avgränsare**, **Delning av sociala medier**, **Text** och **Titel**.
+1. Uppdatera sidrotbehållarens profil. Det här är mallens yttre behållare. Ställ in profilen på **Sidrot**.
    * Under **Behållarinställningar**, ange **Layout** till **Responsivt rutnät**.
 1. Aktivera layoutläget för **Innehållsbehållare**. Dra handtaget från höger till vänster och krymp behållaren så att den blir åtta kolumner bred.
 1. Aktivera layoutläget för **Side Rail-behållare**. Dra handtaget från höger till vänster och krymp behållaren så att den är fyra kolumner bred. Dra sedan det vänstra handtaget från vänster till höger en kolumn för att göra behållaren tre kolumner bred och lämna ett mellanrum på en kolumn mellan **Innehållsbehållare**.
 1. Öppna mobilemulatorn och byt till en mobil brytpunkt. Aktivera layoutläget igen och gör **Innehållsbehållare** och **Side Rail-behållare** sidans hela bredd. Detta staplar behållarna lodrätt i den mobila brytpunkten.
-1. Uppdatera profilen för **Text** i **Innehållsbehållare**.
+1. Uppdatera profilen för **Text** -komponenten i **Innehållsbehållare**.
    * Ställ in profilen på **Innehållstext**.
    * Under **Plugins** > **Styckeformat**, kontrollera **Aktivera styckeformat** och se till att **Offertblock** är aktiverat.
 
 ### Inledande innehållskonfigurationer
 
 1. Växla till **Ursprungligt innehåll** läge.
-1. Lägg till en **Titel** till **Innehållsbehållare**. Detta fungerar som artikelrubrik. När den lämnas tom visas automatiskt den aktuella sidans titel.
-1. Lägg till en sekund **Titel** -komponenten under den första Title-komponenten.
-   * Konfigurera komponenten med texten: &quot;Av författare&quot;. Det här är en textplatshållare.
-   * Ange vilken typ som ska användas `H4`.
+1. Lägg till en **Titel** -komponenten till **Innehållsbehållare**. Detta fungerar som artikelrubrik. När den lämnas tom visas automatiskt den aktuella sidans titel.
+1. Lägg till en sekund **Titel** under den första Title-komponenten.
+   * Konfigurera komponenten med texten: &quot;By Author&quot;. Det här är en textplatshållare.
+   * Ange vilken typ som ska `H4`.
 1. Lägg till en **Text** -komponenten under **Efter författare** Rubrikkomponent.
-1. Lägg till en **Titel** till **Side Rail Container**.
-   * Konfigurera komponenten med texten: &quot;Dela den här artikeln&quot;.
-   * Ange vilken typ som ska användas `H5`.
+1. Lägg till en **Titel** -komponenten till **Side Rail Container**.
+   * Konfigurera komponenten med texten: &quot;Share this Story&quot;.
+   * Ange vilken typ som ska `H5`.
 1. Lägg till en **Delning av sociala medier** -komponenten under **Dela den här artikeln** Rubrikkomponent.
 1. Lägg till en **Avgränsare** -komponenten under **Delning av sociala medier** -komponenten.
-1. Lägg till en **Hämta** -komponenten under **Avgränsare** -komponenten.
-1. Lägg till en **Lista** -komponenten under **Hämta** -komponenten.
+1. Lägg till en **Ladda ned** -komponenten under **Avgränsare** -komponenten.
+1. Lägg till en **Lista** -komponenten under **Ladda ned** -komponenten.
 1. Uppdatera **Inledande sidegenskaper** för mallen.
    * Under **Sociala medier** > **Delning av sociala medier**, kontrollera **Facebook** och **Pinterest**
 
@@ -169,7 +171,7 @@ Steg på hög nivå för videon ovan:
 1. Uppdatera webbvariationsmallen, som är den mall som används för Experience Fragments på [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html)
    * Uppdatera profilen med **Behållare** -komponenten i mallen.
    * Ställ in profilen på **XF-rot**.
-   * Under **Tillåtna komponenter** markera komponentgruppen **WKND Sites Project - Structure** inkludera **Språknavigering**, **Navigering** och **Snabbsökning** -komponenter.
+   * Under **Tillåtna komponenter** markera komponentgruppen **WKND Sites Project - Structure** att inkludera **Språknavigering**, **Navigering** och **Snabbsökning** -komponenter.
 
 ### Uppdatera rubrikupplevelsefragment
 
@@ -196,7 +198,7 @@ Steg på hög nivå för videon ovan:
    * Ändra layouten för **WKND Light, logotyp** att **två** kolumner bred. Dra handtagen från höger till vänster.
    * Konfigurera logotypen med **Alternativ text** av &quot;WKND Logo Light&quot;.
    * Konfigurera logotypen för **Länk** till `/content/wknd/us/en` hemsidan.
-1. Lägg till en **Navigering** -komponenten under logotypen. Konfigurera **Navigering** komponent:
+1. Lägg till en **Navigering** under logotypen. Konfigurera **Navigering** komponent:
    * Ange **Uteslut rotnivåer** till **1**.
    * Avmarkera **Samla in alla underordnade sidor**.
    * Ange **Navigeringsstrukturens djup** till **1**.
@@ -204,7 +206,7 @@ Steg på hög nivå för videon ovan:
 
 ## Skapa en artikelsida
 
-Skapa sedan en sida med hjälp av mallen Artikelsida. Skriv innehållet på sidan så att det matchar webbplatsens dummies. Följ stegen i videon nedan:
+Skapa sedan en sida med hjälp av mallen Artikelsida. Skriv innehållet på sidan så att det matchar webbplatsens modeller. Följ stegen i videon nedan:
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
 
@@ -218,13 +220,13 @@ Steg på hög nivå för videon ovan:
 1. Ersätt **Efter författare** Titel med texten&quot;Av Stacey Roswells&quot;.
 1. Uppdatera **Text** som ska innehålla ett stycke för att fylla i artikeln. Du kan använda följande textfil som kopia: [la-skate-parks-copy.txt](assets/pages-templates/la-skateparks-copy.txt).
 1. Lägg till ytterligare **Text** -komponenten.
-   * Uppdatera komponenten så att den innehåller offerten: &quot;Det finns ingen bättre plats att dela än Los Angeles.&quot;
+   * Uppdatera komponenten så att den innehåller citatet:&quot;Det finns ingen bättre plats att dela än Los Angeles.&quot;
    * Redigera RTF-redigeraren i helskärmsläge och ändra offerten ovan så att den använder **Offertblock** -element.
 1. Fortsätt fylla i artikelns brödtext för att matcha dummies.
-1. Konfigurera **Hämta** om du vill använda en PDF-version av artikeln.
-   * Under **Hämta** > **Egenskaper** klickar du på kryssrutan för att **Hämta titeln från DAM-resursen**.
-   * Ange **Beskrivning** till: &quot;Hämta hela artikeln&quot;.
-   * Ange **Åtgärdstext** till: &quot;Ladda ned PDF&quot;.
+1. Konfigurera **Ladda ned** om du vill använda en PDF-version av artikeln.
+   * Under **Ladda ned** > **Egenskaper** klickar du på kryssrutan för att **Hämta titeln från DAM-resursen**.
+   * Ange **Beskrivning** till:&quot;Hämta hela artikeln&quot;.
+   * Ange **Åtgärdstext** till: &quot;Download PDF&quot;.
 1. Konfigurera **Lista** -komponenten.
    * Under **Listinställningar** > **Skapa lista med**, markera **Underordnade sidor**.
    * Ange **Överordnad sida** till `/content/wknd/us/en/magazine`.
@@ -320,7 +322,7 @@ Det är ofta viktigt att beständiga konfigurationer, som mallar och relaterade 
 För tillfället behandlas mallar som andra kodavsnitt och synkroniserar **Artikelsidmall** som en del av projektet.
 Fram tills nu överförs kod från det AEM projektet till en lokal instans av AEM. The **Artikelsidmall** skapades direkt på en lokal instans av AEM, så den måste **import** mallen i AEM projekt. The **ui.content** modulen ingår i AEM projekt för detta ändamål.
 
-Nästa steg görs i VSCode IDE med hjälp av [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview) plugin. Men de kan använda vilken IDE som helst som du har konfigurerat till **import** eller importera innehåll från en lokal instans av AEM.
+Nästa steg görs i VSCode IDE med hjälp av [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview) plugin-program. Men de kan använda vilken IDE som helst som du har konfigurerat till **import** eller importera innehåll från en lokal instans av AEM.
 
 1. I öppnar VSCode `aem-guides-wknd` projekt.
 
@@ -351,7 +353,7 @@ Nästa steg görs i VSCode IDE med hjälp av [Synkronisering AEM VSCode](https:/
    </workspaceFilter>
    ```
 
-   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte ska ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
+   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte ska ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) för mer information om hur du arbetar med filterelement.
 
    Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` för att förstå de olika noder som hanteras av varje modul.
 
@@ -370,4 +372,4 @@ Nu är artikelsidan helt oformaterad. Följ [Bibliotek på klientsidan och arbet
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `tutorial/pages-templates-solution`.
 
 1. Klona [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) databas.
-1. Kolla in `tutorial/pages-templates-solution` förgrening.
+1. Kolla in `tutorial/pages-templates-solution` gren.

@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: e71b106d-a44b-44af-ba85-7fb5806cdb83
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 10%
@@ -23,6 +23,8 @@ ht-degree: 10%
 ---
 
 # Redigeringsöversikt {#authoring-overview}
+
+{{edge-delivery-services-and-page-editor}}
 
 I följande video visas en översikt över grundläggande redigeringsbegrepp i en AEM redigeringsmiljö för AEM Sites.
 

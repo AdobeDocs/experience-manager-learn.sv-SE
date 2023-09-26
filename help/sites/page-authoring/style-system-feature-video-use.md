@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
@@ -23,6 +23,8 @@ ht-degree: 1%
 ---
 
 # Använda formatsystemet {#using-the-style-system-with-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
 

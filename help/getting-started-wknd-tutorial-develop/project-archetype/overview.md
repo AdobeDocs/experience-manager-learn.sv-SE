@@ -11,7 +11,7 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -20,9 +20,11 @@ ht-degree: 0%
 
 # Komma igång med AEM Sites - Project Archetype {#project-archetype}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND.
+{{edge-delivery-services-and-page-editor}}
 
-Den här självstudiekursen börjar med att använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att skapa ett nytt projekt.
+Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND.
+
+Den här självstudien börjar med att använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att skapa ett nytt projekt.
 
 Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.14+**. Webbplatsen implementeras med:
 

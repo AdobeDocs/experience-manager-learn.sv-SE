@@ -4,7 +4,7 @@ description: En samling självstudiekurser för Adobe Experience Manager (AEM) a
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 4%
@@ -12,6 +12,8 @@ ht-degree: 4%
 ---
 
 # AEM as a Cloud Service videor och självstudiekurser {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
 ## Nyheter
 
 * **[Tokenbaserad autentisering (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
-
-   *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM as a Cloud Service via HTTP*
+  *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM as a Cloud Service via HTTP*
 
 * **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *Lär dig hur du kan använda AEM GraphQL API:er för att skapa bättre upplevelser i ett externt program.*
+  *Lär dig hur du kan använda AEM GraphQL API:er för att skapa bättre upplevelser i ett externt program.*
 
 * **[Massimport (video)](./migration/bulk-import.md)**
+  *Lär dig hur du importerar resurser till AEM från Azure Blob Storage eller Amazon S3 satsvis*
 
-   *Lär dig hur du importerar resurser till AEM från Azure Blob Storage eller Amazon S3 satsvis*
-
-* **[asset compute metadataarbetare (självstudiekurs)](./asset-compute/advanced/metadata.md)**
-
-   *Lär dig hur du skriver tillbaka metadata för resurser till AEM från en Asset compute-arbetare*
+* **[Asset compute metadataarbetare (självstudiekurs)](./asset-compute/advanced/metadata.md)**
+  *Lär dig hur du skriver tillbaka metadata för resurser till AEM från en Asset compute-arbetare*
 
 * **[Utbyggbarhet för Asset compute-mikrotjänster (självstudiekurs)](./asset-compute/overview.md)**
-
-   *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
+  *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
 
 </div>
 
@@ -74,7 +71,7 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>Självstudiekurs för installation av lokal utvecklingsmiljö</strong>
+         <strong>Självstudiekurs om installation av lokal utvecklingsmiljö</strong>
          </a>
       </div>
       <p>

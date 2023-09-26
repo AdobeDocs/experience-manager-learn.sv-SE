@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 1623e1eaf966e625e1ec402a2996e8beb1e1cd03
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 1%
@@ -24,7 +24,9 @@ ht-degree: 1%
 
 # Använda sidredigeraren {#using-page-editor-with-aem-sites}
 
-AEM sidredigerare är ett kraftfullt verktyg för att skapa och redigera webbinnehåll. Page Editors verktyg och funktioner finns i verktygsfältet i sidredigeraren.
+{{edge-delivery-services-and-page-editor}}
+
+AEM sidredigeraren på webbplatsen är ett kraftfullt verktyg för att skapa och redigera webbinnehåll. Page Editors verktyg och funktioner finns i verktygsfältet i sidredigeraren.
 
 I följande video visas några av de viktigaste funktionerna i sidredigeraren.
 

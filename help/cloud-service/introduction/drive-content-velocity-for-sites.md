@@ -3,7 +3,7 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: de31d6e97b84781aa05ca441fc6e9fc4bc59ccc3
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '2814'
 ht-degree: 0%
@@ -11,6 +11,8 @@ ht-degree: 0%
 ---
 
 # Skapa innehåll snabbare med Adobe Experience Manager
+
+{{edge-delivery-services}}
 
 Som ledande leverantör av kundupplevelser vet vi hur utmanande det kan vara för er att se till att ni har rätt ramverk och principer för att driva innehållets hastighet - komponenter som är nödvändiga för att låsa upp det verkliga värdet på er Adobe Experience Manager-plattform. I den här artikeln ska vi läsa vad innehållets hastighet är och dess värde inom företagsorganisationer. Därefter ska vi gå in på fyra principer om effektiv implementering och fallgropar att hålla utkik efter vägen.
 
@@ -40,7 +42,7 @@ Låt oss titta på några principer som ska följas för att skapa en egen organ
 
 Det första steget är att inse att en ändring är nödvändig. Många gånger kommer detta från de intressenter som är bekanta med den taktiska vardagen.
 
-Exempel på problem du kan stöta på är:
+Några exempel på problem du kan stöta på är:
 
 * Nya produktfunktioner som inte kan implementeras på grund av anpassning
 * Silobaserade arbetsflöden
@@ -51,7 +53,7 @@ Att hantera dessa samtidigt är skrämmande. Å andra sidan skapar ett försök 
 
 Hur genomgick en enskild berörd part - från den kreativa, tekniska eller funktionella sidan - de olika skikten av förvaltning, strategi och administrativa mål? Hur avskaffar man isolerade vattentäta skott som bygger på näsa- och perifera strategiska mål som skulle kunna informera varandra? Hur kan de göra det när överlappningen kanske inte är synlig för berörda parter?
 
-Svaret: en enskild intressent inte kan. När organisationen anpassas till lösningen måste beslutet fattas som helhet eftersom det påverkar hela teamet.
+Svaret: en enskild intressent kan inte. När organisationen anpassas till lösningen måste beslutet fattas som helhet eftersom det påverkar hela teamet.
 
 Ännu viktigare är att omvandlingens gnista i grunden måste komma från ledarskap. Det är först när ledningen investerar i organisatoriska förändringar och kan förutse de konkreta fördelarna med detta, som man skapar lämplig organisationsdesign och lämpliga processer - som är avgörande för att kunna utnyttja en företagslösning.
 
@@ -71,13 +73,13 @@ Framtagningen av innehåll i en organisation, från design, marknadsföring, tek
 
 Det är svårt, för att inte säga omöjligt, att lösa alla problem på en gång.
 
-För att illustrera detta ska vi titta på ett exempel på en företagsorganisation med olika varumärken. Varumärke A kan använda AEM på flera, om i slutändan ineffektiva sätt. Varumärke B kanske inte använder AEM alls.
+Vi ska ta en titt på ett exempel på en företagsorganisation med olika varumärken. Varumärke A kan använda AEM på flera, om i slutändan ineffektiva sätt. Varumärke B kanske inte använder AEM alls.
 
 Frågan är om ni kommer att vänta med att omarbeta innehållet tills alla varumärken fungerar på ett enhetligt sätt? Är det klokt att lösa förändringen för dem alla?
 
 Svaret är nej. Detta skulle öka komplexiteten. Dessutom kommer många intressenter att bli frustrerade av att aldrig ha avslutat konversationer runt om i världen, vilket kommer att skapa frustrerande försök att skapa det nya. En låses in i en konversation _om_ i stället för att göra det.
 
-Det som behövs är ett konkret ramverk. Ett nytt paradigm att arbeta för. Något som folk kan se och känna. Tidigare kan innehåll ha betraktats som en sida, en kampanj eller något annat som föreställt sig i en enda. Den grundläggande förändringen är att se innehåll som innehåll i sig: som ska återanvändas, formateras om och återanvändas till redigeringsgruppen. Den viktigaste nya utvecklingen bör användas för målrika upplevelser.
+Det som behövs är ett konkret ramverk. Ett nytt paradigm att arbeta för. Något som folk kan se och känna. Tidigare kan innehåll ha betraktats som en sida, en kampanj eller något annat som föreställt sig i en enda. Den grundläggande förändringen är att se innehåll som innehåll i sig: att återanvändas, formateras om och återvinnas till redigeringsgruppen. Den viktigaste nya utvecklingen bör användas för målrika upplevelser.
 
 För många kunder är det bästa sättet att införa förändringar att skapa en miniwebbplats, ett varumärke eller en separat del av webbplatsen som kan användas som testfall för det nya ramverket. Genom att välja en del av organisationen som konceptbevis kan du:
 
@@ -104,7 +106,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    I det här skedet bör du fundera över om du vill ha en centraliserad styrningsmodell eller en decentraliserad modell. Å ena sidan skapar en centraliserad styrningsmodell en konsoliderad taxonomistrategi som erbjuder tätare kvalitetskontroll och processinsikter som är omöjliga, eller åtminstone minst svåra i en decentraliserad ram.
 
-   Å andra sidan kan en centraliserad modell, särskilt om den kommer från en redigeringsupplevelse som för närvarande är alltför flexibel, vara ett stort hinder för teamet. Strukturen måste möjliggöra gemensamma språkliga och regionala differentieringsmetoder samt rutiner för kvalitetskontroll. Dessutom kan det bli mindre självständigt för varje del av redigeringsprocessen, det vill säga bara vissa författare får arbeta i specifika grupper av sidor och endast begränsade författare har redigeringsbar behörighet.
+   Å andra sidan kan en centraliserad modell, särskilt om den kommer från en upplevelse som för närvarande är alltför flexibel, vara ett stort hinder för teamet. Strukturen måste möjliggöra gemensamma språkliga och regionala differentieringsmetoder samt rutiner för kvalitetskontroll. Dessutom kan det bli mindre självständigt för varje del av redigeringsprocessen, det vill säga bara vissa författare får arbeta i specifika grupper av sidor och endast begränsade författare har redigeringsbar behörighet.
 
    Även om ett centraliserat styrningssätt till en början kan verka långsammare, i slutänden med insamlade processinsikter och en öppen ansvarsfördelning mellan företagsanvändare, är den övergripande strategin snabbare.
 
@@ -114,7 +116,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    Tänk på följande scenario:
 
-   Interaktivt innehåll (som ofta finns på hemsidan) kan kräva mycket interaktiva upplevelser, och därför krävs det att gränssnittsdesigners arbetar med företagsförfattare för att uppdatera. Underhåll av hemsidan kräver en annan behörighetsstruktur och godkännandeprocess än en referenssida, vilket är enklare att uppdatera. Ljudstyrning, effektivitet och kvalitet börjar med ett tydligt ägarskap av innehållet. Överväg att utföra en innehållsgranskning som besvarar följande frågor:
+   Interaktivt innehåll (som ofta finns på hemsidan) kan kräva mycket interaktiva upplevelser, och därför krävs det att gränssnittsdesigners arbetar med företagsförfattare för att uppdatera. Underhåll av hemsidan kräver en annan behörighetsstruktur och godkännandeprocess än en referenssida, vilket är enklare att uppdatera. Ljudstyrning, effektivitet och kvalitet börjar med ett tydligt ägarskap av innehållet. Utför en innehållsgranskning som besvarar följande frågor:
 
    * Vem skapar vad? Och när?
    * Vilka olika behörighetsstrukturer måste tillämpas för varje typ av innehåll?
@@ -128,7 +130,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    En del av den här processen är att titta på innehållet holistiskt, inte bara som delar på en sida eller ett avsnitt, utan även hur innehållet fungerar på hela webbplatsen. Fundera på möjligheter att öka återanvändbarheten. Identifiera områden där innehållet kan återanvändas för att öka effektiviteten. Fundera på hur du kan utnyttja OTB-funktionalitet (out-of-the-box) jämfört med områden som kräver anpassning. Genom att använda OOTB-komponenter blir det enklare att snabbt göra om varumärket och få snabbare estetiska ändringar på webbplatsen.
 
-   Från ett flervarumärkesperspektiv innebär en övergång till&quot;universella&quot; paradigmer (till skillnad från sidspecifika) att det går snabbare att återanvända och varumärka, vilket skapar iterativa, snabba experiment med kampanjer för att skapa den bästa kundupplevelsen. Hastighet = kreativ flexibilitet och målgruppsengagemang.
+   Från ett flervarumärkesperspektiv innebär en övergång till&quot;universella&quot; paradigmer (till skillnad från sidspecifika) att det går snabbare att återanvända och varumärka, vilket skapar iterativa, snabba experiment med kampanjer för att skapa den bästa kundupplevelsen. Hastighet = kreativ flexibilitet och målgruppens engagemang.
 
    Genom att använda ett innehållsdrivet ramverk blir det dessutom enklare att anta innehållsfragment och upplevelsefragment. Lösningarna kan tas fram centralt inifrån Adobe Experience Manager, vilket minskar behovet av att ta fram dokument separat. Detta kommer att öka enhetligheten i författarupplevelsen och betona strategiskt drivet innehåll på webbplatsen.
 
@@ -140,21 +142,21 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    _&quot;En centraliserad innehållsstrategi hjälper oss att undvika dubbelarbete. Vi övermättar inte marknaden, vi säger inte olika saker om liknande frågor. Det hjälper oss att optimera hela vårt innehållsbibliotek och tala med en enhetlig röst över hela världen.&quot;_ - Amy Bergstrom, Deloitte
 
-## Rekommenderade rutiner: Snabb, återanvändbar modell för innehållsframtagning
+## Rekommenderad praxis: Snabb, återanvändbar modell för att skapa innehåll
 
 I allmänhet är det bäst att följa dessa tumregler:
 
-* Målet är att inte mindre än 80 % av upplevelserna ska köras genom [Utanför Box-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en) och [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Genom kundutlåtanden kommer detta inte bara att skapa en mer skalbar grund som gör att ni kan dra nytta av produktplanen, utan det kommer också att öka hastigheten med upp till 50 %.
+* Målet är att inte mindre än 80 % av upplevelserna ska köras genom [Ut ur kartongkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en) och [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Genom kundutlåtanden kommer detta inte bara att skapa en mer skalbar grund som gör att ni kan dra nytta av produktplanen, utan det kommer också att öka hastigheten med upp till 50 %.
 * [Konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) och gå bort från statiska mallar. När du skapar redigerbara mallar (som krävs för att använda formatsystem) måste du tilldela en mallskapare som styr de olika format som är tillgängliga för en sida eller ett avsnitt på webbplatsen. Dessa uppdateringar av själva mallen är relativt minimala när det gäller det dagliga arbetet.
 * Använd [Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) där det är möjligt. Även om det allmänna användningsexemplet för upplevelsefragment är för flerkanalsdistribution kan de också användas effektivt på hela webbplatsen för att fylla i innehåll i ett område åt gången i stället för att uppdatera innehåll manuellt i flera områden. Detta kan spara mycket tid och arbete och kommer att frigöra teamet från att arbeta med mer specifika och innehållsrika upplevelser.
 * Skapa rikare upplevelser. Genom att använda regeln 80/20 (enligt ovan) kan en organisation använda specifik CSS och serverutveckling för utvalda upplevelser i stället för vanliga underhållsuppdateringar.
 * Välj en skalbar grund och snabb omprofilering. Formatsystem som körs baserat på en modern implementering kan möjliggöra en effektiv omprofilering på en plattform. Genom att uppdatera många innehållssektorer genom att ändra CSS-skal går det snabbt att testa och validera webbplatsen och ökar webbplatsens upplevelsekvalitet, vilket direkt påverkar avkastningen.
 
-### Organisationsmodellering
+### Organisationsmodell
 
 Det finns inget unikt svar på hur personalmodellerna i en AEM Sites-implementering ska se ut. Det finns dock arktyper som du bör följa som standard.
 
-AEM Sites: grundläggande körning och drift
+AEM Sites: grundläggande drift och drift
 
 | Teknisk roll | Tekniskt ansvar | Företagsansvar | Affärsroll |
 | --- | --- | --- | --- |

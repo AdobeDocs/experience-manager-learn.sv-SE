@@ -15,7 +15,7 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 5f43db64f68218ed3d349508a2c4fd232601a9ef
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%
@@ -24,11 +24,13 @@ ht-degree: 0%
 
 # Kom igång med AEM Sites - WKND, genomgång {#introduction}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
+{{edge-delivery-services}}
+
+Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
 ## Översikt {#wknd-tutorial-overview}
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med hjälp av de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå den grundläggande grunden för plattformen och de vanliga designmönstren i AEM.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå den grundläggande grunden för plattformen och de vanliga designmönstren i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -36,7 +38,7 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
-**AEM Project Archetype** - Traditionell strategi för AEM utveckling genom att generera ett minimalt AEM med hjälp av en Maven-mall. Detta är det rekommenderade tillvägagångssättet för AEM 6.5/6.4-projekt och AEM as a Cloud Service projekt som förutser omfattande anpassningar. Självstudiekursen ger en djupdykning i AEM utveckling.
+**AEM Project Archettype** - Traditionell strategi för AEM utveckling genom att generera ett minimalt AEM med hjälp av en Maven-mall. Detta är det rekommenderade tillvägagångssättet för AEM 6.5/6.4-projekt och AEM as a Cloud Service projekt som förutser omfattande anpassningar. Självstudiekursen ger en djupdykning i AEM utveckling.
 
 [Starta självstudiekursen med AEM Project Archetype](./project-archetype/overview.md)
 
@@ -46,7 +48,7 @@ Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
 ## Adobe XD UI Kit
 
-För att göra den här självstudiekursen närmare ett verkligt scenario skapade Adobe talangfulla UX-designers dummies för sajten med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Amola** som skapade den vackra designen för WKND-sajten.
+För att göra den här självstudiekursen närmare ett verkligt scenario skapade Adobe talangfulla UX-designers dummies för sajten med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Amola** som skapade den vackra designen för WKND-webbplatsen.
 
 Ladda ned XD UI-kit:
 

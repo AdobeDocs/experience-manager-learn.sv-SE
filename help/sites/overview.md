@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: d24649d4b1411f57a46595edddb601ac49b51643
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 4%
@@ -13,6 +13,8 @@ ht-degree: 4%
 ---
 
 # AEM Sites videor och självstudiekurser {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehantering. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Sites.
 
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 ## Nyheter
 
 * **[Använda Launches with AEM Sites (Video)](./page-authoring/launches.md)**
-
-   *Läs mer om AEM Sites lanseringar och hur de kan användas för att förbereda webbinnehåll för framtida releaser.*
+  *Läs om AEM Sites lanseringar och hur de kan användas för att förbereda webbinnehåll för framtida releaser.*
 
 * **[Anpassa Adobe-klientdatalagret med AEM (självstudiekurs)](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-
-   *Lär dig hur du uppdaterar Adobe-klientdatalagret med innehåll från anpassade AEM-komponenter.*
+  *Lär dig hur du uppdaterar Adobe-klientdatalagret med innehåll från anpassade AEM-komponenter.*
 
 * **[Komma igång med AEM Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-
-   *Visa innehåll från AEM som ska användas av en intern mobilapp med hjälp av GraphQL API:er.*
+  *Visa innehåll från AEM som ska användas av en intern mobilapp med hjälp av GraphQL API:er.*
 
 * **[Använda innehållsfragment (videoserie)](./content-fragments/content-fragments-feature-video-use.md)**
-
-   *Innehållsfragment är kanalagnostiska innehållsdelar som kan återanvändas.*
+  *Innehållsfragment är kanalagnostiska innehållsdelar som kan återanvändas.*
 
 * **[Använda SPA (video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
-
-   *Läs om AEM redigeringsfunktioner för single page-applikationer (SPA).*
+  *Läs om AEM redigeringsfunktioner för single page-applikationer (SPA).*
 
 </div>
 
@@ -105,8 +102,8 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 * [AEM Sites Authoring documentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
 * [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [AEM Sites Administering - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites Distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [Dokumentation för AEM Sites Deploying](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
 * [AEM Assets självstudiekurser](/help/assets/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
 * [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

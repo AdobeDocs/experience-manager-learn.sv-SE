@@ -13,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 0%
@@ -22,7 +22,9 @@ ht-degree: 0%
 
 # Skapa din första Angular SPA i AEM {#introduction}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som är nybörjare i **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular har utvecklats och utformats för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+{{edge-delivery-services}}
+
+Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte använt **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular har utvecklats och utformats för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
 ![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
 
@@ -111,4 +113,4 @@ The `classic` profilen är inaktiverad som standard. Om du följer självstudiek
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-När du skapar ett nytt projekt för en AEM implementering ska du alltid använda den senaste versionen av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` för att anpassa er till den avsedda versionen av AEM.
+När du skapar ett nytt projekt för en AEM implementering ska du alltid använda den senaste versionen av [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` för att anpassa er till den avsedda versionen av AEM.

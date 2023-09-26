@@ -1,7 +1,7 @@
 ---
 title: Använda sidskillnad med AEM Sites
 seo-title: Using Page Difference with AEM Sites
-description: Funktionerna för sidskillnad i AEM Sites visar en snabb, färgkodad vy över vilket innehåll som har ändrats på en sida (version, live-kopia, start, språkkopia).
+description: AEM Sites funktioner för sidskillnad ger en snabb, färgkodad vy över vilket innehåll som har ändrats på en sida (version, live copy, launches, language copy).
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -16,7 +16,7 @@ feature: Authoring
 role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -25,7 +25,9 @@ ht-degree: 1%
 
 # Använda funktionen Sidskillnad {#using-page-difference-with-aem-sites}
 
-Funktionerna för sidskillnad i AEM Sites visar en snabb, färgkodad vy över vilket innehåll som har ändrats på en sida (version, live-kopia, start, språkkopia).
+{{edge-delivery-services-and-page-editor}}
+
+AEM Sites funktioner för sidskillnad ger en snabb, färgkodad vy över vilket innehåll som har ändrats på en sida (version, live copy, launches, language copy).
 
 ## Jämföra sidversioner {#comparing-page-versions}
 

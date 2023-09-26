@@ -9,7 +9,7 @@ level: Beginner
 kt: 4245
 thumbnail: 32147.jpg
 exl-id: d4f33657-d3b1-46d3-848c-8b73ce149797
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 11%
@@ -17,6 +17,8 @@ ht-degree: 11%
 ---
 
 # Grundläggande sidåtgärder {#basic-page-operations-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Lär dig hur du utför grundläggande sidhanteringsåtgärder för en Adobe Experience Manager Sites-sida.
 

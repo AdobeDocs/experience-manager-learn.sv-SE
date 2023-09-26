@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: c125c0e0-1ed2-463e-bd34-767d009479eb
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 1%
@@ -24,7 +24,9 @@ ht-degree: 1%
 
 # Förstå responsiv layout {#understanding-responsive-layout-with-aem-sites}
 
-Med Adobe Experience Manager Sites kan en författare hantera bredden på en komponent baserat på enhetens bredd för att underlätta en responsiv webbplatsdesign. Med layoutläget och layoutbehållaren kan användarna skapa responsivt innehåll för olika enheter och förhandsgranska slutanvändarens upplevelse, utan att lämna det AEM användargränssnittet.
+{{edge-delivery-services-and-page-editor}}
+
+Med Adobe Experience Manager Sites kan en författare hantera bredden på en komponent baserat på enhetens bredd för att underlätta en responsiv webbplatsdesign. Med layoutläget och layoutbehållaren kan användarna skapa responsivt innehåll för olika enheter och förhandsgranska slutanvändarens upplevelse, utan att lämna AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
 

@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2ad1554e-312a-4150-b365-7e00eab1fa43
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%
@@ -23,6 +23,8 @@ ht-degree: 0%
 ---
 
 # Skapa en sida {#creating-page-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Lär dig hur du skapar webbsidor med hjälp av sidmallar i Adobe Experience Manager.
 

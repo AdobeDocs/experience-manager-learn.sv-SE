@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
@@ -10,3 +10,15 @@ ht-degree: 0%
 ## AEM Headless Trials promo{#aem-headless-trials-promo}
 
 [![Lär känna vårt headless CMS med en 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
+
+## Edge Delivery Services{#edge-delivery-services}
+
+[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
+
+## Edge Delivery Services och sidredigeraren{#edge-delivery-services-and-page-editor}
+
+[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
+
+## Edge Delivery Services och universell visuell redigerare{#edge-delivery-services-and-universal-visual-editor}
+
+[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}

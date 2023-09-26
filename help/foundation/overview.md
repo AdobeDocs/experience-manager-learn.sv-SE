@@ -4,7 +4,7 @@ description: Titta på våra videor och självstudiekurser för att få hjälp m
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 
 # AEM Foundation videor och självstudiekurser {#overview}
 
+{{edge-delivery-services}}
+
 Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgängliga för användare av AEM Sites, Assets och Forms.
 
 <div id="whats-new-section">
@@ -20,14 +22,13 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 ## Nyheter
 
 * **[Använd AEM (video)](./workflow/use-workflow.md)**
-
-   *AEM Workflow är ett sätt att samarbeta, hantera och bearbeta innehåll i AEM.*
+  *AEM Workflow är ett sätt att samarbeta, hantera och bearbeta innehåll i AEM.*
 
 * **[Förstå Cloud Manager för AEM (video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
+  *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
 
 * **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
+  *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
 
 </div>
 
@@ -90,7 +91,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 ## Ytterligare resurser
 
-* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
 * [AEM Sites videor och självstudiekurser](/help/sites/overview.md)
 * [AEM Assets videor och självstudiekurser](/help/assets/overview.md)
 * [AEM Forms videor och självstudiekurser](/help/forms/overview.md)

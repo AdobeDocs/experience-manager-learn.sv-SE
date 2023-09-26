@@ -13,7 +13,7 @@ feature: Authoring
 role: User
 level: Beginner
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -21,6 +21,8 @@ ht-degree: 0%
 ---
 
 # Skapa sidversioner {#creating-page-versions-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Sidversionshantering hjälper innehållsförfattare att spåra ändringar som är kopplade till en sida genom att skapa en sidversion och ger möjlighet att förhandsgranska en version, återställa en version och jämföra en version med den aktuella versionen av en sida.
 
