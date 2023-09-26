@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 4%
 
 ---
@@ -18,27 +18,22 @@ ht-degree: 4%
 
 Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehantering. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Sites.
 
-
-<div id="whats-new-section">
+<div id="whats-new-section-skip"></div>
 
 ## Nyheter
 
-* **[Använda Launches with AEM Sites (Video)](./page-authoring/launches.md)**
-  *Läs om AEM Sites lanseringar och hur de kan användas för att förbereda webbinnehåll för framtida releaser.*
+* **[Översikt över AEM och Edge Delivery Services (video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)**
+  *I den här informativa översiktsvideon ser du hur Adobe Experience Manager (AEM) innehåller AEM Sites, AEM Assets, AEM Headless, AEM Forms och Edge Delivery Services.*
 
-* **[Anpassa Adobe-klientdatalagret med AEM (självstudiekurs)](./integrations/adobe-client-data-layer/data-layer-customize.md)**
-  *Lär dig hur du uppdaterar Adobe-klientdatalagret med innehåll från anpassade AEM-komponenter.*
+* **[Vad är AEM och Edge Delivery Services? (Video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
+  *Läs mer om värdet som Adobe Experience Manager (AEM) och Edge Delivery Servicens erbjuder.*
 
-* **[Komma igång med AEM Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-  *Visa innehåll från AEM som ska användas av en intern mobilapp med hjälp av GraphQL API:er.*
+* **[Läs om hur AEM utvecklas (video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
+  *Läs om AEM utveckling och det värde den ger, från AEM 6.5 till AEM as a Cloud Service och slutligen till Edge Delivery Services.*
 
-* **[Använda innehållsfragment (videoserie)](./content-fragments/content-fragments-feature-video-use.md)**
-  *Innehållsfragment är kanalagnostiska innehållsdelar som kan återanvändas.*
+* **[AEM med Edge Delivery Services arkitektoniska översikt (video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
+  *Lär dig allt om AEM as a Cloud Service arkitektur!*
 
-* **[Använda SPA (video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
-  *Läs om AEM redigeringsfunktioner för single page-applikationer (SPA).*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
