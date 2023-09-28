@@ -10,7 +10,7 @@ kt: 10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2023-08-08T00:00:00Z
-source-git-commit: 58347d4f8ef50375385342671f68c26502aecba4
+source-git-commit: 4d24d45239fc39129e16bad04278d2ce8090a351
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -167,8 +167,8 @@ AEM Publish (och Preview)-tjänstens Dispatcher måste vara konfigurerad för CO
          RewriteCond expr "reqenv('CORSProcessing') == 'true' && reqenv('CORSTrusted') == 'false'"
          RewriteRule "^(.*)" - [R=204,L]
    
-         # Remove Origin before sending to AEM Publish
-         RequestHeader unset Origin
+         # Remove Origin before sending to AEM Publish if this configuration handles the CORS
+         RequestHeader unset Origin "expr=reqenv('CORSTrusted') == 'true'"
    
          ################## End of CORS configuration ##################
      </IfModule>
