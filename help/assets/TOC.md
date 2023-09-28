@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '401'
 ht-degree: 11%
 
 ---
@@ -64,6 +64,9 @@ ht-degree: 11%
    + [Smarta taggar för videoklipp](metadata/video-smart-tags.md)
    + [Importera och exportera metadata](metadata/metadata-import-export.md)
 
++ Edge Delivery Services{#edge-delivery-services}
+   + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
+
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
    + [Publicera resurser](./sharing/publish.md)
@@ -82,7 +85,7 @@ ht-degree: 11%
    + [Anslutna resurser](./sharing/connected-assets.md)
 
 + Integrera med kreativa arbetsflöden{#creative-workflows}
-   + [AEM](./creative-workflows/aem-desktop-app.md)
+   + [AEM datorprogram](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
@@ -92,7 +95,7 @@ ht-degree: 11%
    + [Panelöversikt](./adobe-asset-link/panel-overview.md)
    + [Filer och samlingar](./adobe-asset-link/files-and-collections.md)
    + [Hämta och överföra](./adobe-asset-link/download-and-upload.md)
-   + [Checka in-utcheckning](./adobe-asset-link/check-in-check-out.md)
+   + [Checka in utcheckning](./adobe-asset-link/check-in-check-out.md)
    + [Versionshantering och kommentarer](./adobe-asset-link/file-versioning-and-comments.md)
    + [Montera kopia](./adobe-asset-link/place-copy.md)
    + [Montera länkad](./adobe-asset-link/place-linked.md)
