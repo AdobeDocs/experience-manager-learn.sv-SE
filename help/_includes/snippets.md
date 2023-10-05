@@ -1,7 +1,7 @@
 ---
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 ## Edge Delivery Services{#edge-delivery-services}
 
-[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
+[!BADGE Klicka här om du vill publicera från AEM Sites med Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
 
 ## Edge Delivery Services och sidredigeraren{#edge-delivery-services-and-page-editor}
 
-[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
+[!BADGE Klicka här om du vill publicera från AEM Sites med Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
 
 ## Edge Delivery Services och universell visuell redigerare{#edge-delivery-services-and-universal-visual-editor}
 
-[!BADGE Klicka här om du vill publicera från AEM till Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
+[!BADGE Klicka här om du vill publicera från AEM Sites med Edge Delivery Services.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Publicera från AEM till Edge Delivery Services"}
