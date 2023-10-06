@@ -1,5 +1,5 @@
 ---
-title: mTLS-autentisering (Mutual Transport Layer Security)
+title: mTLS-autentisering (Mutual Transport Layer Security) från AEM
 description: Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering.
 feature: Security
 version: 6.5, Cloud Service
@@ -10,15 +10,15 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
 
 
-# mTLS-autentisering (Mutual Transport Layer Security)
+# mTLS-autentisering (Mutual Transport Layer Security) från AEM
 
 Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering.
 
@@ -81,7 +81,7 @@ Generera certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Requ
 
 ### Certifikatutbyte
 
-Om du använder en självsignerad certifikatutfärdare för AEM, som ovan, ska du byta ut certifikatet eller det interna certifikatutfärdarcertifikatet (CA) mot API-providern.
+Om du använder en självsignerad certifikatutfärdare för AEM, som ovan, skickar du certifikatet eller det interna certifikatutfärdarcertifikatet till API-providern.
 
 Om API-providern använder ett självsignerat certifikatutfärdarcertifikat tar du dessutom emot certifikatet eller det interna certifikatutfärdarcertifikatet från API-providern.
 

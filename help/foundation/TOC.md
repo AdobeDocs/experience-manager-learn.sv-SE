@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 13%
+source-wordcount: '232'
+ht-degree: 12%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 13%
    + [Använda SSL-guiden](./security/use-the-ssl-wizard.md)
    + [ModSecurity CRS DoS Attack Protection](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-anslutningar till API:er med privata certifikat](./security/call-internal-apis-having-private-certificate.md)
-   + [Mutual TLS-autentisering (mTLS)](./security/mutual-tls-authentication.md)
+   + [mTLS-autentisering (Mutual TLS) från AEM](./security/mutual-tls-authentication.md)
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflöde](./workflow/use-workflow.md)
