@@ -10,17 +10,19 @@ kt: 11548
 thumbnail: KT-11548.png
 doc-type: article
 last-substantial-update: 2023-08-25T00:00:00Z
-source-git-commit: d4859d8af066d456f16f76869e99432aaa5b9863
+exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
+source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-
 # Anropa interna API:er med privata certifikat
 
 Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er med privata eller självsignerade certifikat.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424853?quality=12&learn=on)
 
 Som standard misslyckas anslutningen när du försöker skapa en HTTPS-anslutning till ett webb-API som använder ett självsignerat certifikat. Fel:
 
@@ -148,3 +150,10 @@ Följ stegen nedan:
 Ett vanligt tillvägagångssätt för att effektivt anropa interna API:er med privata certifikat är att ändra JVM-nyckelbehållaren. Detta uppnås genom att de privata certifikaten importeras med Java™ [nyckelverktyg](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) -kommando.
 
 Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM erbjuder ett överlägset alternativ genom att använda **Global Trust Store** och [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+
+## Lösningspaket
+
+Exempelprojektet Node.js som demonstreras i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
+
+Den AEM serletkoden finns i WKND Sites Project `tutorial/web-api-invocation` gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
