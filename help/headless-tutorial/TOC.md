@@ -8,7 +8,7 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 12%
@@ -20,14 +20,14 @@ ht-degree: 12%
 
 + [AEM Headless Overview](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [Översikt](./graphql/overview.md)
    + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
       + [1 - Grundläggande om modellering](./graphql/video-series/modeling-basics.md)
-      + [2 - Avancerad modellering](./graphql/video-series/advanced-modeling.md)
+      + [2 - avancerad modellering](./graphql/video-series/advanced-modeling.md)
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
       + [4 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL Endpoints](./graphql/video-series/graphql-endpoints.md)
@@ -80,23 +80,23 @@ ht-degree: 12%
    + Reagera{#react}
       + [Översikt](./spa-editor/react/overview.md)
       + [1 - Skapa projekt](./spa-editor/react/create-project.md)
-      + [2 - Integrera SPA](./spa-editor/react/integrate-spa.md)
-      + [3 - Mappa SPA](./spa-editor/react/map-components.md)
+      + [2 - SPA](./spa-editor/react/integrate-spa.md)
+      + [3 - SPA](./spa-editor/react/map-components.md)
       + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
    + Angular{#angular}
       + [Översikt](./spa-editor/angular/overview.md)
       + [1 - SPA](./spa-editor/angular/create-project.md)
-      + [2 - Integrera SPA](./spa-editor/angular/integrate-spa.md)
-      + [3 - Mappa SPA](./spa-editor/angular/map-components.md)
+      + [2 - SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 - SPA](./spa-editor/angular/map-components.md)
       + [4 - Navigering och routning](./spa-editor/angular/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/angular/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/angular/extend-component.md)
    + SPA{#remote-spa}
       + [Översikt](./spa-editor/remote-spa/overview.md)
       + [1 - Konfigurera AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [2 - Bootstrap i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [2 - BOOTSTRAP i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
@@ -108,12 +108,12 @@ ht-degree: 12%
    + [2 - Tjänstreferenser](./authentication/service-credentials.md)
 + Innehållstjänster {#content-services}
    + [Översikt](./content-services/overview.md)
-   + [1 - Ställa in självstudiekurser](./content-services/chapter-1.md)
+   + [1 - Inställning av självstudiekurs](./content-services/chapter-1.md)
    + [2 - Definiera fragmentmodeller för händelseinnehåll](./content-services/chapter-2.md)
    + [3 - Innehållsfragment för redigeringshändelser](./content-services/chapter-3.md)
    + [4 - Definiera mallar för innehållstjänster](./content-services/chapter-4.md)
    + [5 - Skapa sidor för innehållstjänster](./content-services/chapter-5.md)
-   + [6 - Visa innehållet på AEM Publish for Delivery](./content-services/chapter-6.md)
+   + [6 - Visa innehållet vid AEM publicering för leverans](./content-services/chapter-6.md)
    + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
 + Kodexempel {#code-samples}
    + [Filtrera React-app](./graphql/code-samples/filtering-react-app.md)

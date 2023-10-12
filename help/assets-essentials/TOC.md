@@ -8,10 +8,10 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '77'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -42,8 +42,8 @@ ht-degree: 3%
    + [Konfigurerar](./integrations/workfront/configure.md)
    + [Mappa metadata](./integrations/workfront/map-metadata.md)
    + [Skicka dokument och länka resurser](./integrations/workfront/link-send.md)
-   + [Versionshistorik](./integrations/workfront/versions.md)
+   + [Versionshantering](./integrations/workfront/versions.md)
 
-+ [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
++ [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html){target=_blank}
 
-+ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html){target=_blank}
