@@ -14,14 +14,14 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
 
-# Skapa Adobe Target-aktivitet med Experience Fragment-erbjudanden {#target-activity-experience-fragment}
+# Skapa Adobe Target Activity med Experience Fragment Offers {#target-activity-experience-fragment}
 
 Lär dig hur du skapar och testar en Adobe Target-aktivitet med AEM Experience Fragment-erbjudanden.
 
@@ -29,7 +29,7 @@ Lär dig hur du skapar och testar en Adobe Target-aktivitet med AEM Experience F
 
 ## Förutsättningar
 
-För att skapa Adobe Target-aktiviteter med Experience Fragment-erbjudanden måste följande byggas upp:
+Om du vill skapa Adobe Target-aktiviteter med Experience Fragment-erbjudanden måste du slutföra följande konfiguration:
 
 1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
 1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
@@ -38,5 +38,5 @@ För att skapa Adobe Target-aktiviteter med Experience Fragment-erbjudanden mås
 
 ## Stödlänkar
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

@@ -1,6 +1,6 @@
 ---
 title: Personalisering med Visual Experience Composer
-description: Lär dig hur du skapar en Adobe Target-aktivitet med Visual Experience Composer.
+description: Lär dig skapa en Adobe Target-aktivitet med Visual Experience Composer.
 topics: integrations, authoring, personalization, activity, offers
 audience: all
 doc-type: feature video
@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -27,20 +27,20 @@ Lär dig hur du skapar en A/B Test Target-aktivitet med Visual Experience Compos
 
 ## Förutsättningar
 
-För att kunna använda VEC på en AEM webbplats måste följande inställningar göras:
+För att kunna använda VEC på en AEM webbplats måste följande konfiguration vara slutförd:
 
 1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
 1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
 
 ## Scenarioöversikt
 
-På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att göra runt en stad i form av informationskort. Som marknadsförare har du tilldelats uppgiften att ändra hemsidan genom att göra textändringar i äventyrsavsnittet och förstå hur konverteringen förbättras.
+På WKND-webbplatsens hemsida visas lokala aktiviteter eller de bästa sakerna att göra runt en stad i form av informationskort. Som marknadsförare har du tilldelats uppgiften att ändra hemsidan genom att göra textändringar i äventyrsavsnittet och förstå hur konverteringen förbättras.
 
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till __Verksamhet__ tab
 
-   + Om du inte ser __Mål__ Kontrollera att rätt Adobe-organisation är markerad i organisationsväljaren i det övre högra hörnet på kontrollpanelen Experience Cloud och att du har fått åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Om du inte ser __Mål__ Kontrollera att rätt Adobe-organisation har valts i organisationsväljaren i det övre högra hörnet på kontrollpanelen Experience Cloud och att användaren har beviljats åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 1. Klicka **Skapa aktivitet** och sedan välja **A/B-test** aktivitet
 
@@ -50,7 +50,7 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller det bästa att gör
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda **Lägg till upplevelse** -knappen.
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med hjälp av **Lägg till upplevelse** -knappen.
 
    ![Upplevelse A](assets/experience.png)
 
@@ -90,5 +90,5 @@ I det här kapitlet kunde en marknadsförare skapa en upplevelse med Visual Expe
 
 ## Stödlänkar
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Lär dig hur du läser in, skickar parametrar till sidförfrågningar och starta
 
 ## Inläsningsregel för sida
 
-Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager läses in utlöser det en händelse `cmp:show` . I videon `Launch Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen samt för dataelementen.
+Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon `Launch Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
@@ -38,7 +38,7 @@ Adobe-klientdatalagret är ett händelsestyrt datalager. När AEM siddatalager l
 Lägg till en ny i Launch-egenskapen **Händelse** till **Regel**
 
 + __Tillägg:__ Core
-+ __Händelsetyp:__ Egen kod
++ __Typ av händelse:__ Egen kod
 + __Namn:__ Visa sidhändelsehanterare (eller något beskrivande)
 
 Tryck på __Öppna redigeraren__ och klistra in i följande kodfragment. Den här koden __måste__ läggs till i __Händelsekonfiguration__ och en efterföljande __Åtgärd__.
@@ -162,7 +162,7 @@ window.targetGlobalSettings = {
 ## Stödlänkar
 
 + [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 + [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

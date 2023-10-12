@@ -10,9 +10,9 @@ kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="Integrering" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2468'
 ht-degree: 1%
 
 ---
@@ -36,16 +36,16 @@ I den här självstudiekursen kommer du att utlösa en taggregel baserat på en 
 
 1. Skapa en händelsestyrd regel i taggegenskapen som hämtar ändringar från datalagret
 1. Mappa egenskaper för siddatalager till dataelement i taggegenskapen
-1. Samla in och skicka siddata till Adobe Analytics med hjälp av sidvyfyren
+1. Samla in och skicka siddata till Adobe Analytics med hjälp av sidvisningsknappen
 
 ## Förutsättningar
 
 Följande krävs:
 
-* **Tagg, egenskap** i Experience Platform
+* **Tagg, egenskap** i EXPERIENCE PLATFORM
 * **Adobe Analytics** test/dev report suite ID and tracking server. Se följande dokumentation för [skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
 * [Felsökning för Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) webbläsartillägg. Skärmbilder i den här självstudiekursen som tagits från webbläsaren Chrome.
-* (Valfritt) AEM webbplatsen med [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudiekursen används den offentliga sidan [WKND](https://wknd.site/us/en.html) -sajten, men du är välkommen att använda din egen sajt.
+* (Valfritt) AEM webbplatsen med [Adobe Client Data Layer är aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). I den här självstudiekursen används den offentliga sidan [WKND](https://wknd.site/us/en.html) -sajten, men du får använda din egen sajt.
 
 >[!NOTE]
 >
@@ -53,9 +53,9 @@ Följande krävs:
 
 ## Byt taggmiljö för WKND-plats
 
-The [WKND](http://wknd.site/us/en.html) är en publik webbplats som bygger på [ett öppen källkodsprojekt](https://github.com/adobe/aem-guides-wknd) som utformats som referens och [självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) för en AEM implementering.
+The [WKND](https://wknd.site/us/en.html) är en publik webbplats som bygger på [ett öppen källkodsprojekt](https://github.com/adobe/aem-guides-wknd) som utformats som referens och [självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) för en AEM implementering.
 
-I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökningsprogrammet Experience Platform för att **switch** live [WKND-plats](http://wknd.site/us/en.html) till *din* taggegenskap. Du kan dock använda en egen AEM om den redan har [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
+I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan du använda felsökningsprogrammet Experience Platform för att **switch** live [WKND-plats](https://wknd.site/us/en.html) till *din* taggegenskap. Du kan dock använda en egen AEM om den redan har [Adobe Client Data Layer är aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 1. Logga in på Experience Platform och [skapa en taggegenskap](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) (om du inte redan gjort det).
 1. Se till att JavaScript-taggen är den första [biblioteket har skapats](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) och framhävd till taggen [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
@@ -63,12 +63,12 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
 
    ![Kopiera kod för att bädda in taggegenskap](assets/collect-data-analytics/launch-environment-copy.png)
 
-1. Öppna en ny flik i webbläsaren och gå till [WKND-plats](http://wknd.site/us/en.html)
+1. Öppna en ny flik i webbläsaren och gå till [WKND-plats](https://wknd.site/us/en.html)
 1. Öppna webbläsartillägget Experience Platform Debugger
 
    ![Felsökning för Experience Platform](assets/collect-data-analytics/experience-platform-debugger-extension.png)
 
-1. Navigera till **Experience Platform-taggar** > **Konfiguration** och under **Inmatade inbäddningskoder** ersätta den befintliga inbäddningskoden med *din* inbäddningskod kopierad från steg 3.
+1. Navigera till **Experience Platform-taggar** > **Konfiguration** och under **Inmatade inbäddade koder** ersätta den befintliga inbäddningskoden med *din* inbäddningskod kopierad från steg 3.
 
    ![Ersätt inbäddad kod](assets/collect-data-analytics/platform-debugger-replace-embed.png)
 
@@ -78,9 +78,9 @@ I stället för att konfigurera en AEM miljö och installera WKND-kodbasen kan d
 
 ## Verifiera Adobe klientdatalager på WKND-plats
 
-The [WKND-referensprojekt](https://github.com/adobe/aem-guides-wknd) byggs med AEM kärnkomponenter och har [Adobe-klientdatalagret har aktiverats](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
+The [WKND-referensprojekt](https://github.com/adobe/aem-guides-wknd) byggs med AEM kärnkomponenter och har [Adobe Client Data Layer är aktiverat](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) som standard. Kontrollera sedan att datalagret för klienten i Adobe är aktiverat.
 
-1. Navigera till [WKND-plats](http://wknd.site/us/en.html).
+1. Navigera till [WKND-plats](https://wknd.site/us/en.html).
 1. Öppna webbläsarens utvecklarverktyg och gå till **Konsol**. Kör följande kommando:
 
    ```js
@@ -115,7 +115,7 @@ The [WKND-referensprojekt](https://github.com/adobe/aem-guides-wknd) byggs med A
 
 ## Skapa en inläst sidregel
 
-Adobe-klientdatalagret är ett **event** datalager. När AEM siddatalager läses in utlöses en `cmp:show` -händelse. Skapa en regel som aktiveras när `cmp:show` händelsen utlöses från siddatalagret.
+Adobe-klientdatalagret är ett **händelsestyrd** datalager. När AEM siddatalager läses in utlöses en `cmp:show` -händelse. Skapa en regel som aktiveras när `cmp:show` händelsen utlöses från siddatalagret.
 
 1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM.
 1. Navigera till **Regler** i taggegenskapsgränssnittet och klicka sedan på **Skapa ny regel**.
@@ -180,7 +180,7 @@ Adobe-klientdatalagret är ett **event** datalager. När AEM siddatalager läses
 
    The `event` objektet skickas från `trigger()` metoden anropas i den anpassade händelsen. Här är `component` är den aktuella sidan som härleds från datalagret `getState` i den anpassade händelsen.
 
-1. Spara ändringarna och kör en [bygga](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i tagg-egenskapen för att höja upp koden för [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
+1. Spara ändringarna och kör en [bygg](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i tagg-egenskapen för att höja upp koden för [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM.
 
    >[!NOTE]
    >
@@ -259,7 +259,7 @@ Lägg sedan till Analytics-tillägget i taggegenskapen för att skicka data till
 
 1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM.
 1. Gå till **Tillägg** > **Katalog**
-1. Leta reda på **Adobe Analytics** och klicka **Installera**
+1. Leta reda på **Adobe Analytics** och klicka på **Installera**
 
    ![Adobe Analytics Extension](assets/collect-data-analytics/analytics-catalog-install.png)
 
@@ -273,7 +273,7 @@ Lägg sedan till Analytics-tillägget i taggegenskapen för att skicka data till
 
    >[!TIP]
    >
-   >Vi rekommenderar att du använder *Hantera biblioteket åt mig, alternativ* eftersom bibliotekshanteringen gör det mycket enklare att behålla `AppMeasurement.js` biblioteket är uppdaterat.
+   >Vi rekommenderar *Hantera biblioteket åt mig, alternativ* eftersom bibliotekshanteringen gör det mycket enklare att behålla `AppMeasurement.js` uppdaterat bibliotek.
 
 1. Markera kryssrutan för att aktivera **Använd Activity Map**.
 
@@ -299,13 +299,13 @@ Uppdatera sedan **Inläst sida** regel som ska använda **Komponentresurstyp** d
 
    >[!NOTE]
    >
-   > Det går att lägga till det här villkoret i den anpassade kodfunktionen som avlyssnar `cmp:show` händelse som skapades tidigare i självstudiekursen. Om du lägger till den i användargränssnittet blir den synligare för ytterligare användare som kan behöva göra ändringar i regeln. Dessutom kan vi använda vårt dataelement!
+   > Det går att lägga till det här villkoret i den anpassade kodfunktionen som avlyssnar `cmp:show` händelse som skapades tidigare i självstudien. Om du lägger till den i användargränssnittet blir den synligare för ytterligare användare som kan behöva göra ändringar i regeln. Dessutom kan vi använda vårt dataelement!
 
 1. Spara ändringarna.
 
 ## Ange analysvariabler och aktivera sidvisningsfunktionen
 
-För närvarande **Inläst sida** regeln returnerar bara en konsolsats. Använd sedan dataelementen och Analytics-tillägget för att ange Analytics-variabler som **åtgärd** i **Inläst sida** regel. Vi ställer också in en extra åtgärd för att aktivera **Sidvisningsfyr** och skicka insamlade data till Adobe Analytics.
+För närvarande är **Inläst sida** regeln returnerar bara en konsolsats. Använd sedan dataelementen och Analytics-tillägget för att ange Analytics-variabler som **åtgärd** i **Inläst sida** regel. Vi ställer också in en extra åtgärd för att aktivera **Sidvisningsfyr** och skicka insamlade data till Adobe Analytics.
 
 1. I regeln för sidinläsning **ta bort** den **Core - anpassad kod** åtgärd (konsolprogramsatser):
 
@@ -319,7 +319,7 @@ För närvarande **Inläst sida** regeln returnerar bara en konsolsats. Använd 
 
 1. Välj en tillgänglig **eVar** och anges som värdet för dataelementet **Sidmall**. Använda ikonen Dataelement ![Ikon för dataelement](assets/collect-data-analytics/cylinder-icon.png) för att välja **Sidmall** -element.
 
-   ![Ange som eVar](assets/collect-data-analytics/set-evar-page-template.png)
+   ![Ange som sidmall för eVar](assets/collect-data-analytics/set-evar-page-template.png)
 
 1. Bläddra nedåt, under **Ytterligare inställningar** set **Sidnamn** till dataelementet **Sidnamn**:
 
@@ -348,16 +348,16 @@ För närvarande **Inläst sida** regeln returnerar bara en konsolsats. Använd 
 
 ## Validera sidvyns beacon- och analysanrop
 
-Nu när **Inläst sida** regel skickar analysfyren, så du bör kunna se analysspårningsvariablerna med Experience Platform-felsökaren.
+Nu när **Inläst sida** regel skickar analysfyren, så du bör kunna se analysspårningsvariablerna med hjälp av Experience Platform-felsökaren.
 
 1. Öppna [WKND-plats](https://wknd.site/us/en.html) i webbläsaren.
-1. Klicka på felsökningsikonen ![Experience platform Debugger, ikon](assets/collect-data-analytics/experience-cloud-debugger.png) för att öppna felsökningsprogrammet för Experience Platform.
+1. Klicka på ikonen Felsökning ![Experience platform Debugger, ikon](assets/collect-data-analytics/experience-cloud-debugger.png) för att öppna felsökningsprogrammet för Experience Platform.
 1. Kontrollera att felsökaren mappar taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen ovan, och **Konsolloggning** är markerad.
 1. Öppna Analytics-menyn och kontrollera att rapportsviten är inställd på *din* rapportsvit. Sidnamnet ska också fyllas i:
 
    ![Felsökning på fliken Analytics](assets/collect-data-analytics/analytics-tab-debugger.png)
 
-1. Bläddra nedåt och expandera **Nätverksförfrågningar**. Du bör kunna hitta **evar** för **Sidmall**:
+1. Rulla ned och expandera **Nätverksförfrågningar**. Du bör kunna hitta **evar** för **Sidmall**:
 
    ![Evar och Page Name](assets/collect-data-analytics/evar-page-name-set.png)
 

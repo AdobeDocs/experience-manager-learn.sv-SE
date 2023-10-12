@@ -1,6 +1,6 @@
 ---
 title: Konfigurera tillgångsinsikter med AEM Assets och Adobe Launch
-description: I denna 5-delars videoserie går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som distribueras via Launch by Adobe.
+description: I den här femdelade videoserien går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som distribueras via Launch by Adobe.
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -10,16 +10,16 @@ last-substantial-update: 2022-06-04T00:00:00Z
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
 
 # Konfigurera tillgångsinsikter med AEM Assets och Adobe Experience Platform Launch
 
-I denna 5-delars videoserie går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som distribueras via Adobe Launch.
+I den här femdelsvideoserien går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som driftsätts via Adobe Launch.
 
 ## Del 1: Översikt över tillgångsinsikter {#overview}
 
@@ -33,16 +33,16 @@ I denna 5-delars videoserie går vi igenom konfigurationen och konfigurationen a
 
 >[!CAUTION]
 >
->Glöm inte att hämta [den senaste versionen av Core Components](https://github.com/adobe/aem-core-wcm-components) för er implementering.
+>Se till att du hämtar [den senaste versionen av Core Components](https://github.com/adobe/aem-core-wcm-components) för er implementering.
 
-I videon används Core Components v2.2.2 som inte längre är den senaste versionen. Använd den senaste versionen innan du går vidare till nästa avsnitt.
+I videon används Core Components v2.2.2, som inte är den senaste versionen. Använd den senaste versionen innan du fortsätter till nästa avsnitt.
 
-* Hämta [Exempel på bildinnehåll för resursinsikter](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
-* Hämta [de senaste AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components/releases)
+* Ladda ned [Exempel på bildinnehåll för resursinsikter](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
+* Ladda ned [de senaste AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components/releases)
 
 ## Del 2: Aktivera spårning av tillgångsinsikter för exempelbildkomponent {#sample-image-component-asset-insights}
 
-Förbättringar av kärnkomponenter och användning av proxykomponent (exempelbildkomponent) för tillgångsinsikter. Redigera mallprofiler för innehållssidor för att aktivera exempelbildkomponenten för referenswebbplatsen.
+Förbättringar av kärnkomponenter och användning av proxykomponent (exempelbildkomponent) för tillgångsinsikter. Redigera policyer för innehållsmallar för att aktivera exempelbildkomponenten för referensplatsen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
@@ -52,16 +52,16 @@ Förbättringar av kärnkomponenter och användning av proxykomponent (exempelbi
 
 Komponenten Core Image använder ***data-asset-id*** attribut inom överordnad &lt;div> av en bildtagg för att aktivera/inaktivera den här funktionen. Proxy-komponenten åsidosätter kärnkomponenten med följande ändringar.
 
-* Tar bort ***data-asset-id*** från den överordnade diven för ett  &lt;img> element i image.html
-* Lägger till ***data-aem-asset-id*** direkt till  &lt;img>  elementet i image.html
-* Lägger till ***data-trackable=&#39;true&#39;*** värdet till elementet  &lt;img>  i image.html
+* Tar bort ***data-asset-id*** från den överordnade diven för ett &lt;img> element i image.html
+* Lägger till ***data-aem-asset-id*** direkt till &lt;img> elementet i image.html
+* Lägger till ***data-trackable=&#39;true&#39;*** värdet till elementet &lt;img> i image.html
 * ***data-aem-asset-id*** och ***data-trackable=&#39;true&#39;*** behålls på samma nodnivå
 
 >[!NOTE]
 >
->*data-aem-asset-id=&#39;image.UUID&#39;* och *data-trackable=&#39;true&#39;* är de nyckelattribut som måste finnas för resursinställningar. För insikter om tillgångsklickning måste den överordnade taggen ha ett giltigt href-värde, utöver ovanstående dataattribut som finns i taggen  &lt;img> .
+>*data-aem-asset-id=&#39;image.UUID&#39;* och *data-trackable=&#39;true&#39;* är de nyckelattribut som måste finnas för resursinställningar. För insikter om tillgångsklickning måste den överordnade taggen ha ett giltigt href-värde, utöver ovanstående dataattribut som finns i taggen &lt;img> .
 
-## Del 3: Adobe Analytics - Skapa Report Suite, aktivera datainsamling i realtid och AEM Assets Reporting {#adobe-analytics-asset-insights}
+## Del 3: Adobe Analytics - Creating Report Suite, enabling Real-Time data collection and AEM Assets Reporting {#adobe-analytics-asset-insights}
 
 Rapportsviten med datainsamling i realtid skapas för att spåra tillgångar. Konfigurationen av AEM Assets Insights konfigureras med Adobe Analytics inloggningsuppgifter.
 
@@ -69,7 +69,7 @@ Rapportsviten med datainsamling i realtid skapas för att spåra tillgångar. Ko
 
 >[!NOTE]
 >
-Datainsamling i realtid och rapportering av AEM tillgångar måste aktiveras för din Adobe Analytics Report Suite. Om du aktiverar AEM Asset Reporting reserveras analysvariabler för att spåra tillgångsinsikter.
+Datainsamling i realtid och rapportering av AEM tillgångar måste vara aktiverat för din Adobe Analytics Report Suite. Om du aktiverar AEM Asset Reporting reserveras analysvariabler för att spåra tillgångsinsikter.
 
 För AEM Assets Insights-konfigurationen behöver du följande autentiseringsuppgifter
 
@@ -89,7 +89,7 @@ Lägga till Adobe Analytics Extension, skapa sidladdningsregler och integrera AE
 >
 Se till att replikera alla ändringar från författarinstansen till publiceringsinstansen.
 
-### Regel 1: Page Tracker (pagetracker.js) {#rule-page-tracker-pagetracker-js}
+### Regel 1: Sidspårare (pagetracker.js) {#rule-page-tracker-pagetracker-js}
 
 ```javascript
 //For AEM 6.3
@@ -104,14 +104,14 @@ Se till att replikera alla ändringar från författarinstansen till publicering
 Page tracker implements two call back (registered in asset-embed-code)
 
 * **\&lt;code>assetAnalytics.core.assetLoaded\&lt;code>** : anropas när load-händelsen skickas för asset-DOM-element.
-* **\&lt;code>assetAnalytics.core.assetClick\&lt;code>** : anropas när click-händelsen skickas för asset-DOM-element är detta bara relevant när asset-DOM-element har en ankartagg som överordnad med ett giltigt, externt href-attribut
+* **\&lt;code>assetAnalytics.core.assetClick\&lt;code>** : anropas när händelsen click skickas för asset-DOM-element är detta bara relevant när asset-DOM-element har en ankartagg som överordnad med ett giltigt, externt &#39;href&#39;-attribut
 
-Slutligen implementerar Pagetracker en initieringsfunktion som.
+Slutligen implementerar Page tracker en initieringsfunktion som.
 
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : anropas för att initiera Pagetracker-komponenten. Detta MÅSTE anropas innan något av materialet-insights-events (Impressions and/or Clicks) genereras från webbsidan.
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : kan också acceptera ett AppMeasurement-objekt - om det anges försöker det inte skapa en ny instans av AppMeasurementen.
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : anropades för att initiera sidspårningskomponenten. Detta MÅSTE anropas innan något av materialet-insights-events (Impressions and/or Clicks) genereras från webbsidan.
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : accepterar eventuellt ett AppMeasurementen objekt - om det anges försöker det inte skapa en instans av AppMeasurementet object.
 
-### Regel 2: Bildspårare - åtgärd 1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
+### Regel 2: Bildspårare - Åtgärd 1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 
 ```javascript
 /*
@@ -146,7 +146,7 @@ _satellite.notify('in assetAnalytics customInit');
 })();
 ```
 
-### Regel 2: Bildspårare - åtgärd 2 (image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
+### Regel 2: Bildspårare - Åtgärd 2 (image-tracker.js) {#rule-image-tracker-action-image-tracker-js}
 
 ```javascript
 /*
@@ -164,9 +164,9 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 });
 ```
 
-* assetAnalytics.core.assetLoaded() : anropas vid sidinläsning slutförd och utlöser tillgångsinställningar för alla spårbara bilder
+* assetAnalytics.core.assetLoaded() : anropas vid inläsning av sida och utlöser tillgångsinställningar för alla spårbara bilder
 * Analysvariabel som innehåller den inlästa tillgångslistan: **contextData[c.a.assets.idList]**
-* assetAnalytics.core.assetClick() : anropas när resursens DOM-element har en ankartagg med ett giltigt href-värde. När du klickar på en resurs skapas en cookie med det resurs-ID som du klickade på som värde.**(Cookie-namn: a.assets.clickedid)**
+* assetAnalytics.core.assetClick() : anropas när objektets DOM-element har en ankartagg med ett giltigt href-värde. När du klickar på en resurs skapas en cookie med det resurs-ID som du klickade på som värde.**(Cookie-namn: a.assets.clickedid)**
 * Analysvariabel som innehåller den inlästa tillgångslistan: **contextData[c.a.assets.clickedid&#39;]**
 * Källa: **contextData[c.a.assets.source]**
 
@@ -189,7 +189,7 @@ document.querySelectorAll(".cmp-image__image");
 Det finns två webbläsartillägg för Google Chrome i videon som ett sätt att felsöka Analytics. Liknande tillägg finns även för andra webbläsare.
 
 * [Starta tillägg för växlingskrom](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
-* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?hl=en)
+* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Det går också att växla DTM till felsökningsläge med följande Chrome-tillägg: [Starta och DTM-växel](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). Det gör det enklare att se om det finns några fel som rör DTM-distributionen. Dessutom kan du manuellt växla DTM till felsökningsläge via valfri webbläsare *utvecklarverktyg -> JS Console* genom att lägga till följande kodutdrag:
 

@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Så här skaffar du React-appen:
 >
 > //**********************************
 >
->  // TODO :: Implementera detta genom att följa stegen från AEM Headless Tutorial
+>  // TODO Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
 >  //*********************************
 >
@@ -488,7 +488,7 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
 
 ## Prova appen
 
-Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medlemmar_ länkar. Du kan också lägga till fler team och/eller medlemmar i teamalfa genom att lägga till innehållsfragment i AEM.
+Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medlemmar_ länkar. Du kan också lägga till fler team och/eller medlemmar i Team Alpha genom att lägga till innehållsfragment i AEM.
 
 >[!IMPORTANT]
 >
@@ -496,7 +496,7 @@ Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka _Medle
 
 ## Under hålet
 
-Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` begäran. Lägg märke till GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI` (till exempel <https://publish-p123-e456.adobeaemcloud.com>). Begärandena görs mot React-appens domän eftersom [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) är aktiverad med `http-proxy-middleware` -modul.
+Öppna webbläsarens **Utvecklarverktyg** > **Nätverk** och _Filter_ for `all-teams` begäran. Lägg märke till GraphQL API-begäran `/graphql/execute.json/my-project/all-teams` görs mot `http://localhost:3000` och **NOT** mot värdet av `REACT_APP_HOST_URI`, till exempel `<https://publish-pxxx-exxx.adobeaemcloud.com`. Begärandena görs mot React-appens domän eftersom [proxyinställningar](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) är aktiverad med `http-proxy-middleware` -modul.
 
 
 ![GraphQL API-begäran via Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

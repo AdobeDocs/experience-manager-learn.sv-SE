@@ -1,6 +1,6 @@
 ---
 title: Skapa klientbibliotek
-description: Skapa klientbibliotek för att hantera klickhändelsen för knappen "Spara och avsluta"
+description: Skapa ett klientbibliotek som hanterar klickhändelsen för knappen "Spara och avsluta"
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -10,16 +10,16 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
 # Skapa klientbibliotek
 
-Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` i `guideBridge` API för click-händelsen för knappen som identifieras av CSS-klassen **sparebutton**.  Vi skickar de anpassningsbara formulärdata, `fileMap`och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
+Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` i `guideBridge` API för click-händelsen för knappen som identifieras av CSS-klassen **Spara, knapp**.  Vi skickar de anpassningsbara formulärdata, `fileMap`och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
 
 När formulärdata har sparats genereras ett unikt program-ID som visas för användaren i en dialogruta. När dialogrutan stängs dirigeras användaren till formuläret som gör att användaren kan hämta det sparade adaptiva formuläret med det unika program-ID:t.
 
@@ -67,9 +67,9 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Vi har använt [bootbox javascript-bibliotek](http://bootboxjs.com/examples.html) för att visa dialogrutan
+> Vi har använt [bootbox JavaScript-bibliotek](https://bootboxjs.com/examples.html) för att visa dialogrutan
 
-Klientbiblioteken som används i exemplet kan [hämtad härifrån](assets/store-af-with-attachments-client-lib.zip)
+Klientbiblioteken som används i exemplet kan [laddas ned härifrån.](assets/store-af-with-attachments-client-lib.zip)
 
 ## Nästa steg
 

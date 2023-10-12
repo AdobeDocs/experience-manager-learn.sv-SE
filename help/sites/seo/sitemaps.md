@@ -10,7 +10,7 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM
 
 ### Absoluta URL för webbplatskarta{#absolute-sitemap-urls}
 
-AEM sitemap stöder absoluta URL:er med [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta görs genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor (vanligtvis AEM Publish-tjänsten).
+AEM sitemap stöder absoluta URL:er med [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta gör du genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor (vanligtvis AEM Publiceringstjänst).
 
 Exempel på noddefinition för Sling-mappning för `https://wknd.com` kan definieras under `/etc/map/https` enligt följande:
 
@@ -48,7 +48,7 @@ Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local`
 
 ### OSGi-konfiguration för schemaläggare för platskarta
 
-Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron-uttryck](http://www.cronmaker.com)) sajtkartor genereras om och cachelagras i AEM.
+Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron-uttryck](http://www.cronmaker.com/)) webbplatskartor genereras om/cachelagras i AEM.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -87,8 +87,8 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Resurser
 
-+ [AEM webbplatskartdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [AEM webbplatskartdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Dokumentation för Sitemap.org Sitemap](https://www.sitemaps.org/protocol.html)
-+ [Dokumentation för webbplatskartan.org för platskartor](https://www.sitemaps.org/protocol.html#index)
++ [Sitemap.org för Dreamweaver](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org för indexfiler för platskartor](https://www.sitemaps.org/protocol.html#index)
 + [Cronmaker](http://www.cronmaker.com/)

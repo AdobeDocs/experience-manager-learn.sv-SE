@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Lär dig hur du skapar en aktivitet som dirigerar om de webbsidor som finns på 
 
 ## Förutsättningar
 
-För att personalisera hela sidor på en AEM webbplats måste följande inställningar göras:
+Om du vill anpassa kompletta sidor på en AEM webbplats måste du slutföra följande konfiguration:
 
 1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
 1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
@@ -47,13 +47,13 @@ WKND:s webbplats har gjort om sin hemsida och vill dirigera om sina nuvarande be
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en ny aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan genom att använda **Lägg till upplevelse** -knappen.
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med hjälp av **Lägg till upplevelse** -knappen.
 
    ![Experience Options](assets/experience-options.png)
 
 1. Visa tillgängliga alternativ för Experience A och välj sedan **Omdirigera till URL** och ange en URL för den nya WKND-webbplatsens hemsida.
 
-   ![Omdirigerings-URL](assets/redirect-url.png)
+   ![Omdirigeringsadress](assets/redirect-url.png)
 
 1. Byt namn *Upplevelse A* till *Ny WKND-startsida* och *Upplevelse B* till *WKND - startsida*
 
@@ -82,5 +82,5 @@ Som marknadsförare kunde du skapa en aktivitet för att dirigera om de webbsido
 
 ## Stödlänkar
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

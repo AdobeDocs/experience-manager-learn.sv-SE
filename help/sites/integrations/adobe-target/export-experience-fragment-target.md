@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '200'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Lär dig hur du exporterar AEM Experience Fragment som Adobe Target-erbjudanden.
 
 ## Felsökning
 
-### Det går inte att exportera Experience Fragments till Target
+### Export av Experience Fragments till Target misslyckas
 
 #### Fel
 
@@ -47,9 +47,9 @@ Om du exporterar Experience Fragment till Adobe Target utan rätt behörighet i 
 
 #### Upplösning
 
-1. Logga in på [Admin Console](https://adminconsole.adobe.com/) med administratörsbehörighet för Adobe Target produktprofil som används men AEM integreringen
+1. Logga in på [Admin Console](https://adminconsole.adobe.com/) med administratörsbehörighet för Adobe Target produktprofil som används, men AEM integrering
 2. Välj __Produkter > Adobe Target > Produktprofil__
-3. Under __Integreringar__ väljer du integrering för din AEM as a Cloud Service miljö (samma namn som Adobe I/O-projektet)
+3. Under __Integreringar__ väljer du integrering för AEM as a Cloud Service miljö (samma namn som Adobe Developer-projektet)
 4. Tilldela __Redigerare__ eller __Godkännare__ roll
 
    ![Mål-API-fel](assets/target-permissions.png)
@@ -58,5 +58,5 @@ Du bör åtgärda det här felet genom att lägga till rätt behörighet i Adobe
 
 ## Stödlänkar
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

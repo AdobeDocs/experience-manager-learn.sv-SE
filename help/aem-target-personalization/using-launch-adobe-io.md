@@ -1,7 +1,7 @@
 ---
-title: Integrera Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
+title: Integrera Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe Developer
 seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
-description: Steg för steg gå igenom hur du integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe I/O
+description: Stegvisa steg-för-steg-instruktioner för hur man integrerar Adobe Experience Manager med Adobe Target med Experience Platform Launch och Adobe Developer
 seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 feature: Experience Fragments
 topic: Personalization
@@ -10,30 +10,30 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 1%
+source-wordcount: '1057'
+ht-degree: 0%
 
 ---
 
-# Använda Adobe Experience Platform Launch via Adobe I/O Console
+# Använda Adobe Experience Platform Launch via Adobe Developer Console
 
 ## Förutsättningar
 
 * [AEM författare och publicera instans](./implementation.md#set-up-aem) körs på localhost-port 4502 respektive 4503
 * **Experience Cloud**
    * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud tillhandahålls med följande lösningar
+   * Tillhandahållande av Experience Cloud med följande lösningar
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
-      * [Adobe I/O Console](https://console.adobe.io)
+      * [Adobe Developer Console](https://developer.adobe.com/console/)
 
      >[!NOTE]
      >Du bör ha behörighet att utveckla, godkänna, publicera, hantera tillägg och hantera miljöer i Launch. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om startbehörigheter finns i [se dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
-* **Webbläsarplugin-program**
-   * Adobe Experience Cloud Debugger ([Krom](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj))
+* **Webbläsarplugin**
+   * Adobe Experience Cloud Debugger ([Krom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob))
    * Launch and DTM Switch ([Krom](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk))
 
 ## Berörda användare
@@ -88,18 +88,18 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
 
 #### Lägger till måltillägg
 
-Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, `at.js`. Kunder som fortfarande använder det äldre målbiblioteket, `mbox.js`, [bör uppgradera till at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) för att använda Launch.
+Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, `at.js`. Kunder som fortfarande använder det äldre målbiblioteket, `mbox.js`, [bör uppgradera till at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) för att använda Launch.
 
 Tillägget Mål består av två huvuddelar:
 
-* Tilläggskonfigurationen som hanterar huvudbiblioteksinställningarna
+* Tilläggskonfigurationen, som hanterar huvudbiblioteksinställningarna
 * Regelåtgärder för att göra följande:
    * Load Target (at.js)
    * Lägg till parametrar i alla rutor
    * Lägg till parametrar i global Mbox
    * Fire Global Mbox
 
-1. Under **Tillägg** visas en lista med tillägg som redan är installerade för Launch-egenskapen. ([Experience Platform Launch Core Extension](https://exchange.adobe.com/experiencecloud.details.100223.adobe-launch-core-extension.html) installeras som standard)
+1. Under **Tillägg** visas en lista med tillägg som redan är installerade för Launch-egenskapen. ([Experience Platform Launch Core Extension](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) installeras som standard)
 2. Klicka på **Tilläggskatalog** och söka efter Mål i filtret.
 3. Välj den senaste versionen av Adobe Target at.js och klicka på **Installera** alternativ.
    ![Launch - ny egenskap](assets/using-launch-adobe-io/launch-target-extension.png)
@@ -124,12 +124,12 @@ Tillägget Mål består av två huvuddelar:
 
 1. Klicka på **Publicering** -fliken för din webbplatsegenskap, och vi skapar ett bibliotek för att bygga och driftsätta våra ändringar (dataelement, regler) i en utvecklingsmiljö.
    >[!VIDEO](https://video.tv.adobe.com/v/28412?quality=12&learn=on)
-2. Publicera ändringarna från utvecklingsmiljön till en mellanlagringsmiljö.
+2. Publicera dina ändringar från utvecklingsmiljön till en mellanlagringsmiljö.
    >[!VIDEO](https://video.tv.adobe.com/v/28419?quality=12&learn=on)
 3. Kör **Alternativet Bygg för mellanlagring**.
 4. Kör när bygget är klart **Godkänn för publicering**, som flyttar dina ändringar från en mellanlagringsmiljö till en produktionsmiljö.
    ![Mellanlagring till produktion](assets/using-launch-adobe-io/build-staging.png)
-5. Kör slutligen **Bygg och publicera i produktion** för att göra produktionsförändringar.
+5. Till sist kör du **Bygg och publicera i produktion** för att göra produktionsförändringar.
    ![Bygg och publicera i produktion](assets/using-launch-adobe-io/build-and-publish.png)
 
 ### Adobe Experience Manager
@@ -138,9 +138,9 @@ Tillägget Mål består av två huvuddelar:
 
 >[!NOTE]
 >
-> Ge integreringen av Adobe I/O tillgång till utvalda arbetsytor med lämplig [roll som gör det möjligt för ett centralt team att göra API-drivna ändringar på bara ett fåtal arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
+> Ge Adobe Developer-integreringen åtkomst till utvalda arbetsytor med lämplig [roll som gör det möjligt för ett centralt team att göra API-drivna ändringar på bara ett fåtal arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
-1. Skapa IMS-integrering i AEM med hjälp av autentiseringsuppgifter från Adobe I/O. (01:12 till 03:55)
+1. Skapa IMS-integrering i AEM med inloggningsuppgifter från Adobe Developer. (01:12 till 03:55)
 2. Skapa en egenskap i Experience Platform Launch. (täckt [ovan](#create-launch-property))
 3. Använd IMS-integreringen från steg 1 för att skapa integrering med Experience Platform Launch för att importera Launch-egenskapen.
 4. I AEM mappar du Experience Platform Launch-integreringen till en webbplats med webbläsarkonfigurationen. (05:28 till 06:14)
@@ -148,6 +148,6 @@ Tillägget Mål består av två huvuddelar:
 6. Använda Launch/DTM-webbläsarplugin. (06:34 till 06:50)
 7. Använda webbläsarplugin-programmet Adobe Experience Cloud Debugger. (06:51 till 07:22)
 
-Nu har du lyckats integrera [AEM med Adobe Target med Adobe Experience Platform Launch](./using-aem-cloud-services.md#integrating-aem-target-options) enligt alternativ 1.
+Nu har du lyckats integrera [AEM med Adobe Target med Adobe Experience Platform Launch](./using-aem-cloud-services.md#integrating-aem-target-options) enligt vad som anges i alternativ 1.
 
 Om du använder AEM Experience Fragment-erbjudanden för att ge dig möjlighet att anpassa dina aktiviteter går vi vidare till nästa kapitel och integrerar AEM med Adobe Target med hjälp av de gamla molntjänsterna.
