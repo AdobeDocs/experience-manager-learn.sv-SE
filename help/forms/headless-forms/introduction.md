@@ -7,13 +7,13 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 7b457ce8-f11a-4e2b-8548-6ac3910cb61e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
-
 
 # Bädda in Headless Adaptive Form
 
@@ -29,7 +29,7 @@ På följande skärmbild visas ett kontaktformulär som är inbäddat i SPA
 
 ## Förutsättningar
 
-* Reaktionsupplevelse
+* Reagera
 
 * Körningsinstans av AEM Forms 6.5.16
 
@@ -38,4 +38,3 @@ På följande skärmbild visas ett kontaktformulär som är inbäddat i SPA
 ## Nästa steg
 
 [Installera beroenden](./install-af-react-libraries.md)
-

@@ -9,13 +9,13 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 13520
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%
 
 ---
-
 
 # Skapa anpassad sändning
 
@@ -23,13 +23,13 @@ AEM Forms tillhandahåller ett antal inskickningsalternativ som uppfyller de fle
 
 Så här skriver du en anpassad skicka-tjänst:
 
-## Skapa AEM projekt
+## Skapa AEM
 
 Om du redan har ett AEM Forms Cloud Service-projekt kan du [hoppa till att skriva anpassad skicka-tjänst](#Write-the-custom-submit-service)
 
 * Skapa en mapp som kallas molnhanterare på din c-enhet.
 * Navigera till den nya mappen
-* Kopiera och klistra in innehållet i [den här textfilen](./assets/creating-maven-project.txt) i kommandotolken.Du kan behöva ändra DarchetypeVersion=41 beroende på [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 41 när den här artikeln skrevs.
+* Kopiera och klistra in innehållet [den här textfilen](./assets/creating-maven-project.txt) i kommandotolken.Du kan behöva ändra DarchetypeVersion=41 beroende på [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 41 när den här artikeln skrevs.
 * Kör kommandot genom att trycka på tangenten enter.Om allt är rätt ska du se meddelandet om att det lyckades.
 
 ## Skriv den anpassade skicka-tjänsten{#Write-the-custom-submit-service}
@@ -112,7 +112,7 @@ Om du vill distribuera koden till den molnförberedda författarinstansen går d
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Detta distribuerar koden som ett paket till din författarinstans
+Detta distribuerar koden som ett enda paket till författarinstansen
 
 ## Skicka koden till molnhanteraren och distribuera koden
 
@@ -125,15 +125,3 @@ När piplexin har körts korrekt bör du kunna koppla formulärskickaåtgärden 
 ## Nästa steg
 
 [Visa det anpassade svaret i din svarsapp](./handle-response-react-app.md)
-
-
-
-
-
-
-
-
-
-
-
-

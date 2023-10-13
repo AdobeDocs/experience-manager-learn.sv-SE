@@ -10,13 +10,13 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
+exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till märken i RTF-redigeraren
 

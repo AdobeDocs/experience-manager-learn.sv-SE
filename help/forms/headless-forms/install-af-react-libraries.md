@@ -7,13 +7,13 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 0ed44016-d52a-4980-a0b1-06da149c3cb1
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
-
 
 # Installerar nödvändiga beroenden
 
@@ -35,7 +35,7 @@ Uppdatera package.json så att den innehåller följande beroenden. När 0.22.41
 
 ## Konfigurera proxy
 
-Cross-Origin Resource Sharing (CORS) är en säkerhetsmekanism som förhindrar webbläsare från att göra förfrågningar till en annan domän än den som appen finns på. CORS-fel kan uppstå när du försöker hämta data från ett API som finns på en annan domän. Genom att konfigurera en proxy kan du kringgå CORS-begränsningar och göra förfrågningar till API:t från din React-app. Jag har använt följande kod i filen setUpProxy.js i mappen src. **Se till att du ändrar målet så att det pekar på publiceringsinstansen.**
+Cross-Origin Resource Sharing (CORS) är en säkerhetsmekanism som förhindrar webbläsare från att göra förfrågningar till en annan domän än den som appen finns på. CORS-fel kan uppstå när du försöker hämta data från ett API på en annan domän. Genom att konfigurera en proxy kan du kringgå CORS-begränsningar och göra förfrågningar till API:t från din React-app. Jag har använt följande kod i filen setUpProxy.js i mappen src. **Se till att du ändrar målet så att det pekar på publiceringsinstansen.**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');

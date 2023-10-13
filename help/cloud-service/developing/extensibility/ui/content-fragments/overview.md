@@ -10,8 +10,8 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
-exl-id: 4e3bb09c-8437-4f1d-bc88-a882a38e246c
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+exl-id: 9164423b-a609-4bc5-9777-112d229ae748
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Gränssnittet AEM innehållsfragment är ett kraftfullt, utbyggbart gränssnitt 
 
 ## Tilläggspunkter för konsoltillägg för innehållsfragment
 
-Content Fragment Console i AEM (Adobe Experience Manager) är ett användargränssnitt som är en central plats för hantering och organisering av innehållsfragment. Det innehåller en omfattande uppsättning verktyg och funktioner för att skapa, redigera, publicera och spåra innehållsfragment, vilket ger användarna möjlighet att effektivt hantera strukturerat innehåll i olika kanaler och kontaktytor.
+Content Fragment Console i AEM (Adobe Experience Manager) är ett användargränssnitt som är en central plats för hantering och organisering av innehållsfragment. Det innehåller en omfattande uppsättning verktyg och funktioner för att skapa, redigera, publicera och spåra innehållsfragment, vilket gör det möjligt för användare att effektivt hantera strukturerat innehåll över olika kanaler och kontaktytor.
 
 ![Konsol för innehållsfragment](./assets/overview/cfc.png)
 
@@ -65,7 +65,7 @@ Följande utökningspunkter för Content Fragments Console är tillgängliga:
       <div class="card-content is-padded-small">
         <div class="content">
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" title="Stödrasterkolumner" target="_blank" rel="referrer">Stödrasterkolumner</a></p>
-          <p class="is-size-6">Anpassa data som visas i listan Innehållsfragment.</p>
+          <p class="is-size-6">Anpassa de data som visas i listan Innehållsfragment.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
           </a>
@@ -171,14 +171,14 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
     <div class="card" style="height: 100%">
       <div class="card-image">
         <figure class="image is-16by9">
-          <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" title="Märken för textredigeraren" tabindex="-1" target="_blank" rel="referrer">
-            <img class="is-bordered-r-small" src="./assets/overview/cfe-rte-badges.png" alt="Märken för textredigeraren">
+          <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" title="Märken för textredigerare" tabindex="-1" target="_blank" rel="referrer">
+            <img class="is-bordered-r-small" src="./assets/overview/cfe-rte-badges.png" alt="Märken för textredigerare">
           </a>
         </figure>
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/ " title="Märken för textredigeraren" target="_blank" rel="referrer">Märken för textredigeraren</a></p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/ " title="Märken för textredigerare" target="_blank" rel="referrer">Märken för textredigerare</a></p>
           <p class="is-size-6">Anpassa icke-redigerbara formaterade block inuti RTE.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>

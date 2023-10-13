@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: b40b0ef4-efa9-400e-82d8-aa0c7feb7be4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -26,7 +27,7 @@ I den här självstudiekursen implementerar vi ett enkelt exempel där de som fy
 ## Krav
 
 * Upplev AEM Forms CS, särskilt när det gäller att skapa formulärdatamodeller.
-* Upplevelse när det gäller att distribuera kod med hjälp av molnhanteraren.
+* Upplev hur man driftsätter kod med hjälp av molnhanteraren.
 * Tillgång till en molnklar instans av AEM Forms CS.
 
 För att implementera ovanstående användningsexempel i AEM Forms CS behöver du följande
@@ -38,5 +39,3 @@ För att implementera ovanstående användningsexempel i AEM Forms CS behöver d
 ### Nästa steg
 
 [Skapa sidkomponent](./page-component.md)
-
-

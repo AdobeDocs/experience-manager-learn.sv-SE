@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-exl-id: 5953a1ad-0eaf-43f0-b356-6d20c0b59fee
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ export default function Contact(){
 }
 ```
 
-Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan hämtas härifrån](./assets/native-components.zip)
+Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan laddas ned härifrån](./assets/native-components.zip)
 
 ## Nästa steg
 

@@ -14,7 +14,8 @@ role: Developer
 level: Beginner
 kt: 13900
 last-substantial-update: 2023-09-09T00:00:00Z
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+exl-id: 18648914-91cc-470d-8f27-30b750eb2f32
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -52,6 +53,3 @@ Skapa ett adaptivt formulär och konfigurera för att skicka formuläret med for
 Skapa ett tackformulär baserat på den här mallen Associera den här tacksidan med huvudformuläret Ändra jsp-koden i [createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) för att skapa den XML som behövs för att förifylla ditt adaptiva formulär.
 Förhandsgranska och skicka in ditt anpassningsbara formulär.
 Tacka-sidan ska visas och fyllas i i förväg med data som anges i XML
-
-
-

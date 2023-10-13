@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: d970d58b-77a4-4012-9e72-b97d60ef028a
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+exl-id: 3b7632bd-3820-4c1e-aa3f-8a6a4fc26847
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
@@ -90,4 +90,3 @@ public class GetWidgetUrl extends SlingAllMethodsServlet {
 ## Nästa steg
 
 [Distribuera självstudieresurserna på ditt lokala system](./deploy-assets-on-your-server.md)
-

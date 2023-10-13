@@ -10,17 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: ad06b0f3-afa7-4661-aa66-0674d2e6bb43
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
 
 ---
 
-
 # Bygg komplex komponent
 
-Välkommen till den här självstudiekursen där vi ska gå igenom hur du skapar en komplex bildlistkomponent som återger innehållsfragment, kapslade innehållsfragmentreferenser och refererade bildresurser. Vi går ett steg längre genom att göra React-appen redigerbar med Universal Editor.
+Välkommen till den här självstudiekursen där vi ska gå igenom hur du skapar en komplex bildlistkomponent som återger innehållsfragment, kapslade innehållsfragmentreferenser och refererade bildresurser. Vi går ett steg längre genom att göra React-appen redigerbar med den universella redigeraren.
 
 Innehållsfragment i Adobe Experience Manager (AEM) är ett strukturerat sätt att hantera innehåll. Vi använder innehållsfragment för att fylla i vår bildlistekomponent, hantera kapslade referenser och visa refererade bildresurser.
 
@@ -30,7 +30,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
 ## Skapa en bildlista
 
-1. Nu måste vi skapa några erbjudandefragment och en bildlistkomponent.  Navigera till konsolen för innehållsfragment.
+1. Nu måste vi skapa några erbjudandefragment och en bildlistkomponent.  Navigera till innehållsfragmentskonsolen.
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
@@ -226,7 +226,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
    }
    ```
 
-1. Koppla det här till vår app.  I vår `home.js`kommer vi att referera till vår nya fråga. Ovanför `useEffect()` vi ställer in `list` och `setList`.
+1. Koppla det här till vår app.  I vår `home.js`kommer vi att referera till vår nya fråga. Över `useEffect()` vi ställer in `list` och `setList`.
 
    ```javascript
    const [list, setList] = useState({});
@@ -279,7 +279,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
    };
    ```
 
-   Observera också att vi refererar till en bildkomponent och skickar den en dynamisk URL-adress.
+   Observera också att vi refererar till en bildkomponent och skickar den en dynamisk URL.
 
    I bildkomponenten använder vi den dynamiska URL:en för att skapa en källuppsättning med flera URL:er.
 
@@ -316,7 +316,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
    Inom `<div className='card' key={card._path}>`
 
-   add
+   lägg till
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
@@ -336,7 +336,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
    itemProp="_metadata" itemType="text"
    ```
 
-   Till `<div />` lägg till:
+   Till våra `<div />` lägg till:
 
    ```javascript
    itemProp="description" itemType="richtext"

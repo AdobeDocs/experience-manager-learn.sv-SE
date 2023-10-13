@@ -10,17 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
-
 # AEM Headless APIs and React
 
-Välkommen till den här självstudiekursen där vi ska utforska hur du konfigurerar en React-app för att ansluta till Adobe Experience Manager (AEM) Headless-API:er med AEM Headless SDK. Vi ska ta upp hur du hämtar innehållsfragmentdata från AEM GraphQL API:er och visar dem i React-appen.
+Välkommen till den här självstudiekursen där vi ska utforska hur du konfigurerar en React-app för att ansluta till Adobe Experience Manager (AEM) Headless API:er med AEM Headless SDK. Vi ska ta upp hur du hämtar data från innehållsfragment AEM GraphQL API:er och visar dem i React-appen.
 
 AEM Headless-API:er tillåter åtkomst AEM innehåll från alla klientprogram. Vi vägleder dig genom att konfigurera React-appen för att ansluta till AEM Headless-API:er med AEM Headless SDK. Med den här inställningen skapas en återanvändbar kommunikationskanal mellan appen React och AEM.
 
@@ -260,4 +260,4 @@ Grattis! Du har uppdaterat React-appen för att integrera med AEM Headless-API:e
 
 Sedan skapar vi en mer komplex bildlistekomponent som dynamiskt återger refererade innehållsfragment från AEM.
 
-[Nästa kapitel: Bygga en bildlistekomponent](./3-complex-components.md)
+[Nästa kapitel: Skapa en bildlistkomponent](./3-complex-components.md)

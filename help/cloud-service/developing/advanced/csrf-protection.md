@@ -10,13 +10,13 @@ doc-type: Code Sample
 last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
-source-git-commit: 38db146129ceab83af50bf97cd6eb2d7179adbbf
+exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
 
 ---
-
 
 # CSRF-skydd
 

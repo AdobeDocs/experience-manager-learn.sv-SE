@@ -10,8 +10,8 @@ jira: KT-13465
 thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
-source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
+exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%

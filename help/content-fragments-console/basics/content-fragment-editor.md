@@ -10,13 +10,13 @@ doc-type: Feature Video
 last-substantial-update: 2023-09-19T00:00:00Z
 jira: KT-13961
 thumbnail: 3424373.jpeg
-source-git-commit: 89bc02b9ead98063ea31301b2e1f5a4d43cb5760
+exl-id: 842622c7-4a1c-42bb-88e9-42717e3dac8e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '22'
 ht-degree: 0%
 
 ---
-
 
 # Innehållsfragmentsredigerare
 

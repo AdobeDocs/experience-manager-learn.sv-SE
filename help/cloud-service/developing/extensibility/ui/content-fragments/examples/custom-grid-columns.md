@@ -10,13 +10,13 @@ jira: KT-13453
 thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade stödrasterkolumner
 
@@ -40,7 +40,7 @@ Koden visar hur Content Fragment-metadata kan hämtas i tilläggets registrering
 
 I det här exemplet används [Luxon](https://moment.github.io/luxon/) bibliotek för att beräkna innehållets ålder, installerat via `npm i luxon`.
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
 
@@ -202,13 +202,13 @@ Exempel på JSON för innehållsfragment som är tillgänglig som ett element i 
 }
 ```
 
-Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begäranden göras till AEM Author för att hämta data.
+Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begäranden göras till AEM författare för att hämta data.
 
 >[!IMPORTANT]
 >
 > Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som appen AppBuilder körs på. Tillåtna ursprung inkluderar `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
 >
-> Tillägget kan även anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som skickar begäran till AEM Author för tilläggets räkning.
+> Tillägget kan även anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som begär AEM författare för tilläggets räkning.
 
 
 ```javascript

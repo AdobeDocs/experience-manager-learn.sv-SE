@@ -10,13 +10,13 @@ doc-type: Article
 last-substantial-update: 2023-08-28T00:00:00Z
 jira: KT-13858
 thumbnail: KT-13858.jpeg
-source-git-commit: 6cbd8f3c49d44e75337715c35c198008da8ae7b9
+exl-id: e76ed4c5-3220-4274-a315-a75e549f8b40
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # AEM as a Cloud Service cachning
 

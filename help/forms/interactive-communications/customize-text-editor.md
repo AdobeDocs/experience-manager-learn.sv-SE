@@ -1,7 +1,7 @@
 ---
 title: Anpassa textredigeraren
 seo-title: Customize text editor
-description: Lär dig hur du anpassar textredigeraren.
+description: Lär dig anpassa textredigeraren.
 seo-description: Learn how to customize text editor.
 doc-type: article
 activity: implement
@@ -12,8 +12,8 @@ level: Beginner
 feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 kt: 13126
-exl-id: f12ab119-ac8e-4cc8-af86-cbffa30e72c5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -176,7 +176,6 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
    1. Klicka **Spara alla**.
 
-
 ## Lägga till anpassade teckensnitt på klientdatorn {#addcustomfonts}
 
 När du öppnar ett teckensnitt i textredigeraren för interaktiv kommunikation måste det finnas på klientdatorn som du använder för att komma åt interaktiv kommunikation. Om du vill kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
@@ -184,13 +183,13 @@ När du öppnar ett teckensnitt i textredigeraren för interaktiv kommunikation 
 Mer information om hur du installerar teckensnitt finns i:
 
 * [Installera eller avinstallera teckensnitt i Windows](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Mac Basics: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
+* [Mac Basics: Font Book](https://support.apple.com/en-us/HT201749)
 
 ## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
 
 När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
 
-Teckensnittet Sazanami Mincho Medium har till exempel lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) proceduren visas i textredigerarens användargränssnitt enligt följande:
+Till exempel har teckensnittet Sazanami Mincho Medium lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) proceduren visas i textredigerarens användargränssnitt enligt följande:
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 

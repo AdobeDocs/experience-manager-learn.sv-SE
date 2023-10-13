@@ -7,10 +7,10 @@ kt: 13311
 topic: Development
 role: User
 level: Intermediate
-exl-id: 7316ca02-be57-4ecf-b162-43a736b992b3
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ I den här artikeln använder vi [listforms-API](https://opensource.adobe.com/ae
 
 ## Kortmall
 
-Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets rubrik och beskrivning tillsammans med Adobe logotyp. [Material, UI-komponenter](https://mui.com/) har använts för att skapa den här layouten.
+Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets rubrik och beskrivning tillsammans med Adobe logotyp. [Material, UI-komponenter](https://mui.com/) har använts när layouten skapades.
 
 
 

@@ -10,13 +10,13 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
 
 ---
-
 
 # Exportera innehållsfragment till XML
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Du kan lägga till anpassade knappar på rubrikmenyn i Content Fragment Editor med hjälp av `headerMenu` tilläggspunkt. I det här exemplet visas hur du lägger till en knapp på rubrikmenyn och hur du hanterar click-händelsen för att exportera det aktiva innehållsfragmentet som XML eller CSV.
 
-Sidhuvudsknappar kan finnas som en enda knapp eller som en knapp med underordnade objekt. I det här exemplet visas hur du implementerar en knapp med underobjekt, men det innehåller den kommenterade utkoden som implementerar en enskild knapp.
+Sidhuvudsknappar kan finnas som en enda knapp eller som en knapp med underordnade objekt. I det här exemplet visas hur du implementerar en knapp med underobjekt, men det innehåller den kommenterade utkoden för att implementera en enskild knapp.
 
 ## Tilläggspunkt
 
@@ -40,7 +40,7 @@ I följande exempel skapas en huvudmenyknapp med två underobjekt, en som export
 
 Koden visar hur innehållet i innehållsfragmentet kan hämtas i tilläggets registreringsfil och hur innehållsfragmentets JSON-innehåll kan omformas kan exporteras.
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
 
@@ -145,7 +145,7 @@ export default ExtensionRegistration;
 
 #### Data för innehållsfragment
 
-Det aktiva innehållsfragmentet kan hämtas med `getContentFragment()` på `guestConnection.host.contentFragment` -objekt.
+Det aktiva innehållsfragmentet kan hämtas med `getContentFragment()` metoden på `guestConnection.host.contentFragment` -objekt.
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();

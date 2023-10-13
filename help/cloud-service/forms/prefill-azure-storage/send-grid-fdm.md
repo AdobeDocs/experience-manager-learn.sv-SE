@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: 4b2d1e50-9fa1-4934-820b-7dae984cee00
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 AEM Forms dataintegrering gör det möjligt att konfigurera och ansluta olika datakällor till AEM Forms. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor.
 
-Vi har använt SendGrid API för att skicka e-post med hjälp av en dynamisk mall. Du måste känna till API:t för SendGrid för att skicka e-post med dynamiska mallar. Du har fått en swagger-fil som beskriver till API som en del av den här självstudiekursen.
+Vi har använt SendGrid API för att skicka e-postmeddelanden med hjälp av en dynamisk mall. Du måste känna till API:t för SendGrid för att skicka e-post med dynamiska mallar. Du har fått en swagger-fil som beskriver till API som en del av den här kursen.
 
 ## Skapa integreringen
 
@@ -33,5 +34,3 @@ Den formulärdatamodell som skapats för den här självstudiekursen ingår som 
 ### Nästa steg
 
 [Skapa Azure Storage-integrering](./create-fdm.md)
-
-

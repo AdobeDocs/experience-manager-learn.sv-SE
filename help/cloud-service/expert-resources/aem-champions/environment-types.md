@@ -9,17 +9,17 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13229
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: 66159aac-a5ca-47fb-b374-f0fe5f8e1198
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
 
 ---
 
-
 # AEM Champion Tips and Tricks - Cloud Manager Environment Types
 
-Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är Adobe Experience Manager-mästare och förklarar hur man förstår Cloud Managers miljötyper.
+Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är Adobe Experience Manager-mästare och förklarar hur man kan förstå Cloud Managers miljötyper.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419297?quality=12&learn=on)
 

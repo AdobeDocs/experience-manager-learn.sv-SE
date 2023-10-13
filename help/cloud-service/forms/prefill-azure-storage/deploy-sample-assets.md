@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: ae8104fa-7af2-49c2-9e6b-704152d49149
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -27,8 +28,6 @@ Distribuera följande resurser på ditt lokala molnförberedda system för att f
 
 * [Installera den Azure-baserade formulärdatamodellen](./assets/azure-storage-fdm.zip). Du måste ange autentiseringsuppgifter för ditt Azure Storage-konto för att formulärdatamodellen ska fungera. Testa formulärdatamodellen i formulärdatamodellens redigerare.
 
-* [Importera exempelformuläret](./assets/credit-applications-af.zip)
+* [Importera det adaptiva exempelformuläret](./assets/credit-applications-af.zip)
 * [Importera klientbiblioteket](./assets/client-lib.zip)
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled). Ange ett giltigt e-postmeddelande och klicka på knappen Spara. Formulärdata bör lagras i Azure Storage och ett e-postmeddelande med en länk till det sparade formuläret skickas till den angivna e-postadressen.
-
-

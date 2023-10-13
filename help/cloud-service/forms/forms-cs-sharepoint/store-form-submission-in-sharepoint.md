@@ -1,6 +1,6 @@
 ---
 title: Integrera AEM Forms med Microsoft Sharepoint
-description: Lär dig hur du lagrar Adobe Experience Manager Forms som Cloud Service i Microsoft Sharepoint
+description: Lär dig hur du lagrar Adobe Experience Manager Forms som inskickade Cloud Service i Microsoft Sharepoint
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,8 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 11895
-exl-id: 7f9ccf2f-fe7c-4a38-b305-ab6937f3d79a
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: cc5bf24c-97c5-4383-8c35-f7512e594445
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

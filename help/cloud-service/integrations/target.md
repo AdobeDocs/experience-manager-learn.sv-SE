@@ -12,8 +12,8 @@ jira: KT-12433
 thumbnail: KT-12433.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
-exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1679'
 ht-degree: 0%
@@ -28,13 +28,13 @@ Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content
 
 Självstudiekursen beskriver de steg som krävs för att konfigurera AEM och Adobe Target:
 
-1. [Skapa Adobe IMS-konfiguration för Adobe Target](#adobe-ims-configuration) i AEM Author
-2. [Skapa Adobe Target-Cloud Service](#adobe-target-cloud-service) i AEM Author
-3. [Använd Adobe Target-Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM Author
-4. [Behörighet för Adobe Target-Cloud Servicen](#permission) i Adobe Admin Console
-5. [Exportera innehållsfragment](#export-content-fragments) från AEM Author till Target
-6. [Skapa en aktivitet med hjälp av erbjudanden för innehållsfragment](#activity) i Adobe Target
-7. [Skapa ett Experience Platform-datastream](#datastream-id) i Experience Platform
+1. [Skapa Adobe IMS-konfiguration för Adobe Target](#adobe-ims-configuration) i AEM
+2. [Skapa Adobe Target-Cloud Service](#adobe-target-cloud-service) i AEM
+3. [Använd Adobe Target-Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM
+4. [Behörighet för Adobe Target-Cloud Servicen](#permission) i ADOBE ADMIN CONSOLE
+5. [Exportera innehållsfragment](#export-content-fragments) från AEM författare till mål
+6. [Skapa en aktivitet med hjälp av erbjudanden för innehållsfragment](#activity) i ADOBE TARGET
+7. [Skapa ett Experience Platform-datastream](#datastream-id) i EXPERIENCE PLATFORM
 8. [Integrera personalisering i en React-baserad AEM Headless-app](#code) med Adobe Web SDK.
 
 ## Adobe IMS-konfiguration{#adobe-ims-configuration}
@@ -61,11 +61,11 @@ Adobe Target-Cloud Servicen, som konfigureras i en kontextmedveten konfiguration
 +++Expandera för steg-för-steg-instruktioner
 
 1. Logga in på __AEM Author Service__ som DAM-administratör
-1. Navigera till __Resurser > Filer__, leta reda på resursmappen som har `/conf` använt på
+1. Navigera till __Assets > Files__, leta reda på resursmappen som har `/conf` använt på
 1. Markera resursmappen och välj __Egenskaper__ i det övre åtgärdsfältet
-1. Välj __Cloud Services__ tab
-1. Kontrollera att molnkonfigurationen är inställd på den kontextmedvetna konfigurationen (`/conf`) som innehåller konfigurationen för Adobe Target-Cloud Services.
-1. Välj __Adobe Target__ från __Cloud Service Configurations__ listruta.
+1. Välj __Cloud Service__ tab
+1. Kontrollera att molnkonfigurationen är inställd på den kontextmedvetna konfigurationen (`/conf`) som innehåller konfigurationen för Adobe Target-Cloud Service.
+1. Välj __Adobe Target__ från __Cloud Service Configurations__ nedrullningsbar meny.
 1. Välj __Spara och stäng__ längst upp till höger
 
 +++
@@ -76,16 +76,16 @@ Adobe Target-Cloud Servicen, som konfigureras i en kontextmedveten konfiguration
 
 ## Behörighet för integrering av AEM Target{#permission}
 
-Integrationen med Adobe Target, som visas som ett utvecklarprojekt.adobe.com-projekt, måste beviljas __Redigerare__ produktroll i Adobe Admin Console för att exportera innehållsfragment till Adobe Target.
+Integrationen med Adobe Target, som visas som ett developer.adobe.com-projekt, måste beviljas __Redigerare__ produktroll i Adobe Admin Console för att exportera innehållsfragment till Adobe Target.
 
 +++Expandera för steg-för-steg-instruktioner
 
 1. Logga in på Experience Cloud som användare som kan administrera Adobe Target-produkten i Adobe Admin Console
 1. Öppna [Adobe Admin Console](https://adminconsole.adobe.com)
-1. Välj __Produkter__ och sedan öppna __Adobe Target__
+1. Välj __Produkter__ öppna __Adobe Target__
 1. På __Produktprofiler__ flik, välja __*DefaultWorkspace*__
 1. Välj __API-autentiseringsuppgifter__ tab
-1. Leta reda på appen developer.adobe.com i den här listan och ange dess __Produktroll__ till __Redigerare__
+1. Leta reda på din developer.adobe.com i den här listan och ange dess __Produktroll__ till __Redigerare__
 
 +++
 
@@ -99,24 +99,24 @@ Innehållsfragment som finns under [konfigurerad AEM Assets-mapphierarki](#apply
 
 +++Expandera för steg-för-steg-instruktioner
 
-1. Logga in på __AEM Author__ som DAM-användare
-1. Navigera till __Resurser > Filer__ och leta upp de innehållsfragment som ska exporteras som JSON till Target i mappen&quot;Adobe Target enabled&quot;
+1. Logga in på __AEM__ som DAM-användare
+1. Navigera till __Assets > Files__ och leta upp de innehållsfragment som ska exporteras som JSON till Target i mappen&quot;Adobe Target enabled&quot;
 1. Markera de innehållsfragment som ska exporteras till Adobe Target
-1. Välj __Exportera till Adobe Target-erbjudanden__ i det övre åtgärdsfältet
+1. Välj __Exportera till Adobe Target__ i det övre åtgärdsfältet
    + Den här åtgärden exporterar den fullständigt hydrerade JSON-representationen av Content Fragment till Adobe Target som ett&quot;Content Fragment Offer&quot;
    + Den fullständigt hydrerade JSON-representationen kan granskas i AEM
-      + Markera innehållsfragmentet
+      + Markera innehållsavsnittet
       + Expandera sidopanelen
       + Välj __Förhandsgranska__ ikonen i den vänstra panelen
       + JSON-representationen som exporteras till Adobe Target visas i huvudvyn
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com) med en användare i redigeringsrollen för Adobe Target
 1. Från [Experience Cloud](https://experience.adobe.com), markera __Mål__ från produktväljaren uppe till höger för att öppna Adobe Target.
-1. Kontrollera att standardarbetsytan är markerad i __Arbetsyteväxlare__ i det övre högra hörnet.
+1. Kontrollera att standardarbetsytan är markerad i __Arbetsyteväxlare__ längst upp till höger.
 1. Välj __Erbjudanden__ i den övre navigeringen
 1. Välj __Typ__ listruta och markera __Innehållsfragment__
 1. Kontrollera att det innehållsfragment som exporteras från AEM visas i listan
    + Hovra över erbjudandet och välj __Visa__ knapp
-   + Granska __Erbjudandeinformation__ och se __AEM djuplänk__ som öppnar innehållsfragmentet direkt i AEM Author-tjänsten
+   + Granska __Erbjudandeinformation__ och se __AEM djuplänk__ som öppnar innehållsfragment direkt i AEM författartjänst
 
 +++
 
@@ -139,15 +139,15 @@ I det här exemplet använder vi en enkel A/B-aktivitet, men alla Target-aktivit
    + Välj __Webb__
    + I __Välj Experience Composer__, markera __Formulär__
    + I __Välj arbetsyta__, markera __Standardarbetsyta__
-   + I __Välj egenskap__ markerar du den egenskap som aktiviteten är tillgänglig i, eller väljer __Inga egenskapsbegränsningar__ så att den kan användas i alla egenskaper.
+   + I __Välj egenskap__ markerar du den egenskap som aktiviteten är tillgänglig i, eller väljer __Inga egenskapsbegränsningar__ för att den ska kunna användas i alla egenskaper.
    + Välj __Nästa__ för att skapa aktiviteten
-1. Byt namn på aktiviteten genom att välja __byt namn__ i det övre vänstra hörnet
+1. Byt namn på aktiviteten genom att välja __byt namn__ längst upp till vänster
    + Ge aktiviteten ett beskrivande namn
-1. I den inledande upplevelsen ställer du in __Plats 1__ för aktiviteten att rikta sig till
+1. I den inledande upplevelsen anger du __Plats 1__ för aktiviteten att rikta sig till
    + I det här exemplet anger du en anpassad plats med namnet `wknd-adventure-promo`
 1. Under __Innehåll__ markera standardinnehållet och markera __Ändra innehållsfragment__
 1. Välj det exporterade innehållsfragment som ska användas för den här upplevelsen och välj __Klar__
-1. Granska JSON-erbjudandet om innehållsfragment i innehållstextområdet. Det är samma JSON som finns i AEM Author-tjänsten via funktionen Förhandsgranska i innehållsfragment.
+1. Granska JSON-erbjudandet för innehållsfragment i textområdet Innehåll. Det är samma JSON som finns i AEM Author-tjänsten via funktionen Förhandsgranska för innehållsfragment.
 1. Lägg till en upplevelse i den vänstra listen och välj ett annat erbjudande om innehållsfragment som ska användas
 1. Välj __Nästa__ och konfigurera målreglerna efter behov för aktiviteten
    + I det här exemplet lämnar du A/B-testningen som en manuell delning på 50/50.
@@ -185,7 +185,7 @@ An [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/doc
       + Målmiljön kan ställas in i Adobe Target på __Administration > Värdar__.
    + Tredjeparts-ID-namnområde för mål: __Lämna tomt__
 1. Välj __Spara__
-1. Till höger kopierar du __Datastream-ID__ för användning i [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) konfigurationsanrop.
+1. Till höger kopierar du __Dataström-ID__ för användning i [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) konfigurationsanrop.
 
 +++
 
@@ -215,7 +215,7 @@ Mobilupplevelserna i Android™ och iOS kan personaliseras enligt liknande möns
    ```
 
 1. Öppna kodbasen på `~/Code/aem-guides-wknd-graphql/personalization-tutorial` i din favoritutvecklingsmiljö
-1. Uppdatera värddatorn för AEM som du vill att appen ska ansluta till `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
+1. Uppdatera värddatorn för AEM som du vill att programmet ska ansluta till `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
 
    ```
    ...
@@ -242,7 +242,7 @@ Mobilupplevelserna i Android™ och iOS kan personaliseras enligt liknande möns
 
    När du konfigurerar Web SDK krävs två ID:
 
-   + `edgeConfigId` som är [Datastream-ID](#datastream-id)
+   + `edgeConfigId` som är [Dataström-ID](#datastream-id)
    + `orgId` AEM as a Cloud Service/Target Adobe-organisations-ID som finns på __Experience Cloud > Profil > Kontoinformation > Aktuellt Org-ID__
 
    När du anropar Web SDK är Adobe Target aktivitetsplats (i vårt exempel: `wknd-adventure-promo`) måste anges som värdet i `decisionScopes` array.

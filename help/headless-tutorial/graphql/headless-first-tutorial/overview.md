@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
+exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 1%
 
 ---
-
 
 # AEM Headless first tutorial
 
@@ -32,7 +32,7 @@ Genom att utnyttja AEM Headless API:er kan du hämta innehåll, resurser och dat
 
 Under den här självstudiekursen går vi steg för steg igenom processen att skapa en webbupplevelse med React och AEM Headless API:er med GraphQL. Du får lära dig hur du konfigurerar utvecklingsmiljön, upprättar en anslutning mellan Reagera och AEM, hämtar innehåll med GraphQL-frågor och återger det dynamiskt i webbprogrammet.
 
-Vi kommer att behandla ämnen som att konfigurera ditt React-projekt, upprätta autentisering med AEM, fråga innehåll från AEM använda GraphQL, hantera data i dina React-komponenter och optimera prestanda genom att använda cachning och paginering.
+Vi kommer att behandla ämnen som att konfigurera ditt React-projekt, upprätta autentisering med AEM, hämta innehåll från AEM använda GraphQL, hantera data i dina React-komponenter och optimera prestanda genom att använda cachning och paginering.
 
 I slutet av den här självstudiekursen får du en god förståelse för hur du använder React, AEM Headless API:er och GraphQL för att skapa en kraftfull och engagerande webbupplevelse. Låt oss dyka in och börja bygga nästa webbapplikation!
 
@@ -48,7 +48,7 @@ I slutet av den här självstudiekursen får du en god förståelse för hur du 
 
 Den här självstudiekursen kräver administratörsåtkomst till en AEM as a Cloud Service miljö.
 
-### Mjukvara
+### Programvara
 
 + [Node.js v16+](https://nodejs.org/en/)
    + Kontrollera nodversionen genom att köra `node -v` från kommandoraden

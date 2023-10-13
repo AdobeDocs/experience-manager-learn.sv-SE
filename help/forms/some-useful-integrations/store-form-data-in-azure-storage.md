@@ -8,7 +8,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-08-14T00:00:00Z
 kt: 13781
-source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
+exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -72,8 +73,3 @@ Följande funktion har skrivits för att lagra skickade formulärdata i Azure St
 ## Verifiera lagrade data i behållaren
 
 ![form-data-in-container](./assets/form-data-in-container.png)
-
-
-
-
-

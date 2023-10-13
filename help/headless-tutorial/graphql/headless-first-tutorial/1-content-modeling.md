@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 1%
 
 ---
-
 
 # Innehållsmodellering
 
@@ -61,7 +61,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![Teaser model](./assets/1/teaser-model.png)
 
-1. I mappen skapar du en andra modell med namnet __Erbjudande__. Klicka på Skapa och ge modellen namnet&quot;Erbjudande&quot; och lägg till följande datatyper:
+1. Skapa en andra modell i mappen __Erbjudande__. Klicka på Skapa och ge modellen namnet&quot;Erbjudande&quot; och lägg till följande datatyper:
 
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|
@@ -71,7 +71,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![Erbjudandemodell](./assets/1/offer-model.png)
 
-1. Skapa en tredje modell i mappen __Bildlista__. Klicka på Skapa och ge modellen namnet &quot;Bildlista&quot; och lägg till följande datatyper:
+1. Skapa en tredje modell med namnet i mappen __Bildlista__. Klicka på Skapa och ge modellen namnet &quot;Bildlista&quot; och lägg till följande datatyper:
 
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|

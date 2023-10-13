@@ -8,8 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 11893
-exl-id: 8ada642b-7810-4060-8567-82954e3789aa
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: 8d3697a6-3a2f-4501-9eea-35cd9e555292
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

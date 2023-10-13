@@ -12,8 +12,8 @@ jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
-exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Lär dig **modern strategi** om hur du integrerar Adobe Experience Manager (AEM)
 
 ## Översikt
 
-Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in uppgifter om två viktiga mätvärden: sidvisningar och CTA-klickningar (homepage call-to-action).
+Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in data om två viktiga mätvärden: sidvisningar och CTA-klick (homepage call-to-action).
 
 Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest uppmärksamhet från användarna. Dessutom ger CTA-klickningar på hemsidan värdefulla insikter om hur effektivt teamets call-to-action-element är. Dessa data kan visa vilka CTA:er som är intressanta för användarna, vilka som behöver justeras, och de kan upptäcka nya möjligheter att öka användarengagemanget och driva konverteringar.
 
@@ -37,7 +37,7 @@ Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest up
 
 Följande krävs vid integrering av Adobe Analytics med Platform Web SDK.
 
-Du har slutfört konfigurationsstegen från **[Integrera Experience Platform Web SDK](./web-sdk.md)** självstudiekurs.
+Du har slutfört konfigurationsstegen från **[Integrera Experience Platform Web SDK](./web-sdk.md)** självstudie.
 
 I **AEM som Cloud Service**:
 
@@ -58,9 +58,9 @@ I **Experience Platform**:
 + Åtkomst till **Datastreams** under Datainsamling
 + Åtkomst till **Taggar** (tidigare Launch) under Datainsamling
 
-Om du inte har nödvändig behörighet använder systemadministratören [Adobe Admin Console](https://adminconsole.adobe.com/) kan ge nödvändiga behörigheter.
+Om du inte har de behörigheter som krävs använder systemadministratören [Adobe Admin Console](https://adminconsole.adobe.com/) kan ge nödvändiga behörigheter.
 
-Innan vi börjar integrera AEM och Analytics med Platform Web SDK kan vi _de viktigaste komponenterna och nyckelelementen_ som fastställdes i [Integrera Experience Platform Web SDK](./web-sdk.md) självstudiekurs. Den utgör en stabil grund för integreringen.
+Innan vi börjar integrera AEM och Analytics med Platform Web SDK kan vi _de viktigaste komponenterna och nyckelelementen_ som fastställdes i [Integrera Experience Platform Web SDK](./web-sdk.md) självstudie. Den utgör en stabil grund för integreringen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -81,7 +81,7 @@ Mer information om koncept och olika element som ska ingå i SDR-dokumentet finn
 
 Det första steget är att konfigurera Adobe Analytics, särskilt att rapportera programpaket med konverteringsvariabler (eller eVar) och framgångshändelser. Konverteringsvariablerna används för att mäta orsak och effekt. Framgångshändelserna används för att spåra åtgärder.
 
-I den här självstudiekursen  `eVar5, eVar6, and eVar7` spår  _WKND-sidnamn, WKND CTA-ID och WKND CTA-namn_ och `event7` används för att spåra  _WKND CTA Click Event_.
+I den här självstudien  `eVar5, eVar6, and eVar7` spår  _WKND-sidnamn, WKND CTA-ID och WKND CTA-namn_ och `event7` används för att spåra  _WKND CTA Click Event_.
 
 För att analysera, samla in insikter och dela dessa insikter med andra från insamlade data skapas ett projekt i Analysis Workspace.
 
@@ -104,7 +104,7 @@ En DataStream instruerar Platform Edge Network var insamlade data ska skickas. I
 
 XDM-schemat (Experience Data Model) hjälper er att standardisera insamlade data. I [tidigare självstudiekurs](./web-sdk.md), ett XDM-schema med `AEP Web SDK ExperienceEvent` en fältgrupp skapas. Med det här XDM-schemat skapas dessutom en datauppsättning för lagring av insamlade data i Experience Platform.
 
-Det XDM-schemat har dock inte Adobe Analytics-specifika fältgrupper för att skicka eVar, händelsedata. Ett nytt XDM-schema skapas i stället för att det befintliga schemat uppdateras för att undvika att eVar, händelsedata i plattformen lagras.
+Det XDM-schemat har dock inte Adobe Analytics-specifika fältgrupper för att skicka eVar, händelsedata. Ett nytt XDM-schema skapas i stället för att det befintliga schemat uppdateras för att undvika att eVarna, händelsedata i plattformen lagras.
 
 Det nyskapade XDM-schemat har `AEP Web SDK ExperienceEvent` och `Adobe Analytics ExperienceEvent Full Extension` fältgrupper.
 
@@ -117,7 +117,7 @@ I [tidigare självstudiekurs](./web-sdk.md), en taggegenskap skapas, har dataele
 
 + Mappa sidnamnet till `eVar5`
 + Startar **sidvy** Analysanrop ( eller skicka fyr)
-+ Samla in CTA-data med Adobe-klientdatalagret
++ Samla in CTA-data med Adobe Client Data Layer
 + Mappa CTA-ID och -namn till `eVar6` och `eVar7` respektive. CTA-klickningen räknar också till `event7`
 + Startar **klicka på länken** Analysanrop ( eller skicka fyr)
 
@@ -256,9 +256,9 @@ Om du vill visualisera användarresor använder du Flödesvisualisering och bör
 
 ## Sammanfattning
 
-Bra jobbat! Du har slutfört konfigurationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA-klickdata.
+Snyggt jobb! Du har slutfört konfigurationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA-klickdata.
 
-Implementering av Adobe Analytics är avgörande för att marknadsföringsteamen ska få insikter i användarbeteenden, fatta välgrundade beslut så att de kan optimera sitt innehåll och fatta datadrivna beslut.
+Implementering av Adobe Analytics är avgörande för att marknadsföringsteamen ska få insikter i användarbeteenden, fatta välgrundade beslut, så att de kan optimera sitt innehåll och fatta datadrivna beslut.
 
 Genom att implementera de rekommenderade stegen och använda de tillhandahållna resurserna, t.ex. dokumentet Solution Design Reference (SDR) och förstå viktiga Analytics-koncept, kan marknadsförarna effektivt samla in och analysera data.
 

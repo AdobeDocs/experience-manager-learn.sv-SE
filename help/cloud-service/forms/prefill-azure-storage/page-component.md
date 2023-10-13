@@ -8,17 +8,17 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
 
 ---
 
-
 # Sidkomponent
 
-En sidkomponent är en vanlig komponent som återger en sida. Vi ska skapa en ny sidkomponent och kommer att koppla den här sidkomponenten till en ny adaptiv formulärmall. Detta garanterar att koden bara körs när ett anpassningsbart formulär är baserat på den här mallen.
+En sidkomponent är en vanlig komponent som återger en sida. Vi ska skapa en ny sidkomponent och kommer att koppla den här sidkomponenten till en ny adaptiv formulärmall. Detta garanterar att koden bara körs när ett anpassningsbart formulär är baserat på just den här mallen.
 
 ## Skapa sidkomponent
 
@@ -84,4 +84,3 @@ I den här koden får vi värdet på parametern request **guid** och lagra den i
 ### Nästa steg
 
 [Koppla sidkomponenten till mallen](./associate-page-component.md)
-

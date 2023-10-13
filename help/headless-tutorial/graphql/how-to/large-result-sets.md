@@ -10,8 +10,8 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-exl-id: f47ce344-310f-4b4c-9340-b0506289f468
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 AEM GraphQL-frågor utan rubriker kan returnera stora resultat. I den här artikeln beskrivs hur du arbetar med stora resultat i AEM Headless för att få bästa prestanda för ditt program.
 
-AEM Headless har stöd för [offset/limit](#list-query) och [markörbaserad sidnumrering](#paginated-query) frågor till mindre delmängder av en större resultatmängd. Flera förfrågningar kan göras för att samla in så många resultat som behövs.
+AEM Headless stöder [offset/limit](#list-query) och [markörbaserad sidnumrering](#paginated-query) frågor till mindre delmängder av en större resultatmängd. Flera förfrågningar kan göras för att samla in så många resultat som behövs.
 
 I exemplen nedan används små delmängder av resultat (fyra poster per begäran) för att demonstrera teknikerna. I ett verkligt program skulle du använda ett större antal poster per begäran för att förbättra prestandan. 50 poster per begäran är en bra baslinje.
 
 ## Content Fragment Model
 
-Du kan använda sidnumrering och sortering mot alla Content Fragment-modeller.
+Du kan använda sidnumrering och sortering mot alla innehållsfragmentmodeller.
 
 ## GraphQL beständiga frågor
 

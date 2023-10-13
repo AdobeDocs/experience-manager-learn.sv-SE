@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13230
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: a89860ed-9ea4-494c-bce9-91ec550361fe
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 2%
 
 ---
-
 
 # AEM Champion Tips and Tricks - Cloud Manager UI
 

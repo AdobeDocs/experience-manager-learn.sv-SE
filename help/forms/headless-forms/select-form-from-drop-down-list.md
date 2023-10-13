@@ -7,8 +7,8 @@ kt: 13346
 topic: Development
 role: User
 level: Intermediate
-exl-id: 31008bb3-316b-4035-89ea-e830b429b927
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Listrutor är ett kompakt och organiserat sätt att presentera en lista med alte
 
 ![kortvy](./assets/forms-drop-down.png)
 
-## Nedrullningsbar lista
+## Listruta
 
-Följande kod användes för att fylla i den nedrullningsbara listan med resultaten från API-anropet för listformulär. Beroende på vad användaren väljer visas det anpassade formuläret så att användaren kan fylla i och skicka det. [Material, UI-komponenter](https://mui.com/) har använts för att skapa det här gränssnittet
+Följande kod användes för att fylla i den nedrullningsbara listan med resultaten från API-anropet för listformulär. Beroende på vad användaren väljer visas det anpassade formuläret så att användaren kan fylla i och skicka det. [Material, UI-komponenter](https://mui.com/) har använts för att skapa gränssnittet
 
 ```javascript
 import * as React from 'react';
@@ -145,4 +145,4 @@ setForm(formJSON.afModelDefinition);
 
 ## Nästa steg
 
-[Visa formulären i kortlayouten](./display-forms-card-view.md)
+[Visa formulären i kortlayout](./display-forms-card-view.md)

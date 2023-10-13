@@ -1,6 +1,6 @@
 ---
 title: Integrera AEM Sites och Experience Platform Web SDK
-description: Lär dig hur du integrerar AEM Sites as a Cloud Service med Experience Platform Web SDK. Detta grundläggande steg är avgörande för att integrera Adobe Experience Cloud-produkter som Adobe Analytics, Target eller nyligen lanserade innovativa produkter som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer.
+description: Lär dig integrera AEM Sites as a Cloud Service med Experience Platform Web SDK. Detta grundläggande steg är avgörande för att integrera Adobe Experience Cloud-produkter som Adobe Analytics, Target eller nyligen lanserade innovativa produkter som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer.
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -12,8 +12,8 @@ jira: KT-13156
 thumbnail: KT-13156.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
-exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1354'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Lär dig integrera AEM as a Cloud Service med Experience Platform [Web SDK](http
 
 Du får även lära dig hur du samlar in och skickar [WKND - exempel på Adobe Experience Manager-projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvisningsdata i [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html).
 
-När du är klar med konfigurationen har du implementerat en stabil grund. Du är också redo att fortsätta implementeringen av Experience Platform med program som [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)och [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). Den avancerade implementeringen bidrar till att öka kundengagemanget genom att standardisera webb- och kunddata.
+När du är klar med konfigurationen har du implementerat en stabil grund. Du är också redo att fortsätta implementeringen av Experience Platform med program som [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)och [Adobe Journey Optimizer (JO)](https://experienceleague.adobe.com/docs/journey-optimizer.html). Den avancerade implementeringen bidrar till att öka kundengagemanget genom att standardisera webb- och kunddata.
 
 ## Förutsättningar
 
@@ -46,13 +46,13 @@ I **Experience Platform**:
 + Åtkomst till **Datastreams** under Datainsamling
 + Åtkomst till **Taggar** (tidigare Launch) under Datainsamling
 
-Om du inte har nödvändig behörighet använder systemadministratören [Adobe Admin Console](https://adminconsole.adobe.com/) kan ge nödvändiga behörigheter.
+Om du inte har de behörigheter som krävs använder systemadministratören [Adobe Admin Console](https://adminconsole.adobe.com/) kan ge nödvändiga behörigheter.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418856?quality=12&learn=on)
 
 ## Skapa XDM-schema - Experience Platform
 
-XDM-schemat (Experience Data Model) hjälper er att standardisera kundupplevelsedata. För att samla in **WKND-sidvy** data, skapa ett XDM-schema och använda fältgrupper som tillhandahålls av Adobe `AEP Web SDK ExperienceEvent` för insamling av webbdata.
+XDM-schemat (Experience Data Model) hjälper er att standardisera kundupplevelsedata. Samla in **WKND-sidvy** data, skapa ett XDM-schema och använda fältgrupper som tillhandahålls av Adobe `AEP Web SDK ExperienceEvent` för insamling av webbdata.
 
 Det finns generiska och specifika branscher, t.ex. Retail, Financial Services, Healthcare med flera, en serie referensdatamodeller, se [Översikt över branschdatamodeller](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) för mer information.
 
@@ -77,8 +77,8 @@ Bekanta dig med begreppet Datastreams och relaterade ämnen som datastyrning och
 Lär dig hur du skapar en taggegenskap (tidigare kallad Launch) i Experience Platform för att lägga till JavaScript-biblioteket för Web SDK på WKND-webbplatsen. Den nyligen definierade taggegenskapen har följande resurser:
 
 + Taggtillägg: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) och [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ Dataelement: Data-element av anpassad kodtyp som extraherar sidnamn, webbplatsavsnitt och värdnamn med WKND-platsens Adobe-klientdatalager. XDM-objektets datatypselement som överensstämmer med det nya WKND XDM-schemabygget som skapades tidigare [Skapa XDM-schema](#create-xdm-schema---experience-platform) steg.
-+ Regel: Skicka data till plattforms-Edge-nätverket när en WKND-webbsida besöks med hjälp av Adobe-klientdatalagret som utlöses `cmp:show` -händelse.
++ Dataelement: Dataelement av anpassad kodtyp som extraherar sidnamn, webbplatsavsnitt och värdnamn med hjälp av WKND-platsens Adobe-klientdatalager. XDM-objektets datatypselement som överensstämmer med det nya WKND XDM-schemabygget som skapades tidigare [Skapa XDM-schema](#create-xdm-schema---experience-platform) steg.
++ Regel: Skicka data till Platform Edge Network när en WKND-webbsida besöktes med hjälp av Adobe-klientdatalagret som utlöses `cmp:show` -händelse.
 
 När du skapar och publicerar taggbiblioteket med **Publiceringsflöde** kan du använda **Lägg till alla ändrade resurser** -knappen. Om du vill välja alla resurser som dataelement, regel och taggtillägg i stället för att identifiera och välja en enskild resurs. Under utvecklingsfasen kan du dessutom publicera biblioteket endast på _Utveckling_ miljö, verifiera och marknadsför den sedan till _Scen_ eller _Produktion_ miljö.
 
@@ -194,7 +194,7 @@ De sidvisningsdata som samlas in med Web SDK lagras som datauppsättningar i Exp
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418898?quality=12&learn=on)
 
-The [Översikt över datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html) ger mer information om koncept, konfigurationer och andra funktioner för konsumtion.
+The [Datauppsättningar - översikt](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html) ger mer information om koncept, konfigurationer och andra funktioner för konsumtion.
 
 
 ## WKND-sidvisningsdata i Experience Platform
@@ -206,7 +206,7 @@ Efter installationen av Web SDK med AEM, särskilt på WKND-webbplatsen, är det
 
 ## Sammanfattning
 
-Bra jobbat! Du har slutfört konfigurationen av AEM med Experience Platform Web SDK för att samla in och importera data från en webbplats. Med denna grund kan ni nu utforska fler möjligheter att förbättra och integrera produkter som Analytics, Target, Customer Journey Analytics (CJA) och många andra för att skapa innehållsrika, personaliserade upplevelser för era kunder. Fortsätt lära dig och utforska Adobe Experience Cloud fulla potential.
+Snyggt jobb! Du har slutfört konfigurationen av AEM med Experience Platform Web SDK för att samla in och importera data från en webbplats. Med denna grund kan ni nu utforska fler möjligheter att förbättra och integrera produkter som Analytics, Target, Customer Journey Analytics (CJA) och många andra för att skapa innehållsrika, personaliserade upplevelser för era kunder. Fortsätt lära dig och utforska Adobe Experience Cloud fulla potential.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
 

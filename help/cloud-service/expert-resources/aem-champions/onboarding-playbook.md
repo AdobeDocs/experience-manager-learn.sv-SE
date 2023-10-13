@@ -9,8 +9,8 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
-exl-id: a52b253c-14b4-465b-9714-7f321435a945
-source-git-commit: 2e37a7ae14f98e2298bcb0a625f8ed55edcee6ad
+exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 1%
