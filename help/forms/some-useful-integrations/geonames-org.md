@@ -9,9 +9,9 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 5fc4a11b7f7f26a62f49cc8614e6bf699cc1697a
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Följande steg har utförts för att implementera listrutor i listrutan för öv
 
 ## Skapa utvecklarkonto
 
-Skapa ett utvecklarkonto med [Geonames](https://www.geonames.org/login). Anteckna användarnamnet. Det här användarnamnet behövs för att anropa REST API:er för geonames.org.
+Skapa ett utvecklarkonto med [Geonames](https://www.geonames.org/login). Anteckna användarnamnet. Användarnamnet behövs för att anropa REST API:er för mappen geonames.org.
 
 ## Skapa Swagger/OpenAPI-fil
 
@@ -47,14 +47,11 @@ Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentati
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (FKA Swagger).
 
-Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som hämtar alla länder och underordnade element för landet eller staten. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/swagger-files.zip)
-Swagger-filerna beskriver följande REST API
-* [Skaffa alla länder](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Hämta underordnade objekt för Geoname-objekt](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som hämtar alla länder och underordnade element för landet eller staten. Swagger-filen kan skapas i JSON- eller YAML-format.
 
 ## Skapa datakällor
 
-För att integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i molntjänstkonfigurationen. Använd [swagger-filer](assets/swagger-files.zip) för att skapa datakällor.
+För att integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i molntjänstkonfigurationen. Använd [växla filer](assets/geonames-swagger-files.zip) för att skapa datakällor.
 Du måste skapa två datakällor (en för att hämta alla länder och andra för att få underordnade element)
 
 
@@ -72,7 +69,7 @@ Skapa ett anpassningsbart formulär med 2 nedrullningsbara listor. En för att l
 
 ### Listruta för att fylla i länder
 
-Länklistan fylls i när formuläret initieras för första gången. Följande skärmbild visar regelredigeraren som är konfigurerad att fylla i alternativen i den nedrullningsbara listan med länder. Du måste ange ditt användarnamn med geonames-kontot för att detta ska fungera.
+Länklistan fylls i när formuläret initieras för första gången. I följande skärmbild visas regelredigeraren som är konfigurerad att fylla i alternativen i den nedrullningsbara listan med länder. Du måste ange ditt användarnamn med geonames-kontot för att detta ska fungera.
 ![get-countries](assets/get-countries-rule-editor.png)
 
 #### Fyll i listrutan Region
@@ -84,3 +81,13 @@ Vi måste fylla i den nedrullningsbara listan Stat/provins baserat på det valda
 
 Lägg till två nedrullningsbara listor med namnet fylken och städer i formuläret för att lista fylken och staden baserat på valt land och vald stat/provins.
 ![träning](assets/cascading-drop-down-exercise.png)
+
+
+### Exempelresurser
+
+Du kan hämta följande resurser för att få ett försprång när du skapar överlappande listruteexempel De färdiga swagger-filerna kan hämtas från [här](assets/geonames-swagger-files.zip)
+Swagger-filerna beskriver följande REST API
+* [Skaffa alla länder](http://api.geonames.org/countryInfoJSON?username=yourusername)
+* [Hämta underordnade objekt för Geoname-objekt](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+
+Slutförd [Du kan hämta formulärdatamodellen härifrån](assets/geonames-api-form-data-model.zip)
