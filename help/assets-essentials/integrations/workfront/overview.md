@@ -6,13 +6,13 @@ feature: Assets Essentials
 topic: Content Management, Integrations
 role: User
 level: Beginner
-kt: null
+jira: KT-14199
 thumbnail: null
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: b8d9b213-867e-457d-932d-1fedc4e1b1d7
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: b9f56c78cb817d59bd6c2480e01f1d0bb3088036
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
