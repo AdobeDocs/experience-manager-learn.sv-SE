@@ -6,8 +6,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+jira: KT-784
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: af9fe46643ce9bc4adf71b77eb49535d0ec5f949
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -29,7 +30,7 @@ Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma
 * AEM kan enkelt skapa bildprofiler för smart beskärning baserat på enhetens bredd och höjd.
 * Smart beskärning kan utföras för en enskild resurs eller för alla resurser i en mapp.
 * Du kan ändra storlek på redigeringslayouten för smart beskärning så att den blir synligare.
-* Dynamic Media-komponenten för AEM Sites har stöd för Smart Crop.
+* AEM Sites Dynamic Media-komponent stöder Smart Crop.
 * Publicerad URL för den smarta beskurna resursen är tillgänglig för användning med program från tredje part som accepterar värdbaserade resurser.
 
 >[!NOTE]
