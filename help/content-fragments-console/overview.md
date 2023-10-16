@@ -6,10 +6,11 @@ feature: Content Fragments
 topic: Content Management
 role: User
 level: Beginner
+jira: KT-14200
 doc-type: Catalog
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: d92c36e2-fbfa-43a3-8c5f-0371cc99f352
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 82926e56d01222186a4d677b29ab9230aa71458a
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
