@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. D
 
 ## Bästa tillvägagångssätt för trafikfilterregler
 
-Aktivera under Trafikfilterregler för ditt AEM. De värden du vill använda för `rateLimit` och `clientCountry` egenskaperna måste fastställas i samarbete med säkerhetsteamet.
+Aktivera nedanstående trafikfilterregler för ditt AEM. De värden du vill använda för `rateLimit` och `clientCountry` egenskaperna måste fastställas i samarbete med säkerhetsteamet.
 
 ```yaml
 kind: CDN

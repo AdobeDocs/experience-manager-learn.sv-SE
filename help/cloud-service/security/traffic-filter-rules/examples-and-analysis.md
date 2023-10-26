@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Exempel och resultatanalys av trafikfilterregler inklusive WAF-regler
 
-Lär dig hur du deklarerar olika typer av trafikfilterregler och analyserar resultaten med hjälp av CDN-loggar och instrumentpanelsverktyg i Adobe Experience Manager as a Cloud Service (AEMCS).
+Lär dig hur du deklarerar olika typer av trafikfilterregler och analyserar resultaten med hjälp av CDN-loggar och kontrollpanelsverktyg i Adobe Experience Manager as a Cloud Service (AEMCS).
 
 I det här avsnittet utforskar du praktiska exempel på trafikfilterregler, inklusive WAF-regler. Du lär dig att logga, tillåta och blockera begäranden baserat på URI (eller sökväg), IP-adress, antalet förfrågningar och olika typer av attacker med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
