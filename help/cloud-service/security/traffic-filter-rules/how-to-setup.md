@@ -1,0 +1,134 @@
+---
+title: Konfigurera trafikfilterregler inklusive WAF-regler
+description: Lär dig hur du konfigurerar för att skapa, driftsätta, testa och analysera resultaten av trafikfilterregler, inklusive WAF-regler.
+version: Cloud Service
+feature: Security
+topic: Security, Administration, Architecture
+role: Admin, Architect
+level: Intermediate
+doc-type: Tutorial
+last-substantial-update: 2023-10-20T00:00:00Z
+jira: KT-13148
+thumbnail: KT-13148.jpeg
+source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+workflow-type: tm+mt
+source-wordcount: '563'
+ht-degree: 0%
+
+---
+
+
+# Konfigurera trafikfilterregler inklusive WAF-regler
+
+Läs **konfigurera** Trafikfilterregler, inklusive WAF-regler. Läs om hur du skapar, distribuerar, testar och analyserar resultat.
+
+## Inställningar
+
+Installationsprocessen omfattar följande:
+
+- _skapa regler_ med en lämplig AEM projektstruktur och konfigurationsfil.
+- _distribuera regler_ med Adobe Cloud Managers konfigurationsflöde.
+- _testregler_ använda olika verktyg för att generera trafik
+- _analysera resultaten_ med hjälp av AEMCS CDN-loggar och instrumentpanelsverktyg.
+
+### Skapa regler i ditt AEM projekt
+
+Så här skapar du regler:
+
+1. Skapa en mapp på den översta nivån i AEM `config`.
+
+1. I `config` mapp, skapa en ny `cdn.yaml`.
+
+1. Lägg till följande metadata i `cdn.yaml` fil:
+
+```yaml
+kind: CDN
+version: '1'
+metadata:
+  envTypes:
+    - dev
+    - stage
+    - prod
+data:
+  trafficFilters:
+    rules:
+```
+
+Se ett exempel på `cdn.yaml` i AEM Guides WKND Sites Project:
+
+![WKND AEM projektregelfil och -mapp](./assets/wknd-rules-file-and-folder.png)
+
+### Distribuera regler via Cloud Manager {#deploy-rules-through-cloud-manager}
+
+Så här distribuerar du regler:
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+
+1. Navigera till _Pipelines_ från _Programöversikt_ och klickar på **+Lägg till** och välj önskad pipeline-typ.
+
+   ![Molnhanteringskort för pipeline](./assets/cloud-manager-pipelines-card.png)
+
+   I exemplet ovan, för demonstrationssyften _Lägg till icke-produktionsförlopp_ har valts eftersom en dev-miljö används.
+
+1. I _Lägg till icke-produktionsförlopp_ väljer du och anger följande information:
+
+   1. Konfigurationssteg:
+
+      - **Typ**: Distributionsförlopp
+      - **Pipelinenamn**: Dev-Config
+
+      ![Dialogrutan Cloud Manager Config Pipeline](./assets/cloud-manager-config-pipeline-step1-dialog.png)
+
+   2. Källkodsteg:
+
+      - **Kod att distribuera**: Målinriktad distribution
+      - **Inkludera**: Konfig
+      - **Distributionsmiljö**: Namnet på miljön, till exempel wknd-program-dev.
+      - **Databas**: Git-databasen varifrån pipelinen ska hämta koden, till exempel `wknd-site`
+      - **Git-gren**: Namnet på Git-databasgrenen.
+      - **Kodplats**: `/config`motsvarar den konfigurationsmapp på den översta nivån som skapades i föregående steg.
+
+      ![Dialogrutan Cloud Manager Config Pipeline](./assets/cloud-manager-config-pipeline-step2-dialog.png)
+
+### Testa regler genom att generera trafik
+
+För att testa regler finns det olika tredjepartsverktyg att tillgå, och din organisation kan ha ett verktyg som du föredrar. För demoändamål använder vi följande verktyg:
+
+- [Rullning](https://curl.se/) för grundläggande tester, som att anropa en URL och kontrollera svarskoden.
+
+- [Vegeta](https://github.com/tsenart/vegeta) för att utföra denial of service (DOS). Följ installationsanvisningarna från [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+
+- [Nikto](https://github.com/sullo/nikto/wiki) för att hitta potentiella problem och säkerhetsluckor som XSS, SQL injection med mera. Följ installationsanvisningarna från [Nikto GitHub](https://github.com/sullo/nikto).
+
+- Kontrollera att verktygen är installerade och tillgängliga i terminalen genom att köra kommandona nedan:
+
+  ```shell
+  # Curl version check
+  $ curl --version
+  
+  # Vegeta version check
+  $ vegeta -version
+  
+  # Nikto version check
+  $ cd <PATH-OF-CLONED-REPO>/program
+  ./nikto.pl -Version
+  ```
+
+### Analysera resultaten med kontrollpanelsverktygen
+
+När du har skapat, distribuerat och testat reglerna kan du analysera resultaten med **Elasticsearch, Logstash och Kibana (ELK)** kontrollpanelsverktyg. Den kan analysera AEMCS CDN-loggarna, vilket gör att du kan visualisera resultaten i form av olika diagram och diagram.
+
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-databas](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) och följer stegen för att installera och läsa in **Trafikfilterregler (inklusive WAF)** kontrollpanel.
+
+- När du har läst in exempelinstrumentpanelen bör sidan med verktyget Elastic Dashboard se ut så här:
+
+  ![Kontrollpanel för regler för ELK-trafikfilter](./assets/elk-dashboard.png)
+
+>[!NOTE]
+>
+>    Instrumentpanelen är tom eftersom det ännu inte finns några AEMCS CDN-loggar.
+
+
+## Nästa steg
+
+Lär dig hur du deklarerar trafikfilterregler inklusive WAF-regler i [Exempel och resultatanalys](./examples-and-analysis.md) -kapitel med hjälp av AEM WKND Sites Project.
