@@ -52,7 +52,7 @@ Utforska AEM GraphQL funktioner genom att bygga ut en React App som förbrukar i
 
 ## AEM GraphQL jämfört med AEM Content Services
 
-|  | AEM GraphQL API:er | AEM Content Services |
+|                                | AEM GraphQL API:er | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
 | Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
 | Innehåll | Innehållsfragment | AEM |

@@ -24,6 +24,6 @@ ht-degree: 4%
 >abstract="IEmma kompileringsfel i koden och se om koden följer vedertagna standarder för AEM as a Cloud Service"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="Förstå testresultat"
 
-Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service eller inte
+Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)

@@ -27,15 +27,15 @@ The `ImageRef` -typen har fyra URL-alternativ för innehållsreferenser:
 
 + `_path` är den refererade sökvägen i AEM och innehåller inte AEM (värdnamn)
 + `_dynamicUrl` är den fullständiga URL:en till den webboptimerade bildresursen.
-   + The `_dynamicUrl` innehåller inte något AEM ursprung, så domänen (AEM Author eller AEM Publish service) måste tillhandahållas av klientprogrammet.
-+ `_authorUrl` är den fullständiga URL:en till bildresursen på AEM Author
-   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsvisning av programmet utan huvud.
-+ `_publishUrl` är den fullständiga URL:en till bildresursen på AEM Publish
+   + The `_dynamicUrl` innehåller inte AEM ursprung, så domänen (AEM författare eller AEM publiceringstjänst) måste anges av klientprogrammet.
++ `_authorUrl` är den fullständiga URL:en till bildresursen på AEM författare
+   + [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsvisning av programmet utan huvud.
++ `_publishUrl` är den fullständiga URL:en till bildresursen vid AEM
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
 The `_dynamicUrl` är den URL som ska användas för bildresurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
 
-|  | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
+|                                | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
 | Stöder webboptimerade bilder? | ✔ | ✔ | ✘ | ✘ |
 
@@ -55,7 +55,7 @@ Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.
 
 ## GraphQL beständig fråga
 
-I GraphQL-frågan returnerar du fältet som `ImageRef` och begär `_dynamicUrl` fält. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
+I GraphQL-frågan returnerar du fältet `ImageRef` och begär `_dynamicUrl` fält. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -105,7 +105,7 @@ The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att opti
 | `flip` | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
 | `quality` | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 | 1-100 | `?quality=80` |
 | `width` | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal | Positivt heltal | `?width=1600` |
-| `preferWebP` | `preferwebp` | If `true` och AEM skickar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
+| `preferWebP` | `preferwebp` | If `true` och AEM fungerar som en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
 
 ## GraphQL svar
 
@@ -129,7 +129,7 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller den
 
 Om du vill läsa in den webboptimerade bilden av den refererade bilden i ditt program använder du `_dynamicUrl` i `primaryImage` som bildens käll-URL.
 
-I Reagera ser det ut så här när en webboptimerad bild från AEM Publish visas:
+I Reagera ser det ut så här när en webboptimerad bild från AEM Publicera visas:
 
 ```jsx
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -139,7 +139,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange det önskade ursprunget för den bild-URL som ska matchas.
+Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange det önskade ursprunget för den bild-URL som ska tolkas.
 
 ## Responsiva URL:er
 

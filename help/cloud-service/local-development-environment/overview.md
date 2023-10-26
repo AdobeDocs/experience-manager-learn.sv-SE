@@ -36,7 +36,7 @@ I den här självstudiekursen går du igenom hur du konfigurerar en lokal utveck
 Den lokala utvecklingsmiljön för AEM kan delas upp i tre logiska grupper:
 
 + The __AEM__ innehåller den anpassade koden, konfigurationen och innehållet som är det anpassade AEM.
-+ The __Local AEM Runtime__ som kör en lokal version av AEM Author och Publiceringstjänster lokalt.
++ The __Local AEM Runtime__ som kör en lokal version av AEM författar- och publiceringstjänster lokalt.
 + The __Local Dispatcher Runtime__ som kör en lokal version av Apache HTTP Web Server och Dispatcher.
 
 I den här självstudiekursen går du igenom hur du installerar och ställer in de markerade objekten i ovanstående diagram, vilket ger en stabil lokal utvecklingsmiljö för AEM.
@@ -46,9 +46,9 @@ I den här självstudiekursen går du igenom hur du installerar och ställer in 
 I den här självstudien fastställdes platsen för de AEM as a Cloud Service SDK-artefakterna och AEM projektkoden enligt följande:
 
 + `~/aem-sdk` är en organisationsmapp som innehåller de olika verktygen i AEM as a Cloud Service SDK
-+ `~/aem-sdk/author` innehåller AEM Author Service
-+ `~/aem-sdk/publish` innehåller AEM-publiceringstjänsten
-+ `~/aem-sdk/dispatcher` innehåller Dispatcher-verktygen
++ `~/aem-sdk/author` innehåller AEM författartjänst
++ `~/aem-sdk/publish` innehåller AEM publiceringstjänst
++ `~/aem-sdk/dispatcher` innehåller Dispatcher Tools
 + `~/code/<project name>` innehåller den anpassade AEM Project-källkoden
 
 Observera att `~` är kortskrift för användarens katalog. I Windows motsvarar detta `%HOMEPATH%`;
@@ -68,7 +68,7 @@ I det här avsnittet av självstudiekursen visas hur du:
 
 ## Local AEM Runtime
 
-AEM as a Cloud Service SDK innehåller en [!DNL QuickStart Jar] som kör en lokal version av AEM. The [!DNL QuickStart Jar] kan användas för att köra antingen AEM Author Service eller AEM Publish Service lokalt. Observera att medan [!DNL QuickStart Jar] har en lokal utvecklingsupplevelse, och inte alla funktioner som finns i AEM as a Cloud Service ingår i [!DNL QuickStart Jar].
+AEM as a Cloud Service SDK innehåller en [!DNL QuickStart Jar] som kör en lokal AEM. The [!DNL QuickStart Jar] kan användas för att köra antingen AEM författartjänst eller AEM publiceringstjänst lokalt. Observera att medan [!DNL QuickStart Jar] har en lokal utvecklingsupplevelse, och inte alla funktioner som finns i AEM as a Cloud Service ingår i [!DNL QuickStart Jar].
 
 I det här avsnittet av självstudiekursen visas hur du:
 
@@ -77,16 +77,16 @@ I det här avsnittet av självstudiekursen visas hur du:
 + Kör [!DNL AEM Author Service]
 + Kör [!DNL AEM Publish Service]
 
-[Konfigurera lokal AEM](./aem-runtime.md)
+[Konfigurera den lokala AEM](./aem-runtime.md)
 
 ## Lokal [!DNL Dispatcher] Körning
 
-AEM as a Cloud Service SDK&#39;s Dispatcher Tools innehåller allt som krävs för att konfigurera lokala [!DNL Dispatcher] runtime. [!DNL Dispatcher] Verktygen är [!DNL Docker]-baserat och innehåller kommandoradsverktyg för att implementera [!DNL Apache HTTP] Webbserver och [!DNL Dispatcher] konfigurationsfiler i kompatibla format och distribuera dem till [!DNL Dispatcher] körs i [!DNL Docker] behållare.
+AEM as a Cloud Service SDK&#39;s Dispatcher Tools innehåller allt som krävs för att konfigurera lokala [!DNL Dispatcher] runtime. [!DNL Dispatcher] Verktygen är [!DNL Docker]-baserat och innehåller kommandoradsverktyg för att implementera [!DNL Apache HTTP] Webbserver och [!DNL Dispatcher] konfigurationsfiler i kompatibla format och distribuera dem till [!DNL Dispatcher] som körs i [!DNL Docker] behållare.
 
 I det här avsnittet av självstudiekursen visas hur du:
 
 + Ladda ned AEM SDK
 + Installera [!DNL Dispatcher] verktyg
-+ Kör lokala [!DNL Dispatcher] runtime
++ Kör den lokala [!DNL Dispatcher] runtime
 
 [Konfigurera den lokala [!DNL Dispatcher] Körning](./dispatcher-tools.md)

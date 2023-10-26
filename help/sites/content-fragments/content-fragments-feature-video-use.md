@@ -57,9 +57,9 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
-AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som innehåller Varianter, Elements och Metadata.
+AEM innehållsfragment kan laddas ned från AEM författare som en ZIP-fil som innehåller varianter, element och metadata.
 
-*Exempel: Zip-fil för hämtning av innehållsfragment:*\
+*Exempel: Zip-fil för innehållsfragmenthämtning:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
 ## Redigeringsfunktioner för innehållsfragment {#editorial-capabilities}
@@ -68,7 +68,7 @@ AEM innehållsfragment kan laddas ned från AEM Author som en ZIP-fil som inneh�
 
 >[!NOTE]
 >
-> Anteckningar och versionsjämförelser för innehållsfragment introducerades i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html).
+> Anteckningar och versionsjämförelser för innehållsfragment infördes i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
 ## Nästa steg
 
