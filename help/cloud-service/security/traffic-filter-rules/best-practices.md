@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ data:
           penalty: 300
           groupBy:
             - reqProperty: clientIp
-        action: block        
+        action: block
     # Block requests coming from OFAC countries
       - name: block-ofac-countries
         when:
@@ -79,8 +79,12 @@ data:
                   - LR
                   - ZW
                   - CU
-                  - CI    
+                  - CI
 ```
+
+>[!WARNING]
+>
+>Samarbeta med webbsäkerhetsteamet i produktionsmiljön för att ta reda på vilka värden som är lämpliga för `rateLimit`,
 
 ## Bästa tillvägagångssätt för WAF-regler
 
@@ -99,10 +103,10 @@ metadata:
 data:
   trafficFilters:
     rules:
-    
+
     # Traffic Filter rules shown in above section
-    ...    
-    
+    ...
+
     # Enable WAF protections (only works if WAF is enabled for your environment)
       - name: block-waf-flags
         when:
@@ -128,7 +132,19 @@ data:
             - CODEINJECTION
             - CMDEXE
             - NO-CONTENT-TYPE
-            - UTF8        
+            - UTF8
+    # Disable protection against CMDEXE on /bin
+      - name: allow-cdmexe-on-root-bin
+        when:
+          allOf:
+            - reqProperty: tier
+              matches: "author|publish"
+            - reqProperty: path
+              matches: "^/bin/.*"
+        action:
+          type: allow
+          wafFlags:
+            - CMDEXE
 ```
 
 ## Sammanfattning

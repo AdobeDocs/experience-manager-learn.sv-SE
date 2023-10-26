@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
+source-git-commit: 67e0a7530549a0d380e9ef82e3747c40d17b1b75
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Installationsprocessen omfattar följande:
 
 - _skapa regler_ med en lämplig AEM projektstruktur och konfigurationsfil.
 - _distribuera regler_ med Adobe Cloud Managers konfigurationsflöde.
-- _testregler_ använda olika verktyg för att generera trafik
+- _testregler_ med olika verktyg för att generera trafik.
 - _analysera resultaten_ med hjälp av AEMCS CDN-loggar och instrumentpanelsverktyg.
 
 ### Skapa regler i ditt AEM projekt
@@ -37,7 +37,7 @@ Så här skapar du regler:
 
 1. Skapa en mapp på den översta nivån i AEM `config`.
 
-1. I `config` mapp, skapa en ny `cdn.yaml`.
+1. I `config` mapp, skapa en ny fil med namnet `cdn.yaml`.
 
 1. Lägg till följande metadata i `cdn.yaml` fil:
 
