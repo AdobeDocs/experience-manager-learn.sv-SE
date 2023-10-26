@@ -7,18 +7,19 @@ audience: author, marketer
 topic: Content Management
 feature: Learn From Your Peers
 role: Admin, User
+jira: KT-14254
 level: Beginner, Intermediate
 exl-id: c88c3ec7-9060-43e2-a6a2-d47bba6f7cf3
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
 source-wordcount: '2034'
 ht-degree: 0%
 
 ---
 
-# Metadata och taggar: Sammanfattning på hög nivå
+# Bästa praxis för taggar, taxonomi och metadata: Sammanfattning på hög nivå
 
-Metadata och taggar är avgörande för att öka effektiviteten i AEM. Användare, chefer och chefer inser att det finns ett behov av en holistisk strategi, men de tycker att det är svårt att göra framsteg. Kunskaperna är ofta isolerade bland användarna, vilket gör en holistisk strategi svår - och gör justeringarna ännu mer problematiska.
+Metadata och taggar är avgörande för AEM. Användare, chefer och chefer inser att det finns ett behov av en holistisk strategi, men de tycker att det är svårt att göra framsteg. Kunskaperna är ofta isolerade bland användarna, vilket gör en holistisk strategi svår - och gör justeringarna ännu mer problematiska.
 
 Vad är skillnaden mellan metadata och taggar? Vilka affärsaspekter ska beaktas när er strategi utvecklas?
 
@@ -26,7 +27,7 @@ Vad är skillnaden mellan metadata och taggar? Vilka affärsaspekter ska beaktas
 
 Metadata lägger till struktur i mindre strukturerat innehåll.
 Exempel: En grundbild har pixlar. Vi kan kalla dessa&quot;kärndata&quot;. Det är metadata som beskriver format, kategori, licensinformation osv.
-Metadata används oftast för resurser. Men det finns också ett stort antal användningsfall för metadata på innehållssidor eller upplevelsefragment.
+Metadata används oftast för resurser. Men det finns också ett stort antal användningsfall för metadata på innehållssidor eller i upplevelsefragment.
 
 ## Källor till metadata
 
@@ -40,10 +41,10 @@ Följande kategorier kan generera metadata:
 
 Inom kategorierna ovan finns fyra huvudtyper:
 
-* Tekniska och beskrivande metadata: Ger information om teknisk information om innehåll (t.ex. tite, språk)
-* Operativa metadata: Dokumenterar en tillgångs livscykel (d.v.s. godkänd, i kreativt syfte, i kampanj)
-* Administrativa metadata: Status eller delstat för en tillgång inom en organisation (dvs. licensinformation, ägarskap)
-* Strukturella metadata: Hjälper till att kategorisera resurser och sidor för att underlätta affärsprocessen (gäller de flesta taggar och taxonomier)
+* Teknisk och beskrivande metadata: Tillhandahåller information om teknisk information om innehåll (t.ex. tite, språk)
+* Driftmetadata: dokumenterar en tillgångs livscykel (dvs. godkänd, i kreativt syfte, i kampanj)
+* Administrativa metadata: Status eller status för en tillgång inom en organisation (dvs. licensinformation, ägarskap)
+* Strukturella metadata: Hjälper till att kategorisera resurser eller sidor så att affärsprocessen blir smidigare (gäller de flesta taggar och taxonomier)
 
 ## Mapp- och filnamn
 
@@ -64,20 +65,20 @@ Det finns tre sätt att lagra metadata:
 
 * Binärt: Binärt format relaterat till resursens typ (Photoshop, InDesign, PNG, JPG).
 * Resursnod: Detta är metadata för själva resursen, oavsett vilket system eller vilken process som används.
-* Extern plats: Metadata som inte finns direkt i tillgången, men som kan användas som en beskrivning av en tillgångs&quot;status&quot; (exempel: ett arbetsflöde som kan påverka en resurs men inte direkt tillämpas på den)
+* Extern plats: Metadata som inte finns direkt i resursen, men som kan användas som en beskrivning av en tillgångs&quot;status&quot; (exempel: ett arbetsflöde som kan påverka en resurs men inte tillämpas direkt på den)
 
 ## Metadatamodell
 
-Strukturen för hur metadata hämtas och formateras kallas metadatamodell eller metadatamodell. Detta måste avtalas innan tillgångar eller sidor hämtas in i systemet.
+Strukturen för hur metadata hämtas och formateras kallas metadatamodell eller metadatamodell. Detta måste man komma överens om innan tillgångar eller sidor hämtas in i systemet.
 
 En metadatamodell är vanligtvis utformad för att uppfylla följande användningsfall:
 
-* Sök och hämta: Hjälper till att lagra viktiga aspekter av innehåll som gör det enkelt att hämta in det per företag.
-* Återanvänd: Hjälper till att återanvända gamla resurser (spara tid och pengar)
-* Licenshantering: Spårar organisationsägarskap för tillgångar (ofta av juridiska skäl)
+* Sök och hämta: Hjälper till att lagra viktiga aspekter av innehåll som gör det enkelt att hämta dem per företag.
+* Återanvändning: Hjälper till att utnyttja gamla resurser för återanvändning (spara tid och pengar)
+* Licenshantering: Spåra ägarskap av tillgångar i organisationen (ofta av juridiska skäl)
 * Distribuera: Gör innehåll tillgängligt för konsumenter eller syndikera resurser till affärspartners.
-* Arkiv: Metadata som anger att en resurs är föråldrad (alltid bästa metoden att sätta en&quot;arkiverad&quot;-flagga på en tillgång så att viktig information inte går förlorad)/
-* Korsreferens: Associativa metadata som fångar relationen mellan två eller flera resurser (syntesen av metadata möjliggör korsreferenser och sammanhängande grupporganisation)
+* Arkiv: Metadata som anger att en resurs är inaktuell (alltid bästa metoden att sätta en&quot;arkiverad&quot;-flagga på en resurs så att den inte förlorar viktig information)/
+* Korsreferens: Associativa metadata som fångar relationen mellan två eller flera resurser (syntesen av metadata möjliggör korsreferenser och sammanhängande gruppordning)
 * Navigera: Mappstrukturen som resurserna lagras i (används för att hämta information genom att bläddra)
 
 *Framtagningsmetadata har huvudsakligen stöd för operationsprocesser. Publicera har stöd för användningsfall för hämtning och distribution.*
@@ -86,13 +87,13 @@ En metadatamodell är vanligtvis utformad för att uppfylla följande användnin
 
 En tagg är ett nyckelord eller en term som tilldelats till en informationsdel. I stället för att ange &quot;car&quot;, &quot;car&quot;, &quot;car&quot;, tillåter ett taggsystem endast ett värde att välja mellan, vilket gör sökningen mer förutsägbar.  Taggar normaliserar och förenklar kategoriseringen av resurser.
 
-*Obs! Även om AEM tillåter ad hoc-taggning är det bäst att hålla sig från detta eftersom det kan leda till odefinierad och oomfattande taxonomi.*
+*Obs! Även om AEM tillåter ad hoc-taggning är det bäst att hålla sig borta från detta eftersom det kan leda till odefinierad och oomfattande taxonomi.*
 
 Vanliga användningsområden för taggar:
 
-* Sökningar efter nyckelord: En tagg kan beskriva att en resurs tillhör en viss grupp av entiteter. Exempel: taggen &quot;image/subject/car&quot; beskriver resursen som tillhör den uppsättning bilder som visar en bil.
-* Körförhållanden: Alla resurser som delar samma tagg kan anses vara anslutna. Det är särskilt användbart att tagga i stället för att länka direkt på webbplatser som har mycket dynamiskt och uppkopplat innehåll.
-* Enhetsnavigering: Taggar som ordnas i hierarkisk taxonomi kan skapa navigering, en eller länka till liknande dokument.
+* Sökningar efter nyckelord: En tagg kan beskriva, att en resurs tillhör en viss grupp med entiteter. Exempel: taggen &quot;image/subject/car&quot; beskriver resursen som tillhör den uppsättning bilder som visar en bil.
+* Körningsrelationer: Alla resurser som delar samma tagg kan anses vara anslutna. Det är särskilt användbart att tagga i stället för att länka direkt på webbplatser som har mycket dynamiskt och uppkopplat innehåll.
+* Enhetsnavigering: Taggar som ordnats i hierarkisk taxonomi kan skapa navigering, en eller länka till liknande dokument.
 Taggar bör också betraktas som information som kopplar samman olika typer av data, baserat på affärsvillkor snarare än tekniska egenskaper.
 
 ## Vanliga program för taggar
@@ -114,14 +115,14 @@ Exempel: Man måste kategorisera bilderna.  Taxonomin kan se ut så här:
 /subject/car/ /subject/car/sportscar/subject/car/sportscar/porsche /subject/car/sportscar/ferrari ... /subject/car/minivan /subject/car/minivan/mercedes /subject/car/minivan/volkswagen ... /subject/car/limousine ...
 
 Nu kan användaren välja om han vill söka upp bilder på sportärr i allmänhet eller en Porsche i synnerhet. Båda är ju sportärr.
-God praxis: Undvik platta taxonomier. Platta taxonomier saknar de fördelar som beskrivs ovan och kräver konstant underhåll
+Bästa praxis: Undvik platta taxonomier. Platta taxonomier saknar de fördelar som beskrivs ovan och kräver konstant underhåll
 
 **Använda en taxonomi som synonymordbok.**  När en användare söker efter ett nyckelord skapas en andra sökning efter alla synonymer som finns där.
 I stället för att skriva &quot;car&quot; manuellt kan systemet dessutom tillhandahålla en lista med nyckelord för att förbättra enhetligheten.
 
 **Använda en taxonomi som ordlista.** I stället för att bara skriva ut &quot;car&quot; kan du utöka den enskilda taggen och använda alla taggens synonymer.
 
-**Flera kategorier.** I motsats till en mapphierarki kan taggar användas för att uttrycka flera kategoriseringar samtidigt. En resurs som är taggad med:
+**Flera kategorier.** I motsats till en mapphierarki kan taggar användas för att uttrycka flera kategoriseringar samtidigt. En resurs taggad med:
 
 /subject/car/minivan/mercedes/subject/people/family/color/red
 
@@ -151,7 +152,7 @@ Se till att skribenterna vet hur de kan föreslå ändringar och att redaktörer
 
 **Utvärdera taggar på nytt över tid.** Kom ihåg att företagsterminologi och företagskontext sällan förblir statiska. Du kan behöva göra om taggarna och lägga till dem på nytt.
 
-**Använda AI-baserad smart taggning.** Smart taggning [se länk] är en AI-funktion i AEM som minskar arbetet med att tagga resurser manuellt. Smart taggning använder en AI för att få information om motivet i en bild. Den genererar beskrivande taggar som beskriver innehållet i en bild.
+**Använda AI-baserad smart taggning.** Smart taggning [se länk] är en AI-funktion i AEM för att minska arbetet med att tagga resurser manuellt. Smart taggning använder en AI för att få information om motivet i en bild. Den genererar beskrivande taggar som beskriver innehållet i en bild.
 
 ## Metadatakvalitet och underhåll
 
@@ -159,16 +160,16 @@ Förståelse av affärskrav är ett viktigt steg när det gäller att implemente
 
 Dessutom bör metadata samlas in så tidigt som möjligt när innehållet skapas. Om metadata inte används vid rätt tidpunkt finns det en liten risk att använda dem retroaktivt.
 
-**Använd metadata** för att förbättra samarbetet: Använd Adobe Asset Link, Adobe Bridge och AEM Desktop för att knyta ihop kreativa processer och utnyttja metadata för att effektivisera de kreativa arbetsflödena. Med dessa verktyg blir metadata bättre och användarupplevelsen bättre i hela den kreativa processen.
+**Använd metadata** för att förbättra samarbetet: Använd Adobe Asset Link, Adobe Bridge och AEM Desktop för att knyta samman den kreativa processen och utnyttja metadata för att effektivisera arbetsflödena. Med dessa verktyg blir metadata bättre och användarupplevelsen bättre i hela den kreativa processen.
 
 ## Bästa praxis för metadatahantering
 
-* Tilldela kärnteamet ett starkt mandat: Bli ett metadatasteam som har fullständig förståelse för affärsekosystemet och ett starkt mandat från organisationens ledning.
-* Definiera strategi och styrning för metadata: En bra metadatastrategi kan hjälpa organisationer att förklara behovet och fördelarna med metadata.  En strategi består av metadata, metadata, taxonomi, affärsprocesser (för datakvalitet och datainhämtning), roller och ansvarsområden samt styrningsprocesser. *
-* Definiera och kommunicera en enhetlig metadatamodell: Definierad strategi och resonemang bör dokumenteras och kommuniceras väl inom organisationerna.
-* Standardnamnkonvention: Skapa enhetliga och beskrivande filnamnskonventioner för förbättrad branding, informationshantering och användbarhet.
+* Tilldela kärnteamet ett starkt mandat: Bli en metadatasteam som har fullständig förståelse för affärsekosystemet och ett starkt mandat från organisationens ledning.
+* Definiera metadatastrategi och metadatastyrning: En bra metadatastrategi kan hjälpa organisationer att förklara behovet och fördelarna med metadata.  En strategi består av metadata, metadata, taxonomi, affärsprocesser (för datakvalitet och datainhämtning), roller och ansvarsområden samt styrningsprocesser. *
+* Definiera och kommunicera konsekventa metadatamodeller: Definierad strategi och motivering ska dokumenteras och kommuniceras väl inom organisationerna.
+* Standardnamnkonvention: Skapa en konsekvent och beskrivande namngivningskonvention för utökad varumärkning, informationshantering och användbarhet.
 * Säkra tecken i filnamn: Filnamnet ska kunna tolkas av alla vanliga operativsystem. Du kan använda tecken, siffror, omljud, mellanrum och understrykning utan risk. Minustecknet är också säkert, men om du klipper ut och klistrar in kan det se ut som ett streck.
-* Versionsnamnkonvention: AEM har vissa funktioner för att behålla tidigare versioner av mediefiler. I vissa fall kanske du vill behålla flera versioner. Du bör dock se till att versionshanteringsschemat är konsekvent.
+* Versionsnamnkonventionen: AEM erbjuder vissa funktioner för att behålla tidigare versioner av resurser. I vissa fall kanske du vill behålla flera versioner. Du bör dock se till att versionshanteringsschemat är konsekvent.
 
 ## Organisations- eller beskrivande metadata
 

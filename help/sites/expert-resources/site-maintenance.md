@@ -6,8 +6,9 @@ level: Beginner, Intermediate
 topic: Administration
 audience: author, marketer, developer
 feature: Learn From Your Peers
+jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 0%
@@ -16,10 +17,10 @@ ht-degree: 0%
 
 # Tips och tricks för webbplatsunderhåll
 
-Det finns tre alternativ när det gäller att installera och underhålla en AEM instans
+Det finns tre alternativ när det gäller att installera och underhålla en AEM
 
-* AEMaaCS (molntjänst) - systemet är alltid aktiverat, uppdaterat och skalas dynamiskt när du behöver det
-* Adobes hanterade tjänster där Adobe kundtjänsttekniker utför allt underhåll varje dag/vecka/månad och ser till att alla servicepaket installeras och att systemet alltid är säkert och smidigt
+* AEMaaCS (molntjänst) - systemet är alltid aktiverat, uppdaterat och skalas dynamiskt efter behov
+* Adobe Managed Services där Adobe kundtjänstingenjörer utför allt underhåll varje dag, vecka/månad och ser till att alla servicepaket installeras och att systemet alltid är säkert och smidigt
 * köra programmet lokalt, där du måste ta hand om hela systemet, inklusive säkerhetskopiering, uppgraderingar och säkerhet.
 
 Om du väljer att implementera ditt eget system lokalt finns det några saker att tänka på för att säkerställa att du har ett säkert, prestandasystem. Förutom&quot;vården och matningen&quot; kommer denna rapport även att peka ut flera saker AEM utvecklarna bör tänka på för att hjälpa till att hålla systemet i drift.

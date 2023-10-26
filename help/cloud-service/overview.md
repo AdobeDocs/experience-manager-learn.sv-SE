@@ -5,10 +5,10 @@ sub-product: Experience Manager as a Cloud Service
 kt: 3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: e100e0078d3464d72dfca769d96ad7a633a1640c
+source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 4%
+source-wordcount: '280'
+ht-degree: 3%
 
 ---
 
@@ -24,14 +24,14 @@ Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Servi
 
 ## Nyheter
 
+* **[Skydda webbplatser med trafikfilterregler, inklusive WAF-regler (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)**
+  *Lär dig hur du använder trafikfilterregler inklusive WAF-regler för att skydda webbplatser*
+
 * **[Tokenbaserad autentisering (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
   *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM as a Cloud Service via HTTP*
 
 * **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
   *Lär dig hur du kan använda AEM GraphQL API:er för att skapa bättre upplevelser i ett externt program.*
-
-* **[Massimport (video)](./migration/bulk-import.md)**
-  *Lär dig hur du importerar resurser till AEM från Azure Blob Storage eller Amazon S3 satsvis*
 
 * **[Asset compute metadataarbetare (självstudiekurs)](./asset-compute/advanced/metadata.md)**
   *Lär dig hur du skriver tillbaka metadata för resurser till AEM från en Asset compute-arbetare*
