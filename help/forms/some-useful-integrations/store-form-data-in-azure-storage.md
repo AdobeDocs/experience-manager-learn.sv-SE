@@ -9,9 +9,9 @@ level: Beginner
 last-substantial-update: 2023-08-14T00:00:00Z
 kt: 13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,6 @@ För att kunna lagra skickade formulärdata i Azure Storage måste följande ste
 
 [Logga in på ditt Azure Portal-konto och skapa ett lagringskonto](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1). Ange ett beskrivande namn för ditt lagringskonto, klicka på Granska och sedan på Skapa. Då skapas ditt lagringskonto med alla standardvärden. I den här artikeln har vi namngett ditt lagringskonto `aemformstutorial`.
 
-## Skapa delad åtkomst
-
-Vi kommer att göra oss av med auktoriseringsmetoden för delad åtkomst eller SAS för att interagera med Azure Storage-behållaren.
-På sidan för lagringskonto i portalen klickar du på menyalternativet Delad åtkomstsignatur till vänster för att öppna den nya inställningssidan för signaturnyckel för delad åtkomst. Se till att du anger inställningar och lämpligt slutdatum enligt skärmbilden nedan och klicka på knappen Generera SAS och anslutningssträng. Kopiera plumppjänstens SAS-URL. Vi kommer att använda den här URL:en för att göra våra HTTP-anrop
-![shared-access-keys](./assets/shared-access-signature.png)
 
 ## Skapa behållare
 
@@ -37,39 +32,74 @@ Nästa vi måste göra är att skapa en behållare för att lagra data från ins
 Klicka på menyalternativet Behållare till vänster på sidan Lagringskonto och skapa en behållare som kallas `formssubmissions`. Kontrollera att åtkomstnivån public är inställd på private
 ![container](./assets/new-container.png)
 
+## Skapa SAS i behållaren
+
+Vi kommer att göra oss av med auktoriseringsmetoden för delad åtkomst eller SAS för att interagera med Azure Storage-behållaren.
+Navigera till behållaren i lagringskontot, klicka på ellipsen och välj alternativet Generera SAS så som visas på skärmbilden
+![AS-on-container](./assets/sas-on-container.png)
+Se till att du anger rätt behörigheter och lämpligt slutdatum enligt skärmbilden nedan och klicka på Generera SAS-token och URL. Kopiera Blob SAS-token och Blob SAS url. Vi kommer att använda dessa två värden för våra HTTP-anrop
+![shared-access-keys](./assets/shared-access-signature.png)
+
+
+## Ange Blob SAS-token och lagrings-URI
+
+För att göra koden mer generisk kan de två egenskaperna konfigureras med OSGi-konfigurationen enligt nedan. The _**aemformstutorial**_ är lagringskontots namn, _**formulärmaterial**_ är den behållare i vilken data ska lagras.
+![osgi-konfiguration](./assets/azure-portal-osgi-configuration.png)
+
+
 ## Skapa PUT-begäran
 
-Nästa steg är att skapa en PUT-begäran om att lagra skickade formulärdata i Azure Storage. Vi måste ändra Plumb Service SAS-URL:en för att inkludera behållarnamnet och BLOB-ID:t i URL:en. Varje formulärinlämning måste identifieras med ett unikt BLOB-ID. Det unika BLOB-ID:t skapas vanligtvis i koden och infogas i URL:en för PUT-begäran.
+Nästa steg är att skapa en PUT-begäran om att lagra skickade formulärdata i Azure Storage. Varje formulärinlämning måste identifieras med ett unikt BLOB-ID. Det unika BLOB-ID:t skapas vanligtvis i koden och infogas i URL:en för PUT-begäran.
 Följande är den partiella URL:en för begäran från PUT. The `aemformstutorial` är namnet på lagringskontot, är formuläröverföringar den behållare i vilken data lagras med ett unikt BLOB ID. Resten av URL:en förblir densamma.
-https://aemformstutorial.blob.core.windows.net/formsubmissions/00cb1a0c-a891-4dd7-9bd2-67a22bef3b8b?...............
-
-Följande funktion har skrivits för att lagra skickade formulärdata i Azure Storage med en PUT-begäran. Observera användningen av behållarnamnet och uuid i url:en. Du kan skapa en OSGi-tjänst eller en sling-server med exempelkoden nedan och lagra formulärskicken i Azure Storage.
+https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken Följande funktion skrivs för att lagra skickade formulärdata i Azure Storage med hjälp av en PUT-begäran. Observera användningen av behållarnamnet och uuid i url:en. Du kan skapa en OSGi-tjänst eller en sling-server med exempelkoden nedan och lagra formulärskicken i Azure Storage.
 
 ```java
  public String saveFormDatainAzure(String formData) {
-        System.out.println("in SaveFormData!!!!!"+formData);
-        org.apache.http.impl.client.CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        UUID uuid = UUID.randomUUID();
-        
-        String url = "https://aemformstutorial.blob.core.windows.net/formsubmissions/"+uuid.toString();
-        url = url+"?sv=2022-11-02&ss=bf&srt=o&sp=rwdlaciytfx&se=2024-06-28T00:42:59Z&st=2023-06-27T16:42:59Z&spr=https&sig=v1MR%2FJuhEledioturDFRTd9e2fIDVSGJuAiUt6wNlkLA%3D";
-        HttpPut httpPut = new HttpPut(url);
-        httpPut.addHeader("x-ms-blob-type","BlockBlob");
-        httpPut.addHeader("Content-Type","text/plain");
-        try {
-            httpPut.setEntity(new StringEntity(formData));
-            CloseableHttpResponse response = httpClient.execute(httpPut);
-            log.debug("Response code "+response.getStatusLine().getStatusCode());
-        } catch (IOException e) {
-            log.error("Error: "+e.getMessage());
-            throw new RuntimeException(e);
+    log.debug("in SaveFormData!!!!!" + formData);
+    String sasToken = azurePortalConfigurationService.getSASToken();
+    String storageURI = azurePortalConfigurationService.getStorageURI();
+    log.debug("The SAS Token is " + sasToken);
+    log.debug("The Storage URL is " + storageURI);
+    org.apache.http.impl.client.CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+    UUID uuid = UUID.randomUUID();
+    String putRequestURL = storageURI + uuid.toString();
+    putRequestURL = putRequestURL + sasToken;
+    HttpPut httpPut = new HttpPut(putRequestURL);
+    httpPut.addHeader("x-ms-blob-type", "BlockBlob");
+    httpPut.addHeader("Content-Type", "text/plain");
+
+    try {
+        httpPut.setEntity(new StringEntity(formData));
+
+        CloseableHttpResponse response = httpClient.execute(httpPut);
+        log.debug("Response code " + response.getStatusLine().getStatusCode());
+        if (response.getStatusLine().getStatusCode() == 201) {
+            return uuid.toString();
         }
-        return uuid.toString();
-
-
+    } catch (IOException e) {
+        log.error("Error: " + e.getMessage());
+        throw new RuntimeException(e);
     }
+    return null;
+
+}
 ```
 
 ## Verifiera lagrade data i behållaren
 
 ![form-data-in-container](./assets/form-data-in-container.png)
+
+## Testa lösningen
+
+* [Distribuera det anpassade OSGi-paketet](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
+
+* [Importera den anpassade formulärmallen och sidkomponenten som är kopplad till mallen](./assets/store-and-fetch-from-azure.zip)
+
+* [Importera det adaptiva exempelformuläret](./assets/bank-account-sample-form.zip)
+
+* Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen
+* [Förhandsgranska och skicka bankkontoformuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
+
+* Verifiera att data lagras i den Azure-lagringsbehållare du väljer. Kopiera blob-ID:t.
+* [Förhandsgranska bankkontoformuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) och ange blob-ID:t som en GUID-parameter i URL:en för formuläret som ska fyllas i med data från Azure-lagringen
+
