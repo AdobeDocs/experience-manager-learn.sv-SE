@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 Lär dig hur du deklarerar olika typer av trafikfilterregler och analyserar resultaten med hjälp av CDN-loggar och kontrollpanelsverktyg i Adobe Experience Manager as a Cloud Service (AEMCS).
 
-I det här avsnittet utforskar du praktiska exempel på trafikfilterregler, inklusive WAF-regler. Du lär dig att logga, tillåta och blockera begäranden baserat på URI (eller sökväg), IP-adress, antalet förfrågningar och olika typer av attacker med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+I det här avsnittet kommer du att utforska praktiska exempel på trafikfilterregler, inklusive WAF-regler. Du får lära dig hur du loggar, tillåter och blockerar begäranden baserat på URI (eller sökväg), IP-adress, antalet förfrågningar och olika typer av attacker med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
-Dessutom får du lära dig att använda kontrollpanelsverktyg som importerar AEMCS CDN-loggar för att visualisera viktiga mätvärden via kontrollpaneler som tillhandahålls av Adobe.
+Dessutom kommer du att upptäcka hur du kan använda kontrollpanelsverktyg som importerar AEMCS CDN-loggar för att visualisera viktiga mätvärden via kontrollpaneler som tillhandahålls av Adobe.
 
 Om du vill anpassa dig efter dina specifika krav kan du förbättra och skapa anpassade instrumentpaneler och på så sätt få djupare insikter och optimera regelkonfigurationerna för dina AEM.
 
 ## Exempel
 
-Låt oss utforska olika exempel på trafikfilterregler, inklusive WAF-regler. Kontrollera att du har slutfört den nödvändiga konfigurationsprocessen enligt beskrivningen i tidigare versioner [konfigurera](./how-to-setup.md) och du har klonat [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+Låt oss utforska olika exempel på trafikfilterregler, inklusive WAF-regler. Kontrollera att du har slutfört den nödvändiga konfigurationsprocessen enligt beskrivningen i tidigare versioner [konfigurera](./how-to-setup.md) och att du har klonat [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### Förfrågningar om loggning
 
@@ -104,11 +104,11 @@ Låt oss analysera resultaten av `publish-auth-requests` genom att hämta AEMCS 
 
 ### Blockera förfrågningar
 
-I det här exemplet lägger vi till en sida i en _internal_ mapp `/content/wknd/internal` sökväg i det distribuerade WKND-projektet. deklarera sedan en trafikfilterregel som **block** till undersidor från andra platser än en angiven IP-adress som matchar din organisation (till exempel ett VPN för företag).
+I det här exemplet lägger vi till en sida i en _internal_ mapp vid sökvägen `/content/wknd/internal` i det distribuerade WKND-projektet. deklarera sedan en trafikfilterregel som **block** till undersidor från andra platser än en angiven IP-adress som matchar din organisation (till exempel ett VPN för företag).
 
-Du kan skapa en egen intern sida (till exempel `demo-page.html`) eller använder [bifogat paket](./assets/demo-internal-pages-package.zip)
+Du kan antingen skapa en egen intern sida (till exempel `demo-page.html`) eller använder [bifogat paket](./assets/demo-internal-pages-package.zip).
 
-- Lägg till följande regel i WKND-projektets `/config/cdn.yaml` -fil.
+- Lägg till följande regel i WKND-projektets `/config/cdn.yaml` fil:
 
 ```yaml
 kind: CDN
@@ -200,7 +200,7 @@ data:
   $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
   ```
 
-  Med det här kommandot utförs 120 begäranden i 5 sekunder och en rapport skapas. Som du ser är frekvensen 32,5 % och för resten en 406 HTTP-svarskod som visar att trafiken blockerades.
+  Med det här kommandot utförs 120 begäranden i 5 sekunder och en rapport skapas. Som du ser är antalet lyckade försök 32,5 %. En 406 HTTP-svarskod tas emot för resten, vilket visar att trafiken blockerades.
 
   ![Vegeta DoS-attack](./assets/vegeta-dos-attack.png)
 
@@ -212,7 +212,7 @@ Den här gången bör du se många **Blockerade förfrågningar** och motsvarand
 
 ![ELK Tool Dashboard DoS Request](./assets/elk-tool-dashboard-dos.png)
 
-Dessutom finns **De 100 viktigaste attackerna per klient-IP, land och användaragent** På panelen visas ytterligare information som kan användas för att optimera regelkonfigurationen ytterligare.
+Dessutom finns **De 100 viktigaste attackerna per klient-IP, land och användaragent** på panelerna visas ytterligare information som kan användas för att ytterligare optimera regelkonfigurationen.
 
 ![ELK Tool Dashboard DoS Top 100 Requests](./assets/elk-tool-dashboard-dos-top-100.png)
 
@@ -220,7 +220,7 @@ Dessutom finns **De 100 viktigaste attackerna per klient-IP, land och användara
 
 Trafikfilterregelexemplen hittills kan konfigureras av alla Sites- och Forms-kunder.
 
-Sedan ska vi utforska upplevelsen för en kund som har köpt en förbättrad licens för säkerhet eller WAF-DDoS-skydd. Detta ger dig rätt att konfigurera avancerade regler för att skydda dina AEM webbplatser från mer sofistikerade attacker.
+Sedan ska vi utforska upplevelsen för en kund som har köpt en licens för Förbättrad säkerhet eller WAF-DDoS-skydd, som låter dem konfigurera avancerade regler för att skydda webbplatser från mer sofistikerade attacker.
 
 Aktivera WAF-DDoS-skyddet för ditt program innan du fortsätter, enligt beskrivningen i dokumentationen för trafikfilterregler [konfigurationssteg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup).
 
@@ -248,7 +248,7 @@ Den här gången bör du dock se **Flaggade begäranden** och motsvarande värde
 
 ![ELK Tool Dashboard WAF Flagged Request](./assets/elk-tool-dashboard-waf-flagged.png)
 
-Anteckna hur **WAF Flags-distribution och Top-attacker** på panelerna visas ytterligare information som kan användas för att optimera regelkonfigurationen ytterligare.
+Anteckna hur **WAF-flaggdistribution** och **De vanligaste attackerna** på panelerna visas ytterligare information som kan användas för att optimera regelkonfigurationen ytterligare.
 
 ![ELK Tool Dashboard WAF Flags Attacks Request](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
@@ -319,7 +319,7 @@ Den här gången ska du se poster under **Blockerade förfrågningar** och motsv
 
 ![Begäran om blockerad WAF-fil för instrumentpanelen för ELK](./assets/elk-tool-dashboard-waf-blocked.png)
 
-Dessutom finns **WAF Flags-distribution och Top-attacker** panelerna innehåller mer information.
+Dessutom finns **WAF-flaggdistribution** och **De vanligaste attackerna** panelerna innehåller mer information.
 
 ![ELK Tool Dashboard WAF Flags Attacks Request](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -327,7 +327,7 @@ Dessutom finns **WAF Flags-distribution och Top-attacker** panelerna innehåller
 
 ### Omfattande analys
 
-I ovanstående _analys_ har du lärt dig att analysera resultaten av **specifik regel** med kontrollpanelsverktyget. Du kan utforska hur du analyserar resultaten med andra paneler på kontrollpanelen, bland annat:
+I ovanstående _analys_ har du lärt dig att analysera resultaten av särskilda regler med hjälp av kontrollpanelsverktyget. Du kan utforska hur du analyserar resultaten med andra paneler på kontrollpanelen, bland annat:
 
 
 - Analyserade, flaggade och blockerade begäranden

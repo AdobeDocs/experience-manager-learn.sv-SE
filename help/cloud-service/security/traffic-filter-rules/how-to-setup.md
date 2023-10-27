@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -118,7 +118,7 @@ För att testa regler finns det olika tredjepartsverktyg att tillgå, och din or
 
 När du har skapat, distribuerat och testat reglerna kan du analysera resultaten med **Elasticsearch, Logstash och Kibana (ELK)** kontrollpanelsverktyg. Den kan analysera AEMCS CDN-loggarna, vilket gör att du kan visualisera resultaten i form av olika diagram och diagram.
 
-Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-databas](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) och följer stegen för att installera och läsa in **trafikfilterregler (inklusive WAF)** kontrollpanel.
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-databas](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) och följer stegen för att installera och läsa in **Trafikfilterregler (inklusive WAF)** kontrollpanel.
 
 - När du har läst in exempelinstrumentpanelen bör sidan med verktyget Elastic Dashboard se ut så här:
 

@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,13 @@ Trafikfilterregler distribueras till [inbyggd CDN](https://experienceleague.adob
 
 Den här självstudiekursen vägleder dig genom processen att skapa, distribuera, testa och analysera resultaten av trafikfilterregler, inklusive WAF-regler.
 
-Du kan läsa mer om trafikfilterregler i [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
+Du kan läsa mer om trafikfilterregler i [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
 
 >[!IMPORTANT]
 >
-> En underkategori av trafikfilterregler som kallas &quot;WAF-regler&quot; kräver en WAF-DDoS-skyddslicens
+> En underkategori av trafikfilterregler som kallas &quot;WAF-regler&quot; kräver en WAF-DDoS-skydd eller en förbättrad säkerhetslicens.
 
+Vi erbjuder dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka e-post **aemcs-waf-adopter@adobe.com**.
 
 ## Nästa steg
 
