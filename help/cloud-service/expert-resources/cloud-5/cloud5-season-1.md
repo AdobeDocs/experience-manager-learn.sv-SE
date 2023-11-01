@@ -5,16 +5,14 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: cacac9b58678316cea6a3cac5ebdb56427690d7d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
-# Cloud 5
-
-![AEM Experts Series](./imgs/masthead.png)
+# 5 säsonger i molnet 1
 
 ## Introduktion
 
