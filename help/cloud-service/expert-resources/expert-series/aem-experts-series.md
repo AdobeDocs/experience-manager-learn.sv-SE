@@ -5,16 +5,14 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 4b634d8b3063375f7c135a3e3ef81b90c84e2579
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '700'
 ht-degree: 2%
 
 ---
 
-# Adobe Experience Manager as a Cloud Service Experts Series
-
-![AEM Experts Series](./assets/masthead.png)
+# AEM as a Cloud Service expertserier
 
 Lär dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe experttekniker som bygger upp det, och det professionella serviceteam som levererar det. Delta i Adobe experter och utforska vad AEM as a Cloud Service är, hur det är och skiljer sig från AEM 6, och hur man går från AEM 6 till AEM as a Cloud Service.
 
@@ -23,7 +21,7 @@ Lär dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe ex
 
 ## Komma igång med AEM as a Cloud Service
 
-Lär dig grunderna i AEM som en Cloud Services och hur det skiljer sig från AEM 6, från Adobe Engineers Senior Cloud Architects.
+Lär dig grunderna i AEM som en Cloud Service och hur det skiljer sig från AEM 6, från Adobe Engineers Senior Cloud Architects.
 
 <table>
   <tr>
@@ -99,7 +97,7 @@ Planerar du att gå från AEM 6 till AEM as a Cloud Service? Läs om Adobe metod
       </div>
       <p>
         <br/>
-         Lär dig hur du automatiskt uppdaterar AEM innehåll för att utnyttja de senaste AEM as a Cloud Service funktionerna.
+         Lär dig hur du automatiskt uppdaterar ditt AEM innehåll för att dra nytta av de senaste AEM as a Cloud Service funktionerna.
       </p>
    </td>     
    </td>   
@@ -147,10 +145,10 @@ Planerar du att gå från AEM 6 till AEM as a Cloud Service? Läs om Adobe metod
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video">
-      <img alt="Överföra innehåll till AEM as a Cloud Service" src="./assets/content-transfer-tool.png"/>
+      <img alt="Överföra ditt innehåll till AEM as a Cloud Service" src="./assets/content-transfer-tool.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>Överföra innehåll till AEM as a Cloud Service</strong></a>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>Överföra ditt innehåll till AEM as a Cloud Service</strong></a>
          <br/><em>med Kiran Murugulla, Senior Cloud Architect</em>
       </div>
       <p>
@@ -162,23 +160,23 @@ Planerar du att gå från AEM 6 till AEM as a Cloud Service? Läs om Adobe metod
 </table>
 
 
-## AEM som en Cloud Services
+## AEM som en Cloud Service
 
-Läs om AEM as a Cloud Service funktioner från Adobe experter.
+Läs om AEM as a Cloud Service unika funktioner från Adobe experter.
 
 <table>
   <tr>
    <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video">
-      <img alt="asset compute mikrotjänster" src="./assets/asset-compute-microservices.png"/>
+      <img alt="Asset compute mikrotjänster" src="./assets/asset-compute-microservices.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>asset compute mikrotjänster</strong></a>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>Asset compute mikrotjänster</strong></a>
          <br/><em>med Amol Anand, Principal Cloud Architect</em>
       </div>
       <p>
         <br/>
-        Lär dig mer om AEM Assets Asset compute Microservices, hur de ersätter AEM 6 och hur de kan utökas för att generera anpassade resursåtergivningar.
+        Läs om AEM Assets Asset compute Microservices, hur de ersätter AEM 6 och hur de kan utökas för att generera anpassade resursåtergivningar.
       </p>
    </td>   
    <td>
@@ -198,7 +196,7 @@ Läs om AEM as a Cloud Service funktioner från Adobe experter.
   </tr>
 </table>
 
-## Behöver du hjälp med AEM som Cloud Services?
+## Behöver du hjälp med AEM som Cloud Service?
 
 Lär dig hur du felsöker och felsöker AEM as a Cloud Service och AEM SDK från experterna!
 
