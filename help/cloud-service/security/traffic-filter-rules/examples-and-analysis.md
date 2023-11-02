@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
-
 
 # Exempel och resultatanalys av trafikfilterregler inklusive WAF-regler
 
@@ -27,6 +27,8 @@ I det här avsnittet kommer du att utforska praktiska exempel på trafikfilterre
 Dessutom kommer du att upptäcka hur du kan använda kontrollpanelsverktyg som importerar AEMCS CDN-loggar för att visualisera viktiga mätvärden via kontrollpaneler som tillhandahålls av Adobe.
 
 Om du vill anpassa dig efter dina specifika krav kan du förbättra och skapa anpassade instrumentpaneler och på så sätt få djupare insikter och optimera regelkonfigurationerna för dina AEM.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425404?quality=12&learn=on)
 
 ## Exempel
 
@@ -351,4 +353,3 @@ Bekanta dig med våra rekommendationer [bästa praxis](./best-practices.md) mins
 [Syntax för trafikfilterregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
 
 [CDN-loggformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
-

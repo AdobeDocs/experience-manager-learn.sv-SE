@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
 
 ---
 
-
 # Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)
 
 Läs mer om **trafikfilterregler**, inklusive dess underkategori **Brandväggsregler för webbaserade program (WAF)** på AEM as a Cloud Service (AEMCS). Läs om hur du skapar, distribuerar och testar reglerna. Analysera även resultaten för att skydda dina AEM webbplatser.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
 ## Översikt
 
@@ -41,6 +43,5 @@ Vi erbjuder dig att ge feedback eller ställa frågor om trafikfilterregler geno
 ## Nästa steg
 
 Läs [konfigurera](./how-to-setup.md) funktionen så att du kan skapa, distribuera och testa trafikfilterregler. Läs om hur du konfigurerar **Elasticsearch, Logstash och Kibana (ELK)** kontrollpanelsverktyg för stackar för att analysera resultaten av dina AEMCS CDN-loggar.
-
 
 

@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
 
-
 # Bästa tillvägagångssätt för trafikfilterregler inklusive WAF-regler
 
 Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. Det är viktigt att notera att de bästa metoder som beskrivs i denna artikel inte är uttömmande och inte är avsedda att ersätta dina egna säkerhetsregler och säkerhetsförfaranden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
 ## Allmän bästa praxis
 
@@ -150,3 +152,6 @@ data:
 ## Sammanfattning
 
 Sammanfattningsvis har den här självstudiekursen försett dig med de kunskaper och verktyg som behövs för att öka säkerheten i dina webbapplikationer i Adobe Experience Manager as a Cloud Service (AEMCS). Med praktiska regelexempel och insikter i resultatanalysen kan ni effektivt skydda era webbplatser och tillämpningar.
+
+
+
