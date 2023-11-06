@@ -14,9 +14,9 @@ level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: e9c0974d35493a607969124b2906564fc97bcdea
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
@@ -39,11 +39,11 @@ Lär dig hur du exporterar AEM Experience Fragment som Adobe Target-erbjudanden.
 
 Om du exporterar Experience Fragment till Adobe Target utan rätt behörighet i Adobe Admin Console uppstår följande fel i AEM Author-tjänsten:
 
-    ![Mål-API-gränssnittsfel](assets/error-target-offer.png)
+![Fel i mål-API](assets/error-target-offer.png)
 
 ... och följande loggmeddelanden i `aemerror` log:
 
-    ![Mål-API-konsolfel](assets/target-console-error.png)
+![Mål-API-konsolfel](assets/target-console-error.png)
 
 #### Upplösning
 
