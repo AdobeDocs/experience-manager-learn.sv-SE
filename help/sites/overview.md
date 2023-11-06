@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 237560dc634cb3d6c3553dd57386d2a9548ed4e5
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 4%
+source-wordcount: '324'
+ht-degree: 5%
 
 ---
 
@@ -27,9 +27,6 @@ Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehan
 
 * **[Vad är AEM och Edge Delivery Services? (Video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html)**
   *Läs mer om värdet som Adobe Experience Manager (AEM) och Edge Delivery Servicens erbjuder.*
-
-* **[Läs om hur AEM utvecklas (video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/evolution.html)**
-  *Läs om AEM utveckling och det värde den ger, från AEM 6.5 till AEM as a Cloud Service och slutligen till Edge Delivery Services.*
 
 * **[AEM med Edge Delivery Services arkitektoniska översikt (video)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)**
   *Lär dig allt om AEM as a Cloud Service arkitektur!*

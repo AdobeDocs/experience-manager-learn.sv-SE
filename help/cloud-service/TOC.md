@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 11%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 11%
    + [Bilder](./aem-trials/images.md)
 + Introduktion till AEM as a Cloud Service{#introduction}
    + [Vad är AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [Utveckling](./introduction/evolution.md)
    + [Arkitektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + Strategi och tankeledarskap{#strategy}
