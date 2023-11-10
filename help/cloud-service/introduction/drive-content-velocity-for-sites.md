@@ -3,9 +3,9 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: bd886704f10834bb07b42d6b5c0f116496da36de
 workflow-type: tm+mt
-source-wordcount: '2814'
+source-wordcount: '2795'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 I allmänhet är det bäst att följa dessa tumregler:
 
 * Målet är att inte mindre än 80 % av upplevelserna ska köras genom [Ut ur kartongkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en) och [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Genom kundutlåtanden kommer detta inte bara att skapa en mer skalbar grund som gör att ni kan dra nytta av produktplanen, utan det kommer också att öka hastigheten med upp till 50 %.
-* [Konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[e](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en)[redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) och gå bort från statiska mallar. När du skapar redigerbara mallar (som krävs för att använda formatsystem) måste du tilldela en mallskapare som styr de olika format som är tillgängliga för en sida eller ett avsnitt på webbplatsen. Dessa uppdateringar av själva mallen är relativt minimala när det gäller det dagliga arbetet.
+* [Konfigurera redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) och gå bort från statiska mallar. När du skapar redigerbara mallar (som krävs för att använda formatsystem) måste du tilldela en mallskapare som styr de olika format som är tillgängliga för en sida eller ett avsnitt på webbplatsen. Dessa uppdateringar av själva mallen är relativt minimala när det gäller det dagliga arbetet.
 * Använd [Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) där det är möjligt. Även om det allmänna användningsexemplet för upplevelsefragment är för flerkanalsdistribution kan de också användas effektivt på hela webbplatsen för att fylla i innehåll i ett område åt gången i stället för att uppdatera innehåll manuellt i flera områden. Detta kan spara mycket tid och arbete och kommer att frigöra teamet från att arbeta med mer specifika och innehållsrika upplevelser.
 * Skapa rikare upplevelser. Genom att använda regeln 80/20 (enligt ovan) kan en organisation använda specifik CSS och serverutveckling för utvalda upplevelser i stället för vanliga underhållsuppdateringar.
 * Välj en skalbar grund och snabb omprofilering. Formatsystem som körs baserat på en modern implementering kan möjliggöra en effektiv omprofilering på en plattform. Genom att uppdatera många innehållssektorer genom att ändra CSS-skal går det snabbt att testa och validera webbplatsen och ökar webbplatsens upplevelsekvalitet, vilket direkt påverkar avkastningen.
