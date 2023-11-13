@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ Så här hämtar du CDN-loggarna:
 
 1. För önskad AEMCS-miljö väljer du **Hämta loggar** på ellipsmenyn.
 
-   ![Hämta loggar - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="200" zoomable="yes"}
+   ![Hämta loggar - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
 1. I **Hämta loggar** väljer du **Publicera** Tjänst från listrutan och klicka sedan på nedladdningsikonen bredvid **cdn** rad.
 
-   ![CDN-loggar - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="200" zoomable="yes"}
+   ![CDN-loggar - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
 
 Om den hämtade loggfilen kommer från _idag_ filtillägget är `.log` annars är tillägget för tidigare loggfiler `.log.gz`.
@@ -71,11 +71,11 @@ Om du vill identifiera nyckeldetaljerna använder du [AEMCS-CDN-Log-Analysis-ELK
 
    1. Öppna **CDN-cacheträffrekvens** genom att klicka på Hamburger-menyn > Analytics (Analyser) > Dashboard > CDN Cache Hit Ratio (Träff-förhållande för CDN-cache).
 
-      ![CDN-cacheträffrekvens - Kibaninstrumentpanel](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="200" zoomable="yes"}
+      ![CDN-cacheträffrekvens - Kibaninstrumentpanel](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
    1. Välj önskat tidsintervall i det övre högra hörnet.
 
-      ![Tidsintervall - Kibana Dashboard](assets/cdn-logs-analysis/time-range.png){width="200" zoomable="yes"}
+      ![Tidsintervall - Kibana Dashboard](assets/cdn-logs-analysis/time-range.png){width="500" zoomable="yes"}
 
    1. The **CDN-cacheträffrekvens** Instrumentpanelen är självförklarande.
 
@@ -83,14 +83,14 @@ Om du vill identifiera nyckeldetaljerna använder du [AEMCS-CDN-Log-Analysis-ELK
       - Cacheproportioner efter cachetyp
       - Cacheantal per cachetyp
 
-      ![Analys av totalt begäranden - Kibana Dashboard](assets/cdn-logs-analysis/total-request-analysis.png){width="200" zoomable="yes"}
+      ![Analys av totalt begäranden - Kibana Dashboard](assets/cdn-logs-analysis/total-request-analysis.png){width="500" zoomable="yes"}
 
    1. The _Analys efter begäran eller MIME-typer_ visar följande information:
       - Cacheproportioner efter cachetyp
       - Cacheantal per cachetyp
       - MEST SAKNAS- och PASS-URL:er
 
-      ![Analys efter begäran eller MIME-typer - Kibana Dashboard](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="200" zoomable="yes"}
+      ![Analys efter begäran eller MIME-typer - Kibana Dashboard](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="500" zoomable="yes"}
 
 #### Filtrera efter miljönamn eller program-ID
 
@@ -98,11 +98,11 @@ Följ stegen nedan för att filtrera de kapslade loggarna efter miljönamn:
 
 1. Klicka på knappen **Lägg till filter** -ikon.
 
-   ![Filter - Kibanas Dashboard](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![Filter - Kibanas Dashboard](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. I **Lägg till filter** modal, välj `aem_env_name.keyword` fält från den nedrullningsbara menyn och `is` operator och önskat miljönamn för nästa fält och klicka slutligen på _Lägg till filter_.
 
-   ![Lägg till filter - Kibana Dashboard](assets/cdn-logs-analysis/add-filter.png){width="200" zoomable="yes"}
+   ![Lägg till filter - Kibana Dashboard](assets/cdn-logs-analysis/add-filter.png){width="500" zoomable="yes"}
 
 #### Filtrera efter värdnamn
 
@@ -110,11 +110,11 @@ Följ stegen nedan för att filtrera de kapslade loggarna efter värdnamn:
 
 1. Klicka på knappen **Lägg till filter** -ikon.
 
-   ![Filter - Kibanas Dashboard](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![Filter - Kibanas Dashboard](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. I **Lägg till filter** modal, välj `host.keyword` fält från den nedrullningsbara menyn och `is` operator och önskat värdnamn för nästa fält och klicka slutligen på _Lägg till filter_.
 
-   ![Värdfilter - Kibankontrollpanel](assets/cdn-logs-analysis/add-host-filter.png){width="200" zoomable="yes"}
+   ![Värdfilter - Kibankontrollpanel](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
 Lägg också till fler filter på kontrollpanelen baserat på analyskraven.
 
@@ -127,7 +127,7 @@ Om du vill snabba upp CDN-logganalysen hämtar du [AEM-som-molntjänst - CDN-log
 Hämtade `aemcs_cdn_logs_analysis.ipynb` &quot;Interactive Python Notebook&quot;-filen är självförklarande, men huvudinnehållet i varje avsnitt är:
 
 - **Installera ytterligare bibliotek**: installerar `termcolor` och `tabulate` Python-bibliotek.
-- **Läs in CDN-loggfil**: läser in CDN-loggfilen med `log_file` måste du uppdatera variabelvärdet. CDN-loggen omvandlas också till [Pandor DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
+- **Läs in CDN-loggar**: läser in CDN-loggfilen med `log_file` måste du uppdatera variabelvärdet. CDN-loggen omvandlas också till [Pandor DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
 - **Utför analys**: det första kodblocket är _Visa analysresultat för totalt, HTML, JS/CSS och bildbegäranden_, ger den cache-träff i procent, bar och cirkeldiagram.
 Det andra kodblocket är _De fem vanligaste URL:erna för MISS- och PASS-begäranden för HTML, JS/CSS och Image_, visas URL:er och deras antal i tabellformat.
 
@@ -141,33 +141,33 @@ Så här kör du Jupyter Notebook i Experience Platform:
 
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), på startsidan > **Snabb åtkomst** > klicka på **Experience Platform**
 
-   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="200" zoomable="yes"}
+   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
 1. På Adobe Experience Platform hemsida > Datavetenskap > klickar du på **Bärbara datorer** menyalternativ. Starta Jupyter Notebooks-miljön genom att klicka på **JupyterLab** -fliken.
 
-   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/datascience-notebook.png){width="200" zoomable="yes"}
+   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
 1. På JupyterLab-menyn använder du **Överför filer** överför CDN-loggfilen och `aemcs_cdn_logs_analysis.ipynb` -fil.
 
-   ![Överför filer - JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="200" zoomable="yes"}
+   ![Överför filer - JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. Öppna `aemcs_cdn_logs_analysis.ipynb` genom att dubbelklicka.
 
 1. I **Läs in CDN-loggfil** i anteckningsboken, uppdatera `log_file` värde.
 
-   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/notebook-update-variable.png){width="200" zoomable="yes"}
+   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
 1. Om du vill köra den markerade cellen och gå framåt klickar du på **Spela upp** -ikon.
 
-   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/notebook-run-cell.png){width="200" zoomable="yes"}
+   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
 1. När du har kört **Visa analysresultat för totalt, HTML, JS/CSS och bildbegäranden** i kodcellen visas cache-träff i procent, staplar och cirkeldiagram.
 
-   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="200" zoomable="yes"}
+   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
 1. När du har kört **De fem vanligaste URL:erna för MISS- och PASS-begäranden för HTML, JS/CSS och Image** i kodcellen visas de fem vanligaste URL:erna för MISS- och PASS-begäranden.
 
-   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/output-top-urls.png){width="200" zoomable="yes"}
+   ![Uppdatering av loggfilsvärde för anteckningsbok](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
 Du kan förbättra Jupyter-anteckningsboken för att analysera CDN-loggarna utifrån dina behov.
 
