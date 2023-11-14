@@ -1,6 +1,6 @@
 ---
 title: Inställning av Adobe Asset Link
-description: Lär dig hur du utan kostnad konfigurerar Adobe Asset Link, som kopplar ihop dina Creative Cloud-appar som Photoshop, Illustrator, InDesign och XD med Adobe Experience Manager Assets.
+description: Lär dig hur du utan kostnad konfigurerar Adobe Asset Link, som kopplar samman dina Creative Cloud-appar som Photoshop, Illustrator, InDesign och XD med Adobe Experience Manager Assets.
 feature: Adobe Asset Link
 version: Cloud Service
 topic: Content Management
@@ -9,16 +9,16 @@ level: Beginner
 kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 288eaf8bab20cfb0ecbfa8455198fa63252e2e71
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # Inställning av Adobe Asset Link
 
-Få snabb genomslagskraft i organisationen genom att göra det enklare för kreatörer och marknadsförare att samarbeta om resurser när de skapar innehåll. Om du använder IT kan du snabbt konfigurera Adobe Asset Link utan kostnad, vilket kopplar dina Creative Cloud-appar som Photoshop, Illustrator, InDesign och XD till Adobe Experience Manager Assets.
+Få snabb genomslagskraft i organisationen genom att göra det enklare för kreatörer och marknadsförare att samarbeta om resurser när de skapar innehåll. Om du använder IT kan du lära dig att snabbt konfigurera Adobe Asset Link utan kostnad, vilket kopplar dina Creative Cloud-appar som Photoshop, Illustrator, InDesign och XD till Adobe Experience Manager Assets.
 
 ## Inställning av tillgångslänk för AEM as a Cloud Service
 
@@ -26,9 +26,14 @@ Lär dig hur du konfigurerar Adobe Asset Link för AEM as a Cloud Service, konfi
 
 >[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
+Adobe Asset Link visas inte i videon ovan och kan läggas till via __Hanterat paket__ från Creative Cloud-pakethanteraren:
+
+1. Välj __Adobe Asset Link CEP__ in __Välj plugin-program__ steg
+2. På __Alternativsteg__ välj __Aktivera självbetjäningsinstallation__ och __Tillåt icke-administratörer att uppdatera och installera appar__ för att ge icke-administratörer behörighet att hantera program och plugin-program från Creative Cloud.
+
 ## Inställning av tillgångslänk för Managed Services och lokal
 
-Lär dig hur du konfigurerar Adobe Asset Link för AEM 6 som körs i Adobes hanterade tjänster eller på plats, konfigurerar användarberättiganden och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
+Lär dig hur du konfigurerar Adobe Asset Link för AEM 6 som körs i Adobe Managed Services eller på plats, konfigurerar användarberättiganden och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
