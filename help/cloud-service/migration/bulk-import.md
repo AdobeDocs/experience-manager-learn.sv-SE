@@ -14,16 +14,20 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4912087feb69ccbed3c66a34941fa6d083af6319
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
 # Använda massimport
 
-Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
+Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring på ett säkert och effektivt sätt.
+
+>[!TIP]
+>
+> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i produktens tillgängliga alternativ. [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
