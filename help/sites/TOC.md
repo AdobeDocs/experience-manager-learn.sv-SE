@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '520'
 ht-degree: 11%
 
 ---
@@ -17,6 +17,23 @@ ht-degree: 11%
 # Videor och självstudiekurser om AEM Sites {#sites}
 
 + [Översikt](overview.md)
++ Dokumentredigering {#document-authoring}
+   + [Konfigurera](document-authoring/set-up.md)
+   + [Förhandsgranska och publicera](document-authoring/preview-and-publish.md)
+   + [Dokumentstruktur](document-authoring/document-structure.md)
+   + [Block och autoblocks](document-authoring/blocks-and-auto-blocks.md)
+   + [Omdirigeringar](document-authoring/redirects.md)
+   + [Massmetadata](document-authoring/bulk-metadata.md)
+   + [Sidmetadata](document-authoring/page-metadata.md)
+   + [Responsiv navigering](document-authoring/responsive-navigation.md)
+   + Så här gör du{#how-to}
+      + [Dokumentgranskning](./document-authoring/how-to/document-audit.md)
+      + [Dokumentbehörigheter](./document-authoring/how-to/document-permissions.md)
+      + [Dokumentversioner](./document-authoring/how-to/document-versions.md)
+      + [Dokumentarbetsflöden](./document-authoring/how-to/document-workflows.md)
+      + [Bädda in iFrames](./document-authoring/how-to/iframes.md)
+      + [Alt-text för bild](./document-authoring/how-to/image-alt-text.md)
+      + [Förhindra indexering av sökmotor](./document-authoring/how-to/no-index.md)
 + Sidredigering {#page-authoring}
    + [Redigering](page-authoring/aem-sites-authoring-overview.md)
    + [Navigering](page-authoring/basic-handling-sites-feature-video-use.md)
@@ -52,8 +69,19 @@ ht-degree: 11%
    + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
    + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
-
++ Edge Delivery Services{#edge-delivery-services}
+   + Utveckling{#developing}
+      + [Förutsättningar](./edge-delivery-services/developing/prerequisites.md)
+      + [Innehållsarkiv](./edge-delivery-services/developing/content-repository.md)
+      + [Förhandsgranska och publicera](./edge-delivery-services/developing/preview-and-publish.md)
+      + [AEM Sidekick](./edge-delivery-services/developing/sidekick.md)
+      + [Dokumentstruktur](./edge-delivery-services/developing/document-structure.md)
+      + [Lokal utveckling](./edge-delivery-services/developing/local-development.md)
+      + [Git](./edge-delivery-services/developing/git.md)
+   + Instruktioner{#how-to}
+      + [RSS-flöden](./edge-delivery-services/how-to/rss.md)
 + Utveckling {#developing}
+   + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM Project Archettype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [Kom igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
