@@ -1,6 +1,6 @@
 ---
 title: Förhandsgranska och publicera innehåll
-description: En stegvis guide om hur du skapar och publicerar innehåll med dokumentredigering.
+description: Skapa och publicera innehåll med dokumentredigering.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -10,9 +10,9 @@ doc-type: Feature Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14466
 thumbnail: 3425700.jpeg
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 6c212071c7afcbfa53d69ecc926dc3066d0ac556
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '32'
 ht-degree: 0%
 
 ---
