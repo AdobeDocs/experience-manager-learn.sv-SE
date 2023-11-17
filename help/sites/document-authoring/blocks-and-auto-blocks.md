@@ -1,6 +1,6 @@
 ---
-title: Standardinnehåll och -avsnitt
-description: Gör en djupdykning i dokumentutvecklingen av standardinnehåll och -avsnitt.
+title: Blockera och låsa vid dokumentframtagning
+description: Hur block och automatiska lås används vid dokumentredigering.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -10,18 +10,18 @@ doc-type: Feature Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14468
 thumbnail: 3425702.jpeg
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 931c48b3687c8d7f8ec0ae8ef5d6dd2390fc119f
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
 
-# Standardinnehåll och -avsnitt
+# Block och autoblocks
 
 {{edge-delivery-services}}
 
-Gör en djupdykning i hur man skapar standardinnehåll och -avsnitt och hur dessa hjälper er att skapa bättre webbupplevelser.
+Ta reda på hur block och autoblocks används vid dokumentframställning och hur dessa kan förbättra webbplatsen och redigeringsupplevelsen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
