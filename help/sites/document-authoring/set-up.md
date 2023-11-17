@@ -1,5 +1,5 @@
 ---
-title: Ställa in dokumentredigering
+title: Konfigurera dokumentredigering
 description: En guide om hur du konfigurerar miljön för författare för dokumentredigering.
 version: 6.5, Cloud Service
 feature: Authoring
@@ -10,18 +10,18 @@ doc-type: Feature Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14465
 thumbnail: 3425699.jpeg
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 9640a20b48a2c006de4b3eeebdb3bd9bfeb0432a
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
 
-# Ställa in dokumentredigering
+# Konfigurera dokumentredigering
 
 {{edge-delivery-services}}
 
-En guide om hur du konfigurerar miljön för författare för dokumentredigering.
+En guide om hur du ställer in dokumentredigering för författare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
