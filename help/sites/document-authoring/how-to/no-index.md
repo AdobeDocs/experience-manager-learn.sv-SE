@@ -10,9 +10,9 @@ doc-type: Technical Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14493
 thumbnail: 3425726.jpeg
-source-git-commit: d17544c4f8dda03e5147a1f48dbbdae005ee9438
+source-git-commit: 6e44e914fad65d277c945e3b1bbbc2afe1707a1b
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Upptäck hur du förhindrar att sidor skapas med hjälp AEM dokumentredigering indexeras av sökmotorer.
+Se hur du förhindrar att webbsidor som skapats med AEM indexeras av sökmotorer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
