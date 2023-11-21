@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
+source-git-commit: 9b733c7070191adb34c9e7c05c92b0567c080e14
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 1%
@@ -331,19 +331,19 @@ eller, för att starta AEM Publish-tjänsten, `cd` till katalogen som innehålle
 >[!TAB macOS]
 
 ```shell
-$ java -jar aem-author-p4503.jar
+$ java -jar aem-publish-p4503.jar
 ```
 
 >[!TAB Windows]
 
 ```shell
-$ java -jar aem-author-p4503.jar
+$ java -jar aem-publish-p4503.jar
 ```
 
 >[!TAB Linux]
 
 ```shell
-$ java -jar aem-author-p4503.jar
+$ java -jar aem-publish-p4503.jar
 ```
 
 >[!ENDTABS]
