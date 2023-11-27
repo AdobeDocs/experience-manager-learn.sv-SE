@@ -10,9 +10,9 @@ topic: Development
 feature: Developer Tools
 kt: 8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -61,4 +61,4 @@ Nu kan du konfigurera alla adaptiva formulär att skicka till den här anpassade
 
 ## Nästa steg
 
-[Aktivera Forms Portal-komponenter](./forms-portal-components.md)
+[Registrera servlet med resurstyp](./registering-servlet-using-resourcetype.md)

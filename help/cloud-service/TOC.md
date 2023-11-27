@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1084'
 ht-degree: 11%
 
 ---
@@ -204,12 +204,13 @@ ht-degree: 11%
       + [4 - Sync IntelliJ med AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 - Skapa ett formulär](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 - Anpassad överföringshanterare](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 - Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 - Inkludera Cloud Service och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [9 - Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [10 - Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [11 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [12 - Uppdaterar maven-arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [7 - Registrerar serverutrymmet med resurstyp](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
+      + [8 - Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [9 - Inkludera Cloud Service och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [10 - Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [11 - Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [12 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [13 - Uppdaterar maven-arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
@@ -254,6 +255,12 @@ ht-degree: 11%
       + [PDF/A-verktyg](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testa lösningen](./forms/forms-cs-assembler/test.md)
       + [Utmaning](./forms/forms-cs-assembler/challenge.md)
+   + Lagra formuläröverföringar med blobindextaggar{#store-submiited-data-with-metadata-tags}
+      + [Introduktion](./forms/store-submiited-data-with-metadata-tags/introduction.md)
+      + [Utöka alternativgruppskomponent](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
+      + [Skapa OSGi-konfiguration](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
+      + [Skapa indexmärkord](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
+      + [Skapa anpassad sändning](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
    + Azure Portal Storage{#forms-cs-azure-portal}
       + [Introduktion](./forms/forms-cs-azure-portal/introduction.md)
       + [Skapa formulärdatamodell](./forms/forms-cs-azure-portal/create-fdm.md)
