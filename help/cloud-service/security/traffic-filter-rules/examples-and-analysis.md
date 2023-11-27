@@ -11,7 +11,7 @@ last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
-source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
+source-git-commit: c32497a7fdcf144d30bb8c0e58527013b66013b0
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
@@ -51,7 +51,7 @@ metadata:
 data:
   trafficFilters:
     rules:
-    # On AEM Publish service log WKND Login and Logout requests 
+    # On AEM Publish service log WKND Login and Logout requests
       - name: publish-auth-requests
         when:
           allOf:
@@ -187,7 +187,7 @@ data:
           penalty: 300
           groupBy:
             - reqProperty: clientIp
-        action: block     
+        action: block
 ```
 
 >[!WARNING]
@@ -276,7 +276,7 @@ metadata:
 data:
   trafficFilters:
     rules:
-    ...     
+    ...
     # Enable WAF protections (only works if WAF is enabled for your environment)
       - name: block-waf-flags
         when:
@@ -286,7 +286,6 @@ data:
           type: block
           wafFlags:
             - SANS
-            - SIGSCI-IP
             - TORNODE
             - NOUA
             - SCANNER
@@ -302,7 +301,7 @@ data:
             - CODEINJECTION
             - CMDEXE
             - NO-CONTENT-TYPE
-            - UTF8        
+            - UTF8
 ```
 
 - Genomför, push och distribuera ändringar enligt [tidigare exempel](#logging-requests).
