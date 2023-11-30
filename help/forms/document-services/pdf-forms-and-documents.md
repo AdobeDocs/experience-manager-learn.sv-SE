@@ -8,11 +8,10 @@ version: 6.4, 6.5
 feature: PDF Generator
 kt: 7071
 topic: Development
-exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 Portable Document Format (PDF) är en familj med filformat, och i den här artikeln beskrivs de som är mest relevanta för formulärutvecklare. Många av de tekniska detaljerna och standarderna för olika typer av PDF utvecklas och förändras. Vissa av dessa format och specifikationer är ISO-standarder (International Organization for Standardization) och vissa är specifika immateriella rättigheter som ägs av Adobe.
 
-I den här artikeln beskrivs hur du skapar olika typer av PDF. Det hjälper er att förstå hur och varför ni ska använda var och en av dem. Alla dessa typer fungerar bäst i det främsta klientverktyget för att visa och arbeta med PDF - Adobe Acrobat DC.
+I den här artikeln beskrivs hur du skapar olika typer av PDF. Det hjälper er att förstå hur och varför ni ska använda varje verktyg. Alla dessa typer fungerar bäst i det främsta klientverktyget för att visa och arbeta med PDF - Adobe Acrobat DC.
 
 Här följer ett exempel på en PDF/A-fil i Acrobat DC.
 
@@ -60,6 +59,8 @@ Dynamisk XFA-PDF kan ändra layouten under körning, vilket innebär att komment
 * Dynamiska formulär har stöd för klientskript som ändrar formulärets layout och sidnumrering. Exempelvis kommer Purchase Order.xdp att expandera och paginera för att rymma en oändlig mängd data om du sparar den som ett dynamiskt formulär
 * Dynamiska formulär har stöd för alla egenskaper i formuläret vid körning, medan statiska formulär bara har stöd för en delmängd
 
+* [Läs det här dokumentet för att förstå skillnaderna mellan statiska och dynamiska PDF-formulär](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+
 >[!NOTE]
 >
 > Du kan skapa dynamiska PDF-filer med AEM Forms Designer genom att spara XDP-filen som ett dynamiskt XML-formulär i Adobe
@@ -74,16 +75,16 @@ Ett certifierat dokument ger PDF-dokument och Forms-mottagare ytterligare en fö
 
 Det vanligaste och mest spridda PDF-formatet är den traditionella PDF-filen. Det finns många sätt att skapa en traditionell PDF-fil, bland annat med Acrobat och många tredjepartsverktyg. I Acrobat kan du skapa PDF-filer på följande sätt: Om du inte har installerat Acrobat kanske du inte ser dessa alternativ på datorn.
 
-* Genom att hämta utskriftsströmmen för ett skrivbordsprogram: Välj Skriv ut i ett redigeringsprogram och välj Adobe PDF-skrivarikon. I stället för en utskriven kopia av dokumentet har du skapat en PDF-fil av dokumentet
-* Genom att använda plugin-programmet Acrobat PDFMaker med Microsoft Office-program: När du installerar Acrobat läggs en Adobe PDF-meny till i Microsoft Office-program och en ikon till i Office-menyfliksområdet. Du kan använda de här nya funktionerna för att skapa PDF-filer direkt i Microsoft Office
-* Genom att använda Acrobat Distiller för att konvertera Postscript- och Encapsulated Postscript-filer (EPS) till PDF: Distiller används vanligtvis vid trycksakspublicering och andra arbetsflöden som kräver konvertering från Postscript-formatet till PDF
+* Genom att hämta utskriftsströmmen för ett skrivbordsprogram: Välj kommandot Skriv ut i ett redigeringsprogram och välj Adobe PDF-skrivarikon. I stället för en utskriven kopia av dokumentet har du skapat en PDF-fil av dokumentet
+* Genom att använda plugin-programmet Acrobat PDFMaker med Microsoft Office-program: När du installerar Acrobat läggs en Adobe PDF-meny till i Microsoft Office-program och en ikon till Office-menyfliken. Du kan använda de här nya funktionerna för att skapa PDF-filer direkt i Microsoft Office
+* Genom att använda Acrobat Distiller för att konvertera Postscript- och Encapsulated Postscript-filer (EPS) till PDF: Distiller används vanligtvis vid trycksakspublicering och andra arbetsflöden som kräver konvertering från Postscript-format till PDF
 * Under huven är en traditionell PDF mycket annorlunda än en XFA-PDF. Den har inte samma XML-struktur, och eftersom den skapas genom att en fils utskriftsström hämtas är en vanlig PDF en statisk och skrivskyddad fil.
 
 Ett certifierat dokument ger PDF dokument och formulärmottagare ytterligare garantier för att de är autentiska och intakta.
 
 ### Acroforms
 
-Acroforms är AdobeÄldre interaktiv formulärteknik. de återgår till Acrobat version 3. Adobe tillhandahåller [API-referens för Acrobat Forms](assets/FormsAPIReference.pdf), daterat i maj 2003, för att ge de tekniska detaljerna om denna teknik. Acrobat är en kombination av följande objekt:
+Acroforms är AdobeÄldre interaktiv formulärteknik; de är tillbaka till Acrobat version 3. Adobe tillhandahåller [Acrobat Forms API Reference](assets/FormsAPIReference.pdf), daterat i maj 2003, för att ge de tekniska detaljerna om denna teknik. Acrobat är en kombination av följande objekt:
 
 * Ett traditionellt PDF som definierar formulärets statiska layout och grafik.
 * Interaktiva formulärfält som markeras ovanpå formulärverktygen i Adobe Acrobat. Dessa formulärverktyg utgör en liten del av vad som är tillgängligt i AEM Forms Designer.
@@ -118,4 +119,4 @@ Dokumentets meddelandefält innehåller instruktioner, och eventuellt knappar, s
 
 >[!NOTE]
 >
-> Om du klickar på Aktivera redigering tar du bort det här dokumentet från PDF/A-kompatibiliteten.
+> Om du klickar på Aktivera redigering tar du bort dokumentet från PDF/A-kompatibiliteten.

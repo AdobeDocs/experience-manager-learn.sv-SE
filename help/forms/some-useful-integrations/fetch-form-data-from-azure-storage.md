@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 kt: 14238
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
+source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -46,18 +46,18 @@ public String getBlobData(String blobID) {
 
     } catch (ClientProtocolException e) {
 
-        log.error("Got Client Protocol Exception " + e.getMessage());
+        log.debug("Got Client Protocol Exception " + e.getMessage());
     } catch (IOException e) {
 
-        log.error("Got IOEXception " + e.getMessage());
+        log.debug("Got IOEXception " + e.getMessage());
     }
 
     return null;
 }
 ```
 
-När ett anpassat formulär återges med en `guid` -parametern i URL hämtar och fyller den anpassade sidkomponenten som är kopplad till mallen i det adaptiva formuläret med data från Azure-lagringen.
-Sidkomponenten som är associerad med mallen har följande JSP-kod.
+När ett adaptivt formulär återges med en guid-parameter i url hämtas och fylls det adaptiva formuläret med data från Azure-lagringen av den anpassade sidkomponenten som är kopplad till mallen.
+Här följer koden i jsp för den sidkomponent som är associerad med mallen
 
 ```java
 com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage azureStorage = sling.getService(com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage.class);
@@ -81,9 +81,11 @@ if(guid!=null&&!guid.isEmpty())
 
 * [Importera det adaptiva exempelformuläret](./assets/bank-account-sample-form.zip)
 
-* Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen
+* Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen.
+
 * [Förhandsgranska och skicka bankkontoformuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * Verifiera att data lagras i den Azure-lagringsbehållare du väljer. Kopiera blob-ID:t.
+
 * [Förhandsgranska bankkontoformuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) och ange blob-ID:t som en GUID-parameter i URL:en för formuläret som ska fyllas i med data från Azure-lagringen
 
