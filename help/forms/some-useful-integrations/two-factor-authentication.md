@@ -3,13 +3,13 @@ title: SMS-autentisering med två faktorer
 description: Lägg till ett extra säkerhetslager som hjälper till att bekräfta en användares identitet när han/hon vill utföra vissa aktiviteter
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 6317
+jira: KT-6317
 topic: Development
 role: Developer
 level: Experienced
 exl-id: c2c55406-6da6-42be-bcc0-f34426b3291a
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentati
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (fka Swagger).
 
-Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångslösenord som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/two-factore-authentication-swagger.zip)
+Använd [swagger editor](https://editor.swagger.io/) om du vill skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångskod som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/two-factore-authentication-swagger.zip)
 
 ## Skapa datakälla
 
@@ -70,4 +70,4 @@ Om du vill använda exempelresurserna med dina API-nycklar följer du följande 
 
 * Redigera regeln som är associerad med fältet. Ange lämpliga API-nycklar
 * Spara formuläret
-* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) och testa funktionaliteten
+* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) och testa funktionerna

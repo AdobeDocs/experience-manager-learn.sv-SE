@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 10436
+jira: KT-10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM as a Cloud Service stöder flera autentiseringsalternativ och varierar beroende på tjänsttyp.
 
-|  | AEM Author | AEM Publish |
+|                       | AEM | AEM Publish |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
 | ・ [SAML 2.0 via Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
@@ -40,14 +40,14 @@ Klicka på motsvarande länk nedan om du vill ha mer information om hur du konfi
       <a  href="../accessing/overview.md"><img alt="Adobe IMS" src="./assets/card--adobe-ims.png"/></a>
       <div><strong><a href="../accessing/overview.md">Adobe IMS</a></strong></div>
       <p>
-          Åtkomst till AEM Author med Adobe IMS via Adobe Admin Console.
+          Hantera AEM författaråtkomst med Adobe IMS via Adobe Admin Console.
       </p>
     </td>   
    <td>
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        Autentisera webbplatsens användare till en IDP med hjälp av AEM Publish-tjänstens SAML 2.0-integrering.
+        Autentisera webbplatsens användare till en IDP med hjälp AEM Publiceringstjänstens SAML 2.0-integrering.
       </p>
     </td>   
    <td>

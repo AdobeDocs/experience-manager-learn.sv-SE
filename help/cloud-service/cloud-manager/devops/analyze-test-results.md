@@ -6,10 +6,10 @@ level: Beginner
 type: Tutorial
 topic: Development
 feature: Developer Tools
-kt: 6917
+jira: KT-6917
 thumbnail: 330540.jpg
 exl-id: 2ddd241a-0e8a-4397-8006-6f807be4fb12
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 4%

@@ -5,11 +5,12 @@ topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7633
+jira: KT-7633
 thumbnail: kt-7633.jpeg
 last-substantial-update: 2022-11-01T00:00:00Z
+doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 0%
@@ -25,8 +26,8 @@ Innan de redigerbara områdena kan läggas till i SPA måste det startas med Jav
 Börja med att granska AEM npm-beroenden för React-projektet och installera dem.
 
 + [`@adobe/aem-spa-page-model-manager`](https://github.com/adobe/aem-spa-page-model-manager) : innehåller API:t för att hämta innehåll från AEM.
-+ [`@adobe/aem-spa-component-mapping`](https://github.com/adobe/aem-spa-component-mapping) : innehåller det API som mappar AEM innehåll till SPA.
-+ [`@adobe/aem-react-editable-components` v2](https://github.com/adobe/aem-react-editable-components) : innehåller ett API för att skapa anpassade SPA och innehåller implementeringar som används ofta, till exempel `AEMPage` Reaktionskomponent.
++ [`@adobe/aem-spa-component-mapping`](https://github.com/adobe/aem-spa-component-mapping) : innehåller det API som mappar AEM innehåll till SPA komponenter.
++ [`@adobe/aem-react-editable-components` v2](https://github.com/adobe/aem-react-editable-components) : innehåller ett API för att skapa anpassade SPA-komponenter och innehåller implementeringar som används ofta, till exempel `AEMPage` Reaktionskomponent.
 
 ```shell
 $ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app
@@ -60,11 +61,11 @@ Flera miljövariabler måste exponeras för SPA så att de kan interagera med AE
 
    + `REACT_APP_HOST_URI`: schemat och värddatorn för den AEM tjänst som fjärr-SPA ansluter till.
       + Det här värdet ändras baserat på om AEM (lokal miljö, Dev, Stage eller Production) och AEM Service-typ (Författare kontra Publicera) ändras
-   + `REACT_APP_USE_PROXY`: På så sätt undviker du CORS-problem under utvecklingen genom att tala om för responsutvecklingsservern att proxybegäranden AEM som `/content, /graphql, .model.json` använda `http-proxy-middleware` -modul.
+   + `REACT_APP_USE_PROXY`: På så sätt undviker du CORS-problem under utvecklingen genom att tala om för den resterande utvecklingsservern att proxybegäranden AEM som `/content, /graphql, .model.json` använda `http-proxy-middleware` -modul.
    + `REACT_APP_AUTH_METHOD`: autentiseringsmetod för AEM hanterade begäranden, alternativ är service-token, dev-token, basic eller lämna tomt för no-auth-användningsfall
-      + Krävs för användning med AEM Author
-      + Krävs eventuellt för användning med AEM Publish (om innehållet är skyddat)
-      + Utvecklingar mot AEM SDK har stöd för lokala konton via Basic Auth. Det här är den metod som används i den här självstudiekursen.
+      + Krävs för användning med AEM författare
+      + Krävs eventuellt för användning med AEM (om innehållet är skyddat)
+      + Utvecklingar mot AEM SDK har stöd för lokala konton via Basic Auth. Det här är den metod som används i den här självstudien.
       + När du integrerar med AEM as a Cloud Service ska du använda [åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
    + `REACT_APP_BASIC_AUTH_USER`: AEM __användarnamn__ av SPA för att autentisera när AEM hämtas.
    + `REACT_APP_BASIC_AUTH_PASS`: AEM __lösenord__ av SPA för att autentisera när AEM hämtas.
@@ -180,7 +181,7 @@ När du skapar en redigerbar SPA är det bäst att skapa en [intern proxy i SPA]
 
    Den här proxykonfigurationen gör två huvudsaker:
 
-   1. Proxyservrar för specifika begäranden som gjorts till SPA (`http://localhost:3000`) till AEM `http://localhost:4502`
+   1. Proxyservrar för specifika förfrågningar som gjorts till SPA (`http://localhost:3000`) till AEM `http://localhost:4502`
       + Det är bara proxybegäranden vars sökvägar matchar mönster som anger att de ska hanteras av AEM, enligt definitionen i `toAEM(path, req)`.
       + SPA banor skrivs om till motsvarande AEM, enligt definitionen i `pathRewriteToAEM(path, req)`
    1. CORS-huvuden läggs till i alla begäranden om att tillåta åtkomst till AEM innehåll, enligt definition i `res.header("Access-Control-Allow-Origin", REACT_APP_HOST_URI);`
@@ -219,7 +220,7 @@ För att lösa det här problemet måste du se till att en statisk resurs som SP
    _När du distribuerar till AEM as a Cloud Service måste du göra samma sak för motsvarande `.env` filer._
 
 1. Öppna filen `src/App.js`
-1. Importera den SPA offentliga URI:n från de SPA miljövariablerna
+1. Importera den SPA offentliga URI:n från SPA miljövariabler
 
    ```javascript
    const {  REACT_APP_PUBLIC_URI } = process.env;
@@ -233,7 +234,7 @@ För att lösa det här problemet måste du se till att en statisk resurs som SP
    <img src={REACT_APP_PUBLIC_URI + '/' +  logo} className="logo" alt="WKND Logo"/>
    ```
 
-1. Gör samma sak med att läsa in bilden i `src/components/Loading.js`
+1. Gör på samma sätt när du läser in bilden i `src/components/Loading.js`
 
    ```javascript
    const { REACT_APP_PUBLIC_URI } = process.env;
@@ -306,7 +307,7 @@ Kopiera i följande verktygsklasser till ditt React-appprojekt.
 
 Nu när SPA har startats för integrering med AEM, kör vi SPA och ser hur den ser ut!
 
-1. Navigera till roten för det SPA projektet på kommandoraden
+1. Navigera till roten för SPA på kommandoraden
 1. Starta SPA med de vanliga kommandona (om du inte redan har gjort det)
 
    ```shell
@@ -323,9 +324,9 @@ Nu när SPA har startats för integrering med AEM, kör vi SPA och ser hur den s
 
 När SPA körs [http://localhost:3000](http://localhost:3000)öppnar vi den med AEM SPA Editor. Inget är redigerbart i SPA än. Detta validerar bara SPA i AEM.
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App > us > en__
-1. Välj __WKND App - startsida__ och trycka __Redigera__ och SPA visas.
+1. Välj __WKND App - startsida__ och knacka __Redigera__ och SPA visas.
 
    ![Redigera startsida för WKND-program](./assets/spa-bootstrap/edit-home.png)
 

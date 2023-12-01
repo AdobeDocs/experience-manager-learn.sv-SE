@@ -1,12 +1,8 @@
 ---
 title: Integrera taggar för Experience Platform-datainsamling (Launch) och AEM
 description: Taggar i Experience Platform Data Collection är nästa generations tagghanteringslösning för Adobe och det bästa sättet att driftsätta Adobe Analytics, Target, Audience Manager och många fler lösningar. Få en översikt över taggar (tidigare Launch) och den rekommenderade integrationen med Adobe Experience Manager.
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5979
+jira: KT-5979
 thumbnail: 39090.jpg
 topic: Integrations
 feature: Integrations
@@ -15,8 +11,9 @@ level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
@@ -43,13 +40,13 @@ Följande krävs när du integrerar taggar för Experience Platform-datainsamlin
 
 + AEM administratörsåtkomst till AEM as a Cloud Service miljö
 + En referenswebbplats som [WKND](https://github.com/adobe/aem-guides-wknd) distribueras på den.
-+ Tillgång till Adobe Experience Platform datainsamlingslösning
++ Tillgång till Adobe Experience Platform datainsamling
 + Systemadministratörsåtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/)
 
 
 ## Stegen på hög nivå
 
-+ I Adobe Experience Platform Data Collection skapar du en taggegenskap och redigerar den till _Lägg till regel_. Sedan _Lägg till bibliotek_, markerar den nya regeln, godkänner och publicerar den.
++ I Adobe Experience Platform Data Collection skapar du en taggegenskap och redigerar den till _Lägg till regel_. Sedan _Lägg till bibliotek_, markera den nya regeln, godkänn och publicera den.
 + Anslut AEM och taggar med befintlig (eller ny) IMS-konfiguration
 + I AEM skapar du en konfiguration för Launch-molntjänster, tillämpar den sedan på en befintlig webbplats och kontrollerar slutligen att taggegenskapen och dess bibliotek läses in på webbplatsen Publicerad eller Författare.
 

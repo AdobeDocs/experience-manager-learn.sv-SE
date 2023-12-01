@@ -4,12 +4,12 @@ description: I den andra videon som handlar om innehållsmigrering diskuterar Ja
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 10258
+jira: KT-10258
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342268.jpeg
 exl-id: 8b31c415-bf12-420f-a81a-6065c56ccbed
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 5%
@@ -25,7 +25,7 @@ I den andra videon som handlar om innehållsmigrering diskuterar James och Darin
 ## Innehåll som behandlas i den här videon
 
 + utvärdering av de instanser du vill migrera
-   + BPA - analys av bästa praxis
+   + BPA - analysverktyg för bästa praxis
    + CAM - molnaccelerationshanteraren
 + [repostatus](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)

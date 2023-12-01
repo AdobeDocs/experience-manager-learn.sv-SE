@@ -7,8 +7,9 @@ version: Cloud Service
 feature: Image Presets
 topic: Development
 index: y
+doc-type: Tutorial
 exl-id: e76c50da-e7a8-4560-bc53-02cdb13619bb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

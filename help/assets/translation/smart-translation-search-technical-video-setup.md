@@ -6,8 +6,9 @@ feature: Search
 topic: Content Management
 role: Developer
 level: Beginner
+doc-type: Technical Video
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -26,41 +27,43 @@ Med Smart Translation Search kan du använda söktermer som inte är engelska f�
 
 1. Hämta och installera Oak Search Machine Translation OSGi-paketet
    * [Ladda ned Oak Search Machine Translation OSGi-paketet](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.jackrabbit%22%20AND%20a%3A%22oak-search-mt%22) som motsvarar AEM Oak-version.
-   * Installera det nedladdade Oak Search Machine Translation OSGi-paketet i AEM via [ `/system/console/bundles`](http://localhost:4502/system/console/bundles).
+   * Installera det hämtade Oak Search Machine Translation OSGi-paketet i AEM via [`/system/console/bundles`](http://localhost:4502/system/console/bundles).
 
 2. Hämta och uppdatera språkpaketen för Apache Joshua
    * Ladda ned och zippa upp [Språkpaket för Apache Joshua](https://cwiki.apache.org/confluence/display/JOSHUA/Language+Packs).
    * Redigera `joshua.config` och kommentera de två rader som börjar med:
 
-      ```
-      feature-function = LanguageModel ...
-      ```
+     ```
+     feature-function = LanguageModel ...
+     ```
 
    * Fastställ och registrera storleken på språkpaketets modellmapp, eftersom detta påverkar hur mycket extra stackutrymme som AEM kräver.
    * Flytta den uppackade mappen för språkpaketet Apache Joshua (med `joshua.config` redigera) till
 
-      ```
-      .../crx-quickstart/opt/<source_language-target_language>
-      ```
+     ```
+     .../crx-quickstart/opt/<source_language-target_language>
+     ```
 
-      Till exempel:
+     Till exempel:
 
-      ```
-       .../crx-quickstart/opt/es-en
-      ```
+     ```
+      .../crx-quickstart/opt/es-en
+     ```
 
 3. Starta om AEM med uppdaterad heap-minnestilldelning
    * Stoppa AEM
    * Ange den nya nödvändiga stackstorleken för AEM
 
       * AEM stackstorlek för pre-language-lack + storleken på modellkatalogen avrundat uppåt till närmaste 2 GB
-      * Till exempel: Om förspråkspaket AEM kräver 8 GB stackutrymme och språkpaketets modellmapp är 3,8 GB okomprimerad är den nya stackstorleken:
+      * Exempel: Om förspråkspaket AEM kräver 8 GB stackutrymme och språkpaketets modellmapp är 3,8 GB okomprimerad är den nya stackstorleken:
 
-         Originalet `8GB` + ( `3.75GB` avrundat uppåt till närmaste `2GB`, som `4GB`) för totalt `12GB`
+        Originalet `8GB` + ( `3.75GB` avrundat uppåt till närmaste `2GB`, som `4GB`) för totalt `12GB`
+
    * Kontrollera att datorn har den här mängden extra ledigt minne.
    * Uppdatera AEM startskript för att justera den nya stackstorleken
 
-      * Exempel. `java -Xmx12g -jar cq-author-p4502.jar`
+      * Ex. `java -Xmx12g -jar cq-author-p4502.jar`
+
    * Starta om AEM med den ökade stackstorleken.
 
    >[!NOTE]
@@ -85,7 +88,7 @@ Med Smart Translation Search kan du använda söktermer som inte är engelska f�
 
 5. Gör en fulltextsökning mot resurser
    * Eftersom Asset är nodtypen som det här språkpaketet registreras på nytt, måste vi söka efter AEM Assets med fulltextsökning för att validera detta.
-   * Navigera till AEM > Resurser och öppna Sök. Sök efter en term på det språk vars språkpaket installerades.
+   * Navigera till AEM > Resurser och öppna Omnisch. Sök efter en term på det språk vars språkpaket installerades.
    * Finjustera den lägsta poängen i OSGi-konfigurationerna för att säkerställa att resultatet blir korrekt.
 
 6. Uppdaterar språkpaket
@@ -93,8 +96,8 @@ Med Smart Translation Search kan du använda söktermer som inte är engelska f�
    * Om ett språkpaket uppdateras för att installera uppdateringarna i AEM måste ovanstående steg 2-4 följas och stackstorleken justeras upp eller ned efter behov.
 
       * Observera, att när du flyttar det uppackade språkpaketet till mappen crx-quickstart/opt flyttar du en befintlig språkpaketsmapp innan du kopierar den i det nya.
-   * Om AEM inte behöver starta om måste de aktuella OSGi-konfigurationerna för Apache Jackrabbit Oak Machien Translation Fulltext Query Terms Provider som gäller för de uppdaterade språkpaketen sparas på nytt så att de uppdaterade filerna bearbetas AEM.
 
+   * Om AEM inte behöver starta om måste de aktuella OSGi-konfigurationerna för Apache Jackrabbit Oak Machien Translation Fulltext Query Terms Provider som gäller för de uppdaterade språkpaketen sparas på nytt så att de uppdaterade filerna bearbetas AEM.
 
 ## Uppdaterar index för damAssetLucene {#updating-damassetlucene-index}
 

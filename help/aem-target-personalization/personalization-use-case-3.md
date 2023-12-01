@@ -1,16 +1,15 @@
 ---
 title: Personalisering med Adobe Target Visual Experience Composer
-seo-title: Personalization using Adobe Target Visual Experience Composer (VEC)
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target Visual Experience Composer (VEC).
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target Visual Experience Composer (VEC).
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -43,7 +42,7 @@ För den här övningen måste följande användare vara involverade och för at
    * [AEM integrerat med Adobe Target med Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud etablerat med [Adobe Target](https://experiencecloud.adobe.com)
+   * Experience Cloud har etablerats med [Adobe Target](https://experiencecloud.adobe.com)
 
 ## Marknadsföringsaktiviteter
 
@@ -65,9 +64,9 @@ För den här övningen måste följande användare vara involverade och för at
    9. Klicka på behållaren som du vill ändra ordning på och dra och släpp den till önskad plats. Vi ordnar om *Bästa roasters* behållare från första raden, första kolumnen till första raden, tredje kolumnen. Nu *Bästa roasters* behållaren är intill *Fotografiutställningar* behållare.
       ![Behållarväxling](assets/personalization-use-case-3/container-swap.png)
       **Efter växling**
-      ![Behållaren har bytts ut](assets/personalization-use-case-3/after-swap-1-3.png)
+      ![Behållare utbytt](assets/personalization-use-case-3/after-swap-1-3.png)
    10. Du kan även ordna om positionerna för de andra kortbehållarna.
-      ![Behållaren har bytts ut](assets/personalization-use-case-3/after-swap-all.png)
+      ![Behållare utbytt](assets/personalization-use-case-3/after-swap-all.png)
    11. Låt oss också lägga till en rubriktext under karusellkomponenten och ovanför kortlayouten.
    12. Klicka på karusellbehållaren och välj **Indrag efter > HTML** för att lägga till HTML.
       ![Lägg till text](assets/personalization-use-case-3/add-text.png)
@@ -83,7 +82,7 @@ För den här övningen måste följande användare vara involverade och för at
    15. Klicka på **Nästa**.
    16. Ange **Målmått** för din aktivitet och spara och stäng A/B-testet.
       ![Mätning av A/B-testmål](assets/personalization-use-case-2/goal-metric.png)
-   17. Ange ett namn (**WKND - uppdatering av hemsida**) för din aktivitet och spara ändringarna.
+   17. Ange ett namn (**WKND - hemsidesuppdatering**) för din aktivitet och spara ändringarna.
    18. På skärmen Aktivitetsinformation ser du till att **Aktivera** din aktivitet.
       ![Aktivera aktivitet](assets/personalization-use-case-3/save-activity.png)
    19. Navigera till WKND-hemsida (http://localhost:4503/content/wknd/en.html) och se ändringarna vi lade till i aktiviteten Uppdatera A/B-test för WKND-hemsidan.

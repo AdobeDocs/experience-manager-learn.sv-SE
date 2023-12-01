@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-kt: 4419
+jira: KT-4419
 thumbnail: kt-4419.jpg
 topic: Development
 role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%

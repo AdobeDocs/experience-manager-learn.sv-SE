@@ -7,12 +7,12 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5251
+jira: KT-5251
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 0%
@@ -41,7 +41,7 @@ CRXDE Lite ger direktåtkomst till JCR. Det innehåll som visas via CRXDE Lite b
 + JCR-strukturen navigeras och ändras med den vänstra navigeringsrutan
 + Om du väljer en nod i det vänstra navigeringsfönstret visas nodegenskaperna i det nedre fönstret.
    + Egenskaper kan läggas till, tas bort eller ändras från rutan
-+ Om du dubbelklickar på en filnod i den vänstra navigeringen öppnas filens innehåll i den övre högra rutan
++ Dubbelklicka på en filnod i den vänstra navigeringen för att öppna filens innehåll i den övre högra rutan
 + Tryck på knappen Spara alla längst upp till vänster om du vill behålla ändringarna eller på nedåtpilen bredvid Spara alla om du vill återställa ändringar som inte har sparats.
 
 ![CRXDE Lite - Felsöka innehåll](./assets/other-tools/crxde-lite__debugging-content.png)
@@ -56,7 +56,7 @@ Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går d
 
 + CRXDE Lite > Verktyg > Testa åtkomstkontroll ...
 
-![CRXDE Lite - testa åtkomstkontroll](./assets/other-tools/crxde-lite__test-access-control.png)
+![CRXDE Lite - Testa åtkomstkontroll](./assets/other-tools/crxde-lite__test-access-control.png)
 
 1. Välj en JCR-sökväg som ska utvärderas i fältet Sökväg
 1. Använd fältet Principal och markera den användare eller grupp som sökvägen ska utvärderas mot

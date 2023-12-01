@@ -5,13 +5,13 @@ topics: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
-kt: 10427
+jira: KT-10427
 hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 1%
@@ -25,10 +25,10 @@ ht-degree: 1%
 
 _Vad är traversal-varningar?_
 
-Traversal-varningar är __aemerror__ loggsatser som anger att dåligt utförda frågor körs i AEM Publish-tjänsten. Traversal-varningar visas vanligtvis på AEM på två sätt:
+Traversal-varningar är __aemerror__ loggsatser som anger att dåligt utförda frågor körs i AEM Publiceringstjänst. Traversal-varningar visas vanligtvis på AEM på två sätt:
 
 1. __Långsamma frågor__ som inte använder index, vilket ger långsamma svarstider.
-1. __Misslyckade frågor__ som ger `RuntimeNodeTraversalException`, vilket ger en trasig upplevelse.
+1. __Misslyckade frågor__, som ger `RuntimeNodeTraversalException`, vilket ger en trasig upplevelse.
 
 Om du tillåter att spårningsvarningar avmarkeras försämras AEM prestanda och kan resultera i trasiga upplevelser för användarna.
 
@@ -95,7 +95,7 @@ Du kan åtgärda genomgångsvarningar i tre enkla steg: analysera, justera och v
        <div class="card-content is-padded-small">
            <div class="content">
                 <p class="headline is-size-5 has-text-weight-bold">Verifiera justeringarna</p>                       
-               <p class="is-size-6">Verifiera ändringar i frågor och index för att ta bort genomgångar.</p>
+               <p class="is-size-6">Verifiera ändringar i frågor och index för att ta bort traversals.</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Verifiera</span>
                </a>
@@ -141,7 +141,7 @@ Beroende på sammanhanget för frågans körning kan loggsatserna innehålla anv
 
    + Exempel:  `apps.wknd.components.search.example__002e__jsp._jspService` → `/apps/wknd/components/search/example.html`
 
-__Misslyckade frågor__ följs upp av `RuntimeNodeTraversalException` -programsats, liknande:
+__Misslyckade frågor__ följs upp av en `RuntimeNodeTraversalException` -programsats, liknande:
 
 ```log
 24.05.2022 14:18:47.240 [cm-p123-e456-aem-author-9876-edcba] *WARN* [192.150.10.214 [1653401908419] GET /content/wknd/us/en/example.html HTTP/1.1] 
@@ -159,7 +159,7 @@ När de felaktiga frågorna och deras anropande kod har identifierats måste jus
 
 __Ändra frågan__ om du vill lägga till nya frågebegränsningar som leder till befintliga indexbegränsningar. Om det är möjligt bör du helst ändra frågan till att ändra index.
 
-+ [Lär dig hur du justerar frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [Lär dig justera frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### Justera indexvärdet
 
@@ -174,7 +174,7 @@ Justeringar av frågor, index eller båda måste verifieras för att säkerstäl
 
 ![Förklara fråga](./assets/traversals/verify.gif)
 
-Endast [justeringar av frågan](#adjust-the-query) när du gör det kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Förklara fråga körs mot AEM Author-tjänsten, men eftersom indexdefinitionerna är desamma i alla författar- och publiceringstjänster räcker det att validera frågor mot AEM Author-tjänsten.
+Endast [justeringar av frågan](#adjust-the-query) när du gör det kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Förklara fråga körs mot AEM författartjänst, men eftersom indexdefinitionerna är desamma i författar- och publiceringstjänsterna räcker det att validera frågor mot AEM författartjänst.
 
 If [justeringar av index](#adjust-the-index) måste indexet distribueras till AEM as a Cloud Service. När indexjusteringarna är distribuerade är det Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} kan användas för att köra och finjustera frågan ytterligare.
 
@@ -182,7 +182,7 @@ I slutändan implementeras alla ändringar (fråga och kod) i Git och distribuer
 
 ## Andra resurser
 
-Här finns andra användbara resurser för att förstå AEM, söka och bläddra igenom varningar.
+Läs om de här andra användbara resurserna för att förstå AEM, söka och bläddra igenom varningar.
 
 <div class="columns is-multiline">
 

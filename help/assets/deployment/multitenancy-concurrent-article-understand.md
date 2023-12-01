@@ -6,8 +6,9 @@ version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
+doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
@@ -38,7 +39,7 @@ Bland dessa finns:
 Trots de problem som kan uppstå har körning av ett multi-tenant-program vissa fördelar, som:
 
 * Minskade hårdvarukostnader
-* kortare time-to-market för framtida webbplatser
+* kortare time-to-market för framtida sajter
 * Lägre implementeringskostnader för framtida hyresgäster
 * Standardiserad arkitektur och utvecklingspraxis i hela företaget
 * En gemensam kodbas
@@ -51,11 +52,11 @@ Om verksamheten kräver äkta multi-tenancy, utan kunskaper om andra innehavare 
 
 När du hanterar Maven-projektberoenden är det viktigt att alla team använder samma version av ett givet OSGi-paket på servern. För att illustrera vad som kan gå fel när Maven-projekt hanteras fel presenterar vi ett exempel:
 
-Projekt A är beroende av version 1.0 av biblioteket. foo version 1.0 är inbäddad i distributionen till servern. Projekt B är beroende av version 1.1 av biblioteket, foo. foo version 1.1 är inbäddad i distributionen.
+Projekt A är beroende av version 1.0 av biblioteket och för version 1.0 är det inbäddat i distributionen till servern. Projekt B är beroende av version 1.1 av biblioteket, foo, för version 1.1 är inbäddad i distributionen.
 
 Låt oss också anta att ett API har ändrats i det här biblioteket mellan version 1.0 och 1.1. I nuläget kommer ett av dessa två projekt inte längre att fungera som de ska.
 
-För att bemöta detta rekommenderar vi att alla Maven-projekt görs underordnade ett huvudreaktorprojekt. Detta reaktorprojekt har två syften: den gör det möjligt att bygga och driftsätta alla projekt tillsammans om så önskas, och den innehåller beroendedeklarationer för alla underordnade projekt. Det överordnade projektet definierar beroenden och deras versioner medan de underordnade projekten endast deklarerar beroenden som de kräver, vilket ärver versionen från det överordnade projektet.
+För att bemöta detta rekommenderar vi att alla Maven-projekt görs underordnade ett huvudreaktorprojekt. Detta reaktorprojekt har två syften: det gör det möjligt att bygga och driftsätta alla projekt tillsammans om så önskas, och det innehåller beroendedeklarationer för alla underordnade projekt. Det överordnade projektet definierar beroenden och deras versioner medan de underordnade projekten endast deklarerar beroenden som de kräver, vilket ärver versionen från det överordnade projektet.
 
 I det här scenariot, om teamet som arbetar med projekt B behöver funktioner i version 1.1 av foo, kommer det i utvecklingsmiljön snabbt att bli uppenbart att den här ändringen kommer att bryta projekt A. Här kan teamen diskutera ändringen och antingen göra Project A kompatibelt med den nya versionen eller leta efter en alternativ lösning för Project B.
 
@@ -65,14 +66,14 @@ Observera att detta inte eliminerar behovet av att dessa team delar detta beroen
 
 När du arbetar med flera projekt är det viktigt att se till att koden inte dupliceras. Kodduplicering ökar sannolikheten för felhändelser, kostnaden för systemändringar och den övergripande stelheten i kodbasen. För att undvika dubbelarbete kan du lägga in den vanliga logiken i återanvändbara bibliotek som kan användas i flera projekt.
 
-För att tillgodose detta behov rekommenderar vi utveckling och underhåll av ett kärnprojekt som alla team kan lita på och bidra till. När man gör detta är det viktigt att se till att detta kärnprojekt inte i sin tur är beroende av något av de enskilda teamens projekt. detta möjliggör oberoende driftsättning samtidigt som det främjar återanvändning av kod.
+För att tillgodose detta behov rekommenderar vi utveckling och underhåll av ett kärnprojekt som alla team kan lita på och bidra till. När du gör det är det viktigt att se till att detta kärnprojekt inte i sin tur är beroende av något av de enskilda teamens projekt, vilket möjliggör oberoende driftsättning samtidigt som det främjar återanvändning av kod.
 
 Några exempel på kod som är vanliga i en huvudmodul är:
 
 * Systemomfattande konfigurationer som:
    * OSGi-konfigurationer
    * Servletfilter
-   * ResourceResolver-mappningar
+   * Resurslösningsmappningar
    * Rörledningar för Sling Transformer
    * Felhanterare (eller använd ACS AEM Commons Error Page Handler1)
    * Auktoriseringsservrar för behörighetskänslig cachelagring
@@ -88,17 +89,17 @@ Några exempel på kod som är vanliga i en huvudmodul är:
 
 Detta eliminerar inte behovet av att flera team är beroende av och kan uppdatera samma koduppsättning. Genom att skapa ett kärnprojekt har vi minskat storleken på den kodbas som delas mellan olika team, men inte eliminerat behovet av delade resurser.
 
-För att säkerställa att de ändringar som görs i detta kärnpaket inte stör systemets funktion rekommenderar vi att en högre utvecklare eller grupp av utvecklare upprätthåller tillsyn. Ett alternativ är att ha ett enda team som hanterar alla ändringar av detta paket. ett annat är att låta team skicka in förfrågningar som granskas och sammanfogas av dessa resurser. Det är viktigt att en styrningsmodell utformas och godkänns av teamen och att utvecklarna följer den.
+För att säkerställa att de ändringar som görs i detta kärnpaket inte stör systemets funktion rekommenderar vi att en högre utvecklare eller grupp av utvecklare upprätthåller tillsyn. Ett alternativ är att ha ett enda team som hanterar alla ändringar i det här paketet. Ett annat är att låta team skicka in pull-begäranden som granskas och sammanfogas av dessa resurser. Det är viktigt att en styrningsmodell utformas och godkänns av teamen och att utvecklarna följer den.
 
 ## Hantera distributionsomfång  {#managing-deployment-scope}
 
 När olika team distribuerar sin kod till samma databas är det viktigt att de inte skriver över varandras ändringar. AEM har en funktion som styr detta när innehållspaket distribueras, filtret. xml-fil. Det är viktigt att det inte finns någon överlappning mellan filtren.  xml-filer, annars kan distributionen av ett team radera ett annat teams tidigare distribution. Se följande exempel på välutformade respektive problematiska filterfiler för att illustrera detta:
 
-/apps/my-company vs /apps/my-company/my-site
+/apps/my-company vs. /apps/my-company/my-site
 
-/etc/clientlibs/my-company vs /etc/clientlibs/my-company/my-site
+/etc/clientlibs/my-company vs/etc/clientlibs/my-company/my-site
 
-/etc/designs/mitt företag vs. /etc/designs/my-company/my-site
+/etc/designs/my-company vs. /etc/designs/my-company/my-site
 
 Om varje team uttryckligen konfigurerar sin filterfil till den eller de webbplatser de arbetar med, kan varje team distribuera sina komponenter, klientbibliotek och webbplatsdesigner separat utan att radera varandras ändringar.
 
@@ -112,9 +113,9 @@ Eftersom det är en global systemsökväg som inte är specifik för en webbplat
 
 Om konsensus inte kan nås mellan de olika affärsenheterna är en möjlig lösning att helt enkelt inte använda övertäckningar. Skapa i stället en egen kopia av funktionen och visa den via olika sökvägar för varje klientorganisation. På så sätt kan varje klientorganisation ha en helt annan användarupplevelse, men det här tillvägagångssättet ökar också kostnaden för implementering och efterföljande uppgraderingar.
 
-### Starta arbetsflöden {#workflow-launchers}
+### Arbetsflödeskörare {#workflow-launchers}
 
-AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, till exempel för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
+AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, t.ex. för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
 
 ### Alternativa URL:er {#vanity-urls}
 
@@ -132,7 +133,7 @@ En bra arkitektur och öppna kommunikationskanaler kan förhindra att defekter i
 
 ### Delade resurser {#shared-resources}
 
-AEM körs inom en enda JVM. alla distribuerade AEM delar resurser med varandra, utöver de resurser som redan använts i den normala AEM. I själva JVM-rymden finns ingen logisk separation av trådar, och de begränsade resurser som är tillgängliga för AEM, som minne, processor och disk-I/O, delas också. Eventuella resurser som förbrukas av hyresgäster kommer oundvikligen att påverka andra systeminnehavare.
+AEM körs i en enda JVM. Alla distribuerade AEM-program delar resurser med varandra utöver de resurser som redan används i den normala AEM. I själva JVM-rymden finns ingen logisk separation av trådar, och de begränsade resurser som är tillgängliga för AEM, som minne, processor och disk-I/O, delas också. Eventuella resurser som förbrukas av hyresgäster kommer ofrånkomligen att påverka andra systeminnehavare.
 
 ### Prestanda {#performance}
 
@@ -145,10 +146,10 @@ AEM tillhandahåller färdiga gränssnitt för robust loggkonfiguration som kan 
 ### Säkerhetskopiering och återställning {#backup-and-restore}
 
 På grund av JCR-databasens natur fungerar traditionella säkerhetskopieringar i hela databasen i stället för i en enskild innehållssökväg. Det är därför inte enkelt att separera säkerhetskopieringar per klient. Omvänt kommer återställning från en säkerhetskopia att återställa innehåll och databasnoder för alla klientorganisationer i systemet. Även om det är möjligt att utföra riktade innehållssäkerhetskopieringar, använda verktyg som VLT, eller att välja innehåll som ska återställas genom att bygga ett paket i en separat miljö, kan dessa\
-Metoderna omfattar inte så lätt konfigurationsinställningar eller programlogik och kan vara besvärliga att hantera.
+Metoderna omfattar inte så lätt konfigurationsinställningar eller programlogik och kan vara krångliga att hantera.
 
 ## Säkerhetsaspekter {#security-considerations}
 
-### ACL {#acls}
+### ACL:er {#acls}
 
 Det går förstås att använda åtkomstkontrollistor för att styra vilka som har åtkomst att visa, skapa och ta bort innehåll baserat på innehållssökvägar, vilket kräver att användargrupper skapas och hanteras. Svårigheten med att underhålla åtkomstkontrollistor och grupper beror på vikten av att se till att varje klientorganisation inte har någon kunskap om andra och huruvida de distribuerade programmen är beroende av delade resurser. För att säkerställa effektiv åtkomstkontroll, användar- och gruppadministration rekommenderar vi att ni har en centraliserad grupp med nödvändig tillsyn för att säkerställa att dessa åtkomstkontroller och principer överlappar (eller inte överlappar) på ett sätt som främjar effektivitet och säkerhet.

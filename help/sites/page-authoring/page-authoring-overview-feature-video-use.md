@@ -1,21 +1,16 @@
 ---
 title: Skapa en sida i AEM Sites
-seo-title: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
 description: I följande videofilm visas hur du skapar en ny sida i Adobe Experience Manager Sites med hjälp av användargränssnittet i Site Editor
-seo-description: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
 feature: Page Editor, Editable Templates
-topics: authoring, publishing
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-kt: 4497
+jira: KT-4497
 thumbnail: 31828.jpg
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 6%

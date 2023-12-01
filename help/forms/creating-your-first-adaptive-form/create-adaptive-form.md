@@ -2,13 +2,13 @@
 title: Skapa anpassat formulär
 description: I del 1 skapar vi ett adaptivt formulär, lägger till och konfigurerar verktygsfältet med lämpliga knappar.
 feature: Adaptive Forms
-kt: 4208
+jira: KT-4208
 thumbnail: 22173.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: de3a0444-64ae-45a1-8329-aafa6f5add49
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%

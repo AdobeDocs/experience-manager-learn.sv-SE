@@ -8,9 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 thumbnail: 335717.jpg
-kt: 8370
+jira: KT-8370
 exl-id: 45738615-4f15-43b0-bdaa-8b72288925ee
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Fråga om skickade data
 
-Lär dig hur du frågar efter adaptiva formulärdata i Azure Blob Storage med metadatatjänsten AEM Forms.
+Lär dig hur du frågar efter adaptiva formulärdata i Azure Blob Storage med hjälp av AEM Forms metadatatjänst.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335717?quality=12&learn=on)

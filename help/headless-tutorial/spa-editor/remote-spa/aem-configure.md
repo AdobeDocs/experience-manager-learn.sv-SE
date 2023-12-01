@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7631
+jira: KT-7631
 thumbnail: kt-7631.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1246'
 ht-degree: 0%
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 SPA-kodbasen hanteras utanför AEM, men det krävs ett AEM för att ställa in konfigurations- och innehållskrav. I det här kapitlet beskrivs hur du skapar ett AEM som innehåller nödvändiga konfigurationer:
 
-+ AEM WCM Core Components-proxies
++ AEM WCM Core Components-proxy
 + AEM för SPA
 + AEM SPA sidmallar
 + SPA för AEM
@@ -64,7 +65,7 @@ while `frontendModule="react"` anges, `ui.frontend` används inte för SPA. SPA 
 
 AEM Project Archetype genererar följande element som används för att konfigurera AEM för integrering med SPA.
 
-+ __AEM WCM Core Components-proxies__ på `ui.apps/src/.../apps/wknd-app/components`
++ __AEM WCM Core Components-proxy__ på `ui.apps/src/.../apps/wknd-app/components`
 + __AEM SPA för fjärrsidproxy__ på `ui.apps/src/.../apps/wknd-app/components/remotepage`
 + __AEM sidmallar__ på `ui.content/src/.../conf/wknd-app/settings/wcm/templates`
 + __Delprojekt för att definiera innehållsmappningar__ på `ui.content/src/...`
@@ -79,7 +80,7 @@ Eftersom SPA är en SPA, anta att den har utvecklats och hanteras utanför det A
 
 1. Öppna AEM (`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`) i din IDE
 1. Öppna roten `pom.xml`
-1. Kommentera `<module>ui.frontend</module` från `<modules>` list
+1. Kommentera `<module>ui.frontend</module` ut från `<modules>` list
 
    ```
    <modules>
@@ -134,7 +135,7 @@ Vikten av den här konfigurationen utforskas senare.
 
 Mappningen kan göras med [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#root-level-mappings-1) definierad i `/etc/map`.
 
-1. Öppna dialogrutan `ui.content` delprojekt
+1. I IDE öppnar du `ui.content` delprojekt
 1. Navigera till  `src/main/content/jcr_root`
 1. Skapa en mapp `etc`
 1. I `etc`, skapa en mapp `map`
@@ -205,9 +206,9 @@ The `filter.xml` filen ska se ut så här:
 
 När det AEM projektet distribueras inkluderas dessa konfigurationer automatiskt.
 
-Samlingsmappningseffekter AEM `http` och `localhost`så att bara lokal utveckling stöds. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för det målet `https` och lämpliga AEM as a Cloud Service domäner. Mer information finns i [Dokumentation för kopplingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
+Effekterna för Sling Mapping AEM `http` och `localhost`så att bara stöd för lokal utveckling finns. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för det målet `https` och lämpliga AEM as a Cloud Service domäner. Mer information finns i [Dokumentation för kopplingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
 
-## Cross-Origin Resource Sharing - säkerhetspolicyer
+## Cross-Origin Resource Sharing - säkerhetsprinciper
 
 Konfigurera sedan AEM för att skydda innehållet så att bara den här SPA kan komma åt det AEM innehållet. Konfigurera [Resursdelning mellan ursprung i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
 
@@ -330,7 +331,7 @@ Den här sidan kan också tas bort och återskapas som en SPA i AEM, men efterso
 
 När AEM Project är driftsatt finns det ett sista steg för att förbereda SPA Editor för att läsa in vår SPA. I AEM markerar du den AEM sidan som motsvarar SPA,`/content/wknd-app/us/en/home`, som genereras av AEM Project Archetype.
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App > us > en__
 1. Välj __WKND App - startsida__ och trycka __Egenskaper__
 
@@ -338,8 +339,8 @@ När AEM Project är driftsatt finns det ett sista steg för att förbereda SPA 
 
 1. Navigera till __SPA__ tab
 1. Fyll i __SPA__
-   + __SPA värd-URL__: `http://localhost:3000`
-      + URL:en till fjärr-SPA
+   + __SPA__: `http://localhost:3000`
+      + URL:en till SPA
 
    ![WKND-appens startsida - SPA](./assets/aem-content/remote-spa-configuration.png)
 

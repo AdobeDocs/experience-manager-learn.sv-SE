@@ -7,18 +7,18 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 4c5173f1-d57d-43ac-83e6-399ce4ead203
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-# Tjänstautentiseringsuppgifter
+# Autentiseringsuppgifter för tjänsten
 
-Integrationer med AEM as a Cloud Service måste kunna autentiseras säkert till AEM. AEM Developer Console genererar autentiseringsuppgifter som används av externa program, system och tjänster för att programmässigt interagera med AEM Author eller Publish services via HTTP.
+Integrationer med AEM as a Cloud Service måste kunna autentiseras på ett säkert sätt till AEM. AEM Developer Console genererar autentiseringsuppgifter för tjänster, som används av externa program, system och tjänster för att programmässigt interagera med AEM Author eller Publish services via HTTP.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

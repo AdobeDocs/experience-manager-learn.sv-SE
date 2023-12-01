@@ -2,16 +2,13 @@
 title: Ställ in översättningsregler i AEM
 description: Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur du skapar en ny översättningsregel för en anpassad komponent.
 feature: Language Copy
-topics: localization, content-architecture
-audience: developer, administrator
-doc-type: technical video
-activity: setup
 version: 6.4, 6.5
 topic: Localization
 role: User
 level: Beginner
+doc-type: Technical Video
 exl-id: 359da531-839c-4680-abf9-c880cc700159
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%

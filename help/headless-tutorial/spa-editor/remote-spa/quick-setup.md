@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7629
+jira: KT-7629
 thumbnail: 333181.jpg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%
@@ -39,16 +40,16 @@ Den här självstudiekursen kräver följande:
 + Förutsättningar endast för macOS
    + [Xcode](https://developer.apple.com/xcode/) eller [Xcode-kommandoradsverktyg](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
-+ [källkoden aem-guides-wknd-graphql (gren: feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
++ [aem-guides-wknd-graphql-källkod (gren: feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 
-I den här självstudiekursen förutsätts:
+I den här självstudien förutsätts:
 
 + [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) som IDE
 + En arbetskatalog för `~/Code/wknd-app`
 + Köra AEM SDK som en författartjänst på `http://localhost:4502`
 + Köra AEM SDK med lokala `admin` konto med lösenord `admin`
-+ Köra SPA på `http://localhost:3000`
++ SPA körs på `http://localhost:3000`
 
 ## Starta AEM SDK QuickStart
 
@@ -71,28 +72,28 @@ AEM SDK startar och startar automatiskt [http://localhost:4502](http://localhost
 
 ## Hämta och installera WKND-webbplatspaket
 
-Den här självstudiekursen är beroende av __WKND 2.1.0+&#39;s__ projekt (för innehåll).
+Självstudiekursen är beroende av __WKND 2.1.0+__ projekt (för innehåll).
 
-1. [Ladda ned den senaste versionen av `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
+1. [Hämta den senaste versionen av `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
 1. Logga in AEM SDK:s Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med `admin` autentiseringsuppgifter.
 1. __Överför__ den `aem-guides-wknd.all.x.x.x.zip` hämtat i steg 1
-1. Tryck på __Installera__ knapp för posten `aem-guides-wknd.all-x.x.x.zip`
+1. Tryck på __Installera__ knapp för inmatningen `aem-guides-wknd.all-x.x.x.zip`
 
 ## Hämta och installera WKND-SPA
 
 För att göra en snabb konfiguration finns AEM här som innehåller den slutliga AEM och det färdiga innehållet.
 
-1. [Hämta ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Hämta ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [Ladda ned ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Ladda ned ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. Logga in AEM SDK:s Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med `admin` autentiseringsuppgifter.
 1. __Överför__ den `wknd-app.all.x.x.x.zip` hämtat i steg 1
-1. Tryck på __Installera__ knapp för posten `wknd-app.all.x.x.x.zip`
+1. Tryck på __Installera__ knapp för inmatningen `wknd-app.all.x.x.x.zip`
 1. __Överför__ den `wknd-app.ui.content.sample.x.x.x.zip` hämtat i steg 2
-1. Tryck på __Installera__ knapp för posten `wknd-app.ui.content.sample.x.x.x.zip`
+1. Tryck på __Installera__ knapp för inmatningen `wknd-app.ui.content.sample.x.x.x.zip`
 
 ## Ladda ned WKND App-källan
 
-Hämta WKND-appens källkod från Github.com och byt gren som innehåller ändringarna till SPA som utfördes i den här självstudiekursen.
+Hämta WKND-appens källkod från Github.com och växla grenen som innehåller ändringarna till SPA som utfördes i den här självstudiekursen.
 
 ```
 $ mkdir -p ~/Code/wknd-app
@@ -124,7 +125,7 @@ Verifiera att SPA körs på [http://localhost:3000](http://localhost:3000).
 
 ## Skapa innehåll i AEM SPA Editor
 
-Ordna webbläsarfönstren så att AEM Author (`http://localhost:4502`) finns till vänster och SPA på fjärrkontrollen (`http://localhost:3000`) till höger. På så sätt kan du se hur ändringar i AEM innehåll återspeglas direkt i SPA.
+Ordna webbläsarfönstren så att AEM författare (`http://localhost:4502`) finns till vänster och SPA på fjärrkontrollen (`http://localhost:3000`) till höger. På så sätt kan du se hur ändringar i AEM innehåll återspeglas direkt i SPA.
 
 1. Logga in på [AEM SDK Author Service](http://localhost:4502) as `admin`
 1. Navigera till __Sites > WKND App > us > en__
@@ -148,7 +149,7 @@ Ordna webbläsarfönstren så att AEM Author (`http://localhost:4502`) finns til
 
 ### Skapa en behållarkomponent på en dynamisk väg
 
-1. Växla till __Förhandsgranska__ läge i SPA Editor
+1. Växla till __Förhandsgranska__ i SPA Editor
 1. Tryck på __Bali Surf Camp__ och navigera till dess dynamiska väg
 1. Lägg till, ändra eller ta bort komponenter från behållarkomponenten som placeras ovanför __Itinerary__ rubrik
 1. Uppdatera SPA som körs `http://localhost:3000` och se att ändringarna återspeglas

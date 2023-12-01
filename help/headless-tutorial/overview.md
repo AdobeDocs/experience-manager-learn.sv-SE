@@ -1,13 +1,14 @@
 ---
 title: Tutorials för Headless i AEM
-description: En samling Headless CMS-självstudiekurser för Adobe Experience Manager. Utforska självstudiekurser per API, ramverk och exempelprogram.
+description: En samling Headless CMS-handledningar för Adobe Experience Manager. Utforska självstudiekurser per API, ramverk och exempelprogram.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -30,11 +31,11 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-      <img alt="GraphQL API" src="./assets/graphql-icon.png" />
+      <img alt="GRAPHQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-    <strong>GraphQL API</strong>
+    <strong>GRAPHQL API</strong>
     </a>
     </div>
     <p>

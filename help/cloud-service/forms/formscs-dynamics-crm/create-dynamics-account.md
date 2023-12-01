@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 9839
+jira: KT-9839
 exl-id: ec4ed3e1-98ae-41ce-9891-09da3321edd5
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa och konfigurera Dynamics-konto
 
-[Inloggning](https://dynamics.microsoft.com/en-us/) till ditt Microsoft Dynamics-konto. Du kan skapa en [kostnadsfritt provkonto](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) om du inte har något Dynamics-konto.
+[Inloggning](https://dynamics.microsoft.com/en-us/) till ditt Microsoft Dynamics-konto. Du kan skapa [kostnadsfritt provkonto](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) om du inte har något Dynamics-konto.
 
 >[!NOTE]
 >Ersätt server- och portnumret i URI:n nedan för att få URI:n för nytt försök. Du behöver denna URI för att försöka igen när du konfigurerar programmet med Azure Active Directory.

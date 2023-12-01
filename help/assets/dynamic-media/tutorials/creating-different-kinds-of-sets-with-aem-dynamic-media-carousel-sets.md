@@ -7,8 +7,9 @@ level: Intermediate
 topic: Development
 feature: Carousel Banners
 index: y
+doc-type: Tutorial
 exl-id: 4816c688-abec-4bd5-9215-59c16d8fe65d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%

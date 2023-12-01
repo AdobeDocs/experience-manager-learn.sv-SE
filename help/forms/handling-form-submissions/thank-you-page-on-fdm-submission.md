@@ -12,10 +12,10 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 13900
+jira: KT-13900
 last-substantial-update: 2023-09-09T00:00:00Z
 exl-id: 18648914-91cc-470d-8f27-30b750eb2f32
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%

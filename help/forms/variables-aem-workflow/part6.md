@@ -6,9 +6,9 @@ topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
-kt: 13783
+jira: KT-13783
 exl-id: 6afb3a52-9879-4393-8efd-ec3e5c303063
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%

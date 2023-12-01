@@ -6,14 +6,14 @@ feature: Integrations
 topic: Integrations
 role: Leader, Architect, Admin, Developer
 level: Beginner
-kt: 10718
+jira: KT-10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 3%
@@ -61,7 +61,7 @@ Adobe Analytics integrering med AEM as a Cloud Service gör att ni kan spåra in
 ### AEM Sites
 
 + [Konfigurera Adobe Analytics-integrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-analytics.html)
-+ [Självstudiekurs om AEM Sites och Analytics](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html)
++ [AEM Sites och Analytics, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html)
 + Adobe-klientdatalager (ACDL)
 
    + [Utöka ACDL i AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
@@ -83,7 +83,7 @@ Adobe Analytics integrering med AEM as a Cloud Service gör att ni kan spåra in
 
 + [Integrera med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
 + [Skapa ett Adobe Experience Manager Newsletter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
-+ [Dokumentation AEM e-postkärnkomponenter](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
++ [Dokumentation för AEM e-postkärnkomponenter](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
 
 ## Adobe Commerce
 
@@ -96,7 +96,7 @@ Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken 
 
 ## Adobe Experience Platform-taggar
 
-Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt med AEM, vilket är ett enkelt sätt att driftsätta och hantera [analys](#adobe-analytics), [mål](#adobe-target)taggar för marknadsföring och annonsering krävs för engagerande kundupplevelser.
+Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt med AEM, vilket är ett enkelt sätt att driftsätta och hantera [analys](#adobe-analytics), [målinriktning](#adobe-target)taggar för marknadsföring och annonsering krävs för engagerande kundupplevelser.
 
 ### AEM Sites
 
@@ -171,4 +171,4 @@ Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar ar
 + AEM Assets Essentials
 
    + [Användarhandbok för Adobe Workfront for Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Adobe Workfront- och Assets Essentials-videor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+   + [Adobe Workfront och Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)

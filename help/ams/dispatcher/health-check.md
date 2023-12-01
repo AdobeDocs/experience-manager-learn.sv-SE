@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Standardkontrollen är vanligtvis en portkontroll för att se om servrarna som �
 
 För att undvika att skicka trafik till en hälsosam dispatcher som kör en icke-hälsosam AEM skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
 
-![Bilden visar de olika delarna för hälsokontrollen](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroller")
+![Bilden visar de olika delarna som hälsokontrollen ska fungera i](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroller")
 
 Hälsokontrollen består av följande delar
 - 1 `Load balancer`
@@ -56,7 +57,7 @@ Vi ska ta upp vad varje stycke är utformat för och deras betydelse
 
 ### AEM
 
-För att ange om AEM fungerar måste du göra en grundläggande sidkompilering och hantera sidan.  Adobe Managed Services skapade ett grundläggande paket som innehåller testsidan.  Sidan testar att databasen är aktiv och att resurserna och sidmallen kan återges.
+För att ange om AEM fungerar måste du göra en grundläggande sidkompilering och hantera sidan.  Adobe Managed Services har skapat ett grundläggande paket som innehåller testsidan.  Sidan testar att databasen är aktiv och att resurserna och sidmallen kan återges.
 
 ![Bilden visar AMS-paketet i CRX-pakethanteraren](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")
 
@@ -91,7 +92,7 @@ Listen 81
 </VirtualHost>
 ```
 
-> `Note:` cgi-bin-filer är skript som kan köras.  Detta kan vara en sårbar attackvektor och de skript som AMS använder är inte offentligt tillgängliga endast för belastningsutjämnaren för att testas.
+> `Note:` cgi-bin-filer är skript som kan köras.  Detta kan vara en sårbar attackvektor och de skript som AMS använder är inte tillgängliga för allmänheten enbart för belastningsutjämnaren för att testas.
 
 
 #### Virtuella värdar för felfritt underhåll
@@ -201,7 +202,7 @@ Det här skriptet används för att kontrollera och logga alla förekomster det 
 
 #### /bin/checkboth
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `author` och `publisher` AEM är inte felfria
+Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `author` och `publisher` AEM instansen är inte felfri
 
 > `Note:` Kom ihåg att om publiceringsinstansen AEM eller författaren AEM instansen inte är felfri kommer dispatchern inte att sluta använda tjänsten.  Det innebär att om någon av dem var ohälsosam så skulle den även i fortsättningen få trafik och ge fel till personer som begär resurser.
 

@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6270
+jira: KT-6270
 thumbnail: KT-6270.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ![punktmiljöfil](assets/environment-variables/dot-env-file.png)
 
-Innan du börjar utveckla Asset compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env`  som endast används för lokal utveckling och inte sparas i Git. The `.env` -filen är ett praktiskt sätt att visa nyckelpar/värdepar för den lokala utvecklingsmiljön i Asset compute. När [distribuera](../deploy/runtime.md) asset compute till Adobe I/O Runtime `.env` filen används inte, utan en delmängd av värden skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i `.env` även, till exempel utvecklingsuppgifter för webbtjänster från tredje part.
+Innan du börjar utveckla Asset compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env`  som endast används för lokal utveckling och inte sparas i Git. The `.env` -filen är ett praktiskt sätt att visa nyckelpar/värdepar för den lokala utvecklingsmiljön i Asset compute. När [distribuera](../deploy/runtime.md) Asset compute till Adobe I/O Runtime `.env` -filen används inte, utan en delmängd av värden skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i `.env` även, till exempel utvecklingsuppgifter för webbtjänster från tredje part.
 
 ## Referera till `private.key`
 
@@ -34,8 +34,8 @@ Innan du börjar utveckla Asset compute-arbetare bör du kontrollera att projekt
 
 + Om nyckelparet genererades av Adobe I/O laddades det ned automatiskt som en del av  `config.zip`.
 + Om du har gett Adobe I/O den offentliga nyckeln bör du också ha den motsvarande privata nyckeln.
-+ Om du inte har dessa nyckelpar kan du generera nya nyckelpar eller överföra nya offentliga nycklar längst ned i:
-   [https://console.adobe.com](https://console.adobe.io) > Ditt Asset compute App Builder-projekt > Arbetsytor @ Utveckling > Tjänstkonto (JWT).
++ Om du inte har dessa nyckelpar kan du generera nya nyckelpar eller överföra nya publika nycklar längst ned i:
+  [https://console.adobe.com](https://console.adobe.io) > Ditt Asset compute App Builder-projekt > Workspaces @ Development > Service Account (JWT).
 
 Kom ihåg `private.key` filen bör inte checkas in i Git eftersom den innehåller hemligheter, utan bör lagras på en säker plats utanför projektet.
 
@@ -73,7 +73,7 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 ...
 ```
 
-Resultatet `.env` filen ser ut så här:
+Resultat `.env` filen ser ut så här:
 
 ![Autentiseringsuppgifter för Azure Blob Storage](assets/environment-variables/cloud-storage-credentials.png)
 

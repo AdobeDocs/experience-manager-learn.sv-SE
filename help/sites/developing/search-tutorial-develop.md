@@ -6,10 +6,11 @@ feature: Search
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Tutorial
 exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -40,7 +41,7 @@ Den enkla sökimplementeringen är materialet från **Adobe Summit lab AEM Searc
 
 ### Kapitel {#chapters}
 
-*Kapitellänkarna nedan förutsätter att [Initiala paket](#initialpackages) installeras på AEM Author på`http://localhost:4502`*
+*Kapitellänkarna nedan förutsätter att [Initiala paket](#initialpackages) installeras på AEM författare på`http://localhost:4502`*
 
 * [Kapitel 1](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [Kapitel 2](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -76,7 +77,7 @@ Den enkla sökimplementeringen är materialet från **Adobe Summit lab AEM Searc
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 * [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
 * [QueryBuilder API](https://experienceleague.adobe.com/docs/)
-* [AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([Dokumentationssida](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
+* [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([Dokumentationssida](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrigeringar och uppföljning {#corrections-and-follow-up}
 
@@ -105,8 +106,7 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
    * Frågor MÅSTE ange en sökvägsbegränsning som är lika med indexets sökvägsomfång, eller vara en underordnad där till.
    * Index med bredare omfång (till exempel `/oak:index/cqPageLucene`) indexerar också data, vilket resulterar i duplicerat intag och kostnader för diskanvändning.
    * Kan kräva duplicerad konfigurationshantering (t.ex. lägga till samma indexRules i flera innehavarindex om de måste uppfylla samma frågeuppsättningar)
-   * Det här arbetssättet används bäst på AEM-publiceringsnivån för anpassad webbplatssökning, som på AEM Author, är det vanligt att frågor körs uppåt i innehållsträdet för olika innehavare (till exempel via OmniSearch) - olika indexdefinitioner kan ge olika beteenden baserat enbart på sökvägsbegränsningen.
-
+   * Det här arbetssättet används bäst på AEM publiceringsnivå för anpassad webbplatssökning, som AEM författare, eftersom det är vanligt att frågor körs uppåt i innehållsträdet för olika innehavare (till exempel via OmniSearch) - olika indexdefinitioner kan ge olika beteenden baserat enbart på sökvägsbegränsningen.
 
 3. **Var finns en lista över alla tillgängliga analytiker?**
 
@@ -137,7 +137,7 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   Utforska frågan och resultaten via [QueryBuilder-felsökning](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) och [AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Utforska frågan och resultaten via [QueryBuilder-felsökning](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) och [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
 
 5. **Hur söker man igenom flera sökvägar i samma fråga?**
 
@@ -161,4 +161,4 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   Utforska frågan och resultaten via [QueryBuilder-felsökning](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) och [AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Utforska frågan och resultaten via [QueryBuilder-felsökning](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) och [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).

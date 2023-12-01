@@ -2,19 +2,17 @@
 title: Skapa en målaktivitet med Experience Fragment-erbjudanden
 description: Lär dig hur du skapar och testar en Adobe Target Activity med AEM Experience Fragment-erbjudanden.
 feature: Experience Fragments
-topics: integrations, authoring, personalization, activity, offers
-audience: all
-doc-type: feature video
 version: Cloud Service
-kt: 6351
+jira: KT-6351
 thumbnail: 41246.jpg
 topic: Integrations
 role: User
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

@@ -1,12 +1,13 @@
 ---
 title: Bild, Färgruta, Snurra och Blandade medieuppsättningar
-description: En av de mest användbara och kraftfulla funktionerna i Dynamic Media Classic är stödet för multimedieuppsättningar som Bild, Färgruta, Snurra och Blandade medieuppsättningar. Lär dig vad varje multimedieuppsättning är och hur du skapar varje typ i Dynamic Media Classic. Läs sedan mer om gruppuppsättningsförinställningar, som automatiserar processen för att skapa multimedieuppsättningar vid överföring.
+description: En av de mest användbara och kraftfulla funktionerna i Dynamic Media Classic är stödet för multimedieuppsättningar som Image, Swatch, Spin och Mixed Media Sets. Lär dig vad varje multimedieuppsättning är och hur du skapar varje typ i Dynamic Media Classic. Läs sedan mer om gruppuppsättningsförinställningar, som automatiserar processen för att skapa multimedieuppsättningar vid överföring.
 feature: Dynamic Media Classic, Image Sets, Mixed Media Sets, Spin Sets
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 45c86ff2-d991-46a7-a8d1-25c9fec142d9
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -19,7 +20,7 @@ Med Dynamic Media Classic set-samlingar får du en bättre onlineupplevelse, och
 
 - Bilduppsättning
 - Uppsättning med färgrutor
-- Snurra uppsättning
+- Rotation
 - Blandad medieuppsättning
 
 Den visar också hur du använder gruppuppsättningsförinställningar för att automatisera skapandet av uppsättningar via en överföring.
@@ -65,12 +66,12 @@ URL:en för färgruteuppsättningen ovan kan se ut som:
 
 ![bild](assets/media-sets/image-set_url.png)
 
-- Läs mer om färgruteuppsättningar med [Snabbstart till färgruteuppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
+- Läs mer om färgruteuppsättningar med [Snabbstart till färgrutor](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
 - Lär dig hur [Skapa en färgruteuppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
 
-### Snurra uppsättning
+### Rotation
 
-Den här uppsättningen används vanligtvis för att visa en 360-gradersvy av ett objekt. Precis som för färgruteuppsättningar använder snurra uppsättningar ingen 3D-magi - det verkliga arbetet är att skapa många foton av en bild från alla sidor. Med visningsprogrammet kan du enkelt växla mellan bilderna som en stop motion-animering.
+Den här uppsättningen används vanligtvis för att visa en 360-gradersvy av ett objekt. Precis som för färgruteuppsättningar använder snurra uppsättningar ingen 3D-magi - det verkliga arbetet är att skapa många foton av en bild från alla sidor. Med visningsprogrammet kan du enkelt växla mellan bilderna som en stop-motion-animering.
 
 Snurra uppsättningar kan antingen snurra i en riktning längs en enda axel, eller om de alternativt skapas som en 2D-snurra - snurra på flera axlar. En bil kan till exempel roteras medan alla hjul är på marken och sedan&quot;vändas&quot; och roteras även på bakhjulen. För en korrekt konfigurerad tvådimensionell rotationsuppsättning bör antalet bilder per rad för varje axel vara detsamma. Det innebär att om du snurrar på två axlar behöver du dubbelt så många bilder som ett vinkelintervall.
 
@@ -83,7 +84,7 @@ URL:en för den ovanstående rotationsuppsättningen kan se ut som:
 ![bild](assets/media-sets/spin-set.png)
 
 - Läs mer om snurruppsättningar med [Snabbstart till snurra uppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
-- Lär dig hur [Skapa en snurruppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
+- Lär dig hur [Skapa en snurra uppsättning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
 
 ## Blandad medieuppsättning
 
@@ -111,14 +112,14 @@ Fram tills nu har vi diskuterat hur du skapar uppsättningar manuellt med funkti
 
 Varje förinställning är en unik, självständig uppsättning instruktioner som definierar hur uppsättningen ska skapas med bilder som matchar de definierade namnkonventionerna. I förinställningen definierar du först namnkonventioner för de resurser som du vill gruppera tillsammans i en uppsättning. En förinställning för gruppuppsättning kan sedan skapas för att referera till dessa bilder.
 
-Du kan skapa förinställningen själv (de finns under **Inställningar > Programinställningar > Gruppera förinställningar** ) bör du som en god praxis låta ditt konsultteam eller din tekniska support konfigurera det åt dig. Därför:
+Du kan skapa förinställningen själv (de finns under **Inställningar > Programinställningar > Gruppera förinställningar** ) bör du som en god praxis låta ditt konsultteam eller din tekniska support konfigurera det åt dig. Här är varför:
 
 - Förinställningar för gruppuppsättningar kan vara komplicerade att konfigurera - de drivs av reguljära uttryck och om du inte är utvecklare kan den här syntaxen vara okänd eller förvirrande.
 - När de har skapats aktiveras de som standard. Det finns ingen ångra-funktion. Om du börjar överföra tusentals bilder och din förinställning är felaktigt konfigurerad kan det resultera i hundratals eller tusentals uppsättningar som du måste hitta och ta bort manuellt.
 
 En enkel namnkonvention föreslogs tidigare som skulle vara mycket enkel att bygga in i en förinställning för gruppuppsättning. Eftersom förinställningarna är mycket flexibla kan de hantera komplexa namngivningsstrategier. Kort och gott: bilderna som hör till en uppsättning ska knytas ihop med ett gemensamt namn - ofta är det SKU-numret eller produkt-ID:t. I Dynamic Media Classic kan du ange en standardnamnkonvention för alla dina bilder som ska användas för en förinställning, eller så kan du skapa flera förinställningar med olika namnregler.
 
-Förinställningar för gruppuppsättning används endast vid överföring. de inte kan köras efter att bilderna har överförts. Därför är det viktigt att planera namnkonventionen och få en förinställning byggd innan du börjar läsa in alla dina bilder.
+Förinställningar för gruppuppsättning används endast vid överföring. De kan inte köras efter att bilderna har överförts. Därför är det viktigt att planera namnkonventionen och få en förinställning byggd innan du börjar läsa in alla dina bilder.
 
 När förinställningarna har skapats kan företagsadministratören välja om de är aktiva eller inaktiva. Aktiva innebär att de visas på överföringssidan under **Jobbalternativ** medan inaktiva förinställningar förblir dolda.
 

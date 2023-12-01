@@ -2,18 +2,15 @@
 title: Översättningsjobb
 description: Lär dig hur du lägger till ett översättningsjobb i ett befintligt översättningsprojekt.
 feature: Language Copy, Multi Site Manager
-topics: localization, authoring, content-architecture
-audience: all
-doc-type: feature video
-activity: use
+doc-type: Feature Video
 version: 6.4, 6.5, Cloud Service
-kt: 5366
+jira: KT-5366
 thumbnail: 36488.jpg
 topic: Localization
 role: User
 level: Beginner
 exl-id: 9734f891-9d0a-46f7-ba13-1970531a8171
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%

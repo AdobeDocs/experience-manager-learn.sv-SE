@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9980
+jira: KT-9980
 exl-id: 713c4e9e-95ac-48e1-a7fc-2b3ec0b145e5
-source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 I den här kursen använder vi manipulering och arkivering av PDF-dokument i PDF med Forms CS. Så här använder du mikrotjänsterna från ett externt program:
 
-1. Generera autentiseringsuppgifter för tjänsten för ett AEM tekniskt konto
+1. Generera tjänstreferenser för ett AEM tekniskt konto
 1. Skapa en JSON Web Token (JWT) från inloggningsuppgifterna och byt ut samma mot en åtkomsttoken
 1. Konfigurera åtkomst för det tekniska kontot i AEM
 1. Göra HTTP-anrop med åtkomsttoken för att hantera PDF-filer/generera och validera PDF/A-filer

@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10797
+jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -25,7 +25,7 @@ AEM Headless [Webbkomponent](https://developer.mozilla.org/en-US/docs/Web/Web_Co
 
 Följande distributionskonfiguration måste finnas på plats för Web Component/JS-distributioner.
 
-| Webbkomponent/JS-program ansluter till | AEM Author | AEM Publish | AEM |
+| Webbkomponent/JS-program ansluter till | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [Cross-origin resource sharing (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |

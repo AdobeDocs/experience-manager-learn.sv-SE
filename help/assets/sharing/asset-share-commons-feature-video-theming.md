@@ -7,8 +7,9 @@ feature: Asset Distribution
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-22T00:00:00Z
+doc-type: Tutorial
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 1%
@@ -74,7 +75,7 @@ I den här videon skapas ett nytt tema baserat på det mörka temat Resursdelnin
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Hämta [Tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
+Ladda ned [Tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
 
 ## Ytterligare resurser{#additional-resources}
 

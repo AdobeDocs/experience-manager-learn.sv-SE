@@ -4,14 +4,14 @@ description: Använd installationsguiden för Adobe Experience Manager SSL för 
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 17993.jpg
-kt: 6046
+jira: KT-6046
 topic: Development
 role: Admin
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: e94cde31-e589-4b71-b5de-bcd898393b8a
-source-git-commit: 490d2d8af8417806527a3e9288127edb9baff924
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

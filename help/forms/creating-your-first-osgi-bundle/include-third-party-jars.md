@@ -6,11 +6,11 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: 11245
+jira: KT-11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
 exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Om ditt OSGi-paket finns i filsystemet skapar du en mapp med namnet **localjar**
 
 Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som bor i **c:\aemformsbundles** mapp
 
-* Öppna **filter.xml** från C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault folder of your project Make a note of the root attribute of the filter element.
+* Öppna **filter.xml** från mappen C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault i ditt projekt Anteckna rotattributet för filterelementet.
 
 * Skapa följande mappstruktur C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
 * The **apps/AEMFormsProcessStep-vendor-packages** är rotattributvärdet i filter.xml
@@ -60,5 +60,5 @@ Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med [felix-webbkonsol](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i `crx` databas enligt nedan
+Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med [felix-webbkonsol](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i `crx` databas som visas nedan
 ![tredje part](assets/custom-bundle1.png)

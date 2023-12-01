@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 333241.jpg
-kt: 7857
+jira: KT-7857
 exl-id: dbff8764-67d5-43fa-bd41-918c638a9afa
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 2%

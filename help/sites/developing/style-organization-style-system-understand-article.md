@@ -2,16 +2,13 @@
 title: De bästa sätten att lära sig formatsystem med AEM Sites
 description: En detaljerad artikel som förklarar de bästa sätten att implementera Style System med Adobe Experience Manager Sites.
 feature: Style System
-topics: development, components, front-end-development
-audience: developer
-doc-type: article
-activity: understand
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -39,7 +36,7 @@ När du definierar de formatnamn som är tillgängliga för AEM författare är 
 
 * Namnge format med hjälp av ett språk som författarna förstår
 * Minimera antalet formatalternativ
-* Visa endast formatalternativ och kombinationer som tillåts av varumärkesstandarder
+* Visa endast formatalternativ och kombinationer som är tillåtna enligt varumärkesstandarder
 * Visa endast formatkombinationer som har en effekt
    * Om ineffektiva kombinationer exponeras, se till att de åtminstone inte har någon skadlig effekt
 
@@ -47,13 +44,13 @@ I takt med att antalet möjliga formatkombinationer som är tillgängliga för A
 
 ### Formatnamn jämfört med CSS-klasser {#style-names-vs-css-classes}
 
-Formatnamn, eller de alternativ som visas för AEM författare, och de implementerande CSS-klassnamnen är inte kopplade till varandra i AEM.
+Formatnamn, eller de alternativ som visas för AEM författare, och de implementerande CSS-klassnamnen är inte kopplade till AEM.
 
 Detta gör att formatalternativen kan märkas i en ordlista som är klar och som kan tolkas av de AEM författarna, men gör att CSS-utvecklare kan namnge CSS-klasserna på ett framtidssäkert, semantiskt sätt. Till exempel:
 
 En komponent måste ha möjlighet att färgläggas med varumärkets **primär** och **sekundär** AEM kan dock se färgerna som **grön** och **gul**, i stället för det primära och sekundära språkets designspråk.
 
-AEM Style System kan visa dessa färgvisningsformat med hjälp av författarvänliga etiketter **Grön** och **Gul**, samtidigt som CSS-utvecklarna kan använda semantisk namngivning av `.cmp-component--primary-color` och `.cmp-component--secondary-color` för att definiera den faktiska formatimplementeringen i CSS.
+AEM Style System kan visa dessa färgningsvisningsformat med hjälp av författarvänliga etiketter **Grön** och **Gul**, samtidigt som CSS-utvecklarna kan använda semantisk namngivning av `.cmp-component--primary-color` och `.cmp-component--secondary-color` för att definiera den faktiska formatimplementeringen i CSS.
 
 Formatnamnet för **Grön** är mappad till `.cmp-component--primary-color`och **Gul** till `.cmp-component--secondary-color`.
 
@@ -63,7 +60,7 @@ Om företagets varumärkeskänsla förändras i framtiden behöver man bara änd
 
 Följande är ett exempel på hur du formaterar en Teaser-komponent så att den har flera olika layout- och visningsformat.
 
-Då utforskas hur formatnamn (exponerade för författare) och hur CSS-klasserna som ligger till grund för bakomliggande är ordnade.
+Då utforskas hur formatnamn (exponerade för författare) och hur CSS-klasserna som ligger till grund för dem är ordnade.
 
 ### Konfiguration av komponentformat för Teaser {#component-styles-configuration}
 
@@ -85,13 +82,13 @@ Bilden nedan visar [!UICONTROL Style] menyförfattare interagerar med för att v
 
 ### Standardformat {#default-style}
 
-Standardformatet är ofta det vanligaste formatet för komponenten och den icke-formaterade standardvyn för teaser när den läggs till på en sida.
+Standardformatet är ofta det vanligaste formatet för komponenten och den icke-formaterade standardvyn för suddgummit när den läggs till på en sida.
 
 Beroende på hur vanligt standardformatet är kan CSS användas direkt på `.cmp-teaser` (utan modifierare) eller på en `.cmp-teaser--default`.
 
 Om standardformatreglerna används oftare än inte för alla variationer är det bäst att använda `.cmp-teaser` som standardformatets CSS-klasser, eftersom alla variationer ska ärva dem implicit, förutsatt att BEM-liknande konventioner följs. Om inte bör de användas med standardmodifieraren, till exempel `.cmp-teaser--default`som i sin tur måste läggas till i [komponentens formatkonfigurations standard-CSS-klasser](#component-styles-configuration) i, annars måste dessa formatregler åsidosättas i varje variant.
 
-Du kan till och med tilldela ett &quot;namngivet&quot; format som standardformat, till exempel Hero-formatet `(.cmp-teaser--hero)` som definieras nedan, men det är tydligare att implementera standardformatet mot `.cmp-teaser` eller `.cmp-teaser--default` Implementeringar av CSS-klass.
+Du kan till och med tilldela ett namngivet format som standardformat, till exempel Hero-formatet `(.cmp-teaser--hero)` som definieras nedan, men det är tydligare att implementera standardformatet mot `.cmp-teaser` eller `.cmp-teaser--default` Implementeringar av CSS-klass.
 
 >[!NOTE]
 >
@@ -103,7 +100,7 @@ Du kan till och med tilldela ett &quot;namngivet&quot; format som standardformat
 >
 >Om en författare väljer visningsformat för **Grön** inget kommer att hända.
 >
->I det här fallet kommer vi att avstå från denna överträdelse, eftersom alla andra layoutformat måste vara färgglada med hjälp av varumärkets färger.
+>I det här fallet kommer vi att avstå från den här överträdelsen, eftersom alla andra layoutformat måste vara färgglada med hjälp av varumärkets färger.
 >
 >I **Promo (right-aligned)** nedan kommer vi att se hur du kan förhindra oönskade formatkombinationer.
 
@@ -164,9 +161,9 @@ Den högra justeringen, i sin helhet, är ett visningsformat som du kan ange i A
 
 **Visa endast formatkombinationer som har en effekt**
 
-..som redan har överträtts i [Standardformat](#default-style).
+..som redan överträtts i [Standardformat](#default-style).
 
-Eftersom den högra justeringen bara påverkar layoutformatet Promo, inte de andra två layoutformaten: standard och hjälte kan vi skapa en ny layoutstil Promo (högerjusterad) som innehåller CSS-klassen som högerjusterar innehållet i Promo-layoutstilar: `cmp -teaser--alternate`.
+Eftersom den högra justeringen bara påverkar layoutformatet Promo, och inte de andra två layoutformaten: standard och hjälte, kan vi skapa en ny layoutstil Promo (högerjusterad) som innehåller CSS-klassen som högerjusterar innehållet i Promo-layoutstilarna: `cmp -teaser--alternate`.
 
 Den här kombinationen av flera format till en enda formatpost kan också minska antalet tillgängliga format och formatändringar, vilket är bäst för att minimera.
 

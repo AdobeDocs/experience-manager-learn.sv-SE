@@ -5,11 +5,12 @@ topic: Content Management
 feature: Asset Processing, Renditions
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-kt: 8073
+jira: KT-8073
 thumbnail: 336540.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
+doc-type: Feature Video
 exl-id: 10e63038-b6d6-4ac6-b6b4-660a05f83d90
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

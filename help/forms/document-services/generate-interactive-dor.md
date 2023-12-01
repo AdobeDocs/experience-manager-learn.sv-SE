@@ -6,10 +6,10 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-kt: 9226
+jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -116,7 +116,7 @@ $(document).ready(function() {
 
 ## Skapa anpassad servett
 
-Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern är en del av [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
+Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -226,4 +226,4 @@ Så här testar du detta på den lokala servern:
 
 >[!NOTE]
 >
->Du kan prova samma användningsfall med [icke-xsd-baserad adaptiv form](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Kontrollera att du skickar rätt parametrar till slutpunkten för posten i streampdf.js som finns i irs clientlib.
+>Du kan prova samma användningsfall med [icke-xsd-baserad adaptiv form](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Se till att du skickar rätt parametrar till slutpunkten för posten i streampdf.js som finns i irs clientlib.

@@ -6,10 +6,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 9442
+jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -49,7 +49,7 @@ _Genomgång av steg_
       + Git-databasnamn måste vara unika per Adobe-organisation,
    1. Välj __Spara__ och vänta på att Git-databasen ska initieras
 
-## 2. Push-exempel på WKND-webbplatsprojekt till Cloud Manager Git-databas
+## 2. Överför exempelprojektet WKND Site till Cloud Manager Git Repository
 
 När Cloud Manager Git-databasen har skapats klonar du WKND-webbplatsens källkod från GitHub och skickar den till Cloud Manager Git-databasen. Nu kan Cloud Manager komma åt och driftsätta WKND Site-projektet i den AEM as a Cloud Service miljön.
 
@@ -101,13 +101,13 @@ _Genomgång av steg_
       1. Välj __Beteende vid viktiga måttfel > Fortsätt omedelbart__
       1. Välj __Fortsätt__
    1. På __Källkod__ tab
-      1. Välj __Fullständig stackkod__ option
+      1. Välj __Fullständig stapelkod__ option
       1. Välj __AEM as a Cloud Service utvecklingsmiljö__ från __Berättigade driftsättningsmiljöer__ välj ruta
       1. Välj `aem-headless-quick-setup-wknd` i __Databas__ välj ruta
       1. Välj `main` från __Git-gren__ välj ruta
       1. Välj __Spara__
 1. Kör __Utveckla distributionskanal__
-   1. Välj __Översikt__ i den övre navigeringen
+   1. Välj __Ökning__ i den övre navigeringen
    1. Leta reda på den nyskapade __Utveckla distributionsförlopp__ i __Pipelines__ section
    1. Välj __...__ till höger om pipeline-posten
    1. Välj __Kör__ och bekräfta i modala
@@ -145,7 +145,7 @@ _Genomgång av steg_
    1. Leta reda på __Publiceringstjänst (AEM &amp; Dispatcher)__ link __Miljösegment__ table
    1. Kopiera länkens adress och använd den som den AEM as a Cloud Service publiceringstjänstens URI
 
-1. I IDE sparar du ändringarna i `.env.development`
+1. Spara ändringarna i IDE `.env.development`
 1. Kör React App från kommandoraden
 
    ```shell
@@ -158,7 +158,7 @@ _Genomgång av steg_
 
 ## 5. Redigera innehåll i AEM
 
-Med exempelappen WKND React App som ansluter till och förbrukar innehåll från de AEM Headless-API:erna för GraphQL kan du skapa innehåll i AEM Author-tjänsten och se hur React Apps upplevelse uppdateras i samförstånd.
+Med exempelappen WKND React App som ansluter till och förbrukar innehåll från de AEM Headless-API:erna för GraphQL kan du redigera innehåll i AEM Author-tjänsten och se hur React App-upplevelsen uppdateras i samförstånd.
 
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
@@ -178,7 +178,7 @@ _Genomgång av steg_
 1. Uppdatera React App som körs den [http://localhost:3000](http://localhost:3000).
 1. I React App (Reagera app) markerar du det nu uppdaterade Cycling-äventyret och verifierar innehållsändringarna i Content Fragment.
 
-1. På samma sätt som i tjänsten AEM Author:
+1. På samma sätt i AEM Author-tjänsten:
    1. Avpublicera ett befintligt Adventure-innehållsfragment och verifiera att det har tagits bort från upplevelsen React App
    1. Skapa och publicera ett nytt Adventure Content Fragment och verifiera att det visas i React App Experience
 

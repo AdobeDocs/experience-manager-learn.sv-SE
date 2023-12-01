@@ -7,14 +7,14 @@ topics: Migration
 feature: Migration
 activity: develop
 audience: developer
-kt: 6729
+jira: KT-6729
 thumbnail: 329680.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
 last-substantial-update: 2022-10-05T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-source-git-commit: 4912087feb69ccbed3c66a34941fa6d083af6319
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%

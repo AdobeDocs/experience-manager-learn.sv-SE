@@ -3,13 +3,13 @@ title: Skapa klientbibliotek
 description: Klientbibliotekskod för att hämta nästa formulär att signera
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 6907
+jira: KT-6907
 thumbnail: 6907.jpg
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 1%

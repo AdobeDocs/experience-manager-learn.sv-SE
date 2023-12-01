@@ -1,16 +1,15 @@
 ---
 title: Integrera AEM Sites med Adobe Target
-seo-title: An article covering different ways to integrate Adobe Experience Manager (AEM) Sites with Adobe Target for delivering personalized content.
 description: En artikel om hur du konfigurerar Adobe Experience Manager med Adobe Target för olika scenarier.
-seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 1%
@@ -23,8 +22,8 @@ I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manag
 
 * **Lägg till Adobe Target JavaScript Library (krävs för alla scenarier)**
 För webbplatser som finns på AEM kan du lägga till Target-bibliotek på din webbplats med, [Starta](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
-* **Lägg till Adobe Target-Cloud Services (krävs för scenariot Experience Fragments)**
-För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicens. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. *Den här integreringen krävs för att implementera scenario 1.*
+* **Lägg till Adobe Target-Cloud Service (krävs för scenariot Experience Fragments)**
+För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicen. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. *Den här integreringen krävs för att implementera scenario 1.*
 
 ## Förutsättningar
 
@@ -54,15 +53,15 @@ För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa
 
 ### Konfigurera AEM{#set-up-aem}
 
-AEM författare och publiceringsinstans krävs för att slutföra den här självstudiekursen. Vi kör författarinstansen på `http://localhost:4502` och publicera instans som körs på `http://localhost:4503`. Mer information finns i: [Konfigurera en lokal AEM utvecklingsmiljö](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html).
+AEM författare och publiceringsinstans krävs för att slutföra kursen. Vi kör författarinstansen på `http://localhost:4502` och publicera instans som körs på `http://localhost:4503`. Mer information finns i: [Konfigurera en lokal AEM utvecklingsmiljö](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html).
 
-#### Konfigurera AEM Author och Publish Instances
+#### Ställ in AEM för författare och publiceringsförekomster
 
 1. Få en kopia av [AEM Quickstart Jar och en licens.](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
 2. Skapa en mappstruktur på datorn enligt följande:
    ![Mappstruktur](assets/implementation/aem-setup-1.png)
 3. Byt namn på Quickstart-behållaren till `aem-author-p4502.jar` och placera den under `/author` katalog. Lägg till `license.properties` filen under `/author` katalog.
-   ![AEM Author Instance](assets/implementation/aem-setup-author.png)
+   ![AEM författarinstans](assets/implementation/aem-setup-author.png)
 4. Gör en kopia av Quickstart-burken och ge den ett nytt namn `aem-publish-p4503.jar` och placera den under `/publish` katalog. Lägg till en kopia av `license.properties` filen under `/publish` katalog.
    ![AEM Publish Instance](assets/implementation/aem-setup-publish.png)
 5. Dubbelklicka på `aem-author-p4502.jar` för att installera Author-instansen. Detta startar författarinstansen, som körs på port 4502 på den lokala datorn.
@@ -70,8 +69,8 @@ AEM författare och publiceringsinstans krävs för att slutföra den här själ
 användarnamn: **admin**
 lösenord: **admin**
    ![AEM Publish Instance](assets/implementation/aem-author-home-page.png)
-7. Dubbelklicka på `aem-publish-p4503.jar` för att installera en publiceringsinstans. Du kan lägga märke till att en ny flik öppnas i webbläsaren för din publiceringsinstans som körs på port 4503 och visar hemsidan för WeRetail. Vi använder WKND-referensplatsen för den här självstudiekursen och vi installerar paketen på författarinstansen.
-8. Navigera till AEM Author i webbläsaren på `http://localhost:4502`. På AEM startskärm går du till *[Verktyg > Distribution > Paket](http://localhost:4502/crx/packmgr/index.jsp)*.
+7. Dubbelklicka på `aem-publish-p4503.jar` för att installera en publiceringsinstans. Du kan lägga märke till att en ny flik öppnas i webbläsaren för din publiceringsinstans som körs på port 4503 och visar hemsidan för WeRetail. Vi använder WKND-referensplatsen för den här självstudien och vi installerar paketen på författarinstansen.
+8. Navigera till AEM författare i webbläsaren på `http://localhost:4502`. På AEM startskärm går du till *[Verktyg > Distribution > Paket](http://localhost:4502/crx/packmgr/index.jsp)*.
 9. Hämta och överföra paketen för AEM (se ovan) *[Krav > AEM](#aem)*)
    * [aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)
    * [aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)
@@ -79,7 +78,7 @@ lösenord: **admin**
    * [digital-data-layer.zip](assets/implementation/digital-data-layer.zip)
 
    >[!VIDEO](https://video.tv.adobe.com/v/28377?quality=12&learn=on)
-10. När du har installerat paketen på AEM Author väljer du varje överfört paket i AEM Package Manager och väljer **Mer > Replikera** för att säkerställa att paketen distribueras till AEM Publish.
-11. Nu har du installerat WKND-referenswebbplatsen och alla andra paket som krävs för den här självstudiekursen.
+10. När du har installerat paketen på AEM Author väljer du varje överfört paket i AEM Package Manager och väljer **Mer > Replikera** för att säkerställa att paketen distribueras till AEM.
+11. Nu har du installerat WKND-referenswebbplatsen och alla andra paket som krävs för den här kursen.
 
 [NÄSTA KAPITEL](./using-launch-adobe-io.md): I nästa kapitel integrerar du Launch med AEM.

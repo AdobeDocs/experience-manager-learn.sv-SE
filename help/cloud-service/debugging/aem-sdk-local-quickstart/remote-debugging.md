@@ -1,14 +1,14 @@
 ---
 title: Fjärrfelsökning av AEM SDK
 description: Med AEM SDK:s lokala snabbstart kan du fjärrfelsöka Java från din utvecklingsmiljö, vilket gör att du kan stega igenom direktkörning av kod i AEM för att förstå det exakta körningsflödet.
-kt: 5251
+jira: KT-5251
 topic: Development
 feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -29,7 +29,7 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar
 
 + AEM SDK stöder bara Java 11
 + `address` anger vilken port AEM avlyssnar fjärrfelsökningsanslutningar och kan ändras till vilken port som helst som är tillgänglig på den lokala utvecklingsdatorn.
-+ Den sista parametern (t.ex. `aem-author-p4502.jar`) är AEM SKD Quickstart Jar. Detta kan vara antingen AEM Author Service (`aem-author-p4502.jar`) eller AEM Publish-tjänsten (`aem-publish-p4503.jar`).
++ Den sista parametern (till exempel `aem-author-p4502.jar`) är AEM SKD Quickstart Jar. Detta kan vara antingen AEM författartjänst (`aem-author-p4502.jar`) eller AEM Publiceringstjänst (`aem-publish-p4503.jar`).
 
 
 ## Instruktioner för IDE-konfiguration
@@ -38,7 +38,7 @@ De flesta Java IDE:er har stöd för fjärrfelsökning av Java-program, men de e
 
 + Värden AEM SDK:s lokala snabbstart lyssnar på, vilket är `localhost`.
 + Porten AEM SDK:s lokala snabbstart lyssnar efter fjärrfelsökningsanslutning, som är den port som anges av `address` när AEM SDK:s lokala snabbstart startas.
-+ Ibland måste det anges vilka Maven-projekt som tillhandahåller källkoden till fjärrfelsökningen. det här är ditt OSGi-paket med maven-projekt.
++ Ibland måste de Maven-projekt som tillhandahåller källkoden till fjärrfelsökningen anges. Det här är dina OSGi-paket med maven-projekt.
 
 ### Konfigurera instruktioner
 

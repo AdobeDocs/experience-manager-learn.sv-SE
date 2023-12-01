@@ -2,16 +2,16 @@
 title: Arbetsflöde för teman | AEM Skapa snabbt webbplatser
 description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Managers frontpipeline.
 version: Cloud Service
-type: Tutorial
 feature: Core Components
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Stegen på hög nivå för videon:
 
 ### Lösningsfiler
 
-Ladda ned de färdiga formaten för [Exempeltema för WKND](assets/theming/WKND-THEME-src-1.1.zip)
+Hämta de färdiga formaten för [Exempeltema för WKND](assets/theming/WKND-THEME-src-1.1.zip)
 
 ## Distribuera ett tema med hjälp av en frontpipeline {#deploy-theme}
 
@@ -71,7 +71,7 @@ Stegen på hög nivå för videon:
    ```
 
 1. Konfigurera en [Front End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) i Cloud Manager för att distribuera slutkoden.
-1. Kör frontpipeline för att distribuera uppdateringar till AEM.
+1. Kör Front End Pipeline för att distribuera uppdateringar till AEM.
 
 ### Exempelrapporter
 
@@ -86,4 +86,4 @@ Grattis, du har precis uppdaterat och distribuerat ett tema till AEM!
 
 ### Nästa steg {#next-steps}
 
-Gör en djupdykning AEM utvecklingen och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archetype](../project-archetype/overview.md).
+Gör en djupdykning AEM utvecklingen och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archettype](../project-archetype/overview.md).

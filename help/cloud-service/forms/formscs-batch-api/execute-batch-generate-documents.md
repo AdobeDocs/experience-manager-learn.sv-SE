@@ -1,15 +1,15 @@
 ---
 title: Kör batchkonfigurationen
-description: Starta dokumentgenereringsprocessen genom att köra gruppen
+description: Starta dokumentgenereringsprocessen genom att köra batchen
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9674
+jira: KT-9674
 exl-id: 17f91f81-96d8-49d6-b1e3-53d8899695ae
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -25,9 +25,9 @@ Kör gruppen genom att göra en POST-förfrågan till följande API
 ```
 
 Denna API förväntar sig ett tomt json-objekt som en parameter i begärandetexten.
-Detta API returnerar en unik URL i svarshuvudet som identifieras av **plats** nyckel.
+Detta API returnerar en unik URL i svarshuvudet som identifieras av **plats** -tangenten.
 En GET-begäran till den här unika URL:en talar om batchkörningens status
 
-I följande video visas hur batchkonfigurationen utlöses
+I följande video visas hur batchkonfigurationen aktiveras
 
 >[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)

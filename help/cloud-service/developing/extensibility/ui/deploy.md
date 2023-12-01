@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 
    Sammanfoga alla ändringar i `.env` och `.aio`.
 
-1. Distribuera det uppdaterade tillägget i appen App Builder.
+1. Distribuera den uppdaterade appen App Builder.
 
    ```shell
    $ aio app deploy
@@ -107,7 +107,7 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 
    Sammanfoga alla ändringar i `.env` och `.aio`.
 
-1. Distribuera det uppdaterade tillägget i appen App Builder.
+1. Distribuera den uppdaterade appen App Builder.
 
    ```shell
    $ aio app deploy

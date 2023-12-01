@@ -2,18 +2,18 @@
 title: Autentisering till AEM as a Cloud Service från ett externt program
 description: Upptäck hur ett externt program kan autentisera och interagera med AEM as a Cloud Service via HTTP med hjälp av Local Development Access-token och inloggningsuppgifter.
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330460.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 0%
@@ -30,11 +30,11 @@ I den här självstudiekursen kan du utforska hur ett externt program kan autent
 
 ## Krav
 
-Kontrollera att följande finns på plats innan du följer med i den här självstudiekursen:
+Se till att följande finns på plats innan du följer med i den här självstudiekursen:
 
-1. Tillgång till AEM as a Cloud Service miljö (helst en utvecklingsmiljö eller ett sandlådeprogram)
+1. Tillgång till AEM as a Cloud Service miljö (helst utvecklingsmiljö eller sandlådeprogram)
 1. Medlemskap i AEM as a Cloud Service miljöns Author Services AEM Administrator Product Profile
-1. Medlemskap i, eller åtkomst till, din Adobe IMS-organisationsadministratör (de måste initiera [Tjänstautentiseringsuppgifter](./service-credentials.md))
+1. Medlemskap i, eller åtkomst till, din Adobe IMS-organisationsadministratör (de måste initiera [Autentiseringsuppgifter för tjänsten](./service-credentials.md))
 1. De senaste [WKND-plats](https://github.com/adobe/aem-guides-wknd) distribueras till din Cloud Service
 
 ## Översikt över externt program
@@ -50,7 +50,7 @@ Körningsflödet för programmet Node.js är följande:
    + Den AEM as a Cloud Service författartjänstvärden som ska anslutas till (`aem`)
    + Den AEM resursmappen vars resurser uppdateras (`folder`)
    + Egenskapen och värdet för metadata som ska uppdateras (`propertyName` och `propertyValue`)
-   + Den lokala sökvägen till filen med de autentiseringsuppgifter som krävs för att få åtkomst AEM as a Cloud Service (`file`)
+   + Den lokala sökvägen till filen med de autentiseringsuppgifter som krävs för att få åtkomst till AEM as a Cloud Service (`file`)
 1. Åtkomsttoken som används för att autentisera AEM härleds från JSON-filen som tillhandahålls via kommandoradsparametern `file`
 
    a. Om tjänstautentiseringsuppgifter som används för icke-lokal utveckling anges i JSON-filen (`file`) hämtas åtkomsttoken från Adobe IMS API:er
@@ -65,9 +65,9 @@ Token för lokal utvecklingsåtkomst genereras för en viss AEM as a Cloud Servi
 
 + [Så här använder du Local Development Access Token](./local-development-access-token.md)
 
-## Tjänstautentiseringsuppgifter
+## Autentiseringsuppgifter för tjänsten
 
-Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till, och interagera med, AEM as a Cloud Service via HTTP. Själva tjänstautentiseringsuppgifterna skickas inte till AEM för autentisering, utan det externa programmet använder dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _for_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden till AEM as a Cloud Service.
+Autentiseringsuppgifterna för tjänsten är de autentiseringsuppgifter som används i alla icke-utvecklingsscenarier - tydligast i produktionen - och som underlättar för ett externt program eller system att autentisera till, och interagera med, AEM as a Cloud Service via HTTP. Själva tjänstens autentiseringsuppgifter skickas inte till AEM för autentisering, utan det externa programmet använder dessa för att generera en JWT, som byts ut mot Adobe IMS API:er _for_ en åtkomsttoken, som sedan kan användas för att autentisera HTTP-begäranden till AEM as a Cloud Service.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)
 

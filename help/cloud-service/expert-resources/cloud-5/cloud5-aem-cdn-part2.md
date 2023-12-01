@@ -4,11 +4,11 @@ description: del två av att använda AEM CDN och djupdyka i olika alternativ.
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
-kt: 9904
+jira: KT-9904
 thumbnail: 340994.jpeg
 hidefromtoc: true
 exl-id: 3d6f3506-e1ec-4eeb-869f-02db2821b8c6
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

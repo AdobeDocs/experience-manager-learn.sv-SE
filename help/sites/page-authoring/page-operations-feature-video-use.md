@@ -6,10 +6,11 @@ topic: Content Management
 feature: Page Editor, Editable Templates
 role: User
 level: Beginner
-kt: 4245
+jira: KT-4245
 thumbnail: 32147.jpg
+doc-type: Feature Video
 exl-id: d4f33657-d3b1-46d3-848c-8b73ce149797
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 11%

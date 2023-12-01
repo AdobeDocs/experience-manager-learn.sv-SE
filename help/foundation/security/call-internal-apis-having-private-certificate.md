@@ -6,12 +6,12 @@ version: 6.5, Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
-kt: 11548
+jira: KT-11548
 thumbnail: KT-11548.png
-doc-type: article
+doc-type: Article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
-source-git-commit: 68aaa58c8f95e72e1a7cb89f849c77d1210f31ee
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%

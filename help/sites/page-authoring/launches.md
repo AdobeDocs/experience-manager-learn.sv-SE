@@ -6,10 +6,11 @@ feature: Launches
 level: Intermediate, Experienced
 role: Admin
 version: 6.4, 6.5, Cloud Service
-kt: 6970
+jira: KT-6970
 thumbnail: 331285.jpg
+doc-type: Feature Video
 exl-id: 7e5ba3f5-e755-452a-8e72-be7832e95a49
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 1%

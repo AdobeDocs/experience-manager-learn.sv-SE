@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-kt: 5269
+jira: KT-5269
 thumbnail: kt-5269.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 0%
@@ -29,7 +29,7 @@ HTML5-formulär kan skickas till en server som finns i AEM. De data som skickas 
 
 Du kan skapa en enkel servett som hanterar HTML5-formuläröverföringen. De data som skickas kan sedan extraheras med följande kod. Detta [servlet](assets/html5-submit-handler.zip) som ingår i den här självstudiekursen. Installera [servlet](assets/html5-submit-handler.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 
-Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [SDK-konfiguration för Adobe LiveCycle-klient](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
+Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [SDK-konfiguration för Adobe-klient](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();

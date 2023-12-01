@@ -6,10 +6,10 @@ level: Beginner
 type: Tutorial
 topic: Development, Migration
 feature: Dispatcher
-kt: 6931
+jira: KT-6931
 thumbnail: 330556.jpg
 exl-id: f0d74326-f8ba-431f-8b66-494e20b9e710
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%

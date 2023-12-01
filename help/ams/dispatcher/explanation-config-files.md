@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Grundläggande fillayout](./basic-file-layout.md)
 
-Det här dokumentet kommer att innehålla en beskrivning och en beskrivning av de konfigurationsfiler som distribueras i en standardbyggd Dispatcher-server som tillhandahålls i Adobe Managed Services. deras användning, namnkonventioner osv.
+I det här dokumentet bryts ned och förklaras var och en av konfigurationsfilerna som distribuerats i en standardbyggd Dispatcher-server som etablerats i Adobe Managed Services. deras användning, namnkonventioner osv.
 
 ## Namngivningskonvention
 
@@ -41,7 +42,7 @@ Apache Web Server bryr sig egentligen inte om vad filtillägget är för en fil 
 | Fil | Filmål | Beskrivning |
 | --- | --- | --- |
 | FILNAMN`.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache Module hämtar inställningarna från `*.any` filer. Den överordnade inkluderingsfilen som är standard är `conf.dispatcher.d/dispatcher.any` |
-| FILNAMN`_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b> de här servergruppsfilerna ska inte kopieras till `enabled_farms` men använd `symlinks` till en relativ sökväg till `available_farms/*_farm.any` fil </div> <br/>`*_farm.any` -filer finns i `conf.dispatcher.d/dispatcher.any` -fil. Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i `available_farms` -katalog och aktiverad med en `symlink` till `enabled_farms` katalog.  <br/>Den tar automatiskt med dem efter namn från `dispatcher.any` -fil.<br/><b>Baslinje</b> gruppfiler börjar med `000_` för att se till att de läses in först.<br><b>Egen</b> servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. |
+| FILNAMN`_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b> de här servergruppsfilerna ska inte kopieras till `enabled_farms` men använd `symlinks` till en relativ sökväg till `available_farms/*_farm.any` fil </div> <br/>`*_farm.any` -filer finns i `conf.dispatcher.d/dispatcher.any` -fil. Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i `available_farms` och aktiveras med en `symlink` till `enabled_farms` katalog.  <br/>Den tar automatiskt med dem efter namn från `dispatcher.any` -fil.<br/><b>Baslinje</b> gruppfiler börjar med `000_` för att se till att de läses in först.<br><b>Egen</b> servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. |
 | FILNAMN`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` -filer inkluderas inifrån `conf.dispatcher.d/enabled_farms/*_farm.any` filer. Varje gård har en uppsättning regler som förändrar vilken trafik som ska filtreras bort och inte övergå till renderarna. |
 | FILNAMN`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` -filer inkluderas inifrån `conf.dispatcher.d/enabled_farms/*_farm.any` filer. De här filerna är en lista över värdnamn eller uri-sökvägar som matchas av blobbmatchning för att avgöra vilken renderare som ska användas för begäran |
 | FILNAMN`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` -filer inkluderas inifrån `conf.dispatcher.d/enabled_farms/*_farm.any` filer. De här filerna anger vilka objekt som cachelagras och vilka som inte |
@@ -81,11 +82,11 @@ RewriteRule ^/robots.txt$ /content/dam/exampleco/robots.txt [PT,L]
 
 #### `POTENTIAL DANGER - The file names are the same`
 
-Om `vhost` filen av misstag läggs in i `rewrites` och `rewrites file` finns i `vhosts` mapp.  Det verkar ha distribuerats korrekt av filnamnet, men Apache genererar ett *FEL* och problemet kommer inte att vara omedelbart uppenbart.
+Om `vhost` filen av misstag läggs in i `rewrites` mapp och `rewrites file` är placerad i `vhosts` mapp.  Det verkar ha distribuerats korrekt av filnamnet, men Apache genererar ett *FEL* och problemet kommer inte att vara omedelbart uppenbart.
 
 <b>Så här blir det oftast ett problem</b>
 
-Om `two files` hämtas till `same` plats kan de antingen `overwrite themselves` eller göra det oskiljaktigt så att driftsättningsprocessen blir en mardröm.
+Om `two files` hämtas till `same` plats kan de antingen `overwrite themselves` eller göra det omöjligt att särskilja och göra driftsättningsprocessen till en mardröm.
 
 <b>Filtilläggen är desamma och tar automatiskt med benen</b>
 
@@ -93,7 +94,7 @@ Filtilläggen är desamma och använder automatiskt inkluderat tillägg som Apac
 
 <b>Så här blir det oftast ett problem</b>
 
-Om värdfilen med tillägget `.conf` finns i `/etc/httpd/conf.d/` mappen försöker den läsa in den i minnet på Apache, som normalt är OK, men om regelfilen för omskrivning med tillägget `.conf` placeras i `/etc/httpd/conf.d/` kommer programmet att inkluderas automatiskt och användas globalt, vilket ger förvirrande och oönskade resultat.
+Om värdfilen med tillägget för `.conf` finns i `/etc/httpd/conf.d/` mappen försöker den läsa in den i minnet på Apache, som normalt är OK, men om regelfilen för omskrivning med tillägget `.conf` placeras i `/etc/httpd/conf.d/` kommer programmet att inkluderas automatiskt och användas globalt, vilket ger förvirrande och oönskade resultat.
 
 ## Upplösning
 
@@ -126,12 +127,12 @@ Include conf.modules.d/*.conf
 IncludeOptional conf.d/*.conf
 ```
 
-### AMS toppnivå omfattar
+### AMS-toppnivån omfattar
 
 När vi tillämpade vår standard lade vi till ytterligare filtyper och inkluderar våra egna.
 
 Här är AMS-originalkataloger och toppnivån innehåller
-![I AMS Baseline ingår att börja med en dispatcher_vhost.conf som inkluderar alla filer med *.vhost från katalogen /etc/httpd/conf.d/enabled_vhosts/.  Objekten i katalogen /etc/httpd/conf.d/enabled_vhosts/ är länkar till den faktiska konfigurationsfilen som finns i /etc/httpd/conf.d/available_vhosts/](assets/explanation-config-files/Apache-Webserver-AMS-Baseline-Includes.png "Apache-WebServer-AMS-Baseline-Includes")
+![I AMS Baseline ingår att börja med en dispatcher_vhost.conf som inkluderar alla filer med *.vhost från katalogen /etc/httpd/conf.d/enabled_vhosts/.  Objekten i katalogen /etc/httpd/conf.d/enabled_vhosts/ är länkar till den faktiska konfigurationsfilen som finns i /etc/httpd/conf.d/available_vhosts/](assets/explanation-config-files/Apache-Webserver-AMS-Baseline-Includes.png "Apache-WebServer-AMS-baseline-includes")
 
 Vi bygger vidare på Apache baslinje och visar hur AMS skapade ytterligare mappar och inkluderingar på den översta nivån för `conf.d` mappar samt modulspecifika kataloger som är kapslade under `/etc/httpd/conf.dispatcher.d/`
 
@@ -141,7 +142,7 @@ När Apache laddas kommer det att dra in `/etc/httpd/conf.modules.d/02-dispatch
 LoadModule dispatcher_module modules /mod_dispatcher .so
 ```
 
-Så här använder du modulen i `<VirtualHost />` vi släpper en konfigurationsfil i `/etc/httpd/conf.d/` namngiven `dispatcher_vhost.conf` och i den här filen visas de grundläggande parametrar som behövs för att modulen ska fungera:
+Använda modulen i `<VirtualHost />` vi släpper en konfigurationsfil i `/etc/httpd/conf.d/` namngiven `dispatcher_vhost.conf` och i den här filen visas de grundläggande parametrar som behövs för att modulen ska fungera:
 
 ```
 <IfModule disp_apache2.c> 

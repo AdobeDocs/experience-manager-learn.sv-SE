@@ -1,16 +1,16 @@
 ---
 title: Tjänsten Automated forms conversion
-description: automated forms conversion Service. I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation.
+description: Automated forms conversion Service. I den här artikeln beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation.
 feature: Adaptive Forms
 thumbnail: 39493.jpg
-kt: 6114
+jira: KT-6114
 topic: Development
 role: Admin
 level: Beginner
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Du behöver följande för att kunna använda tjänsten Automated forms conversi
 
 * Tjänsten Automated forms conversion är aktiverad för din organisation
 * Ett Adobe ID-konto med administratörsbehörighet för konverteringstjänsten
-* En AEM 6.4- eller AEM 6.5-författarinstans med senaste AEM Service Pack
+* En AEM 6.4- eller AEM 6.5-författarinstans som körs med senaste AEM Service Pack
 * En AEM användare (i din AEM instans) som är medlem i användargruppen formulär
 
 >[!NOTE]

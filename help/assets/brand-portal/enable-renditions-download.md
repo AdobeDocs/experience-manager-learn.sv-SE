@@ -7,8 +7,9 @@ version: Cloud Service
 feature: Brand Portal
 topic: Development
 last-substantial-update: 2022-06-19T00:00:00Z
+doc-type: Feature Video
 exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%

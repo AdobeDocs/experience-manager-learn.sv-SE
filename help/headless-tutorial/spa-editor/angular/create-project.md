@@ -4,16 +4,16 @@ description: Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-
 feature: SPA Editor, AEM Project Archetype
 topics: development
 version: Cloud Service
-doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5309
+jira: KT-5309
 thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -26,12 +26,12 @@ Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som s
 
 ## Syfte
 
-1. Förstå strukturen i ett nytt AEM SPA redigeringsprojekt som skapats av en Maven-arkityp.
+1. Förstå strukturen i ett nytt AEM SPA redigeringsprojekt som byggts från en Maven-arketype.
 2. Distribuera startprojektet till en lokal instans av AEM.
 
 ## Vad du ska bygga
 
-I det här kapitlet distribueras ett nytt AEM baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet har en mycket enkel startpunkt för SPA. Det projekt som används i detta kapitel kommer att utgöra grunden för en implementering av WKND-SPA och är byggt på i framtida kapitel.
+I det här kapitlet distribueras ett nytt AEM baserat på [AEM Project Archettype](https://github.com/adobe/aem-project-archetype). Det AEM projektet har en mycket enkel startpunkt för SPA. Det projekt som används i detta kapitel kommer att utgöra grunden för en implementering av WKND-SPA och är byggt på i framtida kapitel.
 
 ![WKND SPA Angular Starter Project](./assets/create-project/what-you-will-build.png)
 
@@ -39,11 +39,11 @@ I det här kapitlet distribueras ett nytt AEM baserat på [AEM Project Archetype
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
 
 ## Hämta projektet
 
-Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM. Den här självstudien använde den senaste [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som grund för självstudiekurskoden. Projektkoden har ändrats för att stödja flera versioner av AEM. Granska [anmärkningen om bakåtkompatibilitet](overview.md#compatibility).
+Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM. I den här självstudien användes den senaste [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) som grund för självstudiekurskoden. Projektkoden har ändrats för att stödja flera versioner av AEM. Granska [anmärkningen om bakåtkompatibilitet](overview.md#compatibility).
 
 >[!CAUTION]
 >
@@ -75,7 +75,7 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
        |--- archetype.properties
    ```
 
-3. Följande egenskaper användes när det AEM projektet genererades från [AEM](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14):
+3. Följande egenskaper användes när det AEM projektet genererades från [AEM projekttyp](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases/tag/aem-project-archetype-14):
 
    | Egenskap | Värde |
    |-----------------|---------------------------------------|
@@ -89,7 +89,7 @@ Det finns flera alternativ för att skapa ett flermodulsprojekt i Maven för AEM
 
    >[!NOTE]
    >
-   > Lägg märke till `frontendModule=angular` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Angularnas kodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
+   > Lägg märke till `frontendModule=angular` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Angularnas kodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA.
 
 ## Bygg projektet
 
@@ -146,7 +146,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    ![WKND-SPA](./assets/create-project/package-manager.png)
 
-   All anpassad kod som krävs för projektet paketeras i dessa paket och installeras på AEM.
+   All anpassad kod som krävs för projektet paketeras i dessa paket och installeras i AEM.
 
 6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM kärnkomponenter finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
@@ -172,7 +172,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
 ## Inspect för Single Page
 
-Kontrollera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
+Verifiera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
 
 1. I **[!UICONTROL Page Editor]** klickar du på **[!UICONTROL Page Information]** meny > **[!UICONTROL View as Published]**:
 

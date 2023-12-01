@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9350
+jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Följande krävs när du konfigurerar flexibel portutgång:
 
 + Adobe Developer Console-projekt med Cloud Manager API aktiverat och [Behörigheter för affärsägare för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
-   + Organisations-ID (även IMS Org ID)
+   + Organisations-ID (även IMS Org-ID)
    + Klient-ID (även API-nyckel)
    + Åtkomsttoken (även Bearer Token)
 + Program-ID för Cloud Manager
@@ -46,7 +46,7 @@ Mer information finns i följande genomgång om hur du konfigurerar, konfigurera
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ska du ersätta `\` radbrytningstecken med `^`.
+Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du `\` radbrytningstecken med `^`.
 
 ## Möjliggör flexibel portutgång per program
 
@@ -112,7 +112,7 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
    Definiera JSON-parametrarna i en `flexible-port-egress.json` och tillhandahålls för att surfa via `... -d @./flexible-port-egress.json`.
 
-   [Ladda ned exemplet flexible-port-egress.json](./assets/flexible-port-egress.json). Den här filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [Hämta exemplet flexible-port-egress.json](./assets/flexible-port-egress.json). Filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -163,7 +163,7 @@ När den flexibla portaregresproxyn är aktiverad kan AEM kod och konfiguration 
 1. HTTP/HTTPS-anrop till externa tjänster på icke-standardportar
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
 1. icke-HTTP/HTTPS-anrop till externa tjänster
-   + Inkluderar alla icke-HTTP-anrop, t.ex. anslutningar till e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
+   + Inkluderar alla icke-HTTP-anrop, till exempel anslutningar med e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
 
 HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard och kräver ingen extra konfiguration eller överväganden.
 
@@ -174,13 +174,17 @@ När du skapar HTTP/HTTPS-anslutningar till portar som inte är standard (not-80
 
 AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
 
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxyvärd för både HTTP/HTTPS-anslutningar | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` | | `AEM_HTTP_PROXY_PORT` | Proxyport för HTTPS-anslutningar (ange reserv som `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` | | `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar (ange reserv som `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
+| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | Proxyvärd för både HTTP/HTTPS-anslutningar | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| `AEM_HTTP_PROXY_PORT` | Proxyport för HTTPS-anslutningar (ange reserv som reserv till `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` |
+| `AEM_HTTPS_PROXY_PORT` | Proxyport för HTTPS-anslutningar (ange reserv som reserv till `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
 
-När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är standard utförs ingen motsvarande `portForwards` måste definieras med Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; definieras som &quot;i kod&quot;.
+När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är standard utförs ingen motsvarande `portForwards` måste definieras med Cloud Manager API `enableEnvironmentAdvancedNetworkingConfiguration` -åtgärd, eftersom portvidarebefordringens &quot;regler&quot; är definierade i koden.
 
 >[!TIP]
 >
-> I AEM as a Cloud Service dokumentation om flexibel portutgång finns mer information [hela uppsättningen routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
+> I AEM as a Cloud Service dokumentation om flexibel portutgång finns mer information [alla routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
 
 #### Exempel på koder
 
@@ -202,7 +206,9 @@ När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är stand
 
 När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som AEM anger.
 
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
+| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
 Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigeras till det mappade externa värdnamnet (`portForwards.name`) och port (`portForwards.portDest`).

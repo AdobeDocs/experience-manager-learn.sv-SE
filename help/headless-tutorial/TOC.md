@@ -6,9 +6,9 @@ feature-set: Experience Manager, Experience Manager Assets, Experience Manager S
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
-kt: 2963
+jira: KT-2963
 index: y
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 12%

@@ -6,10 +6,11 @@ feature: Core Components
 role: Developer
 level: Intermediate
 version: Cloud Service
-kt: 243
+jira: KT-243
 thumbnail: 25173.jpg
+doc-type: Technical Video
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -22,7 +23,7 @@ Att anpassa metadatafälten för Sidegenskaper är ett vanligt krav i alla imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
-I videon ovan visas hur du anpassar sidegenskaperna för [WKND-referensplats](https://github.com/adobe/aem-guides-wknd).
+I videon ovan anpassas sidegenskaperna för [WKND-referensplats](https://github.com/adobe/aem-guides-wknd).
 
 ## Exempel på paket med WKND-sidegenskaper
 

@@ -3,12 +3,12 @@ title: Visa de hämtade formulären i kortvyn
 description: Använd listforms-API för att visa formulären
 feature: Adaptive Forms
 version: 6.5
-kt: 13311
+jira: KT-13311
 topic: Development
 role: User
 level: Intermediate
 exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

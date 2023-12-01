@@ -6,11 +6,11 @@ feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9354
+jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt hantering av anslutningar till och från AEM as a Cloud Service program.
 
-|  | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
+|                                                   | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | Stöd för avancerade nätverk | ✔ | ✘ |
 
 
 AEM avancerade nätverk består av tre alternativ för hantering av anslutning med externa tjänster. Ett Cloud Manager-program och dess AEM as a Cloud Service miljöer kan bara använda en enda typ av avancerad nätverkskonfiguration åt gången, så se till att den mest lämpliga typen väljs.
 
-|  | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Icke-proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa AEM-publiceringstrafik efter IP |
+|                                   | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Inga proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa AEM Publicera trafik per IP |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __Inga avancerade nätverk__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__Flexibel portutgång__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |
@@ -55,7 +55,7 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
       <a  href="./dedicated-egress-ip-address.md"><img alt="FleDedicated egress IP-adress" src="./assets/dedicated-egress-ip-address.png"/></a>
       <div><strong><a href="./dedicated-egress-ip-address.md">Dedikerad IP-adress för utgångar</a></strong></div>
       <p>
-        Ursprunglig utgående AEM as a Cloud Service trafik från en dedikerad IP-adress.
+        Ursprunglig utgående AEM as a Cloud Service trafik från en dedikerad IP.
       </p>
     </td>   
    <td>
@@ -72,7 +72,7 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
 
 Den här samlingen innehåller exempel på den konfiguration och kod som krävs för att utnyttja avancerade nätverksfunktioner för specifika användningsområden.
 
-Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigurerats innan du följer dessa självstudiekurser.
+Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigurerats innan du följer dessa självstudier.
 
 <table><tr>
    <td>
@@ -105,17 +105,17 @@ Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigu
       </p>
     </td>   
     <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Använda ett IP-tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
       <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Använda ett IP-tillåtelselista</a></strong></div>
       <p>
             Konfigurera en IP-tillåtelselista så att endast VPN-trafik kan komma åt AEM.
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM</a></strong></div>
       <p>
-            Kräv VPN-åtkomst för specifika sökvägar i AEM Publish.
+            Kräv VPN-åtkomst för specifika sökvägar vid AEM.
       </p>
     </td>
 </tr>

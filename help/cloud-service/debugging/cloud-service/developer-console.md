@@ -7,13 +7,13 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5433
+jira: KT-5433
 thumbnail: kt-5433.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 8ca9535866cc1a673a59ac3743847e68dfedd156
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -45,7 +45,7 @@ För att få tillgång till och använda Developer Console måste utvecklarens A
 1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM as a Cloud Service produkter är aktiv i Adobe Org-växlaren.
 1. Utvecklaren måste vara medlem i [Cloud Manager Product&#39;s __Utvecklare - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
    + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
-1. Utvecklaren måste vara medlem i [__AEM__ eller __AEM administratörer__ Produktprofil på AEM Author och/eller Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
+1. Utvecklaren måste vara medlem i [__AEM__ eller __AEM administratörer__ Produktprofil för AEM författare och/eller publicering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + Om det här medlemskapet inte finns [status](#status) dumpar timeout med 401 Unauthorized error error.
 
 ### Felsökning: Developer Console-åtkomst
@@ -59,7 +59,7 @@ Om någon status dumpas och 401 ett obehörigt fel rapporteras innebär det att 
 Så här löser du det 401 obehöriga problemet:
 
 1. Se till att din användare är medlem i rätt Adobe IMS-produktprofil (AEM administratörer eller AEM användare) för Developer Console AEM as a Cloud Service produktinstans.
-   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser; AEM as a Cloud Service Author och Publish produktinstanser, så att rätt produktprofiler används beroende på vilket tjänstskikt som kräver åtkomst via Developer Console.
+   + Kom ihåg att Developer Console har tillgång till två Adobe IMS-produktinstanser, AEM as a Cloud Service Author och Publish produktinstanser, så att rätt produktprofiler används beroende på vilken tjänstnivå som kräver åtkomst via Developer Console.
 1. Logga in på AEM as a Cloud Service (Författare eller Publicera) och kontrollera att användare och grupper har synkroniserats korrekt till AEM.
    + Developer Console kräver att din användarpost skapas i motsvarande AEM tjänstenivå för att den ska kunna autentiseras till den tjänstnivån.
 1. Rensa dina webbläsares cookies och programtillstånd (lokal lagring) och logga in på Developer Console igen, så att åtkomsttoken Developer Console används korrekt och inte har gått ut.
@@ -73,7 +73,7 @@ AEM as a Cloud Service redigerings- och publiceringstjänster består av flera i
 + En pod är en diskret instans som ingår i en AEM (författare eller publicera)
 + Poängen är övergående, vilket innebär AEM as a Cloud Service skapar och förstör dem vid behov
 + Endast poder som är en del av den associerade AEM as a Cloud Service miljön visas i Developer Console&#39;s Pod Switcher.
-+ Längst ned i Pod Switcher kan du med bekväma alternativ välja Pods efter tjänstetyp:
++ Längst ned i Pod Switcher kan du välja Pods efter tjänstetyp:
    + Alla författare
    + Alla utgivare
    + Alla förekomster
@@ -91,7 +91,7 @@ Paketen innehåller alla OSGi-paket i AEM. Den här funktionen liknar [AEM SDK&#
 Paket hjälper dig att felsöka genom att:
 
 + Lista alla OSGi-paket som distribuerats till AEM som en tjänst
-+ En lista över varje OSGi-paketstatus; inklusive om de är aktiva eller inte
++ En lista över varje OSGi-paketstatus, inklusive om de är aktiva eller inte
 + Tillhandahåller information om olösta beroenden som gör att OSGi-paket inte blir aktiva
 
 ### Komponenter
@@ -101,7 +101,7 @@ Komponenterna listar alla OSGi-komponenter i AEM. Den här funktionen liknar [AE
 Komponenterna hjälper till vid felsökning genom att:
 
 + Lista alla OSGi-komponenter som distribuerats till AEM as a Cloud Service
-+ tillhandahålla varje OSGi-komponentstatus, inklusive om de är aktiva eller missnöjda
++ Tillhandahålla varje OSGi-komponents tillstånd, inklusive om de är aktiva eller missnöjda
 + Om du anger information i ej tillfredsställande tjänstreferenser kan det leda till att OSGi-komponenter blir aktiva
 + En lista över OSGi-egenskaper och deras värden som är bundna till OSGi-komponenten.
    + Detta visar faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values).
@@ -120,7 +120,7 @@ Konfigurationer hjälper dig att felsöka genom att:
 
 Oak Indexes innehåller en dump av de noder som definieras under `/oak:index`. Tänk på att detta inte visar sammanfogade index, som inträffar när ett AEM ändras.
 
-Ta hjälp av index:
+Ta hjälp av index när du felsöker genom att:
 
 + En lista över alla indexdefinitioner för eko som ger insikter om hur sökfrågor körs i AEM. Tänk på att ändringar i AEM inte återspeglas här. Den här vyn är bara användbar för index som endast tillhandahålls av AEM, eller enbart av den anpassade koden.
 
@@ -167,7 +167,7 @@ Servlets hjälper dig att felsöka:
 
 ## Frågor
 
-Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionen är densamma som  [AEM SDK:s lokala snabbstartsverktyg > Frågeprestanda ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) konsol.
+Frågor ger insikt i vad och hur sökfrågor körs på AEM. Den här funktionen är densamma som  [AEM SDK:s lokala snabbstartsverktyg > Frågeprestanda](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) konsol.
 
 Frågar fungerar bara när en viss ruta har valts, eftersom den öppnar den pods webbkonsol för frågeprestanda, som kräver att utvecklaren har åtkomst till AEM.
 

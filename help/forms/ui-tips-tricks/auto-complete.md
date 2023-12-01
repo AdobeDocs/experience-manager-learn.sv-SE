@@ -7,10 +7,10 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 11374
+jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -63,11 +63,11 @@ $(".streetAddress input").autocomplete({
 
 
 
-## Förslag med känslolägesikoner
+## Förslag med uttryckssymboler
 
 ![landsförslag](assets/auto-complete3.png)
 
-Följande kod användes för att visa känslolägesikoner i förslagslistan
+Följande kod användes för att visa uttryckssymboler i förslagslistan
 
 ```javascript
 var values=["Wolf \u{1F98A}", "Lion \u{1F981}","Puppy \u{1F436}","Giraffe \u{1F992}","Frog \u{1F438}"];
@@ -78,8 +78,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-The [exempelformulär kan hämtas](assets/auto-complete-form.zip) härifrån. Se till att du anger din egen användarnamn/API-nyckel med kodredigeraren för koden för att kunna göra REST-anrop.
+The [exempelformulär kan laddas ned](assets/auto-complete-form.zip) härifrån. Se till att du anger din egen användarnamn/API-nyckel med kodredigeraren för koden för att kunna göra REST-anrop.
 
 >[!NOTE]
 >
-> För att automatisk ifyllning ska fungera måste formuläret använda följande klientbibliotek **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.
+> Se till att formuläret använder följande klientbibliotek för att slutföra automatiskt **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.

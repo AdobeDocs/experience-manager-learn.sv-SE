@@ -1,32 +1,33 @@
 ---
-title: Kapitel 6 - Visa innehåll på AEM Publish som JSON - Innehållstjänster
+title: Kapitel 6 - Visa innehåll vid AEM publicering som JSON - Innehållstjänster
 description: Kapitel 6 i självstudiekursen AEM Headless handlar om att säkerställa att alla nödvändiga paket, konfigurationer och innehåll finns på AEM Publish för att tillåta användning från mobilappen.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: b33d1509-531d-40c3-9b26-1d18c8d86a97
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 1%
 
 ---
 
-# Kapitel 6 - Visa innehållet på AEM Publish for Delivery
+# Kapitel 6 - Visa innehåll vid AEM publicering för leverans
 
-Kapitel 6 i den AEM självstudiekursen Headless handlar om att säkerställa att alla nödvändiga paket, konfigurationer och innehåll finns på AEM Publish för att göra det möjligt för mobilappen att konsumera.
+Kapitel 6 i självstudiekursen AEM Headless handlar om att säkerställa att alla nödvändiga paket, konfigurationer och innehåll finns på AEM Publish för att göra det möjligt att använda mobilappen.
 
 ## Publicera innehåll för AEM Content Services
 
-Den konfiguration och det innehåll som skapas för att köra händelser via AEM Content Services måste publiceras i AEM Publish så att mobilappen kan komma åt det.
+Den konfiguration och det innehåll som skapas för att köra händelser via AEM Content Services måste publiceras för AEM Publish så att mobilappen kan komma åt det.
 
 Eftersom AEM Content Services byggs från Configuration (Content Fragment Models, Editable Templates), Assets (Content Fragments, Images) och Pages får alla dessa delar automatiskt AEM funktioner för innehållshantering, som:
 
 * Arbetsflöde för granskning och bearbetning
-* och aktivering/inaktivering för att skjuta upp och dra innehåll från AEM Publish AEM Content Services-slutpunkter
+* och aktivering/inaktivering för att skjuta upp och dra innehåll från AEM publiceringens AEM Content Services-slutpunkter
 
-1. Se till att **[!DNL WKND Mobile]Programpaket**, listas i [Kapitel 1](./chapter-1.md#wknd-mobile-application-packages), installeras på **AEM Publish** använda [!UICONTROL Package Manager].
+1. Kontrollera **[!DNL WKND Mobile]Programpaket**, listas i [Kapitel 1](./chapter-1.md#wknd-mobile-application-packages), installeras på **AEM Publish** använda [!UICONTROL Package Manager].
    * [http://localhost:4503/crx/packmgr](http://localhost:4503/crx/packmgr)
 
 1. Publicera **[!DNL WKND Mobile Events API]Redigerbar mall**
@@ -57,15 +58,16 @@ Eftersom AEM Content Services byggs från Configuration (Content Fragment Models
 
 >[!VIDEO](https://video.tv.adobe.com/v/28343?quality=12&learn=on)
 
-## Verifiera AEM-publicering
+## Verifiera AEM
 
-1. I en ny webbläsare kontrollerar du att du är utloggad från AEM Publish och begär följande URL:er (ersätt) `http://localhost:4503` för alla värddatorer:port AEM Publish körs på).
+1. I en ny webbläsare kontrollerar du att du är utloggad AEM Publicera och begär följande URL:er (ersätt) `http://localhost:4503` för alla värddatorer:port AEM Publish körs på).
 
    * [http://localhost:4503/content/wknd-mobile/en/api/events.model.json](http://localhost:4503/content/wknd-mobile/en/api/events.model.tidy.json)
-   Dessa förfrågningar bör returnera samma JSON-svar som när motsvarande AEM Author-slutpunkter granskades. Om de inte gör det kontrollerar du att alla publikationer har slutförts (kontrollera replikeringsköerna), [!DNL WKND Mobile] `ui.apps` paketet är installerat på AEM Publish och du kan granska `error.log` för AEM Publish.
+
+   Dessa förfrågningar bör returnera samma JSON-svar som när motsvarande AEM författarslutpunkter granskades. Om de inte gör det kontrollerar du att alla publikationer har slutförts (kontrollera replikeringsköerna), [!DNL WKND Mobile] `ui.apps` paketet installeras AEM publicera och du kan granska `error.log` för AEM.
 
 ## Nästa steg
 
-Det finns inga extra paket att installera. Kontrollera att innehållet och konfigurationen som beskrivs i det här avsnittet publiceras till AEM Publish, annars fungerar inte efterföljande kapitel.
+Det finns inga extra paket att installera. Kontrollera att innehållet och konfigurationen som beskrivs i det här avsnittet publiceras AEM Publicera, annars fungerar inte efterföljande kapitel.
 
 * [Kapitel 7 - Använda AEM innehållstjänster från en mobilapp](./chapter-7.md)

@@ -1,12 +1,8 @@
 ---
 title: Skapa en konfiguration för Starta Cloud Service i AEM Sites
 description: Lär dig hur du skapar en Launch Cloud Service-konfiguration i AEM. Konfigurationen av Launch-Cloud Servicen kan sedan tillämpas på en befintlig webbplats och taggbiblioteken kan läsas in både i författarmiljön och i publiceringsmiljön.
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5982
+jira: KT-5982
 thumbnail: 38566.jpg
 topic: Integrations
 feature: Integrations
@@ -14,8 +10,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 0%
@@ -34,31 +31,31 @@ Lär dig hur du skapar en Launch Cloud Service-konfiguration i Adobe Experience 
 
 Skapa konfigurationen av molntjänsten Launch genom att följa stegen nedan.
 
-1. Från **verktyg** meny, välja **Cloud Services** och klicka **Adobe Launch Configurations**
+1. Från **verktyg** meny, välja **Cloud Service** och klicka **Adobe Launch Configurations**
 
 1. Välj platsens konfigurationsmapp eller välj **WKND-plats** (om du använder WKND-stödlinjeprojekt) och klicka på **Skapa**
 
-1. Från _Allmänt_ -fliken, namnge konfigurationen med **Titel** fält och markera **Adobe Launch** från _Associerad Adobe IMS-konfiguration_ listruta. Välj sedan ditt företagsnamn på menyn _Företag_ listrutan och välj en egenskap som skapats tidigare i _Egenskap_ listruta.
+1. Från _Allmänt_ -fliken, namnge konfigurationen med **Titel** fält och markera **Adobe Launch** från _Associerad Adobe IMS-konfiguration_ nedrullningsbar meny. Välj sedan ditt företagsnamn på menyn _Företag_ listrutan och välj en egenskap som skapats tidigare i _Egenskap_ nedrullningsbar meny.
 
 1. Från _Mellanlagring_ och _Produktion_ behåller standardkonfigurationerna. Vi rekommenderar dock att du granskar och ändrar konfigurationerna för verkliga produktionsinställningar, särskilt _Läs in bibliotek asynkront_ växla baserat på prestanda och optimeringskrav. Observera även att _Biblioteks-URI_ värdet är annorlunda för Förproduktion och Förproduktion.
 
 1. Klicka slutligen **Skapa** för att slutföra tjänsterna i Launch-molnet.
 
-   ![Starta konfiguration av Cloud Services](assets/launch-cloud-services-config.png)
+   ![Starta konfiguration av Cloud Service](assets/launch-cloud-services-config.png)
 
 ## Använd molntjänsten Launch på webbplatsen
 
 Om du vill läsa in taggegenskapen och dess bibliotek på AEM webbplats används molntjänstkonfigurationen för Launch på webbplatsen. I föregående steg skapas molntjänstkonfigurationen under platsnamnmappen (WKND-plats) så att den ska tillämpas automatiskt. Vi måste verifiera den.
 
-1. Från **Navigering** meny, välja **Webbplatser** ikon.
+1. Från **Navigering** meny, välja **Webbplatser** -ikon.
 
 1. Markera rotsidan för AEM och klicka på **Egenskaper**. Navigera sedan till **Avancerat** tabb och under **Konfiguration** kontrollerar du att värdet för molnkonfiguration pekar på din platsspecifika `conf` mapp.
 
-   ![Använd konfigurationen för Cloud Services på platsen](assets/apply-cloud-services-config-to-site.png)
+   ![Använd konfigurationen för Cloud Service på platsen](assets/apply-cloud-services-config-to-site.png)
 
 ## Verifiera inläsning av taggegenskap på författar- och publiceringssidor
 
-Nu är det dags att verifiera att taggegenskapen och dess bibliotek har lästs in på den AEM webbplatssidan.
+Nu är det dags att verifiera att taggegenskapen och dess bibliotek har lästs in på AEM.
 
 1. Öppna din favoritwebbplats i **Visa som publicerad** i webbläsarkonsolen ser du loggmeddelandet. Det är samma meddelande från JavaScript-kodfragmentet i taggegenskapsregeln som utlöses när _Bibliotek inläst (sidan ovanpå)_ -händelsen utlöses.
 

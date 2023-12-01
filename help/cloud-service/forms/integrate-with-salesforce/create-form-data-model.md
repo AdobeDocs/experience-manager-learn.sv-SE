@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms, Integrations
 topic: Development
-kt: 7149
+jira: KT-7149
 thumbnail: 331756.jpg
 exl-id: 9dcbf06c-6dd0-4f26-bc5e-9074f4c78ac6
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%

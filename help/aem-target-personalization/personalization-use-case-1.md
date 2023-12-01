@@ -1,16 +1,15 @@
 ---
 title: Personalisering med AEM Experience Fragments och Adobe Target
-seo-title: Personalization using Adobe Experience Manager (AEM) Experience Fragments and Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Experience Manager Experience Fragments och Adobe Target.
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager Experience Fragments and Adobe Target.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -52,12 +51,12 @@ För den här övningen måste följande användare vara involverade och för at
 ![AEM målscenario 1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
 1. Marketer initierar WKND SkateFest-kampanjdiskussionen med AEM Content Editor och redogör för kraven.
-   * ***Krav***: Marknadsför kampanjen WKND SkateFest på WKND:s hemsida med personaliserat innehåll för besökare från alla delstater i USA. Lägg till ett nytt innehållsblock under Home Page Carousel som innehåller en bakgrundsbild, text och en knapp.
-      * **Bakgrundsbild**: Bilden bör vara relevant för det tillstånd från vilket användaren besöker WKND-webbplatssidan.
-      * **Text**: &quot;Registrera dig för Audition&quot;
-      * **Knapp**: &quot;Händelseinformation&quot; som pekar på WKND SkateFest-sidan
-      * **WKND SkateFest Page**: en ny sida med eventinformation, inklusive ljudplats, datum och tid.
-1. AEM Content Editor skapar en Experience Fragment för innehållsblocket och exporterar det till Adobe Target som ett erbjudande. Om du vill leverera personaliserat innehåll för alla lägen i USA kan innehållsförfattaren skapa en överordnad Experience Fragment-variant och sedan skapa 50 andra varianter, en för varje läge. Innehåll för varje lägesvariation med relevanta bilder och text kan sedan redigeras manuellt. När du redigerar ett Experience Fragment kan redigerare snabbt få tillgång till alla resurser som finns i AEM Assets med hjälp av alternativet Resurssökning. När en Experience Fragment exporteras till Adobe Target skickas alla dess varianter också till Adobe Target som erbjudanden.
+   * ***Krav***: Marknadsför WKND SkateFest-kampanjen på WKND:s hemsida med personaliserat innehåll för besökare från alla delstater i USA. Lägg till ett nytt innehållsblock under Home Page Carousel som innehåller en bakgrundsbild, text och en knapp.
+      * **Bakgrundsbild**: Bilden ska vara relevant för det tillstånd från vilket användaren besöker WKND-webbplatssidan.
+      * **Text**:&quot;Registrera dig för Audition&quot;
+      * **Knapp**:&quot;Händelseinformation&quot; som pekar på WKND SkateFest-sidan
+      * **WKND SkateFest Page**: en ny sida med händelseinformation, inklusive auditionsplats, datum och tid.
+1. AEM Content Editor skapar en Experience Fragment för innehållsblocket och exporterar det till Adobe Target som ett erbjudande. Om du vill leverera anpassat innehåll för alla lägen i USA kan innehållsförfattaren skapa en Experience Fragment-huvudvariant och sedan skapa 50 andra varianter, en för varje läge. Innehåll för varje lägesvariation med relevanta bilder och text kan sedan redigeras manuellt. När du redigerar ett Experience Fragment kan redigerare snabbt få tillgång till alla resurser som finns i AEM Assets med hjälp av alternativet Resurssökning. När en Experience Fragment exporteras till Adobe Target skickas alla dess varianter också till Adobe Target som erbjudanden.
 
 1. Efter att ha exporterat Experience Fragment från AEM till Adobe Target som erbjudanden kan marknadsförarna skapa aktiviteter i Target med dessa erbjudanden. Baserat på SkateFest-kampanjen på WKND-webbplatsen måste marknadsföraren skapa och leverera en personaliserad upplevelse till WKND-webbplatsbesökare från varje stat. För att skapa en Experience Targeting-aktivitet måste marknadsföraren identifiera målgrupperna. För vår WKND SkateFest-kampanj måste vi skapa 50 separata målgrupper utifrån deras plats på WKND:s webbplats.
    * [Målgrupper](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) Definiera målet för din aktivitet och används var som helst där målinriktning finns tillgänglig. Målgrupper är en definierad uppsättning besökskriterier. Erbjudandena kan riktas till specifika målgrupper (eller segment). Det är bara besökare som tillhör den målgruppen som ser upplevelsen som är riktad till dem.  Du kan till exempel leverera ett erbjudande till en publik som består av besökare som använder en viss webbläsare eller från en viss geografisk plats.
@@ -85,11 +84,11 @@ För den här övningen måste följande användare vara involverade och för at
 1. Logga in med din Adobe ID och kontrollera att du är i rätt organisation.
 1. Klicka på **Mål** och sedan **starta** Adobe Target.
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
+   ![EXPERIENCE CLOUD - ADOBE TARGET](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
 
-1. Navigera till **Erbjudanden** och söka efter&quot;WKND&quot;-erbjudanden. Du bör kunna se listan över Experience Fragments-variationer, som exporteras från AEM som HTML Offers. Varje erbjudande motsvarar ett läge. Till exempel: *WKND SkateFest California* är erbjudandet som skickas till en WKND Site-besökare från Kalifornien.
+1. Navigera till **Erbjudanden** och söka efter&quot;WKND&quot;. Du bör kunna se listan över Experience Fragments-variationer, som exporteras från AEM som HTML Offers. Varje erbjudande motsvarar ett läge. Till exempel: *WKND SkateFest California* är erbjudandet som skickas till en WKND Site-besökare från Kalifornien.
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/html-offers.png)
+   ![EXPERIENCE CLOUD - ADOBE TARGET](assets/personalization-use-case-1/html-offers.png)
 
 1. I huvudnavigeringen klickar du på **Målgrupper**.
 
@@ -99,7 +98,7 @@ För den här övningen måste följande användare vara involverade och för at
 
    **Målgruppsnamnformat: WKND-\&lt;*läge*\>**
 
-   ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
+   ![EXPERIENCE CLOUD - ADOBE TARGET](assets/personalization-use-case-1/audience-target-1.png)
 
 1. Klicka **Lägg till regel > Geo**.
 1. Klicka **Välj** väljer du sedan något av följande alternativ:
@@ -107,7 +106,7 @@ För den här övningen måste följande användare vara involverade och för at
    * **Läge** *(Välj tillstånd för WKND Site SkateFest Campaign)*
    * Ort
    * Postnummer
-   * Latitud
+   * Latitude
    * Longitud
    * DMA
    * Mobiloperatör
@@ -117,9 +116,9 @@ För den här övningen måste följande användare vara involverade och för at
    >[!NOTE]
    >En besökares IP-adress skickas med en mbox-begäran, en gång per besök (session), för att matcha parametrar för geomål för den besökaren.
 
-1. Välj operatorn som **matchar**, ange ett lämpligt värde (t.ex.: Kalifornien) och **Spara** dina ändringar. Ange i så fall delstatens namn.
+1. Välj operatorn som **matchar**, ange ett lämpligt värde (t.ex. Kalifornien) och **Spara** dina ändringar. Ange i så fall delstatens namn.
 
-   ![Adobe Target - Georegel](assets/personalization-use-case-1/audience-geo-rule.png)
+   ![Adobe Target - Geo-regel](assets/personalization-use-case-1/audience-geo-rule.png)
 
    >[!NOTE]
    >Du kan ha flera regler tilldelade till en målgrupp.
@@ -137,7 +136,7 @@ I nuläget har vi skapat målgrupper för alla WKND Site-besökare i olika delst
 1. Välj **Webb** kanal och välj **Visual Experience Composer**.
 1. Ange **Aktivitets-URL** och klicka **Nästa** för att öppna Visual Experience Composer.
 
-   Publicerings-URL för WKND-webbplatsens hemsida: http://localhost:4503/content/wknd/en.html
+   Publicerings-URL för WKND-hemsida: http://localhost:4503/content/wknd/en.html
 
    ![Experience Targeting Activity](assets/personalization-use-case-1/target-activity.png)
 
@@ -149,7 +148,7 @@ I nuläget har vi skapat målgrupper för alla WKND Site-besökare i olika delst
 
    ![VEC](assets/personalization-use-case-1/vec.png)
 
-1. Klicka på **Lägg till Experience Targeting** under Publiker och välj WKND-California-målgrupp och klicka på **Nästa**.
+1. Om du vill lägga till en publik i din VEC klickar du på **Lägg till Experience Targeting** under Publiker och välj WKND-California-målgrupp och klicka på **Nästa**.
 
    ![VEC](assets/personalization-use-case-1/vec-select-audience.png)
 
@@ -162,7 +161,7 @@ I nuläget har vi skapat målgrupper för alla WKND Site-besökare i olika delst
 1. Upprepa steg 7-10 för att lägga till Experience Targeting för de andra lägena och välj motsvarande HTML-erbjudande.
 1. Klicka **Nästa** för att fortsätta, och ni kan se en mappning för målgrupper till upplevelser.
 1. Klicka **Nästa** för att gå över till mål och inställningar.
-1. Välj rapportkälla och identifiera ett primärt mål för aktiviteten. I vårt scenario väljer vi rapportkällan som **Adobe Target**, mäta aktivitet som **Konvertering**, åtgärd som visad på en sida och URL som pekar på sidan WKND SkateFest Details.
+1. Välj rapportkälla och identifiera ett primärt mål för din aktivitet. I vårt scenario väljer vi rapportkällan som **Adobe Target**, mäta aktivitet som **Konvertering**, åtgärd som visad på en sida och URL som pekar på sidan WKND SkateFest Details.
 
    ![Mål och målinriktning - Mål](assets/personalization-use-case-1/goal-metric-target.png)
 
@@ -175,7 +174,7 @@ I nuläget har vi skapat målgrupper för alla WKND Site-besökare i olika delst
    ![Aktivera aktivitet](assets/personalization-use-case-1/activate-activity.png)
 
 1. Din WKND SkateFest-kampanj är nu tillgänglig för alla WKND-webbplatsbesökare.
-1. Navigera till [Startsida för WKND-webbplats](http://localhost:4503/content/wknd/en.html)och du bör kunna se WKND SkateFest-erbjudandet baserat på din geografiska plats (*läge: Kalifornien*).
+1. Navigera till [Startsida för WKND-webbplats](http://localhost:4503/content/wknd/en.html)och du bör kunna se WKND SkateFest-erbjudandet baserat på din geografiska plats (*delstat: Kalifornien*).
 
    ![Aktivitets-QA](assets/personalization-use-case-1/wknd-california.png)
 

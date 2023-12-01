@@ -1,33 +1,33 @@
 ---
 title: AEM UI-tillägg modal
-description: Lär dig hur du skapar ett AEM gränssnittstillägg modalt.
+description: Lär dig hur du skapar ett AEM gränssnittstillägg modal.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
-# Förlängning modal
+# Förlängningsmodalt
 
 ![AEM UI-tillägg modal](./assets/modal/modal.png){align="center"}
 
 AEM är ett sätt att koppla anpassade användargränssnitt till AEM användargränssnittstillägg.
 
-Modulerna är React-program som bygger på [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/)och kan skapa valfritt anpassat användargränssnitt som krävs av tillägget, inklusive, men inte begränsat till:
+Modulerna är React-applikationer som bygger på [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/)och kan skapa valfritt anpassat användargränssnitt som krävs av tillägget, inklusive, men inte begränsat till:
 
 + Bekräftelsedialogrutor
 + [Inmatningsformulär](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [Förloppsindikatorer](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [Progress-indikatorer](https://react-spectrum.adobe.com/react-spectrum/#status)
 + [Sammanfattning av resultat](https://react-spectrum.adobe.com/react-spectrum/#collections)
 + Felmeddelanden
 + ... eller till och med ett fullfjädrat React-program med flera vyer!
@@ -78,14 +78,14 @@ function App(props) {
 }
 ```
 
-## Tilläggsregistrering
+## Tillägg - registrering
 
 Om du vill öppna en modal anrop `guestConnection.host.modal.showUrl(..)` görs från tilläggets `onClick(..)` funktion. `showUrl(..)` skickas ett JavaScript-objekt med nyckel/värden:
 
 + `title` innehåller namnet på namnet på spärrkoden som visas för användaren
 + `url` är den URL som anropar [Reaktionsflöde](#modal-routes) ansvarar för modets inledande vy.
 
-Det är av största vikt att `url` skickat till `guestConnection.host.modal.showUrl(..)` löser problemet så att det går att dirigera i tillägget, annars visas ingenting i det modala.
+Det är av största vikt att `url` skickat till `guestConnection.host.modal.showUrl(..)` löser problemet så att det går att dirigera i tillägget, i annat fall visas ingenting i det modala.
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 

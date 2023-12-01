@@ -3,13 +3,13 @@ title: Konfigurerar formulärdatamodell
 description: Skapa formulärdatamodell baserad på RDBMS-datakälla
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 5812
+jira: KT-5812
 thumbnail: kt-5812.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -29,14 +29,14 @@ Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att k
 * Spara ändringarna
 
 >[!NOTE]
->URI:n, användarnamnet och lösenordet för JDBC-anslutningen ändras beroende på konfigurationen för MySQL-databasen.
+>URI:n, användarnamnet och lösenordet för JDBC-anslutningen ändras beroende på din MySQL-databaskonfiguration.
 
 
 ## Skapar formulärdatamodell
 
 * Peka webbläsaren till [Dataintegrering](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)
 * Klicka _Skapa_->_Formulärdatamodell_
-* Ge formulärdatamodellen beskrivande namn och titel, t.ex. **Medarbetare**
+* Ge formulärdatamodellen beskrivande namn och titel som **Medarbetare**
 * Klicka på _Nästa_
 * Markera datakällan som skapades i det tidigare avsnittet (forumen)
 * Klicka _Skapa_->Redigera för att öppna den nya formulärdatamodellen i redigeringsläge
@@ -67,7 +67,7 @@ Följande steg visar hur du skapar en en-till-många-association
 
 * Välj en enhet och klicka på _Lägg till association_
 * Ange en meningsfull titel och identifierare för associationen och andra egenskaper enligt skärmbilden nedan
-   ![association](assets/association-entities-1.png)
+  ![association](assets/association-entities-1.png)
 
 * Klicka på _redigera_ ikon under avsnittet Argument
 

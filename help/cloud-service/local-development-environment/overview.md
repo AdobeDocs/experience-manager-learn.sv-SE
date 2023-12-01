@@ -4,14 +4,14 @@ description: Översikt över den lokala utvecklingsmiljön i Adobe Experience Ma
 feature: Developer Tools
 version: Cloud Service
 doc-type: article
-kt: 3290
+jira: KT-3290
 thumbnail: 32565.jpg
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%

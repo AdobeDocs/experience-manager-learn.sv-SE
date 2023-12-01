@@ -6,8 +6,9 @@ version: 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -54,7 +55,7 @@ I AMS baslinjekonfigurationsgrupper hittar du våra inkluderingar enligt nedan:
 ```
 
 
-När du skapar regler för vad som ska cachelagras eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+När du skapar regler för vad som ska cachas eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 
 ## Cacheförfattare
@@ -132,7 +133,7 @@ Cachereglerna innehåller en -programsats som innehåller filen `/etc/httpd/conf
 ```
 
 I ett författarscenario ändras innehållet hela tiden och i rätt syfte. Du vill bara cachelagra objekt som inte ändras så ofta.
-Vi har regler att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för slutanvändare som använder webbplatsen.
+Vi har regler att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
 
@@ -170,7 +171,7 @@ Som standard vill du ange `ignoreUrlParams` regler som tillåter `*`.  Betyder a
 
 Här är ett exempel där någon har skapat en mekanism för djuplänksreferens för sociala medier som använder argumentreferensen i URI:n för att ta reda på var personen kom ifrån.
 
-<b>Ignorerbart exempel:</b>
+<b>Okänt exempel:</b>
 
 - https://www.we-retail.com/home.html?reference=android
 - https://www.we-retail.com/home.html?reference=facebook
@@ -187,12 +188,12 @@ Konfigurera `ignoreUrlParams` som tillåtelselista kommer att hjälpa till att l
 
 När Dispatcher ser begäran kommer den att ignorera det faktum att begäran har `query` parameter för `?` referens och fortfarande cachelagra sidan
 
-<b>Dynamiskt exempel:</b>
+<b>Exempel:</b>
 
 - https://www.we-retail.com/search.html?q=fruit
 - https://www.we-retail.com/search.html?q=vegetables
 
-Tänk på att om du har frågeparametrar som gör att en sidändring görs i utdata måste du undanta dem från din ignorerade lista och göra sidan icke-cachelagrad igen.  En söksida som använder en frågeparameter ändrar till exempel den återgivna råa-html.
+Tänk på att om du har frågeparametrar som gör att en sidändring görs i utdata måste du undanta dem från din ignorerade lista och göra sidan icke-cachelagrad igen.  En söksida som använder en frågeparameter ändrar till exempel den återgivna råa-html-filen.
 
 Här är alltså HTML-källan för varje sökning:
 
@@ -249,7 +250,7 @@ Exempel:
     }
 ```
 
-Sidor som använder frågeparametrar via Javascript fungerar fortfarande helt och hållet utan parametrar i den här inställningen.  Eftersom de inte ändrar HTML-filen i vila.  De använder javascript för att uppdatera webbläsarnas körtider i den lokala webbläsaren.  Det innebär att om du använder frågeparametrarna med javascript är det högst troligt att du kan ignorera den här parametern för sidcache.  Tillåt att den sidan cache-lagras och utnyttja prestandaförbättringarna!
+Sidor som använder frågeparametrar via Javascript fungerar fortfarande helt och hållet utan parametrar i den här inställningen.  Eftersom de inte ändrar HTML-filen i vila.  De använder javascript för att uppdatera webbläsarnas körtider i den lokala webbläsaren.  Det innebär att om du använder frågeparametrarna med javascript är det högst troligt att du kan ignorera den här parametern för sidcachning.  Tillåt att den sidan cache-lagras och utnyttja prestandaförbättringarna!
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
 
@@ -257,7 +258,7 @@ Att hålla koll på dessa sidor kräver viss uppladdning men är väl värt pres
 </div>
 <br/>
 
-## Cachelagra svarshuvuden
+## Cachelagra svarsrubriker
 
 Det är ganska uppenbart att Dispatcher caches `.html` sidor och klientlibs (dvs. `.js`, `.css`), men visste du att den även kan cachelagra särskilda svarshuvuden längs med innehållet i en fil med samma namn men en `.h` filtillägg. På så sätt kan nästa svar inte bara på innehållet utan även på de svarshuvuden som ska följa med det från cachen.
 
@@ -267,7 +268,7 @@ Ibland har objekt särskilda rubriker som hjälper till att styra cachefilens ko
 
 Dessa värden rensas som standard när de cachelagras och Apache httpd-webbservern gör sin egen bearbetning av resursen med sina vanliga filhanteringsmetoder, som vanligtvis är begränsad till mime-typgissning baserat på filtillägg.
 
-Om du har Dispatcher cachelagrar resursen och de rubriker du vill ha kan du visa rätt upplevelse och se till att all information görs i klientens webbläsare.
+Om du har Dispatcher cachelagrar resursen och de rubriker du vill ha kan du visa rätt upplevelse och försäkra dig om att all information gör den till klientens webbläsare.
 
 Här är ett exempel på en servergrupp med de rubriker som ska cachelagras angivna:
 
@@ -299,7 +300,7 @@ På AEM system som har mycket aktivitet från författare som gör många sidakt
 
 ### Exempel på hur detta fungerar:
 
-Om du har 5 begäranden om ogiltigförklaring `/content/exampleco/en/` allt sker inom 3 sekunder.
+Om du har 5 begäranden om ogiltigförklaring `/content/exampleco/en/` allt sker inom en 3-sekundersperiod.
 
 Om den här funktionen är inaktiverad blir cachekatalogen ogiltig `/content/exampleco/en/` 5 gånger
 
@@ -324,7 +325,7 @@ Här är ett exempel på funktionen som konfigureras i servergruppens konfigurat
 ```
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker kommer Dispatcher inte att göra något särskilt här.
+Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör inte Dispatcher något särskilt här.
 </div>
 
 ## Regler för cachefilter

@@ -1,16 +1,17 @@
 ---
 title: Navigering
-description: Utforska grunderna för navigering i AEM Assets.
+description: Grunderna för navigering i AEM Assets.
 feature: Asset Management
 role: User
 level: Beginner
 version: Cloud Service
-kt: 4305
+jira: KT-4305
 thumbnail: 32046.jpg
 topic: Content Management
 last-substantial-update: 2021-09-23T00:00:00Z
+doc-type: Feature Video
 exl-id: eba697fc-02ca-4ac8-82d5-7b230ef4d45b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
@@ -19,6 +20,6 @@ ht-degree: 0%
 
 # Navigering
 
-Utforska grunderna för navigering i AEM Assets.
+Grunderna för navigering i AEM Assets.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)

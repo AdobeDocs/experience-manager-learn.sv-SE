@@ -7,8 +7,8 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
-kt: 14238
-source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
+jira: KT-14238
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%

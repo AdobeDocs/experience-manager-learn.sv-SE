@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7635
+jira: KT-7635
 thumbnail: kt-7635.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # Redigerbara behållarkomponenter
 
-[Fasta komponenter](./spa-fixed-component.md) ger viss flexibilitet vid framtagning SPA innehåll, men det här tillvägagångssättet är stelt och kräver att utvecklare definierar den exakta sammansättningen av det redigerbara innehållet. SPA Editor stöder användningen av behållarkomponenter i SPA för att skapa exceptionella upplevelser för författare. Med behållarkomponenter kan författare dra och släppa tillåtna komponenter i behållaren och redigera dem, precis som i traditionell AEM Sites-redigering!
+[Fasta komponenter](./spa-fixed-component.md) ger viss flexibilitet vid framtagning SPA innehåll, men det här tillvägagångssättet är stelt och kräver att utvecklare definierar den exakta kompositionen för det redigerbara innehållet. SPA Editor stöder användningen av behållarkomponenter i SPA för att skapa exceptionella upplevelser för författare. Med behållarkomponenter kan författare dra och släppa tillåtna komponenter i behållaren och redigera dem, precis som i traditionell AEM Sites-redigering!
 
 ![Redigerbara behållarkomponenter](./assets/spa-container-component/intro.png)
 
@@ -78,7 +79,7 @@ The `Home.js` filen ska se ut så här:
 
 ## Skapa redigerbara komponenter
 
-För att få full effekt av de flexibla redigeringsfunktionerna i SPA Editor. Vi har redan skapat en redigerbar Title-komponent, men vi ska göra några till så att författarna kan använda redigerbar text och bilder i den nyligen tillagda ResponsiveGrid-komponenten.
+För att få full effekt av de flexibla redigeringsfunktionerna i SPA. Vi har redan skapat en redigerbar Title-komponent, men vi ska göra några till så att författarna kan använda redigerbar text och bilder i den nyligen tillagda ResponsiveGrid-komponenten.
 
 De nya redigerbara komponenterna Text och Bildredigering skapas med det redigerbara komponentdefinitionsmönstret som exporteras i [redigerbara fasta komponenter](./spa-fixed-component.md).
 
@@ -288,7 +289,7 @@ AEM behållarkomponenter använder profiler för att styra deras tillåtna kompo
 
 Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Verktyg > Allmänt > Mallar > WKND-app__
 1. Redigera __SPA__
 
@@ -310,11 +311,11 @@ Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
 1. Tryck __Klar__
 
-## Redigera behållaren i AEM
+## Redigerar behållaren i AEM
 
 Efter att SPA uppdaterats för att bädda in `<ResponsiveGrid...>`, omslag för tre redigerbara React-komponenter (`EditableTitle`, `EditableText`och `EditableImage`), och AEM uppdateras med en matchande mallprincip, kan vi börja skapa innehåll i behållarkomponenten.
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App__
 1. Tryck __Startsida__ och markera __Redigera__ i det övre åtgärdsfältet
    + En&quot;Hello World&quot;-textkomponent visas, eftersom den lades till automatiskt när projektet genererades från den AEM projekttypen
@@ -336,7 +337,7 @@ Efter att SPA uppdaterats för att bädda in `<ResponsiveGrid...>`, omslag för 
    1. Tryck __Klar__
 1. __Upphovsman__ den __Bild__ komponent
    1. Dra en bild i från sidofältet (efter växling till resursvyn) på komponenten Bild
-   1. Tryck på komponenten Image (Bild) och tryck på __wrench__ ikon som ska redigeras
+   1. Tryck på komponenten Bild och tryck på __wrench__ ikon som ska redigeras
    1. Kontrollera __Bilden är dekorativ__ kryssruta
    1. Tryck __Klar__
 1. __Upphovsman__ den __Text__ komponent

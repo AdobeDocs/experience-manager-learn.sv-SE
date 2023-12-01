@@ -4,12 +4,12 @@ description: Konfigurerar rotpanelens layout till"Tabbar till vänster" och läg
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 28536.jpg
-kt: 4209
+jira: KT-4209
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a68c41b8-3e80-4b25-a933-9ceb8aee1e01
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%

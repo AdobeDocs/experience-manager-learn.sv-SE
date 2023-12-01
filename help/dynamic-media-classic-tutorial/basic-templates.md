@@ -2,15 +2,12 @@
 title: Introduktion till grundläggande mallar
 description: Lär dig mer om grundläggande mallar i Dynamic Media Classic, bildbaserade mallar som anropas från Image Server och består av bilder och återgiven text. En mall kan ändras dynamiskt via URL:en när mallen har publicerats. Du får lära dig hur du överför ett Photoshop PSD till Dynamic Media Classic för att använda det som grund för en mall. Skapa en enkel mall som består av bildlager. Lägg till textlager och gör dem variabla med hjälp av parametrar. Skapa en mall-URL och ändra bilden dynamiskt i webbläsaren.
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 0%
@@ -21,14 +18,14 @@ ht-degree: 0%
 
 I Dynamic Media Classic-termer är en mall ett dokument som kan ändras dynamiskt via URL:en när mallen har publicerats. Dynamic Media Classic erbjuder grundläggande mallar, bildbaserade mallar som anropas från Image Server och består av bilder och återgiven text.
 
-En av de kraftfullaste aspekterna med mallar är att de har direktintegreringspunkter som gör att du kan koppla dem till databasen. Så du kan inte bara spara upp en bild och ändra storlek på den, du kan söka i databasen efter nya objekt eller försäljningsobjekt och få bilden att se ut som en övertäckning. Du kan be om en beskrivning av objektet och få det att visas som en etikett i ett teckensnitt som du väljer och en layout. Möjligheterna är obegränsade.
+En av de kraftfullaste aspekterna med mallar är att de har direktintegreringspunkter som gör att du kan koppla dem till databasen. Så du kan inte bara spara en bild och ändra storlek på den, du kan söka efter nya objekt eller försäljningsobjekt i databasen och få bilden att se ut som en övertäckning. Du kan be om en beskrivning av objektet och få det att visas som en etikett i ett teckensnitt som du väljer och en layout. Möjligheterna är obegränsade.
 
 Grundmallar kan implementeras på många olika sätt, från enkla till komplexa. Till exempel:
 
-- Grundläggande marknadsföring. Använder etiketter som&quot;fri frakt&quot; om produkten har fri frakt. Etiketterna är konfigurerade av säljarna i Photoshop och webben använder logik för att veta när de ska användas i bilden.
+- Grundläggande marknadsföring. Använder etiketter som&quot;fri frakt&quot; om produkten har fri frakt. Etiketterna är konfigurerade av säljteamet i Photoshop, och webben använder logik för att veta när de ska användas på bilden.
 - Avancerad marknadsföring. Varje mall har flera variabler och kan visa mer än ett alternativ samtidigt. Använder en databas, ett lager och affärsregler för att avgöra när en produkt ska visas som&quot;Just In&quot;, på&quot;Clearance&quot; eller&quot;Sold Out&quot;. Du kan också använda genomskinlighet bakom produkten för att visa den på olika bakgrunder, t.ex. i olika rum. Samma mallar och/eller resurser kan återanvändas på produktinformationssidan för att visa en större eller zoombar version av samma produkt på olika bakgrunder.
 
-Det är viktigt att veta att Dynamic Media Classic bara tillhandahåller den visuella delen av dessa mallbaserade program. Dynamic Media Classic företag eller deras integreringspartners måste tillhandahålla affärsregler, databaser och utvecklingskompetens för att skapa programmen. Det finns inget inbyggt mallprogram; designers ställer in mallen i Dynamic Media Classic, och utvecklare använder URL-anrop för att ändra variablerna i mallen.
+Det är viktigt att veta att Dynamic Media Classic bara tillhandahåller den visuella delen av dessa mallbaserade program. Dynamic Media Classic företag eller deras integreringspartners måste tillhandahålla affärsregler, databaser och utvecklingskompetens för att skapa programmen. Det finns inget inbyggt mallprogram, designers konfigurerar mallen i Dynamic Media Classic och utvecklare använder URL-anrop för att ändra variablerna i mallen.
 
 I slutet av kursen får du lära dig att:
 
@@ -39,7 +36,7 @@ I slutet av kursen får du lära dig att:
 
 >[!NOTE]
 >
->Alla URL-adresser i detta kapitel är endast avsedda som illustrationer. de är inte direktlänkar.
+>Alla URL-adresser i det här kapitlet är endast avsedda som illustrationer. De är inte direktlänkar.
 
 ## Översikt över grundläggande mallar
 
@@ -47,7 +44,7 @@ Definitionen av en grundläggande mall (eller bara&quot;mall&quot; för kort) ä
 
 Mallar liknar oftast Photoshop PSD-filer eftersom de har ett liknande arbetsflöde och liknande funktioner.
 
-- Båda består av lager som liknar ark av staplad acetat. Du kan sätta samman delvis genomskinliga bilder och se igenom de genomskinliga områdena i ett lager till lagren under.
+- Båda består av lager som är som ark av staplad acetat. Du kan sätta samman delvis genomskinliga bilder och se igenom de genomskinliga områdena i ett lager till lagren under.
 - Lagren kan flyttas och roteras för att flytta innehållet och opacitets- och blandningslägena kan ändras så att innehållet blir delvis genomskinligt.
 - Du kan skapa textbaserade lager. Kvaliteten kan bli mycket hög eftersom Image Server använder samma textmotor som Photoshop och Illustrator.
 - Enkla lagerstilar kan användas på varje lager för att skapa specialeffekter som skuggor och glöd.
@@ -66,7 +63,7 @@ Eftersom grundläggande mallar vanligtvis utformas i Photoshop men distribueras 
 Mallprojekt kan vara relativt enkla eller extremt komplexa beroende på vilka affärsregler och behov programmet har. Grundmallar anropas från Image Server, men på grund av flexibiliteten i Dynamic Media Classic-miljön kan du till och med kapsla mallar i andra mallar, vilket gör att du kan skapa ganska komplexa bilder som kan länkas med vanliga namngivna variabler.
 
 - Läs mer om [Grundläggande om mallar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html).
-- Lär dig hur du skapar en [Grundläggande mall](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template).
+- Lär dig skapa en [Grundläggande mall](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template).
 
 ## Skapa en grundmall
 
@@ -79,7 +76,7 @@ _Arbetsflödet Grundläggande mall._
 1. Designa och skapa material. De flesta användare gör detta i Adobe Photoshop. Designa material i exakt den storlek du behöver - om det är en bild med 200 pixlar för en miniatyrsida designar du den med 200 pixlar. Om du behöver zooma in den kan du utforma den med en storlek på cirka 2 000 pixlar. Använd Photoshop (och/eller Illustrator sparat som bitmapp) för att skapa resurserna och använd Dynamic Media Classic för att sammanfoga delarna, hantera lagren och lägga till variabler.
 2. När du har utformat grafikresurser överför du dem till Dynamic Media Classic. I stället för att överföra enskilda resurser från PSD rekommenderar vi att du överför hela PSD-filen med lager och låter Dynamic Media Classic skapa en fil per lager med **Behåll lager** vid överföring (se nedan för mer information.) _Textarbetsflöde: Om du skapar dynamisk text överför du även teckensnitten. Dynamisk text är variabel och styrs via URL:en. Om texten är statisk eller bara har några korta fraser som inte ändras - till exempel taggar som säger&quot;Nytt&quot; eller&quot;Försäljning&quot; i stället för&quot;X% av&quot;, där X är ett variabelt nummer - rekommenderar vi att du återger texten i Photoshop i förväg och överför den som rastrerade lager som bilder. Det är enklare och du kan formatera texten exakt som du vill._
 3. Bygg mallen i Dynamic Media Classic med hjälp av mallredigeraren på menyn Skapa och lägg till bildlager. Textarbetsflöde: Skapa textlager i samma redigerare. Det här steget krävs när du skapar en mall manuellt i Dynamic Media Classic. Välj en storlek på arbetsytan som matchar din design, dra och släpp bilder på arbetsytan och ange lageregenskaper (storlek, rotation, opacitet osv.). Du placerar inte alla lager i mallen, bara en platshållare per bildlager. _Textarbetsflöde: Du skapar textlager med textverktyget, ungefär som när du skapar textlager i Photoshop. Du kan välja ett teckensnitt och formatera det med samma alternativ som finns i Photoshop Type-verktyget._ Ett annat arbetsflöde är att ladda upp en PSD och låta Dynamic Media Classic generera en&quot;kostnadsfri&quot; mall, och kan till och med återskapa textlager. Detta diskuteras mer ingående senare.
-4. När lagren har skapats lägger du till parametrar (variabler) i alla egenskaper i lagret som du vill kontrollera via URL:en, inklusive lagrets källa (själva bilden). _Textarbetsflöde: Du kan också lägga till parametrar i textlager, både för att styra textens innehåll, storlek och position samt alla formateringsalternativ som teckensnittsfärg, teckensnittsstorlek, vågrät spårning osv._
+4. När lagren har skapats lägger du till parametrar (variabler) i alla egenskaper i lagret som du vill kontrollera via URL:en, inklusive lagrets källa (själva bilden). _Textarbetsflöde: Du kan också lägga till parametrar i textlager, både för att styra textens innehåll, storlek och position samt alla formateringsalternativ som teckensnittsfärg, teckenstorlek, vågrät spårning osv._
 5. Skapa en bildförinställning som matchar mallens storlek. Vi rekommenderar att du gör detta så att mallen alltid anropas i 1:1-storlek och även lägger till skärpa i stora bildlager som storleksändras för att passa mallen. Om du skapar en mall som ska zoomas är det här steget överflödigt.
 6. Publicera, kopiera webbadressen från Dynamic Media Classic-förhandsgranskning och testa den i en webbläsare.
 
@@ -89,7 +86,7 @@ Innan du överför dina mallresurser till Dynamic Media Classic måste du slutf�
 
 ### Förbereda PSD för överföring
 
-Innan du överför din Photoshop-fil till Dynamic Media Classic bör du förenkla lagren i Photoshop så att det blir enklare att arbeta med och få största möjliga kompatibilitet med Image Server. Din PSD-fil består ofta av många element som Dynamic Media Classic inte känner igen, och du kan också få många små delar som är svåra att hantera. Spara en säkerhetskopia av din överordnad PSD om du skulle behöva redigera originalet senare. Du överför den förenklade kopian och inte den överordnad.
+Innan du överför din Photoshop-fil till Dynamic Media Classic bör du förenkla lagren i Photoshop så att det blir enklare att arbeta med och få största möjliga kompatibilitet med Image Server. Din PSD-fil består ofta av många element som Dynamic Media Classic inte känner igen, och du kan också få många små delar som är svåra att hantera. Kom ihåg att spara en säkerhetskopia av PSD om du skulle behöva redigera originalet senare. Du överför den förenklade kopian och inte mallsidan.
 
 ![bild](assets/basic-templates/basic-templates-2.jpg)
 
@@ -123,18 +120,18 @@ _Fliken Metadata på informationssidan för ett teckensnitt i Dynamic Media Clas
 
 Dynamic Media Classic använder teckensnittets filnamn (ACaslonPro-Semibold) som sitt resurs-ID, men det är inte det namn som används av mallen. I mallen används RTF-namnet (Rich Text Format), som finns längst ned. RTF är det inbyggda&quot;språket&quot; i Image Server-textmotorn.
 
-Om du behöver ändra teckensnitt via URL:en måste du anropa teckensnittets RTF-namn (inte resurs-ID), annars får du ett felmeddelande. I det här fallet ska teckensnittets namn vara&quot;Adobe Caslon Pro&quot;. Vi kommer att diskutera mer om teckensnitt och RTF i ämnet RTF och textparametrar nedan.
+Om du behöver ändra teckensnitt via URL:en måste du anropa teckensnittets RTF-namn (inte resurs-ID), annars får du ett felmeddelande. I det här fallet ska teckensnittets namn vara&quot;Adobe Caslon Pro&quot;. Vi diskuterar mer om teckensnitt och RTF i ämnet RTF och textparametrar nedan.
 
 De vanligaste teckensnittsfilformaten som finns i Windows och Mac är OpenType och TrueType. OpenTypen har tillägget .OTF, medan TrueType är .TTF. Båda formaten fungerar lika bra i Dynamic Media Classic.
 
 ### Markera alternativ när du överför PSD
 
-Du behöver inte ladda upp en Photoshop-fil (PSD) för att skapa en mall; en mall kan byggas ut från alla bildresurser i Dynamic Media Classic. Om du överför ett PSD kan det dock bli enklare att redigera, eftersom du vanligtvis redan har dessa resurser i ett PSD med lager. Dessutom genererar Dynamic Media Classic automatiskt en mall när du överför en PSD med lager.
+Du behöver inte överföra en Photoshop-fil (PSD) för att skapa en mall. En mall kan byggas ut från alla bildresurser i Dynamic Media Classic. Om du överför ett PSD kan det dock bli enklare att redigera, eftersom du vanligtvis redan har dessa resurser i ett PSD med lager. Dessutom genererar Dynamic Media Classic automatiskt en mall när du överför en PSD med lager.
 
 - **Behåll lager.** Det här är det viktigaste alternativet. Detta anger för Dynamic Media Classic att skapa en bildresurs per Photoshop-lager. Om du inte markerar det här alternativet inaktiveras alla andra alternativ och PSD förenklas till en enda bild.
 - **Skapa** **Mall.** Det här alternativet tar de olika genererade lagren och skapar automatiskt en mall genom att kombinera dem igen. En nackdel med att använda den automatiskt genererade mallen är att Dynamic Media Classic placerar alla lager i en fil, medan vi bara behöver en enda platshållare per lager. Det är lätt nog att ta bort de extra lagren, men om du har många lager går det snabbare att återskapa dem. Byt namn på den nya mallen. Om du inte gör det skrivs den över nästa gång du överför samma PSD.
-- **Extrahera text.** Detta återskapar textlager i PSD som textlager i mallen med det teckensnitt som du överförde. Det här steget krävs om texten finns på en bana i Photoshop och du vill behålla den sökvägen i mallen. Den här funktionen kräver att du använder **Skapa mall** eftersom den extraherade texten bara kan skapas av en mall som genereras vid överföring.
-- **Utöka lager till bakgrundsstorlek.** Med den här inställningen får varje lager samma storlek som hela arbetsytan i PSD. Det här är mycket användbart för lager som alltid är fasta i position: Om du byter bilder till samma lager måste du kanske flytta dem.
+- **Extrahera text** Detta återskapar textlager i PSD som textlager i mallen med det teckensnitt som du överförde. Det här steget krävs om texten finns på en bana i Photoshop och du vill behålla den sökvägen i mallen. Den här funktionen kräver att du använder **Skapa mall** eftersom den extraherade texten bara kan skapas av en mall som genereras vid överföring.
+- **Utöka lager till bakgrundsstorlek.** Med den här inställningen får varje lager samma storlek som hela arbetsytan i PSD. Det här är mycket användbart för lager som alltid är fasta i positionen. I annat fall kan du behöva flytta dem när du byter bilder till samma lager.
 - **Namnge lager.** Detta anger för Dynamic Media Classic hur varje resurs som genereras per lager ska namnges. Vi rekommenderar antingen **Photoshop** **och lager** **Namn** eller Photoshop och **Lager** **Nummer**. Båda alternativen använder namnet PSD som första del av namnet och lägger antingen till lagernamnet eller siffran i slutet. Om du till exempel har PSD som heter &quot;shirt.psd&quot; och har lager som heter &quot;front&quot;, &quot;sleeves&quot; och &quot;collar&quot; om du överför med **Photoshop och** Lager **Namn** Dynamic Media Classic genererar tillgångs-ID:n &quot;shirt_front&quot;,&quot;shireves&quot; och &quot;shirt_collar&quot;. Om du använder något av dessa alternativ är namnet unikt i Dynamic Media Classic.
 
 ## Skapa en mall med bildlager
@@ -145,7 +142,7 @@ Du behöver inte ladda upp en Photoshop-fil (PSD) för att skapa en mall; en mal
 
 Vi börjar med att bekanta oss med redigeringsgränssnittet.
 
-I det vänstra mitten visas arbetsytan med en förhandsvisning av den färdiga mallen. Till höger finns panelerna Lager och Lageregenskaper. Det är här du arbetar mest.
+I det vänstra mitten visas arbetsytan med en förhandsvisning av den färdiga mallen. Till höger finns panelerna Lager och Lageregenskaper. Det är här du gör mest jobb.
 
 ![bild](assets/basic-templates/basic-templates-5.jpg)
 
@@ -154,7 +151,7 @@ _Bygg mallsidan Basics._
 - **Förhandsgranska/arbetsyta.** Detta är huvudfönstret. Här kan du flytta, ändra storlek på och rotera lager med musen. Lagerkonturer visas som streckade linjer.
 - **Lager.** Det liknar lagerpanelen i Photoshop. När du lägger till lager i mallen visas de här. Lager staplas uppifrån och ned - det översta lagret på panelen Lager visas ovanför de andra under det i listan.
 - **Lageregenskaper.** Här kan du justera alla egenskaper för ett lager med hjälp av numeriska kontroller. Markera först ett lager och justera sedan dess egenskaper.
-- **Sammansatt** **URL.** Längst ned i användargränssnittet finns området Sammansatt URL. Detta beskrivs inte i det här avsnittet av självstudiekursen, men här ser du hur mallen dekonstrueras som en serie URL-modifierare för bildservering. Det här området är redigerbart - om du är mycket bekant med Image Server-kommandon kan du redigera mallen manuellt här. Men du kan också bryta den. Precis som Photoshop börjar lagernumreringen på 0. Arbetsytan är lager 0 och det första lagret du lägger till själv är lager 1. Blandningslägena avgör hur ett lagers pixlar blandas med de underliggande pixlarna. Du kan skapa en mängd olika specialeffekter med hjälp av blandningslägen.
+- **Sammansatt** **URL.** Längst ned i användargränssnittet finns området Sammansatt URL. Detta beskrivs inte i det här avsnittet av självstudiekursen, men här ser du hur mallen dekonstrueras som en serie URL-modifierare för bildservering. Det här området är redigerbart - om du är mycket bekant med Image Server-kommandon kan du redigera mallen manuellt här. Men du kan också bryta den. Precis som Photoshop börjar lagernumreringen på 0. Arbetsytan är lager 0 och det första lagret du lägger till själv är lager 1. Blandningslägena avgör hur ett lagers pixlar blandas med de underliggande pixlarna. Du kan skapa en mängd olika specialeffekter med blandningslägen.
 
 #### Använda mallbasredigeraren
 
@@ -173,7 +170,7 @@ Här följer arbetsflödesstegen för att starta den grundläggande mallen:
 
 ### Lägga till lagereffekter
 
-Image Server har stöd för några programmatiska lagereffekter - specialeffekter som ändrar utseendet på ett lagers innehåll. De fungerar ungefär som lagereffekter i Photoshop. De bifogas till ett lager men styrs oberoende av lagret. Du kan justera eller ta bort dem utan att göra en permanent ändring i själva lagret.
+Image Server har stöd för några programmatiska lagereffekter - specialeffekter som ändrar utseendet på ett lagers innehåll. De fungerar ungefär som lagereffekter i Photoshop. De är kopplade till ett lager men styrs oberoende av lagret. Du kan justera eller ta bort dem utan att göra en permanent ändring i själva lagret.
 
 - **Skugga**. Använder en skugga utanför lagrets gränser, placerad med en x- och y-pixelförskjutning.
 - **Inre skugga**. Använder en skugga innanför lagrets gränser, placerad med en x- och y-pixelförskjutning.
@@ -184,7 +181,7 @@ Image Server har stöd för några programmatiska lagereffekter - specialeffekte
 
 _Ett lager med och utan skugga_
 
-Om du vill lägga till en effekt klickar du på **Lägg till effekt** och väljer en effekt på menyn. Precis som med vanliga lager kan du markera en effekt på panelen Lager och använda panelen Lageregenskaper för att justera inställningarna.
+Om du vill lägga till en effekt klickar du **Lägg till effekt** och väljer en effekt på menyn. Precis som med vanliga lager kan du markera en effekt på panelen Lager och använda panelen Lageregenskaper för att justera inställningarna.
 
 Skuggeffekter förskjuts vågrätt eller lodrätt från lagret, medan glödeffekter används jämnt i alla riktningar. Innereffekter fungerar ovanpå de ogenomskinliga delarna av lagret, medan yttre effekter bara påverkar de genomskinliga områdena.
 
@@ -212,11 +209,11 @@ Det här är arbetsflödet för att skapa parametrar:
 1. Välj **På** bredvid namnet på varje egenskap som du vill göra till en parameter. Ett standardparameternamn visas. Du kan bara lägga till parametrar till egenskaper som har ändrats från standardläget.
 
    - Om du t.ex. lägger till ett lager och behåller det vid standardinställningen 0,0 visas inte en **Position** -egenskap. Om du vill åtgärda det flyttar du lagret minst en pixel. Nu kommer Dynamic Media Classic att exponeras **Position** som en egenskap kan du parametrisera.
-   - Om du vill lägga till en parameter till egenskapen show/hide (som aktiverar och inaktiverar lagret) klickar du på knappen **Visa** eller **Göm lager** om du vill avaktivera lagret (du kan aktivera det efteråt om du vill). Dynamic Media Classic kommer nu att visa **Dölj** egenskap som kan parametriseras.
+   - Om du vill lägga till en parameter till egenskapen show/hide (som aktiverar och inaktiverar lagret) klickar du på knappen **Visa** eller **Göm lager** om du vill avaktivera lagret (du kan aktivera det efteråt om du vill). Dynamic Media Classic visar nu en **Dölj** egenskap som kan parametriseras.
 
 1. Byt namn på standardparameternamnen till något som är enklare att identifiera i URL:en. Om du till exempel vill lägga till en parameter för att ändra banderolllagret ovanpå en bild ändrar du standardnamnet för&quot;layer_2_src&quot; till&quot;banner&quot;.
 1. Tryck **Stäng** för att avsluta parameterskärmen.
-1. Upprepa den här processen för andra lager genom att klicka på **Parametrar** och lägga till och byta namn på parametrar.
+1. Upprepa detta för andra lager genom att klicka på **Parametrar** och lägga till och byta namn på parametrar.
 1. Spara ändringarna när du är klar.
 
 >[!TIP]
@@ -233,7 +230,7 @@ Nu ska du lära dig hur du skapar en grundläggande mall som innehåller textlag
 
 ### Dynamisk text
 
-Nu vet du hur du skapar en grundläggande mall med bildlager. För många program är detta allt du behöver. Som du såg i föregående övning kan lager med enkel text (till exempel&quot;Försäljning&quot; och&quot;Nytt&quot;) rastreras och behandlas som bilder eftersom texten inte behöver ändras.
+Nu vet du hur du skapar en grundläggande mall med hjälp av bildlager. För många program är detta allt du behöver. Som du såg i föregående övning kan lager med enkel text (till exempel&quot;Försäljning&quot; och&quot;Nytt&quot;) rastreras och behandlas som bilder eftersom texten inte behöver ändras.
 
 Men tänk om du behöver:
 
@@ -268,7 +265,7 @@ Du skriver text med textredigeraren. Textredigeraren är ett WYSIWYG-gränssnitt
 
 _Grundläggande malltextredigerare._
 
-Du gör det mesta av ditt arbete i **Förhandsgranska** som gör att du kan ange text och visa den som den kommer att se ut i mallen. Det finns också en **Källa** som används för att manuellt redigera RTF-filen, om det behövs.
+Du kommer att göra det mesta av ditt arbete i **Förhandsgranska** som gör att du kan ange text och visa den som den kommer att se ut i mallen. Det finns också en **Källa** som används för att manuellt redigera RTF-filen, om det behövs.
 
 Det allmänna arbetsflödet är att använda **Förhandsgranska** för att skriva text.
 
@@ -289,14 +286,14 @@ Här följer arbetsflödesstegen för att lägga till text på mallsidan:
    - Till skillnad från Photoshop och Illustrator kan Image Server justera texten lodrätt i textrutan. Standardvärdet är överkantsjustering. Om du vill ändra detta markerar du texten och väljer **Mitten** eller **Nederkant** från **Lodrät justering** -menyn.
    - Om du gör texten för stor för rutan (eller om textrutan är för liten) kommer hela eller en del av den att beskäras och försvinna. Minska teckenstorleken eller gör rutan större.
 
-5. Klicka **Använd** för att se ändringarna i arbetsytefönstret. Du måste klicka **Använd**, annars förlorar du redigeringarna.
-6. När du är klar klickar du på **Stäng**. Om du vill gå tillbaka till redigeringsläget dubbelklickar du på textlagret för att öppna textredigeraren igen.
+5. Klicka **Använd** för att se ändringarna i arbetsytefönstret. Klicka **Använd**, annars förlorar du redigeringarna.
+6. När du är klar klickar du **Stäng**. Om du vill gå tillbaka till redigeringsläget dubbelklickar du på textlagret för att öppna textredigeraren igen.
 
 Textredigeraren visar exakt hur stort teckensnittet är om du har teckensnittet installerat lokalt på datorn.
 
 ### Om att lägga till parametrar i textlager
 
-Vi följer nu en liknande process för att lägga till textparametrar som vi gjorde för lagerparametrar. Textlager kan också ha lagerparametrar för storlek, position och så vidare. De kan dock ta ytterligare parametrar som gör att du kan styra vilken aspekt som helst av RTF-filen.
+Vi följer nu en liknande process för att lägga till textparametrar som vi gjorde för lagerparametrar. Textlager kan också ha lagerparametrar för storlek, position och så vidare. De kan dock ha ytterligare parametrar som gör att du kan styra vilken aspekt som helst av RTF-filen.
 
 Till skillnad från lagerparametrar markerar du bara det värde som du vill ändra och lägger till en parameter i den i stället för att lägga till en parameter till hela egenskapen.
 
@@ -311,7 +308,7 @@ När du undersöker RTF-filen måste du ta reda på var varje inställning är s
 Du kan se frasen Chocolate Mint Sandal - det är själva texten.
 
 - Det finns en referens till teckensnittet Poor Richard - här väljs teckensnitten.
-- Du kan se ett RGB-värde: \red56\green53\blue4 — this is the text color.
+- Du kan se ett RGB-värde: \red56\green53\blue4 - det här är textfärgen.
 - Även om teckensnittsstorleken är 20 ser du inte siffran 20. Det finns emellertid ett kommando \fs40 - av någon udda anledning mäter RTF teckensnitt som halvpunkter. Därför är \fs40 teckensnittsstorleken!
 
 Du har tillräckligt med information för att skapa parametrar, men det finns en fullständig referens till alla RTF-kommandon i dokumentationen för bildservern. Besök [Dokumentation om bildhantering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c).
@@ -321,8 +318,8 @@ Du har tillräckligt med information för att skapa parametrar, men det finns en
 Så här lägger du till parametrar i textlager.
 
 1. Klicka på **Parametrar** -knapp (a&quot;P&quot;) bredvid namnet på textlagret som du vill skapa parametrar för. Skärmen Parametrar öppnas. The **Vanliga** På -fliken visas varje egenskap i lagret och dess värde. Här kan du lägga till vanliga lagerparametrar.
-1. Klicka på **Text** -fliken. Här ser du RTF:n längst upp; de parametrar som du lägger till ligger under det.
-1. Om du vill lägga till en parameter markerar du det värde du vill ändra och klickar på **Lägg till parameter** -knappen. Se till att du bara markerar värdena för kommandona och inte för hela kommandot. Om jag till exempel vill ange en parameter för teckensnittsnamnet i exemplet RTF ovan skulle jag bara markera &quot;Poor Richard&quot; och lägga till en parameter i det, men inte &quot;\f0&quot;. När du klickar **Lägg till parameter** visas det i listan nedan och parametervärdet visas i rött i RTF-filen medan det fortfarande är markerat. Om du behöver ta bort en parameter klickar du i kryssrutan bredvid **På** för att inaktivera den parametern, så försvinner den.
+1. Klicka på **Text** -fliken. Här visas RTF-filen högst upp. De parametrar som du lägger till finns under den.
+1. Om du vill lägga till en parameter markerar du det värde du vill ändra och klickar på knappen **Lägg till parameter** -knappen. Se till att du bara markerar värdena för kommandona och inte för hela kommandot. Om jag till exempel vill ange en parameter för teckensnittsnamnet i exemplet RTF ovan skulle jag bara markera &quot;Poor Richard&quot; och lägga till en parameter i det, men inte &quot;\f0&quot;. När du klickar **Lägg till parameter** , visas det i listan nedan och parametervärdet visas i rött i RTF-filen medan det fortfarande är markerat. Om du behöver ta bort en parameter klickar du i kryssrutan bredvid **På** för att stänga av den parametern, så försvinner den.
 1. Klicka för att byta namn på parametern till ett mer beskrivande namn.
 1. När du är klar markeras RTF-filen i grönt där det finns parametrar, och parameternamn och värden visas nedan.
 1. Klicka **Stäng** för att avsluta parameterskärmen. Tryck sedan på **Spara** , för att spara mallen. Om du är klar med redigeringen trycker du **Stäng** för att stänga sidan Grundläggande om mallar.
@@ -350,7 +347,7 @@ Läs mer om [Publicera din mall](https://experienceleague.adobe.com/docs/dynamic
 
 ### Skapa mall-URL
 
-En Basic-mall har samma grundläggande URL-syntax som ett normalt bildanrop, vilket förklaras ovan. En mall har vanligtvis fler modifierare - kommandon avgränsade med ett et-tecken (&amp;) - till exempel parametrar med värden. Den största skillnaden är dock att du anropar mallen som huvudbild i stället för att anropa en statisk bild.
+En Basic-mall har samma grundläggande URL-syntax som ett normalt bildanrop, vilket förklaras ovan. En mall har vanligtvis fler modifierare - kommandon avgränsade med ett et-tecken (&amp;) - t.ex. parametrar med värden. Den största skillnaden är dock att du anropar mallen som huvudbild i stället för att anropa en statisk bild.
 
 ![bild](assets/basic-templates/basic-templates-11.jpg)
 

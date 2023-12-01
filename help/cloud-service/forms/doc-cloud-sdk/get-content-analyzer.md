@@ -8,16 +8,16 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 7836.jpg
-kt: 7836
+jira: KT-7836
 exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-# Skapa Analyzer-förfrågningar
+# Skapa analysförfrågningar
 
 Skapa ett JSON-fragment som definierar:
 

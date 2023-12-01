@@ -1,19 +1,19 @@
 ---
 title: Konfigurera App Builder för Asset compute-utbyggbarhet
-description: asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
+description: Asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6268
+jira: KT-6268
 thumbnail: 40183.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Konfigurera App Builder
 
-asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
+Asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
 
 ## Skapa och konfigurera App Builder i Adobe Developer Console{#set-up}
 
@@ -37,20 +37,20 @@ _Klicka igenom konfigurationen av App Builder (inget ljud)_
 
    + __Projektets titel__: `WKND AEM Asset Compute`
    + __Programnamn__: `wkndAemAssetCompute<YourName>`
-      + The __Programnamn__ måste vara unik för alla FApp Builderirefly-projekt och kan inte ändras senare. Att lägga till prefix för företagets eller organisationens namn och efterhandskorrigering med ett meningsfullt suffix är ett bra tillvägagångssätt, till exempel: `wkndAemAssetCompute`.
-      + För självaktivering är det oftast bäst att lägga ditt namn på __Programnamn__, till exempel `wkndAemAssetComputeJaneDoe` för att undvika kollisioner med andra App Builder-projekt.
+      + The __Programnamn__ måste vara unik för alla FApp Builderrefly-projekt och kan inte ändras senare. Att lägga till prefix för företagets eller organisationens namn och efterhandskorrigering med ett meningsfullt suffix är ett bra tillvägagångssätt, till exempel: `wkndAemAssetCompute`.
+      + För självaktivering är det oftast bäst att lägga ditt namn på __Programnamn__, till exempel `wkndAemAssetComputeJaneDoe` för att undvika konflikter med andra App Builder-projekt.
    + Under __Arbetsytor__ lägg till en ny miljö med namnet `Development`
    + Under __Adobe I/O Runtime__ säkerställa __Inkludera körtid i varje arbetsyta__ är markerat
    + Tryck __Spara__ spara projektet
-1. I App Builder-projektet väljer du `Development` från arbetsyteväljaren
+1. Välj `Development` från arbetsyteväljaren
 1. Tryck __+ Lägg till tjänst > API__ för att öppna __Lägg till ett API__ använder du den här metoden för att lägga till följande API:er:
 
-   + __Experience Cloud > Asset compute__
+   + __EXPERIENCE CLOUD > ASSET COMPUTE__
       + Välj __Generera ett nyckelpar__ och tryck på __Generera nyckelpar__ och spara de hämtade `config.zip` till en säker plats för [senare använda](#private-key)
       + Tryck __Nästa__
-      + Välj produktprofil __Integreringar - Cloud Service__ och trycka __Spara konfigurerat API__
-   + __Adobe Services > I/O Events__ och trycka __Spara konfigurerat API__
-   + __Adobe Services > I/O Management API__ och trycka __Spara konfigurerat API__
+      + Välj produktprofil __Integreringar - Cloud Service__ och knacka __Spara konfigurerat API__
+   + __Adobe Services > I/O Events__ och knacka __Spara konfigurerat API__
+   + __Adobe Services > I/O Management API__ och knacka __Spara konfigurerat API__
 
 ## Öppna private.key{#private-key}
 
@@ -61,12 +61,12 @@ När du ställer in [API-integrering för asset compute](#set-up) ett nytt nycke
 
 ## Granska JWT-autentiseringsuppgifterna (Service Account)
 
-Det här Adobe I/O-projektets autentiseringsuppgifter används av den lokala [asset compute Development Tool](../develop/development-tool.md) för att interagera med Adobe I/O Runtime och måste införlivas i Asset compute. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
+Det här Adobe I/O-projektets autentiseringsuppgifter används av den lokala [Asset compute Development Tool](../develop/development-tool.md) för att interagera med Adobe I/O Runtime och måste införlivas i Asset compute. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
 
 ![Autentiseringsuppgifter för Adobe Developer-tjänstkonto](./assets/app-builder/service-account.png)
 
 1. I Adobe I/O Project App Builder-projektet ser du till att `Development` arbetsytan är markerad
-1. Tryck på __Tjänstkonto (JWT)__ under __Autentiseringsuppgifter__
+1. Tryck på __Tjänstkonto (JWT)__ under __Referenser__
 1. Granska inloggningsuppgifterna för Adobe I/O som visas
-   + The __publik nyckel__ längst ned finns __private.key__ motpart i `config.zip` laddas ned när __asset compute API__ har lagts till i det här projektet.
+   + The __publik nyckel__ längst ned finns __private.key__ motpart i `config.zip` laddas ned när __ASSET COMPUTE API__ har lagts till i det här projektet.
       + Om den privata nyckeln förloras eller komprometteras kan den matchande offentliga nyckeln tas bort och ett nytt nyckelpar genereras i eller överförs till Adobe I/O med det här gränssnittet.

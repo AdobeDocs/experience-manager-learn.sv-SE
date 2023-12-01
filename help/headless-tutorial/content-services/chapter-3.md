@@ -7,8 +7,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 46ef11a2-81bd-4ff7-b9ef-9f8cba52c6a8
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -45,9 +46,9 @@ I det här steget skapar du en ny [!DNL Event] for `Punkrock Fest` i `/content/d
 
    Tryck **[!UICONTROL Save]** i det övre åtgärdsfältet för att spara ändringar.
 
-1. Använda [AEM](http://localhost:4502/crx/packmgr/index.jsp)installerar du paketet nedan på AEM Author. Det här paketet innehåller ett antal händelseinnehållsfragment.
+1. Använda [AEM](http://localhost:4502/crx/packmgr/index.jsp), installerar du paketet nedan på AEM. Det här paketet innehåller ett antal händelseinnehållsfragment.
 
-   [Hämta fil: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+   [Hämta fil: GitHub > Resurser > com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28338?quality=12&learn=on)
 
@@ -55,17 +56,17 @@ I det här steget skapar du en ny [!DNL Event] for `Punkrock Fest` i `/content/d
 
 *Det här avsnittet är endast informationsbaserat och är avsett att socialisera den underliggande JCR-strukturen för innehållsfragment som skapats från modeller för innehållsfragment.*
 
-1. Öppna **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** på AEM Author.
+1. Öppna **[CRXDE Lite](http://localhost:4502/crx/de/index.jsp)** på AEM författare.
 1. I CRXDE Lite, på den vänstra hierarkimenyn, navigerar du till [/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content) som representerar [!DNL Punkrock Fest] [!DNL Event] Innehållsfragment i JCR.
 1. Expandera [data](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) nod.
 Granska i **Egenskapspanelen** att den har en egenskap `cq:model` som pekar på [!DNL Event] Definition av innehållsfragmentmodell.
    * **`cq:model`**=**`/conf/settings/wknd-mobile/dam/cfm/models/event`**
-1. Under `data` noden väljer [överordnad](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) nod och granska egenskaperna. Den här noden innehåller det innehåll som samlats in under utvecklingen av en [!DNL Event] Content Fragment Model. JCR-egenskapsnamnen motsvarar egenskapsnamnet för innehållsfragmentmodellen, och värdena motsvarar de värden som har skapats för &quot;[!DNL Punkrock Fest]&quot; [!DNL Event] Innehållsfragment.
+1. Under `data` noden väljer [master](http://localhost:4502/crx/de/index.jsp#/content/dam/wknd-mobile/en/events/punkrock-fest/jcr:content/data/master) nod och granska egenskaperna. Den här noden innehåller det innehåll som samlats in under utvecklingen av en [!DNL Event] Content Fragment Model. JCR-egenskapsnamnen motsvarar egenskapsnamnet för innehållsfragmentmodellen, och värdena motsvarar de värden som har skapats för &quot;[!DNL Punkrock Fest]&quot; [!DNL Event] Innehållsfragment.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28356?quality=12&learn=on)
 
 ## Nästa steg
 
-Vi rekommenderar att du installerar [com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM Author via [AEM [!UICONTROL Package Manager]](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
+Vi rekommenderar att du installerar [com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM författare via [AEM [!UICONTROL Package Manager]](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
 
 * [Kapitel 4 - Definiera mallar AEM innehållstjänster](./chapter-4.md)

@@ -2,17 +2,17 @@
 title: Granska ui.front-modulen för ett projekt i full hög
 description: Granska utvecklingsfasen, driftsättningen och leveranscykeln för ett webbaserat AEM Sites-projekt i full hög.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Nedan visas en högnivårepresentation av __utveckling, driftsättning och lever
 ![Utveckling, driftsättning och leverans av frontend-artefakter](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
 
-Under utvecklingsfasen utförs ändringar i gränssnittet som formatering och omprofilering genom att CSS-, JS-filer uppdateras från `ui.frontend/src/main/webpack` mapp. Under byggtiden [webbpaket](https://webpack.js.org/) plug-inen module-bundler och maven förvandlar dessa filer till optimerade AEM clientlibs under `ui.apps` -modul.
+Under utvecklingsfasen utförs ändringar i gränssnittet som formatering och omprofilering genom att CSS-, JS-filer uppdateras från `ui.frontend/src/main/webpack` mapp. Under byggtiden kan [webbpaket](https://webpack.js.org/) plug-inen module-bundler och maven förvandlar dessa filer till optimerade AEM clientlibs under `ui.apps` -modul.
 
 Ändringar i gränssnittet distribueras till AEM as a Cloud Service miljö när programmet körs [__Fullhög__ pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
 
@@ -70,41 +70,41 @@ Framsidan levereras till webbläsarna via URI-sökvägar som börjar med `/etc.c
 
    1. `webpack.common` - Detta innehåller __vanlig__ konfiguration för att instruera WKND-resurspaket och optimering. The __output__ anger var de konsoliderade filerna ska genereras (kallas även JavaScript-paket, men ska inte blandas ihop med AEM OSGi-paket) som skapas. Standardnamnet är `clientlib-site/js/[name].bundle.js`.
 
-   ```javascript
-       ...
-       output: {
-               filename: 'clientlib-site/js/[name].bundle.js',
-               path: path.resolve(__dirname, 'dist')
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      output: {
+              filename: 'clientlib-site/js/[name].bundle.js',
+              path: path.resolve(__dirname, 'dist')
+          }
+      ...    
+  ```
 
    1. `webpack.dev.js` innehåller __utveckling__ konfiguration för webbpack-dev-server och pekar på HTML-mallen som ska användas. Den innehåller även en proxykonfiguration för en AEM som körs på `localhost:4502`.
 
-   ```javascript
-       ...
-       devServer: {
-           proxy: [{
-               context: ['/content', '/etc.clientlibs', '/libs'],
-               target: 'http://localhost:4502',
-           }],
-       ...    
-   ```
+  ```javascript
+      ...
+      devServer: {
+          proxy: [{
+              context: ['/content', '/etc.clientlibs', '/libs'],
+              target: 'http://localhost:4502',
+          }],
+      ...    
+  ```
 
    1. `webpack.prod.js` innehåller __produktion__ och använder plugin-programmen för att omvandla utvecklingsfilerna till optimerade paket.
 
-   ```javascript
-       ...
-       module.exports = merge(common, {
-           mode: 'production',
-           optimization: {
-               minimize: true,
-               minimizer: [
-                   new TerserPlugin(),
-                   new CssMinimizerPlugin({ ...})
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      module.exports = merge(common, {
+          mode: 'production',
+          optimization: {
+              minimize: true,
+              minimizer: [
+                  new TerserPlugin(),
+                  new CssMinimizerPlugin({ ...})
+          }
+      ...    
+  ```
 
 
 * De paketerade resurserna flyttas till `ui.apps` modul använda [aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator) plugin-program, använda konfigurationen som hanteras i `clientlib.config.js` -fil.
@@ -138,7 +138,7 @@ The [__Fullhög__ pipeline](https://experienceleague.adobe.com/docs/experience-m
 
 ### Leverans från AEM as a Cloud Service {#delivery-frontend-aemaacs}
 
-De resurser som distribueras via hela stacken levereras från AEM till webbläsare som `/etc.clientlibs` filer. Du kan verifiera detta genom att gå till [offentlig WKND-webbplats](https://wknd.site/content/wknd/us/en.html) och visa webbsidans källa.
+De resurser som distribueras via hela stacken levereras från AEM webbplats till webbläsare som `/etc.clientlibs` filer. Du kan verifiera detta genom att gå till [offentlig WKND-webbplats](https://wknd.site/content/wknd/us/en.html) och visa webbsidans källa.
 
 ```html
     ....

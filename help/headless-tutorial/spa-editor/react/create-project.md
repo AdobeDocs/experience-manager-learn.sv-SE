@@ -3,13 +3,14 @@ title: Skapa projekt | Komma igång med AEM SPA Editor och React
 description: Lär dig hur du skapar ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett React-program som är integrerat med AEM SPA Editor.
 feature: SPA Editor, AEM Project Archetype
 version: Cloud Service
-kt: 413
+jira: KT-413
 thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: c489a033f34aecaa0af10e3868c258feba6aaae6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 0%
@@ -27,7 +28,7 @@ Lär dig hur du skapar ett Adobe Experience Manager (AEM) Maven-projekt som utg�
 
 ## Vad du ska bygga {#what-build}
 
-I det här kapitlet skapas ett nytt AEM baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Det AEM projektet inleds med en mycket enkel utgångspunkt för SPA React.
+I det här kapitlet skapas ett nytt AEM baserat på [AEM Project Archettype](https://github.com/adobe/aem-project-archetype). Det AEM projektet inleds med en mycket enkel startpunkt för SPA React.
 
 **Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager* implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod utöver AEM.
 
@@ -35,7 +36,7 @@ I det här kapitlet skapas ett nytt AEM baserat på [AEM Project Archetype](http
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Se till att en ny instans av Adobe Experience Manager börjar på **författare** körs lokalt.
 
 ## Skapa projektet {#create}
 
@@ -62,11 +63,11 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    >
    > Om mål AEM 6.5.5+ ersätts `aemVersion="cloud"` med `aemVersion="6.5.5"`. Om mål är 6.4.8+, använd `aemVersion="6.4.8"`.
 
-   Lägg märke till `frontendModule=react` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Reaktionskodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId`och `groupId` används för att identifiera projektet och syftet.
+   Lägg märke till `frontendModule=react` -egenskap. Detta anger att AEM Project Archetype ska starta projektet med en startare [Reaktionskodbas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA. Egenskaper som `appTitle`, `appId`, `artifactId`och `groupId` används för att identifiera projektet och syftet.
 
    En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. Följande mapp- och filstruktur genereras av arkivtypen Maven i det lokala filsystemet:
+1. Följande mapp- och filstruktur genereras av Maven-typen i det lokala filsystemet:
 
    ```plain
    |--- aem-guides-wknd-spa.react/
@@ -164,7 +165,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
 ## Inspect för Single Page
 
-Kontrollera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
+Verifiera sedan att det här är ett Single Page-program med hjälp av webbläsarens utvecklarverktyg.
 
 1. I **Page Editor** klickar du på **Sidinformation** knapp > **Visa som publicerad**:
 
@@ -216,7 +217,7 @@ Kontrollera sedan att det här är ett Single Page-program med hjälp av webblä
    ...
    ```
 
-   I nästa kapitel kommer vi att undersöka hur detta JSON-innehåll mappas från AEM komponenter till SPA komponenter för att utgöra grunden för den AEM SPA redigeraren.
+   I nästa kapitel kommer vi att undersöka hur detta JSON-innehåll mappas från AEM komponenter till SPA komponenter för att utgöra grunden för den AEM SPA redigerarupplevelsen.
 
    >[!NOTE]
    >

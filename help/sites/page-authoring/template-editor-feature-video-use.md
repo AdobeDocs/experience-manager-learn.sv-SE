@@ -1,20 +1,15 @@
 ---
 title: Använda redigerbara sidmallar med AEM Sites
-seo-title: Using Editable Page Templates with Adobe Experience Manager Sites
 description: Med redigerbara mallar kan man skapa och uppdatera sidmallar och hantera avancerade regelkonfigurationer med AEM Sites.
-seo-description: Editable templates allow specialized authors to create and update page templates and manage advanced policy configurations with Adobe Experience Manager Sites.
 feature: Editable Templates
-topics: authoring
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5
-kt: 193
+jira: KT-193
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%

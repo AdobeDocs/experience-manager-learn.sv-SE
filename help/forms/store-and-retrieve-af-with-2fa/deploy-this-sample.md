@@ -4,13 +4,13 @@ description: Hämta användningsfall som körs på den lokala AEM Forms-instanse
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6602
+jira: KT-6602
 thumbnail: 6602.jpg
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
-source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

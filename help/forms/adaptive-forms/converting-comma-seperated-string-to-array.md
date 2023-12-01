@@ -6,10 +6,10 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-kt: 8507
+jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%

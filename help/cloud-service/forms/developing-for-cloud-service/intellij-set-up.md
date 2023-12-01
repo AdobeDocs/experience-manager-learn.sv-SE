@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8843
+jira: KT-8843
 exl-id: 34840d28-ad47-4a69-b15d-cd9593626527
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
@@ -31,8 +31,8 @@ Installera [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/
 Om du vill använda anpassade teckensnitt i PDF måste du överföra de anpassade teckensnitten till AEM Forms CS-instansen. Följ följande steg
 
 * Skapa en mapp med namnet **teckensnitt** i C:\CloudManager\aem-banking-application
-* Extrahera innehållet i [font.zip](assets/fonts.zip) till den nya teckensnittsmappen
-* I teckensnittsmodulen finns några anpassade teckensnitt.Du kan lägga till organisationens anpassade teckensnitt i mappen C:\CloudManager\aem-banking-application\fonts\src\main\resources folder of the fonts module
+* Extrahera innehållet i [font.zip](assets/fonts.zip) till mappen med nya teckensnitt
+* I teckensnittsmodulen finns några anpassade teckensnitt.Du kan lägga till organisationens anpassade teckensnitt i mappen C:\CloudManager\aem-banking-application\fonts\src\main\resources i teckensnittsmodulen
 * Öppna C:\CloudManager\aem-banking-application\pom.xml
 * Lägg till följande rad  ```<module>fonts</module>``` i modulavsnittet i pom.xml
 * Spara din pom.xml

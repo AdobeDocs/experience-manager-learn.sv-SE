@@ -2,16 +2,13 @@
 title: Använda delning av sociala medier i AEM Sites
 description: Upptäck hur du konfigurerar och använder komponenten Delning i sociala medier.
 feature: Core Components
-topics: integrations
-audience: developer, implementer
-doc-type: technical video
-activity: setup
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
+doc-type: Technical Video
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -37,9 +34,9 @@ I den här videon utforskas följande funktioner i komponenten Delning i sociala
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) bör konfigureras på både AEM Author och AEM Publish för att mappa publiceringsmiljön till den allmänt tillgängliga domän som används för åtkomst till AEM Publish.
+[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) ska vara konfigurerat på både AEM författare och AEM publicering för att mappa publiceringsmiljön till den offentliga domän som används för att komma åt AEM publicering.
 
-I den här videon använder vi `/etc/hosts` till spoof *www.example.com* för att lösa till localhost och använda [grundläggande AEM Dispatcher-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) så att www.example.com kan användas framför AEM Publish.
+I den här videon använder vi `/etc/hosts` till spoof *www.example.com* för att lösa till localhost och använda [grundläggande AEM Dispatcher-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för att www.example.com ska kunna AEM publicera.
 
 ## Stödmaterial {#supporting-materials}
 

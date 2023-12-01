@@ -8,23 +8,24 @@ role: Admin
 level: Experienced
 jira: KT-12305
 last-substantial-update: 2023-03-01T00:00:00Z
+doc-type: Tutorial
 exl-id: 460e9bfa-1b15-41b9-b8b7-58b2b1252576
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
 
 ---
 
-# Autentisera till AEM Author med OKTA
+# Autentisera till AEM författare med OKTA
 
 > Se [SAML 2.0-autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html) för instruktioner om hur du ställer in OKTA med AEM as a Cloud Service.
 
-Det första steget är att konfigurera appen på OKTA-portalen. När appen har godkänts av din OKTA-administratör har du tillgång till IdP-certifikatet och URL för enkel inloggning. Följande inställningar används vanligtvis när nya program registreras.
+Det första steget är att konfigurera appen på OKTA-portalen. När appen har godkänts av din OKTA-administratör har du tillgång till IdP-certifikatet och URL:en för enkel inloggning. Följande inställningar används vanligtvis för att registrera nya program.
 
 * **Programnamn:** Detta är ditt programnamn. Se till att du ger programmet ett unikt namn.
 * **SAML-mottagare:** Efter autentisering från OKTA är det här den URL som skulle påverkas på din AEM med SAML-svaret. SAML-autentiseringshanteraren fångar vanligtvis alla URL:er med / saml_login, men det är bättre att lägga till dem efter programroten.
-* **SAML-målgrupp**: Detta är programmets domän-URL. Använd inte protocol(http eller https) i domän-URL:en.
+* **SAML-målgrupp**: Detta är programmets domän-URL. Använd inte protocol(http eller https) i domänens URL.
 * **SAML-namn-ID:** Välj E-post i listrutan.
 * **Miljö**: Välj lämplig miljö.
 * **Attribut**: Detta är de attribut du får om användaren i SAML-svaret. Specificera dem efter behov.
@@ -40,11 +41,11 @@ Eftersom SAML-bekräftelser krypteras måste vi lägga till IdP-certifikatet (OK
 Kom ihåg lösenordet för förtroendearkivet. Vi måste använda det här lösenordet senare i den här processen.
 
 * Navigera till [Global Trust Store](http://localhost:4502/libs/granite/security/content/truststore.html).
-* Klicka på&quot;Lägg till certifikat från CER-fil&quot;. Lägg till IdP-certifikatet från OKTA och klicka på skicka.
+* Klicka på Lägg till certifikat från CER-fil. Lägg till IdP-certifikatet från OKTA och klicka på skicka.
 
-   >[!NOTE]
-   >
-   >Koppla inte certifikatet till någon användare
+  >[!NOTE]
+  >
+  >Koppla inte certifikatet till någon användare
 
 När du lägger till certifikatet i förtroendearkivet bör du hämta certifikataliaset så som visas på skärmbilden nedan. Aliasnamnet kan vara ett annat i ditt fall.
 
@@ -63,7 +64,7 @@ Ange följande egenskaper enligt följande:
 * **IDP-certifikatalias**:Detta alias du fick när du lade till IdP-certifikatet i AEM förtroendearkiv
 * **Tjänstleverantörens enhets-ID**:Det här är namnet på AEM
 * **Lösenord för nyckelbehållare**:Det här är lösenordet för förtroendearkivet som du använde
-* **Standardomdirigering**:Det här är den URL som ska omdirigeras till vid lyckad autentisering
+* **Standardomdirigering**:Det här är URL:en som du kan omdirigera till om autentiseringen lyckas
 * **UserID-attribut**:uid
 * **Använd kryptering**:false
 * **Skapa CRX-användare automatiskt**:true
@@ -97,7 +98,7 @@ När du konfigurerar OKTA-integreringen på AEM kan det vara praktiskt att grans
 
 * Sök och öppna &quot;Apache Sling Logging Logger Configuration&quot;
 * Skapa en loggare med följande konfiguration:
-   * **Loggnivå**: Felsök
+   * **Loggnivå**: Felsökning
    * **Loggfil**: logs/saml.log
    * **Logger**: com.adobe.granite.auth.saml
 * Klicka på Spara för att spara inställningarna

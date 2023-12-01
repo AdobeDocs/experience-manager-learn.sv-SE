@@ -3,14 +3,14 @@ title: Sammanställa formulärbilagor
 description: Sammanställa formulärbilagor i angiven ordning
 feature: Assembler
 version: 6.4,6.5
-kt: 6406
+jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Sammanställa formulärbilagor
 
-I den här artikeln finns resurser för att sammanställa adaptiva formulärbilagor i en viss ordning. Formulärbilagorna måste vara i PDF-format för att exempelkoden ska fungera. Här följer ett exempel.
+I den här artikeln finns resurser för att sammanställa adaptiva formulärbilagor i en viss ordning. De bifogade formulären måste vara i pdf-format för att exempelkoden ska fungera. Här följer ett exempel.
 Användaren som fyller i ett anpassat formulär bifogar ett eller flera PDF-dokument till formuläret.
 När du skickar in formuläret sätter du ihop de bifogade filerna för att generera en PDF. Du kan ange i vilken ordning de bifogade filerna ska monteras för att skapa den slutliga PDF-filen.
 
@@ -36,13 +36,13 @@ Ordningen på de bifogade filerna anges som processtegargument i arbetsflödet, 
 
 ![processteg](assets/process-step.JPG)
 
-Följande kodfragment extraherar namnen på de bifogade filerna från processargumenten
+Följande kodfragment extraherar namnen på bilagor från processargumenten
 
 ```java
 String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(",");
 ```
 
-### Skapa DDX från namn på bifogade filer
+### Skapa DDX från namnen på de bifogade filerna
 
 Sedan måste vi skapa [XML för dokumentbeskrivning (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) dokument som används av Assembler-tjänsten för att sammanställa dokument. Följande är den DDX som skapades från processargumenten. Med NoForms-elementet kan du förenkla XFA-baserade dokument innan de sätts samman. Observera att källelementen i PDF är i rätt ordning enligt processargumenten.
 
@@ -85,7 +85,7 @@ return mapOfDocuments;
 }
 ```
 
-### Använd AssemblerService för att sammanställa dokumenten
+### Använd AssemblerService för att samla ihop dokumenten
 
 När du har skapat DDX-filen och dokumentöversikten är nästa steg att använda AssemblerService för att montera dokumenten.
 Följande kod sätter ihop och returnerar den sammansatta PDF-filen.
@@ -135,7 +135,7 @@ Nedan följer mappstrukturen för nyttolast när formulärbilagor har monterats 
 
 * Ladda ned [Formulär för att sammanställa bifogade formulär](assets/assemble-form-attachments-af.zip) till ditt lokala system.
 * Importera formuläret från[Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) sida.
-* Hämta [arbetsflöde](assets/assemble-form-attachments.zip) och importera till AEM med hjälp av pakethanteraren.
+* Ladda ned [arbetsflöde](assets/assemble-form-attachments.zip) och importera till AEM med hjälp av pakethanteraren.
 * Ladda ned [anpassat paket](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Distribuera och starta paketet med [webbkonsol](http://localhost:4502/system/console/bundles)
 * Peka webbläsaren till [Formulär för att sammanställa bifogade filer](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)

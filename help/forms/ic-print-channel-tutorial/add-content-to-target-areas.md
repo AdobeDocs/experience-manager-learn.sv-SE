@@ -11,13 +11,13 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
-kt: 5992
+jira: KT-5992
 thumbnail: 22379.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -30,7 +30,7 @@ I det här avsnittet kommer vi att lägga till bilder och textinnehåll i de må
 
 Nu när du har skapat ditt första dokumentfragment som ska innehålla mottagarens namn och adress måste vi lägga till dokumentfragmentet i dokumentet för utskriftskanalen.
 
-Du kan lägga till innehåll av olika typer, som dokumentfragment, bilder, layoutfragment osv., i dokumentet för utskriftskanalen.
+Du kan lägga till innehåll av olika typer, t.ex. dokumentfragment, bilder, layoutfragment osv., i dokumentet för utskriftskanalen.
 
 Följ videon nedan om du vill lägga till innehåll i utskriftskanalsdokumentet.
 

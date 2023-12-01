@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 12%
+source-wordcount: '228'
+ht-degree: 13%
 
 ---
 
@@ -39,7 +39,6 @@ ht-degree: 12%
    + [AEM projekt](./projects/develop-aem-projects.md)
    + [Använd projektmallar](./projects/use-project-masters.md)
 + Dokumentskydd {#security}
-   + [AEM säkerhetsmeddelande (november 2018)](./security/aem-security-notification-2018-11.md)
    + [Utveckla för Cross-Origin Resource Sharing (CORS)](./security/develop-for-cross-origin-resource-sharing.md)
    + [CORS (Cross-Origin Resource Sharing)](./security/understand-cross-origin-resource-sharing.md)
    + [Använda SSL-guiden](./security/use-the-ssl-wizard.md)

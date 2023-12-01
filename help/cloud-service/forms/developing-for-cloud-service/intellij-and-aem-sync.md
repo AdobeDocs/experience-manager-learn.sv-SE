@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8844
+jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 2%
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 
 Cygwin är en POSIX-kompatibel programmerings- och körningsmiljö som kan köras i Microsoft Windows.
-Installera [Cygwin](https://www.cygwin.com/). Jag har installerat i C:\cygwin64 folder
+Installera [Cygwin](https://www.cygwin.com/). Jag har installerat i mappen C:\cygwin64
 >[!NOTE]
 > Kontrollera att du har installerat paket för zip, uppzip, bläddring och synkronisering med cygwin-installationen
 
 Skapa en mapp med namnet adoberepo under c:\cloudmanager.
 
-[Installera repo-verktyget](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) Det finns inget annat att installera repo-verktyget än att kopiera repo-filen och placera den i din c:\cloudmanger\adoberepo folder.
+[Installera repo-verktyget](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) Att installera repo-verktyget är bara att kopiera repo-filen och placera den i mappen c:\cloudmanger\adoberepo.
 
 Lägg till följande i miljövariabeln Path C:\cygwin64\bin;C:\CloudManager\adoberepo;
 
@@ -36,7 +36,7 @@ Lägg till följande i miljövariabeln Path C:\cygwin64\bin;C:\CloudManager\adob
 * Tryck på Ctrl+Alt+S för att öppna inställningsfönstret.
 * Välj Verktyg ->Externa verktyg och klicka sedan på plustecknet (+) och ange följande som visas på skärmbilden.
   ![rep](assets/repo.png)
-* Se till att du skapar en grupp med namnet repo genom att skriva&quot;repo&quot; i listrutan Grupp och alla kommandon du skapar tillhör **repa** grupp
+* Se till att du skapar en grupp med namnet repo genom att skriva&quot;repo&quot; i listrutan Grupp och alla kommandon du skapar tillhör **repo** grupp
 
 
 **Placera kommando**
@@ -68,23 +68,23 @@ Extrahera .repo-filen från [repo.zip](assets/repo.zip) och placera den i AEM pr
 
 Välj ett projekt i ett aem-Banking-applikationsprojekt, till exempel ui.content, och högerklicka så ser du repoalternativet och under repoalternativet ser du de fyra kommandona vi lade till tidigare.
 
-## Konfigurera AEM Author Instance{#set-up-aem-author-instance}
+## AEM författarinstans{#set-up-aem-author-instance}
 
 Följande steg kan följas för att snabbt konfigurera en molnklar instans på ditt lokala system.
-* [Ladda ned den senaste AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [Ladda ned AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
 * [Ladda ned den senaste AEM Forms-appen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
 * Skapa följande mappstruktur c:\aemformscs\aem-sdk\author
 
-* Extrahera filen aem-sdk-quickstart-xxxxxxx.jar från AEM SDK zip-filen och placera den i c:\aemformscs\aem-sdk\author folder.Rename filen jar till aem-author-p4502.jar
+* Extrahera filen aem-sdk-quickstart-xxxxxxx.jar från AEM SDK zip-filen och placera den i mappen c:\aemformscs\aem-sdk\author.Byt namn på filen jar till aem-author-p4502.jar
 
-* Öppna kommandotolken och gå till c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar. Detta startar installationen av AEM.
-* Logga in med inloggningsinformation för admin/admin
+* Öppna kommandotolken och gå till \aemformscs\aem-sdk\author här kommandot java -jar aem-author-p4502.jar -gui. Detta startar installationen av AEM.
+* Logga in med administratörs-/administratörsbehörighet
 * Stoppa AEM
 * Skapa följande mappstruktur.C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * Kopiera aem-forms-addon-xxxxxx.far till installationsmappen
-* Öppna kommandotolken och gå till c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar. Detta distribuerar formulären som läggs till i paketet i AEM.
+* Öppna kommandotolken och gå till \aemformscs\aem-sdk\author här kommandot java -jar aem-author-p4502.jar -gui. Detta distribuerar formulären som läggs till i paketet i AEM.
 
 ## Nästa steg
 

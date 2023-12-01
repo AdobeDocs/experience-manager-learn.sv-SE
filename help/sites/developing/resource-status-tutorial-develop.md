@@ -3,10 +3,10 @@ title: Utveckla resursstatus i AEM Sites
 description: Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden AEM olika redigeringswebbgränssnitt.
 topics: development
 audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 activity: develop
 version: 6.4, 6.5
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -32,11 +32,11 @@ Exempel på användningsexempel för anpassade resursstatusprovidrar är:
 
 ![Översikt över resursstatus för AEM](assets/sample-editor-resource-status-screenshot.png)
 
-## Resursstatusproviderns ramverk {#resource-status-provider-framework}
+## Ramverk för resursstatusprovider {#resource-status-provider-framework}
 
 När du utvecklar anpassade resursstatusar består utvecklingsarbetet av:
 
-1. Implementeringen ResourceStatusProvider, som avgör om en status krävs, och grundläggande information om statusen: titel, meddelande, prioritet, variant, ikon och tillgängliga åtgärder.
+1. Implementeringen av ResourceStatusProvider, som avgör om en status krävs, och grundläggande information om status: titel, meddelande, prioritet, variant, ikon och tillgängliga åtgärder.
 2. GraniteUI JavaScript som implementerar funktionaliteten för alla tillgängliga åtgärder kan också användas.
 
    ![resursstatusarkitektur](assets/sample-editor-resource-status-application-architecture.png)
@@ -47,13 +47,13 @@ När du utvecklar anpassade resursstatusar består utvecklingsarbetet av:
    * Experience Fragment editor: `editor`
    * Mallredigerare: `template-editor`
 
-4. Statusresursens `statusType` matchar registrerade `CompositeStatusType` OSGi har konfigurerats `name` -egenskap.
+4. Statusresursens `statusType` matchas till registrerad `CompositeStatusType` OSGi har konfigurerats `name` -egenskap.
 
    För alla matchningar visas `CompositeStatusType's` typerna samlas in och används för att samla in `ResourceStatusProvider` implementeringar som har den här typen, via `ResourceStatusProvider.getType()`.
 
 5. Matchningen `ResourceStatusProvider` har skickats `resource` i redigeraren och avgör om `resource` har status som ska visas. Om status krävs ansvarar den här implementeringen för att skapa 0 eller många `ResourceStatuses` för att returnera, där var och en representerar en status som ska visas.
 
-   Vanligtvis är `ResourceStatusProvider` returnerar 0 eller 1 `ResourceStatus` per `resource`.
+   Oftast är `ResourceStatusProvider` returnerar 0 eller 1 `ResourceStatus` per `resource`.
 
 6. ResourceStatus är ett gränssnitt som kan implementeras av kunden eller det praktiska `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kan användas för att konstruera en status. En status består av:
 
@@ -78,7 +78,7 @@ När du utvecklar anpassade resursstatusar består utvecklingsarbetet av:
    })(jQuery, document);
    ```
 
-8. Alla JavaScript- och CSS-funktioner som stöder åtgärderna måste proxideras genom varje redigerares respektive klientbibliotek för att säkerställa att koden finns tillgänglig i redigeraren.
+8. Alla JavaScript- och CSS-funktioner som stöder åtgärderna måste proxideras genom varje redigerares respektive klientbibliotek för att se till att koden finns tillgänglig i redigeraren.
 
    * Sidredigeringskategori: `cq.authoring.editor.sites.page`
    * Experience Fragment editor-kategori: `cq.authoring.editor.sites.page`

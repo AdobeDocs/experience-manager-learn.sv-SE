@@ -11,13 +11,13 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
-kt: 5993
+jira: KT-5993
 thumbnail: 22386.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

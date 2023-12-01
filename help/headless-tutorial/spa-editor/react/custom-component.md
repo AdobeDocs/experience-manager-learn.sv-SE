@@ -1,17 +1,17 @@
 ---
 title: Skapa en anpassad väderkomponent | Komma igång med AEM SPA Editor och React
-description: Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. Komponenterna Open Weather API och React Open Weather används.
+description: Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. Komponenterna Open Weather API och React Open Weather används.
 feature: SPA Editor
-doc-type: tutorial
 topics: development
 version: Cloud Service
-kt: 5878
+jira: KT-5878
 thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa en anpassad WeatherComponent {#custom-component}
 
-Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. The [Öppna väder-API](https://openweathermap.org) och [Reagera på komponenten Öppna väder](https://www.npmjs.com/package/react-open-weather) används.
+Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. The [Öppna väder-API](https://openweathermap.org) och [Reagera på komponenten Öppna väder](https://www.npmjs.com/package/react-open-weather) används.
 
 ## Syfte
 
@@ -30,13 +30,13 @@ Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA
 
 ## Vad du ska bygga
 
-En enkel väderkomponent byggs. Den här komponenten kan läggas till i SPA av innehållsförfattare. I en AEM kan författare ange var vädret ska visas.  Implementeringen av den här komponenten illustrerar de steg som behövs för att skapa en ny AEM som är kompatibel med det AEM SPA redigeringsramverket.
+En enkel väderkomponent byggs. Den här komponenten kan läggas till i SPA av innehållsförfattare. Med hjälp av en AEM kan författare ange var vädret ska visas.  Implementeringen av den här komponenten illustrerar de steg som behövs för att skapa en ny AEM som är kompatibel med det AEM SPA redigeringsramverket.
 
 ![Konfigurera komponenten Open Weather](assets/custom-component/enter-dialog.png)
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Detta kapitel är en fortsättning på [Navigering och routning](navigation-routing.md) för att följa med i det hela behöver du ett SPA-aktiverat AEM-projekt som distribueras till en lokal AEM.
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Det här kapitlet är en fortsättning på [Navigering och routning](navigation-routing.md) för att följa med i det hela behöver du ett SPA-aktiverat AEM-projekt som distribueras till en lokal AEM.
 
 ### Öppna API-nyckel för väder
 
@@ -148,7 +148,7 @@ En AEM definieras som en nod och egenskaper. I projektet representeras dessa nod
 
 ## Skapa segmentmodellen
 
-Sling Models är anteckningsdrivna Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) som underlättar mappningen av data från JCR till Java-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) används vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM komponenter.
+Sling Models är anteckningsdrivna Java &quot;POJO&#39;s&quot; (Plain Old Java Objects) som underlättar mappningen av data från JCR till Java-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=en#sling-models) används vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM.
 
 I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Export av försäljningsmodell](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
@@ -239,7 +239,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    } 
    ```
 
-   Den statiska variabeln `RESOURCE_TYPE` måste peka på banan i `ui.apps` för komponenten. The `getExportedType()` används för att mappa JSON-egenskaper till SPA via `MapTo`. `@ValueMapValue` är en anteckning som läser jcr-egenskapen som sparas av dialogrutan.
+   The static variable `RESOURCE_TYPE` måste peka på banan i `ui.apps` för komponenten. The `getExportedType()` används för att mappa JSON-egenskaper till SPA via `MapTo`. `@ValueMapValue` är en anteckning som läser jcr-egenskapen som sparas av dialogrutan.
 
 ## Uppdatera SPA
 
@@ -253,7 +253,7 @@ Uppdatera sedan React-koden så att den innehåller [Reagera på komponenten Öp
    ```
 
 1. Skapa en ny mapp med namnet `OpenWeather` på `ui.frontend/src/components/OpenWeather`.
-1. Lägg till en fil med namnet `OpenWeather.js` och fylla i den med följande:
+1. Lägga till en fil med namnet `OpenWeather.js` och fylla i den med följande:
 
    ```js
    import React from 'react';
@@ -363,7 +363,7 @@ Nästa steg är att skapa `Open Weather` med AEM SPA Editor.
 
    ![Infoga ny komponent](assets/custom-component/insert-custom-component.png)
 
-1. Öppna komponentens dialogruta och ange en **Etikett**, **Latitud** och **Longitud**. Till exempel **San Diego**, **32.7157** och **-117.1611**. Nummer på västra halvklotet och södra halvklotet representeras som negativa tal med Open Weather API
+1. Öppna komponentens dialogruta och ange en **Etikett**, **Latitude** och **Longitud**. Till exempel **San Diego**, **32.7157** och **-117.1611**. Nummer på västra halvklotet och södra halvklotet representeras som negativa tal med Open Weather API
 
    ![Konfigurera komponenten Open Weather](assets/custom-component/enter-dialog.png)
 

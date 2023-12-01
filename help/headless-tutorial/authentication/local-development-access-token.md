@@ -2,19 +2,19 @@
 title: Åtkomsttoken för lokal utveckling
 description: AEM Local Development Access-token används för att påskynda utvecklingen av integreringar med AEM as a Cloud Service som programmässigt interagerar med AEM Author eller Publish services via HTTP.
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
+doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM 
 
 ![Hämta en lokal åtkomsttoken för utveckling](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
+Token för lokal utvecklingsåtkomst ger åtkomst till AEM författar- och publiceringstjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
 
 1. I [Adobe Admin Console](https://adminconsole.adobe.com/) säkerställa att du, utvecklaren, är medlem i
    + __Cloud Manager - utvecklare__ IMS-produktprofil (ger åtkomst till AEM Developer Console)
@@ -81,7 +81,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 1. Kör från kommandoraden i projektmappen `npm install`
 1. Kopiera [laddade ned Local Development Access Token](#download-local-development-access-token) till en fil med namnet `local_development_token.json` i projektets rot
    + Men kom ihåg att aldrig binda några referenser till Git!
-1. Öppna `index.js` och granska den externa programkoden och kommentarerna.
+1. Öppna `index.js` och granska programkoden och kommentarerna.
 
    ```javascript
    const fetch = require('node-fetch');
@@ -242,9 +242,9 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 
    + `aem`: Schemat och värdnamnet för den AEM as a Cloud Service miljön som programmet interagerar med (t.ex. `https://author-p1234-e5678.adobeaemcloud.com`).
    + `folder`: Resursmappens sökväg vars resurser uppdateras med `propertyValue`; lägg INTE till `/content/dam` prefix (ex. `/wknd-shared/en/adventures/napa-wine-tasting`)
-   + `propertyName`: Namnet på resursegenskapen som ska uppdateras, relativt till `[dam:Asset]/jcr:content` (ex. `metadata/dc:rights`).
-   + `propertyValue`: Värdet som anger `propertyName` till värden med blanksteg måste kapslas in med `"` (ex. `"WKND Limited Use"`)
-   + `file`: Den relativa sökvägen till JSON-filen som hämtats från AEM Developer Console.
+   + `propertyName`: Namnet på den resursegenskap som ska uppdateras, relativt till `[dam:Asset]/jcr:content` (ex. `metadata/dc:rights`).
+   + `propertyValue`: Det värde som ska anges för `propertyName` till; värden med mellanslag måste kapslas in med `"` (ex. `"WKND Limited Use"`)
+   + `file`: Den relativa sökvägen till JSON-filen som hämtas från AEM Developer Console.
 
    En lyckad körning av programresultatet för varje resurs som har uppdaterats:
 

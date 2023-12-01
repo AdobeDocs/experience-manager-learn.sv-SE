@@ -3,12 +3,12 @@ title: Välj ett formulär i en lista över tillgängliga formulär
 description: Använd listforms-API för att fylla i listrutan
 feature: Adaptive Forms
 version: 6.5
-kt: 13346
+jira: KT-13346
 topic: Development
 role: User
 level: Intermediate
 exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%

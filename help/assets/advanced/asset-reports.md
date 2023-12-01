@@ -6,11 +6,12 @@ topic: Administration
 role: User
 level: Intermediate
 version: 6.4, 6.5, Cloud Service
-kt: 648
+jira: KT-648
 thumbnail: 22140.jpg
 last-substantial-update: 2022-06-05T00:00:00Z
+doc-type: Feature Video
 exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
-source-git-commit: a5f8ef3c507274be30da8ea225d2daf7a983cf86
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%

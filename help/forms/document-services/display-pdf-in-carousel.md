@@ -6,10 +6,10 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
-kt: 10292
+jira: KT-10292
 exl-id: c1d248c3-8208-476e-b0ae-cab25575cd6a
 last-substantial-update: 2021-10-12T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Ett klientbibliotek skapades för att visa PDF med hjälp av Adobe PDF Embed API
 Skapa ett adaptivt formulär baserat på vissa flikar (exemplet har tre flikar) Lägg till några adaptiva formulärkomponenter på de första två flikarna Lägg till pdf-karusellkomponenten på den tredje fliken Konfigurera pdf-karusellkomponenten enligt skärmbilden nedan
 ![pdf-carousel](assets/pdf-carousel-af-component.png)
 
-**Bädda in PDF API-nyckel** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan skapa [egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
+**Bädda in PDF API-nyckel** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan [egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
 
 **Ange PDF-dokument** - Här kan du ange vilka PDF-dokument som ska visas i karusellen.
 
@@ -50,7 +50,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Importera klientbiblioteket](assets/pdf-carousel-client-lib.zip) till din lokala AEM [använda pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 1. [Importera PDF-karusellkomponenten](assets/pdf-carousel-component.zip) till din lokala AEM [använda pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Importera det adaptiva formuläret ](assets/adaptive-form-pdf-carousel.zip) till din lokala AEM [använda pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Importera exempelfilerna som ska visas](assets/pdf-carousel-sample-documents.zip) till din lokala AEM [med länken för överföring av resursfiler](http://localhost:4502/assets.html/content/dam)
+1. [Importera det adaptiva formuläret](assets/adaptive-form-pdf-carousel.zip) till din lokala AEM [använda pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+1. [Importera exempelfilerna som ska visas](assets/pdf-carousel-sample-documents.zip) till din lokala AEM [med hjälp av länken för överföring av resursfiler](http://localhost:4502/assets.html/content/dam)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 1. Fliken Dokument att granska. Du bör se tre PDF-dokument i karusellkomponenten.

@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 [Innehållsförteckning](./overview.md)
 
-[&lt;- Föregående: Sändarens hälsokontroll](./health-check.md)
+[&lt;- Föregående: Dispatcher Health Check](./health-check.md)
 
 I AMS får du en färdigfylld GIT-databas som innehåller källkoden för din dispatcher och är klar att börja utveckla och anpassa.
 
@@ -67,7 +68,7 @@ dispatcher
 
 Som ett exempel `/etc/httpd/conf.d/available_vhosts/` katalogen innehåller den mellanlagrade potentialen `.vhost` filer som vi kan använda i vår konfigurering som körs.
 
-Den aktiverade `.vhost` filer visas som en relativ sökväg `symlinks` inuti `/etc/httpd/conf.d/enabled_vhosts/` katalog.
+Den aktiverade `.vhost` filer visas som en relativ sökväg `symlinks` innanför `/etc/httpd/conf.d/enabled_vhosts/` katalog.
 
 ## Skapa en länk
 
@@ -134,7 +135,7 @@ symbolic link created for aem_flush.vhost <<===>> ..\available_vhosts\aem_flush.
 
 #### Utvecklarläge ( Windows 10 )
 
-När [Utvecklarläge](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)I Windows 10 kan du enklare testa appar som du utvecklar, använda Ubuntu Bash-gränssnittsmiljön, ändra en mängd inställningar för utvecklare och göra andra saker.
+Vid inläggning på [Utvecklarläge](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)I Windows 10 kan du enklare testa appar som du utvecklar, använda Ubuntu Bash-gränssnittsmiljön, ändra en mängd inställningar för utvecklare och göra andra saker.
 
 Microsoft verkar fortsätta lägga till funktioner i utvecklarläget, eller aktivera vissa av dessa funktioner som standard när de har blivit mer spridda och betraktas som stabila (t.ex. med Creators Update, Ubuntu Bash Shell-miljö behöver inte längre vara i utvecklarläget).
 
@@ -174,11 +175,11 @@ Standardvärdet är true, förutom `git-clone[1]` eller `git-init[1] will probe 
 
 Beteendet för Git i Windows förklaras här: Symboliska länkar ・ Git-for-windows/git Wiki ・ GitHub
 
-> `Info`: De antaganden som anges i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer&#39;s Setup i Windows, framför allt NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
+> `Info`: De antaganden som anges i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer&#39;s Setup i Windows, främst NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
 
 Här är de goda nyheterna, sedan [Git för Windows version 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) installationsprogrammet har en [explicit alternativ för att aktivera stöd för symboliska länkar.](https://github.com/git-for-windows/git/issues/921)
 
-> `Warning`: Alternativet core.symlink kan anges vid körning när databasen klonas, eller också kan det lagras som en global konfiguration.
+> `Warning`: Alternativet core.symlink kan anges vid körning när databasen klonas, eller kan på annat sätt lagras som en global konfiguration.
 
 ![Visar GIT-installationsprogram med stöd för länkar](./assets/git-symlinks/windows-git-install-symlink.png)
 

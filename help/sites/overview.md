@@ -4,8 +4,9 @@ description: Läs om Experience Manager Sites i våra videor och självstudiekur
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
+doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 32d109b534fe63b26530a4b88d202540cf7dff38
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 5%

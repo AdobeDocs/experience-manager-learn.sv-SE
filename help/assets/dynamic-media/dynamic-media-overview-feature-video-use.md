@@ -6,8 +6,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
@@ -26,9 +27,9 @@ Den här videoserien i flera delar ger dig en översikt över hur mediematerial 
 >
 >Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7.
 
-I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Dynamic Media använder en enda Överordnad Asset-metod där du överför en bildresurs eller videomaterial som kan begäras för att klara ett obegränsat antal förbrukningsbara variationer eller härledda renderingar. Ingår:
+I den här videon beskrivs hur mediematerial hanteras och nås med Adobe Experience Manager Dynamic Media som en tjänst för innehållsleverans. Dynamic Media använder en enda huvudtillgångsmetod där du överför en bildresurs eller videoresurs som kan begäras för att uppfylla en obegränsad uppsättning förbrukningsvariationer eller härledda återgivningar. Ingår:
 
-* Enskild Överordnad resurs till URL-produkt som kan levereras
+* Enskilt huvudresurs till URL-produkt som kan levereras
 * Bildbearbetningsalternativ
 * Alternativ för Content Viewer
 * Kopiera URL:er till bilder och responsiva visningsprogram
@@ -56,7 +57,7 @@ I den här videon beskrivs hur mediematerial hanteras i Adobe Experience Manager
 >
 >Funktionaliteten som visas här är tillgänglig med körningsläget Dynamic Media DMS7, det körningsläge som stöds för närvarande, inte nödvändigtvis DMHybrid, som har ersatts av DMS7. Den här videon refererar till begrepp som beskrivs i del 1-video (Dynamic Media Overview).
 
-I den här videon beskrivs den enkla processen att skapa för en samling medieresurser i visningsprogrammet för blandade media, inklusive en snurruppsättning, video och en samling produktbilder. Lägg till innehåll i den blandade medieuppsättningen och skapa ett anpassat visningsprogram som du kan välja från i den slutliga kopiera-URL:en eller AEM Sites-komponenten.
+I den här videon beskrivs den enkla processen att skapa för en samling medieresurser i visningsprogrammet för blandade media, inklusive en snurruppsättning, video och en samling produktbilder. Lägg till innehåll i den blandade medieuppsättningen och skapa ett anpassat visningsprogram som du kan välja från i den slutliga kopierings-URL:en eller AEM Sites-komponenten.
 
 * Skapa snurra uppsättning av lämpliga produktfoton
 * Ladda upp och koda videomaterial för Dynamic Media Video
@@ -78,7 +79,7 @@ I den här videon beskrivs hur bildförinställningar skapas och vad som är en 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
-I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Medias URL-modifierare.
+I den här videon beskrivs mer än att ändra storlek på bilder för att utnyttja funktionerna i själva källfilen - genomskinlighet i bakgrunden, inbyggda urklippsbanor och beskärningar samt text som variabler - med Dynamic Media URL-modifierare.
 
 * Använda URL-modifierare i fältet Dynamic Media Modifier
 * Ändra bakgrundsfärg på bilder med genomskinlighet

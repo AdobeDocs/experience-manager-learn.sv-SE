@@ -6,8 +6,9 @@ topic: Localization
 feature: Multi Site Manager, Language Copy
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 21633308-ffe4-4023-affe-59269504da69
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -26,11 +27,11 @@ AEM 6.5-översättningsförbättringar:
 
 **Godkänn översättningsjobb automatiskt**: Godkännandeflaggan i översättningsjobbet är en binär egenskap. Den kan inte köra eller integreras med färdiga arbetsflöden för granskning och godkännande. För att minimera antalet steg i ett översättningsjobb anges det som standard till &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt. Om din organisation kräver godkännande för ett översättningsjobb kan du avmarkera alternativet &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt.
 
-**Ta bort översättningsstarter automatiskt**: I stället för att manuellt ta bort översättningsstarter i Launches Admin efter faktumet, är det nu möjligt att automatiskt ta bort översättningsstarter när de har befordrats.
+**Ta bort översättningsstarter automatiskt**: I stället för att manuellt ta bort översättningsstarter i Launches Admin efter faktumet går det nu att automatiskt ta bort översättningsstarter när de har befordrats.
 
-**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare versioner har stöd för XML- och XLIFF-format för översättningsobjekt. Nu kan du konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Sök efter [!UICONTROL Translation Platform Configuration]och sedan kan du välja exportformatet som JSON.
+**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare versioner stöder XML- och XLIFF-format för översättningsobjekt. Nu kan du konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration]och sedan kan du välja exportformatet som JSON.
 
-**Uppdatera översatt AEM i översättningsminnet (TMS)**: lokal författare som inte har tillgång till AEM kan uppdatera översatt innehåll som redan har importerats till AEM, direkt i TM (översättningsminne, i TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobb från TMS till AEM
+**Uppdatera översatt AEM i översättningsminnet (TMS)**: Den lokala författaren som inte har åtkomst till AEM kan uppdatera översatt innehåll som redan har importerats till AEM, direkt i TM (översättningsminne, i TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobb från TMS till AEM
 
 ## Översättningsförbättringar i AEM 6.4
 

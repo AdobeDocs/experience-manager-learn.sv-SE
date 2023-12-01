@@ -3,13 +3,13 @@ title: Anpassa komponenten Sammanfattning
 description: Utöka komponenten för sammanfattningssteg så att den kan navigera till nästa formulär i paketet.
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 6894
+jira: KT-6894
 thumbnail: 6894.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: fb68579d-241c-414d-92f4-13194f4d1923
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%

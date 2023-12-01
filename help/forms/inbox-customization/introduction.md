@@ -7,13 +7,13 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-kt: 5830
+jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -47,9 +47,9 @@ I kolumnanpassningsgränssnittet kan du utföra följande åtgärder
 
 ## Anpassning av varumärkesprofilering
 
-Du kan göra följande när du anpassar varumärket:
+Du kan göra följande när du anpassar varumärket
 
-* Lägg till din företagslogotyp
+* Lägg till din organisationslogotyp
 * Anpassa rubriktext
 * Anpassa hjälplänken
 * Dölj navigeringsalternativ

@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 9958
+jira: KT-9958
 thumbnail: 332439.jpg
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

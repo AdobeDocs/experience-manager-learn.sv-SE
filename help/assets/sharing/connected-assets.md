@@ -7,8 +7,9 @@ topic: Content Management
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-23T00:00:00Z
+doc-type: Feature Video
 exl-id: 2eceb65f-362a-48e1-a8c6-e9f6954dc2a0
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

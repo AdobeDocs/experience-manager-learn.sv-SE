@@ -6,8 +6,9 @@ version: 6.4, 6.5
 topic: Personalization
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%

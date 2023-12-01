@@ -1,6 +1,6 @@
 ---
 title: Använda resursmallar med AEM Assets och InDesign Server
-description: Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Det är mycket enklare att skapa markeringsbroschyrer, visitkort, flygblad, annonser och vykort med Assets Templates när de integreras med InDesign-servern.
+description: Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Att skapa broschyrer, visitkort, flygblad, annonser och vykort är mycket enklare med Assets Templates när de integreras med InDesign Server.
 version: 6.4, 6.5
 topic: Content Management
 feature: Templates
@@ -8,8 +8,9 @@ role: User
 level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
+doc-type: Feature Video
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -18,11 +19,11 @@ ht-degree: 0%
 
 # Använda resursmallar med AEM Assets och InDesign Server{#using-asset-templates-with-aem-assets-and-indesign-server}
 
-Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Det är mycket enklare att skapa markeringsbroschyrer, visitkort, flygblad, annonser och vykort med Assets Templates när de integreras med InDesign-servern.
+Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digitala resurser för digitala och tryckta medier. Att skapa broschyrer, visitkort, flygblad, annonser och vykort är mycket enklare med Assets Templates när de integreras med InDesign Server.
 
 >[!NOTE]
 >
->Information om hur du konfigurerar InDesign Server finns i [Konfigurera resursmallar med InDesign Server](asset-templates-technical-video-setup.md).
+>Information om hur du konfigurerar InDesign Server finns i [Ställ in resursmallar med InDesign Server](asset-templates-technical-video-setup.md).
 
 ## Översikt {#overview}
 

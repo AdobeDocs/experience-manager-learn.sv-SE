@@ -6,12 +6,12 @@ version: 6.5, Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
-kt: 13881
+jira: KT-13881
 thumbnail: KT-13881.png
-doc-type: article
+doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
-source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%

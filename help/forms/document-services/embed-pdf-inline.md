@@ -6,10 +6,10 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-kt: 9411
+jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -30,7 +30,7 @@ En anpassad komponent (embed-pdf) skapades för att bädda in den PDF-fil som re
 
 ## Klientbibliotek
 
-Följande kod körs när `viewPDF` Klicka på kryssruteknappen. Vi skickar adaptiva formulärdata, mallnamn till slutpunkten för att generera PDF-filen. Den genererade PDF-filen visas sedan för formuläranvändaren med hjälp av JavaScript-biblioteket för inbäddning av pdf.
+Följande kod körs när `viewPDF` är markerad. Vi skickar adaptiva formulärdata, mallnamn till slutpunkten för att generera PDF-filen. Den genererade PDF-filen visas sedan för formuläranvändaren med hjälp av JavaScript-biblioteket för inbäddning av pdf.
 
 ```javascript
 $(document).ready(function() {
@@ -106,7 +106,7 @@ Lägg till en ny flik i adaptiven. Lägg till en kryssrutekomponent och bädda i
 Konfigurera komponenten embed-pdf enligt skärmbilden nedan
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**Bädda in PDF API-nyckel** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan skapa [egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
+**Bädda in PDF API-nyckel** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan [egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
 
 **Slutpunkt som returnerar PDF-filen** - Det här är den anpassade servern som sammanfogar data med xdp-mallen och returnerar PDF-filen.
 
@@ -116,7 +116,7 @@ Konfigurera komponenten embed-pdf enligt skärmbilden nedan
 
 ## Skapa anpassad servett
 
-En anpassad servlet skapades för att sammanfoga data med XDP-mallen och returnera PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern är en del av [inbäddat pdf-paket](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+En anpassad servlet skapades för att sammanfoga data med XDP-mallen och returnera PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i [inbäddat pdf-paket](assets/embedpdf.core-1.0-SNAPSHOT.jar)
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -228,9 +228,9 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera det inbäddade PDF-paketet](assets/embedpdf.core-1.0-SNAPSHOT.jar).
 Detta har serverleten för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen.
-1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet med uteslutna sökvägar i CSRF-filtret för Adobe Granite med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö rekommenderar vi att du använder [Ramverk för CSRF-skydd](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet med uteslutna sökvägar i CSRF-filtret för Adobe Granite med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [Ramverk för CSRF-skydd](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [Importera klientbiblioteket och den anpassade komponenten](assets/embed-pdf.zip)
 1. [Importera det adaptiva formuläret och mallen](assets/embed-pdf-form-and-xdp.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
-1. Fylla i några av formulärfälten
+1. Fylla i vissa formulärfält
 1. Fliken Visa PDF. Markera kryssrutan Visa PDF. En PDF-fil ska visas i formuläret ifyllt med data från det adaptiva formuläret

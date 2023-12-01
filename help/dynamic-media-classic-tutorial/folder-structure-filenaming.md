@@ -2,15 +2,13 @@
 title: Ange mappstruktur och namngivningskonvention för filer
 description: Namngivning av filer är kanske det viktigaste beslutet när du implementerar Dynamic Media Classic. Mappstrukturen är också viktig. Lär dig varför det är så viktigt och möjligt att använda metoder för mappstruktur och filnamn.
 feature: Dynamic Media Classic
-doc-type: tutorial
 activity: develop
-topics: development, authoring, configuring, architecture
-audience: all
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -23,13 +21,13 @@ Innan du börjar ladda upp allt ditt innehåll är det klokt att fundera över m
 
 ## Mapphierarki och namngivningskonvention för filer
 
-Namngivning av filer är i allmänhet det viktigaste beslutet när det gäller Dynamic Media Classic. Men för att förstå varför det är viktigt måste vi först prata om mappstrukturen.
+Namngivning av filer är i allmänhet det viktigaste beslutet när det gäller implementeringen av Dynamic Media Classic. Men för att förstå varför det är viktigt måste vi först prata om mappstrukturen.
 
 ### Mapphierarki
 
 Mapphierarkin är bara viktig för dig och ditt företag i organiseringssyfte - dina Dynamic Media Classic-URL:er refererar bara till resursnamnet, inte mappen eller sökvägen. Oavsett var du överför en fil är URL:en densamma. Detta skiljer sig helt från hur de flesta organiserar sina bilder och sitt innehåll för webben, men med Dynamic Media Classic gör det ingen skillnad.
 
-En annan viktig faktor är antalet resurser eller mappar som ska lagras i varje mapp. Om många resurser lagras i en mapp försämras prestanda när du visar resurser i Dynamic Media Classic. Lagra inte tusentals resurser i en mapp. Utveckla i stället en organisationshierarki med färre än ca 500 resurser eller mappar inom en viss gren i hierarkin. Detta är inte ett strikt krav, men det hjälper till att behålla godtagbara svarstider när du visar eller söker resurser. Rekommendationen är i själva verket att skapa hierarkier som är breda och tunna snarare än smala och djupa.
+Ett annat viktigt att tänka på är antalet resurser eller mappar som ska lagras i varje mapp. Om många resurser lagras i en mapp försämras prestanda när du visar resurser i Dynamic Media Classic. Lagra inte tusentals resurser i en mapp. Utveckla i stället en organisationshierarki med färre än ca 500 resurser eller mappar inom en viss gren i hierarkin. Detta är inte ett strikt krav, men det hjälper till att behålla godtagbara svarstider när du visar eller söker resurser. Rekommendationen är i själva verket att skapa hierarkier som är breda och inte smala och djupa.
 
 Det enklaste sättet att skapa mappar är att överföra hela mappstrukturen med FTP och aktivera alternativet **Inkludera undermappar**. Med det här alternativet återskapar Dynamic Media Classic mappstrukturen på FTP-webbplatsen i Dynamic Media Classic.
 
@@ -43,9 +41,9 @@ För er mappstrategi bör ni fundera över vad som passar er organisation bäst.
 - SKU- eller produkt-ID-baserad strategi. Om återförsäljarna till exempel har tusentals objekt kan det vara bra att använda SKU-nummer eller produkt-ID som mappnamn.
 - Varumärkesstrategi. Tillverkare som har flera varumärken kan till exempel välja sina märkesnamn som mappar på den översta nivån.
 
-## Namngivningskonvention
+## Namngivningskonvention för filer
 
-Hur du namnger filerna är kanske det viktigaste beslutet du kommer att fatta om Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
+Hur du namnger filer är kanske det viktigaste tidiga beslutet du kommer att fatta om Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
 
 Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett tillgångs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Till exempel: _896649.jpg_ hämtar resurs _ID 896649_.
 
@@ -53,7 +51,7 @@ Regler för tillgångs-ID:
 
 - Två resurser kan inte ha samma namn i Dynamic Media Classic, oavsett i vilken mapp resurserna finns.
 - Namnen är skiftlägeskänsliga. Till exempel skulle stol.jpg, stol.jpg och CHAIR.jpg skapa tre olika resurs-ID:n.
-- Ett tips är att resurs-ID:n inte får innehålla blanksteg eller symboler. Användningen av blanksteg och symboler gör implementeringen svårare eftersom du måste URL-koda dessa tecken. Ett blanksteg &quot; blir till exempel &quot;%20&quot;.
+- Ett tips är att resurs-ID inte får innehålla blanksteg eller symboler. Användningen av blanksteg och symboler gör implementeringen svårare eftersom du måste URL-koda de här tecknen. Ett blanksteg &quot; blir till exempel &quot;%20&quot;.
 
 Namnkonventionen är i stort sett hur du integrerar med Dynamic Media Classic. Du integrerar vanligtvis inte dina datasystem i Dynamic Media Classic eftersom det är ett slutet system. Det är en passiv partner som väntar på instruktioner i form av URL-adresser.
 
@@ -76,10 +74,10 @@ Detta är ett mycket enkelt system och bra om du har blygsamma behov. Den är do
 
 | SKU/PID | Kategori | Filnamn | Tillgångs-ID |
 | ------- | ----------------------- | ------------------------------------------- | ------------------------------- |
-| AA123 | Alt-vyer | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
-|  | Färgade vyer | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
-|  | Färgrutor | AA123_BLU_SW.tif | AA123_BLU_SW |
-|  | Bilduppsättning eller uppsättning med färgrutor |  | AA123 eller AA123_SET | — |
+| AA123 | Alternativ vy | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
+|         | Färgade vyer | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
+|         | Färgrutor | AA123_BLU_SW.tif | AA123_BLU_SW |
+|         | Bilduppsättning eller uppsättning med färgrutor |                                             | AA123 eller AA123_SET | — |
 
 När du arbetar med uppsatta samlingar, som bilduppsättningar och färgruteuppsättningar, måste själva uppsättningen också ha ett unikt namn. I det här fallet kan uppsättningen få bas-SKU:n som namn, eller SKU:n med tillägget&quot;_SET&quot;.
 

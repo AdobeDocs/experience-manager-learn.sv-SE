@@ -1,17 +1,17 @@
 ---
 title: Sidmallar
-description: Lär dig hur du skapar och ändrar sidmallar. Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i Magazine skapas utifrån en dummy från Adobe XD.
+description: Lär dig skapa och ändra sidmallar. Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i Magazine skapas utifrån en dummy från Adobe XD.
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Det finns tre huvudområden [Sidmallar](https://experienceleague.adobe.com/docs/
 
 1. **Struktur** - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
 1. **Ursprungligt innehåll** - definierar komponenter som mallen börjar med, de kan redigeras och/eller tas bort av innehållsförfattare
-1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare kommer att ha tillgängliga.
+1. **Profiler** - definierar konfigurationer för hur komponenter beter sig och vilka alternativ författare har tillgängliga.
 
 Skapa sedan en ny mall i AEM som matchar strukturen i modellerna. Detta inträffar i en lokal instans av AEM. Följ stegen i videon nedan:
 
@@ -75,7 +75,7 @@ Steg på hög nivå för videon nedan:
 
 ## Skapa en artikelsida för Magazine
 
-Skapa sedan en ny sida med mallen Artikelsida för tidskrift. Skriv innehållet på sidan så att det matchar webbplatsens dummies. Följ stegen i videon nedan:
+Skapa sedan en ny sida med mallen Artikelsida för tidskrift. Skriv innehållet på sidan så att det matchar webbplatsens modeller. Följ stegen i videon nedan:
 
 >[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 

@@ -2,17 +2,17 @@
 title: Utvecklingsaspekter
 description: Fundera på effekten på frontend- och back-end-utvecklingsprocessen när du aktiverar front-end-flödet.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: a3b27d5b-b167-4c60-af49-8f2e8d814c86
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -41,4 +41,4 @@ När du har aktiverat frontend-pipelinen för att endast distribuera frontendres
 A __lösning__ kan vara att justera Git-förgreningsmodellen och se till att AEM ändringar i projektkonfigurationen aldrig kommer tillbaka till __lokal utveckling__ som AEM bakomliggande utvecklare använder.
 
 
-* Som en del av en pågående förbättring av AEM projekt, om du introducerar nya komponenter eller uppdaterar en befintlig komponent som har ändringar i båda `ui.app` och `ui.frontend` måste du köra både fullstacks- och frontendpipelines.
+* Som en del av en pågående förbättring av AEM projekt, om du inför nya komponenter eller uppdaterar en befintlig komponent som har ändringar i båda `ui.app` och `ui.frontend` måste du köra både fullstacks- och frontendpipelines.

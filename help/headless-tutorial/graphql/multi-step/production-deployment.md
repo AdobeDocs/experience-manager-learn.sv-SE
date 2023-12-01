@@ -1,25 +1,25 @@
 ---
-title: Produktionsdistribution med en AEM-publiceringstjänst - Komma igång med AEM Headless - GraphQL
-description: Lär dig mer om AEM Author och Publish och det rekommenderade distributionsmönstret för headless-program. I den här självstudiekursen lär du dig att använda miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Lär dig att konfigurera AEM för Cross-Origin Resource Sharing (CORS).
+title: Produktionsdistribution med en AEM publiceringstjänst - Komma igång AEM Headless - GraphQL
+description: Lär dig mer om AEM författar- och publiceringstjänster och det rekommenderade distributionsmönstret för headless-program. I den här självstudiekursen lär du dig att använda miljövariabler för att dynamiskt ändra en GraphQL-slutpunkt baserat på målmiljön. Lär dig att konfigurera AEM för Cross-Origin Resource Sharing (CORS).
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-kt: 7131
+jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2357'
 ht-degree: 0%
 
 ---
 
-# Produktionsdistribution med en AEM-publiceringstjänst
+# Produktionsdistribution med en AEM Publiceringstjänst
 
-I den här självstudiekursen skapar du en lokal miljö för att simulera innehåll som distribueras från en Author-instans till en Publish-instans. Du kommer också att generera ett produktionsbygge av en React App som är konfigurerad att förbruka innehåll från AEM-publiceringsmiljön med GraphQL API:er. Under tiden kommer du att lära dig hur du effektivt använder miljövariabler och hur du uppdaterar AEM CORS-konfigurationer.
+I den här självstudiekursen skapar du en lokal miljö för att simulera innehåll som distribueras från en Author-instans till en Publish-instans. Du genererar också en produktionsbygge av en React App som är konfigurerad att använda innehåll från AEM publiceringsmiljö med GraphQL API:er. Under tiden kommer du att lära dig hur du effektivt använder miljövariabler och hur du uppdaterar AEM CORS-konfigurationer.
 
 ## Förutsättningar
 
@@ -29,7 +29,7 @@ Den här självstudiekursen är en del av en självstudiekurs i flera delar. Det
 
 Lär dig mer om:
 
-* Förstå arkitekturen för AEM Author och Publish.
+* Förstå arkitekturen AEM Author och Publish.
 * Lär dig de bästa sätten att hantera miljövariabler.
 * Lär dig hur du konfigurerar AEM för Cross-Origin Resource Sharing (CORS).
 
@@ -37,18 +37,18 @@ Lär dig mer om:
 
 En komplett AEM består av en författare, en publiceringsversion och en utskicksare. I författartjänsten kan interna användare skapa, hantera och förhandsgranska innehåll. Publiceringstjänsten betraktas som&quot;Live&quot;-miljö och är vanligtvis den slutanvändare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten.
 
-Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
+Det vanligaste distributionsmönstret med AEM headless-program är att få produktionsversionen av programmet att ansluta till en AEM Publish-tjänst.
 
 ![Mönster för högnivådistribution](assets/publish-deployment/high-level-deployment.png)
 
-Diagrammet ovan visar det här vanliga distributionsmönstret.
+Diagrammet ovan visar detta vanliga distributionsmönster.
 
 1. A **Innehållsförfattare** använder AEM författartjänst för att skapa, redigera och hantera innehåll.
 2. The **Innehållsförfattare** och andra interna användare kan förhandsgranska innehållet direkt i författartjänsten. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till författartjänsten.
 3. När innehållet har godkänts kan det **publicerad** till AEM Publish-tjänsten.
-4. **Slutanvändare** interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL API:er för att begära och använda innehåll.
+4. **Slutanvändare** interagerar med programmets Production-version. Produktionsprogrammet ansluter till publiceringstjänsten och använder GraphQL API:er för att begära och använda innehåll.
 
-Självstudiekursen simulerar distributionen ovan genom att lägga till en AEM Publish-instans i den aktuella installationen. I tidigare kapitel fungerade React App som en förhandsgranskning genom att ansluta direkt till Author-instansen. En produktionsversion av React App distribueras till en statisk Node.js-server som ansluter till den nya Publish-instansen.
+Självstudiekursen simulerar distributionen ovan genom att lägga till en AEM Publish-instans i den aktuella konfigurationen. I tidigare kapitel fungerade React App som en förhandsgranskning genom att ansluta direkt till Author-instansen. En produktionsversion av React App distribueras till en statisk Node.js-server som ansluter till den nya Publish-instansen.
 
 Slutligen körs tre lokala servrar:
 
@@ -58,7 +58,7 @@ Slutligen körs tre lokala servrar:
 
 ## Installera AEM SDK - publiceringsläge {#aem-sdk-publish}
 
-För närvarande har vi en instans av SDK som körs i **Upphovsman** läge. SDK kan också startas i **Publicera** läge för att simulera en AEM-publiceringsmiljö.
+För närvarande har vi en instans av SDK som körs i **Upphovsman** läge. SDK kan också startas i **Publicera** läge för att simulera en AEM publiceringsmiljö.
 
 En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up).
 
@@ -98,7 +98,7 @@ Precis som i Author-instansen måste Publish-instansen ha GraphQL-slutpunkterna 
 
    ![WKND Referenswebbplats för utloggning](assets/publish-deployment/sign-out-wknd-reference-site.png)
 
-   Till skillnad från AEM Author-instansen är AEM Publish-instansen standard för anonym skrivskyddad åtkomst. Vi vill simulera upplevelsen för en anonym användare när vi kör React-programmet.
+   Till skillnad från AEM Author-instansen är AEM publiceringsinstanser standard anonym skrivskyddad åtkomst. Vi vill simulera upplevelsen för en anonym användare när vi kör React-programmet.
 
 ## Uppdatera miljövariabler för att peka på Publish-instansen {#react-app-publish}
 
@@ -126,7 +126,7 @@ Lägg sedan till en ny fil `.env.production.local` för att simulera produktions
 
 ## Distribuera en statisk nodserver {#static-server}
 
-Appen React kan startas med webbpaketservern, men detta är endast till för utveckling. Därefter simulerar du en produktionsdistribution med [server](https://github.com/vercel/serve) som värd för en produktionsversion av React-appen med Node.js.
+Appen React kan startas med webbpaketservern, men detta är endast till för utveckling. Nu kan du simulera en produktionsdistribution med [server](https://github.com/vercel/serve) som värd för en produktionsversion av React-appen med Node.js.
 
 1. Öppna ett nytt terminalfönster och navigera till `aem-guides-wknd-graphql/react-app` katalog
 
@@ -187,9 +187,9 @@ Appen React kan startas med webbpaketservern, men detta är endast till för utv
 
 ## Absoluta bildreferenser {#absolute-image-references}
 
-Bilderna ser brutna ut eftersom `<img src` är inställt på en relativ sökväg och slutar upp som pekar på den statiska nodservern vid `http://localhost:5000/`. I stället bör dessa bilder peka på AEM Publish-instansen. Det finns flera möjliga lösningar på detta. När du använder webbpaketets dev-server kan du `react-app/src/setupProxy.js` skapa en proxy mellan webbpaketservern och AEM författarinstans för alla förfrågningar till `/content`. En proxykonfiguration kan användas i en produktionsmiljö men måste konfigureras på webbservernivå. Till exempel: [Apache&#39;s proxy module](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
+Bilderna ser brutna ut eftersom `<img src` är inställt på en relativ sökväg och slutar upp som pekar på den statiska nodservern vid `http://localhost:5000/`. I stället bör de här bilderna peka på AEM Publish-instans. Det finns flera möjliga lösningar på detta. När du använder webbpaketets dev-server kan du `react-app/src/setupProxy.js` skapa en proxy mellan webbpaketservern och AEM författarinstans för alla förfrågningar till `/content`. En proxykonfiguration kan användas i en produktionsmiljö men måste konfigureras på webbservernivå. Till exempel: [Apache&#39;s proxy module](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
 
-Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_URI` systemvariabel. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
+Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_URI` miljövariabel. I stället använder vi en funktion i AEM GraphQL API för att begära en absolut URL till bilden.
 
 1. Stoppa Node.js-servern.
 1. Återgå till utvecklingsmiljön och öppna filen `Adventures.js` på `react-app/src/components/Adventures.js`.
@@ -222,7 +222,7 @@ Appen kan uppdateras så att den innehåller en absolut URL med `REACT_APP_HOST_
    `_publishUrl` och `_authorUrl` är värden inbyggda i `ImageRef` så att det blir enklare att ta med absoluta URL:er.
 
 1. Upprepa stegen ovan om du vill ändra frågan som används i dialogrutan `filterQuery(activity)` funktionen som ska innehålla `_publishUrl` -egenskap.
-1. Ändra `AdventureItem` komponent vid `function AdventureItem(props)` för att referera till `_publishUrl` i stället för `_path` egenskapen när `<img src=''>` tagg:
+1. Ändra `AdventureItem` komponent vid `function AdventureItem(props)` referera till `_publishUrl` i stället för `_path` egenskapen när du skapar `<img src=''>` tagg:
 
    ```diff
    - <img className="adventure-item-image" src={props.adventurePrimaryImage._path} alt={props.adventureTitle}/>
@@ -309,7 +309,7 @@ Detta är något att tänka på när du distribuerar nya uppdateringar till ett 
 Sedan kan du simulera innehållspublicering mellan de lokala författarinstanserna och publiceringsinstanserna.
 
 1. Starta Author-instansen (om den inte redan har startats) och navigera till Package Manager på [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
-1. Hämta paketet [EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip) och installera det med Package Manager.
+1. Ladda ned paketet [EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip) och installera det med Package Manager.
 
    Det här paketet installerar en konfiguration som gör att författarinstansen kan publicera innehåll till publiceringsinstansen. Manuella steg för [den här konfigurationen finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution).
 
@@ -373,13 +373,13 @@ Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
 
    ![CORS-fel](assets/publish-deployment/cors-error-not-fetched.png)
 
-   Uppdatera sedan AEM Publish CORS-konfigurationen så att begäranden från nätverkets IP-adress tillåts.
+   Uppdatera sedan AEM Publish CORS-konfiguration så att begäranden från nätverkets IP-adress tillåts.
 
 1. Navigera till [http://localhost:4503/content/wknd/us/en/errors/sign-in.html](http://localhost:4503/content/wknd/us/en/errors/sign-in.html) och logga in med användarnamnet `admin` och lösenord `admin`.
 
 1. Navigera till [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr) och hitta WKND GraphQL-konfigurationen på `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql`.
 
-1. Uppdatera **Tillåtna original** fält som ska innehålla nätverkets IP-adress:
+1. Uppdatera **Tillåtna ursprungsobjekt** fält som ska innehålla nätverkets IP-adress:
 
    ![Uppdatera CORS-konfiguration](assets/publish-deployment/cors-update.png)
 
@@ -393,7 +393,7 @@ Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
 
    >[!NOTE]
    >
-   > OSGi-konfigurationer hanteras i ett AEM projekt som är implementerat för källkontroll. Ett AEM projekt kan distribueras till AEM som Cloud Service med hjälp av Cloud Manager. The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan hjälpa till att generera ett projekt för en viss implementering.
+   > OSGi-konfigurationer hanteras i ett AEM projekt som är implementerat för källkontroll. Ett AEM projekt kan distribueras till AEM som Cloud Service med hjälp av Cloud Manager. The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) kan hjälpa till att generera ett projekt för en viss implementering.
 
 1. Återgå till React App från [http://192.168.86.XXX:5000](http://192.168.86.XXX:5000) och observera att programmet inte längre orsakar ett CORS-fel.
 
@@ -401,7 +401,7 @@ Experimentera sedan med CORS-konfigurationen för AEM Publish-instansen.
 
 ## Grattis! {#congratulations}
 
-Grattis! Du har nu simulerat en fullständig produktionsdistribution med en AEM-publiceringsmiljö. Du lärde dig också att använda CORS-konfigurationen i AEM.
+Grattis! Du har nu simulerat en fullständig produktionsdistribution med en AEM publiceringsmiljö. Du lärde dig också att använda CORS-konfigurationen i AEM.
 
 ## Andra resurser
 

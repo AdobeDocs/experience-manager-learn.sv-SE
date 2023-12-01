@@ -7,12 +7,12 @@ version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
-kt: 5252
+jira: KT-5252
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Via loggarna för AEM SDK kan AEM SDK:s lokala snabbstartsverktyg eller Dispatcher Tools ge viktiga insikter i felsökning AEM program.
 
-## AEM
+## AEM loggar
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
 Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM. Adobe rekommenderar att konfigurationerna för lokal utveckling och AEM as a Cloud Service Dev-loggning är så lika som möjligt, eftersom det normaliserar loggsynligheten i AEM SDK:s lokala snabbstart och AEM as a Cloud Service Dev-miljöer, vilket minskar behovet av konfigurationssvängningar och omdistribution.
 
-The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
+The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 

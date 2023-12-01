@@ -6,10 +6,10 @@ role: Developer
 level: Beginner, Intermediate
 version: 6.4, 6.5
 feature: PDF Generator
-kt: 7071
+jira: KT-7071
 topic: Development
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 0%

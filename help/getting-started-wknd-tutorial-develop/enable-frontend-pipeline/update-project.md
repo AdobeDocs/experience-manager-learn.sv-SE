@@ -2,17 +2,17 @@
 title: Uppdatera AEM i full hög för att använda frontendpipeline
 description: Lär dig hur du uppdaterar AEM i full hög för att aktivera det för frontendpipeline, så att endast slutartefakter byggs och distribueras.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -194,7 +194,7 @@ Slutligen kan du överföra dessa ändringar till Adobe i programmets Git-databa
 
 ## Varning - _Aktivera frontdelspipeline_ knapp
 
-The [Järnvägsväljare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) &#39;s [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) alternativet visar **Aktivera frontdelspipeline** när du väljer platsroten eller webbplatssidan. Klicka **Aktivera frontdelspipeline** knappen åsidosätter ovanstående **Sling-konfigurationer**, kontrollera **du inte klickar** den här knappen efter distributionen av ovanstående ändringar via molnhanterarens pipeline-körning.
+The [Järnvägsväljare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) &#39;s [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) alternativet visar **Aktivera frontdelspipeline** när du väljer platsroten eller webbplatssidan. Klicka **Aktivera frontdelspipeline** kommer att åsidosätta ovanstående **Sling-konfigurationer**, kontrollera **du inte klickar** den här knappen efter distributionen av ovanstående ändringar via molnhanterarens pipeline-körning.
 
 ![Knappen Aktivera främre rörledning](assets/enable-front-end-Pipeline-button.png)
 

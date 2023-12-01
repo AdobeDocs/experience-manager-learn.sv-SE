@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 [Innehållsförteckning](./overview.md)
 
-[&lt;- Föregående: Vad är &quot;The Dispatcher&quot;?](./what-is-the-dispatcher.md)
+[&lt;- Previous: What is &quot;The Dispatcher&quot;](./what-is-the-dispatcher.md)
 
 I det här dokumentet förklaras AMS-standardkonfigurationsuppsättningen och hur man tänker bakom den här konfigurationsstandarden
 
@@ -58,7 +59,7 @@ När vi följer och följer installationsdesignen/-strukturen får vi följande 
 - Undviker SELinux-överträdelser av felmärkta filkontexter
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Adobe Managed Services-serveravbildningarna har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis är monterad i "/mnt". Sedan använder vi volymen istället för standardvärdena för följande standardkataloger
+Adobe Managed Services-serverbilder har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis är monterad i "/mnt". Sedan använder vi volymen istället för standardvärdena för följande standardkataloger
 
 `DocumentRoot`
 - Standard:`/var/www/html`
@@ -130,7 +131,7 @@ Vi följer den bästa metoden och skapar en egen
 
 Med följande kataloger kan du bygga ut konfigurationsfiler med ett mellanlagringsområde som du kan arbeta med filer och bara aktivera när de är klara.
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
-   - Den här mappen är värd för alla dina `/myfarm {` filer anropade `_farm.any`
+   - Den här mappen är värd för alla `/myfarm {` filer anropade `_farm.any`
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
    - När du är redo att använda servergruppsfilen finns det en länk i mappen available_farm med en relativ sökväg till katalogen enabled_farm
 
@@ -140,7 +141,7 @@ Det finns ytterligare delar som är underavsnitt i filkonfigurationerna för Dis
 
 #### Cachekatalog
 
-Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller regler för hur du vill att modulen ska hantera cachelagrade element som kommer från AEM samt syntaxen för ogiltighetsregler.  Mer information om det här avsnittet finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller regler för hur du vill att modulen ska hantera cachelagrade element som kommer från AEM samt syntaxen för ogiltighetsregler.  Mer information finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
@@ -162,7 +163,7 @@ Den här katalogen kan innehålla alla `_renders.any` filer som du skapar och so
 
 - `/etc/httpd/conf.dispatcher.d/renders/`
 
-#### Vhosts-katalog
+#### Vvärkatalog
 
 Den här katalogen kan innehålla alla `_vhosts.any` filer som du skapar och som innehåller en lista med domännamn och sökvägar som matchar en viss servergrupp med en viss serverdel
 
@@ -273,7 +274,7 @@ De mindre installerade standardfilerna som du ändrar blir bättre. Om några pa
 
 Istället skapas en `.rpmnew` -filen bredvid originalet.  Det innebär att du kommer att sakna vissa ändringar som du kan ha önskat och skapat mer skräp i konfigurationsmapparna.
 
-RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om det finns i `unaltered` ange att den *ersätt* filen så får du de viktigaste uppdateringarna.  Om `httpd.conf` var `altered` sedan *ersätter inte* filen och i stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många korrigeringar som du vill göra finns i filen som inte gäller vid tjänststart.
+dvs. RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om det finns i `unaltered` ange att den *ersätt* filen så får du de viktigaste uppdateringarna.  Om `httpd.conf` var `altered` sedan *ersätter inte* filen och i stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många korrigeringar som du vill göra finns i filen som inte gäller vid tjänststart.
 
 Enterprise Linux har konfigurerats korrekt för att hantera det här användningsexemplet på ett bättre sätt.  De ger dig områden där du kan utöka eller åsidosätta de standardvärden som de anger åt dig.  I grundinstallationen av httpd hittar du filen `/etc/httpd/conf/httpd.conf`och har en syntax som:
 
@@ -284,7 +285,7 @@ IncludeOptional conf.d/.conf
 
 Apache vill att du ska utöka modulerna och konfigurationerna genom att lägga till nya filer i `/etc/httpd/conf.d/` och `/etc/httpd/conf.modules.d/` kataloger med filtillägg för `.conf`
 
-Som det perfekta exemplet när du lägger till modulen Dispatcher i Apache skapar du en modul `.so` fil i ` /etc/httpd/modules/` och sedan inkludera den genom att lägga till en fil i `/etc/httpd/conf.modules.d/02-dispatcher.conf` med innehållet som läser in modulen `.so` fil
+Som det perfekta exemplet när du lägger till modulen Dispatcher i Apache skapar du en modul `.so` fil i ` /etc/httpd/modules/` och sedan inkludera den genom att lägga till en fil i `/etc/httpd/conf.modules.d/02-dispatcher.conf` med innehåll som ska läsa in modulen `.so` fil
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
@@ -303,6 +304,6 @@ Nu använder vi vår modul i vår fil <b>`/etc/httpd/conf.d/dispatcher_vhost.co
 </IfModule>
 ```
 
-Vi kommer att märka att vi har lagt till filer och moduler, men inte ändrat några originalfiler.  Detta ger oss den önskade funktionaliteten och skyddar oss från att behöva åtgärda saknade korrigeringar samt att hålla oss till högsta kompatibilitetsnivå med varje uppgradering av paketet.
+Även här kommer du att märka att vi har lagt till filer och moduler, men inte ändrat några originalfiler.  Detta ger oss den önskade funktionaliteten och skyddar oss från saknade korrigeringar samt att hålla oss till högsta kompatibilitetsnivå med varje uppgradering av paketet.
 
 [Nästa -> Förklaring av konfigurationsfiler](./explanation-config-files.md)

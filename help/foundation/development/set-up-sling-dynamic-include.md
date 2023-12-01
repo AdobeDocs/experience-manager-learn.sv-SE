@@ -4,15 +4,12 @@ description: En videogenomgång av hur du installerar och använder Apache Sling
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
-topics: caching
-activity: develop
-audience: architect, developer
-doc-type: technical video
+doc-type: Technical Video
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera [!DNL Sling Dynamic Include]
 
-En videogenomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) körs [!DNL Apache HTTP Web Server].
+En videogenomgång av installation och användning [!DNL Apache Sling Dynamic Include] med [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) körs [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
@@ -80,7 +77,7 @@ En videogenomgång av hur du installerar och använder [!DNL Apache Sling Dynami
    -->
    ```
 
-1. Uppdatera [!DNL Apache HTTPD Web server]&#39;s `httpd.conf` fil för att aktivera [!DNL Include] -modul.
+1. Uppdatera [!DNL Apache HTTPD Web server]&#39;s `httpd.conf` -fil för att aktivera [!DNL Include] -modul.
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -150,7 +147,7 @@ En videogenomgång av hur du installerar och använder [!DNL Apache Sling Dynami
 
 >[!NOTE]
 >
->Om du använder [!DNL Sling Dynamic Includes] för servering av SSI (edge-side includes), se till att cachelagra relevanta [svarshuvuden i dispatchercachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
+>Om du använder [!DNL Sling Dynamic Includes] för servering av SSI (edge-side includes), se till att cachelagra relevanta [svarsrubriker i dispatchercachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
@@ -161,7 +158,6 @@ En videogenomgång av hur du installerar och använder [!DNL Apache Sling Dynami
 >* &quot;X-content-type-options&quot;
 >* &quot;Senast ändrad&quot;
 >
-
 
 ## Stödmaterial
 

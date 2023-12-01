@@ -7,17 +7,17 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-# Tilläggsregistrering
+# Tillägg - registrering
 
 AEM är en specialiserad app i App Builder som bygger på React och använder [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/) Gränssnittsramverk.
 
@@ -50,13 +50,13 @@ function App(props) {
 }
 ```
 
-## Tilläggsregistrering
+## Tillägg - registrering
 
 `ExtensionRegistration.js` måste läsas in omedelbart via tilläggets indexflöde och fungerar som registreringspunkt för tillägget.
 
 Baserat på den AEM UI-tilläggsmallen som valts när [initiera apptillägget App Builder](./app-initialization.md), stöds olika tilläggspunkter.
 
-+ [Gränssnittstilläggspunkter för innehållsfragment](./content-fragments/overview.md#extension-points)
++ [Tillägg för innehållsfragment i användargränssnittet](./content-fragments/overview.md#extension-points)
 
 
 ## Inkludera tillägg villkorligt
@@ -73,7 +73,7 @@ De vanligaste kontrollerna för att läsa in ett tillägg är:
 + Använda AEM (`new URLSearchParams(window.location.search).get('repo')`) för att avgöra om tillägget ska läsas in.
    + Visa bara tillägget i AEM miljöer som ingår i ett visst program (som visas i exemplet nedan).
    + Visa bara tillägget i en viss AEM (AEM värd).
-+ Använda en [Adobe I/O Runtime action](./runtime-action.md) för att göra ett HTTP-anrop till AEM för att avgöra om den aktuella användaren ska se tillägget.
++ Använda [Adobe I/O Runtime action](./runtime-action.md) för att göra ett HTTP-anrop till AEM för att avgöra om den aktuella användaren ska se tillägget.
 
 I exemplet nedan visas hur du begränsar tillägget till alla miljöer i programmet `p12345`.
 

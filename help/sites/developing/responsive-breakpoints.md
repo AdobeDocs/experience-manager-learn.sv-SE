@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-01-05T00:00:00Z
-kt: 11664
+jira: KT-11664
 thumbnail: kt-11664.jpeg
 exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -38,7 +38,7 @@ I `/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/
 
 ## Skapa emulatorer
 
-AEM emulatorer måste definieras så att författare kan välja den responsiva vyn som ska redigeras i sidredigeraren.
+AEM måste definieras så att författare kan välja den responsiva vyn som ska redigeras i sidredigeraren.
 
 Skapa emulatornoder under `/ui.apps/src/main/content/jcr_root/apps/<app name>/emulators`
 

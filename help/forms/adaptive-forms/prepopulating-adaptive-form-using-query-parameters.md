@@ -1,15 +1,15 @@
 ---
-title: Fyll i Adaptiv Forms med hjälp av frågeparametrar.
+title: Fyll i Adaptiv Forms med frågeparametrar.
 description: Fyll i Adaptiv Forms med data från frågeparametrar.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-kt: 11470
+jira: KT-11470
 last-substantial-update: 2020-11-12T00:00:00Z
 exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

@@ -1,13 +1,14 @@
 ---
-title: Förstå skäl att uppgradera
-description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager 6.
+title: Förstå anledningar att uppgradera
+description: En högnivåbeskrivning av de viktigaste funktionerna för kunder som överväger att uppgradera till den senaste versionen av Adobe Experience Manager 6.
 version: 6.5
 topic: Upgrade
 feature: Release Information
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
+doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2602'
 ht-degree: 1%
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 # Förstå skäl att uppgradera
 
-En högnivåbeskrivning av de viktigaste funktionerna för kunder som funderar på att uppgradera till den senaste versionen av Adobe Experience Manager 6.
+En högnivåbeskrivning av de viktigaste funktionerna för kunder som överväger att uppgradera till den senaste versionen av Adobe Experience Manager 6.
 
 ## Viktiga funktioner för uppgradering till AEM 6.5
 
@@ -32,7 +33,7 @@ Adobe Experience Manager 6.5 fortsätter att förbättra systemets stabilitet, p
 
 AEM Sites presenterar ett antal funktioner för att snabba upp framtagningen och utbyggnaden av webbplatser:
 
-+ **SPA** kan SPA (single-page-applikationer) redigeras i sin helhet i AEM, vilket ger en rikhaltig, marknadsföringsvänlig upplevelse.
++ **SPA** kan SPA (single-page-applikationer) redigeras i sin helhet i AEM, vilket stöder en omfattande, marknadsföringsvänlig upplevelse.
 +_ **JavaScript SDK&#39;s**, en SPA startsats för projekt och stödverktyg för bygge, gör det möjligt för gränssnittsutvecklare att utveckla SPA redigerarkompatibla single page-applikationer oberoende av AEM.
 + **Kärnkomponenter** innehåller en mängd nya komponenter, **Komponentbibliotek** samt en mängd förbättringar av befintliga kärnkomponenter.
 + Ytterligare **Översättningar** förbättringarna effektiviserar översättningen av AEM Sites.
@@ -51,7 +52,7 @@ AEM Assets fortsätter att bygga vidare på sin omfattande uppsättning funktion
 
 + **Adobe Asset Link** kopplar samman kreatörer direkt till AEM Assets från Adobe Creative Cloud verktyg.
 + **Adobe Stock** integreringen ger direktåtkomst till Adobe Stock bilder direkt från AEM Assets och skapar en smidig upplevelse för innehållsidentifiering.
-+ **AEM** releases version 2.0 and re-envisioning self while improve performance and ability.
++ **AEM datorprogram** releases version 2.0 and re-envisioning self while improve performance and ability.
 + **Anslutna resurser** har stöd för diskreta AEM Sites-instanser för smidig åtkomst till och användning av resurser från en annan AEM Assets-instans.
 + Uppdaterat videostöd i **Dynamic Media**, inklusive **360-video** och **Egna videominiatyrer**.
 
@@ -59,7 +60,7 @@ AEM Assets fortsätter att bygga vidare på sin omfattande uppsättning funktion
 
 AEM fortsätter att bygga sin integrering med smarta tekniker och utnyttjar maskininlärning och artificiell intelligens för att förbättra alla upplevelser.
 
-+ **Adobe Asset Link** tillägg **Visuell likhetssökning** så att liknande bilder enkelt kan hittas och användas i **Adobe Creative Cloud**.
++ **Adobe Asset Link** tillägg **Visuell likhetssökning**, vilket gör att liknande bilder enkelt kan hittas och användas i **Adobe Creative Cloud**.
 
 ### Integreringar
 
@@ -72,7 +73,7 @@ AEM utökar sin förmåga att integrera med andra Adobe-tjänster:
 [Cloud Manager](https://adobe.ly/2HODmsv), som endast är till för Adobe Managed Services-kunder (AMS), har följande funktioner:
 
 + Cloud Manager har stöd för utökade AEM från AEM Sites till **AEM Assets**, inklusive **automatisk prestandatestning av materialbearbetning**.
-+ **Automatisk skalning** av AEM-publiceringsnivån vid fördefinierade tröskelvärden säkerställer en optimal slutanvändarupplevelse.
++ **Automatisk skalning** av AEM publiceringsnivå vid fördefinierade tröskelvärden säkerställer en optimal slutanvändarupplevelse.
 + **Icke-produktionsrörledningar** gör det möjligt för utvecklingsteam att utnyttja Cloud Manager för att kontinuerligt kontrollera kodkvaliteten och driftsätta i lägre miljöer (utveckling och kvalitetskontroll).
 + **API:er för CI/CD-pipeline** gör det möjligt för kunderna att programmatiskt interagera med Cloud Manager, vilket ger djupare integreringsmöjligheter med en lokal utvecklingsinfrastruktur.
 
@@ -146,7 +147,7 @@ Nedan finns en matris med grundläggande funktioner som AEM erbjuder. Vissa av d
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">Rensa onlineändringar</a>:</strong>
-                Utför databasunderhåll utan driftavbrott.</td>
+                Utför databasunderhåll utan serverdriftavbrott.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -169,7 +170,7 @@ Nedan finns en matris med grundläggande funktioner som AEM erbjuder. Vissa av d
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">Prestanda och stabilitet i MongoMK</a>:</strong>
-            MongoMK har förbättrats ytterligare sedan det introducerades med AEM 6.0.</td>
+            MongoMK har förbättrats ytterligare sedan lanseringen med AEM 6.0.</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -258,7 +259,7 @@ Nedan finns en matris med grundläggande funktioner som AEM erbjuder. Vissa av d
         </tr>
         <tr>
             <td><strong><a href="https://adobe.ly/2HODmsv" target="_blank">Cloud Manager</a>: </strong>
-                Cloud Manager är exklusivt för kunder som använder Adobe Managed Services (AMS) och snabbar upp utvecklingen och driftsättningen via en modern CI/CD-pipeline.</td>
+                Cloud Manager är exklusivt för Adobe Managed Services-kunder (AMS) och snabbar upp utvecklingen och driftsättningen via en modern CI/CD-pipeline.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -408,7 +409,7 @@ Nedan finns en matris med viktiga säkerhetsfunktioner som AEM erbjuder. Vissa a
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Stöd för Adobe IMS-autentisering</a><br>
- </strong>Exklusivt för Adobe Managed Services (AMS), hantera åtkomsten till AEM Author-instanser centralt via Adobe IMS (Identity Management System).</td>
+ </strong>Endast för Adobe Managed Services (AMS) kan du centralt hantera åtkomst till AEM Author-instanser via Adobe IMS (Identity Management System).</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -588,7 +589,7 @@ Nedan finns en matris med de viktigaste webbplatsfunktionerna som AEM erbjuder. 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Adobe Analytics integrerings- och innehållsinsikter:</strong>
+            <td><strong>Adobe Analytics Integration and Content Insights:</strong>
                 Enkel integrering av Adobe Analytics och DTM. Visa prestandainformation i redigeringsmiljön.</td>
             <td> </td>
             <td>✔</td>
@@ -727,7 +728,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
         </tr>
         <tr>
             <td><strong>Skalbarhet och prestanda:</strong>
-            Förbättrat stöd för konsumtion, överföring och lagring i stor skala.</td>
+            Förbättrat stöd för konsumtion, uppladdning och lagring i stor skala.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -826,7 +827,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server Integration</a>:</strong>
-            Generera produktkataloger. Skapa broschyrer, flygblad och annonser baserade på InDesign-mallar.</td>
+            Generera produktkataloger. Skapa broschyrer, flygblad och annonser baserade på mallar för InDesigner.</td>
             <td> </td>
             <td> </td>
             <td>✔</td>
@@ -836,7 +837,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM datorprogram</a>:</strong>
             Synkronisera material till det lokala skrivbordet för redigering med Creative Suite-produkter.
             </td>
             <td> </td>
@@ -973,7 +974,7 @@ Nedan finns en matris med de viktigaste Assets-funktionerna som AEM erbjuder. Vi
         </tr>
         <tr>
             <td><strong>Uppgradera från Scene7 till Dynamic Media:</strong>
-            Möjlighet att migrera överordnad resurser och fortsätta använda befintliga S7-URL:er.</td>
+            Möjlighet att migrera huvudresurser och fortsätta använda befintliga S7-URL:er.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1019,7 +1020,7 @@ Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM er
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">Dokument</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html" target="_blank">Dokument för registrering</a>:</strong>
             Skapa ett dokument för att säkerställa långsiktig lagring av datainhämtning eller tryckklar version.</td>
             <td> </td>
             <td>✔</td>
@@ -1122,7 +1123,7 @@ Nedan finns en matris med de viktigaste AEM Forms Add-on-funktionerna som AEM er
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms App</a>:</strong>
-            Möjliggör bearbetning av online-/offlineformulär i en app på iOS, Android eller Windows.</td>
+            Tillåt bearbetning av online-/offlineformulär i en app på iOS, Android eller Windows.</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>

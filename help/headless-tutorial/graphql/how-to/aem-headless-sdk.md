@@ -6,10 +6,10 @@ topic: Headless
 feature: GraphQL API
 role: Developer
 level: Intermediate
-kt: 10269
+jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
@@ -46,7 +46,7 @@ $ npm i @adobe/aem-headless-client-js
 
 I det här kodexemplet visas hur du ställer AEM med [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm-modul använda `async/await` syntax. AEM Headless SDK för JavaScript har också stöd för [Promise syntax](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
 
-Den här koden förutsätter en beständig fråga med namnet `wknd/adventureNames` har skapats på AEM Author och publicerats på AEM Publish.
+Den här koden förutsätter en beständig fråga med namnet `wknd/adventureNames` har skapats AEM författare och publicerats till AEM Publish.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -102,7 +102,7 @@ Använda `useEffect` om du vill göra det asynkrona GraphQL-anropet i React anv�
 1. Den tillhandahåller synkron wrapper för det asynkrona anropet till AEM.
 1. Det minskar behovet av AEM.
 
-Den här koden förutsätter en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats på AEM Author och publicerats på AEM Publish med GraphiQL.
+Den här koden förutsätter en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats AEM författare och publicerats till AEM Publish med GraphiQL.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';

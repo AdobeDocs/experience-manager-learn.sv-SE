@@ -6,10 +6,10 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-kt: 9685
+jira: KT-9685
 exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -71,7 +71,7 @@ function convertUTC(strUTCString)
 }
 ```
 
-Please [referera till jsdoc ](https://jsdoc.app/index.html)om du vill ha mer information om hur du kommenterar javascript-funktioner.
+Please [referera till jsdoc](https://jsdoc.app/index.html)om du vill ha mer information om hur du kommenterar javascript-funktioner.
 Koden ovan har två funktioner:
 **getCountyNamesList** - returnerar en array med strängar
 **convertUTC** - Konverterar UTC-tidsstämpel till lokal tidszon
@@ -90,5 +90,5 @@ Om du har problem med att skapa anpassade funktioner kan du [hämta och installe
 
 ## Använda anpassade funktioner
 
-I följande videofilm får du hjälp med hur du använder en anpassad funktion i regelredigeraren för ett anpassat formulär
+I följande video får du hjälp med att använda den anpassade funktionen i regelredigeraren för ett anpassat formulär
 >[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)

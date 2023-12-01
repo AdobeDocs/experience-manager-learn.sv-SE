@@ -2,18 +2,18 @@
 title: Utöka en komponent | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig att använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
 feature: SPA Editor, Core Components
-doc-type: tutorial
 topics: development
 version: Cloud Service
 activity: develop
 audience: developer
-kt: 5871
+jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 0%
@@ -38,11 +38,11 @@ I det här kapitlet finns en ny `Card` -komponenten skapas. The `Card` -komponen
 
 >[!NOTE]
 >
-> I en implementering i verkligheten kan det vara lämpligare att helt enkelt använda [Teaser Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) inte utöka [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) för att skapa `Card` -komponenten beroende på projektkraven. Det rekommenderas alltid att använda [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) direkt när det är möjligt.
+> I en implementering i verkligheten kan det vara lämpligare att använda [Teaser Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) än att utöka [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) för att skapa `Card` -komponenten beroende på projektkraven. Det rekommenderas alltid att använda [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) direkt om möjligt.
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
 ### Hämta koden
 
@@ -90,7 +90,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   Egenskapen `sling:resourceSuperType` pekar på `wknd-spa-angular/components/image` anger att `Card` -komponenten ärver funktionaliteten från WKND SPA Image-komponenten.
+   Egenskapen `sling:resourceSuperType` pekar på `wknd-spa-angular/components/image` som anger att `Card` -komponenten ärver funktionaliteten från WKND SPA Image-komponenten.
 
 3. Inspect filen `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
 
@@ -109,13 +109,13 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
 
    Många utvecklingsteam strävar efter att bli D.R.Y. (upprepa inte dig själv). Sling arv gör detta möjligt med AEM.
 
-4. Under `card` mapp, öppna filen `_cq_dialog/.content.xml`.
+4. Under `card` öppna filen `_cq_dialog/.content.xml`.
 
    Den här filen är definitionen av komponentdialogrutan för `Card` -komponenten. Om du använder Samling-arv är det möjligt att använda funktionerna i [Samla resurser](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) om du vill åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
-   Egenskaper som `sling:orderBefore` låter en utvecklare välja var nya flikar eller formulärfält ska infogas. I det här fallet `Text` infogas före `asset` -fliken. Om du vill använda Sling Resource Merger fullt ut är det viktigt att du känner till den ursprungliga nodstrukturen i dialogrutan för [Dialogrutan Bildkomponent](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
+   Egenskaper som `sling:orderBefore` låter en utvecklare välja var nya flikar eller formulärfält ska infogas. I det här fallet `Text` infogas före `asset` -fliken. Om du vill använda Sling Resource Merger fullt ut är det viktigt att du känner till den ursprungliga nodstrukturen i dialogrutan för [Dialogruta för bildkomponent](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
 
-5. Under `card` mapp, öppna filen `_cq_editConfig.xml`. Den här filen styr dra och släpp-beteendet i AEM redigeringsgränssnitt. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten. Granska `<parameters>` nod:
+5. Under `card` öppna filen `_cq_editConfig.xml`. Den här filen styr dra och släpp-beteendet i AEM redigeringsgränssnitt. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten. Granska `<parameters>` nod:
 
    ```xml
    <parameters
@@ -177,7 +177,7 @@ Med denna inledande `Card` implementeringen granskar funktionen i AEM SPA Editor
 Nästa steg är att skapa `Card` med AEM SPA Editor.
 
 1. Navigera till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
-2. I `Edit` läge, lägga till `Card` till `Layout Container`:
+2. I `Edit` läge, lägga till `Card` -komponenten till `Layout Container`:
 
    ![Infoga ny komponent](assets/extend-component/insert-custom-component.png)
 
@@ -190,7 +190,7 @@ Nästa steg är att skapa `Card` med AEM SPA Editor.
 
    ![Fliken Textkomponent](assets/extend-component/card-component-text.png)
 
-   **Kortsökväg** - välj en sida under SPA hemsida.
+   **Kortsökväg** - välj en sida under SPA.
 
    **CTA-text** -&quot;Läs mer&quot;
 
@@ -198,7 +198,7 @@ Nästa steg är att skapa `Card` med AEM SPA Editor.
 
    **Hämta rubrik från länkad sida** - markera kryssrutan för att ange true.
 
-6. Uppdatera **Resursmetadata** flik för att lägga till värden för **Alternativ text** och **Bildtext**.
+6. Uppdatera **Resursmetadata** för att lägga till värden för **Alternativ text** och **Bildtext**.
 
    Inga ytterligare ändringar visas efter att dialogrutan har uppdaterats. Om du vill visa de nya fälten för komponenten Angular måste vi uppdatera Sling Model för `Card` -komponenten.
 
@@ -261,7 +261,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna `core` -modul.
 
    Dessa metoder exponeras via JSON-modellens API och skickas till Angular-komponenten.
 
-3. Öppna `CardImpl.java`. Detta är genomförandet av `Card.java` gränssnitt. Implementeringen har delvis stoppats för att snabba upp självstudiekursen.  Lägg märke till att `@Model` och `@Exporter` anteckningar för att säkerställa att Sling Model kan serialiseras som JSON via Sling Model Exporter.
+3. Öppna `CardImpl.java`. Detta är genomförandet av `Card.java` gränssnitt. Implementeringen har delvis stoppats för att snabba upp självstudiekursen.  Lägg märke till att `@Model` och `@Exporter` annoteringar för att säkerställa att Sling-modellen kan serialiseras som JSON via Sling Model Exporter.
 
    `CardImpl.java` använder [Delegeringsmönster för segmenteringsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) för att undvika att skriva om logiken från Image Core-komponenten.
 

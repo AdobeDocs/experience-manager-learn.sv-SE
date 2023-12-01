@@ -1,5 +1,5 @@
 ---
-title: Synkronisera formulär och teman i AEM
+title: Synkronisera formulär och teman i AEM projekt
 description: Synkronisera AEM Forms-resurser i AEM
 solution: Experience Manager
 role: Developer
@@ -7,16 +7,16 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Code Deployment
-kt: 8852
+jira: KT-8852
 exl-id: 81a53f52-2a6c-44ef-a13f-ac372b4a33b9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
-# Synkronisera adaptiv Forms med AEM
+# Synkronisera anpassad Forms med AEM
 
 ## Skapa tema
 

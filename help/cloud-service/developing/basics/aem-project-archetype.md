@@ -6,10 +6,10 @@ level: Beginner
 type: Tutorial
 topic: Development
 feature: AEM Project Archetype
-kt: 6929
+jira: KT-6929
 thumbnail: 330551.jpg
 exl-id: 28914c67-a1d3-4f85-987e-c84ff348f560
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

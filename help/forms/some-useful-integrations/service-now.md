@@ -3,13 +3,13 @@ title: Integrera med [!DNL ServiceNow]
 description: Skapa och visa alla incidenter med hjälp av formulärdatamodell.
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 9957
+jira: KT-9957
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
 last-substantial-update: 2022-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Skapa och visa incidenter i [!DNL ServiceNow] med formulärdatamodell i AEM Form
 
 ## Exempelresurser
 
-Följande exempelresurser finns i den här artikeln:
+Följande exempelresurser finns i artikeln
 
 * Konfiguration av molntjänster
 * Växla filer för att skapa en incident och hämta alla incidenter
@@ -40,17 +40,17 @@ Följande exempelresurser finns i den här artikeln:
 * Ladda ned [exempelresurser](assets/service-now.zip)
 * Importera resurser till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 * Swagger-filen som används för den här integreringen finns under ```/conf/9957/settings/cloudconfigs/fdm``` mapp i crx-databas
-* Redigera [Konfiguration av molntjänsten CreateIncident](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)för att matcha ServiceNow-instansen.
+* Redigera [CreateIncident cloud service configuration](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)för att matcha ServiceNow-instansen.
 * Redigera [Konfiguration av molntjänsten GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) för att matcha ServiceNow-instansen. Du måste ändra värden, användarnamn och lösenord för att matcha dina ServiceNow-instansreferenser.
 
 ## Åtkomst till ServiceNow-instansreferenser
 
 * Klicka på din användarprofil
-   ![klicka på användarprofilen](assets/snow-1.png)
+  ![klicka på användarprofilen](assets/snow-1.png)
 
 * Klicka på Hantera instanslösenord
 * Instansinformationen visas nedan
-   ![instansinformation](assets/snow-3.png)
+  ![instansinformation](assets/snow-3.png)
 
 ## Testa integreringen
 

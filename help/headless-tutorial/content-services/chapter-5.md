@@ -5,15 +5,16 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 873d8e69-5a05-44ac-8dae-bba21f82b823
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
 
 ---
 
-# Kapitel 5 - Sidor för redigering av innehållstjänster
+# Kapitel 5 - Redigera sidor för innehållstjänster
 
 Kapitel 5 i den AEM självstudiekursen Headless handlar om att skapa sidan med hjälp av mallarna som definieras i kapitel 4. Den sida som skapas i det här kapitlet fungerar som JSON HTTP-slutpunkt för mobilappen.
 
@@ -84,9 +85,8 @@ Om det här kontraktet bryts på ett publicerat API kan det leda till felaktigt 
 > Denna JSON kan skrivas ut i en **väldig** (formaterad) mode för läsbarhet genom att använda `.tidy` väljare:
 > * [http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json](http://localhost:4502/content/wknd-mobile/en/api/events.model.tidy.json)
 
-
 ## Nästa steg
 
-Du kan också installera [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM Author via [AEM](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
+Du kan också installera [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM författare via [AEM](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
 
-* [Kapitel 6 - Visa innehållet i AEM Publish som JSON](./chapter-6.md)
+* [Kapitel 6 - Visa innehåll vid AEM publicering som JSON](./chapter-6.md)

@@ -4,15 +4,12 @@ description: I Apache Sling Models 1.3.0 introduceras Sling Model Exporter, ett 
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
-topics: development, content-delivery, headless
-activity: understand
-audience: developer, architect
-doc-type: article
+doc-type: Article
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -27,7 +24,7 @@ Apache [!DNL Sling Models] 1.3.0 introducerar [!DNL Sling Model Exporter], ett e
 
 Traditionell användning för [!DNL Sling Models] är att tillhandahålla en affärabstraktion för en resurs eller begäran som tillhandahåller HTML-skript (eller tidigare JSP-skript) ett gränssnitt för att komma åt affärsfunktioner.
 
-Vanliga mönster utvecklas [!DNL Sling Models] som representerar AEM komponenter eller sidor, och som använder [!DNL Sling Model] -objekt som matar in HTML-skript med data, med slutresultatet HTML som visas i webbläsaren.
+Vanliga mönster utvecklas [!DNL Sling Models] som representerar AEM komponenter eller sidor och använder [!DNL Sling Model] -objekt som matar in HTML-skript med data, med slutresultatet HTML som visas i webbläsaren.
 
 ### Sling Model - flöde för HTTP-begäran
 
@@ -51,13 +48,13 @@ Detta traditionella mönster fungerar bra när det gäller att generera HTML och
 
 Apache [!DNL Sling Model Exporter] levereras med en Sling-medföljande Jackson Exporter som automatiskt serialiserar en&quot;vanlig&quot; [!DNL Sling Model] till JSON. Jackson Exporter är ganska konfigurerbar, men vid kärnan kontrolleras [!DNL Sling Model] och genererar JSON med någon&quot;getter&quot;-metod som JSON-tangenter, och get-tangenten returnerar värden som JSON-värden.
 
-Direkt serialisering av [!DNL Sling Models] gör att de kan hantera både vanliga webbförfrågningar med HTML-svar skapade med [!DNL Sling Model] begäranflöde (se ovan), men visar också JSON-renderingar som kan användas av webbtjänster eller JavaScript-program.
+Direkt serialisering av [!DNL Sling Models] gör att de kan hantera både vanliga webbförfrågningar med HTML-svar som skapats med [!DNL Sling Model] begäranflöde (se ovan), men visar också JSON-renderingar som kan användas av webbtjänster eller JavaScript-program.
 
 ![Sling Model Exporter - flöde för HTTP-begäran](./assets/understand-sling-model-exporter/sling-model-exporter-request-flow.png)
 
 *Det här flödet beskriver flödet med angivet Jackson Exporter för att skapa JSON-utdata. Användning av anpassade exporterare följer samma flöde men med deras utdataformat.*
 
-1. HTTP-GET-begäran görs för en resurs i AEM med väljaren och tillägget som är registrerat med [!DNL Sling Model]Exporter.
+1. HTTP-GET-begäran görs för en resurs i AEM med väljaren och tillägget som är registrerat med [!DNL Sling Model]Vi exporterar.
 
    Exempel: `HTTP GET /content/my-resource.model.json`
 

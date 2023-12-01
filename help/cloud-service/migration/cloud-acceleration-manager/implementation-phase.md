@@ -6,10 +6,10 @@ feature: Migration
 topic: Migration, Upgrade
 role: Architect, Developer
 level: Intermediate
-kt: 8660
+jira: KT-8660
 thumbnail: 336691.jpeg
 exl-id: 35420690-061a-4562-a933-e7bacd9e116d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

@@ -7,12 +7,12 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-kt: 5830
+jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomst
 
 ## Tjänstimplementering
 
-Följande kod är tjänstimplementeringen för att visa resultatkolumnen.
+Följande kod är implementeringen av tjänsten för att visa resultatkolumnen.
 
 Rad 12 associerar kolumnen med den synta mallen
 
@@ -82,7 +82,7 @@ return val;
 
 >[!NOTE]
 >
->I den här artikeln förutsätts att du har installerat [exempelarbetsflöde](assets/review-workflow.zip) och [exempelformulär](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
+>Den här artikeln förutsätter att du har installerat [exempelarbetsflöde](assets/review-workflow.zip) och [exempelformulär](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
 
 * [Logga in som administratör](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)

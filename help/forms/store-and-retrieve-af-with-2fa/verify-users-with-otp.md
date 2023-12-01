@@ -4,13 +4,13 @@ description: Verifiera det mobilnummer som är kopplat till programnumret med hj
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6594
+jira: KT-6594
 thumbnail: 6594.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d486d5de-efd9-4dd3-9d9c-1bef510c6073
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentati
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (fka Swagger).
 
-Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångslösenord som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/two-factore-authentication-swagger.zip)
+Använd [swagger editor](https://editor.swagger.io/) om du vill skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångskod som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/two-factore-authentication-swagger.zip)
 
 ## Skapa datakälla
 

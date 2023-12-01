@@ -3,14 +3,14 @@ title: Förifyll formulär med formulärdatamodell
 description: Fyll i anpassat formulär i förväg med hjälp av formulärdatamodellens attribut för begäran
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 4419
+jira: KT-4419
 thumbnail: 36387.jpg
 topic: Development
 role: User
 level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -23,8 +23,8 @@ Du kommer att lära dig att använda formulärdatamodellens attribut för att h�
 När kursen är slut har du lärt dig följande.
 
 * Skapa RDBMS-baserad formulärdatamodell
-* Skapa association mellan två enheter
-* Fyll i tabell med data som returnerats av _get_ tjänst för formulärdatamodell
+* Skapa association mellan två entiteter
+* Fyll i tabellen med data som returnerats av _get_ tjänst för formulärdatamodell
 * Använd formulärdatamodellens attribut för begäran
 
 I följande video visas en översikt över kursen

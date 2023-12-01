@@ -6,10 +6,10 @@ version: Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
-kt: 11743
+jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Detta kan kräva att App Builder-åtgärden genererar en egen åtkomsttoken som 
 
 ## .env-fil
 
-I App Builder-projektets `.env` lägger du till egna nycklar för vart och ett av Adobe Developer Console-projektets JWT-uppgifter. JWT-referensvärdena kan hämtas från Adobe Developer Console-projektets __Autentiseringsuppgifter__ > __Tjänstkonto (JWT)__ för en viss arbetsyta.
+I App Builder-projektets `.env` lägger du till egna nycklar för vart och ett av Adobe Developer Console-projektets JWT-uppgifter. JWT-referensvärdena kan hämtas från Adobe Developer Console-projektets __Referenser__ > __Tjänstkonto (JWT)__ för en viss arbetsyta.
 
 ![Autentiseringsuppgifter för tjänsten Adobe Developer Console JWT](./assets/jwt-auth/jwt-credentials.png)
 
@@ -49,7 +49,7 @@ Värdena för `JWT_CLIENT_ID`, `JWT_CLIENT_SECRET`, `JWT_TECHNICAL_ACCOUNT_ID`, 
 
 ### Metasskop
 
-Bestäm vilka Adobe-API:er och deras metascope som App Builder-åtgärden interagerar med. Visa metascopes med kommaavgränsare i dialogrutan `JWT_METASCOPES` nyckel. Giltiga metasskop visas i [Adobe JWT Metascope-dokumentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+Bestäm vilka Adobe-API:er och deras metascope som App Builder-åtgärden interagerar med. Visa metascopes med kommaavgränsare i dialogrutan `JWT_METASCOPES` -tangenten. Giltiga metasskop visas i [Adobe JWT Metascope-dokumentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
 
 
 Följande värde kan till exempel läggas till i `JWT_METASCOPES` i `.env`:
@@ -62,7 +62,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 ### Privat nyckel
 
-The `JWT_PRIVATE_KEY` måste vara särskilt formaterad eftersom det är ett internt flerradsvärde, vilket inte stöds i `.env` filer. Det enklaste sättet är att base64 koda den privata nyckeln. Base64-kodning av den privata nyckeln (`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`) kan göras med hjälp av inbyggda verktyg från operativsystemet.
+The `JWT_PRIVATE_KEY` måste vara särskilt formaterad eftersom det är ett internt flerradsvärde, vilket inte stöds i `.env` filer. Det enklaste sättet är att base64 koda den privata nyckeln. Base64-kodning av den privata nyckeln (`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`) kan göras med hjälp av inbyggda verktyg från ditt operativsystem.
 
 >[!BEGINTABS]
 

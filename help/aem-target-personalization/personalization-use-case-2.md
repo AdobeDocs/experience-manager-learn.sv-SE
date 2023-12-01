@@ -9,8 +9,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -67,7 +68,7 @@ För den här övningen måste följande användare vara involverade och för at
       ![Experience Targeting Activity](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Observera att WKND-webbplatsens hemsida är öppen i Visual Experience Composer-redigeraren.
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. Hovra över **Upplevelse B** och välj visa andra alternativ.
+   7. Hovring **Upplevelse B** och välj visa andra alternativ.
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url.png)
    8. Välj **Omdirigera till URL** och ange URL:en till den nya WKND-startsidan. (http://localhost:4503/content/wknd/en1.html)
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url-2.png)
@@ -85,4 +86,4 @@ För den här övningen måste följande användare vara involverade och för at
 
 ## Sammanfattning
 
-I det här kapitlet kunde en marknadsförare skapa en aktivitet som dirigerade om de webbsidor som finns på AEM till en ny sida med Adobe Target.
+I det här kapitlet kunde en marknadsförare skapa en aktivitet för att dirigera om de webbsidor som finns på AEM till en ny sida med Adobe Target.

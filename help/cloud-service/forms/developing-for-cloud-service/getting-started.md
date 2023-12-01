@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8842
+jira: KT-8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I den här självstudiekursen får du hjälp med att skapa ett AEM Forms-projekt
 Den här självstudiekursen visar mappstrukturen framåt.
 
 * [Installera JDK 11](https://www.oracle.com/java/technologies/downloads/#java11-windows). Jag har laddat ned jdk-11.0.6_windows-x64_bin.zip
-* [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)Om du till exempel har installerat Maven i c:\maven folder måste du skapa en miljövariabel som heter M2_HOME med värdet C:\maven\apache-maven-3.6.0. Lägg sedan till M2_HOME\bin i sökvägen och spara inställningarna.
+* [Maven](https://maven.apache.org/guides/getting-started/windows-prerequisites.html).Om du till exempel har installerat Maven i mappen c:\maven måste du skapa en miljövariabel som heter M2_HOME med värdet C:\maven\apache-maven-3.6.0. Lägg sedan till M2_HOME\bin i sökvägen och spara inställningarna.
 
 ## Skapa Maven-projekt med AEM Project Archetype
 

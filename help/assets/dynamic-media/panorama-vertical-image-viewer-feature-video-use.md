@@ -6,8 +6,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 1%
@@ -36,7 +37,7 @@ den betraktas som en panoramabild oavsett dess proportioner.
 
 ## Lodrät bildvisare
 
-Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det hända att färgrutorna inte visas förrän användaren rullar nedåt på sidan. Genom att använda lodrätt bildvisningsprogram och placera lodräta färgrutor ser det till att färgrutorna visas oavsett skärmstorleken. Den maximerar också huvudbildens storlek. Med vågräta färgrutor var det nödvändigt att reservera utrymme på sidan för att säkerställa att de med stor sannolikhet är synliga och skulle minska storleken på huvudbilden. Med en lodrät layout behöver du inte bekymra dig om att tilldela detta utrymme och kan därför maximera huvudbildstorleken.
+Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det hända att färgrutorna inte visas förrän användaren rullar nedåt på sidan. Genom att använda lodrätt bildvisningsprogram och placera lodräta färgrutor ser det till att färgrutorna är synliga oavsett skärmstorleken. Den maximerar också huvudbildens storlek. Med vågräta färgrutor var det nödvändigt att reservera utrymme på sidan för att säkerställa att de med stor sannolikhet är synliga och skulle minska storleken på huvudbilden. Med en lodrät layout behöver du inte bekymra dig om att tilldela detta utrymme och kan därför maximera huvudbildstorleken.
 
 <table> 
  <tbody>

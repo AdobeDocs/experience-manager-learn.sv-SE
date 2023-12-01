@@ -1,16 +1,16 @@
 ---
 title: Sammanfoga data med XDP-mallen
-description: Gör en POST-förfrågan till slutpunkten med de nödvändiga parametrarna
+description: Gör en POST-förfrågan till slutpunkten med nödvändiga parametrar
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 8185
+jira: KT-8185
 thumbnail: 332439.jpg
 exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
-source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

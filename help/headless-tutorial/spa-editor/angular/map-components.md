@@ -2,18 +2,15 @@
 title: Mappa SPA komponenter till AEM | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du mappar komponentkomponenter till Adobe Experience Manager (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
 feature: SPA Editor
-topics: development
-doc-type: tutorial
 version: Cloud Service
-activity: develop
-audience: developer
-kt: 5311
+jira: KT-5311
 thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2370'
 ht-degree: 0%
@@ -34,13 +31,13 @@ I det här kapitlet finns en djupdykning i AEM JSON-modell-API:t och hur JSON-in
 
 ## Vad du ska bygga
 
-I det här kapitlet granskas hur `Text` SPA är mappad till AEM `Text`-komponenten. En ny `Image` SPA som kan användas i SPA och redigeras i AEM skapas. Funktioner i **Layoutbehållare** och **Mallredigerare** kommer också att användas för att skapa en vy som ser lite mer varierad ut.
+I det här kapitlet granskas hur `Text` SPA är mappad till AEM `Text`-komponenten. En ny `Image` SPA som kan användas i SPA och redigeras i AEM skapas. Funktioner i **Layoutbehållare** och **Mallredigerare** kommer också att användas för att skapa en vy som är lite mer varierad i utseendet.
 
 ![Slutredigering av kapitelexempel](./assets/map-components/final-page.png)
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
 ### Hämta koden
 
@@ -76,7 +73,7 @@ Det grundläggande konceptet är att mappa en SPA till en AEM. AEM komponenter, 
 
 ## Inspect textkomponenten
 
-The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) ger en `Text` som är mappad till AEM [Textkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Detta är ett exempel på en **innehåll** -komponent, på så sätt att den återges *innehåll* från AEM.
+The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) ger en `Text` som är mappad till AEM [Textkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Detta är ett exempel på en **innehåll** -komponent, på så sätt att den återges *innehåll* från AEM.
 
 Låt oss se hur komponenten fungerar.
 
@@ -214,11 +211,11 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    >[!NOTE]
    >
-   > Andra bildegenskaper visas (`lazyEnabled`, `widths`) som gör att utvecklare kan skapa en adaptiv och lat laddande komponent. Komponenten som är inbyggd i den här självstudiekursen är enkel och gör **not** använder dessa avancerade egenskaper.
+   > Andra bildegenskaper visas (`lazyEnabled`, `widths`) som gör det möjligt för en utvecklare att skapa en adaptiv och lat laddande komponent. Komponenten som är inbyggd i den här självstudiekursen är enkel och gör **not** använder dessa avancerade egenskaper.
 
 2. Återgå till din utvecklingsmiljö och öppna `en.model.json` på `ui.frontend/src/mocks/json/en.model.json`. Eftersom det här är en ny komponent i vårt projekt måste vi&quot;göra dummy&quot; av Image JSON.
 
-   På ~rad 70 lägger du till en JSON-post för `image` modell (glöm inte bort det avslutande kommatecknet) `,` efter andra `text_386303036`) och uppdatera `:itemsOrder` array.
+   På ~rad 70 lägger du till en JSON-post för `image` modell (glöm inte bort det avslutande kommatecknet) `,` efter den andra `text_386303036`) och uppdatera `:itemsOrder` array.
 
    ```json
    ...
@@ -249,7 +246,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
 3. Lägg till ett stockfoto som ska visas av komponenten.
 
-   Skapa en ny mapp med namnet **bilder** under `ui.frontend/src/mocks`. Hämta [adobestock-140634652.jpeg](assets/map-components/adobestock-140634652.jpeg) och montera den i den nya **bilder** mapp. Du kan använda din egen bild om du vill.
+   Skapa en ny mapp med namnet **bilder** under `ui.frontend/src/mocks`. Ladda ned [adobestock-140634652.jpeg](assets/map-components/adobestock-140634652.jpeg) och montera den i den nya **bilder** mapp. Du kan använda din egen bild om du vill.
 
 ### Implementera komponenten Bild
 
@@ -260,7 +257,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
    $ ng generate component components/image
    ```
 
-3. Öppna **image.component.ts** på `ui.frontend/src/app/components/image/image.component.ts` och uppdatera enligt följande:
+3. Öppna i IDE **image.component.ts** på `ui.frontend/src/app/components/image/image.component.ts` och uppdatera enligt följande:
 
    ```js
    import {Component, Input, OnInit} from '@angular/core';
@@ -301,7 +298,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    `hasImage()` är en metod som avgör om bilden ska återges.
 
-   `MapTo` mappar SPA till AEM på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
+   `MapTo` mappar SPA-komponenten till AEM på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
 
 4. Öppna **image.component.html** och uppdatera enligt följande:
 
@@ -357,7 +354,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
 The `ImageComponent` -komponenten visas bara i **dev-server för webbpaket**. Distribuera sedan den uppdaterade SPA för att AEM och uppdatera mallprofilerna.
 
-1. Stoppa **dev-server för webbpaket** och **root** av projektet, använd ändringarna i AEM med dina Maven-kunskaper:
+1. Stoppa **dev-server för webbpaket** och från **root** av projektet, använd ändringarna i AEM med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -382,7 +379,7 @@ The `ImageComponent` -komponenten visas bara i **dev-server för webbpaket**. Di
 
    ![Ange standardkomponenter](assets/map-components/default-components.png)
 
-   Ange **mime-typ** av `image/*`.
+   Ange en **mime-typ** av `image/*`.
 
    Klicka **Klar** för att spara principuppdateringarna.
 
@@ -390,7 +387,7 @@ The `ImageComponent` -komponenten visas bara i **dev-server för webbpaket**. Di
 
    ![Ikon för textkomponentprofil](./assets/map-components/edit-text-policy.png)
 
-   Skapa en ny princip med namnet **WKND-SPA**. Under **Plugins** > **Formatering** > markera alla rutor för att aktivera ytterligare formateringsalternativ:
+   Skapa en ny princip med namnet **WKND SPA**. Under **Plugins** > **Formatering** > markera alla rutor för att aktivera ytterligare formateringsalternativ:
 
    ![Aktivera RTE-formatering](assets/map-components/enable-formatting-rte.png)
 
@@ -450,7 +447,7 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
 5. Återgå till utvecklingsmiljön och i `ui.apps` modul där det finns ett klientbibliotek definierat på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-grid`. Öppna filen `less/grid.less`.
 
-   Den här filen avgör brytpunkterna (`default`, `tablet`och `phone`) används av **Layoutbehållare**. Den här filen är avsedd att anpassas efter projektspecifikationer. För närvarande är brytpunkterna inställda på `1200px` och `650px`.
+   Den här filen avgör brytpunkterna (`default`, `tablet`och `phone`) som används av **Layoutbehållare**. Den här filen är avsedd att anpassas efter projektspecifikationer. För närvarande är brytpunkterna inställda på `1200px` och `650px`.
 
 6. Du bör kunna använda de responsiva funktionerna och de uppdaterade reglerna för avancerad text i `Text` för att skapa en vy som följande:
 
@@ -470,7 +467,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 I många fall, särskilt i början av ett AEM projekt, är det viktigt att behålla konfigurationer som mallar och relaterade innehållsprinciper för källkontroll. Detta garanterar att alla utvecklare arbetar mot samma uppsättning innehåll och konfigurationer och kan säkerställa ytterligare enhetlighet mellan miljöer. När ett projekt når en viss mognadsnivå kan rutinen med mallhantering överföras till en särskild grupp med avancerade användare.
 
-Nästa steg är att utföra med Visual Studio Code IDE och [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) men skulle kunna göra det med vilket verktyg som helst och med vilken IDE som helst som du har konfigurerat till **pull** eller **import** innehåll från en lokal instans av AEM.
+Nästa steg är att utföra med Visual Studio Code IDE och [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) men skulle kunna göra det med vilket verktyg som helst och med vilken IDE som helst som du har konfigurerat till **pull** eller **import** innehåll från en lokal AEM.
 
 1. Kontrollera att du har **Synkronisering AEM VSCode** installeras via Marketplace-tillägget:
 
@@ -497,6 +494,6 @@ Nästa steg är att utföra med Visual Studio Code IDE och [Synkronisering AEM V
     </workspaceFilter>
    ```
 
-   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) om du vill ha mer information om hur du arbetar med filterelement.
+   The `filter.xml` filen ansvarar för att identifiera sökvägarna till de noder som installeras med paketet. Lägg märke till `mode="merge"` på vart och ett av filtren som anger att befintligt innehåll inte kommer att ändras, läggs endast nytt innehåll till. Eftersom innehållsförfattare kan uppdatera dessa sökvägar är det viktigt att en koddistribution gör det **not** skriva över innehåll. Se [FileVault-dokumentation](https://jackrabbit.apache.org/filevault/filter.html) för mer information om hur du arbetar med filterelement.
 
    Jämför `ui.content/src/main/content/META-INF/vault/filter.xml` och `ui.apps/src/main/content/META-INF/vault/filter.xml` för att förstå de olika noder som hanteras av varje modul.

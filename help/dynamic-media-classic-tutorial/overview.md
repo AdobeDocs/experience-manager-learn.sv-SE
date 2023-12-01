@@ -1,15 +1,13 @@
 ---
 title: Självstudiekurs om bästa praxis för Dynamic Media Classic
 description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om bästa praxis har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort titt på dess kärnfunktioner och användargränssnitt.
-doc-type: tutorial
-audience: all
-activity: develop, use
 feature: Dynamic Media Classic
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
@@ -25,7 +23,7 @@ Den här guiden ska hjälpa nuvarande och nya användare av Dynamic Media Classi
 - Diskutera viktiga objekt som ska konfigureras innan du hoppar in och använder lösningen.
 - En djupdykning i användningen av flera av lösningens kärnfunktioner.
 
-Under hela guiden kommer vi att ge exempel, tips och bästa praxis. Vi kommer också att förklara viktiga termer och koncept som du bör känna till när du arbetar med Dynamic Media Classic. Och när det finns för ett visst ämne kan vi hänvisa dig till relevanta webbinarier, blogginlägg och onlinedokumentation.
+Under hela guiden kommer vi att ge exempel, tips och metodtips. Vi kommer också att förklara viktiga termer och koncept som du bör känna till när du arbetar med Dynamic Media Classic. Och när det finns för ett visst ämne kan vi hänvisa dig till relevanta webbinarier, blogginlägg och onlinedokumentation.
 
 Vi hoppas att den här guiden ger dig den information du behöver för att utnyttja din Dynamic Media Classic-lösning på ett enastående sätt. Klicka på bokmärkesikonen till vänster om stödlinjen för att visa innehållet.
 
@@ -39,7 +37,7 @@ Bildvisning är kanske den mest använda funktionen i Dynamic Media Classic. Fak
 
 I den här guiden diskuterar vi följande kärnfunktioner i Dynamic Media Classic.
 
-- **Dynamic Imaging.** Paraplytermen för redigering i realtid, formatering och storleksändring samt interaktiv zoom och panorering. Färg- och texturtittande. 360-graders centrifugering, bildmallar, och multimediavisare.
+- **Dynamic Imaging.** Paraplytermen för redigering i realtid, formatering och storleksändring samt interaktiv zoom och panorering, visning av färger och texturer, 360-graders rotation, bildmallar och multimediavisare.
 - **Video.** Ladda upp färdiga videor, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
 - **Smart bildbehandling.** Teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
 
@@ -47,7 +45,7 @@ Om du vill ha mer information om lösningen går du till [Dokumentation för Dyn
 
 ## Dynamic Media Classic användargränssnitt
 
-Dynamic Media Classic huvudsakliga användargränssnitt består av tre huvudområden: det globala navigeringsfältet, resursbiblioteket och panelen Bläddra/Bygg.
+Dynamic Media Classic huvudgränssnitt består av tre huvudområden: Global Navigation Bar, Asset Library och Browse Panel/Build Panel.
 
 ![bild](assets/overview/overview-dmc-ui-ew.png)
 

@@ -3,14 +3,14 @@ title: AEM Headless-konfiguration med det lokala AEM SDK
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Installera AEM SDK, lägg till exempelinnehåll och distribuera ett program som använder innehåll från AEM med dess GraphQL API:er. Se hur AEM driver flerkanalsupplevelser.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6386
+jira: KT-6386
 thumbnail: KT-6386.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%
@@ -87,9 +87,9 @@ WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQ
 
 1. Redigeraren för innehållsfragment öppnas för Hoing Wyoming-äventyret.
 
-   ![Redigera innehållsfragment](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
+   ![Innehållsfragmentsredigerare](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
 
-   Observera att olika fält som **Titel**, **Beskrivning** och **Aktivitet** definierar fragmentet.
+   Observera att olika fält som **Titel**, **Beskrivning** och **Aktivitet** Definiera fragmentet.
 
    **Innehållsfragment** är ett av sätten att hantera innehåll i AEM. Innehållsfragment är återanvändbart, presentationsbaserat innehåll som består av strukturerade dataelement som text, formaterad text, datum eller referenser till andra innehållsfragment. Innehållsfragment utforskas i detalj senare i snabbinställningarna.
 
@@ -101,7 +101,7 @@ WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQ
 
 ## 3. Ladda ned och kör appen WKND React {#sample-app}
 
-Ett av målen med den här självstudiekursen är att visa hur du använder AEM innehåll från ett externt program med GraphQL API:er. I den här självstudien används ett exempel på React App (Reagera-app). Reaktionsappen är avsiktligt enkel att fokusera på integrationen med AEM GraphQL API:er.
+Ett av målen med den här självstudiekursen är att visa hur du använder AEM innehåll från ett externt program med GraphQL API:er. I den här självstudiekursen används ett exempel på React App (Reagera-app). Reaktionsappen är avsiktligt enkel att fokusera på integreringen med AEM GraphQL API:er.
 
 1. Öppna en ny kommandotolk och klona exempelappen React från GitHub:
 
@@ -120,7 +120,7 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   Säkerställ `REACT_APP_HOST_URI` pekar på ditt lokala AEM SDK. Den här snabbstarten kopplar appen React till  **AEM Author**. **Upphovsman** tjänsterna kräver autentisering, så appen använder `admin` användare för att upprätta anslutningen. Att ansluta en app till AEM Author är vanligt under utvecklingen eftersom det gör det enklare att snabbt upprepa innehållet utan att behöva publicera ändringar.
+   Säkerställ `REACT_APP_HOST_URI` pekar på ditt lokala AEM SDK. Den här snabbstarten kopplar appen React till  **AEM**. **Upphovsman** tjänsterna kräver autentisering, så appen använder `admin` användare för att upprätta anslutningen. Att koppla en app till AEM Author är vanligt under utvecklingen eftersom det gör det enklare att snabbt iterera i innehållet utan att behöva publicera ändringar.
 
    >[!NOTE]
    >
@@ -168,7 +168,7 @@ När React-appen är igång uppdaterar du innehållet i AEM och ser att ändring
 
    ![Uppdaterat Bali Surf Camp Adventure](assets/setup/overnight-bali-surf-camp-changes.png)
 
-## 5. Upptäck GraphiQL {#graphiql}
+## 5. Utforska GraphiQL {#graphiql}
 
 1. Öppna [GraphiQL](http://localhost:4502/aem/graphiql.html) genom att navigera till **verktyg** > **Allmänt** > **GraphQL Query Editor**
 1. Välj befintliga beständiga frågor till vänster och kör dem för att se resultatet.

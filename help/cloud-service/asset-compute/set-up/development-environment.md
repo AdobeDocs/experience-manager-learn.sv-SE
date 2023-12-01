@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6266
+jira: KT-6266
 thumbnail: KT-6266.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -50,13 +50,13 @@ Mer information om de förkortade installationsanvisningarna finns i avsnitten n
 
 ## Installera Visual Studio Code{#vscode}
 
-[Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för att utveckla och felsöka Asset compute. Med annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, endast Visual Studio Code kan integreras i [debug](../test-debug/debug.md) asset compute-arbetare.
+[Microsoft Visual Studio Code](https://code.visualstudio.com/download) används för att utveckla och felsöka Asset compute. Med annan [JavaScript-kompatibel IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) kan användas för att utveckla arbetaren, endast Visual Studio Code kan integreras i [debug](../test-debug/debug.md) Asset compute-arbetare.
 
 I den här självstudiekursen antas att Visual Studio Code används som den bästa utvecklarupplevelsen för att utöka Asset compute.
 
 ## Installera Docker Desktop{#docker}
 
-Ladda ned och installera den senaste, stabila [Docker Desktop](https://www.docker.com/products/docker-desktop), eftersom detta krävs för att [test](../test-debug/test.md) och [debug](../test-debug/debug.md) asset compute projekt lokalt.
+Ladda ned och installera den senaste, stabila [Docker Desktop](https://www.docker.com/products/docker-desktop), eftersom detta krävs för att [test](../test-debug/test.md) och [debug](../test-debug/debug.md) Asset compute projekt lokalt.
 
 När du har installerat Docker Desktop startar du programmet och installerar följande Docker-bilder från kommandoraden:
 
@@ -69,9 +69,9 @@ Utvecklare på Windows-datorer bör kontrollera att de använder Linux-behållar
 
 ## Installera Node.js (och npm){#node-js}
 
-asset compute arbetare är [Node.js](https://nodejs.org/)-baserat och därför krävs Node.js 10+ (och npm) för att utveckla och bygga.
+Asset compute arbetare är [Node.js](https://nodejs.org/)-baserat och därför krävs Node.js 10+ (och npm) för att utveckla och bygga.
 
-+ [Installera Node.js (och npm)](../../local-development-environment/development-tools.md#node-js) på samma sätt som för den traditionella AEM utvecklingen.
++ [Installera Node.js (och npm)](../../local-development-environment/development-tools.md#node-js) på samma sätt som för traditionell AEM.
 
 ## Installera Adobe I/O CLI{#aio}
 

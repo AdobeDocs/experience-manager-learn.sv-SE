@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8848
+jira: KT-8848
 exl-id: 31487027-d528-48ea-b626-a740b94dceb8
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 
 [Installera Git](https://git-scm.com/downloads). Du kan välja standardinställningar och slutföra installationsprocessen.
-Gå till kommandotolken Navigera till c:\cloudmanager\aem-banking-app type in git —version. Du bör se den version av GIT som är installerad på datorn
+Gå till kommandotolken Navigera till typen c:\cloudmanager\aem-Banking-app i Git —version. Du bör se den version av GIT som är installerad på datorn
 
 ## Initiera lokal Git-databas
 
-Se till att du är i mappen c:\cloudmanager\aem-banking-app folder
+Kontrollera att du finns i mappen c:\cloudmanager\aem-Banking-app
 
 ```
 git init

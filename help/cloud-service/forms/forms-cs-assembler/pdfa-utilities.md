@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 10105
+jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
-source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

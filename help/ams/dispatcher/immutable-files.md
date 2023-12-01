@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 [Innehållsförteckning](./overview.md)
 
-[&lt;- Föregående: Gemensamma loggar](./common-logs.md)
+[&lt;- Föregående: Vanliga loggar](./common-logs.md)
 
 ## Beskrivning
 
@@ -31,7 +32,7 @@ Layouten förhindrar inte att du ändrar deras beteende och åsidosätter ändri
 
 Detta gör också att du kan vara säker på att när AMS korrigerar utskickarna med de senaste korrigeringarna och säkerhetsförbättringarna så ändras inte filerna.  Sedan kan du fortsätta att dra nytta av förbättringarna och bara använda de ändringar du vill.
 ![Visar ett bowlingband med en boll som rullar längs körfältet.  Kulan har en pil med ordet som visar dig.  Spaltmellanrummen är upphöjda och de har orden oföränderliga filer ovanför dem.](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
-Som framgår av bilden ovan hindrar inte oföränderliga filer dig från att spela spelet.  De hindrar dig bara från att skada din prestanda och håller dig i farten.  Den här metoden ger oss några viktiga funktioner:
+Som framgår av bilden ovan hindrar inte oföränderliga filer dig från att spela spelet.  De hindrar dig bara från att skada din prestanda och håller dig i farten.  Med den här metoden får vi några viktiga funktioner:
 
 - Anpassningar hanteras i sina egna säkra utrymmen
 - Övertäckning för anpassade ändringar speglar för övertäckningsmetoder i AEM
@@ -180,9 +181,9 @@ Här följer ett exempel på svar där filer inte kan ändras:
 /etc/httpd/conf.dispatcher.d/dispatcher.any Immutable
 ```
 
-## Så här gör du ändringar
+## Gör ändringar
 
-### Variabler
+### Variabel
 
 Med variabler kan du göra funktionella ändringar utan att ändra själva konfigurationsfilerna.  Vissa element i konfigurationen kan justeras genom att variabelvärdena justeras.  Ett exempel som kan markeras från filen `/etc/httpd/conf.d/dispatcher_vhost.conf` visas här:
 
@@ -213,7 +214,7 @@ Det aktuella värdet för `DISP_LOG_LEVEL` variabeln is `info`.  Vi kan juster
 
 ### Överläggsmetod
 
-Ta reda på den översta nivån med filer eftersom dessa blir den plats där du börjar göra anpassningar.  För att börja med ett enkelt exempel har vi ett scenario där vi vill lägga till ett nytt domännamn som vi tänker peka på denna Dispatcher.  Domänexemplet vi ska använda är we-retail.adobe.com.  Vi börjar med att kopiera en befintlig konfigurationsfil till en ny där vi kan lägga till våra ändringar:
+Ta reda på den översta nivån med filer eftersom dessa blir den plats där du börjar göra anpassningar.  För att börja med ett enkelt exempel har vi ett scenario där vi vill lägga till ett nytt domännamn som vi tänker peka på denna Dispatcher.  Domänexemplet som vi använder är is we-retail.adobe.com.  Vi börjar med att kopiera en befintlig konfigurationsfil till en ny där vi kan lägga till våra ändringar:
 
 ```
 $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/available_vhosts/weretail_publish.vhost

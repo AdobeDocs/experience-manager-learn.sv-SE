@@ -2,16 +2,13 @@
 title: Konfigurera ContextHub för personalisering med AEM Sites
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Med ContextHub Javascript API kan du komma åt arkiv för att skapa, uppdatera och ta bort data efter behov. Därför representerar ContextHub ett datalager på dina sidor. På den här sidan beskrivs hur du lägger till sammanhangsnav på dina AEM webbplatssidor.
 feature: Context Hub
-topics: personalization
-audience: developer, architect
-doc-type: technical video
-activity: setup
 version: 6.4, 6.5
 topic: Personalization
 role: Developer
 level: Intermediate
+doc-type: Technical Video
 exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 1%
@@ -32,7 +29,7 @@ Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och 
 
 ## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
-Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` i `<head>` på webbsidan. HTML-koden för sidkomponenten liknar följande exempel:
+Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` -komponenten i `<head>` på webbsidan. HTML-koden för sidkomponenten liknar följande exempel:
 
 ```java
 <!--/* Include Context Hub */-->
@@ -45,11 +42,11 @@ ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställ
 
 ## Skapa segment {#create-segments}
 
-Skapa AEM segment som fungerar som regler för teasers. Det innebär att de definierar när innehåll inom ett suddgummi visas på en webbsida. Innehållet kan sedan anpassas specifikt efter besökarens behov och intressen, beroende på vilket segment de matchar.
+Skapa AEM segment som fungerar som regler för teasers. Det innebär att de definierar när innehåll inom ett suddgummi visas på en webbsida. Innehållet kan sedan anpassas efter besökarens behov och intressen, beroende på vilket segment som de matchar.
 
 ## Tilldela molnkonfiguration, segmentsökväg och ContextHub-sökväg till din plats {#assigning-cloud-configuration-segment-path-and-contexthub-path-to-your-site}
 
-Tilldela molnkonfigurationssökvägen, segmenteringssökvägen och ContextHub-sökvägen till platsens rotnod så att du kan skapa en personlig upplevelse för din publik. Med ContextHub kan du ändra kontextdata och testa de lösta segmenten.
+Tilldela konfigurationssökvägen, segmenteringssökvägen och ContextHub-sökvägen till platsens rotnod så att du kan skapa en personlig upplevelse för din publik. Med ContextHub kan du ändra kontextdata och testa de lösta segmenten.
 
 ![CRXDE Lite](assets/crx-de-properties.png)
 

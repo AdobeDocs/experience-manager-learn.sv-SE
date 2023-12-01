@@ -1,16 +1,16 @@
 ---
 title: AEM UI-tillägg för Adobe I/O Runtime-åtgärder
-description: Lär dig hur du skapar ett AEM gränssnittstillägg modalt.
+description: Lär dig hur du skapar ett AEM gränssnittstillägg modal.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
-kt: 11603
+jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 1%
@@ -303,7 +303,7 @@ async function main (params) {
 Följande AEM HTTP-API:er används ofta för interaktion med AEM från tillägg:
 
 + [AEM GraphQL API:er](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-+ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
++ [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [Stöd för Content Fragments i AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
 + [Fullständig AEM as a Cloud Service API-referens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)

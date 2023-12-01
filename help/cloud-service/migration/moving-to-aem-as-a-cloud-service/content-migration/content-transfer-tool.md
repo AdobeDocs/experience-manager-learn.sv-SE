@@ -6,10 +6,10 @@ topic: Migration, Upgrade
 feature: Migration
 role: Developer
 level: Experienced
-kt: 8919
+jira: KT-8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -32,10 +32,10 @@ Verktyget Innehållsöverföring är installerat på AEM 6.3+ och överför inne
 ## Viktiga aktiviteter
 
 + Ladda ned [det senaste verktyget för innehållsöverföring](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=2).
-+ Överför AEM Author 6.3+-material till AEM as a Cloud Service Author-tjänsten.
++ Överför AEM 6.3+ slutligt innehåll till AEM as a Cloud Service Author-tjänst.
    + Installera verktyget Innehållsöverföring på AEM 6.3+ Author som innehåller det slutliga innehållet som ska överföras.
    + Kör verktyget Innehållsöverföring gruppvis och överför uppsättningar av innehåll.
-+ Överför AEM Publish 6.3+-material till AEM as a Cloud Service Publish-tjänsten.
++ Överför AEM Publish 6.3+ till AEM as a Cloud Service Publish-tjänst.
    + Installera verktyget Innehållsöverföring på AEM 6.3+ Publish som innehåller det slutliga innehållet som ska överföras.
    + Kör verktyget Innehållsöverföring gruppvis och överför uppsättningar av innehåll.
 + Om du vill kan du även göra&quot;top-up&quot;-innehåll på AEM as a Cloud Service genom att överföra nytt innehåll sedan den senaste innehållsöverföringen
@@ -65,7 +65,7 @@ Se även till att du har fullföljt tidigare övningar:
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">Handverktyget med verktyget Innehållsöverföring</div>
             <p style="margin:1rem 0">
-                Se hur verktyget Innehållsöverföring automatiskt kan flytta innehåll från AEM 6 till AEM as a Cloud Service.
+                Upptäck hur verktyget Innehållsöverföring automatiskt kan flytta innehåll från AEM 6 till AEM as a Cloud Service.
             </p>
             <a  rel="noreferrer"
                 target="_blank"
@@ -78,6 +78,6 @@ Se även till att du har fullföljt tidigare övningar:
 
 ## Andra resurser
 
-+ [Ladda ned innehållsöverföringsverktyg](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=2)
++ [Använda Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=2)
 + [Videofilm om hur man gör i tjänsten Massimport](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/bulk-import.html)
 

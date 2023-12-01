@@ -2,17 +2,17 @@
 title: Kom igång med AEM Sites - projektinställningar
 description: Skapa ett Maven Multi Module-projekt för att hantera koden och konfigurationerna för en Experience Manager-webbplats.
 version: 6.5, Cloud Service
-type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-kt: 3418
+jira: KT-3418
 thumbnail: 30152.jpg
+doc-type: Tutorial
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -25,7 +25,7 @@ I den här självstudiekursen beskrivs hur du skapar ett Maven Multi Module-modu
 
 ## Förutsättningar {#prerequisites}
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](./overview.md#local-dev-environment). Se till att du har en ny instans av Adobe Experience Manager tillgänglig lokalt och att inga fler exempel-/demopaket har installerats (förutom obligatoriska Service Pack).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](./overview.md#local-dev-environment). Se till att du har en ny instans av Adobe Experience Manager tillgänglig lokalt och att inga fler exempel-/demopaket har installerats (förutom obligatoriska Service Pack).
 
 ## Syfte {#objective}
 
@@ -37,7 +37,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
 
-I det här kapitlet skapar du ett nytt Adobe Experience Manager-projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Ditt AEM innehåller fullständig kod, fullständigt innehåll och konfigurationer som används för en webbplatsimplementering. Det projekt som genereras i detta kapitel utgör grunden för en implementering av WKND-webbplatsen och är byggt på i framtida kapitel.
+I det här kapitlet skapar du ett nytt Adobe Experience Manager-projekt med [AEM Project Archettype](https://github.com/adobe/aem-project-archetype). Ditt AEM innehåller fullständig kod, fullständigt innehåll och konfigurationer som används för en webbplatsimplementering. Det projekt som genereras i detta kapitel utgör grunden för en implementering av WKND-webbplatsen och är byggt på i framtida kapitel.
 
 **Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager* implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod utöver AEM.
 
@@ -62,7 +62,7 @@ Nästa serie steg kommer att utföras med en UNIX®-baserad kommandoradsterminal
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. Navigera till en katalog där du vill generera det AEM projektet. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. En katalog med namnet `code` under användarens hemkatalog:
+1. Navigera till en katalog där du vill generera AEM. Detta kan vara vilken katalog som helst där du vill underhålla projektets källkod. En katalog med namnet `code` under användarens hemkatalog:
 
    ```shell
    $ cd ~/code
@@ -92,7 +92,7 @@ Nästa serie steg kommer att utföras med en UNIX®-baserad kommandoradsterminal
 
    En fullständig lista över tillgängliga egenskaper för konfiguration av ett projekt [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. Följande mapp- och filstruktur genereras av arkivtypen Maven i det lokala filsystemet:
+1. Följande mapp- och filstruktur genereras av Maven-typen i det lokala filsystemet:
 
    ```plain
     ~/code/
@@ -117,7 +117,7 @@ Nästa serie steg kommer att utföras med en UNIX®-baserad kommandoradsterminal
 Skapa och distribuera projektkoden till en lokal instans av AEM.
 
 1. Kontrollera att du har en författarinstans av AEM som körs lokalt på porten **4502**.
-1. Navigera från kommandoraden till `aem-guides-wknd` projektkatalog.
+1. Gå till kommandoraden `aem-guides-wknd` projektkatalog.
 
    ```shell
    $ cd aem-guides-wknd
@@ -165,13 +165,13 @@ Skapa och distribuera projektkoden till en lokal instans av AEM.
 
    ![webbplatskonsol](assets/project-setup/aem-sites-console.png)
 
-1. Startinnehåll har redan skapats och flera komponenter är tillgängliga för att läggas till på en sida. Experimentera med de här komponenterna för att få en uppfattning om funktionaliteten. Du får lära dig grunderna för en komponent i nästa kapitel.
+1. Startinnehåll har redan skapats och flera komponenter är tillgängliga för att läggas till på en sida. Experimentera med de här komponenterna för att få en uppfattning om funktionerna. Du får lära dig grunderna för en komponent i nästa kapitel.
 
    ![Startinnehåll för startsida](assets/project-setup/start-home-page.png)
 
    *Exempelinnehåll som genererats av Arketypen*
 
-## Inspect {#project-structure}
+## Inspect projektet {#project-structure}
 
 Det genererade AEM består av enskilda Maven-moduler, var och en med olika roller. Den här självstudiekursen och den mesta utvecklingsinriktningen på dessa moduler:
 
@@ -200,7 +200,7 @@ Det är alltid en bra idé att använda någon form av källkontroll för att ha
 
 Maven skapar en målmapp när du skapar och installerar kodpaketet. Målmappen och innehållet ska uteslutas från SCM.
 
-Under `ui.apps` modulen observerar så många `.content.xml` filer skapas. Dessa XML-filer mappar nodtyperna och egenskaperna för innehåll som är installerat i JCR-läsaren. Dessa filer är viktiga och **inte** ignoreras.
+Under `ui.apps` modulen observerar många `.content.xml` filer skapas. Dessa XML-filer mappar nodtyperna och egenskaperna för innehåll som är installerat i JCR-läsaren. Dessa filer är viktiga och **inte** ignoreras.
 
 Den AEM projekttypen genererar ett exempel `.gitignore` fil som kan användas som startpunkt för vilken filer kan ignoreras. Filen genereras på `<src>/aem-guides-wknd/.gitignore`.
 
@@ -210,7 +210,7 @@ Grattis, du har skapat ditt första AEM projekt!
 
 ### Nästa steg {#next-steps}
 
-Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel med [Grundläggande om komponenter](component-basics.md) självstudiekurs.
+Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel med [Grundläggande om komponenter](component-basics.md) självstudie.
 
 ## Avancerade Maven-kommandon (Bonus) {#advanced-maven-commands}
 
@@ -220,7 +220,7 @@ Nu ska vi granska några av de Maven-profiler och kommandon du kan använda för
 
 ### Kärnmodul {#core-module}
 
-The **[kärna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)** -modulen innehåller all Java™-kod som är kopplad till projektet. The build of **kärna** -modulen distribuerar ett OSGi-paket till AEM. Så här skapar du bara den här modulen:
+The **[kärna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html)** -modulen innehåller all Java™-kod som är kopplad till projektet. Bygget av **kärna** -modulen distribuerar ett OSGi-paket till AEM. Så här skapar du bara denna modul:
 
 1. Navigera till `core` mapp (under `aem-guides-wknd`):
 
@@ -256,7 +256,7 @@ The **[kärna](https://experienceleague.adobe.com/docs/experience-manager-core-c
 
 The **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** maven-modulen innehåller all återgivningskod som behövs för webbplatsen under `/apps`. Detta inkluderar CSS/JS som lagras i ett AEM som kallas [klientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). Detta innefattar även [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) skript för återgivning av dynamiska HTML. Du kan tänka dig **ui.apps** som en karta till strukturen i JCR men i ett format som kan lagras i ett filsystem och implementeras i källkontrollen. The **ui.apps** -modulen innehåller bara kod.
 
-Så här skapar du bara den här modulen:
+Så här skapar du bara denna modul:
 
 1. Från kommandoraden. Navigera till `ui.apps` mapp (under `aem-guides-wknd`):
 
@@ -326,7 +326,7 @@ Så här skapar du bara den här modulen:
 
    Återigen förväntas ett byggfel inträffa om ingen AEM körs på porten **4504** är tillgängligt. Parametern `aem.port` definieras i POM-filen på `aem-guides-wknd/pom.xml`.
 
-The **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** modulen är strukturerad på samma sätt som **ui.apps** -modul. Den enda skillnaden är att **ui.content** module contains what is known as **mutabel** innehåll. **Mutable** innehåll avser i huvudsak icke-kodade konfigurationer som mallar, profiler eller mappstrukturer som lagras i källkontrollen **men** kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
+The **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** modulen är strukturerad på samma sätt som **ui.apps** -modul. Den enda skillnaden är att **ui.content** module contains what is known as **oföränderlig** innehåll. **Mutable** innehåll avser i huvudsak icke-kodade konfigurationer som mallar, profiler eller mappstrukturer som lagras i källkontrollen **men** kan ändras direkt på en AEM. Detta beskrivs mer ingående i kapitlet om sidor och mallar.
 
 Samma Maven-kommandon som användes för att skapa **ui.apps** kan användas för att skapa **ui.content** -modul. Upprepa stegen ovan inifrån **ui.content** mapp.
 
@@ -336,8 +336,8 @@ Om det uppstår problem när du skapar ett projekt med hjälp av den AEM projekt
 
 ## Grattis igen! {#congratulations-bonus}
 
-Grattis, när du går igenom bonusmaterialet.
+Grattis, för att du gått igenom bonusmaterialet.
 
 ### Nästa steg {#next-steps-bonus}
 
-Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel med [Grundläggande om komponenter](component-basics.md) självstudiekurs.
+Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Components via en enkel `HelloWorld` exempel med [Grundläggande om komponenter](component-basics.md) självstudie.

@@ -8,11 +8,11 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
-kt: 12557
+jira: KT-12557
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 369c563e-c847-438a-a783-bc6a9f81b77c
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Integrera AEM Forms med Adobe Analytics för att rapportera formulärdatafält
 
-Lär dig hur du integrerar AEM Forms as a Cloud Service med Adobe Analytics i dina adaptiva formulär med hjälp av Experience Platform-taggar. I det här exemplet får du hjälp med konfiguration och implementering för att få insiktsfulla rapporter om hur besökarna interagerar med formulären.
+Lär dig hur du integrerar AEM Forms as a Cloud Service med Adobe Analytics i dina adaptiva formulär med Experience Platform-taggar. I det här exemplet får du hjälp med konfiguration och implementering för att få insiktsfulla rapporter om hur besökarna interagerar med formulären.
 
 ## Förutsättningar
 

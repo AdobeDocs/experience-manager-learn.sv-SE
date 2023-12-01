@@ -7,8 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 jira: KT-784
+doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
-source-git-commit: af9fe46643ce9bc4adf71b77eb49535d0ec5f949
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%

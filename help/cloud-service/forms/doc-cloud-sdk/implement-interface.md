@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 thumbnail: 7826.jpg
-kt: 7826
+jira: KT-7826
 exl-id: c1fd02aa-577b-453f-8948-ca50e3e8f89b
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%

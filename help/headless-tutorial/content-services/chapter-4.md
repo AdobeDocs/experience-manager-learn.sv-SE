@@ -5,8 +5,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '759'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Kapitel 4 i AEM Headless-självstudiekursen behandlar rollen AEM redigerbara mal
 
 AEM Redigerbara mallar används för att definiera de HTTP-slutpunkter som är tillgängliga för att visa händelseinnehållet som JSON.
 
-Traditionellt AEM Redigerbara mallar används för att definiera webbsidor, men det här är bara vanligt. Redigerbara mallar kan användas för att skapa **alla** Innehållsuppsättning. hur innehållet nås: som HTML i en webbläsare, som JSON används av JavaScript (AEM) eller en mobilapp är en funktion av hur sidan begärs.
+Traditionellt AEM Redigerbara mallar används för att definiera webbsidor, men det här är bara vanligt. Redigerbara mallar kan användas för att skapa **alla** uppsättning innehåll, hur det innehållet nås: som HTML i en webbläsare, som JSON förbrukas av JavaScript (AEM redigeraren) eller en mobilapp är en funktion av hur sidan begärs.
 
 I AEM Content Services används redigerbara mallar för att definiera hur JSON-data ska visas.
 
@@ -29,7 +30,7 @@ För [!DNL WKND Mobile] Vi skapar en enda redigerbar mall som används för att 
 
 ## API-slutpunkten
 
-För att förstå hur vår API-slutpunkt ska disponeras och förstå vilket innehåll som ska exponeras för vår [!DNL WKND Mobile] App, låt oss titta på designen igen.
+För att förstå hur vår API-slutpunkt ska disponeras och förstå vilket innehåll som ska exponeras för [!DNL WKND Mobile] App, låt oss titta på designen igen.
 
 ![Evenemang-API för dekomposition av sida](./assets/chapter-4/design-to-component-mapping.png)
 
@@ -64,20 +65,20 @@ För att göra detta kan vi mappa dessa krav till AEM (och i vårt fall AEM WCM 
    1. Tryck **[!UICONTROL Create]** i det övre åtgärdsfältet
    1. Tryck **[!UICONTROL Open]** öppna den nya mallen för redigering
 
-1. Först tillåter vi de tre identifierade AEM komponenterna som vi behöver för att modellera innehållet genom att redigera [!UICONTROL Policy] av roten [!UICONTROL Layout Container]. Se till att **[!UICONTROL Structure]** är aktivt, välj **[!DNL Layout Container \[Root\]]** och trycker på **[!UICONTROL Policy]** -knappen.
+1. Först tillåter vi de tre identifierade AEM komponenterna som vi behöver för att modellera innehållet genom att redigera [!UICONTROL Policy] av roten [!UICONTROL Layout Container]. Kontrollera **[!UICONTROL Structure]** är aktivt, välj **[!DNL Layout Container \[Root\]]** och trycker på **[!UICONTROL Policy]** -knappen.
 1. Under **[!UICONTROL Properties]>[!UICONTROL Allowed Components]** sök efter **[!DNL WKND Mobile]**. Tillåt följande komponenter från [!DNL WKND Mobile] komponentgrupp så att de kan användas på [!DNL Events] API-sida.
 
    * **[!DNL WKND Mobile > Image]**
 
       * Programmets logotyp
+
    * **[!DNL WKND Mobile > Text]**
 
       * Appens introduktionstext
+
    * **[!DNL WKND Mobile > Content Fragment List]**
 
       * Listan med händelsekategorier som är tillgängliga för visning i appen
-
-
 
 1. Tryck på **[!UICONTROL Done]** bockmarkering i det övre högra hörnet när det är klart.
 1. **Uppdatera** webbläsarfönstret för att se [!UICONTROL Allowed Components] listan i den vänstra listen.
@@ -87,7 +88,7 @@ För att göra detta kan vi mappa dessa krav till AEM (och i vårt fall AEM WCM 
    3. **[!DNL Content Fragment List]** för händelserna
 1. **För var och en av komponenterna ovan**, markerar dem och trycker på **låsa upp** -knappen.
 1. Se dock till att **layoutbehållare** är **låst** för att förhindra att andra komponenter läggs till eller att dessa tre komponenter tas bort.
-1. Tryck **[!UICONTROL Page Information]>[!UICONTROL View in Admin]** för att gå tillbaka till [!DNL WKND Mobile] malllista. Markera den nyskapade **[!DNL Events API]** mall och knacka **[!UICONTROL Enable]** i det övre åtgärdsfältet.
+1. Tryck **[!UICONTROL Page Information]>[!UICONTROL View in Admin]** för att gå tillbaka till [!DNL WKND Mobile] malllista. Välj den nyskapade **[!DNL Events API]** mall och knacka **[!UICONTROL Enable]** i det övre åtgärdsfältet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
@@ -97,6 +98,6 @@ För att göra detta kan vi mappa dessa krav till AEM (och i vårt fall AEM WCM 
 
 ## Nästa steg
 
-Du kan också installera [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM Author via [AEM](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
+Du kan också installera [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM författare via [AEM](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i det här och föregående kapitel i självstudien.
 
-* [Kapitel 5 - Sidor för redigering av innehållstjänster](./chapter-5.md)
+* [Kapitel 5 - Redigera sidor för innehållstjänster](./chapter-5.md)

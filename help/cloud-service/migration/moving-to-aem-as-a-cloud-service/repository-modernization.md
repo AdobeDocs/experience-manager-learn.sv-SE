@@ -6,10 +6,10 @@ feature: Developer Tools
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8630
+jira: KT-8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -22,11 +22,11 @@ Lär dig mer om databasmodernisering, ändringsbart och oföränderligt innehål
 
 >[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
 
-## Repository Modernizer Tool
+## Verktyget Databasmodernisering
 
 ![Databasmodernisering](./assets/repository-modernizer.png)
 
-Använd [Verktyget Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) för att strukturera om en 6.x-kodbas till en mer modern struktur.
+När du omfaktoriserar din kodbas använder du [Verktyget Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) för att strukturera om en 6.x-kodbas till en mer modern struktur.
 
 ## Viktiga aktiviteter
 

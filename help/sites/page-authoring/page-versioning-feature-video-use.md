@@ -1,19 +1,16 @@
 ---
 title: Skapa sidversioner för AEM webbplatssidor
 description: I följande video visas hur du skapar en sidversion, förhandsvisar, återställer en sidversion och jämför den aktuella sidversionen med en sparad sidversion.
-topics: authoring
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, Cloud Service
-kt: 4630
+jira: KT-4630
 thumbnail: 32151.jpg
 topic: Content Management
 feature: Authoring
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

@@ -1,19 +1,16 @@
 ---
 title: Skapa en anpassad komponent | Komma igång med AEM SPA Editor och Angular
-description: Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
+description: Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
 feature: SPA Editor
-doc-type: tutorial
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
-kt: 5831
+jira: KT-5831
 thumbnail: 5831-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -22,7 +19,7 @@ ht-degree: 0%
 
 # Skapa en anpassad komponent {#custom-component}
 
-Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
+Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
 
 ## Syfte
 
@@ -40,7 +37,7 @@ Ett enkelt `Custom Component` visar de steg som behövs för att skapa en ny AEM
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
 ### Hämta koden
 
@@ -162,7 +159,7 @@ En AEM definieras som en nod och egenskaper. I projektet representeras dessa nod
 
 ## Skapa segmentmodellen
 
-Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) används vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM komponenter.
+Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) används vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM.
 
 I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Export av försäljningsmodell](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
@@ -172,7 +169,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    >
    > Om du använder Visual Studio Code IDE kan det vara praktiskt att installera [tillägg för Java™](https://code.visualstudio.com/docs/java/extensions).
 
-2. Öppna Java™-gränssnittet `CustomComponent.java` på `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`:
+2. Öppna Java™ `CustomComponent.java` på `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`:
 
    ![Gränssnittet CustomComponent.java](assets/custom-component/custom-component-interface.png)
 
@@ -207,7 +204,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
 
    Komponentens resurstyp är den som binder Sling-modellen till AEM-komponenten och mappar slutligen till komponenten Angular.
 
-6. Lägg till `getExportedType()` till `CustomComponentImpl` klass som returnerar komponentresurstypen:
+6. Lägg till `getExportedType()` metoden till `CustomComponentImpl` klass som returnerar komponentresurstypen:
 
    ```java
    @Override
@@ -233,12 +230,13 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    }
    ```
 
-   Ytterligare&quot;affärslogik&quot; läggs till för att returnera värdet för meddelandet som versaler. På så sätt kan vi se skillnaden mellan det råvärde som lagras av författardialogrutan och det värde som exponeras av Sling-modellen.
+   Ytterligare&quot;affärslogik&quot; läggs till för att returnera värdet för meddelandet som versal. På så sätt kan vi se skillnaden mellan det råvärde som lagras av författardialogrutan och det värde som exponeras av Sling-modellen.
 
    >[!NOTE]
+   >
    Du kan visa [slut CustomComponentImpl.java här](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
-## Uppdatera komponenten Angular
+## Uppdatera Angular-komponenten
 
 Koden för den anpassade Angularna har redan skapats. Därefter gör du några uppdateringar för att mappa Angularna till AEM.
 
@@ -258,7 +256,7 @@ Koden för den anpassade Angularna har redan skapats. Därefter gör du några u
    ```
 
 4. Öppna `cutom.component.html` och observera att `{{message}}` visas på sidan en `<h2>` -tagg.
-5. Öppna `custom.component.css` och lägga till följande regel:
+5. Öppna `custom.component.css` och lägg till följande regel:
 
    ```css
    :host-context {

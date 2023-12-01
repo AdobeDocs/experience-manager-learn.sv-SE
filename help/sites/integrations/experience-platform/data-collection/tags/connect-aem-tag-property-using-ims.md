@@ -1,12 +1,8 @@
 ---
 title: Koppla AEM Sites med taggegenskap med IMS
 description: Lär dig hur du ansluter AEM Sites med taggegenskap med hjälp av IMS-konfigurationen i AEM. Den här installationen autentiserar AEM med Launch API och gör att AEM kan kommunicera via Launch API:er för att komma åt taggegenskaper.
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5981
+jira: KT-5981
 thumbnail: 38555.jpg
 topic: Integrations
 feature: Integrations
@@ -14,8 +10,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -44,7 +41,7 @@ Granskning har skapats automatiskt **Adobe Launch** IMS-konfiguration med följa
 
 1. Välj **Adobe Launch** kort och klicka **Egenskaper**, kan du läsa informationen från **Certifikat** och **Konto** -tabbar. Klicka sedan på **Avbryt** för att returnera utan att ändra någon information som skapats automatiskt.
 
-1. Välj **Adobe Launch** och klicka på **Kontrollera hälsa** bör du se **Lyckades** som nedan.
+1. Välj **Adobe Launch** och klicka på **Kontrollera hälsa**, bör du se **Lyckades** som nedan.
 
    ![Starta konfigurationen för felfri IMS i Adobe](assets/adobe-launch-healthy-ims-config.png)
 

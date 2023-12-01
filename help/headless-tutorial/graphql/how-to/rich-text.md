@@ -3,13 +3,13 @@ title: Använda RTF med AEM Headless
 description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av GraphQL API:er som JSON som kan användas av headless-program.
 version: Cloud Service
 doc-type: article
-kt: 9985
+jira: KT-9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # RTF med AEM Headless
 
-Flerradigt textfält är en datatyp i Content Fragments som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, till exempel bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. Textfältet En rad är en annan datatyp för innehållsfragment som ska användas för enkla textelement.
+Flerradigt textfält är en datatyp i Content Fragments som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, t.ex. bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. Textfältet En rad är en annan datatyp för innehållsfragment som ska användas för enkla textelement.
 
 AEM GraphQL API har en robust funktion för att returnera RTF som HTML, oformaterad text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
 
@@ -26,7 +26,7 @@ AEM GraphQL API har en robust funktion för att returnera RTF som HTML, oformate
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-I Content Fragment Editor har menyraden för flerradiga textfält försetts med formateringsfunktioner som **fet**, *kursiv* och understrykning. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
+I Innehållsfragmentsredigeraren har menyraden för flerradiga textfält försetts med formateringsfunktioner som **fet**, *kursiv* och understrykning. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Använd **Flerradstext** datatyp när du definierar innehållsfragmentmodellen f
 
 Flera egenskaper för flerradsfältet kan konfigureras.
 
-The **Återge som** kan anges till:
+The **Återge som** -egenskapen kan anges till:
 
 * Textområde - återger ett enskilt fält med flera rader
 * Flera fält - återger flera fält med flera rader
@@ -56,7 +56,7 @@ The **Standardtyp** -alternativet påverkar redigeringsmiljön direkt och avgör
 
 Du kan också [aktivera textbundna referenser](#insert-fragment-references) till andra innehållsfragment genom att kontrollera **Tillåt fragmentreferens** och konfigurera **Tillåtna modeller för innehållsfragment**.
 
-Kontrollera **Översättningsbar** om innehållet ska lokaliseras. Endast RTF och oformaterad text kan lokaliseras. Se [arbeta med lokaliserat innehåll för mer information](./localized-content.md).
+Kontrollera **Översättningsbar** om innehållet ska lokaliseras. Endast RTF och normal text kan lokaliseras. Se [arbeta med lokaliserat innehåll för mer information](./localized-content.md).
 
 ## RTF-svar med GraphQL API
 
@@ -128,7 +128,7 @@ The `$path` variabel som används i `_path` filtret kräver den fullständiga s�
 
 ### Andra exempel
 
-Nedan visas flera exempel på svarstyper för ett flerradigt fält med namnet `main` som innehåller ett stycke: &quot;Det här är ett stycke som innehåller **important** innehåll.&quot; där&quot;important&quot; markeras som **fet**.
+Nedan visas flera exempel på svarstyper för ett flerradigt fält med namnet `main` som innehåller ett stycke:&quot;Detta är ett stycke som innehåller **important** innehåll.&quot; där&quot;important&quot; markeras som **fet**.
 
 +++HTML, exempel
 
@@ -248,7 +248,7 @@ The `plaintext` renderingsalternativet tar bort all formatering.
 
 Flerradsfältets RTF-JSON-svar är strukturerat som ett hierarkiskt träd. Varje objekt eller nod representerar ett HTML-block av den formaterade texten.
 
-Nedan visas ett exempel på JSON-svar för ett textfält med flera rader. Observera att varje objekt, eller nod, innehåller en `nodeType` som representerar HTML-blocket från den RTF-text som `paragraph`, `link`och `text`. Varje nod kan innehålla `content` som är en undergrupp som innehåller underordnade noder till den aktuella noden.
+Nedan visas ett exempel på JSON-svar för ett textfält med flera rader. Observera att varje objekt, eller nod, innehåller en `nodeType` som representerar HTML-blocket från den RTF-text som `paragraph`, `link`och `text`. Varje nod kan innehålla `content` som är en underordnad array som innehåller underordnade noder till den aktuella noden.
 
 ```json
 "json": [// root "content" or child nodes
@@ -328,7 +328,7 @@ const nodeMap = {
 }
 ```
 
-The `nodeMap` är en JavaScript-objektlitteral som används som en karta. Var och en av nycklarna representerar olika `nodeType`. Parametrar för `node` och `children` kan skickas till de resulterande funktioner som återger noden. Returtypen som används i det här exemplet är JSX, men metoden kan anpassas för att skapa en stränglitteral som representerar HTML-innehåll.
+The `nodeMap` är en JavaScript-objektlitteral som används som en karta. Var och en av &quot;tangenterna&quot; representerar olika `nodeType`. Parametrar för `node` och `children` kan skickas till de resulterande funktioner som återger noden. Returtypen som används i det här exemplet är JSX, men metoden kan anpassas för att skapa en stränglitteral som representerar HTML-innehåll.
 
 ### Exempel på fullständig kod
 
@@ -348,7 +348,7 @@ Skärmbilden ovan visar en bild som infogats i fältet med flera rader med hjäl
 
 Referenser till andra innehållsfragment kan också länkas eller infogas i flerradsfältet med **Infoga innehållsfragment** -knappen.
 
-![Infoga referens för innehållsfragment](assets/rich-text/insert-contentfragment.png)
+![Infoga innehållsfragmentreferens](assets/rich-text/insert-contentfragment.png)
 
 Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide till LA Skate Parks, som infogas i fältet med flera rader. De typer av innehållsfragment som kan infogas i fält styrs av **Tillåtna modeller för innehållsfragment** i [datatyp med flera rader](#multi-line-data-type) i Content Fragment Model.
 
@@ -359,7 +359,7 @@ Med GraphQL API kan utvecklare skapa en fråga som innehåller ytterligare egens
 Du kanske vill:
 
 * Inkludera anpassad routningslogik för hantering av länkar till andra innehållsfragment vid implementering av ett Single Page-program, som React Router eller Next.js
-* Rendera en textbunden bild med den absoluta sökvägen till en AEM-publiceringsmiljö som `src` värde.
+* Rendera en textbunden bild med den absoluta sökvägen till en AEM publiceringsmiljö som `src` värde.
 * Bestäm hur en inbäddad referens ska återges till ett annat innehållsfragment med ytterligare anpassade egenskaper.
 
 Använd `json` returtyp och inkludera `_references` -objekt när en GraphQL-fråga skapas:
@@ -536,7 +536,7 @@ Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns
 
 >[!NOTE]
 >
-> Videon ovan använder `_publishUrl` för att återge bildreferensen. I stället vill du `_dynamicUrl` som förklaras i [webboptimerade bilder](./images.md);
+> Videon ovan använder `_publishUrl` för att återge bildreferensen. I stället vill du `_dynamicUrl` enligt vad som anges i [webboptimerade bilder](./images.md);
 
 
 I föregående video visas ett exempel från början till slut:

@@ -6,11 +6,11 @@ topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
 role: Developer
 level: Beginner
-kt: 7620
+jira: KT-7620
 thumbnail: 332859.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
-source-git-commit: 084e2d49c2790188b4f02bfad5b3ae7099820457
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

@@ -3,7 +3,7 @@ title: Android-app - Exempel AEM Headless
 description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Android-programmet visar hur du frågar efter innehåll med hjälp av GraphQL API:er för AEM.
 version: Cloud Service
 mini-toc-levels: 2
-kt: 10588
+jira: KT-10588
 thumbnail: KT-10588.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 679b9bf9f0948e2b24d613b530d3ae644c92057d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Android-programmet fungerar med följande AEM distributionsalternativ. Alla dist
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 
-Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i Android-programmets konfiguration.
+Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljön kan däremot hämta innehåll från AEM författare om autentisering anges i Android-programmets konfiguration.
 
 ## Så här använder du
 

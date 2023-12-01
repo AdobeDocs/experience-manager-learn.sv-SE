@@ -6,10 +6,11 @@ topic: Content Management, Collaboration
 feature: Projects
 level: Intermediate
 role: User
-kt: 256
+jira: KT-256
 thumbnail: 17740.jpg
+doc-type: Feature Video
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -22,28 +23,28 @@ Project Masters förenklar användar- och teamhanteringen avsevärt med [!DNL AE
 
 >[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
 
-Administratörer kan nu skapa en **[!DNL Master Project]** och tilldela användare roller/behörigheter som en del av ett projektteam. Du kan skapa projekt från ett Överordnad projekt och automatiskt ärva teammedlemskapet. Detta ger flera fördelar:
+Administratörer kan nu skapa en **[!DNL Master Project]** och tilldela användare roller/behörigheter som en del av ett projektteam. Du kan skapa projekt från ett huvudprojekt och automatiskt ärva teammedlemskapet. Detta ger flera fördelar:
 
 * Återanvänd befintliga team i flera projekt
 * Snabbare projektframtagning eftersom team inte behöver återskapas manuellt
 * Hantera teammedlemskap från en central plats och uppdateringar av team ärvs automatiskt av projekt
 * undviker att skapa dubbletter av ACL:er som kan orsaka prestandaproblem
 
-[!DNL Master Projects] kan skapas under [!UICONTROL Masters] mapp under [!UICONTROL AEM Projects]. När ett Överordnad projekt har skapats visas det som ett alternativ tillsammans med tillgängliga mallar i guiden när nya projekt skapas.
+[!DNL Master Projects] kan skapas under [!UICONTROL Masters] mapp under [!UICONTROL AEM Projects]. När du har skapat ett huvudprojekt visas det som ett alternativ tillsammans med tillgängliga mallar i guiden när nya projekt skapas.
 
 [!DNL Project Masters] URL (lokal AEM Author instance): [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
 ## Ta bort [!DNL Project Masters]
 
-Om du tar bort ett överordnad projekt blir det oanvändbara härledda projekt.
+Om du tar bort ett huvudprojekt blir det oanvändbara härledda projekt.
 
-Innan du tar bort ett överordnad projekt måste du se till att alla härledda projekt är avslutade och borttagna från AEM. Spara alla nödvändiga projektdata innan du tar bort de härledda projekten. När alla härledda projekt har tagits bort från AEM kan det överordnad projektet tas bort.
+Innan du tar bort ett huvudprojekt måste du se till att alla härledda projekt är avslutade och borttagna från AEM. Spara alla nödvändiga projektdata innan du tar bort de härledda projekten. När alla härledda projekt har tagits bort från AEM kan huvudprojektet tas bort.
 
-## Mark [!DNL Project Masters] som inaktiv
+## Märk [!DNL Project Masters] som inaktiv
 
-Genom att ändra det överordnad projektets status till inaktiv i projektets egenskaper försvinner de inaktiva överordnad projekten från listan med överordnad projekt.
+Genom att ändra huvudprojektets status till inaktiv i projektets egenskaper, försvinner de inaktiva huvudprojekten från huvudprojektlistan.
 
-Om du vill visa inaktiva överordnad projekt växlar du filterknappen &quot;visa aktivt&quot; i det övre fältet (bredvid visningsalternativet). Om du vill aktivera det inaktiva projektet igen väljer du bara det inaktiva överordnad projektet, redigerar projektegenskaperna och anger det igen som aktivt.
+Om du vill visa inaktiva huvudprojekt växlar du till filterknappen &quot;visa aktivt&quot; i det övre fältet (bredvid alternativet för att visa listan). Om du vill göra det inaktiva projektet aktivt igen väljer du bara det inaktiva huvudprojektet, redigerar projektegenskaperna och anger det igen som aktivt.
 
 ## Förstå [!DNL Project Masters]
 

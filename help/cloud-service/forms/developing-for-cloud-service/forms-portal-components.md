@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Core Components
-kt: 10373
+jira: KT-10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller följande portalkomponenter direkt:
 
-**Sök och visa**: Med den här komponenten kan du lista formulär från formulärdatabasen på din portalsida, och du får konfigurationsalternativ för att lista formulär baserat på angivna villkor.
+**Sök och visa**: Den här komponenten gör att du kan lista formulär från formulärdatabasen på portalsidan och innehåller konfigurationsalternativ för att lista formulär baserat på angivna villkor.
 
-**Utkast och inskickat material**: Medan komponenten Sök och Lister visar formulär som har publicerats av Forms författare, visar komponenten Utkast och inskickningar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Den här komponenten ger en personaliserad upplevelse till alla inloggade användare.
+**Utkast och inskickat material**: Medan komponenten Sök och lista visar formulär som har publicerats av Forms författare, visar komponenten Utkast och inskickningar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Den här komponenten ger en personaliserad upplevelse till alla inloggade användare.
 
 **Länk**: Med den här komponenten kan du skapa en länk till ett formulär var som helst på sidan.
 
@@ -34,13 +34,13 @@ Om du vill använda en huvudkomponent (inklusive färdiga portalkomponenter) på
 Den nyligen skapade proxykomponenten måste peka i utkanten av formulärkomponenten, så att de ärver allt från dem. Detta görs genom att ändra resourceSuperType i content.xml för proxykomponenten. I content.xml anger vi också titeln och komponentgruppen.
 >[!NOTE]
 >
-> Du kan konstruera resurssupertypen för var och en av [de här komponenterna härifrån](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
+> Du kan konstruera resurssupertypen för var och en av [dessa komponenter härifrån](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
 
 
 ### Utkast och inlagor
 
-Skapa en kopia av en befintlig komponent (till exempel `button`) och namnge det som _utkast_.
-![utkast](assets/forms-portal-components2.png)
+Skapa en kopia av en befintlig komponent (till exempel `button`) och namnge det som _utkast och inskick_.
+![utkast och inskick](assets/forms-portal-components2.png)
 Ersätta innehållet i dialogrutan `.content.xml` med följande XML:
 
 ```xml

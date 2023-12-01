@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Technical Video
 recommendations: noDisplay, noCatalog
 last-substantial-update: 2023-06-02T00:00:00Z
-kt: 11659
+jira: KT-11659
 thumbnail: 3412876.jpeg
 exl-id: ef5ad335-7278-4c00-beb6-233a3d1e330e
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

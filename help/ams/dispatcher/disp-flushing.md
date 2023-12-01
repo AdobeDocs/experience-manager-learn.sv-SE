@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2223'
 ht-degree: 0%
@@ -38,7 +39,7 @@ Vid författaren finns det en replikeringsagent som är konfigurerad att peka p�
 
 När utgivaren tar emot filen har den en replikeringsagent som är konfigurerad att peka på Dispatcher som utlöser händelsen on-receive.  Sedan serialiseras en tömningsbegäran och skickas till Dispatcher.
 
-### FÖRFATTARE REPLICATION AGENT
+### REPLIKATIONSAGENT FÖR FÖRFATTARE
 
 Här följer några exempel på skärmbilder av en konfigurerad standardslikeringsagent
 ![skärmbild av standardroppreplikeringsagenten från AEM webbsida /etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
@@ -52,9 +53,9 @@ Det andra är det omvända agenset.  Detta är valfritt och är konfigurerat f�
 ### PUBLISHER REPLICATION AGENT
 
 Här är ett exempel på skärmbilder av en konfigurerad standardimporteringsagent
-![skärmbild av standardsvarningsagenten för tömningsreplikering från AEM webbsida /etc/replication.html](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
+![skärmbild av standardsvarningsagenten för tömning från AEM webbsida /etc/replication.html](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
 
-### SKICKA FLUSH-REPLIKATION SOM TAR EMOT VIRTUELL VÄRD
+### SKICKA FLUSH-REPLIKATION SOM TAR EMOT VIRTUAL HOST
 
 Dispatcher-modulen letar efter särskilda rubriker som ska veta när en POST-förfrågan är något att skicka vidare till AEM eller om den är serialiserad som en tömningsbegäran och måste hanteras av Dispatcher-hanteraren.
 
@@ -247,7 +248,7 @@ Den här inställningen mäter hur djupt `.stat` filer måste genereras när en 
 
 - 0 - Följande statusfiler skulle skapas
    - `/var/www/html/.stat`
-- 1 - Följande statusfiler skapas
+- 1 - Följande statusfiler skulle skapas
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
 - 2 - Följande statusfiler skulle skapas
@@ -278,7 +279,7 @@ Den här inställningen mäter hur djupt `.stat` filer måste genereras när en 
 
 Kom ihåg att när tidsstämpelhandskakningen inträffar så ser den ut som närmast `.stat` -fil.
 
-har `.stat` filnivå 0 och en startfil endast på `/var/www/html/.stat` betyder det innehåll som lever under `/var/www/html/content/dam/brand1/en/us/` söker efter närmaste `.stat` och bläddra mellan fem mappar för att hitta den enda `.stat` som finns på nivå 0 och jämför datum med det.  Att en tömning vid den nivån gör i princip alla cachelagrade objekt ogiltiga.
+har `.stat` filnivå 0 och en startfil endast på `/var/www/html/.stat` betyder det innehåll som lever under `/var/www/html/content/dam/brand1/en/us/` skulle leta efter närmaste `.stat` och bläddra mellan fem mappar för att hitta den enda `.stat` som finns på nivå 0 och jämför datum med det.  Att en tömning vid den nivån gör i princip alla cachelagrade objekt ogiltiga.
 </div>
 
 ### Invalidering tillåten
@@ -378,7 +379,7 @@ Om vi kör rensningen igen ser du hur tidsstämplarna uppdateras
 -rw-r--r--. 1 apache apache 0 Nov 13 17:17 /mnt/var/www/html/.stat
 ```
 
-Låt oss jämföra våra tidsstämplar med våra `.stat` filer tidsstämplar
+Låt oss jämföra våra tidsstämplar med våra `.stat` tidsstämplar för filer
 
 ```
 $ stat /mnt/var/www/html/content/customer/en-us/.stat 

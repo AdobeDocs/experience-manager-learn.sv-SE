@@ -6,14 +6,14 @@ audience: administrator, developer
 doc-type: technical video
 activity: understand
 version: Cloud Service
-kt: 4643
+jira: KT-4643
 thumbnail: 32030.jpg
 topic: Architecture
 feature: JCR
 role: Architect, Developer
 level: Beginner
 exl-id: 1e419597-3f60-4110-bafd-a4acb0fad7a0
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

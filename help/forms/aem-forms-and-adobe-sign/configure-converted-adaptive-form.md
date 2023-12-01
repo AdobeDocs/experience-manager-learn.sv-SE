@@ -3,14 +3,14 @@ title: Konfigurera konverterad adaptiv form
 description: Konfigurera konverterad adaptiv form
 feature: Adaptive Forms
 thumbnail: 39574.jpg
-kt: 6126
+jira: KT-6126
 topic: Development
 role: User
 level: Beginner
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

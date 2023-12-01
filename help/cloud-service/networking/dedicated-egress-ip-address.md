@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9351
+jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Följande krävs när du konfigurerar en dedikerad IP-adress för utgångar:
 
 + Cloud Manager API med [Behörigheter för affärsägare för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
-   + Organisations-ID (även IMS Org ID)
+   + Organisations-ID (även IMS Org-ID)
    + Klient-ID (även API-nyckel)
    + Åtkomsttoken (även Bearer Token)
 + Program-ID för Cloud Manager
@@ -46,7 +46,7 @@ Mer information finns i följande genomgång om hur du konfigurerar, konfigurera
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ska du ersätta `\` radbrytningstecken med `^`.
+Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du `\` radbrytningstecken med `^`.
 
 ## Aktivera dedikerad IP-adress för egress i programmet
 
@@ -93,7 +93,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
        -H 'Content-Type: application/json'
    ```
 
-   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kontrollerar du statusen var minut.
+   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kontrollerar du statusen var några minut.
 
 ## Konfigurera IP-adressproxy för dedikerad egress per miljö
 
@@ -112,7 +112,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Definiera JSON-parametrarna i en `dedicated-egress-ip-address.json` och tillhandahålls för att surfa via `... -d @./dedicated-egress-ip-address.json`.
 
-   [Ladda ned exemplet dedikerad-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). Den här filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [Hämta exemplet dedikerad-egress-ip-address.json](./assets/dedicated-egress-ip-address.json). Filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
@@ -159,7 +159,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
 1. IP-adresskonfigurationer för dedikerade utgångar kan uppdateras med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Kom ihåg `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT` -åtgärd, så alla regler måste anges för varje anrop av den här åtgärden.
 
-1. Hämta __dedikerad IP-adress för egress__ genom att använda en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
+1. Hämta __dedikerad IP-adress för egress__ med en DNS-lösare (t.ex. [DNSChecker.org](https://dnschecker.org/)) på värden: `p{programId}.external.adobeaemcloud.com`eller genom att köra `dig` från kommandoraden.
 
    ```shell
    $ dig +short p{programId}.external.adobeaemcloud.com
@@ -178,13 +178,13 @@ När den dedikerade IP-adressen för utgångar är aktiverad kan AEM kod och kon
 1. HTTP/HTTPS-anrop till externa tjänster
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
 1. icke-HTTP/HTTPS-anrop till externa tjänster
-   + Inkluderar alla icke-HTTP-anrop, t.ex. anslutningar till e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
+   + Inkluderar alla icke-HTTP-anrop, till exempel anslutningar med e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
 
 HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard, men de använder inte den dedikerade IP-adressen för utgångar om de inte är korrekt konfigurerade enligt beskrivningen nedan.
 
 >[!TIP]
 >
-> Läs AEM as a Cloud Service dokumentation om IP-adresser för utgångar om du vill veta mer [hela uppsättningen routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
+> Läs AEM as a Cloud Service dokumentation om IP-adresser för utgångar om du vill veta mer [alla routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
 
 
 ### HTTP/HTTPS
@@ -211,7 +211,9 @@ När du skapar HTTP/HTTPS-anslutningar från AEM, när du använder en dedikerad
 
 När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som AEM anger.
 
-| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
 Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigeras till det mappade externa värdnamnet (`portForwards.name`) och port (`portForwards.portDest`).

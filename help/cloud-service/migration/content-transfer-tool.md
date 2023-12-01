@@ -7,13 +7,13 @@ topics: migration
 feature: Migration
 activity: develop
 audience: developer
-kt: 5352
+jira: KT-5352
 thumbnail: kt-5352.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
 exl-id: 0cefc336-2a46-4a11-a734-ba1cb63c5cbe
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 2%

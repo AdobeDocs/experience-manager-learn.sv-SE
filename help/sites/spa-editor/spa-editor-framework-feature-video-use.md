@@ -6,10 +6,11 @@ topic: SPA
 feature: SPA Editor
 role: Developer
 level: Beginner
-kt: 1047
+jira: KT-1047
 thumbnail: 22229.jpg
+doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%

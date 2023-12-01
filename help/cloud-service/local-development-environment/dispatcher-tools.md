@@ -6,11 +6,11 @@ topic: Development
 feature: Dispatcher, Developer Tools
 role: Developer
 level: Beginner
-kt: 4679
+jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1695'
 ht-degree: 1%

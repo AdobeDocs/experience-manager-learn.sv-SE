@@ -8,9 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 thumbnail: 335423.jpg
-kt: 8230
+jira: KT-8230
 exl-id: a3a0414a-ce35-4609-922f-06f3c6153723
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

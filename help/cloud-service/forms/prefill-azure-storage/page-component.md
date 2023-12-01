@@ -7,9 +7,9 @@ role: Developer
 level: Beginner
 version: Cloud Service
 topic: Integrations
-kt: 13717
+jira: KT-13717
 exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%

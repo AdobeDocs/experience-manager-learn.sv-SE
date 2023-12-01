@@ -7,8 +7,9 @@ level: Intermediate
 feature: Video Profiles
 topic: Development
 index: y
+doc-type: Tutorial
 exl-id: 0fd4d366-bb7a-4c43-887f-3a83cf60d15b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%

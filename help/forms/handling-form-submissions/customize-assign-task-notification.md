@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-kt: 6279
+jira: KT-6279
 thumbnail: KT-6279.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -115,7 +115,7 @@ return customMetadataMap;
 
 ## Använd anpassade metadataegenskaper i e-postmallen för aktivitetsmeddelanden
 
-I e-postmallen kan du inkludera metadataegenskapen genom att använda följande syntax där amountRequested är metadataegenskapen `${amountRequested}`
+I e-postmallen kan du inkludera metadataegenskapen med följande syntax där amountRequested är metadataegenskapen `${amountRequested}`
 
 ## Konfigurera Tilldela uppgift för att använda anpassad metadataegenskap
 
@@ -133,7 +133,7 @@ När OSGi-komponenten har byggts och distribuerats till AEM server konfigurerar 
 * [Konfigurera daglig CQ Mail-tjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * Associera ett giltigt e-post-ID med [admin-användare](http://localhost:4502/security/users.html)
 * Hämta och installera [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Hämta [Adaptiv form](assets/request-travel-authorization.zip) och importera till AEM från [formulär och dokument-ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* Ladda ned [Adaptiv form](assets/request-travel-authorization.zip) och importera till AEM från [formulär och dokument-ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
 * Distribuera och starta [Anpassat paket](assets/work-items-user-service-bundle.jar) med [webbkonsol](http://localhost:4502/system/console/bundles)
 * [Förhandsgranska och skicka formuläret](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 

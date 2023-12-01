@@ -4,12 +4,12 @@ description: Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellra
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 22198.jpg
-kt: 4211
+jira: KT-4211
 topic: Development
 role: Developer
 level: Beginner
 exl-id: e7674c46-259f-4dbd-96db-c40369534911
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%

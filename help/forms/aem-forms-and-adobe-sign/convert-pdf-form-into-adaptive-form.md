@@ -3,14 +3,14 @@ title: Konvertera PDF-formulär till anpassat format
 description: Tjänsten AEM Forms Automated forms conversion, som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Oavsett om du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan Automated forms conversion-tjänsten enkelt konvertera dessa formulär till anpassningsbara formulär.
 feature: Adaptive Forms
 thumbnail: 39495.jpg
-kt: 6115
+jira: KT-6115
 topic: Development
 role: User
 level: Beginner
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 9aab3eb0-03a5-4962-a2ff-d44a17dc140e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%

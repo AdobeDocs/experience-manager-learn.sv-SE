@@ -7,8 +7,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
@@ -17,13 +18,13 @@ ht-degree: 0%
 
 # Integrera AEM Sites och Adobe Target {#getting-started-with-aem-target}
 
-AEM och Target är båda kraftfulla lösningar med synbarligen överlappande funktioner. Kunderna kämpar ibland med att förstå hur och när de ska använda dessa produkter tillsammans för att leverera personaliserade upplevelser. För att leverera optimerad upplevelse för alla slutanvändare bör olika team i organisationen ha ett nära samarbete och definiera vem som ska göra vad.
+AEM och Target är båda kraftfulla lösningar med synbarligen överlappande funktioner. Kunderna kämpar ibland med att förstå hur och när de ska använda dessa produkter tillsammans för att leverera personaliserade upplevelser. För att kunna leverera optimerade upplevelser för alla slutanvändare bör olika team i organisationen ha ett nära samarbete och definiera vem som ska göra vad.
 
 I den här självstudiekursen beskriver vi tre olika scenarier för AEM och Target, som hjälper dig att förstå vad som fungerar bäst för din organisation och hur olika team samarbetar.
 
 * Scenario 1: Personalisering med AEM Experience Fragments
 * Scenario 2: Personalisering med Visual Experience Composer
-* Scenario 3: Personalisering av fullständiga webbsidesupplevelser
+* Scenario 3: Personalisering av helwebbsidesupplevelser
 
 ## Personalisering med AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
@@ -45,7 +46,7 @@ Vi har nu personaliserat innehåll i form av erbjudanden från AEM i Target. Med
 **För att implementera detta scenario måste du:**
 
 * [Integrera AEM och Adobe Target med Launch och Adobe I/O](./implementation.md#integrating-aem-target-options)
-* [AEM och Adobe Target med äldre Cloud Services](./implementation.md#integrating-aem-target-options)
+* [AEM och Adobe Target med äldre Cloud Service](./implementation.md#integrating-aem-target-options)
 
 ***När du har implementerat integreringarna ovan kan du [scenario i detalj](./personalization-use-case-1.md).***
 
@@ -71,7 +72,7 @@ VEC är en av huvudfunktionerna i Adobe Target. Med VEC kan marknadsförare och 
 
 ## Personalisering av fullständiga webbsidesupplevelser
 
-Genom att integrera Adobe Experience Manager med Adobe Target kan ni leverera personaliserade upplevelser till era webbplatsanvändare. Dessutom hjälper det er att bättre förstå vilka versioner av webbplatsinnehållet som bäst förbättrar konverteringsgraden under en viss testperiod. Ett A/B-test jämför till exempel två eller flera versioner av webbplatsinnehållet för att se vilka som är bäst på att lyfta konverteringarna, försäljningen eller andra mätvärden som du identifierar. En marknadsförare kan skapa aktiviteter inom Adobe Target för att förstå hur användare interagerar med webbplatsens innehåll och hur det påverkar webbplatsens mått.
+Genom att integrera Adobe Experience Manager med Adobe Target kan ni leverera en personaliserad upplevelse till era webbplatsanvändare. Dessutom hjälper det er att bättre förstå vilka versioner av webbplatsinnehållet som bäst förbättrar konverteringsgraden under en viss testperiod. Ett A/B-test jämför till exempel två eller flera versioner av webbplatsinnehållet för att se vilka som är bäst på att lyfta konverteringarna, försäljningen eller andra mätvärden som du identifierar. En marknadsförare kan skapa aktiviteter inom Adobe Target för att förstå hur användare interagerar med webbplatsens innehåll och hur det påverkar webbplatsens mått.
 
 * Innehållet finns i AEM och redaktörer skapar och hanterar webbplatssidorna
 * Målet använder AEM värdbaserade webbplatssidor för att köra tester och personalisering

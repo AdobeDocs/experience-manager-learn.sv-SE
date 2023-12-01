@@ -5,9 +5,9 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: 5859
+jira: KT-5859
 thumbnail: 37324.jpg
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%

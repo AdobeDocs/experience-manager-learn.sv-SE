@@ -1,19 +1,19 @@
 ---
 title: Felsöka en Asset compute-arbetare
-description: asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM as a Cloud Service.
+description: Asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM as a Cloud Service.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6285
+jira: KT-6285
 thumbnail: 40383.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -22,20 +22,20 @@ ht-degree: 0%
 
 # Felsöka en Asset compute-arbetare
 
-asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM as a Cloud Service.
+Asset compute-arbetare kan felsökas på flera olika sätt, från enkla felsökningsloggsatser till kopplad VS-kod som fjärrfelsökare, till att dra loggar för aktiveringar i Adobe I/O Runtime som initierats från AEM as a Cloud Service.
 
 ## Loggning
 
-Den mest grundläggande formen av felsökning i Asset compute använder traditionella `console.log(..)` -satser i arbetskoden. The `console` JavaScript-objektet är ett implicit, globalt objekt så det finns inget behov av att importera eller kräva det, eftersom det alltid finns i alla sammanhang.
+Den mest grundläggande formen av felsökning i Asset compute använder traditionella `console.log(..)` -programsatser i arbetskoden. The `console` JavaScript-objektet är ett implicit, globalt objekt så det finns inget behov av att importera eller kräva det, eftersom det alltid finns i alla sammanhang.
 
 De här loggsatserna är tillgängliga för granskning på olika sätt beroende på hur Asset compute-arbetaren körs:
 
 + Från `aio app run`, loggar ut som standard och [Utvecklingsverktyg](../develop/development-tool.md) Aktiveringsloggar
-   ![AIO-appkörningen console.log(...)](./assets/debug/console-log__aio-app-run.png)
+  ![AIO-appkörningen console.log(...)](./assets/debug/console-log__aio-app-run.png)
 + Från `aio app test`, loggar ut till `/build/test-results/test-worker/test.log`
-   ![aio app test console.log(..)](./assets/debug/console-log__aio-app-test.png)
+  ![aio app test console.log(..)](./assets/debug/console-log__aio-app-test.png)
 + Använda `wskdebug`, loggar programsatser som skrivs ut på VS-kodens felsökningskonsol (Visa > Felsökningskonsol), standard-out
-   ![wskdebug console.log(..)](./assets/debug/console-log__wskdebug.png)
+  ![wskdebug console.log(..)](./assets/debug/console-log__wskdebug.png)
 + Använda `aio app logs`, loggutdrag som skrivs ut i aktiveringsloggen
 
 ## Fjärrfelsökning via ansluten felsökning
@@ -91,16 +91,16 @@ _Klicka igenom felsökningen av en Asset compute-arbetare med wskdebug (inget lj
 1. Öppna `/actions/worker/index.js` och tryck till vänster om radnumren för att lägga till brytpunkter 1. Navigera till webbläsarfönstret Asset compute Development Tool som öppnas i steg 6
 1. Tryck på __Kör__ knapp för att köra arbetaren
 1. Navigera tillbaka till VS-koden, till `/actions/worker/index.js` och stega igenom koden
-1. Om du vill avsluta utvecklingsverktyget vid felsökning trycker du på `Ctrl-C` i terminalen som kördes `npx adobe-asset-compute devtool` kommando i steg 6
+1. Om du vill avsluta utvecklingsverktyget vid felsökning trycker du på `Ctrl-C` i terminalen som körde `npx adobe-asset-compute devtool` kommando i steg 6
 
 ## Åtkomst till loggar från Adobe I/O Runtime{#aio-app-logs}
 
 [AEM as a Cloud Service utnyttjar Asset compute-arbetare via Bearbetningsprofiler](../deploy/processing-profiles.md) genom att anropa dem direkt i Adobe I/O Runtime. Eftersom dessa anrop inte innefattar lokal utveckling kan deras körningar inte felsökas med lokala verktyg som Asset compute Development Tool eller wskdebug. I stället kan Adobe I/O CLI användas för att hämta loggar från arbetaren som körs på en viss arbetsyta i Adobe I/O Runtime.
 
-1. Se till att [arbetsytespecifika miljövariabler](../deploy/runtime.md) anges via `AIO_runtime_namespace` och `AIO_runtime_auth`, baserat på arbetsytan som kräver felsökning.
+1. Kontrollera [arbetsytespecifika miljövariabler](../deploy/runtime.md) anges via `AIO_runtime_namespace` och `AIO_runtime_auth`, baserat på arbetsytan som kräver felsökning.
 1. Kör från kommandoraden `aio app logs`
    + Om arbetsytan är hårt trafikerad kan du utöka antalet aktiveringsloggar via `--limit` flagga:
-      `$ aio app logs --limit=25`
+     `$ aio app logs --limit=25`
 1. Den senaste (upp till den angivna `--limit`)-aktiveringsloggar returneras som utdata från kommandot för granskning.
 
    ![AIO-apploggar](./assets/debug/aio-app-logs.png)

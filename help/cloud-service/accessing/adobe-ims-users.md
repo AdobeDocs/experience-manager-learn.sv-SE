@@ -6,10 +6,10 @@ topic: Administration, Security
 feature: User and Groups
 role: Admin
 level: Beginner
-kt: 4997
+jira: KT-4997
 thumbnail: 39149.jpg
 exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 5%

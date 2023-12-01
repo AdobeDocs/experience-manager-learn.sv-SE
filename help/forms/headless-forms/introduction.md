@@ -3,12 +3,12 @@ title: Använda headless adaptive form i SPA
 description: Implementera ett formulär för att kontakta oss utan rubrik i SPA
 feature: Adaptive Forms
 version: 6.5
-kt: 13285
+jira: KT-13285
 topic: Development
 role: User
 level: Intermediate
 exl-id: 7b457ce8-f11a-4e2b-8548-6ac3910cb61e
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%

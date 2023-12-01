@@ -2,17 +2,17 @@
 title: Distribuera via pipeline i frontend-läget
 description: Lär dig hur du skapar och kör en frontend-pipeline som bygger front-end-resurser och distribuerar till det inbyggda CDN på AEM as a Cloud Service.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
@@ -55,14 +55,14 @@ I __Källkod__ ska du kontrollera att fältvärdena Databas och Git Branch är k
 
 Till __ENDAST__ bygga och driftsätta resurser från `ui.frontend` utför du följande steg:
 
-1. I användargränssnittet för Cloud Manager kan du gå till __Pipelines__ avsnitt, klicka __Lägg till__ knapp, markera __Lägg till icke-produktionsförlopp__ (eller __Lägg till produktionspipeline__) baserat på den AEM as a Cloud Service miljön som du vill distribuera till.
+1. I användargränssnittet för Cloud Manager kan du gå till __Pipelines__ avsnitt, klicka __Lägg till__ knapp och sedan markera __Lägg till icke-produktionsförlopp__ (eller __Lägg till produktionspipeline__) baserat på den AEM as a Cloud Service miljön som du vill distribuera till.
 
 1. I __Lägg till icke-produktionsförlopp__ som en del av __Konfiguration__ steg väljer du __Distributionsförlopp__ option, name it as __FrontEnd WKND Distribuera till Dev__ och klicka __Fortsätt__
 
 ![Skapa frontlinjeförslutskonfigurationer](assets/create-frontend-pipeline-configs.png)
 
 1. Som en del av __Källkod__ steg väljer du __Front End-kod__ och välj miljö __Berättigade driftsättningsmiljöer__. I __Källkod__ kontrollerar du att fälten Databas och Git Branch är korrekta och att grenen har ditt avtal för frontend-pipeline ändrat.
-Och __viktigast__ för __Kodplats__ fält där värdet är `/ui.frontend` och slutligen klickar du på __Spara__.
+Och __viktigast__ för __Kodplats__ fält där värdet är `/ui.frontend` och slutligen klickar du __Spara__.
 
 ![Skapa källkod för frontpipeline](assets/create-frontend-pipeline-source-code.png)
 
@@ -78,7 +78,7 @@ Och __viktigast__ för __Kodplats__ fält där värdet är `/ui.frontend` och sl
 >Efter __FullStack WKND Distribuera till Dev__ slutförande av pipeline kommer att ha __oformaterad__ WKND-plats, som kan se trasig ut. Planera ett driftstopp eller en driftsättning under udda timmar. Detta är en engångsstörning som du måste planera för under den initiala övergången från att använda en enda pipeline i full hög till den främre pipelinen.
 
 
-* Kör slutligen __FrontEnd WKND Distribuera till Dev__ endast bygga `ui.frontend` och driftsätta resurserna direkt till CDN.
+* Till sist kör du __FrontEnd WKND Distribuera till Dev__ endast bygga `ui.frontend` och driftsätta resurserna direkt till CDN:n.
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ Och __viktigast__ för __Kodplats__ fält där värdet är `/ui.frontend` och sl
 
 >[!TIP]
 >
->The `$HASH_VALUE$` här är samma sak som i __FrontEnd WKND Distribuera till Dev__  pipeline __INNEHÅLLSHASH__ fält. AEM meddelas om frontend-resursens CDN-URL, värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under __prefixPath__ -egenskap.
+>The `$HASH_VALUE$` det här är samma som det du ser i __FrontEnd WKND Distribuera till Dev__  pipeline __INNEHÅLLSHASH__ fält. AEM meddelas om frontend-resursens CDN-URL, värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under __prefixPath__ -egenskap.
 
 
 ![Hash-värdekorrelation](assets/hash-value-correlartion.png)

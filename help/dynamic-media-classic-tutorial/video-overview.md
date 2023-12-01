@@ -2,15 +2,12 @@
 title: Videoöversikt
 description: Dynamic Media Classic innehåller automatisk konvertering av video vid överföring, direktuppspelad video till datorer och mobila enheter samt anpassningsbara videouppsättningar som är optimerade för uppspelning baserat på enhet och bandbredd. Läs mer om videofilmer i Dynamic Media Classic och få en grundlig beskrivning av videokoncept och terminologi. Sedan kan du lära dig att ladda upp och koda video, välja videoförinställningar för att ladda upp, lägga till eller redigera en videoförinställning, förhandsgranska videor i ett videovisningsprogram, distribuera video på webben och mobilsajter, lägga till bildtexter och kapitelmarkörer i video samt publicera videovisningsprogram för dator- och mobilanvändare.
 feature: Dynamic Media Classic, Video Profiles, Viewer Presets
-doc-type: tutorial
-topics: development, authoring, configuring, videos, video-profiles
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: dfbf316f-3922-4bc7-b3f3-2a5bbdeb7063
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '6118'
 ht-degree: 0%
@@ -27,23 +24,23 @@ I slutet av kursen får du lära dig att:
 - Välj bland tillgängliga videoförinställningar för överföring
 - Lägga till eller redigera en förinställning för videokodning
 - Förhandsgranska videoklipp i ett videovisningsprogram
-- Distribuera video till webb- och mobilsajter
+- Distribuera video på webbplatser och mobilsajter
 - Lägga till bildtexter och kapitelmarkörer i video
 - Anpassa och publicera videovisningsprogram för dator- och mobilanvändare
 
 >[!NOTE]
 >
->Alla URL-adresser i detta kapitel är endast avsedda som illustrationer. de är inte direktlänkar.
+>Alla URL-adresser i det här kapitlet är endast avsedda som illustrationer. De är inte direktlänkar.
 
 ## Översikt över Dynamic Media Classic Video
 
-Först får vi en bättre bild av möjligheterna med Dynamic Media Classic.
+Först får vi en bättre uppfattning om möjligheterna med video med Dynamic Media Classic.
 
 ### Funktioner och funktioner
 
-Dynamic Media Classic videoplattform erbjuder alla delar av videolösningen - överföring, konvertering och hantering av videor. möjlighet att lägga till bildtexter och kapitelmarkörer i en video, och möjligheten att använda förinställningar för enkel uppspelning.
+Dynamic Media Classic videoplattform har alla delar av videolösningen - överföring, konvertering och hantering av videor, möjlighet att lägga till bildtexter och kapitelmarkörer i en video samt möjlighet att använda förinställningar för enkel uppspelning.
 
-Det gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android™, BlackBerry® och Windows-enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
+Det gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android™, BlackBerry® och Windows-enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Datorns eller mobilenhetens tillgängliga bandbredd identifieras.
 
 Dessutom ändras videokvaliteten dynamiskt automatiskt om nätverksförhållandena ändras på datorn eller den mobila enheten. Om en kund går över till helskärmsläge på en stationär dator svarar den adaptiva videouppsättningen med en bättre upplösning, vilket förbättrar kundens tittarupplevelse. Med adaptiva videouppsättningar får du bästa möjliga uppspelning för kunder som spelar upp Dynamic Media Classic-video på flera skärmar och enheter.
 
@@ -53,7 +50,7 @@ Att arbeta med video kan vara mer komplext än att arbeta med stillbilder. Med v
 
 Dynamic Media Classic känner igen och kan arbeta med många olika källformat. Att läsa videon är dock bara en del av arbetet - du måste också konvertera den till ett webbvänligt format. Dynamic Media Classic tar hand om detta genom att göra det möjligt att konvertera video till H.264-video.
 
-Att konvertera videon själv kan bli komplicerat med de många professionella och entusiastverktygen som finns. Dynamic Media Classic gör det enkelt genom att erbjuda enkla förinställningar som är optimerade för olika kvalitetsinställningar. Om du vill ha något mer anpassat kan du även skapa egna förinställningar.
+Att konvertera videon själv kan bli komplicerat med de många professionella och entusiastverktygen som finns. Dynamic Media Classic gör det enkelt med enkla förinställningar som är optimerade för olika kvalitetsinställningar. Om du vill ha något mer anpassat kan du även skapa egna förinställningar.
 
 Om du har mycket video kommer du att uppskatta möjligheten att hantera allt material tillsammans med bilder och andra media i Dynamic Media Classic. Du kan ordna, katalogisera och söka efter resurser, inklusive videomaterial, med stöd XMP metadata.
 
@@ -63,7 +60,7 @@ Ungefär som problemet med att konvertera video för att göra den webbvänlig o
 
 Återigen är Dynamic Media Classic metod att låta dig välja den förinställning och det visningsprogram som passar dina behov. Du har många olika visningsprogramalternativ och ett bibliotek med många förinställningar.
 
-Du kan enkelt leverera video till webben och mobila enheter, eftersom Dynamic Media Classic har stöd för HTML5-video, vilket innebär att du kan rikta in dig på användare som kör olika webbläsare, liksom Android™- och iOS-användare. Med direktuppspelad video kan du smidigt spela upp längre eller HD-innehåll, medan progressiv HTML5-video har förinställningar som är optimerade för små skärmar.
+Du kan enkelt leverera video till webben och mobila enheter, eftersom Dynamic Media Classic har stöd för HTML5-video, vilket innebär att du kan rikta in dig på användare som kör olika webbläsare, liksom Android™- och iOS-plattformsanvändare. Med direktuppspelad video kan du smidigt spela upp längre eller HD-innehåll, medan progressiv HTML5-video har förinställningar som är optimerade för små skärmar.
 
 Visningsförinställningar för video kan delvis konfigureras beroende på visningsprogramtyp.
 
@@ -73,7 +70,7 @@ Integreringen sker på samma sätt som alla tittare via en enda Dynamic Media Cl
 >
 >Det bästa sättet är att använda videovisningsprogram i Dynamic Media Classic HTML 5. De förinställningar som används i videovisningsprogram för HTML5 är robusta videospelare. Genom att i en enda spelare kombinera möjligheten att utforma uppspelningskomponenterna med HTML 5 och CSS, ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet, kan du utöka räckvidden för ditt multimedieinnehåll till datorer, surfplattor och mobilanvändare och få en smidig videoupplevelse.
 
-En sista kommentar om Dynamic Media Classic-video som kan gälla vissa kunder: inte alla företag har automatisk konvertering, strömning eller videoförinställningar aktiverat för sitt konto. Om du av någon anledning inte kan komma åt URL:er för direktuppspelad video kan det bero på detta. Du kan överföra och publicera progressivt nedladdad video och ha tillgång till alla videovisningsprogram. Om du vill utnyttja Dynamic Media Classic alla videofunktioner kontaktar du din Account Manager eller Sales Manager och aktiverar dessa funktioner.
+En sista kommentar om Dynamic Media Classic-video som kan gälla vissa kunder: alla företag kanske inte har automatisk konvertering, strömning eller videoförinställningar aktiverade för sitt konto. Om du av någon anledning inte kan komma åt URL:er för direktuppspelad video kan det bero på detta. Du kan överföra och publicera progressivt nedladdad video och ha tillgång till alla videovisningsprogram. Om du vill utnyttja Dynamic Media Classic alla videofunktioner kontaktar du din Account Manager eller Sales Manager för att aktivera de här funktionerna.
 
 Läs mer om [Video i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html).
 
@@ -85,7 +82,7 @@ Innan vi börjar ska vi diskutera några termer som du bör känna till för att
 
 - **Kodning/omkodning.** Kodning är processen att tillämpa videokomprimering för att konvertera okomprimerade rådata till ett format som gör det enklare att arbeta med. Även om omkodning fungerar på liknande sätt, hänvisar det till konvertering från en kodningsmetod till en annan.
 
-   - Överordnad videofiler som skapats med videoredigeringsprogram är ofta för stora och har inte rätt format för leverans till onlinedestinationer. De kodas vanligtvis för snabb uppspelning på datorn och för redigering, men inte för leverans via webben.
+   - De vanligaste videofilerna som skapas med videoredigeringsprogrammet är ofta för stora och har inte rätt format för leverans till onlinedestinationer. De kodas vanligtvis för snabb uppspelning på datorn och för redigering, men inte för leverans via webben.
    - Om du vill konvertera digital video till rätt format och specifikationer för uppspelning på olika skärmar, kodas videofiler om till en mindre, effektiv filstorlek som är optimal för distribution på webben och till mobila enheter.
 
 - **Videokomprimering.** Minska mängden data som används för att representera digitala videobilder och är en kombination av spatial bildkomprimering och tidsbestämd rörelsekompensation.
@@ -113,7 +110,7 @@ Innan vi börjar ska vi diskutera några termer som du bör känna till för att
    - Storleken på källvideon bestäms av kameran och utdata från redigeringsprogrammet. En HD-kamera skapar högupplöst 1 920 x 1 080-video, men om du vill spela upp mjukt på webben nedsamplar du den (ändrar storlek) till en lägre upplösning, till exempel 1 280 x 720, 640 x 480 eller lägre.
    - Upplösningen har en direkt inverkan på filstorleken och bandbredden som krävs för att spela upp videon.
 
-- **Visa proportioner.** Förhållandet mellan videons bredd och videons höjd. När videofilens proportioner inte matchar spelarens proportioner kanske du ser&quot;svarta fält&quot; eller tomt utrymme. Två vanliga proportioner som används för att visa video är:
+- **Visa proportioner.** Förhållandet mellan videons bredd och videons höjd. När videofilens proportioner inte matchar spelarens proportioner kan du se&quot;svarta fält&quot; eller tomt utrymme. Två vanliga proportioner som används för att visa video är:
 
    - 4:3 (1.33:1). Används för nästan alla tv-sändningar i standardformat.
    - 16:9 (1.78:1). Används för nästan alla HDTV-skärmar och filmer.
@@ -123,7 +120,7 @@ Innan vi börjar ska vi diskutera några termer som du bör känna till för att
    - Ju lägre bithastighet, desto mer önskvärd är den för webben eftersom den kan hämtas snabbare. Det kan dock också betyda att kvaliteten är låg på grund av komprimeringsförluster.
    - En bra kodek bör balansera låg bithastighet med god kvalitet.
 
-- **Bildrutefrekvens (bildrutor per sekund eller bildrutefrekvens).** Antalet bildrutor, eller stillbilder, för varje sekund i videon. Normalt sänds NTSC (North American TV) i 29,97 bildrutor/s. Europeisk och asiatisk TV (PAL) sänds i 25 bildrutor/s. och film (analog och digital) är vanligtvis i 24 (23,976) bildrutor/s.
+- **Bildrutefrekvens (bildrutor per sekund eller bildrutefrekvens).** Antalet bildrutor, eller stillbilder, för varje sekund i videon. Normalt sänds nordamerikansk-tv (NTSC) i 29,97 bildrutor/s, europeisk och asiatisk-tv (PAL) i 25 bildrutor/s och film (analog och digital) i allmänhet i 24 (23,976) bildrutor/s.
 
    - Det finns även progressiva och sammanflätade bildrutor som gör det förvirrande. Varje progressiv bildruta innehåller en hel bildram, medan sammanflätade bildrutor innehåller varannan rad med pixlar i en bildram. Bildrutorna spelas sedan upp snabbt och ser ut att smälta samman. Film använder en progressiv skanningsmetod, medan digital video vanligtvis är sammanflätad.
    - Vanligtvis spelar det ingen roll om källmaterialet är sammanflätat eller inte - Dynamic Media Classic bevarar skanningsmetoden i den konverterade videon.
@@ -139,7 +136,7 @@ När du arbetar med video i Dynamic Media Classic följer du ett grundläggande 
 
 1. Börja med att ladda upp videofiler till Dynamic Media Classic. Öppna **Verktyg-menyn** längst ned på panelen för Dynamic Media Classic-tillägg och väljer **Överför till Dynamic Media Classic > Filer till mappnamn**, eller **Överför till Dynamic Media Classic > Mappar till mappnamn**. &quot;Mappnamn&quot; är den mapp som du just nu bläddrar i med tillägget. Videofiler kan vara stora, så vi rekommenderar att du använder FTP för att överföra stora filer. Som en del av överföringen väljer du en eller flera videoförinställningar för kodning av videoklipp. Video kan konverteras till MP4-video vid överföring. Mer information om hur du använder och skapar kodningsförinställningar finns i avsnittet Videoförinställningar nedan. Läs mer om [Överföra och koda video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html).
 2. Markera eller markera och ändra en förinställning för visningsprogrammet för video och förhandsgranska videon. Du kan antingen välja en färdig visningsförinställning eller anpassa en egen. Om ni riktar er till mobilanvändare behöver ni inte göra något här, eftersom mobilplattformarna inte kräver ett visningsprogram eller en förinställning. Läs mer om [Förhandsgranska videoklipp i ett visningsprogram för video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html) och [Lägga till eller redigera en förinställning för visningsprogrammet för video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset).
-3. Kör en videopublicering, hämta URL:en och integrera. Den största skillnaden mellan det här steget för videoarbetsflödet jämfört med bildarbetsflödet är att du kör en speciell videopublicering istället för (eller kanske och) standardpubliceringen för bildservrar. Videovisningsprogramintegrationen på datorn fungerar precis som bildvisningsprogramintegrationen, men för mobila enheter är det ännu enklare - allt du behöver är URL:en till själva videon.
+3. Kör en videopublicering, hämta URL:en och integrera. Den största skillnaden mellan det här steget för videoarbetsflödet jämfört med bildarbetsflödet är att du kör en speciell videopublicering i stället för (eller kanske) standardpubliceringen för bildservrar. Videovisningsprogramintegrationen på datorn fungerar precis som bildvisningsprogramintegrationen, men för mobila enheter är det ännu enklare - allt du behöver är URL:en till själva videon.
 
 ### Om omkodning
 
@@ -159,19 +156,19 @@ Strömning kräver vanligtvis mindre bandbredd än progressiv nedladdning efters
 
 Med direktuppspelning börjar videon spelas upp tidigare än med andra metoder. Den utnyttjar också nätverksresurserna effektivare eftersom bara de delar av videon som visas skickas till klienten.
 
-Den andra leveransmetoden är progressiv nedladdning. Jämfört med direktuppspelad video finns det bara en konsekvent fördel med progressiv nedladdning - du behöver ingen direktuppspelningsserver för att kunna leverera videon. Och det är här Dynamic Media Classic kommer in - Dynamic Media Classic har en strömningsserver inbyggd i plattformen, så du behöver inte besväret med att underhålla denna dedikerade maskinvara.
+Den andra leveransmetoden är progressiv hämtning. Jämfört med direktuppspelad video finns det bara en konsekvent fördel med progressiv nedladdning - du behöver ingen direktuppspelningsserver för att kunna leverera videon. Och det är här Dynamic Media Classic kommer in - Dynamic Media Classic har en strömningsserver inbyggd i plattformen, så du behöver inte besväret med att underhålla denna dedikerade maskinvara.
 
-Progressiv nedladdning av video kan göras från vilken webbserver som helst. Detta kan vara bekvämt och potentiellt kostnadseffektivt, men tänk på att progressiva nedladdningar har begränsade sök- och navigeringsmöjligheter och att användarna kan komma åt och återanvända innehållet. I vissa situationer, t.ex. uppspelning bakom strikta brandväggar för nätverk, kan direktuppspelning blockeras. I dessa fall kan det vara önskvärt att återställa till progressiv leverans.
+Progressiv nedladdning av video kan göras från vilken webbserver som helst. Detta kan vara bekvämt och potentiellt kostnadseffektivt, men tänk på att progressiva nedladdningar har begränsade sök- och navigeringsmöjligheter och att användarna kan komma åt och återanvända innehållet. I vissa situationer, till exempel uppspelning bakom strikta brandväggar i nätverk, kan direktuppspelningsleverans blockeras. I dessa fall kan det vara önskvärt att återställa till progressiv leverans.
 
-Progressiv nedladdning är ett bra val för amatörer eller webbplatser som har låg trafik. om de inte har något emot att deras innehåll cachas på användarens dator, om de endast behöver leverera videor med kortare längd (under 10 minuter), eller om besökarna av någon anledning inte kan ta emot strömmande video.
+Progressiv nedladdning är ett bra val för amatörer eller webbplatser med låg trafik, om de inte har något emot om deras innehåll cachas på användarens dator, om de bara behöver leverera långfilmer (under 10 minuter) eller om besökarna av någon anledning inte kan ta emot strömmande video.
 
-Du måste strömma videon om du behöver avancerade funktioner och har kontroll över videoleveransen, och/eller om du behöver visa videon för större målgrupper (t.ex. flera 100 samtidiga visningsprogram), spåra och rapportera användning eller visningsstatistik, eller om du vill erbjuda tittarna den bästa interaktiva uppspelningsupplevelsen.
+Du måste strömma videon om du behöver avancerade funktioner och har kontroll över videoleveransen, och/eller om du behöver visa videon för en större publik (till exempel flera 100 samtidiga tittare), spåra och rapportera användning eller visningsstatistik, eller om du vill erbjuda tittarna den bästa interaktiva uppspelningsupplevelsen.
 
 Slutligen, om du är orolig för att skydda dina medier för immateriell egendom eller rättighetshanteringsproblem, ger direktuppspelning säkrare leverans av video eftersom mediet inte sparas i klientens cache när det direktuppspelas.
 
 ## Videoförinställningar
 
-När du överför videon kan du välja bland en eller flera förinställningar som innehåller inställningarna för konvertering av den överordnad videon till ett webbvänligt format via kodning. Videoförinställningar finns i två versioner, Adaptiva videoförinställningar och Encoding Presets.
+När du överför videon väljer du bland en eller flera förinställningar som innehåller inställningarna för konvertering av huvudvideon till ett webbvänligt format via kodning. Videoförinställningar finns i två versioner, Adaptiva videoförinställningar och Encoding Presets.
 
 Se [Tillgängliga videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
 
@@ -179,7 +176,7 @@ Anpassade videoförinställningar aktiveras som standard, vilket betyder att de 
 
 Lär dig hur [Aktivera eller inaktivera videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets).
 
-Du kan välja någon av många förinställningar som medföljer Dynamic Media Classic eller skapa en egen, Inga förinställningar är dock markerade för överföring som standard. Med andra ord: **Om du inte väljer en förinställning för video vid överföring kommer videon inte att konverteras och kan vara opublicerbar**. Men du kan konvertera videon själv offline och överföra och publicera precis som du vill. Videoförinställningar krävs bara om du vill att Dynamic Media Classic ska göra konverteringen åt dig.
+Du kan välja någon av många färdiga förinställningar som medföljer Dynamic Media Classic eller skapa egna, men inga förinställningar väljs för överföring som standard. Med andra ord: **Om du inte väljer en förinställning för video vid överföring kommer videon inte att konverteras och kan vara opublicerbar**. Men du kan konvertera videon själv offline och överföra och publicera precis som du vill. Videoförinställningar krävs bara om du vill att Dynamic Media Classic ska göra konverteringen åt dig.
 
 Vid överföring väljer du en videoförinställning genom att välja **Videoalternativ** i panelen Jobbalternativ. Sedan väljer du om du vill koda för Dator, Mobil eller Tablet.
 
@@ -208,7 +205,7 @@ Videoförinställningarna avgör hur videon kodas genom att ange de här instäl
 
 ### Bestämma datahastigheten eller bithastigheten för videon
 
-Att beräkna bithastigheten för videon är en av de minst kända faktorerna för att visa videon på webben, men det kan vara den viktigaste eftersom den direkt påverkar användarupplevelsen. Om du anger för hög bithastighet får du hög videokvalitet men sämre prestanda. Användare med långsammare internetanslutningar måste vänta medan videon hela tiden pausas när den spelas upp. Men om du anger för lågt blir kvaliteten sämre. I videoförinställningen föreslår Dynamic Media Classic ett dataintervall som är beroende av målbandbredden. Det är en bra plats att börja på.
+Att beräkna bithastigheten för videon är en av de minst kända faktorerna för att visa videon på webben, men det kan vara den viktigaste eftersom den direkt påverkar användarupplevelsen. Om du anger för hög bithastighet får du hög videokvalitet men sämre prestanda. Användare med långsammare internetanslutningar måste vänta medan videon hela tiden pausas när den spelas upp. Men om du ställer in den för låg blir kvaliteten sämre. I videoförinställningen föreslår Dynamic Media Classic ett dataintervall som är beroende av målbandbredden. Det är en bra utgångspunkt.
 
 Men om du vill komma på det själv behöver du en beräknare av bithastigheten. Det här är ett verktyg som ofta används av videoproffs och entusiaster för att uppskatta hur mycket data som får plats i en viss ström eller media (t.ex. en dvd).
 
@@ -222,20 +219,20 @@ Ibland kanske du behöver en speciell videoförinställning som inte matchar ins
 
    - Alla konton för direktuppspelad video har dussintals förinställningar, och om du skapar egna förinställningar kan du även se dem här.
    - Du kan filtrera efter typ med hjälp av den nedrullningsbara menyn. Förinställningarna är uppdelade i Dator, Mobil och Tablet.
-      ![bild](assets/video-overview/video-overview-4.jpg)
+     ![bild](assets/video-overview/video-overview-4.jpg)
 
 2. I kolumnen Aktiv kan du välja om du vill visa alla förinställningar vid överföring eller bara de du väljer. Om du är i USA kan du avmarkera de europeiska PAL-förinställningarna och avmarkera NTSC-förinställningarna om du är i Storbritannien/EMEA.
 3. Klicka på **Lägg till** för att skapa en anpassad förinställning. Då öppnas panelen Lägg till videoförinställning. Processen här liknar den du gör när du skapar en bildförinställning.
 4. Ge den en **Förinställningsnamn** visas i listan med förinställningar. I exemplet ovan är den här förinställningen för videoklipp med skärmdumpar.
 5. The **Beskrivning** är valfritt, men det ger användarna ett verktygstips som beskriver syftet med den här förinställningen.
-6. The **Koda filsuffix** läggs till i slutet av namnet på videon som du skapar här. Kom ihåg att du kommer att ha både en Överordnad Video och den här kodade videon, som är en variant av den överordnad, och att inga två resurser i Dynamic Media Classic kan ha samma resurs-ID.
-7. **Uppspelningsenhet** är där du väljer vilket videofilformat du vill ha (dator, mobil eller surfplatta). Kom ihåg att Mobile och Tablet har samma MP4-format. Dynamic Media Classic behöver bara veta i vilken kategori förinställningen ska placeras. Den teoretiska skillnaden är dock att förinställningar för surfplattor vanligtvis används för en snabbare internetanslutning eftersom alla stöder WiFi.
+6. The **Koda filsuffix** läggs till i slutet av namnet på videon som du skapar här. Kom ihåg att du kommer att ha både en huvudvideo och den här kodade videon, som är en härledd från huvudvideon, och att inga två resurser i Dynamic Media Classic kan ha samma resurs-ID.
+7. **Uppspelningsenhet** är där du väljer vilket videofilformat du vill ha (dator, mobil eller surfplatta). Kom ihåg att Mobile och Tablet har samma MP4-format. Dynamic Media Classic behöver bara veta i vilken kategori förinställningen ska placeras, men den teoretiska skillnaden är att förinställningar för surfplattor vanligtvis är för en snabbare internetanslutning eftersom alla stöder WiFi.
 8. **Måldatahastighet** är något du måste ta reda på själv, men du kan se ett föreslaget intervall på bilden nedan. Du kan också dra skjutreglaget till den ungefärliga målbandbredden. För en mer exakt bild använder du en bithastighetskalkylator. Det finns en del testversioner och fel.
 
    ![bild](assets/video-overview/video-overview-5.jpg)
 
-9. Ange källfilens **Proportioner**. Den här inställningen är direkt kopplad till storleken nedan. Om du väljer _Egen_ måste du ange både bredd och höjd manuellt.
-10. Om du väljer en proportion anger du ett värde för **Upplösningsstorlek** och Dynamic Media Classic fyller i det andra värdet automatiskt. Om du vill ha en anpassad proportion fyller du i båda värdena. Storleken bör vara i linje med datahastigheten. Om du anger en låg datahastighet och en stor storlek förväntar du dig sämre kvalitet.
+9. Ange källfilens **Proportioner**. Den här inställningen är direkt knuten till storleken nedan. Om du väljer _Egen_ måste du ange både bredd och höjd manuellt.
+10. Om du väljer en proportion anger du ett värde för **Upplösningsstorlek** och Dynamic Media Classic fyller i det andra värdet automatiskt. Om du vill ha en anpassad proportion fyller du i båda värdena. Storleken bör överensstämma med datahastigheten. Om du anger en låg datahastighet och en stor storlek förväntar du dig sämre kvalitet.
 11. Klicka **Spara** för att spara förinställningen. Till skillnad från alla andra förinställningar behöver du inte publicera just nu, eftersom förinställningarna bara är till för att överföra filer. Senare måste du publicera de kodade videoklippen, men förinställningarna gäller endast för intern Dynamic Media Classic-användning.
 12. Om du vill kontrollera att videoförinställningen finns med i överföringslistan går du till **Överför**. Välj **Jobbalternativ** och expandera **Videoalternativ**. Din förinställning visas i kategorin för den uppspelningsenhet som du väljer (Dator, Mobil eller Surfplatta).
 
@@ -263,7 +260,7 @@ Det sista steget i Dynamic Media Classic arbetsflöde är att publicera videoinn
 
 Lär dig hur [Publicera videon](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video).
 
-När du har kört en videopublicering kan du få en URL för att komma åt dina videor och eventuella förinställningar för Dynamic Media Classic Viewer i en webbläsare. Men om du anpassar eller skapar en egen förinställning för Video Viewer måste du köra en separat Image Server-publicering.
+När du har kört en videopublicering kan du få en URL-adress för att komma åt dina videor och eventuella förinställningar för Dynamic Media Classic Viewer i en webbläsare. Men om du anpassar eller skapar en egen förinställning för Video Viewer måste du köra en separat Image Server-publicering.
 
 - Lär dig hur [Länka en URL till en mobilwebbplats eller en webbplats](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website).
 - Lär dig hur [Bädda in Video Viewer på en webbsida](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page).
@@ -295,11 +292,11 @@ När du skapar videosemappningar och mRSS-flöden bestämmer du vilka metadataf�
 
 När webbplatskartan eller feeden har skapats kan du låta Dynamic Media Classic publicera den automatiskt, publicera den manuellt eller helt enkelt generera en fil som du kan redigera senare. Dessutom kan Dynamic Media Classic automatiskt generera och publicera den här filen varje dag.
 
-När du är klar skickar du filen eller URL-adressen till sökmotorn. Denna uppgift utförs utanför Dynamic Media Classic; Vi diskuterar det dock kort nedan.
+När du är klar skickar du filen eller URL-adressen till sökmotorn. Denna uppgift utförs utanför Dynamic Media Classic, men vi diskuterar den kortfattat nedan.
 
 ### Krav för platskarta/mRSS-filer
 
-För att Google och andra sökmotorer inte ska kunna avvisa dina filer måste de ha rätt format och innehålla viss information. Dynamic Media Classic genererar en korrekt formaterad fil. Men om informationen inte är tillgänglig för vissa videoklipp inkluderas de inte i filen.
+För att Google och andra sökmotorer inte ska kunna avvisa dina filer måste de ha rätt format och innehålla viss information. Dynamic Media Classic genererar en korrekt formaterad fil, men om informationen inte är tillgänglig för vissa videoklipp inkluderas de inte i filen.
 
 De obligatoriska fälten är Landningssida (URL:en för sidan som visar videon, inte URL:en till själva videon), Titel och Beskrivning. Varje video måste ha en post för dessa objekt, annars inkluderas den inte i den genererade filen. Valfria fält är taggar och kategori.
 
@@ -331,7 +328,7 @@ När du konfigurerar Video SEO börjar du med att välja vilken typ av format du
 
 ### Testa och publicera din webbplatskarta för video, mRSS-flöden eller båda filer
 
-Genererade filer visas i kontots rotkatalog (baskatalog).
+Genererade filer visas i kontots rotkatalog (bas).
 
 ![bild](assets/video-overview/video-overview-8.jpg)
 
@@ -347,9 +344,9 @@ Exempel:
 
 ### Skicka till sökmotorer
 
-Det sista steget i processen är att skicka filer och/eller URL:er till sökmotorer. Dynamic Media Classic kan inte göra detta åt dig; Om du däremot skickar webbadressen och inte själva XML-filen, bör din feed uppdateras nästa gång filen skapas och publiceras.
+Det sista steget i processen är att skicka filer och/eller URL:er till sökmotorer. Dynamic Media Classic kan inte göra det här steget åt dig, men om du skickar URL:en och inte själva XML-filen, bör din feed uppdateras nästa gång filen skapas och publiceras.
 
-Hur du skickar till sökmotorn varierar, men för Google använder du Google Webmaster Tools. Gå till **Platskonfiguration > Platskartor** och klickar på **Skicka en webbplatskarta** -knappen. Här kan du placera Dynamic Media Classic-URL:en i SEO-filen/SEO-filerna.
+Hur du skickar till sökmotorn varierar, men för Google använder du Google Webmaster Tools. Gå till **Platskonfiguration > Platskartor** och klickar på **Skicka en webbplatskarta** -knappen. Här kan du placera Dynamic Media Classic-URL:en i SEO-filerna.
 
 ### SEO-rapport för video
 
@@ -361,7 +358,7 @@ Dynamic Media Classic tillhandahåller en rapport som visar hur många videoklip
 
 Dynamic Media Classic innehåller inte visningsförinställningar för mobiler eftersom visningsprogram inte behöver spela upp video på mobila enheter som stöds. Så länge du kodar till H.264 MP4-formatet - antingen genom att konvertera vid överföring eller förkoda på skrivbordet - kan surfplattor och smarttelefoner som stöds spela upp dina videor utan att behöva använda ett visningsprogram. Detta stöds på Android- och iOS-enheter (iPhone och iPad).
 
-Orsaken till att inget visningsprogram krävs är att båda plattformarna har inbyggt H.264-stöd. Du kan antingen bädda in videon på en HTML5-webbsida, eller bädda in videon i själva programmet, så att Android- och iOS-operativsystemen har en kontrollenhet för uppspelning av videon.
+Orsaken till att inget visningsprogram krävs är att båda plattformarna har inbyggt H.264-stöd. Du kan antingen bädda in videon på en HTML5-webbsida, eller bädda in videon i själva programmet, så att Android- och iOS-operativsystemen har en kontrollenhet som kan spela upp videon.
 
 På grund av detta ger inte Dynamic Media Classic dig en URL till ett visningsprogram för mobila enheter, utan i stället en URL direkt till videon. I förhandsgranskningsfönstret för en MP4-video finns det länkar för Desktop och Mobile. Mobil-URL:en pekar på den publicerade videon.
 

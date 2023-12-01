@@ -1,16 +1,17 @@
 ---
-title: AEM
+title: AEM datorprogram
 description: Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som hanteras i AEM på datorn, för alla program och filformat.
 version: 6.5, 6.4
 topic: Content Management
 feature: Desktop App
 role: User
 level: Beginner
-kt: 2551
+jira: KT-2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
+doc-type: Feature Video
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%
@@ -34,4 +35,4 @@ Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som ha
 
 ## Ytterligare resurser
 
-+ [Ladda ned den senaste AEM datorappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
++ [Hämta den senaste AEM datorappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)

@@ -7,11 +7,11 @@ topic: Development
 role: Developer
 level: Beginner
 recommendations: noDisplay
-kt: 11603
+jira: KT-11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%

@@ -7,12 +7,12 @@ topic: Integrations, Personalization, Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
-kt: 11336
+jira: KT-11336
 thumbnail: kt-11336.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 0%
@@ -31,26 +31,26 @@ Nedan visas en översikt över hur FPID fungerar när AEM används som webbvärd
 
 ## Generera och behåll FPID med AEM
 
-Med tjänsten AEM Publish optimeras prestanda genom att begäranden cachelagras så många som möjligt, både i CDN- och AEM Dispatcher-cachen.
+AEM Publiceringstjänst optimerar prestanda genom att cachelagra begäranden så många som möjligt, både i CDN- och AEM Dispatcher-cachen.
 
-Det är en absolut nödvändighet att HTTP-begäranden som genererar FPID-cookie för en unik användare och returnerar FPID-värdet cachelagras aldrig, och skickas direkt från AEM Publish som kan implementera logik för att garantera unika funktioner.
+Det är en absolut nödvändighet att HTTP-begäranden som genererar FPID-cookie för en unik användare och returnerar FPID-värdet cachelagras aldrig, och skickas direkt från AEM Publish, som kan implementera logik för att garantera unika funktioner.
 
 Undvik att generera FPID-cookie för webbsidor eller andra tillgängliga resurser eftersom kombinationen av FPID:ts unika krav skulle göra dessa resurser otillgängliga.
 
-I följande diagram beskrivs hur AEM Publish-tjänsten hanterar FPID:n.
+I följande diagram beskrivs hur AEM hanterar FPID:n.
 
 ![FPID och AEM](./assets/aem-fpid-flow.png)
 
-1. Webbläsaren begär en webbsida som AEM är värd för. Begäran kan hanteras med en cachelagrad kopia av webbsidan från CDN- eller AEM Dispatcher-cachen.
-1. Om webbsidan inte kan hanteras från cacheminnen för CDN eller AEM Dispatcher når förfrågan AEM Publish-tjänsten, som genererar den begärda webbsidan.
+1. Webbläsaren begär en webbsida som AEM. Begäran kan hanteras med en cachelagrad kopia av webbsidan från CDN- eller AEM Dispatcher-cachen.
+1. Om webbsidan inte kan hanteras från cacheminnen för CDN eller AEM Dispatcher kommer begäran att nå AEM Publiceringstjänst, som genererar den begärda webbsidan.
 1. Webbsidan skickas sedan tillbaka till webbläsaren och fyller i de cacheminnen som inte kunde hantera begäran. Med AEM förväntas antalet träffar i CDN och AEM Dispatcher-cachen vara större än 90 %.
-1. Webbsidan innehåller JavaScript som gör en otillgänglig asynkron XHR-begäran (AJAX) till en anpassad FPID-server i AEM Publish-tjänsten. Eftersom detta är en otillgänglig begäran (på grund av dess slumpmässiga frågeparameter och Cache-Control-headers) cachelagras den aldrig av CDN eller AEM Dispatcher och når alltid AEM Publish-tjänsten för att generera svaret.
-1. Den anpassade FPID-servern i AEM Publish-tjänsten bearbetar begäran och genererar ett nytt FPID när ingen befintlig FPID-cookie hittas, eller förlänger livscykeln för en befintlig FPID-cookie. Servern returnerar också FPID i svarstexten som ska användas av JavaScript på klientsidan. Lyckligtvis är den anpassade FPID-serverlogiken liten, vilket förhindrar att den här begäran påverkar AEM Publish-tjänstens prestanda.
+1. Webbsidan innehåller JavaScript som gör en otillgänglig asynkron XHR-begäran (AJAX) till en anpassad FPID-server i AEM Publiceringstjänst. Eftersom det här är en otillgänglig begäran (på grund av dess slumpmässiga frågeparameter och Cache-Control-headers) cachelagras den aldrig av CDN eller AEM Dispatcher och AEM alltid till Publiceringstjänst för att generera svaret.
+1. Den anpassade FPID-servern i AEM Publish-tjänsten bearbetar begäran och genererar ett nytt FPID när ingen befintlig FPID-cookie hittas, eller förlänger livscykeln för en befintlig FPID-cookie. Servern returnerar också FPID i svarstexten som ska användas av JavaScript på klientsidan. Lyckligtvis är den anpassade FPID-serverlogiken liten, vilket förhindrar att den här begäran påverkar AEM publiceringstjänstens prestanda.
 1. Svaret på XHR-begäran återgår till webbläsaren med FPID-cookien och FPID som JSON i svarstexten för användning av Platform Web SDK.
 
 ## Kodexempel
 
-Följande kod och konfiguration kan distribueras till AEM Publish-tjänsten för att skapa en slutpunkt som genererar eller förlänger livscykeln för en befintlig FPID-cookie och returnerar FPID som JSON.
+Följande kod och konfiguration kan distribueras till AEM Publiceringstjänst för att skapa en slutpunkt som genererar eller förlänger livscykeln för en befintlig FPID-cookie och returnerar FPID som JSON.
 
 ### AEM FPID-cookie-server
 
@@ -159,7 +159,7 @@ Det här JavaScript-skriptet skrivs in på sidan på något av följande sätt:
 XHR-anropet till den anpassade AEM FPID-servern är snabbt, även om det är asynkront, så det är möjligt för en användare att besöka en webbsida som AEM och navigera bort innan begäran kan slutföras.
 Om detta inträffar kommer samma process att försöka igen på nästa sida att läsa in en webbsida från AEM.
 
-HTTP-GET till AEM FPID-serverlet (`/bin/aep/fpid`) parametriseras med en slumpmässig frågeparameter för att säkerställa att ingen infrastruktur mellan webbläsaren och AEM Publish-tjänsten cache-lagrar svaret.
+HTTP-GET till AEM FPID-serverlet (`/bin/aep/fpid`) parametriseras med en slumpmässig frågeparameter för att säkerställa att ingen infrastruktur mellan webbläsaren och AEM publiceringstjänsten cache-lagrar svaret.
 På samma sätt är `Cache-Control: no-store` begärandehuvudet har lagts till som stöd för att undvika cachelagring.
 
 Vid ett anrop av AEM FPID-servlet hämtas FPID från JSON-svaret och används av [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en) för att skicka det till Experience Platform API:er.
@@ -187,11 +187,11 @@ Mer information om Experience Platform finns i dokumentationen [använda FPID:n 
 </script>
 ```
 
-### Filter för att tillåta utskickning
+### filtret Tillåt sändning
 
 Slutligen måste HTTP GET-begäranden till den anpassade FPID-servern tillåtas via AEM Dispatcher&#39;s `filter.any` konfiguration.
 
-Om Dispatcher-konfigurationen inte implementeras korrekt begär HTTP-GETEN att `/bin/aep/fpid` resulterar i en 404-siffra.
+Om Dispatcher-konfigurationen inte är korrekt implementerad begär HTTP-GETEN att `/bin/aep/fpid` resulterar i en 404-siffra.
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

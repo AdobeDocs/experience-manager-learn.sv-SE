@@ -7,9 +7,9 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
-kt: 8851
+jira: KT-8851
 exl-id: e61cea37-b931-49c6-9e5d-899628535480
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # Skicka AEM till molnhanterarens Git-rapport
 
-I det föregående steget synkroniserade vi vårt AEM med det adaptiva Forms och de teman som skapades i AEM.
+I föregående steg synkroniserade vi vårt AEM med det adaptiva Forms och de teman som skapades i AEM.
 Vi måste nu lägga till dessa ändringar i vår lokala Git-databas och sedan överföra den lokala Git-databasen till molnhanterarens Git-databas.
-Öppna kommandotolken och gå till c:\cloudmanager\aem-banking-app Execute the following commands
+Öppna kommandotolken och navigera till c:\cloudmanager\aem-Banking-app Kör följande kommandon
 
 ```
 git add .
@@ -32,13 +32,13 @@ Detta lägger till de nya filerna i scengrenen i den lokala Git-databasen
 git commit -m "My First AF"
 ```
 
-Detta implementerar filerna på den överordnad grenen i vår lokala Git-databas
+Detta implementerar filerna i huvudgrenen i vår lokala Git-databas
 
 ```
 git push -f bankingapp master:"MyFirstAF"
 ```
 
-I ovanstående kommando överför vi vår överordnad gren från vår lokala Git-databas till MyFirstAF-grenen i molnhanterardatabasen som identifieras av bankingapp-användarnamnet.
+I ovanstående kommando flyttar vi huvudgrenen från vår lokala Git-databas till MyFirstAF-grenen i molnhanterardatabasen som identifieras av bankingapp-användarnamnet.
 
 ## Nästa steg
 

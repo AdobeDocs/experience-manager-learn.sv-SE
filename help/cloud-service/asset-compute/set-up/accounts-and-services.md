@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6264
+jira: KT-6264
 thumbnail: 40377.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Observera att en lokal AEM SDK inte räcker till för att slutföra den här sj�
 
 ## App Builder{#app-builder}
 
-The [App Builder](https://developer.adobe.com/app-builder/) ramverket används för att skapa och distribuera anpassade åtgärder till Adobe I/O Runtime, Adobe serverless-plattformen. AEM Asset compute-projekt är särskilt byggda App Builder-projekt som kan integreras med AEM Assets via Bearbeta profiler och som ger möjlighet att komma åt och bearbeta resurbinärfiler.
+The [App Builder](https://developer.adobe.com/app-builder/) ramverket används för att skapa och distribuera anpassade åtgärder till Adobe I/O Runtime, Adobe serverless. AEM Asset compute-projekt är särskilt byggda App Builder-projekt som kan integreras med AEM Assets via Bearbeta profiler och som ger möjlighet att komma åt och bearbeta resurbinärfiler.
 
 Registrera dig för förhandsgranskningen om du vill få tillgång till App Builder.
 
@@ -74,7 +74,7 @@ I den här självstudiekursen används dock Azure Blob Storage [Amazon S3](#amaz
 _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
 
 1. Logga in på [Microsoft Azure-konto](https://azure.microsoft.com/en-us/account/).
-1. Navigera till __Lagringskonton__ Avsnittet Azure-tjänster
+1. Navigera till __Lagringskonton__ Azure Services-avsnitt
 1. Tryck __+ Lägg till__ för att skapa ett nytt Blob Storage-konto
 1. Skapa ett nytt __Resursgrupp__ efter behov, till exempel: `aem-as-a-cloud-service`
 1. Ange en __Lagringskontonamn__, till exempel: `aemguideswkndassetcomput`
@@ -82,11 +82,11 @@ _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
    + The __Åtkomstnycklar__ som är kopplade till lagringskontot krävs också när [konfigurera molnlagring](../develop/environment-variables.md).
 1. Lämna allt annat som standard och tryck på __Granska och skapa__ knapp
    + Om du vill kan du markera __plats__ nära dig.
-1. Granska begäran om etablering och kontrollera om den är korrekt och tryck sedan på __Skapa__ knapp om den är godkänd
+1. Granska begäran om etablering och kontrollera att den är korrekt och tryck sedan på __Skapa__ knapp om den är godkänd
 
 ### Amazon S3{#amazon-s3}
 
-Använda [Microsoft Azure Blob Storage](#azure-blob-storage) rekommenderas dock [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) kan också användas.
+Använda [Microsoft Azure Blob Storage](#azure-blob-storage) rekommenderas dock för att du ska kunna använda den här självstudiekursen [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) kan också användas.
 
 Om du använder Amazon S3-lagring anger du inloggningsuppgifterna för Amazon S3-molnlagring när [konfigurera projektets miljövariabler](../develop/environment-variables.md#amazon-s3).
 

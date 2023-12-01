@@ -7,10 +7,10 @@ topic: Migration
 feature: Migration
 role: Architect, Developer
 level: Beginner
-kt: 11200
+jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Använd mallen nedan om du vill ha mer information när du skapar supportbiljett
 
 ## Allmänna frågor om innehållsmigrering
 
-### F: Vilka metoder använder man för att migrera innehåll till AEM som Cloud Services?
+### F: Vilka olika metoder använder man för att migrera innehåll till AEM som Cloud Service?
 
 Det finns tre olika metoder
 
@@ -52,11 +52,11 @@ Mer information finns i [krav för molnmigrering](https://experienceleague.adobe
 
 ### F: Jag har den senaste BPA-rapporten från mitt källsystem, vad ska jag göra med den?
 
-Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [som är kopplad till din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [som beskrivs i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [som är kopplad till din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
 
 Granska den bedömning av kod och innehållskomplexitet som verktyget erbjuder och notera associerade åtgärdsobjekt som leder till eftersläpning i kodomfaktoriseringen eller utvärdering av molnmigrering.
 
-### F: Rekommenderas extrahering av källmaterial och import till AEMaaCS-författare och publicering?
+### F: Rekommenderas att extrahera information om källförfattare och inmatning till AEMaaCS-författare och publicera?
 
 Vi rekommenderar alltid att du utför 1:1-extrahering och -förtäring mellan författare- och publiceringsnivåer. Det går dock att extrahera källproduktionsförfattare och importera det till Dev, Stage och Production CS.
 
@@ -76,7 +76,7 @@ Mängden resurser som extraheringsprocessen för CTT tar beror på antalet noder
 
 Om klonmiljöer används för migrering kommer detta inte att påverka resursutnyttjandet för produktionsservern, utan har egna nackdelar när det gäller att synkronisera innehåll mellan Live-produktion och kloning
 
-### F: I mitt källförfattarsystem har vi konfigurerat enkel inloggning så att användarna kan autentisera sig till Author-instansen. Måste jag använda funktionen för användarmappning i CTT i det här fallet?
+### F: I mitt källförfattarsystem har vi konfigurerat enkel inloggning så att användarna kan autentiseras i Author-instansen. Måste jag använda funktionen för användarmappning i CTT i det här fallet?
 
 Det korta svaret är &quot;**Ja**&quot;.
 
@@ -109,7 +109,7 @@ Ja, det är möjligt men kräver noggrann planering av:
 
 Granska den övre extraherings- och intagsprocessen enligt dokumentationen innan du planerar migreringarna.
 
-### F: Kommer mina webbplatser att vara tillgängliga för slutanvändare även om de kommer in på AEMaaCS-författare eller publiceringsinstanser?
+### F: Kommer mina webbplatser att vara tillgängliga för slutanvändare även om de lägger in något i AEMaaCS-författare eller publiceringsinstanser?
 
 Ja. Slutanvändartrafiken avbryts inte av innehållsmigreringsaktiviteten. Författaren fryser dock innehållet tills det är klart.
 
@@ -117,7 +117,7 @@ Ja. Slutanvändartrafiken avbryts inte av innehållsmigreringsaktiviteten. Förf
 
 Ja. Den saknade ursprungliga återgivningen innebär att resursens binärfil inte överförs korrekt från början. Om du ser det som felaktiga data bör du granska, säkerhetskopiera med Package Manager (efter behov) och ta bort dem från AEM innan du kör extraheringen. Felaktiga data kommer att få negativa resultat i tillgångsbearbetningsstegen.
 
-### F: BPA-rapporten innehåller artiklar som är relaterade till saknade `jcr:content` nod för mappar. Vad ska jag göra med dem?
+### F: BPA-rapporten innehåller artiklar som är relaterade till saknad `jcr:content` nod för mappar. Vad ska jag göra med dem?
 
 När `jcr:content` saknas på mappnivå, åtgärder för att sprida inställningar som bearbetningsprofiler osv. från föräldrar bryts på den här nivån. Granska orsaken till saknad `jcr:content`. Även om dessa mappar kan migreras bör du tänka på att sådana mappar försämrar användarupplevelsen och orsakar onödiga felsökningscykler senare.
 
@@ -129,11 +129,11 @@ Ja, det finns en [Kontrollera storlek](https://experienceleague.adobe.com/docs/e
 
 Ja, det finns en [validering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html) som ingår i CTT.
 
-### F: Min kund måste flytta innehåll mellan AEMaaCS-miljöer som AEMaaCS Dev till AEMaaCS Stage eller till AEMaaCS Prod. Kan jag använda verktyget för innehållsöverföring för de här användningsområdena?
+### F: Kunden måste flytta innehåll mellan AEMaaCS-miljöer som AEMaaCS Dev till AEMaaCS Stage eller till AEMaaCS Prod. Kan jag använda verktyget för innehållsöverföring för de här användningsområdena?
 
 Tyvärr, nej. CTT:s användningsexempel är att migrera innehåll från en lokal/AMS-värd AEM 6.3+-källa till AEMaaCS-molnmiljöer. [Läs CTT-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html).
 
-### F: Vilken typ av problem förväntas vid extraktion?
+### F: Vilka typer av problem förväntas vid extraktion?
 
 Extraheringsfasen är en involverad process som kräver att flera aspekter fungerar som förväntat. Att vara medveten om olika typer av problem som kan uppstå och hur ni kan mildra dem ökar den övergripande framgången med innehållsmigreringen.
 
@@ -165,15 +165,15 @@ Mer information om [källanslutning](https://experienceleague.adobe.com/docs/exp
 
 ## Tillgångshantering Dynamic Media relaterade frågor
 
-### F: Kommer resurser att bearbetas om automatiskt efter intag i AEMaaCS?
+### F: Kommer materialet att bearbetas om automatiskt efter intag i AEMaaCS?
 
 Nej. Begäran om ombearbetning måste initieras för att resurserna ska kunna bearbetas.
 
-### F: Kommer resurser att indexeras om automatiskt efter intag i AEMaaCS?
+### F: Kommer mediefiler att indexeras om automatiskt efter intag i AEMaaCS?
 
 Ja. Resurserna indexeras om baserat på de indexdefinitioner som är tillgängliga i AEMaaCS.
 
-### F: Källans AEM är integrerat med Dynamic Media. Finns det några specifika saker som måste övervägas före innehållsmigrering?
+### F: AEM är integrerat med Dynamic Media. Finns det några specifika saker som måste övervägas före innehållsmigrering?
 
 Ja, tänk på följande när AEM har Dynamic Media Integration.
 
@@ -181,11 +181,11 @@ Ja, tänk på följande när AEM har Dynamic Media Integration.
 + Om metoden är att migrera från källkloninstanser är det säkert att inaktivera DM-integrering på klon som skulle användas för CTT. Detta steg är enbart för att undvika skrivningar till DM eller för att undvika belastning på DM-trafiken.
 + Observera att CTT migrerar noder, metadata för en migreringsuppsättning från AEM till AEMaaCS. Den utför inga åtgärder direkt på DM.
 
-### F: Vad är olika migreringsmetoder när DM-integrering finns på AEM?
+### F: Vilka olika migreringsmetoder använder DM-integrering på AEM?
 
 Läs ovanstående fråga och svar innan
 
-(Det här är två möjliga alternativ, men de är inte begränsade till bara dessa två). Det beror på hur kunden vill närma sig UAT, prestandatestning, den tillgängliga miljön och om en klon används för migrering eller inte. Tänk på dessa två som utgångspunkt för en diskussion
+(Det här är två möjliga alternativ, men de är inte begränsade till bara dessa två). Det beror på hur kunden vill närma sig UAT, prestandatestning, den tillgängliga miljön och om en klon används för migrering eller inte. Se dessa två som utgångspunkt för diskussion
 
 **Alternativ 1**
 
@@ -195,7 +195,7 @@ Om antalet resurser/noder i källmiljön ligger på en lägre nivå (~100 kB), u
 + Kör en första extrahering och intag i AEMaaCS med `wipe=true`
    + Det här steget migrerar alla noder och binärfiler
 + Fortsätt arbeta på plats/med utvecklaren av AMS-produkten
-+ Från och med nu kan du köra alla andra korrektur av migreringscykler med `wipe=true`
++ Från och med nu kan du köra alla andra korrekturrundor med `wipe=true`
    + Observera att den här åtgärden migrerar hela nodarkivet, men endast ändrade blobbar i motsats till hela blobbar. Den tidigare uppsättningen blober finns i Azure-blobbbutiken för AEMaaCS-målinstansen.
    + Använd det här migreringsbeviset för att mäta migreringens varaktighet, användarmappning, testning och validering av alla andra funktioner
 + Utför slutligen en svepning=verklig migrering före veckan då det publiceras

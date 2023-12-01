@@ -5,10 +5,10 @@ role: Developer
 level: Beginner
 topic: Development
 feature: OSGI
-kt: 8228
+jira: KT-8228
 thumbnail: 335475.jpeg
 exl-id: 5a65dbcd-649b-464c-9c78-d31c2b6c49c3
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 1%

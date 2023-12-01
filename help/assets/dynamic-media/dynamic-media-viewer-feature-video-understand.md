@@ -7,8 +7,9 @@ version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
+doc-type: Feature Video
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

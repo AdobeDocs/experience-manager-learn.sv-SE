@@ -3,7 +3,7 @@ title: iOS App - AEM Headless-exempel
 description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här iOS-programmet visas hur du använder AEM GraphQL-API:er med beständiga frågor.
 version: Cloud Service
 mini-toc-levels: 2
-kt: 10587
+jira: KT-10587
 thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
@@ -41,7 +41,7 @@ IOS fungerar med följande AEM driftsättningsalternativ. Alla distributioner kr
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
-IOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i iOS-programmets konfiguration.
+IOS är utformat för att ansluta till en __AEM Publish__ -miljön kan däremot hämta innehåll från AEM författare om autentisering anges i iOS-programmets konfiguration.
 
 ## Så här använder du
 
@@ -52,7 +52,7 @@ IOS är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock 
    ```
 
 1. Starta [Xcode](https://developer.apple.com/xcode/) och öppna mappen `ios-app`
-1. Ändra filen `Config.xcconfig` fil och uppdatera `AEM_SCHEME` och `AEM_HOST` för att matcha din AEM-publiceringstjänst.
+1. Ändra filen `Config.xcconfig` fil och uppdatera `AEM_SCHEME` och `AEM_HOST` för att matcha AEM publiceringstjänst.
 
    ```plain
    // The http/https protocol scheme used to access the AEM_HOST

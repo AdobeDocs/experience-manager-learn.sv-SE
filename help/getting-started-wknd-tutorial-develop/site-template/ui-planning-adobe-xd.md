@@ -2,16 +2,16 @@
 title: UI Planning with Adobe XD | AEM Skapa snabbt webbplatser
 description: Läs om hur Adobe XD UI Kits kan användas för att utforma och snabba upp implementeringen av Adobe Experience Manager Sites.
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components
 role: Developer
 level: Beginner
-kt: 9371
+jira: KT-9371
 thumbnail: 338680.jpg
+doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # UI Planning with Adobe XD {#ui-planning-adobe-xd}
 
-I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är ett förstklassigt designverktyg för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser med hjälp av gränssnittsmodeller med Adobe XD eller något annat verktyg.
+I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är det bästa designverktyget för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser med hjälp av gränssnittsmodeller med Adobe XD eller något annat verktyg.
 
 ## Förutsättningar {#prerequisites}
 

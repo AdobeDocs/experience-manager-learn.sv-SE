@@ -3,15 +3,12 @@ title: Använd oak-run.jar för att hantera index
 description: index-kommandot oak-run.jar konsoliderar ett antal funktioner för att hantera Oak-index i AEM, från att samla in indexstatistik, köra konsekvenskontroller av index samt att indexera om sig själv.
 version: 6.4, 6.5
 feature: Search
-topics: search
-activity: use
-audience: architect, developer, implementer
-doc-type: technical video
+doc-type: Technical Video
 topic: Performance
 role: Developer
 level: Experienced
 exl-id: be49718e-f1f5-4ab2-9c9d-6430a52bb439
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -49,7 +46,7 @@ ht-degree: 0%
 * `oak-run.jar` avgör snabbt om index för lucene Oak är skadade.
 * Konsekvenskontrollen är säker att köra på AEM som används för konsekvenskontrollnivå 1 och 2.
 
-## TarmMK Online-indexering med [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
+## TARMK Online-indexering med [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21479?quality=12&learn=on)
 
@@ -67,12 +64,12 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/21480?quality=12&learn=on)
 
-* Out-of-band-indexering på [!DNL TarMK] använda [!DNL oak-run.jar] minimerar effekten av indexering på AEM som används.
+* Out-of-band-indexering [!DNL TarMK] använda [!DNL oak-run.jar] minimerar effekten av indexering på AEM som används.
 * Indexering utanför band är den rekommenderade indexeringsmetoden för AEM installationer där tiden för omindexering/indexering överstiger tillgängliga underhållsperioder.
 
 ## MongoMK Online-indexering med oak-run.jar
 
-* Online-index med [!DNL oak-run.jar] på [!DNL MongoMK] och [!DNL RDBMK] är den rekommenderade metoden för omindexering/indexering [!DNL MongoMK] (och [!DNL RDBMK]) AEM installationer. **Ingen annan metod bör användas för [!DNL MongoMK] eller [!DNL RDBMK].**
+* Online-index med [!DNL oak-run.jar] på [!DNL MongoMK] och [!DNL RDBMK] är den rekommenderade metoden för omindexering [!DNL MongoMK] (och [!DNL RDBMK]) AEM. **Ingen annan metod bör användas för [!DNL MongoMK] eller [!DNL RDBMK].**
 * Den här indexeringen behöver bara utföras mot en enda AEM i klustret.
 * Indexering online av [!DNL MongoMK] är säker att köra mot ett AEM kluster som körs, eftersom databassorteringen bara sker på en enda [!DNL MongoDB] -nod, vilket gör att de andra kan fortsätta att betjäna förfrågningar utan någon större prestandapåverkan.
 
@@ -88,6 +85,6 @@ java -jar oak-run*.jar index
 
 ## Stödmaterial
 
-* [Hämta [!DNL oak-run.jar]](https://repository.apache.org/#nexus-search;gav~org.apache.jackrabbit~oak-run~~~~kw,versionexpand)
+* [Ladda ned [!DNL oak-run.jar]](https://repository.apache.org/#nexus-search;gav~org.apache.jackrabbit~oak-run~~~~kw,versionexpand)
    * *Kontrollera att den hämtade versionen överensstämmer med den version av Oak som är installerad på AEM enligt beskrivningen ovan*
 * [Apache Jackrabbit Oak oak-run.jar Index Command Documentation](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)

@@ -5,8 +5,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 5%
@@ -29,8 +30,8 @@ I den här självstudiekursen utforskas hur AEM Content Services kan användas f
 
 Den här självstudiekursen kommer att omfatta följande ämnen:
 
-* Skapa innehåll som representerar en händelse med hjälp av innehållsfragment
-* Definiera AEM Content Services-slutpunkter med hjälp av mallar och sidor för AEM Sites som visar händelsedata som JSON
+* Skapa innehåll som representerar en händelse med innehållsfragment
+* Definiera AEM Content Services-slutpunkter med AEM Sites mallar och sidor som visar händelsedata som JSON
 * Se hur AEM WCM Core Components kan användas för att marknadsförarna ska kunna skapa JSON-slutpunkter
 * Förbruka AEM Content Services JSON från en mobilapp
    * Android används för att det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra den inbyggda appen.
@@ -43,7 +44,7 @@ Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-pr
 
 ## AEM GraphQL jämfört med AEM Content Services
 
-|  | AEM GraphQL API:er | AEM Content Services |
+|                                | AEM GraphQL API:er | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
 | Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
 | Innehåll | Innehållsfragment | AEM |

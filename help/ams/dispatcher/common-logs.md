@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
@@ -86,14 +87,14 @@ Fri Jul 20 17:26:47 2018 D pid 20051 (tid 139937517123328) Filter rejects:
 GET /etc/designs/exampleco/fonts/montserrat-regular/montserrat-regular-webfont.eot HTTP/1.1
 ```
 
-Det visar att vår designfil `.eot` blockeras och vi vill åtgärda det.
+Det visar att vår designfil `.eot` blockeras och vi kommer att vilja åtgärda det.
 Så vi bör titta på vår filterfil och lägga till följande rad för att tillåta `.eot` filer genom
 
 ```
 /0011 { /type "allow" /method "GET" /extension 'eot' /path "/etc/designs/*" }
 ```
 
-Detta gör att filen kan loggas igenom och förhindrar detta.
+Detta gör att filen kan loggas igenom och förhindrar att den loggas.
 Om du vill se vad som filtreras ut kan du köra det här kommandot i loggfilen:
 
 ```
@@ -132,7 +133,7 @@ Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit rat
 
 Det innebär att hämtningen från renderingsnivån kontra från cacheminnet mäts. Du vill uppnå över 80 procent från cacheminnet, och du bör följa hjälpen [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den):
 
-För att få det här talet så högt som möjligt.
+För att få så många siffror som möjligt.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
 Även om du har cacheinställningarna i servergruppsfilen för att cachelagra allt som du kanske tömmer för ofta eller för aggressivt, vilket kan orsaka en lägre procentandel av cacheträffen
@@ -169,7 +170,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 Det här felet inträffar när du har konfigurerat Dispatcher att använda det dynamiska autofiltret för att tillåta URL:er för innehållshantering, men inte slutfört installationen genom att installera paketet på AEM.
 
-Du åtgärdar detta genom att installera funktionspaketet för huvud-URL på AEM och tillåta att det kan vara klart av den anonyma användaren. Detaljer [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
+Du åtgärdar detta genom att installera funktionspaketet för huvud-URL på AEM och tillåta att det kan vara klart av den anonyma användaren. Information [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
 
 En fungerande URL-adress ser ut så här:
 
@@ -191,7 +192,7 @@ Det här felet indikerar att från alla servergruppsfiler som är tillgängliga 
 
 Servergruppsfilerna matchar trafik baserat på det domännamn eller den sökväg som förfrågan kom in med. Den använder matchning av glob, och om den inte matchar så har du antingen inte konfigurerat din servergrupp korrekt, skrivit in posten i servergruppen eller låtit posten saknas helt. När servergruppen inte matchar några poster används den till slut som standard för den senaste servergruppen som ingår i gruppen med servergruppsfiler. I det här exemplet `999_ams_publish_farm.any` som är det generiska namnet på den publicerade servergruppen.
 
-Här är ett exempel på en servergruppsfil `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` som har reducerats för att lyfta fram relevanta delar.
+Här är ett exempel på en gruppfil `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` som har reducerats för att lyfta fram relevanta delar.
 
 ## Objekt som har betjänats från
 

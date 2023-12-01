@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-kt: 4271
+jira: KT-4271
 thumbnail: 40242.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

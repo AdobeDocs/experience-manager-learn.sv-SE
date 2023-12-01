@@ -2,10 +2,7 @@
 title: Personalisering av en hel webbsida - upplevelse
 description: Lär dig hur du skapar en Target-aktivitet för att dirigera om dina AEM webbsidor till nya sidor med Adobe Target.
 topics: integrations, authoring, personalization, activity, offers
-audience: all
-doc-type: feature video
-version: Cloud Service
-kt: 6353
+jira: KT-6353
 thumbnail: 6353-personalization-web-page.jpg
 topic: Integrations
 feature: Integrations
@@ -13,8 +10,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%

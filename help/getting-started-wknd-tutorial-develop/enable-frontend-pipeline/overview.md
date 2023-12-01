@@ -1,20 +1,20 @@
 ---
 title: Aktivera frontendpipeline för standardprojekttypen AEM
-description: Lär dig hur du aktiverar en frontpipeline för AEM standardprojekt för snabbare distribution av statiska resurser som CSS, JavaScript, teckensnitt och ikoner. Dessutom separeras front-end-utveckling från backend-utveckling i full stack på AEM.
+description: Lär dig hur du aktiverar en frontpipeline för AEM standardprojekt för snabbare distribution av statiska resurser som CSS, JavaScript, teckensnitt och ikoner. Dessutom separeras front-end-utveckling från backend-utveckling i full-stack på AEM.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
+doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # Aktivera frontendpipeline för standardprojekttypen AEM{#enable-front-end-pipeline-standard-aem-project}
 
-Lär dig hur du aktiverar [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) (även kallat Standard AEM Project) som skapats med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) för att driftsätta frontresurser som CSS, JavaScript, Fonts och Icons med hjälp av en pipeline för snabbare utveckling till driftsättning. Avgränsningen mellan frontend-utveckling och fullstacksutveckling på AEM. Du får också lära dig hur dessa resurser __not__ från AEM, men från CDN, en förändring i leveransparadigm.
+Lär dig hur du aktiverar [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) (även kallat Standard AEM Project) som skapats med [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) för att driftsätta frontresurser som CSS, JavaScript, Fonts och Icons med hjälp av en pipeline för snabbare utveckling till driftsättning. Avgränsningen mellan frontend-utveckling och fullstacksutveckling på AEM. Du får också lära dig hur dessa resurser __not__ från AEM, men från CDN, en förändring i leveransparadigm.
 
 
 En ny pipeline skapas i Adobe Cloud Manager som endast bygger och distribuerar `ui.frontend` artefakter till det inbyggda CDN och informerar AEM om var det finns. AEM under webbsidans HTML-generation `<link>` och `<script>` -taggar, referera till den här artefaktplatsen i `href` attributvärde.

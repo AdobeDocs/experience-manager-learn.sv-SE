@@ -5,8 +5,9 @@ feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -41,14 +42,14 @@ Android används som självstudiekurs eftersom det går att köra en Android-emu
 
 ### Konfigurera mobilappen för icke-lokal värdanvändning
 
-Om AEM Publish inte körs **http://localhost:4503** värden och port kan uppdateras i mobilappens [!DNL Settings] för att peka på egenskapen AEM Publish host/port.
+Om AEM inte körs **http://localhost:4503** värden och port kan uppdateras i mobilappens [!DNL Settings] för att peka på egenskapen AEM Publicera värd/port.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## Kör mobilappen lokalt
 
 1. Hämta och installera [Android Studio](https://developer.android.com/studio/install) för att installera Android-emulatorn.
-1. **Hämta** Android [!DNL APK] fil [GitHub > Assets > wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+1. **Ladda ned** Android [!DNL APK] fil [GitHub > Assets > wknd-mobile.x.x.xapk](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 1. Öppna **Android Studio**
    * När Android Studio startas första gången uppmanas du att installera [!DNL Android SDK] kommer att presentera. Acceptera standardinställningarna och slutför installationen.
 1. Öppna Android Studio och välj **Profil eller felsök APK**
@@ -57,7 +58,7 @@ Om AEM Publish inte körs **http://localhost:4503** värden och port kan uppdate
 1. När du startar Android Studio första gången högerklickar du på **wknd-mobile.x.x.x** i projektlistan och välj **Öppna modulinställningar**.
    * Under **Moduler > wknd-mobile.x.x > fliken Beroenden**, markera **Android API 29-plattform**. Tryck på OK för att stänga och spara ändringarna.
    * Om du inte gör det visas ett felmeddelande om att välja Android SDK när du försöker starta emulatorn.
-1. Öppna **AVD Manager** genom att välja **Verktyg > AVD Manager** eller knacka på **AVD Manager** ikonen i det övre fältet.
+1. Öppna **AVD Manager** genom att välja **Verktyg > AVD Manager** eller knacka på **AVD Manager** i det övre fältet.
 1. I **AVD Manager** fönster, klicka **+ Skapa virtuell enhet..** om du inte redan har registrerat enheten.
    1. Till vänster väljer du **Telefon** kategori.
    1. Välj en **Pixel 2**.
@@ -87,7 +88,7 @@ På grund av den redigerbara mallen för API:t för händelser (`/content/wknd-m
 
 ### Kodflöde på hög nivå
 
-1. Öppna [!DNL WKND Mobile] Appen anropar en `HTTP GET` begäran till AEM Publish på `/content/wknd-mobile/en/api/events.model.json` för att samla in innehållet för att fylla i mobilappens användargränssnitt.
+1. Öppna [!DNL WKND Mobile] Appen anropar en `HTTP GET` begäran till AEM Publish `/content/wknd-mobile/en/api/events.model.json` för att samla in innehållet för att fylla i mobilappens användargränssnitt.
 2. När du har tagit emot innehåll från AEM, var och en av de tre vyelementen i mobilappen, **logotyp, taggrad och händelselista**, initieras med innehåll från AEM.
    * För att binda AEM till visningselementet i mobilappen är det JSON som representerar varje AEM objekt mappat till ett Java POJO, som i sin tur är bundet till Android-visningselementet.
       * Image Component JSON → Logo POJO → Logo ImageView
@@ -130,11 +131,11 @@ private void initApp(final List<ViewBinder> viewBinders) {
 
 `onCreate(..)` är initieringsgaffeln för mobilappen och registrerar de 3 anpassade `ViewBinders` ansvarar för parsning av JSON och bindning av värdena till `View` -element.
 
-`initApp(...)` anropas sedan vilket gör att HTTP-GET-begäran skickas till AEM Content Services-slutpunkten på AEM Publish för att samla in innehållet. När ett giltigt JSON-svar tas emot, skickas JSON-svaret till varje `ViewBinder` som ansvarar för att analysera JSON och binda den till mobilen `View` -element.
+`initApp(...)` anropas sedan vilket gör att HTTP-GET-begäran skickas till AEM Content Services-slutpunkten vid AEM Publish för att samla in innehållet. När ett giltigt JSON-svar tas emot, skickas JSON-svaret till varje `ViewBinder` som ansvarar för att analysera JSON och binda den till mobilen `View` -element.
 
 #### Tolka JSON-svaret
 
-Nu ska vi titta på `LogoViewBinder`, vilket är enkelt, men som sätter fokus på flera viktiga saker.
+Nu ska vi titta på `LogoViewBinder`, vilket är enkelt, men tar upp flera viktiga saker att tänka på.
 
 ```
 public class LogoViewBinder implements ViewBinder {
@@ -156,13 +157,13 @@ public class LogoViewBinder implements ViewBinder {
 
 Den första raden i `bind(...)` navigerar nedåt i JSON-svaret via tangenterna **:items → root → :items** som representerar AEM Layoutbehållare som komponenterna lades till i.
 
-Härifrån görs en kontroll av en nyckel med namnet **image**, som representerar bildkomponenten (återigen är det viktigt att det här nodnamnet → JSON-nyckeln är stabil). Om det här objektet finns, läses det och mappas till [anpassad bild-POJO](#image-pojo) via Jackson `ObjectMapper` bibliotek. Bildens POJO utforskas nedan.
+Härifrån görs en kontroll av en nyckel med namnet **image**, som representerar bildkomponenten (återigen är det viktigt att det här nodnamnet → JSON-nyckeln är stabil). Om objektet finns läses det och mappas till [anpassad bild-POJO](#image-pojo) via Jackson `ObjectMapper` bibliotek. Bildens POJO utforskas nedan.
 
 Till sist, logotypens `src` läses in i Android ImageView med [!DNL Glide] hjälpbibliotek.
 
-Observera att vi måste tillhandahålla AEM schema, värd och port (via `aemHost`) till AEM Publish-instansen eftersom AEM Content Services bara tillhandahåller JCR-sökvägen (dvs. `/content/dam/wknd-mobile/images/wknd-logo.png`) till det refererade innehållet.
+Observera att vi måste tillhandahålla AEM schema, värd och port (via `aemHost`) till AEM Publish-instansen som AEM Content Services tillhandahåller bara JCR-sökvägen (dvs. `/content/dam/wknd-mobile/images/wknd-logo.png`) till det refererade innehållet.
 
-#### Bildens POJO{#image-pojo}
+#### Bild-POJO{#image-pojo}
 
 Om det är valfritt används [Jackson ObjectMapper](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html) eller liknande funktioner från andra bibliotek som Gson, hjälper dig att mappa komplexa JSON-strukturer till Java-POJO:er utan att behöva arbeta direkt med de inbyggda JSON-objekten. I det här enkla fallet mappar vi `src` från `image` JSON-objekt, till `src` i Image POJO direkt via `@JSONProperty` anteckning.
 

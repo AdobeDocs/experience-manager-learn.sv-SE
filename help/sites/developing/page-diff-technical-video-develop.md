@@ -1,17 +1,14 @@
 ---
 title: Developing for Page Difference in AEM Sites
-description: I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
+description: I den här videon visas hur du kan skapa anpassade format för AEM Sites siddifferensfunktion.
 feature: Authoring
-topics: development
-audience: developer
-doc-type: technical video
-activity: develop
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Beginner
+doc-type: Technical Video
 exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%
@@ -20,7 +17,7 @@ ht-degree: 0%
 
 # Utveckla för sidskillnader {#developing-for-page-difference}
 
-I den här videon visas hur du kan skapa anpassade format för funktionen Sidskillnad i AEM Sites.
+I den här videon visas hur du kan skapa anpassade format för AEM Sites siddifferensfunktion.
 
 ## Anpassa siddifferensformat {#customizing-page-difference-styles}
 
@@ -28,7 +25,7 @@ I den här videon visas hur du kan skapa anpassade format för funktionen Sidski
 
 >[!NOTE]
 >
->I den här videon läggs anpassad CSS till i webbbiblioteket.Butiksklientbiblioteket, där dessa ändringar bör göras i anpassarens AEM Sites-projekt. i exempelkoden nedan: `my-project`.
+>I den här videon läggs anpassad CSS till i webbbiblioteket.Butiksklientbiblioteket, där dessa ändringar ska göras i anpassarens AEM Sites-projekt, i exempelkoden nedan: `my-project`.
 
 AEM sidskillnad hämtar OTB-CSS via en direkt inläsning av `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
 
@@ -124,5 +121,5 @@ Slutresultatet av en avvikande d-sida med formaten ovan tillämpade skulle se ut
 ## Ytterligare resurser {#additional-resources}
 
 * [Ladda ned exempelwebbplatsen för web.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [Använda AEM Client Libraries](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Använda AEM klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [Mindre CSS-dokumentation](https://lesscss.org/)

@@ -1,19 +1,19 @@
 ---
 title: Distribuera Asset compute-arbetare till Adobe I/O Runtime för användning med AEM as a Cloud Service
-description: asset compute-projekt, och de arbetare de innehåller, måste driftsättas i Adobe I/O Runtime för att kunna användas av AEM as a Cloud Service.
+description: Asset compute-projekt, och de arbetare de innehåller, måste driftsättas i Adobe I/O Runtime för att kunna användas av AEM as a Cloud Service.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6286
+jira: KT-6286
 thumbnail: KT-6286.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 0327cf61-fd51-4fa7-856d-3febd49c01a0
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 0%
@@ -22,18 +22,18 @@ ht-degree: 0%
 
 # Distribuera till Adobe I/O Runtime
 
-asset compute-projekt, och de arbetare de innehåller, måste driftsättas i Adobe I/O Runtime via Adobe I/O CLI för att kunna användas av AEM as a Cloud Service.
+Asset compute-projekt, och de arbetare de innehåller, måste driftsättas i Adobe I/O Runtime via Adobe I/O CLI för att kunna användas av AEM as a Cloud Service.
 
 Vid distribution till Adobe I/O Runtime för användning av AEM as a Cloud Service författartjänster krävs bara två miljövariabler:
 
 + `AIO_runtime_namespace` pekar på arbetsytan i App Builder att distribuera till
 + `AIO_runtime_auth` är autentiseringsuppgifter för arbetsytan i App Builder
 
-De andra standardvariablerna som definieras i `.env` filen anges implicit av AEM as a Cloud Service när den anropar arbetaren Asset compute.
+De andra standardvariablerna som definieras i `.env` filen anges implicit av AEM as a Cloud Service när den anropar Asset compute-arbetaren.
 
 ## Arbetsyta för utveckling
 
-Eftersom projektet genererades med `aio app init` med `Development` arbetsyta, `AIO_runtime_namespace` ställs in automatiskt på `81368-wkndaemassetcompute-development` med matchningen `AIO_runtime_auth` på vår lokala `.env` -fil.  Om en `.env` filen finns i den katalog som används för att utfärda kommandot deploy, och dess värden används, såvida de inte ersätts via en variabelexport på operativsystemnivå, vilket är så [stadium och produktion](#stage-and-production) är avsedda för arbetsytor.
+Eftersom det här projektet genererades med `aio app init` med `Development` arbetsyta, `AIO_runtime_namespace` ställs in automatiskt på `81368-wkndaemassetcompute-development` med matchningen `AIO_runtime_auth` på vår lokala `.env` -fil.  Om en `.env` filen finns i den katalog som används för att utfärda kommandot deploy, och dess värden används, såvida de inte ersätts via en variabelexport på operativsystemnivå, vilket är så [stadium och produktion](#stage-and-production) är avsedda för arbetsytor.
 
 ![driftsättning av aio-program med hjälp av .env-variabler](./assets/runtime/development__aio.png)
 
@@ -55,7 +55,7 @@ Om du anger true-miljövariabler åsidosätts värden för variabler med samma n
 
 Det allmänna tillvägagångssättet, som vanligtvis automatiseras av ett CI/CD-system, för distribution till scen- och produktionsmiljöer är:
 
-1. Se till att [Adobe I/O CLI npm-modulen och Asset compute-plugin](../set-up/development-environment.md#aio) är installerade
+1. Kontrollera [Adobe I/O CLI npm-modulen och Asset compute-plugin](../set-up/development-environment.md#aio) är installerade
 1. Kolla in Asset compute-projektet att distribuera från Git
 1. Ange miljövariablerna med de värden som motsvarar målarbetsytan (scen eller produktion)
    + De två variablerna som krävs är `AIO_runtime_namespace` och `AIO_runtime_auth` och hämtas per arbetsyta i Adobe I/O Developer Console via arbetsytans __Hämta alla__ -funktion.
@@ -80,6 +80,6 @@ Om projektversionen för Asset compute ändrar arbetarens URL:er ändras också 
 
 ## API-etablering för arbetsyta{#workspace-api-provisioning}
 
-När [konfigurera App Builder-projektet i Adobe I/O](../set-up/app-builder.md) för att stödja lokal utveckling skapades en ny arbetsyta för utveckling och __asset compute, I/O-händelser__ och __API:er för I/O-händelsehantering__ har lagts till.
+När [konfigurera App Builder-projektet i Adobe I/O](../set-up/app-builder.md) en ny arbetsyta för utveckling skapades och __Asset compute, I/O-händelser__ och __API:er för I/O-händelsehantering__ har lagts till i den.
 
-The __asset compute, I/O-händelser__ och __API:er för I/O-händelsehantering__ APIS läggs bara till explicit i arbetsytorna som används för lokal utveckling. Arbetsytor som integreras (exklusivt) med AEM as a Cloud Service miljöer gör __not__ behöver dessa API:er läggas till explicit eftersom API:er görs naturligt tillgängliga för AEM as a Cloud Service.
+The __Asset compute, I/O-händelser__ och __API:er för I/O-händelsehantering__ APIS läggs bara till explicit i arbetsytorna som används för lokal utveckling. Arbetsytor som integreras (exklusivt) med AEM as a Cloud Service miljöer gör __not__ behöver dessa API:er läggas till explicit eftersom API:er görs naturligt tillgängliga för AEM as a Cloud Service.

@@ -6,8 +6,9 @@ topic: Security, Development
 role: Developer
 level: Beginner
 feature: Security
+doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%

@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7636
+jira: KT-7636
 thumbnail: kt-7636.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -56,7 +57,7 @@ Mappningen för SPA begäranden när SPA öppnas via AEM SPA Editor konfigureras
 
 Skapa först mellanhanden `adventure` Sidsegment:
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App > us > en > WKND App Home Page__
    + Den här AEM är mappad som SPA rot, så här börjar vi skapa den AEM sidstrukturen för andra SPA.
 1. Tryck __Skapa__ och markera __Sida__
@@ -94,14 +95,13 @@ Placera `<ResponsiveGrid...>` i `AdventureDetail` skapar en redigerbar behållar
 
 1. Öppna och redigera `react-app-/src/components/AdventureDetail.js`
 1. Importera `ResponsiveGrid` och placera den ovanför `<h2>Itinerary</h2>` -komponenten.
-1. Ange följande attribut för `<ResponsiveGrid...>` -komponenten. Anteckna `pagePath` attributet lägger till det aktuella `slug` som mappar till äventyrssidan enligt mappningen ovan.
+1. Ange följande attribut för `<ResponsiveGrid...>` -komponenten. Anteckna `pagePath` attributet lägger till aktuell `slug` som mappar till äventyrssidan enligt mappningen ovan.
    + `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    + `itemPath = 'root/responsivegrid'`
 
    Detta instruerar `ResponsiveGrid` för att hämta dess innehåll från AEM:
 
    + `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
-
 
 Uppdatera `AdventureDetail.js` med följande rader:
 
@@ -141,9 +141,9 @@ The `AdventureDetail.js` filen ska se ut så här:
 
 ## Skapa behållaren i AEM
 
-Med `<ResponsiveGrid...>` på plats, och `pagePath` dynamiskt inställda baserat på äventyret som återges, försöker vi skapa innehåll i det.
+Med `<ResponsiveGrid...>` på plats och `pagePath` dynamiskt inställda baserat på äventyret som återges, försöker vi skapa innehåll i det.
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App > us > en__
 1. __Redigera__ den __WKND App - startsida__ page
    + Navigera till __Bali Surf Camp__ för att redigera SPA
@@ -157,7 +157,7 @@ Med `<ResponsiveGrid...>` på plats, och `pagePath` dynamiskt inställda baserat
    + Text
    + Titel
 
-   Och skapa marknadsföringsmaterial. Det kan se ut ungefär så här:
+   Och skapa marknadsföringsmaterial. Det skulle kunna se ut ungefär så här:
 
    ![Bali Adventure Detail Authoring](./assets/spa-dynamic-routes/adventure-detail-edit.png)
 

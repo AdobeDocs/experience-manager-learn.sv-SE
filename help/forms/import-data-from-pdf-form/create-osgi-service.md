@@ -6,8 +6,9 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
+jira: KT-14196
+exl-id: c3032669-154c-4565-af6e-32d94e975e37
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -81,4 +82,3 @@ Extraherade data lagras under noden /content/exporteddata i crx-databasen. Fils�
 ## Nästa steg
 
 [Importera data från PDF-fil](./populate-adaptive-form.md)
-

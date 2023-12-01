@@ -2,17 +2,17 @@
 title: Komma igång med AEM Sites - Grunderna i komponenter
 description: Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt HelloWorld-exempel. Ämnen som rör HTML, Sling Models, Client-side libraries och författardialogrutor har utforskats.
 version: 6.5, Cloud Service
-type: Tutorial
 feature: Core Components, Developer Tools
 topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
-kt: 4081
+jira: KT-4081
 thumbnail: 30177.jpg
+doc-type: Tutorial
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 0%
@@ -25,9 +25,9 @@ I det här kapitlet ska vi titta närmare på den underliggande tekniken i en Ad
 
 ## Förutsättningar {#prerequisites}
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](./overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](./overview.md#local-dev-environment).
 
-Den utvecklingsmiljö som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) plugin.
+Den utvecklingsmiljö som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och [Synkronisering AEM VSCode](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) plugin-program.
 
 ## Syfte {#objective}
 
@@ -41,7 +41,7 @@ I det här kapitlet gör du flera ändringar av en enkel `HelloWorld` -komponent
 
 ## Startprojekt för kapitel {#starter-project}
 
-Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Titta på videon nedan och titta på [krav](#prerequisites) för att komma igång!
+Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project Archettype](https://github.com/adobe/aem-project-archetype). Titta på videon nedan och titta på [krav](#prerequisites) för att komma igång!
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project
 
 Öppna en ny kommandoradsterminal och utför följande åtgärder.
 
-1. I en tom katalog klonar du [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) databas:
+1. Klona [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) databas:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git --branch tutorial/component-basics-start --single-branch
@@ -83,7 +83,7 @@ Det här kapitlet bygger på ett allmänt projekt som genererats av [AEM Project
 
 1. Importera projektet till din egen utvecklingsmiljö genom att följa instruktionerna för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
-## Komponentredigering {#component-authoring}
+## Komponentutveckling {#component-authoring}
 
 Komponenter kan ses som små modulära byggstenar på en webbsida. Komponenterna måste vara konfigurerbara för att kunna återanvända dem. Detta sker via författardialogrutan. Låt oss sedan skapa en enkel komponent och kontrollera hur värden från dialogrutan bevaras i AEM.
 
@@ -103,7 +103,7 @@ HTML mallspråk eller **[HTL](https://experienceleague.adobe.com/docs/experience
 
 **Dialogrutor** Definiera de konfigurationer som är tillgängliga för en komponent.
 
-Nästa steg är att uppdatera `HelloWorld` HTML-skript om du vill visa en extra hälsning före textmeddelandet.
+Vi uppdaterar `HelloWorld` HTML-skript om du vill visa en extra hälsning före textmeddelandet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987?quality=12&learn=on)
 
@@ -280,11 +280,11 @@ Nu ska vi göra några uppdateringar i `HelloWorldModel` Sling Model för att ti
 
 1. Distribuera ändringarna till en lokal instans av AEM med Eclipse Developer plugin eller med dina Maven-kunskaper.
 
-## Klientbibliotek {#client-side-libraries}
+## Bibliotek på klientsidan {#client-side-libraries}
 
-Bibliotek på klientsidan, `clientlibs` kort och gott: innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som behövs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
+Bibliotek på klientsidan, `clientlibs` kort och gott: innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som behövs för en AEM Sites-implementering. Klientbibliotek är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
 
-The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modulen är en frikopplad [webbpaket](https://webpack.js.org/) projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. The `ui.frontend` finns mer detaljerad information om modulen i [Kapitel om bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) modulen är en frikopplad [webbpaket](https://webpack.js.org/) projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. The `ui.frontend` finns mer ingående i [Kapitel om bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 Uppdatera sedan CSS-formaten för `HelloWorld` -komponenten.
 

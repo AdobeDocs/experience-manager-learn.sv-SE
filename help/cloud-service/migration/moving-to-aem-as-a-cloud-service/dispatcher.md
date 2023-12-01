@@ -6,10 +6,10 @@ feature: Dispatcher
 topic: Migration, Upgrade
 role: Developer
 level: Experienced
-kt: 8633
+jira: KT-8633
 thumbnail: 336962.jpeg
 exl-id: 81397b21-b4f3-4024-a6da-a9b681453eff
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 3%
@@ -27,12 +27,12 @@ Lär dig mer om AEM Dispatcher for AEM as a Cloud Service, med fokus på betydan
 
 ![Dispatcher Converter](./assets/dispatcher-converter-diagram.png)
 
-Använd [AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) för att omforma befintliga konfigurationer för Adobe Managed Services Dispatcher eller Adobe Managed Services Dispatcher till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
+När du omfaktoriserar din kodbas använder du [AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) för att refaktorisera befintliga Managed Services Dispatcher-konfigurationer på plats eller Adobe till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
 
 ## Viktiga aktiviteter
 
 + Använd [Adobe I/O Dispatcher Converter](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter) för att migrera en befintlig Dispatcher-konfiguration.
-+ Referera till modulen Dispatcher från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) som bästa praxis.
++ Referera till modulen Dispatcher från [AEM Project Archettype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) som bästa praxis.
 + [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) för att validera dispatchern, innan du testar i en Cloud Service-miljö.
 
 ## Handövning
@@ -58,7 +58,7 @@ Se även till att du har fullföljt tidigare övningar:
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">Handtag med Dispatcher Tools</div>
+            <div style="font-size:1.25rem;font-weight:400;">Handverktyget med Dispatcher Tools</div>
             <p style="margin:1rem 0">
                 Använd AEM SDK:s Dispatcher Tools för att validera Dispatcher-konfigurationer och köra AEM Dispatcher lokalt med Docker.
             </p>

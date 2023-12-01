@@ -3,14 +3,14 @@ title: Använda objektets inläsningssökväg för att fylla i listrutan
 description: Konfigurera och fylla i en nedrullningsbar lista för att läsa värden från en crx-nod
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 10961
+jira: KT-10961
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
 exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -27,8 +27,8 @@ Följ stegen nedan för att skapa en sådan nod i crx:
 * Spara
 * Klicka på noden för nyligen skapade resurser och ange dess egenskaper enligt nedan
 * Du måste skapa en egenskap av typen String som kallas resurstyper (du kan namnge den efter behov). Kontrollera att egenskapen är ett multivärde. Ange de värden som du vill ha och spara.
-   ![item-load-path](assets/item-load-path-crx.png)
+  ![item-load-path](assets/item-load-path-crx.png)
 
-Om du vill läsa in dessa värden i den nedrullningsbara listan anger du följande sökväg i objektets egenskap för inläsningssökväg  **/content/assets/assettypes**
+Om du vill läsa in dessa värden i listrutan anger du följande sökväg i objektets egenskap för inläsningssökväg  **/content/assets/assettypes**
 
 Exempelpaketet kan [hämtad härifrån](assets/item-load-path-package.zip)

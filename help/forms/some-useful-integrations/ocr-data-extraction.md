@@ -3,13 +3,13 @@ title: OCR-dataextrahering
 description: Extrahera data från dokument från myndigheter för att fylla i formulär.
 feature: Barcoded Forms
 version: 6.4,6.5
-kt: 6679
+jira: KT-6679
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentati
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (fka Swagger).
 
-Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångslösenord som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/drivers-license-swagger.zip)
+Använd [swagger editor](https://editor.swagger.io/) om du vill skapa en swagger-fil som beskriver de åtgärder som skickar och verifierar den engångskod som skickas med SMS. Swagger-filen kan skapas i JSON- eller YAML-format. Den färdiga swagger-filen kan hämtas från [här](assets/drivers-license-swagger.zip)
 
 ## Att tänka på när du definierar swagger-filen
 

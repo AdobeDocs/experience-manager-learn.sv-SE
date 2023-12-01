@@ -7,14 +7,14 @@ audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
-kt: 5407
+jira: KT-5407
 thumbnail: 40258.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Exempelformuläret som används i det här arbetsflödet är baserat på en anpa
 
 ### Hämta adaptiva formulärmallar
 
-* Hämta [Adaptiv formulärmall](assets/af-form-template.zip)
-* [Importera mallen med hjälp av pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Ladda ned [Adaptiv formulärmall](assets/af-form-template.zip)
+* [Importera mallen med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * Överför och installera mallen för adaptiva formulär
 
-### Hämta exemplet Adaptiv form
+### Hämta exemplet med adaptiv form
 
-* Hämta [Adaptiv form](assets/peak-application-form.zip)
+* Ladda ned [Adaptiv form](assets/peak-application-form.zip)
 * Bläddra till [Formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa -> Filöverföring
 * Det adaptiva exempelformuläret placeras i en mapp som heter [Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)

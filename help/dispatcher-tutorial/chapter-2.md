@@ -5,8 +5,9 @@ feature: Dispatcher
 topic: Architecture
 role: Architect
 level: Beginner
+doc-type: Tutorial
 exl-id: a25b6f74-3686-40a9-a148-4dcafeda032f
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 0%
@@ -31,7 +32,7 @@ På den tidiga tiden var antalet potentiella besökare litet, maskinvaran var dy
 
 <br> 
 
-Här fick dispatchern sitt namn från: Det var i princip att skicka förfrågningar. Den här konfigurationen är inte särskilt vanlig längre eftersom den inte kan uppfylla de högre krav på prestanda och stabilitet som krävs idag.
+Det var här som dispatchern fick sitt namn från: Den skickade i stort sett begäranden. Den här konfigurationen är inte särskilt vanlig längre eftersom den inte kan uppfylla de högre krav på prestanda och stabilitet som krävs idag.
 
 ### Multi-Legged-konfiguration
 
@@ -51,7 +52,7 @@ Här är skälen till den här typen av konfiguration,
 
 3. Apache-servrar är billiga. De baseras på öppen källkod och eftersom du har ett virtuellt datacenter kan de etableras mycket snabbt.
 
-4. Den här konfigurationen är ett enkelt sätt att skapa ett&quot;rullande&quot; eller&quot;staggerat&quot; uppdateringsscenario. Du stänger helt enkelt Dispatcher 1 medan du installerar ett nytt programpaket på Publish 1. När installationen är klar, och du har tillräckligt röktestat Publish 1 från det interna nätverket, rensar du cacheminnet på Dispatcher 1 och startar det igen samtidigt som du stänger Dispatcher 2 för att behålla Publish 2.
+4. Den här konfigurationen är ett enkelt sätt att skapa ett&quot;rullande&quot; eller&quot;staggerat&quot; uppdateringsscenario. Du stänger bara av Dispatcher 1 medan du installerar ett nytt programpaket på Publish 1. När installationen är klar, och du har tillräckligt röktestat Publish 1 från det interna nätverket, rensar du cacheminnet på Dispatcher 1 och startar det igen samtidigt som du stänger Dispatcher 2 för att underhålla Publish 2.
 
 5. Cacheogiltigförklaring blir mycket enkelt och deterministiskt i den här konfigurationen. Eftersom endast ett publiceringssystem är anslutet till en Dispatcher finns det bara en Dispatcher som ska göras ogiltig. Ordningen och tidpunkten för ogiltigförklaringen är avgörande.
 
@@ -65,7 +66,7 @@ Apache-servrar är billiga och enkla att tillhandahålla, och du bör inte skjut
 
 <br> 
 
-Det kan du absolut göra! Och det finns många giltiga programscenarier för den konfigurationen. Men det finns också vissa begränsningar och problem du bör tänka på.
+Det kan du absolut göra! Och det finns många giltiga programscenarier för den konfigurationen. Men det finns också vissa begränsningar och problem som du bör tänka på.
 
 #### Invalidering
 
@@ -77,11 +78,11 @@ Det är självklart att den ursprungliga konfigurationen av Dispatcher- och Publ
 
 I ett tidigare projekt använde vi ett annat trick för att ta bort ett publiceringssystem från belastningsutjämningen utan att ha direkt åtkomst till själva belastningsutjämnaren.
 
-Belastningsutjämnaren brukar vara &quot;pings&quot;, en viss sida för att se om servern är igång och körs. Ett enkelt val är vanligtvis att pinga hemsidan. Men om du vill använda ping för att signalera att belastningsutjämnaren inte ska balansera trafiken så väljer du något annat. Du skapar en dedikerad mall eller server som kan konfigureras att svara med `"up"` eller `"down"` (i brödtexten eller som http-svarskod). Svaret på den sidan får förstås inte cachas i dispatchern, så den hämtas alltid från publiceringssystemet. Om du nu konfigurerar belastningsutjämnaren för att kontrollera den här mallen eller servern kan du enkelt låta Publicera&quot;låtsas&quot; den vara nedtryckt. Den skulle inte ingå i lastbalanseringen och kan uppdateras.
+Belastningsutjämnaren brukar vara &quot;pings&quot;, en viss sida för att se om servern är igång och körs. Ett enkelt val är vanligtvis att pinga hemsidan. Men om du vill använda ping för att signalera att belastningsutjämnaren inte ska balansera trafiken så väljer du något annat. Du skapar en dedikerad mall eller server som kan konfigureras att svara med `"up"` eller `"down"` (i texten eller som http-svarskod). Svaret på den sidan får förstås inte cachas i dispatchern, så den hämtas alltid från publiceringssystemet. Om du nu konfigurerar belastningsutjämnaren för att kontrollera den här mallen eller servern kan du enkelt låta Publicera&quot;låtsas&quot; den vara nedtryckt. Den skulle inte ingå i lastbalanseringen och kan uppdateras.
 
 #### Worldwide Distribution
 
-&quot;Worldwide Distribution&quot; är en&quot;Scale out&quot;-konfiguration där du har flera utskicksare framför varje publiceringssystem - som nu distribueras över hela världen för att vara närmare kunden och ge bättre prestanda. I det scenariot har du förstås ingen central belastningsutjämnare utan ett DNS- och geo-IP-baserat belastningsutjämningsschema.
+&quot;Worldwide Distribution&quot; är en&quot;Scale out&quot;-konfiguration där du har flera utskicksare framför varje publiceringssystem - som nu distribueras över hela världen för att vara närmare kunden och ge bättre prestanda. I det scenariot har du förstås ingen central belastningsutjämnare, utan ett DNS- och geo-IP-baserat belastningsutjämningsschema.
 
 >[!NOTE]
 >
@@ -93,7 +94,7 @@ Till och med i ett lokalt datacenter har en&quot;Scale Out&quot;-topologi med fl
 
 #### Gränser för utskalningstopologin
 
-Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom &quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Det här är en användbar funktion - vi gick igenom det här i [Kapitel 1](chapter-1.md) av den här serien - men det innebär också att när du ofta har gjort ändringar på webbplatsen blir cachen ofta ogiltig. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
+Om du lägger till proxyservrar bör prestandan normalt öka. Det finns dock scenarier där du faktiskt kan minska prestandan genom att lägga till servrar. Hur? Tänk dig att du har en nyhetsportal där du kan presentera nya artiklar och sidor varje minut. En Dispatcher blir ogiltig genom&quot;automatisk ogiltigförklaring&quot;: När en sida publiceras blir alla sidor i cachen på samma webbplats ogiltiga. Det här är en användbar funktion - vi gick igenom det här i [Kapitel 1](chapter-1.md) av den här serien - men det innebär också att när du ofta har gjort ändringar på webbplatsen blir cachen ofta ogiltig. Om du bara har en Dispatcher per Publish-instans aktiverar den första besökaren som begär en sida en cachelagring av den sidan. Den andra besökaren hämtar redan den cachelagrade versionen.
 
 Om du har två utskickare har den andra besökaren 50 % chans att sidan inte cachelagras, och då får han en större fördröjning när sidan återges igen. Med ännu fler utskickare per publicering blir allt värre. Vad som händer är att publiceringsservern får mer belastning eftersom den måste återge sidan för varje Dispatcher separat.
 
@@ -107,29 +108,29 @@ Om du har två utskickare har den andra besökaren 50 % chans att sidan inte cac
 
 Du kan överväga att använda en central delad lagring för alla utskickare eller synkronisera filsystemen för Apache-servrarna för att minska problemen. Vi kan bara ge begränsad förstahandsupplevelse, men vi kan vara förberedda på att detta leder till systemets komplexitet och kan ge en helt ny typ av fel.
 
-Vi har experimenterat med NFS - men NFS introducerar stora prestandaproblem på grund av innehållslåsning. Detta minskade faktiskt det totala resultatet.
+Vi har experimenterat med NFS - men NFS introducerar stora prestandaproblem på grund av innehållslåsning. Detta minskade faktiskt den totala prestandan.
 
 **Slutsats** - Att dela ett gemensamt filsystem mellan flera utskickare rekommenderas INTE.
 
 Om du har problem med prestandan kan du skala upp Publish och Dispatcher lika för att undvika belastningen på Publisher-instanserna. Det finns ingen gyllene regel om förhållandet mellan publicering och utskick - den beror i hög grad på hur förfrågningarna distribueras och hur ofta publikationer och cacheminnet blir ogiltiga.
 
-Om du också är orolig för den fördröjning en besökare upplever kan du använda ett leveransnätverk, cachelagra omhämtning, förebyggande cachevärmare, ange en respittid enligt beskrivningen i [Kapitel 1](chapter-1.md) eller hänvisa till några avancerade idéer i [Del 3](chapter-3.md).
+Om du också är orolig för den fördröjning en besökare upplever kan du använda ett leveransnätverk, cachelagra omhämtning, förebyggande cachevärmare, ange en respittid enligt beskrivningen i [Kapitel 1](chapter-1.md) i den här serien eller hänvisa till några avancerade idéer i [Del 3](chapter-3.md).
 
 ### Konfiguration av &quot;Cross Connected&quot;
 
-En annan inställning som vi har sett tidigare och sedan är den&quot;sammankopplade&quot; konfigurationen: Publiceringsinstanserna har inga dedikerade utskickare, men alla utskickare är anslutna till alla publiceringssystem.
+En annan inställning som vi har sett tidigare och sedan är den&quot;korsanslutna&quot; konfigurationen: Publiceringsinstanserna har inte dedikerade utskickare, men alla utskickare är anslutna till alla publiceringssystem.
 
-![Kopplad topologi: Ökad redundans och komplexitet](assets/chapter-2/cross-connected-setup.png)
+![Kopplad topologi: ökad redundans och större komplexitet](assets/chapter-2/cross-connected-setup.png)
 
 <br> 
 
-*Kopplad topologi: Ökad redundans och komplexitet.*
+*Kopplad topologi: ökad redundans och mer komplexitet.*
 
 I första hand ger detta lite mer redundans för en relativt liten budget. När en av Apache-servrarna är nere kan du fortfarande ha två Publish-system som utför återgivningen. Om ett av publiceringssystemen kraschar har du fortfarande två utskickare som hanterar den cachelagrade inläsningen.
 
-Men det här kommer med ett pris.
+Men det här kostar.
 
-För det första är det ganska krångligt att ta ut ett ben för underhåll. Det är faktiskt det här programmet är avsett för. för att vara mer flexibel och hålla er igång på alla tänkbara sätt. Vi har sett komplicerade underhållsplaner för hur detta ska hanteras. Konfigurera först om Dispatcher 2 och ta bort korsanslutningen. Startar om Dispatcher 2. Stänger av Dispatcher 1, uppdaterar Publish 1, ... och så vidare. Du bör tänka noga på om det skalar upp till mer än två ben. Slutsatsen blir att det faktiskt ökar komplexiteten, kostnaderna och är en fantastisk källa till mänskliga misstag. Det är bäst att automatisera detta. Så kolla om du har de mänskliga resurserna som behövs för att ta med automatiseringsuppgifterna i projektschemat. Även om du kan spara på maskinvarukostnaderna med detta kan du spendera dubbelt så mycket på IT-personalen.
+För det första är det ganska krångligt att ta ut ett ben för underhåll. Det är faktiskt det här programmet är avsett för: att vara mer flexibel och hålla sig igång på alla tänkbara sätt. Vi har sett komplicerade underhållsplaner för hur detta ska hanteras. Konfigurera först om Dispatcher 2 och ta bort korsanslutningen. Startar om Dispatcher 2. Stänger av Dispatcher 1, uppdaterar Publish 1, ... och så vidare. Du bör tänka noga på om det skalar upp till mer än två ben. Slutsatsen blir att det faktiskt ökar komplexiteten, kostnaderna och är en fantastisk källa till mänskliga misstag. Det är bäst att automatisera detta. Så kolla om du har de mänskliga resurserna som behövs för att ta med automatiseringsuppgifterna i projektschemat. Även om du kan spara på maskinvarukostnaderna med detta kan du spendera dubbelt så mycket på IT-personalen.
 
 För det andra kanske du kör ett användarprogram på AEM som kräver inloggning. Du använder klibbiga sessioner för att se till att en användare alltid hanteras från samma AEM så att du kan behålla sessionsläget för den instansen. Med den här korsanslutna konfigurationen måste du se till att klisterlappande sessioner fungerar korrekt på belastningsutjämnaren och på utskickarna. Det är inte omöjligt - men du måste vara medveten om det och lägga till extra konfigurations- och testtimmar, vilket - återigen - kan jämna ut de besparingar du planerat genom att spara maskinvara.
 

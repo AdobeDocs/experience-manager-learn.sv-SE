@@ -3,16 +3,13 @@ title: Innehållsfragment och Upplevelsefragment
 description: Lär dig likheterna och skillnaderna mellan innehållsfragment och Experience Fragments, och när och hur du använder varje typ.
 sub-product: Experience Manager Assets, Experience Manager Sites
 feature: Content Fragments, Experience Fragments
-topics: headless
 version: 6.4, 6.5
-doc-type: article
-activity: understand
-audience: all
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-source-git-commit: 84fdbaa173a929ae7467aecd031cacc4ce73538a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1044'
 ht-degree: 0%
@@ -50,7 +47,7 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 <li>Presentationscentrerad</li>
 <li>Definieras av ostrukturerad komposition för AEM</li>
 <li>Definierar design och layout för innehåll</li>
-<li>Används i befintligt skick i kanaler</li>
+<li>Används som det är i kanaler</li>
 </ul>
 </td>
 </tr><tr><td><strong>Teknisk information</strong></td>
@@ -60,14 +57,14 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </ul>
 </td>
 <td><ul>
-<li>Implementerat som en <strong>cq:Page</strong></li>
+<li>Implementerat som en <strong>cq:Sida</strong></li>
 <li>Definieras av redigerbara mallar</li>
 <li>Inbyggd HTML-rendering</li>
 </ul>
 </td>
 </tr><tr><td><strong>Variationer</strong></td>
 <td><ul>
-<li>Den Överordnad variationen är den kanoniska variationen</li>
+<li>Huvudvarianten är den kanoniska variationen</li>
 <li>Variationer är skiftlägeskänsliga, som kan justeras mot kanaler.</li>
 </ul>
 </td>
@@ -111,7 +108,7 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </td>
 <td><ul>
 <li>AEM Experience Fragment-komponent som ska användas i AEM Sites, AEM Screens eller andra Experience Fragments.</li>
-<li>Exportera som <a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">Plain HTML</a> för användning i tredjepartssystem</li>
+<li>Exportera som <a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=en" target="_blank">Plain HTML</a> för användning i system från tredje part</li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/experience-fragments-target.html?lang=en" target="_blank">HTML export till Adobe Target</a> för riktade erbjudanden</li>
 <li>JSON-export till Adobe Target för riktade erbjudanden</li>
 </ul>
@@ -156,7 +153,7 @@ I följande diagram visas den övergripande arkitekturen för AEM innehållsfrag
    + Använda innehållsfragment på **AEM Sites** (eller AEM Screens) via AEM WCM Core Components Content Fragment-komponent.
    + Förbrukning **Innehållsfragment** från headless-appar med AEM Headless GraphQL API:er.
    + Visa ett innehållsfragment varierar innehåll som JSON via **AEM Content Services** och API-sidor för skrivskyddade användningsfall.
-   + Exponera innehåll i innehållsfragment (alla varianter) direkt som JSON via direktanrop till AEM Assets via **AEM Assets HTTP API** för CRUD-användning.
+   + Exponera innehåll i innehållsfragment (alla varianter) direkt som JSON via direktanrop till AEM Assets via **AEM ASSETS HTTP API** för CRUD-användning.
 
 ## Experience Fragments arkitektur
 
@@ -165,7 +162,7 @@ I följande diagram visas den övergripande arkitekturen för AEM innehållsfrag
 + **Redigerbara mallar**, som i sin tur definieras av **Redigerbara malltyper** och **Implementering av AEM** definierar du de AEM komponenter som kan användas för att skapa en Experience Fragment.
 + The **Experience Fragment** är en instans av en redigerbar mall som representerar en logisk upplevelse.
 + Experience Fragment **variationer** som följer den redigerbara mallen har dock olika upplevelser (innehåll och design).
-+ Upplevelsefragment kan visas/användas av:
++ Upplevelsefragment kan exponeras/användas av:
    + Använda Experience Fragments på AEM Sites (eller AEM Screens) via komponenten AEM Experience Fragment.
    + Visa ett Experience Fragment-varierande innehåll som JSON (med inbäddad HTML) via **AEM Content Services** och API-sidor.
    + Exponera en Experience Fragment-variation direkt som **&quot;Plain HTML&quot;**.

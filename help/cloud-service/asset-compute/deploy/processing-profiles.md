@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6287
+jira: KT-6287
 thumbnail: KT-6287.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -65,8 +65,8 @@ Skapa först en ny bearbetningsprofil som anropar arbetaren med konfigurerbara p
 
 1. Välj den nya bearbetningsprofilen, `WKND Asset Renditions`
 1. Tryck __Använd profil för mapp(ar)__ i det övre åtgärdsfältet
-1. Välj en mapp som bearbetningsprofilen ska användas på, till exempel `WKND` och trycka __Använd__
-1. Navigera till mappen som bearbetningsprofilen inte tillämpades på via __AEM > Resurser > Filer__ och `WKND`.
+1. Välj en mapp som bearbetningsprofilen ska användas på, till exempel `WKND` och knacka __Använd__
+1. Navigera till mappen som bearbetningsprofilen inte tillämpades på via __AEM > Assets > Files__ och `WKND`.
 1. Överför några nya bildresurser ([sample-1.jpg](../assets/samples/sample-1.jpg), [sample-2.jpg](../assets/samples/sample-2.jpg)och [sample-3.jpg](../assets/samples/sample-3.jpg)) i alla mappar i mappen där Bearbetningsprofilen används och väntar på att den överförda resursen ska bearbetas.
 1. Tryck på resursen för att öppna dess information
    + Standardåtergivningar kan generera och visas snabbare i AEM än anpassade återgivningar.

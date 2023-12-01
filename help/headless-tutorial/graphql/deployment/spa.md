@@ -6,11 +6,11 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10587
+jira: KT-10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -25,7 +25,7 @@ För att driftsätta en SPA som interagerar AEM utan att vara i kö måste du va
 
 ## SPA
 
-En SPA består av en samling inbyggda webbresurser: **HTML, CSS och JavaScript**. De här resurserna genereras under _bygga_ process (till exempel `npm run build`) och distribueras till en värd för att konsumeras av slutanvändare.
+En SPA består av en samling med inbyggda webbresurser: **HTML, CSS och JavaScript**. De här resurserna genereras under _bygg_ process (till exempel `npm run build`) och distribueras till en värd för att konsumeras av slutanvändare.
 
 Det finns olika **hosting** alternativ beroende på organisationens krav:
 
@@ -48,11 +48,11 @@ En SPA och AEM delar domäner när båda är åtkomliga för slutanvändare frå
 
 Eftersom både AEM och SPA är åtkomliga från samma domän kan SPA göra XHR till AEM Headless-slutpunkter utan CORS, och tillåta delning av HTTP-cookies (till exempel AEM `login-token` cookie).
 
-Hur SPA och AEM trafik dirigeras till den delade domänen är upp till dig: CDN med flera ursprung, HTTP-server med omvänd proxy, SPA som värd direkt i AEM och så vidare.
+Det är upp till dig att dirigera SPA- och AEM-trafik till den delade domänen: CDN med flera ursprung, HTTP-server med omvänd proxy, som är värd för SPA direkt i AEM och så vidare.
 
 Nedan visas distributionskonfigurationer som krävs för SPA produktionsdistributioner, när de finns på samma domän som AEM.
 
-| SPA ansluter till | AEM Author | AEM Publish | AEM |
+| SPA ansluter till | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |
@@ -60,16 +60,16 @@ Nedan visas distributionskonfigurationer som krävs för SPA produktionsdistribu
 
 ### Olika domäner
 
-En SPA och AEM har olika domäner när slutanvändare från olika domäner får åtkomst till dem. Till exempel:
+En SPA och AEM har olika domäner när slutanvändare från olika domäner har åtkomst till dem. Till exempel:
 
 + AEM nås via: `https://wknd.site/`
 + SPA öppnas via `https://wknd-app.site/`
 
-Eftersom AEM och SPA används från olika domäner tillämpar webbläsare säkerhetsprofiler som [resursdelning mellan ursprung (CORS)](./configurations/cors.md)och förhindra delning av HTTP-cookies (t.ex. AEM `login-token` cookie).
+Eftersom AEM och SPA används från olika domäner tillämpar webbläsare säkerhetsprofiler som [resursdelning mellan ursprung (CORS)](./configurations/cors.md)och förhindra delning av HTTP-cookies (till exempel AEM `login-token` cookie).
 
 Nedan visas distributionskonfigurationer som krävs för SPA av produktionsdistributioner, när dessa lagras på en annan domän än AEM.
 
-| SPA ansluter till | AEM Author | AEM Publish | AEM |
+| SPA ansluter till | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [Cross-origin resource sharing (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
@@ -77,7 +77,7 @@ Nedan visas distributionskonfigurationer som krävs för SPA av produktionsdistr
 
 #### Exempel SPA distribution på olika domäner
 
-I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder GraphQL API:er från AEM Publish-domänen (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
+I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder GraphQL-API:er från AEM publiceringsdomän (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
 
 1. SPA hanteras från en Netlify-domän, men gör ett XHR-anrop till AEM GraphQL API:er på en annan domän. Denna begäran över flera webbplatser kräver [CORS](./configurations/cors.md) som ska konfigureras AEM att tillåta begäran från Netlify-domänen att få åtkomst till dess innehåll.
 
@@ -99,14 +99,14 @@ Adobe tillhandahåller ett exempel på en enkelsidig app som kodats i React.
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="../example-apps/react-app.md" title="Reagera app" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="Reagera app">
+               <a href="../example-apps/react-app.md" title="Reagera-app" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="Reagera-app">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="Reagera app">Reagera app</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="Reagera-app">Reagera-app</a></p>
                <p class="is-size-6">Ett exempel på en enda sida, skrivet i React, som använder innehåll från AEM Headless GraphQL API:er.</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>

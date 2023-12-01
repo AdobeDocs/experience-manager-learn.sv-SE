@@ -7,12 +7,12 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 10721
+jira: KT-10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
-source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%
@@ -40,9 +40,9 @@ Appen Next.js fungerar med följande AEM driftsättningsalternativ. Alla distrib
 
 Det här exemplet på appen Next.js är utformat för att ansluta till __AEM Publish__ service.
 
-### Krav för AEM Author
+### Krav för AEM författare
 
-Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång till oskyddat innehåll. Next.js kan konfigureras att ansluta till AEM Author via `.env` egenskaper som beskrivs nedan. Bilder som hanteras från AEM Author kräver autentisering, och därför måste användaren som använder appen Next.js också vara inloggad på AEM Author.
+Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång till oskyddat innehåll. Next.js kan konfigureras att ansluta till AEM Author via `.env` egenskaper som beskrivs nedan. Bilder som hanteras från AEM författare kräver autentisering, och därför måste användaren som använder appen Next.js också loggas in AEM Author.
 
 ## Så här använder du
 
@@ -60,7 +60,7 @@ Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång til
    ...
    ```
 
-   Om du ansluter till AEM Author-tjänsten måste autentisering tillhandahållas som standard eftersom AEM Author-tjänsten är säker.
+   Om du ansluter till AEM Author-tjänsten måste du ange AEM Author-tjänsten som standard.
 
    Använda en lokal AEM `AEM_AUTH_METHOD=basic` och ange användarnamn och lösenord i `AEM_AUTH_USER` och `AEM_AUTH_PASSWORD` egenskaper.
 

@@ -3,7 +3,7 @@ title: Reaktionsapp - Exempel AEM Headless
 description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här React-programmet visas hur du frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 10715
+jira: KT-10715
 thumbnail: KT-10715.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
-source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Programmet React fungerar med följande AEM driftsättningsalternativ. Alla dist
 + Lokal installation med [AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
    + Kräver [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 
-Programmet React är utformat för att ansluta till en __AEM Publish__ -miljön kan den dock hämta innehåll från AEM Author om autentisering anges i React-programmets konfiguration.
+Programmet React är utformat för att ansluta till en __AEM Publish__ -miljö kan däremot hämta innehåll från AEM författare om autentisering anges i React-programmets konfiguration.
 
 ## Så här använder du
 
@@ -292,16 +292,16 @@ I React-programmet används två vyer för att presentera äventyrsdata i webbup
 
 ### Miljövariabler
 
-Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environment-variables) används för att ansluta till en AEM. Standardanslutningar till AEM-publicering som körs på `http://localhost:4503`. Uppdatera `.env.development` för att ändra AEM:
+Flera [miljövariabler](https://create-react-app.dev/docs/adding-custom-environment-variables) används för att ansluta till en AEM. Standardanslutningar till AEM som körs vid `http://localhost:4503`. Uppdatera `.env.development` för att ändra AEM:
 
 + `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`: Ange som AEM målvärd
 + `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json`: Ange slutpunktsbana för GraphQL. Detta används inte av React-appen eftersom den bara använder beständiga frågor.
 + `REACT_APP_AUTH_METHOD=`: Den önskade autentiseringsmetoden. Valfritt, som standard används ingen autentisering.
    + `service-token`: Använd tjänstautentiseringsuppgifter för att få en åtkomsttoken på AEM as a Cloud Service
    + `dev-token`: Använd dev-token för lokal utveckling på AEM as a Cloud Service
-   + `basic`: Använd användare/pass för lokal utveckling med lokal AEM Author
+   + `basic`: Använd användare/pass för lokal utveckling med lokal AEM författare
    + Lämna tomt om du vill ansluta till AEM utan autentisering
-+ `REACT_APP_AUTHORIZATION=admin:admin`: Ange grundläggande autentiseringsuppgifter som ska användas vid anslutning till en AEM Author-miljö (endast för utveckling). Om du ansluter till en publiceringsmiljö är den här inställningen inte nödvändig.
++ `REACT_APP_AUTHORIZATION=admin:admin`: Ange grundläggande autentiseringsuppgifter som ska användas vid anslutning till en AEM författarmiljö (endast för utveckling). Om du ansluter till en publiceringsmiljö är den här inställningen inte nödvändig.
 + `REACT_APP_DEV_TOKEN`: Dev-tokensträng. Om du vill ansluta till en fjärrinstans kan du förutom grundläggande autentisering (användare:pass) använda Bearer-autentisering med DEV-token från molnkonsolen
 + `REACT_APP_SERVICE_TOKEN`: Sökväg till tjänstens autentiseringsuppgifter. Om du vill ansluta till en fjärrinstans kan du autentisera med Service Token (hämta fil från Developer Console).
 

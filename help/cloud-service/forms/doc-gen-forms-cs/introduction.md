@@ -1,16 +1,16 @@
 ---
 title: Dokumentgenerering av mikrotjänster i AEM Forms CS
-description: Förbruka dokumentgenereringsmikrotjänsterna från ett externt program.
+description: Förbruka dokumentgenereringen från ett externt program.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 feature: Output Service
 topic: Development
-kt: 7432
+jira: KT-7432
 thumbnail: 334859.jpg
 exl-id: 08dd141d-9d25-4dd5-a810-70e3835deae4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 I den här kursen använder vi mikrotjänsterna för dokumentgenerering för att skapa en PDF-fil genom att sammanfoga data med en XDP-mall. Så här använder du mikrotjänsterna från ett externt program:
 
-1. Generera autentiseringsuppgifter för tjänsten för ett AEM tekniskt konto
+1. Generera tjänstreferenser för ett AEM tekniskt konto
 1. Skapa en JSON Web Token (JWT) från inloggningsuppgifterna och byt ut samma mot en åtkomsttoken
 1. Konfigurera åtkomst för det tekniska kontot i AEM
 1. Göra HTTP-anrop med åtkomsttoken

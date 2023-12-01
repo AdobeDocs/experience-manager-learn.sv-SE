@@ -3,14 +3,15 @@ title: Vattenstämplar i AEM Assets
 description: AEM as a Cloud Service möjlighet att vattenstämpla anpassade bildåtergivningar med vattenstämpel från alla PNG-bilder.
 feature: Asset Compute Microservices
 version: Cloud Service
-kt: 6357
+jira: KT-6357
 thumbnail: 41536.jpg
 topic: Content Management
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-07T00:00:00Z
+doc-type: Feature Video
 exl-id: 252c7c58-3567-440a-a1d5-19c598b6788e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

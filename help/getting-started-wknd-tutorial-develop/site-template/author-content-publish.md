@@ -1,17 +1,17 @@
 ---
 title: Introduktion till redigering och publicering | AEM Skapa snabbt webbplatser
-description: Använd sidredigeraren i Adobe Experience Manager AEM för att uppdatera webbplatsens innehåll. Lär dig hur komponenter används för att underlätta redigering. Förstå skillnaden mellan en AEM Author- och Publish-miljö och lär dig hur man publicerar ändringar på den publicerade webbplatsen.
+description: Använd sidredigeraren i Adobe Experience Manager AEM för att uppdatera webbplatsens innehåll. Lär dig hur komponenter används för att underlätta redigering. Förstå skillnaden mellan en AEM författare- och publiceringsmiljö och lär dig hur du publicerar ändringar på den publicerade webbplatsen.
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
 level: Beginner
-kt: 7497
+jira: KT-7497
 thumbnail: KT-7497.jpg
+doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Introduktion till redigering och publicering {#author-content-publish}
 
-Det är viktigt att förstå hur en användare uppdaterar innehåll för webbplatsen. I det här kapitlet kommer vi att anta **Innehållsförfattare** och gör några redaktionella uppdateringar av webbplatsen som skapades i föregående kapitel. I slutet av kapitlet kommer vi att publicera ändringarna för att förstå hur den publicerade webbplatsen uppdateras.
+Det är viktigt att förstå hur en användare uppdaterar innehåll för webbplatsen. I det här kapitlet kommer vi att anta **Innehållsförfattare** och gör några redaktionella uppdateringar av webbplatsen som skapades i det föregående kapitlet. I slutet av kapitlet kommer vi att publicera ändringarna för att förstå hur den publicerade webbplatsen uppdateras.
 
 ## Förutsättningar {#prerequisites}
 
@@ -28,7 +28,7 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 
 ## Syfte {#objective}
 
-1. Förstå begreppen **Sidor** och **Komponenter** i AEM Sites.
+1. Förstå begreppen för **Sidor** och **Komponenter** i AEM Sites.
 1. Lär dig hur du uppdaterar innehåll på webbplatsen.
 1. Lär dig hur du publicerar ändringar på den publicerade webbplatsen.
 
@@ -46,14 +46,14 @@ En webbplats delas vanligtvis upp i sidor för att skapa en flersidig upplevelse
 
 1. Välj **Artikelsida** mall och klicka på **Nästa**.
 
-   Sidor i AEM skapas utifrån en sidmall. Sidmallar utforskas i detalj i [Sidmallar](page-templates.md) kapitel.
+   Sidor i AEM skapas utifrån en sidmall. Sidmallar beskrivs mer ingående i [Sidmallar](page-templates.md) kapitel.
 
-1. Under **Egenskaper** ange **Titel** &quot;Hello World&quot;.
+1. Under **Egenskaper** ange en **Titel** &quot;Hello World&quot;.
 1. Ange **Namn** att `hello-world` och klicka **Skapa**.
 
    ![Egenskaper för första sidan](assets/author-content-publish/initial-page-properties.png)
 
-1. Klicka på i popup-fönstret i dialogrutan **Öppna** för att öppna den nya sidan.
+1. I popup-fönstret i dialogrutan klickar du på **Öppna** för att öppna den nya sidan.
 
 ## Skapa en komponent {#author-component}
 
@@ -64,13 +64,13 @@ AEM innehåller en uppsättning [Kärnkomponenter](https://experienceleague.adob
 Skapa sedan några komponenter med AEM Page Editor.
 
 1. Navigera till **Hello World** sida som skapades i föregående övning.
-1. Se till att du är **Redigera** och i den vänstra sidlisten klickar du på **Komponenter** ikon.
+1. Se till att du är **Redigera** och i den vänstra sidlisten klickar du på **Komponenter** -ikon.
 
    ![Sidredigeringssida](assets/author-content-publish/page-editor-siderail.png)
 
    Komponentbiblioteket öppnas och de tillgängliga komponenter som kan användas på sidan visas.
 
-1. Bläddra nedåt och **Dra och släpp** a **Text (v2)** till det redigerbara huvudområdet på sidan.
+1. Rulla ned och **Dra och släpp** a **Text (v2)** till det redigerbara huvudområdet på sidan.
 
    ![Dra och släpp textkomponent](assets/author-content-publish/drag-drop-text-cmp.png)
 
@@ -89,11 +89,11 @@ Skapa sedan några komponenter med AEM Page Editor.
 
 1. Observera att det finns komponenter på sidan, som **Titel**, **Navigering**, **Sök** som är fasta. De här områdena är konfigurerade som en del av sidmallen och kan inte ändras på en enskild sida. Detta beskrivs mer i nästa kapitel.
 
-Experimentera med några andra komponenter. Dokumentation om varje [Kärnkomponenten finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). En detaljerad videoserie om [Här finns sidredigering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
+Experimentera fritt med några andra komponenter. Dokumentation om varje [Kärnkomponenten finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). En detaljerad videoserie om [Här finns sidredigering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 
 ## Publicera uppdateringar {#publish-updates}
 
-AEM miljöer delas mellan **Författartjänst** och **Publiceringstjänst**. I det här kapitlet har vi gjort flera ändringar av webbplatsen på **Författartjänst**. För att webbplatsbesökarna ska kunna se ändringarna måste vi publicera dem på **Publiceringstjänst**.
+AEM-miljöer delas mellan **Författartjänst** och **Publiceringstjänst**. I det här kapitlet har vi gjort flera ändringar av webbplatsen på **Författartjänst**. För att webbplatsbesökarna ska kunna se ändringarna måste vi publicera dem på **Publiceringstjänst**.
 
 ![Högnivådiagram](assets/author-content-publish/author-publish-high-level-flow.png)
 
@@ -125,7 +125,7 @@ Nu ska vi publicera ändringarna.
 
    ![Publiceringsreferenser](assets/author-content-publish/publish-references.png)
 
-1. Markera kryssrutan intill **WKND-plats** och klicka **Nästa** i det övre högra hörnet.
+1. Markera kryssrutan intill **WKND-plats** och klicka **Nästa** längst upp till höger.
 1. I **Arbetsflöden** steg, ange **Arbetsflödets titel**. Detta kan vara vilken text som helst och kan vara användbart som en del av en granskningsversion senare. Ange&quot;Inledande publicering&quot; och klicka på **Publicera**.
 
 ![Inledande publicering av arbetsflödessteg](assets/author-content-publish/workflow-step-publish.png)
@@ -134,7 +134,7 @@ Nu ska vi publicera ändringarna.
 
 Navigera sedan till Publicera-tjänsten för att visa ändringarna.
 
-1. Ett enkelt sätt att hämta URL:en för publiceringstjänsten är att kopiera författar-URL:en och ersätta `author` ord med `publish`. Till exempel:
+1. Ett enkelt sätt att hämta URL:en för publiceringstjänsten är att kopiera författarens URL och ersätta `author` ord med `publish`. Till exempel:
 
    * **Författar-URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **Publicera URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
@@ -143,21 +143,21 @@ Navigera sedan till Publicera-tjänsten för att visa ändringarna.
 
    >[!NOTE]
    >
-   > Ändra `wknd.html` för att matcha namnet på din webbplats, om du angav ett unikt namn under [webbplatsskapande](create-site.md).
+   > Ändra `wknd.html` för att matcha namnet på din webbplats, om du angav ett unikt namn under [webbplatsgenerering](create-site.md).
 
-1. Navigera till publicerings-URL:en som du vill visa webbplatsen utan någon AEM redigeringsfunktion.
+1. Navigera till publicerings-URL:en som du vill ska se webbplatsen, utan någon AEM redigeringsfunktion.
 
    ![Publicerad webbplats](assets/author-content-publish/publish-url-update.png)
 
 1. Använda **Navigering** meny klicka **Artikel** > **Hello World** för att navigera till sidan Hello World som skapades tidigare.
-1. Återgå till **AEM Author Service** och gör ytterligare innehållsändringar i sidredigeraren.
+1. Återgå till **AEM författartjänst** och gör ytterligare innehållsändringar i sidredigeraren.
 1. Publicera dessa ändringar direkt inifrån sidredigeraren genom att klicka på **Sidegenskaper** ikon > **Publicera sida**
 
    ![publicera direkt](assets/author-content-publish/page-editor-publish.png)
 
-1. Återgå till **AEM Publish Service** för att visa ändringarna. Troligen kommer du **not** omedelbart se uppdateringarna. Det beror på att **AEM Publish Service** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). Som standard cachelagras HTML innehåll i cirka 5 minuter.
+1. Återgå till **AEM Publiceringstjänst** för att visa ändringarna. Troligen kommer du **not** omedelbart se uppdateringarna. Det beror på att **AEM Publiceringstjänst** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). Som standard cachelagras HTML innehåll i cirka 5 minuter.
 
-1. Om du vill kringgå cacheminnet för testning/felsökning lägger du bara till en frågeparameter som `?nocache=true`. URL:en ser ut så här `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. Mer information om cachningsstrategi och tillgängliga konfigurationer [finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
+1. Om du vill kringgå cacheminnet för testnings-/felsökningsändamål lägger du bara till en frågeparameter som `?nocache=true`. URL:en ser ut så här `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. Mer information om cachningsstrategi och tillgängliga konfigurationer [finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
 
 1. Du kan också hitta URL:en till publiceringstjänsten i Cloud Manager. Navigera till **Cloud Manager-program** > **Miljö** > **Miljö**.
 
@@ -171,8 +171,8 @@ Grattis! Du har just skrivit och publicerat ändringar på din AEM webbplats!
 
 ### Nästa steg {#next-steps}
 
-I en implementeringsplanering i verkligheten kommer en webbplats med dummies och gränssnittsdesign vanligtvis före webbplatsskapandet. Läs om hur Adobe XD UI Kits kan användas för att utforma och snabba upp Adobe Experience Manager Sites-implementeringen i [UI-planering med Adobe XD](./ui-planning-adobe-xd.md).
+I en implementeringsplanering i verkligheten kommer en webbplats med dummies och gränssnittsdesign vanligtvis före webbplatsskapandet. Läs om hur Adobe XD UI Kits kan användas för att designa och snabba upp Adobe Experience Manager Sites-implementeringen i [UI-planering med Adobe XD](./ui-planning-adobe-xd.md).
 
-Vill du fortsätta utforska AEM Sites funktioner? Gå direkt till kapitlet om [Sidmallar](./page-templates.md) om du vill veta mer om förhållandet mellan en sidmall och en sida.
+Vill du fortsätta utforska AEM Sites funktioner? Gå direkt in i kapitlet om [Sidmallar](./page-templates.md) om du vill veta hur en sidmall och en sida fungerar.
 
 

@@ -1,12 +1,8 @@
 ---
 title: Skapa en taggegenskap
 description: Lär dig hur du skapar en taggegenskap med lägsta möjliga konfiguration som kan integreras med AEM. Användare introduceras i tagggränssnittet och får lära sig mer om tillägg, regler och publiceringsarbetsflöden.
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5980
+jira: KT-5980
 thumbnail: 38553.jpg
 topic: Integrations
 feature: Integrations
@@ -14,8 +10,9 @@ role: Developer
 level: Intermediate
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
@@ -32,7 +29,7 @@ Lär dig hur du skapar en taggegenskap med lägsta möjliga konfiguration som ka
 
 Om du vill skapa en taggegenskap följer du de här stegen.
 
-1. Navigera till [Adobe Experience Cloud Home](https://experience.adobe.com/) och logga in med Adobe ID.
+1. I webbläsaren går du till [Adobe Experience Cloud Home](https://experience.adobe.com/) och logga in med Adobe ID.
 
 1. Klicka på **Datainsamling** från _Snabb åtkomst_ på Adobe Experience Cloud hemsida.
 
@@ -75,7 +72,7 @@ Egenskapen Tagg _Regler_ aktiveras med ett bibliotek, tänk på biblioteket som 
 
 1. Klicka **Publiceringsflöde** från _PUBLICERING_ till vänster och klicka sedan på **Lägg till bibliotek**
 
-1. Namnge biblioteket med **Namn** fält och markera _Utveckling_ alternativ för **Miljö** listruta.
+1. Namnge biblioteket med **Namn** fält och markera _Utveckling_ alternativ för **Miljö** nedrullningsbar meny.
 
 1. Om du vill välja alla ändrade resurser sedan taggegenskapen skapades klickar du på **+ Lägg till alla ändrade resurser**. Den här åtgärden lägger till den nya regeln och kärntilläggsresursen i biblioteket. Klicka till sist **Spara och bygg till utveckling**.
 

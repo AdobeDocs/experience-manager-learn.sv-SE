@@ -5,12 +5,13 @@ topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
-kt: 7634
+jira: KT-7634
 thumbnail: kt-7634.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
+doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -163,12 +164,12 @@ The `Home.js` filen ska se ut så här:
 
 ## Skapa komponenten Title i AEM
 
-1. Logga in på AEM Author
+1. Logga in på AEM författare
 1. Navigera till __Sites > WKND App__
 1. Tryck __Startsida__ och markera __Redigera__ i det övre åtgärdsfältet
 1. Välj __Redigera__ i redigeringslägesväljaren längst upp till höger i sidredigeraren
 1. Håll muspekaren över standardtexten under WKND-logotypen och ovanför äventyrslistan tills den blå redigeringsramen visas
-1. Tryck för att visa komponentens åtgärdsfält och tryck sedan på __wrench__  redigera
+1. Tryck för att visa komponentens åtgärdsfält och tryck sedan på __wrench__  för att redigera
 
    ![Åtgärdsfält för titelkomponent](./assets/spa-fixed-component/title-action-bar.png)
 
@@ -176,7 +177,7 @@ The `Home.js` filen ska se ut så här:
    + Titel: __WKND-annonser__
    + Typ/storlek: __H2__
 
-      ![Dialogrutan Titelkomponent](./assets/spa-fixed-component/title-dialog.png)
+     ![Dialogrutan Titelkomponent](./assets/spa-fixed-component/title-dialog.png)
 
 1. Tryck __Klar__ spara
 1. Förhandsgranska ändringarna i AEM SPA

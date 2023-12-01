@@ -1,14 +1,15 @@
 ---
 title: Använda Brand Portal
-description: Videogenomgång av integrationen mellan AEM Author och AEM Assets Brand Portal.
+description: Videogenomgångar av integrationen mellan AEM författare och AEM Assets Brand Portal.
 feature: Brand Portal
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-15T00:00:00Z
+doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -71,10 +72,10 @@ På samma sätt kan du ange:
 Administratörer kan nu konfigurera hur mapparna visas för icke-adminanvändare (redigerare, visningsprogram och gästanvändare) vid inloggning.
 [Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) -konfigurationen läggs till i Allmänna inställningar på panelen Administrationsverktyg. Om konfigurationen är:
 
-* Aktiverat är mappträdet som börjar från rotmappen synligt för icke-adminanvändare. Det innebär att de får en navigeringsupplevelse som liknar administratörerna.
+* Aktiverat är det mappträd som börjar från rotmappen synligt för användare som inte är administratörer. Det innebär att de får en navigeringsupplevelse som liknar administratörerna.
 * Inaktiverat visas bara de delade mapparna på landningssidan.
 
-[Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) (när den är aktiverad) hjälper dig att skilja mappar med samma namn som delas från olika hierarkier åt. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
+[Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) om funktionen är aktiverad kan du skilja mappar åt med samma namn som delas från olika hierarkier. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
 
 De delade mapparna ordnas i respektive katalog i virtuella mappar. Du känner igen dessa virtuella mappar med en låsikon.
 
@@ -82,7 +83,7 @@ Observera att standardminiatyrbilden för de virtuella mapparna är miniatyrbild
 
 ### Stöd för videoåtergivningar från Dynamic Media
 
-Användare vars AEM Author-instans är i hybridläget Dynamic Media kan förhandsgranska och hämta de dynamiska medieåtergivningarna, utöver de ursprungliga videofilerna.
+Användare vars AEM Author-instans är i hybridläget Dynamic Media kan förhandsgranska och hämta de dynamiska medieåtergivningarna, förutom de ursprungliga videofilerna.
 
 Om du vill tillåta förhandsgranskning och hämtning av dynamiska medierenderingar på specifika klientkonton måste administratörer ange Dynamic Media Configuration (URL för videotjänst (DM-Gateway-URL) och registrerings-ID för att hämta den dynamiska videon) i videokonfigurationen från panelen Administrationsverktyg.
 
@@ -90,7 +91,7 @@ Dynamic Media videor kan förhandsgranskas på:
 
 * Sidan Resursinformation
 * Resursvy
-* Förhandsgranska länkdelning
+* Förhandsgranskning av länkresurs
 
 Dynamic Media Video encodes kan laddas ned från:
 
@@ -105,14 +106,14 @@ Publicerade resurser kan också tas bort från portalen vid ett senare datum (ti
 
 ### Konfigurerbart klientalias i URL
 
-Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i deras befintliga portal-URL måste man kontakta supporten för Adobe.
+Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i den befintliga portalwebbadressen måste man kontakta supporten för Adobe.
 
 Observera att endast prefixet för Brand Portal URL kan anpassas och inte hela URL:en.
-En organisation med en befintlig domän `wknd.brand-portal.adobe.com` kan få `wkndinc.brand-portal.adobe.com` skapad på begäran.
+Exempel: en organisation med befintlig domän `wknd.brand-portal.adobe.com` kan få `wkndinc.brand-portal.adobe.com` skapad på begäran.
 
-AEM Author-instansen kan dock vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) endast med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
+AEM författarinstans kan dock vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) endast med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
 
-**Använd skiftläge** : Man kan anpassa portalens URL istället för att följa Adobe:s webbadress.
+**Använd skiftläge** : Organisationer kan anpassa portalens URL-adress istället för att följa den URL-adress som Adobe tillhandahåller.
 
 ## Brand Portal December 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-642}
 
@@ -126,7 +127,7 @@ AEM Brand-portalen ger gäster åtkomst till portalen. En gästanvändare behöv
 
 Brand Portal-användare kan utnyttja Aspera-baserade snabba nedladdningar för att få upp till 25 gånger snabbare och få en smidig nedladdningsupplevelse oavsett var i världen de befinner sig. Om du vill hämta resurserna snabbare från Brand Portal eller via en delad länk måste du välja alternativet Aktivera acceleration för hämtning i hämtningsdialogrutan, förutsatt att hämtningsacceleration är aktiverat i organisationen.
 
-* [Guide för att snabba upp nedladdningar från Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
+* [Guide för snabbare nedladdning från Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Aspera Connect Test Server](https://test-connect.asperasoft.com/)
 
 ### Rapport om användarinloggning
@@ -147,12 +148,12 @@ Sex nya konfigurationer har lagts till för administratörer för att aktivera/i
 * Tillåt användare att begära åtkomst till Brand Portal
 * Tillåt administratörer att ta bort resurser från Brand Portal
 * Tillåt att offentliga samlingar skapas
-* Tillåt skapande av publika smarta samlingar
+* Tillåt att offentliga smarta samlingar skapas
 * Tillåt hämtning av acceleration
 
 ### Andra förbättringar
 
-* *Mapphierarkisökväg för kort- och listvyer* - gör att användare kan se var de mappar som lagras i en Brand Portal-instans finns. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
+* *Mapphierarkisökväg för kort- och listvyer* - gör att användarna kan ta reda på var de mappar som lagras i en Brand Portal-instans finns. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
 * *Alternativet Översikt* — innehåller metadata för andra användare än administratören om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
 
 ### Adobe I/O Värdar-användargränssnittet för att konfigurera autentiseringsintegreringar
@@ -175,7 +176,7 @@ Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 * Med kortvyn, listvyn och kolumnvyn kan du enkelt bläddra bland kapslade mappar.
 * Resurssorteringen i listvyn är inte längre begränsad till antalet resurser som visas på skärmen. Alla resurser i en mapp sorteras.
 
-### Sökförbättringar
+### Förbättrade sökfunktioner
 
 * Med Omnissearch kan du göra en snabb sökning efter resurser och filer i Brand Portal.
 * Det finns även ett alternativ för att söka efter resurser i en viss mapp eller plats
@@ -197,8 +198,8 @@ Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 * Administratörer kan skapa och hantera tre typer av rapporter - resurser som laddats ned, gått ut och publicerats
 * Möjlighet att konfigurera kolumnen som ska inkluderas i rapporten.
 * Skapa bildförinställningar för resurser i Brand Portal.
-* Möjlighet att ändra administratörens sökformulär för e-post eller söka i Forms med ytterligare filtreringsalternativ.
-* Uppdatera och förhandsgranska anpassade skrivbordsunderlägg för ert varumärke
+* Möjlighet att ändra administratörens sökformulär för e-post eller söka i Forms för att inkludera ytterligare filtreringsalternativ.
+* Uppdatera och förhandsgranska anpassade bakgrundsbilder för ert varumärke
 * Använd en rapport om hur många användare, vilket lagringsutrymme som används och totalt antal resurser som används.
 
 ## Ytterligare resurser{#additional-resources}

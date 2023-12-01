@@ -2,15 +2,12 @@
 title: Smart bildbehandling
 description: Smart Imaging i Dynamic Media Classic förbättrar bildhanteringen genom att automatiskt optimera bildformat och bildkvalitet baserat på webbläsarens funktioner. Det gör man genom att utnyttja Adobe Sensei AI-funktioner och arbeta med befintliga bildförinställningar. Läs mer om Smart Imaging och hur ni kan använda det för att erbjuda bättre kundupplevelser genom snabbare sidladdning.
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, renditions, images
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%
@@ -47,7 +44,7 @@ Smart bildbehandling fungerar med bilder som levereras via HTTP, HTTPS och HTTP/
 >
 >Om du går över till Smart Imaging rensas cacheminnet vid CDN:n. Cacheminnet i CDN byggs vanligtvis upp igen inom en eller två dagar.
 
-Smart Imaging ingår i din befintliga licens av Dynamic Media Classic. Det finns inga extra kostnader för den här funktionen. Du måste uppfylla två krav för att kunna utnyttja det: har ett CDN-paket i Adobe och en dedikerad domän. Sedan måste du aktivera det för ditt konto eftersom det inte aktiveras automatiskt.
+Smart Imaging ingår i din befintliga licens av Dynamic Media Classic. Det finns inga extra kostnader för den här funktionen. För att kunna dra nytta av det måste du uppfylla två krav: ha ett CDN-paket i Adobe och en dedikerad domän. Sedan måste du aktivera det för ditt konto eftersom det inte aktiveras automatiskt.
 
 Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa ett supportärende| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Support kommer att fungera tillsammans med dig för att konfigurera en anpassad domän som du ska associera med Smart Imaging. Du ändrar en parameter som är relaterad till cachelagring (Time To Live, eller TTL) och stödet rensar cachen. Du kan också göra ett valfritt mellanlagringssteg om du vill innan du går till produktion. När Smart Imaging sedan är aktiverat kan du leverera bilder i mindre storlek till kunderna, men med samma kvalitet som de önskade. Det innebär att de får snabbare sidladdning - och allt detta görs automatiskt eftersom Adobe Sensei hjälper dem att välja den mest effektiva storleken.
 

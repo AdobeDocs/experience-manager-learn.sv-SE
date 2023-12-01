@@ -1,15 +1,15 @@
 ---
 title: Vad är databasstrukturpaketet i ett AEM projekt?
-description: Utforska ett AEM databaskaket, dess betydelse och hur du definierade det korrekt.
+description: Utforska ett AEM databaskaket, dess betydelse och hur du definierade det på rätt sätt.
 role: Developer
 level: Beginner
 type: Tutorial
 topic: Development
 feature: AEM Project Archetype
-kt: 6928
+jira: KT-6928
 thumbnail: 330550.jpg
 exl-id: af0da906-87ea-4b52-9c9c-343fb29d3fcc
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

@@ -8,8 +8,8 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Developer Tools
-kt: 14581
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+jira: KT-14581
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%

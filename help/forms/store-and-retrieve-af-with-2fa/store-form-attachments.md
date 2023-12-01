@@ -4,13 +4,13 @@ description: Extrahera formulärbilagorna och lagra dem på en ny plats i CRX-da
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6537
+jira: KT-6537
 thumbnail: 6537.jpg
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%

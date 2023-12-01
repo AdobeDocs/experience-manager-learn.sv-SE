@@ -4,13 +4,13 @@ description: Skapa en datakälla som pekar på MySQL-databasen
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
-kt: 6541
+jira: KT-6541
 thumbnail: 6541.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
-source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

@@ -3,14 +3,14 @@ title: Definiera modeller för innehållsfragment - Komma igång med AEM Headles
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig modellera innehåll och skapa ett schema med Content Fragment Models i AEM. Granska befintliga modeller och skapa en modell. Lär dig mer om de olika datatyper som kan användas för att definiera ett schema.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6712
+jira: KT-6712
 thumbnail: 22452.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: 25c289b093297e870c52028a759d05628d77f634
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1115'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Definiera modeller för innehållsfragment {#content-fragment-models}
 
-I det här kapitlet får du lära dig att modellera innehåll och skapa ett schema med **Modeller för innehållsfragment**. Du lär dig mer om de olika datatyper som kan användas för att definiera ett schema som en del av modellen.
+Läs om hur du modellerar innehåll och skapar ett schema med **Modeller för innehållsfragment**. Du lär dig mer om de olika datatyper som kan användas för att definiera ett schema som en del av modellen.
 
 Vi skapar två enkla modeller, **Team** och **Person**. The **Team** datamodellen har namn, kort namn, beskrivning och referenser till **Person** datamodell med fullständigt namn, bioinformation, profilbild och yrkeslista.
 
@@ -67,7 +67,7 @@ Skapa en modell för en **Person**, som är datamodellen som representerar en pe
 
 1. Navigera till **Mitt projekt** mapp.
 1. Tryck **Skapa** i det övre högra hörnet för att visa **Skapa modell** guide.
-1. I **Modelltitel** fält, ange **Person** och trycka **Skapa**. Tryck på **Öppna**, för att bygga modellen.
+1. I **Modelltitel** fält, ange **Person** och knacka **Skapa**. Tryck på **Öppna**, för att bygga modellen.
 
 1. Dra och släpp en **Enkelradig text** till huvudpanelen. Ange följande egenskaper på **Egenskaper** tab:
 
@@ -118,7 +118,7 @@ Skapa en modell för en **Person**, som är datamodellen som representerar en pe
 Skapa en modell för en **Team**, som är datamodellen för ett team med människor. Teammodellen refererar till personmodellen för att representera teamets medlemmar.
 
 1. I **Mitt projekt** mapp, tryck **Skapa** i det övre högra hörnet för att visa **Skapa modell** guide.
-1. I **Modelltitel** fält, ange **Team** och trycka **Skapa**.
+1. I **Modelltitel** fält, ange **Team** och knacka **Skapa**.
 
    Tryck **Öppna** i den dialogruta som visas när du vill öppna den nya modellen.
 
@@ -137,7 +137,7 @@ Skapa en modell för en **Team**, som är datamodellen för ett team med männis
    * Under, **Valideringstyp** > välja **Egen**
    * Under, **Anpassad valideringsregion** > ange `^[a-z0-9\-_]{5,40}$` - detta garanterar att endast alfanumeriska gemener och bindestreck mellan 5 och 40 tecken kan anges.
 
-   The `shortName` -egenskapen är ett sätt att fråga ett enskilt team baserat på en förkortad sökväg. The **Unik** inställningen ser till att värdet alltid är unikt för den här modellens innehållsfragment.
+   The `shortName` -egenskapen är ett sätt att fråga ett enskilt team baserat på en förkortad sökväg. The **Unik** inställningen ser till att värdet alltid är unikt per innehållsfragment för den här modellen.
 
 1. Tryck på **Datatyper** och dra och släppa **Flerradstext** fält under **Kortnamn** fält. Ange följande egenskaper:
 
@@ -162,13 +162,13 @@ Skapa en modell för en **Team**, som är datamodellen för ett team med männis
 
    ![Två modeller](assets/content-fragment-models/two-new-models.png)
 
-## Publicera projektkonfigurationer och modeller för innehållsfragment
+## Publicera projektkonfigurationer och innehållsfragmentmodeller
 
 Publicera `Project Configuration` &amp; `Content Fragment Model`
 
 1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
-1. Tryck på kryssrutan bredvid **Mitt projekt** och trycka **Publicera**
+1. Tryck på kryssrutan bredvid **Mitt projekt** och knacka **Publicera**
 
    ![Publicera projektkonfiguration](assets/content-fragment-models/publish-project-config.png)
 
@@ -186,7 +186,7 @@ Grattis! Du har precis skapat dina första modeller för innehållsfragment!
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel [Skapa modeller för innehållsfragment](author-content-fragments.md)skapar och redigerar du ett nytt innehållsfragment baserat på en modell för innehållsfragment. Du får även lära dig hur du skapar varianter av innehållsfragment.
+I nästa kapitel [Skapa modeller för innehållsfragment](author-content-fragments.md)skapar och redigerar du ett nytt innehållsfragment baserat på en innehållsfragmentmodell. Du får även lära dig hur du skapar varianter av innehållsfragment.
 
 ## Relaterad dokumentation
 

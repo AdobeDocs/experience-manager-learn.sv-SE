@@ -7,8 +7,9 @@ feature: Asset Distribution
 role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
+doc-type: Feature Video
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%

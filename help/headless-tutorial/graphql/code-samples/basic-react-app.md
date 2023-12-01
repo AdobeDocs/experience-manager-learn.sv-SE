@@ -7,13 +7,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-kt: 11134
+jira: KT-11134
 thumbnail: KT-11134.jpg
 index: false
 hide: true
 hidefromtoc: true
 exl-id: 870be37f-68bb-4b0f-9918-e68b09be830e
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Detta [Reagera](https://reactjs.org/) app visar hur du kan fråga efter innehål
 
 Den här koden:
 
-+ Ansluter till en AEM Publish-tjänst och kräver ingen autentisering
++ Ansluter till en AEM-publiceringstjänst och kräver ingen autentisering
 + Använder WKND:s beständiga frågor: `wknd-shared/adventures-all` och `wknd-shared/adventures-by-slug`
 
 Om du vill ha en mer detaljerad genomgång av hur den här appen Next.js byggs kan du gå igenom [exempel Reagera-appdokumentation](../example-apps/react-app.md).

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: AEM Project Archetype
-kt: 9534
+jira: KT-9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Följande steg har utförts för att migrera projektet som skapats med arkivtyp 
 
 ## Skapa maven-projekt med den senaste arkitypen
 
-* Öppna kommandotolken och gå till c:\cloudmanager
+* Öppna kommandotolken och navigera till c:\cloudmanager
 * Skapa maven-projekt med den senaste arkitypen.
 * Kopiera och klistra in innehållet i [textfil](assets/creating-maven-project.txt) i kommandotolken. Du kan behöva ändra DarchetypeVersion=33 beroende på [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Arketypen 33 innehåller nya AEM Forms-teman.
 Eftersom vi skapar det nya maven-projektet i molnhanterarmappen som redan har ett aem-Banking-applikationsprojekt, bör du ändra **DartifactId** från aem-Banking till något annat. Jag har använt aem-Banking-application1 för den här artikeln.

@@ -3,13 +3,14 @@ title: Integrera en SPA | Komma igång med AEM SPA Editor och React
 description: Förstå hur källkoden för ett Single Page-program (SPA) skrivet i React kan integreras med ett Adobe Experience Manager (AEM)-projekt. Lär dig använda moderna front end-verktyg, som en webpack-dev-server, för att snabbt utveckla SPA mot AEM JSON-modell-API:t.
 feature: SPA Editor
 version: Cloud Service
-kt: 4853
+jira: KT-4853
 thumbnail: 4853-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
+doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 0%
@@ -29,7 +30,7 @@ Förstå hur källkoden för ett Single Page-program (SPA) skrivet i React kan i
 ## Vad du ska bygga
 
 I det här kapitlet gör du flera små ändringar av SPA för att förstå hur den är integrerad med AEM.
-I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att bygga ut **static** `Header` flera metoder AEM utveckling av SPA används.
+I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att bygga ut **static** `Header` flera metoder för AEM SPA.
 
 ![Nytt sidhuvud i AEM](./assets/integrate-spa/final-header-component.png)
 
@@ -37,13 +38,13 @@ I det här kapitlet kommer ett enkelt `Header` till SPA. Under arbetet med att b
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Detta kapitel är en fortsättning på [Skapa projekt](create-project.md) för att följa med i det hela behöver du ett fungerande SPA-aktiverat AEM.
+Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Det här kapitlet är en fortsättning på [Skapa projekt](create-project.md) för att följa med i det hela behöver du ett fungerande SPA-aktiverat AEM.
 
 ## Integreringsmetod {#integration-approach}
 
 Två moduler skapades som en del av AEM: `ui.apps` och `ui.frontend`.
 
-The `ui.frontend` modulen är en [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning görs i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
+The `ui.frontend` modulen är [webbpaket](https://webpack.js.org/) projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning görs i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till `ui.apps` som sedan distribueras till AEM.
 
 ![ui.frontHigh-level architecture](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -53,9 +54,9 @@ Ytterligare information om Front-end-bygget kan [hittades här](https://experien
 
 ## Integreringen av Inspect SPA {#inspect-spa-integration}
 
-Kontrollera sedan `ui.frontend` för att förstå SPA som har genererats automatiskt av [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+Kontrollera sedan `ui.frontend` för att förstå SPA som har genererats automatiskt av [AEM projekttyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
 
-1. Öppna AEM i den utvecklingsmiljö du valt. Den här självstudiekursen använder [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. I den utvecklingsmiljö du väljer öppnar du AEM. Den här självstudiekursen använder [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -98,7 +99,7 @@ Kontrollera sedan `ui.frontend` för att förstå SPA som har genererats automat
 
 1. Inspect filen `ui.frontend/clientlib.config.js`. Den här konfigurationsfilen används av [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) för att avgöra hur klientbiblioteket ska genereras.
 
-1. Inspect filen `ui.frontend/pom.xml`. Den här filen omvandlar `ui.frontend` mapp till en [Maven module](https://maven.apache.org/guides/mini/guide-multiple-modules.html). The `pom.xml` filen har uppdaterats för att använda [front-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) till **test** och **bygga** SPA under en Maven-byggnad.
+1. Inspect filen `ui.frontend/pom.xml`. Den här filen omvandlar `ui.frontend` mapp till en [Maven module](https://maven.apache.org/guides/mini/guide-multiple-modules.html). The `pom.xml` filen har uppdaterats för att använda [front-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) till **test** och **bygg** SPA under en Maven-byggnad.
 
 1. Inspect filen `index.js` på `ui.frontend/src/index.js`:
 
@@ -327,7 +328,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan anv
 
 ## Distribuera SPA uppdateringar till AEM
 
-Ändringarna i `Header` är för närvarande bara synliga genom **webpack-dev-server**. Distribuera den uppdaterade SPA för att AEM se ändringarna.
+De ändringar som gjorts i `Header` är för närvarande bara synliga genom **webpack-dev-server**. Distribuera den uppdaterade SPA för att AEM se ändringarna.
 
 1. Navigera till projektets rot (`aem-guides-wknd-spa`) och distribuera projektet till AEM med hjälp av Maven:
 

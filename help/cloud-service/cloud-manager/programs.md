@@ -6,14 +6,14 @@ audience: administrator
 doc-type: feature video
 activity: use
 version: Cloud Service
-kt: 6845
+jira: KT-6845
 thumbnail: 26313.jpg
 topic: Architecture
 feature: Cloud Manager, Production Programs, Sandbox Programs
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%

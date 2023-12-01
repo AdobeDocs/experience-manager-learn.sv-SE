@@ -9,8 +9,9 @@ level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
 last-substantial-update: 2022-06-13T00:00:00Z
+doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 1%
@@ -31,7 +32,7 @@ Lär dig hur du använder metadatafunktionerna för import och export i Adobe Ex
 
 >[!NOTE]
 >
-> När du förbereder en CSV-fil för import är det enklare att generera en CSV-fil med resurslistan med hjälp av funktionen för export av metadata. Du kan sedan ändra den genererade CSV-filen och importera den med importfunktionen.
+> När du förbereder en CSV-fil för import är det enklare att generera en CSV-fil med resurslistan med hjälp av funktionen för export av metadata. Du kan sedan ändra den genererade CSV-filen och importera den med hjälp av importfunktionen.
 
 ## CSV-filformat för metadata {#metadata-file-format}
 

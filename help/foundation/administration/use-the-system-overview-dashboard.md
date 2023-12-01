@@ -1,18 +1,14 @@
 ---
 title: Använda kontrollpanelen för systemöversikt i AEM
-description: I tidigare versioner av AEM behövde administratörer undersöka flera olika platser för att få en fullständig bild av den AEM instansen. Syftet med systemöversikten är att lösa detta genom att tillhandahålla en översikt över konfiguration, maskinvara och hälsa för den AEM instansen från en enda kontrollpanel.
+description: I tidigare versioner av AEM behövde administratörer undersöka flera olika platser för att få en fullständig bild av AEM. Syftet med systemöversikten är att lösa detta genom att tillhandahålla en översikt över konfiguration, maskinvara och hälsa för den AEM instansen från en enda kontrollpanel.
 version: 6.4, 6.5
-topics: administration, operations, monitoring
 feature: Operations
-activity: use
-audience: administrator, architect, developer, implementer
-doc-type: technical video
-contentOwner: dgordon
+doc-type: Technical Video
 topic: Administration
 role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 # Använda kontrollpanelen för systemöversikt
 
-Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för AEM från en enda kontrollpanel.
+Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för den AEM instansen från en enda kontrollpanel.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
@@ -30,7 +26,7 @@ Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt öv
    Direkt vid **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
 1. Information från [!UICONTROL System Overview] kan exporteras genom att klicka på [!UICONTROL Download] -knappen. Informationen visas också via följande [!DNL REST] slutpunkt:
-1. Nedan visas ett exempel på JSON som exporteras från [!UICONTROL System Overview]:
+1. Nedan visas ett exempel på JSON-utdata som exporteras från [!UICONTROL System Overview]:
 
    ```json
    {

@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-08-14T00:00:00Z
-kt: 13781
+jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%

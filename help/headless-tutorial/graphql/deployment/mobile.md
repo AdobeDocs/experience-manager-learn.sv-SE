@@ -6,10 +6,10 @@ feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
 level: Intermediate
-kt: 10796
+jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Mobila distributioner kräver minimal konfiguration eftersom HTTP-anslutningar t
 
 Följande distributionskonfiguration måste finnas på plats för mobilappsdistributioner.
 
-| Mobilappen ansluter till | AEM Author | AEM Publish | AEM |
+| Mobilappen ansluter till | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |

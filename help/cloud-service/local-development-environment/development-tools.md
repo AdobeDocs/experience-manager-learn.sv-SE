@@ -3,14 +3,14 @@ title: Konfigurera utvecklingsverktygen för AEM as a Cloud Service utveckling
 description: Konfigurera en lokal utvecklingsmaskin med alla grundläggande verktyg som behövs för att utveckla mot AEM lokalt.
 feature: Developer Tools
 version: Cloud Service
-kt: 4267
+jira: KT-4267
 thumbnail: 25907.jpg
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 0%

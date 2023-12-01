@@ -1,5 +1,5 @@
 ---
-title: Handbok för Adobe Managed Services Dispatcher
+title: Adobe Managed Services Dispatcher-handbok
 description: AMS-processer för att få rätt support för Dispatcher-konfigurationen.
 version: 6.5
 topic: Administration, Performance, Security
@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Catalog
 exl-id: 4f72d010-f488-490a-83fb-38ff1b1e8183
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 3%

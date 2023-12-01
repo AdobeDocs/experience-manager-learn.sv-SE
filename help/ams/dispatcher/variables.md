@@ -7,8 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
+doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 I det här dokumentet beskrivs hur du kan utnyttja variablerna på webbservern i Apache och i konfigurationsfilerna för modulen Dispatcher.
 
-## Variabler
+## Variabel
 
 Apache har stöd för variabler och sedan version 4.1.9 av modulen Dispatther har det också stöd för dem!
 
@@ -54,7 +55,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### Exempel 1 - Tvinga SSL
 
-Variablerna ovan `AUHOR_FORCE_SSL`, eller `PUBLISH_FORCE_SSL` kan ställas in på 1 för att koda om omskrivningsregler som tvingar slutanvändare när de kommer in på http-begäran att omdirigeras till https
+Variablerna som visas ovan `AUHOR_FORCE_SSL`, eller `PUBLISH_FORCE_SSL` kan ställas in på 1 för att koda om omskrivningsregler som tvingar slutanvändare när de kommer in på http-begäran att omdirigeras till https
 
 Här är konfigurationsfilens syntax som gör att den här växlingen fungerar:
 
@@ -124,7 +125,7 @@ Här är några syntaxexempel på hur variabeln aktiverar inkluderingen av vitli
 
 Som du kan se `sample_whitelist.rules` tvingar IP-begränsningen men om variabeln växlas kan den inkluderas i `sample.vhost`
 
-## Variabler
+## Var variablerna ska placeras
 
 ### Startargument för webbserver
 
@@ -210,7 +211,7 @@ Om `RUNMODE` värdet är `preview` så är filen som används:
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
-När den filen inkluderas kan vi använda de variabelnamn som lagrats i den.
+När den filen inkluderas kan vi använda de variabelnamn som finns lagrade i den.
 
 I vår `/etc/httpd/conf.d/available_vhosts/weretail.vhost` kan vi byta ut den normala syntaxen som bara fungerade för dev:
 
@@ -242,7 +243,7 @@ Med en nyare syntax som utnyttjar kraften i variabler för att arbeta med dev, s
 "${WERETAIL_ALT_DOMAIN}"
 ```
 
-Dessa variabler har en enorm mängd återanvändning för att anpassa körningsinställningar utan att behöva ha olika distribuerade filer per miljö.  Du kan i stort sett mallanpassa konfigurationsfilerna med hjälp av variabler och inkludera filer som är baserade på variabler.
+Dessa variabler har en enorm mängd återanvändning för att anpassa körningsinställningar utan att behöva ha olika distribuerade filer per miljö.  Du kan i stort sett mallanpassa dina konfigurationsfiler med hjälp av variabler och inkludera filer som är baserade på variabler.
 
 ## Visa variabelvärden
 
@@ -264,7 +265,7 @@ Hur variablerna såg ut i den kompilerade Dispatcher-konfigurationen:
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
 ```
 
-Från utdata från kommandona ser du skillnaderna mellan variabeln i konfigurationsfilen och den kompilerade utskriften.
+Från utdata från kommandona ser du skillnaderna mellan variabeln i config-filen och den kompilerade utskriften.
 
 Exempelkonfiguration
 
@@ -272,7 +273,7 @@ Exempelkonfiguration
 
 ```
 <VirtualHost *:80> 
-	DocumentRoot	${PUBLISH_DOCROOT} 
+    DocumentRoot    ${PUBLISH_DOCROOT} 
 ```
 
 Kör nu kommandona för att se kompilerade utdata

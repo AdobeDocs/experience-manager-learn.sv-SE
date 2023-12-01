@@ -1,17 +1,14 @@
 ---
 title: Anpassa komponentikoner i Adobe Experience Manager Sites
-description: Med komponentikoner kan man snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
-topics: components
-audience: administrator, developer
-doc-type: technical video
-activity: develop
+description: Med komponentikoner kan författare snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
 version: 6.4, 6.5
 feature: Core Components
 topic: Development
 role: User
 level: Intermediate
+doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -20,7 +17,7 @@ ht-degree: 0%
 
 # Anpassa komponentikoner {#developing-component-icons-in-aem-sites}
 
-Med komponentikoner kan man snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
+Med komponentikoner kan författare snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
 

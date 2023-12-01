@@ -6,11 +6,12 @@ topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate, Experienced
-kt: 6265
+jira: KT-6265
 thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
+doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -35,7 +36,7 @@ I den här självstudiekursen ska vi utforska olika alternativ för att utöka d
 
 ## Förutsättningar {#prerequisites}
 
-A **lokal utvecklingsmiljö** är nödvändigt för att slutföra den här självstudiekursen. Skärmbilder och video hämtas med AEM as a Cloud Service SDK som körs på en macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
+A **lokal utvecklingsmiljö** är nödvändigt för att slutföra den här självstudien. Skärmbilder och video hämtas med AEM as a Cloud Service SDK som körs på en macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
 
 **Är du inte AEM as a Cloud Service?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
@@ -86,7 +87,7 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
 
 Om du vill mata in data om komponenten i datalagret uppdaterar vi först komponentens Sling Model. Uppdatera sedan Bylines Java™-gränssnitt och Sling Model-implementering till en ny metod `getData()`. Den här metoden innehåller de egenskaper som ska injiceras i datalagret.
 
-1. Öppna `aem-guides-wknd` i den utvecklingsmiljö du vill. Navigera till `core` -modul.
+1. Öppna `aem-guides-wknd` -projektet i den utvecklingsmiljö du vill. Navigera till `core` -modul.
 1. Öppna filen `Byline.java` på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
 
    ![Byline Java Interface](assets/adobe-client-data-layer/byline-java-interface.png)
@@ -282,7 +283,7 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
    });
    ```
 
-   Ovanstående metod överför en händelseavlyssnare till datalagret för att avlyssna `cmp:click` -händelsen och anropar `bylineClickHandler`.
+   Ovanstående metod överför en händelseavlyssnare till datalagret för att avlyssna `cmp:click` och anropar `bylineClickHandler`.
 
    >[!CAUTION]
    >
@@ -361,7 +362,7 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
    ```
 
 1. Återgå till utvecklingsmiljön och öppna `byline.html` fil under `ui.apps`
-1. Uppdatera den HTML som ska användas `byline.data.json` för att fylla i `data-cmp-data-layer` attribute:
+1. Uppdatera den HTML som ska användas `byline.data.json` för att fylla `data-cmp-data-layer` attribute:
 
    ```diff
      <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
@@ -412,7 +413,7 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
 ## Ytterligare exempel {#additional-examples}
 
 1. Ett annat exempel på hur du utökar datalagret kan visas genom att undersöka `ImageList` i WKND-kodbasen:
-   * `ImageList.java` - Java-gränssnittet i `core` -modul.
+   * `ImageList.java` - Java i `core` -modul.
    * `ImageListImpl.java` - Sling Model i `core` -modul.
    * `image-list.html` - HTML-mall i `ui.apps` -modul.
 

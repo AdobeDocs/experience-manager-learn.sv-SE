@@ -7,8 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 last-substantial-update: 2022-06-26T00:00:00Z
+doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 0%
@@ -29,7 +30,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 
 ## Funktioner
 
-### Sök och spara
+### Söka och spara
 
 * Utför sökning av Adobe Stock-resurser utan att lämna AEM arbetsyta.
 * Spara Adobe Stock-mediefiler för förhandsgranskning utan att behöva licensiera mediefilen.
@@ -52,13 +53,13 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 ### Filter
 
 * En användare kan filtrera mediefiler baserat på tillgångstyp, orientering och liknande
-* Resurstypen innehåller foton, illustrationer, vektorer, videor, mallar, 3D, Premium, redaktionellt
+* Resurstypen innehåller foton, illustrationer, vektorer, videoklipp, mallar, 3D, Premium, redaktionellt
 * Orienteringen inkluderar Vågrät, Lodrät och Fyrkant.
 * Filtret Visa liknande kräver Adobe Stock-filnummer
 
 ### Åtkomstkontroll
 
-* Administratörer kan ge vissa användare/grupper behörighet att licensiera Stock-resurser när de konfigurerar Adobe Stock molntjänstkonfiguration.
+* Administratörer kan ge vissa användare/grupper behörighet att licensiera mediefiler när de konfigurerar Adobe Stock molntjänst.
 * Om en viss användare/grupp inte har behörighet att licensiera Stock-resurser *Sök efter Stock-resurser/Tillgångslicensiering* Funktionen skulle vara inaktiverad.
 
 ## Konfigurera Adobe Stock med AEM Assets{#set-up-adobe-stock-with-aem-assets}
@@ -87,14 +88,14 @@ I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera 
 3. Navigera till Adobe I/O Console och skapa en ny integration av tjänstkontot för *Adobe Stock*.
 4. Överför certifikatet från steg 2 till Adobe Stock tjänstkontointegration.
 5. Välj den Adobe Stock-profilkonfiguration som krävs och slutför tjänstintegreringen.
-6. Använd integreringsinformationen för att slutföra konfigurationen av det tekniska kontot för Adobe IMS
+6. Använd integreringsinformationen för att slutföra konfigurationen av Adobe IMS Technical Account
 7. Kontrollera att du kan ta emot åtkomsttoken med hjälp av Adobe IMS Technical Account.
 
 ![Adobe IMS Technical Account](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### Konfigurera Adobe Stock-Cloud Services {#set-up-adobe-stock-cloud-services}
+#### Konfigurera Adobe Stock-Cloud Service {#set-up-adobe-stock-cloud-services}
 
-1. Skapa en ny molntjänstkonfiguration för Adobe Stock under **Verktyg > Cloud Services.**
+1. Skapa en ny molntjänstkonfiguration för Adobe Stock under **Verktyg > Cloud Service.**
 2. Välj *Adobe IMS-konfiguration* som skapades i ovanstående avsnitt för *Adobe Stock Cloud* konfiguration
 
 3. Se till att du väljer **MILJÖ** som PROD.

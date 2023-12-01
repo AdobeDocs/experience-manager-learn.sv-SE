@@ -6,10 +6,10 @@ feature: Security
 topic: Development, Security
 role: Architect, Developer
 level: Intermediate
-kt: 9355
+jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste var
 
 Följande kodexempel stöds av följande avancerade nätverksalternativ.
 
-Se till att [lämplig](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
+Kontrollera att [lämplig](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -35,7 +35,7 @@ Se till att [lämplig](../advanced-networking.md#advanced-networking) avancerad 
 OSGi-konfigurationens anslutningssträng använder:
 
 + `AEM_PROXY_HOST` värdet via [OSGi-konfigurationsmiljövariabel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningens värd
-+ `30001` som är `portOrig` värde för Cloud Manager-portvidarebefordringsmappning `30001` → `mysql.example.com:3306`
++ `30001` som är `portOrig` värde för Cloud Manager-portmappning `30001` → `mysql.example.com:3306`
 
 Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges via OSGi-konfigurationsvariabler som anges med API:er för AIO CLI eller Cloud Manager.
 

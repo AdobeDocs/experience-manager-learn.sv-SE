@@ -5,11 +5,12 @@ topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate
-kt: 6261
+jira: KT-6261
 thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
+doc-type: Tutorial
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
-source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -69,7 +70,7 @@ Du kan få en uppfattning om de inbyggda funktionerna i Adobe Client Data Layer 
 
 ## Arbeta med händelser
 
-Det är bäst att utlösa en anpassad kod som baseras på en händelse från datalagret. Sedan kan du utforska registreringen och lyssna på olika händelser.
+Det är bäst att utlösa en anpassad kod som baseras på en händelse från datalagret. Sedan kan du utforska registrering och avlyssning av olika händelser.
 
 1. Ange följande hjälpmetod i konsolen:
 
@@ -158,9 +159,9 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
    });
    ```
 
-1. Du bör omedelbart se en konsolsats som utlösts med siddata:
+1. Du bör omedelbart se en konsolprogramsats som utlösts med siddata:
 
-   ![Visa data](assets/page-show-console-data.png)
+   ![Sidvisningsdata](assets/page-show-console-data.png)
 
    The `cmp:show` -händelsen för sidan aktiveras för varje sida som läses in överst på sidan. Du kan fråga varför händelsehanteraren utlöstes när sidan redan har lästs in?
 

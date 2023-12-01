@@ -6,9 +6,10 @@ topic: Content Management
 feature: 3D Assets
 role: User
 level: Beginner
-kt: 5349
+jira: KT-5349
+doc-type: Feature Video
 exl-id: 8462e2e3-3279-4e80-9c22-0dd7077d3f27
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

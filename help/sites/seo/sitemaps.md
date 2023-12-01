@@ -6,11 +6,12 @@ feature: Core Components
 topic: Content Management
 role: Developer
 level: Intermediate
-kt: 9165
+jira: KT-9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
+doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 2%

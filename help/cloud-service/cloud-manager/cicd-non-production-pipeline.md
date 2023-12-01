@@ -6,14 +6,14 @@ audience: administrator
 doc-type: feature video
 activity: use
 version: Cloud Service
-kt: 6873
+jira: KT-6873
 thumbnail: 26316.jpg
 topic: Architecture
 feature: Cloud Manager, CI-CD Pipeline
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%

@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6448
+jira: KT-6448
 thumbnail: 327313.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -40,14 +40,14 @@ I den här självstudiekursen skapar vi en metadataarbetare för Asset compute s
 
 Anropet av metadataarbetare i Asset compute är nästan identiskt med anropet från [arbetare för generering av binär återgivning](../develop/worker.md), där den största skillnaden är returtypen är en XMP (XML)-återgivning vars värden också skrivs till resursens metadata.
 
-asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i `renditionCallback(...)` funktion, vilket är begreppsmässigt:
+Asset compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i `renditionCallback(...)` funktion, vilket är begreppsmässigt:
 
 + __Indata:__ En AEM ursprungliga binära parametrar och parametrar för Bearbetningsprofil
 + __Utdata:__ En XMP (XML) återgivning beständig till AEM som återgivning och till resursens metadata
 
 ![Logiskt arbetsflöde för Asset compute-metadataarbetare](./assets/metadata/logical-flow.png)
 
-1. AEM Author anropar metadataarbetaren Asset compute, förutsatt att resursens __(1a)__ originalbinärfil, och __(1b)__ Alla parametrar som har definierats i bearbetningsprofilen.
+1. AEM Author anropar metadataarbetaren Asset compute, förutsatt att resursens __(1a)__ originalbinärfil, och __(1b)__ Alla parametrar som har definierats i Bearbetningsprofilen.
 1. Asset compute SDK hanterar körningen av den anpassade Asset compute-metadataarbetarens `renditionCallback(...)` funktion, härleda en XMP (XML) återgivning utifrån resursens binära __(1a)__ och eventuella parametrar för bearbetningsprofil __(1b)__.
 1. Arbetaren i Asset compute sparar XMP (XML) till `rendition.path`.
 1. De XMP (XML)-data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och exponerar det som __(4a)__ en textåtergivning och __(4b)__ beständig till resursens metadatanod.
@@ -83,9 +83,9 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` pekar på den arbetarimplementering som har skapats i [nästa steg](#metadata-worker). Namnge arbetare semantiskt (till exempel `actions/worker/index.js` kan ha fått ett bättre namn `actions/rendition-circle/index.js`), som de här visas i [arbetarens URL](#deploy) och även fastställa [arbetarens testsvitmappnamn](#test).
+`function` pekar på den arbetarimplementering som har skapats i [nästa steg](#metadata-worker). Namnge arbetare semantiskt (till exempel `actions/worker/index.js` kan ha fått ett bättre namn `actions/rendition-circle/index.js`), som de här visas i [arbetarens URL](#deploy) och även fastställa [arbetarens testsvitens mappnamn](#test).
 
-The `limits` och `require-adobe-auth` konfigureras separat per arbetare. I den här arbetaren `512 MB` minne tilldelas när koden inspekterar (eventuellt) stora binära bilddata. Den andra `limits` tas bort för att använda standardvärden.
+The `limits` och `require-adobe-auth` konfigureras separat per arbetare. I denna arbetare `512 MB` minne tilldelas när koden inspekterar (eventuellt) stora binära bilddata. Den andra `limits` tas bort för att använda standardvärden.
 
 ## Utveckla en metadataarbetare{#metadata-worker}
 
@@ -93,7 +93,7 @@ Skapa en ny JavaScript-fil för metadataarbetare i Asset compute-projektet vid s
 
 ### Installera npm-moduler
 
-Installera de extra npm-modulerna ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-colors](https://www.npmjs.com/package/get-image-colors)och [color-namer](https://www.npmjs.com/package/color-namer)) som används i den här Asset compute-arbetaren.
+Installera de extra npm-modulerna ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-colors](https://www.npmjs.com/package/get-image-colors)och [color-namer](https://www.npmjs.com/package/color-namer)) som används i denna Asset compute-arbetare.
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -184,14 +184,14 @@ function getColorName(colorsFamily, color) {
 
 När koden för arbetaren är klar kan den köras med det lokala utvecklingsverktyget i Asset compute.
 
-Eftersom vårt Asset compute-projekt innehåller två arbetare (föregående [cirkelåtergivning](../develop/worker.md) och `metadata-colors` arbetare), [asset compute Development Tool&#39;s](../develop/development-tool.md) profildefinitionen listar körningsprofiler för båda arbetarna. Den andra profildefinitionen pekar på den nya `metadata-colors` arbetare.
+Eftersom vårt Asset compute-projekt innehåller två arbetare (föregående [cirkelåtergivning](../develop/worker.md) och `metadata-colors` arbetare), [Asset compute Development Tool&#39;s](../develop/development-tool.md) profildefinitionen listar körningsprofiler för båda arbetarna. Den andra profildefinitionen pekar på den nya `metadata-colors` arbetare.
 
 ![XML-metadataåtergivning](./assets/metadata/metadata-rendition.png)
 
 1. Från Asset compute-projektets rot
 1. Kör `aio app run` för att starta utvecklingsverktyget Asset compute
-1. I __Välj en fil..__ listruta, välj [exempelbild](../assets/samples/sample-file.jpg) bearbeta
-1. I den andra profildefinitionskonfigurationen, som pekar på `metadata-colors` arbetare, uppdatera `"name": "rendition.xml"` eftersom den här arbetaren genererar en XMP (XML) återgivning. Om du vill kan du lägga till en `colorsFamily` parameter (värden som stöds) `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`).
+1. I __Välj en fil..__ nedrullningsbar meny, välj [exempelbild](../assets/samples/sample-file.jpg) bearbeta
+1. I den andra profildefinitionskonfigurationen, som pekar på `metadata-colors` arbetare, uppdatera `"name": "rendition.xml"` eftersom den här arbetaren genererar en XMP (XML) återgivning. Du kan också lägga till en `colorsFamily` parameter (värden som stöds) `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`).
 
    ```json
    {
@@ -288,7 +288,7 @@ Om du vill granska färgmetadata mappar du två nya fält i bildens metadataram 
 
 ![Metadataschema](./assets/metadata/metadata-schema.png)
 
-1. I tjänsten AEM Author går du till __Verktyg > Resurser > Metadata Schemas__
+1. I AEM Author går du till __Verktyg > Resurser > Metadata Schemas__
 1. Navigera till __standard__ och markera och redigera __image__ och lägg till skrivskyddade formulärfält för att visa genererade färgmetadata
 1. Lägg till en __Enkelradstext__
    + __Fältetikett__: `Colors Family`
@@ -303,7 +303,7 @@ Om du vill granska färgmetadata mappar du två nya fält i bildens metadataram 
 
 ![Tillgångsinformation](./assets/metadata/asset-details.png)
 
-1. I tjänsten AEM Author går du till __Resurser > Filer__
+1. I AEM Author går du till __Assets > Files__
 1. Navigera till mappen, eller undermappen, som Bearbetningsprofilen tillämpas på
 1. Överför en ny bild (JPEG, PNG, GIF eller SVG) till mappen eller bearbeta om befintliga bilder med den uppdaterade [Bearbetar profil](#processing-profile)
 1. När bearbetningen är klar markerar du resursen och trycker på __egenskaper__ i det övre åtgärdsfältet för att visa dess metadata

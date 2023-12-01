@@ -7,13 +7,13 @@ version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
-kt: 6284
+jira: KT-6284
 thumbnail: KT-6284.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 # Testa en Asset compute-arbetare
 
-I Asset compute-projektet definieras ett mönster som gör det enkelt att skapa och köra [test av arbetare i Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Asset compute-projektet definierar ett mönster för att enkelt skapa och köra [test av arbetare i Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
 
 ## Anatomi i ett arbetartest
 
-asset compute arbetares tester delas upp i testsviter och inom varje testsvit finns ett eller flera testfall där ett villkor ska testas.
+Asset compute arbetares tester delas upp i testsviter och inom varje testsvit finns ett eller flera testfall där ett villkor ska testas.
 
 Teststrukturen i ett Asset compute-projekt är följande:
 
@@ -80,7 +80,7 @@ Det här testfallet kontrollerar parametriserade indata (`params.json`) för ind
    }
    ```
 
-   Dessa är samma nyckel/värden som skickas till [Definition av Asset compute-profil för utvecklingsverktyget](../develop/development-tool.md), minus `worker` nyckel.
+   Dessa är samma nyckel/värden som skickas till [Definition av Asset compute-profil för utvecklingsverktyget](../develop/development-tool.md), minus `worker` -tangenten.
 
 1. Lägg till förväntat [återgivningsfil](./assets/test/success-parameterized/rendition.png) till det här testfallet och ge det ett namn `rendition.png`. Den här filen representerar förväntade utdata för arbetaren för angivna indata `file.jpg`.
 1. Kör testerna i projektets rot från kommandoraden genom att köra `aio app test`
@@ -91,7 +91,7 @@ Det här testfallet kontrollerar parametriserade indata (`params.json`) för ind
 
 ## Skriva ett fel vid kontroll av testfall
 
-Det här testfallet testar för att säkerställa att arbetaren ger rätt fel när `contrast` parametern är inställd på ett ogiltigt värde.
+Det här testfallet testar för att säkerställa att arbetaren orsakar rätt fel när `contrast` parametern är inställd på ett ogiltigt värde.
 
 1. Skapa en ny testfallsmapp på `/test/asset-compute/worker/error-contrast` för att testa en felkörning av arbetaren på grund av ett ogiltigt `contrast` parametervärde.
 1. I `error-contrast` mapp, lägg till testet [indatafil](./assets/test/error-contrast/file.jpg) för det här testfallet och ge det ett namn `file.jpg`. Innehållet i den här filen är inte viktigt för det här testet. Det behöver bara finnas för att komma förbi kontrollen &quot;Skadad källa&quot; för att nå `rendition.instructions` validering kontrollerar att det här testfallet validerar.
@@ -105,7 +105,7 @@ Det här testfallet testar för att säkerställa att arbetaren ger rätt fel n�
    ```
 
    + Ange `contrast` parametrar till `10`, ett ogiltigt värde, eftersom kontrasten måste vara mellan -1 och 1, för att en `RenditionInstructionsError`.
-   + Kontrollera att rätt fel genereras i tester genom att ställa in `errorReason` nyckeln till orsaken som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern ger [anpassat fel](../develop/worker.md#errors), `RenditionInstructionsError`därför att `errorReason` på grund av felet, eller`rendition_instructions_error` för att bekräfta att det kastas.
+   + Kontrollera att rätt fel genereras i tester genom att ställa in `errorReason` nyckeln till orsaken som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern ger [anpassat fel](../develop/worker.md#errors), `RenditionInstructionsError`därför att ange `errorReason` på grund av felet, eller`rendition_instructions_error` för att bekräfta att det kastas.
 
 1. Eftersom ingen återgivning ska genereras under en körning av en återgivning bör ingen `rendition.<extension>` filen är nödvändig.
 1. Kör testsviten från projektets rot genom att köra kommandot `aio app test`

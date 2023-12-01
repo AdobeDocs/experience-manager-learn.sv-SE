@@ -6,10 +6,11 @@ feature: Authoring
 role: User
 level: Intermediate
 version: 6.4, 6.5, Cloud Service
-kt: 3307
+jira: KT-3307
 thumbnail: 17453.jpg
+doc-type: Feature Video
 exl-id: 12d8c0c6-c556-49f4-a6fe-84fccfccf95e
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

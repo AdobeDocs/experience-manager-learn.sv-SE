@@ -3,13 +3,13 @@ title: Skapa anpassat formulär
 description: Skapa och konfigurera anpassningsbara formulär för att använda formulärdatamodellens förifyllningstjänst
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 5813
+jira: KT-5813
 thumbnail: kt-5813.jpg
 topic: Development
 role: User
 level: Beginner
 exl-id: c8d4eed8-9e2b-458c-90d8-832fc9e0ad3f
-source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -69,10 +69,10 @@ Nästa steg är att visa de anställdas förmånstagare i tabellform. Exempelfor
 * Öppna formuläret i redigeringsläge.
 * Expandera rotpanelen->Dina mottagare->Tabell
 * Välj Rad1 och klicka på skiftnyckelsikonen för att öppna egenskapsbladet.
-* Ange bindningsreferensen till **/newhire/GetEmployeeBeneficiaries**
+* Ställ in bindningsreferensen på **/newhire/GetEmployeeBeneficiaries**
 * Ange inställningarna för Upprepa - Minsta antal till 1 och Högsta antal till 5.
 * Din konfiguration av Row1 bör se ut som skärmbilden nedan
-   ![radkonfigurera](assets/configure-row.PNG)
+  ![radkonfigurera](assets/configure-row.PNG)
 * Klicka på den blå ☑ för att spara ändringarna
 
 ## Bind radceller

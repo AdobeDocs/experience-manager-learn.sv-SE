@@ -8,8 +8,9 @@ thumbnail: 34839.jpg
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: b5d0d2e1-22d7-4dd9-9913-c6f4a7cc0234
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

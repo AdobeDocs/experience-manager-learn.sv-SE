@@ -6,12 +6,12 @@ feature: Content Fragments
 topic: Content Management
 role: User
 level: Beginner
-doc-type: Feature Video
 last-substantial-update: 2023-09-19T00:00:00Z
 jira: KT-13961
 thumbnail: 3424373.jpeg
+doc-type: Feature Video
 exl-id: 842622c7-4a1c-42bb-88e9-42717e3dac8e
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '22'
 ht-degree: 0%

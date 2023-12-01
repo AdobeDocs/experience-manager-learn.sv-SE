@@ -6,10 +6,10 @@ topic: Migration, Upgrade
 feature: Migration
 role: Developer
 level: Experienced
-kt: 8629
+jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Läs om hur AEM modernisaliseringsverktyg används för att uppgradera befintlig
 
 >[!VIDEO](https://video.tv.adobe.com/v/338797?quality=12&learn=on)
 
-## Använda AEM
+## Använda AEM moderniseringsverktyg
 
 ![AEM verktygets livscykel](./assets/aem-modernization-tools.png)
 
@@ -74,7 +74,7 @@ Innan du provar övningen bör du kontrollera att du har tittat på och förstå
 
 Se även till att du har fullföljt tidigare övningar:
 
-+ [Praktisk övning i BPA och CAM](./bpa-and-cam.md#hands-on-exercise)
++ [BPA och CAM: s praktiska övning](./bpa-and-cam.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
@@ -85,7 +85,7 @@ Se även till att du har fullföljt tidigare övningar:
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">Praktisk med AEM</div>
+            <div style="font-size:1.25rem;font-weight:400;">Praktisk med AEM modernisering</div>
             <p style="margin:1rem 0">
                 Upptäck hur du använder AEM Moderniseringsverktyg för att uppdatera en äldre WKND-webbplats så att den följer AEM as a Cloud Service praxis.
             </p>

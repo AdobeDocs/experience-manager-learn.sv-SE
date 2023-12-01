@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 feature: Developer Tools
-kt: 8852
+jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%

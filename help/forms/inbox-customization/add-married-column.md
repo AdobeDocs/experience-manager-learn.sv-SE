@@ -7,12 +7,12 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.5
-kt: 5830
+jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Det här arbetsflödet har två definierade variabler (isGift och Inkomst) och d
 
 ## Skapa tjänst
 
-För varje kolumn som ska visas i inkorgen måste vi skriva en tjänst. Med följande tjänst kan vi lägga till en kolumn som visar värdet för variabeln isMarry
+För varje kolumn som vi måste visa i vår inkorg måste vi skriva en tjänst. Med följande tjänst kan vi lägga till en kolumn som visar värdet för variabeln isMarry
 
 ```java
 import com.adobe.cq.inbox.ui.column.Column;
@@ -90,9 +90,9 @@ return isMarried(inboxItem);
 * [Importera exempelformuläret](assets/snap-form.zip) genom att välja _Filöverföring_ från _Skapa_ meny
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * Välj _civilstånd_ och skicka in formuläret
-   [visa inkorg](http://localhost:4502/aem/inbox)
+  [visa inkorg](http://localhost:4502/aem/inbox)
 
-Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se ett värde under kolumnen Gift, vilket visas i den här skärmbilden
+Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se ett värde under kolumnen Gift, vilket visas i skärmbilden
 
 ![gift-kolumn](assets/married-column.PNG)
 

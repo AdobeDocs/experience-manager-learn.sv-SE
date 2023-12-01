@@ -1,13 +1,14 @@
 ---
 title: Så här kodar du för AEM Style System
-description: I den här videon ska vi titta närmare på den beskrivning av CSS (eller LESS) och JavaScript som används för att formatera huvudtitelkomponenten i Adobe Experience Manager med Style System, samt hur dessa format tillämpas på HTML och DOM.
+description: I den här videon ska vi titta närmare på den beskrivning av CSS (eller LESS) och JavaScript som används för att formatera Adobe Experience Managers Core Title Component med Style System, samt hur dessa format tillämpas på HTML och DOM.
 feature: Style System
-version: 6.4, 6.5
+version: 6.4, 6.5, Cloud Service
 topic: Development
 role: Developer
 level: Intermediate, Experienced
+doc-type: Technical Video
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -33,7 +34,7 @@ Följande är [!DNL LESS] definition för exempelformatet som finns på:
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-För dem som föredrar CSS är CSS här nedanför det här kodfragmentet [!DNL LESS] kompilerar till.
+För dem som föredrar CSS är CSS här nedanför kodfragmentet [!DNL LESS] kompilerar till.
 
 ```css
 /* LESS */
@@ -146,7 +147,7 @@ jQuery(function ($) {
 
 ### HTML bästa praxis {#html-best-practices}
 
-* HTML (genereras via HTML) ska vara så strukturellt semantiskt som möjligt. undvika onödig gruppering/kapsling av element.
+* HTML (som genereras via HTML) ska vara så strukturellt semantiskt som möjligt, så att onödiga grupperingar/kapslingar av element undviks.
 * HTML-element ska kunna adresseras via CSS-klasser i BEM-format.
 
 **Bra** - Alla element i komponenten kan adresseras via BEM-notation:
@@ -190,7 +191,7 @@ jQuery(function ($) {
 
 * Använd preprocessorer som [LESS](https://lesscss.org/) (stöds AEM internt) eller [SCSS](https://sass-lang.com/) (kräver anpassat byggsystem) för att tillåta tydlig CSS-definition och återanvändning.
 
-* Behåll väljarens vikt/specificitet enhetlig. Detta hjälper till att undvika och lösa svåridentifierade CSS-överlappningskonflikter.
+* Se till att väljarens vikt/specificitet är enhetlig. Detta hjälper till att undvika och lösa problem med att identifiera CSS-överlappningskonflikter.
 * Ordna varje format i en separat fil.
    * Dessa filer kan kombineras med LESS/SCSS `@imports` eller om obearbetad CSS krävs, via HTML Client Library-filinkludering eller anpassade front-end-system för att bygga resurser.
 * Undvik att blanda många komplexa format.
@@ -223,7 +224,7 @@ Exempel på CSS-väljarstruktur ska vara följande:
    <td valign="middle"><span class="code">.cmp-image</span></td> 
    <td valign="middle"><span class="code">.cmp-image_caption</span></td> 
    <td valign="middle">→</td> 
-   <td valign="middle"><p><span class="code">.cmp-image—hero</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image_caption {</span></p> <p><span class="code"> färg: rött,</span></p> <p><span class="code"> }</span></p> </td> 
+   <td valign="middle"><p><span class="code">.cmp-image—hero</span></p> <p><span class="code"> .cmp-image</span></p> <p><span class="code"> .cmp-image_caption {</span></p> <p><span class="code"> färg: röd,</span></p> <p><span class="code"> }</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -240,7 +241,7 @@ De bästa metoderna som definieras i det här avsnittet gäller&quot;style-JavaS
 * Utvärdera användningen av Javascript på nytt om nya data/nytt innehåll hämtas asynkront (via AJAX) när komponenten kan visas många gånger på en sida.
 * Hantera både publicerings- och redigeringsupplevelser.
 * Återanvänd style-Javascript när det är möjligt.
-   * Om flera format för en komponent till exempel kräver att bilden flyttas till en bakgrundsbild, kan style-JavaScript implementeras en gång och kopplas till flera `BLOCK--MODIFIERs`.
+   * Om flera format för en komponent kräver att bilden flyttas till en bakgrundsbild, kan style-JavaScript implementeras en gång och kopplas till flera `BLOCK--MODIFIERs`.
 * Skilj style-JavaScript från funktionell JavaScript när det är möjligt.
 * Utvärdera kostnaden för JavaScript jämfört med att visa dessa DOM-ändringar i HTML direkt via HTML.
    * När en komponent som använder style-JavaScript behöver ändras på serversidan, ska du utvärdera om JavaScript-manipuleringen kan utföras just nu och vilka effekter/förändringar som är kopplade till komponentens prestanda och stödbarhet.

@@ -3,13 +3,13 @@ title: Hämta begäranparameter
 description: Åtkomst till begärandeparametern för en formulärdatamodell förifyllningstjänst
 feature: Adaptive Forms
 version: 6.4,6.5
-kt: 5815
+jira: KT-5815
 thumbnail: kt-5815.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: a640539d-c67f-4224-ad81-dd0b62e18c79
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 ## Hämta empID-parameter
 
 Nästa steg är att få åtkomst till parametern empID från URL:en. Värdet för parametern empID-begäran skickas sedan till **_get_** tjänståtgärd för formulärdatamodellen.
-För kursen har vi skapat och tillhandahållit följande
+För kursen har vi skapat följande
 
 * Adaptiv formulärmall har anropats **_FDMDemo_**
 * Page Component called **_fdmdemo_**
 * Inkluderade vårt anpassade jsp med sidkomponenten
 * Kopplade den adaptiva formulärmallen till sidkomponenten
 
-Genom att göra detta kommer vår kod i den anpassade jsp endast att köras när anpassningsbara formulär som är baserade på den här anpassade mallen återges
+Genom att göra detta kommer vår kod i den anpassade jsp endast att köras när anpassningsbara formulär baserade på den här anpassade mallen återges
 
 * [Importera paketet](assets/template-page-component.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 * [Öppna fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
