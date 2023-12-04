@@ -2,16 +2,16 @@
 title: Konfigurera DataSource med Salesforce i AEM Forms 6.3 och 6.4
 description: Integrera AEM Forms med Salesforce med hjälp av formulärdatamodell
 feature: Adaptive Forms, Form Data Model
-topics: integrations
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 232
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ I den här artikeln går vi igenom processen att skapa datakälla med Salesforce
 
 Krav för den här självstudiekursen:
 
-* Bläddra längst ned på den här sidan och hämta swagger-filen och spara den på hårddisken.
+* Bläddra längst ned på sidan och hämta swagger-filen och spara den på hårddisken.
 * AEM Forms med SSL aktiverat
 
    * [Officiell dokumentation för aktivering av SSL på AEM 6.3](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
@@ -69,15 +69,15 @@ Nästa steg är att skapa en datakälla i AEM Forms. Följ de här stegen enligt
 * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
 * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
 * **Åtkomsttagg-URL - https://na5.salesforce.com/services/oauth2/token**
-* Auktoriseringsomfång: ** api chatter_api full-id openid refresh_token visualforce web**
-* Autentiseringshanterare: Authorization Bearer
+* Auktoriseringsomfång: ** api chatter_api full id openid refresh_token visualforce web**
+* Autentiseringshanterare: auktoriseringsgranskare
 * Klicka på &quot;Anslut till OAUTH&quot;.Om allt fungerar bra bör du inte se några fel
 
 När du har skapat formulärdatamodellen med Salesforce kan du sedan skapa integrering av formulärdata med den datakälla som du just har skapat. Den officiella dokumentationen för att skapa integreringen av formulärdata är [här](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
 Kontrollera att du har konfigurerat formulärdatamodellen så att den omfattar POSTEN för att skapa ett Lead-objekt i SFDC.
 
-Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på den här sidan.
+Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på sidan.
 
 När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda överföringsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
 
@@ -93,6 +93,7 @@ När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på 
       * Namn: CreateLeadInSalesForce
       * Titel: CreateLeadInSalesForce
       * Tjänsttyp: RESTful-tjänst
+
    * Klicka på Nästa
    * Växlingskälla: Fil
    * Bläddra och välj den swagger-fil som du har hämtat i föregående steg
@@ -101,16 +102,15 @@ När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på 
    * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
    * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
    * Åtkomsttoken-Ur **l - https://na5.salesforce.com/services/oauth2/token**
-   * Auktoriseringsomfång: ** api chatter_api full-id openid refresh_token visualforce web**
-   * Autentiseringshanterare: Authorization Bearer
+   * Auktoriseringsomfång: ** api chatter_api full id openid refresh_token visualforce web**
+   * Autentiseringshanterare: auktoriseringsgranskare
    * Klicka på knappen &quot;Anslut till OAuth&quot;. Om du skulle få se några fel bör du gå igenom de föregående stegen för att säkerställa att all information har angetts korrekt.
-
 
 När du har skapat datakällan med SalesForce kan du skapa integrering av formulärdata med datakällan som du just har skapat. Dokumentationslänken för det är [här](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 Kontrollera att du har konfigurerat formulärdatamodellen så att den omfattar POSTEN för att skapa ett Lead-objekt i SFDC.
 
-Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på den här sidan.
+Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på sidan.
 
 När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda överföringsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
 

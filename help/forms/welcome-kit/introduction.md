@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: 7aba25d1-0d4d-4c49-8132-f844a288e8f3
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 32
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '101'
 ht-degree: 0%
 
 ---

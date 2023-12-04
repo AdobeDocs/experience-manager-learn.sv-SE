@@ -10,9 +10,10 @@ level: Beginner
 jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 580
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2146'
 ht-degree: 0%
 
 ---

@@ -2,17 +2,16 @@
 title: Delivery Interactive Communication Document - Web Channel AEM Forms
 description: Skicka webbkanalsdokument via länk i e-post
 feature: Interactive Communication
-audience: developer
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 85
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ Låt oss titta på följande kodfragment. Den här koden är en del av GET.jsp s
 
 Sedan associerar vi värdet accountNumber med en nyckel som kallas kontonummer på kartan. Nyckeln **kontonummer** är definierad i formulärdata modal som ett Request Attribute. Värdet för det här attributet skickas som en indataparameter till lästjänstmetoden Form Data Modal.
 
-Rad 7: Vi skickar den mottagna begäran till en annan server, baserat på resurstypen som identifieras av URL:en för interaktivt kommunikationsdokument. Svaret som returneras av den här andra servern inkluderas i den första serverns svar.
+Rad 7: Vi skickar den mottagna begäran till en annan server, baserat på den resurstyp som identifieras av URL:en för interaktivt kommunikationsdokument. Svaret som returneras av den här andra servern inkluderas i den första serverns svar.
 
 ```java
 org.apache.jackrabbit.api.security.user.UserManager um = ((org.apache.jackrabbit.api.JackrabbitSession) session).getUserManager();

@@ -9,9 +9,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 109
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ Arbetsflödet Signera flera Forms aktiveras när formuläret skickas och kunden 
 
 Kunden får fylla i och signera det första formuläret i paketet. När formuläret har signerats kan kunden navigera till nästa formulär i paketet. När alla blanketter är ifyllda och signerade får kunden texten **AllaKlar**&quot;.
 
-## Felsök
+## Felsökning
 
 ### E-postmeddelanden genereras inte
 

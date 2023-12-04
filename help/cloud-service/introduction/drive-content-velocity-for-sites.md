@@ -3,9 +3,10 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: bd886704f10834bb07b42d6b5c0f116496da36de
+duration: 728
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2795'
+source-wordcount: '2742'
 ht-degree: 0%
 
 ---
@@ -92,7 +93,7 @@ _&quot;Vi har förändrat vår upplevelsedesignorganisation till en mer kanalöv
 
 _&quot;Vi visste att det kom ut för mycket innehåll. Så vi forskade lite med vår publik för att ta reda på om de kunde hitta våra ledande personer. Det visade sig att det var förvirring, så vi använde en unik strategi, segmenterade ut alla de bästa idéerna på en pilotwebbplats och varumärke för det innehållet. Vi skapade ett dedikerat område för det innehållet och odlade en stor publik för det. Flera år senare har vi nu kunnat återintegrera detta på vår bredare webbplats och nu hjälper vårt innehåll som visar tankeledarskap människor genom säljcykeln.&quot;_ - Amy Bergstrom, Deloitte
 
-### Körning 
+### Körning
 
 AEM är en företagslösning som berör många delar av företaget eller varumärket och dess effektivitet, som ett CMS-verktyg, är beroende av tidigare versioner.
 

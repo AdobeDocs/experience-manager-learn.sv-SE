@@ -12,7 +12,8 @@ thumbnail: 332439.jpg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: feab7e1d-3998-41ba-8326-bbff14564494
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 215
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

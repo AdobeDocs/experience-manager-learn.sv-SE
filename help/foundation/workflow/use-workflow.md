@@ -10,7 +10,8 @@ jira: KT-2557
 thumbnail: 27848.jpg
 doc-type: Feature Video
 exl-id: 5a6bf1f2-1dd5-40b4-8ceb-03672a36869d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 216
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

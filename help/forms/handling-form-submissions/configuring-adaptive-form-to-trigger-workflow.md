@@ -2,10 +2,7 @@
 title: Konfigurera anpassat formulär för att aktivera AEM arbetsflöde - översikt
 description: Konfigurera nyttolastalternativ när AEM aktiveras när formulär skickas
 feature: Workflow
-topics: integrations
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 jira: KT-5407
 thumbnail: 40258.jpg
@@ -14,9 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 591
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---

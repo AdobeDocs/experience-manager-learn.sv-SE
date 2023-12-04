@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 9cce47e7-07b4-43c3-8746-197620855c3f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+duration: 135
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # Skapa OSGi-tjänst för att hämta data
 
-Följande kod skrevs för att lagra och hämta lagrade data för adaptiva formulär. En enkel fråga används för att hämta data för adaptiva formulär som är kopplade till ett givet GUID. Hämtade data returneras sedan till det anropande programmet. Samma datakälla som skapades i det tidigare steget refereras i den här koden
+Följande kod skrevs för att lagra och hämta lagrade data för adaptiva formulär. En enkel fråga används för att hämta data för adaptiva formulär som är kopplade till ett givet GUID. Hämtade data returneras sedan till det anropande programmet. Samma datakälla som skapades i det tidigare steget refereras i koden
 
 
 ```java

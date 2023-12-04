@@ -10,7 +10,8 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-11019
 exl-id: 9ded508c-9408-4d41-b8c6-cd85d1e4cf17
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 298
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

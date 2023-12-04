@@ -9,7 +9,8 @@ feature: Designer
 topic: Administration
 index: y
 exl-id: 83e09f3f-1058-44d7-b068-a84eeb671e37
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 93
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%

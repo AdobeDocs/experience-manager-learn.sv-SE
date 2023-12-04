@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 203
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att definiera FDM (Form Data Mo
 
 >[!VIDEO](https://video.tv.adobe.com/v/21414?quality=12&learn=on)
 
-Detta ger följande fördelar:
+Detta ger dig följande fördelar:
 
 * Snabbare utveckling av interaktiva kommunikationsdokument/Forms.
 * Utvecklingar av interaktiva kommunikationsdokument/Forms kan göras parallellt med utvecklingen av datakällor.

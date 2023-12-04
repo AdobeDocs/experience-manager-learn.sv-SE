@@ -3,16 +3,16 @@ title: Använda automatiska tester med AEM Adaptive Forms
 description: Automatiserad testning av Adaptive Forms med Calvin SDK
 feature: Adaptive Forms
 doc-type: article
-activity: develop
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 142
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -69,10 +69,10 @@ Koden ovan skapar en ny testsvit.
 
 Testfall kan läggas till för testsviten som ska köras mot en adaptiv form.
 
-* Om du vill lägga till ett testfall till testsviten använder du `addTestCase` metoden för TestSuite-objektet.
+* Använd `addTestCase` metoden för TestSuite-objektet.
 * The `addTestCase` metoden tar ett TestCase-objekt som parameter.
-* Skapa TestCase med `hobs.TestCase(..)` -metod.
-* Obs! Den första parametern är namnet på det testfall som ska visas i användargränssnittet.
+* Om du vill skapa TestCase använder du `hobs.TestCase(..)` -metod.
+* Obs! Den första parametern är namnet på det testfall som visas i användargränssnittet.
 * När du har skapat ett testfall kan du lägga till åtgärder i testfallet.
 * Åtgärder som omfattar `navigateTo`, `asserts.isTrue` kan läggas till som åtgärder i testfallet.
 

@@ -9,7 +9,8 @@ version: Cloud Service
 topic: Development
 jira: KT-8851
 exl-id: e61cea37-b931-49c6-9e5d-899628535480
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 50
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%

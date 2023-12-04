@@ -10,9 +10,10 @@ jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 113
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 Läs om Rapid Development Environment (RDE) på AEM as a Cloud Service.
 
-Den här videokonturen:
+Den här videon:
 
 - Vad är RDE?
 - Hur hjälper de till att snabba upp driftsättningscyklerna?
@@ -30,7 +31,7 @@ Den här videokonturen:
 
 ## Nästa steg
 
-Lär dig [konfigurera](./how-to-setup.md) en RDE på AEM as a Cloud Service.
+Läs [konfigurera](./how-to-setup.md) en RDE på AEM as a Cloud Service.
 
 ## Ytterligare resurser
 
@@ -38,4 +39,4 @@ Lär dig [konfigurera](./how-to-setup.md) en RDE på AEM as a Cloud Service.
 
 [Cloud Manager CI/CD Pipelines](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 
-[Konfigurera utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)
+[Ställ in utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)

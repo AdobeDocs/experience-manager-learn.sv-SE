@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 224
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Användningsexemplet är att utlösa ett AEM arbetsflöde för att skicka ett ad
 
 * Gå till [ConfigMgr](http://localhost:4502/system/console/configMgr)
 
-   * Sök efter JDBC-anslutningspool. Skapa en ny JDBC-anslutningspool för dagskommandon. Ange inställningarna som är specifika för databasen.
+   * Sök efter JDBC-anslutningspool. Skapa en ny JDBC-anslutningspool för dagkommentarer. Ange inställningarna som är specifika för databasen.
 
    * ![OSGi-konfiguration för JDBC-anslutningspool](assets/aemformstutorial-jdbc.png)
 
@@ -37,13 +38,13 @@ Användningsexemplet är att utlösa ett AEM arbetsflöde för att skicka ett ad
    * DataSourceName:Namn på datakällan som du konfigurerade tidigare.
    * TableName - namnet på den tabell där du vill lagra AF-data
    * FormName - Kolumnnamn som ska innehålla formulärets namn
-   * ColumnName - Kolumnnamn som AF-data ska lagras i
+   * ColumnName - kolumnnamn som AF-data ska lagras i
 
-   ![Ange databasinformation i OSGi-konfiguration](assets/specify-database-details.png)
+  ![Ange databasinformation i OSGi-konfiguration](assets/specify-database-details.png)
 
 
 
-## Code for OSGi configuration
+## Kod för OSGi-konfiguration
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -212,9 +213,9 @@ public class InsertAfData implements WorkflowProcess {
 * Ange databasinformation med configMgr
 * [Ladda ned zip-filen och extrahera innehållet till hårddisken](assets/article-assets.zip)
 
-   * Distribuera jar-filen med [AEM webbkonsol](http://localhost:4502/system/console/bundles). Denna jar-fil innehåller koden som används för att lagra formulärdata i databasen.
+   * Distribuera jar-filen med [AEM webbkonsol](http://localhost:4502/system/console/bundles). Den här jar-filen innehåller koden som används för att lagra formulärdata i databasen.
 
-   * Importera de två ZIP-filerna till [AEM med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig [exempelarbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och [exempeladaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som kommer att utlösa arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Lägg märke till hur [adaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) har konfigurerats för att utlösa AEM arbetsflöde vid överföring och datafilskonfigurationen (data.xml)
+   * Importera de två ZIP-filerna till [AEM med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig [exempelarbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och [exempeladaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som kommer att utlösa arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Se hur [adaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) har konfigurerats för att utlösa AEM arbetsflöde vid överföring och datafilskonfigurationen (data.xml)
 
    * Förhandsgranska och fyll i formuläret och skicka. Du bör se en ny rad som har skapats i databasen
 

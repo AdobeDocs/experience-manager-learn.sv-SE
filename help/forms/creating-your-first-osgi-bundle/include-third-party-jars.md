@@ -10,9 +10,10 @@ jira: KT-11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
 exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 78
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---

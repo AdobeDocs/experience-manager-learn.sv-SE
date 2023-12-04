@@ -1,6 +1,6 @@
 ---
 title: Skriv nyttolastdokumentet till filsystemet
-description: Anpassat processsteg för att lägga till skrivdokument som finns under nyttolastmappen i filsystemet
+description: Anpassat processsteg för att lägga till skrivdokument i nyttolastmappen i filsystemet
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,7 +9,8 @@ level: Beginner
 kt: kt-9859
 exl-id: bab7c403-ba42-4a91-8c86-90b43ca6026c
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 43
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Den anpassade processen tar följande kommaseparerade argument
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-Det första argumentet är namnet på dokumentet som du vill spara i filsystemet. Det andra argumentet är den mapp där du vill spara dokumentet. I ovanstående exempel skrivs dokumentet till `c:\confirmation\ChangeBeneficiary.pdf`
+Det första argumentet är namnet på dokumentet som du vill spara i filsystemet. Det andra argumentet är den mapp där du vill spara dokumentet. I exemplet ovan skrivs dokumentet till `c:\confirmation\ChangeBeneficiary.pdf`
 
 I följande skärmbild visas de argument som du behöver skicka till det anpassade steget
 ![write-payload-file-system](assets/write-payload-file-system.png)

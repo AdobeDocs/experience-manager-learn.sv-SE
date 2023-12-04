@@ -9,9 +9,10 @@ version: 6.4,6.5
 jira: KT-6899
 thumbnail: 6899.jpg
 exl-id: 2e851ae5-6caa-42e3-8af2-090766a6f36a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 61
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---

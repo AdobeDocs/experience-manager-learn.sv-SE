@@ -11,10 +11,11 @@ thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 doc-type: Feature Video
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 594
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 30%
+source-wordcount: '212'
+ht-degree: 20%
 
 ---
 
@@ -34,7 +35,7 @@ AEM Assets smarta taggar för bilder förbättrar AEM Assets sökning genom att 
 Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med Adobe I/O:
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen
-* Att Smart Content Service är aktiverad för din organisation
+* Tjänsten Smart Content Service är aktiverad för din organisation
 
 I videon beskrivs följande åtgärder som krävs för att konfigurera tjänsten Adobe I/O Smart Content som används för bilder med smarta taggar.
 

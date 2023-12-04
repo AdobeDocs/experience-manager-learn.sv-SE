@@ -10,9 +10,10 @@ jira: KT-256
 thumbnail: 17740.jpg
 doc-type: Feature Video
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 288
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---

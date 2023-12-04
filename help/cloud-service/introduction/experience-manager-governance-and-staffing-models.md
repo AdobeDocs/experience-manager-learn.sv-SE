@@ -1,11 +1,12 @@
 ---
-title: Styrnings- och personalmodeller och arketyper
+title: Styrnings- och personalmodeller och arkitekter
 description: Lär dig hur du kan driftsätta din Adobe Experience Manager-plattform (AEM) och få ut det mesta av dina insatser.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: dcd69c7444eae0f8c86464c1963bff35e6f11238
+duration: 333
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 Som ledande kund inom kundupplevelsen förstår Adobe hur utmanande det kan vara för er att se till att ni har rätt personal och styrningsramverk för att öka effektiviteten. Med Adobe branschbeprövade styrnings- och personalmodeller har ni de verktyg och den kunskap som behövs för att skapa en stabil grund för innehålls- och resurshantering. I den här artikeln diskuterar vi olika sätt att driftsätta din Adobe Experience Manager-plattform (AEM) och få ut så mycket som möjligt av dina insatser.
 
-## Skapa ett överlägset operativt ramverk
+## Skapa en överlägsen operativ miljö
 
 För att kunna köra och använda AEM bör du tänka på följande:
 
@@ -24,7 +25,7 @@ För att kunna köra och använda AEM bör du tänka på följande:
 
 Vad är då rätt modell? Vilken är rätt rollmatris att skapa?
 
-Det finns inte ett enda specifikt svar, eftersom en AEM konfiguration kan variera mycket, precis som många organisationer varierar, vilket gör att det behövs olika stödroller. Varje vertikalt, varje bransch, kräver olika implementeringar av teamstrukturen. Men du kan skapa en baslinje genom att etablera arketyper.
+Det finns inte ett enda specifikt svar, eftersom en AEM konfiguration kan variera mycket, precis som för olika organisationer, vilket gör att det behövs olika stödroller. Varje vertikalt, varje bransch, kräver olika implementeringar av teamstrukturen. Men du kan skapa en baslinje genom att etablera arketyper.
 
 ## Arkityper
 
@@ -49,7 +50,7 @@ Det finns två operationsströmmar för [!DNL AEM Sites] och [!DNL AEM Assets]:
    * Teknisk resurs - Någon som har AEM erfarenhet av behörighet och kan uppdatera metadatamatchemat
    * Versionshanteraren
    * Produktägare - Detta är en roll som är anpassad efter lösningen. Vissa produktägare kan vara involverade i analysen.
-   * DAM-bibliotek - Det här är någon som kan hjälpa till att hantera de integrerade ramverksprocesserna. Den här kreativa rollen kan överlappa andra roller. (Obs! Detta är en roll som har ökat i popularitet de senaste fem åren.)
+   * DAM-bibliotek - Det här är någon som kan hjälpa till att hantera de integrerade ramverksprocesserna. Den här kreativa rollen kan överlappa andra roller. (Obs! Detta är en roll som har utvecklats i popularitet de senaste fem åren.)
    * Kreativ
 
 1. Strategi och omvandling
@@ -82,7 +83,7 @@ Nedan följer några exempel på hur man arbetar med ett ljust (sportklädföret
 
 ### Hög nivå [!DNL AEM Sites] roller
 
-1. Baskörning och -drift
+1. Baskörning och drift
 
    **Allmänt mellanrum:** CSS-utvecklare skapar nya skal för komponenter. Adobe Sr Business Consultant, Joseph Van Buskirk, rekommenderar att man&quot;Get uncorked components and style systems. Det är den roll som ger besparingar. 80 % av de upplevelser som skapas bör göras med hjälp av tidigare skapade komponenter eller kärnkomponenter.&quot; Målet är att återanvända kärnkomponenter eller anpassade komponenter med nya format med hjälp av en CSS-utvecklare (eller utvecklingsgrupp).
 
@@ -91,8 +92,8 @@ Nedan följer några exempel på hur man arbetar med ett ljust (sportklädföret
    * CSS-utveckling - skapar upplevelseartefakter genom att återanvända komponenter med nya format.
    * Backend-utveckling - skapar nya komponenter eller kan utöka en kärnkomponent. Om det görs på rätt sätt bör den här rollen inte ha mer än en person, såvida det inte finns ett behov av stora animeringsuppgifter.
    * Versionshantering - ansvarar för koddistributionen och fungerar som kontoteamet för Adobe.
-   * Produktägare - samarbetar med BU när det gäller att gifta sig med tekniska och strategiska visioner, skapar underhållsuppgifter och förbättringar och fungerar som affärsägare för lösningen.
-   * Administratörsförfattare - uppdaterar CSS-skalet och ger vägledning till författare som uppdaterar och använder innehåll. Den här rollen fungerar på arbetsflödeskonfigurationer och skapar vägledningsdokumentation som författarna kan använda. OBS! I version 6.5 rekommenderar Adobe att du använder redigerbara mallar.
+   * Produktägare - samarbetar med BU när det gäller att genomföra tekniska och strategiska visioner, skapar underhållsuppgifter och förbättringar och fungerar som lösningens företagsägare.
+   * Administratörsförfattare - uppdaterar CSS-skalet och ger vägledning till författare som uppdaterar och använder innehåll. Den här rollen fungerar på arbetsflödeskonfigurationer och skapar vägledningsdokumentation som författarna kan använda. Obs! I version 6.5 rekommenderar Adobe att du använder redigerbara mallar.
    * Innehållsförfattare - lägger in innehåll, nivåindelad äganderätt och levererar kommunikationsproblem och frågor allt eftersom de uppstår med CSM.
 
 1. Strategi och omvandling

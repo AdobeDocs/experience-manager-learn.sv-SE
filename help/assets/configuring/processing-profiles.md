@@ -1,5 +1,5 @@
 ---
-title: Bearbeta profiler
+title: Bearbetar profiler
 description: Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser på AEM as a Cloud Service.
 feature: Asset Compute Microservices
 version: Cloud Service
@@ -11,14 +11,15 @@ level: Beginner
 last-substantial-update: 2021-09-21T00:00:00Z
 doc-type: Feature Video
 exl-id: a08ce6b2-532d-4fd4-ada4-3cbec0fde699
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 464
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 11%
+ht-degree: 0%
 
 ---
 
-# Bearbeta profiler
+# Bearbetar profiler
 
 Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser på AEM as a Cloud Service.
 

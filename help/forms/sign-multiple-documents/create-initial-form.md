@@ -9,7 +9,8 @@ level: Intermediate
 jira: KT-6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 54
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 1%

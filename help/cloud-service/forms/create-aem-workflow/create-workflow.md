@@ -11,7 +11,8 @@ topic: Development
 jira: KT-7424
 thumbnail: 332434.pg
 exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 652
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%

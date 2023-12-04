@@ -2,20 +2,18 @@
 title: Konfigurera konton och tjänster för utbyggbarhet för Asset compute
 description: För att kunna utveckla Asset compute-arbetare måste du ha tillgång till konton och tjänster som AEM as a Cloud Service, App Builder och molnlagring från Microsoft eller Amazon.
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6264
 thumbnail: 40377.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 253
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---

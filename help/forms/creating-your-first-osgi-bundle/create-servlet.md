@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 88
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ En Servlet är en klass som används för att utöka funktionerna för servrar s
 Alla serveringar måste implementera gränssnittet Servlet, som definierar livscykelmetoder.
 
 
-En AEM kan registreras som OSGi-tjänst: Du kan utöka SlingSafeMethodsServlet för skrivskyddad implementering eller SlingAllMethodsServlet för att implementera alla RESTful-åtgärder.
+En AEM kan registreras som OSGi-tjänst: du kan utöka SlingSafeMethodsServlet för skrivskyddad implementering eller SlingAllMethodsServlet för att implementera alla RESTful-åtgärder.
 
 ## Servlet Code
 

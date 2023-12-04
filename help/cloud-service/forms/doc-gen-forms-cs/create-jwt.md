@@ -10,7 +10,8 @@ topic: Development
 jira: KT-8184
 thumbnail: 8184.jpg
 exl-id: 394ed621-1106-4b2a-a6b7-2efa5867f5b1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 86
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%

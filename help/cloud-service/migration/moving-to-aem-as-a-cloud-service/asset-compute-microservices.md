@@ -9,10 +9,11 @@ level: Experienced
 jira: KT-8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1006
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 1%
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +25,7 @@ Se hur AEM Assets as a Cloud Service mikrotjänster på asset compute gör det m
 
 ## Arbetsflödesmigreringsverktyg
 
-![Verktyg för resursarbetsflödesmigrering](./assets/asset-workflow-migration.png)
+![Migreringsverktyg för arbetsflöde för resurs](./assets/asset-workflow-migration.png)
 
 När du omfaktoriserar din kodbas använder du [Verktyget för arbetsflödesmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) för att migrera befintliga arbetsflöden för att använda Asset compute-mikrotjänsterna på AEM as a Cloud Service.
 

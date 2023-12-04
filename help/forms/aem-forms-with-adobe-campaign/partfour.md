@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 157
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Fo
 
 ## Skapa anpassad autentisering {#create-custom-authentication}
 
-När du skapar en datakälla med swagger-filen stöder AEM Forms följande typer av autentisering
+När du skapar en datakälla med swagger-filen har AEM Forms stöd för följande typer av autentisering
 
 * Ingen
 * OAuth 2.0

@@ -8,14 +8,15 @@ role: User
 level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
 last-substantial-update: 2021-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 374
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
 
-# Lägga till objekt dynamiskt till urvalskomponenten för grupp
+# Lägga till objekt dynamiskt i alternativgruppskomponenten
 
 I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i en adaptiv Forms-valgruppkomponent som CheckBox, Radio Button och Image List.
 
@@ -85,7 +86,7 @@ Så här provar du det på datorn:
 * Klicka på Nästa
 * Kryssrutan ska fyllas i med den sökandes namn och med makens namn om äktenskapsstatusen är gift
 
-**Använda den visuella redigeraren för att lägga till objekt**
+**Lägga till objekt med den visuella redigeraren**
 
 * [Hämta resurserna](assets/usingthevisualeditor.zip)
 * Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
@@ -93,7 +94,7 @@ Så här provar du det på datorn:
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring och ladda upp filen som du laddade ned i föregående steg
 * [Förhandsgranska formulären](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
-* Ange lånebelopp och tabba utanför fältet. Detta aktiverar regeln som visar fältet för låneperiod.
+* Ange lånebelopp och tabba utanför fältet. Detta utlöser regeln som visar fältet för låneperiod.
 * Välj lämplig låneperiod (artiklarna för låneperioden fylls i från resten av samtalet)
 * Välj räntesatsen och klicka på&quot;Get Amortization Schedule&quot;
 * Avskrivningstabellen ska fyllas i. Avskrivningsschemat hämtas med ett REST-anrop.

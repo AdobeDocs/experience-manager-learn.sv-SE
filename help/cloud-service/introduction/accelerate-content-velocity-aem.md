@@ -3,9 +3,10 @@ title: Snabba upp materialets hastighet med AEM
 description: Lär dig använda AEM Style Systems för att ge designers, innehållsförfattare och utvecklare i organisationen möjlighet att skapa och leverera upplevelser i den hastighet och i den omfattning som kunderna förväntar sig.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 230
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 I den här artikeln får du lära dig hur du använder AEM system för att ge designers, innehållsförfattare och utvecklare i organisationen möjlighet att skapa och leverera upplevelser i den hastighet och i den omfattning som kunderna förväntar sig.
 
-## Översikt
+## Ökning
 
 AEM Style Systems har fyra fördelar:
 
@@ -29,7 +30,7 @@ Konfigurationen i fem steg liknar ett standardarbetsflöde för komponentutveckl
 
 | **Ledarskap** | **Designer** | **Utvecklare/arkitekt** | **Mallförfattare** | **Innehållsförfattare** |
 | --- | --- | --- | --- | --- |
-| Bestämmer innehåll och mål för den komponenten | Bestämmer visuell och upplevelsebaserad presentation av innehåll | Utvecklar CSS och JS för att stödja upplevelsen. definierar och anger klassnamn som ska användas | Konfigurerar mallprofiler för formaterade komponenter genom att lägga till CSS-klassnamn som definieras av utvecklare. Användarvänliga namn bör användas för varje format. | När du redigerar sidor används de format som behövs för att få önskat utseende och känsla |
+| Bestämmer innehåll och mål för den komponenten | Bestämmer visuell och upplevelsebaserad presentation av innehåll | Utvecklar CSS och JS för att ge stöd åt upplevelsen. Definierar och tillhandahåller klassnamn som ska användas | Konfigurerar mallprofiler för formaterade komponenter genom att lägga till CSS-klassnamn som definieras av utvecklare. Användarvänliga namn bör användas för varje format. | När du redigerar sidor används format för att få önskat utseende och känsla |
 
 Detta är den första konfigurationen, men många av våra kunder har fått större flexibilitet genom att effektivisera den här processen, till exempel genom att överföra sin CSS till DAM, som tillåter uppdateringar av format utan att behöva distribueras. Andra kunder har en komplett uppsättning verktygsklasser, som gör att de kan utveckla komponenter och format som sedan kan utnyttjas utan driftsättning eller utveckling.
 
@@ -61,7 +62,7 @@ Stilsystem har några olika varianter:
    * Det här bör vara den mest använda återgivningen
 * Försök att bara visa formatalternativ som har en effekt när det är möjligt
    * Om ineffektiva kombinationer exponeras, se till att de inte orsakar negativa effekter
-   * Exempel: en layoutstil som anger bildens placering och åtföljs av ett ineffektivt visningsformat som styr bildens placering
+   * T.ex. Ett layoutformat som anger bildens placering och följs av ett ineffektivt visningsformat som styr bildens position
 * Anpassa layoutstilar efter kombinerade visningsstilar
    * Minskar antalet permutationer som måste kvalitetskontrolleras
    * Ser till att varumärkesstandarderna följs
@@ -69,7 +70,7 @@ Stilsystem har några olika varianter:
    * Hjälper till att skapa en enhetlig webbplatsidentitet
 * Var försiktig med kombinerade format
    * Både mellan och inom kategorier
-* Tilldela lämplig tid för att noggrant testa kombinerade format
+* Tilldela lämplig tid för att grundligt testa kombinerade format
    * Hjälper till att undvika oönskade effekter
 * Minimera antalet stilalternativ och permutationer
    * Alltför många alternativ kan leda till bristande varumärkeskonsekvens för utseende och känsla
@@ -78,7 +79,7 @@ Stilsystem har några olika varianter:
 * Använd användarvänliga etiketter och kategorier
    * &quot;Blue&quot; och &quot;Red&quot; i stället för &quot;Primary&quot; och &quot;Secondary
    * &quot;Card&quot; och &quot;Hero&quot; i stället för &quot;Variation A&quot; och &quot;Variation B&quot;
-   * Detta kan vara mer allmänt för vissa kunder. designteamet, affärsteamet och innehållsteamet är väl insatta i vad deras primära och sekundära färger är eller vilka varianter de testar. Men för flexibilitet och potential för framtida ändringar kan det vara mer effektivt att använda specifika termer.
+   * Detta kan vara mer generellt för vissa kunder. Designteamet, affärsteamet och innehållsteamet är mycket bekanta med vad deras primära och sekundära färger är eller vilka varianter de testar. Men för att flexibiliteten ska bli mer flexibel och för att eventuella framtida ändringar ska kunna ske kan det vara mer effektivt att använda specifika termer.
 
 ## Viktiga uppgifter
 

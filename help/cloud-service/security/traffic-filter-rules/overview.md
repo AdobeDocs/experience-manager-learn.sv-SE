@@ -11,9 +11,10 @@ last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
+duration: 186
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ Läs mer om **trafikfilterregler**, inklusive dess underkategori **Brandväggsre
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
-## Översikt
+## Ökning
 
 Minska risken för säkerhetsintrång är en högsta prioritet för alla organisationer. AEMCS erbjuder trafikfilterregelfunktionen, inklusive WAF-regler, för att skydda webbplatser och applikationer.
 

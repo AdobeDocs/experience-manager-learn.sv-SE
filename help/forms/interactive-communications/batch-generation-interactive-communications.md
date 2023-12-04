@@ -2,19 +2,17 @@
 title: Använda batch-API för att generera interaktiva kommunikationsdokument
 description: Exempelresurser för generering av tryckta kanalsdokument med batch-API
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 2cdf37e6-42ad-469a-a6e4-a693ab2ca908
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 109
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
@@ -43,7 +41,7 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 * Hämta och extrahera innehållet i [zip-fil](assets/jsonfile.zip). ZIP-filen innehåller en mapp med namnet `jsonfile` som innehåller `beneficiaries.json` -fil. Den här filen innehåller data för att generera 3 dokument.
 
 * Släpp `jsonfile` till indatamappen för den bevakade mappen.
-* När mappen har tagits upp för bearbetning kontrollerar du resultatmappen för den bevakade mappen. Du bör se 3 genererade PDF-filer
+* När mappen har tagits upp för bearbetning kontrollerar du resultatmappen för den bevakade mappen. 3 genererade PDF-filer bör visas
 
 ## Batchgenerering med REST-begäranden
 
@@ -56,7 +54,7 @@ De exempelresurser som tillhandahålls visar REST-slutpunkten för generering av
 * channelType - Print, Web eller båda
 * recordId - JSON-sökväg till element för att ange namnet på en interaktiv kommunikation
 
-På följande skärmbild visas parametrarna och deras värden
+I följande skärmbild visas parametrarna och deras värden
 ![exempelbegäran](assets/generate-ic-batch-servlet.PNG)
 
 ## Distribuera exempelresurser på servern

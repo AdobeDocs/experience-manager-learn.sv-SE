@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
 exl-id: e116038f-7d86-41ee-b1b0-7b8569121d6d
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 130
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ ht-degree: 0%
 # XDP Stitching using assembler Service
 
 I den här artikeln finns de resurser som du kan använda för att visa möjligheten att sammanfoga xdp-dokument med hjälp av sammansättningstjänsten.
-Följande jsp-kod har skrivits för att infoga ett delformulär med namnet **adress** från xdp-dokument med namnet address.xdp till en insättningspunkt med namnet **adress** i överordnad.xdp-dokument. Den resulterande xdp-filen sparades i rotmappen för AEM.
+Följande jsp-kod har skrivits för att infoga ett delformulär med namnet **adress** från xdp-dokument med namnet address.xdp till en insättningspunkt med namnet **adress** i master.xdp-dokument. Den resulterande xdp-filen sparades i rotmappen för AEM.
 
-Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva hanteringen av PDF-dokument. Du kan se [DDX-referensdokument här](assets/ddxRef.pdf).Sidan 40 innehåller information om xdp-sammanfogning.
+Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva manipuleringen av PDF-dokument. Du kan se [DDX-referensdokument här](assets/ddxRef.pdf).Sidan 40 innehåller information om xdp-sammanfogning.
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -52,7 +53,7 @@ Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva
     finalXDP.copyToFile(new java.io.File("stitched.xdp"));
 ```
 
-DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformuläret  **adress** från address.xdp till insättningspunkten som anropas **adress** i överordnad.xdp. Det resulterande dokumentet med namnet **sydda.xdp** sparas i filsystemet.
+DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformuläret  **adress** från address.xdp till insättningspunkten som anropas **adress** i master.xdp. Det resulterande dokumentet med namnet **sydda.xdp** sparas i filsystemet.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -67,7 +68,7 @@ DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformul
 
 För att få den här funktionen att fungera på din AEM
 
-* Hämta [XDP Stitching-paket](assets/xdp-stitching.zip) till ditt lokala system.
+* Ladda ned [XDP Stitching-paket](assets/xdp-stitching.zip) till ditt lokala system.
 * Överför och installera paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
 * [Extrahera innehållet i zip-filen](assets/xdp-and-ddx.zip) för att hämta exempelfilen för xdp och DDX
 
@@ -78,7 +79,7 @@ För att få den här funktionen att fungera på din AEM
 1. Sök efter Adobe Granite CSRF-filter
 1. Lägg till följande sökväg i de uteslutna avsnitten och spara `/content/AemFormsSamples/assemblerservice`
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan du göra POSTER till servern. Installera Postman på datorn.
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 
 Ange följande indataparametrar enligt skärmbilden. Du kan använda exempeldokumenten som du hämtade tidigare,
@@ -87,3 +88,4 @@ Ange följande indataparametrar enligt skärmbilden. Du kan använda exempeldoku
 >[!NOTE]
 >
 >Kontrollera att AEM Forms-installationen är klar. Alla paket måste vara i aktivt läge.
+>

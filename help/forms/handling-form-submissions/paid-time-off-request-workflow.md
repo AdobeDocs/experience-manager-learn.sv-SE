@@ -1,12 +1,8 @@
 ---
 title: Arbetsflöde för enkel betald tid på begäran
-description: Dölja och visa anpassade formulärpaneler i AEM arbetsflöde
-uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
+description: Dölja och visa anpassade formulärpaneler i AEM
 feature: Adaptive Forms
-topics: workflow
-audience: developer
 doc-type: article
-activity: use
 version: 6.4,6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
 topic: Development
@@ -14,9 +10,10 @@ role: Developer
 level: Experienced
 exl-id: 9342bd2f-2ba9-42ee-9224-055649ac3c90
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 618
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -56,6 +53,6 @@ Följ stegen nedan för att testa det här arbetsflödet i ditt system:
 * [Importera resurser som hör till den här artikeln till AEM](assets/helpxworkflow.zip)
 * Öppna [Frågeformulär - tid](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i uppgifterna och skicka in
-* Öppna [inkorg](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Du bör se en ny uppgift tilldelad. Öppna formuläret. Den som skickar uppgifterna ska vara skrivskyddade och ett nytt godkännaravsnitt ska vara synligt.
+* Öppna [inkorg](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Du bör se en ny uppgift som har tilldelats. Öppna formuläret. Den som skickar uppgifterna ska vara skrivskyddade och ett nytt godkännaravsnitt ska vara synligt.
 * Utforska [arbetsflödesmodell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * Utforska processteget. Detta är steget som ställer in värdet för initialsteget till Nej.

@@ -8,10 +8,11 @@ role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 343
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 4%
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
@@ -109,7 +110,7 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
 | PS4Default | CMYK | Photoshop 4 - standard-CMYK |
-| PS5Default | CMYK | Photoshop 5 - standard-CMYK |
+| PS5Standard | CMYK | Photoshop 5 - standard-CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |

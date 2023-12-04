@@ -7,9 +7,10 @@ role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
 last-substantial-update: 2020-09-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 187
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -40,13 +41,13 @@ I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar 
 
 I ovanstående konfigurationsinställning är DevelopingWithServiceUser.core paketets symboliska namn. getresouresolver är undertjänstens namn.data är systemanvändaren som skapades i det tidigare steget.
 
-Vi kan också hämta resurslösare för fd-service-användare. Den här tjänstanvändaren används för dokumenttjänster. Om du t.ex. vill certifiera/använda användningsrättigheter använder vi resurslösare från fd-service-användare för att utföra åtgärderna
+Vi kan också hämta resurslösare för Fd-service-användare. Den här tjänstanvändaren används för dokumenttjänster. Om du t.ex. vill certifiera/använda användningsrättigheter använder vi resurslösare från fd-service-användare för att utföra åtgärderna
 
 1. [Ladda ned och zippa upp zip-filen som är kopplad till den här artikeln.](assets/developingwithserviceuser.zip)
 1. Navigera till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. Ladda upp och starta OSGi-paketet
 1. Kontrollera att paketet är i aktivt läge
-1. Du har nu skapat en *Systemanvändare* och även *Tjänstanvändarpaket*.
+1. Du har nu skapat en *Systemanvändare* och även distribuerade *Tjänstanvändarpaket*.
 
    Ge systemanvändaren (&#39; data &#39;) läsbehörighet på innehållsnoden för att ge åtkomst till /content.
 

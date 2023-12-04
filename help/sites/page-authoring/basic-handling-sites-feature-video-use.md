@@ -10,10 +10,11 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 310
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 4%
+source-wordcount: '320'
+ht-degree: 2%
 
 ---
 
@@ -34,9 +35,9 @@ I den här videon beskrivs följande funktioner:
      | Konsol | Syfte |
      |---|---|
      | Assets | Med dessa konsoler kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM | Communities | Med den här konsolen kan du skapa och hantera communitysajter för engagemang och aktivering | Handel | På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina Commerce-webbplatser |
-     | Experience Fragments | Ett upplevelsefragment är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger |
+     | Upplevelsefragment | Ett upplevelsefragment är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger |
      | Forms | Med den här konsolen kan du skapa, hantera och bearbeta formulär och dokument |
-     | Personanpassning | Konsolen innehåller ett ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser |
+     | Personalisering | Konsolen innehåller ett ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser |
      | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. Projekt är virtuella kontrollpaneler. De kan användas för att bygga upp ett team och sedan ge teamet tillgång till resurser, arbetsflöden och uppgifter så att andra kan arbeta med ett gemensamt mål |
      | Sites | Med platskonsolerna kan du skapa, visa och hantera webbplatser som körs på din AEM. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor |
 

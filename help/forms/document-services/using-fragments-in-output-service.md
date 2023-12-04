@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-09T00:00:00Z
 exl-id: d7887e2e-c2d4-4f0c-b117-ba7c41ea539a
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 147
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -19,12 +20,12 @@ ht-degree: 0%
 
 
 I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i xdp måste du skapa en mapp med namnet **fragment** under din AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![fragment-xdp](assets/survey-fragment.png).
+* c:\xdptemplates - Detta kommer att innehålla xdp-basmallen
+* c:\xdptemplates\fragments - Den här mappen innehåller fragment och huvudmallen refererar till fragmentet enligt nedan
+  ![fragment-xdp](assets/survey-fragment.png).
 * Mappens xdpdokument kommer att innehålla din basmall och fragmenten i **fragment** mapp
 
-Du kan skapa den struktur som behövs med [formulär och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+Du kan skapa den struktur som behövs med hjälp av [formulär och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 Nedan följer mappstrukturen för exempelkoden xdp som använder 2 fragment
 ![formulär&amp;dokument](assets/fragment-folder-structure-ui.png)
@@ -77,7 +78,7 @@ out.println("Document genreated and saved to " + filePath);
 1. Lägg till följande sökväg i de uteslutna avsnitten och spara
 1. /content/AemFormsSamples/usingFrments
 
-Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan du göra POSTER till servern. Installera Postman på datorn.
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 
 Se till att du har valt &quot;POST&quot; i listrutan http://localhost:4502/content/AemFormsSamples/usingfragments.html Kontrollera att du har angett &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för begäran enligt bilden nedan

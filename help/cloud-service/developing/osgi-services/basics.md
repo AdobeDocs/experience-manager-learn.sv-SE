@@ -9,9 +9,10 @@ jira: KT-8227
 thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 516
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '57'
 ht-degree: 1%
 
 ---

@@ -9,9 +9,10 @@ topic: Development
 feature: Core Components
 jira: KT-10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 110
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---

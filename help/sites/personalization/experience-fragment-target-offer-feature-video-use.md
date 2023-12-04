@@ -8,10 +8,11 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 597
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 1%
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
@@ -35,4 +36,4 @@ Adobe Experience Manager förnyar personaliseringsarbetsflödet mellan AEM och T
 ## Ytterligare resurser {#additional-resources}
 
 * [Dokumentation för Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
-* [Använda Experience Fragments](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
+* [Använda upplevelsefragment](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

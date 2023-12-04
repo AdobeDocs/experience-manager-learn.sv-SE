@@ -8,16 +8,17 @@ role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: ce9b9203-b44c-4a52-821c-ae76e93312d2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 62
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
 # Steg som krävs för att testa de två metoderna
 
-* Konfigurera [Dagens CQ-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) för att skicka e-post från AEM Forms server
+* Konfigurera [Dagens CQ-tjänst för e-post](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) för att skicka e-post från AEM Forms server
 * Distribuera [formulärbilagor](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar) paket med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
 
 ## Skicka zip-fil som e-postbilaga

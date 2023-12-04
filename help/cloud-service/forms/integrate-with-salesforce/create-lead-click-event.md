@@ -10,7 +10,8 @@ topic: Development
 jira: KT-7193
 thumbnail: 331892.jpg
 exl-id: 7b21f24d-d694-489e-a8f6-c5e16445dde3
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 261
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

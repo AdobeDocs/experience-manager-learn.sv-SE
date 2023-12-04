@@ -2,15 +2,15 @@
 title: Ange mappstruktur och namngivningskonvention för filer
 description: Namngivning av filer är kanske det viktigaste beslutet när du implementerar Dynamic Media Classic. Mappstrukturen är också viktig. Lär dig varför det är så viktigt och möjligt att använda metoder för mappstruktur och filnamn.
 feature: Dynamic Media Classic
-activity: develop
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 330
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---

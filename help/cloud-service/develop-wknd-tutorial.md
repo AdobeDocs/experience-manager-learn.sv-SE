@@ -1,22 +1,23 @@
 ---
-title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
+title: Getting Started Developing AEM Sites - WKND Tutorial
 description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
 topic: Development
 role: Developer
 level: Beginner
 thumbnail: 30476.jpeg
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+duration: 433
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 5%
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 
-# Komma igång med utveckling i AEM Sites – WKND-självstudiekurs{#getting-started-developing-aem-sites-wknd-tutorial}
+# Getting Started Developing AEM Sites - WKND Tutorial{#getting-started-developing-aem-sites-wknd-tutorial}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Har du inte använt Adobe Experience Manager as a Cloud Service tidigare? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
 
@@ -38,7 +39,7 @@ När du är klar med WKND-självstudiekursen kan du se en video nedan som visar 
 
 Videon visar hur WKND Site-projektet kan vara:
 
-1. Köps från en Git-databas från tredje part, i det här fallet Github.com, men kan vara vilken Git-databas som helst
+1. Källas från en Git-databas från tredje part, i det här fallet Github.com, men kan vara vilken Git-databas som helst
 2. Publicerat till en Adobe Cloud Manager Git-databas som är uppströms och registrerad med ett AEM as a Cloud Service program
 3. Driftsätts via Cloud Manager-rörledningar till AEM as a Cloud Service miljöer
 

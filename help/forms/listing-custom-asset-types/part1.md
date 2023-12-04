@@ -1,14 +1,8 @@
 ---
 title: Registrerar anpassade resurstyper
-seo-title: Registering Custom Asset Types
 description: Aktivera anpassade resurstyper för listning i AEMForms-portalen
-seo-description: Enabling custom asset types for listing in AEMForms Portal
-uuid: eaf29eb0-a0f6-493e-b267-1c5c4ddbe6aa
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 99944f44-0985-4320-b437-06c5adfc60a1
 topic: Development
@@ -16,9 +10,10 @@ role: Developer
 level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
 last-substantial-update: 2019-07-11T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 173
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -41,15 +36,15 @@ Steg för att konfigurera bassökvägen
 1. Navigera till **/libs/fd/fp/extensions/querybuilder/basepath**
 
 1. Klicka på &quot;Overlay Node&quot; i verktygsfältet
-1. Kontrollera att överläggsplatsen är &quot;/apps/&quot;
+1. Kontrollera att överläggsplatsen är /apps/
 1. Klicka på OK
 1. Klicka på Spara
 1. Navigera till den nya strukturen som skapades på **/apps/fd/fp/extensions/querybuilder/basepath**
 
-1. Ändra värdet för egenskapen path till **&quot;/content/dam&quot;**
+1. Ändra värdet för egenskapen path till **/content/dam**
 1. Klicka på Spara
 
-Genom att ange egenskapen path till **&quot;/content/dam&quot;** Du anger i princip Bas-sökvägen till /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
+Genom att ange egenskapen path till **/content/dam** Du anger i princip Bas-sökvägen till /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
 
 ![basepath](assets/basepath.png)
 
@@ -79,7 +74,7 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
 1. Skapa en nod av typen &quot;nt:undefined&quot; under nodens sökvillkor. Namnge den här noden &quot;filetypes&quot;
 1. Lägg till följande två egenskaper i den här noden &quot;filetypes&quot;
 
-   1. name: ./jcr:content/metadata/dc:format
+   1. namn: ./jcr:content/metadata/dc:format
    1. värde: video/mp4
 
 1. Det innebär att resurser med egenskapen dc:format som är lika med video/mp4 betraktas som en resurstyp,&quot;Mp4-videor&quot;. Du kan använda valfri egenskap i noden&quot;jcr:content/metadata&quot; för sökvillkoren
@@ -90,6 +85,6 @@ När du har utfört stegen ovan börjar den nya resurstypen (Mp4-filer) visas i 
 
 ![mp4files](assets/mp4files.png)
 
-[Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tar en titt på **/apps/fd/fp/extensions/querybuilder/assettypes**
+[Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tittar på **/apps/fd/fp/extensions/querybuilder/assettypes**
 
-[Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan används i del 2 av den här självstudiekursen
+[Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan används i del 2 av den här självstudien

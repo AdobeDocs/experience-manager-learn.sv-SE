@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+duration: 192
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ I den här självstudiekursen ska vi skriva de bilagor som lagts till i det anpa
 
 Följande Java-klass har skrivits för att uppnå detta användningsfall
 
-Låt oss titta på den här koden
+Låt oss titta på koden
 
 ```java
 package com.mysite.core;
@@ -116,7 +117,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att anropa AEM arbetsflöde. Detta är ett namn på mappen som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
+* attachmentsPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att starta AEM. Detta är ett namn på mappen som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
 
 * saveToLocation - Det här är platsen där du vill att de bifogade filerna ska sparas i AEM filsystem.
 
@@ -129,7 +130,7 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 
 >[!NOTE]
 >
->Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med aemfd-client-sdk-beroendet i ditt maven-projekt.
+>Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt.
 
 ```xml
 <dependency>

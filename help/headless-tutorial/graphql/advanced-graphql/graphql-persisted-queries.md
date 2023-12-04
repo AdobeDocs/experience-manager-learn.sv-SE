@@ -7,9 +7,10 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+duration: 253
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -206,7 +207,7 @@ Genom att köra `getAllAdventureDetailsBySlug` frågor från kommandoradstermina
 
 >[!TIP]
 >
->    Om du kör frågan ovan mot AEM Author-miljön måste du skicka inloggningsuppgifterna. Se [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) för att demonstrera den och [Anropa AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) för dokumentationsinformation.
+>    Om du kör frågan ovan mot AEM författarmiljö måste du skicka inloggningsuppgifterna. Se [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) för att demonstrera den och [Anropa AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) för dokumentationsinformation.
 
 Granska även [Så här kör du en fråga som är sparad](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)och [Kodning av fråge-URL för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) för att lära sig hur klientapplikationerna beständiga frågekörningen fungerar.
 
@@ -216,9 +217,9 @@ Med AEM GraphQL API kan du uppdatera standardparametrarna för cachekontroll til
 
 * 60 sekunder är standardvärde (maxage=60) för klientens TTL (t.ex. en webbläsare)
 
-* 7200 sekunder är standard (s-maxage=7200) TTL för Dispatcher och CDN. kallas även delade cacheminnen
+* 7200 sekunder är standardvärdet (s-maxage=7200) för TTL för Dispatcher och CDN, som också kallas delade cacheminnen
 
-Använd `adventures-all` fråga för att uppdatera parametrar för cachekontroll. Frågesvaret är stort och det är användbart att styra dess `age` i cacheminnet. Den här beständiga frågan används senare för att uppdatera [klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
+Använd `adventures-all` fråga för att uppdatera parametrar för cachekontroll. Frågesvaret är stort och det är användbart att styra dess `age` i cachen. Den här beständiga frågan används senare för att uppdatera [klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
 
 1. Öppna GraphiQL Explorer och klicka på **ellipser** (...) bredvid den beständiga frågan och klicka sedan på **Sidhuvuden** att öppna **Cachekonfiguration** modal.
 

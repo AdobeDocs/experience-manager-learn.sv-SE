@@ -1,12 +1,8 @@
 ---
 title: Visar anpassade tillgångstyper i AEM Forms
 description: Del 2 i Lista anpassade tillgångstyper i AEM Forms
-uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
 topic: Development
@@ -14,9 +10,10 @@ role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
 last-substantial-update: 2019-07-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 184
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -27,8 +24,8 @@ ht-degree: 0%
 
 I den här artikeln skapar vi en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
 
-1. Skapa en sling: under /apps. Ge den namnet &quot;myportalcomponent&quot;
-1. Lägg till en fpContentType-egenskap. Ange värdet till **/libs/fd/ fp/formTemplate&quot;.**
+1. Skapa en sling:-mapp under /apps. Ge den namnet &quot;myportalcomponent&quot;
+1. Lägg till egenskapen fpContentType. Ange värdet till **/libs/fd/ fp/formTemplate&quot;.**
 1. Lägg till en title-egenskap och ställ in dess värde på &quot;custom template&quot;. Det här namnet visas i listrutan för sök- och listkomponenten
 1. Skapa en&quot;template.html&quot; under den här mappen. Den här filen innehåller koden för att formatera och visa de olika resurstyperna.
 
@@ -78,13 +75,13 @@ I följande kod visas de olika typerna av resurser som använder söknings- och 
 
 ## Konfigurera sök- och listkomponenten {#configure-search-and-lister-component}
 
-När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka på webbläsaren [till denna URL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka på webbläsaren [till denna URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 Växla till designläge och konfigurera styckesystemet så att det inkluderar Search and Lister-komponenten i den tillåtna komponentgruppen. Komponenten Sök och Lister ingår i Document Services-gruppen.
 
 Växla till redigeringsläget och lägg till komponenten Sök och Lister i ParSys.
 
-Öppna konfigurationsegenskaperna för komponenten &quot;Sök och visa&quot;. Kontrollera att fliken &quot;Resursmappar&quot; är markerad. Välj de mappar från vilka du vill visa resurserna i sök- och listkomponenten. I den här artikeln har jag valt
+Öppna konfigurationsegenskaperna för komponenten Sök och visa. Kontrollera att fliken &quot;Resursmappar&quot; är markerad. Välj de mappar från vilka du vill visa resurserna i sök- och listkomponenten. I den här artikeln har jag valt
 
 * /content/dam/VideosAndWordDocuments
 * /content/dam/formsanddocuments/assettypes
@@ -100,7 +97,7 @@ Välj &quot;anpassad mall&quot; i listrutan enligt nedan.
 Konfigurera de typer av resurser som du vill visa i portalen. Om du vill konfigurera resurstypernas flik till&quot;Resurslista&quot; och konfigurera resurstyperna. I det här exemplet har vi konfigurerat följande typer av resurser
 
 1. MP4-filer
-1. Word-dokument
+1. Orddokument
 1. Dokument (OOTB-tillgångstyp)
 1. Formulärmall (OOTB-resurstyp)
 
@@ -108,7 +105,7 @@ I följande skärmbild visas resurstyperna som är konfigurerade för listning
 
 ![tillgångstyper](assets/assettypes.png)
 
-Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka på webbläsaren [till denna URL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
+Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka på webbläsaren [till denna URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
 
 >[!NOTE]
 >

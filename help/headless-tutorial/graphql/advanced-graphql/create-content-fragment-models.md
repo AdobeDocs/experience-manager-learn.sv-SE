@@ -7,9 +7,10 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 884
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ I följande video ges en kort introduktion till modeller för innehållsfragment
 
 ## Skapa modeller för innehållsfragment {#create-models}
 
-Låt oss skapa några innehållsfragmentmodeller för WKND-appen. Om du behöver en grundläggande introduktion till att skapa modeller för innehållsfragment, se motsvarande kapitel i [grundläggande självstudiekurs](../multi-step/content-fragment-models.md).
+Låt oss skapa några innehållsfragmentmodeller för WKND-appen. Om du behöver en grundläggande introduktion till att skapa modeller för innehållsfragment kan du läsa motsvarande kapitel i [grundläggande självstudiekurs](../multi-step/content-fragment-models.md).
 
 1. Navigera till **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
@@ -58,11 +59,11 @@ Låt oss skapa några innehållsfragmentmodeller för WKND-appen. Om du behöver
 
 Skapa sedan en modell som innehåller kontaktinformationen för en person eller plats.
 
-1. Välj **Skapa** i det övre högra hörnet.
+1. Välj **Skapa** längst upp till höger.
 
 1. Ge modellen titeln &quot;Kontaktinformation&quot; och välj sedan **Skapa**. Välj **Öppna** för att redigera den nya modellen.
 
-1. Börja med att dra en **Enkelradig text** till modellen. Ge den en **Fältetikett** i &quot;Telefon&quot; i **Egenskaper** -fliken. Egenskapsnamnet fylls i automatiskt som `phone`. Markera kryssrutan för att skapa fältet **Obligatoriskt**.
+1. Börja med att dra en **Enkelradig text** till modellen. Ge den en **Fältetikett** i &quot;Telefon&quot; i dialogrutan **Egenskaper** -fliken. Egenskapsnamnet fylls i automatiskt som `phone`. Markera kryssrutan för att skapa fältet **Obligatoriskt**.
 
 1. Navigera till **Datatyper** och sedan lägga till en ny **Enkelradig text** under fältet &quot;Telefon&quot;. Ge den en **Fältetikett** av&quot;Email&quot; (E-post) och ange det som **Obligatoriskt**.
 
@@ -100,7 +101,7 @@ Skapa sedan en modell för en adress.
 
 Skapa sedan en modell som innehåller information om en person.
 
-1. I det övre högra hörnet väljer du **Skapa**.
+1. Välj i det övre högra hörnet **Skapa**.
 
 1. Ge modellen titeln Person och välj sedan **Skapa**. Välj **Öppna** för att redigera den nya modellen.
 
@@ -108,7 +109,7 @@ Skapa sedan en modell som innehåller information om en person.
 
    ![Alternativ för fullständigt namn](assets/define-content-fragment-models/full-name.png)
 
-1. Content Fragment Models kan refereras i andra modeller. Navigera till **Datatyper** och sedan dra och släppa **Fragmentreferens** och ge den etiketten &quot;Kontaktinformation&quot;.
+1. Content Fragment Models kan refereras till i andra modeller. Navigera till **Datatyper** och sedan dra och släppa **Fragmentreferens** och ge den etiketten &quot;Kontaktinformation&quot;.
 
 1. I **Egenskaper** -fliken, under **Tillåtna modeller för innehållsfragment** markerar du mappikonen och väljer **Kontaktinformation** fragmentmodellen skapades tidigare.
 
@@ -127,7 +128,7 @@ Skapa sedan en modell som innehåller information om en person.
 
 1. För **Max**, ange &quot;5&quot; och för **Välj enhet** väljer du &quot;Megabyte (MB)&quot;. Valideringen tillåter bara att bilder med den angivna storleken väljs.
 
-1. Under **Acceptera endast angiven bildbredd** väljer du &quot;Maximal bredd&quot;. I **Max (pixlar)** anger du &quot;10000&quot;. Välj samma alternativ för **Acceptera endast en angiven bildhöjd**.
+1. Under **Acceptera endast angiven bildbredd** väljer du Maximal bredd. I **Max (pixlar)** anger du &quot;10000&quot;. Välj samma alternativ för **Acceptera endast en angiven bildhöjd**.
 
    Dessa valideringar säkerställer att tillagda bilder inte överskrider de angivna värdena. Valideringsreglerna ska nu se ut så här:
 
@@ -149,7 +150,7 @@ Välj **Spara** för att bekräfta ändringarna och stänga Modellredigeraren f�
 
 ### Platsmodell {#location-model}
 
-Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen används tabbplatshållare. Med platshållare för flikar kan du ordna dina datatyper i modellredigeraren och i innehållet i fragmentredigeraren genom att kategorisera innehållet. Varje platshållare skapar en flik som liknar en flik i en webbläsare i Content Fragment-redigeraren. Platsmodellen ska ha två flikar: Platsinformation och platsadress.
+Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen används tabbplatshållare. Med platshållare för flikar kan du ordna dina datatyper i modellredigeraren och i innehållet i fragmentredigeraren genom att kategorisera innehållet. Varje platshållare skapar en flik som liknar en flik i en webbläsare i Content Fragment-redigeraren. Platsmodellen ska ha två flikar: Platsinformation och Platsadress.
 
 1. Som tidigare, markera **Skapa** om du vill skapa en annan innehållsfragmentmodell. Ange&quot;Plats&quot; i modelltitel. Välj **Skapa** följt av **Öppna** i den framgångstrafik som visas.
 
@@ -161,11 +162,11 @@ Nästa Content Fragment Model beskriver en fysisk plats. I den här modellen anv
 
 1. Lägg till en **Innehållsreferens** under Kontaktinformation. Ge den etiketten&quot;Platsbild&quot;. The **Rotsökväg** bör `/content/dam/wknd-shared.` Under **Acceptera endast angivna innehållstyper** väljer du &quot;Bild&quot;.
 
-1. Låt oss också lägga till en **JSON-objekt** -fältet under &quot;Location Image (Platsbild)&quot;. Eftersom den här datatypen är flexibel kan den användas för att visa alla data som du vill inkludera i ditt innehåll. I det här fallet används JSON-objektet för att visa information om vädret. Märk JSON-objektet &quot;Väder efter säsong&quot;. I **Egenskaper** flik, lägga till **Beskrivning** så att användaren vet vilka data som ska anges här: &quot;JSON-data om händelsens läge (väder, sommar, höst, vinter).&quot;
+1. Låt oss också lägga till en **JSON-objekt** -fältet under &quot;Platsbild&quot;. Eftersom den här datatypen är flexibel kan den användas för att visa alla data som du vill inkludera i ditt innehåll. I det här fallet används JSON-objektet för att visa information om vädret. Märk JSON-objektet &quot;Väder efter säsong&quot;. I **Egenskaper** flik, lägga till **Beskrivning** så det är tydligt för användaren vilka data som ska anges här:&quot;JSON-data om händelseplatsens väder per säsong (vår, sommar, höst, vinter).&quot;
 
    ![Alternativ för JSON-objekt](assets/define-content-fragment-models/json-object.png)
 
-1. Om du vill skapa fliken Platsadress lägger du till en **Platshållare för flik** till modellen och ge den etiketten&quot;Platsadress&quot;.
+1. Skapa fliken Platsadress genom att lägga till en **Platshållare för flik** till modellen och ge den etiketten&quot;Platsadress&quot;.
 
 1. Dra och släpp en **Fragmentreferens** och etikettera den som&quot;Adress&quot; och under egenskapsfliken **Tillåtna modeller för innehållsfragment** väljer du **Adress** modell.
 
@@ -189,7 +190,7 @@ Skapa slutligen en modell som beskriver ett team med människor.
 
    ![Alternativ för fragmentreferens](assets/define-content-fragment-models/fragment-reference.png)
 
-1. Under **Tillåtna modeller för innehållsfragment**, använder du mappikonen för att öppna modal Markera bana och väljer sedan **Person** modell. Använd **Välj** för att spara banan.
+1. Under **Tillåtna modeller för innehållsfragment**, använder du mappikonen för att öppna modal Markera bana och väljer sedan alternativet **Person** modell. Använd **Välj** för att spara banan.
 
    ![Välj personmodell](assets/define-content-fragment-models/select-person-model.png)
 
@@ -203,7 +204,7 @@ På liknande sätt som Team-modellen har en fragmentreferens till personmodellen
 
    ![Adventure edit path](assets/define-content-fragment-models/adventure-edit-path.png)
 
-1. Längst ned i formuläret, under &quot;What to Bring&quot;, lägger du till en **Fragmentreferens** fält. Ange **Fältetikett** av &quot;Location&quot;. Under **Tillåtna modeller för innehållsfragment** väljer du **Plats** modell.
+1. Längst ned i formuläret, under &quot;What to Bring&quot;, lägger du till en **Fragmentreferens** fält. Ange en **Fältetikett** av &quot;Location&quot;. Under **Tillåtna modeller för innehållsfragment** väljer du **Plats** modell.
 
    ![Referensalternativ för platsfragment](assets/define-content-fragment-models/location-fragment-reference.png)
 

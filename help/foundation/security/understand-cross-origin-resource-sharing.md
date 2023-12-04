@@ -9,9 +9,10 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 336
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---

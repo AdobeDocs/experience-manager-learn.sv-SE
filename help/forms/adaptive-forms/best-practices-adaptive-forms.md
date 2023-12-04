@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: fbfc74d7-ba7c-495a-9e3b-63166a3025ab
 last-substantial-update: 2020-09-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
 
 ## Namnkonventioner
 
-* **Paneler**
+* **Panel**
    * Panelnamn är från och med en versal.
 
 * **Formulärfält**
@@ -37,6 +38,7 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
    * Formulärfragment bör beaktas vid utveckling av stora formulär. Aktivera lazy loading av formulärfragment för snabbare inläsning
    * **DataModel**
       * Vi rekommenderar att adaptiv form kopplas till lämplig datamodell
+
    * **Objekthändelser**
       * Kod som rör ett objekts synlighet ska alltid placeras i synlighetshändelsen för det objektet.
    * **Skript**

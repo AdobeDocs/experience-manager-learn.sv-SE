@@ -10,20 +10,21 @@ jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
-source-git-commit: 27d065761643030de68176ebb4ca10bc152844df
+duration: 883
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # Så här använder du Rapid Development Environment
 
-Lär dig **använda** Rapid Development Environment (RDE) på AEM as a Cloud Service. Distribuera kod och innehåll för snabbare utvecklingscykler med kod som nästan är färdig i den integrerade utvecklingsmiljön (IDE).
+Läs **använda** Rapid Development Environment (RDE) på AEM as a Cloud Service. Distribuera kod och innehåll för snabbare utvecklingscykler med kod som nästan är färdig i den integrerade utvecklingsmiljön (IDE).
 
 Använda [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) får du lära dig hur du distribuerar olika AEM till RDE genom att köra AEM-RDE:er `install` från din favoritutvecklingsmiljö.
 
-- AEM kod- och innehållspaketdistribution (all, ui.apps)
+- AEM kod och innehållspaket (all, ui.apps)-distribution
 - Driftsättning av OSGi-paket och konfigurationsfiler
 - Apache och Dispatcher konfigurerar distributionen som en zip-fil
 - Enskilda filer som HTML, `.content.xml` (dialog-XML) distribution
@@ -82,7 +83,7 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
    ```
 
 1. Öppna `helloworld.html` fil från `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld` mapp
-1. Återge `Description` efter befintlig `<div>` -elementet i `Text` -egenskap.
+1. Återge `Description` egenskapen efter befintlig `<div>` -elementet i `Text` -egenskap.
 
    ```html
    ...
@@ -112,7 +113,7 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
    $ aio aem:rde:install ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml -t content-xml -p /apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplatssida.
+1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplats.
 
 ### Granska `install` kommandoalternativ
 
@@ -149,7 +150,7 @@ Om du vill lära dig hur man driftsätter OSGi-paketet kan vi förbättra `Hello
    $ aio aem:rde:install target/aem-guides-wknd.core-2.1.3-SNAPSHOT.jar
    ```
 
-1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplatssida.
+1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplats.
 
 ### Distribuera OSGi-konfiguration
 
@@ -231,4 +232,4 @@ Läs mer om [livscykeln för utveckling/driftsättning med RDE](./development-li
 
 [Adobe I/O Runtime CLI Plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
+[AEM projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)

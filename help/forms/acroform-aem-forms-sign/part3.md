@@ -1,18 +1,15 @@
 ---
 title: Acrobat med AEM Forms
-seo-title: Merge Adaptive Form data with Acroform
-description: Del 3 i en självstudiekurs om hur du integrerar Acrobat med AEM Forms. Testa arbetsflödet och det adaptiva formuläret på datorn.
+description: Del 3 i en självstudiekurs som integrerar Acrobat med AEM Forms. Testa arbetsflödet och det adaptiva formuläret på datorn.
 feature: adaptive-forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 67
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---

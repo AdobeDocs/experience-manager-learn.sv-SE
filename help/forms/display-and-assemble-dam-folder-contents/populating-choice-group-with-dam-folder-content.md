@@ -8,14 +8,15 @@ role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
-# Lägga till objekt dynamiskt till urvalskomponenten för grupp
+# Lägga till objekt dynamiskt i alternativgruppskomponenten
 
 I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i en adaptiv Forms-valgruppkomponent som CheckBox, Radio Button och Image List. I den här artikeln ska vi titta på hur man fyller i en alternativgruppskomponent med innehållet i DAM-mappen. På skärmbilden finns de tre filerna i mappen newsletter. Varje gång ett nytt nyhetsbrev läggs till i mappen uppdateras urvalsgruppskomponenten och visar innehållet automatiskt. Användaren kan välja ett eller flera nyhetsbrev att hämta.
 

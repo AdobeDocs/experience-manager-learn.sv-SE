@@ -8,9 +8,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 541
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---

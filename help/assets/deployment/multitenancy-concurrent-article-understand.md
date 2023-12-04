@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 543
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -117,7 +118,7 @@ Om konsensus inte kan nås mellan de olika affärsenheterna är en möjlig lösn
 
 AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, t.ex. för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
 
-### Alternativa URL:er {#vanity-urls}
+### Vanity-URL:er {#vanity-urls}
 
 AEM tillhandahåller funktionalitet-URL som kan anges per sida. Oron med detta tillvägagångssätt i ett multi-tenant-scenario är att AEM inte garanterar att det är unikt mellan de vanity-URL:er som konfigurerats på det här sättet. Om två olika användare konfigurerar samma vanlighetssökväg för olika sidor kan ett oväntat beteende påträffas. Därför rekommenderar vi att du använder mod_rewrite-regler i Apache-dispatcherinstanserna, som tillåter en central konfigurationspunkt i kombination med regler för utgående resurslösare.
 

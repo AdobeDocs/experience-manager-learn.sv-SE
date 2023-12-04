@@ -9,9 +9,10 @@ topic: Headless, Content Management
 level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 952
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1409'
 ht-degree: 0%
 
 ---
@@ -49,7 +50,7 @@ The **Återge som** -egenskapen kan anges till:
 The **Standardtyp** kan anges till:
 
 * RTF
-* Markdown
+* Markering
 * Oformaterad text
 
 The **Standardtyp** -alternativet påverkar redigeringsmiljön direkt och avgör om det finns RTF-verktyg.

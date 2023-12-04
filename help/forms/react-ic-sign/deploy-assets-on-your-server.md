@@ -9,9 +9,10 @@ level: Beginner
 jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: f12f83fa-673a-454c-aa52-6ea769a182b7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 58
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '157'
 ht-degree: 0%
 
 ---

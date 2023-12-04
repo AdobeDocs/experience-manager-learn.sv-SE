@@ -1,22 +1,18 @@
 ---
 title: Generera interaktivt kommunikationsdokument för tryckkanaler med bevakad mappmekanism
-seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: Använd bevakad mapp för att generera dokument för utskriftskanaler
-seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 161
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -47,13 +43,13 @@ Kodlistan nedan gör följande:
 
 Rad 1 - Sökväg till InteractiveCommunicationsDocument
 
-Raderna 15-20: Hämta listan med kontonummer från XML-dokumentet som finns i den bevakade mappen
+Rader 15-20: Hämta listan med kontonummer från XML-dokumentet som tagits bort i den bevakade mappen
 
-Raderna 24-25: Hämta PrintChannelService och Print Channel som är associerade med dokumentet.
+Rader 24-25: Hämta PrintChannelService och Print Channel som är associerade med dokumentet.
 
 Rad 30: Skicka kontonumret som nyckelelement till formulärdatamodellen.
 
-Raderna 32-36: Ange dataalternativen för det dokument som ska genereras.
+Rader 32-36: Ange dataalternativ för det dokument som ska genereras.
 
 Rad 38: Återge dokumentet.
 
@@ -126,7 +122,7 @@ Kontrollera att den här systemanvändaren har läsbehörighet för följande no
 * [Bevakat mappskript](assets/printchanneldocumentusingwatchedfolder.zip)
 * [Konfiguration av datakälla](assets/datasource.zip)
 
-* Öppna filen /etc/fd/watchfolder/scripts/PrintPDF.ecma. Kontrollera att sökvägen till interactiveCommunicationsDocument på rad 1 pekar på rätt dokument som du vill skriva ut
+* Öppna filen /etc/fd/watchfolder/scripts/PrintPDF.ecma. Se till att sökvägen till interactiveCommunicationsDocument på rad 1 pekar på rätt dokument som du vill skriva ut
 
 * Ändra saveLocation enligt dina önskemål på rad 2
 
@@ -144,7 +140,7 @@ Kontrollera att den här systemanvändaren har läsbehörighet för följande no
 ```
 
 
-* Släpp account.xml i mappen C:\RenderPrintChannel\input folder.
+* Släpp account.xml i mappen C:\RenderPrintChannel\input.
 
 * De genererade PDF-filerna skrivs till saveLocation enligt specifikationen i ecma-skriptet.
 

@@ -2,19 +2,17 @@
 title: Felsöka AEM SDK med OSGi-webbkonsolen
 description: AEM SDK:s lokala snabbstart har en OSGi-webbkonsol som innehåller en mängd information och introspectioner i den lokala AEM som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 kt: 5265, 5366, 5267
 topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 516
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -59,7 +57,7 @@ Viktiga aspekter som kan vara till hjälp vid felsökning:
 + Verifierar om ett OSGi-paket är aktivt
 + Fastställa om ett OSGi-paket har otillfredsställande importer som förhindrar det från att starta
 + Hämta komponentens PID för att skapa OSGi-konfigurationer för dem i Git
-+ Identifiera OSGi-egenskapsvärden som är bundna till den aktiva OSGi-konfigurationen
++ Identifiera OSGi-egenskapsvärden bundna till den aktiva OSGi-konfigurationen
 
 ## Sling Models
 

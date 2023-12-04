@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 46df7b13401ee3497c871eac3b8158148c2e6a04
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 Använda API:er för Output och Forms Service i AEM Forms
 
-I den här artikeln ska vi ta en titt på följande
+I den här artikeln ska vi titta på följande
 
 * Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns här [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för Output-tjänsten.
 * FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF. Mer information finns här [javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) för Forms.
@@ -61,7 +62,7 @@ Rad 6 exporterar xmlData från PDF-filen
 1. /content/AemFormsSamples/exportdata
 1. /content/help/seFormsSamples/outputService
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman-appen. Med Postman kan du göra POSTER till servern. Installera Postman på datorn.
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 
 Se till att du har valt &quot;POST&quot; i listrutan http://localhost:4502/content/AemFormsSamples/exportdata.html Kontrollera att du har angett &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för begäran enligt bilden nedan
@@ -78,7 +79,7 @@ Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänst
 
    * **xdp_or_pdf_file** : Den xdp- eller pdf-fil som du vill sammanfoga data med
    * **xmlfile**: XML-datafilen som sammanfogas med xdp_or_pdf_file
-   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\documents\\sample.pdf
+   * **saveLocation**: Den plats där det återgivna dokumentet ska sparas i filsystemet. Till exempel c:\\documents\\sample.pdf
 
 ### Importera data till PDF-fil
 
@@ -86,9 +87,9 @@ Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänst
 * **POSTS-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 * **Begärandeparametrar:**
 
-   * **pdffile** : PDF-filen som du vill sammanfoga data med
+   * **pdffile** : Den PDF-fil som du vill sammanfoga data med
    * **xmlfile**: XML-datafilen som sammanfogas med PDF-filen
-   * **saveLocation**: Platsen där det återgivna dokumentet ska sparas i filsystemet. Till exempel `c:\\outputsample.pdf`.
+   * **saveLocation**: Den plats där det återgivna dokumentet ska sparas i filsystemet. Till exempel `c:\\outputsample.pdf`.
 
 **Exportera data från PDF-fil**
 * Använd FormsService för att exportera data från PDF-fil
@@ -96,6 +97,6 @@ Paketet innehåller 3 exempel. I följande stycken förklaras när utdatatjänst
 * **Begärandeparametrar:**
 
    * **pdffile** : Den PDF-fil som du vill exportera data från
-   * **saveLocation**: Platsen där exporterade data ska sparas i filsystemet. Till exempel c:\\documents\\exported_data.xml
+   * **saveLocation**: Den plats där exporterade data ska sparas i filsystemet. Till exempel c:\\documents\\exported_data.xml
 
 [Du kan importera den här postmansamlingen för att testa API:t](assets/document-services-postman-collection.json)

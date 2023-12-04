@@ -12,9 +12,10 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 286
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---

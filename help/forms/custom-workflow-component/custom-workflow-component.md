@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
 exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 95
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
 # Anpassad arbetsflödeskomponent
 
-Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver skapa anpassade arbetsflödeskomponenter. Arbetsflödeskomponenten konfigureras för att köra koden som skrevs i föregående steg. Arbetsflödeskomponenten kan ange processargument för koden. I den här artikeln ska vi utforska arbetsflödeskomponenten som är kopplad till koden.
+Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver skapa anpassade arbetsflödeskomponenter. Arbetsflödeskomponenten kommer att konfigureras för att köra koden som skrevs i föregående steg. Arbetsflödeskomponenten kan ange processargument för koden. I den här artikeln ska vi utforska arbetsflödeskomponenten som är kopplad till koden.
 
 
 [Hämta den anpassade arbetsflödeskomponenten](assets/saveFiles.zip)
@@ -47,10 +48,10 @@ Processargumenten för processen finns under processarnoden
 
 ![processargument](assets/process-arguments.png)
 
-Författaren anger argumenten som visas på skärmbilden nedan
+Författaren anger argumenten enligt skärmbilden nedan
 ![workflow-component](assets/custom-workflow-component.png)
 
-Värdena lagras som egenskaper för metadatanoden. Värdet **c:\formsattachments** lagras i metadatanodens saveToLocation-egenskap
+Värdena lagras som egenskaper för metadatanoden. Värdet **c:\formbilagor** lagras i metadatanodens saveToLocation-egenskap
 ![save-location](assets/save-to-location.png)
 
 ## cq:editConfig
@@ -59,7 +60,7 @@ Cq:EditConfig är helt enkelt en nod med den primära typen cq:EditConfig och na
 
 ![edit-config](assets/cq-edit-config.png)
 
-cq:formParameters (nodtyp not:unsigned): definierar ytterligare parametrar som läggs till i dialogformuläret.
+cq:formParameters (nodtyp nt:unStructed): definierar ytterligare parametrar som läggs till i dialogformuläret.
 
 
 Observera egenskaperna för cq:formParameters-noden

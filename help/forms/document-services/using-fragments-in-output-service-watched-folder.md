@@ -9,9 +9,10 @@ level: Intermediate
 last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
 exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 120
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -20,12 +21,12 @@ ht-degree: 0%
 
 
 I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i xdp måste du skapa en mapp med namnet **fragment** under din AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![fragment-xdp](assets/survey-fragment.png).
+* c:\xdptemplates - Detta kommer att innehålla xdp-basmallen
+* c:\xdptemplates\fragments - Den här mappen innehåller fragment och huvudmallen refererar till fragmentet enligt nedan
+  ![fragment-xdp](assets/survey-fragment.png).
 * Mappens xdpdokument kommer att innehålla din basmall och fragmenten i **fragment** mapp
 
-Du kan skapa den struktur som behövs med [formulär och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+Du kan skapa den struktur som behövs med hjälp av [formulär och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 Nedan följer mappstrukturen för exempelkoden xdp som använder 2 fragment
 ![formulär&amp;dokument](assets/fragment-folder-structure-ui.png)
@@ -65,12 +66,12 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 **Testa exempelpaketet på datorn**
-* [Distribuera paketet DevelopingWithServiceUSer](assets/DevelopingWithServiceUser.jar)
+* [Distribuera DevelopingWithServiceUSer-paketet](assets/DevelopingWithServiceUser.jar)
 * Lägg till posten **DevelopingWithServiceUser.core:getformsresourceReser=fd-service** i tillägget för tjänsten för användarmappning, vilket visas på skärmbilden nedan
-   ![tillägg för användarmappning](assets/user-mapper-service-amendment.png)
+  ![tillägg för användarmappning](assets/user-mapper-service-amendment.png)
 * [Hämta och importera xdp-exempelfiler och ECMA-skript](assets/watched-folder-fragments-ecma.zip).
 Detta skapar en bevakad mappstruktur i din c:/fragmentsandoutputService-mapp
 
-* [Extrahera exempeldatafilen](assets/usingFragmentsSampleData.zip) och placera den i installationsmappen för den bevakade mappen (c:\fragmentsandoutputservice\install)
+* [Extrahera exempelfilen](assets/usingFragmentsSampleData.zip) och placera den i installationsmappen för den bevakade mappen (c:\fragmentsandoutputservice\install)
 
 * Kontrollera resultatmappen för den bevakade mappkonfigurationen för den genererade PDF-filen

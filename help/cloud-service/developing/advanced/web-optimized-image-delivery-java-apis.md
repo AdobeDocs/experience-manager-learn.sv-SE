@@ -1,6 +1,6 @@
 ---
-title: Webboptimerad bildleverans Java&trade; API:er
-description: Lär dig hur du använder AEM as a Cloud Service webboptimerade Java&trade för bildleverans. API:er för att utveckla högpresterande webbupplevelser.
+title: Webboptimerad bildleverans, Java&trade; API:er
+description: Lär dig hur du använder AEM as a Cloud Service webboptimerade Java&trade; API:er för bildleverans för att utveckla högpresterande webbupplevelser.
 version: Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
 topic: Performance, Development
@@ -11,9 +11,10 @@ last-substantial-update: 2023-03-30T00:00:00Z
 jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 527
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ AEM as a Cloud Service stöd [webboptimerad bildleverans](https://experienceleag
 
 I den här artikeln utforskas hur du använder Java™-API:er för webboptimerade bilder i en anpassad komponent, på ett sätt som gör att kodbaserade funktioner kan användas på både AEM as a Cloud Service och AEM SDK.
 
-## Java™ API:er
+## Java™-API:er
 
 The [AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) är en OSGi-tjänst som genererar webboptimerade URL:er för bildresurser. `AssetDelivery.getDeliveryURL(...)` tillåtna alternativ är [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 

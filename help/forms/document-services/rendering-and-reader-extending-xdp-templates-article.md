@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 221
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -30,17 +31,17 @@ För att uppnå detta måste vi göra följande.
 * Du kan även se videon om [konfigurera autentiseringsuppgifter för Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
-* Skapa en anpassad OSGi-tjänst som återger och tillämpar användarrättigheter. Koden som ska användas anges nedan
+* Skapa en anpassad OSGi-tjänst som återger och tillämpar användarrättigheter. Koden för att uppnå detta visas nedan
 
 ## Rendera XDP och Använd användarrättigheter {#render-xdp-and-apply-usage-rights}
 
-* Rad 7: Med hjälp av FormsTjänsts renderPDFForm genererar vi PDF från XDP.
+* Rad 7: Med FormsTjänsts renderPDFForm genererar vi PDF från XDP.
 
-* Raderna 8-14: Lämpliga användningsrättigheter har angetts. Dessa användningsrättigheter hämtas från OSGi-konfigurationsinställningarna.
+* Rader 8-14: Lämpliga användningsrättigheter har angetts. Dessa användningsrättigheter hämtas från OSGi-konfigurationsinställningarna.
 
-* Rad 20: Använd resurshanteraren som är associerad med tjänstanvändarens fd-service
+* Rad 20: Använd den resurslösning som är associerad med tjänstanvändarens fd-service
 
-* Rad 24: Metoden secureDocument i DocumentAssuranceService används för att tillämpa användningsrättigheterna
+* Rad 24: DocumentAssuranceTjänstens secureDocument-metod används för att tillämpa användningsrättigheterna
 
 ```java
  public Document renderAndExtendXdp(String xdpPath) {

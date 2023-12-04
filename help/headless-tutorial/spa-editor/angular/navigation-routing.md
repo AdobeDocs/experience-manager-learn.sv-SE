@@ -2,10 +2,7 @@
 title: Lägga till navigering och routning | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur flera vyer i SPA stöds med AEM sidor och SPA Editor SDK. Dynamisk navigering implementeras med hjälp av Angular och läggs till i en befintlig Header-komponent.
 feature: SPA Editor
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-5312
 thumbnail: 5312-spa-angular.jpg
 topic: SPA
@@ -13,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 936
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2635'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---

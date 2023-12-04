@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 106
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -43,11 +44,11 @@ return interactivePDF;
 
 Rad 1: Sökväg till mappen som innehåller xdp-mallen
 
-Rad2-4: Skapa PDFFormRenderOptions och ange dess egenskaper
+Line2-4: Skapa PDFormRenderOptions och ange dess egenskaper
 
-Rad 7: Generera interaktiv PDF med hjälp av tjänsten renderPDFForm i FormsService
+Rad 7: Generera interaktivt PDF med hjälp av tjänsten renderPDFForm i FormsService
 
-Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande programmet
+Rad 1: Returnerar den genererade interaktiva PDF-filen till det anropande programmet
 
 **Testa exempelpaketet på datorn**
 1. [Hämta och installera DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
@@ -63,7 +64,7 @@ Rad 11: Returnerar den genererade interaktiva PDF-filen till det anropande progr
       * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
    1. Klicka på Spara
 1. [Öppna mobilformuläret](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. Fyll i några fält och klicka sedan på ***Hämta och fyll i....*** knapp
+1. Fyll i några fält och klicka sedan på ***Hämta och fyll i...*** knapp
 1. Den interaktiva PDF-filen bör laddas ned till ditt lokala system
 
 

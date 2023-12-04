@@ -2,17 +2,15 @@
 title: Spara och hämta utkast
 description: Lär dig hur du sparar och hämtar utkast
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-10208
 exl-id: dc6f64a0-7059-4392-9c29-e66bdef4fd4d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 180
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%

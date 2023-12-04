@@ -8,16 +8,17 @@ role: Developer
 level: Intermediate
 exl-id: abb74d44-d1b9-44d6-a49f-36c01acfecb4
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 115
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Använda bevakade mappar i AEM Forms{#using-watched-folders-in-aem-forms}
 
-En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare monterar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript.
+En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare placerar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript.
 
 Om du vill veta mer om hur du skapar en bevakad mapp [klicka här](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html)
 
@@ -32,7 +33,7 @@ Följ stegen nedan för att konfigurera bevakade mappar på datorn:
 * [Hämta och extrahera innehållet i zip-filen](assets/outputservicewatchedfolderkt.zip).Den här ZIP-filen innehåller ett paket för att skapa bevakad mapp och exempelfiler för att testa utdatatjänsten med hjälp av en bevakad mappmekanism
    * Windows-system
 
-      * Importera outputServiceWatchedfolder.zip till AEM med hjälp av pakethanteraren
+      * Importera outputServiceWatchedfolder.zip till AEM med pakethanteraren
       * Då skapas en bevakad mapp som heter outputservicewatchedfolder på C-enheten.
    * System utanför Windows
       * [Öppna konfigurationsinställningen för den bevakade mappen](http://localhost:4502/crx/de/index.jsp#/etc/fd/watchfolder/config/outputservice)

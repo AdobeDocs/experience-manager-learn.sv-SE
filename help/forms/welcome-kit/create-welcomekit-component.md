@@ -8,14 +8,15 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 36
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
-# Välkomstpaketkomponent
+# Komponent för välkomstkit
 
 En sidkomponent skapades för att lista de resurser på sidan som kan hämtas av slutanvändaren. Sökvägarna till de enskilda resurserna sparas i en egenskap som kallas **banor**. De skickade formulärdata avgör vilka resurser som ska inkluderas.
 

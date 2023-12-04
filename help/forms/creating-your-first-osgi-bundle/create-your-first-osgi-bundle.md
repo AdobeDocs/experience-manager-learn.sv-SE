@@ -1,6 +1,6 @@
 ---
 title: Skapa ditt första OSGi-paket med AEM Forms
-description: Bygg ditt första OSGi-paket med Maven och Eclipse
+description: Skapa ditt första OSGi-paket med Maven och Eclipse
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 199
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -43,7 +44,7 @@ Maven är ett automatiserat byggverktyg som främst används för Java-projekt. 
 * Skapa en mapp med namnet `maven` i C-enheten
 * Ladda ned [binärt zip-arkiv](https://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
-* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
+* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
 * Lägg till `%M2_HOME%\bin` till din bana
 * Spara ändringarna
 * Öppna en ny kommandotolk och skriv in `mvn -version`. Du borde se **mvn** version som visas på skärmbilden nedan
@@ -68,7 +69,7 @@ Så här skapar du ditt första maven-projekt:
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=36 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.13
 ```
 
-När du är klar bör du se ett meddelande om att bygget lyckades i kommandofönstret
+När du är klar visas ett meddelande om att bygget lyckades i kommandofönstret
 
 ## Skapa förmörkande projekt från ditt maven-projekt
 
@@ -85,7 +86,7 @@ Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som vis
 
 Klicka på Nästa
 
-Välj c:\aemformsbundles\mysite by clicking the **Bläddra** knapp
+Välj platsen c:\aemformsbundles\mysite genom att klicka på **Bläddra** knapp
 
 ![datakälla](assets/mysite-eclipse-project.png)
 
@@ -94,7 +95,7 @@ Välj c:\aemformsbundles\mysite by clicking the **Bläddra** knapp
 
 Klicka **Slutför** för att starta importprocessen
 
-Projektet importeras till Eclipse och ett antal `mysite.xxxx` mappar
+Projektet importeras till Eclipse och du ser ett antal `mysite.xxxx` mappar
 
 Expandera `src/main/java` under `mysite.core` mapp. Det här är den mapp där du skriver större delen av koden.
 
@@ -118,7 +119,7 @@ Så här skapar du ditt projekt:
 * Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
-   `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+  `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg
 

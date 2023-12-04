@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 274
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -169,7 +170,7 @@ Följ stegen nedan om du vill att det här exemplet ska fungera i ditt system:
 
 * [Importera artikelresurser](assets/tag-and-store-in-dam-assets.zip) med AEM
 * Öppna [exempelformulär i förhandsgranskningsläge](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Fyll i alla fält** och skicka in formuläret.
-* [Navigera till toppmapp i DAM](http://localhost:4502/assets.html/content/dam/Peak). Du bör se DoR i mappen Peak. Kontrollera dokumentets egenskaper. Den bör taggas på lämpligt sätt.
+* [Navigera till toppmapp i DAM](http://localhost:4502/assets.html/content/dam/Peak). Se DoR i mappen Peak. Kontrollera dokumentets egenskaper. Den bör taggas på lämpligt sätt.
 Grattis! Exemplet har installerats på datorn
 
 * Låt oss utforska [arbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) som aktiveras när formulär skickas.

@@ -1,23 +1,18 @@
 ---
 title: Konfigurera leverans av webbkanalsdokument
-seo-title: Setting up the delivery of web channel document
 description: Det här är den sista delen i en flerstegskurs för att skapa ditt första interaktiva kommunikationsdokument. Här tittar vi på hur vi levererar webbkanalsdokument via e-post.
-seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
-uuid: c1066600-1abd-4401-b04f-b93c28603cc7
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 97
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -50,9 +45,9 @@ Logga in på AEM Forms.
 * På det här sättet skickar vi kontonumret via attributet request till formulärdatamodellen
 
 * Se till att du sparar ändringarna.
-   ![fdm](assets/requestattribute.gif)
+  ![fdm](assets/requestattribute.gif)
 
-## Testa e-postleverans av webbkanalsdokument {#test-email-delivery-of-web-channel-document}
+## Test Email Delivery of Web Channel Document {#test-email-delivery-of-web-channel-document}
 
 * [Installera exempelresurserna med pakethanteraren](assets/webchanneldelivery.zip)
 * [Logga in på crx](http://localhost:4502/crx/de/index.jsp#)
@@ -65,7 +60,7 @@ Logga in på AEM Forms.
 
 * Skapa en egenskap med namnet &quot;accountNumber&quot;. Kontrollera att egenskapstypen är en sträng.
 
-* Ange värdet för den här kontonummeregenskapen till &quot;3059827&quot;. Du kan ange det här värdet till valfritt slumptal.
+* Ange värdet för den här kontonummeregenskapen till &quot;3059827&quot;. Du kan ange det här värdet till valfritt slumptal som du vill.
 
 * [Öppna getad.html](http://localhost:4502/content/getad.html)
 
@@ -73,7 +68,7 @@ Logga in på AEM Forms.
 
 >[!NOTE]
 >
->Ta en titt på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
+>Titta på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
 
 ## Nästa steg
 

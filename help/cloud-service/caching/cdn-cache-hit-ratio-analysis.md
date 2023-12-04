@@ -10,13 +10,14 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: 4e93bc88b0ee5a805f2aaf1e66900f084ae01247
+exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
+duration: 377
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
-
 
 # Analys av träffgrad i CDN-cache
 

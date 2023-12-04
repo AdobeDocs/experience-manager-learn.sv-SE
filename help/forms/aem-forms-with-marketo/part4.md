@@ -1,6 +1,6 @@
 ---
 title: AEM Forms med Marketo (del 4)
-description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
+description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 95
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Användaren anger lead-ID:t och när Marketo-tjänsten tabbas anropas lead by ID
 1. Ange namn och titel för de två TextField-komponenterna som FirstName och LastName
 1. Konfigurera panelkomponenten så att den är en repeterbar komponent genom att ange Minimum till 1 och Maximum till -1. Detta krävs eftersom Marketo-tjänsten returnerar en array med Lead-objekt och du måste ha en upprepningsbar komponent för att kunna visa resultatet. I det här fallet får vi bara tillbaka ett Lead-objekt eftersom vi söker efter Lead-objekt med dess ID.
 1. Skapa en regel i fältet LeadId så som visas i bilden nedan
-1. Förhandsgranska formuläret och ange ett giltigt lead-ID i fältet LeadID och tabba ut. Fälten Förnamn och Efternamn ska fyllas i med resultatet av anropet.
+1. Förhandsgranska formuläret och ange ett giltigt lead-ID i fältet LeadID och tabba ut. Fälten Förnamn och Efternamn ska fyllas i med resultatet av serviceanropet.
 
 I följande skärmbild förklaras inställningarna för regelredigeraren
 

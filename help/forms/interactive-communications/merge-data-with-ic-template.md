@@ -2,26 +2,24 @@
 title: Generera dokument för utskriftskanal genom att sammanfoga data
 description: Lär dig hur du genererar dokument för utskriftskanaler genom att sammanfoga data som finns i indataströmmen
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 223
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # Generera dokument för utskriftskanaler med inskickade data
 
-Skriv ut kanaldokument genereras vanligtvis genom att data hämtas från en backend-datakälla via formulärdatamodellens get-tjänst. I vissa fall kan du behöva generera dokument för tryckkanaler med angivna data. Till exempel: Kunden fyller i ändringar av mottagarformulär och du kanske vill generera dokument för tryckkanaler med data från det skickade formuläret. Följande steg måste följas för att du ska kunna utföra den här åtgärden:
+Skriv ut kanaldokument genereras vanligtvis genom att data hämtas från en backend-datakälla via formulärdatamodellens get-tjänst. I vissa fall kan du behöva generera dokument för tryckkanaler med angivna data. Till exempel: Kunden fyller i ändringar av mottagarformulär och du kanske vill generera dokument för tryckkanaler med data från det skickade formuläret. För att kunna utföra den här åtgärden måste följande steg följas
 
 ## Skapa förifyllningstjänst
 
@@ -165,7 +163,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 Så här testar du detta på servern:
 
 * [Konfigurera Day CQ Mail Service.](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) Detta behövs för att skicka e-post med dokumentet som har genererats som en bifogad fil.
-* [Distribuera Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [Distribuera paketet Utveckla med tjänster](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Kontrollera att du har lagt till följande post i konfigurationen för användarmappningstjänsten för Apache Sling
 * **DevelopingWithServiceUser.core:getformsresourceReser=fd-service**
 * [Ladda ned och zippa upp resurser som hör till den här artikeln i ditt filsystem](assets/prefillservice.zip)
@@ -179,7 +177,7 @@ Så här testar du detta på servern:
 
 * [Öppna ChangeOfBeneficiaryForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * Kontrollera att det adaptiva formuläret är konfigurerat att skicka till AEM arbetsflöde enligt nedan
-   ![bild](assets/generateic.PNG)
+  ![bild](assets/generateic.PNG)
 * [Konfigurera arbetsflödesmodellen.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)Kontrollera att processsteget och skicka e-postkomponenter är konfigurerade enligt din miljö
 * [Förhandsgranska ChangeOfBeneficiaryForm.](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) Fyll i viss information och skicka
 * Arbetsflödet ska anropas och dokument för konc-utskriftskanal skickas till mottagaren som anges i skicka-e-postkomponenten som en bifogad fil

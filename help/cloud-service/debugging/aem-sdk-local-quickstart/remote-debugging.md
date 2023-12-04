@@ -8,9 +8,10 @@ role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 452
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---

@@ -11,9 +11,10 @@ thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+duration: 1773
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Det funktionella flödet för exempeltillägget är följande:
 
 ![Adobe I/O Runtime action flow for digital image generation](./assets/digital-image-generation/flow.png){align="center"}
 
-1. Välj Innehållsfragment och klicka på tilläggets `Generate Image` i [åtgärdsfält](#extension-registration) öppnar [modal](#modal).
+1. Välj Innehållsfragment och klicka på tilläggets `Generate Image` knappen i [åtgärdsfält](#extension-registration) öppnar [modal](#modal).
 1. The [modal](#modal) visar ett anpassat indataformulär som skapats med [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/).
 1. När du skickar formuläret skickas den angivna användaren `Image Description` text, det markerade innehållsfragmentet och AEM värd för [anpassad Adobe I/O Runtime-åtgärd](#adobe-io-runtime-action).
 1. The [Adobe I/O Runtime action](#adobe-io-runtime-action) validerar indata.
@@ -62,7 +63,7 @@ I exemplet används ett befintligt Adobe Developer Console-projekt och följande
 + Vilka mallar vill du söka efter? `All Extension Points`
 + Välj de mallar som ska installeras:` @adobe/aem-cf-admin-ui-ext-tpl`
 + Vad vill du ge tillägget ett namn? `Image generation`
-+ Ange en kort beskrivning av tillägget: `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
++ Ange en kort beskrivning av ditt tillägg: `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
 + Vilken version vill du börja med? `0.0.1`
 + Vad vill du göra nu?
    + `Add a custom button to Action Bar`
@@ -75,7 +76,7 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
 
 ### Inledande konfiguration
 
-1. Registrera dig kostnadsfritt [OpenAI API](https://openai.com/api/) skapa ett [API-nyckel](https://beta.openai.com/account/api-keys)
+1. Registrera dig kostnadsfritt [OpenAI API](https://openai.com/api/) konto och skapa [API-nyckel](https://beta.openai.com/account/api-keys)
 1. Lägg till den här nyckeln i ditt App Builder-projekts `.env` fil
 
    ```
@@ -90,7 +91,7 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
        ...
    ```
 
-1. Pass `OPENAI_API_KEY` uppdaterar Adobe I/O Runtime `src/aem-cf-console-admin-1/ext.config.yaml`
+1. Godkänd `OPENAI_API_KEY` uppdaterar Adobe I/O Runtime-åtgärden `src/aem-cf-console-admin-1/ext.config.yaml`
 
    ```yaml
        ...
@@ -111,13 +112,13 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
    ```
 
 1. Installera under Node.js-bibliotek
-   1. [OpenAI Node.js-biblioteket](https://github.com/openai/openai-node#installation) - för att enkelt anropa OpenAI API:t
+   1. [OpenAI Node.js Library](https://github.com/openai/openai-node#installation) - för att enkelt anropa OpenAI API:t
    1. [AEM](https://github.com/adobe/aem-upload#install) - för att överföra bilder till AEM-CS-instanser.
 
 
 >[!TIP]
 >
->I följande avsnitt får du lära dig mer om nyckelfilerna React och Adobe I/O Runtime Action JavaScript. Nyckelfilerna från `web-src` och  `actions` finns i AppBuilder-projektmappen [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+>I följande avsnitt får du lära dig mer om nyckelfilerna React och Adobe I/O Runtime Action JavaScript. Nyckelfilerna från `web-src` och  `actions` finns i AppBuilder-projektmappen. [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
 
 
 ### Appvägar{#app-routes}
@@ -126,7 +127,7 @@ The `src/aem-cf-console-admin-1/web-src/src/components/App.js` innehåller [Reag
 
 Det finns två logiska uppsättningar vägar:
 
-1. Den första rutten mappar begäranden till `index.html`som anropar React-komponenten som ansvarar för [tilläggsregistrering](#extension-registration).
+1. Den första rutten mappar begäranden till `index.html`, som anropar React-komponenten som ansvarar för [tilläggsregistrering](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
@@ -143,7 +144,7 @@ Det finns två logiska uppsättningar vägar:
        />
    ```
 
-### Tilläggsregistrering
+### Tillägg - registrering
 
 `ExtensionRegistration.js`, mappas till `index.html` rutt, är ingångspunkten för AEM tillägg och definierar:
 
@@ -209,7 +210,7 @@ I det här exemplet finns det en modal React-komponent (`GenerateImageModal.js`)
 1. Svaret på bildgenereringsåtgärden, som tillhandahåller länken AEM resursinformation för den nyligen genererade, överförda bilden.
 
 Viktigt är att all interaktion med AEM från tillägget ska delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsdomänsdelning (CORS).
+Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsorigo resursdelning (CORS).
 
 När _Generera bild_ formulär skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden, skickar bildbeskrivningen, aktuell AEM (domän) och användarens AEM åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) API för att generera en bild med den inskickade bildbeskrivningen. Nästa användning [AEM](https://github.com/adobe/aem-upload) nodmodulens `DirectBinaryUpload` klass som den överför genererad bild till AEM och slutligen använder [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
@@ -585,7 +586,7 @@ exports.main = main;
 
 #### Bildgenerering
 
-Den här modulen ansvarar för att anropa OpenAI-filer [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) slutpunkt med [öppai](https://github.com/openai/openai-node) bibliotek. Så här hämtar du OpenAI API-hemlig nyckel som definieras i `.env` fil, använder `params.OPENAI_API_KEY`.
+Den här modulen ansvarar för att anropa OpenAI-filer [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) slutpunkt med [öppai](https://github.com/openai/openai-node) bibliotek. Så här hämtar du OpenAI API-hemlig nyckel som definieras i `.env` -fil, använder `params.OPENAI_API_KEY`.
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 

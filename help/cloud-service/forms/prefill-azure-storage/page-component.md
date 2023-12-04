@@ -9,10 +9,11 @@ version: Cloud Service
 topic: Integrations
 jira: KT-13717
 exl-id: 7469aa7f-1794-40dd-990c-af5d45e85223
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 105
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 

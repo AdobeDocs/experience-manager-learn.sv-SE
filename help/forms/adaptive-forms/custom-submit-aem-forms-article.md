@@ -8,10 +8,11 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +23,7 @@ Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för
 I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd för hantering av adaptiv inlämning av Forms.
 
 * Logga in på crx
-* Skapa en nod av typen &quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
+* Skapa en nod av typen&quot;sling :folder&quot; under program. Anropa den här noden CustomSubmitHelpx.
 * Spara den nyskapade noden.
 * Lägg till följande tre egenskaper i den nya noden
 
@@ -30,7 +31,7 @@ I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd 
 |----------------    | ---------------------------------|
 | guideComponentType | fd/af/components/guidepittype |
 | guideDataModel | xfa,xsd,grundläggande |
-| jcr:description | CustomSubmitHelpx |
+| jcr:description | CustomSubmitHelp |
 
 
 * Spara ändringarna
@@ -52,7 +53,7 @@ I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd 
 ```
 
 * Skapa en fil med namnet addfields.jsp under noden CustomSubmitHelpx. Den här filen ger dig åtkomst till det signerade dokumentet.
-* Lägg till följande kod i den här filen
+* Lägg till följande kod i filen
 
 ```java
     <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>

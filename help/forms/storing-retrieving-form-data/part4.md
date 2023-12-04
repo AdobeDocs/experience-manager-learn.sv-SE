@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+duration: 145
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%

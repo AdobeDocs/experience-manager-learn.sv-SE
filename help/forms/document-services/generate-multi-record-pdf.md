@@ -8,21 +8,22 @@ role: Developer
 level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 199
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # Generera en uppsättning PDF-dokument från en XML-datafil
 
-OutputService innehåller ett antal metoder för att skapa dokument med hjälp av en formulärdesign och data som ska sammanfogas med formulärdesignen. I följande artikel förklaras hur du kan generera flera PDF-filer från en stor XML som innehåller flera enskilda poster.
+OutputService innehåller ett antal metoder för att skapa dokument med hjälp av en formulärdesign och data som ska sammanfogas med formulärdesignen. I följande artikel förklaras hur du kan generera flera PDF-filer från en stor XML-fil som innehåller flera enskilda poster.
 Nedan visas en skärmbild av XML-filen som innehåller flera poster.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch, metod](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över pdf-dokument (en per post) Signaturen för metoden generatePDFOutputBatch har följande parametrar
+Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch, metod](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över PDF-dokument (en per post) Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 * mallar - Karta som innehåller mallen, identifierad med en nyckel
 * data - Karta som innehåller XML-datadokument, identifierad med nyckel
@@ -33,7 +34,7 @@ Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml sk
 
 ## Använd ärendeinformation{#use-case-details}
 
-I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och data(xml)-filen. När filöverföringen är klar och POSTEN har skickats till AEM. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
+I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och XML-filen. När överföringen av filerna är klar och POSTEN har skickats till AEM. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
 
 ## Servlet Code{#servlet-code}
 
@@ -128,7 +129,7 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 * [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip).Den här zip-filen innehåller mallen och XML-datafilen.
 * [Peka din webbläsare på Felix webbkonsol](http://localhost:4502/system/console/bundles)
 * [Distribuera DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filer med hjälp av API:t för OutputService
+* [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filerna med API:t för OutputService
 * [Peka webbläsaren mot pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Importera och installera paketet](assets/generate-multiple-pdf-from-xml.zip). Det här paketet innehåller HTML-sidor som gör att du kan släppa mallen och datafilerna.
 * [Peka webbläsaren på MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)

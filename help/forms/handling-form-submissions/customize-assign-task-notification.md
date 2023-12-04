@@ -2,10 +2,7 @@
 title: Anpassa meddelande om tilldelning av uppgift
 description: Inkludera formulärdata i e-postmeddelanden om tilldelning av uppgifter
 feature: Workflow
-topics: integrations
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 jira: KT-6279
 thumbnail: KT-6279.jpg
@@ -14,9 +11,10 @@ role: Developer
 level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 213
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---

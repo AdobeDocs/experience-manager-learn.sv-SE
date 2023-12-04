@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 272
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Arch
 
 Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Den körda metodens signatur är som följer public void execute(WorkItem, WorkflowSession, workflowSession, MetaDataMap processArguments) ger WorkflowException Körningsmetoden ger åtkomst till följande tre variabler
 
-**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Variabeln workItem ger åtkomst till data som är relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
 **WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
@@ -45,7 +46,7 @@ I den här självstudiekursen ska vi skriva de bilagor som lagts till i det anpa
 
 Följande Java-klass har skrivits för att uppnå detta användningsfall
 
-Låt oss titta på den här koden
+Låt oss titta på koden
 
 ```java
 package com.learningaemforms.adobe.core;
@@ -143,7 +144,7 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 
 >[!NOTE]
 >
->Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med aemfd-client-sdk-beroendet i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
+>Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
 
 #### Bygg och driftsätt
 

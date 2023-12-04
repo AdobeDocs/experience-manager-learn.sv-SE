@@ -4,13 +4,13 @@ description: Oavsett om du är administratör, författare eller utvecklare gäl
 role: Admin
 level: Beginner, Intermediate
 topic: Administration
-audience: author, marketer, developer
 feature: Learn From Your Peers
 jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+duration: 266
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '998'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns presta
 
 AEM som är kvalificerade för granskningsloggning genererar mycket arkiverade data. Dessa data kan snabbt växa med tiden på grund av replikeringar, överföringar av resurser och andra systemaktiviteter.
 
-#### [Dokumentskydd](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
+#### [Säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
 
 Se till att god praxis för checklistan för säkerhet följs noga för att säkerställa den säkraste instansen av AEM.
 
@@ -79,7 +79,7 @@ Försök att inte använda anpassade komponenter - använd [kärnkomponenter](ht
 
 Med formatsystem kan de centrala komponenterna, och även de anpassade komponenterna, få en ny look och känsla som författaren bestämmer sig för att skapa helt nya snygga komponenter. De här stilistiska ändringarna gäller vanligtvis endast för en frontenddesigner och en kunnig författare (kallas ofta&quot;superförfattare&quot;)
 
-### [Launches](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
+### [Startar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
 
 Med lanseringar kan du slutföra arbetet för att lansera en ny kampanj, försäljning eller webbplats utan att påverka de distribuerade sidorna. Dessutom kan man schemalägga att publicera dem automatiskt utan närvaro eller övervakning, så att författarna kan göra nästa veckas (eller nästa kvarts) arbete idag och inte skynda sig in i sidutvecklingen dagen innan det ska publiceras - det är verkligen TIME-presenten!)
 

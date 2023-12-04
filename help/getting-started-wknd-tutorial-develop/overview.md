@@ -1,10 +1,7 @@
 ---
 title: Kom igång med AEM Sites - WKND, genomgång
 description: Lär dig implementera en AEM sajt för ett fiktivt livsstilsmärke som kallas WKND. Få en genomgång av grundläggande Experience Manager-teman som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -16,9 +13,9 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
 
 Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
-## Översikt {#wknd-tutorial-overview}
+## Ökning {#wknd-tutorial-overview}
 
 Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå den grundläggande grunden för plattformen och de vanliga designmönstren i AEM.
 

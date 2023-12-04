@@ -1,5 +1,5 @@
 ---
-title: Verktyg för omstrukturering av kod
+title: Kodomfaktoriseringsverktyg
 description: AEM Code Refactoring Tools automatiserar konverteringen av befintliga AEM så att de blir AEM as a Cloud Service kompatibla.
 version: Cloud Service
 feature: Migration
@@ -9,14 +9,15 @@ level: Intermediate
 jira: KT-8662
 thumbnail: 336693.jpeg
 exl-id: 9a607307-4f00-41db-a9e2-64bd7c18e3f8
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 190
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 12%
+ht-degree: 0%
 
 ---
 
-# Verktyg för omstrukturering av kod
+# Kodomfaktoriseringsverktyg
 
 AEM Code Refactoring Tools automatiserar konverteringen av befintliga AEM så att de blir AEM as a Cloud Service kompatibla.
 

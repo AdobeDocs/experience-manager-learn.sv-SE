@@ -11,10 +11,11 @@ thumbnail: 22132.jpg
 last-substantial-update: 2022-06-13T00:00:00Z
 doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 448
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 1%
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +43,7 @@ Lär dig hur du använder metadatafunktionerna för import och export i Adobe Ex
 * Den första kolumnen är som standard `assetPath`, som innehåller den absoluta JCR-sökvägen för en resurs.
 
 * Efterföljande kolumner i den första raden pekar på andra metadataegenskaper för en resurs.
-   * Till exempel : `dc:title, dc:description, jcr:title`
+   * Till exempel: `dc:title, dc:description, jcr:title`
 
 * Egenskapsformat för ett värde
 

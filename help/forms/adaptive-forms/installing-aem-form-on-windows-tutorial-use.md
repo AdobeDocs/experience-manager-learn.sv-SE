@@ -9,9 +9,10 @@ role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 757c8ad251d058bbe48cc3cd354fec533ec4e968
+duration: 158
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dubbelklicka aldrig på AEM snabbstartsburk om du tänker använda AEM Forms.
+>Dubbelklicka aldrig på AEM Quick Start jar om du tänker använda AEM Forms.
 >
 >Kontrollera också att det inte finns några blanksteg i sökvägen till installationsmappen för AEM Forms.
 >
->Installera till exempel inte AEM Forms i c:\jack and jill\AEM Forms folder
+>Installera till exempel inte AEM Forms i mappen c:\jack and jill\AEM Forms
 
 >[!NOTE]
 >
@@ -35,19 +36,18 @@ ht-degree: 0%
 >* Microsoft Visual C++ 2012 återdistribuerbar
 >* Microsoft Visual C++ 2013 återdistribuerbar (från och med 6.5)
 
-
 Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) för installation av AEM Forms. Följ de här stegen för att installera och konfigurera AEM Forms i Windows-miljö:
 
 * Kontrollera att rätt JDK är installerat
-   * AEM 6.2: Oracle SE 8 JDK 1.8.x (64 bitar)
-   * AEM 6.3 och AEM 6.4: Oracle SE 8 JDK 1.8.x (64 bitar)
+   * AEM 6.2 du behöver: Oracle SE 8 JDK 1.8.x (64 bitar)
+   * AEM 6.3 och AEM 6.4 du behöver: Oracle SE 8 JDK 1.8.x (64 bitar)
    * AEM 6.5 behöver du JDK 8 eller JDK 11
    * [Officiella JDK-krav](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=en) anges här
 * Kontrollera att JAVA_HOME är inställt på att peka på den JDK som du har installerat.
    * Följ stegen nedan för att skapa variabeln JAVA_HOME i Windows:
       * Högerklicka på Den här datorn och välj Egenskaper
       * På fliken Avancerat väljer du Miljövariabler och skapar en ny systemvariabel som heter JAVA_HOME.
-      * Ställ in variabelvärdet så att det pekar på JDK som är installerat på datorn. Till exempel c:\program files\java\jdk1.8.0_25
+      * Ställ in variabelvärdet så att det pekar på JDK som är installerat på datorn. Till exempel c:\programfiler\java\jdk1.8.0_25
 
 * Skapa en mapp med namnet AEMForms på C-enheten
 * Leta reda på AEMQuickStart.Jar och flytta den till mappen AEMForms
@@ -63,14 +63,14 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 
 * Du bör få en liten dialogruta med information om startförloppet.
 
-* Öppna filen sling.properties när starten är klar. Det här finns i c:\AEMForms\crx-quickstart\conf folder.
+* Öppna filen sling.properties när starten är klar. Detta finns i mappen c:\AEMForms\crx-quickstart\conf.
 
 * Kopiera de följande två raderna längst ned i filen
    * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.&#42;**
 * Dessa två egenskaper krävs för att dokumenttjänster ska fungera
 * Spara filen sling.properties
 * [Ladda ned ett formulärtilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
-* Installera formulären som läggs till i paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp).
+* Installera formulärtillägget i paketet med hjälp av [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp).
 * När du har installerat add-on package måste du följa följande steg
 
    * **Kontrollera att alla paket är i aktivt läge. (Förutom för AEMFD-signaturpaket).**
@@ -86,4 +86,4 @@ Vi rekommenderar att du följer [officiell dokumentation](https://helpx.adobe.co
 1. Spara ändringarna.
 
 Grattis! Du har nu installerat och konfigurerat AEM Forms på datorn.
-Beroende på dina behov kan du konfigurera  [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) eller [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) på servern
+Beroende på dina behov kan du konfigurera  [Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) eller [PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) på servern

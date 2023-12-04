@@ -2,7 +2,6 @@
 title: Skapa en anpassad väderkomponent | Komma igång med AEM SPA Editor och React
 description: Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. Komponenterna Open Weather API och React Open Weather används.
 feature: SPA Editor
-topics: development
 version: Cloud Service
 jira: KT-5878
 thumbnail: 5878-spa-react.jpg
@@ -11,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 472
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---

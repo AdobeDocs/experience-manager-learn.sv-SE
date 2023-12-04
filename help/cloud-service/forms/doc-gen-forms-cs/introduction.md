@@ -10,7 +10,8 @@ topic: Development
 jira: KT-7432
 thumbnail: 334859.jpg
 exl-id: 08dd141d-9d25-4dd5-a810-70e3835deae4
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 137
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 1%

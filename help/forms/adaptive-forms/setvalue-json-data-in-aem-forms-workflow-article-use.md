@@ -1,6 +1,6 @@
 ---
 title: Ange värde för Json-dataelement i AEM Forms Workflow
-description: Eftersom ett anpassat formulär dirigeras till olika användare AEM arbetsflödet finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
+description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 feature: Adaptive Forms
 version: 6.4
 topic: Development
@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 167
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
 
-# Ange värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# Ställa in värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-Eftersom ett anpassat formulär dirigeras till olika användare AEM arbetsflödet finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
+Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 
 ![Ställa in värdet för ett element i json-data](assets/capture-3.gif)
 
@@ -50,7 +51,7 @@ Så här distribuerar du resurser på ditt lokala system:
 * Peka webbläsaren till [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring
 * Ladda upp filen TimeOffRequestForm.zip
-   **Det här formuläret har skapats med AEM Forms 6.4. Kontrollera att du använder AEM Forms 6.4 eller senare**
+  **Det här formuläret har skapats med AEM Forms 6.4. Kontrollera att du använder AEM Forms 6.4 eller senare**
 * Öppna [formulär](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * Fyll i start- och slutdatum och skicka formuläret.
 * Gå till [&quot;Inkorg&quot;](http://localhost:4502/aem/inbox)
@@ -60,7 +61,7 @@ Så här distribuerar du resurser på ditt lokala system:
 
 >[!NOTE]
 >
->Eftersom vi fyller i det adaptiva formuläret i förväg med hjälp av användarprofilen bör du kontrollera att administratören [användarprofilinformation ](http://localhost:4502/security/users.html). Kontrollera att du har angett fälten FirstName, LastName och Email som minst.
+>Eftersom vi fyller i det adaptiva formuläret i förväg med hjälp av användarprofilen bör du kontrollera att administratören [användarprofilinformation](http://localhost:4502/security/users.html). Kontrollera att du har angett fälten FirstName, LastName och Email som minst.
 >Du kan aktivera felsökningsloggning genom att aktivera loggning för com.aemforms.setvalue.core.SetValueInJson [härifrån](http://localhost:4502/system/console/slinglog)
 
 >[!NOTE]

@@ -1,6 +1,6 @@
 ---
 title: AEM Forms med Marketo (del 3)
-description: Självstudiekurs om hur du integrerar AEM Forms med Marketo med AEM Forms Form Data Model.
+description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 108
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ För integreringen av AEM Forms med Marketo använder vi RESTful-webbtjänster. 
 
 &quot;marketo.json&quot; är swagger-filen som du får som en del av kursens resurser.
 Egenskapsvärden är specifik för din Marketo-instans.
-Autentiseringstypen är anpassad och autentiseringsimplementeringen måste matcha&quot;AemForms With Marketo&quot;. (Om du inte har ändrat detta i koden).
+Autentiseringstypen är anpassad och autentiseringsimplementeringen måste matcha AemForms med Marketo. (Om du inte har ändrat detta i koden).
 
 ## Skapa formulärdatamodell
 

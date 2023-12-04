@@ -9,7 +9,8 @@ feature: Developer Tools
 topic: Administration
 doc-type: Technical Video
 exl-id: 940d3cca-6052-40b6-b4f7-c0689ad21c94
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 72
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

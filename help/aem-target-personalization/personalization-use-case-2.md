@@ -1,8 +1,6 @@
 ---
 title: Personalisering med Adobe Target
-seo-title: Personalization using Adobe Target
 description: En komplett självstudiekurs som visar hur man skapar och levererar personaliserade upplevelser med Adobe Target.
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
@@ -11,9 +9,10 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 165
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---

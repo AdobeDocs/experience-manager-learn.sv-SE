@@ -11,9 +11,10 @@ thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 633
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---

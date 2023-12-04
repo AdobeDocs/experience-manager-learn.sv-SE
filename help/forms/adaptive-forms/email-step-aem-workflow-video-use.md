@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 345
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ Så här kör du exemplet på datorn:
 1. [Konfigurera daglig CQ Mail-tjänst](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
 1. [Importera och installera resurser som är associerade med den här artikeln med hjälp av pakethanteraren i CRX](assets/emaildoraemformskt.zip)
 1. Starta [adaptiv form](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Fyll i de obligatoriska fälten och skicka.
-1. Du bör få ett e-postmeddelande med DocumentOfRecord som en bifogad fil
+1. Du bör få ett e-postmeddelande med DocumentOfRecord som en bilaga
 
 Utforska [arbetsflödesmodell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
 

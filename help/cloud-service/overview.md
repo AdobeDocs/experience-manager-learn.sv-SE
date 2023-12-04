@@ -5,10 +5,11 @@ sub-product: Experience Manager as a Cloud Service
 jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 498
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 3%
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 3%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) finns nu som en molntjänst. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
+Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 

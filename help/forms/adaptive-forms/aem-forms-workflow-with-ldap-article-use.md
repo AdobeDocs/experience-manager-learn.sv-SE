@@ -8,9 +8,10 @@ version: 6.4,6.5
 level: Intermediate
 exl-id: 2e9754ff-49fe-4260-b911-796bcc4fd266
 last-substantial-update: 2021-09-18T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 149
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -61,7 +62,7 @@ Vi får tag i den person som initierade arbetsflödet. Sedan får vi värdet fö
 
 Beroende på hur hanteraregenskapen lagras i LDAP kan du behöva göra någon strängändring för att få hanterar-ID:t.
 
-Läs den här artikeln för att implementera din egen [  ParticipantChooser .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+Läs den här artikeln för att implementera din egen [ParticipantChooser .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 Om du vill testa detta på datorn (för anställda på Adobe kan du använda det här exemplet direkt)
 
@@ -71,7 +72,7 @@ Om du vill testa detta på datorn (för anställda på Adobe kan du använda det
 * Konfigurera AEM med LDAP med lämpliga LDAP-autentiseringsuppgifter.
 * Logga in på AEM med dina LDAP-autentiseringsuppgifter.
 * Öppna [timeoffrequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-* Fyll i formuläret och skicka in det.
+* Fyll i formuläret och skicka.
 * Den som skickar in formuläret bör hämta det för granskning.
 
 >[!NOTE]

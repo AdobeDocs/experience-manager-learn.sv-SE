@@ -1,13 +1,14 @@
 ---
 title: AEM Forms Tutorials och videor
-description: En samling resurser om AEM Forms för nybörjare och erfarna utvecklare av AEM-formulär
+description: AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+duration: 152
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 6%
+source-wordcount: '405'
+ht-degree: 4%
 
 ---
 
@@ -18,16 +19,13 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 ## Nyheter
 
 * **[Hantera felmeddelanden i steget Anropa formulärdatamodelltjänst](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-
-   *En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp*
+  *En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp*
 
 * **[Diagram från flera serier i interaktiva kommunikationsdokument (video)](./interactive-communications/multiseriescharts.md)**
-
-   *Rita upp mer än en serie i samma diagram. Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen rad, stapel och kolumn.*
+  *Rita upp mer än en serie i samma diagram. Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen rad, stapel och kolumn.*
 
 * **[Skapa återanvändbara arbetsflödesmodeller](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär*
+  *Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär*
 
 ## Personalval
 
@@ -69,7 +67,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
     </a>
     </div>
     <p>
-    <em>Anropa tjänsten för formulärdatamodellen som ett steg i AEM arbetsflöde</em>
+    <em>Anropa formulärdatamodellens tjänst som ett steg i AEM arbetsflöde</em>
     <p>
   </td>
 </tr>

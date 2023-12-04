@@ -10,7 +10,8 @@ jira: KT-7874
 thumbnail: 333295.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: c7fb28b8-494f-47d6-95b7-01ef444abe99
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 353
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%

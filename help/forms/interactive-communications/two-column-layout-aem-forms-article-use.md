@@ -1,22 +1,18 @@
 ---
 title: Skapa layouter med två kolumner för tryckta kanaldokument
-seo-title: Creating two column layouts for print channel documents
 description: Skapa layouter med två kolumner för dokument med utskriftskanaler
-seo-description: Create 2 column layouts for print channel document
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 416e3401-ba9f-4da3-8b07-2d39f9128571
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 64
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -27,9 +23,9 @@ Den här korta artikeln visar de steg som behövs för att skapa en layout med t
 
 Nedan beskrivs de steg som krävs för att skapa 2 kolumnlayouter med AEM Forms Designer.
 
-* Skapa 2 innehållsområden på överordnad sida 1
-* Namnge de två innehållsområdena &quot;leftColumn&quot; och &quot;rightColumn&quot;
-* Skapa en andra överordnad sida med ett innehållsområde (standard)
+* Skapa 2 innehållsområden på mallsidan på sidan 1
+* Namnge de två innehållsområdena &quot;left column&quot; och &quot;right column&quot;
+* Skapa en andra mallsida med ett innehållsområde (standard)
 * Välj fliken Sidnumrering (namnlöst delformulär) (sidan 1) och (namnlöst delformulär) (sidan 2) och ange egenskaperna enligt skärmbilderna nedan.
 
 ![page1](assets/untitledsubform_paginationproperties.gif)

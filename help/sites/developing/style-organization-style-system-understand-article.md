@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 447
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---

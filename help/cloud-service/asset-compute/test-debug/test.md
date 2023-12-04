@@ -2,20 +2,18 @@
 title: Testa en Asset compute-arbetare
 description: I Asset compute-projektet definieras ett mönster för att enkelt skapa och köra tester av Asset compute.
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6284
 thumbnail: KT-6284.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 205
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---

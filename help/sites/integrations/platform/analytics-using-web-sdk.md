@@ -13,9 +13,10 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
+duration: 2373
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 Lär dig **modern strategi** om hur du integrerar Adobe Experience Manager (AEM) och Adobe Analytics med Platform Web SDK. Den här omfattande självstudiekursen vägleder dig genom processen att sömlöst samla in [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvy och CTA-klicka på data. Få värdefulla insikter genom att visualisera insamlade data i Adobe Analysis Workspace, där ni kan utforska olika mätvärden och dimensioner. Utforska även plattformsdatauppsättningen för att verifiera och analysera data. Följ oss på den här resan för att utnyttja kraften i AEM och Adobe Analytics för datadrivet beslutsfattande.
 
-## Översikt
+## Ökning
 
 Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in data om två viktiga mätvärden: sidvisningar och CTA-klick (homepage call-to-action).
 
@@ -276,5 +277,5 @@ Genom att implementera de rekommenderade stegen och använda de tillhandahållna
 + [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 + [Integrera taggar och AEM för datainsamling från Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
 + [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [Självstudiekurser om datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

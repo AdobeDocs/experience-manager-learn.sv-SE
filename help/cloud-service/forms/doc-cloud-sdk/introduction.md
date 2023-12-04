@@ -10,7 +10,8 @@ topic: Development
 thumbnail: 333241.jpg
 jira: KT-7857
 exl-id: dbff8764-67d5-43fa-bd41-918c638a9afa
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 100
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 2%

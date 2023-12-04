@@ -2,10 +2,7 @@
 title: AEM
 description: Anpassa inkorgen genom att lägga till nya kolumner baserat på arbetsflödesdata
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 jira: KT-5830
 topic: Development
@@ -13,9 +10,10 @@ role: Developer
 level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 63
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---

@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 108
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---

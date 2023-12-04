@@ -10,7 +10,8 @@ jira: KT-6970
 thumbnail: 331285.jpg
 doc-type: Feature Video
 exl-id: 7e5ba3f5-e755-452a-8e72-be7832e95a49
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 407
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 1%

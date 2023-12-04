@@ -11,9 +11,10 @@ thumbnail: KT-10385.png
 doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 925
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-at
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
 
-## Översikt
+## Ökning
 
 The [Open Web Application Security Project® (OWASP)](https://owasp.org/) stiftelsen ger [**OWASP Top 10**](https://owasp.org/www-project-top-ten/) som beskriver de tio viktigaste säkerhetsfrågorna för webbapplikationer.
 

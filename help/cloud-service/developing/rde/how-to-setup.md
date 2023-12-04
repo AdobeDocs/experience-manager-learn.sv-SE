@@ -10,22 +10,23 @@ jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+duration: 528
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Rapid Development Environment
 
-Lär dig **konfigurera** Rapid Development Environment (RDE) på AEM as a Cloud Service.
+Läs **konfigurera** Rapid Development Environment (RDE) på AEM as a Cloud Service.
 
 I den här videon visas:
 
 - Lägga till en RDE i ditt program med hjälp av Cloud Manager
 - Inloggningsflöde för RDE med Adobe IMS, på samma sätt som andra AEM as a Cloud Service miljöer
-- Inställningar för [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) kallas även `aio CLI`
+- Inställningar för [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) även känt som `aio CLI`
 - Konfigurera AEM RDE och Cloud Manager `aio CLI` plugin
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415490?quality=12&learn=on)
@@ -49,7 +50,7 @@ Installera Adobe I/O Runtime Extensible CLI, även kallat `aio CLI` genom att k�
 $ npm install -g @adobe/aio-cli
 ```
 
-### AEM
+### AEM plugin-program
 
 Installera plugin-program för Cloud Manager och AEM RDE med `aio cli`&#39;s `plugins:install` -kommando.
 
@@ -73,9 +74,9 @@ AEM plugin-program måste konfigureras för att interagera med din RDE. Först k
 
    ![Organisations-ID](./assets/Org-ID.png)
 
-1. Program-ID: Kopiera värdet från **Program Overview > Environmental > {ProgramName}-rde > Browser URI > numbers between `program/` och`/environment`**
+1. Program-ID: Kopiera värdet från **Programöversikt > Miljöer > {ProgramName}-rde > Webbläsar-URI > tal mellan `program/` och`/environment`**
 
-1. Miljö-ID: Kopiera värdet från **Program Overview > Environmental > {ProgramName}-rde > Browser URI > numbers after`environment/`**
+1. Miljö-ID: Kopiera värdet från **Programöversikt > Miljöer > {ProgramName}-rde > Browser URI > numbers after`environment/`**
 
    ![Program- och miljö-ID](./assets/Program-Environment-Id.png)
 
@@ -113,14 +114,14 @@ Statusinformationen för RDE visas som miljöstatus, listan med _ditt AEM_ paket
 
 ## Nästa steg
 
-Lär dig [använda](./how-to-use.md) en utvecklingsmiljö för att driftsätta kod och innehåll från din favoritutvecklingsmiljö (Integrated Development Environment, IDE) för snabbare utvecklingscykler.
+Läs [använda](./how-to-use.md) en utvecklingsmiljö för att driftsätta kod och innehåll från din favoritutvecklingsmiljö (Integrated Development Environment, IDE) för snabbare utvecklingscykler.
 
 
 ## Ytterligare resurser
 
 [Aktivera RDE i en programdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
 
-Inställningar för [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) kallas även `aio CLI`
+Inställningar för [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) även känt som `aio CLI`
 
 [Användning och kommandon i AIR CLI](https://github.com/adobe/aio-cli#usage)
 

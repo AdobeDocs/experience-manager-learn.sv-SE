@@ -9,9 +9,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 146
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att k
 * Peka webbläsaren till [Dataintegrering](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)
 * Klicka _Skapa_->_Formulärdatamodell_
 * Ge formulärdatamodellen beskrivande namn och titel som **Medarbetare**
-* Klicka på _Nästa_
+* Klicka _Nästa_
 * Markera datakällan som skapades i det tidigare avsnittet (forumen)
 * Klicka _Skapa_->Redigera för att öppna den nya formulärdatamodellen i redigeringsläge
 * Expandera _forum_ nod för att se medarbetarschemat. Expandera medarbetarnoden för att se de två tabellerna

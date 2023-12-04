@@ -10,9 +10,10 @@ jira: KT-5882
 thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 148
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---

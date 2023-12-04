@@ -1,20 +1,18 @@
 ---
 title: Diagram för flera serier i AEM Forms
-description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i utskrifts- och webbkanalsdokument.
+description: Skapa en lämplig formulärdatamodell för att skapa diagram i flera serier i dokument för tryck och webbkanaler.
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 454
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -25,7 +23,7 @@ I AEM Forms 6.5 fanns möjligheten att skapa och konfigurera diagram för flera 
 
 ![Diagram över flera serier](assets/seriescharts.jfif)
 
-Om du vill skapa diagram i flera serier i AEM Forms måste du skapa en lämplig formulärdatamodell med nödvändiga entiteter och associationer mellan entiteterna. Följande skärmbild visar enheterna och associationerna mellan de tre entiteterna. På den översta nivån har vi en enhet som heter&quot;Organisation&quot;, som har en en-till-många-association med fondenheten. Fondenheten har i sin tur en-till-många-association med resultatenheten.
+Om du vill skapa diagram i flera serier i AEM Forms måste du skapa en lämplig formulärdatamodell med nödvändiga enheter och associationer mellan enheterna. Följande skärmbild visar enheterna och associationerna mellan de tre entiteterna. På den översta nivån har vi en enhet som heter&quot;Organisation&quot;, som har en en-till-många-association med fondenheten. Fondenheten har i sin tur en-till-många-association med resultatenheten.
 
 ![Formulärdatamodell](assets/formdatamodel.jfif)
 
@@ -40,7 +38,7 @@ Om du vill skapa diagram i flera serier i AEM Forms måste du skapa en lämplig 
 Följ de här stegen för att testa detta på datorn
 
 * [Hämta och importera filen MutualFundFactSheet.zip med AEM Package Manager.](assets/mutualfundfactsheet.zip)
-* [Ladda ned SeriesChartSampleData.json till hårddisken.](assets/serieschartsampledata.json) Detta är exempeldata som används för att fylla i diagrammet.
+* [Hämta SeriesChartSampleData.json till hårddisken.](assets/serieschartsampledata.json) Detta är exempeldata som används för att fylla i diagrammet.
 * [Navigera till Forms och Dokument.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Välj försiktigt den interaktiva kommunikationsmallen &quot;MutualFundGrowthFactSheet&quot;.
 * Klicka på Förhandsgranska | Utskriftskanal | Överför exempeldata.

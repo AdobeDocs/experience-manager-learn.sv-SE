@@ -10,9 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 611
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1218'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
@@ -102,7 +103,7 @@ Så här skaffar du React-appen:
 >
 >  // TODO Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
->  //*********************************
+>  //**********************************
 >
 
 ## Anatomi i React-appen

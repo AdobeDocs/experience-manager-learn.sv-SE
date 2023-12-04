@@ -8,7 +8,8 @@ feature: Smart Crop
 topic: Development
 doc-type: Tutorial
 exl-id: 117e4ba4-2d60-40a6-b267-c2e1d99df808
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 163
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

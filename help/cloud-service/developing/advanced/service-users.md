@@ -10,9 +10,10 @@ jira: KT-9113
 thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1102
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '70'
+source-wordcount: '62'
 ht-degree: 1%
 
 ---

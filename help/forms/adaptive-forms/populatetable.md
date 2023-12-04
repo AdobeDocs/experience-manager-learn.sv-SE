@@ -8,14 +8,15 @@ role: User
 level: Intermediate
 exl-id: 6e4b901a-6534-4c34-b315-2f2620b74247
 last-substantial-update: 2019-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 64
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Fyll i adaptiv formulärtabell med resultatet av anrop till tjänsten för formulärdatamodell
+# Fyll i adaptiv formulärtabell med resultatet av anrop till tjänsten Form Data Model
 
 [Live-formuläret finns här](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 I den här artikeln tar vi en titt på att fylla i tabeller med anpassade formulär genom att hämta data från anrop av formulärdatamodelltjänst. Vi ska skapa en amorteringsplan i en tabell som visar varje vanlig betalning på en inteckning över tiden. Avskrivningsresultaten returneras av vår formulärdatamodell. Tjänsten för formulärdatamodellen anropas vid click-händelsen för knappen calculate, vilket visas på skärmbilden. Indata- och utdataparametrarna för serviceanropet mappas på rätt sätt enligt skärmbilden. Utdata mappas till kolumnerna i rad1
@@ -28,6 +29,6 @@ Rad1 är konfigurerad att växa beroende på vilka data som returneras av servic
 
 [Installera Tomcat enligt anvisningarna här](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
 [Distribuera filen SampleRest.war som finns i zip-filen i din Tomcat](assets/sample-rest.zip)
-[Installera resurserna ](assets/amortizationschedule.zip) med AEM
+[Installera resurserna](assets/amortizationschedule.zip) med AEM
 [Öppna formuläret för amorteringsschema](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
 Ange lämpligt värde och klicka på Beräkna amorteringsschema för att fylla i formuläret

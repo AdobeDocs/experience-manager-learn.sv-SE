@@ -10,7 +10,8 @@ last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
 doc-type: Feature Video
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 753
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -25,7 +26,7 @@ Med AEM Assets Template kan marknadsförarna skapa, hantera och leverera digital
 >
 >Information om hur du konfigurerar InDesign Server finns i [Ställ in resursmallar med InDesign Server](asset-templates-technical-video-setup.md).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I den här videon går du igenom koncept och steg för att generera tryckoriginal i AEM med Adobe InDesign, Adobe InDesign Server och AEM Assets.
 

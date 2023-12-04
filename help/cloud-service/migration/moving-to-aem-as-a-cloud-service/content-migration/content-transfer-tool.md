@@ -9,15 +9,16 @@ level: Experienced
 jira: KT-8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1398
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 2%
+source-wordcount: '295'
+ht-degree: 1%
 
 ---
 
 
-# Content Transfer Tool
+# Verktyget Innehållsöverföring
 
 Lär dig hur verktyget Innehållsöverföring hjälper dig att migrera innehåll till AEM as a Cloud Service från AEM 6.3+.
 
@@ -78,6 +79,6 @@ Se även till att du har fullföljt tidigare övningar:
 
 ## Andra resurser
 
-+ [Använda Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=2)
++ [Ladda ned innehållsöverföringsverktyg](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Content*+Transfer*+Tool*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=2)
 + [Videofilm om hur man gör i tjänsten Massimport](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/bulk-import.html)
 

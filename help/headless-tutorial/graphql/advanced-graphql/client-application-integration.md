@@ -7,9 +7,10 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+duration: 345
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 I föregående kapitel skapade och uppdaterade du beständiga frågor med GraphiQL Explorer.
 
-I det här kapitlet beskrivs de olika stegen för att integrera de beständiga frågorna med WKND-klientprogrammet (även WKND App) med HTTP GET-begäranden i befintliga **Reagera på komponenter**. Det är också en valfri utmaning att använda dina AEM Headless-kunskaper och kodningskunskaper för att förbättra WKND-klientapplikationen.
+I det här kapitlet beskrivs de olika stegen för att integrera de beständiga frågorna med WKND-klientprogrammet (även WKND App) med HTTP-GET-begäranden i befintliga **Reagera på komponenter**. Det är också en valfri utmaning att använda dina AEM Headless-kunskaper och kodningskunskaper för att förbättra WKND-klientapplikationen.
 
 ## Förutsättningar {#prerequisites}
 
@@ -36,10 +37,10 @@ The _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code
 
 Det finns ett lösningspaket som kan installeras och som slutför stegen i AEM för kapitel 1-4. Det här paketet är **behövs inte** om föregående kapitel har fyllts i.
 
-1. Hämta [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
+1. Ladda ned [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
 1. I AEM navigerar du till **verktyg** > **Distribution** > **Paket** för åtkomst **Pakethanteraren**.
-1. Överför och installera det paket (zip-fil) som hämtades i föregående steg.
-1. Replikera paketet till AEM-publiceringstjänsten
+1. Ladda upp och installera det paket (zip-fil) som laddats ned i föregående steg.
+1. Replikera paketet till AEM
 
 ## Mål {#objectives}
 
@@ -83,7 +84,7 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
    >[!NOTE]
    > 
-   > Instruktionerna ovan är att ansluta React-appen till **AEM-publiceringstjänst** dock ansluta till **AEM Author Service** hämta en lokal utvecklingstoken för AEM as a Cloud Service målmiljö.
+   > Instruktionerna ovan är att ansluta React-appen till **AEM Publiceringstjänst**, men ansluta till **AEM Author Service** hämta en lokal utvecklingstoken för AEM as a Cloud Service målmiljö.
    >
    > Det går också att ansluta appen till en [lokal författarinstans med AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) med grundläggande autentisering.
 
@@ -99,7 +100,7 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 1. Ett nytt webbläsarfönster ska läsas in [http://localhost:3000](http://localhost:3000)
 
 
-1. Tryck **Camping** > **Yosemite Backpackaging** för att visa Yosemite Backpackaging-presentationsinformation.
+1. Tryck **Camping** > **Yosemite Backpackaging** om du vill visa Yosemite Backpackaging-presentationsinformation.
 
    ![Yosemite Backpackaging Screen](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
@@ -111,7 +112,7 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
 >[!IMPORTANT]
 >
->    Om du undrar varför GraphQL API-begäran görs mot `http://localhost:3000` och INTE mot AEM Publish Service-domänen, granska [Under hålet](../multi-step/graphql-and-react-app.md#under-the-hood) från Grundläggande självstudiekurs.
+>    Om du undrar varför GraphQL API-begäran görs mot `http://localhost:3000` och INTE mot AEM Publish Service-domän, granska [Under hålet](../multi-step/graphql-and-react-app.md#under-the-hood) från Grundläggande självstudiekurs.
 
 
 ## Granska koden
@@ -142,7 +143,7 @@ The `AdventureDetail` Reaktionskomponenten återger detaljer om äventyret. Neda
 
 * The `src/components/AdventureDetail.js` samtal `useAdventureBySlug(slug)` krok och här `slug` argument är frågeparameter.
 
-* Som ovan, `useAdventureBySlug(slug)` kroken definieras i `src/api/usePersistedQueries.js` -fil. Det ringer `wknd-shared/adventure-by-slug` beständig fråga genom delegering till `AEMHeadless` via `aemHeadlessClient.js`.
+* Precis som ovan, `useAdventureBySlug(slug)` kroken definieras i `src/api/usePersistedQueries.js` -fil. Det ringer `wknd-shared/adventure-by-slug` beständig fråga genom delegering till `AEMHeadless` via `aemHeadlessClient.js`.
 
 * När frågan har körts `AdventureDetailRender(..)` återgivningsfunktion från `AdventureDetail.js` lägger till elementet HTML för att visa Adventure-informationen.
 
@@ -306,7 +307,7 @@ I föregående kapitel skapade vi `adventure-details-by-slug` beständig fråga,
 >De uppdaterade filerna är tillgängliga under **AEM Guides WKND - GraphQL** projekt, se [Avancerad självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) -avsnitt.
 
 
-När du är klar med ovanstående förbättringar ser WKND-appen ut så här nedan och webbläsarens utvecklarverktyg visar `adventure-details-by-slug` beständigt frågeanrop.
+När du är klar med ovanstående förbättringar ser WKND-appen ut så här nedan och webbläsarens utvecklarverktyg visar `adventure-details-by-slug` beständig fråga.
 
 ![Förbättrad WKND-APP](assets/client-application-integration/Enhanced-WKND-APP.gif)
 

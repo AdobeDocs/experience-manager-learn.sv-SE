@@ -1,14 +1,8 @@
 ---
 title: Lägga till tabell i avsnittet om bidrag
-seo-title: Adding table to contributions section
 description: Detta är en del av 9-stegssjälvstudiekursen för att skapa ditt första interaktiva kommunikationsdokument.I det här avsnittet ska vi lägga till en tabell i avsnittet om bidrag.
-seo-description: This is part 9 of multistep tutorial for creating your first interactive communication document.In this part, we will add a table to the contributions section.
-uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 jira: KT-5994
 thumbnail: 37953.jpg
@@ -17,9 +11,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b5a6c1c9-2be1-4622-b85b-a1996fb86a2f
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 260
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---

@@ -1,14 +1,8 @@
 ---
 title: Skicka till din tacksida
-seo-title: Submitting To Thank You Page
 description: Visa en tacksida när du skickar ett anpassat formulär
-seo-description: Display a thank you page on submitting Adaptive Form
-uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
 feature: Adaptive Forms
-topics: developing
-audience: implementer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
 topic: Development
@@ -16,9 +10,10 @@ role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -31,7 +26,7 @@ Alternativet Skicka till REST-slutpunkt skickar data som är ifyllda i formulär
 
 `submitterName=submitter`
 
-På skärmbilden nedan skickar vi det adaptiva formuläret för att tacka dig på sidan /content/thankyou. Till denna tacksida skickar vi tre attribut som innehåller formulärfältets värden.
+På skärmbilden nedan skickar vi det adaptiva formuläret för att tacka dig på sidan /content/thankyou. Till denna tacksida skickar vi tre begärandeattribut som innehåller formulärfältets värden.
 
 ![Tack](assets/thankyoupage.gif)
 
@@ -39,9 +34,9 @@ Du kan också skicka till den externa slutpunkten via POST. För att uppnå dett
 
 ![Hämtningskonfiguration](assets/capture.gif)
 
-Följ instruktionerna nedan för att testa den här funktionen på servern:
+Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
 * Importera [resursfil som är associerad med den här artikeln till AEM med hjälp av pakethanteraren](assets/submittingtorestendpoint.zip)
 * Peka webbläsaren mot [Frågeformulär - tid](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i det obligatoriska fältet och skicka formuläret
-* Du bör få en tacksida med dina uppgifter ifyllda på sidan
+* Du bör få en tacksida där informationen finns på sidan

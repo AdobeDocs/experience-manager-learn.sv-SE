@@ -11,9 +11,10 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 715
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---

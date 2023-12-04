@@ -4,13 +4,15 @@ description: Adobe Asset Link stärker samarbetet mellan kreatörer och marknads
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
+kt: 4904
 thumbnail: 33733.jpg
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 261135af-4d26-4b07-8ec9-6e9875a158ba
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 232
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%

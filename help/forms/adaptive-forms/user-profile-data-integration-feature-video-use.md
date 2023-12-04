@@ -1,6 +1,6 @@
 ---
 title: Använda dataintegrering med användarprofiler med AEM Forms
-description: Integrera AEM användarprofilinformation med Adaptive Forms
+description: Integrera AEM användarprofilsinformation med Adaptive Forms
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 4f2b6669-d61e-400d-8657-dddb28ae35f4
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 368
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---

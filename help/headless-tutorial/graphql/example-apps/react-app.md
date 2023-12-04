@@ -12,9 +12,10 @@ level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 374
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---

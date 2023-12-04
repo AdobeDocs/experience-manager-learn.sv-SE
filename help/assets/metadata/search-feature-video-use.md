@@ -3,7 +3,8 @@ title: Använda sökning i AEM Assets
 description: I dessa videofilmer tittar vi på några förbättringar av resurssökningen som introducerades i AEM. Författare kan förbättra vissa resurser i sökresultat med nyckelord genom att uppdatera sina metadataegenskaper. Vi tittar också på några avancerade konfigurationer för Assets OmniSearch-predikat.
 version: 6.4, 6.5
 doc-type: Feature Video
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 388
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

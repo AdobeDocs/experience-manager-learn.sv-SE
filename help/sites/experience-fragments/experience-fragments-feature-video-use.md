@@ -12,14 +12,15 @@ jira: KT-194
 thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 243
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# Använda Experience Fragments {#using-aem-experience-fragments}
+# Använda upplevelsefragment {#using-aem-experience-fragments}
 
 {{edge-delivery-services-and-page-editor}}
 

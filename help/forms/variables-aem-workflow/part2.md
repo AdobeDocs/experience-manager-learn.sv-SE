@@ -7,9 +7,10 @@ feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: e7d3e0be-5194-47c2-a668-ce78e727986e
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 376
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---

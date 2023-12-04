@@ -1,8 +1,7 @@
 ---
 title: Konfigurera Reader-tillägg i AEM Forms OSGi
-description: Lägg till autentiseringsuppgifter för Reader-tillägg i förtroendearkivet i AEM Forms OSGi
+description: Lägg till autentiseringsuppgifter för Reader Extensions i förtroendearkivet i AEM Forms OSGi
 feature: Reader Extensions
-audience: developer
 type: Tutorial
 version: 6.4,6.5
 topic: Administration
@@ -10,7 +9,8 @@ role: Admin
 level: Beginner
 exl-id: 1f16acfd-e8fd-4b0d-85c4-ed860def6d02
 last-substantial-update: 2020-08-01T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 328
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -25,7 +25,7 @@ DocAssurance-tjänsten kan tillämpa användarrättigheter på PDF-dokument. Kon
 
 Autentiseringsuppgifterna för läsartillägg är kopplade till användaren av fd-service. Följ de här stegen för att lägga till autentiseringsuppgifterna för användaren av fd-tjänsten. Om du redan har skapat nyckelbehållaren för användaren av tjänsten hoppar du över det här avsnittet
 
-* Logga in på din AEM Author-instans som administratör
+* Logga in på AEM Author-instansen som administratör
 * Gå till Verktyg-Säkerhet-Användare
 * Bläddra nedåt i listan över användare tills du hittar användarkontot för tjänsten
 * Klicka på användaren av fd-tjänsten

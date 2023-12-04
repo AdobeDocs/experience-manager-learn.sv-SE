@@ -10,10 +10,11 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1044
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +27,7 @@ Adobe Cloud Manager är en enkel men ändå robust lösning som gör det enkelt 
 I den här videoserien utforskas de viktigaste funktionerna i Cloud Managers för AEM:
 
 * [Program](#programs)
-* [Miljöer](#environments)
+* [Miljö](#environments)
 * [Rapporter](#reports)
 * [CI/CD Production Pipeline](#cicd-production-pipeline)
 * [Icke-produktionsförlopp för CI/CD](#cicd-non-production-pipeline)
@@ -40,7 +41,7 @@ En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
 
-## Miljöer {#environments}
+## Miljö {#environments}
 
 [Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) består av AEM Author, AEM Publish and Dispatcher-instanser. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipelines (beskrivs nedan). Cloud Manager-miljöer har vanligtvis en produktionsmiljö och en scenmiljö.
 

@@ -2,20 +2,18 @@
 title: Konfigurera manifest.yml för ett Asset compute-projekt
 description: Asset compute projekts manifest.yml beskriver alla arbetare i det här projektet som ska distribueras.
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6281
 thumbnail: KT-6281.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 172
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---

@@ -1,15 +1,15 @@
 ---
 title: Din AEM Sites-utvärdering av mognad
 description: Denna checklista ger en översikt över viktiga frågor som du och ditt team bör besvara när de utvärderar mognaden för din AEM Sites-instans
-audience: author, marketer, developer
 role: Admin
 level: Intermediate
 topic: Administration
 feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 83
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -32,8 +32,8 @@ Mer information om hur du administrerar, utvecklar och redigerar finns i följan
 
 Vart och ett av dessa områden för bästa praxis ovan omfattar även ytterligare bästa metoder för att skapa, utveckla och driftsätta AEM.
 
-I de flesta fall kommer utvärderingen av AEM mognad att bidra till att genomföra en diagnostisk översyn av AEM bästa praxis och leda till en färdplan för att proaktivt upptäcka, lösa och förebygga potentiella problem. Vi rekommenderar att utvärderingarna slutförs med de team som också var en del av AEM implementeringsfas (före AEM migrering). Roller som ska tas med kan vara: Programägare, webbplatsägare, utvecklingsteam, tekniska leads, säkerhets-/infrastrukturteam, SEO-team och supportteam (t.ex. innehållsförfattare, administratörer).
+I de flesta fall kommer utvärderingen av AEM mognad att bidra till att genomföra en diagnostisk översyn av AEM bästa praxis och leda till en färdplan för att proaktivt upptäcka, lösa och förebygga potentiella problem. Vi rekommenderar att utvärderingarna slutförs med de team som också var en del av AEM implementeringsfas (före AEM migrering). Roller som bör ingå kan vara programägare, webbplatsägare, utvecklingsteam, tekniska leads, säkerhets-/infrastrukturteam, SEO-team och supportteam (t.ex. innehållsförfattare och administratörer).
 
-Rekommenderade områden AEM mognadsbedömning: Design och arkitektur, produkthantering och -strategi, hantering och leverans av digitala resurser, analys, testning och säkerhet.
+Rekommenderade områden AEM mognadsbedömning: Design och arkitektur, produkthantering och strategi, hantering och leverans av digitala resurser, analys, testning och säkerhet.
 
 Mycket bra AEM Champion Greg Dimeris för att han har samlat ihop den här informationen från olika Experience League-artiklar och sina egna rutiner!

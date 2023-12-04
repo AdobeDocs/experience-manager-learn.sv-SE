@@ -9,9 +9,10 @@ level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 946
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---

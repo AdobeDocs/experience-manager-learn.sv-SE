@@ -9,9 +9,10 @@ level: Experienced
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+duration: 217
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ I den här delen förifyller vi Adaptiv form med profilinformation som hämtats 
 
 Läs detta om du vill veta mer om hur du fyller i adaptiva formulär i förväg [självstudiekurs](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
-För att fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM. Om e-post-ID:t för den person som är inloggad AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
+Om du vill fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM. Om e-post-ID:t för den person som är inloggad AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
 
 Följande steg krävs för att hämta profilinformation från ACS med REST API
 

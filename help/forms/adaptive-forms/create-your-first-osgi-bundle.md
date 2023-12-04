@@ -2,18 +2,16 @@
 title: Skapa ditt första OSGi-paket med AEM formulär
 description: Bygg ditt första OSGi-paket med maven och eclipse
 feature: Adaptive Forms
-topics: development
-audience: developer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 240
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -47,7 +45,7 @@ Maven är ett automatiserat byggverktyg som främst används för Java-projekt. 
 * Skapa en mapp med namnet `maven` i C-enheten
 * Ladda ned [binärt zip-arkiv](http://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
-* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
+* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
 * Lägg till `%M2_HOME%\bin` till din bana
 * Spara ändringarna
 * Öppna en ny kommandotolk och skriv in `mvn -version`. Du borde se **mvn** version som visas på skärmbilden nedan
@@ -82,7 +80,7 @@ Maven-projektet genereras interaktivt och du uppmanas att ange värden för ett 
 | groupId | groupId identifierar projektet unikt i alla projekt | com.learningaemforms.adobe |
 | appsFolderName | Namnet på den mapp som innehåller projektstrukturen | inlärningsaemforms |
 | artifactId | artifactId är namnet på behållaren utan version. Om du skapade den kan du välja vilket namn du vill med gemener och inga märkliga symboler. | inlärningsaemforms |
-| version | Om du distribuerar den kan du välja valfri typisk version med siffror och punkter (1.0, 1.1, 1.0.1, ...). | 1.0 |
+| version | Om du distribuerar den kan du välja valfri typisk version med siffror och punkter (1.0, 1.1, 1.0.1, ...). | 1,0 |
 
 Acceptera standardvärdena för de andra egenskaperna genom att trycka på Retur.
 Om allt blir bra kan du se ett meddelande om att bygget fungerar i kommandofönstret
@@ -102,7 +100,7 @@ Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som vis
 
 Klicka på Nästa
 
-Välj `c:\aemformsbundles\learningaemform`s genom att klicka på **Bläddra** knapp
+Välj `c:\aemformsbundles\learningaemform`s genom att klicka **Bläddra** knapp
 
 ![datakälla](assets/select-mvn-project.JPG)
 
@@ -111,7 +109,7 @@ Välj `c:\aemformsbundles\learningaemform`s genom att klicka på **Bläddra** kn
 
 Klicka **Slutför** för att starta importprocessen
 
-Projektet importeras till Eclipse och ett antal `learningaemforms.xxxx` mappar
+Projektet importeras till Eclipse och du ser ett antal `learningaemforms.xxxx` mappar
 
 Expandera `src/main/java` under `learningaemforms.core` mapp. Det här är den mapp där du skriver större delen av koden.
 

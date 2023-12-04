@@ -1,19 +1,15 @@
 ---
 title: Starta AEM arbetsflöde för att skicka HTML5-formulär - Granska och godkänn PDF
-seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
-seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 50
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -28,7 +24,7 @@ Följande skärmbild visar de steg som ingår i arbetsflödet.
 
 ![arbetsflöde](assets/workflow.PNG)
 
-## Skapa icke-interaktivt arbetsflödessteg för PDF
+## Generera icke-interaktivt arbetsflödessteg för PDF
 
 XDP-mallen och de data som ska sammanfogas med mallen anges här. De data som ska sammanfogas är de data som har skickats från PDF. Dessa skickade data lagras under noden `/content/pdfsubmissions`.
 

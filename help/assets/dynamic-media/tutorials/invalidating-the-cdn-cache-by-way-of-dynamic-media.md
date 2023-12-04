@@ -9,7 +9,8 @@ feature: Operations
 index: y
 doc-type: Tutorial
 exl-id: 7993e482-3db0-46a0-ae2f-f5a167ac02dc
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 94
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

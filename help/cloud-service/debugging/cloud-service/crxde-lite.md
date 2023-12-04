@@ -1,19 +1,17 @@
 ---
 title: CRXDE Lite
-description: CRXDE Lite är ett klassiskt men kraftfullt verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer. CRXDE Lite har en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av JCR och undersöka behörigheter.
+description: CRXDE Lite är ett klassiskt men ändå kraftfullt verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer. CRXDE Lite har en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av JCR och undersöka behörigheter.
 feature: Developer Tools
-topics: development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 kt: KT-5481
 thumbnail: kt-5481.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: f3f2c89f-6ec1-49d3-91c7-10a42b897780
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+duration: 168
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -24,16 +22,16 @@ ht-degree: 0%
 
 CRXDE Lite is __ENDAST__ finns för AEM as a Cloud Service utvecklingsmiljöer (liksom för den lokala AEM SDK).
 
-## Åtkomst till CRXDE Lite på AEM Author
+## Åtkomst till CRXDE Lite på AEM författare
 
 CRXDE Lite is __endast__ som är tillgängliga AEM as a Cloud Service utvecklingsmiljöer, och __not__ som finns i scen- eller produktionsmiljöer.
 
-Så här öppnar du CRXDE Lite på AEM Author:
+Så här öppnar du CRXDE Lite på AEM författare:
 
-1. Logga in på AEM as a Cloud Service AEM Author-tjänsten.
+1. Logga in på AEM as a Cloud Service AEM Author.
 1. Navigera till Verktyg > Allmänt > CRXDE Lite
 
-CRXDE Lite öppnas med hjälp av de inloggningsuppgifter och behörigheter som används för att logga in på AEM Author.
+Detta öppnar CRXDE Lite med hjälp av de inloggningsuppgifter och behörigheter som används för att logga in AEM författare.
 
 ## Felsöka innehåll
 
@@ -44,7 +42,7 @@ Observera att `/apps`, `/libs` och `/oak:index` är oföränderliga, vilket inne
 + JCR-strukturen navigeras och ändras med den vänstra navigeringsrutan
 + Om du väljer en nod i det vänstra navigeringsfönstret visas nodegenskaperna i det nedre fönstret.
    + Egenskaper kan läggas till, tas bort eller ändras från rutan
-+ Om du dubbelklickar på en filnod i den vänstra navigeringen öppnas filens innehåll i den övre högra rutan
++ Dubbelklicka på en filnod i den vänstra navigeringen för att öppna filens innehåll i den övre högra rutan
 + Tryck på knappen Spara alla längst upp till vänster om du vill behålla ändringarna eller på nedåtpilen bredvid Spara alla om du vill återställa ändringar som inte har sparats.
 
 ![CRXDE Lite - Felsöka innehåll](./assets/crxde-lite/debugging-content.png)
@@ -60,7 +58,7 @@ Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går d
 
 + CRXDE Lite > Verktyg > Testa åtkomstkontroll ...
 
-![CRXDE Lite - testa åtkomstkontroll](./assets/crxde-lite/permissions__test-access-control.png)
+![CRXDE Lite - Testa åtkomstkontroll](./assets/crxde-lite/permissions__test-access-control.png)
 
 1. Välj en JCR-sökväg som ska utvärderas i fältet Sökväg
 1. Använd fältet Principal och markera den användare eller grupp som sökvägen ska utvärderas mot
@@ -82,4 +80,4 @@ Följande är felsökningsaktiviteter som kan __not__ utföras i CRXDE Lite.
 
 Distribuerade OSGi-konfigurationer kan inte granskas via CRXDE Lite. OSGi-konfigurationer underhålls i AEM `ui.apps` kodpaket på `/apps/example/config.xxx`Men när OSGi-konfigurationsresurserna distribueras till AEM as a Cloud Service miljöer bevaras de inte i JCR-konfigurationen och syns därför inte via CRXDE Lite.
 
-Använd i stället [Developer Console > Configurations](./developer-console.md#configurations) för att granska driftsatta OSGi-konfigurationer.
+Använd i stället [Developer Console > Configuration](./developer-console.md#configurations) för att granska driftsatta OSGi-konfigurationer.

@@ -1,14 +1,8 @@
 ---
 title: Skapa interaktiv kommunikation för tryckkanaler
-seo-title: Create Interactive Communication For Print Channel
 description: Detta är en del av sex självstudiekurser i flera delar för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen skapas en kanal för interaktivt kommunikationsdokument för utskrift.
-seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
-uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 6e3f9c8c-8ec4-4084-bf35-1c97a5b463f1
 jira: KT-5972
@@ -17,9 +11,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d4355f72-aefa-4ab3-ba7e-ebd7f7b536f0
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 134
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---

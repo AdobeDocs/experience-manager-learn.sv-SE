@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
-source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
+duration: 102
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 Generera DOR (Document Of Record) programmatiskt
 
-Den här artikeln visar hur du använder `com.adobe.aemds.guide.addon.dor.DoRService API` att generera **Dokument** programmatiskt. [Dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) är en PDF-version av de data som samlats in i adaptiv form.
+Den här artikeln visar hur du använder `com.adobe.aemds.guide.addon.dor.DoRService API` att generera **Dokument för registrering** programmatiskt. [Dokument för registrering](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) är en PDF-version av de data som samlats in i adaptiv form.
 
 1. Här följer kodfragmentet. Den första raden hämtar DOR-tjänsten.
 1. Ange DoROptions.
@@ -67,18 +68,18 @@ Följ de här stegen för att prova detta på din lokala dator
 1. [Hämta och installera artikelresurserna med pakethanteraren](assets/dor-with-api.zip)
 1. Kontrollera att du har installerat och startat DevelopingWithServiceUser-paketet som ingår i [Create Service User article](service-user-tutorial-develop.md)
 1. [Logga in på configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter användarmappningstjänsten för Apache Sling Service
+1. Sök efter användarmappningstjänsten för Apache Sling-tjänsten
 1. Kontrollera följande post _DevelopingWithServiceUser.core:getformsresourceReser=fd-service_ i avsnittet Tjänstmappningar
 1. [Öppna formuläret](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
 1. Fyll i formuläret och klicka på Visa PDF
 1. Du bör se DOR på den nya fliken i webbläsaren
 
 
-**Felsökningstips**
+**Felsökning - tips**
 
 PDF visas inte på den nya webbläsarfliken:
 
 1. Kontrollera att du inte blockerar popup-fönster i webbläsaren
-1. Kontrollera att du startar AEM som administratör (åtminstone i Windows)
+1. Se till att du startar AEM som administratör (åtminstone i Windows)
 1. Kontrollera att paketet DevelopingWithServiceUser är i *aktivt läge*
 1. [Kontrollera att systemanvändaren](http://localhost:4502/useradmin) fd-service har behörighet att läsa, ändra och skapa på följande nod `/content/usergenerated/content/aemformsenablement`

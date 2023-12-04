@@ -1,5 +1,5 @@
 ---
-title: "Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns"
+title: Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns
 description: I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
 feature: Dispatcher
 topic: Architecture
@@ -7,16 +7,17 @@ role: Architect
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 4820
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '17460'
+source-wordcount: '17384'
 ht-degree: 0%
 
 ---
 
 # Kapitel 1 - Dispatcher Concepts, Patterns and Antipatterns
 
-## Översikt
+## Ökning
 
 I det här kapitlet ges en kort introduktion om Dispatcher-historiken och -mekanismerna, och vi diskuterar hur detta påverkar hur en AEM utvecklare designar sina komponenter.
 
@@ -264,7 +265,7 @@ Låt oss titta på en kort sammanfattning av det sista kapitlet plus några andr
 
 ## Invalidera och tömma cachen
 
-### Översikt
+### Ökning
 
 I det sista kapitlet visas ett stort antal undantag när Dispatcher inte kan cachelagra en begäran. Men det finns fler saker att tänka på: Bara för att Dispatcher _kan_ cachelagra en begäran, det behöver inte innebära att den _bör_.
 
@@ -587,7 +588,7 @@ Vi låter dig bestämma om det är ett mönster eller ett antimönster för till
 
 ### Lösa vanliga utskicksproblem
 
-#### Översikt
+#### Ökning
 
 Låt oss prata om hur det kunde ha implementerats lite mer cachevänligt. Det finns flera alternativ. Ibland kan man inte välja den bästa lösningen. Du kanske kommer i ett projekt som redan körs och du har begränsad budget för att bara åtgärda det aktuella cacheproblemet och inte tillräckligt för att utföra en fullständig omfaktorisering. Eller så har du ett problem som är mer komplext än exempelbildkomponenten.
 
@@ -823,7 +824,7 @@ Men det finns en typ av fall som du inte enkelt kan lösa med en resursbaserad U
 
 ### Parametern matar in komponenter
 
-#### Översikt
+#### Ökning
 
 Utskriftshanteraren i det sista kapitlet var bara en tunn wrapper runt en resurs. Det orsakade mer problem än att hjälpa till att lösa problemet.
 
@@ -1180,7 +1181,7 @@ Kunden hade en webbplatsstruktur som den som skissades i det sista kapitlet:
 /content/brand/country/language
 ```
 
-Till exempel,
+Exempel:
 
 ```
 /content/shiny-brand/switzerland/fr

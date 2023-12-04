@@ -5,7 +5,8 @@ topic: Development
 version: Cloud Service
 jira: KT-4677
 thumbnail: 32551.jpg
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 425
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

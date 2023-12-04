@@ -7,14 +7,15 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: f9782684-3a74-4080-9680-589d3f901617
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+duration: 590
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-# XML-variabler i AEM arbetsflöde
+# XML-variabler i AEM
 
 Variabler av typen XML används vanligtvis när du har ett XSD-baserat adaptivt formulär och vill extrahera värden från det adaptiva formuläret i arbetsflödet.
 
@@ -36,7 +37,7 @@ De adaptiva formulärdata lagras under dataelementet som visas ovan. **_I ovanst
 >
 >**AEM Forms 6.5.0** - När du skapar en variabel av typen XML för att hämta inskickade data i arbetsflödesmodellen ska du inte associera XSD med variabeln. Detta beror på att inskickade data inte är kompatibla med XSD när du skickar in XSD-baserade adaptiva formulär. XSD-data för klagomål omges av elementet /afData/afBoundData/.
 >
->**AEM Forms 6.5.1** - Om du kopplar XSD till din XML-variabel kan du bläddra bland schemaelementen för att göra variabelmappningen. Du kommer inte att kunna komma åt formulärdata som inte är bundna till schemaelement. Om ditt användningsfall är att få tillgång till data som är bundna till schemaelement samt obundna data, ska du inte binda schemat till din XML-variabel i arbetsflödet.Du måste använda rätt XPath-uttryck för att få tillgång till de data som du behöver
+>**AEM Forms 6.5.1** - Om du kopplar XSD till din XML-variabel kan du bläddra bland schemaelementen för att göra variabelmappningen. Du kommer inte att kunna komma åt formulärdata som inte är bundna till schemaelement. Om ditt användningsfall är att få tillgång till data som är bundna till schemaelement samt obundna data, ska du inte binda schemat till din XML-variabel i arbetsflödet.Du måste använda rätt XPath-uttryck för att få fram de data du behöver
 
 ## Skapa XML-variabler
 

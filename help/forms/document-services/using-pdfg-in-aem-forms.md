@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 76
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 Uppvisa dra och släpp-funktioner för att skapa PDF med AEM Forms
 
-PDFG står för PDF Generation. Det innebär att du kan konvertera en mängd olika filformat till PDF. De vanligaste är Microsoft Office-dokument. PDFG har varit en del av AEM Forms sedan 6.1.
+PDFG står för PDF Generation. Det innebär att du kan konvertera en mängd olika filformat till PDF. De vanligaste är Microsoft Office-dokument. PDFG har tillhört AEM Forms sedan 6.1.
 [Javadoc för PDFG API finns här](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
 
 Med resurserna som är kopplade till den här artikeln kan du dra och släppa MS Office-dokument eller JPG-filer i släppzonen på HTML-sidan. När dokumentet har släppts anropas PDFG-tjänsten och dokumentet konverteras till PDF och sparas i filsystemet i AEM Server.

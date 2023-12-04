@@ -8,16 +8,17 @@ thumbnail: 343623.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 09a4b4fd-b4b5-413b-bd27-d0c1c41b1c8d
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+duration: 328
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
 # Cloud 5 - Mysteries of Cloud Manager - Unit Tests
 
-Enhetstester är ett ofta förbisett steg i programutvecklingen och är en mycket viktig aktivitet som alla utvecklare bör slutföra. AEM innehåller många standardkvalitetskontroller internt, men de kan inte testa allt som du har anpassat eller ändrat.
+Enhetstester är ett ofta förbisett steg i utvecklingen av programvara och är en mycket viktig aktivitet som varje utvecklare bör slutföra. AEM innehåller många standardkvalitetskontroller internt, men de kan inte testa allt som du har anpassat eller ändrat.
 
 >[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 

@@ -7,14 +7,15 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 342
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 5%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
-# Kom igång med AEM Headless - Innehållstjänster
+# Komma igång med AEM utan rubriker - Innehållstjänster
 
 AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
 

@@ -11,10 +11,11 @@ thumbnail: KT-6296.jpg
 badgeIntegration: label="Integrering" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 567
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1886'
-ht-degree: 1%
+source-wordcount: '1795'
+ht-degree: 0%
 
 ---
 

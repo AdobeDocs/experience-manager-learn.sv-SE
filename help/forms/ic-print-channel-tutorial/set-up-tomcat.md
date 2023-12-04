@@ -1,13 +1,8 @@
 ---
 title: Installera och konfigurera Tomcat-video
-seo-title: Install and Configure Tomcat
 description: Detta är en del av en flerstegskurs som lär dig skapa ditt första interaktiva kommunikationsdokument.
-uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
@@ -15,9 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+duration: 259
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -32,18 +28,18 @@ Så här ställer du in tomcat:
 
 1. Hämta och installera JDK1.8.
 2. Ställ in JAVA_HOME till att peka på JDK1.8.
-3. Hämta [tomat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
+3. Ladda ned [tomat](https://tomcat.apache.org/). Krigsfilen har testats med Tomcat version 8.5.x och 9.0.x.
 4. Ladda ned tomcat-versionen av din inställning. Du kan ladda ned zip-filen för 64-bitarsfönster under kärnavsnittet.
-5. Packa upp innehållet till c:\tomcat.
+5. Zippa upp innehållet till din c:\tomcat.
 6. Du bör se något liknande i din cd-enhet **c:\tomcat\apache-tomcat-8.5.27** beroende på vilken version du har
-7. Skapa en miljövariabel med namnet&quot;CATALINA_HOME&quot; och ange värdet till Exempel på installationsmappen för tomcat c:\tomcat\apache- tomcat-8.5.27
+7. Skapa en miljövariabel med namnet&quot;CATALINA_HOME&quot; och ange värdet till Exempel på installationsmappen för tomcat c:\tomcat\apache-tomcat-8.5.27
 8. Kopiera filen SampleRest.war till webbappen för din Tomcat-installation
 9. Starta nytt kommandotolkfönster.
 10. Navigera till &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin och kör startup.bat
 11. När tomcat har startat testar du slutpunkten som exponeras av WAR-filen av [klicka här](http://localhost:8080/SampleRest/webapi/getStatement/9586)
 12. Du bör hämta exempeldata som resultat av det här anropet.
 
-Grattis!!!! Du har konfigurerat för att katt och distribuerat filen SampleRest.war.
+Grattis!!! Du har konfigurerat för att katt och distribuerat filen SampleRest.war.
 
 I följande video förklaras distributionen av exempelprogrammet i Tomcat
 >[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)

@@ -10,9 +10,10 @@ jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 2511
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '3123'
+source-wordcount: '3137'
 ht-degree: 0%
 
 ---
@@ -395,7 +396,7 @@ AEM Publish har stöd för en enda konfiguration för refererarfilter, så samma
 
 OSGi-konfigurationer per miljö (`config.publish.dev`, `config.publish.stage`och `config.publish.prod`) kan definieras med specifika attribut om `allow.hosts` (eller `allow.hosts.regex`) varierar mellan olika miljöer.
 
-## Konfigurerar CORS (Cross-Origin Resource Sharing)
+## Konfigurera Cross-Origin Resource Sharing (CORS)
 
 Under SAML-autentiseringsprocessen initierar IDP en HTTP-POST på klientsidan för att AEM publiceringens `.../saml_login` slutpunkt. Om IDP och AEM Publish finns på olika värdar/domäner AEM Publish&#39;s __CRoss-Origin Resource Sharing (CORS)__ måste vara konfigurerat för att tillåta HTTP POST från IDP:s värd/domän.
 

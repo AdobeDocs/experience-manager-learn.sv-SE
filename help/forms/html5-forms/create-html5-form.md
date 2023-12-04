@@ -2,10 +2,7 @@
 title: Skapa HTML5 Forms
 description: Skapa och konfigurera HTML5-formulär
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.5
 jira: KT-4419
 thumbnail: kt-4419.jpg
@@ -14,9 +11,10 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 133
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---

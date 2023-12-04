@@ -10,7 +10,8 @@ level: Beginner
 jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 74
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%

@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
 last-substantial-update: 2020-01-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 123
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ I det här exemplet ställer vi in data-attributet med innehållet. Innehållet 
 
 För att uppnå detta måste du skapa en anpassad profil. Information om hur du skapar en anpassad profil finns tydligt dokumenterad i [AEM Forms-dokumentation här](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html).
 
-När du har skapat din anpassade profil skapar du sedan en JSP-fil som hämtar data genom att anropa ditt serverdelssystem. När data har hämtats använder du slingRequest.setAttribute(&quot;data&quot;, innehåll); fylla i formuläret i förväg
+När du har skapat din anpassade profil skapar du sedan en JSP-fil som hämtar data genom att anropa ditt serverdelssystem. När data har hämtats använder du slingRequest.setAttribute(&quot;data&quot;, innehåll); för att fylla i formuläret i förväg
 
 När XDP-filen återges kan du även skicka vissa parametrar till xdp och utifrån parameterns värde kan du hämta data från backend-systemet.
 
@@ -54,4 +55,4 @@ Paketet installerar följande
 >
 >Om du vill fylla i formuläret genom att anropa workbench-processen kanske du vill inkludera callWorkbenchProcess.jsp i /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp i stället för setdata.jsp
 
-* [Peka din favoritwebbläsare till den här URL:en](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). Formuläret ska fyllas i i förväg med värdet för name-parametern
+* [Peka din favoritwebbläsare till denna URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). Formuläret ska fyllas i i förväg med värdet för name-parametern

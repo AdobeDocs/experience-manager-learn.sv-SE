@@ -8,16 +8,17 @@ role: Developer
 level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 127
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # Använda Geolocation-API:er i Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-I den här artikeln ska vi titta närmare på hur du använder Google Geolocation API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i de aktuella adressfälten i ett formulär.
+I den här artikeln ska vi titta närmare på hur du använder Google Geolocation API för att fylla i fält i ett adaptivt formulär. Detta är vanligt när du vill fylla i aktuella adressfält i ett formulär.
 
 Följande steg har utförts för att använda Geolocation-API:t i Adaptive Forms.
 
@@ -93,8 +94,7 @@ Den JSON som returneras av API tolkas sedan för att ange fälten för adaptiv f
 Så här aktiverar du den här funktionen på servern:
 
 * Installera och starta AEM Forms-servern.
-
->!![NOTE] Den här funktionen testades i AEM Forms 6.3 och senare
+> Den här funktionen testades i AEM Forms 6.3 och senare
 * [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
 * [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)

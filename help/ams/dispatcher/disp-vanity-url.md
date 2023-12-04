@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 286
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Skickartömning](./disp-flushing.md)
 
-## Översikt
+## Ökning
 
 Det här dokumentet hjälper dig att förstå hur AEM hanterar vanlighetsadresser och vissa andra tekniker med hjälp av omskrivningsregler för att mappa innehåll närmare leveranskanterna
 

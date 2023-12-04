@@ -9,7 +9,8 @@ topic: Development
 index: y
 doc-type: Tutorial
 exl-id: e76c50da-e7a8-4560-bc53-02cdb13619bb
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 104
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

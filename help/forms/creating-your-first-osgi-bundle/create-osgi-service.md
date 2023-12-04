@@ -8,9 +8,10 @@ role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
-source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
+duration: 126
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -87,7 +88,7 @@ The `@Reference` anteckningen ingår i OSGi-deklarationstjänster och används f
 * Öppna **kommandotolkfönstret**
 * Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
-* Kommandot ovan skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
+* Ovanstående kommando skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
 
 Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med [Felix webbkonsol.](http://localhost:4502/system/console/bundles)
 
@@ -102,7 +103,7 @@ com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.m
 
 Exempelpaketet som innehåller JSP-sidan kan [hämtad härifrån](assets/learning_aem_forms.zip)
 
-[Det fullständiga paketet kan laddas ned](assets/mysite.core-1.0.0-SNAPSHOT.jar)
+[Det fullständiga paketet kan hämtas](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## Testa paketet
 

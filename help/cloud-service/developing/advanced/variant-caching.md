@@ -5,9 +5,10 @@ role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 213
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -28,9 +29,9 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 + AEM måste ange cookie-filen __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den initiala HTTP-begärans motsvarande HTTP-svar.
 
-+ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookie-filen omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till avsändaren.
++ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookien omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till avsändaren.
 
-+ En regel för omskrivning av Apache ändrar sökvägen till begäran så att den inkluderar rubrikvärdet i sidans URL som en Apache Sling-väljare (t.ex. `/page.variant=NY.html`). Detta gör att AEM Publish kan leverera olika innehåll baserat på väljaren och avsändaren kan cachelagra en sida per variant.
++ En regel för omskrivning av Apache ändrar sökvägen till begäran så att den inkluderar rubrikvärdet i sidans URL som en Apache Sling-väljare (t.ex. `/page.variant=NY.html`). Detta gör att AEM kan leverera olika innehåll baserat på väljaren och avsändaren kan cachelagra en sida per variant.
 
 + Svaret som skickas av AEM Dispatcher måste innehålla en HTTP-svarshuvud `Vary: x-aem-variant`. Detta instruerar CDN att lagra olika cachekopior för olika rubrikvärden.
 
@@ -48,9 +49,9 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Användning
 
-1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering som ett exempel.
+1. För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering som ett exempel.
 
-1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM `x-aem-variant` cookie på HTTP-svaret, med ett variantvärde.
+1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM att ange `x-aem-variant` cookie på HTTP-svaret, med ett variantvärde.
 
 1. AEM CDN omformas automatiskt `x-aem-variant` cookie till en HTTP-rubrik med samma namn.
 
@@ -64,72 +65,72 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 + Exempel på SlingServletFilter som ska anges `x-aem-variant` cookie med ett värde i AEM.
 
-   ```
-   package com.adobe.aem.guides.wknd.core.servlets.filters;
-   
-   import javax.servlet.*;
-   import java.io.IOException;
-   
-   import org.apache.sling.api.SlingHttpServletRequest;
-   import org.apache.sling.api.SlingHttpServletResponse;
-   import org.apache.sling.servlets.annotations.SlingServletFilter;
-   import org.apache.sling.servlets.annotations.SlingServletFilterScope;
-   import org.osgi.service.component.annotations.Component;
-   import org.slf4j.Logger;
-   import org.slf4j.LoggerFactory;
-   
-   
-   // Invoke filter on  HTTP GET /content/wknd.*.foo|bar.html|json requests.
-   // This code and scope is for example purposes only, and will not interfere with other requests.
-   @Component
-   @SlingServletFilter(scope = {SlingServletFilterScope.REQUEST},
-           resourceTypes = {"cq:Page"},
-           pattern = "/content/wknd/.*",
-           extensions = {"html", "json"},
-           methods = {"GET"})
-   public class PageVariantFilter implements Filter {
-       private static final Logger log = LoggerFactory.getLogger(PageVariantFilter.class);
-       private static final String VARIANT_COOKIE_NAME = "x-aem-variant";
-   
-       @Override
-       public void init(FilterConfig filterConfig) throws ServletException { }
-   
-       @Override
-       public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-           SlingHttpServletResponse slingResponse = (SlingHttpServletResponse) servletResponse;
-           SlingHttpServletRequest slingRequest = (SlingHttpServletRequest) servletRequest;
-   
-           // Check is the variant was previously set
-           final String existingVariant = slingRequest.getCookie(VARIANT_COOKIE_NAME).getValue();
-   
-           if (existingVariant == null) {
-               // Variant has not been set, so set it now
-               String newVariant = "NY"; // Hard coding as an example, but should be a calculated value
-               slingResponse.setHeader("Set-Cookie", VARIANT_COOKIE_NAME + "=" + newVariant + "; Path=/; HttpOnly; Secure; SameSite=Strict");
-               log.debug("x-aem-variant cookie is set with the value {}", newVariant);
-           } else {
-               log.debug("x-aem-variant previously set with value {}", existingVariant);
-           }
-   
-           filterChain.doFilter(servletRequest, slingResponse);
-       }
-   
-       @Override
-       public void destroy() { }
-   }
-   ```
+  ```
+  package com.adobe.aem.guides.wknd.core.servlets.filters;
+  
+  import javax.servlet.*;
+  import java.io.IOException;
+  
+  import org.apache.sling.api.SlingHttpServletRequest;
+  import org.apache.sling.api.SlingHttpServletResponse;
+  import org.apache.sling.servlets.annotations.SlingServletFilter;
+  import org.apache.sling.servlets.annotations.SlingServletFilterScope;
+  import org.osgi.service.component.annotations.Component;
+  import org.slf4j.Logger;
+  import org.slf4j.LoggerFactory;
+  
+  
+  // Invoke filter on  HTTP GET /content/wknd.*.foo|bar.html|json requests.
+  // This code and scope is for example purposes only, and will not interfere with other requests.
+  @Component
+  @SlingServletFilter(scope = {SlingServletFilterScope.REQUEST},
+          resourceTypes = {"cq:Page"},
+          pattern = "/content/wknd/.*",
+          extensions = {"html", "json"},
+          methods = {"GET"})
+  public class PageVariantFilter implements Filter {
+      private static final Logger log = LoggerFactory.getLogger(PageVariantFilter.class);
+      private static final String VARIANT_COOKIE_NAME = "x-aem-variant";
+  
+      @Override
+      public void init(FilterConfig filterConfig) throws ServletException { }
+  
+      @Override
+      public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+          SlingHttpServletResponse slingResponse = (SlingHttpServletResponse) servletResponse;
+          SlingHttpServletRequest slingRequest = (SlingHttpServletRequest) servletRequest;
+  
+          // Check is the variant was previously set
+          final String existingVariant = slingRequest.getCookie(VARIANT_COOKIE_NAME).getValue();
+  
+          if (existingVariant == null) {
+              // Variant has not been set, so set it now
+              String newVariant = "NY"; // Hard coding as an example, but should be a calculated value
+              slingResponse.setHeader("Set-Cookie", VARIANT_COOKIE_NAME + "=" + newVariant + "; Path=/; HttpOnly; Secure; SameSite=Strict");
+              log.debug("x-aem-variant cookie is set with the value {}", newVariant);
+          } else {
+              log.debug("x-aem-variant previously set with value {}", existingVariant);
+          }
+  
+          filterChain.doFilter(servletRequest, slingResponse);
+      }
+  
+      @Override
+      public void destroy() { }
+  }
+  ```
 
 + Exempelregel för omskrivning i __dispatcher/src/conf.d/rewrite.rules__ som hanteras som källkod i Git och distribueras med Cloud Manager.
 
-   ```
-   ...
-   
-   RewriteCond %{REQUEST_URI} ^/us/.*  
-   RewriteCond %{HTTP:x-aem-variant} ^.*$  
-   RewriteRule ^([^?]+)\.(html.*)$ /content/wknd$1.variant=%{HTTP:x-aem-variant}.$2 [PT,L] 
-   
-   ...
-   ```
+  ```
+  ...
+  
+  RewriteCond %{REQUEST_URI} ^/us/.*  
+  RewriteCond %{HTTP:x-aem-variant} ^.*$  
+  RewriteRule ^([^?]+)\.(html.*)$ /content/wknd$1.variant=%{HTTP:x-aem-variant}.$2 [PT,L] 
+  
+  ...
+  ```
 
 ## Variantbegränsningar
 

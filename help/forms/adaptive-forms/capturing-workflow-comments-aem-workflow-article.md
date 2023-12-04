@@ -1,6 +1,6 @@
 ---
 title: Samla in arbetsflödeskommentarer i adaptiv Forms Workflow
-description: Samla in arbetsflödeskommentarer i AEM arbetsflöde
+description: Samla in arbetsflödeskommentarer AEM arbetsflödet
 feature: Workflow
 version: 6.4
 topic: Development
@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
 last-substantial-update: 2020-10-10T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 100
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ För att uppfylla detta krav finns ett exempel på ett OSGi-paket som kan använ
 
 I följande skärmbild visas hur du använder processteg i [AEM](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) om du vill samla in kommentarer och lagra dem som metadataegenskaper. &quot;Capture Workflow Comments&quot; är namnet på den java-klass som ska användas i processsteget. Du måste skicka metadataegenskapsnamnet som innehåller kommentarerna. I skärmbilden nedan är managerComments metadataegenskapen som lagrar kommentarerna.
 
-![workflowcomments1](assets/workflowcomments1.gif)
+![arbetsflödenkommentarer1](assets/workflowcomments1.gif)
 
 Så här testar du den här funktionen på datorn:
 * [Kontrollera att processteget i arbetsflödet är konfigurerat att använda kommentarerna i arbetsflödet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
@@ -38,11 +39,11 @@ Så här testar du den här funktionen på datorn:
 
 * Importera de två ZIP-filerna till AEM med hjälp av pakethanteraren
 
-* [Förhandsgranska formuläret genom att bläddra till den här URL:en](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
+* [Förhandsgranska formuläret genom att bläddra till denna URL](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
 
 * Fyll i formulärfälten och skicka formuläret
 
-* [Kontrollera AEM inkorg](http://localhost:4502/aem/inbox)
+* [Kontrollera AEM](http://localhost:4502/aem/inbox)
 
 * Öppna uppgiften från inkorgen och skicka formuläret. Ange några kommentarer när du uppmanas till det.
 

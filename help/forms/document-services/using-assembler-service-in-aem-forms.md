@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 121
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -104,8 +105,8 @@ För att få den här funktionen att fungera på din AEM
 
 * Ladda ned [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
 * Överför och installera paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Hämta[Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Hämta [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Ladda ned[Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Ladda ned [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Distribuera och starta paketen med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
 * Peka webbläsaren till [SammanställPDF.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * Dra och släpp några filer med PDF-filer
@@ -123,4 +124,3 @@ För att få den här funktionen att fungera på din AEM
 > * Se till att du bara drar och släpper PDF-filer
 >
 >
-

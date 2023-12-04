@@ -9,9 +9,10 @@ level: Intermediate
 jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 192
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---

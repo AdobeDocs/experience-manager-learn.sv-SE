@@ -8,9 +8,10 @@ role: Developer
 level: Intermediate
 exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
 last-substantial-update: 2021-01-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 127
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ Följ stegen nedan för att testa den här funktionen på servern:
 
 1.[Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).Det här anpassade OSGI-paketet används för att skapa en metadataegenskap och ange dess värde utifrån skickade formulärdata.
+1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).Det här anpassade OSGI-paketet används för att skapa metadataegenskapen och ange dess värde från skickade formulärdata.
 
 1. [Importera resurserna](assets/postdortodam.zip) som är kopplad till den här artikeln i AEM med hjälp av pakethanteraren.Du får följande
 
@@ -57,7 +58,7 @@ Följ stegen nedan för att testa den här funktionen på servern:
    1. Formulärdatamodell som använder datakällan
 
 1. Peka på [webbläsare som öppnar det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
-1. Fyll i formuläret och skicka in det.
+1. Fyll i formuläret och skicka.
 1. Kontrollera Assets-programmet om arkivdokumentet skapas och lagras.
 
 

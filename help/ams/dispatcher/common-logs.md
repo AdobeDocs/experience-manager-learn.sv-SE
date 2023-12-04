@@ -9,9 +9,10 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 327
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Vanity URLs](./disp-vanity-url.md)
 
-## Översikt
+## Ökning
 
 Dokumentet beskriver vanliga loggposter som du kommer att se, vad de betyder och hur du hanterar dem.
 

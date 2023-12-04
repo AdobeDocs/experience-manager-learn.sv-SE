@@ -9,7 +9,8 @@ feature: Document Security
 topic: Development
 index: y
 exl-id: 086afdf4-c9a4-4bb9-b242-e6337281ef9b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 144
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%

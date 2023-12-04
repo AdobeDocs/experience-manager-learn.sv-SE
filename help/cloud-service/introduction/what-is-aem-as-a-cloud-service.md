@@ -10,7 +10,8 @@ jira: KT-6923
 thumbnail: 330546.jpg
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 8aa97bdf-6a0b-4140-8183-a8f77212992d
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 422
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%

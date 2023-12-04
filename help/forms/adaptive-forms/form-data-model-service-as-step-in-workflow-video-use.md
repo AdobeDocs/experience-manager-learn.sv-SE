@@ -9,9 +9,10 @@ role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 226
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -25,11 +26,11 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodel
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet som anger metadataegenskaper.
->!![NOTE]I AEM Forms 6.5 och senare finns den här funktionen att få direkt tillgång till som [beskriv här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+>I AEM Forms 6.5 och senare finns den här funktionen att få direkt tillgång till som [beskriv här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
 * Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)Krigsfilen som distribueras i Tomcat har koden som returnerar sökandens poäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
-* [Importera resurser till AEM med pakethanteraren](assets/invoke-fdm-as-service-step.zip)Paketet innehåller följande:
+* [Importera resurser till AEM med hjälp av pakethanteraren](assets/invoke-fdm-as-service-step.zip)Paketet innehåller följande:
 
    * Arbetsflödesmodell som använder FDM-steg.
    * Formulärdatamodell som används i FDM-steget.

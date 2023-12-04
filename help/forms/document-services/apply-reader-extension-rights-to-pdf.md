@@ -8,9 +8,10 @@ role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 193
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ För att uppnå detta måste vi göra följande:
 
 ## Skapa en anpassad OSGi-tjänst
 
-Skapa en anpassad OSGi-tjänst som tillämpar användningsrättigheter på dokumenten. Koden som ska användas anges nedan
+Skapa en anpassad OSGi-tjänst som tillämpar användningsrättigheter på dokumenten. Koden för att uppnå detta visas nedan
 
 ```java
 import com.adobe.aemfd.docmanager.Document;
@@ -195,7 +196,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 Så här testar du detta på den lokala servern:
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Ladda ned och installera ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användarrättigheter och strömma tillbaka PDF-filen
+1. [Hämta och installera ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användarrättigheter och strömma tillbaka PDF-filen
 1. [Importera klientlibs och anpassad sändning](assets/applyaresdemo.zip)
 1. [Importera det adaptiva formuläret](assets/applyaresform.zip)
 1. Lägg till certifikatet för Reader-tillägg till användaren fd-service. Kontrollera att aliaset är &quot;ares&quot;.

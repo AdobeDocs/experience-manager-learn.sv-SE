@@ -1,21 +1,17 @@
 ---
 title: AEM Forms med JSON-schema och data[del2]
-seo-title: AEM Forms with JSON Schema and Data[Part2]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
-seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+duration: 164
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Vi rekommenderar att du använder MySQL 8 som din databas eftersom den har stöd för JSON-datatyp. Du måste också installera rätt drivrutin för MySQL DB. Jag har använt drivrutinen som finns på den här platsen https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
+>Vi rekommenderar att du använder MySQL 8 som din databas eftersom den har stöd för JSON-datatyp. Du måste också installera rätt drivrutin för MySQL DB. Jag har använt drivrutinen som finns här https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
 
 Om du vill lagra skickade data i databasen skriver vi en serverlet som extraherar bundna data och formulärnamnet och arkivet. Den fullständiga koden för att hantera formuläröverföringen och lagra afBoundData i databasen anges nedan.
 
@@ -143,7 +139,7 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 
 ![anslutningpool](assets/connectionpooled.gif)
 
-Så här fungerar ditt system
+Så här fungerar ditt system:
 
 * [Ladda ned och zippa upp zip-filen](assets/aemformswithjson.zip)
 * Skapa AdaptiveForm med JSON-schema. Du kan använda JSON-schemat som ingår i den här artikelresursen. Se till att du skickar in formuläret på rätt sätt. Åtgärden Skicka måste konfigureras till CustomSubmitHelpx.
@@ -151,6 +147,6 @@ Så här fungerar ditt system
 * Konfigurera den poolade datakällan för Apache Sling-anslutningen från Felix webbkonsol
 * Ge datakällan namnet&quot;aemformswithjson&quot;. Detta är namnet som används av det OSGi-exempelpaket som du får
 * Se bilden ovan för mer information om egenskaper. Detta förutsätter att du kommer att använda MySQL som databas.
-* Distribuera de OSGi-paket som ingår i den här artikeln.
+* Distribuera de OSGi-paket som ingår i den här artikelresursen.
 * Förhandsgranska formuläret och skicka.
 * JSON-data lagras i den databas som skapades när du importerade filen &quot;schema.sql&quot;.

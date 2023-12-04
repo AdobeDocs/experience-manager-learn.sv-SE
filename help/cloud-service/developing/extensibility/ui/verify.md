@@ -10,9 +10,10 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+duration: 665
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Om du vill skapa en URL som monterar det icke-producerade tillägget i AEM måst
 Om du till exempel vill förhandsgranska ett tillägg för konsolen Innehållsfragment:
 
 1. Logga in på önskad AEM as a Cloud Service-miljö.
-2. Välj __Innehållsfragment__ ikon.
+2. Välj __Innehållsfragment__ -ikon.
 3. Vänta tills AEM Content Fragment Console läses in i webbläsaren.
 4. Kopiera URL:en för AEM Content Fragment Console från webbläsarens adressfält. Den ska likna:
 
@@ -66,7 +67,7 @@ Den här URL:en används nedan när du skapar URL:er för utveckling och scenver
 
 Observera den lokala URL:en för programmet som visas ovan som `-> https://localhost:9080`
 
-1. Lägg till följande två frågeparametrar i [AEM URL](#aem-ui-url)
+1. Lägg till följande två frågeparametrar i [URL för AEM](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, vanligtvis `&ext=https://localhost:9080`.
 
@@ -99,7 +100,7 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 
    Sammanfoga alla ändringar i `.env` och `.aio`.
 
-1. Distribuera det uppdaterade tillägget i appen App Builder. Om du inte är inloggad kör du `aio login` först.
+1. Distribuera den uppdaterade appen App Builder. Om du inte är inloggad kör du `aio login` först.
 
    ```shell
    $ aio app deploy
@@ -115,7 +116,7 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    Successful deployment 🏄
    ```
 
-1. Lägg till följande två frågeparametrar i [AEM URL](#aem-ui-url)
+1. Lägg till följande två frågeparametrar i [URL för AEM](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
@@ -132,7 +133,7 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 
 Kom ihåg att när du använder den här metoden injiceras tillägget Mellanlagring bara på AEM Content Fragment Console när du får tillgång till den här programmeringsscenens URL.
 
-1. Distribuerade tillägg kan uppdateras genom att köra `aio app deploy` och dessa ändringar återspeglas automatiskt när du använder URL:en för förhandsgranskning.
+1. Distribuerade tillägg kan uppdateras genom att köra `aio app deploy` igen, och dessa ändringar återspeglas automatiskt när du använder URL:en för förhandsgranskning.
 1. Om du vill ta bort ett tillägg för verifiering kör du `aio app undeploy`.
 
 ## Förhandsgranska bokmärkesdiagram
@@ -143,7 +144,7 @@ Bokmärket nedan förhandsvisar [lokala utvecklingsverktyg](#verify-local-develo
 
 1. Skapa ett bokmärke i webbläsaren.
 2. Redigera bokmärket.
-3. Ge ett bokmärke ett beskrivande namn, som `AEM UI Extension Preview (localhost:9080)`.
+3. Ge ett bokmärke ett beskrivande namn, till exempel `AEM UI Extension Preview (localhost:9080)`.
 4. Ställ in bokmärkets URL till följande kod:
 
    ```javascript

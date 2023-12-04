@@ -1,6 +1,6 @@
 ---
 title: Hur uppdaterar man CORBA-timeout i PDFG för att minska problem med återkallad transaktion?
-description: Konfigurera CORBA-timeout i AEM Forms PDF Generator för att lösa problem med återställning av transaktioner
+description: Konfigurera CORBA-timeout i AEM Forms PDF Generator för att lösa problem med transaktionsåterställning
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,7 +9,8 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: 397f5580-d982-46f3-b63a-7fc6def07ec5
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+duration: 140
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

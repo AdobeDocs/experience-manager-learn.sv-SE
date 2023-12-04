@@ -1,14 +1,8 @@
 ---
 title: Skicka anpassat formulär till extern server
-seo-title: Submitting Adaptive Form to External Server
 description: Skicka anpassat formulär till REST-slutpunkt som körs på en extern server
-seo-description: Submitting Adaptive Form to REST endpoint running on external server
-uuid: 1a46e206-6188-4096-816a-d59e9fb43263
 feature: Adaptive Forms
-topics: developing
-audience: implementer
 doc-type: article
-activity: setup
 version: 6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
 topic: Development
@@ -16,9 +10,10 @@ role: Developer
 level: Beginner
 exl-id: 5363c3f7-9006-4430-b647-f3283a366a64
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+duration: 109
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -27,7 +22,7 @@ ht-degree: 0%
 
 Använd åtgärden Skicka till REST-slutpunkt för att skicka skickade data till en REST-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
 
-Vanligtvis vill man skicka formulärdata till en extern server för vidare bearbetning.
+Normalt vill man skicka blankettdata till en extern server för vidare bearbetning.
 
 Om du vill skicka data till en intern server anger du en sökväg till resursen. Data bokförs som resurssökväg. Till exempel: &lt;/content restendpoint=&quot;&quot;> . För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 
