@@ -6,18 +6,19 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
+source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 11%
+source-wordcount: '491'
+ht-degree: 6%
 
 ---
 
 
 # Videor och självstudiekurser om AEM Sites {#sites}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 + Dokumentredigering {#document-authoring}
+   + [Ökning](document-authoring/overview.md)
    + [Konfigurera](document-authoring/set-up.md)
    + [Förhandsgranska och publicera](document-authoring/preview-and-publish.md)
    + [Dokumentstruktur](document-authoring/document-structure.md)
@@ -61,12 +62,13 @@ ht-degree: 11%
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Översätta innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
    + [Content Fragments vs. Experience Fragments](content-fragments/understand-content-fragments-and-experience-fragments.md)
-+ Experience Fragments {#experience-fragments}
-   + [Använda Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
++ Upplevelsefragment {#experience-fragments}
+   + [Använda upplevelsefragment](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
    + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
-   + Utveckling{#developing}
+   + [Ökning](./edge-delivery-services/overview.md)
+   + Utvecklar{#developing}
       + [Förutsättningar](edge-delivery-services/developing/prerequisites.md)
       + [AEM](edge-delivery-services/developing/aem-boilerplate.md)
       + [Innehållsarkiv](edge-delivery-services/developing/content-repository.md)
@@ -81,7 +83,7 @@ ht-degree: 11%
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM Project Archettype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [Kom igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
@@ -132,7 +134,7 @@ ht-degree: 11%
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analyser med Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
    + Taggar för Experience Platform-datainsamling (Launch) {#experience-platform-data-collection-tags}
-      + [Översikt](integrations/experience-platform/data-collection/tags/overview.md)
+      + [Ökning](integrations/experience-platform/data-collection/tags/overview.md)
       + [Skapa en taggegenskap](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [Koppla AEM och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [Cloud Servicen Skapa AEM start](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
@@ -145,7 +147,7 @@ ht-degree: 11%
       + [Spåra klickade komponenter med Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysera data med Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [Översikt](integrations/adobe-target/overview.md)
+      + [Ökning](integrations/adobe-target/overview.md)
       + [Lägg till måltillägg i startegenskapen](integrations/adobe-target/add-target-launch-extension.md)
       + [Läsa in och utlösa ett Target-anrop](integrations/adobe-target/load-and-fire-target.md)
       + [Skapa Adobe Target Cloud Service-konto](integrations/adobe-target/setup-aem-target-cloud-service.md)
@@ -154,7 +156,7 @@ ht-degree: 11%
       + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
 + Lär dig av andra {#expert-resources}
-   + [Översikt](expert-resources/learn-from-your-peers-overview.md)
+   + [Ökning](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
    + [Platsunderhåll](expert-resources/site-maintenance.md)
    + [AEM Champion Tips and Tricks: Session 1](expert-resources/champion-tips-1.md)
