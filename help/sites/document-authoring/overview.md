@@ -8,8 +8,9 @@ role: User
 level: Beginner
 jira: KT-14609
 doc-type: Catalog
+duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
-source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
+source-git-commit: e5e1b1b9313f5c7b031c6e4233052dee67c6bd7c
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
