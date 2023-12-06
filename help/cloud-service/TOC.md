@@ -6,17 +6,17 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 43c021b051806380b3211f2d7357555622217b91
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 11%
+source-wordcount: '1072'
+ht-degree: 5%
 
 ---
 
 
 # Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
-+ [Översikt](./overview.md)
++ [Ökning](./overview.md)
 + AEM {#aem-trials}
    + [Bilder](./aem-trials/images.md)
 + Introduktion till AEM as a Cloud Service{#introduction}
@@ -27,7 +27,7 @@ ht-degree: 11%
       + [Experience Manager - Styrnings- och personalmodeller och arkitekter](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Skapa innehåll snabbare med Adobe Experience Manager](./introduction/drive-content-velocity-for-sites.md)
       + [Snabba upp materialets hastighet med AEM](./introduction/accelerate-content-velocity-aem.md)
-+ Experience Cloud-integreringar{#integrations}
++ Integreringar med Experience Cloud{#integrations}
    + [Integreringar](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)
 + Underliggande teknik {#underlying-technology}
@@ -41,7 +41,7 @@ ht-degree: 11%
    + [AEM Assets Sidekick plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [Program](./cloud-manager/programs.md)
-   + [Miljöer](./cloud-manager/environments.md)
+   + [Miljö](./cloud-manager/environments.md)
    + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivitet](./cloud-manager/activity.md)
@@ -54,16 +54,16 @@ ht-degree: 11%
       + [Dispatcher Configurations](./cloud-manager/devops/dispatcher-configurations.md)
       + [API:er för Cloud Manager](./cloud-manager/devops/cloud-manager-apis.md)
 + Installation av lokal utvecklingsmiljö {#local-development-environment-set-up}
-   + [Översikt](./local-development-environment/overview.md)
+   + [Ökning](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Lokal AEM SDK](./local-development-environment/aem-runtime.md)
    + [Local Dispatcher Tools](./local-development-environment/dispatcher-tools.md)
-+ Utveckling{#developing}
++ Utvecklar{#developing}
    + Utbyggbarhet{#extensibility}
       + App Builder{#app-builder}
          + [Generera åtkomsttoken](./developing/extensibility/app-builder/jwt-auth.md)
       + Utbyggbarhet för användargränssnitt{#ui}
-         + [Översikt](./developing/extensibility/ui/overview.md)
+         + [Ökning](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
          + [Initiera app](./developing/extensibility/ui/app-initialization.md)
          + [Registrera tillägg](./developing/extensibility/ui/extension-registration.md)
@@ -72,7 +72,7 @@ ht-degree: 11%
          + [Verifiera](./developing/extensibility/ui/verify.md)
          + [Distribuera](./developing/extensibility/ui/deploy.md)
          + Innehållsfragment{#content-fragments}
-            + [Översikt](./developing/extensibility/ui/content-fragments/overview.md)
+            + [Ökning](./developing/extensibility/ui/content-fragments/overview.md)
             + Exempel{#examples}
                + [Generering av AI-bilder](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
                + [Uppdatering av massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
@@ -85,7 +85,7 @@ ht-degree: 11%
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [Lokal utvecklingsmiljö](./developing/basics/local-development-environment.md)
       + [AEM Project Archettype](./developing/basics/aem-project-archetype.md)
-      + [AEM-projektstruktur](./developing/basics/project-structure.md)
+      + [AEM projektstruktur](./developing/basics/project-structure.md)
       + [Mutable vs. Immutable Content](./developing/basics/mutable-immutable.md)
       + [Databasstrukturpaket](./developing/basics/repository-structure-package.md)
       + [Content Publishing](./developing/basics/content-publishing.md)
@@ -106,21 +106,21 @@ ht-degree: 11%
       + [Tjänstanvändare](./developing/advanced/service-users.md)
       + [Webboptimerade bild-API:er](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + Rapid Development Environment{#rde}
-      + [Översikt](./developing/rde/overview.md)
+      + [Ökning](./developing/rde/overview.md)
       + [Så här konfigurerar du](./developing/rde/how-to-setup.md)
       + [Så här använder du](./developing/rde/how-to-use.md)
       + [Utveckling/livscykeln](./developing/rde/development-life-cycle.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
-      + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [Ökning](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Loggar](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Fjärrfelsökning](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + Felsökning AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [Översikt](./debugging/cloud-service/overview.md)
+      + [Ökning](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
@@ -130,22 +130,25 @@ ht-degree: 11%
 + Innehållsleverans{#content-delivery}
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + Cachning{#caching}
-   + [Översikt](./caching/overview.md)
+   + [Ökning](./caching/overview.md)
    + [AEM Publiceringstjänst](./caching/publish.md)
    + [AEM Author Service](./caching/author.md)
    + [Analys av träffar i CDN-cache](./caching/cdn-cache-hit-ratio-analysis.md)
+   + Så här gör du{#how-to}
+      + [Aktivera cachelagring](./caching/how-to/enable-caching.md)
+      + [Inaktivera cachelagring](./caching/how-to/disable-caching.md)
 + Åtkomst AEM{#accessing}
-   + [Översikt](./accessing/overview.md)
+   + [Ökning](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
    + [Adobe IMS-användargrupper](./accessing/adobe-ims-user-groups.md)
    + [Produktprofiler för Adobe IMS](./accessing/adobe-ims-product-profiles.md)
    + [AEM användare, grupper och behörigheter](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
 + Autentisering{#authentication}
-   + [Översikt](./authentication/authentication.md)
+   + [Ökning](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
 + Avancerat nätverksbyggande{#networking}
-   + [Översikt](./networking/advanced-networking.md)
+   + [Ökning](./networking/advanced-networking.md)
    + [Flexibel portutgång](./networking/flexible-port-egress.md)
    + [Dedikerad IP-adress för utgångar](./networking/dedicated-egress-ip-address.md)
    + [Virtuellt privat nätverk](./networking/vpn.md)
@@ -157,12 +160,12 @@ ht-degree: 11%
       + [E-posttjänst](./networking/examples/email-service.md)
 + Dokumentskydd {#security}
    + Trafikfilterregler inklusive WAF-regler{#traffic-filter-and-waf-rules}
-      + [Översikt](./security/traffic-filter-rules/overview.md)
+      + [Ökning](./security/traffic-filter-rules/overview.md)
       + [Så här konfigurerar du](./security/traffic-filter-rules/how-to-setup.md)
       + [Exempel och resultatanalys](./security/traffic-filter-rules/examples-and-analysis.md)
       + [God praxis](./security/traffic-filter-rules/best-practices.md)
 + Migrering {#migration}
-   + [Content Transfer Tool](./migration/content-transfer-tool.md)
+   + [Verktyget Innehållsöverföring](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)
    + Flytta till AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [Introduktion](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
@@ -176,7 +179,7 @@ ht-degree: 11%
       + [Sökning och indexering](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + Innehållsmigrering {#content-migration}
          + [Massimporttjänst](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
-         + [Content Transfer Tool](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
+         + [Verktyget Innehållsöverföring](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
          + [Vanliga frågor](./migration/moving-to-aem-as-a-cloud-service/content-migration/faq.md)
       + [Felsökning](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
       + AEM Forms as a Cloud Service {#aem-forms}
@@ -187,7 +190,7 @@ ht-degree: 11%
       + [Introduktion](./migration/cloud-acceleration-manager/introduction.md)
       + [Analysera beredskap och bästa praxis](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [Implementeringsfas](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [Content Transfer Tool](./migration/cloud-acceleration-manager/content-transfer-tool.md)
+      + [Verktyget Innehållsöverföring](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [Kodomfaktoriseringsverktyg](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [Koddatabasmodernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
@@ -308,7 +311,7 @@ ht-degree: 11%
       + [Lagra formulärdata på en enhet](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Lagra formulärdata i SharePoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + Utbyggbarhet för asset compute{#asset-compute}
-   + [Översikt](./asset-compute/overview.md)
+   + [Ökning](./asset-compute/overview.md)
    + Konfigurera{#set-up}
       + [Konto- och tjänsteetablering](./asset-compute/set-up/accounts-and-services.md)
       + [Lokal utvecklingsmiljö](./asset-compute/set-up/development-environment.md)
