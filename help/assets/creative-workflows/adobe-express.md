@@ -1,26 +1,28 @@
 ---
-title: Integrering av Adobe Expresser
-description: Lär er hur ni optimerar innehållsleveranskedjorna med AEM Assets och Adobe Express, vilket förbättrar produktiviteten och tillgängligheten för alla teammedlemmar.
+title: AEM Assets och Adobe Express
+description: Upptäck hur du enkelt kan skapa och redigera innehåll i AEM Assets med Adobe Express.
 version: Cloud Service
 feature: Integrations
-topic: Integrations, Content Management
-role: User
-level: Intermediate
-last-substantial-update: 2023-10-26T00:00:00Z
-jira: KT-14192
-thumbnail: 3425193.jpeg
+topic: Integrations, Content Management, Content Supply Chain
+role: Admin, User
+level: Beginner
 doc-type: Feature Video
-exl-id: 4da1b1ff-5472-4282-a998-ae344e7b8309
-duration: 610
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 500
+last-substantial-update: 2023-12-06T00:00:00Z
+jira: KT-14645
+thumbnail: 3425972.jpeg
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
 workflow-type: tm+mt
-source-wordcount: '49'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-# Integrering av Adobe Expresser
 
-Lär dig hur du optimerar innehållsleveranskedjor med AEM Assets och [Adobe Express](https://www.adobe.com/express/), förbättrar produktiviteten och tillgängligheten för alla teammedlemmar.
+# AEM Assets och Adobe Express
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+Upptäck hur du enkelt kan skapa och redigera innehåll i Adobe Experience Manager Assets med Adobe Express. I den här videon får du hjälp med att förbättra arbetsflödena för innehåll, vilket visar både redigering av befintligt material och framtagning av nya, som alla har effektiviserats och är användarvänliga.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+
+Lär dig hur du ställer in [AEM Assets-tillägg för Adobe Express](./adobe-express-aem-assets-add-on.md) för smidig åtkomst till AEM Assets från Adobe Expressen.

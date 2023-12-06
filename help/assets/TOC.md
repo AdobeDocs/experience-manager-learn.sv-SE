@@ -7,17 +7,17 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f6491d04f7f23da75366904a7965103465d33f87
+source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 12%
+source-wordcount: '402'
+ht-degree: 6%
 
 ---
 
 
 # Videor och självstudiekurser om AEM Assets {#assets}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 
 + Konfigurerar{#configuring}
    + [Originalmappar](configuring/baseline-folders.md)
@@ -27,7 +27,7 @@ ht-degree: 12%
    + [Metadataprofiler](configuring/metadata-profiles.md)
    + [Mappscheman för metadata](configuring/metadata-folder-schemas.md)
    + [Resursadministratörssökspår](configuring/assets-admin-search-rail.md)
-   + [Bearbeta profiler](configuring/processing-profiles.md)
+   + [Bearbetar profiler](configuring/processing-profiles.md)
    + [Starta arbetsflöden automatiskt](configuring/auto-start-workflows.md)
 
 + Redigering{#authoring}
@@ -52,7 +52,7 @@ ht-degree: 12%
 + Avancerade funktioner{#advanced}
    + [3D-resurser](./advanced/3d-assets.md)
    + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
-   + [Asset Insights ](./advanced/asset-insights-launch-tutorial.md)
+   + [Resursinsikter](./advanced/asset-insights-launch-tutorial.md)
    + [Resursrapporter](./advanced/asset-reports.md)
    + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
    + [Vattenstämplar](./advanced/watermarks.md)
@@ -84,8 +84,9 @@ ht-degree: 12%
       + [Resursdelningskommentarer Tillgångar](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Anslutna resurser](./sharing/connected-assets.md)
 
-+ Integrera med kreativa arbetsflöden{#creative-workflows}
++ Kreativa arbetsflöden{#creative-workflows}
    + [Adobe Express](./creative-workflows/adobe-express.md)
+   + [Adobe Express AEM Assets-tillägg](./creative-workflows/adobe-express-aem-assets-add-on.md)
    + [AEM datorprogram](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
@@ -104,7 +105,7 @@ ht-degree: 12%
    + [Resurssökning](./adobe-asset-link/asset-search.md)
 
 + Automatisering av innehåll{#content-automation}
-   + [Översikt](./content-automation/overview.md)
+   + [Ökning](./content-automation/overview.md)
    + [Kreativa åtgärder](./content-automation/creative-operations.md)
    + [Photoshop Actions](./content-automation/photoshop-actions.md)
 
@@ -129,10 +130,10 @@ ht-degree: 12%
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + Använda med AEM Sites {#dm-with-aem-sites}
-      + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Upplevelsefragment](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
 
-   + Självstudiekurser {#tutorials}
+   + Tutorials {#tutorials}
       + [Skapa Carousel-uppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Skapa bilduppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Skapa bildförinställningar](dynamic-media/tutorials/creating-image-presets.md)
@@ -153,7 +154,7 @@ ht-degree: 12%
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
       + AEM Experts Series{#aem-experts-series}
-         + [Översikt](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Ökning](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Inställningar](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-formulär och AEM metadata](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Taggar, projektlänkade mappar och mappmetadata](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
