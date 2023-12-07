@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
 duration: 140
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 6995b0221e381979aca0aeb540fe04d71b16eaae
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Här följer en instruktion för att konfigurera en förkortning. Information om
 1. Installera nödvändiga npm-moduler och Adobe I/O CLI-plugin-program från kommandoraden:
 
    ```
-   $ npm i -g @adobe/aio-cli@7.1.0 @openwhisk/wskdebug ngrok --unsafe-perm=true \
+   $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
@@ -76,11 +76,8 @@ Asset compute arbetare är [Node.js](https://nodejs.org/)-baserat och därför k
 [Installera Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli), eller __aio__ är en kommandoradsmodul (CLI) npm som underlättar användningen av och interaktionen med Adobe I/O och som används både för att generera och lokalt utveckla anpassade Asset compute-arbetare.
 
 ```
-$ npm install -g @adobe/aio-cli@7.1.0
+$ npm install -g @adobe/aio-cli
 ```
-
-_Adobe I/O CLI version 7.1.0 krävs. Senare versioner av Adobe I/O CLI stöds för närvarande inte._
-
 
 ## Installera plugin-programmet Adobe I/O CLI Asset compute{#aio-asset-compute}
 
