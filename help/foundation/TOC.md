@@ -4,17 +4,17 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 13%
+source-wordcount: '224'
+ht-degree: 12%
 
 ---
 
 
 # Videor och självstudiekurser om AEM Foundation {#foundation}
 
-+ [Översikt](./overview.md)
++ [Ökning](./overview.md)
 + Administration {#administration}
    + [Förstå skäl att uppgradera AEM](./administration/understand-reasons-to-upgrade.md)
    + [Använd oak-run.jar för att hantera index](./administration/use-oak-run-jar-to-manage-indexes.md)
@@ -28,7 +28,8 @@ ht-degree: 13%
    + [Förstå IMS-autentisering på AMS](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Förstå Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
-   + [Använda CI/CD-pipeline i Adobe Cloud Manager](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [CI/CD-rör](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [Anpassade behörigheter](./cloud-manager/cloud-permissions.md)
 + Utveckling {#development}
    + [Utveckla export av försäljningsmodeller](./development/develop-sling-model-exporter.md)
    + [Konfigurera en lokal AEM utvecklingsmiljö](./development/set-up-a-local-aem-development-environment.md)
