@@ -12,7 +12,7 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 439
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: d7f3c5193cc53f050d24dd66705a3979fb710c36
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
