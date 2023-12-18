@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 227
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 234c163a2936ca07bdf259038f1b22c4363fae3c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,10 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
 
 
 ## Skapa ett innehållsfragment {#create-content-fragment}
+
+>[!TIP]
+>
+>För lokala AEM SDK-användare: Använd AEM Assets-gränssnittet för att skapa och redigera innehållsfragment i stället för det innehållsfragment-gränssnitt som beskrivs nedan. Detaljerade instruktioner finns i [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html).
 
 Därefter skapas flera innehållsfragment baserat på **Team** och **Person** modeller.
 
@@ -145,6 +149,10 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 1. Tryck **Spara och stäng** om du vill spara ändringarna i fragmentet Team Alpha.
 
 ## Publicera innehållsfragment
+
+>[!TIP]
+>
+>För lokala AEM SDK-användare: Använd AEM Assets-gränssnittet för att publicera innehållsfragment i stället för det användargränssnitt för innehållsfragment som beskrivs nedan. Detaljerade instruktioner finns i [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
 
 Publicera den skapade `Content Fragments`
 
