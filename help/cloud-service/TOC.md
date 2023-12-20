@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1096'
 ht-degree: 5%
 
 ---
@@ -164,6 +164,11 @@ ht-degree: 5%
       + [Så här konfigurerar du](./security/traffic-filter-rules/how-to-setup.md)
       + [Exempel och resultatanalys](./security/traffic-filter-rules/examples-and-analysis.md)
       + [God praxis](./security/traffic-filter-rules/best-practices.md)
++ AEM{#aem-eventing}
+   + [Ökning](./eventing/overview.md)
+   + Exempel{#examples}
+      + [Webkrok - Ta emot AEM](./eventing/examples/webhook.md)
+      + [Journalföring - Läs in AEM](./eventing/examples/journaling.md)
 + Migrering {#migration}
    + [Verktyget Innehållsöverföring](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)

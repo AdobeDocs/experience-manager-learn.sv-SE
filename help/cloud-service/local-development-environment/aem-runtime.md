@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 563
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -24,19 +24,19 @@ ht-degree: 0%
 >id="aemcloud_localdev_aemruntime"
 >title="Local AEM Runtime"
 >abstract="Adobe Experience Manager (AEM) kan köras lokalt med den AEM as a Cloud Service SDK:ns QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service miljö."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Hämta AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) kan köras lokalt med den AEM as a Cloud Service SDK:ns QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service miljö.
 
 Observera att `~` används som kortskrift för användarkatalogen. I Windows motsvarar detta `%HOMEPATH%`.
 
-## Installera Java
+## Installera Java™
 
-Experience Manager är ett Java-program och kräver därför Oraclet Java SDK för att stödja utvecklingsverktygen.
+Experience Manager är en Java™-applikation och därför krävs Oraclet Java™ SDK för utvecklingsverktygen.
 
-1. [Hämta och installera den senaste Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Kontrollera att Oraclet Java 11 SDK är installerat genom att köra kommandot:
+1. [Hämta och installera den senaste Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. Kontrollera att Oraclet Java™ 11 SDK är installerat genom att köra kommandot:
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ $ java --version
 $ java -version
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java --version
@@ -85,7 +85,7 @@ Den lokala AEM författartjänsten ger utvecklare en lokal upplevelse som digita
 1. Kopiera __Quickstart JAR__ fil till  `~/aem-sdk/author` och ändra namnet till `aem-author-p4502.jar`
 1. Starta den lokala AEM Author Service genom att köra följande från kommandoraden:
    + `java -jar aem-author-p4502.jar`
-      + Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
+      + Ange administratörslösenordet som `admin`. Alla administratörslösenord är tillåtna, men du bör använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 
    Du *inte* starta AEM som Cloud Service QuickStart Jar [genom att dubbelklicka](#troubleshooting-double-click).
 1. Gå till den lokala AEM författartjänsten på [http://localhost:4502](http://localhost:4502) i en webbläsare
@@ -110,7 +110,7 @@ $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ mkdir -p ~/aem-sdk/author
@@ -130,7 +130,7 @@ Den lokala AEM-publiceringstjänsten ger utvecklare den lokala upplevelse som sl
 1. Kopiera __Quickstart JAR__ fil till  `~/aem-sdk/publish` och ändra namnet till `aem-publish-p4503.jar`
 1. Starta den lokala AEM-publiceringstjänsten genom att köra följande från kommandoraden:
    + `java -jar aem-publish-p4503.jar`
-      + Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men de rekommenderas att använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
+      + Ange administratörslösenordet som `admin`. Alla administratörslösenord är tillåtna, men du bör använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
 
    Du *inte* starta AEM som Cloud Service QuickStart Jar [genom att dubbelklicka](#troubleshooting-double-click).
 1. Åtkomst till den lokala AEM-publiceringstjänsten på [http://localhost:4503](http://localhost:4503) i en webbläsare
@@ -155,7 +155,7 @@ $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ mkdir -p ~/aem-sdk/publish
@@ -194,7 +194,7 @@ $ java -jar aem-author-p4502.jar -r prerelease
 $ java -jar aem-publish-p4503.jar -r prerelease
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 # For AEM Author service in prerelease mode
@@ -214,7 +214,7 @@ Under utvecklingen kan det vara önskvärt att simulera distributionen av inneh�
 
 >[!NOTE]
 >
-> Replikeringsagenter är bara tillgängliga för användning i den lokala Quickstart JAR och ger bara en simulering av innehållsdistribution.
+Replikeringsagenter är bara tillgängliga för användning i den lokala Quickstart JAR och ger bara en simulering av innehållsdistribution.
 
 1. Logga in på **Upphovsman** och navigera till [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. Klicka **Standardagent (publicera)** om du vill öppna standardreplikeringsagenten.
@@ -279,7 +279,7 @@ Uppdatera AEM SDK minst en gång i månaden, eller kort efter, den sista torsdag
 
 >[!WARNING]
 >
-> Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
+Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
 
 ### Så här undviker du innehållsförluster när du uppgraderar AEM SDK
 
@@ -317,7 +317,7 @@ $ java -jar aem-author-p4502.jar
 $ java -jar aem-author-p4502.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java -jar aem-author-p4502.jar
@@ -341,7 +341,7 @@ $ java -jar aem-publish-p4503.jar
 $ java -jar aem-publish-p4503.jar
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java -jar aem-publish-p4503.jar
@@ -364,9 +364,9 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Detta beror på att AEM as a Cloud Service kräver Java SDK 11 och du kör en annan version, troligtvis Java 8. Lös problemet genom att hämta och installera [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+Detta beror på att AEM as a Cloud Service kräver Java™ SDK 11 och du kör en annan version, troligtvis Java™ 8. Lös problemet genom att hämta och installera [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 
-När Oraclet Java 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
+När Oraclet Java™ 11 SDK är installerat kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
 
 >[!BEGINTABS]
 
@@ -382,7 +382,7 @@ $ java --version
 $ java -version
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ java --version

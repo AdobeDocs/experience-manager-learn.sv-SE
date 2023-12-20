@@ -11,9 +11,9 @@ thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
 duration: 765
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
 >title="Local Dispatcher Tools"
->abstract="Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön. Den AEM as a Cloud Service SDK-versionen innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt."
+>abstract="Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön. AEM as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera validering och simulera Dispatcher lokalt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="Dispatcher i molnet"
->additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Hämta AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="Hämta AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsskiktet. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
 
-Den AEM as a Cloud Service SDK-versionen innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt. Dispatcher Tools består av:
+AEM as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera validering och simulera Dispatcher lokalt. Dispatcher Tools består av:
 
 + en basuppsättning med konfigurationsfiler för Apache HTTP-webbserver och Dispatcher, som finns på `.../dispatcher-sdk-x.x.x/src`
 + en konfigurationsvaliderare för CLI-verktyg, som finns på `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -47,7 +47,7 @@ Observera att `~` används som kortskrift för användarkatalogen. I Windows mot
 ## Förutsättningar
 
 1. Windows-användare måste använda Windows 10 Professional (eller en version som stöder Docker)
-1. Installera [Experience Manager Publish Quickstart JAR](./aem-runtime.md) på den lokala framkallningsmaskinen.
+1. Installera [Experience Manager Publish Quickstart JAR](./aem-runtime.md) på den lokala utvecklingsdatorn.
 
 + Du kan också installera den senaste [AEM webbplats](https://github.com/adobe/aem-guides-wknd/releases) på den lokala AEM. Den här webbplatsen används i den här självstudiekursen för att visualisera en fungerande Dispatcher.
 
@@ -87,7 +87,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 Zippa upp `aem-sdk-dispatcher-tools-x.x.x-windows.zip` till `C:\Users\<My User>\aem-sdk\dispatcher` (skapar saknade mappar efter behov).
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh
@@ -105,11 +105,11 @@ Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen in
 ## Förstå Dispatcher-konfigurationsfilerna
 
 >[!TIP]
-> Experience Manager-projekt skapade från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, så du behöver inte kopiera över från Src-mappen Dispatcher Tools.
+Experience Manager-projekt skapade från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, så du behöver inte kopiera över från Src-mappen Dispatcher Tools.
 
 Dispatcher Tools innehåller en uppsättning konfigurationsfiler för Apache HTTP Web Server och Dispatcher som definierar beteendet för alla miljöer, inklusive lokal utveckling.
 
-Filerna ska kopieras till ett Experience Manager Maven-projekt till `dispatcher/src` om de inte redan finns i Experience Manager Maven-projektet.
+Filerna ska kopieras till ett Experience Manager Maven-projekt till `dispatcher/src` om de inte finns i Experience Manager Maven-projektet.
 
 En fullständig beskrivning av konfigurationsfilerna finns i de opackade Dispatcher-verktygen som `dispatcher-sdk-x.x.x/docs/Config.html`.
 
@@ -132,7 +132,7 @@ $ ./bin/validate.sh ./src
 $ bin\validate src
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/validate.sh ./src
@@ -161,7 +161,7 @@ The `docker_run_hot_reload` körbar fil föredras framför `docker_run` när kon
 $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
@@ -191,7 +191,7 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 $ bin\docker_run src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
@@ -217,7 +217,7 @@ $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.in
 $ bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
@@ -258,7 +258,7 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run <User Directory>/code/my-project/dispatcher/src host.docker.internal:4503 8080
 ```
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 ```shell
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.internal:4503 8080
@@ -331,7 +331,7 @@ När du validerar projektspecifika Dispatcher-konfigurationer mot den senaste Di
 
 + Verifiera uppdaterade oföränderliga filer som `dispatcher_vhost.conf`, `default.vhost`och `default.farm` och vid behov göra relevanta ändringar i dina anpassade filer som härleds från dessa filer.
 
-+ Validera konfigurationerna på nytt, det bör gå
++ Verifiera konfigurationen på nytt, det bör gå
 
 ```shell
 $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -353,7 +353,7 @@ Phase 3 finished
 
 The `host.docker.internal` är ett värdnamn som tillhandahålls Docker-behållaren som löses till värden. Per docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
 
-> Från och med Docker 18.03 rekommenderar vi att du ansluter till det särskilda DNS-namnet host.docker.internal, som matchar den interna IP-adressen som används av värden
+>Från och med Docker 18.03 rekommenderar vi att du ansluter till det särskilda DNS-namnet host.docker.internal, som matchar den interna IP-adressen som används av värden
 
 När `bin/docker_run src host.docker.internal:4503 8080` i meddelandet __Väntar tills host.docker.internal är tillgänglig__ och sedan:
 
@@ -372,7 +372,7 @@ När `bin/docker_run src host.docker.internal:4503 8080` i meddelandet __Väntar
 + Kör från kommandotolken `ipconfig`och registrera värddatorns __IPv4-adress__ värddatorn.
 + Kör sedan `docker_run` med denna IP-adress: `$ bin\docker_run src <HOST IP>:4503 8080`
 
->[!TAB Linux]
+>[!TAB Linux®]
 
 + Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
 + Kör sedan `docker_run` med hjälp av värdens IP-adress: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
