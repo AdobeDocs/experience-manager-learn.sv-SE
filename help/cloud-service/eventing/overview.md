@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+source-git-commit: 839d552199fe7d10a0cde4011bdfe8cf42cc8ec9
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # AEM
 
 Lär dig mer om AEM, vad det är, varför och när du ska använda det och exempel på det.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426686?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
