@@ -1,6 +1,6 @@
 ---
 title: Utveckla projekt i AEM
-description: En självstudiekurs om utveckling som illustrerar hur du utvecklar för AEM projekt.  I den här självstudien skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
+description: En självstudiekurs om utveckling som illustrerar hur du utvecklar för AEM projekt. I den här självstudien skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
 version: 6.4, 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
@@ -9,16 +9,16 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1753
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: b9b8dd9d815d7a0ef800635a74b030c50821b9df
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4441'
 ht-degree: 0%
 
 ---
 
 # Utveckla projekt i AEM
 
-Det här är en självstudiekurs om utveckling som illustrerar hur du utvecklar för [!DNL AEM Projects].  I den här självstudien skapar vi en anpassad projektmall som kan användas för att skapa nya projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
+Det här är en självstudiekurs om utveckling som illustrerar hur du utvecklar för [!DNL AEM Projects]. I den här självstudien skapar vi en anpassad projektmall som kan användas för att skapa projekt i AEM för att hantera arbetsflöden och uppgifter för innehållsredigering.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,9 +26,9 @@ Det här är en självstudiekurs om utveckling som illustrerar hur du utvecklar 
 
 ## Introduktion {#introduction}
 
-[[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
+[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
 
-AEM innehåller flera [OTB-projektmallar](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTemplates). När du skapar ett nytt projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi ska titta närmare på strukturen för en projektmall och skapa en exempelmall.
+AEM innehåller flera [OTB-projektmallar](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). När du skapar ett projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi tittar på strukturen för en projektmall och skapar ett exempel.
 
 ![Anpassat projektkort](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ Den här självstudiekursen stegar igenom koden som behövs för att skapa en an
 * [Självstudiepaketet har slutförts](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html) och viss vana vid [AEM Maven-projektinställningar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ht-projects-maven.html). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted).
+Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) och viss vana vid [AEM Maven-projektinställningar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
 
 ## Struktur för en projektmall
 
@@ -69,15 +69,15 @@ Ett exempel på en anpassad guide finns för översättningsprojektmallen: **/li
 
 ### Gadgets {#gadgets}
 
-Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektpaneler](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#ProjectTiles) (kallas även gadgets eller poder) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
+Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektpaneler](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) (kallas även gadgets eller poder) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
 
 ### Roller {#roles}
 
-Det finns 3 [standardroller](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html#UserRolesinaProject) för varje projekt: **Observatörer**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under rollnoden kan du lägga till ytterligare företagsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
+Det finns tre [standardroller](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) för varje projekt: **Observatörer**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under noden Roller kan du lägga till ytterligare affärsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
 
 ### Arbetsflöden {#workflows}
 
-Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under **arbetsflöden** nod där måste vara en **modeller** nod (även `nt:unstructured`) och underordnade noder under anger tillgängliga arbetsflödesmodeller. Egenskapen **modelId **pekar på arbetsflödesmodellen under /etc/workflow och egenskapen **guide** pekar på den dialogruta som används när arbetsflödet startas. En stor fördel med Projekt är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan driva vidare åtgärder i arbetsflödet.
+Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under **arbetsflöden** nod där måste vara en **modeller** nod (även `nt:unstructured`) och underordnade noder under anger tillgängliga arbetsflödesmodeller. Egenskapen **modelId **pekar på arbetsflödesmodellen under /etc/workflow och egenskapen **guide** pekar på den dialogruta som används när arbetsflödet startas. En stor fördel med Projects är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan leda till ytterligare åtgärder i arbetsflödet.
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,9 +90,9 @@ Ett av de mest lockande skälen till att du skapar en anpassad projektmall är a
 
 ## Skapa en projektmall {#creating-project-template}
 
-Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRXDE Lite. Öppna den lokala AEM instansen [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+Eftersom vi i första hand kopierar/konfigurerar noder kommer CRXDE Lite att användas. Öppna i den lokala AEM instansen [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. Börja med att skapa en ny mapp under `/apps/&lt;your-app-folder&gt;` namngiven `projects`. Skapa en annan mapp under namnet `templates`.
+1. Börja med att skapa en mapp under `/apps/&lt;your-app-folder&gt;` namngiven `projects`. Skapa en annan mapp under namnet `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -100,7 +100,7 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
                                 + templates (nt:folder)
    ```
 
-1. För att göra det enklare kommer vi att starta vår anpassade mall från den befintliga mallen för enkla projekt.
+1. Vi kommer att starta vår anpassade mall från den befintliga mallen Enkelt projekt för att göra det enklare.
 
    1. Kopiera och klistra in noden **/libs/cq/core/content/projects/templates/default** under *mallar* som skapades i steg 1.
 
@@ -148,11 +148,11 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
 
 1. Vi ska lägga till en anpassad godkännarroll i vår projektmall.
 
-   1. Under projektmallsnoden (authoring-project) lägger du till en ny **nt:ostrukturerad** nod med etikett **roller**.
+   1. Under projektmallsnoden (authoring-project) lägger du till en ny **nt:ostrukturerad** nodmärkt **roller**.
    1. Lägg till ytterligare **nt:ostrukturerad** noden som kallas godkännare som underordnad till rollnoden.
    1. Lägg till String-egenskaper **jcr:title** = &quot;**Godkännare**&quot;, **rolclass** =&quot;**ägare**&quot;, **roleid**=&quot;**godkännare**&quot;.
       1. Namnet på godkännarnoden, samt jcr:title och roleid, kan vara vilket strängvärde som helst (så länge som roleid är unikt).
-      1. **rolclass** styr behörigheter för den rollen baserat på [3 OTB-roller](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project): **ägare**, **redigerare** och **observatör**.
+      1. **rolclass** styr behörigheter för den rollen baserat på [tre OOTB-roller](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html): **ägare**, **redigerare** och **observatör**.
       1. Om den anpassade rollen är mer av en ledningsroll kan rollklassen i allmänhet **Ägare.** om det är en mer specifik redigeringsroll som fotografen eller Designer **redigerare** bör det räcka med en rollklass. Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
 
    ```shell
@@ -165,7 +165,7 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
                 - roleid = "approver"
    ```
 
-1. Genom att kopiera mallen Simple Project får du 4 OOTB-arbetsflöden konfigurerade. Varje nod under arbetsflöden/modeller pekar på ett specifikt arbetsflöde och en startdialogruteguide för det arbetsflödet. Senare i den här självstudiekursen skapar vi ett anpassat arbetsflöde för det här projektet. Ta nu bort noderna under arbetsflöde/modeller:
+1. Genom att kopiera mallen Enkelt projekt får du fyra OOTB-arbetsflöden konfigurerade. Varje nod under arbetsflöden/modeller pekar på ett specifikt arbetsflöde och en startdialogruteguide för det arbetsflödet. Senare i den här självstudiekursen skapar vi ett anpassat arbetsflöde för det här projektet. Ta nu bort noderna under arbetsflöde/modeller:
 
    ```shell
    ../projects/templates/authoring-project
@@ -176,8 +176,8 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
                - (remove ootb models)
    ```
 
-1. För att göra det enkelt för innehållsförfattare att identifiera projektmallen kan du lägga till en anpassad miniatyrbild. Den rekommenderade storleken är 319 x 319 pixlar.
-   1. Skapa en ny fil på samma nivå som gadgets, roller och arbetsflödesnoder med namnet i CRXDE Lite **thumbnail.png**.
+1. Om du vill göra det enkelt för innehållsförfattare att identifiera projektmallen kan du lägga till en anpassad miniatyrbild. Den rekommenderade storleken är 319 x 319 pixlar.
+   1. Skapa en fil på samma nivå som gadgets, roller och arbetsflödesnoder med namnet i CRXDE Lite **thumbnail.png**.
    1. Spara och navigera sedan till `jcr:content` och dubbelklicka på `jcr:data` -egenskap (undvik att klicka på &quot;visa&quot;).
       1. Detta bör uppmana dig att redigera `jcr:data` och du kan överföra en egen miniatyrbild.
 
@@ -247,13 +247,13 @@ Slutförd XML-representation av projektmallen:
 
 ## Testa den anpassade projektmallen
 
-Nu kan vi testa vår projektmall genom att skapa ett nytt projekt.
+Nu kan vi testa vår projektmall genom att skapa ett projekt.
 
 1. Du bör se den anpassade mallen som ett av alternativen när du skapar projekt.
 
    ![Välj mall](./assets/develop-aem-projects/choose-template.png)
 
-1. När du har valt den anpassade mallen klickar du på Nästa och lägger till dem som en godkännarroll när du fyller i projektmedlemmar.
+1. När du har valt den anpassade mallen klickar du på Nästa och noterar att du kan lägga till dem som en godkännarroll när du fyller i projektmedlemmar.
 
    ![Godkänn](./assets/develop-aem-projects/user-approver.png)
 
@@ -264,7 +264,7 @@ Nu kan vi testa vår projektmall genom att skapa ett nytt projekt.
 
 ## Varför arbetsflöde?
 
-Traditionellt AEM arbetsflöden som bygger på en godkännandeprocess har använt arbetsflödessteg för deltagare. AEM Inkorg innehåller information om uppgifter och arbetsflöden och förbättrad integrering med AEM projekt. De här funktionerna gör det enklare att använda stegen i Skapa uppgift i projekt.
+Traditionellt AEM arbetsflöden som bygger på en godkännandeprocess har använt arbetsflödessteg för deltagare. AEM Inkorg innehåller information om uppgifter och arbetsflöden samt förbättrad integrering med AEM projekt. De här funktionerna gör det enklare att använda stegen i Skapa uppgift i projekt.
 
 ### Varför aktiviteter?
 
@@ -284,35 +284,35 @@ Uppgifter har vissa fördelar jämfört med deltagarsteg, men de har ytterligare
 
 ![Arbetsflödesprocessdiagram](./assets/develop-aem-projects/workflow-process-diagram.png)
 
-Diagrammet ovan visar de höga kraven för vårt arbetsflöde för provgodkännande.
+Diagrammet ovan visar kraven på hög nivå för vårt arbetsflöde för godkännande av provexemplar.
 
 Det första steget är att skapa en uppgift för att slutföra redigeringen av ett visst innehåll. Vi låter arbetsflödesinitieraren välja den som ska tilldelas den första uppgiften.
 
 När den första uppgiften är klar har den som tilldelats tre alternativ för att dirigera arbetsflödet:
 
-**Normal **- normal routning skapar en uppgift som tilldelats projektets godkännargrupp för granskning och godkännande. Aktivitetens prioritet är Normal och förfallodatumet är 5 dagar från den dag den skapades.
+**Normal **- normal routning skapar en uppgift som tilldelats projektets godkännargrupp för granskning och godkännande. Aktivitetens prioritet är Normal och förfallodatumet är fem dagar från den dag den skapades.
 
-**Rush** - Push-routning skapar också en uppgift som är tilldelad projektets godkännargrupp. Aktivitetens prioritet är Hög och förfallodatumet är bara 1 dag.
+**Rush** - Push-routning skapar också en uppgift som är tilldelad projektets godkännargrupp. Aktivitetens prioritet är Hög och förfallodatumet är bara en dag.
 
 **Kringgå** - i det här exempelarbetsflödet kan den initiala deltagaren åsidosätta godkännandegruppen. (ja, detta kan motverka syftet med ett godkännandearbetsflöde, men det gör det möjligt för oss att illustrera ytterligare routningsfunktioner)
 
-Godkännargruppen kan godkänna innehållet eller skicka tillbaka det till den ursprungliga tilldelade personen för omarbete. Om en ny uppgift skickas tillbaka för återarbete skapas den och får den korrekta etiketten&quot;Skickat för återarbete&quot;.
+Godkännargruppen kan godkänna innehållet eller skicka tillbaka det till den ursprungliga personen för omarbetning. Om du vill skicka tillbaka en ny uppgift skapas en ny uppgift och får den korrekta etiketten&quot;Skickat för omarbetning&quot;.
 
 I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nyttolasten replikeras.
 
 ## Skapa arbetsflödesmodellen
 
-1. Navigera AEM Start-menyn till Verktyg -> Arbetsflöde -> Modeller. Klicka på Skapa i det övre högra hörnet för att skapa en ny arbetsflödesmodell.
+1. Navigera AEM Start-menyn till Verktyg -> Arbetsflöde -> Modeller. Klicka på Skapa i det övre högra hörnet för att skapa en arbetsflödesmodell.
 
    Ge den nya modellen en rubrik:&quot;Arbetsflöde för godkännande av innehåll&quot; och ett URL-namn:&quot;arbetsflöde för godkännande av innehåll&quot;.
 
    ![Dialogrutan Skapa arbetsflöde](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   Mer information om [skapa arbetsflöden som läses här](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-models.html).
+   [Mer information om hur du skapar arbetsflöden finns här](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 
-1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. Skapa ett nytt **&#39;nt:folder&#39;** under /etc/workflow/models named **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
+1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. I CRXDE Lite skapar du en **&#39;nt:folder&#39;** under /etc/workflow/models named **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
 
-   &#42;Observera att det är viktigt att aldrig placera mappen eller anpassade arbetsflöden under undermappar som /etc/workflow/models/dam eller /etc/workflow/models/projects eftersom hela undermappen också kan skrivas över av uppgraderingar eller servicepaket.
+   &#42;Observera att det är viktigt att aldrig placera mappen eller anpassade arbetsflöden under undermappar som /etc/workflow/models/dam eller /etc/workflow/models/projects, eftersom hela undermappen också kan skrivas över av uppgraderingar eller servicepaket.
 
    ![Placering av arbetsflödesmodell i 6.3](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
@@ -320,7 +320,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    >[!NOTE]
    >
-   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Se [här för mer information.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Se [här för mer information.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    Om AEM 6.4+ används skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
 
@@ -329,7 +329,7 @@ Placering av arbetsflödesmodell i 6.4+
 
 1. I AEM 6.3 introducerades möjligheten att lägga till arbetsflödessteg i ett visst arbetsflöde. Stegen visas för användaren från Inkorgen på fliken Arbetsflödesinformation. Den visar användaren det aktuella steget i arbetsflödet samt de steg som föregår och följer det.
 
-   Om du vill konfigurera stegen öppnar du dialogrutan Sidegenskaper från Sidekick. Den fjärde fliken heter &quot;Steg&quot;. Lägg till följande värden för att konfigurera de tre stegen i det här arbetsflödet:
+   Om du vill konfigurera faserna öppnar du dialogrutan Sidegenskaper från Sidekick. Den fjärde fliken heter &quot;Steg&quot;. Lägg till följande värden för att konfigurera de tre stegen i det här arbetsflödet:
 
    1. Redigera innehåll
    1. Godkännande
@@ -347,7 +347,7 @@ Placering av arbetsflödesmodell i 6.4+
 
 1. Arbetsflödet Skapa projektuppgift är utformat för att skapa en uppgift som ett steg i arbetsflödet. Arbetsflödet går framåt först när uppgiften har slutförts. En kraftfull aspekt av steget Skapa projektuppgift är att det går att läsa metadatavärden för arbetsflödet och använda dem för att dynamiskt skapa uppgiften.
 
-   Ta först bort det deltagarsteg som skapas som standard. Expandera från Sidekick på komponentmenyn **&quot;Projekt&quot;** underrubrik och dra och släpp **&quot;Skapa projektuppgift&quot;** på modellen.
+   Ta först bort det deltagarsteg som skapas som standard. Expandera från Sidekick på komponentmenyn **&quot;Projekt&quot;** undermeny och dra och släpp **&quot;Skapa projektuppgift&quot;** på modellen.
 
    Dubbelklicka på steget&quot;Skapa projektuppgift&quot; för att öppna arbetsflödesdialogrutan. Konfigurera följande egenskaper:
 
@@ -372,7 +372,7 @@ Placering av arbetsflödesmodell i 6.4+
        Due In - Days = "2"
    ```
 
-   Fliken för routning är en valfri dialogruta som kan ange tillgängliga åtgärder för användaren som utför uppgiften. Dessa åtgärder är bara strängvärden och sparas i arbetsflödets metadata. Dessa värden kan läsas av skript och/eller processteg senare i arbetsflödet för att dynamiskt dirigera arbetsflödet. Baserat på [arbetsflödesmål](#goals-tutorial) ska vi lägga till tre åtgärder på den här fliken:
+   Fliken för routning är en valfri dialogruta som kan ange tillgängliga åtgärder för användaren som utför uppgiften. Dessa åtgärder är bara strängvärden och sparas i arbetsflödets metadata. Dessa värden kan läsas av skript och/eller processteg senare i arbetsflödet för att dynamiskt dirigera arbetsflödet. Baserat på de arbetsflödesmål vi ska lägga till lägger du till tre åtgärder på den här fliken:
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ Placering av arbetsflödesmodell i 6.4+
 
 1. I föregående steg refererade vi till ett Pre-Create Task Script. Vi ska skapa skriptet där vi nu ställer in Tilldelning av uppgiften baserat på värdet för arbetsflödets metadatavärde **tilldelad**&quot;. The **’tilldelad’** värdet anges när arbetsflödet startas. Vi läser också arbetsflödets metadata för att dynamiskt välja uppgiftens prioritet genom att läsa &quot;**taskPriority&quot;** värdet på arbetsflödets metadata samt **&quot;taskdueDate&quot; **som dynamiskt anges när den första uppgiften förfaller.
 
-   För organisatoriska ändamål har vi skapat en mapp under vår appmapp för alla våra projektrelaterade skript: **/apps/aem-guides/projects-tasks/projects/scripts**. Skapa en ny fil med namnet under den här mappen **&quot;start-task-config.ecma&quot;**. &#42;Observera att sökvägen till filen start-task-config.ecma matchar sökvägen som angetts på fliken Avancerade inställningar i steg 4.
+   För organisatoriska ändamål har vi skapat en mapp under vår appmapp för alla våra projektrelaterade skript: **/apps/aem-guides/projects-tasks/projects/scripts**. Skapa en fil med namnet under den här mappen **&quot;start-task-config.ecma&quot;**. &#42;Observera att sökvägen till filen start-task-config.ecma matchar sökvägen som angetts på fliken Avancerade inställningar i steg 4.
 
    Lägg till följande som innehåll i filen:
 
@@ -738,7 +738,7 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
    >Om AEM 6.4 används har arbetsflödets plats ändrats. Peka på `modelId` egenskapen till platsen för körningsarbetsflödesmodellen under `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >Se [här finns mer information om förändringen i arbetsflödets plats.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/workflows-best-practices.html#LocationsWorkflowModels)
+   >Se [här finns mer information om förändringen i arbetsflödets plats.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
 
 * [Ladda ned det färdiga självstudiekurspaketet](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM projektdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html)
+* [AEM projektdokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
