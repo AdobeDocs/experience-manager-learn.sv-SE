@@ -12,9 +12,9 @@ duration: 0
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
+source-git-commit: 7f69fc888a7b603ffefc70d89ea470146971067e
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,9 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 ### Anpassa OTB-indexet
 
-- När du anpassar OOTB-indexanvändningen **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** namnkonvention. Till exempel: `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Se [Ändringar av färdiga index](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) för mer information.
+- I **AEMCS**, när du anpassar OTB-indexanvändningen **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** namnkonvention. Till exempel: `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Se [Ändringar av färdiga index](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) för mer information.
+
+- I **AEM 6.X**, namnet ovan _fungerar inte_ uppdaterar du emellertid bara OTB-indexet med ytterligare egenskaper i `indexRules` nod.
 
 - Kopiera alltid den senaste OTB-indexdefinitionen från den AEM instansen med CRX DE Package Manager (/crx/packmgr/), byt namn på den och lägg till anpassningar i XML-filen.
 
@@ -57,11 +59,13 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 ### Helt anpassat index
 
-- När du skapar ett helt anpassat index bör du använda **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** namnkonvention. Till exempel: `wknd.adventures-1-custom-1`. Detta hjälper till att undvika namnkonflikter. Här, `wknd` är prefixet och `adventures` är det anpassade indexnamnet.
+Det sista alternativet måste vara att skapa ett helt anpassat index och endast om ovanstående alternativ inte fungerar.
+
+- När du skapar ett helt anpassat index bör du använda **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** namnkonvention. Till exempel: `wknd.adventures-1-custom-1`. Detta hjälper till att undvika namnkonflikter. Här, `wknd` är prefixet och `adventures` är det anpassade indexnamnet. Denna konvention gäller för både AEM 6.X och AEMCS och bidrar till att förbereda för framtida övergång till AEMCS.
 
 - AEMCS stöder bara Lucene-index, så för att förbereda för framtida migrering till AEMCS bör du alltid använda Lucene-index. Se [Lucene-index jämfört med egenskapsindex](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) för mer information.
 
-- Skapa inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index. Det har varit en vanlig grundorsak till prestandaproblem och funktionsproblem.
+- Undvik att skapa ett anpassat index för samma nodtyp som OTB-indexet. Istället kan du anpassa OTB-indexet med ytterligare egenskaper i `indexRules` nod. Skapa till exempel inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index. _Det har varit en vanlig grundorsak till prestanda- och funktionsproblem_.
 
 - Undvik också att lägga till flera nodtyper, till exempel `cq:Page` och `cq:Tag` enligt indexeringsreglerna (`indexRules`)-nod. Skapa i stället separata index för varje nodtyp.
 
@@ -70,7 +74,7 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 - Riktlinjerna för indexdefinitioner är:
    - Nodtypen (`jcr:primaryType`) ska vara `oak:QueryIndexDefinition`
    - Indextypen (`type`) ska vara `lucene`
-   - Egenskapen async (`async`) ska vara `async, rt`
+   - Egenskapen async (`async`) ska vara `async,nrt`
    - Använd `includedPaths` och undvika `excludedPaths` -egenskap. Alltid inställd `queryPaths` till samma värde som `includedPaths` värde.
    - Om du vill tillämpa sökvägsbegränsningen använder du `evaluatePathRestrictions` egenskap och ange den som `true`.
    - Använd `tags` för att tagga indexet och när du frågar anger du det här taggvärdet för att använda indexet. Den allmänna frågesyntaxen är `<query> option(index tag <tagName>)`.
@@ -80,7 +84,7 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
       - jcr:primaryType = "oak:QueryIndexDefinition"
       - type = "lucene"
       - compatVersion = 2
-      - async = ["async", "rt"]
+      - async = ["async", "nrt"]
       - includedPaths = ["/content/wknd"]
       - queryPaths = ["/content/wknd"]
       - evaluatePathRestrictions = true
@@ -90,7 +94,7 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 ### Exempel
 
-Låt oss titta på några exempel för att förstå de bästa metoderna.
+Vi ska ta en titt på några exempel för att förstå de bästa metoderna.
 
 #### Felaktig användning av taggegenskap
 
