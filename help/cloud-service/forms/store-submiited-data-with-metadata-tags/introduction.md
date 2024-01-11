@@ -9,16 +9,17 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14501
 duration: 40
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
+source-git-commit: 016b06d3bd5b62945c168588839454544b2f7d41
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Introduktion
 
-I den här självstudiekursen implementerar vi ett enkelt användningsfall för att lagra formulärinskickade formulär i Azure-lagring med blobindextaggar. Blobindexmärkord ger datahanterings- och identifieringsfunktioner genom att använda indexmärkordsattribut för nyckelvärden. Du kan kategorisera och söka efter objekt i en enda behållare eller i alla behållare på ditt lagringskonto.
+I den här självstudiekursen lär du dig hur du implementerar ett enkelt användningsfall för att lagra formulärinskickade formulär i Azure-lagring med blobindextaggar. Blobindexmärkord ger datahanterings- och identifieringsfunktioner genom att använda indexmärkordsattribut för nyckelvärden. Du kan kategorisera och söka efter objekt i en enda behållare eller i alla behållare på ditt lagringskonto.
 ![blob-index-tags](assets/blob-with-index-tags.png)
 
 ## Krav
