@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: eb64367ffa110d1d28fe91a372c724a476e36f5e
+source-git-commit: bd66ad8698e2017cb53b91cae8f1cea92903f05b
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 6%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 6%
    + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
    + [Resursinsikter](./advanced/asset-insights-launch-tutorial.md)
    + [Resursrapporter](./advanced/asset-reports.md)
+   + [Blockerade taggar](./advanced/blocked-tags.md)
    + [Extrahera arkiv](./advanced/extract-archive.md)
    + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
    + [Vattenstämplar](./advanced/watermarks.md)
