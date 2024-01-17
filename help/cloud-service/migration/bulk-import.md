@@ -4,17 +4,17 @@ description: Med verktyget för massimport i AEM as a Cloud Service kan administ
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
-jira: KT-6729
+jira: KT-6729, KT-14796
 thumbnail: 329680.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
-last-substantial-update: 2022-10-05T00:00:00Z
+last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-duration: 38
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 474
+source-git-commit: 613d280f3aa64d04dd5ef3d636a63d31a4c7bfbd
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,21 @@ ht-degree: 0%
 
 Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring på ett säkert och effektivt sätt.
 
+>[!BEGINTABS]
+
+>[!TAB Resursvy]
+
+Lär dig hur du importerar många filer till AEM Assets med [Resursvy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [Massimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html), med Dropbox som exempelleverantör av molnlagring för en tydlig och lättillgänglig integrationsprocess.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+
+>[!TAB Administratörsvy]
+
+>[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
+
 >[!TIP]
 >
 > Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i produktens tillgängliga alternativ. [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
-
->[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
 
 ## Schemalägg bulkimport
 
@@ -37,3 +47,5 @@ Massimport stöder schemalagd körning av konfigurationer, inklusive:
 + Periodkörningar varje timme, dag eller vecka
 
 ![Schema för massimport](./assets/bulk-import/schedule.png)
+
+>[!ENDTABS]
