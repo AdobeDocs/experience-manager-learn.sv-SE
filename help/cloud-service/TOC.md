@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+source-git-commit: aa6cd605c617de45003a96b1c14e37f055a8c566
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1103'
 ht-degree: 5%
 
 ---
@@ -319,6 +319,7 @@ ht-degree: 5%
    + Spara formulärinskick i en och samma enhet{#one-drive}
       + [Lagra formulärdata på en enhet](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Lagra formulärdata i SharePoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
+      + [Fyll i formulär i förväg med data från SharePoint-listan](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
 + Utbyggbarhet för asset compute{#asset-compute}
    + [Ökning](./asset-compute/overview.md)
    + Konfigurera{#set-up}
