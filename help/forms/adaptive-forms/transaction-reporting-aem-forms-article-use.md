@@ -9,16 +9,16 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 96
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 4b88045a626b5e7bd1386e62ee54ac6fe2ce9282
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
 
 # Använda transaktionsrapportering i AEM Forms{#using-transaction-reporting-in-aem-forms}
 
-Transaktionsrapportering för att fånga upp antalet inskickade formulär, återgivning av dokument med dokumenttjänster och återgivning av interaktiv kommunikation (webben och tryckkanaler) har introducerats i AEM Forms 6.4.1. Den här funktionen är främst avsedd för kunder som vill licensiera programvaran baserat på antalet inskickade formulär och/eller återgivna dokument. Den här funktionen är för närvarande endast tillgänglig i AEM Forms OSGI-stacken.
+Transaktionsrapportering för att fånga upp antalet inskickade formulär, återgivning av dokument med dokumenttjänster och återgivning av interaktiv kommunikation (webben och tryckkanaler) har introducerats i AEM Forms 6.4.1. Den här funktionen är för närvarande endast tillgänglig i AEM Forms OSGI-stacken.
 
 ## Aktivera transaktionsrapportering {#enabling-transaction-reporting}
 
@@ -35,7 +35,7 @@ När transaktionsrapportering är aktiverat kan du skicka adaptiva Forms-dokumen
 
 Om du vill visa transaktionsrapporten loggar du in på AEM Forms som administratör. Endast medlemmar i gruppen fd-Administrator kan visa transaktionsrapporten.
 
-Välj verktyg | FORMS | Visa transaktionsrapport
+Välj verktyg | Forms | Visa transaktionsrapport
 
 eller visa transaktionsrapporten genom att klicka på [här](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
