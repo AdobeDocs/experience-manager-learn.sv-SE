@@ -7,11 +7,11 @@ feature: Search
 role: User
 level: Beginner
 doc-type: Feature Video
-duration: 91
+duration: 97
 last-substantial-update: 2024-01-08T00:00:00Z
 jira: KT-14752
 thumbnail: 3426796.jpeg
-source-git-commit: fc893796c27bb513409c2677d60289beddec69f2
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%

@@ -11,8 +11,8 @@ jira: KT-11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
-duration: 397
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 343
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

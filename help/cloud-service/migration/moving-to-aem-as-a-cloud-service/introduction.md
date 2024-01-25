@@ -9,8 +9,8 @@ level: Beginner, Intermediate, Experienced
 jira: KT-8628
 thumbnail: 336956.jpeg
 exl-id: d8c044a1-a208-411c-b66f-ce5b0b3a5e2c
-duration: 1027
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 1017
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%

@@ -11,8 +11,8 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-duration: 1037
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 957
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1930'
 ht-degree: 0%

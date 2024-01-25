@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-8667
 thumbnail: 336698.jpeg
 exl-id: 1a12d267-f9d0-48e1-9263-c53c038e4754
-duration: 245
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 235
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%

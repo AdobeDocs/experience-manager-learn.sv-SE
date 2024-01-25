@@ -10,8 +10,8 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 73de0ac4-ada6-4b8e-90a8-33b976032135
-duration: 60
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 46
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%

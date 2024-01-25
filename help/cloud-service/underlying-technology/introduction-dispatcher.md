@@ -10,8 +10,8 @@ feature: Dispatcher
 role: Architect, Developer
 level: Beginner
 exl-id: 06954993-c8bb-47f3-8ab6-76d6b1b8e8b0
-duration: 363
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 353
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

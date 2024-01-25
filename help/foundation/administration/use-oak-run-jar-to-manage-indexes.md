@@ -8,8 +8,8 @@ topic: Performance
 role: Developer
 level: Experienced
 exl-id: be49718e-f1f5-4ab2-9c9d-6430a52bb439
-duration: 766
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 745
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%

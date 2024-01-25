@@ -10,8 +10,8 @@ feature: OSGI
 role: Architect, Developer
 level: Beginner
 exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
-duration: 431
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 420
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

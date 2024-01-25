@@ -9,8 +9,8 @@ feature: Workbench
 topic: Development
 index: y
 exl-id: c0078e02-34b0-496c-9c06-b7b5fc0304f7
-duration: 46
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 35
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

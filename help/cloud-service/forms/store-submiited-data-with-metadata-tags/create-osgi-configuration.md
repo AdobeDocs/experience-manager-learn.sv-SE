@@ -8,8 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-14501
-duration: 69
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 52
+exl-id: 6a3af59d-f916-451f-887c-0f4580cbcb3e
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -103,6 +104,3 @@ public class AzurePortalStorageConfigImpl implements AzurePortalConfigurationSer
 ## Nästa steg
 
 [Skapa indexmärkord för blob](./create-blob-index-tags.md)
-
-
-

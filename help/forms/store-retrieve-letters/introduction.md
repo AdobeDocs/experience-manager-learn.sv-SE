@@ -10,8 +10,8 @@ level: Intermediate
 jira: KT-10208
 exl-id: e032070b-7332-4c2f-97ee-7e887a61aa7a
 last-substantial-update: 2022-01-07T00:00:00Z
-duration: 176
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 163
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

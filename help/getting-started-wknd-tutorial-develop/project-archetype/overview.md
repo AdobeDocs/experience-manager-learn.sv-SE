@@ -11,8 +11,8 @@ index: y
 doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-duration: 104
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 84
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%

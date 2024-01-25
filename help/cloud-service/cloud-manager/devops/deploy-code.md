@@ -9,8 +9,8 @@ feature: Developer Tools
 jira: KT-6912
 thumbnail: 330534.jpg
 exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
-duration: 26
-source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
+duration: 16
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

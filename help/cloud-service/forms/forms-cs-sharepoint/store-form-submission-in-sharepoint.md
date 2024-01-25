@@ -9,8 +9,8 @@ version: Cloud Service
 topic: Integrations
 jira: KT-11895
 exl-id: cc5bf24c-97c5-4383-8c35-f7512e594445
-duration: 536
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 526
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

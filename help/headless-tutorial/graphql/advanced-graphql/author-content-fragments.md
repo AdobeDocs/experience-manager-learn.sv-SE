@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
-duration: 818
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 732
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -163,7 +163,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | Profilbild | /content/dam/wknd-shared/en/contributors/stacey-roswells.jpg |
 | Biografi | Stacey Roswells är en skicklig klippare och alfanäventyrare. Stacey är född i Baltimore, Maryland, och är yngst av sex barn. Staceys far var överste i USA:s flotta och mor var en modern dansinstruktör. Staceys familj flyttade ofta med fars arbetsuppgifter och tog de första bilderna när fadern var stationerad i Thailand. Det här är också där Stacey lärde sig att klättra. |
 | Upplevelsenivå för lärare | Avancerat |
-| Kompetens | Groda klättrar | Skickar | Bakåt |
+| Kompetens | Groda klättrar | Skickar | Bakpackning |
 
 **Kumar Selvaraj**
 
@@ -175,7 +175,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | Profilbild | /content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg |
 | Biografi | Kumar Selvaraj är en erfaren AMGA Certified Professional-instruktör vars främsta mål är att hjälpa eleverna att förbättra sina klättring- och vandringsfärdigheter. |
 | Upplevelsenivå för lärare | Avancerat |
-| Kompetens | Groda klättrar | Bakåt |
+| Kompetens | Groda klättrar | Bakpackning |
 
 **Ayo Ogunseinde**
 
@@ -187,7 +187,7 @@ Följ samma process som beskrivs i [föregående avsnitt](#fragment-reference-fr
 | Profilbild | /content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg |
 | Biografi | Ayo Ogunseinde är en professionell timmerlärare och handledare i Fresno i CentralKalifornien. Ayos mål är att vägleda de anställda i deras mest episnationella parkäventyr. |
 | Upplevelsenivå för lärare | Avancerat |
-| Kompetens | Groda klättrar | Cykler | Bakåt |
+| Kompetens | Groda klättrar | Cykling | Bakpackning |
 
 Lämna **Ytterligare information** fältet är tomt.
 

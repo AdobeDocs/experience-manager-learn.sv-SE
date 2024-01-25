@@ -9,8 +9,8 @@ topic: Administration
 feature: Operations
 index: y
 exl-id: edb97c88-2689-4508-82a6-256b344133c0
-duration: 65
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 55
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%

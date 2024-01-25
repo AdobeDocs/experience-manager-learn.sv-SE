@@ -11,8 +11,8 @@ doc-type: Feature Video
 jira: KT-660
 thumbnail: 331786.jpg
 exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
-duration: 193
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 181
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

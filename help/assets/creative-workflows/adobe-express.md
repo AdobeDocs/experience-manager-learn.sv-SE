@@ -7,17 +7,17 @@ topic: Integrations, Content Management, Content Supply Chain
 role: Admin, User
 level: Beginner
 doc-type: Feature Video
-duration: 500
+duration: 517
 last-substantial-update: 2023-12-06T00:00:00Z
 jira: KT-14645
 thumbnail: 3425972.jpeg
-source-git-commit: e5c50ffb379f497ed72efd63528af4f874b18ade
+exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
-
 
 # AEM Assets och Adobe Express
 

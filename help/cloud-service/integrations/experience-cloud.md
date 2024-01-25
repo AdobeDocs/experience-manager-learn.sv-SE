@@ -13,8 +13,8 @@ mini-toc-levels: 1
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-duration: 211
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 193
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 1%

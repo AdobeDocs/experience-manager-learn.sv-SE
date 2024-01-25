@@ -13,8 +13,8 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 doc-type: Feature Video
 exl-id: fe9d1305-7add-4434-a4a9-16e0fb805574
-duration: 923
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 912
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%

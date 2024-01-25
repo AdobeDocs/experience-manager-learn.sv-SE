@@ -10,8 +10,8 @@ hidefromtoc: true
 jira: KT-9797
 thumbnail: 340760.jpeg
 exl-id: 8b608b05-48ee-434f-8d5a-6c5ff1969dcf
-duration: 311
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 300
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%

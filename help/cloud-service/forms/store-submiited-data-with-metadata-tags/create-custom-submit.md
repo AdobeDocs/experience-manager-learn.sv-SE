@@ -8,8 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-14501
-duration: 122
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 99
+exl-id: 5cd5e37e-9881-4fce-a0cb-402d738f83ae
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -144,4 +145,3 @@ public class CustomAFSubmitService implements FormSubmitActionService {
         return null;
     }
 ```
-

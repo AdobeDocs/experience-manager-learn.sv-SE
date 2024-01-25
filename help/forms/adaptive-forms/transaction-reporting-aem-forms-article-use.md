@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
-duration: 96
-source-git-commit: 4b88045a626b5e7bd1386e62ee54ac6fe2ce9282
+duration: 71
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%

@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-14795
-source-git-commit: aa6cd605c617de45003a96b1c14e37f055a8c566
+duration: 53
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%

@@ -10,8 +10,8 @@ doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
 exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
-duration: 132
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 118
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%

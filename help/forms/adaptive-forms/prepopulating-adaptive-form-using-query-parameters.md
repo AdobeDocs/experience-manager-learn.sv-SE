@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-11470
 last-substantial-update: 2020-11-12T00:00:00Z
 exl-id: 14ac6ff9-36b4-415e-a878-1b01ff9d3888
-duration: 74
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 58
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%

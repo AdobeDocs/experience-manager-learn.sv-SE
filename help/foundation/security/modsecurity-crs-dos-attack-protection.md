@@ -11,8 +11,8 @@ thumbnail: KT-10385.png
 doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
-duration: 925
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 874
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1172'
 ht-degree: 0%

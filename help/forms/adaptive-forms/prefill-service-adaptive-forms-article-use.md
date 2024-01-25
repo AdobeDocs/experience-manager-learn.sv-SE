@@ -8,8 +8,8 @@ role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
-duration: 184
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 155
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

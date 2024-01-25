@@ -10,14 +10,14 @@ doc-type: Technical Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14493
 thumbnail: 3425726.jpeg
-duration: 103
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 92
+exl-id: fa22fa48-667b-42bc-9b6e-d8a8935fa7ed
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
-
 
 # Förhindra indexering av sökmotor
 

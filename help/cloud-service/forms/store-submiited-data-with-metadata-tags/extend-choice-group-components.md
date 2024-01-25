@@ -8,8 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-14501
-duration: 55
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 41
+exl-id: 94454327-86d9-468e-9f08-50b8a9c530f3
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -87,6 +88,3 @@ Följande .content.xml skapades under mappen _cq_dialog.
 ## Nästa steg
 
 [Skapa Azure Portal-konfiguration](./create-osgi-configuration.md)
-
-
-

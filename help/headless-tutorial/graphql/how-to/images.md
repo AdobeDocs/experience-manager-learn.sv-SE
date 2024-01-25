@@ -10,8 +10,8 @@ jira: KT-10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-duration: 449
-source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
+duration: 409
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%

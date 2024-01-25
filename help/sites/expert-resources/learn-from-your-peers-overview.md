@@ -3,8 +3,8 @@ title: Lär dig av dina kollegor - översikt
 description: Lär dig av dina kollegor - översikt
 feature: Learn From Your Peers
 exl-id: 83f09377-5103-4466-a260-d99b2cbedece
-duration: 25
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 14
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

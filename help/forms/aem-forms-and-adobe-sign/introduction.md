@@ -10,8 +10,8 @@ exl-id: 0be61f04-c3ed-4ecb-bab7-73fd308c14e0
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
-duration: 49
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 34
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%

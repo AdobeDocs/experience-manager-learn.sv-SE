@@ -9,8 +9,8 @@ level: Beginner
 jira: KT-784
 doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
-duration: 464
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 447
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%

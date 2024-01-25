@@ -11,8 +11,8 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-duration: 2096
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 2056
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%

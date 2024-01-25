@@ -12,8 +12,8 @@ thumbnail: kt-11336.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
-duration: 365
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 316
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%

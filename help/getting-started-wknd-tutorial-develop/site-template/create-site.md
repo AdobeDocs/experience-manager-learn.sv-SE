@@ -1,5 +1,5 @@
 ---
-title: Skapa en plats | AEM Skapa snabbt webbplatser
+title: Skapa en plats | Skapa AEM
 description: Lär dig hur du använder guiden Skapa webbplats för att skapa en ny webbplats. Standardwebbplatsmallen som tillhandahålls av Adobe är en startpunkt för den nya webbplatsen.
 version: Cloud Service
 topic: Content Management
@@ -11,8 +11,8 @@ thumbnail: KT-7496.jpg
 doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
-duration: 265
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 235
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%

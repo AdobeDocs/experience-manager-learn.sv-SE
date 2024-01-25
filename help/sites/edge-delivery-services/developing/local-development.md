@@ -10,14 +10,14 @@ doc-type: Technical Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14483
 thumbnail: 3425717.jpeg
-duration: 196
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 181
+exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera en lokal utvecklingsmiljö
 
@@ -61,4 +61,3 @@ Konfigurera en lokal utvecklingsmiljö för utveckling av Edge Delivery Services
    ```
 
 1. Öppna http://localhost:3000/ webbläsaren för att visa AEM webbplats.
-

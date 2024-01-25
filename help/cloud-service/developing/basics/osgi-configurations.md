@@ -9,8 +9,8 @@ feature: APIs
 jira: KT-6934
 thumbnail: 330559.jpg
 exl-id: 06793e03-72c1-4566-80d7-c126fc8e3879
-duration: 15
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 5
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 0%

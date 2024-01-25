@@ -10,8 +10,8 @@ topic: Development
 feature: Developer Tools
 jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-duration: 78
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 60
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Följande kod i post.POST.jsp vidarebefordrar enkelt begäran till den server so
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-I ditt AEM i IntelliJ högerklickar du på `apps/bankingapplication` och välj Ny | Paketera och skriv i SubmitToAEMServlet efter apps.bankingapplication i den nya paketdialogrutan. Högerklicka på noden SubmitToAEMServlet och välj repo | Hämta kommando för att synkronisera det AEM projektet med AEM serverdatabas.
+I ditt AEM i IntelliJ högerklickar du på `apps/bankingapplication` och välj Ny | Paketera och skriv i SubmitToAEMServlet efter apps.bankingapplication i den nya paketdialogrutan. Högerklicka på noden SubmitToAEMServlet och välj repo | Hämta kommando för att synkronisera AEM projekt med AEM serverdatabas.
 
 
 ## Konfigurera anpassat formulär

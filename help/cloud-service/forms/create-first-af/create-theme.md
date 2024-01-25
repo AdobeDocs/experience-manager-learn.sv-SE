@@ -11,8 +11,8 @@ topic: Development
 jira: KT-7386
 thumbnail: 332229.jpg
 exl-id: c8c04528-384b-48b3-abba-04db16fd87c5
-duration: 70
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 59
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%

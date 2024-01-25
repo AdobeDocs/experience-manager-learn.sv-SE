@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 kt: kt-8049
 exl-id: ce9b9203-b44c-4a52-821c-ae76e93312d2
-duration: 62
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 47
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%

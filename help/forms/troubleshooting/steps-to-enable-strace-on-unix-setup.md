@@ -9,8 +9,8 @@ feature: PDF Generator
 topic: Administration
 index: y
 exl-id: e7a3f63e-549a-493c-a8f1-cb0bca2c07e0
-duration: 121
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 111
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%

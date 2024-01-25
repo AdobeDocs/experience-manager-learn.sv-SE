@@ -9,8 +9,8 @@ level: Beginner
 kt: kt-8049
 exl-id: bd9e1fc1-2fc7-452c-9a4a-2e16f6821760
 last-substantial-update: 2020-07-07T00:00:00Z
-duration: 44
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 30
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%

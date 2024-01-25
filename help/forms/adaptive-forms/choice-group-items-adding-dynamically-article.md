@@ -8,8 +8,8 @@ role: User
 level: Beginner
 exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
 last-substantial-update: 2021-09-10T00:00:00Z
-duration: 374
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 350
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -79,7 +79,7 @@ Så här provar du det på datorn:
 
 * [Hämta resurserna](assets/usingthecodeeditor.zip)
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Klicka på Skapa | Filöverföring och ladda upp filen som du laddade ned i föregående steg
+* Klicka på Skapa | Filöverföring och överföring av filen du laddade ned i föregående steg
 * [Förhandsgranska formulären](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
 * Ange den sökandes namn och välj civilstånd till gift
 * Ange makens namn
@@ -92,7 +92,7 @@ Så här provar du det på datorn:
 * Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [Distribuera filen SampleRest.war som finns i zip-filen i din Tomcat](assets/sample-rest.zip)
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Klicka på Skapa | Filöverföring och ladda upp filen som du laddade ned i föregående steg
+* Klicka på Skapa | Filöverföring och överföring av filen du laddade ned i föregående steg
 * [Förhandsgranska formulären](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
 * Ange lånebelopp och tabba utanför fältet. Detta utlöser regeln som visar fältet för låneperiod.
 * Välj lämplig låneperiod (artiklarna för låneperioden fylls i från resten av samtalet)

@@ -3,8 +3,8 @@ title: Snabba upp materialets hastighet med AEM
 description: Lär dig använda AEM Style Systems för att ge designers, innehållsförfattare och utvecklare i organisationen möjlighet att skapa och leverera upplevelser i den hastighet och i den omfattning som kunderna förväntar sig.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 230
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 191
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Stilsystem har några olika varianter:
    * Det här bör vara den mest använda återgivningen
 * Försök att bara visa formatalternativ som har en effekt när det är möjligt
    * Om ineffektiva kombinationer exponeras, se till att de inte orsakar negativa effekter
-   * T.ex. Ett layoutformat som anger bildens placering och följs av ett ineffektivt visningsformat som styr bildens position
+   * Exempel: en layoutstil som anger bildens placering och åtföljs av ett ineffektivt visningsformat som styr bildens placering
 * Anpassa layoutstilar efter kombinerade visningsstilar
    * Minskar antalet permutationer som måste kvalitetskontrolleras
    * Ser till att varumärkesstandarderna följs

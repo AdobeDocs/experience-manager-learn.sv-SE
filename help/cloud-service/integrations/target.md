@@ -13,8 +13,8 @@ thumbnail: KT-12433.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
-duration: 1721
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 1644
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%

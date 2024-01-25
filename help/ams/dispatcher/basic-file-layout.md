@@ -9,8 +9,8 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
-duration: 439
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 373
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -275,7 +275,7 @@ De mindre installerade standardfilerna som du ändrar blir bättre. Om några pa
 
 Istället skapas en `.rpmnew` -filen bredvid originalet.  Det innebär att du kommer att sakna vissa ändringar som du kan ha önskat och skapat mer skräp i konfigurationsmapparna.
 
-dvs. RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om det finns i `unaltered` ange att den *ersätt* filen så får du de viktigaste uppdateringarna.  Om `httpd.conf` var `altered` sedan *ersätter inte* filen och i stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många korrigeringar som du vill göra finns i filen som inte gäller vid tjänststart.
+RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om det finns i `unaltered` ange att den *ersätt* filen så får du de viktigaste uppdateringarna.  Om `httpd.conf` var `altered` sedan *ersätter inte* filen och i stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många korrigeringar som du vill göra finns i filen som inte gäller vid tjänststart.
 
 Enterprise Linux har konfigurerats korrekt för att hantera det här användningsexemplet på ett bättre sätt.  De ger dig områden där du kan utöka eller åsidosätta de standardvärden som de anger åt dig.  I grundinstallationen av httpd hittar du filen `/etc/httpd/conf/httpd.conf`och har en syntax som:
 

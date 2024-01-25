@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-10798
 thumbnail: kt-10798.jpg
 exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
-duration: 90
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 73
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

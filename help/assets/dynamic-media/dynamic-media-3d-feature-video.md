@@ -10,8 +10,8 @@ jira: KT-5349
 thumbnail: 35156.jpg
 doc-type: Feature Video
 exl-id: 8462e2e3-3279-4e80-9c22-0dd7077d3f27
-duration: 473
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 462
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

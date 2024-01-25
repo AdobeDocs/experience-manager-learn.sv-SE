@@ -10,8 +10,8 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-duration: 227
-source-git-commit: 234c163a2936ca07bdf259038f1b22c4363fae3c
+duration: 214
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%

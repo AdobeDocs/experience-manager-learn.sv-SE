@@ -8,11 +8,11 @@ doc-type: Article
 topic: Development
 role: Developer, Architect
 level: Beginner
-duration: 0
+duration: 363
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: 7f69fc888a7b603ffefc70d89ea470146971067e
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%

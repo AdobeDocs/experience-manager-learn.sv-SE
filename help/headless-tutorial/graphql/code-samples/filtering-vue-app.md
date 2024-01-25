@@ -12,8 +12,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 8f96093a-4449-4249-9257-028e2ffd979b
-duration: 42
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 28
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

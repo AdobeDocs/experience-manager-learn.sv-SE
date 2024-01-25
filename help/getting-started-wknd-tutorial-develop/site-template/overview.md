@@ -1,5 +1,5 @@
 ---
-title: Komma igång med AEM Sites | AEM Skapa snabbt webbplatser
+title: Komma igång med AEM Sites | Skapa AEM
 description: Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
 version: Cloud Service
 topic: Content Management
@@ -10,8 +10,8 @@ jira: KT-7985
 thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
-duration: 445
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 430
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%

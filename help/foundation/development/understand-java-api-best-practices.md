@@ -10,8 +10,8 @@ doc-type: Article
 exl-id: b613aa65-f64b-4851-a2af-52e28271ce88
 last-substantial-update: 2022-06-24T00:00:00Z
 thumbnail: aem-java-bp.jpg
-duration: 564
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 498
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 0%

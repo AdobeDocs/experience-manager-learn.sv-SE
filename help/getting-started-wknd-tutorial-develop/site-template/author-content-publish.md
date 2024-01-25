@@ -1,5 +1,5 @@
 ---
-title: Introduktion till redigering och publicering | AEM Skapa snabbt webbplatser
+title: Introduktion till redigering och publicering | Skapa AEM
 description: Använd sidredigeraren i Adobe Experience Manager AEM för att uppdatera webbplatsens innehåll. Lär dig hur komponenter används för att underlätta redigering. Förstå skillnaden mellan en AEM författare- och publiceringsmiljö och lär dig hur du publicerar ändringar på den publicerade webbplatsen.
 version: Cloud Service
 topic: Content Management
@@ -11,8 +11,8 @@ thumbnail: KT-7497.jpg
 doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-duration: 350
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 314
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 0%

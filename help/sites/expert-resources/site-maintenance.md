@@ -7,8 +7,8 @@ topic: Administration
 feature: Learn From Your Peers
 jira: KT-14255
 exl-id: 37ee3234-f91c-4f0a-b0b7-b9167e7847a9
-duration: 266
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 225
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 0%

@@ -8,8 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 exl-id: 7b2b1e1c-820f-4387-a78b-5d889c31eec0
-duration: 45
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 30
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Navigera till /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefro
 | sling:resourceType | Sträng | azureportalpagecomponent/component/page/storeandfetch |
 
 Navigera till /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content-nod, lägg till följande egenskap och spara ändringarna.
-| **Egenskapsnamn**  | **Egenskapstyp** | **Egenskapsvärde**                                    | |—|—|—| | sling:resourceType | Sträng | azureportalpagecomponent/komponent/sida/storeandfetch |
+| **Egenskapsnamn**  | **Egenskapstyp** | **Egenskapsvärde**                                    | |—|—|—| | sling:resourceType | Sträng | azureportalpagecomponent/component/page/storeandfetch |
 
 
 ## Nästa steg

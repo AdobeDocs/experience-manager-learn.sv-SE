@@ -10,8 +10,8 @@ level: Beginner
 exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
 last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
-duration: 642
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 626
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%

@@ -10,8 +10,8 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 765
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+duration: 716
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%

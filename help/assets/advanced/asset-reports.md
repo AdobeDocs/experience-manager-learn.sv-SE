@@ -11,8 +11,8 @@ thumbnail: 22140.jpg
 last-substantial-update: 2022-06-05T00:00:00Z
 doc-type: Feature Video
 exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
-duration: 172
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 162
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%

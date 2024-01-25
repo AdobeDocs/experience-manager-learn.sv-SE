@@ -12,8 +12,8 @@ jira: KT-12557
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
-duration: 58
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 44
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

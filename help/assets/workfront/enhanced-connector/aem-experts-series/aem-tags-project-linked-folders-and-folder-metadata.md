@@ -13,8 +13,8 @@ last-substantial-update: 2022-09-02T00:00:00Z
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
-duration: 2647
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 2636
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%

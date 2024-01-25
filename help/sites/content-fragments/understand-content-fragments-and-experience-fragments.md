@@ -9,8 +9,8 @@ role: User
 level: Beginner
 doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
-duration: 242
-source-git-commit: 7e1f538b111815a7934b798e0dac3587d8962c31
+duration: 204
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 0%

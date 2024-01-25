@@ -10,8 +10,8 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-duration: 327
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 284
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%

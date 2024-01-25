@@ -13,8 +13,8 @@ hide: true
 recommendations: noCatalog, noDisplay
 hidefromtoc: true
 exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
-duration: 37
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 24
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

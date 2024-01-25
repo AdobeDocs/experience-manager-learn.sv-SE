@@ -7,11 +7,11 @@ topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
-duration: 107
+duration: 114
 last-substantial-update: 2024-01-09T00:00:00Z
 jira: KT-14756
 thumbnail: 3426806.jpeg
-source-git-commit: 32ea9d9b395a061c0be1e60a2f378dcaa7340f7d
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%

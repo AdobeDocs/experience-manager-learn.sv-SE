@@ -8,8 +8,8 @@ role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
-duration: 121
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 98
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
