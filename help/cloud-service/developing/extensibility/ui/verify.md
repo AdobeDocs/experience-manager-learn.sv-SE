@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
-source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
+source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -39,9 +39,9 @@ Om du vill skapa en URL som monterar det icke-producerade tillägget i AEM måst
 Om du till exempel vill förhandsgranska ett tillägg för konsolen Innehållsfragment:
 
 1. Logga in på önskad AEM as a Cloud Service-miljö.
-2. Välj __Innehållsfragment__ -ikon.
-3. Vänta tills AEM Content Fragment Console läses in i webbläsaren.
-4. Kopiera URL:en för AEM Content Fragment Console från webbläsarens adressfält. Den ska likna:
+1. Välj __Innehållsfragment__ -ikon.
+1. Vänta tills AEM Content Fragment Console läses in i webbläsaren.
+1. Kopiera URL:en för AEM Content Fragment Console från webbläsarens adressfält. Den ska likna:
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
@@ -80,11 +80,11 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-2. Kopiera och klistra in URL:en för förhandsgranskning i webbläsaren.
+1. Kopiera och klistra in URL:en för förhandsgranskning i webbläsaren.
 
    + Du kan behöva göra det först, och sedan regelbundet, [acceptera HTTPS-certifikatet](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) för det lokala programmets värd (`https://localhost:9080`).
 
-3. Det AEM användargränssnittet läses in med den lokala versionen av tillägget inmatad i det för verifiering.
+1. Det AEM användargränssnittet läses in med den lokala versionen av tillägget inmatad i det för verifiering.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ För att förenkla skapandet av förhandsgransknings- och förhandsgransknings-U
 Bokmärket nedan förhandsvisar [lokala utvecklingsverktyg](#verify-local-development-builds) för tillägget på `https://localhost:9080`. Förhandsgranska [scenbyggen](#verify-stage-builds), skapa ett bokmärkesdiagram med `previewApp` variabeln inställd på URL:en för den distribuerade appen App Builder.
 
 1. Skapa ett bokmärke i webbläsaren.
-2. Redigera bokmärket.
-3. Ge ett bokmärke ett beskrivande namn, till exempel `AEM UI Extension Preview (localhost:9080)`.
-4. Ställ in bokmärkets URL till följande kod:
+1. Redigera bokmärket.
+1. Ge ett bokmärke ett beskrivande namn, till exempel `AEM UI Extension Preview (localhost:9080)`.
+1. Ställ in bokmärkets URL till följande kod:
 
    ```javascript
    javascript: (() => {
@@ -161,7 +161,7 @@ Bokmärket nedan förhandsvisar [lokala utvecklingsverktyg](#verify-local-develo
    })();
    ```
 
-5. Navigera till ett utökningsbart AEM för att läsa in förhandsvisningstillägget och klicka sedan på bokmärkesdiagrammet.
+1. Navigera till ett utökningsbart AEM för att läsa in förhandsvisningstillägget och klicka sedan på bokmärkesdiagrammet.
 
 >[!TIP]
 >
