@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1319
-source-git-commit: d8890ab7a929801b8ccd33271c2c421df40be694
+source-git-commit: 8f6f41a73477ef784dc56b09ed7f7349ce9f151e
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -108,17 +108,17 @@ function ExtensionRegistration() {
           getButton() {
             return {
               'id': 'bulk-property-update',     // Unique ID for the button
-              'label': 'Bulk property update',  // Button label 
+              'label': 'Bulk property update',  // Button label
               'icon': 'Edit'                    // Button icon; get name from: https://spectrum.adobe.com/page/icons/ (Remove spaces, keep uppercase)
             }
           },
 
           // Click handler for the extension button
           onClick(selections) {
-            // Collect the selected content fragment paths 
+            // Collect the selected content fragment paths
             const selectionIds = selections.map(selection => selection.id);
 
-            // Create a URL that maps to the 
+            // Create a URL that maps to the
             const modalURL = "/index.html#" + generatePath(
               "/content-fragment/:selection/bulk-property-update",
               {
@@ -133,12 +133,12 @@ function ExtensionRegistration() {
               url: modalURL
             })
           }
-        },
-
+        },        
       }
     })
   }
-  init().catch(console.error)
+}
+init().catch(console.error)
 ```
 
 ### Modal
