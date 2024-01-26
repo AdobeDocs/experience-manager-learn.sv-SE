@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 555
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -69,46 +69,48 @@ Se även nyckeldetaljerna för widgeten för textredigering:
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+import React from "react";
 import { Text } from "@adobe/react-spectrum";
 import { register } from "@adobe/uix-guest";
 import { extensionId } from "./Constants";
 
 // This function is called when the extension is registered with the host and runs in an iframe in the Content Fragment Editor browser window.
 function ExtensionRegistration() {
-
   const init = async () => {
     const guestConnection = await register({
       id: extensionId,
       methods: {
         rte: {
-
           // RTE Badges
           getBadges: () => [
             {
-              id: "phoneNumber",                    // Provide a unique ID for the badge
-              prefix: "#",                          // Provide a Badge starting character
-              suffix: "#",                          // Provide a Badge ending character
-              backgroundColor: "",                  // Provide HEX or text CSS color code for the background
-              textColor: "#071DF8"                  // Provide HEX or text CSS color code for the text
-            }
+              id: "phoneNumber",
+              prefix: "#",
+              suffix: "#",
+              backgroundColor: "",
+              textColor: "#071DF8",
+            },
           ],
 
           // RTE Widgets
           getWidgets: () => [
             {
-              id: "largegroup-contact-list-widget",       // Provide a unique ID for the widget
-              label: "Large Group Bookings Customer Service",          // Provide a label for the widget
-              url: "/index.html#/largeBookingsCustomerService",     // Provide the "relative" URL to the widget content. It will be resolved as `/index.html#/largeBookingsCustomerService`
+              id: "largegroup-contact-list-widget",
+              label: "Large Group Bookings Customer Service",
+              url: "/index.html#/largeBookingsCustomerService",
             },
           ],
-      }
+        },
+      },
     });
   };
-  
+
   init().catch(console.error);
 
   return <Text>IFrame for integration with Host (AEM)...</Text>;
 }
+
+export default ExtensionRegistration;
 ```
 
 ### Lägg till `largeBookingsCustomerService` rutt in `App.js`{#add-widgets-route}

@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 354
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -60,39 +60,45 @@ The `insertContent` värdet är en HTML-sträng, `<div class=\"cmp-contentfragme
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+import React from "react";
 import { Text } from "@adobe/react-spectrum";
 import { register } from "@adobe/uix-guest";
 import { extensionId } from "./Constants";
 
 // This function is called when the extension is registered with the host and runs in an iframe in the Content Fragment Editor browser window.
 function ExtensionRegistration() {
-
   const init = async () => {
     const guestConnection = await register({
       id: extensionId,
       methods: {
         rte: {
-
           // RTE Toolbar custom button
-          getCustomButtons: () => ([
+          getCustomButtons: () => [
             {
-              id: "wknd-cf-tip",       // Provide a unique ID for the custom button
-              tooltip: "Add Tip",      // Provide a label for the custom button
-              icon: 'Note',            // Provide an icon for the button (see https://spectrum.adobe.com/page/icons/ for a list of available icons)
-              onClick: (state) => {    // Provide a click handler function that returns the instructions array with type and value. This example inserts the HTML snippet for TIP content.
-                return [{
-                  type: "insertContent",
-                  value: "<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>"
-                }];
+              id: "wknd-cf-tip", // Provide a unique ID for the custom button
+              tooltip: "Add Tip", // Provide a label for the custom button
+              icon: "Note", // Provide an icon for the button (see https://spectrum.adobe.com/page/icons/ for a list of available icons)
+              onClick: (state) => {
+                // Provide a click handler function that returns the instructions array with type and value. This example inserts the HTML snippet for TIP content.
+                return [
+                  {
+                    type: "insertContent",
+                    value:
+                      '<div class="cmp-contentfragment__element-tip"><div>TIP</div><div>Add your tip text here...</div></div>',
+                  },
+                ];
               },
             },
-          ]),
-      }
+          ],
+        },
+      },
     });
   };
-  
+
   init().catch(console.error);
 
   return <Text>IFrame for integration with Host (AEM)...</Text>;
 }
+
+export default ExtensionRegistration;
 ```

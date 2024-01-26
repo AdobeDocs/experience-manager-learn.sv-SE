@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 182
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -50,6 +50,7 @@ I det här exemplet används [Luxon](https://moment.github.io/luxon/) bibliotek 
 + Värdena för varje anpassad kolumn, efter rad
 
 ```javascript
+import React from "react";
 import { generatePath } from "react-router";
 import { Text } from "@adobe/react-spectrum";
 import { register } from "@adobe/uix-guest";

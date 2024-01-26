@@ -8,10 +8,10 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2023-06-02T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 duration: 220
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -54,6 +54,7 @@ Adobe I/O Runtime-åtgärder kan anropas direkt från tilläggsregistreringskode
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+...
 // allActions is an object containing all the actions defined in the extension's manifest
 import allActions from '../config.json'
 
@@ -63,39 +64,39 @@ import actionWebInvoke from '../utils'
 function ExtensionRegistration() {
   const init = async () => {
     const guestConnection = await register({
-      id: extensionId, // A unique ID for the extension
+      id: extensionId, // A unique ID for the extension, usually defined in Constants.js
       methods: {
         // Configure your header menu button here
         headerMenu: {
-          getButton() {
-            return {
+          getButtons() {
+            return [{
               'id': 'example.my-header-menu-extension',  // Unique ID for the button
               'label': 'My header menu extension',       // Button label 
-              'icon': 'Edit'                             // Button icon from https://spectrum.adobe.com/page/icons/
-            }
-          },
+              'icon': 'Edit',                             // Button icon from https://spectrum.adobe.com/page/icons/
 
-          // Click handler for the extension button
-          onClick() {
-            // Set the HTTP headers required to access the Adobe I/O runtime action
-            const headers = {
-              'Authorization': 'Bearer ' + guestConnection.sharedContext.get('auth').imsToken,
-              'x-gw-ims-org-id': guestConnection.sharedContext.get('auth').imsOrg
-            };
+              // Click handler for the extension button
+              onClick() {
+                // Set the HTTP headers required to access the Adobe I/O runtime action
+                const headers = {
+                  'Authorization': 'Bearer ' + guestConnection.sharedContext.get('auth').imsToken,
+                  'x-gw-ims-org-id': guestConnection.sharedContext.get('auth').imsOrg
+                };
 
-            // Set the parameters to pass to the Adobe I/O Runtime action
-            const params = {
-              aemHost: `https://${guestConnection.sharedContext.get('aemHost')}`, // Pass in the AEM host if the action interacts with AEM
-              aemAccessToken: guestConnection.sharedContext.get('auth').imsToken
-            };
+                // Set the parameters to pass to the Adobe I/O Runtime action
+                const params = {
+                  aemHost: `https://${guestConnection.sharedContext.get('aemHost')}`, // Pass in the AEM host if the action interacts with AEM
+                  aemAccessToken: guestConnection.sharedContext.get('auth').imsToken
+                };
 
-            try {
-              // Invoke Adobe I/O Runtime action named `generic`, with the configured headers and parameters.
-              const actionResponse = await actionWebInvoke(allActions['generic'], headers, params);
-            } catch (e) {
-              // Log and store any errors
-              console.error(e)
-            }           
+                try {
+                  // Invoke Adobe I/O Runtime action named `generic`, with the configured headers and parameters.
+                  const actionResponse = await actionWebInvoke(allActions['generic'], headers, params);
+                } catch (e) {
+                  // Log and store any errors
+                  console.error(e)
+                }           
+              }
+            }]
           }
         }
       }
@@ -103,6 +104,8 @@ function ExtensionRegistration() {
   }
   init().catch(console.error);
 }
+
+export default ExtensionRegistration;
 ```
 
 ### Från modal

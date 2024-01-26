@@ -8,12 +8,12 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2023-06-02T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,8 @@ ht-degree: 0%
 # Distribuera ett tillägg
 
 För användning i AEM as a Cloud Service miljöer måste appen App Builder distribueras och godkännas.
+
+![Adobe Exchange](./assets/deploy/adobe-exchange.png){align="center"}
 
 Det finns flera saker att tänka på när du distribuerar tillägg till App Builder-program:
 
@@ -77,9 +79,9 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 ![Tilläggsgodkännande](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigera till __Hantera__ > __Appar som väntar på granskning__
-1. __Granska__ appen App Builder
-1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Då läggs tillägget omedelbart in på alla AEM as a Cloud Service redigeringstjänster i Adobe Org.
+2. Navigera till __Hantera__ > __Experience Cloud-program__
+3. __Granska__ appen App Builder
+4. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Då läggs tillägget omedelbart in på alla AEM as a Cloud Service redigeringstjänster i Adobe Org.
 
 När tilläggsbegäran har godkänts aktiveras tillägget omedelbart i AEM as a Cloud Service författartjänster.
 
@@ -92,7 +94,7 @@ Uppdatering och tillägg av appen App Builder följer samma process som [initial
 Om du vill distribuera en ny version av ett tillägg måste det först återkallas (eller tas bort). Tillägget återkallas men är inte tillgängligt i AEM.
 
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigera till __Hantera__ > __App Builder-appar__
+1. Navigera till __Hantera__ > __Experience Cloud-program__
 1. __Återkalla__ det tillägg som ska uppdateras
 
 ### Distribuera tillägget
@@ -128,10 +130,10 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 
 #### Godkänn distributionsbegäran
 
-![Tilläggsgodkännande](./assets/deploy/adobe-exchange.png){align="center"}
+![Tilläggsgodkännande](./assets/deploy/review.png){align="center"}
 
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigera till __Hantera__ > __Appar som väntar på granskning__
+1. Navigera till __Hantera__ > __Experience Cloud-program__
 1. __Granska__ appen App Builder
 1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Då läggs tillägget omedelbart in på alla AEM as a Cloud Service redigeringstjänster i Adobe Org.
 
@@ -144,5 +146,5 @@ När tilläggsbegäran har godkänts aktiveras tillägget omedelbart i AEM as a 
 Om du vill ta bort ett tillägg återkallar (eller tar bort) du det från Adobe Exchange. När tillägget återkallas tas det bort från alla AEM as a Cloud Service redigeringstjänster.
 
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigera till __Hantera__ > __App Builder-appar__
+1. Navigera till __Hantera__ > __Experience Cloud-program__
 1. __Återkalla__ tillägget som ska tas bort

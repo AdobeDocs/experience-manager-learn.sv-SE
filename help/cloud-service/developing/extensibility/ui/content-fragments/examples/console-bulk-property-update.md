@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-11604
 thumbnail: KT-11604.png
 doc-type: article
-last-substantial-update: 2022-12-09T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1319
-source-git-commit: 8f6f41a73477ef784dc56b09ed7f7349ce9f151e
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -92,53 +92,70 @@ Det finns två logiska uppsättningar vägar:
 `ExtensionRegistration.js`, mappas till `index.html` rutt, är ingångspunkten för AEM tillägg och definierar:
 
 1. Platsen för tilläggsknappen visas i AEM (`actionBar` eller `headerMenu`)
-1. Tilläggsknappens definition i `getButton()` function
+1. Tilläggsknappens definition i `getButtons()` function
 1. Knappens klickningshanterare i `onClick()` function
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+import React from "react";
+import { generatePath } from "react-router";
+import { Text } from "@adobe/react-spectrum";
+import { register } from "@adobe/uix-guest";
+import { extensionId } from "./Constants";
+
 function ExtensionRegistration() {
   const init = async () => {
     const guestConnection = await register({
-      id: extensionId,  // This is the unique id of this extension (you can make this up as long as its unique) .. in this case its `bulk-property-update` pulled out into Constants.js so it can be easily re-used in BulkPropertyUpdateModal.js
+      id: extensionId, // Some unique ID for the extension used to facilitate communication between the extension and Content Fragment Console
       methods: {
         // Configure your Action Bar button here
         actionBar: {
-          getButton() {
-            return {
-              'id': 'bulk-property-update',     // Unique ID for the button
-              'label': 'Bulk property update',  // Button label
-              'icon': 'Edit'                    // Button icon; get name from: https://spectrum.adobe.com/page/icons/ (Remove spaces, keep uppercase)
-            }
-          },
-
-          // Click handler for the extension button
-          onClick(selections) {
-            // Collect the selected content fragment paths
-            const selectionIds = selections.map(selection => selection.id);
-
-            // Create a URL that maps to the
-            const modalURL = "/index.html#" + generatePath(
-              "/content-fragment/:selection/bulk-property-update",
+          getButtons() {
+            return [
               {
-                // Set the :selection React route parameter to an encoded, delimited list of paths of the selected content fragments
-                selection: encodeURIComponent(selectionIds.join('|'))
-              }
-            );
+                id: "examples.action-bar.bulk-property-update", // Unique ID for the button
+                label: "Bulk property update", // Button label
+                icon: "OpenIn", // Button icon; get name from: https://spectrum.adobe.com/page/icons/ (Remove spaces, keep uppercase)
+                // Click handler for the extension button
+                onClick(selections) {
+                  // Collect the selected content fragment paths
+                  const selectionIds = selections.map(
+                    (selection) => selection.id
+                  );
 
-            // Open the route in the extension modal using the constructed URL
-            guestConnection.host.modal.showUrl({
-              title: "Bulk property update",
-              url: modalURL
-            })
-          }
-        },        
-      }
-    })
-  }
+                  // Create a URL that maps to the
+                  const modalURL =
+                    "/index.html#" +
+                    generatePath(
+                      "/content-fragment/:selection/bulk-property-update",
+                      {
+                        // Set the :selection React route parameter to an encoded, delimited list of paths of the selected content fragments
+                        selection: encodeURIComponent(selectionIds.join("|")),
+                      }
+                    );
+
+                  // Open the route in the extension modal using the constructed URL
+                  guestConnection.host.modal.showUrl({
+                    // The modal title
+                    title: "Bulk property update",
+                    url: modalURL,
+                  });
+                },
+              },
+            ];
+          },
+        },
+      },
+    });
+  };
+
+  init().catch(console.error);
+
+  return <Text>IFrame for integration with Host (AEM)...</Text>;
 }
-init().catch(console.error)
+
+export default ExtensionRegistration;
 ```
 
 ### Modal

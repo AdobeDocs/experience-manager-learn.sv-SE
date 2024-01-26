@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 236
-source-git-commit: ba9d9fe4b3a387e0fb32bbd2edd7b2debf03f325
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -52,6 +52,7 @@ Koden visar hur innehållet i innehållsfragmentet kan hämtas i tilläggets reg
 `src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+import React from "react";
 import { Text } from "@adobe/react-spectrum";
 import { register } from "@adobe/uix-guest";
 import { extensionId } from "./Constants";
@@ -118,6 +119,7 @@ function ExtensionRegistration() {
 
   return <Text>IFrame for integration with Host (AEM)...</Text>;
 }
+
 
 /**
  * This function triggers a download of the content fragment export.
