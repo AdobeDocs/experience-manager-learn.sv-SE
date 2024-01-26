@@ -10,10 +10,10 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
-duration: 633
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 637
+source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,7 @@ Den här URL:en används nedan när du skapar URL:er för utveckling och scenver
 
 Observera den lokala URL:en för programmet som visas ovan som `-> https://localhost:9080`
 
+1. Först (och när du ser ett anslutningsfel) öppnas `https://localhost:9080` (eller vilken URL-adress som helst för ditt lokala program) i webbläsaren och acceptera manuellt [HTTPS-certifikatet](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
 1. Lägg till följande två frågeparametrar i [URL för AEM](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, vanligtvis `&ext=https://localhost:9080`.
