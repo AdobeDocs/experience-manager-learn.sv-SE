@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
+source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '2001'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Videor och självstudiekurser om AEM Forms {#forms}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Konfigurera OKTA-autentisering med AEM författare](adaptive-forms/single-sign-on-with-okta.md)
 + Skapa ditt första adaptiva formulär {#creating-your-first-adaptive-form}
@@ -131,6 +131,11 @@ ht-degree: 1%
    + [2 - Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
    + [3 - Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - Testa lösningen](zipping-form-attachments/test.md)
++ Fylla i formulär med data och bilagor i förväg{#prefill-form-with-data-attachments}
+   + [1 - Introduktion](prefill-form-with-data-attachments/introduction.md)
+   + [2 - Skapa anpassad sändning](prefill-form-with-data-attachments/create-custom-submit.md)
+   + [3 - Skapa OSGi-konfiguration](prefill-form-with-data-attachments/create-osgi-configuration.md)
+   + [4 - Skapa förifyllningstjänst](prefill-form-with-data-attachments/create-prefill-service.md)
 + Lagra och hämta adaptiv form{#store-and-retrieve-af-with-2fa}
    + [1 - Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 - Konfigurera datakälla](store-and-retrieve-af-with-2fa/configure-data-source.md)
