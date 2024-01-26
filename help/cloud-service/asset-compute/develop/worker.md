@@ -10,8 +10,8 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
-duration: 572
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 481
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%

@@ -10,8 +10,8 @@ jira: KT-3307
 thumbnail: 17453.jpg
 doc-type: Feature Video
 exl-id: 12d8c0c6-c556-49f4-a6fe-84fccfccf95e
-duration: 175
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 177
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%

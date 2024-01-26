@@ -10,9 +10,9 @@ doc-type: Feature Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14465
 thumbnail: 3425699.jpeg
-duration: 108
+duration: 109
 exl-id: 3a378f4a-1d08-4f77-997a-d7cd19ad7021
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

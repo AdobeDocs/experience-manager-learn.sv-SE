@@ -11,8 +11,8 @@ thumbnail: 20702.jpg
 last-substantial-update: 2022-06-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-duration: 348
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 352
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%

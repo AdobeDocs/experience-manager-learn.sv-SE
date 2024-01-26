@@ -11,8 +11,8 @@ thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
-duration: 260
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 182
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%

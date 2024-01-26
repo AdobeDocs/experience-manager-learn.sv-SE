@@ -10,8 +10,8 @@ role: Developer
 level: Intermediate, Experienced
 doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-duration: 145
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 164
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%

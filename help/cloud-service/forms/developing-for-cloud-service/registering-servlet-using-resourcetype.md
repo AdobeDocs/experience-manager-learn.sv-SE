@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-14581
-duration: 110
+duration: 108
 exl-id: 2a33a9a9-1eef-425d-aec5-465030ee9b74
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%

@@ -8,8 +8,8 @@ role: Developer
 level: Experienced
 doc-type: Article
 exl-id: dd37355e-cfc7-4581-ac22-d89c951c22cf
-duration: 30
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 34
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%

@@ -10,8 +10,8 @@ jira: KT-10900
 thumbnail: kt-10900.jpeg
 doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
-duration: 244
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 195
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 0%

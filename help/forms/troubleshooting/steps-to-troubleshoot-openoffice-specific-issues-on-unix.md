@@ -9,8 +9,8 @@ feature: PDF Generator
 topic: Development
 index: y
 exl-id: bc86dda1-18a4-474b-a8ec-d4e7f15ddd10
-duration: 87
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 88
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%

@@ -8,9 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-14501
-duration: 27
+duration: 31
 exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

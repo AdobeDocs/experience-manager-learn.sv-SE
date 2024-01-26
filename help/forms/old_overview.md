@@ -4,8 +4,8 @@ description: AEM Forms-resurser för nybörjare och erfarna AEM Forms-utvecklare
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-duration: 126
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 140
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 4%

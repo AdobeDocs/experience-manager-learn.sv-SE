@@ -12,8 +12,8 @@ jira: KT-194
 thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-duration: 230
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 234
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%

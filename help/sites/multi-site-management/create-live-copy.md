@@ -10,8 +10,8 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 44540dee-909b-4140-b007-402ef9af58c4
-duration: 310
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 311
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

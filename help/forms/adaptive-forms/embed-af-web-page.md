@@ -10,8 +10,8 @@ level: Beginner
 jira: KT-8390
 exl-id: 068e38df-9c71-4f55-b6d6-e1486c29d0a9
 last-substantial-update: 2020-06-09T00:00:00Z
-duration: 402
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 404
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

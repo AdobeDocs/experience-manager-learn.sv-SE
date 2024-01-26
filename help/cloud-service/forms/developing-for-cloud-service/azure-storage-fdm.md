@@ -10,8 +10,8 @@ topic: Development
 feature: Developer Tools
 jira: KT-9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-duration: 51
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 57
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%

@@ -7,8 +7,8 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-duration: 553
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 461
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%

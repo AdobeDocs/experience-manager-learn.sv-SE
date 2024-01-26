@@ -10,8 +10,8 @@ level: Beginner
 jira: KT-7593
 exl-id: b9809561-e9bd-4c67-bc18-5cab3e4aa138
 last-substantial-update: 2019-06-09T00:00:00Z
-duration: 216
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 245
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%

@@ -11,8 +11,8 @@ level: Beginner
 last-substantial-update: 2021-09-29T00:00:00Z
 doc-type: Feature Video
 exl-id: c3b4366b-cbb2-48d6-b101-78effb35130d
-duration: 6
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 7
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%

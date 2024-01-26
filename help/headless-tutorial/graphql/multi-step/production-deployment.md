@@ -10,8 +10,8 @@ mini-toc-levels: 1
 jira: KT-7131
 thumbnail: KT-7131.jpg
 exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
-duration: 591
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 620
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 0%

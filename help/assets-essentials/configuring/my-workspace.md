@@ -11,8 +11,8 @@ jira: KT-11800
 thumbnail: 3413809.jpeg
 doc-type: Feature Video
 exl-id: da9363f3-43a9-4396-b8e8-15267fd7a689
-duration: 144
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 145
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 0%

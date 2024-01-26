@@ -10,8 +10,8 @@ jira: KT-4235
 thumbnail: 32547.jpg
 doc-type: Technical Video
 exl-id: ad767329-58bc-44ec-83de-2f5e3c8a30a3
-duration: 740
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 742
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

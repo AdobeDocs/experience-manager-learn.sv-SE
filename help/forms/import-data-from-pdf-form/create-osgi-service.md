@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: c3032669-154c-4565-af6e-32d94e975e37
-duration: 65
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 49
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%

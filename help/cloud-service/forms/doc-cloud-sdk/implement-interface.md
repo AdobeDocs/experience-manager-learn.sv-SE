@@ -10,8 +10,8 @@ topic: Development
 thumbnail: 7826.jpg
 jira: KT-7826
 exl-id: c1fd02aa-577b-453f-8948-ca50e3e8f89b
-duration: 167
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 80
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%

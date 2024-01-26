@@ -7,8 +7,8 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-duration: 512
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 532
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%

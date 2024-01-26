@@ -9,8 +9,8 @@ feature: Output Service
 topic: Development
 jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
-duration: 71
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 50
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

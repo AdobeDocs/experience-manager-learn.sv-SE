@@ -6,8 +6,8 @@ level: Intermediate
 topic: Administration
 feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
-duration: 67
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 76
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%

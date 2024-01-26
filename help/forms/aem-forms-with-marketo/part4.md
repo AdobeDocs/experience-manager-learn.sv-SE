@@ -9,8 +9,8 @@ level: Experienced
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-duration: 74
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 84
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%

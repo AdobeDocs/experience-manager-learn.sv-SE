@@ -6,8 +6,8 @@ doc-type: Tutorial
 version: 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-duration: 52
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 59
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%

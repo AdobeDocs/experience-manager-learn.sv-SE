@@ -10,8 +10,8 @@ jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
-duration: 841
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 815
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%

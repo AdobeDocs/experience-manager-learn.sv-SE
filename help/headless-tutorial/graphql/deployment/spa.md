@@ -10,8 +10,8 @@ jira: KT-10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
-duration: 195
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 220
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%

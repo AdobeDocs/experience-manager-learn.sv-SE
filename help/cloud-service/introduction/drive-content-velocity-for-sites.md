@@ -3,8 +3,8 @@ title: Skapa innehåll snabbare med Adobe Experience Manager
 description: Läs om innehållets snabbhet och dess värde inom företagsorganisationer. Fördjupa dig i fyra principer om effektivt genomförande och fallgropar att hålla utkik efter vägen.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 635
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 718
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 0%

@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-10292
 exl-id: c1d248c3-8208-476e-b0ae-cab25575cd6a
 last-substantial-update: 2021-10-12T00:00:00Z
-duration: 74
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 84
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

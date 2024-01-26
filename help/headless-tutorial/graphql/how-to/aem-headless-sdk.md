@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-duration: 262
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 186
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%

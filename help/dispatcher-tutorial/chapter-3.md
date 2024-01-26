@@ -7,8 +7,8 @@ role: Architect
 level: Intermediate
 doc-type: Tutorial
 exl-id: 7c7df08d-02a7-4548-96c0-98e27bcbc49b
-duration: 1470
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 1653
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '6172'
 ht-degree: 0%

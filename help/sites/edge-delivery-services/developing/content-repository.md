@@ -10,9 +10,9 @@ doc-type: Technical Video
 last-substantial-update: 2023-11-15T00:00:00Z
 jira: KT-14477, KT-14478
 thumbnail: 3425712.jpeg
-duration: 414
+duration: 418
 exl-id: 290184ea-88cb-401e-b784-77c8322c77de
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%

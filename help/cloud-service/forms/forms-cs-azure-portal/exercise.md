@@ -9,8 +9,8 @@ version: Cloud Service
 topic: Integrationa
 thumbnail: 335800.jpg
 jira: KT-8481
-duration: 51
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 52
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%

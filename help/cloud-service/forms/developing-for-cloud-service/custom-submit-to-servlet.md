@@ -10,8 +10,8 @@ topic: Development
 feature: Developer Tools
 jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-duration: 60
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 58
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

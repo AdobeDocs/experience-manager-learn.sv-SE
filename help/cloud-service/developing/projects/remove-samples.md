@@ -9,8 +9,8 @@ level: Beginner
 jira: KT-9092
 thumbnail: 337263.jpeg
 exl-id: 4e10c2b7-41b6-41a0-b8d4-9207a9d3f9c8
-duration: 347
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 344
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 1%

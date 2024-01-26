@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 doc-type: Technical Video
 exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
-duration: 299
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 290
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%

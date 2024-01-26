@@ -10,8 +10,8 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 6bcc5978-dac8-4112-8e50-de1722b1c289
-duration: 341
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 342
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

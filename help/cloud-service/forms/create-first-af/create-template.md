@@ -11,8 +11,8 @@ topic: Development
 jira: KT-7382
 thumbnail: 332223.jpg
 exl-id: 3e6dc8c4-d080-4a95-9fb2-52747fda69d7
-duration: 226
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 228
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%

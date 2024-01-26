@@ -10,8 +10,8 @@ jira: KT-7620
 thumbnail: 332859.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
-duration: 335
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 338
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

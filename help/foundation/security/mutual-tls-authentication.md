@@ -11,8 +11,8 @@ thumbnail: KT-13881.png
 doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
-duration: 548
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 524
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%

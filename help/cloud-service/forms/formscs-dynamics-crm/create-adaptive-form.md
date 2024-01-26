@@ -9,8 +9,8 @@ feature: Adaptive Forms, Integrations
 topic: Development
 jira: KT-9839
 exl-id: 804b2fad-34a3-4bcb-913c-9070393a6c9c
-duration: 346
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 347
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

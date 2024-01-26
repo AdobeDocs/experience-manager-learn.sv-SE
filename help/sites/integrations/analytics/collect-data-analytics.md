@@ -11,8 +11,8 @@ thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="Integrering" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-duration: 629
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 668
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '2307'
 ht-degree: 0%

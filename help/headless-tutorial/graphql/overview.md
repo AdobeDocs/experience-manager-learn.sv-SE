@@ -8,8 +8,8 @@ level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
-duration: 638
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 647
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%

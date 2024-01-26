@@ -10,8 +10,8 @@ topic: Development
 feature: Code Deployment
 jira: KT-8851
 exl-id: daf7d316-e9ec-41b5-89c8-fe4f4ada9701
-duration: 27
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 31
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%

@@ -10,8 +10,8 @@ exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
-duration: 4612
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 4677
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '2384'
 ht-degree: 0%

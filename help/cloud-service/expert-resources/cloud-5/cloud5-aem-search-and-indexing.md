@@ -9,8 +9,8 @@ thumbnail: 342374.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: b2571a84-101f-4330-8a5f-9ef5e4344591
-duration: 288
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 290
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

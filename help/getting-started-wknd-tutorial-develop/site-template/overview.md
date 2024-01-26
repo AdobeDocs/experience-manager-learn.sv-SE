@@ -10,8 +10,8 @@ jira: KT-7985
 thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
-duration: 430
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 437
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%

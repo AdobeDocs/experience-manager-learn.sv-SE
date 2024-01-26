@@ -10,8 +10,8 @@ topic: Development
 thumbnail: 7820.jpg
 jira: KT-7820
 exl-id: 49ecde63-e53c-41fa-ab9b-d6a4435657b5
-duration: 133
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 135
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

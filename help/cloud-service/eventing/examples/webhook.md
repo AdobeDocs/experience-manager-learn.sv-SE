@@ -7,11 +7,11 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 152
+duration: 156
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

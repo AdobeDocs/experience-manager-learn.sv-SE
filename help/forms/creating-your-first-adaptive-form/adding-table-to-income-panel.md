@@ -9,8 +9,8 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: e7674c46-259f-4dbd-96db-c40369534911
-duration: 357
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 363
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%

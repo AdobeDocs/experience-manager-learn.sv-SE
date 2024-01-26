@@ -9,8 +9,8 @@ feature: Workbench
 topic: Administration
 index: y
 exl-id: 89f485c3-cd6f-4814-8538-de9c07b33ba4
-duration: 53
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 54
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

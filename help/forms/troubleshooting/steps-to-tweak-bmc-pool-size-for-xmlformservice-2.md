@@ -9,8 +9,8 @@ feature: Output Service,Forms Service
 topic: Development
 index: y
 exl-id: 404049b8-1646-47e1-b2fd-e4024859ca22
-duration: 117
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 118
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%

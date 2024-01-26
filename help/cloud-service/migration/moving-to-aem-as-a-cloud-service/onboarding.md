@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
-duration: 521
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 530
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 5%

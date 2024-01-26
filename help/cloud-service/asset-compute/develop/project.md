@@ -8,8 +8,8 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-duration: 198
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 212
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
