@@ -11,9 +11,9 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -27,14 +27,14 @@ Content Fragments used in AEM Headless content modeling, ofta reference image as
 The `ImageRef` -typen har fyra URL-alternativ för innehållsreferenser:
 
 + `_path` är den refererade sökvägen i AEM och innehåller inte AEM (värdnamn)
-+ `_dynamicUrl` är den fullständiga URL:en till den webboptimerade bildresursen.
++ `_dynamicUrl` är webbadressen till bildresursens webboptimerade leverans.
    + The `_dynamicUrl` innehåller inte AEM ursprung, så domänen (AEM författare eller AEM publiceringstjänst) måste anges av klientprogrammet.
 + `_authorUrl` är den fullständiga URL:en till bildresursen på AEM författare
    + [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsvisning av programmet utan huvud.
 + `_publishUrl` är den fullständiga URL:en till bildresursen vid AEM
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
-The `_dynamicUrl` är den URL som ska användas för bildresurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
+The `_dynamicUrl` är den rekommenderade URL som ska användas för leverans av bildresurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
 
 |                                | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -96,17 +96,17 @@ The `$path` variabel som används i `_path` filtret kräver den fullständiga s�
 
 The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
 
-| GraphQL-parameter | URL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden | URL-parametervärden | Exempel på URL-parameter |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | Ej tillämpligt | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Ej tillämpligt | Ej tillämpligt |
-| `seoName` | Ej tillämpligt | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` | Ej tillämpligt | Ej tillämpligt |
-| `crop` | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna | Kommaavgränsad sträng med numeriska koordinater `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal | Kommaavgränsade positiva heltal i ordningen `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
-| `flip` | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal | Positivt heltal | `?width=1600` |
-| `preferWebP` | `preferwebp` | If `true` och AEM fungerar som en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
+| GraphQL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+| `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
+| `seoName` | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` |
+| `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna |
+| `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal |
+| `rotation` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` |
+| `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
+| `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 |
+| `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal |
+| `preferWebP` | If `true` och AEM fungerar som en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
 
 ## GraphQL svar
 
@@ -145,7 +145,7 @@ Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange d
 
 ## Responsiva URL:er
 
-Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som en baserad bild, och som tillägg till olika breddparametrar, för att driva olika responsiva vyer. Inte bara `width` frågeparametern kan användas, men andra frågeparametrar kan läggas till av klienten för att ytterligare optimera bildresursen utifrån dess behov.
+Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som bas. `width` är en URL-parameter som du sedan kan lägga till i `_dynamicUrl` för olika responsiva vyer.
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
