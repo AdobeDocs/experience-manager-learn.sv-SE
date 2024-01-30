@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
+source-git-commit: d178059f6f00228586e692465f7f437129bffaae
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -97,7 +97,7 @@ The `$path` variabel som används i `_path` filtret kräver den fullständiga s�
 The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
 
 | GraphQL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+|-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
 | `seoName` | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` |
 | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna |
@@ -107,6 +107,7 @@ The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att opti
 | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 |
 | `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal |
 | `preferWebP` | If `true` och AEM fungerar som en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
+
 
 ## GraphQL svar
 
