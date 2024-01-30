@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 156
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # Webbhooks och AEM
 
 Lär dig hur du tar emot AEM på en webbkrok och granskar händelseinformation som nyttolast, huvuden och metadata.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 I det här exemplet används en Adobe _webbkrok_ gör att du kan ta emot AEM händelser utan att behöva skapa en egen webkrok. Den här webbkroken som tillhandahålls av Adobe är värd för [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar utveckling och driftsättning av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
 

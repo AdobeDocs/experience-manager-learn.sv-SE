@@ -11,9 +11,9 @@ duration: 573
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Om den redan är aktiverad, se [Aktivera AEM i din AEM Cloud Service-miljö](htt
 
 Om du vill prenumerera på AEM händelser behöver du inte skriva någon kod i AEM, utan i stället en [Adobe Developer Console](https://developer.adobe.com/) projektet är konfigurerat. Adobe Developer Console är en gateway till Adobe API:er, SDK:er, Events, Runtime och App Builder.
 
-I det här fallet _projekt_ i Adobe Developer Console kan du prenumerera på händelser som skickas från AEM as a Cloud Service miljöer och konfigurera händelseleveransen till externa system.
+I det här fallet _projekt_ i Adobe Developer Console kan du prenumerera på händelser som skickas från AEM as a Cloud Service miljö och konfigurera händelseleveransen till externa system.
 
 Mer information finns i [Prenumerera på AEM händelser i Adobe Developer Console](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
 
@@ -92,7 +92,7 @@ Mer information finns i [Prenumerera på AEM händelser i Adobe Developer Consol
 Det finns två primära metoder för AEM: _push_ -metoden och _pull_ -metod.
 
 - **Push-metod**: I det här tillvägagångssättet meddelas händelsekonsumenten aktivt av Adobe I/O Events när en händelse blir tillgänglig. Integrationsalternativen är Webhooks, Adobe I/O Runtime och Amazon EventBridge.
-- **Pull-metod**: Här avfrågar händelsekonsument aktivt Adobe I/O Events för att söka efter nya händelser. Det primära integrationsalternativet för den här metoden är Adobe I/O-API:t för journalföring.
+- **Pull-metod**: Här avfrågar händelsekonsument aktivt Adobe I/O Events för att söka efter nya händelser. Det primära integreringsalternativet för den här metoden är Adobe Developer Journaling API.
 
 Mer information finns i [AEM via Adobe I/O Events](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#aem-events-processing-via-adobe-io).
 
@@ -101,7 +101,7 @@ Mer information finns i [AEM via Adobe I/O Events](https://developer.adobe.com/e
 <table>
   <tr>
     <td>
-        <a  href="./examples/webhook.md"><img alt="Ta emot AEM på en webkrok" src="./assets/examples/webhook/Eventing-webhook.png"/></a>
+        <a  href="./examples/webhook.md"><img alt="Ta emot AEM på en webkrok" src="./assets/examples/webhook/webhook-example.png"/></a>
         <div><strong><a href="./examples/webhook.md">Ta emot AEM på en webkrok</a></strong></div>
         <p>
           Använd webbkroken som tillhandahålls av Adobe för att ta emot AEM och granska händelseinformationen.
@@ -115,4 +115,20 @@ Mer information finns i [AEM via Adobe I/O Events](https://developer.adobe.com/e
         </p>
       </td>
     </tr>
+  <tr>
+    <td>
+        <a  href="./examples/runtime-action.md"><img alt="Ta emot AEM om Adobe I/O Runtime-åtgärd" src="./assets/examples/runtime-action/eventing-runtime.png"/></a>
+        <div><strong><a href="./examples/runtime-action.md">Ta emot AEM om Adobe I/O Runtime-åtgärd</a></strong></div>
+        <p>
+          Ta emot AEM och granska händelseinformationen.
+        </p>
+      </td>
+      <td>
+        <a  href="./examples/event-processing-using-runtime-action.md"><img alt="AEM händelsehantering med Adobe I/O Runtime Action" src="./assets/examples/event-processing-using-runtime-action/event-processing.png"/></a>
+        <div><strong><a href="./examples/event-processing-using-runtime-action.md">AEM händelsehantering med Adobe I/O Runtime Action</a></strong></div>
+        <p>
+          Lär dig hur du bearbetar mottagna AEM med Adobe I/O Runtime Action. Händelsebearbetningen innehåller AEM återanrop, händelsedatans beständighet och visar dem i SPA.
+        </p>
+      </td>
+  </tr>    
 </table>

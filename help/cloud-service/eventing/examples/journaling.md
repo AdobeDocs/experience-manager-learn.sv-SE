@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 163
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # Journalföring och AEM
 
 Lär dig hur du hämtar den första uppsättningen AEM händelser från journalen och utforskar detaljer om varje händelse.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
 Journalföring är en pull-metod för att förbruka AEM händelser, och en journal är en ordnad lista över händelser. Med hjälp av API:t för Adobe I/O Events-journalföring kan du hämta AEM händelser från journalen och bearbeta dem i ditt program. Med den här metoden kan du hantera händelser baserat på en viss gräns och effektivt bearbeta dem flera gånger. Se [Journalföring](https://developer.adobe.com/events/docs/guides/journaling_intro/) för djupgående insikter, inklusive viktiga överväganden som kvarhållningsperioder, sidnumrering med mera.
 
