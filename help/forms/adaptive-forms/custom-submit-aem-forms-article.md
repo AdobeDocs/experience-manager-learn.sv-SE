@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,11 @@ ht-degree: 0%
 # Skriva en anpassad sändning i AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
 Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för anpassat formulär
+
+>[!NOTE]
+>Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär.
+>[Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+
 
 I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd för hantering av adaptiv inlämning av Forms.
 

@@ -10,9 +10,9 @@ last-substantial-update: 2023-08-14T00:00:00Z
 jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
 
 I den här artikeln visas hur du gör REST-anrop för att lagra skickade AEM Forms-data i Azure Storage.
 För att kunna lagra skickade formulärdata i Azure Storage måste följande steg följas.
+
+>[!NOTE]
+>Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär. [Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## Skapa Azure Storage-konto
 
@@ -45,6 +49,7 @@ Se till att du anger rätt behörigheter och lämpligt slutdatum enligt skärmbi
 ## Ange Blob SAS-token och lagrings-URI
 
 För att göra koden mer generisk kan de två egenskaperna konfigureras med OSGi-konfigurationen enligt nedan. The _**aemformstutorial**_ är lagringskontots namn, _**formulärmaterial**_ är den behållare i vilken data ska lagras.
+Kontrollera att du har / i slutet av lagringsURI:n och att SAS-token börjar med?
 ![osgi-konfiguration](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -98,7 +103,8 @@ https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken F
 
 * [Importera det adaptiva exempelformuläret](./assets/bank-account-sample-form.zip)
 
-* Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen
+* [Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+
 * [Förhandsgranska och skicka bankkontoformuläret](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * Verifiera att data lagras i den Azure-lagringsbehållare du väljer. Kopiera blob-ID:t.

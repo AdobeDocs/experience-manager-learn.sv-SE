@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -61,12 +61,18 @@ Rad 6 exporterar xmlData från PDF-filen
 1. /content/help/seFormsSamples/outputService
 1. /content/AemFormsSamples/renderxdp
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
-Starta programmet och ange följande URL för att testa API:t för exportdata
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)
 
-Se till att du har valt &quot;POST&quot; i listrutan http://localhost:4502/content/AemFormsSamples/exportdata.html Kontrollera att du har angett &quot;Auktorisering&quot; som &quot;Grundläggande autentisering&quot;. Ange AEM användarnamn och lösenord Navigera till fliken &quot;Brödtext&quot; och ange parametrarna för begäran enligt bilden nedan
-![export](assets/postexport.png)
-Klicka sedan på knappen Skicka
+## Testa proverna
+
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern.
+
+* Installera Postman-appen på datorn.
+* Starta programmet och ange rätt URL
+* Se till att du har valt &quot;POST&quot; i listrutan
+* Ange&quot;Authorization&quot; som&quot;Basic Auth&quot;. Ange AEM användarnamn och lösenord
+* Ange parametrarna för begäran på fliken Innehåll
+* Klicka på knappen Skicka
 
 Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjänsten eller Forms-tjänsten ska användas, tjänstens URL, indataparametrar som förväntas av varje tjänst
 
