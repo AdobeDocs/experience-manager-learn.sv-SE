@@ -1,6 +1,6 @@
 ---
-title: Förstå autentiseringsstöd i AEM
-description: En samlad vy över de autentiseringsmekanismer (och ibland auktoriseringsmekanismer) som stöds av AEM.
+title: Autentiseringsstöd i AEM 6.x
+description: En samlad vy över de autentiseringsmekanismer som stöds av AEM 6.x.
 version: 6.4, 6.5
 feature: User and Groups
 doc-type: Article
@@ -12,14 +12,14 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 duration: 38
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 9ef35d4d20ea574ac2051d7d3e997ecc18c2aaaa
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
-# Förstå autentiseringsstöd i AEM 6.x
+# Autentiseringsstöd i AEM 6.x
 
 En samlad vy över de autentiseringsmekanismer (och ibland auktoriseringsmekanismer) som stöds av AEM.
 
