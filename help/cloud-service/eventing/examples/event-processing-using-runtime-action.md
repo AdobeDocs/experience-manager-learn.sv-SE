@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
+source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,9 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 - Lokalt initierat projekt från det tidigare exemplet [Adobe I/O Runtime Action and AEM Events](./runtime-action.md#initialize-project-for-local-development).
 
+>[!IMPORTANT]
+>
+>AEM as a Cloud Service Eventing är bara tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM på din AEM as a Cloud Service miljö kontaktar du [AEM](mailto:grp-aem-events@adobe.com).
 
 ## Processor för AEM-händelser
 
