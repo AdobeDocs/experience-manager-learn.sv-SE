@@ -11,8 +11,8 @@ topic: Content Management
 last-substantial-update: 2021-09-27T00:00:00Z
 doc-type: Feature Video
 exl-id: a05f995e-11bb-4b28-9aed-3033071244f7
-duration: 6
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 177
+source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%

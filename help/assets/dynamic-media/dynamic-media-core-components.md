@@ -10,8 +10,8 @@ jira: KT-6630
 thumbnail: 329331.jpg
 doc-type: Feature Video
 exl-id: 12fa3622-428a-40c1-b47f-fa55c2858896
-duration: 19
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 503
+source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%

@@ -11,8 +11,8 @@ feature: Adaptive Forms, Integrations
 jira: KT-7148
 thumbnail: 331755.jpg
 exl-id: c0a875bd-55b6-4f63-a58d-eecb62ae703b
-duration: 7
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 175
+source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
