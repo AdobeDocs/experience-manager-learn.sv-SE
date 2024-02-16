@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
+source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,19 @@ ht-degree: 0%
 
 # AEM Assets event for PIM integration
 
-** Obs! I den här självstudiekursen används experimentella AEM as a Cloud Service API:er.  För att få tillgång till dessa API:er måste du godkänna ett förhandsversionsavtal och ha dessa API:er manuellt aktiverade av Adobe Engineering.  Kontakta supporten i Adobe för att få åtkomst. **
+>[!IMPORTANT]
+>
+>I den här självstudien används experimentella AEM as a Cloud Service API:er. För att få tillgång till dessa API:er måste du godkänna ett förhandsavtal för programvara och ha dessa API:er manuellt aktiverade för din miljö av Adobe-tekniker. Kontakta supporten för att få åtkomst till Adobe.
 
-Lär dig hur du integrerar AEM Assets med ett tredjepartssystem, t.ex. ett PIM-system (Product Information Management) eller PLM-system, för att uppdatera metadata för mediefiler **använda AEM I/O-händelser**. När du får en AEM Assets-händelse kan metadata för resursen uppdateras i AEM, PIM eller båda systemen, baserat på företagets behov. I det här exemplet visas dock att metadata för resursen uppdateras i AEM.
+Lär dig hur du integrerar AEM Assets med ett tredjepartssystem, t.ex. ett PIM-system (Product Information Management) eller PLM-system, för att uppdatera metadata för mediefiler **använda AEM I/O-händelser**. När du får en AEM Assets-händelse kan metadata för resursen uppdateras i AEM, PIM eller båda systemen, baserat på företagets behov. I det här exemplet visas dock hur metadata för resursen uppdateras i AEM.
 
-Så här kör du uppdateringen av metadata för resursen **kod utanför AEM**, kommer vi att utnyttja [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/), en serverlös plattform. Händelsebearbetningsflödet är följande:
+Så här kör du uppdateringen av metadata för resursen **kod utanför AEM**, [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)används en serverfri plattform.
+
+Händelsebearbetningsflödet är följande:
 
 ![AEM Assets event for PIM integration](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. Tjänsten AEM Author utlöser en _Resursbearbetning slutförd_ händelse när en överföring av tillgångar har slutförts och alla processer för bearbetning av tillgångar har slutförts.  Om du väntar på att bearbetningen ska slutföras ser du till att all körklar bearbetning, till exempel metadataextrahering, har slutförts innan vi fortsätter.
+1. Tjänsten AEM Author utlöser en _Resursbearbetning slutförd_ händelse när en överföring av tillgångar har slutförts och alla processer för bearbetning av tillgångar har slutförts. Om du väntar på att bearbetningen ska slutföras ser du till att all körklar bearbetning, till exempel metadataextrahering, har slutförts.
 1. Händelsen skickas till [Adobe I/O Events](https://developer.adobe.com/events/) service.
 1. Tjänsten Adobe I/O Events skickar händelsen till [Adobe I/O Runtime Action](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) för bearbetning.
 1. Adobe I/O Runtime Action anropar PIM-systemets API för att hämta ytterligare metadata som SKU, leverantörsinformation eller annan information.
@@ -106,7 +110,7 @@ Om du vill hämta och uppdatera metadata börjar du med att uppdatera det automa
 
 Se bifogad fil [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) för hela koden och de viktigaste filerna markeras i avsnittet nedan.
 
-- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` filen gör PIM API-anropet till en dummy för att hämta ytterligare metadata som SKU och leverantörsnamn.  Den här filen används för demoändamål.  När du har arbetsflödet från början till slut ersätter du den här funktionen med ett anrop till ditt riktiga PIM-system för att hämta metadata för resursen.
+- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` filen gör PIM API-anropet till en dummy för att hämta ytterligare metadata som SKU och leverantörsnamn. Den här filen används för demoändamål. När du har arbetsflödet från början till slut ersätter du den här funktionen med ett anrop till ditt riktiga PIM-system för att hämta metadata för resursen.
 
   ```javascript
   /**
@@ -209,7 +213,7 @@ Se bifogad fil [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-i
 
 - The `src/dx-excshell-1/actions/model` mappen innehåller `aemAssetEvent.js` och `errors.js` filer, som används av åtgärden för att analysera den mottagna händelsen och hantera fel.
 
-- The `src/dx-excshell-1/actions/generic/index.js` filen använder de ovannämnda modulerna för att ordna hämtning och uppdatering av metadata.
+- The `src/dx-excshell-1/actions/generic/index.js` filen använder de tidigare nämnda modulerna för att ordna hämtning och uppdatering av metadata.
 
   ```javascript
   ...
@@ -277,7 +281,7 @@ $ aio app deploy
 
 Följ de här stegen för att verifiera integreringen mellan AEM Assets och PIM:
 
-- Om du vill visa metadata som tillhandahålls av PIM-modellen, som SKU, och leverantörsnamn, skapar du metadatamatchemat i AEM Assets, se [Metadata-scheman](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html) som visar metadataegenskaperna SKU och leverantörsnamn.
+- Om du vill visa metadata som tillhandahålls av PIM-modellen, som SKU, och leverantörsnamn, skapar du metadatamatchemat i AEM Assets, se [Metadata-schema](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html) som visar metadataegenskaperna SKU och leverantörsnamn.
 
 - Överför en resurs i AEM Author-tjänsten och verifiera metadatauppdateringen.
 
