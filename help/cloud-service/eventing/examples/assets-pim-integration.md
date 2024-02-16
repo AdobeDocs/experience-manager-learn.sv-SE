@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f150a2517c4cafe55917e1aa50dca297c9bb3bc5
+source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,19 @@ ht-degree: 0%
 
 # AEM Assets event for PIM integration
 
-Lär dig integrera AEM Assets- och PIM-system (Product Information Management) för att uppdatera metadata för mediefiler **använda AEM**. När du får en AEM Assets-händelse kan metadata för resursen uppdateras i AEM, PIM eller båda systemen, baserat på affärskraven. I det här exemplet ska vi dock uppdatera metadata för resursen i AEM.
+** Obs! I den här självstudiekursen används experimentella AEM as a Cloud Service API:er.  För att få tillgång till dessa API:er måste du godkänna ett förhandsversionsavtal och ha dessa API:er manuellt aktiverade av Adobe Engineering.  Kontakta supporten i Adobe för att få åtkomst. **
 
-Så här kör du uppdateringen av metadata för resursen **kod utanför AEM**, [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) en serverlös plattform används. Händelsebearbetningsflödet är följande:
+Lär dig hur du integrerar AEM Assets med ett tredjepartssystem, t.ex. ett PIM-system (Product Information Management) eller PLM-system, för att uppdatera metadata för mediefiler **använda AEM I/O-händelser**. När du får en AEM Assets-händelse kan metadata för resursen uppdateras i AEM, PIM eller båda systemen, baserat på företagets behov. I det här exemplet visas dock att metadata för resursen uppdateras i AEM.
+
+Så här kör du uppdateringen av metadata för resursen **kod utanför AEM**, kommer vi att utnyttja [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/), en serverlös plattform. Händelsebearbetningsflödet är följande:
 
 ![AEM Assets event for PIM integration](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. Tjänsten AEM Author utlöser en _Resursbearbetning slutförd_ händelse när en överföring av en resurs har slutförts.
+1. Tjänsten AEM Author utlöser en _Resursbearbetning slutförd_ händelse när en överföring av tillgångar har slutförts och alla processer för bearbetning av tillgångar har slutförts.  Om du väntar på att bearbetningen ska slutföras ser du till att all körklar bearbetning, till exempel metadataextrahering, har slutförts innan vi fortsätter.
 1. Händelsen skickas till [Adobe I/O Events](https://developer.adobe.com/events/) service.
 1. Tjänsten Adobe I/O Events skickar händelsen till [Adobe I/O Runtime Action](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) för bearbetning.
-1. Adobe I/O Runtime Action anropar det pIM-API:t som är dockat för att hämta ytterligare metadata som SKU, leverantörsinformation.
-1. Ytterligare metadata för PIM-filen uppdateras sedan i AEM Assets med [Resursförfattar-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+1. Adobe I/O Runtime Action anropar PIM-systemets API för att hämta ytterligare metadata som SKU, leverantörsinformation eller annan information.
+1. Ytterligare metadata som hämtas från PIM uppdateras sedan i AEM Assets med [Resursförfattar-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
 
 ## Förutsättningar
 
@@ -47,22 +49,22 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 Utvecklingsstegen på hög nivå är följande:
 
-1. [Skapa projekt i Adobe Developer Console (ADC)](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
-1. [Initiera projekt för lokal utveckling](./runtime-action.md#initialize-project-for-local-development)
-1. Konfigurera projekt i ADC
-1. Konfigurera AEM Author Service för att aktivera ADC-projektkommunikation
-1. Utveckla körningsåtgärd som organiserar hämtning och uppdatering av metadata
-1. Överför en resurs i AEM Author-tjänsten och verifiera metadatauppdatering
+1. [Skapa ett projekt i Adobe Developer Console (ADC)](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
+1. [Initiera projektet för lokal utveckling](./runtime-action.md#initialize-project-for-local-development)
+1. Konfigurera projektet i ADC
+1. Konfigurera AEM Author-tjänsten för att aktivera ADC-projektkommunikation
+1. Utveckla en körningsåtgärd som hanterar hämtning och uppdatering av metadata
+1. Överför en resurs till AEM Author och verifiera att metadata har uppdaterats
 
-Detaljerade steg för 1-2 finns i [Adobe I/O Runtime Action and AEM Events](./runtime-action.md#) och för 3-6, se följande avsnitt.
+Mer information om steg 1-2 finns i [Adobe I/O Runtime Action and AEM Events](./runtime-action.md#) och för steg 3-6, se följande avsnitt.
 
-### Konfigurera projekt i Adobe Developer Console (ADC)
+### Konfigurera projektet i Adobe Developer Console (ADC)
 
 Om du vill ta emot AEM Assets Events och köra Adobe I/O Runtime Action som skapades i föregående steg konfigurerar du projektet i ADC.
 
 - I ADC navigerar du till [projekt](https://developer.adobe.com/console/projects). Välj `Stage` arbetsytan, det är här som körningsåtgärden distribuerades.
 
-- Klicka **Lägg till tjänst** knapp och markera **Händelse** alternativ. I **Lägg till händelser** dialogruta, välja **Experience Cloud** > **AEM Assets** och klicka **Nästa**. Följ ytterligare konfigurationssteg, välj AEMCS-instans, _Resursbearbetning slutförd_ händelse, autentiseringstyp för OAuth Server-till-Server och annan information.
+- Klicka på **Lägg till tjänst** och väljer **Händelse** alternativ. I **Lägg till händelser** dialogruta, välja **Experience Cloud** > **AEM Assets** och klicka **Nästa**. Följ ytterligare konfigurationssteg, välj AEMCS-instans, _Resursbearbetning slutförd_ händelse, autentiseringstyp för OAuth Server-till-Server och annan information.
 
   ![AEM Assets Event - händelsen add](../assets/examples/assets-pim-integration/add-aem-assets-event.png)
 
@@ -70,13 +72,13 @@ Om du vill ta emot AEM Assets Events och köra Adobe I/O Runtime Action som skap
 
   ![AEM Assets Event - ta emot händelse](../assets/examples/assets-pim-integration/receive-aem-assets-event.png)
 
-- Klicka på samma sätt **Lägg till tjänst** knapp och markera **API** alternativ. I **Lägg till ett API** modal, välj **Experience Cloud** > **AEM AS A CLOUD SERVICE API** och klicka **Nästa**.
+- Klicka på samma sätt på **Lägg till tjänst** och väljer **API** alternativ. I **Lägg till ett API** modal, välj **Experience Cloud** > **AEM AS A CLOUD SERVICE API** och klicka **Nästa**.
 
   ![Lägg till AEM as a Cloud Service API - Konfigurera projekt](../assets/examples/assets-pim-integration/add-aem-api.png)
 
 - Välj sedan **OAuth Server-till-server** för autentiseringstyp och klicka **Nästa**.
 
-- Välj sedan **AEM administratörer-XXX** produktprofil och klicka på **Spara konfigurerat API**. För att få tillgång till detaljerade funktioner och behörigheter måste den valda produktprofilen associeras med AEM Assets-händelsen som skapar AEMCS-miljön.
+- Välj sedan **AEM administratörer-XXX** produktprofil och klicka på **Spara konfigurerat API**. Om du vill uppdatera resursen i fråga måste den valda produktprofilen associeras med den AEM Assets-miljö som händelsen skapas från och ha tillräcklig tillgång till för att uppdatera resurserna där.
 
   ![Lägg till AEM as a Cloud Service API - Konfigurera projekt](../assets/examples/assets-pim-integration/add-aem-api-product-profile-select.png)
 
@@ -104,7 +106,7 @@ Om du vill hämta och uppdatera metadata börjar du med att uppdatera det automa
 
 Se bifogad fil [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) för hela koden och de viktigaste filerna markeras i avsnittet nedan.
 
-- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` filen gör PIM API-anropet till en dummy för att hämta ytterligare metadata som SKU och leverantörsnamn.
+- The `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` filen gör PIM API-anropet till en dummy för att hämta ytterligare metadata som SKU och leverantörsnamn.  Den här filen används för demoändamål.  När du har arbetsflödet från början till slut ersätter du den här funktionen med ett anrop till ditt riktiga PIM-system för att hämta metadata för resursen.
 
   ```javascript
   /**
@@ -285,7 +287,7 @@ Följ de här stegen för att verifiera integreringen mellan AEM Assets och PIM:
 
 Synkronisering av metadata för tillgångar mellan AEM och andra system som PIM krävs ofta i företaget. AEM Eventing kan man uppnå sådana krav.
 
-- Metadatakoden för resursen körs utanför AEM, vilket undviker belastningen på AEM Author-tjänsten och därmed händelsestyrd arkitektur som skalas oberoende av varandra.
+- Koden för hämtning av metadata om mediematerial körs utanför AEM, vilket undviker belastningen på AEM Author-tjänsten och därmed händelsestyrd arkitektur som skalas oberoende av varandra.
 - Det nya API:t för Assets Author används för att uppdatera metadata för resurser i AEM.
 - API-autentiseringen använder OAuth server-till-server (även klientens autentiseringsflöde), se [Implementeringshandbok för OAuth Server-till-Server-autentiseringsuppgifter](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - I stället för Adobe I/O Runtime Actions kan andra webhooks eller Amazon EventBridge användas för att ta emot händelsen AEM Assets och bearbeta metadatauppdateringen.
