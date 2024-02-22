@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -99,11 +99,27 @@ Dispatcher har ett konfigurationsavsnitt i sin servergruppsfil:
 }
 ```
 
-Den här konfigurationen anger för Dispatcher att hämta den här URL:en från den AEM instansen som den skickar var 300:e sekund för att hämta listan över objekt som vi vill tillåta igenom.
+The `/delay` parametern, mätt i sekunder, fungerar inte med ett fast intervall utan i stället med en villkorsbaserad kontroll. Dispatcher utvärderar ändringstidsstämpeln för `/file` (som lagrar listan över kända URL:er för immunitet) när en begäran om en URL som inte finns med tas emot. The `/file` kommer inte att uppdateras om tidsskillnaden mellan den aktuella tidpunkten och `/file`Den senaste ändringen är mindre än `/delay` varaktighet. Uppdaterar `/file` inträffar under två förhållanden:
+
+1. Den inkommande begäran är för en URL som inte är cachelagrad eller listad i `/file`.
+1. Minst `/delay` sekunder har gått sedan `/file` uppdaterades senast.
+
+Den här mekanismen är utformad för att skydda mot DoS-attacker (Denial of Service) som annars skulle kunna överbelasta Dispatcher med förfrågningar och utnyttja Vanity URL:er.
+
+I enklare termer är `/file` som innehåller mål-URL:er uppdateras bara om en begäran kommer fram för en URL som inte redan finns i `/file` och om `/file`Den senaste ändringen var längre än den `/delay` punkt.
+
+Så här utlöser du en uppdatering av `/file`kan du begära en URL som inte finns efter att du har säkerställt att det obligatoriska `/delay` tiden har gått sedan den senaste uppdateringen. Exempel-URL:er för detta ändamål är:
+
+- `https://dispatcher-host-name.com/this-vanity-url-does-not-exist`
+- `https://dispatcher-host-name.com/please-hand-me-that-planet-maestro`
+- `https://dispatcher-host-name.com/random-vanity-url`
+
+På det här sättet måste Dispatcher uppdatera `/file`, förutsatt att det angivna `/delay` intervallet har gått sedan den senaste ändringen.
 
 Cacheminnet för svaret lagras i `/file` argument så i det här exemplet `/tmp/vanity_urls`
 
 Så om du besöker den AEM instansen på URI:n ser du vad den hämtar:
+
 ![skärmbild av innehållet som återges från /libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
 Det är bokstavligen en lista, superenkel
