@@ -4,7 +4,7 @@ description: Med hjälp av den tredje säsongen kan du lära dig mer om AEM Edge
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: f2dceed935f563e83092f8e14133746f4126a212
+source-git-commit: 8a88caeb8d894eb281321fc0b28fd41621c5c8db
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             <div>
                 <a href="./season-3/cloud5-rum.md">
                 <strong>Real User Monitoring (RUM)</strong></a>        
-                <br/><em>med James Talbot och Varun Mitra, AEM Engineering</em>
+                <br/><em>med James Talbot och Damian Langsweirdt, AEM Engineering</em>
             </div>
             <p>
                 <br/>
