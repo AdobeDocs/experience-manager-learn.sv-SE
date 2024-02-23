@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 266
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -309,9 +309,8 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 Nu läser vi bara in webbservertjänsten igen och använder vår nya domän!
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Observera att vi bara ändrade de delar vi behövde för att ändra och utnyttja den befintliga inkluderings- och koden som medföljde konfigurationsfilerna för baslinjen.  Vi behöver bara dra slutsatser om det vi behöver ändra.  Gör det enklare och gör att vi kan underhålla mindre kod
-</div>
+>[!NOTE]
+>
+>Observera att vi bara ändrade de delar vi behövde för att ändra och utnyttja den befintliga inkluderings- och koden som medföljde konfigurationsfilerna för baslinjen.  Vi behöver bara dra slutsatser om det vi behöver ändra.  Gör det enklare och gör att vi kan underhålla mindre kod
 
 [Nästa -> Sändningshälsokontroll](./health-check.md)

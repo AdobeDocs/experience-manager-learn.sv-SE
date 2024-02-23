@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 653
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2225'
 ht-degree: 0%
 
 ---
@@ -133,16 +133,17 @@ Om inställningen för statusfilnivå är för hög kommer varje justeringsbegä
 
 Om den här filnivån anges för låg kan det medföra att en rensningsbegäran rensas mer än vad som var tänkt.  Detta skulle i sin tur få cachen att krascha oftare med färre begäranden som skickas från cachen och kan orsaka prestandaproblem.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
+>[!BEGINSHADEBOX &quot;Anteckning&quot;]
 
-Ange `statfilelevel` på en rimlig nivå.  Titta på mappstrukturen och se till att den är konfigurerad så att du kan utföra korta genomgångar utan att behöva gå igenom för många kataloger.   Testa det och se till att det passar dina behov under ett prestandatest av systemet.
+Ange `statfilelevel` på en rimlig nivå. Titta på mappstrukturen och se till att den är konfigurerad så att du kan utföra korta genomgångar utan att behöva gå igenom för många kataloger. Testa det och se till att det passar dina behov under ett prestandatest av systemet.
 
-Ett bra exempel är en webbplats som har stöd för språk.  Det typiska innehållsträdet skulle ha följande kataloger
+Ett bra exempel är en webbplats som har stöd för språk. Det typiska innehållsträdet skulle ha följande kataloger
 
 `/content/brand1/en/us/`
 
-I det här exemplet använder du en inställning för statusfilnivå på 4.  Detta garanterar när du tömmer innehåll som finns under <b>`us`</b> som inte gör att även språkmapparna blir tömda.
-</div>
+I det här exemplet använder du en inställning för statusfilnivå på 4. Detta garanterar när du tömmer innehåll som finns under **`us`** som inte gör att även språkmapparna blir tömda.
+
+>[!ENDSHADEBOX]
 
 ### STÄLL FILTIDSSTÄMPELHANTERING
 
@@ -227,11 +228,11 @@ Den här konfigurationsposten finns i följande avsnitt i servergruppsfilen:
 
 Du anger i vilken katalog du vill att Dispatcher ska fylla i och hantera som en cachekatalog.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Den här katalogen bör matcha dokumentets rotinställning för Apache för den domän som webbservern är konfigurerad att använda.
-
-Att ha kapslade dokumentrotmappar per servergrupp som innehåller en undermapp till dokumentroten i Apache är en hemsk idé av många anledningar.
-</div>
+>[!NOTE]
+>
+>Den här katalogen bör matcha dokumentets rotinställning för Apache för den domän som webbservern är konfigurerad att använda.
+>
+>Att ha kapslade dokumentrotmappar per servergrupp som innehåller en undermapp till dokumentroten i Apache är en hemsk idé av många anledningar.
 
 ### Statusfilnivå
 
@@ -275,13 +276,11 @@ Den här inställningen mäter hur djupt `.stat` filer måste genereras när en 
    - `/var/www/html/content/damn/brand1/en/.stat`
    - `/var/www/html/content/damn/brand1/en/us/.stat`
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Kom ihåg att när tidsstämpelhandskakningen inträffar så ser den ut som närmast `.stat` -fil.
-
-har `.stat` filnivå 0 och en startfil endast på `/var/www/html/.stat` betyder det innehåll som lever under `/var/www/html/content/dam/brand1/en/us/` skulle leta efter närmaste `.stat` och bläddra mellan fem mappar för att hitta den enda `.stat` som finns på nivå 0 och jämför datum med det.  Att en tömning vid den nivån gör i princip alla cachelagrade objekt ogiltiga.
-</div>
+>[!NOTE]
+>
+>Kom ihåg att när tidsstämpelhandskakningen inträffar så ser den ut som närmast `.stat` -fil.
+>
+>Med `.stat` filnivå 0 och en startfil endast på `/var/www/html/.stat` betyder det innehåll som lever under `/var/www/html/content/dam/brand1/en/us/` skulle leta efter närmaste `.stat` och bläddra mellan fem mappar för att hitta den enda `.stat` som finns på nivå 0 och jämför datum med det. Att en tömning vid den nivån gör i princip alla cachelagrade objekt ogiltiga.
 
 ### Invalidering tillåten
 

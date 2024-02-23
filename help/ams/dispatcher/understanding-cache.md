@@ -9,9 +9,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 491
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -35,12 +35,11 @@ Vi använder följande standardcachekataloger i våra baslinjeinstallationer
 
 När varje begäran går igenom Dispatcher följer förfrågningarna de konfigurerade reglerna för att behålla en lokalt cachelagrad version som svar på giltiga objekt
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Vi håller avsiktligt den publicerade arbetsbelastningen åtskild från författarens arbetsbelastning, eftersom när Apache söker efter en fil i DocumentRoot så vet det inte vilken AEM den kommer från. Så även om du har inaktiverat cache i författargruppen, och om författarens DocumentRoot är samma som utgivaren, kommer den att leverera filer från cachen när den finns. Det innebär att du kan leverera författarfiler från publicerade cacheminnen och skapa en riktigt fantastisk mixningsupplevelse för besökarna.
-
-Att ha separata DocumentRoot-kataloger för olika publicerat innehåll är också en dålig idé. Du måste skapa flera omcachelagrade objekt som inte skiljer sig åt mellan platser som clientlibs, och du måste också konfigurera en agent för att tömma replikeringen för varje DocumentRoot som du konfigurerar. Öka mängden spolning över huvudet när varje sida aktiveras. Använd namnutrymmet för filer och deras fullständiga cachelagrade sökvägar för att undvika flera DocumentRoot-filer för publicerade webbplatser.
-</div>
+>[!NOTE]
+>
+>Vi håller avsiktligt den publicerade arbetsbelastningen åtskild från författarens arbetsbelastning, eftersom när Apache söker efter en fil i DocumentRoot så vet det inte vilken AEM den kommer från. Så även om du har inaktiverat cache i författargruppen, och om författarens DocumentRoot är samma som utgivaren, kommer den att leverera filer från cachen när den finns. Det innebär att du kan leverera författarfiler från publicerade cacheminnen och skapa en riktigt fantastisk mixningsupplevelse för besökarna.
+>
+>Att ha separata DocumentRoot-kataloger för olika publicerat innehåll är också en dålig idé. Du måste skapa flera omcachelagrade objekt som inte skiljer sig åt mellan platser som clientlibs, och du måste också konfigurera en agent för att tömma replikeringen för varje DocumentRoot som du konfigurerar. Öka mängden spolning över huvudet när varje sida aktiveras. Använd namnutrymmet för filer och deras fullständiga cachelagrade sökvägar för att undvika flera DocumentRoot-filer för publicerade webbplatser.
 
 ## Konfigurationsfiler
 
@@ -95,10 +94,9 @@ Här är en basförfattare `/cache {` del av vår författarfil:
 
 Det viktiga att notera här är att `/docroot` är inställt på cachekatalogen för författaren.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Se till att `DocumentRoot` i författarens `.vhost` filen matchar servergrupperna `/docroot` parameter
-</div>
+>[!NOTE]
+>
+>Se till att `DocumentRoot` i författarens `.vhost` filen matchar servergrupperna `/docroot` parameter
 
 Cachereglerna innehåller en -programsats som innehåller filen `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` som innehåller dessa regler:
 
@@ -136,20 +134,17 @@ Cachereglerna innehåller en -programsats som innehåller filen `/etc/httpd/conf
 I ett författarscenario ändras innehållet hela tiden och i rätt syfte. Du vill bara cachelagra objekt som inte ändras så ofta.
 Vi har regler att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Kom ihåg att dessa regler även cachelagrar <b>`/apps`</b> det är här som anpassad programkod finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM blir det också ovanligt och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
-</div>
-
+>[!NOTE]
+>
+>Kom ihåg att dessa regler även cachelagrar <b>`/apps`</b> det är här som anpassad programkod finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM blir det också ovanligt och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
 
 ## ServeOnStale (AKA-server vid föråldrad/SOS)
 
 Det här är en av dessa pärlor i Dispatcher. Om utgivaren är under belastning eller inte svarar kommer den oftast att generera en http-svarskod på 502 eller 503. Om det händer och den här funktionen är aktiverad instrueras Dispatcher att ändå leverera det innehåll som finns kvar i cachen som en bra åtgärd, även om det inte är en ny kopia. Det är bättre att skicka något om du har det, i stället för att bara visa ett felmeddelande som inte har någon funktionalitet.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Tänk på att om utgivarrenderaren har en sockettimeout eller ett felmeddelande om 500 kommer den här funktionen inte att aktiveras. Om AEM bara inte kan nås händer ingenting
-</div>
+>[!NOTE]
+>
+>Tänk på att om utgivarrenderaren har en sockettimeout eller ett felmeddelande om 500 kommer den här funktionen inte att aktiveras. Om AEM bara inte kan nås händer ingenting
 
 Den här inställningen kan ställas in i vilken grupp som helst, men det är bara bra att använda den i publiceringsservergruppens filer. Här följer ett syntaxexempel på funktionen som är aktiverad i en servergruppsfil:
 
@@ -160,11 +155,9 @@ Den här inställningen kan ställas in i vilken grupp som helst, men det är ba
 
 ## Cachelagra sidor med frågeparametrar/argument
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Ett av de normala beteendena i modulen Dispatcher är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`) går den inte att cachelagra filen och direkt till AEM. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
-</div>
-<br/>
+>[!NOTE]
+>
+>Ett av de normala beteendena i modulen Dispatcher är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`) går den inte att cachelagra filen och direkt till AEM. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
 
 Se det här [artikel](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) visa hur viktiga frågeparametrar kan påverka webbplatsens prestanda.
 
@@ -172,7 +165,7 @@ Som standard vill du ange `ignoreUrlParams` regler som tillåter `*`.  Betyder a
 
 Här är ett exempel där någon har skapat en mekanism för djuplänksreferens för sociala medier som använder argumentreferensen i URI:n för att ta reda på var personen kom ifrån.
 
-<b>Okänt exempel:</b>
+*Okänt exempel:*
 
 - https://www.we-retail.com/home.html?reference=android
 - https://www.we-retail.com/home.html?reference=facebook
@@ -253,11 +246,9 @@ Exempel:
 
 Sidor som använder frågeparametrar via Javascript fungerar fortfarande helt och hållet utan parametrar i den här inställningen.  Eftersom de inte ändrar HTML-filen i vila.  De använder javascript för att uppdatera webbläsarnas körtider i den lokala webbläsaren.  Det innebär att om du använder frågeparametrarna med javascript är det högst troligt att du kan ignorera den här parametern för sidcachning.  Tillåt att den sidan cache-lagras och utnyttja prestandaförbättringarna!
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Att hålla koll på dessa sidor kräver viss uppladdning men är väl värt prestandavinster.  Du kan be din CSE att köra en rapport om webbplatstrafiken för att ge dig en lista över alla sidor som använder frågeparametrar under de senaste 90 dagarna så att du vet vilka sidor du ska titta på och vilka frågeparametrar du inte ska ignorera
-</div>
-<br/>
+>[!NOTE]
+>
+>Att hålla koll på dessa sidor kräver viss uppladdning men är väl värt prestandavinster.  Du kan be din CSE att köra en rapport om webbplatstrafiken för att ge dig en lista över alla sidor som använder frågeparametrar under de senaste 90 dagarna så att du vet vilka sidor du ska titta på och vilka frågeparametrar du inte ska ignorera
 
 ## Cachelagra svarsrubriker
 
@@ -289,11 +280,9 @@ Här är ett exempel på en servergrupp med de rubriker som ska cachelagras angi
 
 I det här exemplet har de konfigurerat AEM för att hantera rubriker som CDN söker efter för att veta när det ska ogiltigförklaras dess cache. Betydelsen är nu att AEM kan avgöra vilka filer som blir ogiltiga baserat på rubriker.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Kom ihåg att du inte kan använda reguljära uttryck eller matchning av glob. Det är en litteral lista över de rubriker som ska cachelagras. Placera bara i en lista över de literalrubriker som du vill att de ska cachelagras.
-</div>
-
+>[!NOTE]
+>
+>Kom ihåg att du inte kan använda reguljära uttryck eller matchning av glob. Det är en litteral lista över de rubriker som ska cachelagras. Placera bara i en lista över de literalrubriker som du vill att de ska cachelagras.
 
 ## Förvräng giltighetsperiod automatiskt
 
@@ -325,9 +314,9 @@ Här är ett exempel på funktionen som konfigureras i servergruppens konfigurat
     /enableTTL "1"
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör inte Dispatcher något särskilt här.
-</div>
+>[!NOTE]
+>
+>Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör inte Dispatcher något särskilt här.
 
 ## Regler för cachefilter
 

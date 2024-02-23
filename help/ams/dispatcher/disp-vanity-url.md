@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
-source-git-commit: 0deeaac90e9d181a60b407e17087650e0be1ff28
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -182,9 +182,8 @@ Använd båda metoderna, men här följer råd och kriterier som ska användas n
 - Om vanligheten är en häftklammerslutpunkt som inte ändras ofta och ofta används, ska du använda en `mod_rewrite` regel.
 - Om namnutrymmet vanity (till exempel: `/aboutus`) måste återanvändas för många varumärken i samma AEM och sedan använda omskrivningsregler.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-
-Om du vill använda AEM-funktionen och undvika namnutrymme kan du göra en namnkonvention. Använda vanity-URL:er som är kapslade som `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
-</div>
+>[!NOTE]
+>
+>Om du vill använda AEM-funktionen och undvika namnutrymme kan du göra en namnkonvention. Använda vanity-URL:er som är kapslade som `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
 
 [Nästa -> Vanlig loggning](./common-logs.md)

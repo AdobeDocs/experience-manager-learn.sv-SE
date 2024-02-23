@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -59,10 +59,9 @@ Om du gör någon av de föreslagna metoderna tas felmeddelandet bort från logg
 
 ## Filteravslag
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-De här posterna visas inte alltid, även om det uppstår avslag om loggnivån är för låg. Ställ in den på Info eller debug för att försäkra dig om att du kan se om filtren avvisar förfrågningarna.
-</div>
+>[!NOTE]
+>
+>De här posterna visas inte alltid, även om det uppstår avslag om loggnivån är för låg. Ställ in den på Info eller debug för att försäkra dig om att du kan se om filtren avvisar förfrågningarna.
 
 Exempel på loggpost:
 
@@ -76,10 +75,9 @@ eller:
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>Varning:</b>
-
-Förstå att Dispatcher-reglerna har ställts in för att filtrera bort den begäran. I det här fallet avvisades sidan med avsikt och vi vill inte göra något med det.
-</div>
+>[!CAUTION]
+>
+>Förstå att Dispatcher-reglerna har ställts in för att filtrera bort den begäran. I det här fallet avvisades sidan med avsikt och vi vill inte göra något med det.
 
 Om loggen ser ut så här:
 
@@ -136,9 +134,9 @@ Det innebär att hämtningen från renderingsnivån kontra från cacheminnet mä
 
 För att få så många siffror som möjligt.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Även om du har cacheinställningarna i servergruppsfilen för att cachelagra allt som du kanske tömmer för ofta eller för aggressivt, vilket kan orsaka en lägre procentandel av cacheträffen
-</div>
+>[!NOTE]
+>
+>Även om du har cacheinställningarna i servergruppsfilen för att cachelagra allt som du kanske tömmer för ofta eller för aggressivt, vilket kan orsaka en lägre procentandel av cacheträffen
 
 ## Katalog saknas
 

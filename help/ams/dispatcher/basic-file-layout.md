@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 354
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -59,20 +59,23 @@ När vi följer och följer installationsdesignen/-strukturen får vi följande 
 - Tillåter patchningscykler som stöds fullt ut av operativsystemet utan konflikter eller manuella justeringar
 - Undviker SELinux-överträdelser av felmärkta filkontexter
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-Adobe Managed Services-serverbilder har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis är monterad i "/mnt". Sedan använder vi volymen istället för standardvärdena för följande standardkataloger
+>[!BEGINSHADEBOX &quot;Anteckning&quot;]
+
+Adobe Managed Services-serverbilder har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis monteras i `/mnt`
+Sedan använder vi volymen i stället för standardvärdena för följande standardkataloger
 
 `DocumentRoot`
 - Standard:`/var/www/html`
 - AMS:`/mnt/var/www/html`
 
 `Log Directory`
-- Standard: `/var/log/httpd`
-- AMS: `/mnt/var/log/httpd`
+- Standard: `/var/log/httpd`
+- AMS: `/mnt/var/log/httpd`
 
 Kom ihåg att gamla och nya kataloger mappas tillbaka till den ursprungliga monteringspunkten för att undvika förvirring.
 Att använda en separat volym är inte nödvändigt, men det är värt att notera
-</div>
+
+>[!ENDSHADEBOX]
 
 ## AMS-tillägg
 
@@ -292,9 +295,9 @@ Som det perfekta exemplet när du lägger till modulen Dispatcher i Apache skapa
 LoadModule dispatcher_module modules/mod_dispatcher.so
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Obs!</b>
-vi har inte ändrat några redan befintliga filer som finns i Apache.  Istället lade de bara till våra kataloger i de kataloger de var avsedda att gå.
-</div><br/>
+>[!NOTE]
+>
+>Inga redan befintliga filer som Apache har tillhandahållits ändrades. Istället har vi lagt till våra i katalogerna de ska gå.
 
 Nu använder vi vår modul i vår fil <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> som initierar modulen och läser in den initiala modulspecifika konfigurationsfilen
 
