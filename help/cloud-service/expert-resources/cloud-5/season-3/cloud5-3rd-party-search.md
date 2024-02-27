@@ -2,11 +2,13 @@
 title: Moln 5 - sökning från tredje part
 description: Se hur tredjepartssökning bäst kan integreras i Edge Delivery Services.
 version: Cloud Service
+feature: Edge Delivery Services
+topic: Development
 role: Admin, Developer
 level: Intermediate
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: da8d584e04b5ef375ef5731ea1d5f9e2c0438b2a
+source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%

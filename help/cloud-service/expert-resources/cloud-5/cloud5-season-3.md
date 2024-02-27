@@ -4,9 +4,9 @@ description: Med hjälp av den tredje säsongen kan du lära dig mer om AEM Edge
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: 8a88caeb8d894eb281321fc0b28fd41621c5c8db
+source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,19 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                 Upptäck hur Real User Monitoring (RUM) fungerar med Edge Delivery Services.
             </p>
         </td>   
-         <td>           
-         </td> 
+ <td>
+            <a href="./season-3/cloud5-edge-workers.md">
+                <img alt="Edge-arbetare" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-edge-workers.md">
+                <strong>Edge-arbetare</strong></a>        
+                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>
+                Upptäck hur viktigt det är att jobba med Edge Delivery Services.
+            </p>
+        </td>   
   </tr>  
 </table>
