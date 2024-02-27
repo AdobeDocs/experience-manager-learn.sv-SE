@@ -6,9 +6,9 @@ jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 duration: 490
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -20,27 +20,6 @@ ht-degree: 0%
 Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
-
-<div id="whats-new-section">
-
-## Nyheter
-
-* **[Skydda webbplatser med trafikfilterregler, inklusive WAF-regler (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)**
-  *Lär dig hur du använder trafikfilterregler inklusive WAF-regler för att skydda webbplatser*
-
-* **[Tokenbaserad autentisering (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
-  *Lär dig hur du använder tokenbaserad autentisering för att interagera med AEM as a Cloud Service via HTTP*
-
-* **[Headless GraphQL (självstudiekurs)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
-  *Lär dig hur du kan använda AEM GraphQL API:er för att skapa bättre upplevelser i ett externt program.*
-
-* **[Asset compute metadataarbetare (självstudiekurs)](./asset-compute/advanced/metadata.md)**
-  *Lär dig hur du skriver tillbaka metadata för resurser till AEM från en Asset compute-arbetare*
-
-* **[Utbyggbarhet för Asset compute-mikrotjänster (självstudiekurs)](./asset-compute/overview.md)**
-  *Lär dig hur du utvecklar Asset compute-arbetare för att generera anpassade resursåtergivningar*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

@@ -5,9 +5,9 @@ role: Leader, Architect, Developer, Admin, User
 level: Beginner
 doc-type: Catalog
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,6 @@ ht-degree: 0%
 {{edge-delivery-services}}
 
 Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgängliga för användare av AEM Sites, Assets och Forms.
-
-<div id="whats-new-section">
-
-## Nyheter
-
-* **[Använd AEM (video)](./workflow/use-workflow.md)**
-  *AEM Workflow är ett sätt att samarbeta, hantera och bearbeta innehåll i AEM.*
-
-* **[Förstå Cloud Manager för AEM (video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-  *Med Cloud Manager för AEM är det enkelt att hantera, inspektera och självbetjäna AEM miljöer.*
-
-* **[Använda Cloud Manager CI/CD Pipeline (video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-  *Lär dig hur du använder Cloud Managers CI/CD-pipeline för att säkerställa säker och konsekvent distribution.*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

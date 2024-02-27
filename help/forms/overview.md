@@ -6,9 +6,9 @@ role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 88
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -16,21 +16,6 @@ ht-degree: 0%
 # AEM Forms självstudiekurser och videofilmer {#overview}
 
 Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hantera, publicera och uppdatera komplexa digitala formulär och samtidigt integrera med back-end-processer, affärsregler och data. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Forms
-
-<div id="whats-new-section">
-
-## Nyheter
-
-* **[Hantera felmeddelanden i steget Anropa formulärdatamodelltjänst](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp*
-
-* **[Diagram från flera serier i interaktiva kommunikationsdokument (video)](./interactive-communications/multiseriescharts.md)**
-  *Rita upp mer än en serie i samma diagram. Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen rad, stapel och kolumn.*
-
-* **[Skapa återanvändbara arbetsflödesmodeller](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-  *Skapa arbetsflödesmodeller som inte är kopplade till ett specifikt formulär*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -88,8 +73,6 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 </table>
 
 </div>
-
-
 
 
 ## Ytterligare resurser
