@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
+source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
@@ -26,6 +26,8 @@ ht-degree: 0%
 >I den här självstudien används experimentella AEM as a Cloud Service API:er. För att få tillgång till dessa API:er måste du godkänna ett förhandsavtal för programvara och ha dessa API:er manuellt aktiverade för din miljö av Adobe-tekniker. Kontakta supporten för att få åtkomst till Adobe.
 
 Lär dig hur du integrerar AEM Assets med ett tredjepartssystem, t.ex. ett PIM-system (Product Information Management) eller PLM-system, för att uppdatera metadata för mediefiler **använda AEM I/O-händelser**. När du får en AEM Assets-händelse kan metadata för resursen uppdateras i AEM, PIM eller båda systemen, baserat på företagets behov. I det här exemplet visas dock hur metadata för resursen uppdateras i AEM.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
 Så här kör du uppdateringen av metadata för resursen **kod utanför AEM**, [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/)används en serverfri plattform.
 
