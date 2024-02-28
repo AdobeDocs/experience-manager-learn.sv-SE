@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2009'
 ht-degree: 1%
 
 ---
@@ -276,6 +276,7 @@ ht-degree: 1%
    + [ECMA-skript för att generera PDF med fragment](document-services/using-fragments-in-output-service-watched-folder.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
    + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Generera PDF på baskomponentbaserad formulärinlämning](document-services/generate-pdf-from-core-component-form-submission.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
    + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
