@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1141'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,8 @@ ht-degree: 5%
 + Utvecklar{#developing}
    + Utbyggbarhet{#extensibility}
       + App Builder{#app-builder}
-         + [Generera åtkomsttoken](./developing/extensibility/app-builder/jwt-auth.md)
+         + [Generera JWT-åtkomsttoken](./developing/extensibility/app-builder/jwt-auth.md)
+         + [Generera åtkomsttoken för server-till-server](./developing/extensibility/app-builder/server-to-server-auth.md)
       + Utbyggbarhet för användargränssnitt{#ui}
          + [Ökning](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)

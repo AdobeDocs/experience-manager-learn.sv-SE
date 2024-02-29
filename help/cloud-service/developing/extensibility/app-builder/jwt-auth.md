@@ -1,5 +1,5 @@
 ---
-title: Generera åtkomsttoken i App Builder-åtgärd
+title: Generera JWT-åtkomsttoken i App Builder-åtgärd
 description: Lär dig hur du skapar en åtkomsttoken med JWT-autentiseringsuppgifter som kan användas i en App Builder-åtgärd.
 feature: Developer Tools
 version: Cloud Service
@@ -10,18 +10,18 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 161
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
 
-# Generera åtkomsttoken i App Builder-åtgärd
+# Generera JWT-åtkomsttoken i App Builder-åtgärd
 
 App Builder-åtgärder kan behöva interagera med Adobe-API:er som är kopplade till Adobe Developer Console-projekt, eftersom appen App Builder också är distribuerad.
 
-Detta kan kräva att App Builder-åtgärden genererar en egen åtkomsttoken som är associerad med det önskade Adobe Developer Console-projektet.
+Detta kan kräva att App Builder-åtgärden genererar en egen JWT-åtkomsttoken som är associerad med det önskade Adobe Developer Console-projektet.
 
 >[!IMPORTANT]
 >
