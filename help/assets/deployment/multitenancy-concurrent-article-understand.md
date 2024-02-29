@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 524
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 3b6de935b5f1fb5ee2d0e50372188f1eba7baeaa
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Detta eliminerar inte behovet av att flera team är beroende av och kan uppdater
 
 För att säkerställa att de ändringar som görs i detta kärnpaket inte stör systemets funktion rekommenderar vi att en högre utvecklare eller grupp av utvecklare upprätthåller tillsyn. Ett alternativ är att ha ett enda team som hanterar alla ändringar i det här paketet. Ett annat är att låta team skicka in pull-begäranden som granskas och sammanfogas av dessa resurser. Det är viktigt att en styrningsmodell utformas och godkänns av teamen och att utvecklarna följer den.
 
-## Hantera distributionsomfång  {#managing-deployment-scope}
+## Hantera distributionsomfång {#managing-deployment-scope}
 
 När olika team distribuerar sin kod till samma databas är det viktigt att de inte skriver över varandras ändringar. AEM har en funktion som styr detta när innehållspaket distribueras, filtret. xml-fil. Det är viktigt att det inte finns någon överlappning mellan filtren.  xml-filer, annars kan distributionen av ett team radera ett annat teams tidigare distribution. Se följande exempel på välutformade respektive problematiska filterfiler för att illustrera detta:
 
