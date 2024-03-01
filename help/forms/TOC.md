@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
+source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2032'
 ht-degree: 1%
 
 ---
@@ -285,6 +285,14 @@ ht-degree: 1%
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
    + [Användbara verktygstjänster](document-services/useful-utility-services.md)
++ Forms Designer{#forms-designer}
+   + [Skapa ditt första formulär](forms-designer/create-simple-form.md)
+   + [Skript för formuläret](forms-designer/first-script-designer.md)
+   + [XML-databindning](forms-designer/xml-data-binding.md)
+   + [Databindning](forms-designer/binding-to-mysql-db.md)
+   + [Använda klottra signaturer](forms-designer/scribble-signature-form.md)
+   + [Använda digital signatur](forms-designer/adding-dig-signature-field.md)
+   + [Reader, utökad form](forms-designer/reader-extending-j2ee.md)
 + Interaktiv kommunikation för tryckkanaler
 {#ic-print-channel-tutorial}
    + [1 - Introduktion](ic-print-channel-tutorial/introduction.md)
