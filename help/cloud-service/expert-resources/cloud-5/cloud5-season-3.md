@@ -1,12 +1,12 @@
 ---
 title: Cloud 5 - Årstid 3
-description: Med hjälp av den tredje säsongen kan du lära dig mer om AEM Edge Delivery Service genom djupgående intervjuer med experter som har arbetat med komplicerade projekt
+description: Med hjälp av tjänsten Edge Delivery under den tredje säsongen kan du lära dig mer om AEM genom djupgående intervjuer med experter som har arbetat med komplicerade projekt
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Introduktion
 
-Välkommen till 3:an Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att tillhandahålla användbar information om AEM Edge Delivery-tjänster på 5 minuter eller mindre.
+Välkommen till 3:an Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att tillhandahålla användbar information om AEM Edge Delivery Services på 5 minuter eller mindre.
 
 ## Förslagsruta
 
@@ -56,7 +56,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                 Upptäck hur Real User Monitoring (RUM) fungerar med Edge Delivery Services.
             </p>
         </td>   
- <td>
+        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="Edge-arbetare" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -70,5 +70,21 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                 Upptäck hur viktigt det är att jobba med Edge Delivery Services.
             </p>
         </td>   
-  </tr>  
+    </tr>
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-publish-events.md">
+                <img alt="Publicera, avpublicera händelser i Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-publish-events.md">
+                <strong>Publicera, avpublicera händelser i Edge Delivery Services</strong></a>        
+                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>
+                Utforska händelser som utlöses vid publicering och avpublicering i Edge Delivery Services samt användningsexempel och exempel för att använda dessa händelser.
+            </p>
+        </td>   
+    </tr>  
 </table>
