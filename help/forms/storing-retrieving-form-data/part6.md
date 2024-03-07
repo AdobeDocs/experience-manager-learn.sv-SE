@@ -8,9 +8,9 @@ level: Experienced
 version: 6.4,6.5
 exl-id: f520e7a4-d485-4515-aebc-8371feb324eb
 duration: 67
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Så här testar du den här funktionen på din AEM Forms-instans:
 
 | Egenskapsnamn | Värde |
 | ------------------------|---------------------------------------|
-| Namn på datakälla | SparaOchFortsätt |
-| JDBC-drivrutinsklass | com.mysql.cj.jdbc.Driver |
-| JDBC-anslutnings-URI | jdbc:mysql://localhost:3306/aemformstutorial |
+| Namn på datakälla | `SaveAndContinue` |
+| JDBC-drivrutinsklass | `com.mysql.cj.jdbc.Driver` |
+| JDBC-anslutnings-URI | `jdbc:mysql://localhost:3306/aemformstutorial` |
 
 * Öppna [Adaptiv form](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
 * Fyll i viss information och klicka på knappen &quot;Spara och fortsätt senare&quot;.

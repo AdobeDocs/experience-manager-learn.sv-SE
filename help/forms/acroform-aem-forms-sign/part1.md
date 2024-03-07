@@ -7,9 +7,9 @@ version: 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 156
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 
 >[!NOTE]
 >
->Om du vill skicka det ifyllbara makroformuläret för signering med Acrobat Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **Sig_es_:signer1:signatur**. Det här är syntaxen som Acrobat Sign förstår.
+>Om du vill skicka det ifyllbara makroformuläret för signering med Acrobat Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **`Sig_es_:signer1:signature`**. Det här är syntaxen som Acrobat Sign förstår.
 
 >[!NOTE]
 >

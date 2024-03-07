@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
 duration: 87
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika
 
 | Egenskapsnamn | Egenskapsvärde |   |
 |---------------------|------------------------------------------------------------------------------------|---|
-| Datakällans namn | StoreAndRetrieveAfData |   |
-| JDBC-enhetsklass | jdbc:mysql://localhost:3306/aemformstutorial |   |
-| URI för JDBC-anslutning | jdbc:mysql://localhost:3306/aemformstutorial?serverTimezone=UTC&amp;autoReconnect=true |   |
+| Datakällans namn | `StoreAndRetrieveAfData` |   |
+| JDBC-enhetsklass | `jdbc:mysql://localhost:3306/aemformstutorial` |   |
+| URI för JDBC-anslutning | `jdbc:mysql://localhost:3306/aemformstutorial?serverTimezone=UTC&autoReconnect=true` |   |
 |                     |                                                                                    |   |
 
 

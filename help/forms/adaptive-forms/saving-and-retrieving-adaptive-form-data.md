@@ -8,9 +8,9 @@ type: Tutorial
 version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 691
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ I den här artikeln får du hjälp med att spara och hämta anpassade formulärd
 
 Den poolade DataSource för Apache Sling-anslutningen har konfigurerats för att peka på databasen som ska användas för att lagra data för det adaptiva formuläret. I följande skärmbild visas konfigurationen för min instans. Följande egenskaper kan kopieras och klistras in
 
-* Datakällans namn:aemformstutorial - Det här namnet används i min kod.
+* `Datasource Name:aemformstutorial` - Det här namnet används i min kod.
 
-* JDBC-drivrutinsklass:com.mysql.jdbc.Driver
+* `JDBC Driver Class:com.mysql.jdbc.Driver`
 
-* URL för JDBC-anslutning:jdbc:mysql://localhost:3306/aemformstutorial
+* `JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial`
 
 ![anslutningpool](assets/storingdata.PNG)
 

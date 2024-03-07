@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 335
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 
 ### Console.json-filen saknas i Asset compute-projektet{#missing-console-json}
 
-+ __Fel:__ Fel: Nödvändiga filer saknas vid verifiering (../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) vid async setupAssetCompute (../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __Fel:__ Fel: Nödvändiga filer saknas vid validering (`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`) vid async setupAssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)
 + __Orsak:__ The `console.json` filen saknas i roten av Asset compute-projektet
 + __Upplösning:__ Ladda ned en ny `console.json` från ditt Adobe I/O-projekt
    1. I console.adobe.io öppnar du det Adobe I/O-projekt som Asset compute har konfigurerats att använda
