@@ -11,15 +11,19 @@ duration: 128
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15053
 thumbnail: 3427620.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+exl-id: ac482951-9941-4c14-95b2-29d274fa610e
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 0%
+source-wordcount: '28'
+ht-degree: 3%
 
 ---
 
-
 # Skapa enkelt formulär med AEM Forms Designer
+
+Introduktion
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
 
 Del 1
 
@@ -28,4 +32,3 @@ Del 1
 Del 2
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
-

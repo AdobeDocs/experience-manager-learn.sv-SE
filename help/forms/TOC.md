@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2034'
 ht-degree: 1%
 
 ---
@@ -220,12 +220,13 @@ ht-degree: 1%
    + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
    + [Arbetsflöde för granskning PDF](offline-mobile-form-submission/part-three.md)
    + [Driftsätt i ditt system](offline-mobile-form-submission/part-four.md)
-+ Frågar skickade data{#querying-submitted-data}
-   + [Introduktion](querying-submitted-data/introduction.md)
-   + [Skapa formulär baserat på JSON-schema](querying-submitted-data/part1.md)
-   + [Lagra skickade data](querying-submitted-data/part2.md)
-   + [Lagra JSON-schemat](querying-submitted-data/part3.md)
-   + [Fråga om skickade data](querying-submitted-data/part4.md)
++ Frågar efter formulärinskickat material{#query-form-submissions}
+   + [Introduktion](query-form-submissions/introduction.md)
+   + [Skapa sökbara fält](query-form-submissions/part1.md)
+   + [Skapa anpassad sändning](query-form-submissions/part2.md)
+   + [Skapa frågegränssnitt](query-form-submissions/part3.md)
+   + [Skriva förifyllningstjänst](query-form-submissions/part4.md)
+   + [Distribuera exemplet](query-form-submissions/part5.md)
 + Visar anpassade tillgångstyper i Forms Portal{#listing-custom-asset-types}
    + [Del1-Registrera anpassade tillgångstyper](listing-custom-asset-types/part1.md)
    + [Del2 - Skapa anpassad mall](listing-custom-asset-types/part2.md)
@@ -286,7 +287,9 @@ ht-degree: 1%
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
    + [Användbara verktygstjänster](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
+   + [Designvy](forms-designer/design-view.md)
    + [Skapa ditt första formulär](forms-designer/create-simple-form.md)
+   + [Skapa formulärmall](forms-designer/creating-form-template.md)
    + [Skript för formuläret](forms-designer/first-script-designer.md)
    + [XML-databindning](forms-designer/xml-data-binding.md)
    + [Databindning](forms-designer/binding-to-mysql-db.md)
