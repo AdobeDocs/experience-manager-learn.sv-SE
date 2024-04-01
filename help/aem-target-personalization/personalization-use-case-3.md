@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
 duration: 165
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ För den här övningen måste följande användare vara involverade och för at
 
 * **AEM**
    * [AEM publiceringsinstans](./implementation.md#getting-aem) som körs på 4503
-   * [AEM integrerat med Adobe Target med Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM integrerat med Adobe Target med taggar](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud har etablerats med [Adobe Target](https://experiencecloud.adobe.com)

@@ -1,6 +1,6 @@
 ---
 title: Läsa in och utlösa ett Target-anrop
-description: Lär dig hur du läser in, skickar parametrar till sidförfrågningar och startar ett Target-anrop från webbplatssidan med en startregel. Sidinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
+description: Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett Target-anrop från din webbplatssida med hjälp av en taggregel.
 feature: Core Components, Adobe Client Data Layer
 version: Cloud Service
 jira: KT-6133
@@ -13,28 +13,28 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 610
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # Läsa in och utlösa ett Target-anrop {#load-fire-target}
 
-Lär dig hur du läser in, skickar parametrar till sidförfrågningar och startar ett Target-anrop från webbplatssidan med en startregel. Webbsidesinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
+Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett Target-anrop från din webbplatssida med hjälp av en taggregel. Webbsidesinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## Inläsningsregel för sida
 
-Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon `Launch Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
+Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon `tags Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
 ![Händelsekonfiguration som visas på sidan och anpassad kod](assets/load-and-fire-target-call.png)
 
-Lägg till en ny i Launch-egenskapen **Händelse** till **Regel**
+Lägg till en ny i taggegenskapen **Händelse** till **Regel**
 
 + __Tillägg:__ Core
 + __Typ av händelse:__ Egen kod
@@ -53,7 +53,7 @@ var pageShownEventHandler = function(coreComponentEvent) {
         // Debug the AEM Component path the show event is associated with
         console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
 
-        // Create the Launch Event object
+        // Create the tags Event object
         var launchEvent = {
             // Include the ID of the AEM Component that triggered the event
             id: coreComponentEvent.eventInfo.path,
@@ -61,14 +61,14 @@ var pageShownEventHandler = function(coreComponentEvent) {
             component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
         };
 
-        //Trigger the Launch Rule, passing in the new `event` object
-        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // Trigger the tags Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other tags data elements
         // i.e `event.component['someKey']`
         trigger(launchEvent);
    }
 }
 
-// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+// With the AEM Core Component event handler, that proxies the event and relevant information to Data Collection, defined above...
 
 // Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-En anpassad funktion definierar `pageShownEventHandler`, och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser Launch Event med den härledda händelseinformationen vid dess nyttolast.
+En anpassad funktion definierar `pageShownEventHandler`, och lyssnar efter händelser som skickas av AEM Core Components, hämtar den relevanta informationen från Core Component, paketerar den i ett händelseobjekt och aktiverar taggen Event med den härledda händelseinformationen vid dess nyttolast.
 
-Startregeln aktiveras med Launch-funktionen `trigger(...)` funktion som __endast__ som är tillgängliga från en Regels egen kodfragmentsdefinition för händelsen.
+Taggregeln aktiveras med hjälp av taggarna `trigger(...)` funktion som __endast__ som är tillgängliga från en Regels egen kodfragmentsdefinition för händelsen.
 
-The `trigger(...)` funktionen tar ett händelseobjekt som en parameter som i sin tur visas i Launch Data Elements av ett annat reserverat namn i Launch med namnet `event`. Data Elements i Launch kan nu referera till data från det här händelseobjektet från `event` objekt med syntax som `event.component['someKey']`.
+The `trigger(...)` funktionen tar ett händelseobjekt som en parameter som i sin tur visas i taggar som dataelement, med ett annat reserverat namn i taggar som heter `event`. Dataelement i taggar kan nu referera till data från det här händelseobjektet från `event` objekt med syntax som `event.component['someKey']`.
 
-If `trigger(...)` används utanför kontexten för händelsetypen Custom Code (t.ex. i en Action), JavaScript-felet `trigger is undefined` genereras på den webbplats som är integrerad med Launch-egenskapen.
+If `trigger(...)` används utanför kontexten för händelsetypen Custom Code (t.ex. i en Action), JavaScript-felet `trigger is undefined` genereras på den webbplats som är integrerad med taggegenskapen.
 
 
 ### Dataelement
 
 ![Dataelement](assets/data-elements.png)
 
-Adobe Launch Data Elements mappar data från händelseobjektet [utlöses i den anpassade händelsen Visa sida](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
+Taggar dataelement mappar data från händelseobjektet [utlöses i den anpassade händelsen Visa sida](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
 
 #### Dataelement för sid-ID
 

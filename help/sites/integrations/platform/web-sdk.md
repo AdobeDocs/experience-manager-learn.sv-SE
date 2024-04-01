@@ -14,9 +14,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ I **Experience Platform**:
 + Åtkomst till **Scheman** under Datahantering
 + Åtkomst till **Datauppsättningar** under Datahantering
 + Åtkomst till **Datastreams** under Datainsamling
-+ Åtkomst till **Taggar** (tidigare Launch) under Datainsamling
++ Åtkomst till **Taggar** under Datainsamling
 
 Om du inte har de behörigheter som krävs använder systemadministratören [Adobe Admin Console](https://adminconsole.adobe.com/) kan ge nödvändiga behörigheter.
 
@@ -75,7 +75,7 @@ Bekanta dig med begreppet Datastreams och relaterade ämnen som datastyrning och
 
 ## Skapa tagg, egenskap - Experience Platform
 
-Lär dig hur du skapar en taggegenskap (tidigare kallad Launch) i Experience Platform för att lägga till JavaScript-biblioteket för Web SDK på WKND-webbplatsen. Den nyligen definierade taggegenskapen har följande resurser:
+Lär dig hur du skapar en taggegenskap i Experience Platform för att lägga till JavaScript-biblioteket för Web SDK på WKND-webbplatsen. Den nyligen definierade taggegenskapen har följande resurser:
 
 + Taggtillägg: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) och [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + Dataelement: Dataelement av anpassad kodtyp som extraherar sidnamn, webbplatsavsnitt och värdnamn med hjälp av WKND-platsens Adobe-klientdatalager. XDM-objektets datatypselement som överensstämmer med det nya WKND XDM-schemabygget som skapades tidigare [Skapa XDM-schema](#create-xdm-schema---experience-platform) steg.
@@ -139,26 +139,26 @@ När du skapar och publicerar taggbiblioteket med **Publiceringsflöde** kan du 
   var pageShownEventHandler = function(evt) {
   // defensive coding to avoid a null pointer exception
   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-      //trigger Launch Rule and pass event
+      // trigger tags Rule and pass event
       console.debug("cmp:show event: " + evt.eventInfo.path);
       var event = {
-          //include the path of the component that triggered the event
+          // include the path of the component that triggered the event
           path: evt.eventInfo.path,
-          //get the state of the component that triggered the event
+          // get the state of the component that triggered the event
           component: window.adobeDataLayer.getState(evt.eventInfo.path)
       };
   
-      //Trigger the Launch Rule, passing in the new 'event' object
-      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // Trigger the tags Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other tags data elements
       // i.e 'event.component['someKey']'
       trigger(event);
       }
   }
   
-  //set the namespace to avoid a potential race condition
+  // set the namespace to avoid a potential race condition
   window.adobeDataLayer = window.adobeDataLayer || [];
   
-  //push the event listener for cmp:show into the data layer
+  // push the event listener for cmp:show into the data layer
   window.adobeDataLayer.push(function (dl) {
       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
       dl.addEventListener("cmp:show", pageShownEventHandler);
@@ -174,9 +174,9 @@ Mer information om hur du integrerar AEM med Adobe Client Data Layer finns i [An
 
 ## Koppla tagg-egenskap till AEM
 
-Lär dig länka den nyligen skapade taggegenskapen till AEM via Adobe IMS och Adobe Launch Configuration i AEM. När en AEM as a Cloud Service miljö är etablerad genereras flera Adobe IMS-konfigurationer av det tekniska kontot automatiskt, inklusive Adobe Launch. För AEM 6.5 måste du dock konfigurera en manuellt.
+Lär dig hur du länkar den nyligen skapade taggegenskapen till AEM via Adobe IMS och taggar i Adobe Experience Platform Configuration i AEM. När en AEM as a Cloud Service miljö är etablerad genereras flera Adobe IMS-konfigurationer för tekniskt konto automatiskt, inklusive taggar. För AEM 6.5 måste du dock konfigurera en manuellt.
 
-När du har länkat taggegenskapen kan WKND-webbplatsen läsa in taggegenskapens JavaScript-bibliotek på webbsidorna med molntjänstkonfigurationen för Adobe Launch.
+När du har länkat taggegenskapen kan WKND-webbplatsen läsa in taggegenskapens JavaScript-bibliotek till webbsidorna med hjälp av taggarna i Adobe Experience Platform molntjänstkonfiguration.
 
 ### Verifiera inläsning av taggegenskap på WKND
 

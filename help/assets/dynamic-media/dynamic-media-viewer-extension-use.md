@@ -1,6 +1,6 @@
 ---
-title: Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch
-description: Med Dynamic Media Viewers-tillägget för Adobe Launch, tillsammans med versionen av Dynamic Media Viewers 5.13, kan kunder som använder Dynamic Media, Adobe Analytics och Adobe Launch använda händelser och data som är specifika för Dynamic Media Viewers i sin Adobe Launch-konfiguration.
+title: Använda Dynamic Media Viewer med Adobe Analytics och taggar
+description: Med tillägget Dynamic Media Viewer för taggar, tillsammans med versionen av Dynamic Media Viewer 5.13, kan kunder som har Dynamic Media, Adobe Analytics och taggar använda händelser och data som är specifika för Dynamic Media Viewer i sin taggkonfiguration.
 sub-product: Dynamic Media
 feature: Asset Insights
 version: 6.4, 6.5
@@ -10,14 +10,14 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 duration: 637
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 3%
+source-wordcount: '325'
+ht-degree: 0%
 
 ---
 
-# Använda Dynamic Media Viewer med Adobe Analytics och Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Använda Dynamic Media Viewer med Adobe Analytics och taggar{#using-dynamic-media-viewers-adobe-analytics-tags}
 
 För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen av Dynamic Media Viewer på din webbplats med Dynamic Media Viewer Extension.
 
@@ -25,13 +25,13 @@ För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen
 
 >[!NOTE]
 >
-> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera Adobe Experience Platform Launch med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera taggar med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
 
 I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med visningsprogram från Dynamic Media (5.13), vilket ger mer detaljkontroll över händelsespårningen när ett Dynamic Media Viewer används på en Sites-sida.
 
-Om du redan har AEM Assets och Sites kan du integrera Launch-egenskapen med AEM författarinstans. När startintegreringen är kopplad till webbplatsen kan du lägga till dynamiska mediekomponenter på sidan med händelsespårning för visningsprogram aktiverat.
+Om du redan har AEM Assets och Sites kan du integrera taggegenskapen med AEM författarinstans. När startintegreringen är kopplad till webbplatsen kan du lägga till dynamiska mediekomponenter på sidan med händelsespårning för visningsprogram aktiverat.
 
-För kunder som bara har AEM Assets eller Dynamic Media Classic kan användare hämta inbäddningskod för ett visningsprogram och lägga till den på sidan. Det går sedan att lägga till skriptbibliotek för att starta dem manuellt på sidan för att spåra visningsprogrammets händelser.
+För kunder som bara har AEM Assets eller Dynamic Media Classic kan användare hämta inbäddningskod för ett visningsprogram och lägga till den på sidan. Skriptbibliotek för taggar kan sedan läggas till manuellt på sidan för spårning av visningshändelser.
 
 I följande tabell visas Dynamic Media Viewer-händelser och deras argument som stöds:
 
@@ -166,6 +166,6 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Integrera Adobe Experience Manager med Adobe Launch](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+* [Integrera AEM med taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 * [Köra Adobe Experience Manager i Dynamic Media Scene7-läge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
-* [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)
+* [Integrera Dynamic Media Viewer med Adobe Analytics med taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)

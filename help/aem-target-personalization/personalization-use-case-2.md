@@ -10,14 +10,14 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
 duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-# Personalisering av helwebbsidesupplevelser med Adobe Target
+# Personalisering av kompletta webbsidesupplevelser med Adobe Target
 
 I det föregående kapitlet lärde vi oss att skapa en geoplatsbaserad aktivitet i Adobe Target med innehåll som skapats som Experience Fragments och exporterats från AEM som HTML Offers.
 
@@ -34,7 +34,7 @@ För den här övningen måste följande användare vara involverade och för at
 * **Content Producer/Content Editor** (Adobe Experience Manager)
 * **Marknadsförare** (Adobe Target/optimeringsteamet)
 
-### Startsida för WKND-webbplats
+### WKND - startsida för webbplats
 
 ![AEM målscenario 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
@@ -42,7 +42,7 @@ För den här övningen måste följande användare vara involverade och för at
 
 * **AEM**
    * [AEM författare och publicera instans](./implementation.md#getting-aem) som körs på localhost 4502 respektive 4503.
-   * [AEM integrerat med Adobe Target med Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM integrerat med Adobe Target med taggar](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar

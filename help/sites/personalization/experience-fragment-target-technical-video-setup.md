@@ -10,7 +10,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
 duration: 248
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM o
 
 >[!NOTE]
 >
->Rekommenderas att använda klientbiblioteket at.js och det bästa sättet är att använda tagghanteringslösningar som Launch by Adobe, Adobe DTM eller någon annan tagghanteringslösning från tredje part för att lägga till målbibliotek på webbplatsens sidor
+>Rekommenderas att använda klientbiblioteket at.js och det bästa sättet är att använda tagghanteringslösningar som taggar i Adobe Experience Platform eller någon annan tagghanteringslösning från tredje part för att lägga till målbibliotek på webbplatssidorna
 
 * Konfigurationen av målmolntjänsten som tillämpas på Experience Fragment-mappen ärver alla Experience Fragments som skapats direkt under den överordnade mappen. Den underordnade mappen ärver inte den överordnade molntjänstkonfigurationen.
 * Målklientkoden kan hämtas från Adobe Experience Cloud > Startmål > Under fliken Konfigurera > Implementering > Redigera at.js-inställningar.

@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 6%
 
 ---
@@ -137,12 +137,12 @@ ht-degree: 6%
       + [Generera FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analyser med Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
-   + Taggar för Experience Platform-datainsamling (Launch) {#experience-platform-data-collection-tags}
+   + Taggar i Adobe Experience Platform {#experience-platform-data-collection-tags}
       + [Ökning](integrations/experience-platform/data-collection/tags/overview.md)
       + [Skapa en taggegenskap](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [Koppla AEM och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [Cloud Servicen Skapa AEM start](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [Felsöka en taggimplementering (Launch)](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [Cloud Servicen Skapa AEM taggar](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [Felsöka en taggimplementering](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe-klientdatalager {#adobe-client-data-layer}
       + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -152,7 +152,7 @@ ht-degree: 6%
       + [Analysera data med Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
       + [Ökning](integrations/adobe-target/overview.md)
-      + [Lägg till måltillägg i startegenskapen](integrations/adobe-target/add-target-launch-extension.md)
+      + [Lägg till måltillägg i taggegenskap](integrations/adobe-target/add-target-launch-extension.md)
       + [Läsa in och utlösa ett Target-anrop](integrations/adobe-target/load-and-fire-target.md)
       + [Skapa Adobe Target Cloud Service-konto](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [Exportera upplevelsefragment till Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)

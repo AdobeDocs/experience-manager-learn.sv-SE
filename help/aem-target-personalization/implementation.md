@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
 duration: 173
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manager Sites med Adobe Target för olika scenarier. Baserat på ditt scenario och organisationens krav.
 
 * **Lägg till Adobe Target JavaScript Library (krävs för alla scenarier)**
-För webbplatser som finns på AEM kan du lägga till Target-bibliotek på din webbplats med, [Starta](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
+För webbplatser som finns på AEM kan du lägga till Target-bibliotek på din webbplats med, [taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Taggar är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
 * **Lägg till Adobe Target-Cloud Service (krävs för scenariot Experience Fragments)**
 För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicen. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. *Den här integreringen krävs för att implementera scenario 1.*
 
@@ -39,7 +39,7 @@ För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa
 * **Experience Cloud**
    * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud tillhandahålls med följande lösningar
-      * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
+      * [Datainsamling](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O Console](https://console.adobe.io)
 
@@ -50,7 +50,7 @@ För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa
 
 >[!NOTE]
 >
-> Kunden måste tillhandahållas med Experience Platform Launch och Adobe I/O från [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller kontakta systemadministratören
+> Kunden måste etableras med datainsamling och Adobe I/O från [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller kontakta systemadministratören
 
 ### Konfigurera AEM{#set-up-aem}
 
@@ -82,4 +82,4 @@ lösenord: **admin**
 10. När du har installerat paketen på AEM Author väljer du varje överfört paket i AEM Package Manager och väljer **Mer > Replikera** för att säkerställa att paketen distribueras till AEM.
 11. Nu har du installerat WKND-referenswebbplatsen och alla andra paket som krävs för den här kursen.
 
-[NÄSTA KAPITEL](./using-launch-adobe-io.md): I nästa kapitel integrerar du Launch med AEM.
+[NÄSTA KAPITEL](./using-launch-adobe-io.md): I nästa kapitel integrerar du taggar med AEM.

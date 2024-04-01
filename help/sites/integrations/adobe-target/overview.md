@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 278
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -35,7 +35,7 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
 * __Scenario 1__ Personalisering med AEM Experience Fragment Offers
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
-   1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
+   1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Integrera AEM Author med Adobe Target](./setup-aem-target-cloud-service.md)
    1. [Exportera AEM Experience Fragments till Adobe Target](./export-experience-fragment-target.md)
    1. [Anpassa en del av en webbsida med Experience Fragment-erbjudanden](./create-target-activity.md)
@@ -43,11 +43,11 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
 * __Scenario 2__ Personalisering med Visual Experience Composer (VEC)
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
-   1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
+   1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Anpassa en del av en webbsida med Visual Experience Composer](./personalization-using-vec.md)
 
 * __Scenario 3__ Personalisering av kompletta webbsidor
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
-   1. [Starta ett Adobe Target-samtal från Launch](./load-and-fire-target.md)
+   1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Personalisera hela webbsidan](./personalization-web-page.md)

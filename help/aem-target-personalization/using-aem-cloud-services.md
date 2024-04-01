@@ -10,9 +10,9 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 duration: 357
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manag
 
 >[!NOTE]
 >
-> Den AEM äldre Cloud Servicen med Adobe Target är **endast** som används för att skapa en direktanslutning AEM författare till Adobe Target back-end-anslutning som underlättar publicering av innehåll från AEM till Target. Adobe Launch används för att visa Adobe Target på den offentliga sajten som AEM betjänar.
+> Den AEM äldre Cloud Servicen med Adobe Target är **endast** som används för att skapa en direktanslutning AEM författare till Adobe Target back-end-anslutning som underlättar publicering av innehåll från AEM till Target. Taggar i Adobe Experience Platform används för att visa Adobe Target på den offentliga webbplats som AEM använder.
 
 För att kunna använda AEM Experience Fragment-erbjudanden som stöd för personaliseringsaktiviteter går vi vidare till nästa kapitel och integrerar AEM med Adobe Target med de äldre molntjänsterna. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla målerbjudandena synkroniserade med AEM. Den här integreringen krävs för implementering [Scenario 1 som diskuteras i översiktsavsnittet](./overview.md#personalization-using-aem-experience-fragment).
 
@@ -40,7 +40,7 @@ För att kunna använda AEM Experience Fragment-erbjudanden som stöd för perso
 
      >[!NOTE]
      >
-     > Kunden måste tillhandahållas med Experience Platform Launch och Adobe I/O från [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller kontakta systemadministratören
+     > Kunden måste etableras med datainsamling och Adobe I/O från [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller kontakta systemadministratören
 
 ### Integrera AEM med Adobe Target
 

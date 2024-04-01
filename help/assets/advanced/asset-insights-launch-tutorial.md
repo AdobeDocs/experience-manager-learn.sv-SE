@@ -1,6 +1,6 @@
 ---
-title: Konfigurera tillgångsinsikter med AEM Assets och Adobe Launch
-description: I den här femdelade videoserien går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som distribueras via Launch by Adobe.
+title: Konfigurera tillgångsinsikter med AEM Assets och taggar
+description: I den här femdelade videoserien går vi igenom konfigurationen och konfigurationen av resursinsikter för Experience Manager som distribueras via taggar.
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -12,16 +12,16 @@ badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-titl
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
-# Konfigurera tillgångsinsikter med AEM Assets och Adobe Experience Platform Launch
+# Konfigurera tillgångsinsikter med AEM Assets och taggar
 
-I den här femdelsvideoserien går vi igenom konfigurationen och konfigurationen av tillgångsinsikter för Experience Manager som driftsätts via Adobe Launch.
+I den här femdelade videoserien går vi igenom konfigurationen och konfigurationen av resursinsikter för Experience Manager som distribueras via taggar.
 
 ## Del 1: Översikt över tillgångsinsikter {#overview}
 
@@ -81,9 +81,9 @@ För AEM Assets Insights-konfigurationen behöver du följande autentiseringsupp
 * Delad hemlighet (kan hämtas från *Adobe Analytics > Admin > Företagsinställningar > Webbtjänst*).
 * Report Suite (se till att välja rätt Report Suite som används för tillgångsrapportering)
 
-## Del 4: Använda Adobe Experience Platform Launch för att lägga till Adobe Analytics-tillägg {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## Del 4: Använda taggar för att lägga till Adobe Analytics-tillägg {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-Lägga till Adobe Analytics Extension, skapa sidladdningsregler och integrera AEM med Launch med Adobe IMS-konto.
+Lägga till Adobe Analytics Extension, skapa sidladdningsregler och integrera AEM med taggar med Adobe IMS-konto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
@@ -175,13 +175,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 ### Felsökningsprogramsatser för konsol {#console-debug-statements}
 
 ```javascript
-//Launch Build Info
+// Tags build info
 _satellite.buildInfo
 
 //Enables debug messages
 _satellite.setDebug(true);
 
-//Asset Insight JS Object
+//Asset Insight JavaScript Object
 assetAnalytics
 
 //List of trackable images
@@ -190,10 +190,8 @@ document.querySelectorAll(".cmp-image__image");
 
 Det finns två webbläsartillägg för Google Chrome i videon som ett sätt att felsöka Analytics. Liknande tillägg finns även för andra webbläsare.
 
-* [Starta tillägg för växlingskrom](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
-* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Det går också att växla DTM till felsökningsläge med följande Chrome-tillägg: [Starta och DTM-växel](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). Det gör det enklare att se om det finns några fel som rör DTM-distributionen. Dessutom kan du manuellt växla DTM till felsökningsläge via valfri webbläsare *utvecklarverktyg -> JS Console* genom att lägga till följande kodutdrag:
 
 ## Del 5: Testning av analysspårning och synkronisering av insiktsdata{#analytics-tracking-asset-insights}
 

@@ -1,6 +1,6 @@
 ---
-title: Lägg till måltillägg i en startegenskap
-description: Lär dig hur du lägger till Adobe Target-tillägget i en Adobe Experience Platform Launch-egenskap.
+title: Lägg till måltillägg i en taggegenskap
+description: Lär dig hur du lägger till Adobe Target-tillägget i en taggegenskap.
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -13,18 +13,18 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 duration: 297
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-# Lägg till måltillägg i en startegenskap {#adobe-target-extension}
+# Lägg till måltillägg i en taggegenskap {#adobe-target-extension}
 
-Om du vill följa med i den här videon måste du ha [integrerad Experience Platform Launch med AEM](../experience-platform/data-collection/tags/overview.md).
+Om du vill följa med i den här videon måste du ha [integrerade taggar i Adobe Experience Platform med AEM](../experience-platform/data-collection/tags/overview.md).
 
-Lär dig hur du aktiverar Adobe Target på din AEM webbplats med Experience Platform Launch.
+Lär dig hur du aktiverar Adobe Target på din AEM webbplats med hjälp av taggar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

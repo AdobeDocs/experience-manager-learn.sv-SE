@@ -14,9 +14,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -95,9 +95,9 @@ Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken 
 + [Användarhandbok för AEM och e-handel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 
-## Adobe Experience Platform-taggar
+## Taggar i Adobe Experience Platform
 
-Adobe Experience Platform-taggar (tidigare Adobe Launch, DTM) integreras smidigt med AEM, vilket är ett enkelt sätt att driftsätta och hantera [analys](#adobe-analytics), [målinriktning](#adobe-target)taggar för marknadsföring och annonsering krävs för engagerande kundupplevelser.
+Taggar i Adobe Experience Platform integreras smidigt med AEM, vilket är ett enkelt sätt att driftsätta och hantera [analys](#adobe-analytics), [målinriktning](#adobe-target)taggar för marknadsföring och annonsering krävs för engagerande kundupplevelser.
 
 ### AEM Sites
 
