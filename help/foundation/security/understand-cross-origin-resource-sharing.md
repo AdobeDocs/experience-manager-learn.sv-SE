@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 296
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: e4c50b66f15b129197f22e104cedf698a1dac079
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Webbplats 1 är ett grundläggande, anonym, skrivskyddat scenario där innehåll
     "X-Requested-With",
     "Content-Type",
     "Access-Control-Request-Method",
-    "Access-Control-Request-Headers",
+    "Access-Control-Request-Headers"
   ]
 }
 ```
