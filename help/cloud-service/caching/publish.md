@@ -12,7 +12,7 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 325
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: baf81bb43a659e49728a05f83e7be394f7fbfb35
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Att konfigurera hur CDN cachelagrar innehåll begränsas till att ange cacherubr
 
 AEM as a Cloud Service CDN cachelagrar bara HTTP-svar och alla följande kriterier måste vara uppfyllda:
 
-+ HTTP-begärandestatus är `2xx` eller `3xx`
++ HTTP-svarsstatusen är `2xx` eller `3xx`
 + HTTP-begärandemetoden är `GET` eller `HEAD`
 + Minst en av följande HTTP-svarshuvuden finns: `Cache-Control`, `Surrogate-Control`, eller  `Expires`
 + HTTP-svaret kan vara vilken innehållstyp som helst, inklusive HTML, JSON, CSS, JS och binära filer.
