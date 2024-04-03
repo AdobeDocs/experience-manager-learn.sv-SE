@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 12%
+source-wordcount: '341'
+ht-degree: 7%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 12%
 + [AEM Headless Overview](./overview.md)
 + GraphQL {#graphql}
    + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
-   + [Översikt](./graphql/overview.md)
+   + [Ökning](./graphql/overview.md)
    + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
@@ -34,20 +34,20 @@ ht-degree: 12%
       + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL: Beständiga frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Grundläggande självstudiekurs{#multi-step}
-      + [Översikt](./graphql/multi-step/overview.md)
+      + [Ökning](./graphql/multi-step/overview.md)
       + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
       + [2 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
       + [3 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
       + [4 - Bygg en React-app](./graphql/multi-step/graphql-and-react-app.md)
    + Avancerad självstudiekurs{#advanced-tutorial}
-      + [Översikt](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
+      + [Ökning](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 - Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 - Skapa innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
       + [3 - Utforska AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 - Beständiga GraphQL-frågor](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Headless First Tutorial{#headless-first}
-      + [Översikt](./graphql/headless-first-tutorial/overview.md)
+      + [Ökning](./graphql/headless-first-tutorial/overview.md)
       + [1 - Innehållsmodellering](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 - AEM Headless API:er och React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
       + [3 - Komplexa komponenter](./graphql/headless-first-tutorial/3-complex-components.md)
@@ -67,6 +67,7 @@ ht-degree: 12%
    + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
    + [Stora resultatuppsättningar](./graphql/how-to/large-result-sets.md)
    + [Förhandsgranska](./graphql/how-to/preview.md)
+   + [Skyddat innehåll](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [Installera GraphiQL på AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Exempel {#example-apps}
@@ -78,7 +79,7 @@ ht-degree: 12%
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
 + SPA{#spa-editor}
    + Reagera{#react}
-      + [Översikt](./spa-editor/react/overview.md)
+      + [Ökning](./spa-editor/react/overview.md)
       + [1 - Skapa projekt](./spa-editor/react/create-project.md)
       + [2 - SPA](./spa-editor/react/integrate-spa.md)
       + [3 - SPA](./spa-editor/react/map-components.md)
@@ -86,7 +87,7 @@ ht-degree: 12%
       + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
    + Angular{#angular}
-      + [Översikt](./spa-editor/angular/overview.md)
+      + [Ökning](./spa-editor/angular/overview.md)
       + [1 - SPA](./spa-editor/angular/create-project.md)
       + [2 - SPA](./spa-editor/angular/integrate-spa.md)
       + [3 - SPA](./spa-editor/angular/map-components.md)
@@ -94,7 +95,7 @@ ht-degree: 12%
       + [5 - Anpassad komponent](./spa-editor/angular/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/angular/extend-component.md)
    + SPA{#remote-spa}
-      + [Översikt](./spa-editor/remote-spa/overview.md)
+      + [Ökning](./spa-editor/remote-spa/overview.md)
       + [1 - Konfigurera AEM](./spa-editor/remote-spa/aem-configure.md)
       + [2 - BOOTSTRAP i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
@@ -103,11 +104,11 @@ ht-degree: 12%
    + Så här gör du{#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
 + Tokenbaserad autentisering {#authentication}
-   + [Översikt](./authentication/overview.md)
+   + [Ökning](./authentication/overview.md)
    + [1 - Åtkomsttoken för lokal utveckling](./authentication/local-development-access-token.md)
    + [2 - Tjänstreferenser](./authentication/service-credentials.md)
 + Innehållstjänster {#content-services}
-   + [Översikt](./content-services/overview.md)
+   + [Ökning](./content-services/overview.md)
    + [1 - Inställning av självstudiekurs](./content-services/chapter-1.md)
    + [2 - Definiera fragmentmodeller för händelseinnehåll](./content-services/chapter-2.md)
    + [3 - Innehållsfragment för redigeringshändelser](./content-services/chapter-3.md)
