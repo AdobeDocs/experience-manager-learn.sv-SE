@@ -9,7 +9,7 @@ level: Beginner
 exl-id: 6c63787c-e511-4764-9a03-2c85c394bcc0
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 36
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -28,4 +28,4 @@ Skärmbilderna nedan visar konfigurationsinställningarna för datakällor i AEM
 
 ![64DataSource Configuration](assets/64release.gif)
 **Redigerbar datakällkonfiguration i AEM 6.5 och senare**
-![65DataSource-konfiguration](assets/modifiabledatasource.jfif)
+![65DataSource-konfiguration](assets/modifiable_data_source.png)

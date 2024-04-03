@@ -10,7 +10,7 @@ level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 446
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 I AEM Forms 6.5 fanns möjligheten att skapa och konfigurera diagram för flera serier. Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen Line, Bar och Column. Följande diagram är ett bra exempel på diagram med flera serier. Diagrammet visar tillväxten på 10 000 USD i tre olika gemensamma fonder under en tidsperiod. För att kunna skapa och använda diagram av den här typen i AEM Forms måste du skapa en lämplig formulärdatamodell.
 
-![Diagram över flera serier](assets/seriescharts.jfif)
+![Diagram över flera serier](assets/series_charts.png)
 
 Om du vill skapa diagram i flera serier i AEM Forms måste du skapa en lämplig formulärdatamodell med nödvändiga enheter och associationer mellan enheterna. Följande skärmbild visar enheterna och associationerna mellan de tre entiteterna. På den översta nivån har vi en enhet som heter&quot;Organisation&quot;, som har en en-till-många-association med fondenheten. Fondenheten har i sin tur en-till-många-association med resultatenheten.
 
-![Formulärdatamodell](assets/formdatamodel.jfif)
+![Formulärdatamodell](assets/form_data_model.png)
 
 ## Skapa formulärdatamodell för diagram i flera serier
 

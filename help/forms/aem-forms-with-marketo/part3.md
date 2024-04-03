@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 97
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakäl
 1. OData-tjänster
 
 För integreringen av AEM Forms med Marketo använder vi RESTful-webbtjänster. Det första steget i integreringen är att konfigurera en [datakälla.](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) Använd swagger-filen som ingår i kursen. I följande skärmbild visas de viktiga egenskaper som måste anges när datakällan konfigureras.
-![datakälla](assets/datasource.jfif)
+![datakälla](assets/datasource.png)
 
 &quot;marketo.json&quot; är swagger-filen som du får som en del av kursens resurser.
 Egenskapsvärden är specifik för din Marketo-instans.
@@ -51,7 +51,7 @@ Peka webbläsaren mot [dataintegreringssida.](http://localhost:4502/aem/forms.ht
 1. Fliken till fliken Tjänster
 1. Välj den enda tjänst som visas och klicka på Test Service
 1. Ange ett giltigt leadId och klicka på Test. Om allt blir bra bör du få tillbaka leadinformationen som visas på skärmbilden nedan
-   ![testresultat](assets/testresults.jfif)
+   ![testresultat](assets/testresults.png)
 
 ## Nästa steg
 
