@@ -10,13 +10,13 @@ doc-type: Article
 duration: 0
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
-source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
+exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
+source-git-commit: f84a6cc54838e5bf87cfa173ef17df4ec745ebcb
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
 
 ---
-
 
 # Förstå DoS/DDoS-skydd i AEM
 
