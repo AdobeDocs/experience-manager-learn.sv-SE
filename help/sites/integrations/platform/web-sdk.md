@@ -14,9 +14,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ När du har länkat taggegenskapen kan WKND-webbplatsen läsa in taggegenskapens
 
 ### Verifiera inläsning av taggegenskap på WKND
 
-Använda Adobe Experience Platform Debugger [Krom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) eller [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) kontrollerar du om taggegenskapen läses in på WKND-sidor. Du kan verifiera,
+Använda Adobe Experience Platform Debugger [Krom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) kontrollerar du om taggegenskapen läses in på WKND-sidor. Du kan verifiera,
 
 + Taggegenskapsinformation som tillägg, version, namn med mera.
 + Plattforms-SDK-biblioteksversion, DataStream ID

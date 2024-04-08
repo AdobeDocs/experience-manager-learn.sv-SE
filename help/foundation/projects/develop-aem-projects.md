@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -26,9 +26,9 @@ Det här är en självstudiekurs om utveckling som illustrerar hur du utvecklar 
 
 ## Introduktion {#introduction}
 
-[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
 
-AEM innehåller flera [OTB-projektmallar](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). När du skapar ett projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi tittar på strukturen för en projektmall och skapar ett exempel.
+AEM innehåller flera [OTB-projektmallar](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). När du skapar ett projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM implementeringar med unika affärskrav vill skapa anpassade projektmallar som är anpassade efter deras behov. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi tittar på strukturen för en projektmall och skapar ett exempel.
 
 ![Anpassat projektkort](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ Den här självstudiekursen stegar igenom koden som behövs för att skapa en an
 * [Självstudiepaketet har slutförts](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) och viss vana vid [AEM Maven-projektinställningar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html).
+Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) och viss vana vid [AEM Maven-projektinställningar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## Struktur för en projektmall
 
@@ -69,11 +69,11 @@ Ett exempel på en anpassad guide finns för översättningsprojektmallen: **/li
 
 ### Gadgets {#gadgets}
 
-Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektpaneler](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) (kallas även gadgets eller poder) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
+Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektpaneler](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) (kallas även gadgets eller poder) är enkla kort som fyller i en arbetsplats i ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
 
 ### Roller {#roles}
 
-Det finns tre [standardroller](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) för varje projekt: **Observatörer**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under noden Roller kan du lägga till ytterligare affärsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
+Det finns tre [standardroller](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) för varje projekt: **Observatörer**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under noden Roller kan du lägga till ytterligare affärsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
 
 ### Arbetsflöden {#workflows}
 
@@ -152,7 +152,7 @@ Eftersom vi i första hand kopierar/konfigurerar noder kommer CRXDE Lite att anv
    1. Lägg till ytterligare **nt:ostrukturerad** noden som kallas godkännare som underordnad till rollnoden.
    1. Lägg till String-egenskaper **jcr:title** = &quot;**Godkännare**&quot;, **rolclass** =&quot;**ägare**&quot;, **roleid**=&quot;**godkännare**&quot;.
       1. Namnet på godkännarnoden, samt jcr:title och roleid, kan vara vilket strängvärde som helst (så länge som roleid är unikt).
-      1. **rolclass** styr behörigheter för den rollen baserat på [tre OOTB-roller](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html): **ägare**, **redigerare** och **observatör**.
+      1. **rolclass** styr behörigheter för den rollen baserat på [tre OOTB-roller](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects): **ägare**, **redigerare** och **observatör**.
       1. Om den anpassade rollen är mer av en ledningsroll kan rollklassen i allmänhet **Ägare.** om det är en mer specifik redigeringsroll som fotografen eller Designer **redigerare** bör det räcka med en rollklass. Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
 
    ```shell
@@ -308,7 +308,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    ![Dialogrutan Skapa arbetsflöde](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [Mer information om hur du skapar arbetsflöden finns här](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+   [Mer information om hur du skapar arbetsflöden finns här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
 
 1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. I CRXDE Lite skapar du en **&#39;nt:folder&#39;** under /etc/workflow/models named **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
 
@@ -320,7 +320,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    >[!NOTE]
    >
-   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Se [här för mer information.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Se [här för mer information.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    Om AEM 6.4+ används skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
 
@@ -738,7 +738,7 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
    >Om AEM 6.4 används har arbetsflödets plats ändrats. Peka på `modelId` egenskapen till platsen för körningsarbetsflödesmodellen under `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >Se [här finns mer information om förändringen i arbetsflödets plats.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html)
+   >Se [här finns mer information om förändringen i arbetsflödets plats.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
 
 * [Ladda ned det färdiga självstudiekurspaketet](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM projektdokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
+* [AEM projektdokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)

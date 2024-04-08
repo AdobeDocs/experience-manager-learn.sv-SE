@@ -13,9 +13,9 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 duration: 268
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
@@ -38,4 +38,3 @@ Om du vill skapa Adobe Target-aktiviteter med Experience Fragment-erbjudanden m�
 ## Stödlänkar
 
 * [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

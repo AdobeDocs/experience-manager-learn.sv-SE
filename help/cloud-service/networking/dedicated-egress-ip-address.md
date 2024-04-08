@@ -10,7 +10,7 @@ jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 duration: 926
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur
 Följande krävs när du konfigurerar en dedikerad IP-adress för utgångar:
 
 + Cloud Manager API med [Behörigheter för affärsägare för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + Organisations-ID (även IMS Org-ID)
    + Klient-ID (även API-nyckel)
    + Åtkomsttoken (även Bearer Token)

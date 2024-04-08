@@ -13,9 +13,9 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '266'
 ht-degree: 0%
 
 ---
@@ -44,11 +44,11 @@ Om du vill aktivera felsökning på klientsidan ringer du `setDebug(true)` metod
 
 ## Felsökning via Adobe Experience Platform Debugger
 
-Adobe tillhandahåller Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) och [Firefox-tillägg](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) att felsöka, förstå och få insikter i integreringen.
+Adobe tillhandahåller Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) att felsöka, förstå och få insikter i integreringen.
 
 1. Öppna tillägget Adobe Experience Platform Debugger och öppna webbplatssidan i Publish-instansen
 
-1. I **Adobe Experience Platform Debugger > Sammanfattning > Adobe Experience Platform-taggar** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
+2. I **Adobe Experience Platform Debugger > Sammanfattning > Adobe Experience Platform-taggar** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
 
    ![Egenskapsinformation för Adobe Experience Platform Debugger och tagg](assets/tag-property-details.png)
 

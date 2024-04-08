@@ -12,9 +12,9 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 957
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local`
 
 ### OSGi-konfiguration för schemaläggare för platskarta
 
-Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron-uttryck](http://www.cronmaker.com/)) webbplatskartor genereras om/cachelagras i AEM.
+Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron-uttryck](https://cron.help/)) webbplatskartor genereras om/cachelagras i AEM.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -93,4 +93,4 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org för Dreamweaver](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org för indexfiler för platskartor](https://www.sitemaps.org/protocol.html#index)
-+ [Cronmaker](http://www.cronmaker.com/)
++ [Cron Helper](https://cron.help/)

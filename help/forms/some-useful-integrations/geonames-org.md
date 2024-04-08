@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -25,7 +25,7 @@ En överlappande nedrullningsbar lista är en serie beroende DropDownList-kontro
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-I den här självstudiekursen har jag använt [Geonames REST API](http://api.geonames.org/) för att visa denna förmåga.
+I den här självstudiekursen har jag använt [Geonames REST API](https://www.geonames.org/export/web-services.html) för att visa denna förmåga.
 Det finns ett antal organisationer som erbjuder den här typen av tjänster och så länge de har väldokumenterade REST API:er kan du enkelt integrera med AEM Forms med hjälp av dataintegreringsfunktionen
 
 Följande steg har utförts för att implementera listrutor i listrutan för överlappande i AEM Forms
@@ -88,7 +88,7 @@ Lägg till två nedrullningsbara listor med namnet fylken och städer i formulä
 
 Du kan hämta följande resurser för att få ett försprång när du skapar överlappande listruteexempel De färdiga swagger-filerna kan hämtas från [här](assets/geonames-swagger-files.zip)
 Swagger-filerna beskriver följande REST API
-* [Skaffa alla länder](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Hämta underordnade objekt för Geoname-objekt](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [Skaffa alla länder](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [Hämta underordnade objekt för Geoname-objekt](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
 Slutförd [Du kan hämta formulärdatamodellen härifrån](assets/geonames-api-form-data-model.zip)
