@@ -5,10 +5,10 @@
 		"title": "Simple API",
 		"description": "Learning Swagger"
 	},
-	"host": "api.geonames.org",
+	"host": "secure.geonames.org",
 
 	"schemes": [
-		"http"
+		"https"
 	],
 	"paths": {
 		"/childrenJSON": {
