@@ -12,13 +12,13 @@ duration: 389
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
+source-git-commit: 78e8a8472d2dd8128c6ce2f1120cb9a41527f31b
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för indexering av AEM
 
@@ -41,21 +41,21 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 - Förstå sökkraven och kontrollera om OTB-indexen stöder sökkraven. Använd **Prestandaverktyg för fråga**, finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
 
-- Definiera en optimal fråga med [optimera frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?#optimizing-queries) flödesdiagram och [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för referens.
+- Definiera en optimal fråga med [optimera frågor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) flödesdiagram och [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för referens.
 
-- Om OTB-indexen inte stöder sökkraven finns det två alternativ. Granska dock [Tips om hur du skapar effektiva index](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#should-i-create-an-index)
+- Om OTB-indexen inte stöder sökkraven finns det två alternativ. Granska dock [Tips om hur du skapar effektiva index](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassa OOTB-indexet: Det bästa alternativet eftersom det är enkelt att underhålla och uppgradera.
    - Helt anpassat index: Endast om alternativet ovan inte fungerar.
 
 ### Anpassa OTB-indexet
 
-- I **AEMCS**, när du anpassar OTB-indexanvändningen **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** namnkonvention. Till exempel: `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Se [Ändringar av färdiga index](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) för mer information.
+- I **AEMCS**, när du anpassar OTB-indexanvändningen **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** namnkonvention. Till exempel: `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Se [Ändringar av färdiga index](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) för mer information.
 
-- I **AEM 6.X**, namnet ovan _fungerar inte_ uppdaterar du emellertid bara OTB-indexet med ytterligare egenskaper i `indexRules` nod.
+- I **AEM 6.X**, namnet ovan _fungerar inte_ uppdaterar du emellertid bara OTB-indexet med nödvändiga egenskaper i `indexRules` nod.
 
 - Kopiera alltid den senaste OTB-indexdefinitionen från den AEM instansen med CRX DE Package Manager (/crx/packmgr/), byt namn på den och lägg till anpassningar i XML-filen.
 
-- Lagra indexdefinitionen i AEM `ui.apps/src/main/content/jcr_root/_oak_index` och driftsätta den med Cloud Manager CI/CD-pipelines. Se [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) för mer information.
+- Lagra indexdefinitionen i AEM `ui.apps/src/main/content/jcr_root/_oak_index` och driftsätta den med Cloud Manager CI/CD-pipelines. Se [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) för mer information.
 
 ### Helt anpassat index
 
@@ -63,13 +63,13 @@ Det sista alternativet måste vara att skapa ett helt anpassat index och endast 
 
 - När du skapar ett helt anpassat index bör du använda **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** namnkonvention. Till exempel: `wknd.adventures-1-custom-1`. Detta hjälper till att undvika namnkonflikter. Här, `wknd` är prefixet och `adventures` är det anpassade indexnamnet. Denna konvention gäller för både AEM 6.X och AEMCS och bidrar till att förbereda för framtida övergång till AEMCS.
 
-- AEMCS stöder bara Lucene-index, så för att förbereda för framtida migrering till AEMCS bör du alltid använda Lucene-index. Se [Lucene-index jämfört med egenskapsindex](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) för mer information.
+- AEMCS stöder bara Lucene-index, så för att förbereda för framtida migrering till AEMCS bör du alltid använda Lucene-index. Se [Lucene-index jämfört med egenskapsindex](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing) för mer information.
 
-- Undvik att skapa ett anpassat index för samma nodtyp som OTB-indexet. Istället kan du anpassa OTB-indexet med ytterligare egenskaper i `indexRules` nod. Skapa till exempel inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index. _Det har varit en vanlig grundorsak till prestanda- och funktionsproblem_.
+- Undvik att skapa ett anpassat index för samma nodtyp som OTB-indexet. Anpassa i stället OTB-indexet med nödvändiga egenskaper i `indexRules` nod. Skapa till exempel inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index. _Det har varit en vanlig grundorsak till prestanda- och funktionsproblem_.
 
 - Undvik också att lägga till flera nodtyper, till exempel `cq:Page` och `cq:Tag` enligt indexeringsreglerna (`indexRules`)-nod. Skapa i stället separata index för varje nodtyp.
 
-- Så som nämns i avsnittet ovan, sparar indexdefinitionen i AEM projekt på `ui.apps/src/main/content/jcr_root/_oak_index` och driftsätta den med Cloud Manager CI/CD-pipelines. Se [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) för mer information.
+- Så som nämns i avsnittet ovan, sparar indexdefinitionen i AEM projekt på `ui.apps/src/main/content/jcr_root/_oak_index` och driftsätta den med Cloud Manager CI/CD-pipelines. Se [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing) för mer information.
 
 - Riktlinjerna för indexdefinitioner är:
    - Nodtypen (`jcr:primaryType`) ska vara `oak:QueryIndexDefinition`
@@ -106,7 +106,7 @@ Nedanför bilden visas en anpassad indexdefinition och indexdefinitionen OTB, d�
 
 Detta är en felaktig användning av `tags` -egenskapen i det anpassade indexet. Oak-frågemotorn väljer det anpassade indexvärdet över OTB-indexvärdet för den lägsta uppskattade kostnaden.
 
-Det rätta sättet är att anpassa OTB-indexet och lägga till ytterligare egenskaper i `indexRules` nod. Se [Anpassa OOTB-indexet](#customize-the-ootb-index) för mer information.
+Det rätta sättet är att anpassa OTB-indexet och lägga till nödvändiga egenskaper i `indexRules` nod. Se [Anpassa OOTB-indexet](#customize-the-ootb-index) för mer information.
 
 #### Index på `dam:Asset` nodtyp
 
@@ -118,7 +118,7 @@ Nedan visas ett eget index för `dam:Asset` nodtyp med `includedPaths` egenskape
 
 Om du utför en sökning på resurser returneras felaktiga resultat eftersom det anpassade indexet har en lägre uppskattad kostnad.
 
-Skapa inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index med ytterligare egenskaper i `indexRules` nod.
+Skapa inte ett anpassat index på `dam:Asset` nodtyp men anpassa OTB `damAssetLucene` index med nödvändiga egenskaper i `indexRules` nod.
 
 #### Flera nodtyper under indexeringsregler
 
@@ -130,7 +130,7 @@ Nedan visas ett eget index med flera nodtyper under `indexRules` nod.
 
 Du bör inte lägga till flera nodtyper i ett index, men det går bra att indexera nodtyper i samma index om nodtyperna är nära besläktade, till exempel `cq:Page` och `cq:PageContent`.
 
-En giltig lösning är att anpassa OTB `cqPageLucene` och `damAssetLucene` index, lägga till ytterligare egenskaper under det befintliga `indexRules` nod.
+En giltig lösning är att anpassa OTB `cqPageLucene` och `damAssetLucene` index, lägga till nödvändiga egenskaper under det befintliga `indexRules` nod.
 
 #### Frånvaro av `queryPaths` property
 
@@ -166,6 +166,78 @@ Nedan visas ett eget index med `suggestion` nod för avancerad sökning.
 
 Det är ett giltigt användningsexempel att skapa ett anpassat index för [avancerad sökning](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features) funktionalitet. Indexnamnet måste dock följa efter **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** namnkonvention.
 
+## Indexoptimering genom att inaktivera Apache Tika
+
+AEM [Apache Tika](https://tika.apache.org/) for _extrahera metadata och textinnehåll från fil_ som PDF, Word, Excel med flera. Det extraherade innehållet lagras i databasen och indexeras med indexet Oak Lucene.
+
+Ibland behöver användare inte kunna söka i innehållet i en fil eller resurs, och i sådana fall kan du förbättra indexeringsprestandan genom att inaktivera Apache Tika. Fördelarna är:
+
+- Snabbare indexering
+- Minska indexstorlek
+- Mindre maskinvaruanvändning
+
+>[!CAUTION]
+>
+>Innan du inaktiverar Apache Tika måste du se till att sökkraven inte kräver möjligheten att söka i innehållet i en resurs.
+
+
+### Inaktivera efter MIME-typ
+
+Så här inaktiverar du Apache Tika efter MIME-typ:
+
+- Lägg till `tika` nod på `nt:unstructured` typ under anpassad indexdefinition eller OOBT-indexdefinition. I följande exempel är MIME-typen PDF inaktiverad för OOTB `damAssetLucene` index.
+
+```xml
+/oak:index/damAssetLucene
+    - jcr:primaryType = "oak:QueryIndexDefinition"
+    - type = "lucene"
+    ...
+    <tika jcr:primaryType="nt:unstructured">
+        <config.xml/>
+    </tika>
+```
+
+- Lägg till `config.xml` med följande information under `tika` nod.
+
+```xml
+<properties>
+  <parsers>
+    <parser class="org.apache.tika.parser.EmptyParser">
+      <mime>application/pdf</mime>
+      <!-- Add more mime types to disable -->
+  </parsers>
+</properties>
+```
+
+- Om du vill uppdatera det lagrade indexet anger du `refresh` egenskap till `true` under indexdefinitionsnoden, se [Egenskaper för indexdefinition](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property) för mer information.
+
+Följande bild visar OTB `damAssetLucene` indexera med `tika` nod `config.xml` som inaktiverar MIME-typerna PDF och andra MIME-typer.
+
+![OOTB damAssetLucene-index med kodnod](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+
+### Inaktivera helt
+
+Följ stegen nedan för att inaktivera Apache Tika helt:
+
+- Lägg till `includePropertyTypes` egenskap vid `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` och ange värdet till `String`. I bilden nedan visas `includePropertyTypes` -egenskapen läggs till för `dam:Asset` nodtyp för OOBT `damAssetLucene` index.
+
+![IncludePropertyTypes, egenskap](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
+
+- Lägg till `data` med nedanstående egenskaper under `properties` ska du kontrollera att den är den första noden ovanför egenskapsdefinitionen. Se till exempel bilden nedan:
+
+```xml
+/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
+    - jcr:primaryType = "nt:unstructured"
+    - type = "String"
+    - name = "jcr:data"
+    - nodeScopeIndex = false
+    - propertyIndex = false
+    - analyze = false
+```
+
+![Egenskapen Data](./assets/understand-indexing-best-practices/data-prop.png)
+
+- Indexera om den uppdaterade indexdefinitionen genom att ange `reindex` egenskap till `true` under indexdefinitionsnoden.
 
 ## Användbara verktyg
 
@@ -201,6 +273,7 @@ De flesta av nedanstående gäller för AEM 6.X och lokal felsökning.
 
 Mer information finns i följande dokumentation:
 
-- [Fråga och indexering](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing.html)
-- [Bästa praxis för frågor och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html)
-- [Metodtips för frågor och indexering](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html)
+- [Fråga och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [Bästa praxis för frågor och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [Metodtips för frågor och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+
