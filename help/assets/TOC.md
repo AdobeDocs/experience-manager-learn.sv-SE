@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
+source-git-commit: 7d84d7ec2b2af34ad8522abaae9757c331613cd5
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '409'
 ht-degree: 6%
 
 ---
@@ -74,6 +74,7 @@ ht-degree: 6%
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
+   + [Exportera resurser](./sharing/export.md)
    + [Publicera resurser](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
