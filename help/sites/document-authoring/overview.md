@@ -11,9 +11,9 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -541,6 +541,70 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
         </div>
       </div>
     </div>
+    <!-- Intro Generate Variation -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations.md" title="Generera variationer"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
+                alt="Generera variationer">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations.md" title="Generera variationer">Generera variationer</a>
+            </p>
+            <p class="is-size-6">Introduktion till att generera variationer i Edge Delivery Services och förstå hur det kan vara användbart för marknadsförare.</p>
+            <a href="./how-to/generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!--  Configure Sidekick for Generative Variations  -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Configure Sidekick for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurera Sidekick för att generera variationer"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                alt="Konfigurera Sidekick för att generera variationer">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 minut</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurera Sidekick för att generera variationer">Konfigurera Sidekick för att generera variationer</a>
+            </p>
+            <p class="is-size-6">Lär dig hur du konfigurerar sidindelad redigering för att generera variationer vid framtagning av dokument för Edge Delivery Services.</p>
+            <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>          
     <!-- GenAI Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
       aria-label="Use GenAI Prompt Templates" tabindex="7">
@@ -564,6 +628,70 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             </p>
             <p class="is-size-6">Upptäck hur du använder de generativa AI-promptmallarna för att generera innehållsvariationer.</p>
             <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Custom Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/custom-prompt-templates.md" title="Anpassade mallar för GenAI-fråga"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                alt="Anpassade mallar för GenAI-fråga">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/custom-prompt-templates.md" title="Anpassade mallar för GenAI-fråga">Egna mallar för promptmeddelanden i GenAI</a>
+            </p>
+            <p class="is-size-6">Lär dig hur du bygger de generativa anpassade AI-promptmallarna för att generera innehållsvariationer.</p>
+            <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!-- Saving Custom Prompt Templates -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="GenAI Save Prompt Templates" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/save-custom-prompt-template.md" title="Formulärmallar för sparad GenAI"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                alt="Formulärmallar för sparad GenAI">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/save-custom-prompt-template.md" title="Formulärmallar för sparad GenAI">Spara promptmallar för GenAI</a>
+            </p>
+            <p class="is-size-6">Lär dig hur du sparar de generativa anpassade AI-promptmallarna för att generera innehållsvariationer.</p>
+            <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap

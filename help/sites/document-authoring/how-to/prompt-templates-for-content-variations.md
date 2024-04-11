@@ -10,15 +10,16 @@ doc-type: Feature Video
 duration: 138
 last-substantial-update: 2024-04-11T00:00:00Z
 jira: KT-15322
-source-git-commit: be3f8fe8ae5c76e17325fd87d0924cc27f8c3e60
+source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
 
 
-# Använd generativa mallar för AI-prompter
+
+# Generativa AI-promptmallar i Edge Delivery Services
 
 {{edge-delivery-services}}
 
