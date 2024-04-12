@@ -11,7 +11,7 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
+source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -702,3 +702,4 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
       </div>
     </div>    
   </div>
+

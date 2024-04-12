@@ -5,7 +5,7 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
+source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -132,4 +132,3 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </td>        
     </tr>      
 </table>
-
