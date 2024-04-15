@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2430
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 1f9736acbbccd09cb1b32c247860827b13e85129
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3060'
 ht-degree: 0%
 
 ---
@@ -441,15 +441,6 @@ Efter lyckad autentisering till IDP kommer IDP att dirigera en HTTP-POST tillbak
 ```
 
 Om URL-omskrivning på Apache-webbservern är konfigurerad (`dispatcher/src/conf.d/rewrites/rewrite.rules`) måste du se till att `.../saml_login` ändpunkter inte av misstag bemästras.
-
-## Aktivera datasynkronisering och kapsla in tokens
-
-När SAML-autentiseringsflödet skapar en användare i AEM Publish kan AEM användarnod autentiseras i AEM.
-Detta kräver [datasynkronisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) och [inkapslade tokens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) aktiveras av Adobe Support på AEM Publish Service.
-
-Skicka en förfrågan till Adobe kundsupport (via [AdminConsole](https://adminconsole.adobe.com) > Support) begär:
-
-> Datasynkronisering och inkapslade tokens är aktiverade AEM publiceringstjänsten för program X och miljö Y.
 
 ## Distribuera SAML-konfiguration
 
