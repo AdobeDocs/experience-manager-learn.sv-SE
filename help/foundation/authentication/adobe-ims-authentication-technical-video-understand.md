@@ -12,9 +12,9 @@ exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 431
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,6 @@ Adobe Experience Manager introducerar stöd för Admin Console för AEM och Adob
 Tillstånd och åtkomst på användarnivå bör undvikas både i Admin Console och i Adobe Experience Manager.
 
 I Admin Console bör användare ges åtkomst via användargrupper på produktkontextnivå. Användargrupper uttrycks oftast bäst utifrån den logiska rollen inom organisationen för att främja återanvändbarheten för grupper i olika Adobe Experience Cloud-produkter.
-
->[!NOTE]
->
-> Om du använder AEM as a Cloud Service tilldelar du Admin Console-användare direkt till produktprofiler. Transitiva behörigheter mellan Admin Console-användare och produktprofiler via användargrupper i Admin Console stöds inte för AEM as a Cloud Service.
 
 ### Tillämpa behörigheter i Adobe Experience Manager
 
