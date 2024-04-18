@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -218,6 +218,8 @@ Den här gången bör du se många **Blockerade förfrågningar** och motsvarand
 Dessutom finns **De 100 viktigaste attackerna per klient-IP, land och användaragent** på panelerna visas ytterligare information som kan användas för att ytterligare optimera regelkonfigurationen.
 
 ![ELK Tool Dashboard DoS Top 100 Requests](./assets/elk-tool-dashboard-dos-top-100.png)
+
+Mer information om hur du förhindrar DoS- och DDoS-attacker finns i [Blockera DoS- och DDoS-attacker med trafikfilterregler](../dos/blocking-dos-attack-using-traffic-filter-rules.md) självstudie.
 
 ### WAF-regler
 

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1179'
 ht-degree: 5%
 
 ---
@@ -161,6 +161,7 @@ ht-degree: 5%
       + [SQL-anslutningar med Java SQL API:er](./networking/examples/sql-java-apis.md)
       + [E-posttjänst](./networking/examples/email-service.md)
 + Dokumentskydd {#security}
+   + [Blockera DoS/DDoS-attacker med trafikfilterregler](./security/dos/blocking-dos-attack-using-traffic-filter-rules.md)
    + Trafikfilterregler inklusive WAF-regler{#traffic-filter-and-waf-rules}
       + [Ökning](./security/traffic-filter-rules/overview.md)
       + [Så här konfigurerar du](./security/traffic-filter-rules/how-to-setup.md)
