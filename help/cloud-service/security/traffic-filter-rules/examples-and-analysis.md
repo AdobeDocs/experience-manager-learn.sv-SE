@@ -12,7 +12,7 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
+source-git-commit: 9af60e1d45eb4569e05ba135fec43e4c744b2a0d
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -355,3 +355,4 @@ Bekanta dig med våra rekommendationer [bästa praxis](./best-practices.md) mins
 [Syntax för trafikfilterregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
 
 [CDN-loggformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
+

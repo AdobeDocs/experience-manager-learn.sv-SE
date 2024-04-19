@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-03-18T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
-source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
+exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
+source-git-commit: 9af60e1d45eb4569e05ba135fec43e4c744b2a0d
 workflow-type: tm+mt
 source-wordcount: '1918'
 ht-degree: 0%
 
 ---
-
 
 # Blockera DoS- och DDoS-attacker med trafikfilterregler
 
