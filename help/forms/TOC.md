@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
+source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2059'
 ht-degree: 1%
 
 ---
@@ -105,6 +105,10 @@ ht-degree: 1%
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ Fylla i ett PDF-formulär med ChatBot{#chatbot-and-aem-forms}
+   + [1 - Introduktion](chatbot-and-aem-forms/introduction.md)
+   + [2 - Tolka ChatBot-data](chatbot-and-aem-forms/parse-chat-bot-data.md)
+   + [3 - Skapa PDF](chatbot-and-aem-forms/merge-data-with-template.md)
 + Core-Components-baserade formulär{#core-component-based-forms}
    + [Få åtkomst till formulärdata med GuideBridge API](core-components/submit-data-using-guidebridge-api.md)
 + Välja och samla ihop innehåll i DAM-mappen{#select-dam-folder-content}
