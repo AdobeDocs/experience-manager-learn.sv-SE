@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: f9841590ea6870d17ce8300b970ec3cb4bf89322
+source-git-commit: 89920c29e4d5f41263ee21b87e04c97b113c0feb
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '413'
 ht-degree: 6%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 6%
 
 + Sök och hitta{#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
+   + [Sammanhangsbaserad sökning](./search-and-discovery/contextual-search.md)
    + [Samlingar](./search-and-discovery/collections.md)
    + [Sökökning](./search-and-discovery/search-boost.md)
    + [Sök efter liknande bilder](./search-and-discovery/find-similar-images.md)
