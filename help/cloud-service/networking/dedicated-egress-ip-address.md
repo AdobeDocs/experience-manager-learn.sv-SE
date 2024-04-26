@@ -9,10 +9,11 @@ level: Intermediate
 jira: KT-9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 926
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -25,15 +26,15 @@ Lär dig hur du konfigurerar och använder en dedikerad IP-adress för utgående
 
 Med en dedikerad IP-adress för utgående IP-adress kan begäranden från AEM as a Cloud Service använda en dedikerad IP-adress, vilket gör att externa tjänster kan filtrera inkommande begäranden från den här IP-adressen. Gilla [flexibla utgångsportar](./flexible-port-egress.md), dedikerad IP-adress för utgångar som gör att du kan börja använda portar som inte är standard.
 
-Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur. Se till att den dedikerade IP-adressen för utgångar är den [lämplig typ av nätverksinfrastruktur](./advanced-networking.md)  för AEM as a Cloud Service innan följande kommandon utförs.
+Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur. Se till att den dedikerade IP-adressen är den mest [lämplig typ av nätverksinfrastruktur](./advanced-networking.md) för AEM as a Cloud Service innan följande kommandon utförs.
 
 >[!MORELIKETHIS]
 >
-> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedicated-egress-IP-address) om du vill ha mer information om IP-adressen för den dedikerade egresen.
+> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om IP-adressen för den dedikerade egresen.
 
 ## Förutsättningar
 
-Följande krävs när du konfigurerar en dedikerad IP-adress för utgångar:
+Följande krävs när du konfigurerar en dedikerad IP-adress för utgångar med API:er för Cloud Manager:
 
 + Cloud Manager API med [Behörigheter för affärsägare för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -53,9 +54,41 @@ Den här självstudiekursen använder `curl` för att göra API-konfigurationer 
 
 Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgångar på AEM as a Cloud Service.
 
+>[!BEGINTABS]
+
+>[!TAB Cloud Manager]
+
+Dedikerad IP-adress för utgångar kan aktiveras med hjälp av Cloud Manager. I följande steg beskrivs hur du aktiverar dedikerad IP-adress för utgångar på AEM as a Cloud Service med hjälp av Cloud Manager.
+
+1. Logga in på [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) som affärsägare i Cloud Manager.
+1. Navigera till önskat program.
+1. Navigera till den vänstra menyn __Tjänster > Nätverksinfrastruktur__.
+1. Välj __Lägg till nätverksinfrastruktur__ -knappen.
+
+   ![Lägg till nätverksinfrastruktur](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. I __Lägg till nätverksinfrastruktur__ väljer du __Dedikerad IP-adress för utgångar__ och väljer __Län__ för att skapa den dedikerade IP-adressen för utgångar.
+
+   ![Lägg till dedikerad IP-adress för egress](./assets/dedicated-egress-ip-address/select-type.png)
+
+1. Välj __Spara__ för att bekräfta att den dedikerade IP-adressen för utgångar har lagts till.
+
+   ![Bekräfta skapande av dedikerad IP-adress för egress](./assets/dedicated-egress-ip-address/confirmation.png)
+
+1. Vänta tills nätverksinfrastrukturen har skapats och markerats som __Klar__. Den här processen kan ta upp till 1 timme.
+
+   ![Status för att skapa en dedikerad IP-adress för utgångar](./assets/dedicated-egress-ip-address/ready.png)
+
+När du har skapat IP-adressen för den dedikerade utgången kan du nu konfigurera den med hjälp av API:erna för Cloud Manager enligt beskrivningen nedan.
+
+>[!TAB API:er för Cloud Manager]
+
+Dedikerad IP-adress för utgångar kan aktiveras med API:er för Cloud Manager. I följande steg beskrivs hur du aktiverar dedikerad IP-adress för utgångar på AEM as a Cloud Service med hjälp av Cloud Manager API.
+
+
 1. Börja med att fastställa i vilken region det avancerade nätverket behövs genom att använda API:t för Cloud Manager [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. The `region name` krävs för att göra efterföljande API-anrop för Cloud Manager. Normalt används regionen där produktionsmiljön finns.
 
-   Hitta den AEM as a Cloud Service miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) används i Cloud Manager API.
+   Hitta den AEM as a Cloud Service miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöinformation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) används i Cloud Manager API.
 
    __listRegions HTTP request__
 
@@ -67,7 +100,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
        -H 'Content-Type: application/json' 
    ```
 
-1. Aktivera dedikerad IP-adress för en molnhanterare med hjälp av API:t för molnhanteraren [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Använd lämplig `region` kod som hämtats från Cloud Manager API `listRegions` operation.
+2. Aktivera dedikerad IP-adress för en molnhanterare med hjälp av API:t för molnhanteraren [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Använd lämplig `region` kod som hämtats från Cloud Manager API `listRegions` operation.
 
    __createNetworkInfrastructure HTTP-begäran__
 
@@ -82,7 +115,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Vänta i 15 minuter tills Cloud Manager-programmet etablerar nätverksinfrastrukturen.
 
-1. Kontrollera att programmet har slutförts __dedikerad IP-adress för egress__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returnerades från createNetworkInfrastructure HTTP-begäran i föregående steg.
+3. Kontrollera att programmet har slutförts __dedikerad IP-adress för egress__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returneras från `createNetworkInfrastructure` HTTP-begäran i föregående steg.
 
    __getNetworkInfrastructure HTTP-begäran__
 
@@ -95,6 +128,11 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
    ```
 
    Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kontrollerar du statusen var några minut.
+
+När du har skapat IP-adressen för den dedikerade utgången kan du nu konfigurera den med hjälp av API:erna för Cloud Manager enligt beskrivningen nedan.
+
+>[!ENDTABS]
+
 
 ## Konfigurera IP-adressproxy för dedikerad egress per miljö
 
@@ -138,7 +176,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Den dedikerade IP-adresskonfigurationens HTTP-signatur skiljer sig bara från [flexibel utgångsport](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) på så sätt att det även stöder det valfria `nonProxyHosts` konfiguration.
 
-   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare automatiskt av Adobe.
+   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafikutjämning via delade IP-adresser optimeras automatiskt av Adobe.
 
    För varje `portForwards` mappning, definierar det avancerade nätverket följande vidarebefordringsregel:
 
@@ -168,7 +206,7 @@ Börja med att aktivera och konfigurera den dedikerade IP-adressen för utgånga
 
    Värdnamnet får inte vara `pinged`, eftersom det är en egress och _not_ och ingress.
 
-   Anteckna __dedikerad IP-adress för egress__ delas av alla AEM as a Cloud Service miljöer i programmet.
+   Observera att den dedikerade IP-adressen för utgångar delas av alla AEM as a Cloud Service miljöer i programmet.
 
 1. Nu kan du använda den dedikerade IP-adressen för utgångar i din anpassade AEM och konfiguration. När du använder en dedikerad IP-adress för utgångar är de externa AEM as a Cloud Service anslutningarna ofta konfigurerade att endast tillåta trafik från den här dedikerade IP-adressen.
 
@@ -185,7 +223,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 >[!TIP]
 >
-> Läs AEM as a Cloud Service dokumentation om IP-adresser för utgångar om du vill veta mer [alla routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#dedcated-egress-ip-traffic-routing=).
+> Läs AEM as a Cloud Service dokumentation om IP-adresser för utgångar om du vill veta mer [alla routningsregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 
 ### HTTP/HTTPS

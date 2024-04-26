@@ -9,10 +9,11 @@ level: Intermediate
 jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
+last-substantial-update: 2024-04-26T00:00:00Z
 duration: 906
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -25,15 +26,16 @@ Lär dig hur du konfigurerar och använder flexibel portutgångar för att stöd
 
 Flexibla portutgångar gör det möjligt att koppla anpassade, specifika regler för portvidarebefordran till AEM as a Cloud Service, vilket gör det möjligt att ansluta från AEM till externa tjänster.
 
-Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur. Se till att den dedikerade IP-adressen för utgångar är den [lämplig typ av nätverksinfrastruktur](./advanced-networking.md)  för AEM as a Cloud Service innan följande kommandon utförs.
+Ett Cloud Manager-program kan bara ha en __enkel__ typ av nätverksinfrastruktur. Se till att flexibel portutgång är den mest [lämplig typ av nätverksinfrastruktur](./advanced-networking.md) för AEM as a Cloud Service innan följande kommandon utförs.
 
 >[!MORELIKETHIS]
 >
-> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress) om du vill ha mer information om flexibel hamnutgång.
+> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om flexibel hamnutgång.
+
 
 ## Förutsättningar
 
-Följande krävs när du konfigurerar flexibel portutgång:
+Följande krävs när du ställer in eller konfigurerar flexibel portutgång med API:er för Cloud Manager:
 
 + Adobe Developer Console-projekt med Cloud Manager API aktiverat och [Behörigheter för affärsägare för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + Åtkomst till [Autentiseringsuppgifter för Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
@@ -49,13 +51,45 @@ Mer information finns i följande genomgång om hur du konfigurerar, konfigurera
 
 Den här självstudiekursen använder `curl` för att göra API-konfigurationer för Cloud Manager. Angiven `curl` -kommandon förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du `\` radbrytningstecken med `^`.
 
+
 ## Möjliggör flexibel portutgång per program
 
 Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
-1. Kontrollera först att regionen Advanced Networking är konfigurerad i med hjälp av Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. The `region name` krävs för att göra efterföljande API-anrop för Cloud Manager. Normalt används regionen där produktionsmiljön finns.
+>[!BEGINTABS]
 
-   Hitta den AEM as a Cloud Service miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) används i Cloud Manager API.
+>[!TAB Cloud Manager]
+
+Flexibel portutgång kan aktiveras med hjälp av Cloud Manager. I följande steg beskrivs hur du aktiverar flexibel portutgång på AEM as a Cloud Service med hjälp av Cloud Manager.
+
+1. Logga in på [Adobe Experience Manager Cloud Manager](https://experience.adobe.com/cloud-manager/) som affärsägare i Cloud Manager.
+1. Navigera till önskat program.
+1. Navigera till den vänstra menyn __Tjänster > Nätverksinfrastruktur__.
+1. Välj __Lägg till nätverksinfrastruktur__ -knappen.
+
+   ![Lägg till nätverksinfrastruktur](./assets/cloud-manager__add-network-infrastructure.png)
+
+1. I __Lägg till nätverksinfrastruktur__ väljer du __Flexibel portutgång__ och väljer __Län__ för att skapa den dedikerade IP-adressen för utgångar.
+
+   ![Lägg till flexibel portutgång](./assets/flexible-port-egress/select-type.png)
+
+1. Välj __Spara__ för att bekräfta tillägget av den flexibla hamnutgången.
+
+   ![Bekräfta flexibel skapande av portutgångar](./assets/flexible-port-egress/confirmation.png)
+
+1. Vänta tills nätverksinfrastrukturen har skapats och markerats som __Klar__. Den här processen kan ta upp till 1 timme.
+
+   ![Status för att skapa flexibel portutgång](./assets/flexible-port-egress/ready.png)
+
+När du har skapat en flexibel portutgång kan du nu konfigurera regler för portvidarebefordran med hjälp av API:erna för Cloud Manager enligt beskrivningen nedan.
+
+>[!TAB API:er för Cloud Manager]
+
+Flexibel portutgång kan aktiveras med API:er för Cloud Manager. I följande steg beskrivs hur du aktiverar flexibel portutgång på AEM as a Cloud Service med hjälp av API:t för Cloud Manager.
+
+1. Först identifierar du vilken region Advanced Networking (avancerat nätverk) som har konfigurerats i med hjälp av Cloud Manager API [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. The `region name` krävs för att göra efterföljande API-anrop för Cloud Manager. Normalt används regionen där produktionsmiljön finns.
+
+   Hitta den AEM as a Cloud Service miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöinformation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) används i Cloud Manager API.
 
    __listRegions HTTP request__
 
@@ -67,7 +101,7 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
        -H 'Content-Type: application/json' 
    ```
 
-1. Aktivera flexibel portutgång för ett Cloud Manager-program med hjälp av API:t för Cloud Manager [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Använd lämplig `region` kod som hämtats från Cloud Manager API `listRegions` operation.
+2. Aktivera flexibel portutgång för ett Cloud Manager-program med hjälp av API:t för Cloud Manager [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Använd lämplig `region` kod som hämtats från Cloud Manager API `listRegions` operation.
 
    __createNetworkInfrastructure HTTP-begäran__
 
@@ -82,7 +116,7 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
    Vänta i 15 minuter tills Cloud Manager-programmet etablerar nätverksinfrastrukturen.
 
-1. Kontrollera att miljön är klar __flexibel portutgång__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returnerades från createNetworkInfrastructure HTTP-begäran i föregående steg.
+3. Kontrollera att miljön är klar __flexibel portutgång__ konfiguration med Cloud Manager API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) åtgärd, använda `id` returneras från `createNetworkInfrastructure` HTTP-begäran i föregående steg.
 
    __getNetworkInfrastructure HTTP-begäran__
 
@@ -94,7 +128,11 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
        -H 'Content-Type: application/json'
    ```
 
-   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kan du kontrollera status var minut.
+   Verifiera att HTTP-svaret innehåller en __status__ av __klar__. Om du inte är klar ännu kontrollerar du statusen var några minut.
+
+När du har skapat en flexibel portutgång kan du nu konfigurera regler för portvidarebefordran med hjälp av API:erna för Cloud Manager enligt beskrivningen nedan.
+
+>[!ENDTABS]
 
 ## Konfigurera flexibla portaregresproxy per miljö
 
@@ -154,7 +192,7 @@ Börja med att aktivera den flexibla porten på AEM as a Cloud Service.
 
 1. Flexibla portutgångskonfigurationer kan uppdateras med API:t för Cloud Manager [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) operation. Kom ihåg `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT` -åtgärd, så alla regler måste anges för varje anrop av den här åtgärden.
 
-1. Nu kan du använda den flexibla konfigurationen av portutgångar i din anpassade AEM kod och konfiguration.
+1. Nu kan du använda den flexibla konfigurationen av portutgångar i din anpassade AEM och konfiguration.
 
 
 ## Ansluta till externa tjänster via flexibel hamnutgång
@@ -185,7 +223,7 @@ När HTTP/HTTPS-anrop görs till externa tjänster på portar som inte är stand
 
 >[!TIP]
 >
-> I AEM as a Cloud Service dokumentation om flexibel portutgång finns mer information [alla routningsregler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
+> I AEM as a Cloud Service dokumentation om flexibel portutgång finns mer information [alla routningsregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### Exempel på koder
 
