@@ -9,9 +9,10 @@ level: Intermediate
 jira: KT-13757
 thumbnail: xx.jpg
 doc-type: Tutorial
-source-git-commit: 3b500873ee7307df590ac66dea541a1adf14d726
+exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
+source-git-commit: 03cb7ef0cf79a21ec1b96caf6c11e6f5119f777c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -42,15 +43,14 @@ Så här implementerar du metadatadrivna behörigheter:
    ```json
    {
      "restrictionPropertyNames":[
-       "status"
+       "status",
+       "brand"
      ],
-     "restrictionPaths":[
-       "/content/dam"
-     ]
+     "enabled":true
    }
    ```
 
-1. Ersätt egenskapsnamnen och begränsningssökvägarna med de värden som krävs.
+1. Ersätt egenskapsnamnen med obligatoriska värden.
 
 
 Innan du lägger till restriktionsbaserade åtkomstkontrollposter bör en ny post på översta nivån läggas till för att först neka läsåtkomst till alla grupper som är föremål för behörighetsutvärdering för resurser (t.ex.&quot;medarbetare&quot; eller liknande):
