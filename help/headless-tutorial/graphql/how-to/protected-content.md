@@ -7,18 +7,24 @@ feature: GraphQL API
 role: Developer, Architect
 level: Intermediate
 jira: KT-15233
-last-substantial-update: 2024-04-01T00:00:00Z
-source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+last-substantial-update: 2024-05-01T00:00:00Z
+exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
+source-git-commit: a3d2b2343269d2cfc7cecc5817ef1e07a66a88d3
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
 
-
 # Skydda innehåll i AEM Headless
 
 Att säkerställa dataintegriteten och datasäkerheten när AEM används Huvudlöst innehåll från AEM Publish är avgörande för att hantera känsligt innehåll. På så sätt kan du gå igenom hur du skyddar innehåll som hanteras AEM Headless GraphQL API-slutpunkter.
+
+Vägledningen i den här självstudiekursen där det finns strikta krav på att innehåll endast ska vara tillgängligt för specifika användare eller användargrupper. Det är av största vikt att skilja mellan personaliserat marknadsföringsinnehåll och privat innehåll, som PII-innehåll eller personuppgifter, för att undvika förvirring och oavsiktliga resultat. Den här självstudiekursen handlar om att skydda privat innehåll.
+
+När vi diskuterar marknadsföringsinnehåll syftar vi på innehåll som är skräddarsytt för enskilda användare eller grupper och som inte är avsett för allmän konsumtion. Men det är viktigt att förstå att även om innehållet kan vara riktat till vissa användare så innebär dess exponering utanför det avsedda sammanhanget (t.ex. genom hantering av HTTP-begäranden) inte någon säkerhetsrisk, juridisk risk eller anseenderisk.
+
+Det betonas att allt innehåll som behandlas i den här artikeln antas vara privat och endast kan ses av utsedda användare eller grupper. Marknadsföringsmaterial kräver ofta inget skydd, utan levereras till specifika användare och kan hanteras av programmet och cachas för att ge resultat.
 
 Detta handledningar täcker inte:
 
@@ -114,4 +120,3 @@ Observera att detta medför en prestandaförsämring eftersom innehållet inte c
 ## Skydda AEM Headless GraphQL API-slutpunkter
 
 Den här guiden skyddar inte [AEM Headless GraphQL API-slutpunkter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint) själva, men fokuserar istället på att skydda det innehåll som de levererar. Alla användare, även anonyma användare, har åtkomst till slutpunkterna som innehåller skyddat innehåll. Endast det innehåll som är tillgängligt för användarens stängda användargrupper returneras. Om inget innehåll är tillgängligt kommer det AEM Headless API-svaret fortfarande att ha en 200 HTTP-svarskod, men resultatet kommer att vara tomt. Normalt räcker det att skydda innehållet eftersom själva slutpunkterna inte exponerar känsliga data. Om du behöver skydda slutpunkterna lägger du till åtkomstkontrollistor i dem AEM Publicera via [Repoinit-skript (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
-
