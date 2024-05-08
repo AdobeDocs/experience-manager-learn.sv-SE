@@ -11,9 +11,9 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -77,22 +77,6 @@ Mängden resurser som extraheringsprocessen för CTT tar beror på antalet noder
 
 Om klonmiljöer används för migrering kommer detta inte att påverka resursutnyttjandet för produktionsservern, utan har egna nackdelar när det gäller att synkronisera innehåll mellan Live-produktion och kloning
 
-### F: I mitt källförfattarsystem har vi konfigurerat enkel inloggning så att användarna kan autentiseras i Author-instansen. Måste jag använda funktionen för användarmappning i CTT i det här fallet?
-
-Det korta svaret är &quot;**Ja**&quot;.
-
-CTT-extrahering och -förtäring **utan** användarmappning migrerar bara innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
-
-I det här fallet är SAML-identitetsleverantören konfigurerad mot Adobe IMS för att använda antingen Federated/Enterprise ID, i stället för direkt till AEM med autentiseringshanteraren.
-
-### F: I mitt källförfattarsystem har vi konfigurerat grundläggande autentisering för användarna så att de kan autentiseras i Author-instansen med lokala AEM. Måste jag använda funktionen för användarmappning i CTT i det här fallet?
-
-Det korta svaret är &quot;**Ja**&quot;.
-
-CTT-extraheringen och -intaget utan användarmappning migrerar innehållet, de associerade principerna (användare, grupper) från AEM till AEMaaCS. Men dessa användare (identiteter) som finns i Adobe IMS och har (etablerats med) tillgång till AEMaaCS-instansen för att kunna autentisera. Jobbet för [användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html) mappa den lokala AEM till IMS-användare så att autentisering och auktoriseringar fungerar tillsammans.
-
-I det här fallet använder man Adobe ID och Adobe ID används av IMS-administratören för att ge åtkomst till AEMaaCS.
-
 ### F: Vad betyder termerna&quot;svep&quot; och&quot;skriv över&quot; i samband med CTT?
 
 I samband med [extraheringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase), är alternativen att antingen skriva över data i mellanlagringsbehållaren från tidigare extraheringscykler eller lägga till differentialen (tillagd/uppdaterad/borttagen) i den. Mellanlagringsbehållaren är ingenting, men den blob-lagringsbehållare som är associerad med migreringsuppsättningen. Varje migreringsuppsättning får en egen mellanlagringsbehållare.
@@ -107,10 +91,11 @@ Ja, det är möjligt men kräver noggrann planering av:
    + Verifiera om det går att migrera alla resurser som en del av en migreringsuppsättning och sedan ta med platser som använder dem i faser
 + I det aktuella läget gör redigeringsprocessen att författarinstansen inte är tillgänglig för innehållsredigering, även om publiceringsnivån fortfarande kan hantera innehållet
    + Detta innebär att tills det är klart för användaren att han/hon har skrivit innehållet, fryses innehållsredigeringen
++ Användare migreras inte längre, men grupper är
 
 Granska den övre extraherings- och intagsprocessen enligt dokumentationen innan du planerar migreringarna.
 
-### F: Kommer mina webbplatser att vara tillgängliga för slutanvändare även om de lägger in något i AEMaaCS-författare eller publiceringsinstanser?
+### F: Kommer mina webbplatser att vara tillgängliga för slutanvändare även om det händer något i AEMaaCS-författare eller publiceringsinstanser?
 
 Ja. Slutanvändartrafiken avbryts inte av innehållsmigreringsaktiviteten. Författaren fryser dock innehållet tills det är klart.
 
@@ -160,7 +145,6 @@ CTT-processen kräver anslutning till resurserna nedan:
 
 + Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
-+ I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
 
 Mer information om [källanslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
 
@@ -198,7 +182,7 @@ Om antalet resurser/noder i källmiljön ligger på en lägre nivå (~100 kB), u
 + Fortsätt arbeta på plats/med utvecklaren av AMS-produkten
 + Från och med nu kan du köra alla andra korrekturrundor med `wipe=true`
    + Observera att den här åtgärden migrerar hela nodarkivet, men endast ändrade blobbar i motsats till hela blobbar. Den tidigare uppsättningen blober finns i Azure-blobbbutiken för AEMaaCS-målinstansen.
-   + Använd det här migreringsbeviset för att mäta migreringens varaktighet, användarmappning, testning och validering av alla andra funktioner
+   + Använd det här migreringsbeviset för att mäta migreringens varaktighet, testning och validering av alla andra funktioner
 + Utför slutligen en svepning=verklig migrering före veckan då det publiceras
    + Ansluta Dynamic Media till AEMaaCS
    + Koppla från DM-konfiguration AEM lokal källa
