@@ -7,12 +7,12 @@ feature: User and Groups
 role: Admin
 level: Intermediate
 jira: KT-13757
-thumbnail: xx.jpg
 doc-type: Tutorial
+last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
-source-git-commit: 03cb7ef0cf79a21ec1b96caf6c11e6f5119f777c
+source-git-commit: 98b26eb15c2fe7d1cf73fe028b2db24087c813a5
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,13 @@ Om du aktiverar metadatadrivna behörigheter måste du definiera vilka egenskape
 
 Åtkomst till en AEM as a Cloud Service miljö som har uppdaterats till den senaste versionen krävs för att konfigurera metadatadrivna behörigheter.
 
+## OSGi-konfiguration {#configure-permissionable-properties}
 
-## Utvecklingssteg
+För att implementera metadatadrivna behörigheter måste utvecklaren distribuera en OSGi-konfiguration till AEM as a Cloud Service, som möjliggör specifika metadata-egenskaper för resurser för att hantera metadatadrivna behörigheter.
 
-Så här implementerar du metadatadrivna behörigheter:
-
-1. Avgör vilka metadataegenskaper för resurser som ska användas för åtkomstkontroll. I vårt fall blir det en egenskap som kallas `status`.
-1. Skapa en OSGi-konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` i ditt projekt.
-1. Klistra in följande JSON i den skapade filen
+1. Avgör vilka metadataegenskaper för resurser som ska användas för åtkomstkontroll. Egenskapsnamnen är JCR-egenskapsnamnen på resursens `jcr:content/metadata` resurs. I vårt fall blir det en egenskap som kallas `status`.
+1. Skapa en OSGi-konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` i ditt AEM Maven-projekt.
+1. Klistra in följande JSON i den skapade filen:
 
    ```json
    {
@@ -52,34 +51,39 @@ Så här implementerar du metadatadrivna behörigheter:
 
 1. Ersätt egenskapsnamnen med obligatoriska värden.
 
+## Återställ behörigheter för basresurs
 
 Innan du lägger till restriktionsbaserade åtkomstkontrollposter bör en ny post på översta nivån läggas till för att först neka läsåtkomst till alla grupper som är föremål för behörighetsutvärdering för resurser (t.ex.&quot;medarbetare&quot; eller liknande):
 
-1. Navigera till fönstret Verktyg → Dokumentskydd → Behörigheter
-1. Välj gruppen&quot;Medarbetare&quot; (eller någon annan anpassad grupp som alla användargrupper tillhör)
-1. Klicka på Lägg till ACE i skärmens övre högra hörn
-1. Välj /content/dam för sökväg
-1. Ange jcr:läs för behörighet
-1. Välj Neka för behörighetstyp
-1. Under Begränsningar väljer du rep:ntNames och anger dam:Asset som begränsningsvärde
-1. Klicka på Spara
+1. Navigera till __Verktyg → Dokumentskydd → Behörigheter__ screen
+1. Välj __Medarbetare__ grupp (eller annan anpassad grupp som alla användargrupper tillhör)
+1. Klicka __Lägg till ACE__ i skärmens övre högra hörn
+1. Välj `/content/dam` for __Bana__
+1. Retur `jcr:read` for __Behörighet__
+1. Välj `Deny` for __Behörighetstyp__
+1. Under Begränsningar väljer du `rep:ntNames` och ange `dam:Asset` som __Begränsningsvärde__
+1. Klicka __Spara__
 
 ![Neka åtkomst](./assets/metadata-driven-permissions/deny-access.png)
 
-Åtkomstkontrollposter kan nu läggas till för att ge läsåtkomst till användargrupper baserat på egenskapsvärden för tillgångsmetadata.
+## Bevilja åtkomst till resurser via metadata
 
-1. Navigera till fönstret Verktyg → Dokumentskydd → Behörigheter
-1. Markera önskad grupp
-1. Klicka på Lägg till ACE i skärmens övre högra hörn
-1. Välj /content/dam (eller en undermapp) som sökväg
-1. Ange jcr:läs för behörighet
-1. Välj Tillåt för behörighetstyp
-1. Under Begränsningar väljer du ett av de konfigurerade egenskapsnamnen för tillgångsmetadata (egenskaperna som definieras i OSGi-konfigurationen inkluderas här)
-1. Ange det obligatoriska egenskapsvärdet för metadata i fältet Begränsningsvärde
-1. Klicka på plusikonen (+) för att lägga till begränsningen i åtkomstkontrollposten
-1. Klicka på Spara
+Åtkomstkontrollposter kan nu läggas till för att ge läsåtkomst till användargrupper baserat på [konfigurerade egenskapsvärden för tillgångsmetadata](#configure-permissionable-properties).
+
+1. Navigera till __Verktyg → Dokumentskydd → Behörigheter__ screen
+1. Välj de användargrupper som ska ha åtkomst till resurserna
+1. Klicka __Lägg till ACE__ i skärmens övre högra hörn
+1. Välj `/content/dam` (eller en undermapp) för __Bana__
+1. Retur `jcr:read` for __Behörighet__
+1. Välj `Allow` for __Behörighetstyp__
+1. Under __Begränsningar__ väljer du en av [konfigurerade egenskapsnamn för tillgångsmetadata i OSGi-konfigurationen](#configure-permissionable-properties)
+1. Ange det obligatoriska metadataegenskapsvärdet i dialogrutan __Begränsningsvärde__ fält
+1. Klicka på __+__ om du vill lägga till begränsningen i åtkomstkontrollposten
+1. Klicka __Spara__
 
 ![Tillåt åtkomst](./assets/metadata-driven-permissions/allow-access.png)
+
+## Metadatadrivna behörigheter används
 
 Exempelmappen innehåller några resurser.
 
@@ -91,7 +95,7 @@ När du har konfigurerat behörigheter och angett metadataegenskaperna för resu
 
 ## Fördelar och överväganden
 
-Fördelarna med metadatadrivna behörigheter är bland annat:
+Fördelarna med metadatadrivna behörigheter är:
 
 - Detaljerad kontroll över åtkomsten till materialet baserat på specifika attribut.
 - Frikoppling av åtkomstkontrollprinciper från mappstrukturen, vilket ger en mer flexibel resursorganisation.
@@ -101,10 +105,10 @@ Fördelarna med metadatadrivna behörigheter är bland annat:
 >
 > Observera:
 > 
-> - Metadataegenskaper utvärderas mot begränsningarna med hjälp av String-likhet (andra datatyper som ännu inte stöds, t.ex. datum)
+> - Metadataegenskaper utvärderas mot begränsningar som använder __Stränglikhet__ (`=`) (andra datatyper eller operatorer stöds ännu inte, för större än (`>`) eller Date-egenskaper)
 > - Om du vill tillåta flera värden för en restriktionsegenskap kan du lägga till ytterligare begränsningar i åtkomstkontrollposten genom att välja samma egenskap i listrutan &quot;Välj typ&quot; och ange ett nytt begränsningsvärde (t.ex. `status=approved`, `status=wip`) och klicka på &quot;+&quot; för att lägga till begränsningen i posten
 > ![Tillåt flera värden](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - Flera begränsningar i en enda åtkomstkontrollpost med olika egenskapsnamn (t.ex. `status=approved`, `brand=Adobe`) utvärderas som ett AND-villkor, vilket innebär att den valda användargruppen ges läsåtkomst till resurser med `status=approved AND brand=Adobe`
+> - __OCH begränsningar__ stöds, via flera begränsningar i en enda åtkomstkontrollpost med olika egenskapsnamn (t.ex. `status=approved`, `brand=Adobe`) utvärderas som ett AND-villkor, vilket innebär att den valda användargruppen ges läsåtkomst till resurser med `status=approved AND brand=Adobe`
 > ![Tillåt flera begränsningar](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - Om du lägger till en ny åtkomstkontrollpost med en metadataegenskapsbegränsning skapas ett OR-villkor för posterna, t.ex. en enskild post med en begränsning `status=approved` och en enda post med `brand=Adobe` utvärderas som `status=approved OR brand=Adobe`
+> - __ELLER begränsningar__ stöds genom att lägga till en ny åtkomstkontrollpost med en metadataegenskapsbegränsning som skapar ett OR-villkor för posterna, t.ex. en enskild post med begränsningar `status=approved` och en enda post med `brand=Adobe` utvärderas som `status=approved OR brand=Adobe`
 > ![Tillåt flera begränsningar](./assets/metadata-driven-permissions/allow-multiple-aces.png)
