@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
+source-git-commit: 131008cfeb41789582bf821b724f996b7fb6fabb
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 5%
@@ -47,7 +47,7 @@ ht-degree: 5%
       + [Generativa variationsåtgärder](./document-authoring/how-to/generate-variations-actions.md)
       + [Anpassa uppmaningar med hjälp av metadata](./document-authoring/how-to/customizing-prompts-using-metadata.md)
       + [GenAI - förtroende och integritet](./document-authoring/how-to/generate-variations-trust-privacy.md)
-      + [Expertimenteringsramverk](./document-authoring/how-to/experimentation-framework.md)
+      + [Experimentationsramverk](./document-authoring/how-to/experimentation-framework.md)
       + [Konfigurera experimentramverk](./document-authoring/how-to/setup-experimentation-framework.md)
 + Sidredigering {#page-authoring}
    + [Redigering](page-authoring/aem-sites-authoring-overview.md)
