@@ -11,9 +11,9 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
+source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -700,6 +700,262 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
           </div>
         </div>
       </div>
+    </div>
+    <!-- Using Adobe Target Audiences for Generate Variations -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Using Adobe Target audiences for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-target-audiences-in-generate-variations.md" title="Använda Adobe Target-målgrupper för att generera variationer"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                alt="Använda Adobe Target-målgrupper för att generera variationer">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-target-audiences-in-generate-variations.md" title="Använda Adobe Target-målgrupper för att generera variationer">Använda Adobe Target-målgrupper för att generera variationer</a>
+            </p>
+            <p class="is-size-6">Upptäck hur ni använder Adobe Target målgrupper för att nå rätt målgrupp för era innehållsvarianter.</p>
+            <a href="./how-to/using-target-audiences-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Using audience CSV files for Generate Variations -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Using audience CSV files for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="Använda CSV-målgruppsfiler för att generera variationer"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                alt="Använda CSV-målgruppsfiler för att generera variationer">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 minut</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="Använda CSV-målgruppsfiler för att generera variationer">Använda CSV-målgruppsfiler för att generera variationer</a>
+            </p>
+            <p class="is-size-6">Upptäck hur ni kan använda målgrupps-CSV-filer för att nå rätt målgrupp för era innehållsvarianter.</p>
+            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!-- Use Adobe Firefly to create images -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Use Adobe Firefly to create images for Generate Variations" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="Använd Adobe Firefly för att skapa bilder för Generera variationer"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                alt="Använd Adobe Firefly för att skapa bilder för Generera variationer">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 minut</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="Använd Adobe Firefly för att skapa bilder för Generera variationer">Använd Adobe Firefly för att skapa bilder för Generera variationer</a>
+            </p>
+            <p class="is-size-6">Upptäck hur du använder Adobe Firefly för att skapa bilder för dina innehållsvariationer.</p>
+            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Generate Variations Actions -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Generative Variation actions" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-actions.md" title="Generativa variationsåtgärder"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                alt="Generativa variationsåtgärder">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">1 minut</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-actions.md" title="Generativa variationsåtgärder">Generativa variationsåtgärder</a>
+            </p>
+            <p class="is-size-6">Utforska de åtgärder som kan användas för en genererad variant</p>
+            <a href="./how-to/generate-variations-actions.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>    
+    <!-- Customizing prompts using metadata -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Customizing prompts using metadata" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/customizing-prompts-using-metadata.md" title="Anpassa uppmaningar med hjälp av metadata"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                alt="Anpassa uppmaningar med hjälp av metadata">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/customizing-prompts-using-metadata.md" title="Anpassa uppmaningar med hjälp av metadata">Anpassa uppmaningar med hjälp av metadata</a>
+            </p>
+            <p class="is-size-6">Utforska användningen av metadata i anpassade uppmaningar</p>
+            <a href="./how-to/customizing-prompts-using-metadata.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Trust and privacy in Generative AI -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Trust and privacy in Generative AI" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/generate-variations-trust-privacy.md" title="Förtroende och integritet i generell AI"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                alt="Förtroende och integritet i generell AI">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/generate-variations-trust-privacy.md" title="Förtroende och integritet i generell AI">Förtroende och integritet i generell AI</a>
+            </p>
+            <p class="is-size-6">Upptäck hur Adobe hanterar förtroende och sekretess i sin användning av generativ AI</p>
+            <a href="./how-to/generate-variations-trust-privacy.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Overview of experimentation framework -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Overview of experimentation framework" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                alt="Översikt över experimentella ramverk">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk">Översikt över experimentella ramverk</a>
+            </p>
+            <p class="is-size-6">Utforska experimenteringsmiljön som gör det möjligt för marknadsförare att testa vilka innehållsvariationer som är mest effektiva.</p>
+            <a href="./how-to/experimentation-framework.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                        
+    <!-- Setup experimentation framework -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Setting up experimentation framework" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                alt="Konfigurera experimentella ramverk">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk">Konfigurera experimentella ramverk</a>
+            </p>
+            <p class="is-size-6">Upptäck hur du konfigurerar experimenteringsramverket i Edge Delivery Services.</p>
+            <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                            
   </div>
 

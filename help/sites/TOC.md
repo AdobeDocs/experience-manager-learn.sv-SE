@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
+source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 6%
+source-wordcount: '549'
+ht-degree: 5%
 
 ---
 
@@ -41,6 +41,14 @@ ht-degree: 6%
       + [Mallar för GenAI-prompt](./document-authoring/how-to/prompt-templates-for-content-variations.md)
       + [Egna mallar för promptmeddelanden i GenAI](./document-authoring/how-to/custom-prompt-templates.md)
       + [Spara egna mallar för uppmaningar i GenAI](./document-authoring/how-to/save-custom-prompt-template.md)
+      + [Målgrupper för Generera variation](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
+      + [Publikens CSV-fil för Generera variation](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
+      + [Adobe Firefly för Generera variation](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
+      + [Generativa variationsåtgärder](./document-authoring/how-to/generate-variations-actions.md)
+      + [Anpassa uppmaningar med hjälp av metadata](./document-authoring/how-to/customizing-prompts-using-metadata.md)
+      + [GenAI - förtroende och integritet](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + [Expertimenteringsramverk](./document-authoring/how-to/experimentation-framework.md)
+      + [Konfigurera experimentramverk](./document-authoring/how-to/setup-experimentation-framework.md)
 + Sidredigering {#page-authoring}
    + [Redigering](page-authoring/aem-sites-authoring-overview.md)
    + [Navigering](page-authoring/basic-handling-sites-feature-video-use.md)
