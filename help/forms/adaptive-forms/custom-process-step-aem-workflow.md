@@ -1,6 +1,6 @@
 ---
 title: Implementera anpassat processsteg
-description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
+description: Skriva adaptiva formulärbilagor till filsystemet med ett anpassat processsteg
 feature: Workflow
 version: 6.5
 topic: Development
@@ -9,18 +9,18 @@ level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 226
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 7ebc33932153cf024e68fc5932b7972d9da262a7
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
 
 # Anpassat processsteg
 
-Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver implementera anpassade processsteg. Ett processteg kan köra ECMA-skript eller anropa anpassad Java-kod för att utföra åtgärder. I den här självstudiekursen beskrivs de steg som behövs för att implementera WorkflowProcess som körs i processteget.
+Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver implementera ett anpassat processsteg. Ett processteg kan köra ett ECMA-skript eller anropa anpassad Java™-kod för att utföra åtgärder. I den här självstudiekursen beskrivs de steg som behövs för att implementera den WorkflowProcess som körs i processteget.
 
-Det främsta skälet till att implementera anpassade processsteg är att utöka AEM arbetsflöde. Om du till exempel använder AEM Forms-komponenter i arbetsflödesmodellen kanske du vill utföra följande åtgärder:
+Det främsta skälet till att implementera ett anpassat processsteg är att utöka AEM arbetsflöde. Om du till exempel använder AEM Forms-komponenter i arbetsflödesmodellen kanske du vill utföra följande åtgärder:
 
 * Spara de anpassade formulärbilagorna i filsystemet
 * Bearbeta inskickade data
@@ -29,24 +29,30 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
 
-Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Den körda metodens signatur är som följer public void execute(WorkItem, WorkflowSession, workflowSession, MetaDataMap processArguments) ger WorkflowException Körningsmetoden ger åtkomst till följande tre variabler
+Öppna Maven-projektet i din Eclipse-utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera `src/main/java` mapp. Ett paket som slutar med `core`. Skapa en Java™-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande:
+
+```java
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException 
+```
+
+Körningsmetoden ger åtkomst till följande tre variabler:
 
 **WorkItem**: Variabeln workItem ger åtkomst till data som är relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
 
 **MetaDataMap**: Alla metadata som är associerade med arbetsflödet. Alla processargument som skickas till processsteget är tillgängliga med MetaDataMap-objektet.[API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 I den här självstudiekursen ska vi skriva de bilagor som lagts till i det anpassade formuläret i filsystemet som en del av AEM arbetsflöde.
 
-Följande Java-klass har skrivits för att uppnå detta användningsfall
+Följande Java™-klass har skrivits för att detta ska fungera
 
-Låt oss titta på koden
+Låt oss titta på den här koden
 
 ```java
 package com.learningaemforms.adobe.core;
@@ -127,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-Rad 1 - definierar komponentens egenskaper. Egenskapen process.label är vad du kommer att se när du associerar OSGi-komponenten med processteget, vilket visas i en av skärmbilderna nedan.
+Rad 1 - definierar komponentens egenskaper. The `process.label` -egenskapen är vad du kommer att se när du associerar OSGi-komponenten med processsteget, vilket visas i en av skärmbilderna nedan.
 
 Rader 13-15 - Processargumenten som skickas till den här OSGi-komponenten delas med avgränsaren &quot;,&quot;. Värdena för attachmentPath och saveToLocation extraheras sedan från strängarrayen.
 
@@ -139,12 +145,12 @@ Dessa två värden skickas som processargument, vilket visas i skärmbilden neda
 
 ![ProcessStep](assets/implement-process-step.gif)
 
-Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i mappen attachmentsPath. Resten av koden itererar genom sökresultaten för att skapa ett Document-objekt och spara det i filsystemet
+Tjänsten QueryBuilder används för att fråga efter noder av typen `nt:file` under mappen attachmentsPath. Resten av koden itererar genom sökresultaten för att skapa ett Document-objekt och spara det i filsystemet.
 
 
 >[!NOTE]
 >
->Eftersom vi använder Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt maven-projekt. Grupp-ID:t är com.adobe.aemfd och artefakt-ID:t är aemfd-client-sdk.
+>Eftersom vi använder ett Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt Maven-projekt. Grupp-ID är `com.adobe.aemfd` och artefakt-id är `aemfd-client-sdk`.
 
 #### Bygg och driftsätt
 
