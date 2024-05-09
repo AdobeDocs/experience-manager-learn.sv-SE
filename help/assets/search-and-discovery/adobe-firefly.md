@@ -10,13 +10,13 @@ doc-type: Feature Video
 duration: 89
 last-substantial-update: 2024-05-09T00:00:00Z
 jira: KT-15486
-source-git-commit: cd20fbc6c960c1ec827b4aaf804d81e7a2c6d92d
+exl-id: 4da5eb7e-fd8c-4a27-a824-1fb72c95933e
+source-git-commit: fa2fc9f769da53309dd1c56a2b35804788665bb9
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Sök och Adobe Firefly
 

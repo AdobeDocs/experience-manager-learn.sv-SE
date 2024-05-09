@@ -7,7 +7,7 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: cd20fbc6c960c1ec827b4aaf804d81e7a2c6d92d
+source-git-commit: 1ab4bc0655c70af7f0401e774823950658dc3f77
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 6%
