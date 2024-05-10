@@ -16,8 +16,8 @@
     </input>
     <input type="text" token="sourcetype" searchWhenChanged="true">
       <label>Source Type</label>
-      <default>cdnlogs</default>
-      <initialValue>cdnlogs</initialValue>
+      <default>aemcdn</default>
+      <initialValue>aemcdn</initialValue>
     </input>
     <input type="text" token="url" searchWhenChanged="true">
       <label>URL</label>
@@ -145,7 +145,7 @@
       <title>Non Cached Requests</title>
       <chart>
         <search>
-          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache!="*HIT*" cli_ip="$cli_ip$"
+          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache IN (MISS ERROR PASS) cli_ip="$cli_ip$"
 | timechart span=$request_rate_span$ count</query>
           <earliest>$time.earliest$</earliest>
           <latest>$time.latest$</latest>
@@ -189,10 +189,10 @@
       <title>Origin Requests rate</title>
       <chart>
         <search>
-          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache!="*HIT*" cli_ip="$cli_ip$"
+          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache IN (MISS ERROR PASS) cli_ip="$cli_ip$"
 | rex field=rules "action=(?&lt;action&gt;.*)"
 | rex field=rules "action=(?&lt;action&gt;.*)(,waf)"
-| where action!="block" and (isnull(ddos) or ddos!=true)
+| where (isnull(action) or action!="block") and (isnull(ddos) or ddos!=true)
 | timechart span=$request_rate_span$ count</query>
           <earliest>$time.earliest$</earliest>
           <latest>$time.latest$</latest>
@@ -279,13 +279,12 @@
   </row>
   <row>
     <panel>
-      <title>Origin RPS per Client IP and POP</title>
+      <title>Max Origin RPS per Client IP and POP</title>
       <chart>
         <search>
-          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache IN ("MISS", "PASS") cli_ip="$cli_ip$"
-| bin span=10s _time 
-| stats count as req_count by _time cli_ip pop
-| eval rps = floor(req_count/10)
+          <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cache IN (MISS PASS) cli_ip="$cli_ip$"
+| bin span=s _time
+| stats count as rps by _time cli_ip pop
 | timechart max(rps)</query>
           <earliest>$time.earliest$</earliest>
           <latest>$time.latest$</latest>
@@ -296,13 +295,12 @@
       </chart>
     </panel>
     <panel>
-      <title>Edge RPS per Client IP and POP</title>
+      <title>Max Edge RPS per Client IP and POP</title>
       <chart>
         <search>
           <query>index=$index$ sourcetype=$sourcetype$ url=$url$ host=$host$ req_ua="$req_ua$" $statusSelection$ cli_ip="$cli_ip$"
-| bin span=10s _time 
-| stats count as req_count by _time cli_ip pop
-| eval rps = floor(req_count/10)
+| bin span=s _time
+| stats count as rps by _time cli_ip pop
 | timechart max(rps)</query>
           <earliest>$time.earliest$</earliest>
           <latest>$time.latest$</latest>
