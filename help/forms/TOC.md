@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
+source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
 workflow-type: tm+mt
-source-wordcount: '2059'
+source-wordcount: '2064'
 ht-degree: 1%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 1%
    + [Konvertera PDF-formulär till anpassat format](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [Använda hjälpmetoder i Acrobat Sign](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
 + Signera flera Forms{#sign-multiple-documents}
    + [1 - Introduktion](sign-multiple-documents/introduction.md)
    + [2 - Konfigurera datakälla](sign-multiple-documents/configure-data-source.md)
