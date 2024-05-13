@@ -11,9 +11,9 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -547,7 +547,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations.md" title="Generera variationer"
+            <a href="./how-to/generate-variations/overview.md" title="Generera variationer"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
@@ -560,10 +560,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations.md" title="Generera variationer">Generera variationer</a>
+              <a href="./how-to/generate-variations/overview.md" title="Generera variationer">Generera variationer</a>
             </p>
             <p class="is-size-6">Introduktion till att generera variationer i Edge Delivery Services och förstå hur det kan vara användbart för marknadsförare.</p>
-            <a href="./how-to/generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/overview.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -575,15 +575,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>  
     <!--  Configure Sidekick for Generative Variations  -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Configure Sidekick for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Configure Sidekick" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurera Sidekick för att generera variationer"
+            <a href="./how-to/generate-variations/configure-sidekick.md" title="Generera variationer - Konfigurera Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="Konfigurera Sidekick för att generera variationer">
+                alt="Generera variationer - Konfigurera Sidekick">
             </a>
           </figure>
         </div>
@@ -592,10 +592,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurera Sidekick för att generera variationer">Konfigurera Sidekick för att generera variationer</a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="Generera variationer - Konfigurera Sidekick">Generera variationer - Konfigurera Sidekick</a>
             </p>
             <p class="is-size-6">Lär dig hur du konfigurerar sidindelad redigering för att generera variationer vid framtagning av dokument för Edge Delivery Services.</p>
-            <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -607,15 +607,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>          
     <!-- GenAI Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Use GenAI Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/prompt-templates-for-content-variations.md" title="Använd mallar för GenAI-fråga"
+            <a href="./how-to/generate-variations/prompt-templates.md" title="Generera variationer - promptmallar"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="Använd mallar för GenAI-fråga">
+                alt="Generera variationer - promptmallar">
             </a>
           </figure>
         </div>
@@ -624,10 +624,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/prompt-templates-for-content-variations.md" title="Använd mallar för GenAI-fråga">Mallar för GenAI-prompt</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="Generera variationer - promptmallar">Generera variationer - promptmallar</a>
             </p>
-            <p class="is-size-6">Upptäck hur du använder de generativa AI-promptmallarna för att generera innehållsvariationer.</p>
-            <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
+            <p class="is-size-6">Lär dig hur du använder mallar för att generera variationer.</p>
+            <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -639,15 +639,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>    
     <!-- Custom Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="GenAI Custom Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Custom prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/custom-prompt-templates.md" title="Anpassade mallar för GenAI-fråga"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - egna mallar för uppmaningar"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
-                alt="Anpassade mallar för GenAI-fråga">
+                alt="Generera variationer - egna mallar för uppmaningar">
             </a>
           </figure>
         </div>
@@ -656,10 +656,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/custom-prompt-templates.md" title="Anpassade mallar för GenAI-fråga">Egna mallar för promptmeddelanden i GenAI</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - egna mallar för uppmaningar">Generera variationer - egna mallar för uppmaningar</a>
             </p>
-            <p class="is-size-6">Lär dig hur du bygger de generativa anpassade AI-promptmallarna för att generera innehållsvariationer.</p>
-            <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
+            <p class="is-size-6">Lär dig hur du skapar anpassade promptmallar för Generera variationer.</p>
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -671,15 +671,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>    
     <!-- Saving Custom Prompt Templates -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="GenAI Save Prompt Templates" tabindex="7">
+      aria-label="Generate Variations - Save custom prompt templates" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/save-custom-prompt-template.md" title="Formulärmallar för sparad GenAI"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - spara egna promptmallar"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="Formulärmallar för sparad GenAI">
+                alt="Generera variationer - spara egna promptmallar">
             </a>
           </figure>
         </div>
@@ -688,10 +688,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/save-custom-prompt-template.md" title="Formulärmallar för sparad GenAI">Spara promptmallar för GenAI</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - spara egna promptmallar">Generera variationer - spara egna promptmallar</a>
             </p>
-            <p class="is-size-6">Lär dig hur du sparar de generativa anpassade AI-promptmallarna för att generera innehållsvariationer.</p>
-            <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
+            <p class="is-size-6">Lär dig hur du sparar de anpassade promptmallarna för Generera variationer.</p>
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -703,15 +703,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>
     <!-- Using Adobe Target Audiences for Generate Variations -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Using Adobe Target audiences for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Using Adobe Target audiences" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-target-audiences-in-generate-variations.md" title="Använda Adobe Target-målgrupper för att generera variationer"
+            <a href="./how-to/generate-variations/using-target-audiences.md" title="Generera variationer - Använda Adobe Target-målgrupper"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
-                alt="Använda Adobe Target-målgrupper för att generera variationer">
+                alt="Generera variationer - Använda Adobe Target-målgrupper">
             </a>
           </figure>
         </div>
@@ -720,10 +720,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-target-audiences-in-generate-variations.md" title="Använda Adobe Target-målgrupper för att generera variationer">Använda Adobe Target-målgrupper för att generera variationer</a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="Generera variationer - Använda Adobe Target-målgrupper">Generera variationer - Använda Adobe Target-målgrupper</a>
             </p>
             <p class="is-size-6">Upptäck hur ni använder Adobe Target målgrupper för att nå rätt målgrupp för era innehållsvarianter.</p>
-            <a href="./how-to/using-target-audiences-in-generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -735,15 +735,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>
     <!-- Using audience CSV files for Generate Variations -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Using audience CSV files for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Using CSV file audiences" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="Använda CSV-målgruppsfiler för att generera variationer"
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generera variationer - Använda CSV-filmålgrupper"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
-                alt="Använda CSV-målgruppsfiler för att generera variationer">
+                alt="Generera variationer - Använda CSV-filmålgrupper">
             </a>
           </figure>
         </div>
@@ -752,10 +752,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" title="Använda CSV-målgruppsfiler för att generera variationer">Använda CSV-målgruppsfiler för att generera variationer</a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generera variationer - Använda CSV-filmålgrupper">Generera variationer - Använda CSV-filmålgrupper</a>
             </p>
             <p class="is-size-6">Upptäck hur ni kan använda målgrupps-CSV-filer för att nå rätt målgrupp för era innehållsvarianter.</p>
-            <a href="./how-to/using-audiences-csv-file-in-generate-variations.md" class="spectrum-Button
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -767,15 +767,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>   
     <!-- Use Adobe Firefly to create images -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Use Adobe Firefly to create images for Generate Variations" tabindex="7">
+      aria-label="Generate Variations - Use Adobe Firefly" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="Använd Adobe Firefly för att skapa bilder för Generera variationer"
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Generera variationer - använd Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
-                alt="Använd Adobe Firefly för att skapa bilder för Generera variationer">
+                alt="Generera variationer - använd Adobe Firefly">
             </a>
           </figure>
         </div>
@@ -784,10 +784,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" title="Använd Adobe Firefly för att skapa bilder för Generera variationer">Använd Adobe Firefly för att skapa bilder för Generera variationer</a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Generera variationer - använd Adobe Firefly">Generera variationer - använd Adobe Firefly</a>
             </p>
-            <p class="is-size-6">Upptäck hur du använder Adobe Firefly för att skapa bilder för dina innehållsvariationer.</p>
-            <a href="./how-to/using-adobe-firefly-for-images-in-generate-variations.md" class="spectrum-Button
+            <p class="is-size-6">Upptäck hur du använder Adobe Firefly för att skapa bilder som används i innehållsvariationerna.</p>
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -799,15 +799,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
     </div>  
     <!-- Generate Variations Actions -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Generative Variation actions" tabindex="7">
+      aria-label="Generate Variations - Actions on a generated variation" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-actions.md" title="Generativa variationsåtgärder"
+            <a href="./how-to/generate-variations/actions.md" title="Generera variationer - Åtgärder för en genererad variant"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
-                alt="Generativa variationsåtgärder">
+                alt="Generera variationer - Åtgärder för en genererad variant">
             </a>
           </figure>
         </div>
@@ -816,10 +816,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-actions.md" title="Generativa variationsåtgärder">Generativa variationsåtgärder</a>
+              <a href="./how-to/generate-variations/actions.md" title="Generera variationer - Åtgärder för en genererad variant">Generera variationer - Åtgärder för en genererad variant</a>
             </p>
-            <p class="is-size-6">Utforska de åtgärder som kan användas för en genererad variant</p>
-            <a href="./how-to/generate-variations-actions.md" class="spectrum-Button
+            <p class="is-size-6">Utforska de åtgärder som kan användas för en genererad innehållsvariant.</p>
+            <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -829,49 +829,17 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
         </div>
       </div>
     </div>    
-    <!-- Customizing prompts using metadata -->
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Customizing prompts using metadata" tabindex="7">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <a href="./how-to/customizing-prompts-using-metadata.md" title="Anpassa uppmaningar med hjälp av metadata"
-              tabindex="-1">
-              <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
-                alt="Anpassa uppmaningar med hjälp av metadata">
-            </a>
-          </figure>
-        </div>
-        <div class="card-content is-padded-small">
-          <div class="content">
-            <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">2 minuter</p>
-            <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-prompts-using-metadata.md" title="Anpassa uppmaningar med hjälp av metadata">Anpassa uppmaningar med hjälp av metadata</a>
-            </p>
-            <p class="is-size-6">Utforska användningen av metadata i anpassade uppmaningar</p>
-            <a href="./how-to/customizing-prompts-using-metadata.md" class="spectrum-Button
-              spectrum-Button--outline spectrum-Button--primary
-              spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>  
     <!-- Trust and privacy in Generative AI -->
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
-      aria-label="Trust and privacy in Generative AI" tabindex="7">
+      aria-label="Generate Variations - Trust and Privacy" tabindex="7">
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-trust-privacy.md" title="Förtroende och integritet i generell AI"
+            <a href="./how-to/generate-variations/trust-privacy.md" title="Generera variationer - pålitlighet och sekretess"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
-                alt="Förtroende och integritet i generell AI">
+                alt="Generera variationer - pålitlighet och sekretess">
             </a>
           </figure>
         </div>
@@ -880,10 +848,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-trust-privacy.md" title="Förtroende och integritet i generell AI">Förtroende och integritet i generell AI</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="Generera variationer - pålitlighet och sekretess">Generera variationer - pålitlighet och sekretess</a>
             </p>
-            <p class="is-size-6">Upptäck hur Adobe hanterar förtroende och sekretess i sin användning av generativ AI</p>
-            <a href="./how-to/generate-variations-trust-privacy.md" class="spectrum-Button
+            <p class="is-size-6">Se hur Adobe hanterar förtroende och sekretess för Generate Variations.</p>
+            <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
@@ -914,7 +882,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk">Översikt över experimentella ramverk</a>
             </p>
-            <p class="is-size-6">Utforska experimenteringsmiljön som gör det möjligt för marknadsförare att testa vilka innehållsvariationer som är mest effektiva.</p>
+            <p class="is-size-6">Utforska det experimentella ramverk som gör det möjligt för marknadsförare att testa vilka innehållsvariationer som är mest effektiva.</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -946,7 +914,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk">Konfigurera experimentella ramverk</a>
             </p>
-            <p class="is-size-6">Upptäck hur du konfigurerar experimenteringsramverket i Edge Delivery Services.</p>
+            <p class="is-size-6">Upptäck hur du konfigurerar experimenteringsramverket i Edge Delivery Services Document Authoring.</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -956,6 +924,38 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
           </div>
         </div>
       </div>
-    </div>                            
+    </div>
+    <!-- Adding metadata for experimentation -->
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen"
+      aria-label="Adding metadata for experimentation" tabindex="7">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="./how-to/experimentation-add-metadata.md" title="Lägga till metadata för experiment"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                alt="Lägga till metadata för experiment">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p style="float: right;font-style: italic; color: #363636"
+              class="is-size-6">2 minuter</p>
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="./how-to/experimentation-add-metadata.md" title="Lägga till metadata för experiment">Lägga till metadata för experiment</a>
+            </p>
+            <p class="is-size-6">Utforska tillägg av metadata för experiment</p>
+            <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold">Se videon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>                                
   </div>
 

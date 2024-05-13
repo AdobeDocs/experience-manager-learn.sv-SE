@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 131008cfeb41789582bf821b724f996b7fb6fabb
+source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 5%
+source-wordcount: '532'
+ht-degree: 6%
 
 ---
 
@@ -36,19 +36,20 @@ ht-degree: 5%
       + [Alt-text för bild](./document-authoring/how-to/image-alt-text.md)
       + [Förhindra indexering av sökmotor](./document-authoring/how-to/no-index.md)
       + [Responsiv navigering](document-authoring/how-to/responsive-navigation.md)
-      + [Generera variationer](./document-authoring/how-to/generate-variations.md)
-      + [Konfigurera Sidekick för att generera variationer](./document-authoring/how-to/generate-variations-sidekick-config.md)
-      + [Mallar för GenAI-prompt](./document-authoring/how-to/prompt-templates-for-content-variations.md)
-      + [Egna mallar för promptmeddelanden i GenAI](./document-authoring/how-to/custom-prompt-templates.md)
-      + [Spara egna mallar för uppmaningar i GenAI](./document-authoring/how-to/save-custom-prompt-template.md)
-      + [Målgrupper för Generera variation](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
-      + [Publikens CSV-fil för Generera variation](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
-      + [Adobe Firefly för Generera variation](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
-      + [Generativa variationsåtgärder](./document-authoring/how-to/generate-variations-actions.md)
-      + [Anpassa uppmaningar med hjälp av metadata](./document-authoring/how-to/customizing-prompts-using-metadata.md)
-      + [GenAI - förtroende och integritet](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + Generera variationer{#generate-variations}
+         + [Ökning](./document-authoring/how-to/generate-variations/overview.md)
+         + [Konfigurera Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
+         + [Promptmallar](./document-authoring/how-to/generate-variations/prompt-templates.md)
+         + [Anpassade promptmallar](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
+         + [Spara egna mallar för uppmaningar](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
+         + [Adobe Target målgrupper](./document-authoring/how-to/generate-variations/using-target-audiences.md)
+         + [Målgrupper med CSV-filer](./document-authoring/how-to/generate-variations/using-csv-file-audiences.md)
+         + [Adobe Firefly](./document-authoring/how-to/generate-variations/using-adobe-firefly-for-images.md)
+         + [Åtgärder](./document-authoring/how-to/generate-variations/actions.md)
+         + [Förtroende och integritet](./document-authoring/how-to/generate-variations/trust-privacy.md)
       + [Experimentationsramverk](./document-authoring/how-to/experimentation-framework.md)
       + [Konfigurera experimentramverk](./document-authoring/how-to/setup-experimentation-framework.md)
+      + [Metadata för experiment](./document-authoring/how-to/experimentation-add-metadata.md)
 + Sidredigering {#page-authoring}
    + [Redigering](page-authoring/aem-sites-authoring-overview.md)
    + [Navigering](page-authoring/basic-handling-sites-feature-video-use.md)
