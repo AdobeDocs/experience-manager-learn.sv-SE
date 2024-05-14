@@ -9,7 +9,7 @@ role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+source-git-commit: b778fa9334d70b61b0d0fa31b6c62ac03490b11e
 workflow-type: tm+mt
 source-wordcount: '4441'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Den här självstudiekursen stegar igenom koden som behövs för att skapa en an
 * [Självstudiepaketet har slutförts](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Full Code Repository on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) och viss vana vid [AEM Maven-projektinställningar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
+Den här självstudiekursen förutsätter vissa grundläggande kunskaper i [AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) och viss vana vid [AEM Maven-projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=en). All kod som nämns är avsedd att användas som referens och ska endast distribueras till en [lokal AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## Struktur för en projektmall
 
@@ -129,7 +129,7 @@ Eftersom vi i första hand kopierar/konfigurerar noder kommer CRXDE Lite att anv
    1. Lägg till en ny **nt:ostrukturerad** nod under authoring-project/gadgets anropade **uppgifter**.
    1. Lägg till String-egenskaper i aktivitetsnoden för **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Uppgifter&quot;, och **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;.
 
-   Nu [Aktivitetspanelen](https://experienceleague.adobe.com/docs/#Tasks) visas som standard när ett nytt projekt skapas.
+   Nu [Aktivitetspanelen](https://experienceleague.adobe.com/en/docs) visas som standard när ett nytt projekt skapas.
 
    ```shell
    ../projects/templates/authoring-project
@@ -629,13 +629,13 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. I CRXDE-Lite skapar vi en undermapp under `/apps/aem-guides/projects-tasks/projects` mappen &quot;wizards&quot;. Kopiera standardguiden från: `/libs/cq/core/content/projects/workflowwizards/default_workflow` under den nya guidemappen och ge den ett nytt namn **content-approval-start**. Den fullständiga sökvägen bör nu vara: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder standardformatet [Gränssnittskomponenter för Granite](https://experienceleague.adobe.com/docs/) för att fylla i fälten.
+   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder standardformatet [Gränssnittskomponenter för Granite](https://experienceleague.adobe.com/en/docs) för att fylla i fälten.
 
    ![arbetsflödesguide för godkännande av innehåll](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. Vi ska lägga till ytterligare ett fält i guiden som används för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `../content-approval-start/jcr:content/items/column2/items` skapa en ny nod av typen `nt:unstructured` namngiven **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på [Bevilja användarväljarkomponent](https://experienceleague.adobe.com/docs/)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
+   Under `../content-approval-start/jcr:content/items/column2/items` skapa en ny nod av typen `nt:unstructured` namngiven **&quot;assign&quot;**. Vi kommer att använda komponenten Projects User Picker (som är baserad på [Bevilja användarväljarkomponent](https://experienceleague.adobe.com/en/docs)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
 
    Nedan visas XML-representationen av **tilldela** nod:
 
@@ -655,7 +655,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. Vi ska också lägga till ett prioritetsurvalsfält som avgör prioriteten för den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `/content-approval-start/jcr:content/items/column2/items` skapa en ny nod av typen `nt:unstructured` namngiven **prioritet**. Vi använder [Komponenten för val av användargränssnitt](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) för att fylla i formulärfältet.
+   Under `/content-approval-start/jcr:content/items/column2/items` skapa en ny nod av typen `nt:unstructured` namngiven **prioritet**. Vi använder [Komponenten för val av användargränssnitt](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) för att fylla i formulärfältet.
 
    Under **prioritet** nod som vi ska lägga till **objekt** nod på **nt:ostrukturerad**. Under **objekt** noden lägger till ytterligare 3 noder för att fylla i markeringsalternativen Hög, Medel och Låg. Varje nod är av typen **nt:ostrukturerad** och bör ha en **text** och **value** -egenskap. Både texten och värdet ska ha samma värde:
 
@@ -691,7 +691,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
    </priority>
    ```
 
-1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) formulärfält för att hämta indata. Vi ska också lägga till ett dolt fält med en [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
+1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) formulärfält för att hämta indata. Vi ska också lägga till ett dolt fält med en [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
 
    Lägg till två **nt:ostrukturerad** noder med följande egenskaper representerade nedan i XML:
 
