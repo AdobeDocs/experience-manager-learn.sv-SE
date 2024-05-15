@@ -8,12 +8,12 @@ role: Architect, Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
-last-substantial-update: 2022-10-17T00:00:00Z
+last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-duration: 2177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+duration: 2200
+source-git-commit: 11c9173cbb2da75bfccba278e33fc4ca567bbda1
 workflow-type: tm+mt
-source-wordcount: '3060'
+source-wordcount: '3357'
 ht-degree: 0%
 
 ---
@@ -456,3 +456,66 @@ $ git push adobe saml-auth:develop
 ```
 
 Distribuera målmolnhanterarens Git-gren (i det här exemplet) `develop`), med ett fullständigt produktionsflöde för stackdistribution.
+
+## Anropa SAML-autentisering
+
+SAML-autentiseringsflödet kan anropas från en AEM webbplats genom att skapa en länk eller en knapp. Parametrarna som beskrivs nedan kan ställas in programmatiskt efter behov, så en inloggningsknapp kan till exempel ställa in `saml_request_path`, som är den plats där användaren dirigeras till olika AEM, baserat på knappens kontext, när SAML-autentiseringen är klar.
+
+### Begäran om GET
+
+SAML-autentisering kan anropas genom att en HTTP GET-begäran skapas i formatet:
+
+`HTTP GET /system/sling/login`
+
+och tillhandahålla frågeparametrar:
+
+| Frågeparameternamn | Frågeparametervärde |
+|----------------------|-----------------------|
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren lyssnar på, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi configuration&#39;s](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
+
+Den här HTML-länken kommer till exempel att utlösa SAML-inloggningsflödet och när den lyckas kommer användaren till `/content/wknd/us/en/protected/page.html`. Dessa frågeparametrar kan ställas in programmatiskt efter behov.
+
+```html
+<a href="/system/sling/login?resource=/content/wknd&saml_request_path=/content/wknd/us/en/protected/page.html">
+    Log in using SAML
+</a>
+```
+
+## Begäran om POST
+
+SAML-autentisering kan anropas genom att en HTTP-POST skapas i formatet:
+
+`HTTP POST /system/sling/login`
+
+och tillhandahålla formulärdata:
+
+| Namn på formulärdata | Formulärdatavärde |
+|----------------------|-----------------------|
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren lyssnar på, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi configuration&#39;s](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
+
+
+Den här HTML-knappen använder till exempel en HTTP-POST för att utlösa SAML-inloggningsflödet, och om den lyckas tar du användaren till `/content/wknd/us/en/protected/page.html`. Dessa formulärdataparametrar kan ställas in programmatiskt efter behov.
+
+```html
+<form action="/system/sling/login" method="POST">
+    <input type="hidden" name="resource" value="/content/wknd">
+    <input type="hidden" name="saml_request_path" value="/content/wknd/us/en/protected/page.html">
+    <input type="submit" value="Log in using SAML">
+</form>
+```
+
+### Dispatcher-konfiguration
+
+Både HTTP-GET och POST-metoder kräver klientåtkomst till AEM `/system/sling/login` slutpunkter, och därför måste de vara tillåtna via AEM Dispatcher.
+
+Tillåt nödvändiga URL-mönster baserade på om GET eller POST används
+
+```
+# Allow GET-based SAML authentication invocation
+/0191 { /type "allow" /method "GET" /url "/system/sling/login" /query="*" }
+
+# Allow POST-based SAML authentication invocation
+/0192 { /type "allow" /method "POST" /url "/system/sling/login" }
+```
