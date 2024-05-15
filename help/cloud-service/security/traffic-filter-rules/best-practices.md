@@ -12,9 +12,9 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. D
 - När du deklarerar och validerar regler börjar du alltid med `action` type `log` för att säkerställa att regeln inte blockerar legitim trafik.
 - För vissa regler gäller att övergången från `log` till `block` bör endast bygga på en analys av tillräcklig platstrafik.
 - Lägg in regler stegvis och överväg att involvera era testteam (QA, prestanda, penetrationstestning) i processen.
-- Analysera regelns påverkan regelbundet med [kontrollpanelsverktyg](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool). Beroende på webbplatsens trafikvolym kan analysen göras varje dag, varje vecka eller varje månad.
+- Analysera regelns påverkan regelbundet med [kontrollpanelsverktyg](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Beroende på webbplatsens trafikvolym kan analysen göras varje dag, varje vecka eller varje månad.
 - Om du vill blockera skadlig trafik som du kanske känner till efter analysen lägger du till eventuella ytterligare regler. Exempel: vissa IP-adresser som har attackerat din webbplats.
 - Regelframtagning, driftsättning och analys ska vara en pågående, iterativ process. Det är inte en engångsaktivitet.
 
@@ -91,7 +91,7 @@ data:
 
 ## Bästa tillvägagångssätt för WAF-regler
 
-När WAF har licensierats och aktiverats för programmet visas WAF-flaggor som matchar trafik i diagram och begärandeloggar, även om du inte deklarerat dem i en regel. Detta för att ni alltid är medvetna om potentiellt ny skadlig trafik och kan skapa regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
+När WAF har licensierats och aktiverats för programmet visas WAF-flaggor som matchar trafik i diagram och begärandeloggar, även om du inte deklarerat dem i en regel. Ni är alltså alltid medvetna om potentiellt ny skadlig trafik och kan skapa regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
 
 Titta på WAF-reglerna nedan för ditt AEM. De värden du vill använda för `action` och `wafFlags` egenskapen måste fastställas i samarbete med säkerhetsteamet.
 

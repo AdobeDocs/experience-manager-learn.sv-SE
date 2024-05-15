@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1968'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Lär dig mer om standardskyddet för DDoS på din AEM webbplats:
 - **Blockering:** CDN i Adobe blockerar trafik till ursprungsläget om den överskrider en Adobe-definierad frekvens från en viss IP-adress, per CDN-postleverantör (Point of Presence).
 - **Varning:** Åtgärdscentret skickar en trafiktopp på grund av varningsmeddelanden när trafiken överskrider en viss nivå. Denna varning utlöses när trafiken till en viss CDN PoP överstiger en _Adobe-definierad_ begärandefrekvens per IP-adress. Se [Varningar om trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) för mer information.
 
-Dessa inbyggda skydd bör betraktas som en baslinje för en organisations förmåga att minimera prestandapåverkan av en DDoS-attack. Eftersom alla webbplatser har olika prestandaegenskaper och kan uppleva prestandaförsämringar innan hastighetsgränsen som definieras av Adobe uppfylls, bör du utöka standardskyddet genom att _kundkonfiguration_.
+Dessa inbyggda skydd bör betraktas som en baslinje för en organisations förmåga att minimera prestandapåverkan av en DDoS-attack. Eftersom varje webbplats har olika prestandaegenskaper och kan se att prestandan försämras innan hastighetsgränsen för Adobe har uppnåtts bör du utöka standardskyddet genom att _kundkonfiguration_.
 
 Låt oss titta på några ytterligare, rekommenderade åtgärder som kunderna kan vidta för att skydda sina webbplatser mot DDoS-attacker:
 
@@ -76,14 +76,20 @@ Adobe skickar en trafikspik på ursprungsvarningen som [Meddelande från Åtgär
 
 ## Analysera trafikmönster {#analyze-traffic}
 
-Om webbplatsen redan är aktiv kan du analysera trafikmönstren med hjälp av CDN-loggar och någon av följande metoder:
+Om webbplatsen redan är aktiv kan du analysera trafikmönstren med hjälp av CDN-loggar och instrumentpaneler från Adobe.
+
+- **Kontrollpanel för CDN-trafik**: ger insikter om trafiken via CDN och antalet förfrågningar om ursprung, felfrekvenserna 4xx och 5xx samt icke-cachelagrade förfrågningar. Ger även maximalt antal CND- och origin-begäranden per sekund per klient-IP-adress och fler insikter för att optimera CDN-konfigurationerna.
+
+- **CDN-cacheträffrekvens**: ger insikter om det totala antalet träffar i cacheminnet och det totala antalet förfrågningar från HIT-, PASS- och MISS-status. Tillhandahåller även de bästa URL:erna för HIT, PASS och MISS.
+
+Konfigurera kontrollpanelsverktygen med _något av följande alternativ_:
 
 ### ELK - konfigurera kontrollpanelsverktyg
 
 The **Elasticsearch, Logstash och Kibana (ELK)** Instrumentpanelsverktyg från Adobe kan användas för att analysera CDN-loggarna. Verktyget innehåller en kontrollpanel som visualiserar trafikmönstren, vilket gör det enklare att fastställa optimala tröskelvärden för trafikfilterreglerna för din hastighetsbegränsning.
 
-- Klona [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub-databas.
-- Konfigurera verktygen genom att följa följande [Så här ställer du in ELK Docker-behållaren](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool?tab=readme-ov-file#how-to-set-up-the-elk-docker-container) steg.
+- Klona [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-databas.
+- Konfigurera verktygen genom att följa följande [Så här ställer du in ELK Docker-behållaren](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) steg.
 - Som en del av konfigurationen importerar du `traffic-filter-rules-analysis-dashboard.ndjson` fil för att visualisera data. The _CDN-trafik_ Kontrollpanelen innehåller visualiseringar som visar det maximala antalet begäranden per IP/POP vid CDN Edge och Origin.
 - Från [Cloud Manager](https://my.cloudmanager.adobe.com/)&#39;s _Miljö_ hämtar du AEMCS Publish-tjänstens CDN-loggar.
 
@@ -95,9 +101,9 @@ The **Elasticsearch, Logstash och Kibana (ELK)** Instrumentpanelsverktyg från A
 
 ### Segment - konfigurera instrumentpanelsverktyg
 
-Kunder som har [Splunk Log-vidarebefordran har aktiverats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa en ny kontrollpanel för att analysera trafikmönstren. Följande XML-fil hjälper dig att skapa en kontrollpanel på Splunk:
+Kunder som har [Splunk Log-vidarebefordran har aktiverats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
-- [CDN - kontrollpanel för trafik](./assets/traffic-dashboard.xml): Den här instrumentpanelen ger insikter om trafikmönstren på CDN Edge och Origin. Det innehåller visualiseringar som visar det maximala antalet begäranden per IP/POP vid CDN Edge och Origin.
+Så här skapar du instrumentpaneler i Splunk: [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) steg.
 
 ### Data granskas
 
