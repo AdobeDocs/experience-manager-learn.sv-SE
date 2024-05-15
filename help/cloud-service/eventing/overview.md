@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 573
+duration: 540
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
-source-git-commit: 5d8ee3b9ab6fb974f7faebb1d0ce42d699e2063c
+exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 0%
 
 ---
-
 
 # AEM
 

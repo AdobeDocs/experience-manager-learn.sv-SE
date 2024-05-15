@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
-duration: 181
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 177
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%

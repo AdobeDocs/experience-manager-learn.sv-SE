@@ -7,18 +7,18 @@ version: Cloud Service
 role: Admin, Developer, Leader, User
 level: Beginner, Intermediate
 doc-type: Technical Video
-duration: 230
+duration: 239
 last-substantial-update: 2024-03-05T00:00:00Z
 jira: KT-15083
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
+exl-id: 5f122412-ab70-4b54-b20b-726bc6138b2b
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
-
 
 # Cloud 5 - Publicera, avpublicera evenemang i Edge Delivery Services
 

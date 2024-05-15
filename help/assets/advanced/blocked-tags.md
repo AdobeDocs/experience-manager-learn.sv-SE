@@ -7,17 +7,17 @@ topic: Content Management
 role: Admin, User
 level: Intermediate
 doc-type: Feature Video
-duration: 305
+duration: 303
 last-substantial-update: 2024-01-12T00:00:00Z
 jira: KT-14778
 thumbnail: 3426839.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+exl-id: 0d02faeb-6290-4f57-800c-4f7ee62f1352
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
-
 
 # Blockerade taggar
 

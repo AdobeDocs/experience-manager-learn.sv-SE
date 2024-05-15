@@ -8,8 +8,8 @@ topic: Development
 role: User
 level: Intermediate
 exl-id: 7b457ce8-f11a-4e2b-8548-6ac3910cb61e
-duration: 31
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 24
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

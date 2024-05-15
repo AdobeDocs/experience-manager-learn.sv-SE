@@ -11,8 +11,8 @@ role: Architect, Developer
 level: Beginner
 last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
-duration: 725
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 712
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%

@@ -10,8 +10,8 @@ thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-duration: 328
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 294
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 1%

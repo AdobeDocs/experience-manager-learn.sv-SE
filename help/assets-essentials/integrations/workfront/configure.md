@@ -13,8 +13,8 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 doc-type: Feature Video
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
-duration: 324
-source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
+duration: 322
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%

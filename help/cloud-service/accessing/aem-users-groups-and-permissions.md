@@ -9,8 +9,8 @@ level: Beginner
 jira: KT-6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
-duration: 324
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 315
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 5%

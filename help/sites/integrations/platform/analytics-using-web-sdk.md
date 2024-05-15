@@ -13,8 +13,8 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-duration: 2330
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 2252
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Om du vill veta mer om konfiguration och koncept för Analytics rekommenderar vi
 
 ## Uppdatera dataström - lägg till analystjänst
 
-En DataStream instruerar Platform Edge Network var insamlade data ska skickas. I [tidigare självstudiekurs](./web-sdk.md), är en dataström konfigurerad att skicka data till Experience Platform. Datastream uppdateras för att skicka data till rapportsviten Analytics som konfigurerades i [ovan](#setup-analytics---report-suite-analysis-workspace) steg.
+En dataström instruerar Platform Edge Network var insamlade data ska skickas. I [tidigare självstudiekurs](./web-sdk.md), är en dataström konfigurerad att skicka data till Experience Platform. Datastream uppdateras för att skicka data till rapportsviten Analytics som konfigurerades i [ovan](#setup-analytics---report-suite-analysis-workspace) steg.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 

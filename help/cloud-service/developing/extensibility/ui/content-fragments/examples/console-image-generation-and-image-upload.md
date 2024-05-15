@@ -11,8 +11,8 @@ thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
-duration: 1380
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+duration: 1438
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%

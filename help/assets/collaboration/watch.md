@@ -7,17 +7,17 @@ topic: Collaboration
 role: User
 level: Beginner, Intermediate
 doc-type: Feature Video
-duration: 116
+duration: 131
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15000
 thumbnail: 3427646.jpeg
-source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
+exl-id: 33531e51-dcbc-4a02-adb1-4abc70a02a28
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
-
 
 # Titta på resurser, mappar och samlingar
 

@@ -9,8 +9,8 @@ role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
 last-substantial-update: 2019-07-07T00:00:00Z
-duration: 35
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 28
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%

@@ -13,8 +13,8 @@ thumbnail: KT-13156.jpeg
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
-duration: 1360
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+duration: 1303
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 0%
@@ -66,7 +66,7 @@ The [XDM - systemöversikt](https://experienceleague.adobe.com/docs/experience-p
 
 ## Skapa dataström - Experience Platform
 
-En DataStream instruerar Platform Edge Network var insamlade data ska skickas. Den kan till exempel skickas till Experience Platform, Analytics eller Adobe Target.
+En dataström instruerar Platform Edge Network var insamlade data ska skickas. Den kan till exempel skickas till Experience Platform, Analytics eller Adobe Target.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -79,7 +79,7 @@ Lär dig hur du skapar en taggegenskap i Experience Platform för att lägga til
 
 + Taggtillägg: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) och [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + Dataelement: Dataelement av anpassad kodtyp som extraherar sidnamn, webbplatsavsnitt och värdnamn med hjälp av WKND-platsens Adobe-klientdatalager. XDM-objektets datatypselement som överensstämmer med det nya WKND XDM-schemabygget som skapades tidigare [Skapa XDM-schema](#create-xdm-schema---experience-platform) steg.
-+ Regel: Skicka data till Platform Edge Network när en WKND-webbsida besöktes med hjälp av Adobe-klientdatalagret som utlöses `cmp:show` -händelse.
++ Regel: Skicka data till Platform Edge Network när en WKND-webbsida besöks med hjälp av Adobe Client Data Layer som utlöses `cmp:show` -händelse.
 
 När du skapar och publicerar taggbiblioteket med **Publiceringsflöde** kan du använda **Lägg till alla ändrade resurser** -knappen. Om du vill välja alla resurser som dataelement, regel och taggtillägg i stället för att identifiera och välja en enskild resurs. Under utvecklingsfasen kan du dessutom publicera biblioteket endast på _Utveckling_ miljö, verifiera och marknadsför den sedan till _Scen_ eller _Produktion_ miljö.
 

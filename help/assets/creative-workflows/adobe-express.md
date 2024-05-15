@@ -7,11 +7,11 @@ topic: Integrations, Content Management, Content Supply Chain
 role: Admin, User
 level: Beginner
 doc-type: Feature Video
-duration: 520
+duration: 510
 last-substantial-update: 2024-05-07T00:00:00Z
 jira: KT-14645
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
-source-git-commit: f82ef04d4f9dc2996df025e90377f668b1525243
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 0%

@@ -6,16 +6,16 @@ topic: Content Management
 role: User
 level: Beginner, Intermediate
 doc-type: Feature Video
-duration: 407
+duration: 421
 last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
-source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
-
 
 # Generera variationer
 

@@ -5,8 +5,8 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-duration: 228
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 137
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 0%

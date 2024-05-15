@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 457
 last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
 
 ---
-
 
 # Adobe I/O Runtime Action and AEM Events
 
@@ -176,4 +176,3 @@ Du kan granska händelseinformationen i **Felsökningsspårning** -fliken i info
 ## Nästa steg
 
 I nästa exempel ska vi förbättra den här åtgärden för att bearbeta AEM händelser, ringa AEM författartjänsten för att få innehållsinformation, lagra information i Adobe I/O Runtime-lagring och visa dem via Single Page Application (SPA).
-

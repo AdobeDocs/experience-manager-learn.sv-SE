@@ -7,16 +7,16 @@ topic: Content Management
 role: Admin, Leader, User
 level: Beginner
 doc-type: Value Video
-duration: 155
+duration: 163
 last-substantial-update: 2024-05-09T00:00:00Z
 jira: KT-15487
-source-git-commit: 5cec056bd50c7ddb8f20dbd6227fe8f21d212a11
+exl-id: db65da7a-56dd-4edb-a6e4-a0c55402c55e
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
-
 
 # Dynamic Media och DASH adaptive streaming
 

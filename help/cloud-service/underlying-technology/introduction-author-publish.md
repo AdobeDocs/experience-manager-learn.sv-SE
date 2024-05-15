@@ -10,8 +10,8 @@ topic: Architecture
 role: Architect, Developer
 level: Beginner
 exl-id: 586d982e-0128-47a1-b945-7d99298db3fd
-duration: 367
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 365
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

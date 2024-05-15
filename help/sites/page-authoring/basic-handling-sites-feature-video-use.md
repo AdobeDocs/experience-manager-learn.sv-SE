@@ -10,8 +10,8 @@ role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
-duration: 289
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 269
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 2%
@@ -34,7 +34,7 @@ I den här videon beskrivs följande funktioner:
 
      | Konsol | Syfte |
      |---|---|
-     | Assets | Med dessa konsoler kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM | Communities | Med den här konsolen kan du skapa och hantera communitysajter för engagemang och aktivering | Handel | På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina Commerce-webbplatser |
+     | Assets | Med dessa konsoler kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM | Communities | Med den här konsolen kan du skapa och hantera communitysajter för engagemang och aktivering | Handel | På så sätt kan du hantera produkter, produktkataloger och beställningar för dina Commerce-webbplatser |
      | Upplevelsefragment | Ett upplevelsefragment är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger |
      | Forms | Med den här konsolen kan du skapa, hantera och bearbeta formulär och dokument |
      | Personalisering | Konsolen innehåller ett ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser |

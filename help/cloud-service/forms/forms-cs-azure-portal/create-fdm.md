@@ -10,8 +10,8 @@ topic: Integrations
 thumbnail: 335385.jpg
 jira: KT-8229
 exl-id: 3bb4edb9-1b3c-4d9d-a133-16fb2b72f8a5
-duration: 539
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 537
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%

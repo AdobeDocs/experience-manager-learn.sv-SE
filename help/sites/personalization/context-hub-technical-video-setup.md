@@ -8,8 +8,8 @@ role: Developer
 level: Intermediate
 doc-type: Technical Video
 exl-id: 89308dd3-a7e5-4fec-bffb-5f0974125c0a
-duration: 375
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 357
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 1%

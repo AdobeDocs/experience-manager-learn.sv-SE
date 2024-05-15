@@ -11,8 +11,8 @@ topic: Development
 jira: KT-7151
 thumbnail: 331758.jpg
 exl-id: fa00822f-075a-47df-941f-c7370bd1d4f4
-duration: 290
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 288
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 0%

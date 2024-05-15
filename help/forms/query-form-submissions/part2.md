@@ -9,7 +9,9 @@ role: Developer
 level: Experienced
 jira: kt-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
+exl-id: b814097c-0066-44da-bba5-6914dee0df75
+duration: 32
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -35,4 +37,3 @@ Den anpassade skicka-koden finns i **_StoreFormDataWithBlobIndexTagsInAzure_** o
 ## Nästa steg
 
 [Skapa frågegränssnitt](./part3.md)
-

@@ -9,8 +9,8 @@ level: Experienced
 jira: KT-8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
-duration: 1257
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 1231
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

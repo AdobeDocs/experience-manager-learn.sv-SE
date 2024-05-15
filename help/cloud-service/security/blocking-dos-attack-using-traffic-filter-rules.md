@@ -7,12 +7,12 @@ topic: Security, Administration, Performance
 role: Admin, Architect
 level: Intermediate
 doc-type: Tutorial
-duration: 0
+duration: 436
 last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1918'
 ht-degree: 0%

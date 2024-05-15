@@ -8,7 +8,9 @@ role: Developer
 level: Experienced
 jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
+exl-id: cae160f2-21a5-409c-942d-53061451b249
+duration: 97
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -124,4 +126,3 @@ Så här testar du detta på den lokala servern:
 1. Fyll i några formulärfält.
 1. Skicka formuläret för att starta AEM arbetsflöde.
 1. Hitta det återgivna PDF i arbetsflödets nyttolastmapp.
-

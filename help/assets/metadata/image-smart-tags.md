@@ -11,8 +11,8 @@ thumbnail: 17019.jpg
 last-substantial-update: 2022-06-09T00:00:00Z
 doc-type: Feature Video
 exl-id: c72dc489-70e6-48ca-99a8-663d4c0652ba
-duration: 585
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 574
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 20%

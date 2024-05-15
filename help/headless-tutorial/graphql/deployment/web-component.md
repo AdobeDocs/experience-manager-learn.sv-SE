@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-10797
 thumbnail: kt-10797.jpg
 exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
-duration: 61
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 31
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%

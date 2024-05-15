@@ -9,8 +9,8 @@ feature: Carousel Banners
 index: y
 doc-type: Tutorial
 exl-id: 4816c688-abec-4bd5-9215-59c16d8fe65d
-duration: 84
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 82
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%

@@ -8,8 +8,8 @@ role: Leader, Architect, Developer, Admin, User
 level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-duration: 809
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+duration: 538
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2588'
 ht-degree: 1%

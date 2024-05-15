@@ -7,12 +7,12 @@ topic: Development
 role: User
 level: Beginner
 doc-type: Value Video
-duration: 128
+duration: 316
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15053
 thumbnail: 3427620.jpeg
 exl-id: ac482951-9941-4c14-95b2-29d274fa610e
-source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

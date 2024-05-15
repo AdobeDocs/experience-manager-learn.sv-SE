@@ -9,8 +9,8 @@ jira: KT-5000
 thumbnail: 39156.jpg
 last-substantial-update: 2023-05-19T00:00:00Z
 exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
-duration: 319
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 312
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

@@ -10,8 +10,8 @@ topic: Administration
 index: y
 doc-type: Technical Video
 exl-id: 6cb60f32-d366-4677-8745-9da7176b782f
-duration: 107
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 106
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%

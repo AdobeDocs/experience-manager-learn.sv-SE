@@ -9,8 +9,8 @@ feature: Dispatcher
 jira: KT-6931
 thumbnail: 330556.jpg
 exl-id: f0d74326-f8ba-431f-8b66-494e20b9e710
-duration: 511
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 509
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%

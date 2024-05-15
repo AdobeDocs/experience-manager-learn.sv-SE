@@ -7,17 +7,17 @@ topic: Development
 role: User
 level: Beginner
 doc-type: Value Video
-duration: 113
+duration: 121
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15061
 thumbnail: 3427629.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+exl-id: 3ba3e51a-e4a3-42c3-92e1-97818dc4ad33
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
-
 
 # Reader som utökar PDF från AEM Forms J2EE
 

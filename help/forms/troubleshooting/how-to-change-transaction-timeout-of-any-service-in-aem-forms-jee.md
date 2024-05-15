@@ -8,8 +8,8 @@ version: 6.5
 topic: Administration
 index: y
 exl-id: 3f30b17b-2e69-4b77-97fc-3df5a273d002
-duration: 62
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 60
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

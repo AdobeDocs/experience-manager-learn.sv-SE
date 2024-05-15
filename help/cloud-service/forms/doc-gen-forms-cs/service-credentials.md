@@ -10,8 +10,8 @@ topic: Development
 jira: KT-8192
 thumbnail: 330519.jpg
 exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
-duration: 458
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 453
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

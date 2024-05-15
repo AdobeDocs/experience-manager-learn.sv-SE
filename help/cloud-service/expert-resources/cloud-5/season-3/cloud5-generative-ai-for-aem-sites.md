@@ -7,13 +7,13 @@ topic: Content Management
 role: Admin, Developer, Leader, User
 level: Beginner, Intermediate, Experienced
 doc-type: Technical Video
-duration: 422
+duration: 434
 last-substantial-update: 2024-04-23T00:00:00Z
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15348
 exl-id: c7020e3e-2664-42f1-a3b4-c23eb17cbf4b
-source-git-commit: 6d727796d534ce01e1fd4604424e78a21ce937c0
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%

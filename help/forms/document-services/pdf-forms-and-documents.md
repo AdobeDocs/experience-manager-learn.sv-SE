@@ -9,9 +9,9 @@ feature: PDF Generator
 jira: KT-7071
 topic: Development
 last-substantial-update: 2020-07-07T00:00:00Z
-duration: 336
+duration: 273
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 0%

@@ -10,8 +10,8 @@ feature: Cloud Manager, CI-CD Pipeline
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-duration: 415
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 408
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%

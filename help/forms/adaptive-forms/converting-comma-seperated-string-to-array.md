@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
-duration: 113
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 115
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%

@@ -11,8 +11,8 @@ thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-duration: 547
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 452
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -424,7 +424,7 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
 
    >[!NOTE]
    >
-   > Om du skapar ett avancerat datalager för objekt som återanvänds under en implementering bör du extrahera datalagrets element till deras egna datalagerspecifika Java™-objekt. Commerce Core Components har till exempel lagt till gränssnitt för `ProductData` och `CategoryData` eftersom dessa skulle kunna användas på många komponenter i en Commerce-implementering. Granska [koden i aem-cif-core-components repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) för mer information.
+   > Om du skapar ett avancerat datalager för objekt som återanvänds under en implementering bör du extrahera datalagrets element till deras egna datalagerspecifika Java™-objekt. Commerce Core Components har till exempel lagt till gränssnitt för `ProductData` och `CategoryData` eftersom dessa kan användas i många komponenter i en Commerce-implementering. Granska [koden i aem-cif-core-components repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) för mer information.
 
 ## Grattis! {#congratulations}
 

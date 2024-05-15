@@ -11,8 +11,8 @@ level: Intermediate
 last-substantial-update: 2023-05-14T00:00:00Z
 doc-type: Feature Video
 exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
-duration: 410
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 385
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%

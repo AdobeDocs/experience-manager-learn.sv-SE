@@ -8,8 +8,8 @@ topic: Administration
 role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
-duration: 355
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 357
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%

@@ -7,17 +7,17 @@ topic: Development, Content Management
 role: Architect, Developer
 level: Intermediate
 doc-type: Tutorial
-duration: 0
+duration: 189
 last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
-source-git-commit: 14767141348d3d56c154704cc21d39722bb67aec
+exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
 
 ---
-
 
 # Lokal utvecklingskonfiguration
 

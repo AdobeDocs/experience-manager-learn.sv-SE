@@ -9,8 +9,8 @@ level: Beginner
 recommendations: noDisplay
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
-duration: 66
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 50
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%

@@ -10,8 +10,8 @@ doc-type: Feature Video
 last-substantial-update: 2023-05-12T00:00:00Z
 jira: KT-13241
 exl-id: aac044b2-903a-47c7-8461-824c43902972
-duration: 61
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 59
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%

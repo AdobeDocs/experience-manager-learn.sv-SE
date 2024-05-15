@@ -10,8 +10,8 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 730
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 624
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen in
 ## Förstå Dispatcher-konfigurationsfilerna
 
 >[!TIP]
-Experience Manager-projekt skapade från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, så du behöver inte kopiera över från Src-mappen Dispatcher Tools.
+> Experience Manager-projekt skapade från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, så du behöver inte kopiera över från Src-mappen Dispatcher Tools.
 
 Dispatcher Tools innehåller en uppsättning konfigurationsfiler för Apache HTTP Web Server och Dispatcher som definierar beteendet för alla miljöer, inklusive lokal utveckling.
 
@@ -353,7 +353,7 @@ Phase 3 finished
 
 The `host.docker.internal` är ett värdnamn som tillhandahålls Docker-behållaren som löses till värden. Per docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
 
->Från och med Docker 18.03 rekommenderar vi att du ansluter till det särskilda DNS-namnet host.docker.internal, som matchar den interna IP-adressen som används av värden
+> Från och med Docker 18.03 rekommenderar vi att du ansluter till det särskilda DNS-namnet host.docker.internal, som matchar den interna IP-adressen som används av värden
 
 När `bin/docker_run src host.docker.internal:4503 8080` i meddelandet __Väntar tills host.docker.internal är tillgänglig__ och sedan:
 

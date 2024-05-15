@@ -9,7 +9,9 @@ role: Developer
 level: Experienced
 jira: kt-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
+exl-id: 44841a3c-85e0-447f-85e2-169a451d9c68
+duration: 20
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -33,4 +35,3 @@ Kontrollera att lagrings-URI avslutas med ett snedstreck och att SAS-token börj
 * Förhandsgranska och skicka [Kontakta oss](http://localhost:4502/content/dam/formsanddocuments/azureportal/contactus/jcr:content?wcmmode=disabled)
 
 * [Fråga när formulär skickas](http://localhost:4502/content/dam/formsanddocuments/azureportal/queryformsubmissions/jcr:content?wcmmode=disabled)
-

@@ -7,7 +7,9 @@ jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
+exl-id: 8c51a374-7444-4a6a-99ed-dce671dc57cb
+duration: 161
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

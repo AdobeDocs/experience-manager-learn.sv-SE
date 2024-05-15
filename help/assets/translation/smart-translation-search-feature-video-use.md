@@ -10,8 +10,8 @@ last-substantial-update: 2022-09-03T00:00:00Z
 thumbnail: 21297.jpg
 doc-type: Feature Video
 exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
-duration: 202
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 189
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%

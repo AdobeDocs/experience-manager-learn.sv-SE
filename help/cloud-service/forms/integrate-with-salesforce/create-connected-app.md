@@ -11,8 +11,8 @@ topic: Development
 jira: KT-7152
 thumbnail: 331757.jpg
 exl-id: 6e130397-9747-4d60-9975-4c45c5aab87b
-duration: 247
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 243
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%

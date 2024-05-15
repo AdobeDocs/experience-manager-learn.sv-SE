@@ -5,8 +5,8 @@ sub-product: Experience Manager as a Cloud Service
 jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-duration: 490
-source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+duration: 434
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%

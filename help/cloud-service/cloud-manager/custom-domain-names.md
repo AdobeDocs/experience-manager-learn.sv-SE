@@ -7,17 +7,17 @@ topic: Administration, Architecture
 role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
-duration: null
+duration: 1042
 last-substantial-update: 2024-03-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
-source-git-commit: 8230991cebf1a9e994f0dfe96c5590d0c19ef887
+exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till anpassat domännamn
 
@@ -156,5 +156,3 @@ Om du vill verifiera att webbplatsen är tillgänglig med det anpassade domänna
 Du kan också titta på den kompletta videon som demonstrerar översikten, förutsättningarna och ovanstående steg för att lägga till ett anpassat domännamn AEM en webbplats som är as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427817?quality=12&learn=on)
-
-

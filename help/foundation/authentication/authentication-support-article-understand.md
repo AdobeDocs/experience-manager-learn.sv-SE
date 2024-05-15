@@ -11,8 +11,8 @@ level: Experienced
 exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
-duration: 38
-source-git-commit: 9ef35d4d20ea574ac2051d7d3e997ecc18c2aaaa
+duration: 22
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

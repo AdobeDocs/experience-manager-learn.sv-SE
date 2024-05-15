@@ -9,8 +9,8 @@ feature: AEM Project Archetype
 jira: KT-6929
 thumbnail: 330551.jpg
 exl-id: 28914c67-a1d3-4f85-987e-c84ff348f560
-duration: 277
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 275
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

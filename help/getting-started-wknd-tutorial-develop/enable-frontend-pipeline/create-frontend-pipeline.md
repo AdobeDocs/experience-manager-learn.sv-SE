@@ -12,8 +12,8 @@ index: y
 recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
-duration: 270
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 225
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%

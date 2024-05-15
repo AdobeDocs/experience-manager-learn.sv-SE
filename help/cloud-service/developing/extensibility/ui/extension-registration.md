@@ -10,8 +10,8 @@ recommendations: noDisplay, noCatalog
 jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
-duration: 96
-source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
+duration: 85
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%

@@ -10,8 +10,8 @@ thumbnail: kt-7633.jpeg
 last-substantial-update: 2022-11-01T00:00:00Z
 doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
-duration: 390
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 327
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%

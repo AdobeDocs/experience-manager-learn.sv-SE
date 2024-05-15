@@ -10,8 +10,8 @@ topic: Development
 jira: KT-8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
-duration: 30
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 33
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

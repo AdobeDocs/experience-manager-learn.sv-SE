@@ -11,8 +11,8 @@ doc-type: Feature Video
 exl-id: 8ec12629-3acd-4958-b25c-0ae0b97ce244
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: KT-657.jpg
-duration: 436
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 433
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%

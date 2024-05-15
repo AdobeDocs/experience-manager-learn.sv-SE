@@ -13,8 +13,8 @@ mini-toc-levels: 1
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-duration: 218
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 135
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -88,11 +88,11 @@ Adobe Analytics integrering med AEM as a Cloud Service gör att ni kan spåra in
 
 ## Adobe Commerce
 
-Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken skalas om och förnya snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM med Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med valfritt antal handelslösningar för att ge alla delar av kundresan olika upplevelser, minska tiden till värde och öka konverteringsgraden.
+Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken skalas om och förnya snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM med Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal handelslösningar för att ge olika upplevelser till alla delar av kundresan, minska time to value och öka konverteringsgraden.
 
 ### AEM Sites
 
-+ [Användarhandbok för AEM och e-handel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
++ [Användarhandbok för AEM Content och Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 
 ## Taggar i Adobe Experience Platform
@@ -119,7 +119,7 @@ Adobe Journey Optimizer hjälper er att schemalägga flerkanalskampanjer och en-
 
 ## Adobe Learning Manager
 
-Adobe Learning Manager (tidigare Adobe Captivate Prime) ger skräddarsydd inlärning till kunder och medarbetare.
+Adobe Learning Manager (tidigare Adobe Captivate Prime) levererar skräddarsytt lärande till kunder och anställda.
 
 ### AEM Sites
 

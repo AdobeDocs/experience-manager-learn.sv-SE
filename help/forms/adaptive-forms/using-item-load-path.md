@@ -10,8 +10,8 @@ level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
 exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
-duration: 42
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 34
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%

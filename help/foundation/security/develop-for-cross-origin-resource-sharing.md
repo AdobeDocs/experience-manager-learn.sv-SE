@@ -8,8 +8,8 @@ level: Beginner
 feature: Security
 doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-duration: 349
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 333
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%

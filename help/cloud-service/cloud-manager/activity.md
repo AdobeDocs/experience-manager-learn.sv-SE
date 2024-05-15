@@ -10,8 +10,8 @@ feature: Cloud Manager, Code Deployment
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 82a9d00f-abe6-4600-92b1-41b5f0b5e352
-duration: 53
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 50
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

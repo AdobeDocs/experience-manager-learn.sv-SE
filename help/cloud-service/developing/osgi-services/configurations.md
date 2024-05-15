@@ -8,8 +8,8 @@ feature: OSGI
 jira: KT-8268
 thumbnail: 335729.jpeg
 exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
-duration: 751
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 755
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 1%

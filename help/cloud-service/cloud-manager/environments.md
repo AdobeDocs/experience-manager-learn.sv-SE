@@ -10,8 +10,8 @@ feature: Cloud Manager, Environments
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: f4311522-b8fb-4375-9ecc-73e0207a63b2
-duration: 195
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 192
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%

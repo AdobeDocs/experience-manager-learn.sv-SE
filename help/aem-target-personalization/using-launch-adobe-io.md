@@ -9,8 +9,8 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b1d7ce04-0127-4539-a5e1-802d7b9427dd
-duration: 747
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+duration: 663
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 0%

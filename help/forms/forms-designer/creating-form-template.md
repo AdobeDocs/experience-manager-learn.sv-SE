@@ -7,17 +7,17 @@ topic: Development
 role: User
 level: Beginner
 doc-type: Value Video
-duration: 106
+duration: 122
 last-substantial-update: 2024-03-07T00:00:00Z
 jira: KT-15074
 thumbnail: 3427678.jpeg
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
+exl-id: 0e849225-83d4-491f-b30f-e067cf6910d3
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms Shorts Create Simple Form Template
 

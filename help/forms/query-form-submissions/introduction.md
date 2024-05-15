@@ -9,7 +9,9 @@ role: Developer
 level: Experienced
 jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
+exl-id: 08c97626-73a9-43d2-955c-b97fbb5f2e9a
+duration: 185
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -45,7 +47,3 @@ Följande steg har gjorts för att skapa lösningen
 ## Nästa steg
 
 [Gör fält sökbara](./part1.md)
-
-
-
-

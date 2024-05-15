@@ -10,8 +10,8 @@ topic: Development
 thumbnail: 7836.jpg
 jira: KT-7836
 exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
-duration: 21
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 23
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

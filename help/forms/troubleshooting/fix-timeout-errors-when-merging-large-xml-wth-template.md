@@ -9,8 +9,8 @@ feature: Output Service,Forms Service
 topic: Administration
 jira: KT-11091
 exl-id: 933ec5f6-3e9c-4271-bc35-4ecaf6dbc434
-duration: 45
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 37
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%

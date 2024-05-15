@@ -10,8 +10,8 @@ topic: Development
 feature: AEM Project Archetype
 jira: KT-9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-duration: 85
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 67
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%

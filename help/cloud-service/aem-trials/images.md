@@ -5,8 +5,8 @@ index: false
 hidefromtoc: true
 hide: true
 exl-id: c2ee05f0-9e10-4a3b-8ecb-0366116356e8
-duration: 13
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 8
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%

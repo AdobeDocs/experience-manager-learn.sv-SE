@@ -11,8 +11,8 @@ last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
-duration: 626
-source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
+duration: 532
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%

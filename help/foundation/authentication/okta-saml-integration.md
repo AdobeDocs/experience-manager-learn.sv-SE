@@ -10,8 +10,8 @@ jira: KT-12305
 last-substantial-update: 2023-03-01T00:00:00Z
 doc-type: Tutorial
 exl-id: 460e9bfa-1b15-41b9-b8b7-58b2b1252576
-duration: 198
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 157
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 0%

@@ -8,7 +8,9 @@ role: Developer
 level: Beginner
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
+exl-id: 3400b728-58ca-44c3-a882-e3170755f845
+duration: 74
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -83,4 +85,3 @@ public class ExampleImpl implements Example {
  }
 }
 ```
-

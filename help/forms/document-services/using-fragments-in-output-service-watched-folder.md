@@ -9,8 +9,8 @@ level: Intermediate
 last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
 exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
-duration: 100
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 84
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%

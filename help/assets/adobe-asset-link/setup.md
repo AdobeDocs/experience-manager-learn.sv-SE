@@ -10,8 +10,8 @@ jira: KT-9401
 thumbnail: 338824.jpg
 doc-type: Feature Video
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-duration: 2432
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 2418
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%

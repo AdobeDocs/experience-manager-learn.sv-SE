@@ -10,8 +10,8 @@ jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-26T00:00:00Z
-duration: 948
-source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
+duration: 919
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%

@@ -11,8 +11,8 @@ thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-duration: 957
-source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+duration: 937
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%

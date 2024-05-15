@@ -12,8 +12,8 @@ thumbnail: 30386.jpg
 doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
-duration: 462
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 358
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%

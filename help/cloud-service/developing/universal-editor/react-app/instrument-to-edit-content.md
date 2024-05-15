@@ -7,17 +7,17 @@ topic: Development, Content Management
 role: Architect, Developer
 level: Intermediate
 doc-type: Tutorial
-duration: 0
+duration: 421
 last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
-source-git-commit: 14767141348d3d56c154704cc21d39722bb67aec
+exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
 
 ---
-
 
 # Instrument React-app för att redigera innehåll med Universal Editor
 

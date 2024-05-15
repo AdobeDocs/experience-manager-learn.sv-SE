@@ -9,8 +9,8 @@ feature: Developer Tools, Dispatcher
 jira: KT-6915
 thumbnail: 330538.jpg
 exl-id: 7d0812b7-2346-42a9-bcd4-ceb394905bea
-duration: 510
-source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
+duration: 508
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

@@ -11,8 +11,8 @@ level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-duration: 431
-source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
+duration: 405
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%

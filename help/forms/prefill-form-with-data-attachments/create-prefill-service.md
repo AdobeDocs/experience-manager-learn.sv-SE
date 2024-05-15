@@ -8,7 +8,9 @@ level: Beginner
 version: 6.5
 topic: Integrations
 jira: KT-14794
-source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
+exl-id: 291a3a19-7227-42e0-a4eb-09f4704fb966
+duration: 62
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

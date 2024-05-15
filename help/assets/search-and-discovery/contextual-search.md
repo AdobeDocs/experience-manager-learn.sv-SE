@@ -7,11 +7,11 @@ feature: Search
 role: User
 level: Beginner
 doc-type: Feature Video
-duration: 105
+duration: 120
 last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15377
 exl-id: 34e9186b-890f-4ffe-b158-171c42c563c5
-source-git-commit: bfda0fd14077af10162fe4d06cf2d839620ec971
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%

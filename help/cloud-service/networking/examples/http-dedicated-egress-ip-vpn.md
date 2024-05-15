@@ -9,8 +9,8 @@ level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-duration: 77
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 70
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

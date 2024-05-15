@@ -8,8 +8,8 @@ role: User
 level: Beginner
 exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
 last-substantial-update: 2020-02-09T00:00:00Z
-duration: 533
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 522
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%

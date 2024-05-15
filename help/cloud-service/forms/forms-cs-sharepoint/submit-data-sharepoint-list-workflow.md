@@ -8,7 +8,9 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-15126
-source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
+exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
+duration: 52
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -65,4 +67,3 @@ Den här artikeln förutsätter att du har [anpassat formulär för att skicka d
 ## Testa formuläret
 
 Förhandsgranska formuläret som skapades i föregående steg. Fyll i formuläret och skicka. Informationen i blanketten ska infogas i SharePoint-listan.
-

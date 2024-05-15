@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 558
 last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
+exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # AEM händelsehantering med Adobe I/O Runtime Action
 
@@ -263,8 +263,3 @@ Kraven för händelsebearbetning skiljer sig från projekt till projekt, men de 
 - Händelsebearbetningen kan göras med Adobe I/O Runtime Action.
 - Körningsåtgärden kan kommunicera med system som interna program, tredjepartslösningar och Adobe-lösningar.
 - Körningsåtgärden fungerar som en startpunkt för en affärsprocess som utformats kring en innehållsändring.
-
-
-
-
-

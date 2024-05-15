@@ -10,8 +10,8 @@ jira: KT-243
 thumbnail: 25173.jpg
 doc-type: Technical Video
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-duration: 497
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 488
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

@@ -3,8 +3,8 @@ title: Snabba upp materialets hastighet med AEM
 description: Lär dig använda AEM Style Systems för att ge designers, innehållsförfattare och utvecklare i organisationen möjlighet att skapa och leverera upplevelser i den hastighet och i den omfattning som kunderna förväntar sig.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 216
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 171
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%

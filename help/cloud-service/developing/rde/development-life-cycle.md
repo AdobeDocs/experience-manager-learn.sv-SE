@@ -10,8 +10,8 @@ jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
-duration: 159
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 153
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

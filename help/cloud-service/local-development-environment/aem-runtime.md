@@ -10,8 +10,8 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-duration: 529
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 411
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 0%
@@ -214,7 +214,7 @@ Under utvecklingen kan det vara önskvärt att simulera distributionen av inneh�
 
 >[!NOTE]
 >
-Replikeringsagenter är bara tillgängliga för användning i den lokala Quickstart JAR och ger bara en simulering av innehållsdistribution.
+> Replikeringsagenter är bara tillgängliga för användning i den lokala Quickstart JAR och ger bara en simulering av innehållsdistribution.
 
 1. Logga in på **Upphovsman** och navigera till [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. Klicka **Standardagent (publicera)** om du vill öppna standardreplikeringsagenten.
@@ -279,7 +279,7 @@ Uppdatera AEM SDK minst en gång i månaden, eller kort efter, den sista torsdag
 
 >[!WARNING]
 >
-Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
+> Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
 
 ### Så här undviker du innehållsförluster när du uppgraderar AEM SDK
 

@@ -10,8 +10,8 @@ jira: KT-9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
-duration: 906
-source-git-commit: 4e3f77a9e687042901cd3b175d68a20df63a9b65
+duration: 870
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 0%

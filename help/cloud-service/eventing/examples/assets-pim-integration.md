@@ -7,17 +7,17 @@ topic: Development, Architecture, Content Management
 role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
-duration: 0
+duration: 761
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
+exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 0%
 
 ---
-
 
 # AEM Assets event for PIM integration
 
@@ -298,4 +298,3 @@ Synkronisering av metadata för tillgångar mellan AEM och andra system som PIM 
 - API-autentiseringen använder OAuth server-till-server (även klientens autentiseringsflöde), se [Implementeringshandbok för OAuth Server-till-Server-autentiseringsuppgifter](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/).
 - I stället för Adobe I/O Runtime Actions kan andra webhooks eller Amazon EventBridge användas för att ta emot händelsen AEM Assets och bearbeta metadatauppdateringen.
 - Tillgångshändelser via AEM Eventing ger företag möjlighet att automatisera och effektivisera kritiska processer, vilket främjar effektivitet och enhetlighet i innehållets ekosystem.
-
