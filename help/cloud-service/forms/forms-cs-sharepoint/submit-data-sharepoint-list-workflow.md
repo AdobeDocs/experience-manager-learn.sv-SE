@@ -10,9 +10,9 @@ topic: Integrations
 jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e8e51fadaa824d615524a8c4c41aefb656d0391d
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -39,8 +39,9 @@ Den här artikeln förutsätter att du har [anpassat formulär för att skicka d
 * Konfigurera steget invoke FDM för att använda formulärdatamodellen som skapades i föregående steg.
 * ![associate-fdm](assets/fdm-insert-1.png)
 
-* ![map-input-parameters](assets/fdm-insert-2.png)
-* Observera användningen av JSON-punktnotation. De data som har skickats har formatet nedan och vi extraherar ContactUS-objektet från de data som har skickats.
+## Adaptiv form baserad på kärnkomponenter
+
+De data som skickas har följande format. Vi måste extrahera ContactUS-objektet med punktnotation i arbetsflödessteget för att anropa Form Data Model Service, vilket visas på skärmbilden
 
 ```json
 {
@@ -54,6 +55,41 @@ Den här artikeln förutsätter att du har [anpassat formulär för att skicka d
 ```
 
 
+* ![map-input-parameters](assets/fdm-insert-2.png)
+
+
+## Adaptiv form baserad på grundläggande komponenter
+
+De data som skickas har följande format. Extrahera ContactUS JSON-objektet med punktnotation i arbetsflödessteget för att anropa Form Data Model Service
+
+```json
+{
+    "afData": {
+        "afUnboundData": {
+            "data": {}
+        },
+        "afBoundData": {
+            "data": {
+                "ContactUS": {
+                    "Title": "Lord",
+                    "HighNetWorth": "true",
+                    "SubmitterName": "John Doe",
+                    "Products": "Forms"
+                }
+            }
+        },
+        "afSubmissionInfo": {
+            "lastFocusItem": "guide[0].guide1[0].guideRootPanel[0].afJsonSchemaRoot[0]",
+            "stateOverrides": {},
+            "signers": {},
+            "afPath": "/content/dam/formsanddocuments/foundationform",
+            "afSubmissionTime": "20240517100126"
+        }
+    }
+}
+```
+
+![grundbaserad form](assets/foundation-based-form.png)
 
 ## Konfigurera anpassat formulär för att aktivera AEM arbetsflöde
 
