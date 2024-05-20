@@ -12,9 +12,9 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Så här hämtar du CDN-loggarna:
 
    ![Hämta loggar - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. I **Hämta loggar** väljer du **Publicera** Tjänst från listrutan och klicka sedan på nedladdningsikonen bredvid **cdn** rad.
+1. I **Hämta loggar** väljer du **Publicera** Tjänst från listrutan och klicka sedan på nedladdningsikonen bredvid **CDN** rad.
 
    ![CDN-loggar - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -67,7 +67,7 @@ I den här självstudiekursen visas tre alternativ för att analysera CDN-loggar
 
 1. **Elasticsearch, Logstash och Kibana (ELK)**: [Verktyg för ELK-kontrollpanel](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kan installeras lokalt.
 1. **Splunk**: [Verktyg för kontrollpanel för segment](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran är aktiverat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att importera CDN-loggarna.
-1. [Jupyter Notebook](https://jupyter.org/): Den kan nås via fjärranslutning som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att installera ytterligare programvara, för kunder som har licens för Adobe Experience Platform.
+1. **Jupyter Notebook**: Den kan nås via fjärranslutning som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att installera ytterligare programvara, för kunder som har licens för Adobe Experience Platform.
 
 ### Alternativ 1: Använda verktygen på ELK-kontrollpanelen
 
@@ -140,6 +140,10 @@ Om du vill identifiera nyckeldetaljerna använder du [AEMCS-CDN-Log-Analysis-Too
 1. Uppdatera _Index, källtyp och annat_ filtervärden på Splunk-kontrollpanelen.
 
    ![Splunk Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+>[!NOTE]
+>
+>Gränssnittet och diagrammen i den överordnade kontrollpanelen skiljer sig från ELK-kontrollpanelen, men nyckeldetaljerna är desamma.
 
 ### Alternativ 3: Använda Jupyter-anteckningsbok
 
