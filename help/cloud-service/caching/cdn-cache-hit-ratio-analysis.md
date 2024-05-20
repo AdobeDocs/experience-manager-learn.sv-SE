@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Analysera CDN-loggfilen om du vill få insikter om till exempel cacheminnets tr�
 I den här självstudiekursen visas tre alternativ för att analysera CDN-loggarna:
 
 1. **Elasticsearch, Logstash och Kibana (ELK)**: [Verktyg för ELK-kontrollpanel](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kan installeras lokalt.
-1. **Splunk**: [Verktyg för kontrollpanel för segment](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran är aktiverat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att importera CDN-loggarna.
+1. **Splunk**: [Verktyg för kontrollpanel för segment](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran är aktiverat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att importera CDN-loggarna.
 1. **Jupyter Notebook**: Den kan nås via fjärranslutning som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att installera ytterligare programvara, för kunder som har licens för Adobe Experience Platform.
 
 ### Alternativ 1: Använda verktygen på ELK-kontrollpanelen
@@ -136,7 +136,7 @@ The [Splunk](https://www.splunk.com/) är ett populärt verktyg för logganalys 
 
 Om du vill identifiera nyckeldetaljerna använder du [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) projekt. Det här projektet innehåller en Splunk-kontrollpanel som analyserar CDN-loggarna.
 
-1. Följ stegen från [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) och se till att importera **CDN-cacheträffrekvens** Splunk Dashboard.
+1. Följ stegen från [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) och se till att importera **CDN-cacheträffrekvens** Splunk Dashboard.
 1. Uppdatera _Index, källtyp och annat_ filtervärden på Splunk-kontrollpanelen.
 
    ![Splunk Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}

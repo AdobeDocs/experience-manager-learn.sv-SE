@@ -12,7 +12,7 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -60,7 +60,7 @@ För att snabbt kunna starta logganalysen tillhandahåller Adobe fördefinierade
 
 För organisationer som använder [Splunk](https://www.splunk.com/en_us/products/observability-cloud.html) och som har aktiverat vidarebefordran av AEMCS-loggen till Splunk-instanserna kan snabbt importera förbyggda kontrollpaneler. Den här konfigurationen underlättar snabbare logganalys och ger användbara insikter för att optimera AEM implementeringar och minska säkerhetshot som DOS-attacker.
 
-Du kan komma igång med [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) guide.
+Du kan komma igång med [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) guide.
 
 
 ## Integrering med ELK
