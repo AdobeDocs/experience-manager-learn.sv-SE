@@ -1,5 +1,5 @@
 ---
-title: Cloud Manager - ta med din egen Github.com
+title: Github.com databaser och AEM Cloud Manager
 description: Koppla en privat GitHub-repo till AEM Cloud Manager för att effektivisera kvalitetskontrollerna, automatisera arbetsflödena och förbättra utvecklingseffektiviteten.
 version: Cloud Service
 topic: Architecture
@@ -10,15 +10,15 @@ doc-type: Feature Video
 duration: 496
 last-substantial-update: 2024-05-22T00:00:00Z
 jira: KT-15587
-source-git-commit: 211cacf02a73be9e32af91bb6ee5f0d67de56ee0
+source-git-commit: 9f3868a0c7e01561c96739c891d68a95912f836d
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
 
-# Cloud Manager - ta med din egen Github.com
+# Github.com databaser
 
 Lär dig hur du ansluter en privat GitHub-databas till AEM Cloud Manager för smidig hantering av kodkvalitet och automatiserade arbetsflöden. Förbättra utvecklingsprocessen med integrerade kontroller och smidigt samarbete.
 
