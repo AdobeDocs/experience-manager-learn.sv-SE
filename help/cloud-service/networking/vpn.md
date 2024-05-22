@@ -9,9 +9,9 @@ level: Intermediate
 jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-last-substantial-update: 2024-04-26T00:00:00Z
+last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1183fc5614f9547b56f22bafd9b54e10279f310f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
