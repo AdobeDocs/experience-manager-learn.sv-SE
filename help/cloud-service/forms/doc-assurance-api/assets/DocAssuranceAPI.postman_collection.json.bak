@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "a1be6f78-f12e-4e7c-9fef-9bfbb420bfaa",
+		"name": "DocAssuranceAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "321409"
+	},
+	"item": [
+		{
+			"name": "https://author-p133654-e1305513.adobeaemcloud.com/adobe/forms/document/assure/signfield",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cDQ9T2tFMjBjXSVZfsdfsdfsdfFNIQT9BaFZy"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/gbedekar/Downloads/BenefitOverview.pdf"
+						},
+						{
+							"key": "field",
+							"value": "Signature20",
+							"contentType": "text/plain",
+							"type": "text"
+						},
+						{
+							"key": "rectangle",
+							"value": "{\"lowerLeftX\":1,\"lowerLeftY\":40,\"width\":100,\"height\":100}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Aem_CS_Server}}/adobe/forms/document/assure/signfield",
+					"host": [
+						"{{Aem_CS_Server}}"
+					],
+					"path": [
+						"adobe",
+						"forms",
+						"document",
+						"assure",
+						"signfield"
+					]
+				},
+				"description": "Add a Signature Field to a PDF using the API"
+			},
+			"response": []
+		},
+		{
+			"name": "https://author-p133654-e1305513.adobeaemcloud.com/adobe/forms/document/assure/inspect",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cDQ9T2tFMjBjXSVZfsdfsdfsdfFNIQT9BaFZy"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/aspire1/encrypted.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Aem_CS_Server}}/adobe/forms/document/assure/inspect",
+					"host": [
+						"{{Aem_CS_Server}}"
+					],
+					"path": [
+						"adobe",
+						"forms",
+						"document",
+						"assure",
+						"inspect"
+					]
+				},
+				"description": "Inspect a given pdf for any encryption"
+			},
+			"response": []
+		},
+		{
+			"name": "https://author-p133654-e1305513.adobeaemcloud.com/adobe/forms/document/assure/encrypt",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cDQ9T2tFMjBjXSVZfsdfsdfsdfFNIQT9BaFZy"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/gbedekar/Downloads/BenefitOverview.pdf"
+						},
+						{
+							"key": "config",
+							"value": "{\n    \"mode\": \"ENCRYPT_WITH_PASSWORD\",\n    \"params\": {\n        \"openPassword\": \"adobe\",\n        \"permPassword\": \"systems\",\n        \"permissions\": [\n            \"ALL_PERM\"\n        ]\n    }\n}\n\n\n\n\n\n12:02",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "options",
+							"value": "{\"parts\":\"ALL\",\"compatibility\":\"ACROBAT_7\"}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Aem_CS_Server}}adobe/forms/document/assure/encrypt",
+					"host": [
+						"{{Aem_CS_Server}}adobe"
+					],
+					"path": [
+						"forms",
+						"document",
+						"assure",
+						"encrypt"
+					]
+				},
+				"description": "Encrypts a given document with password"
+			},
+			"response": []
+		},
+		{
+			"name": "https://author-p133654-e1305513.adobeaemcloud.com/adobe/forms/document/assure/encrypt",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cDQ9T2tFMjBjXSVZfsdfsdfsdfFNIQT9BaFZy"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/aspire1/encrypted.pdf"
+						},
+						{
+							"key": "config",
+							"value": "{\n    \"mode\": \"ENCRYPT_WITH_PASSWORD\",\n    \"params\": {\n        \"openPassword\": \"adobe\",\n        \"permPassword\": \"systems\",\n        \"permissions\": [\n            \"ALL_PERM\"\n        ]\n    }\n}\n\n\n\n\n\n12:02",
+							"contentType": "application/json",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "options",
+							"value": "{\"parts\":\"ALL\",\"compatibility\":\"ACROBAT_7\"}",
+							"contentType": "application/json",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "config",
+							"value": "systems",
+							"contentType": "text/plain",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Aem_CS_Server}}/adobe/forms/document/assure/encrypt",
+					"host": [
+						"{{Aem_CS_Server}}"
+					],
+					"path": [
+						"adobe",
+						"forms",
+						"document",
+						"assure",
+						"encrypt"
+					]
+				},
+				"description": "Remove encryption from the document"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "Aem_CS_Server",
+			"value": "https://author-p133654-e1305513.adobeaemcloud.com"
+		},
+		{
+			"key": "password",
+			"value": "admin"
+		},
+		{
+			"key": "username",
+			"value": "geebee"
+		}
+	]
+}
