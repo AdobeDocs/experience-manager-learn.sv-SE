@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
+source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2069'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 1%
    + [Installera 32-bitarspaket i Linux](adaptive-forms/installing-aem-form-on-linux.md)
    + [Prefill Service in Adaptive Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Fylla i anpassat formulär med frågeparametrar](adaptive-forms/prepopulating-adaptive-form-using-query-parameters.md)
+   + [QR-kod i AEM Forms](adaptive-forms/qr-code-aem-forms.md)
    + [Anpassad sändning i anpassad Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptive Forms](adaptive-forms/forms-captcha-feature-video-use.md)
    + [Anpassade funktioner i regelredigeraren](adaptive-forms/custom-functions-aem-forms.md)
