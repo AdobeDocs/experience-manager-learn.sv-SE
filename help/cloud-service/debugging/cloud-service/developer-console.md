@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1d9aeb4e5bd41096a28e3375d124bd6b6b8784aa
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,21 @@ Developer Console är tillgänglig per AEM as a Cloud Service miljö via Cloud M
 
 För att få tillgång till och använda Developer Console måste utvecklarens Adobe ID ha följande behörigheter via [Adobe Admin Console](https://adminconsole.adobe.com).
 
-1. Se till att den Adobe-organisation som har aktiverat Cloud Manager och AEM as a Cloud Service produkter är aktiv i Adobe Org-växlaren.
-1. Utvecklaren måste vara medlem i [Cloud Manager Product&#39;s __Utvecklare - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
-   + Om det här medlemskapet inte finns kan utvecklaren inte logga in på Developer Console.
+1. Se till att du i Adobe Org-växlaren kan se Adobe-organisationen som hör till de miljöer du vill inspektera i Developer Console.
+1. För att kunna logga in på Developer Console måste utvecklaren vara medlem i någon av följande roller:
+   + [Cloud Manager Product&#39;s __Utvecklare - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer): I det här fallet ser utvecklaren den fullständiga listan över miljöer som är tillgängliga under den valda URL:en för utvecklarkonsolen. Om en utvecklingsmiljö eller RDE har valts i Cloud Manager kan andra utvecklingsmiljöer eller RDE:er i samma program visas.
+   + [__AEM administratörer__ Produktprofil på __AEM__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles): I det här fallet kommer listan över miljöer som beskrivs i föregående punkt att begränsas till de relaterade produktprofiler där rollen tilldelas.
 1. Utvecklaren måste vara medlem i [__AEM__ eller __AEM administratörer__ Produktprofil för AEM författare och/eller publicering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + Om det här medlemskapet inte finns [status](#status) dumpar timeout med 401 Unauthorized error error.
 
 ### Felsökning: Developer Console-åtkomst
+
+#### När jag loggar in ser jag inte den miljö jag letar efter
+
+Kontrollera följande:
+
++ Du har valt rätt webbadress för utvecklarkonsolen genom att klicka på de tre punkterna för den valda miljön via Cloud Manager och välja Utvecklarkonsol.
++ Du har [Cloud Manager Product&#39;s __Utvecklare - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer) för att se hela listan med miljöer eller för att du är en del av [__AEM administratörer__ Produktprofil på __AEM__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles) för den miljö du inte hittar.
 
 #### 401 Otillåtet fel vid dumpningens status
 
