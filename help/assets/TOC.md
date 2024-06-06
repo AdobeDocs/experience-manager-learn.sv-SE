@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 0435cfe082043da1c92a25b0429c508121c0d95c
+source-git-commit: 6736eb9f124d43b6337b74fd9463bd56cee4e15a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '419'
 ht-degree: 6%
 
 ---
@@ -90,7 +90,6 @@ ht-degree: 6%
       + [Konfigurera resursdelningskommentarer på lokala AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Kommandon för att dela resurser med teman](./sharing/asset-share-commons-feature-video-theming.md)
       + [Resursdelningskommentarer Tillgångar](./sharing/asset-share/asset-share-commons-asset-kits.md)
-   + [Anslutna resurser](./sharing/connected-assets.md)
 
 + Kreativa arbetsflöden{#creative-workflows}
    + [Integrering av Adobe Expresser](./creative-workflows/adobe-express.md)
@@ -130,7 +129,6 @@ ht-degree: 6%
       + [Egna videominiatyrer](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH adaptive streaming](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
-      + [Interaktiv video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [Videospelare](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + Tittare {#viewers}
       + [Tittare](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
