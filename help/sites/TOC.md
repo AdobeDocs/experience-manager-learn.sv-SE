@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
+source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 6%
+source-wordcount: '547'
+ht-degree: 5%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 6%
    + [Omdirigeringar](document-authoring/redirects.md)
    + [Massmetadata](document-authoring/bulk-metadata.md)
    + [Sidmetadata](document-authoring/page-metadata.md)
+   + [Autentisering av författare](document-authoring/author-authentication.md)
    + Så här gör du{#how-to}
       + [Dokumentgranskning](./document-authoring/how-to/document-audit.md)
       + [Dokumentbehörigheter](./document-authoring/how-to/document-permissions.md)
@@ -36,6 +37,10 @@ ht-degree: 6%
       + [Alt-text för bild](./document-authoring/how-to/image-alt-text.md)
       + [Förhindra indexering av sökmotor](./document-authoring/how-to/no-index.md)
       + [Responsiv navigering](document-authoring/how-to/responsive-navigation.md)
+      + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
+      + [Platsmigrering med importverktyget](./document-authoring/how-to/migration-using-importer.md)
+      + [Anpassa importeraren](./document-authoring/how-to/customizing-importer.md)
+      + [Massimport med importverktyg](./document-authoring/how-to/bulk-importing-using-importer.md)
       + Generera variationer{#generate-variations}
          + [Ökning](./document-authoring/how-to/generate-variations/overview.md)
          + [Konfigurera Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
