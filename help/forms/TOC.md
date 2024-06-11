@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
+source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2080'
 ht-degree: 1%
 
 ---
@@ -304,6 +304,10 @@ ht-degree: 1%
    + [Använda klottra signaturer](forms-designer/scribble-signature-form.md)
    + [Använda digital signatur](forms-designer/adding-dig-signature-field.md)
    + [Reader, utökad form](forms-designer/reader-extending-j2ee.md)
++ AEM Forms Workbench{#forms-workbench}
+   + [Introduktion till Workbench](aem-forms-workbench/workbench-introduction.md)
+   + [Skapa formulärprocess](aem-forms-workbench/workbench-creating-a-process.md)
+   + [Felsökningsprocess](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + Interaktiv kommunikation för tryckkanaler
 {#ic-print-channel-tutorial}
    + [1 - Introduktion](ic-print-channel-tutorial/introduction.md)
