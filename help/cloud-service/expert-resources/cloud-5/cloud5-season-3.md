@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c67fad3da9b9eaa740c4351448108af3b1542912
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -145,5 +145,19 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                 Upptäck de nya generativa AI-funktionerna i AEM Sites dokumentredigering.
             </p>
         </td>                
+        <td>
+            <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <img alt="Exploring Universal Editor" src="https://video.tv.adobe.com/v/3429656?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <strong>Exploring Universal Editor</strong></a>        
+                <br/><em>med James Talbot &amp; Dirk Rudolph, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>                
+                 Lär dig mer om Universal Editor och AEM med Edge Delivery Services.
+            </p>
+        </td>                    
     </tr>      
 </table>
