@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 272ed4e4782b03f284886a3046440960df538286
+source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1234'
 ht-degree: 5%
 
 ---
@@ -249,6 +249,11 @@ ht-degree: 5%
       + [1 - Introduktion](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - Skapa en anpassad skicka-tjänst](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - Visa svaret](./forms/custom-submit-headless-forms/handle-response-react-app.md)
+   + Skapa adressblockskomponent{#create-address-block}
+      + [1 - Introduktion](./forms/create-address-block-component/introduction.md)
+      + [2 - Inställningar](./forms/create-address-block-component/set-up.md)
+      + [3 - Skapa komponent](./forms/create-address-block-component/creating-address-component.md)
+      + [4 - Distribuera komponent](./forms/create-address-block-component/deploy-your-project.md)
    + AEM Forms och Analytics{#forms-and-analytics}
       + [Introduktion](./forms/form-data-analytics/introduction.md)
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)

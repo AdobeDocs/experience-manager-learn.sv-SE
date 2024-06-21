@@ -1,0 +1,82 @@
+---
+title: Skapar adresskomponent
+description: Skapa ny adresskomponent i AEM Forms Cloud Service
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
+jira: KT-15752
+source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 0%
+
+---
+
+
+# Skapa adresskomponent
+
+Logga in på CRXDE för din lokala molnförberedda instans av AEM Forms.
+
+Skapa en kopia av ``/apps/bankingapplication/components/adaptiveForm/button`` nod och byt namn på den till adressblock. Markera adressblocksnoden och ange dess egenskaper enligt nedan.
+
+>[!NOTE]
+>
+> ``bankingapplication`` är det appId som angavs när Maven-projektet skapades. Detta appId kan vara ett annat i din miljö. Du kan skapa en kopia av vilken komponent som helst. Jag råkade bara göra en kopia av knappkomponenten
+
+
+![address-bloc](assets/address-properties.png)
+
+## cq-template-nodegenskaper
+
+Välj ``cq-template`` noden under ``addressblock`` och ange dess egenskaper enligt nedan. Observera att fieldType är inställd på panel
+![cq-template](assets/cq-template.png)
+
+## Lägg till noder under cq-template
+
+Lägg till följande noder av typen ``nt:unstructured`` under ``cq-template``
+
+* streetaddress
+* stad
+* zip
+* läge
+
+Dessa noder representerar fälten i adressblockskomponenten. Fälten för gatuadress, ort och postnummer kommer att vara ett textinmatningsfält och tillståndsfältet kommer att vara ett nedrullningsbart fält.
+
+## Ange egenskaperna för en gatuadressnod
+
+>[!NOTE]
+>
+> The **_bankingapplication_** i sökvägen refererar till appId för maven-projektet. Det här kan vara annorlunda i din miljö
+
+Välj ``streetaddress`` och ange dess egenskaper enligt nedan.
+![gatuadress](assets/streetaddress.png)
+
+## Ange egenskaper för stadsnod
+
+Välj ``city`` och ange dess egenskaper enligt nedan.
+![stad](assets/city.png)
+
+## Ange postnodens egenskaper
+
+Välj ``zip`` och ange dess egenskaper enligt nedan.
+![zip](assets/zip.png)
+
+## Ange egenskaper för lägesnod
+
+Välj ``state`` och ange dess egenskaper enligt nedan. Observera tillstånd fieldType - det är inställt på en listruta
+![läge](assets/state.png)
+
+Komponenten för det sista adressblocket ser ut så här
+
+![slutadress](assets/crx-address-block.png)
+
+## Nästa steg
+
+[Distribuera projektet](./deploy-your-project.md)
+
+
+
+
