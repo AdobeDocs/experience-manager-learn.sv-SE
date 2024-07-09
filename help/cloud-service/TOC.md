@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
+source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1229'
 ht-degree: 5%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 5%
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java Content Repository](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
-   + [Författare och publiceringstjänster](./underlying-technology/introduction-author-publish.md)
+   + [Författare och Publish Services](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
    + [AEM Assets Sidekick plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
@@ -59,7 +59,7 @@ ht-degree: 5%
    + [Ökning](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Lokal AEM SDK](./local-development-environment/aem-runtime.md)
-   + [Local Dispatcher Tools](./local-development-environment/dispatcher-tools.md)
+   + [Dispatcher verktyg lokalt](./local-development-environment/dispatcher-tools.md)
 + Utvecklar{#developing}
    + Utbyggbarhet{#extensibility}
       + App Builder{#app-builder}
@@ -129,7 +129,7 @@ ht-degree: 5%
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Felsökning AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Felsöka AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Ökning](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
@@ -141,7 +141,7 @@ ht-degree: 5%
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + Cachning{#caching}
    + [Ökning](./caching/overview.md)
-   + [AEM Publiceringstjänst](./caching/publish.md)
+   + [AEM Publish-tjänst](./caching/publish.md)
    + [AEM Author Service](./caching/author.md)
    + [Analys av träffar i CDN-cache](./caching/cdn-cache-hit-ratio-analysis.md)
    + Så här gör du{#how-to}
@@ -193,7 +193,7 @@ ht-degree: 5%
       + [BPA och CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [Verktyg för AEM](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
       + [Databasmodernisering](./migration/moving-to-aem-as-a-cloud-service/repository-modernization.md)
-      + [Asset compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
+      + [Asset Compute Microservices](./migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md)
       + [Dispatcher](./migration/moving-to-aem-as-a-cloud-service/dispatcher.md)
       + [Sökning och indexering](./migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
       + Innehållsmigrering {#content-migration}
@@ -215,11 +215,11 @@ ht-degree: 5%
       + [Dispatcher Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
       + [Indexkonverterare](./migration/cloud-acceleration-manager/index-converter.md)
       + [Verktyg för resursarbetsflödesmigrering](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
-      + [Navigera i molnaccelerationshanteraren](./migration/cloud-acceleration-manager/navigating.md)
+      + [Navigera i Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
 + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
-   + Developing for Forms as a Cloud Service{#developing-for-cloud-service}
+   + Utveckla för Forms as a Cloud Service{#developing-for-cloud-service}
       + [1 - Komma igång](./forms/developing-for-cloud-service/getting-started.md)
       + [2 - Installera IntelliJ](./forms/developing-for-cloud-service/intellij-set-up.md)
       + [3 - Konfigurera Git](./forms/developing-for-cloud-service/setup-git.md)
@@ -230,7 +230,7 @@ ht-degree: 5%
       + [8 - Aktivera Forms Portal-komponenter](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [9 - Inkludera Cloud Service och FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 - Kontextmedveten molnkonfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [11 - Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [11 - Skicka till Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [12 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [13 - Uppdaterar maven-arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Skapa anpassat formulär{#create-first-af}
@@ -326,7 +326,7 @@ ht-degree: 5%
       + [Extrahera formulärbilagor från inskickade data](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + Integrera med Microsoft Dynamics{#formscs-dynamics-crm}
       + [Skapa Dynamics-program](./forms/formscs-dynamics-crm/create-dynamics-account.md)
-      + [Konfigurera datakälla](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
+      + [Konfigurera Source](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
       + [Skapa formulärdatamodell](./forms/formscs-dynamics-crm/create-form-data-model.md)
       + [Skapa anpassat formulär](./forms/formscs-dynamics-crm/create-adaptive-form.md)
    + Integrera med Salesforce{#integrate-with-salesforce}
@@ -373,8 +373,8 @@ ht-degree: 5%
 + Expertresurser {#expert-resources}
    + AEM Champions {#aem-champions}
       + [Cloud Manager Onboarding Playbook](./expert-resources/aem-champions/onboarding-playbook.md)
-      + [Miljötyper för Cloud Manager](./expert-resources/aem-champions/environment-types.md)
-      + [Användargränssnitt för Cloud Manager](./expert-resources/aem-champions/cloud-manager-ui.md)
+      + [Cloud Manager miljötyper](./expert-resources/aem-champions/environment-types.md)
+      + [Cloud Manager UI](./expert-resources/aem-champions/cloud-manager-ui.md)
    + [AEM Experts Series](./expert-resources/expert-series/aem-experts-series.md)
    + Cloud 5{#cloud-5}
       + [Introduktion](./expert-resources/cloud-5/cloud5-introduction.md)
@@ -405,9 +405,8 @@ ht-degree: 5%
       + Säsong 3{#season-3}
          + [Sökning från tredje part](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [Real User Monitoring (RUM) Explorer](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
-         + [Edge-arbetare](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
-         + [Publicera, avpublicera händelser i Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
+         + [Edge arbetare](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [Publish, avpublicera evenemang i Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [Frågeindex och Excel-formler](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [Använd ditt eget CloudFlex CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [Integrera AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
