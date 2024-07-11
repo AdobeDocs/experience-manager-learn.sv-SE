@@ -8,17 +8,17 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: a5eb7cb6ba9b806a57a27ad1a0e01609af713656
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 2%
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
 
-# AEM Assets Essentials - videor {#assets-essentials}
+# AEM Assets Essentials-videor {#assets-essentials}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 
 + [Komma igång](./getting-started.md)
 
@@ -34,11 +34,12 @@ ht-degree: 2%
    + [Min arbetsyta](configuring/my-workspace.md)
    + [Metadataformulär](configuring/metadata-forms.md)
    + [Behörighetshantering](configuring/permissions-management.md)
+   + [Taxonomihantering](configuring/taxonomy-management.md)
 
 + [Integrering med Creative Cloud](integrations/creative-cloud.md)
 
 + Integrering med Adobe Workfront{#workfront}
-   + [Översikt](./integrations/workfront/overview.md)
+   + [Ökning](./integrations/workfront/overview.md)
    + [Konfigurerar](./integrations/workfront/configure.md)
    + [Mappa metadata](./integrations/workfront/map-metadata.md)
    + [Skicka dokument och länka resurser](./integrations/workfront/link-send.md)
