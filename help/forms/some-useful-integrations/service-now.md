@@ -1,5 +1,5 @@
 ---
-title: Integrera med [!DNL ServiceNow]
+title: Integrerar med  [!DNL ServiceNow]
 description: Skapa och visa alla incidenter med hjälp av formulärdatamodell.
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -19,30 +19,30 @@ ht-degree: 0%
 
 # Integrera AEM Forms med [!DNL ServiceNow]
 
-Skapa och visa incidenter i [!DNL ServiceNow] med formulärdatamodell i AEM Forms.
+Skapa och visa incidenter i [!DNL ServiceNow] med hjälp av formulärdatamodellen i AEM Forms.
 
 ## Förutsättningar
 
-* [!DNL ServiceNow] konto.
-* Välbekant med [skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* Välbekant med [Formulärdatamodell](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
+* [!DNL ServiceNow]-konto.
+* Välbekant med [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
+* Välbekant med [formulärdatamodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
 
-## Exempelresurser
+## Exempel på Assets
 
 Följande exempelresurser finns i artikeln
 
 * Konfiguration av molntjänster
-* Växla filer för att skapa en incident och hämta alla incidenter
+* Växla filer för att skapa en incident och hämta alla   incidenter
 * Formulärdatamodell baserad på swagger-filer
 * Anpassat formulär för att skapa och lista [!DNL ServiceNow] incidenter
 
 ## Distribuera resurserna på servern
 
-* Ladda ned [exempelresurser](assets/service-now.zip)
-* Importera resurser till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Swagger-filen som används för den här integreringen finns under ```/conf/9957/settings/cloudconfigs/fdm``` mapp i crx-databas
-* Redigera [CreateIncident cloud service configuration](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)för att matcha ServiceNow-instansen.
-* Redigera [Konfiguration av molntjänsten GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) för att matcha ServiceNow-instansen. Du måste ändra värden, användarnamn och lösenord för att matcha dina ServiceNow-instansreferenser.
+* Hämta [exempelresurserna](assets/service-now.zip)
+* Importera resurserna till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Swagger-filen som används för den här integreringen finns under mappen ```/conf/9957/settings/cloudconfigs/fdm``` i crx-databasen
+* Redigera [CreateIncident-molntjänstkonfigurationen](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident)så att den matchar ServiceNow-instansen.
+* Redigera molntjänstkonfigurationen [GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) så att den matchar ServiceNow-instansen. Du måste ändra värden, användarnamn och lösenord för att matcha dina ServiceNow-instansreferenser.
 
 ## Åtkomst till ServiceNow-instansreferenser
 

@@ -1,6 +1,6 @@
 ---
 title: AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook
-description: Ta en titt på de här tipsen för Cloud Manager-introduktion och introduktionspellistan av AEM mästare och expert, Rakesh Pasupuleti.
+description: Tipsen för Cloud Manager onbarding och onboarding av AEM mästare och expert, Rakesh Pasupuleti.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook
 
-Med spelboken för introduktion kan du ta ansvar som ny administratör och utvecklare för AEM as a Cloud Service. I det nedladdningsbara kalkylbladet går vi igenom de aktiviteter du ska utföra de första tre veckorna på jobbet när du påbörjar din introduktionsresa.
+Du kan använda introduktionspellistan som ny administratör och utvecklare för AEM as a Cloud Service. I det nedladdningsbara kalkylbladet går vi igenom de aktiviteter du ska utföra de första tre veckorna på jobbet när du påbörjar din introduktionsresa.
 
 >[!TIP]
 >
->Ladda ned [introducerar spelbok här.](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
+>Hämta spelningsboken [för introduktion här.](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
 
 Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är en Adobe Experience Manager-mästare och han delar med sig av sina idéer om hur man använder spelboken för onboarding.
 
@@ -32,4 +32,4 @@ Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM as a Cloud Service onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) - En stegvis guide för en ny systemadministratör som till att börja med tillhandahåller molnresurser och tilldelar användare till roller baserat på deras arbetsuppgifter, så att alla teammedlemmar kan logga in och komma åt sina nya AEM as a Cloud Service resurser
+* [AEM as a Cloud Service Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) - En stegvis guide för en ny systemadministratör som initialt kan tillhandahålla molnresurser och tilldela användare till roller baserat på deras arbetsuppgifter, så att alla medlemmar i teamet kan logga in och komma åt sina nya AEM as a Cloud Service-resurser

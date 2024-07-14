@@ -36,7 +36,7 @@ Ett arbetsflöde måste skapas för att kunna hantera formuläröverföringen. A
 ## Konfigurera anpassat formulär
 
 * Konfigurera skicka-åtgärden för det adaptiva formuläret för att aktivera det AEM arbetsflödet
-  ![skicka-åtgärd](assets/store-attachments.png)
+  ![submit-action](assets/store-attachments.png)
 
 ## Testa lösningen
 

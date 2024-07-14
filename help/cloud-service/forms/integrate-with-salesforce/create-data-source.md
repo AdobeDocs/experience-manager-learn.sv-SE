@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Skapa datakälla
+# Skapa data-Source
 
 Skapa en REST-baserad datakälla med swagger-filen som skapades i det tidigare steget
 

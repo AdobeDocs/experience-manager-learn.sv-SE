@@ -23,13 +23,13 @@ I AEM Forms 6.5 introducerades möjligheten att lägga till objekt dynamiskt i e
 
 Du kan lägga till objekt med den visuella redigeraren och kodredigeraren beroende på hur du använder dem.
 
-**Använda den visuella redigeraren:** Du kan fylla i alternativgruppens objekt från resultatet av ett funktionsanrop eller ett serviceanrop. Du kan till exempel ställa in objekten i urvalsgruppen genom att använda svaret på ett REST API-anrop.
+**Med den visuella redigeraren:** Du kan fylla i alternativgruppens objekt från resultatet av ett funktionsanrop eller ett serviceanrop. Du kan till exempel ställa in objekten i urvalsgruppen genom att använda svaret på ett REST API-anrop.
 
 På skärmbilden nedan ställer vi in alternativen för låneperiod(år) till resultatet av ett serviceanrop som kallas getLoanPeriods.
 
 ![Regelredigeraren](assets/ruleeditor.png)
 
-**Använda kodredigeraren**: När du vill ange objekten i urvalsgruppen dynamiskt baserat på de värden som anges i formuläret. Följande kodfragment ställer till exempel in kryssrutans objekt på de värden som anges i den sökandes namn och i makens fält i det adaptiva formuläret.
+**Använda kodredigeraren**: När du vill ange objekten i alternativgruppen dynamiskt baserat på de värden som anges i formuläret. Följande kodfragment ställer till exempel in kryssrutans objekt på de värden som anges i den sökandes namn och i makens fält i det adaptiva formuläret.
 
 I kodfragmentet anger vi objekten för WorkingMembers, som är en kryssrutekomponent. Arrayen för objekten byggs dynamiskt genom att hämta värdena för sökandeName- och make-textfälten i de adaptiva formulären
 
@@ -86,7 +86,7 @@ Så här provar du det på datorn:
 * Klicka på Nästa
 * Kryssrutan ska fyllas i med den sökandes namn och med makens namn om äktenskapsstatusen är gift
 
-**Lägga till objekt med den visuella redigeraren**
+**Använda den visuella redigeraren för att lägga till objekt**
 
 * [Hämta resurserna](assets/usingthevisualeditor.zip)
 * Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)

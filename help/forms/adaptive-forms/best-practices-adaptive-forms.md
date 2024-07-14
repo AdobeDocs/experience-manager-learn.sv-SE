@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
 
 ## Namnkonventioner
 
-* **Panel**
+* **Paneler**
    * Panelnamn är från och med en versal.
 
 * **Formulärfält**
@@ -32,10 +32,10 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
    * Namn kan innehålla bokstäver, siffror, understreck och dollartecken.
    * Namn måste börja med en bokstav
    * Namnen är skiftlägeskänsliga
-   * Reserverade ord (som JavaScript-nyckelord) kan inte användas som namn. Håll utkik efter andra AF-specifika reserverade ord som &quot;panel&quot;,&quot;namn&quot;.
+   * Reserverade ord (som JavaScript-nyckelord) kan inte användas som namn. Håll utkik efter andra AF-specifika reserverade ord, som   som &quot;panel&quot;,&quot;name&quot;.
    * Inkludera inte bindestreck &quot;-&quot; i dina namn
 * **Utveckla Forms**
-   * Formulärfragment bör beaktas vid utveckling av stora formulär. Aktivera lazy loading av formulärfragment för snabbare inläsning
+   * Formulärfragment bör beaktas vid utveckling av stora formulär. Aktivera lazy loading av formulärfragment för snabbare inläsning   gånger
    * **DataModel**
       * Vi rekommenderar att adaptiv form kopplas till lämplig datamodell
 

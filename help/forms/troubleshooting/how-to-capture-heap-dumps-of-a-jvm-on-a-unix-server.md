@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här fångar du stackdumpar för en JVM på en unix-server
 
-*I den här videon går du igenom stegen för att hämta stackdumpar för en JVM på en unix-server.*
+*Den här videon går igenom stegen för att hämta stackdumpar för en JVM på en unix-server.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335489?quality=12&learn=on)

@@ -20,7 +20,8 @@ ht-degree: 0%
 
 # Inkludera molntjänstkonfiguration i ditt projekt
 
-Skapa en konfigurationsbehållare med namnet &#39;FormTutorial&#39; för din molntjänstkonfiguration Skapa en molntjänstkonfiguration för Azure Storage med namnet &#39;FormsCSAndAzureBlob&#39; i behållaren &#39;FormTutorial&#39; genom att ange information om Azure-lagringskontot och Azure-åtkomstnyckeln.
+Skapa en konfigurationsbehållare med namnet &#39;FormTutorial&#39; för konfigurationen av molntjänster
+Skapa en molntjänstkonfiguration för Azure Storage som kallas FormsCSAndAzureBlob i behållaren FormTutorial genom att ange information om Azure-lagringskontot och Azure-åtkomstnyckeln.
 
 Öppna AEM i IntelliJ. Se till att du lägger till mappen FormTutorial så som visas nedan i ui.content-projektet
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -47,7 +48,7 @@ Inkludera lämplig post i ui.content-projektets filter.xml
 
 >[!NOTE]
 >
->När du skapar och distribuerar ditt projekt med molnhanteraren måste du nu ange din Azure-åtkomstnyckel igen i molntjänstkonfigurationen. För att undvika att ange åtkomstnyckeln igen rekommenderar vi att du skapar en kontextmedveten konfiguration med hjälp av miljövariablerna enligt anvisningarna i [nästa artikel](./context-aware-fdm.md)
+>När du skapar och distribuerar ditt projekt med molnhanteraren måste du nu ange din Azure-åtkomstnyckel igen i molntjänstkonfigurationen. För att undvika att ange åtkomstnyckeln igen rekommenderar vi att du skapar kontextmedveten konfiguration med hjälp av miljövariablerna som förklaras i [nästa artikel](./context-aware-fdm.md)
 
 ## Nästa steg
 

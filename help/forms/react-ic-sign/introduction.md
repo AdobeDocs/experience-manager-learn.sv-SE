@@ -20,7 +20,7 @@ ht-degree: 0%
 # AEM Forms med Acrobat Sign webbformulär
 
 
-I den här självstudiekursen får du hjälp med att generera ett interaktivt kommunikationsdokument med data som skickas från [Reagera](https://react.dev/) app och presentera det genererade dokumentet för signering med Acrobat Sign webbformulär.
+I den här självstudiekursen får du hjälp med att skapa ett interaktivt kommunikationsdokument med data från appen [React](https://react.dev/) och visa det genererade dokumentet för signering med Acrobat Sign webbformulär.
 
 Här följer ett flöde för användningsfallet
 
@@ -34,8 +34,8 @@ Här följer ett flöde för användningsfallet
 Du måste ha följande för att användningsexemplet ska fungera:
 
 * En AEM server med Forms-tillägg i paket
-* An [integreringsnyckel för ett Acrobat Sign-program](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* En [integreringsnyckel för ett Acrobat Sign-program](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
 
 ## Nästa steg
 
-Skriv en [anpassad OSGi-tjänst för att generera interaktivt kommunikationsdokument](./create-ic-document.md) med dokumenterad API
+Skriv en [anpassad OSGi-tjänst för att generera ett interaktivt kommunikationsdokument](./create-ic-document.md) med dokumenterad API

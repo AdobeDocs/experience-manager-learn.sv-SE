@@ -20,13 +20,13 @@ ht-degree: 0%
 # Använda enkel mall för att visa inkorgsdata
 
 Du kan använda en liten mall för att formatera de data som ska visas i inkorgskolumner. I det här exemplet visas koral-ui-ikoner beroende på värdet i resultatkolumnen. På följande skärmbild visas hur ikoner används i resultatkolumnen
-![intäkter-ikoner](assets/income-column.PNG)
+![intäktsikoner](assets/income-column.PNG)
 
-[Den smidiga mallen](assets/sightly-template.zip) som används för att visa de anpassade gränssnittsikonerna för coral anges som en del av den här artikeln.
+[Den smidiga mallen](assets/sightly-template.zip) som används för att visa de anpassade URI-ikonerna för coral anges som en del av den här artikeln.
 
 ## Liten mall
 
-Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [ikonbibliotek för coral ui](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som kommer med AEM.
+Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [URI-ikonbiblioteket ](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -80,17 +80,17 @@ return val;
 
 >[!NOTE]
 >
->Den här artikeln förutsätter att du har installerat [exempelarbetsflöde](assets/review-workflow.zip) och [exempelformulär](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
+>I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
 
-* [Logga in som administratör](http://localhost:4502/crx/de/index.jsp)
+* [Logga in för att krascha som administratörsanvändare](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)
-* [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
+* [Logga in AEM webbkonsolen](http://localhost:4502/system/console/bundles)
 * [Distribuera och starta anpassningspaketet för inkorgen](assets/income-column-customization.jar)
 * [Öppna din inkorg](http://localhost:4502/aem/inbox)
 * Öppna administrationskontrollen genom att klicka på listvyn bredvid knappen Skapa
 * Lägg till resultatkolumn i Inkorgen och spara ändringarna
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Välj _civilstånd_ och skicka in formuläret
+* Välj _civilstånd_ och skicka formuläret
 * [Visa inkorg](http://localhost:4502/aem/inbox)
 
 Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se lämplig ikon under resultatkolumnen

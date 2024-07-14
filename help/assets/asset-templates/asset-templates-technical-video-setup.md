@@ -24,11 +24,11 @@ Med hjälp av resursmallar kan marknadsförarna skapa, hantera och leverera digi
 
 >[!NOTE]
 >
->AEM **måste** anslutas till en InDesign som körs när INDD-mallen överförs. En del av den inledande bearbetningen i INDD-filen kräver en InDesign-server.
+>AEM **måste** vara ansluten till en InDesign som körs när INDD-mallen överförs. En del av den inledande bearbetningen i INDD-filen kräver en InDesign-server.
 
 ## Ladda ned testversion av InDesign Server {#download-indesign-server-trial}
 
-Ladda ned [Ladda ned webbplats för testversioner av InDesigner Server](https://www.adobeprerelease.com/)
+Hämta [InDesignens Server webbplats för hämtning av testversion](https://www.adobeprerelease.com/)
 
 ## Startar InDesign Server {#starting-indesign-server}
 

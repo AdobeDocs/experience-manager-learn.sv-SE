@@ -24,11 +24,11 @@ När formuläret har lämnat navigeringsflikar och en av flikarna har flera pane
 
 ## Skapa anpassat formulär
 
-Skapa ett anpassat formulär med följande struktur. Rotpanelen har underordnade paneler som visas som flikar till vänster. Några av dessa &quot;**tabbar**&quot; har ytterligare underordnade paneler. Fliken Familj har till exempel två underordnade paneler som heter Mus och Barn.
+Skapa ett anpassat formulär med följande struktur. Rotpanelen har underordnade paneler som visas som flikar till vänster. Vissa av dessa **flikar** har ytterligare underordnade paneler. Fliken Familj har till exempel två underordnade paneler som heter Mus och Barn.
 
 Ett verktygsfält läggs också till under FormContainer med knapparna Föregående och Nästa
 
-![verktygsfältsavstånd](assets/multiple-panels.png)
+![verktygsfält-spacing](assets/multiple-panels.png)
 
 
 
@@ -39,13 +39,13 @@ Om du vill ändra standardbeteendet måste du göra följande
 >[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
 
 
-Lägg till följande kod i click-händelsen för **Nästa** med kodredigeraren
+Lägg till följande kod i click-händelsen för knappen **Nästa** med kodredigeraren
 
 ```javascript
 window.guideBridge.setFocus(null, 'nextItemDeep', true);
 ```
 
-Lägg till följande kod i click-händelsen för **Föregående** med kodredigeraren
+Lägg till följande kod i click-händelsen för knappen **Prev** med kodredigeraren
 
 ```javascript
 window.guideBridge.setFocus(null, 'prevItemDeep', true);

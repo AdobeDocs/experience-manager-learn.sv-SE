@@ -23,7 +23,7 @@ I den här delen skapar vi en REST-baserad datakälla.  I följande videofilm vi
 
 >[!VIDEO](https://video.tv.adobe.com/v/22344?quality=12&learn=on)
 
-Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudiekursen.
+Använd swagger-filen som du får som en del av resurserna som hör till den här självstudiekursen. Resurserna är tillgängliga i [introduktion](introduction.md) av den här självstudien.
 
 ## Nästa steg
 

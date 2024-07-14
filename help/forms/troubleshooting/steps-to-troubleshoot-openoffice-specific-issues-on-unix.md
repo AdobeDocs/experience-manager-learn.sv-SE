@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka OpenOffice-specifika fel i en Unix-installation
 
-*I den här videon går vi igenom processen att felsöka OpenOffice-specifika fel i en Unix-konfiguration för AEM Forms PDFG.*
+*Den här videon går igenom processen att felsöka OpenOffice-specifika fel i en Unix-konfiguration för AEM Forms PDFG.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)

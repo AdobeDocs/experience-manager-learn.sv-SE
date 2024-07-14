@@ -31,9 +31,9 @@ Som standard misslyckas anslutningen när du försöker skapa en HTTPS-anslutnin
 PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
 
-Det här problemet inträffar oftast när **API:ts SSL-certifikat har inte utfärdats av en erkänd certifikatutfärdare** och Java™-program kan inte validera SSL-/TLS-certifikat.
+Det här problemet inträffar vanligtvis när **API:ts SSL-certifikat inte har utfärdats av en erkänd certifikatutfärdare (CA)** och Java™-programmet inte kan validera SSL-/TLS-certifikatet.
 
-Lär dig hur du kan anropa API:er som har privata eller självsignerade certifikat med [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM global TrustStore**.
+Låt oss lära oss hur du kan anropa API:er som har privata eller självsignerade certifikat med hjälp av [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM global TrustStore**.
 
 
 ## Prototypisk API-anropskod med HttpClient
@@ -57,23 +57,23 @@ CloseableHttpResponse closeableHttpResponse = httpClient.execute(new HttpGet(API
 ...
 ```
 
-Koden använder [Apache HttpComponent](https://hc.apache.org/)&#39;s [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) biblioteksklasser och deras metoder.
+Koden använder [Apache HttpComponent](https://hc.apache.org/)s [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) -biblioteksklasser och deras metoder.
 
 
 ## HttpClient och läsa in AEM TrustStore-material
 
-Anropa en API-slutpunkt som har _privat eller självsignerat certifikat_, [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)&#39;s `SSLContextBuilder` måste läsas in med AEM TrustStore och användas för att underlätta anslutningen.
+Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifikat_ måste `SSLContextBuilder` för [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) läsas in med AEM TrustStore och användas för att underlätta anslutningen.
 
 Följ stegen nedan:
 
-1. Logga in på **AEM** som **administratör**.
-1. Navigera till **AEM Author > Tools > Security > Trust Store** och öppna **Global Trust Store**. Om du försöker komma åt den första gången anger du ett lösenord för Global Trust Store.
+1. Logga in på **AEM författare** som **administratör**.
+1. Navigera till **AEM Författare > Verktyg > Säkerhet > Lita på butik** och öppna **Global Trust Store**. Om du försöker komma åt den första gången anger du ett lösenord för Global Trust Store.
 
    ![Global Trust Store](assets/internal-api-call/global-trust-store.png)
 
-1. Importera ett privat certifikat genom att klicka på **Välj certifikatfil** och väljer önskad certifikatfil med `.cer` tillägg. Importera den genom att klicka **Skicka** -knappen.
+1. Om du vill importera ett privat certifikat klickar du på knappen **Välj certifikatfil** och väljer önskad certifikatfil med tillägget `.cer`. Importera den genom att klicka på knappen **Skicka**.
 
-1. Uppdatera Java™-kod enligt nedan. Observera att `@Reference` för att AEM `KeyStoreService` Den anropande koden måste vara en OSGi-komponent/tjänst eller en Sling-modell (och `@OsgiService` används där).
+1. Uppdatera Java™-kod enligt nedan. Observera att om du vill använda `@Reference` för att få AEM `KeyStoreService` måste anropskoden vara en OSGi-komponent/tjänst, eller en Sling-modell (och `@OsgiService` används där).
 
    ```java
    ...
@@ -133,28 +133,28 @@ Följ stegen nedan:
    ...
    ```
 
-   * Injicera OTB `com.adobe.granite.keystore.KeyStoreService` OSGi-tjänst i OSGi-komponenten.
-   * Hämta den globala AEM TrustStore med `KeyStoreService` och `ResourceResolver`, `getAEMTrustStore(...)` metoden gör det.
+   * Mata in OTB `com.adobe.granite.keystore.KeyStoreService` OSGi-tjänsten i OSGi-komponenten.
+   * Hämta den globala AEM TrustStore med `KeyStoreService` och `ResourceResolver`, det gör metoden `getAEMTrustStore(...)`.
    * Skapa ett objekt av `SSLContextBuilder`, se Java™ [API-information](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html).
-   * Läs in det globala AEM TrustStore i `SSLContextBuilder` använda `loadTrustMaterial(KeyStore truststore,TrustStrategy trustStrategy)` -metod.
-   * Godkänd `null` for `TrustStrategy` i ovanstående metod säkerställer att endast AEM betrodda certifikat lyckas under API-körning.
+   * Läs in den globala AEM TrustStore till `SSLContextBuilder` med metoden `loadTrustMaterial(KeyStore truststore,TrustStrategy trustStrategy)`.
+   * Skicka `null` för metoden `TrustStrategy` i ovanstående säkerställer att endast AEM betrodda certifikat lyckas under API-körningen.
 
 
 >[!CAUTION]
 >
 >API-anrop med giltiga CA-utfärdade certifikat misslyckas när de körs med den angivna metoden. Endast API-anrop med AEM betrodda certifikat kan lyckas när den här metoden används.
 >
->Använd [standardmetod](#prototypical-api-invocation-code-using-httpclient) för att köra API-anrop av giltiga CA-utfärdade certifikat, vilket innebär att endast API:er som är kopplade till privata certifikat ska köras med den tidigare nämnda metoden.
+>Använd [standardmetoden](#prototypical-api-invocation-code-using-httpclient) för att köra API-anrop av giltiga CA-utfärdade certifikat, vilket innebär att endast API:er som är kopplade till privata certifikat ska köras med den tidigare nämnda metoden.
 
 ## Undvik JVM-nyckelbehållarändringar
 
-Ett vanligt tillvägagångssätt för att effektivt anropa interna API:er med privata certifikat är att ändra JVM-nyckelbehållaren. Detta uppnås genom att de privata certifikaten importeras med Java™ [nyckelverktyg](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) -kommando.
+Ett vanligt tillvägagångssätt för att effektivt anropa interna API:er med privata certifikat är att ändra JVM-nyckelbehållaren. Detta uppnås genom att importera privata certifikat med kommandot Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) .
 
 Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM erbjuder ett överlägset alternativ genom att använda **Global Trust Store** och [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
 
 
 ## Lösningspaket
 
-Exempelprojektet Node.js som demonstreras i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
+Exempelprojektet Node.js som har nedgraderats i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
 
-Den AEM serletkoden finns i WKND Sites Project `tutorial/web-api-invocation` gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+Den AEM serletkoden är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).

@@ -1,6 +1,6 @@
 ---
-title: Resursadministratörssökspår
-description: Med hjälp av sökfältet Resursadministratörer kan resurser sökas efter med anpassade villkor i Omnissearch.
+title: Assets administratörssökfält
+description: Med Assets administratörssökspår kan du söka efter resurser med hjälp av anpassade sökvillkor i Omnissearch.
 sub-product: Experience Manager Assets
 feature: Search
 version: Cloud Service
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 ---
 
-# Resursadministratörssökspår
+# Assets administratörssökfält
 
-Med hjälp av sökfältet Resursadministratörer kan resurser sökas efter med anpassade villkor i Omnissearch.
+Med Assets administratörssökspår kan du söka efter resurser med hjälp av anpassade sökvillkor i Omnissearch.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35842?quality=12&learn=on)

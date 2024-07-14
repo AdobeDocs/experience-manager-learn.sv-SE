@@ -22,7 +22,7 @@ Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att 
 
 AEM innehållsfragment är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
 
-Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om [som levererar innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
+Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om att [leverera innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivera och definiera modeller för innehållsfragment
 2. Skapa innehållsfragment
@@ -38,7 +38,7 @@ Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM Content Fragments Models, the data schemas of Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfiguration.
+AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), vilket gör att Content Fragment Models kan definieras per konfiguration.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -49,7 +49,7 @@ AEM konfigurationer tillämpas på AEM Assets mapphierarkier så att deras Conte
 Innehållsfragment kan ha flera varianter, där varje variant adresserar olika användningsfall (inte nödvändigtvis kanal) för innehållet.
 
 *Exempel på sportbiografi för import:*\
-**[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
+**[sandra-spritent-bio.txt](assets/sandra-sprient-bio.txt)**
 
 ## Hämta innehållsfragment {#downloading-content-fragments}
 
@@ -57,7 +57,7 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 
 AEM innehållsfragment kan laddas ned från AEM författare som en ZIP-fil som innehåller varianter, element och metadata.
 
-*Exempel: Zip-fil för innehållsfragmenthämtning:*\
+*Exempel på ZIP-fil för hämtning av innehållsfragment:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
 ## Redigeringsfunktioner för innehållsfragment {#editorial-capabilities}
@@ -66,11 +66,11 @@ AEM innehållsfragment kan laddas ned från AEM författare som en ZIP-fil som i
 
 >[!NOTE]
 >
-> Anteckningar och versionsjämförelser för innehållsfragment infördes i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html).
+> Anteckningar och versionsjämförelser för innehållsfragment introducerades i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
 ## Nästa steg
 
-Läs mer om [leverera innehållsfragment](content-fragments-delivery-feature-video-use.md).
+Lär dig mer om att [leverera innehållsfragment](content-fragments-delivery-feature-video-use.md).
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -80,4 +80,4 @@ Läs mer om [leverera innehållsfragment](content-fragments-delivery-feature-vid
 
 Så här hämtar och installerar du paketet nedan på en AEM 6.4+-instans för det slutliga läget från videoserien:
 
-**[aem_demo_fluid-experiences-content-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**
+**[aem_demo_fluid-experience-content-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

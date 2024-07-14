@@ -24,7 +24,7 @@ I videon förklaras de olika stegen som krävs för att konfigurera ett adaptivt
 
 >[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
 
-Resurser relaterade till den här videon kan hämtas från följande länkar
+Assets för den här videon kan hämtas från följande länkar
 
 * [Adaptiv formulärmall](assets/tenancy-agreement-template.zip)
 * [Hyresavtalsformulär](assets/rental-agreement-form.zip)

@@ -22,16 +22,16 @@ ht-degree: 0%
 
 # Definiera regeln
 
-I taggegenskapen skapade vi 2 nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**Fältvalideringsfel och FormSubmit**).
+I taggegenskapen skapade vi två nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**Fältvalideringsfel och FormSubmit**).
 
 ![adaptiv form](assets/rules.png)
 
 
 ## Fältvalideringsfel
 
-The **Fältvalideringsfel** Regeln aktiveras varje gång ett valideringsfel uppstår i ett anpassat formulärfält. I vårt formulär visas till exempel ett valideringsfelmeddelande om telefonnumret eller e-postadressen inte har det förväntade formatet.
+Regeln **Fältvalideringsfel** aktiveras varje gång det finns ett valideringsfel i anpassat formulärfält. I vårt formulär visas till exempel ett valideringsfelmeddelande om telefonnumret eller e-postadressen inte har det förväntade formatet.
 
-Regeln för fältverifieringsfel konfigureras genom att händelsen ställs in på _**Adobe Experience Manager Forms-Error**_ som på skärmbilden
+Regeln för fältverifieringsfel konfigureras genom att händelsen ställs in på _**Adobe Experience Manager Forms-Error**_ så som visas på skärmbilden
 
 
 
@@ -45,16 +45,16 @@ Adobe Analytics - Ange variabler är konfigurerat enligt följande
 
 Regeln Skicka formulär aktiveras varje gång ett anpassat formulär skickas.
 
-Regeln Skicka formulär konfigureras med _**Adobe Experience Manager Forms - skicka**_ event
+Regeln för att skicka formulär har konfigurerats med händelsen _**Adobe Experience Manager Forms - Submit**_
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-I regeln Skicka formulär anger dataelementets värde _**SökandeStatAvBosättning**_ mappas till prop5 och värdet för dataelementet FormTitle mappas till prop8.
+I regeln Skicka formulär mappas värdet för dataelementet _**ApplicantsStateOfResidence**_ till prop5 och värdet för dataelementet FormTitle mappas till prop8.
 
 Adobe Analytics - Ange variabler konfigureras enligt följande.
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-När du är redo att testa taggar-koden[publicera dina ändringar av taggarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) publiceringsflödet.
+När du är redo att testa din taggkod [publicerar du dina ändringar av taggarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) med hjälp av publiceringsflödet.
 
 ## Nästa steg
 

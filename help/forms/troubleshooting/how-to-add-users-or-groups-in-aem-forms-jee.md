@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Lägga till användare och grupper i AEM JEE
 
-*I den här videon går du igenom processen att lägga till användare och grupper i Användarhantering.*
+*Den här videon går igenom processen att lägga till användare och grupper i Användarhantering.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335485?quality=12&learn=on)

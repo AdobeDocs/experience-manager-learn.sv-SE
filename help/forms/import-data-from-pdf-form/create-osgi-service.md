@@ -63,7 +63,7 @@ public String getFormData(Document pdfForm) {
 }
 ```
 
-Följande är den verktygsfunktion som är skriven för att extrahera _**topmostSubForm**_ med lämpliga namnutrymmen
+Följande är den verktygsfunktion som har skrivits för att extrahera _**topmostSubForm**_ med lämpliga namnutrymmen
 
 ```java
 private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, String tagName) {

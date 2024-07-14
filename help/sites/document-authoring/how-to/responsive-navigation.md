@@ -1,6 +1,6 @@
 ---
 title: Responsiv navigering
-description: Upptäck hur du utför responsiv navigering vid redigering av Edge Delivery Document.
+description: Lär dig hur du utför responsiv navigering i Edge Delivery Document Authoring.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management

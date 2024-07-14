@@ -67,7 +67,7 @@ Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det händ
 
 [Konfigurera Dynamic Media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[Konfigurera Dynamic Media i hybridläge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
+[Konfigurera Dynamic Media i hybrid-läge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >

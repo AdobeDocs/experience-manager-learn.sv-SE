@@ -1,6 +1,6 @@
 ---
-title: Debugging Dispatcher Tools
-description: Dispatcher Tools är en innesluten Apache-webbservermiljö som kan användas för att simulera AEM som en Cloud Services AEM Publish-tjänstens Dispatcher lokalt. Debugging Dispatcher Tools loggar och cacheinnehåll kan vara avgörande för att säkerställa att hela AEM och tillhörande cache- och säkerhetskonfigurationer är korrekta.
+title: Felsöka Dispatcher-verktyg
+description: Dispatcher Tools har en innesluten Apache Web Server-miljö som kan användas för att simulera AEM som en Cloud Services AEM Publish-tjänstens Dispatcher lokalt. Felsökning av loggar och cacheinnehåll i Dispatcher Tools kan vara avgörande för att säkerställa att AEM från början till slut och att cache- och säkerhetskonfigurationerna stöds korrekt.
 feature: Dispatcher
 jira: KT-5918
 topic: Development
@@ -15,27 +15,27 @@ ht-degree: 0%
 
 ---
 
-# Debugging Dispatcher Tools
+# Felsöka Dispatcher-verktyg
 
-Dispatcher Tools är en innesluten Apache-webbservermiljö som kan användas för att simulera AEM som en Cloud Services AEM Publish-tjänstens Dispatcher lokalt.
+Dispatcher Tools har en innesluten Apache Web Server-miljö som kan användas för att simulera AEM som en Cloud Services AEM Publish-tjänstens Dispatcher lokalt.
 
-Debugging Dispatcher Tools loggar och cacheinnehåll kan vara avgörande för att säkerställa att hela AEM och tillhörande cache- och säkerhetskonfigurationer är korrekta.
+Felsökning av loggar och cacheinnehåll i Dispatcher Tools kan vara avgörande för att säkerställa att AEM från början till slut och att cache- och säkerhetskonfigurationerna stöds korrekt.
 
 >[!NOTE]
 >
->Eftersom Dispatcher Tools är behållarbaserat förstörs tidigare loggar och cacheinnehåll varje gång de startas om.
+>Eftersom Dispatcher Tools är behållarbaserat förstörs tidigare loggar och cacheinnehåll varje gång det startas om.
 
-## Loggar för Dispatcher Tools
+## Dispatcher Tools-loggar
 
-Loggarna för Dispatcher Tools är tillgängliga via `stdout` eller `bin/docker_run` eller med fler detaljer, tillgängliga i Docker-behållaren på `/etc/https/logs`.
+Loggar för Dispatcher-verktyg är tillgängliga via kommandot `stdout` eller `bin/docker_run`, eller med mer information, som finns i Docker-behållaren på `/etc/https/logs`.
 
-Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du får direktåtkomst till Dispatcher Tools Docker-behållarens loggar.
+Se [Dispatcher-loggar](./logs.md#dispatcher-logs) för instruktioner om hur du får direktåtkomst till loggarna för Dispatcher Tools Docker-behållare.
 
-## Cacheminne för Dispatcher Tools
+## Dispatcher Tools Cache
 
 ### Åtkomst till loggar i Docker-behållaren
 
-Dispatcher-cachen kan användas direkt i Docker-behållaren på ` /mnt/var/www/html`.
+Dispatcher-cachen kan komma åt direkt i Docker-behållaren på ` /mnt/var/www/html`.
 
 ```shell
 $ docker ps
@@ -55,7 +55,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopiera Docker-loggarna till det lokala filsystemet
 
-Sändningsloggar kan kopieras ut från Docker-behållaren på `/mnt/var/www/html` till det lokala filsystemet för granskning med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
+Dispatcher-loggar kan kopieras ut från Docker-behållaren på `/mnt/var/www/html` till det lokala filsystemet för kontroll med dina favoritverktyg. Observera att detta är en kopia som görs vid en viss tidpunkt och inte innehåller realtidsuppdateringar av cachen.
 
 ```shell
 $ docker ps

@@ -1,6 +1,6 @@
 ---
 title: Koddatabasmodernizer
-description: Läs om hur Core Repository Modernizer automatiskt uppdaterar befintliga AEM Maven-projekt så att de blir AEM as a Cloud Service.
+description: Läs om hur Core Repository Modernizer automatiskt uppdaterar befintliga AEM Maven-projekt till AEM as a Cloud Service-kompatibla.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Koddatabasmodernizer
 
-Läs om hur Core Repository Modernizer automatiskt uppdaterar befintliga AEM Maven-projekt så att de blir AEM as a Cloud Service.
+Läs om hur Core Repository Modernizer automatiskt uppdaterar befintliga AEM Maven-projekt till AEM as a Cloud Service-kompatibla.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336694?quality=12&learn=on)

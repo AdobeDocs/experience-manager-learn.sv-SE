@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # Lägg till anpassat domännamn
 
-Lär dig hur du lägger till ett anpassat domännamn AEM en as a Cloud Service webbplats.
+Lär dig hur du lägger till ett anpassat domännamn på AEM as a Cloud Service webbplats.
 
-I den här självstudiekursen är det bara varumärket [AEM WKND](https://github.com/adobe/aem-guides-wknd) webbplatsen har förbättrats genom att ett anpassat domännamn med HTTPS-adress läggs till `wknd.enablementadobe.com` med TLS (Transport Layer Security)
+I den här självstudiekursen har varumärket för exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) förbättrats genom att ett anpassat domännamn `wknd.enablementadobe.com` med HTTPS-adresserbart läggs till med TLS (Transport Layer Security).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427903?quality=12&learn=on)
 
@@ -35,14 +35,14 @@ Stegen på hög nivå är:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427909?quality=12&learn=on)
 
-- [OpenSSL](https://www.openssl.org/) och [digga](https://www.isc.org/blogs/dns-checker/) installeras på din lokala dator.
+- [OpenSSL](https://www.openssl.org/) och [dig](https://www.isc.org/blogs/dns-checker/) är installerade på din lokala dator.
 - Tillgång till tredjepartstjänster:
-   - Certifikatutfärdare (CA) - för att begära det signerade certifikatet för din webbplatsdomän, som [DigitCert](https://www.digicert.com/)
+   - Certifikatutfärdare (CA) - att begära det signerade certifikatet för din webbplatsdomän, som [DigitCert](https://www.digicert.com/)
    - DNS-värdtjänst (Domain Name System) - för att lägga till DNS-poster för din anpassade domän, som Azure DNS eller AWS Route 53.
 - Åtkomst till [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) som Business Owner eller Deployment Manager-roll.
-- Exempel [AEM WKND](https://github.com/adobe/aem-guides-wknd) -sajten används i AEMCS-miljön för [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs) typ.
+- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEMCS-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
 
-Om du inte har tillgång till tjänster från tredje part _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
+Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
 
 ## Generera SSL-certifikat
 
@@ -50,7 +50,7 @@ Om du inte har tillgång till tjänster från tredje part _samarbeta med ditt s�
 
 Du har två alternativ:
 
-- Använda `openssl` kommandoradsverktyg - du kan generera en privat nyckel och en CSR-fil (Certificate Signing Request) för din webbplatsdomän. Om du vill begära ett signerat certifikat skickar du CSR till en certifikatutfärdare (CA).
+- Med kommandoradsverktyget `openssl` kan du skapa en privat nyckel och en CSR (Certificate Signing Request) för din webbplatsdomän. Om du vill begära ett signerat certifikat skickar du CSR till en certifikatutfärdare (CA).
 
 - Ditt värdteam tillhandahåller den privata nyckel och det signerade certifikat som krävs för din webbplats.
 
@@ -76,15 +76,15 @@ $ openssl crl2pkcs7 -nocrl -certfile <YOUR-SIGNED-CERT>.crt | openssl pkcs7 -pri
 
 Det signerade certifikatet kan innehålla certifikatkedjan, som innehåller rot- och mellanliggande certifikat tillsammans med slutentitetscertifikatet.
 
-Adobe Cloud Manager godkänner slutentitetscertifikatet och certifikatkedjan _i separata formulärfält_ så du måste extrahera slutenhetscertifikatet och certifikatkedjan från det signerade certifikatet.
+Adobe Cloud Manager godkänner slutentitetscertifikatet och certifikatkedjan _i separata formulärfält_, så du måste extrahera slutentitetscertifikatet och certifikatkedjan från det signerade certifikatet.
 
-I den här självstudien [DigitCert](https://www.digicert.com/) signerat certifikat utfärdat mot `*.enablementadobe.com` domän används som exempel. Slutentiteten och certifikatkedjan extraheras genom att det signerade certifikatet öppnas i en textredigerare och innehållet kopieras mellan `-----BEGIN CERTIFICATE-----` och `-----END CERTIFICATE-----` markörer.
+I den här självstudien används det [DigitCert](https://www.digicert.com/)-signerade certifikatet som utfärdats mot domänen `*.enablementadobe.com` som exempel. Slutentiteten och certifikatkedjan extraheras genom att det signerade certifikatet öppnas i en textredigerare och innehållet mellan markörerna `-----BEGIN CERTIFICATE-----` och `-----END CERTIFICATE-----` kopieras.
 
 ## Lägg till SSL-certifikat i Cloud Manager
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427906?quality=12&learn=on)
 
-Om du vill lägga till SSL-certifikatet i Cloud Manager följer du [Lägg till SSL-certifikat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate) dokumentation.
+Om du vill lägga till SSL-certifikatet i Cloud Manager följer du dokumentationen för [Lägg till SSL-certifikat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate).
 
 ## Verifiering av domännamn
 
@@ -92,9 +92,9 @@ Om du vill lägga till SSL-certifikatet i Cloud Manager följer du [Lägg till S
 
 Så här verifierar du domännamnet:
 
-- Lägg till domännamn i Cloud Manager genom att följa följande [Lägg till anpassat domännamn](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) dokumentation.
-- Lägg till en AEM [TXT-post](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) i din DNS-värdtjänst.
-- Verifiera ovanstående steg genom att fråga DNS-servrarna med `dig` -kommando.
+- Lägg till domännamn i Cloud Manager genom att följa dokumentationen för [Lägg till anpassat domännamn](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name).
+- Lägg till en AEM specifik [TXT-post](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) i DNS-värdtjänsten.
+- Kontrollera ovanstående steg genom att fråga DNS-servrarna med kommandot `dig`.
 
 ```bash
 # General syntax, the `_aemverification` is prefix provided by Adobe
@@ -129,7 +129,7 @@ _aemverification.wknd.enablementadobe.com. 3600    IN TXT "adobe-aem-verificatio
 
 I den här självstudiekursen används Azure DNS som exempel. Om du vill lägga till TXT-posten måste du följa dokumentationen för DNS-värdtjänsten.
 
-Granska [Kontrollerar domännamnsstatus](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status) dokumentation om det finns ett problem.
+Granska dokumentationen [Kontrollera domännamnsstatus](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status) om det finns något problem.
 
 ## Konfigurera DNS-post
 
@@ -137,13 +137,13 @@ Granska [Kontrollerar domännamnsstatus](https://experienceleague.adobe.com/en/d
 
 Så här konfigurerar du DNS-posten för din anpassade domän:
 
-- Ta reda på DNS-posttypen (CNAME eller APEX) baserat på domäntypen, till exempel rotdomän (APEX) eller underdomän (CNAME), och följ [Konfigurera DNS-inställningar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/configure-dns-settings) dokumentation.
+- Ta reda på DNS-posttypen (CNAME eller APEX) baserat på domäntypen, till exempel rotdomän (APEX) eller underdomän (CNAME), och följ dokumentationen för [Konfigurera DNS-inställningar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/configure-dns-settings).
 - Lägg till DNS-posten i DNS-värdtjänsten.
-- Utlös verifieringen av DNS-posten genom att följa följande [Kontrollerar DNS-poststatus](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-dns-record-status) dokumentation.
+- Utlös verifieringen av DNS-posten genom att följa dokumentationen för [Kontrollera DNS-poststatus](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/check-dns-record-status).
 
-I den här självstudiekursen som **underdomän** `wknd.enablementadobe.com` används, CNAME-posttypen som pekar på `cdn.adobeaemcloud.com` läggs till.
+I den här självstudien läggs CNAME-posttypen som pekar på `cdn.adobeaemcloud.com` till, eftersom en **underdomän** `wknd.enablementadobe.com` används.
 
-Om du använder **rotdomän** måste du lägga till en APEX-posttyp (även A, ALIAS eller ANAME) som pekar på de IP-adresser som tillhandahålls av Adobe.
+Om du använder **rotdomänen** måste du lägga till en APEX-posttyp (även A, ALIAS eller ANAME) som pekar på de IP-adresser som tillhandahålls av Adobe.
 
 ## Platsverifiering
 
@@ -153,6 +153,6 @@ Om du vill verifiera att webbplatsen är tillgänglig med det anpassade domänna
 
 ## Avsluta video
 
-Du kan också titta på den kompletta videon som demonstrerar översikten, förutsättningarna och ovanstående steg för att lägga till ett anpassat domännamn AEM en webbplats som är as a Cloud Service.
+Du kan även titta på en video från början till slut som demonstrerar översikten, förutsättningarna och ovanstående steg för att lägga till ett anpassat domännamn på en AEM as a Cloud Service-värdwebbplats.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427817?quality=12&learn=on)

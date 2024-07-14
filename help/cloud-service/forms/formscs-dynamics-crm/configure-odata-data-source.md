@@ -1,5 +1,5 @@
 ---
-title: Skapa och konfigurera datakälla
+title: Skapa och konfigurera Odata Source
 description: Skapa och konfigurera molntjänstkonfiguration för att ansluta till Microsoft Dynamics.
 type: Documentation
 role: Developer

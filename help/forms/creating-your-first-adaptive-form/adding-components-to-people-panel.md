@@ -29,7 +29,7 @@ Konfigurera panelen Personer genom att lägga till fragmentet med information om
 
 >[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
 
-**Regler för info om make/maka**
+**Information om make/maka**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
 

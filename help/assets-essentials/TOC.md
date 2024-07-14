@@ -22,7 +22,7 @@ ht-degree: 0%
 
 + [Komma igång](./getting-started.md)
 
-+ Grunderna{#basics}
++ Grunderna {#basics}
    + [Hantera](basics/managing.md)
    + [Använda](basics/using.md)
    + [Skapa innehåll](basics/creating.md)
@@ -30,7 +30,7 @@ ht-degree: 0%
    + [Samarbeta](basics/collaborating.md)
    + [Länkdelning](basics/link-sharing.md)
 
-+ Konfigurerar{#configuring}
++ Konfigurerar {#configuring}
    + [Min arbetsyta](configuring/my-workspace.md)
    + [Metadataformulär](configuring/metadata-forms.md)
    + [Behörighetshantering](configuring/permissions-management.md)
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 + [Integrering med Creative Cloud](integrations/creative-cloud.md)
 
-+ Integrering med Adobe Workfront{#workfront}
++ Adobe Workfront-integrering{#workfront}
    + [Ökning](./integrations/workfront/overview.md)
    + [Konfigurerar](./integrations/workfront/configure.md)
    + [Mappa metadata](./integrations/workfront/map-metadata.md)

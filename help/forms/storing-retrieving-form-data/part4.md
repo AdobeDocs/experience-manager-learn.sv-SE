@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa klientbibliotek
 
-AEM Client Library hanterar all JavaScript-kod på klientsidan. I den här artikeln har jag skapat ett enkelt JavaScript som hämtar data i adaptiv form med hjälp av guide bridge API. När data för det adaptiva formuläret har hämtats anropas POSTEN till servern för att antingen infoga eller uppdatera adaptiva formulärdata i databasen. Funktionen getALLUrlParams returnerar parametrarna i URL:en. Om GUID-parametern finns i URL:en måste uppdateringsåtgärden utföras, om inte det är en infogningsåtgärd. Resten av funktionerna hanteras i koden som är associerad med click-händelsen i klassen .saveButton.
+AEM Client Library hanterar all JavaScript-kod på klientsidan. I den här artikeln har jag skapat en enkel JavaScript som hämtar data i adaptiv form med hjälp av guide bridge API. När data för det adaptiva formuläret har hämtats anropas POSTEN till servern för att antingen infoga eller uppdatera adaptiva formulärdata i databasen. Funktionen getALLUrlParams returnerar parametrarna i URL:en. Om GUID-parametern finns i URL:en måste uppdateringsåtgärden utföras, om inte det är en infogningsåtgärd. Resten av funktionerna hanteras i koden som är associerad med click-händelsen i klassen .saveButton.
 
 >[!NOTE]
 >

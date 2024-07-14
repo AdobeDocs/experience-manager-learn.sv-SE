@@ -44,7 +44,7 @@ Tabeller används för att visa data i tabelläge. Raderna i tabellen måste fö
    * Interaktivt kommunikationsdokument
    * sampleretirementaccountdata.json
 
-* Öppna dokumentet för interaktiv kommunikation i [redigeringsläge](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
+* Öppna det interaktiva kommunikationsdokumentet i [redigeringsläge](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
 
 * Lägg till layoutfragmentet TableDemo i sektionen för bidrag.
 * Binda tabellcellerna till lämpliga formulärets datamodellelement som de visas i videon

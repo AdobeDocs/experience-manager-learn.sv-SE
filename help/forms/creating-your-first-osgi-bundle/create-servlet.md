@@ -80,17 +80,17 @@ Så här skapar du ditt projekt:
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 * Kommandot ovan skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
 
-Paketet finns även på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med [Felix webbkonsol.](http://localhost:4502/system/console/bundles)
+Paketet är också tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med webbkonsolen [Felix.](http://localhost:4502/system/console/bundles)
 
 
 ## Testa serverlösaren
 
-Peka webbläsaren mot [URL för servermatchare](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Det här visar vilken server som anropas för en viss sökväg som visas på skärmbilden nedan
+Peka webbläsaren på [serverlösarens URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Det här visar vilken server som anropas för en viss sökväg som visas på skärmbilden nedan
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Testa servleten med Postman
 
-![Testa servleten med Postman](assets/test-servlet-postman.JPG)
+![Testa serverleten med Postman](assets/test-servlet-postman.JPG)
 
 ## Nästa steg
 

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 GraphQL-API:t för AEM innehåller ett kraftfullt frågespråk för att visa data från innehållsfragment för program längre fram i kedjan. Modeller för innehållsfragment definierar det dataschema som används av innehållsfragment. När en innehållsfragmentmodell skapas eller uppdateras, översätts och läggs schemat till i det diagram som utgör GraphQL-API:t.
 
-I det här kapitlet ska vi titta på några vanliga GraphQL-frågor för att samla in innehåll med hjälp av en IDE som kallas [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. Den ger också enkel åtkomst till dokumentationen, vilket gör det enkelt att lära sig och förstå vilka metoder som är tillgängliga.
+I det här kapitlet tittar vi på några vanliga GraphQL-frågor för att samla in innehåll med en IDE som heter [GraphiQL](https://github.com/graphql/graphiql). Med GraphiQL IDE kan du snabbt testa och finjustera frågor och data som returneras. Den ger också enkel åtkomst till dokumentationen, vilket gör det enkelt att lära sig och förstå vilka metoder som är tillgängliga.
 
 ## Förutsättningar {#prerequisites}
 
@@ -40,20 +40,20 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 
 En GraphQL-slutpunkt måste konfigureras för att aktivera GraphQL API-frågor för innehållsfragment.
 
-1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL**.
+1. Gå till **Verktyg** > **Allmänt** > **GraphQL** från AEM startskärm.
 
    ![Navigera till GraphQL-slutpunkt](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
-1. Tryck **Skapa** i det övre högra hörnet av dialogrutan som visas anger du följande värden:
+1. Tryck på **Skapa** i det övre högra hörnet i den resulterande dialogrutan och ange följande värden:
 
    * Namn*: **Min projektslutpunkt**.
    * Använd GraphQL-schema från ... *: **Mitt projekt**
 
    ![Skapa GraphQL-slutpunkt](assets/explore-graphql-api/create-graphql-endpoint.png)
 
-   Tryck **Skapa** för att spara slutpunkten.
+   Tryck på **Skapa** för att spara slutpunkten.
 
-   GraphQL-slutpunkter som skapats baserat på en projektkonfiguration aktiverar bara frågor mot modeller som tillhör det projektet. I det här fallet är den enda frågan mot **Person** och **Team** kan användas.
+   GraphQL-slutpunkter som skapats baserat på en projektkonfiguration aktiverar bara frågor mot modeller som tillhör det projektet. I det här fallet kan de enda frågorna mot modellerna **Person** och **Team** användas.
 
    >[!NOTE]
    >
@@ -61,27 +61,27 @@ En GraphQL-slutpunkt måste konfigureras för att aktivera GraphQL API-frågor f
 
 1. Nu bör en GraphQL-slutpunkt vara aktiverad i din miljö.
 
-   ![Aktiverade slutpunkter för grafer](assets/explore-graphql-api/enabled-graphql-endpoints.png)
+   ![Aktiverade grafikslutpunkter](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
 ## Använda GraphiQL IDE
 
-The [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) Med kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan man också **bevara eller spara** frågor som ska användas av klientprogram i en produktionsinställning.
+Med verktyget [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
 
-Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL IDE.
+Utforska sedan kraften i att AEM GraphQL API med den inbyggda GraphiQL IDE.
 
-1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**.
+1. Gå till **Verktyg** > **Allmänt** > **GraphQL Query Editor** från AEM startskärmen.
 
    ![Navigera till GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
    >[!NOTE]
    >
-   > I kan det hända att de äldre versionerna av GraphiQL IDE inte är inbyggda. Den kan installeras manuellt efter dessa [instruktioner](#install-graphiql).
+   > I kan det hända att de äldre versionerna av GraphiQL IDE inte är inbyggda. Den kan installeras manuellt enligt dessa [instruktioner](#install-graphiql).
 
-1. Kontrollera att slutpunkten är inställd på längst upp till höger **Min projektslutpunkt**.
+1. Kontrollera att slutpunkten är inställd på **Min projektslutpunkt** i det övre högra hörnet.
 
    ![Ange GraphQL-slutpunkt](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-Detta kommer att omfatta alla frågor till modeller som skapats i **Mitt projekt** projekt.
+Detta omfattar alla frågor till modeller som skapats i projektet **Mitt projekt**.
 
 ### Fråga en lista med innehållsfragment {#query-list-cf}
 
@@ -100,25 +100,25 @@ Ett vanligt krav är att fråga efter flera innehållsfragment.
    } 
    ```
 
-1. Tryck på **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från det föregående kapitlet:
+1. Tryck på knappen **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från det föregående kapitlet:
 
    ![Resultat av personlista](assets/explore-graphql-api/all-teams-list.png)
 
-1. Placera markören under `title` text och ange **CTRL+Blanksteg** för att aktivera kodtips. Lägg till `shortname` och `description` till frågan.
+1. Placera markören under texten `title` och ange **CTRL+Space** för att utlösa kodtips. Lägg till `shortname` och `description` i frågan.
 
    ![Uppdatera fråga med kodtips](assets/explore-graphql-api/update-query-codehinting.png)
 
-1. Kör frågan igen genom att trycka på **Spela upp** och du bör se att resultatet innehåller ytterligare egenskaper för `shortname` och `description`.
+1. Kör frågan igen genom att trycka på knappen **Spela upp** så ser du att resultatet innehåller de extra egenskaperna för `shortname` och `description`.
 
    ![gennamn och beskrivningsresultat](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   The `shortname` är en enkel egenskap och `description` är ett textfält med flera rader och med GraphQL API kan vi välja olika format för resultaten, som `html`, `markdown`, `json`, eller `plaintext`.
+   `shortname` är en enkel egenskap och `description` är ett textfält med flera rader och med GraphQL API kan vi välja olika format för resultat som `html`, `markdown`, `json` eller `plaintext`.
 
 ### Fråga efter kapslade fragment
 
-Experimentera med frågor för att hämta kapslade fragment, kom ihåg att **Team** modell refererar till **Person** modell.
+Experimentera sedan med frågor om att hämta kapslade fragment. Kom ihåg att **Team**-modellen refererar till **Person**-modellen.
 
-1. Uppdatera frågan så att den innehåller `teamMembers` -egenskap. Kom ihåg att det här är en **Fragmentreferens** till personmodellen. Personmodellens egenskaper kan returneras:
+1. Uppdatera frågan så att den innehåller egenskapen `teamMembers`. Kom ihåg att detta är ett **fragmentreferensfält** till personmodellen. Personmodellens egenskaper kan returneras:
 
    ```graphql
    query allTeams {
@@ -175,7 +175,7 @@ Experimentera med frågor för att hämta kapslade fragment, kom ihåg att **Tea
    }
    ```
 
-   Möjligheten att fråga mot kapslade fragment är en kraftfull funktion i AEM GraphQL API. I det här enkla exemplet är kapslingen bara två nivåer djup. Det går dock att kapsla fragment ännu mer. Om det till exempel finns en **Adress** modell som är associerad med en **Person** det skulle vara möjligt att returnera data från alla tre modellerna i en enda fråga.
+   Möjligheten att fråga mot kapslade fragment är en kraftfull funktion i AEM GraphQL API. I det här enkla exemplet är kapslingen bara två nivåer djup. Det går dock att kapsla fragment ännu mer. Om det till exempel finns en **Address**-modell som är associerad med en **Person** kan data returneras från alla tre modellerna i en enda fråga.
 
 ### Filtrera en lista med innehållsfragment {#filter-list-cf}
 
@@ -204,19 +204,19 @@ Sedan ska vi titta på hur det går att filtrera resultatet till en delmängd av
    }  
    ```
 
-   Ovanstående fråga utför en sökning mot alla personfragment i systemet. Det tillagda filtret i början av frågan utför en jämförelse på `name` fält och variabelsträngen `$name`.
+   Ovanstående fråga utför en sökning mot alla personfragment i systemet. Det tillagda filtret i början av frågan utför en jämförelse av fältet `name` och variabelsträngen `$name`.
 
-1. I **Frågevariabler** ange följande:
+1. Ange följande på panelen **Frågevariabler**:
 
    ```json
    {"name": "John Doe"}
    ```
 
-1. Kör frågan, det förväntas bara att **Personer** Innehållsfragment returneras med värdet `John Doe`.
+1. Kör frågan. Endast **Personer** innehållsfragment returneras med värdet `John Doe`.
 
    ![Använd frågevariabler för att filtrera](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Lära dig att använda GraphQL med AEM - Exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 1. Förbättra ovanstående fråga för att hämta profilbild
 
@@ -251,7 +251,7 @@ Sedan ska vi titta på hur det går att filtrera resultatet till en delmängd av
    } 
    ```
 
-   The `profilePicture` är en innehållsreferens och förväntas vara en bild, därför inbyggd `ImageRef` -objektet används. Detta gör att vi kan begära ytterligare data om bilden som referens, som `width` och `height`.
+   `profilePicture` är en innehållsreferens och förväntas vara en bild. Inbyggt `ImageRef`-objekt används därför. Detta gör att vi kan begära ytterligare data om bilden som ska refereras, som `width` och `height`.
 
 ### Fråga ett enstaka innehållsfragment {#query-single-cf}
 
@@ -270,7 +270,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
    }
    ```
 
-1. Ange följande för **Frågevariabler**:
+1. Ange följande för **frågevariabler**:
 
    ```json
    {"path": "/content/dam/my-project/en/alison-smith"}
@@ -280,7 +280,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
 
 ## Beständiga frågor {#persist-queries}
 
-När en utvecklare är nöjd med de fråga- och resultatdata som returneras från frågan är nästa steg att lagra eller behålla frågan som ska AEM. The [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) är den bästa metoden för att exponera GraphQL API för klientprogram. När en fråga har sparats kan den begäras med hjälp av en GET-begäran och cachas i Dispatcher- och CDN-lagren. Prestandan för de beständiga frågorna är mycket bättre. Förutom prestandafördelar säkerställer beständiga frågor att extra data inte oavsiktligt exponeras för klientprogram. Mer information om [Beständiga frågor finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+När en utvecklare är nöjd med de fråga- och resultatdata som returneras från frågan är nästa steg att lagra eller behålla frågan som ska AEM. [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) är den bästa metoden för att exponera GraphQL-API:t för klientprogram. När en fråga har sparats kan den begäras med hjälp av en GET-begäran och cachas i Dispatcher- och CDN-lagren. Prestandan för de beständiga frågorna är mycket bättre. Förutom prestandafördelar säkerställer beständiga frågor att extra data inte oavsiktligt exponeras för klientprogram. Mer information om [Beständiga frågor finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
 
 Behåll sedan två enkla frågor. De används i nästa kapitel.
 
@@ -307,12 +307,12 @@ Behåll sedan två enkla frågor. De används i nästa kapitel.
 
    Kontrollera att frågan fungerar.
 
-1. Nästa tryckning **Spara som** och ange `all-teams` som **Frågenamn**.
+1. Tryck sedan på **Spara som** och ange `all-teams` som **frågenamn**.
 
-   Frågan ska visas under **Beständiga frågor** till vänster.
+   Frågan ska visas under **Beständiga frågor** i den vänstra listen.
 
-   ![Fråga om alla team](assets/explore-graphql-api/all-teams-persisted-query.png)
-1. Tryck sedan på ellipserna **...** bredvid den beständiga frågan och tryck på **Kopiera URL** om du vill kopiera sökvägen till Urklipp.
+   ![Alla team - beständig fråga](assets/explore-graphql-api/all-teams-persisted-query.png)
+1. Tryck sedan på ellipserna **..** bredvid den beständiga frågan och tryck på **Kopiera URL** för att kopiera sökvägen till Urklipp.
 
    ![Kopiera URL för beständig fråga](assets/explore-graphql-api/copy-persistent-query-url.png)
 
@@ -372,31 +372,31 @@ Behåll sedan två enkla frågor. De används i nästa kapitel.
    ![Slutliga beständiga frågor](assets/explore-graphql-api/final-persisted-queries.png)
 
 
-## Publicera GraphQL Endpoint &amp; Persisted Queries
+## Publish GraphQL Endpoint &amp; Persisted Queries
 
-Publicera `GraphQL Endpoint` &amp; `Persisted Queries`
+Publicera `GraphQL Endpoint` &amp; `Persisted Queries` vid granskning och verifiering
 
-1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL**.
+1. Gå till **Verktyg** > **Allmänt** > **GraphQL** från AEM startskärm.
 
-1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och knacka **Publicera**
+1. Tryck på kryssrutan bredvid **Min projektslutpunkt** och tryck på **Publish**
 
-   ![Publicera GraphQL Endpoint](assets/explore-graphql-api/publish-graphql-endpoint.png)
+   ![Publish GraphQL Endpoint](assets/explore-graphql-api/publish-graphql-endpoint.png)
 
-1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**
+1. Gå till **Verktyg** > **Allmänt** > **GraphQL Query Editor** från AEM startskärmen.
 
-1. Tryck på **alla team** fråga från panelen Beständiga frågor och tryck på **Publicera**
+1. Tryck på **all-teams**-frågan från panelen Beständiga frågor och tryck sedan på **Publish**
 
-   ![Publicera beständiga frågor](assets/explore-graphql-api/publish-persisted-query.png)
+   ![Publish beständiga frågor](assets/explore-graphql-api/publish-persisted-query.png)
 
-1. Upprepa steget ovan för `person-by-name` fråga
+1. Upprepa steget ovan för frågan `person-by-name`
 
 ## Lösningsfiler {#solution-files}
 
-Ladda ned innehåll, modeller och beständiga frågor som skapats i de tre senaste kapitlen: [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
+Hämta innehåll, modeller och beständiga frågor som skapats i de tre senaste kapitlen: [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
 
 ## Ytterligare resurser
 
-Läs mer om GraphQL frågor på [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+Läs mer om GraphQL-frågor på [Lär dig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## Grattis! {#congratulations}
 
@@ -404,9 +404,9 @@ Grattis! Du har skapat och kört flera GraphQL-frågor!
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel [Bygg React-app](./graphql-and-react-app.md)utforskar du hur ett externt program kan fråga AEM GraphQL-slutpunkter och använda dessa två beständiga frågor. En del grundläggande felhantering introduceras också under körningen av GraphQL-frågor.
+I nästa kapitel, [Build React app](./graphql-and-react-app.md), utforskar du hur ett externt program kan fråga AEM GraphQL-slutpunkter och använda dessa två beständiga frågor. En del grundläggande felhantering introduceras också under körningen av GraphQL-frågor.
 
 ## Installera GraphiQL-verktyget (valfritt) {#install-graphiql}
 
-I vissa versioner av AEM (6.X.X) måste GraphiQL IDE-verktyget installeras manuellt. Använd [instruktioner härifrån](../how-to/install-graphiql-aem-6-5.md).
+I vissa versioner av AEM (6.X.X) måste GraphiQL IDE-verktyget installeras manuellt. Använd [instruktionerna här](../how-to/install-graphiql-aem-6-5.md).
 

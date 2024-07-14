@@ -1,6 +1,6 @@
 ---
-title: Analysera testresultat AEM Cloud Manager
-description: Utforska och åtgärda resultaten av rapporter från AEM Cloud Manager
+title: Analysera AEM Cloud Manager testresultat
+description: Utforska och åtgärda resultaten från rapporter från AEM Cloud Manager
 role: Developer
 level: Beginner
 type: Tutorial
@@ -25,6 +25,6 @@ ht-degree: 0%
 >abstract="IEmma kompileringsfel i koden och se om koden följer vedertagna standarder för AEM as a Cloud Service"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="Förstå testresultaten"
 
-Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service
+Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service eller inte
 
 >[!VIDEO](https://video.tv.adobe.com/v/330540?quality=12&learn=on)

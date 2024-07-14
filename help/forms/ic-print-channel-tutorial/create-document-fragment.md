@@ -25,11 +25,11 @@ I den här delen skapar vi dokumentfragment för mottagarens namn och adress.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
-Dokumentfragment innehåller textinnehållet i interaktiva kommunikationsdokument. Det här textinnehållet kan vara statisk text eller infogas från de underliggande datamodellelementens värden. Till exempel **Bästa _{name}_**, där Bästa är statisk text och namnet är elementnamnet i formulärdatamodellen. Vid körning kommer detta att resultera i **Bästa Gloria Rios**eller **Bästa John Jacobs**beroende på name-elementets värde.
+Dokumentfragment innehåller textinnehållet i interaktiva kommunikationsdokument. Det här textinnehållet kan vara statisk text eller infogas från de underliggande datamodellelementens värden. Till exempel **Bästa _{name}_**, där Bästa är statisk text och namnet är elementnamnet i formulärdatamodellen. Vid körning kommer detta att matchas till **Bästa Gloria Rios**eller **Bästa John Jacobs**beroende på värdet på name-elementet.
 
 RTF-redigerare är tillräckligt intuitiv för att en affärsanvändare ska kunna skriva text och infoga formulärelement. Dokumentfragmentredigeraren kan formatera text, ange teckensnittstyper och format, infoga specialtecken och skapa hyperlänkar.
 
-Dokumentfragmentredigeraren kan även infoga infogade villkor i texten, vilket visas i detta [video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Dokumentfragmentredigeraren kan även infoga infogade villkor i texten, vilket visas i denna [video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >

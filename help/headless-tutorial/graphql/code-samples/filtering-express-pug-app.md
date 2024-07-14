@@ -23,11 +23,11 @@ ht-degree: 0%
 
 # Filtrera Express-app
 
-Utforska AEM Headless GraphQL API:er för att filtrera data med en [Express](https://expressjs.com/) och [Pug](https://pugjs.org/) app. Den här Express-appen skapar en lista över WKND-äventyr som kan filtreras efter aktivitetstyp.
+Utforska möjligheten AEM Headless GraphQL API:er att filtrera data med en [Express](https://expressjs.com/) - och [Pug](https://pugjs.org/) -app. Den här Express-appen skapar en lista över WKND-äventyr som kan filtreras efter aktivitetstyp.
 
-Den här koden visar hur du använder Adobe [AEM Headless Client för NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) för att anropa beständiga GraphQL-frågor med Node.js-baserad JavaScript. Den här appen använder `wknd-shared/adventures-all` beständig fråga för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till `wknd-shared/adventures-by-activity` beständig fråga och hämtar äventyrsinformation endast för äventyren med den angivna aktivitetstypen. Äventyrsinformation hämtas från AEM via `wknd-shared/adventures-by-slug` beständig fråga.
+Den här koden visar hur du använder Adobe [AEM Headless Client för NodeJS](https://github.com/adobe/aem-headless-client-nodejs#aem-headless-client-for-nodejs) för att anropa beständiga GraphQL-frågor med hjälp av Node.js-baserad JavaScript. Den här appen använder den `wknd-shared/adventures-all` beständiga frågan för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. När en användare väljer en aktivitetstyp skickas den valda typen till den `wknd-shared/adventures-by-activity` beständiga frågan och hämtar äventyrsinformationen för endast de äventyren med den angivna aktivitetstypen. Äventyrsinformation hämtas från AEM via den `wknd-shared/adventures-by-slug` beständiga frågan.
 
 Den här koden:
 
-+ Ansluter till en AEM-publiceringstjänst och kräver ingen autentisering
-+ Använder WKND:s beständiga frågor: `wknd-shared/adventures-all`, `wknd-shared/adventures-by-activity`och `wknd-shared/adventures-by-slug`
++ Ansluter till en AEM Publish-tjänst och kräver ingen autentisering
++ Använder WKND:s beständiga frågor: `wknd-shared/adventures-all`, `wknd-shared/adventures-by-activity` och `wknd-shared/adventures-by-slug`

@@ -33,11 +33,11 @@ Användaren anger lead-ID:t och när Marketo-tjänsten tabbas anropas lead by ID
 
 I följande skärmbild förklaras inställningarna för regelredigeraren
 
-![linjalredigerare](assets/ruleeditor.png)
+![linjeredigeraren](assets/ruleeditor.png)
 
 ## Felsökning
 
-Om du använder de paket som ingår i den här artikeln kanske du vill aktivera [felsökningsloggar](http://localhost:4502/system/console/slinglog) för följande klasser:
+Om du använder de paket som ingår i den här artikeln kan du aktivera [felsökningsloggar](http://localhost:4502/system/console/slinglog) för följande klasser:
 
 + `com.marketoandforms.core.impl.MarketoServiceImpl`
 + `com.marketoandforms.core.MarketoConfigurationService`

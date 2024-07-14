@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Kommunikation (utdatatjänst)
 
-Läs om hur AEM Forms as a Cloud Service stöder kommunikationsanvändningen.
+Läs om hur AEM Forms as a Cloud Service stöder användningsexemplet Kommunikation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336967?quality=12&learn=on)

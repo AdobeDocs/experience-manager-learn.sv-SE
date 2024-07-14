@@ -28,10 +28,10 @@ Använda Acrobat Sign med AEM Forms
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
 
-*I den här videon går du igenom processen med att konfigurera Acrobat Sign molntjänst och lägga till flera signaturfält i ett AEM anpassat formulär.*
+*Den här videon går igenom processen med att konfigurera molntjänsten i Acrobat Sign och lägga till flera signaturfält i ett AEM anpassat formulär.*
 
 >[!NOTE]
 >
 >Den här funktionen är endast tillgänglig med AEM 6.3 och senare.
 
-Besök [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign) sida för en länk till en live-demo av den här funktionen.
+Gå till sidan [Exempel från AEM Forms](https://forms.enablementadobe.com/content/samples/samples.html?query=0#formsandsign) om du vill se en länk till en live-demo av den här funktionen.

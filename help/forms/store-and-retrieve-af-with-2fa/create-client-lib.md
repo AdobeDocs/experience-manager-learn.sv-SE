@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa klientbibliotek
 
-Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` i `guideBridge` API för click-händelsen för knappen som identifieras av CSS-klassen **Spara, knapp**.  Vi skickar de anpassningsbara formulärdata, `fileMap`och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
+Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för `guideBridge` API:t för click-händelsen för knappen som identifieras av CSS-klassen **save button**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
 
 När formulärdata har sparats genereras ett unikt program-ID som visas för användaren i en dialogruta. När dialogrutan stängs dirigeras användaren till formuläret som gör att användaren kan hämta det sparade adaptiva formuläret med det unika program-ID:t.
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
 >[!NOTE]
 > Vi har använt [bootbox JavaScript-bibliotek](https://bootboxjs.com/examples.html) för att visa dialogrutan
 
-Klientbiblioteken som används i exemplet kan [laddas ned härifrån.](assets/store-af-with-attachments-client-lib.zip)
+Klientbiblioteken som används i det här exemplet kan [hämtas härifrån.](assets/store-af-with-attachments-client-lib.zip)
 
 ## Nästa steg
 

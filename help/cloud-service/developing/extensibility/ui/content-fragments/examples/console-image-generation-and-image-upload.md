@@ -25,7 +25,7 @@ Lär dig hur du genererar en bild med OpenAI eller DALL ・ E 2 och överför de
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfält](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) tillägg som genererar digital bild från indata på naturens språk med [OpenAI API](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/). Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
+Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som genererar digital bild från indata på naturligt språk med [OpenAI API ](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/). Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
 
 I det här exemplet lär du dig:
 
@@ -35,22 +35,22 @@ I det här exemplet lär du dig:
 
 Det funktionella flödet för exempeltillägget är följande:
 
-![Adobe I/O Runtime action flow for digital image generation](./assets/digital-image-generation/flow.png){align="center"}
+![Adobe I/O Runtime åtgärdsflöde för generering av digitala bilder](./assets/digital-image-generation/flow.png){align="center"}
 
-1. Välj Innehållsfragment och klicka på tilläggets `Generate Image` knappen i [åtgärdsfält](#extension-registration) öppnar [modal](#modal).
-1. The [modal](#modal) visar ett anpassat indataformulär som skapats med [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/).
-1. När du skickar formuläret skickas den angivna användaren `Image Description` text, det markerade innehållsfragmentet och AEM värd för [anpassad Adobe I/O Runtime-åtgärd](#adobe-io-runtime-action).
-1. The [Adobe I/O Runtime action](#adobe-io-runtime-action) validerar indata.
-1. Därefter anropas OpenAI:s [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) API och använder `Image Description` text för att ange vilken bild som ska genereras.
-1. The [bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) slutpunkten skapar en originalbild med storleken _1024x1024_ pixlar som använder parametervärdet för promptbegäran och returnerar den genererade bild-URL:en som svar.
-1. The [Adobe I/O Runtime action](#adobe-io-runtime-action) hämtar den genererade bilden till App Builder-miljön.
+1. Välj Innehållsfragment och klicka på tilläggets `Generate Image`-knapp i [åtgärdsfältet](#extension-registration) för att öppna [modal](#modal) .
+1. [modal](#modal) visar ett anpassat indataformulär som skapats med [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+1. När du skickar formuläret skickas `Image Description`-text, det markerade innehållsfragmentet och AEM värd till den [anpassade Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action).
+1. [Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action) validerar indata.
+1. Därefter anropas OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API och `Image Description`-text används för att ange vilken bild som ska genereras.
+1. Slutpunkten för [bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) skapar en originalbild med storleken _1024x1024_ pixlar med parametervärdet för promptbegäran och returnerar den genererade bild-URL:en som svar.
+1. [Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action) hämtar den genererade bilden till App Builder-miljön.
 1. Därefter initieras bildöverföringen från App Builder-miljön till AEM DAM under en fördefinierad sökväg.
-1. Den AEM as a Cloud Service sparar bilden i DAM och returnerar om Adobe I/O Runtime-åtgärden lyckades eller misslyckades. Det överförda svaret uppdaterar det valda Content Fragments image-egenskapsvärde med en annan HTTP-begäran som AEM från Adobe I/O Runtime-åtgärden.
+1. AEM as a Cloud Service sparar bilder till DAM och returnerar svar på om Adobe I/O Runtime-åtgärden lyckades eller misslyckades. Det överförda svaret uppdaterar det valda Content Fragments image-egenskapsvärde med en annan HTTP-begäran som AEM från Adobe I/O Runtime-åtgärden.
 1. modalen tar emot svar från Adobe I/O Runtime-åtgärden och tillhandahåller länken AEM resursinformation för den nyligen genererade, överförda bilden.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `actionBar` om du vill lägga till en anpassad knapp i konsolen för innehållsfragment.
+Det här exemplet utökar till tilläggspunkten `actionBar` för att lägga till en anpassad knapp i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
@@ -58,26 +58,26 @@ Det här exemplet utökar till tilläggspunkten `actionBar` om du vill lägga ti
 
 ## Exempel på tillägg
 
-I exemplet används ett befintligt Adobe Developer Console-projekt och följande alternativ när appen App Builder initieras via `aio app init`.
+I exemplet används ett befintligt Adobe Developer Console-projekt och följande alternativ när App Builder-appen initieras via `aio app init`.
 
-+ Vilka mallar vill du söka efter? `All Extension Points`
++ Vilka mallar vill du söka efter?: `All Extension Points`
 + Välj de mallar som ska installeras:` @adobe/aem-cf-admin-ui-ext-tpl`
-+ Vad vill du ge tillägget ett namn? `Image generation`
-+ Ange en kort beskrivning av ditt tillägg: `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
-+ Vilken version vill du börja med? `0.0.1`
++ Vad vill du kalla tillägget? `Image generation`
++ Ange en kort beskrivning av tillägget: `An example action bar extension that generates an image using OpenAI and uploads it to AEM DAM.`
++ Vilken version vill du börja med?: `0.0.1`
 + Vad vill du göra nu?
    + `Add a custom button to Action Bar`
-      + Ange knappens etikettnamn: `Generate Image`
+      + Ange etikettnamn för knappen: `Generate Image`
       + Måste du visa en modal för knappen? `y`
    + `Add server-side handler`
       + Med Adobe I/O Runtime kan du anropa serverlös kod vid behov. Hur vill du namnge den här åtgärden?: `generate-image`
 
-Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
+Den genererade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
 
 ### Inledande konfiguration
 
-1. Registrera dig kostnadsfritt [OpenAI API](https://openai.com/api/) konto och skapa [API-nyckel](https://beta.openai.com/account/api-keys)
-1. Lägg till den här nyckeln i ditt App Builder-projekts `.env` fil
+1. Registrera dig för ett kostnadsfritt [OpenAI API](https://openai.com/api/)-konto och skapa en [API-nyckel](https://beta.openai.com/account/api-keys)
+1. Lägg till den här nyckeln i ditt App Builder-projekts `.env`-fil
 
    ```
        # Specify your secrets here
@@ -91,7 +91,7 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
        ...
    ```
 
-1. Godkänd `OPENAI_API_KEY` uppdaterar Adobe I/O Runtime-åtgärden `src/aem-cf-console-admin-1/ext.config.yaml`
+1. Skicka `OPENAI_API_KEY` som param till Adobe I/O Runtime-åtgärden och uppdatera `src/aem-cf-console-admin-1/ext.config.yaml`
 
    ```yaml
        ...
@@ -112,30 +112,30 @@ Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
    ```
 
 1. Installera under Node.js-bibliotek
-   1. [OpenAI Node.js Library](https://github.com/openai/openai-node#installation) - för att enkelt anropa OpenAI API:t
-   1. [AEM](https://github.com/adobe/aem-upload#install) - för att överföra bilder till AEM-CS-instanser.
+   1. [OpenAI Node.js-biblioteket](https://github.com/openai/openai-node#installation) - kan enkelt anropa OpenAI API:t
+   1. [AEM Överför](https://github.com/adobe/aem-upload#install) - för att överföra bilder till AEM-CS-instanser.
 
 
 >[!TIP]
 >
->I följande avsnitt får du lära dig mer om nyckelfilerna React och Adobe I/O Runtime Action JavaScript. Nyckelfilerna från `web-src` och  `actions` finns i AppBuilder-projektmappen. [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+>I följande avsnitt får du lära dig mer om JavaScript-filerna för nyckelåtgärder React och Adobe I/O Runtime action. Referensen till nyckelfilerna från mappen `web-src` och `actions` i AppBuilder-projektet finns i [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
 
 
 ### Appvägar{#app-routes}
 
-The `src/aem-cf-console-admin-1/web-src/src/components/App.js` innehåller [Reagera router](https://reactrouter.com/en/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js` innehåller [Reaktionsroutern](https://reactrouter.com/en/main).
 
 Det finns två logiska uppsättningar vägar:
 
-1. Den första rutten mappar begäranden till `index.html`, som anropar React-komponenten som ansvarar för [tilläggsregistrering](#extension-registration).
+1. Den första vägen mappar begäranden till `index.html`, som anropar React-komponenten som ansvarar för [tilläggsregistreringen](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. The `:selection` -param representerar en avgränsad sökväg för innehållsfragment.
+1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. Param `:selection` representerar en begränsad sökväg för innehållsfragment i listan.
 
-   Om tillägget har flera knappar för att anropa diskreta åtgärder ska varje [tilläggsregistrering](#extension-registration) mappar till en väg som definieras här.
+   Om tillägget har flera knappar för att anropa diskreta åtgärder mappas varje [tilläggsregistrering](#extension-registration) till en väg som definieras här.
 
    ```javascript
    <Route
@@ -146,11 +146,11 @@ Det finns två logiska uppsättningar vägar:
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappas till `index.html` rutt, är ingångspunkten för AEM tillägg och definierar:
+`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM och definierar:
 
-1. Platsen för tilläggsknappen visas i AEM (`actionBar` eller `headerMenu`)
-1. Tilläggsknappens definition i `getButtons()` function
-1. Knappens klickningshanterare i `onClick()` function
+1. Platsen för tilläggsknappen visas i AEM-redigeringsgränssnittet (`actionBar` eller `headerMenu`)
+1. Tilläggsknappens definition i funktionen `getButtons()`
+1. Knappens klickningshanterare i funktionen `onClick()`
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -211,19 +211,19 @@ export default ExtensionRegistration;
 
 ### Modal
 
-Varje rutt för tillägget, enligt definition i [`App.js`](#app-routes), mappar till en React-komponent som återges i tilläggets modal.
+Varje väg i tillägget, enligt definition i [`App.js`](#app-routes), mappas till en React-komponent som återges i tilläggets modal.
 
-I det här exemplet finns det en modal React-komponent (`GenerateImageModal.js`) som har fyra lägen:
+I den här exempelappen finns en modal React-komponent (`GenerateImageModal.js`) som har fyra lägen:
 
 1. Läser in, vilket anger att användaren måste vänta
 1. Varningsmeddelandet som föreslår att användarna bara väljer ett innehållsfragment åt gången
 1. Formuläret Generera bild där användaren kan ange en bildbeskrivning på det naturliga språket.
 1. Svaret på bildgenereringsåtgärden, som tillhandahåller länken AEM resursinformation för den nyligen genererade, överförda bilden.
 
-Viktigt är att all interaktion med AEM från tillägget ska delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsorigo resursdelning (CORS).
 
-När _Generera bild_ formulär skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden, skickar bildbeskrivningen, aktuell AEM (domän) och användarens AEM åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) API för att generera en bild med den inskickade bildbeskrivningen. Nästa användning [AEM](https://github.com/adobe/aem-upload) nodmodulens `DirectBinaryUpload` klass som den överför genererad bild till AEM och slutligen använder [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
+När formuläret _Generera bild_ skickas anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärd och skickar bildbeskrivningen, den aktuella AEM (domänen) och användarens AEM åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API för att generera en bild med den inskickade bildbeskrivningen. Därefter används [AEM Upload](https://github.com/adobe/aem-upload) -nodmodulens `DirectBinaryUpload` -klass för att överföra den genererade bilden till AEM och slutligen använder [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modalen så att resultatet av bildgenereringen visas.
 
@@ -482,25 +482,25 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->I `buildAssetDetailsURL()` funktionen, `aemAssetdetailsURL` variabelvärdet förutsätter att [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) är aktiverat. Om du har inaktiverat Unified Shell måste du ta bort `/ui#/aem` från variabelvärdet.
+>I funktionen `buildAssetDetailsURL()` antar variabelvärdet `aemAssetdetailsURL` att [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
 
 
 ### Adobe I/O Runtime action
 
-En AEM app i App Builder kan definiera eller använda 0 eller många av Adobe I/O Runtime åtgärder.
+Ett AEM tillägg som App Builder kan definiera eller använda 0 eller många Adobe I/O Runtime-åtgärder.
 Åtgärden Adobe Runtime ansvarar för arbete som kräver interaktion med AEM, Adobe eller tredjeparts webbtjänster.
 
-I det här exemplet är `generate-image` Adobe I/O Runtime åtgärd ansvarar för att
+I den här exempelappen ansvarar Adobe I/O Runtime-åtgärden `generate-image` för:
 
-1. Generera en bild med [Generering av OpenAI API-avbildning](https://beta.openai.com/docs/guides/images/image-generation-beta) service
-1. Överföra den genererade bilden till AEM-CS med [AEM](https://github.com/adobe/aem-upload) bibliotek
+1. Generera en bild med tjänsten [OpenAI API Image Generation](https://beta.openai.com/docs/guides/images/image-generation-beta)
+1. Överför den genererade bilden till AEM-CS-instansen med biblioteket [AEM Upload](https://github.com/adobe/aem-upload)
 1. Göra en HTTP-begäran till AEM Content Fragment API för att uppdatera innehållets image-egenskap.
-1. Returnera nyckelinformationen för lyckade och misslyckade resultat för visning av modala (`GenerateImageModal.js`)
+1. Returnerar nyckelinformationen för lyckade och misslyckade visningsuppgifter för modala (`GenerateImageModal.js`)
 
 
 #### Startpunkt (`index.js`)
 
-The `index.js` arbetar över 1 till 3 uppgifter med hjälp av respektive JavaScript-modul, nämligen `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. Dessa moduler och tillhörande kod beskrivs i nästa [delavsnitt](#image-generation-module---generate-image-using-openaijs).
+`index.js` strukturerar över 1 till 3 uppgifter med hjälp av respektive JavaScript-moduler, nämligen `generate-image-using-openai, upload-generated-image-to-aem, update-content-fragement`. Dessa moduler och tillhörande kod beskrivs i de följande [underavsnitten](#image-generation-module---generate-image-using-openaijs).
 
 + `src/aem-cf-console-admin-1/actions/generate-image/index.js`
 
@@ -595,7 +595,7 @@ exports.main = main;
 
 #### Bildgenerering
 
-Den här modulen ansvarar för att anropa OpenAI-filer [Bildgenerering](https://beta.openai.com/docs/guides/images/image-generation-beta) slutpunkt med [öppai](https://github.com/openai/openai-node) bibliotek. Så här hämtar du OpenAI API-hemlig nyckel som definieras i `.env` -fil, använder `params.OPENAI_API_KEY`.
+Den här modulen ansvarar för att anropa OpenAI:s [Image Generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -slutpunkt med hjälp av [openai](https://github.com/openai/openai-node)-biblioteket. För att hämta OpenAI API-hemlig nyckel som definierats i filen `.env` används `params.OPENAI_API_KEY`.
 
 + `src/aem-cf-console-admin-1/actions/generate-image/generate-image-using-openai.js`
 
@@ -653,9 +653,9 @@ module.exports = {
 
 #### Överför till AEM
 
-Den här modulen ansvarar för att överföra den OpenAI-genererade bilden till AEM med [AEM](https://github.com/adobe/aem-upload) bibliotek. Den genererade bilden hämtas först till App Builder-miljön med Node.js [Filsystem](https://nodejs.org/api/fs.html) biblioteket och när överföringen till AEM är klar tas det bort.
+Den här modulen ansvarar för att överföra den OpenAI-genererade bilden till AEM med hjälp av biblioteket [AEM Upload](https://github.com/adobe/aem-upload). Den genererade bilden hämtas först till App Builder-miljön med biblioteket Node.js [File System](https://nodejs.org/api/fs.html) och när överföringen till AEM är klar tas den bort.
 
-Kod nedan `uploadGeneratedImageToAEM` funktionen dirigerar genererad bildhämtning till körningsmiljön, överför den till AEM och tar bort den från körningsmiljön. Bilden överförs till `/content/dam/wknd-shared/en/generated` sökväg, kontrollera att alla mappar finns i DAM, vilket krav som måste användas [AEM](https://github.com/adobe/aem-upload) bibliotek.
+I koden nedan sorterar funktionen `uploadGeneratedImageToAEM` den genererade avbildningen som hämtas till körningsmiljön, överför den till AEM och tar bort den från körningsmiljön. Bilden överförs till sökvägen `/content/dam/wknd-shared/en/generated`. Kontrollera att alla mappar finns i DAM, vilket är en förutsättning för att du ska kunna använda biblioteket [AEM Upload](https://github.com/adobe/aem-upload).
 
 + `src/aem-cf-console-admin-1/actions/generate-image/upload-generated-image-to-aem.js`
 

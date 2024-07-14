@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 - Mysteries of Cloud Manager - Funktionstester
+title: Cloud 5 - Mysteries of Cloud Manager - Functional Tests
 description: Hur och varför skapa anpassade funktionstester
 version: Cloud Service
 role: Admin, Developer
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 - Mysteries of Cloud Manager - Funktionstester
+# Cloud 5 - Mysteries of Cloud Manager - Functional Tests
 
 AEM as a Cloud Service slutför många funktionstester som standard med programmet som är inbyggt överst. Dessa tester kanske inte täcker alla tester som krävs och som du kan behöva. Anpassade funktionstester hjälper till.
 

@@ -48,4 +48,4 @@ Vi ska lägga till en tabell i inkomstpanelen. Konfigurera tabellraderna och anv
 
 ## Nästa steg
 
-[Konfigurera resurspanelen](./configuring-assets-panel.md)
+[Konfigurera Assets-panelen](./configuring-assets-panel.md)

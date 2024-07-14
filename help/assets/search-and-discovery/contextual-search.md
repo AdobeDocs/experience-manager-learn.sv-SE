@@ -26,7 +26,7 @@ Lär dig hur du använder kontextuell sökning i Adobe Experience Manager Assets
 
 ## Växla sammanhangsbaserad sökning
 
-Om du vill aktivera eller inaktivera sammanhangsbaserad sökning för alla användare kan AEM göra det genom att gå till __Allmänna inställningar__ och __Sammanhangsbaserad sökning__ växla till önskad inställning.
+Om du vill aktivera eller inaktivera sammanhangsbaserad sökning för alla användare kan AEM göra det genom att gå till __Allmänna inställningar__ och växla __Sammanhangsbaserad sökning__ till önskad inställning.
 
 Som standard är sammanhangsbaserad sökning aktiverad för alla användare.
 

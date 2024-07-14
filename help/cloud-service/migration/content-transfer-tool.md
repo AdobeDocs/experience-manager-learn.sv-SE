@@ -1,6 +1,6 @@
 ---
 title: Använda verktyget Innehållsöverföring
-description: Verktyget Innehållsöverföring är det rekommenderade sättet att migrera innehåll från en lokal version eller en AMS-version av AEM till en AEM as a Cloud Service miljö.
+description: Verktyget Innehållsöverföring är det rekommenderade sättet att migrera innehåll från en lokal version eller en AMS-version av AEM till en AEM as a Cloud Service-miljö.
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Använda verktyget Innehållsöverföring
 
-Verktyget Innehållsöverföring är det rekommenderade sättet att migrera innehåll från en lokal version eller en AMS-version av AEM till en AEM as a Cloud Service miljö.
+Verktyget Innehållsöverföring är det rekommenderade sättet att migrera innehåll från en lokal version eller en AMS-version av AEM till en AEM as a Cloud Service-miljö.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
 

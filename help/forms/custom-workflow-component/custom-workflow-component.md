@@ -22,7 +22,7 @@ Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver skapa 
 
 
 [Hämta den anpassade arbetsflödeskomponenten](assets/saveFiles.zip)
-Importera arbetsflödeskomponenten [använda pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+Importera arbetsflödeskomponenten [med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
 Den anpassade arbetsflödeskomponenten finns i /apps/AEMFormsDemoListings/workflowComponent/SaveFiles
 
@@ -49,14 +49,15 @@ Processargumenten för processen finns under processarnoden
 ![processargument](assets/process-arguments.png)
 
 Författaren anger argumenten enligt skärmbilden nedan
-![workflow-component](assets/custom-workflow-component.png)
+![arbetsflödeskomponent](assets/custom-workflow-component.png)
 
-Värdena lagras som egenskaper för metadatanoden. Värdet **c:\formbilagor** lagras i metadatanodens saveToLocation-egenskap
+Värdena lagras som egenskaper för metadatanoden. Värdet **c:\formateachments** lagras till exempel i egenskapen saveToLocation för metadatanoden
 ![save-location](assets/save-to-location.png)
 
 ## cq:editConfig
 
-Cq:EditConfig är helt enkelt en nod med den primära typen cq:EditConfig och namnet cq:editConfig under komponentroten. Redigeringsbeteendet för en komponent konfigureras genom att en cq:editConfig-nod av typen cq:EditConfig läggs till under komponentnoden (av typen cq:Component)
+Cq:EditConfig är helt enkelt en nod med den primära typen cq:EditConfig och namnet cq:editConfig under komponentroten
+Redigeringsbeteendet för en komponent konfigureras genom att en cq:editConfig-nod av typen cq:EditConfig läggs till under komponentnoden (av typen cq:Component)
 
 ![edit-config](assets/cq-edit-config.png)
 

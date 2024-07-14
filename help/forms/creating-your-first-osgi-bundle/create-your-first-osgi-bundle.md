@@ -33,7 +33,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 
 ### Testa JDK-versionen
 
-Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör gå tillbaka till den version av JDK som identifieras av `JAVA_HOME` variabel
+Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör återställa den version av JDK som identifieras av variabeln `JAVA_HOME`
 
 ![datakälla](assets/java-version.JPG)
 
@@ -42,19 +42,19 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 Maven är ett automatiserat byggverktyg som främst används för Java-projekt. Följ de här stegen för att installera maven på din lokala dator.
 
 * Skapa en mapp med namnet `maven` i C-enheten
-* Ladda ned [binärt zip-arkiv](https://maven.apache.org/download.cgi)
+* Hämta det [binära zip-arkivet](https://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
-* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
-* Lägg till `%M2_HOME%\bin` till din bana
+* Skapa en miljövariabel med namnet `M2_HOME` och värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är versionen **mvn** 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
+* Lägg till `%M2_HOME%\bin` i din sökväg
 * Spara ändringarna
-* Öppna en ny kommandotolk och skriv in `mvn -version`. Du borde se **mvn** version som visas på skärmbilden nedan
+* Öppna en ny kommandotolk och skriv in `mvn -version`. Du bör se **mvn**-versionen som visas på skärmbilden nedan
 
 ![datakälla](assets/mvn-version.JPG)
 
 
 ## Installera Eclipse
 
-Installera den senaste versionen av [förmörka](https://www.eclipse.org/downloads/)
+Installera den senaste versionen av [eclipse](https://www.eclipse.org/downloads/)
 
 ## Skapa ditt första projekt
 
@@ -80,30 +80,30 @@ När du är klar visas ett meddelande om att bygget lyckades i kommandofönstret
 
 Starta **Eclipse**
 
-Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som visas här
+Gå till **Arkiv -> Importera** och välj **Befintliga Maven-projekt** så som visas här
 
 ![datakälla](assets/import-mvn-project.JPG)
 
 Klicka på Nästa
 
-Välj platsen c:\aemformsbundles\mysite genom att klicka på **Bläddra** knapp
+Markera c:\aemformsbundles\mysite genom att klicka på knappen **Bläddra**
 
 ![datakälla](assets/mysite-eclipse-project.png)
 
 >[!NOTE]
 >Du kan välja att importera lämpliga moduler beroende på dina behov. Välj och importera endast kärnmodulen om du bara ska skapa Java-kod i ditt projekt.
 
-Klicka **Slutför** för att starta importprocessen
+Klicka på **Slutför** för att starta importprocessen
 
 Projektet importeras till Eclipse och du ser ett antal `mysite.xxxx` mappar
 
-Expandera `src/main/java` under `mysite.core` mapp. Det här är den mapp där du skriver större delen av koden.
+Expandera `src/main/java` under mappen `mysite.core`. Det här är den mapp där du skriver större delen av koden.
 
 ![datakälla](assets/mysite-core-project.png)
 
 ## Inkludera AEMFD-klient-SDK
 
-Du måste inkludera AEMFD-klientens SDK i ditt projekt för att kunna utnyttja olika tjänster som medföljer AEM Forms. Se [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i Maven-projektet. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
+Du måste inkludera AEMFD-klientens SDK i ditt projekt för att kunna utnyttja olika tjänster som medföljer AEM Forms. Se [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
 
 ```xml
 <dependency>
@@ -119,7 +119,7 @@ Så här skapar du ditt projekt:
 * Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
-  `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+  `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med webbkonsolen [Felix](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg
 

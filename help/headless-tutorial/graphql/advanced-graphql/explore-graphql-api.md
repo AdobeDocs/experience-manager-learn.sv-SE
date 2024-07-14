@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # Utforska AEM GraphQL API
 
-Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudien [GraphQL i flera steg](../multi-step/explore-graphql-api.md)använder du GraphiQL Explorer för att testa och förfina GraphQL-frågorna.
+Med GraphQL API i AEM kan du visa Content Fragment-data för program längre fram i kedjan. I den grundläggande självstudiekursen [om flera steg i GraphQL](../multi-step/explore-graphql-api.md) använde du GraphiQL Explorer för att testa och förfina GraphQL-frågorna.
 
-I det här kapitlet använder du GraphiQL Explorer för att definiera mer avancerade frågor för att samla in data om de innehållsfragment som du har skapat i [föregående kapitel](../advanced-graphql/author-content-fragments.md).
+I det här kapitlet använder du GraphiQL Explorer för att definiera mer avancerade frågor för att samla in data om de innehållsfragment som du skapade i det [föregående kapitlet](../advanced-graphql/author-content-fragments.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,30 +38,30 @@ I det här kapitlet får du lära dig att:
 ## Använda GraphiQL Explorer
 
 
-The [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) gör att utvecklare kan skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan man också **bevara eller spara** frågor som ska användas av klientprogram i en produktionsinställning.
+Med verktyget [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
 
-Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL Explorer.
+Utforska sedan kraften i att AEM GraphQL API med hjälp av den inbyggda GraphiQL Explorer.
 
-1. Navigera AEM startskärmen till **verktyg** > **Allmänt** > **GraphQL Query Editor**.
+1. Gå till **Verktyg** > **Allmänt** > **GraphQL Query Editor** från AEM startskärmen.
 
    ![Navigera till GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
 >[!IMPORTANT]
 >
->I vissa versioner av AEM (6.X.X) måste GraphiQL Explorer-verktyget (även GraphiQL IDE) installeras manuellt. Följ [instruktion härifrån](../how-to/install-graphiql-aem-6-5.md).
+>I vissa versioner av AEM (6.X.X) måste GraphiQL Explorer-verktyget (även GraphiQL IDE) installeras manuellt. Följ [instruktionerna här](../how-to/install-graphiql-aem-6-5.md).
 
-1. Kontrollera att slutpunkten är inställd på längst upp till höger **WKND delad slutpunkt**. Ändra _Slutpunkt_ här visas det befintliga _Beständiga frågor_ längst upp till vänster.
+1. Kontrollera att slutpunkten är inställd på **WKND-delad slutpunkt** i det övre högra hörnet. Om du ändrar listrutan _Slutpunkt_ här visas de befintliga _beständiga frågorna_ i det övre vänstra hörnet.
 
    ![Ange GraphQL-slutpunkt](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
 
-Detta kommer att omfatta alla frågor till modeller som skapats i **WKND delad** projekt.
+Detta omfattar alla frågor till modeller som skapats i projektet **WKND Shared** .
 
 
 ## Filtrera en lista med innehållsfragment med frågevariabler
 
-I föregående [GraphQL i flera steg](../multi-step/explore-graphql-api.md), har du definierat och använt grundläggande beständiga frågor för att hämta information om innehållsfragment. Här utökar du kunskapen och filtrerar Content Fragments-data genom att skicka variabler till de beständiga frågorna.
+I den tidigare [flerstegssjälvstudiekursen för GraphQL](../multi-step/explore-graphql-api.md) definierade och använde du grundläggande beständiga frågor för att hämta information om innehållsfragment. Här utökar du kunskapen och filtrerar Content Fragments-data genom att skicka variabler till de beständiga frågorna.
 
-När du utvecklar klientprogram behöver du vanligtvis filtrera innehållsfragment baserat på dynamiska argument. Med AEM GraphQL API kan du skicka dessa argument som variabler i en fråga för att undvika strängkonstruktion på klientsidan vid körning. Mer information om GraphQL-variabler finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#variables).
+När du utvecklar klientprogram behöver du vanligtvis filtrera innehållsfragment baserat på dynamiska argument. Med AEM GraphQL API kan du skicka dessa argument som variabler i en fråga för att undvika strängkonstruktion på klientsidan vid körning. Mer information om GraphQL-variabler finns i [GraphQL-dokumentationen](https://graphql.org/learn/queries/#variables).
 
 I det här exemplet frågar du alla instruktörer som har en viss kompetens.
 
@@ -94,9 +94,9 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
    }
    ```
 
-   The `listPersonBySkill` en variabel accepteras i frågan ovan (`skillFilter`) som krävs `String`. Den här frågan utför en sökning mot alla personinnehållsfragment och filtrerar dem baserat på `skills` fält och strängen som skickas `skillFilter`.
+   `listPersonBySkill`-frågan ovan accepterar en variabel (`skillFilter`) som är en obligatorisk `String`. Den här frågan utför en sökning mot alla personinnehållsfragment och filtrerar dem baserat på fältet `skills` och strängen som skickas i `skillFilter`.
 
-   The `listPersonBySkill` innehåller `contactInfo` -egenskap, som är en fragmentreferens till kontaktinformationsmodellen som definieras i föregående kapitel. Kontaktinformationsmodellen innehåller `phone` och `email` fält. Minst ett av dessa fält i frågan måste finnas för att den ska fungera korrekt.
+   `listPersonBySkill` innehåller egenskapen `contactInfo`, som är en fragmentreferens till kontaktinformationsmodellen som definierats i föregående kapitel. Kontaktinformationsmodellen innehåller fälten `phone` och `email`. Minst ett av dessa fält i frågan måste finnas för att den ska fungera korrekt.
 
    ```graphql
    contactInfo {
@@ -105,7 +105,7 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
          }
    ```
 
-1. Nu definierar vi `skillFilter` och få alla instruktörer som är skickliga på skidåkning. Klistra in följande JSON-sträng på panelen Frågevariabler i GraphiQL IDE:
+1. Sedan definierar vi `skillFilter` och hämtar alla instruktörer som har kompetens för att skidåkning. Klistra in följande JSON-sträng på panelen Frågevariabler i GraphiQL IDE:
 
    ```json
    {
@@ -145,13 +145,13 @@ I det här exemplet frågar du alla instruktörer som har en viss kompetens.
    }
    ```
 
-Tryck på **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från det föregående kapitlet:
+Tryck på knappen **Spela upp** på den översta menyn för att köra frågan. Du bör se resultatet av innehållsfragmenten från det föregående kapitlet:
 
-![Person efter kunskapsresultat](assets/explore-graphql-api/person-by-skill.png)
+![Person efter kompetens - resultat](assets/explore-graphql-api/person-by-skill.png)
 
 ## Filter för innehåll i en fragmentreferens
 
-Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregående kapitel lade du till tre nya fragmentreferenser till ett Adventure Content Fragment: `location`, `instructorTeam`och `administrator`. Nu ska vi filtrera alla annonser för alla administratörer som har ett visst namn.
+Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I det föregående kapitlet lade du till tre nya fragmentreferenser till ett Adventure Content Fragment: `location`, `instructorTeam` och `administrator`. Nu ska vi filtrera alla annonser för alla administratörer som har ett visst namn.
 
 >[!CAUTION]
 >
@@ -190,7 +190,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
    }
    ```
 
-   The `getAdventureAdministratorDetailsByAdministratorName` frågefiltrerar alla annonser för `administrator` av `fullName` &quot;Jacob Wester&quot;, returnerar information från två kapslade innehållsfragment: Adventure och Instructor.
+   Frågan `getAdventureAdministratorDetailsByAdministratorName` filtrerar alla tillägg för `administrator` av `fullName` &quot;Jacob Wester&quot; och returnerar information från två kapslade innehållsfragment: Adventure och Instructor.
 
 1. Kör frågan. Resultatet ska se ut ungefär så här:
 
@@ -230,7 +230,7 @@ Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I föregåe
 
 ## Fråga efter textbundna referenser från ett textfält med flera rader {#query-rte-reference}
 
-Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i textfält med flera rader. I föregående kapitel lade du till båda referenstyperna i **Beskrivning** i Yosemite Team Content Fragment. Nu hämtar vi referenserna.
+Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i textfält med flera rader. I föregående kapitel lade du till båda referenstyperna i fältet **Beskrivning** i Yosemite Team Content Fragment. Nu hämtar vi referenserna.
 
 1. Klistra in följande fråga i den vänstra panelen i GraphiQL IDE:
 
@@ -276,13 +276,13 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
    }
    ```
 
-   The `getTeamByAdventurePath` hämtar alla annonser per sökväg och returnerar data för `instructorTeam` fragmentreferens för ett specifikt Adventure.
+   Frågan `getTeamByAdventurePath` filtrerar alla annonser efter sökväg och returnerar data för fragmentreferensen `instructorTeam` för en specifik Adventure.
 
-   `_references` är ett systemgenererat fält som används för att visa referenser, inklusive de som infogas i textfält med flera rader.
+   `_references` är ett systemgenererat fält som används för att visa referenser, inklusive de som infogas i flerradiga textfält.
 
-   The `getTeamByAdventurePath` hämtar flera referenser. Först används den inbyggda `ImageRef` objektet som ska hämta `_path` och `__typename` av bilder som infogats som innehållsreferenser i textfältet med flera rader. Därefter används `LocationModel` om du vill hämta data för det platsinnehållsfragment som infogats i samma fält.
+   `getTeamByAdventurePath`-frågan hämtar flera referenser. Först används det inbyggda `ImageRef`-objektet för att hämta `_path` och `__typename` för bilder som infogats som innehållsreferenser i textfältet med flera rader. Därefter används `LocationModel` för att hämta data från det platsinnehållsfragment som infogats i samma fält.
 
-   Frågan innehåller även `_metadata` fält. På så sätt kan du hämta namnet på teaminnehållsfragmentet och visa det senare i WKND-appen.
+   Frågan innehåller även fältet `_metadata`. På så sätt kan du hämta namnet på teaminnehållsfragmentet och visa det senare i WKND-appen.
 
 1. Klistra sedan in följande JSON-sträng på panelen Frågevariabler för att hämta Yosemite Backpackaging Adventure:
 
@@ -344,14 +344,14 @@ Med AEM GraphQL API kan du söka efter innehålls- och fragmentreferenser i text
    }
    ```
 
-   The `_references` visas både logotypbilden och Yosemite Valley Lodge Content Fragment som infogades i **Beskrivning** fält.
+   Fältet `_references` visar både logotypbilden och Yosemite Valley Lodge Content Fragment som infogades i fältet **Beskrivning**.
 
 
 ## Fråga med direktiv
 
-När du utvecklar klientprogram måste du ibland ändra strukturen för dina frågor på ett villkor. I det här fallet kan du med AEM GraphQL API använda GraphQL-direktiv för att ändra beteendet på dina frågor baserat på de angivna villkoren. Mer information om GraphQL-direktiv finns i [GraphQL-dokumentation](https://graphql.org/learn/queries/#directives).
+När du utvecklar klientprogram måste du ibland ändra strukturen för dina frågor på ett villkor. I det här fallet kan du med AEM GraphQL API använda GraphQL-direktiv för att ändra beteendet på dina frågor baserat på de angivna villkoren. Mer information om GraphQL-direktiv finns i [GraphQL-dokumentationen](https://graphql.org/learn/queries/#directives).
 
-I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter textbundna referenser i textfält med flera rader. Innehållet hämtades från `description` i `plaintext` format. Nu ska vi utöka frågan och använda ett direktiv för att hämta villkorligt `description` i `json` även format.
+I det [föregående avsnittet](#query-rte-reference) fick du lära dig att fråga efter textbundna referenser i textfält med flera rader. Innehållet hämtades från fältet `description` i formatet `plaintext`. Låt oss sedan utöka frågan och använda ett direktiv för att hämta `description` villkorligt i formatet `json`.
 
 1. Klistra in följande fråga i den vänstra panelen i GraphiQL IDE:
 
@@ -398,7 +398,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
    }
    ```
 
-   Frågan ovan accepterar ytterligare en variabel (`includeJson`) som krävs `Boolean`, även kallat frågans direktiv. Ett direktiv kan användas för att villkorligt inkludera data från `description` fältet i `json` baserat på det booleska värde som skickas `includeJson`.
+   Frågan ovan accepterar ytterligare en variabel (`includeJson`) som är en obligatorisk `Boolean`, som också kallas frågans direktiv. Ett direktiv kan användas för att villkorligt inkludera data från fältet `description` i formatet `json` baserat på det booleska värde som skickas i `includeJson`.
 
 1. Klistra sedan in följande JSON-sträng på panelen Frågevariabler:
 
@@ -409,9 +409,9 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
    }
    ```
 
-1. Kör frågan. Du bör få samma resultat som i föregående avsnitt på [fråga efter textbundna referenser i textfält med flera rader](#query-rte-reference).
+1. Kör frågan. Du bör få samma resultat som i föregående avsnitt om [hur du frågar efter textbundna referenser i textfält med flera rader](#query-rte-reference).
 
-1. Uppdatera `includeJson` direktiv till `true` och kör frågan igen. Resultatet ska se ut ungefär så här:
+1. Uppdatera direktivet `includeJson` till `true` och kör frågan igen. Resultatet ska se ut ungefär så här:
 
    ```json
    {
@@ -501,7 +501,7 @@ I [föregående avsnitt](#query-rte-reference)har du lärt dig att söka efter t
 
 ## Fråga efter JSON-objektets innehållstyp
 
-Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade till ett JSON-objekt i **Väder efter säsong** fält. Nu hämtar vi dessa data i Location Content Fragment.
+Kom ihåg att du i det föregående kapitlet om utveckling av innehållsfragment lade till ett JSON-objekt i fältet **Väder efter säsong**. Nu hämtar vi dessa data i Location Content Fragment.
 
 1. Klistra in följande fråga i den vänstra panelen i GraphiQL IDE:
 
@@ -599,7 +599,7 @@ Kom ihåg att du i föregående kapitel om utveckling av innehållsfragment lade
    }
    ```
 
-   The `weatherBySeason` -fältet innehåller det JSON-objekt som lagts till i föregående kapitel.
+   Fältet `weatherBySeason` innehåller det JSON-objekt som lagts till i föregående kapitel.
 
 ## Fråga om allt innehåll samtidigt
 
@@ -726,4 +726,4 @@ Grattis! Du har nu testat avancerade frågor för att samla in data om de inneh�
 
 ## Nästa steg
 
-I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)kommer du att lära dig hur du behåller GraphQL-frågor och varför det är bäst att använda beständiga frågor i dina program.
+I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md) får du lära dig hur du behåller GraphQL-frågor och varför det är bäst att använda beständiga frågor i dina program.

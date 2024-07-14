@@ -35,13 +35,13 @@ Den här självstudiekursen kommer att omfatta följande ämnen:
 * Definiera AEM Content Services-slutpunkter med AEM Sites mallar och sidor som visar händelsedata som JSON
 * Se hur AEM WCM Core Components kan användas för att marknadsförarna ska kunna skapa JSON-slutpunkter
 * Förbruka AEM Content Services JSON från en mobilapp
-   * Android används för att det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra den inbyggda appen.
+   * Användningen av Android beror på att det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra programmet.
 
 ## GitHub-projekt
 
-Källkoden och innehållspaketen finns på [AEM - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
+Källkoden och innehållspaketen är tillgängliga på [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile).
 
-Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
 ## AEM GraphQL jämfört med AEM Content Services
 

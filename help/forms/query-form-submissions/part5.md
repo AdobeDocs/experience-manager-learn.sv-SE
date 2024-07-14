@@ -32,6 +32,6 @@ Kontrollera att lagrings-URI avslutas med ett snedstreck och att SAS-token börj
 * Redigera autentiseringsinställningarna för följande tre datakällor så att de matchar din miljö
   ![datakällor](assets/fdm-data-sources.png)
 
-* Förhandsgranska och skicka [Kontakta oss](http://localhost:4502/content/dam/formsanddocuments/azureportal/contactus/jcr:content?wcmmode=disabled)
+* Förhandsgranska och skicka [formuläret Kontakta oss](http://localhost:4502/content/dam/formsanddocuments/azureportal/contactus/jcr:content?wcmmode=disabled)
 
 * [Fråga när formulär skickas](http://localhost:4502/content/dam/formsanddocuments/azureportal/queryformsubmissions/jcr:content?wcmmode=disabled)

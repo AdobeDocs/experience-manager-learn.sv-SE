@@ -27,8 +27,9 @@ Rad1 är konfigurerad att växa beroende på vilka data som returneras av servic
 
 ## Distribuera detta på servern
 
-[Installera Tomcat enligt anvisningarna här](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[Installera Tomcat enligt följande](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
 [Distribuera filen SampleRest.war som finns i zip-filen i din Tomcat](assets/sample-rest.zip)
-[Installera resurserna](assets/amortizationschedule.zip) med AEM
+[Installera resurserna](assets/amortizationschedule.zip) med AEM pakethanterare
 [Öppna formuläret för amorteringsschema](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-Ange lämpligt värde och klicka på Beräkna amorteringsschema för att fylla i formuläret
+Ange lämpligt värde och klicka på Beräkna
+Amorteringsschema ska fyllas i i formuläret

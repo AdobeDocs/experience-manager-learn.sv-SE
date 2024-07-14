@@ -22,9 +22,9 @@ I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versi
 
 >[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
 
-**Några av de stora förbättringarna för Adaptiv formulärredigerare är:**
+**Några av de största förbättringarna för Adaptiv formulärredigerare omfattar:**
 
-* [Förbättrad slutanvändarupplevelse](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
+* [Förbättrad användarupplevelse](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 
 * Fyll i formulärfält automatiskt
 * RTF för en textrutekomponent
@@ -32,8 +32,8 @@ I AEM 6.3 introduceras flera nya funktioner och förbättringar i den här versi
 
 * [Inline-redigering av komponentens titel](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
 * [Standardvalidering i komponenter](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
-* [Kortkommandon för snabbare innehållsutveckling](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
+* [Kortkommandon för snabbare innehållsredigering](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
 * [Stöd för JSON-schema för att skapa anpassningsbara formulär](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
-* [CAPTCHA i anpassningsbara formulär](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
+* [CAPTCHA i adaptiva formulär](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
 * [Förbättrad Acrobat Sign-integrering](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
-* [Asynkron inlämning av formulär](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)
+* [Asynkrona formuläröverföringar](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)

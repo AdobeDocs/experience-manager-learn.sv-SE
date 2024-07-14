@@ -66,7 +66,7 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
   </tr>
   <tr> 
    <td> <p>Skrivbord</p> </td>
-   <td> <p>Krom</p> </td>
+   <td> <p>Chrome</p> </td>
    <td> <p>HLS-videoströmning</p> </td>
   </tr>
   <tr> 

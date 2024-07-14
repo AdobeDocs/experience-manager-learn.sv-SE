@@ -1,6 +1,6 @@
 ---
 title: Åtkomsttoken för lokal utveckling
-description: AEM Local Development Access-token används för att påskynda utvecklingen av integreringar med AEM as a Cloud Service som programmässigt interagerar med AEM Author eller Publish services via HTTP.
+description: AEM Local Development Access-token används för att snabba upp utvecklingen av integreringar med AEM as a Cloud Service som programmässigt interagerar med AEM Author eller Publish-tjänster via HTTP.
 version: Cloud Service
 feature: APIs
 jira: KT-6785
@@ -21,36 +21,36 @@ ht-degree: 0%
 
 # Åtkomsttoken för lokal utveckling
 
-Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM as a Cloud Service behöver ett enkelt och snabbt sätt att få temporära åtkomsttoken för AEM för att underlätta lokala utvecklingsaktiviteter. För att tillgodose detta behov kan AEM Developer Console låta utvecklare generera tillfälliga åtkomsttoken som kan användas för programmässig åtkomst till AEM.
+Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM as a Cloud Service behöver ett enkelt och snabbt sätt att få temporära åtkomsttoken för AEM för att underlätta lokala utvecklingsaktiviteter. För att tillgodose detta behov AEM Developer Console tillåter utvecklare att själva generera temporära åtkomsttoken som kan användas för programmässig åtkomst till AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
 ## Generera en lokal åtkomsttoken för utveckling
 
-![Hämta en lokal åtkomsttoken för utveckling](assets/local-development-access-token/getting-a-local-development-access-token.png)
+![Hämtar en åtkomsttoken för lokal utveckling](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-Token för lokal utvecklingsåtkomst ger åtkomst till AEM författar- och publiceringstjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
+Token för lokal utvecklingsåtkomst ger åtkomst till AEM författare och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
 
-1. I [Adobe Admin Console](https://adminconsole.adobe.com/) säkerställa att du, utvecklaren, är medlem i
-   + __Cloud Manager - utvecklare__ IMS-produktprofil (ger åtkomst till AEM Developer Console)
-   + Antingen __AEM administratörer__ eller __AEM__ IMS-produktprofil för AEM tjänst som åtkomsttoken kan integreras med
-   + Sandbox AEM as a Cloud Service environment require membership in either __AEM administratörer__ eller __AEM__ Produktprofil
+1. I [Adobe Admin Console](https://adminconsole.adobe.com/) kontrollerar du att du, utvecklaren, är medlem i:
+   + __Cloud Manager - utvecklare__ IMS-produktprofil (beviljar åtkomst till AEM Developer Console)
+   + Åtkomsttoken integreras antingen med __AEM-administratörerna__ eller __AEM användare__ IMS-produktprofilen för AEM tjänst.
+   + För sandlådemiljön i AEM as a Cloud Service krävs endast medlemskap i produktprofilen __AEM administratörer__ eller __AEM användare__
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
-1. Öppna programmet som innehåller den AEM as a Cloud Service miljön att integrera med
-1. Tryck på __ellips__ bredvid miljön i __Miljö__ och markera __Developer Console__
-1. Tryck på __Integreringar__ tab
-1. Tryck på __Lokal token__ tab
-1. Tryck __Hämta lokal utvecklingstoken__ knapp
-1. Tryck på __hämtningsknapp__ i det övre vänstra hörnet för att ladda ned JSON-filen som innehåller `accessToken` och spara JSON-filen på en säker plats på utvecklingsdatorn.
-   + Detta är din dygnet-runt-token för utvecklaråtkomst till den AEM as a Cloud Service miljön.
+1. Öppna programmet som innehåller AEM as a Cloud Service-miljön som du kan integrera med
+1. Tryck på __ellipsen__ bredvid miljön i avsnittet __Miljö__ och välj __Developer Console__
+1. Tryck på fliken __Integrationer__
+1. Tryck på fliken __Lokal token__
+1. Tryck på knappen __Hämta lokal utvecklingstoken__
+1. Tryck på __hämtningsknappen__ i det övre vänstra hörnet för att hämta JSON-filen som innehåller värdet `accessToken` och spara JSON-filen på en säker plats på utvecklingsdatorn.
+   + Detta är din dygnet-runt-token för utvecklaråtkomst till AEM as a Cloud Service-miljön.
 
-![AEM Developer Console - integreringar - Get Local Development Token](./assets/local-development-access-token/developer-console.png)
+![AEM Developer Console - Integreringar - Hämta lokal utvecklingstoken](./assets/local-development-access-token/developer-console.png)
 
 ## Använde token för lokal utvecklingsåtkomst{#use-local-development-access-token}
 
 ![Åtkomsttoken för lokal utveckling - externt program](assets/local-development-access-token/local-development-access-token-external-application.png)
 
-1. Hämta den temporära Local Development Access-token från AEM Developer Console
+1. Ladda ned den temporära Local Development Access Token från AEM Developer Console
    + Den lokala utvecklingsåtkomsttoken upphör att gälla var 24:e timme, så utvecklare måste hämta nya åtkomsttoken varje dag
 1. Ett externt program utvecklas som programmässigt interagerar med AEM as a Cloud Service
 1. Det externa programmet läser i åtkomsttoken för lokal utveckling
@@ -59,12 +59,12 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM författar- och publi
 
 ### Externt exempelprogram
 
-Vi ska skapa ett enkelt externt JavaScript-program som visar hur du programmässigt får åtkomst AEM as a Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_ program eller system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att programmässigt autentisera till, och komma åt, AEM as a Cloud Service. I [nästa avsnitt](./service-credentials.md)uppdaterar vi den här programkoden så att den stöder metoden att generera en token för användning i produktionen.
+Vi ska skapa ett enkelt externt JavaScript-program som visar hur man programmässigt får åtkomst till AEM as a Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_-program eller system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att autentisera till och få åtkomst till AEM as a Cloud Service via programkod. I [nästa avsnitt](./service-credentials.md) uppdaterar vi den här programkoden så att den stöder metoden för att generera en token för användning i produktionen.
 
 Det här exempelprogrammet körs från kommandoraden och uppdaterar metadata AEM resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
 
 1. Läser in parametrar från kommandoraden (`getCommandLineParams()`)
-1. Hämtar åtkomsttoken som används för att autentisera till AEM as a Cloud Service (`getAccessToken(...)`)
+1. Hämtar den åtkomsttoken som används för autentisering till AEM as a Cloud Service (`getAccessToken(...)`)
 1. Visar alla resurser i en AEM resursmapp som anges i kommandoradsparametrar (`listAssetsByFolder(...)`)
 1. Uppdatera metadata för resurser i listan med värden som anges i kommandoradsparametrar (`updateMetadata(...)`)
 
@@ -74,12 +74,12 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 
 ## Kör det externa programmet
 
-1. Se till att [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js) installeras på din lokala utvecklingsdator, som används för att köra det externa programmet
-1. Ladda ned och zippa upp [externt exempelprogram](./assets/aem-guides_token-authentication-external-application.zip)
-1. Kör från kommandoraden i projektmappen `npm install`
-1. Kopiera [laddade ned Local Development Access Token](#download-local-development-access-token) till en fil med namnet `local_development_token.json` i projektets rot
+1. Kontrollera att [Node.js](/help/cloud-service/local-development-environment/development-tools.md?lang=en#node-js) är installerat på din lokala utvecklingsdator, som används för att köra det externa programmet
+1. Hämta och zippa upp det [externa exempelprogrammet](./assets/aem-guides_token-authentication-external-application.zip)
+1. Kör `npm install` från kommandoraden i projektmappen
+1. Kopiera [hämtningen av den lokala utvecklingsåtkomsttoken](#download-local-development-access-token) till en fil med namnet `local_development_token.json` i projektets rot
    + Men kom ihåg att aldrig binda några referenser till Git!
-1. Öppna `index.js` och granska programkoden och kommentarerna.
+1. Öppna `index.js` och granska den externa programkoden och kommentarerna.
 
    ```javascript
    const fetch = require('node-fetch');
@@ -210,7 +210,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    }
    ```
 
-   Granska `fetch(..)` inbjudningar i `listAssetsByFolder(...)` och `updateMetadata(...)`och meddela `headers` definiera `Authorization` HTTP-begärandehuvud med värdet `Bearer ACCESS_TOKEN`. Det är så här HTTP-begäran som kommer från det externa programmet autentiseras till AEM as a Cloud Service.
+   Granska `fetch(..)`-anropen i `listAssetsByFolder(...)` och `updateMetadata(...)` och lägg märke till att `headers` definierar HTTP-begärandehuvudet `Authorization` med värdet `Bearer ACCESS_TOKEN`. Så här autentiserar HTTP-begäran från det externa programmet AEM as a Cloud Service.
 
    ```javascript
    ...
@@ -223,7 +223,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    })...
    ```
 
-   Alla HTTP-begäranden som AEM as a Cloud Service måste ange Bearer-åtkomsttoken i auktoriseringshuvudet. Kom ihåg att varje AEM as a Cloud Service miljö kräver en egen åtkomsttoken. Utvecklingens åtkomsttoken fungerar inte på scenen eller i produktionen, scenen fungerar inte på utveckling eller produktion och produktionens fungerar inte på utvecklingsfasen eller scenen!
+   Alla HTTP-begäranden till AEM as a Cloud Service måste ange Bearer-åtkomsttoken i auktoriseringsrubriken. Kom ihåg att varje AEM as a Cloud Service-miljö kräver en egen åtkomsttoken. Utvecklingens åtkomsttoken fungerar inte på scenen eller i produktionen, scenen fungerar inte på utveckling eller produktion och produktionens fungerar inte på utvecklingsfasen eller scenen!
 
 1. Med kommandoraden från projektets rot kör du programmet och skickar följande parametrar:
 
@@ -238,11 +238,11 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 
    Följande parametrar skickas:
 
-   + `aem`: Schemat och värdnamnet för den AEM as a Cloud Service miljön som programmet interagerar med (t.ex. `https://author-p1234-e5678.adobeaemcloud.com`).
-   + `folder`: Resursmappens sökväg vars resurser uppdateras med `propertyValue`; lägg INTE till `/content/dam` prefix (ex. `/wknd-shared/en/adventures/napa-wine-tasting`)
-   + `propertyName`: Namnet på den resursegenskap som ska uppdateras, relativt till `[dam:Asset]/jcr:content` (ex. `metadata/dc:rights`).
-   + `propertyValue`: Det värde som ska anges för `propertyName` till; värden med mellanslag måste kapslas in med `"` (ex. `"WKND Limited Use"`)
-   + `file`: Den relativa sökvägen till JSON-filen som hämtas från AEM Developer Console.
+   + `aem`: Schemat och värdnamnet för den AEM as a Cloud Service-miljö som programmet interagerar med (t.ex. `https://author-p1234-e5678.adobeaemcloud.com`).
+   + `folder`: Sökvägen till resursmappen vars resurser uppdateras med `propertyValue`. Lägg INTE till prefixet `/content/dam` (t.ex. `/wknd-shared/en/adventures/napa-wine-tasting`)
+   + `propertyName`: Resursegenskapens namn som ska uppdateras i förhållande till `[dam:Asset]/jcr:content` (t.ex. `metadata/dc:rights`).
+   + `propertyValue`: Värdet som `propertyName` ska anges till; värden med mellanslag måste kapslas in med `"` (t.ex. `"WKND Limited Use"`)
+   + `file`: Den relativa sökvägen till JSON-filen som hämtats från AEM Developer Console.
 
    En lyckad körning av programresultatet för varje resurs som har uppdaterats:
 
@@ -256,19 +256,19 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
 
 ### Verifiera metadatauppdatering i AEM
 
-Kontrollera att metadata har uppdaterats genom att logga in i den AEM as a Cloud Service miljön (se till att samma värd skickas till `aem` kommandoradsparameter används).
+Kontrollera att metadata har uppdaterats genom att logga in i AEM as a Cloud Service-miljön (kontrollera att samma värd som skickas till kommandoradsparametern `aem` är tillgänglig).
 
-1. Logga in i den AEM as a Cloud Service miljön som det externa programmet interagerade med (använd samma värd som finns i `aem` kommandoradsparameter)
-1. Navigera till __Resurser__ > __Filer__
-1. Navigera till resursmappen som anges av `folder` kommandoradsparameter, till exempel __WKND__ > __Engelska__ > __Annonser__ > __Napa-vinsprovning__
+1. Logga in i AEM as a Cloud Service-miljön som det externa programmet interagerade med (använd samma värd som anges i kommandoradsparametern `aem`)
+1. Navigera till __Assets__ > __Filer__
+1. Navigera till resursmappen som anges av kommandoradsparametern `folder`, till exempel __WKND__ > __Engelska__ > __Anteckningar__ > __Napa-vindstick__
 1. Öppna __Egenskaper__ för alla (icke-innehållsfragment) resurser i mappen
-1. Tryck på __Avancerat__ tab
-1. Granska värdet på den uppdaterade egenskapen, till exempel __Copyright__ som mappas till den uppdaterade `metadata/dc:rights` JCR-egenskap, som återspeglar värdet i `propertyValue` parameter, till exempel __WKND Begränsad användning__
+1. Tryck på fliken __Avancerat__
+1. Granska värdet för den uppdaterade egenskapen, till exempel __Copyright__ som är mappad till den uppdaterade JCR-egenskapen `metadata/dc:rights` som återspeglar värdet som anges i parametern `propertyValue`, till exempel __WKND Limited Use__
 
-![Uppdatering av metadata för begränsad användning i WKND](./assets/local-development-access-token/asset-metadata.png)
+![WKND - metadatauppdatering med begränsad användning](./assets/local-development-access-token/asset-metadata.png)
 
 ## Nästa steg
 
-Nu när vi programmässigt har kommit åt AEM as a Cloud Service med hjälp av den lokala utvecklingstoken. Därefter måste vi uppdatera programmet så att det kan hanteras med tjänstens autentiseringsuppgifter, så att det här programmet kan användas i ett produktionssammanhang.
+Nu när vi programmässigt har kommit åt AEM as a Cloud Service via den lokala utvecklingstoken. Därefter måste vi uppdatera programmet så att det kan hanteras med tjänstens autentiseringsuppgifter, så att det här programmet kan användas i ett produktionssammanhang.
 
 + [Så här använder du tjänstens autentiseringsuppgifter](./service-credentials.md)

@@ -34,10 +34,10 @@ I den här videon beskrivs följande funktioner:
 
      | Konsol | Syfte |
      |---|---|
-     | Assets | Med dessa konsoler kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM | Communities | Med den här konsolen kan du skapa och hantera communitysajter för engagemang och aktivering | Handel | På så sätt kan du hantera produkter, produktkataloger och beställningar för dina Commerce-webbplatser |
+     | Assets | Med dessa konsoler kan du importera och hantera digitala resurser som bilder, videoklipp, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM | Communities | Med den här konsolen kan du skapa och hantera communitysajter för engagemang och aktivering | Commerce | På så sätt kan du hantera produkter, produktkataloger och beställningar för dina Commerce-webbplatser |
      | Upplevelsefragment | Ett upplevelsefragment är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger |
      | Forms | Med den här konsolen kan du skapa, hantera och bearbeta formulär och dokument |
-     | Personalisering | Konsolen innehåller ett ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser |
+     | Personalization | Konsolen innehåller ett ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser |
      | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. Projekt är virtuella kontrollpaneler. De kan användas för att bygga upp ett team och sedan ge teamet tillgång till resurser, arbetsflöden och uppgifter så att andra kan arbeta med ett gemensamt mål |
      | Sites | Med platskonsolerna kan du skapa, visa och hantera webbplatser som körs på din AEM. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor |
 
@@ -60,5 +60,5 @@ I den här videon beskrivs följande funktioner:
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
 * [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

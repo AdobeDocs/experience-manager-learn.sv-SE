@@ -43,7 +43,7 @@ Det finns flera saker du måste övervaka för att säkerställa problemfri drif
 
 Med index kan frågor köras så snabbt de kan, vilket frigör resurser för andra åtgärder. Se till att indexen är i toppform! AEM avbryter frågor som rör sig i stället för att använda ett index för att förhindra att en felaktig fråga påverkar AEM övergripande prestanda.
 
-#### [Tjärkompakation/Revision-rensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
+#### [Tjärkompakation-/revideringsrensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
 
 Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla versioner rensas bort för att frigöra diskutrymme.
 
@@ -51,7 +51,7 @@ Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att
 
 Rensa lucene-binärfiler och minska storlekskraven för det datalager som körs.
 
-#### [Skräpning för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
+#### [Skräpinslag för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
 
 När en resurs i AEM tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir&quot;skräp&quot; som inte behöver behållas. Om det finns ett antal resurser som inte refereras är det bra att ta bort dem, bevara utrymme, optimera säkerhetskopieringen och prestanda för filsystemsunderhåll.
 
@@ -59,7 +59,7 @@ När en resurs i AEM tas bort kan referensen till den underliggande datalagrepos
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
+#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html)
 
 AEM som är kvalificerade för granskningsloggning genererar mycket arkiverade data. Dessa data kan snabbt växa med tiden på grund av replikeringar, överföringar av resurser och andra systemaktiviteter.
 
@@ -95,7 +95,7 @@ Tänk framåt och se vad som kan återanvändas. En sidfot? Ansvarsfriskrivning?
 
 ## Allmänt
 
-Håll dig à jour med förändringar AEM genom fortsatt lärande - fastna inte i det förflutna. Använd [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en) och [Adobe Digital Learning Services (ADLS)](https://learning.adobe.com/) för att finslipa dina färdigheter.
+Håll dig à jour med förändringar AEM genom fortsatt lärande - fastna inte i det förflutna. Använd [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en) och [Adobe Digital Learning Services (ADLS)](https://learning.adobe.com/) för att finslipa dina kunskaper.
 
 ## Slutsats
 

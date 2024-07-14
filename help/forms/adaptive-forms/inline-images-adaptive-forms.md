@@ -22,7 +22,7 @@ Ett vanligt användningssätt är att visa den överförda bilden som en textbun
 
 ## Lägg till platshållarbild
 
-Det första steget är att lägga till en platshållare-div i filbilagekomponenten. I koden nedanför identifieras den bifogade filkomponenten av CSS-klassnamnet för överföring av foton. JavaScript-funktionen är en del av klientbiblioteket som är associerat med de adaptiva formulären. Den här funktionen anropas i initialize-händelsen för den bifogade filkomponenten.
+Det första steget är att lägga till en platshållare-div i filbilagekomponenten. I koden nedanför identifieras den bifogade filkomponenten av CSS-klassnamnet för överföring av foton. JavaScript-funktionen är en del av klientbiblioteket som är kopplat till de adaptiva formulären. Den här funktionen anropas i initialize-händelsen för den bifogade filkomponenten.
 
 ```javascript
 /**
@@ -65,7 +65,7 @@ function consumeImage (file) {
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbibliotek](assets/inline-image-client-library.zip) på AEM med AEM pakethanterare.
-* Hämta och installera [exempelformulär](assets/inline-image-af.zip) på AEM med AEM pakethanterare.
-* Peka webbläsaren till [Lägg till textbunden bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på din AEM med AEM pakethanterare.
+* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) till din AEM med AEM pakethanterare.
+* Peka webbläsaren på [Lägg till textbunden bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicka på knappen &quot;Bifoga ditt foto&quot; för att lägga till en bild

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka HtmltoPDF-specifika problem i en Windows-konfiguration
 
-*I den här videon går du igenom processen att felsöka HTML to PDF-specifika problem i en Windows-konfiguration.*
+*Den här videon går igenom processen att felsöka HtmltoPDF-specifika problem i en Windows-konfiguration.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335545?quality=12&learn=on)

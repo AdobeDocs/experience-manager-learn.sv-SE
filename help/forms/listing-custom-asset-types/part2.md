@@ -25,13 +25,13 @@ ht-degree: 0%
 I den här artikeln skapar vi en anpassad mall som visar de anpassade resurstyperna och OOTB-resurstyperna på samma sida. Följ nedanstående instruktioner för att skapa en anpassad mall
 
 1. Skapa en sling:-mapp under /apps. Ge den namnet &quot;myportalcomponent&quot;
-1. Lägg till egenskapen fpContentType. Ange värdet till **/libs/fd/ fp/formTemplate&quot;.**
+1. Lägg till egenskapen fpContentType. Ange värdet **/libs/fd/ fp/formTemplate.**
 1. Lägg till en title-egenskap och ställ in dess värde på &quot;custom template&quot;. Det här namnet visas i listrutan för sök- och listkomponenten
 1. Skapa en&quot;template.html&quot; under den här mappen. Den här filen innehåller koden för att formatera och visa de olika resurstyperna.
 
-![appsmapp](assets/appsfolder_.png)
+![appsfolder](assets/appsfolder_.png)
 
-I följande kod visas de olika typerna av resurser som använder söknings- och listkomponenten. Vi skapar separata html-element för varje typ av resurs, vilket visas med taggen data-type = &quot;videos&quot;. För resurstypen&quot;videor&quot; använder vi &lt;video> -element för att spela upp den infogade videon. För resurstypen &quot;worddocuments&quot; använder vi olika html-markeringar.
+I följande kod visas de olika typerna av resurser som använder söknings- och listkomponenten. Vi skapar separata html-element för varje typ av resurs, vilket visas med taggen data-type = &quot;videos&quot;. För resurstypen &quot;videor&quot; använder vi elementet &lt;video> för att spela upp den infogade videon. För resurstypen &quot;worddocuments&quot; använder vi olika html-markeringar.
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -75,7 +75,7 @@ I följande kod visas de olika typerna av resurser som använder söknings- och 
 
 ## Konfigurera sök- och listkomponenten {#configure-search-and-lister-component}
 
-När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka på webbläsaren [till denna URL](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka webbläsaren [ mot den här URL:en](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 Växla till designläge och konfigurera styckesystemet så att det inkluderar Search and Lister-komponenten i den tillåtna komponentgruppen. Komponenten Sök och Lister ingår i Document Services-gruppen.
 
@@ -103,13 +103,13 @@ Konfigurera de typer av resurser som du vill visa i portalen. Om du vill konfigu
 
 I följande skärmbild visas resurstyperna som är konfigurerade för listning
 
-![tillgångstyper](assets/assettypes.png)
+![resurstyper](assets/assettypes.png)
 
-Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka på webbläsaren [till denna URL](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
+Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka webbläsaren [ mot den här URL:en](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
 
 >[!NOTE]
 >
->Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att ge&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
+>Om din portal listar anpassade resurstyper på en publiceringsserver ska du se till att du ger&quot;läsbehörighet&quot; till&quot;fd-service&quot;-användaren till noden **/apps/fd/fp/extensions/querybuilder**
 
-![tillgångstyper](assets/assettypeslistings.png)
-[Hämta och installera det här paketet med hjälp av pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och Word-dokument och xdp-filer som används som resurstyper för att lista med hjälp av sök- och listkomponenten
+![resurstyper](assets/assettypeslistings.png)
+[Hämta och installera det här paketet med pakethanteraren.](assets/customassettypekt1.zip) Detta innehåller exempel på mp4- och orddokument samt xdp-filer som används som resurstyper för att lista med hjälp av sök- och listkomponenten

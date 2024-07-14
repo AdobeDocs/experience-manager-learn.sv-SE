@@ -28,14 +28,14 @@ Lär dig hur du ansluter AEM med taggegenskap med hjälp av IMS-konfigurationen 
 
 IMS-konfigurationen som använder Adobe Developer Console-projektet krävs för att integrera AEM med den nyligen skapade taggegenskapen. Med den här konfigurationen kan AEM kommunicera med taggar-program med hjälp av tagg-API:er och IMS hanterar säkerhetsaspekten av den här integreringen.
 
-När en AEM som Cloud Service-miljö etableras skapas automatiskt några IMS-konfigurationer som Asset compute, Adobe Analytics och taggar. Den automatiskt skapade **taggar i Adobe Experience Platform** IMS-konfigurationen kan användas eller så bör en ny IMS-konfiguration skapas om du använder AEM 6.X-miljö.
+När en AEM som Cloud Service-miljö etableras skapas automatiskt några IMS-konfigurationer som Asset compute, Adobe Analytics och taggar. De automatiskt skapade **taggarna i Adobe Experience Platform** IMS-konfigurationen kan användas eller så bör en ny IMS-konfiguration skapas om du använder AEM 6.X-miljö.
 
-Granskning har skapats automatiskt **taggar i Adobe Experience Platform** IMS-konfiguration med följande steg.
+Granska automatiskt skapade **taggar i IMS-konfigurationen för Adobe Experience Platform** med följande steg.
 
-1. Öppna AEM **verktyg** meny
+1. Öppna menyn **Verktyg** i AEM författare
 1. I avsnittet Säkerhet väljer du Adobe IMS-konfigurationer.
-1. Välj **Adobe Launch** kort och klicka **Egenskaper**, kan du läsa informationen från **Certifikat** och **Konto** -tabbar. Klicka sedan på **Avbryt** för att returnera utan att ändra någon information som skapats automatiskt.
-1. Välj **Adobe Launch** och klicka på **Kontrollera hälsa**, bör du se **Lyckades** som nedan.
+1. Markera **Adobe-startkortet** och klicka på **Egenskaper**. Granska informationen på flikarna **Certifikat** och **Konto**. Klicka sedan på **Avbryt** för att återgå utan att ändra någon information som skapats automatiskt.
+1. Markera **Adobe-startkortet** och klicka på **Kontrollera hälsa**. Du bör se meddelandet **Klart** enligt nedan.
 
    ![Taggar felfri IMS-konfiguration](assets/adobe-launch-healthy-ims-config.png)
 

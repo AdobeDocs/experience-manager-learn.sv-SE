@@ -1,6 +1,6 @@
 ---
 title: Indexkonverterare
-description: Lär dig hur indexkonverteraren automatiskt konverterar befintliga AEM indexdefinitioner till AEM as a Cloud Service kompatibla.
+description: Lär dig hur indexkonverteraren automatiskt konverterar befintliga AEM indexdefinitioner till AEM as a Cloud Service-kompatibla.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Indexkonverterare
 
-Lär dig hur indexkonverteraren automatiskt konverterar befintliga AEM indexdefinitioner till AEM as a Cloud Service kompatibla.
+Lär dig hur indexkonverteraren automatiskt konverterar befintliga AEM indexdefinitioner till AEM as a Cloud Service-kompatibla.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)

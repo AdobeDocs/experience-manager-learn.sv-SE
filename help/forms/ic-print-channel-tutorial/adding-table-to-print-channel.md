@@ -22,7 +22,7 @@ ht-degree: 0%
 # Lägga till tabell i avsnittet om bidrag
 
 I den här delen ska vi lägga till en tabell i avsnittet om bidrag.
-Se [Använda tabeller i utskriftskanalen](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) om du vill ha mer information om hur du använder tabeller i dokument för tryckkanaler.
+Mer information om hur du använder tabeller i dokument för utskriftskanaler finns i [Använda tabeller i skrivarkanalen](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md).
 
 Logga in på AEM Forms och gå till Adobe Experience Manager > Forms > Forms &amp; Documents.
 

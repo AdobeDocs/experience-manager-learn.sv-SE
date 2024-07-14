@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # AEM testversioner, bildindex
 
-Bildfiler måste placeras i `assets` mapp som finns bredvid den här filen.
+Bildfiler måste placeras i mappen `assets` som finns bredvid den här filen.
 
 Alla bildfiler som ska publiceras ska länkas från den här filen med syntaxen:
 
-![Personligt konto för testversioner av e-postbilder](./assets/select-personal-account.png)
-![Slack e-postbild](./assets/Slack-email-image.png)
+![Personligt konto för utvärderingsfärdig e-postbild](./assets/select-personal-account.png)
+![Slack-e-postbild](./assets/Slack-email-image.png)

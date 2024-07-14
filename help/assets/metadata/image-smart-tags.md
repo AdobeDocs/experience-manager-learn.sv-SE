@@ -46,4 +46,4 @@ I videon beskrivs följande åtgärder som krävs för att konfigurera tjänsten
 
 ## Ytterligare resurser
 
-* [Dokumentation för AEM Assets smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
+* [AEM Assets-dokumentation om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)

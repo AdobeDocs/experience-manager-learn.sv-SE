@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att aktivera utförlig ORB-spårning
 
-*I den här videon går du igenom stegen för att aktivera utförlig ORB-spårning.*
+*Den här videon går igenom stegen för att aktivera utförlig ORB-spårning.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

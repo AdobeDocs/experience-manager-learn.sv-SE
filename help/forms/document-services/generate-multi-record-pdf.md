@@ -23,7 +23,8 @@ Nedan visas en skärmbild av XML-filen som innehåller flera poster.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Data-xml har 2 poster. Varje post representeras av elementet form1. Denna xml skickas till OutputService [generatePDFOutputBatch, metod](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) vi får en lista över PDF-dokument (en per post) Signaturen för metoden generatePDFOutputBatch har följande parametrar
+Data-xml har 2 poster. Varje post representeras av elementet form1. Den här xml-filen skickas till OutputService-metoden [generatePDFOutputBatch](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html). Vi får en lista över PDF-dokument (en per post)
+Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 * mallar - Karta som innehåller mallen, identifierad med en nyckel
 * data - Karta som innehåller XML-datadokument, identifierad med nyckel
@@ -126,11 +127,11 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
-* [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip).Den här zip-filen innehåller mallen och XML-datafilen.
-* [Peka din webbläsare på Felix webbkonsol](http://localhost:4502/system/console/bundles)
+* [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip).Zip-filen innehåller mallen och xml-datafilen.
+* [Peka din webbläsare på Felix-webbkonsolen](http://localhost:4502/system/console/bundles)
 * [Distribuera DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filerna med API:t för OutputService
-* [Peka webbläsaren mot pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filerna med OutputService API
+* [Peka webbläsaren på pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Importera och installera paketet](assets/generate-multiple-pdf-from-xml.zip). Det här paketet innehåller HTML-sidor som gör att du kan släppa mallen och datafilerna.
 * [Peka webbläsaren på MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * Dra och släpp mallen och XML-datafilen tillsammans

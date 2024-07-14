@@ -17,4 +17,4 @@ ht-degree: 0%
 
 # Utveckling av Edge Delivery Services
 
-Utveckla webbplatser i Adobe Experience Manager (AEM) för Edge Delivery Services skiljer sig från utvecklingen av AEM webbplatser. För särskilda riktlinjer och bästa praxis som är skräddarsydda för Edge Delivery Services, se [Edge Delivery Services - dokumentation](../edge-delivery-services/developing/prerequisites.md). Den här resursen innehåller viktig information och steg som säkerställer att utvecklingsprocessen är anpassad efter Edge Delivery Servicens behov.
+Utveckla webbplatser i Adobe Experience Manager (AEM) för Edge Delivery Services skiljer sig från utvecklingen av AEM webbplatser. Specifika riktlinjer och metodtips som är skräddarsydda för Edge Delivery Services finns i [Edge Delivery Servicens utvecklingsdokumentation](../edge-delivery-services/developing/prerequisites.md). Den här resursen innehåller viktig information och steg som säkerställer att utvecklingsprocessen är anpassad efter Edge Delivery Servicens behov.

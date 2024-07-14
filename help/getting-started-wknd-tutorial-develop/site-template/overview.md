@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM Sites | Skapa AEM
-description: Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
+description: Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet arbetsflöde för teman för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
 version: Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
+Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats i Adobe Experience Manager med hjälp av snabbmenyalternativet Skapa webbplats och en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett Adobe XD-drivet arbetsflöde för teman för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
@@ -31,10 +31,10 @@ Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats 
 
 ## AEM as a Cloud Service Environment {#environment}
 
-Stegen i den här självstudiekursen äger rum i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM. Det rekommenderas att du använder [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
+Stegen i den här självstudiekursen äger rum i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
 
 ## Nästa steg {#next-steps}
 
 En stegvis självstudiekurs leder dig igenom implementeringen av en AEM webbplats för ett fiktivt livsstilsmärke, WKND, med hjälp av funktionen för att skapa snabbwebbplatser.
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till [Skapa webbplats](create-site.md) och lär dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av en webbplatsmall.
+Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Skapa plats](create-site.md) och lära dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av en webbplatsmall.

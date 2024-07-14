@@ -18,9 +18,10 @@ ht-degree: 0%
 
 # Importera Eclipse-projekt
 
-Ladda ned och zippa upp [zip-fil](./assets/aem-forms-cs-doc-gen.zip)
+Hämta och zippa upp zip-filen [zip](./assets/aem-forms-cs-doc-gen.zip)
 
-Starta Eclipse och importera projektet till Eclipse Projektet innehåller följande filer i resursmappen:
+Starta Eclipse och importera projektet till Eclipse
+Projektet innehåller följande filer i resursmappen:
 
 * DataFile1,DataFile2 och DataFile3 - Exempel på xml-datafiler som ska sammanfogas med mallen för att skapa den slutliga PDF-filen
 * custom_fonts.xdp - XDP-mall.
@@ -37,6 +38,6 @@ Starta Eclipse och importera projektet till Eclipse Projektet innehåller följa
 * Kör Main.java som java-programmet
 
 >[!NOTE]
-> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du [lämplig behörighet för den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge den [lämpliga behörigheten till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-**AEM Forms-användare** Det är den roll jag har använt för den här kursen.
+**AEM Forms-användare** är den roll jag har använt för kursen.

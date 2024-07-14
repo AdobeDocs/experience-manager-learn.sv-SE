@@ -1,6 +1,6 @@
 ---
 title: Sammanfoga AEM projekt med hjälp av Github Desktop
-description: Använd Github Desktop för att utforska hur flera projekt kan sammanfogas till ett enda projekt för distribution till AEM as a Cloud Service med hjälp av Cloud Manager.
+description: Använd Github Desktop för att utforska hur flera projekt kan sammanfogas till ett enda projekt för distribution till AEM as a Cloud Service med Cloud Manager.
 role: Developer
 level: Beginner
 type: Tutorial
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Sammanfoga AEM projekt för distribution med Cloud Manager
 
-Se hur flera projekt kan sammanfogas till ett enda projekt för distribution till AEM as a Cloud Service med hjälp av Cloud Manager.
+Se hur flera projekt kan sammanfogas till ett enda projekt för distribution till AEM as a Cloud Service med Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330535?quality=12&learn=on)

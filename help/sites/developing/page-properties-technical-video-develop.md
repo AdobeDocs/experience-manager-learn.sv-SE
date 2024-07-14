@@ -24,12 +24,12 @@ Att anpassa metadatafälten för Sidegenskaper är ett vanligt krav i alla imple
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
-I videon ovan anpassas sidegenskaperna för [WKND-referensplats](https://github.com/adobe/aem-guides-wknd).
+I videon ovan visas hur du anpassar sidegenskaperna för [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd).
 
 ## Exempel på paket med WKND-sidegenskaper
 
-Du kan använda följande [exempelpaket för WKND-sidegenskaper](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) innehållande **WKND** och **Grundläggande** de tabbanpassningar som visas i videon ovan. The **SocialMedia** tabbanpassning tillhandahålls inte som [WKND-sidkomponent](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) använder nu V3-versionen av WCM Core Components och i V3-versionen av [social delning är föråldrad](https://github.com/adobe/aem-core-wcm-components/pull/1930).
+Du kan använda [exempelpaketet med WKND-sidegenskaper](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) som innehåller **WKND**- och **Basic**-flikanpassningar som visas i videon ovan. Flikanpassningen **SocialMedia** tillhandahålls inte eftersom [WKND Page-komponenten](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) nu använder V3-versionen av WCM Core-komponenter och i V3-versionen är den [sociala delningen föråldrad](https://github.com/adobe/aem-core-wcm-components/pull/1930).
 
-I utbildningssyfte kan du dock peka WKND-sidkomponenten mot V2-versionen av WCM Core Components med `sling:resourceSuperType` egenskapsvärde och täcka över [Sociala medier](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) -fliken. Mer information finns i [Konfigurera dina sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+I utbildningssyfte kan du emellertid peka WKND-sidkomponenten mot V2-versionen av WCM Core Components med egenskapsvärdet `sling:resourceSuperType` och täcka över fliken [ Sociala media](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95). Mer information finns i [Konfigurera dina sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
 Det här exempelpaketet ska installeras på en lokal AEM SDK- eller AEM 6.X.X-instans i utbildningssyfte.

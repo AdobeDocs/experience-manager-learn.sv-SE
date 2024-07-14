@@ -29,17 +29,17 @@ Komponentwebbläsaren visas nu i ett konsekvent grått tema och med följande:
 * **[!UICONTROL Component Description]**
 * **[!UICONTROL Component Icon]**
    * De två första bokstäverna i komponenttiteln *(standard)*
-   * Egen PNG-bild *(konfigurerad av en utvecklare)*
-   * Anpassad SVG-bild *(konfigurerad av en utvecklare)*
-   * CoralUI, ikon *(konfigurerad av en utvecklare)*
+   * Anpassad PNG-bild *(konfigurerad av en utvecklare)*
+   * Anpassad SVG-avbildning *(konfigurerad av en utvecklare)*
+   * CoralUI-ikon *(konfigurerad av en utvecklare)*
 
 ## Konfigurationsalternativ för komponentikoner {#component-icon-configuration-options}
 
 ### Förkortningar {#abbreviations}
 
-Som standard är de två första tecknen i komponenttiteln (**[cq:Component]@jcr:title**) används som förkortning. Om **[cq:Component]@jcr:title=Artikellista** förkortningen skulle visas som &quot;**Ar**&quot;.
+Som standard används de två första tecknen i komponenttiteln (**[cq:Component]@jcr:title**) som förkortning. Om **[cq:Component]@jcr:title=Article List** skulle förkortningen visas som **Ar**.
 
-Förkortningen kan anpassas via **[cq:Component]@förkortning** -egenskap. Även om det här värdet kan innehålla fler än 2 tecken bör förkortningen begränsas till två tecken för att undvika eventuella visuella störningar.
+Förkortningen kan anpassas via egenskapen **[cq:Component]@abbreption** . Även om det här värdet kan innehålla fler än 2 tecken bör förkortningen begränsas till två tecken för att undvika eventuella visuella störningar.
 
 ```plain
 /apps/.../components/content/my-component
@@ -49,7 +49,7 @@ Förkortningen kan anpassas via **[cq:Component]@förkortning** -egenskap. Även
 
 ### CoralUI-ikoner {#coralui-icons}
 
-CoralUI-ikoner från AEM kan användas för komponentikoner. Konfigurera en CoralUI-ikon genom att ange en **[cq:Component]@cq:ikon** till den önskade CoralUI-ikonens HTML-ikonattributvärde (anges i [CoralUI-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html).
+CoralUI-ikoner från AEM kan användas för komponentikoner. Om du vill konfigurera en CoralUI-ikon anger du en **[cq:Component]@cq:icon** -egenskap som motsvarar HTML-ikonens attributvärde för CoralUI-ikonen (som räknas upp i [CoralUI-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
 
 ```plain
 /apps/.../components/content/my-component
@@ -59,11 +59,11 @@ CoralUI-ikoner från AEM kan användas för komponentikoner. Konfigurera en Cora
 
 ### PNG-bilder {#png-images}
 
-PNG-bilder kan användas för komponentikoner. Om du vill konfigurera en PNG-bild som en komponentikon lägger du till önskad bild som en **nt:fil** namngiven **cq:icon.png** under **[cq:Component]**.
+PNG-bilder kan användas för komponentikoner. Om du vill konfigurera en PNG-bild som en komponentikon lägger du till den önskade bilden som en **nt:file** med namnet **cq:icon.png** under **[cq:Component]** .
 
 PNG-filen ska ha en genomskinlig bakgrund eller en bakgrundsfärg inställd på **#707070**.
 
-PNG-bilder skalas till **20px x x 20px**. Men för att passa Retina-skärmar **40px** av **40px** kan vara att föredra.
+PNG-bilderna skalas till **20px med 20px**. Det kan dock vara bättre att använda Retina-skärmar med **40px** x **40px**.
 
 ```plain
 /apps/.../components/content/my-component
@@ -74,9 +74,9 @@ PNG-bilder skalas till **20px x x 20px**. Men för att passa Retina-skärmar **4
 
 ### SVG bilder {#svg-images}
 
-SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till SVG som en **nt:fil** namngiven **cq:icon.svg** under **[cq:Component]**.
+SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till SVG som en **nt:file** med namnet **cq:icon.svg** under **[cq:Component]** .
 
-SVG-bilder bör ha en bakgrundsfärg inställd på **#707070** och en storlek på **20px x x 20px.**
+SVG-bilder bör ha en bakgrundsfärg inställd på **#707070** och storleken **20px gånger 20px.**
 
 ```plain
 /apps/.../components/content/my-component

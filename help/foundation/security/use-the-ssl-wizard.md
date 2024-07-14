@@ -32,55 +32,55 @@ Lär dig hur du konfigurerar SSL i Adobe Experience Manager så att det körs ö
 
 ## Använda SSL-konfigurationsguiden
 
-Navigera till __AEM Author > Tools > Security > SSL Configuration__ och öppna __SSL-konfigurationsguide__.
+Navigera till __AEM Författare > Verktyg > Säkerhet > SSL-konfiguration__ och öppna __SSL-konfigurationsguiden__.
 
-![SSL-konfigurationsguide](assets/use-the-ssl-wizard/ssl-config-wizard.png)
+![SSL-konfigurationsguiden](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
 ### Skapa autentiseringsuppgifter för butik
 
-Skapa en _Nyckelarkiv_ som är kopplade till `ssl-service` systemanvändare och en global _Trust Store_, använder du __Lagra autentiseringsuppgifter__ guidesteg.
+Om du vill skapa ett _nyckelarkiv_ som är associerat med `ssl-service`-systemanvändaren och ett globalt _förtroendearkiv_ använder du guidesteget __Lagra autentiseringsuppgifter__.
 
-1. Ange lösenordet och bekräfta lösenordet för __Nyckelarkiv__ som är kopplade till `ssl-service` systemanvändare.
+1. Ange lösenordet och bekräfta lösenordet för __Key Store__ som är associerat med `ssl-service`-systemanvändaren.
 1. Ange lösenordet och bekräfta lösenordet för den globala __Trust Store__. Observera att det är ett systemomfattande förtroendearkiv och om det redan har skapats ignoreras det angivna lösenordet.
 
    ![SSL-inställning - Lagra autentiseringsuppgifter](assets/use-the-ssl-wizard/store-credentials.png)
 
 ### Överför privat nyckel och certifikat
 
-Ladda upp _privat nyckel_ och _SSL-certifikat_, använder du __Nyckel och certifikat__ guidesteg.
+Om du vill överföra den _privata nyckeln_ och _SSL-certifikatet_ använder du guidesteget __Nyckel och certifikat__.
 
-Vanligtvis tillhandahåller din IT-avdelning det certifikatutfärdarbetrodda certifikatet och nyckeln, men självsignerade certifikat kan användas för __utveckling__ och __testning__ syften.
+Vanligtvis tillhandahåller din IT-avdelning det certifikat och den nyckel som är betrodda av certifikatutfärdaren, men självsignerade certifikat kan användas för __utveckling__- och __testning__-syften.
 
-Information om hur du skapar eller hämtar det självsignerade certifikatet finns i [Självsignerad privat nyckel och certifikat](#self-signed-private-key-and-certificate).
+Mer information om hur du skapar eller hämtar det självsignerade certifikatet finns i den [självsignerade privata nyckeln och certifikatet](#self-signed-private-key-and-certificate).
 
-1. Ladda upp __Privat nyckel__ i formatet DER (Distinguished Encoding Rules). Till skillnad från PEM innehåller DER-kodade filer inte vanliga textsatser som `-----BEGIN CERTIFICATE-----`
-1. Överför associerade __SSL-certifikat__ i `.crt` format.
+1. Överför den __privata nyckeln__ i DER-formatet (Distinguished Encoding Rules). Till skillnad från PEM innehåller DER-kodade filer inte vanliga textsatser som `-----BEGIN CERTIFICATE-----`
+1. Överför det associerade __SSL-certifikatet__ i formatet `.crt`.
 
-   ![SSL-installation - privat nyckel och certifikat](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
+   ![SSL-inställning - privat nyckel och certifikat](assets/use-the-ssl-wizard/privatekey-and-certificate.png)
 
 ### Uppdatera SSL-anslutningsinformation
 
-Uppdatera _värdnamn_ och _port_ använder __SSL-anslutning__ guidesteg.
+Om du vill uppdatera _värdnamnet_ och _porten_ använder du guidesteget __SSL Connector__.
 
-1. Uppdatera eller verifiera __HTTPS-värdnamn__ värde, det ska matcha `Common Name (CN)` från certifikatet.
-1. Uppdatera eller verifiera __HTTPS-port__ värde.
+1. Uppdatera eller verifiera värdet __HTTPS-värdnamn__, det ska matcha värdet `Common Name (CN)` från certifikatet.
+1. Uppdatera eller verifiera värdet för __HTTPS-port__.
 
    ![SSL-installation - SSL-anslutningsinformation](assets/use-the-ssl-wizard/ssl-connector-details.png)
 
 ### Verifiera SSL-konfigurationen
 
-1. Verifiera SSL genom att klicka på __Gå till HTTPS-URL__ -knappen.
-1. Om du använder självsignerat certifikat visas `Your connection is not private` fel.
+1. Verifiera SSL genom att klicka på knappen __Gå till HTTPS-URL__ .
+1. Om du använder självsignerat certifikat visas `Your connection is not private`-fel.
 
-   ![SSL-inställningar - Verifiera AEM över HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+   ![SSL-inställning - Verifiera AEM över HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
 ## Självsignerad privat nyckel och certifikat
 
-Följande ZIP innehåller [!DNL DER] och [!DNL CRT] filer som krävs för att konfigurera AEM SSL lokalt och som endast är avsedda för lokal utveckling.
+Följande ZIP-adress innehåller [!DNL DER]- och [!DNL CRT]-filer som krävs för att konfigurera AEM SSL lokalt och som endast är avsedda för lokal utveckling.
 
-The [!DNL DER] och [!DNL CERT] filerna tillhandahålls av praktiska skäl och genereras enligt de steg som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
+Filerna [!DNL DER] och [!DNL CERT] tillhandahålls av praktiska skäl och genereras med de steg som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
 
-Om det behövs är certifikatets lösenfras **admin**.
+Om det behövs är certifikatets lösenordsfras **admin**.
 
 Den här lokala värden - privat nyckel och självsignerat certifikat.zip (upphör att gälla i juli 2028)
 
@@ -88,7 +88,7 @@ Den här lokala värden - privat nyckel och självsignerat certifikat.zip (upph�
 
 ### Skapa privata nycklar och självsignerade certifikat
 
-I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
+I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon som använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
 
 ```shell
 ### Create Private Key

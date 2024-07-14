@@ -21,7 +21,7 @@ ht-degree: 0%
 # Skapa en JSON-webbtoken
 
 JSON Web Tokens är en öppen, branschstandard-RFC 7519-metod för att representera anspråk på ett säkert sätt mellan två parter. JWT.io-bibliotek användes i det här exemplet för att generera JWT.
-De inloggningsuppgifter som du har hämtat i föregående steg innehåller den privata nyckeln i PKCS#1-formatet.För att extrahera den privata nyckeln från den här strängen har vi använt [BouncyCastle](https://www.bouncycastle.org/) bibliotek. Kryptobiblioteken som ingår i java har inte stöd för formatet PKCS#1.
+De autentiseringsuppgifter för tjänsten som du har hämtat i föregående steg innehåller den privata nyckeln i PKCS#1-formatet. För att extrahera den privata nyckeln från den här strängen har vi använt [BouncyCastle](https://www.bouncycastle.org/)-bibliotek. Kryptobiblioteken som ingår i java har inte stöd för formatet PKCS#1.
 
 Följande kod användes för att generera JWT:
 

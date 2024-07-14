@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här skapar du ett självsignerat certifikat
 
-*I den här videon går du igenom stegen för att generera ett självsignerat certifikat.*
+*Den här videon går igenom stegen för att generera ett självsignerat certifikat.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335539?quality=12&learn=on)

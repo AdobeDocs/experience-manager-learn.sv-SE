@@ -36,7 +36,7 @@ ht-degree: 12%
    + [Konfigurera dynamisk SSLING-inkludering](./development/set-up-sling-dynamic-include.md)
    + [Förstå bästa praxis för Java API](./development/understand-java-api-best-practices.md)
    + [Förstå export av försäljningsmodell](./development/understand-sling-model-exporter.md)
-   + [Förstå bästa praxis för indexering av eko](./development/understand-indexing-best-practices.md)
+   + [Lär dig Oak indexering på bästa sätt](./development/understand-indexing-best-practices.md)
 + Projekt {#projects}
    + [AEM projekt](./projects/develop-aem-projects.md)
    + [Använd projektmallar](./projects/use-project-masters.md)
@@ -58,7 +58,7 @@ ht-degree: 12%
    + [Hur du undersöker indexeringsrelaterade problem i AEM](./troubleshooting/how-to-investigate-indexing-related-issues.md)
    + [Hur man undersöker SAML-relaterade problem i AEM](./troubleshooting/how-to-investigate-saml-related-issues.md)
    + [Hur du undersöker sökrelaterade problem i AEM](./troubleshooting/how-to-investigate-search-related-issues.md)
-   + [Ange förfallodatum för Oak-inloggningstoken-session](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
+   + [Ange förfallodatum för Oak inloggningstoken](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
    + [Felsöka problem med Jetty-konfiguration](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
    + [Felsöka prestandarelaterade problem](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
    + [Steg för att lösa minnesrelaterade problem i AEM](./troubleshooting/steps-to-resolve-memory-related-issues.md)

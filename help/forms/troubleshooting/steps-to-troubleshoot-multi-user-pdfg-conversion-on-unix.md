@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Steg för att felsöka PDFG-konverteringsproblem för flera användare i en Unix-konfiguration
 
-*I den här videon beskrivs processen att felsöka problem med PDFG-konvertering för flera användare i en Unix-konfiguration.*
+*Den här videon beskriver processen att felsöka problem med PDFG-konvertering för flera användare i en Unix-konfiguration.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335549?quality=12&learn=on)

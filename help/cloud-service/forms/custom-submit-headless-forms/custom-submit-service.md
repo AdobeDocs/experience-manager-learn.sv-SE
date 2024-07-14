@@ -26,17 +26,17 @@ Så här skriver du en anpassad skicka-tjänst:
 
 ## Skapa AEM
 
-Om du redan har ett AEM Forms Cloud Service-projekt kan du [hoppa till att skriva anpassad skicka-tjänst](#Write-the-custom-submit-service)
+Om du redan har ett AEM Forms Cloud Service-projekt kan du [hoppa till att skriva en anpassad skicka-tjänst](#Write-the-custom-submit-service)
 
 * Skapa en mapp som kallas molnhanterare på din c-enhet.
 * Navigera till den nya mappen
-* Kopiera och klistra in innehållet [den här textfilen](./assets/creating-maven-project.txt) i kommandotolken.Du kan behöva ändra DarchetypeVersion=41 beroende på [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 41 när den här artikeln skrevs.
+* Kopiera och klistra in innehållet i [den här textfilen](./assets/creating-maven-project.txt) i kommandotolken.Du kan behöva ändra DarchetypeVersion=41 beroende på den [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Den senaste versionen var 41 när den här artikeln skrevs.
 * Kör kommandot genom att trycka på tangenten enter.Om allt är rätt ska du se meddelandet om att det lyckades.
 
 ## Skriv den anpassade skicka-tjänsten{#Write-the-custom-submit-service}
 
-Starta IntelliJ och öppna AEM. Skapa en ny java-klass som kallas **HandleRegistrationFormSubmission** som visas på skärmbilden nedan
-![skräddarsydd tjänst](./assets/custom-submit-service.png)
+Starta IntelliJ och öppna AEM. Skapa en ny java-klass med namnet **HandleRegistrationFormSubmission** som visas på skärmbilden nedan
+![custom-submit-service](./assets/custom-submit-service.png)
 
 Följande kod skrevs för att implementera tjänsten
 
@@ -88,9 +88,9 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 
 ## Skapa en crx-nod under appar
 
-Expandera noden ui.apps och skapa ett nytt paket med namnet **HandleRegistrationFormSubmission** under programnoden enligt skärmbilden nedan
+Expandera noden ui.apps och skapa ett nytt paket med namnet **HandleRegistrationFormSubmission** under noden apps, som visas på skärmbilden nedan
 ![crx-node](./assets/crx-node.png)
-Skapa en fil med namnet .content.xml under **HandleRegistrationFormSubmission**. Kopiera och klistra in följande kod i .content.xml
+Skapa en fil med namnet .content.xml under **HandleRegistrationFormSubmission** . Kopiera och klistra in följande kod i .content.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -102,7 +102,7 @@ Skapa en fil med namnet .content.xml under **HandleRegistrationFormSubmission**.
     submitService="Core Custom AF Submit"/>
 ```
 
-Värdet för **submitService** elementet måste matcha  **serviceName = &quot;Core Custom AF Submit&quot;** i FormSubmitActionService-implementeringen.
+Värdet för elementet **submitService** måste matcha **serviceName = &quot;Core Custom AF Submit&quot;** i FormSubmitActionService-implementeringen.
 
 ## Distribuera koden till din lokala AEM Forms-instans
 
@@ -118,10 +118,10 @@ Detta distribuerar koden som ett enda paket till författarinstansen
 ## Skicka koden till molnhanteraren och distribuera koden
 
 När du har verifierat koden på din lokala instans skickar du koden till din molninstans.
-Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan läsa  [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [överföra AEM till molnhanterardatabasen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) och [distribuera till utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) artiklar.
+Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan referera till artiklarna [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [AEM projekt i molnhanterardatabasen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) och [distribuering till utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html).
 
 När piplexin har körts korrekt bör du kunna koppla formulärskickaåtgärden till den anpassade överföringshanteraren, som visas på skärmbilden nedan
-![skicka-åtgärd](./assets/configure-submit-action.png)
+![submit-action](./assets/configure-submit-action.png)
 
 ## Nästa steg
 

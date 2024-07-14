@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Komponent för välkomstkit
 
-En sidkomponent skapades för att lista de resurser på sidan som kan hämtas av slutanvändaren. Sökvägarna till de enskilda resurserna sparas i en egenskap som kallas **banor**. De skickade formulärdata avgör vilka resurser som ska inkluderas.
+En sidkomponent skapades för att lista de resurser på sidan som kan hämtas av slutanvändaren. Sökvägarna till de enskilda resurserna sparas i en egenskap med namnet **paths**. De skickade formulärdata avgör vilka resurser som ska inkluderas.
 
 I följande kod visas resurserna på sidan:
 

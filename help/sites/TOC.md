@@ -28,7 +28,7 @@ ht-degree: 5%
    + [Massmetadata](document-authoring/bulk-metadata.md)
    + [Sidmetadata](document-authoring/page-metadata.md)
    + [Autentisering av författare](document-authoring/author-authentication.md)
-   + Så här gör du{#how-to}
+   + Använda {#how-to}
       + [Dokumentgranskning](./document-authoring/how-to/document-audit.md)
       + [Dokumentbehörigheter](./document-authoring/how-to/document-permissions.md)
       + [Dokumentversioner](./document-authoring/how-to/document-versions.md)
@@ -41,7 +41,7 @@ ht-degree: 5%
       + [Platsmigrering med importverktyget](./document-authoring/how-to/migration-using-importer.md)
       + [Anpassa importeraren](./document-authoring/how-to/customizing-importer.md)
       + [Massimport med importverktyg](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + Generera variationer{#generate-variations}
+      + Generera variationer {#generate-variations}
          + [Ökning](./document-authoring/how-to/generate-variations/overview.md)
          + [Konfigurera Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [Promptmallar](./document-authoring/how-to/generate-variations/prompt-templates.md)
@@ -73,12 +73,12 @@ ht-degree: 5%
    + [Formatsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launches](page-authoring/launches.md)
-   + Lär dig av andra {#expert-advice}
+   + Lär dig av dina kollegor {#expert-advice}
       + [Tips för webbplatshierarki](page-authoring/expert-advice/site-hierarchy.md)
 + Generativ AI {#generative-ai}
    + [Generera variationer](./generative-ai/generate-variations.md)
 + Innehållsfragment {#content-fragments}
-   + [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [Konsolen för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [Skapa innehållsfragment](content-fragments/content-fragments-feature-video-use.md)
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Översätta innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 5%
 + Upplevelsefragment {#experience-fragments}
    + [Använda upplevelsefragment](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
-   + [Content Fragments vs. Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [Innehållsfragment kontra Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [Ökning](./edge-delivery-services/overview.md)
    + Utvecklar{#developing}
@@ -131,7 +131,7 @@ ht-degree: 5%
 + Enkelsidiga program {#spa-editor}
    + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
-+ Hantering av flera webbplatser {#multi-site-management}
++ Hantering av flera platser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [Skapa en Live Copy](./multi-site-management/create-live-copy.md)
@@ -151,7 +151,7 @@ ht-degree: 5%
    + [Använda språkkopia](translation/language-copy-feature-video-use.md)
    + [Konfigurera översättningsregler](translation/translation-rules-editor-technical-video-setup.md)
    + [Översättningsförbättringar](translation/translation-enhancements-feature-video-use.md)
-+ Integreringar {#integrations}
++ Integrationer {#integrations}
    + Experience Platform {#experience-platform}
       + [Generera FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
@@ -162,7 +162,7 @@ ht-degree: 5%
       + [Koppla AEM och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [Cloud Servicen Skapa AEM taggar](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [Felsöka en taggimplementering](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe-klientdatalager {#adobe-client-data-layer}
+   + Adobe-klientdatalagret {#adobe-client-data-layer}
       + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
@@ -176,9 +176,9 @@ ht-degree: 5%
       + [Skapa Adobe Target Cloud Service-konto](integrations/adobe-target/setup-aem-target-cloud-service.md)
       + [Exportera upplevelsefragment till Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
-      + [Personalisering med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
-      + [Personalisering av en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
-+ Lär dig av andra {#expert-resources}
+      + [Personalization med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
+      + [Personalization med en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
++ Lär dig av dina kollegor {#expert-resources}
    + [Ökning](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
    + [Platsunderhåll](expert-resources/site-maintenance.md)

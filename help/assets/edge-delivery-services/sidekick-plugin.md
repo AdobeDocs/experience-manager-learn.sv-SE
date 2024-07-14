@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Se hur [AEM Assets Sidekick plugin](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) kan användas för att införliva hanterade resurser i slagkraftiga upplevelser som levereras via Edge Delivery Services.
+Lär dig hur plugin-programmet [AEM Assets Sidekick](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) kan användas för att införliva hanterade resurser i slagkraftiga upplevelser som levereras via Edge Delivery Services.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)

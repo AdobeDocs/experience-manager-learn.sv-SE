@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Anpassa Adobe-klientdatalagret med AEM {#customize-data-layer}
 
-Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från [AEM Core Components to extend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
+Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
 
 ## Vad du ska bygga
 
 ![Byline Data Layer](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-I den här självstudiekursen ska vi utforska olika alternativ för att utöka datalagret för klienten i Adobe genom att uppdatera WKND [Byline-komponent](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). The _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
+I den här självstudiekursen ska vi utforska olika alternativ för att utöka datalagret för Adobe-klienten genom att uppdatera WKND-komponenten [Byline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). Komponenten _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
 
 ### Mål {#objective}
 
@@ -37,17 +37,17 @@ I den här självstudiekursen ska vi utforska olika alternativ för att utöka d
 
 ## Förutsättningar {#prerequisites}
 
-A **lokal utvecklingsmiljö** är nödvändigt för att slutföra den här självstudien. Skärmbilder och video hämtas med AEM as a Cloud Service SDK som körs på en macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
+En **lokal utvecklingsmiljö** krävs för att slutföra den här självstudien. Skärmbilder och video spelas in med AEM as a Cloud Service SDK som körs på en macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
 
-**Är du inte AEM as a Cloud Service?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**Ny på AEM as a Cloud Service?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
-**Har du inte använt AEM 6.5 tidigare?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+**Har du inte använt AEM 6.5 tidigare?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Hämta och distribuera WKND Reference-webbplatsen {#set-up-wknd-site}
 
 Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klona och installera WKND-kodbasen i din lokala miljö.
 
-1. Starta en lokal snabbstart **författare** instans av AEM som körs vid [http://localhost:4502](http://localhost:4502).
+1. Starta en lokal QuickStart **author**-instans av AEM som körs på [http://localhost:4502](http://localhost:4502).
 1. Öppna ett terminalfönster och klona WKND-kodbasen med Git:
 
    ```shell
@@ -63,16 +63,16 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
 
    >[!NOTE]
    >
-   > För AEM 6.5 och senaste Service Pack lägger du till `classic` profil till kommandot Maven:
+   > För AEM 6.5 och senaste Service Pack lägger du till profilen `classic` i kommandot Maven:
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
-1. Öppna ett nytt webbläsarfönster och logga in på AEM. Öppna en **Magazine** sida som: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. Öppna ett nytt webbläsarfönster och logga in på AEM. Öppna en **tidskriftssida** som: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
    ![Byline-komponent på sida](assets/adobe-client-data-layer/byline-component-onpage.png)
 
    Du bör se ett exempel på den Byline-komponent som har lagts till på sidan som en del av ett Experience Fragment. Du kan visa Experience Fragment på [http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/language-masters/en/contributors/stacey-roswells/byline.html)
-1. Öppna utvecklingsverktygen och ange följande kommando i **Konsol**:
+1. Öppna dina utvecklarverktyg och ange följande kommando i **konsolen**:
 
    ```js
    window.adobeDataLayer.getState();
@@ -86,12 +86,12 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
 
 ## Uppdatera modellen Byline Sling {#sling-model}
 
-Om du vill mata in data om komponenten i datalagret uppdaterar vi först komponentens Sling Model. Uppdatera sedan Bylines Java™-gränssnitt och Sling Model-implementering till en ny metod `getData()`. Den här metoden innehåller de egenskaper som ska injiceras i datalagret.
+Om du vill mata in data om komponenten i datalagret uppdaterar vi först komponentens Sling Model. Uppdatera sedan Bylines Java™-gränssnitt och Sling Model-implementering så att den nya metoden `getData()` finns. Den här metoden innehåller de egenskaper som ska injiceras i datalagret.
 
-1. Öppna `aem-guides-wknd` -projektet i den utvecklingsmiljö du vill. Navigera till `core` -modul.
-1. Öppna filen `Byline.java` på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
+1. Öppna projektet `aem-guides-wknd` i den utvecklingsmiljö du vill använda. Navigera till modulen `core`.
+1. Öppna filen `Byline.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
 
-   ![Byline Java Interface](assets/adobe-client-data-layer/byline-java-interface.png)
+   ![Gränssnitt för Java-penna](assets/adobe-client-data-layer/byline-java-interface.png)
 
 1. Lägg till nedanstående metod i gränssnittet:
 
@@ -106,7 +106,7 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
    }
    ```
 
-1. Öppna filen `BylineImpl.java` på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. Det är genomförandet av `Byline` och implementeras som en Sling-modell.
+1. Öppna filen `BylineImpl.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. Det är implementeringen av gränssnittet `Byline` och implementeras som en Sling-modell.
 
 1. Lägg till följande importsatser i början av filen:
 
@@ -119,9 +119,9 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
    import com.adobe.cq.wcm.core.components.util.ComponentUtils;
    ```
 
-   The `fasterxml.jackson` API:er används för att serialisera data som ska visas som JSON. The `ComponentUtils` AEM kärnkomponenter används för att kontrollera om datalagret är aktiverat.
+   `fasterxml.jackson` API:er används för att serialisera data som ska visas som JSON. `ComponentUtils` AEM kärnkomponenter används för att kontrollera om datalagret är aktiverat.
 
-1. Lägg till den oimplementerade metoden `getData()` till `BylineImple.java`:
+1. Lägg till den oimplementerade metoden `getData()` i `BylineImple.java`:
 
    ```java
    public class BylineImpl implements Byline {
@@ -160,11 +160,11 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
    }
    ```
 
-   I ovanstående metod finns en ny `HashMap` används för att hämta de egenskaper som ska visas som JSON. Observera att befintliga metoder som `getName()` och `getOccupations()` används. The `@type` representerar komponentens unika resurstyp, så att klienten enkelt kan identifiera händelser och/eller utlösare baserat på komponenttypen.
+   I ovanstående metod används en ny `HashMap` för att hämta de egenskaper som ska visas som JSON. Observera att befintliga metoder som `getName()` och `getOccupations()` används. `@type` representerar komponentens unika resurstyp, vilket gör att en klient enkelt kan identifiera händelser och/eller utlösare baserat på komponenttypen.
 
-   The `ObjectMapper` används för att serialisera egenskaperna och returnera en JSON-sträng. Denna JSON-sträng kan sedan infogas i datalagret.
+   `ObjectMapper` används för att serialisera egenskaperna och returnera en JSON-sträng. Denna JSON-sträng kan sedan infogas i datalagret.
 
-1. Öppna ett terminalfönster. Bygg och driftsätt endast `core` för att använda dina Maven-kunskaper:
+1. Öppna ett terminalfönster. Skapa och distribuera bara modulen `core` med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd/core
@@ -173,16 +173,16 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
 
 ## Uppdatera Byline-HTML {#htl}
 
-Uppdatera sedan `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTML (HTML Template Language) är den mall som används för att återge komponentens HTML.
+Uppdatera sedan `Byline` [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTML (HTML Template Language) är den mall som används för att återge komponentens HTML.
 
-Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM används för att visa sitt datalager. JavaScript från AEM Core Components söker efter det här dataattributet. Värdet för det här dataattributet fylls i med JSON-strängen som returneras av Byline Sling-modellens `getData()` och injiceras i Adobe Client Data-lagret.
+Ett särskilt dataattribut `data-cmp-data-layer` för varje AEM används för att visa dess datalager. JavaScript som tillhandahålls av AEM Core Components letar efter det här dataattributet. Värdet för det här dataattributet fylls i med JSON-strängen som returneras av Byline Sling-modellens `getData()`-metod och matas in i Adobe-klientdatalagret.
 
-1. Öppna `aem-guides-wknd` projektet i utvecklingsmiljön. Navigera till `ui.apps` -modul.
-1. Öppna filen `byline.html` på `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
+1. Öppna projektet `aem-guides-wknd` i IDE. Navigera till modulen `ui.apps`.
+1. Öppna filen `byline.html` vid `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
    ![Byline HTML](assets/adobe-client-data-layer/byline-html-template.png)
 
-1. Uppdatera `byline.html` som innehåller `data-cmp-data-layer` attribute:
+1. Uppdatera `byline.html` om du vill inkludera attributet `data-cmp-data-layer`:
 
    ```diff
      <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
@@ -193,32 +193,32 @@ Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM används för att
        ...
    ```
 
-   Värdet för `data-cmp-data-layer` har angetts till `"${byline.data}"` där `byline` är Sling Model som uppdaterades tidigare. `.data` är standardnoteringen för anrop av Java™ Getter-metoden i HTML av `getData()` som genomförts i föregående övning.
+   Värdet för `data-cmp-data-layer` har angetts till `"${byline.data}"` där `byline` är den tidigare uppdaterade delningsmodellen. `.data` är standardnotation för anrop av Java™ Getter-metoden i HTML-koden för `getData()` som implementerades i föregående övning.
 
-1. Öppna ett terminalfönster. Bygg och driftsätt endast `ui.apps` för att använda dina Maven-kunskaper:
+1. Öppna ett terminalfönster. Skapa och distribuera bara modulen `ui.apps` med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
    $ mvn clean install -PautoInstallPackage
    ```
 
-1. Återgå till webbläsaren och öppna sidan igen med en Byline-komponent: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
+1. Gå tillbaka till webbläsaren och öppna sidan igen med en Byline-komponent: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
 1. Öppna utvecklingsverktygen och kontrollera HTML-källan för sidan för att se om det finns en Byline-komponent:
 
    ![Byline Data Layer](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-   Du borde se att `data-cmp-data-layer` har fyllts i med JSON-strängen från Sling-modellen.
+   Du bör se att `data-cmp-data-layer` har fyllts i med JSON-strängen från Sling-modellen.
 
-1. Öppna webbläsarens utvecklarverktyg och skriv följande kommando i **Konsol**:
+1. Öppna webbläsarens utvecklarverktyg och ange följande kommando i **konsolen**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-1. Navigera under svaret under `component` för att hitta instansen av `byline` har lagts till i datalagret:
+1. Navigera under svaret under `component` för att hitta instansen av komponenten `byline` som har lagts till i datalagret:
 
-   ![En del av datalagret](assets/adobe-client-data-layer/byline-part-of-datalayer.png)
+   ![En del av datalagret ](assets/adobe-client-data-layer/byline-part-of-datalayer.png) med penna
 
    Du bör se ett inlägg som följande:
 
@@ -231,18 +231,18 @@ Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM används för att
        parentId: "page-30d989b3f8"
    ```
 
-   Observera att de egenskaper som visas är samma som läggs till i `HashMap` i Sling Model.
+   Observera att de egenskaper som visas är samma som läggs till i `HashMap` i segmentmodellen.
 
 ## Lägg till en klickningshändelse {#click-event}
 
-Adobe-klientdatalagret är händelsestyrt och en av de vanligaste händelserna som utlöser en åtgärd är `cmp:click` -händelse. AEM Core-komponenterna gör det här enkelt att registrera komponenten med hjälp av dataelementet: `data-cmp-clickable`.
+Adobe-klientdatalagret är händelsestyrt och en av de vanligaste händelserna som utlöser en åtgärd är `cmp:click`-händelsen. AEM Core-komponenterna gör det här enkelt att registrera komponenten med hjälp av dataelementet: `data-cmp-clickable`.
 
 Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr har inte komponenten Byline någon av dessa men vi måste registrera den ändå eftersom det kan vara vanligt för andra anpassade komponenter.
 
-1. Öppna `ui.apps` i din IDE
-1. Öppna filen `byline.html` på `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
+1. Öppna modulen `ui.apps` i din IDE
+1. Öppna filen `byline.html` vid `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
-1. Uppdatera `byline.html` som innehåller `data-cmp-clickable` på Bylines **name** element:
+1. Uppdatera `byline.html` så att attributet `data-cmp-clickable` inkluderas i Bylines **name**-element:
 
    ```diff
      <h2 class="cmp-byline__name" 
@@ -251,7 +251,7 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
      </h2>
    ```
 
-1. Öppna en ny terminal. Bygg och driftsätt endast `ui.apps` för att använda dina Maven-kunskaper:
+1. Öppna en ny terminal. Skapa och distribuera bara modulen `ui.apps` med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -260,9 +260,9 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
 
 1. Gå tillbaka till webbläsaren och öppna sidan igen med komponenten Byline tillagd: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
-   För att testa vår händelse lägger vi till JavaScript manuellt med hjälp av utvecklarkonsolen. Se [Använda Adobe-klientdatalagret med AEM kärnkomponenter](data-layer-overview.md) om du vill se en video om hur du gör detta.
+   För att testa vår aktivitet lägger vi till JavaScript manuellt med hjälp av utvecklarkonsolen. Se [Använda Adobe-klientdatalagret med AEM kärnkomponenter](data-layer-overview.md) för en video om hur du gör detta.
 
-1. Öppna webbläsarens utvecklarverktyg och ange följande metod i dialogrutan **Konsol**:
+1. Öppna webbläsarens utvecklarverktyg och ange följande metod i **konsolen**:
 
    ```javascript
    function bylineClickHandler(event) {
@@ -276,7 +276,7 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
 
    Den här enkla metoden bör hantera klickningen på namnet på komponenten Byline.
 
-1. Ange följande metod i dialogrutan **Konsol**:
+1. Ange följande metod i **konsolen**:
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
@@ -284,29 +284,29 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
    });
    ```
 
-   Ovanstående metod överför en händelseavlyssnare till datalagret för att avlyssna `cmp:click` och anropar `bylineClickHandler`.
+   Ovanstående metod överför en händelseavlyssnare till datalagret för att avlyssna händelsen `cmp:click` och anropar `bylineClickHandler`.
 
    >[!CAUTION]
    >
-   > Det är viktigt **not** om du vill uppdatera webbläsaren under övningen, annars försvinner konsolens JavaScript.
+   > Det är viktigt **inte** att uppdatera webbläsaren under övningen, annars försvinner konsolen JavaScript.
 
-1. I webbläsaren med **Konsol** öppna klickar du på författarens namn i Byline-komponenten:
+1. I webbläsaren klickar du på författarens namn i Byline-komponenten när **konsolen** är öppen:
 
-   ![Byline-komponent klickad](assets/adobe-client-data-layer/byline-component-clicked.png)
+   ![Byline-komponenten klickade](assets/adobe-client-data-layer/byline-component-clicked.png)
 
-   Du bör se konsolmeddelandet `Byline Clicked!` och namnet på Byline.
+   Du bör se konsolmeddelandet `Byline Clicked!` och namnet på byteboken.
 
-   The `cmp:click` -händelsen är den enklaste att koppla in sig i. För mer komplexa komponenter och för att spåra andra beteenden är det möjligt att lägga till anpassad JavaScript för att lägga till och registrera nya händelser. Ett bra exempel är Carousel-komponenten som utlöser en `cmp:show` händelse när en bildruta växlas. Se [källkod för mer information](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
+   Händelsen `cmp:click` är enklast att koppla in sig i. För mer komplexa komponenter och för att spåra andra beteenden är det möjligt att lägga till anpassade JavaScript för att lägga till och registrera nya händelser. Ett bra exempel är Carousel-komponenten, som utlöser en `cmp:show`-händelse när en bild växlas. Mer information finns i [källkoden](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
 
 ## Använda verktyget DataLayerBuilder {#data-layer-builder}
 
-När Sling Model var [uppdaterad](#sling-model) tidigare i kapitlet valde vi att skapa JSON-strängen med en `HashMap` och ange varje egenskap manuellt. Den här metoden fungerar bra för små engångskomponenter, men för komponenter som utökar AEM Core Components kan det resultera i mycket extra kod.
+När Sling Model [uppdaterades](#sling-model) tidigare i kapitlet valde vi att skapa JSON-strängen med en `HashMap` och ange var och en av egenskaperna manuellt. Den här metoden fungerar bra för små engångskomponenter, men för komponenter som utökar AEM Core Components kan det resultera i mycket extra kod.
 
-En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av grovjobbet. Detta gör att implementeringar kan utöka bara de egenskaper de vill ha. Vi uppdaterar Sling-modellen så att den använder `DataLayerBuilder`.
+Det finns en verktygsklass, `DataLayerBuilder`, som kan utföra de flesta grova lyftningarna. Detta gör att implementeringar kan utöka bara de egenskaper de vill ha. Vi uppdaterar Sling-modellen så att `DataLayerBuilder` används.
 
-1. Återgå till utvecklingsmiljön och navigera till `core` -modul.
-1. Öppna filen `Byline.java` på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
-1. Ändra `getData()` metod för att returnera en typ av `ComponentData`
+1. Återgå till IDE och navigera till modulen `core`.
+1. Öppna filen `Byline.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
+1. Ändra metoden `getData()` för att returnera typen `ComponentData`
 
    ```java
    import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
@@ -323,7 +323,7 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
 
    `ComponentData` är ett objekt som tillhandahålls av AEM kärnkomponenter. Det resulterar i en JSON-sträng, precis som i det föregående exemplet, men utför även en hel del extraarbete.
 
-1. Öppna filen `BylineImpl.java` på `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
+1. Öppna filen `BylineImpl.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
 
 1. Lägg till följande importsatser:
 
@@ -332,7 +332,7 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
    import com.adobe.cq.wcm.core.components.models.datalayer.builder.DataLayerBuilder;
    ```
 
-1. Ersätt `getData()` metod med följande:
+1. Ersätt metoden `getData()` med följande:
 
    ```java
    @Override
@@ -351,19 +351,19 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
    }
    ```
 
-   Komponenten Byline återanvänder delar av Image Core Component för att visa en bild som representerar författaren. I ovanstående utdrag visas [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) används för att utöka datalagret i `Image` -komponenten. JSON-objektet fylls i automatiskt med alla data om bilden som används. Den utför även en del rutinfunktioner som att ställa in `@type` och komponentens unika identifierare. Observera att metoden är liten!
+   Komponenten Byline återanvänder delar av Image Core Component för att visa en bild som representerar författaren. I ovanstående kodutdrag används [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) för att utöka datalagret för komponenten `Image`. JSON-objektet fylls i automatiskt med alla data om bilden som används. Den utför även några av rutinfunktionerna som att ställa in `@type` och komponentens unika identifierare. Observera att metoden är liten!
 
-   Den enda egenskapen som utökade `withTitle` som ersätts med värdet för `getName()`.
+   Den enda egenskapen utökade `withTitle` som ersätts med värdet `getName()`.
 
-1. Öppna ett terminalfönster. Bygg och driftsätt endast `core` för att använda dina Maven-kunskaper:
+1. Öppna ett terminalfönster. Skapa och distribuera bara modulen `core` med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd/core
    $ mvn clean install -PautoInstallBundle
    ```
 
-1. Återgå till utvecklingsmiljön och öppna `byline.html` fil under `ui.apps`
-1. Uppdatera den HTML som ska användas `byline.data.json` för att fylla `data-cmp-data-layer` attribute:
+1. Återgå till IDE och öppna filen `byline.html` under `ui.apps`
+1. Uppdatera HTML så att `byline.data.json` används för att fylla i attributet `data-cmp-data-layer`:
 
    ```diff
      <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
@@ -373,9 +373,9 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
    +   data-cmp-data-layer="${byline.data.json}"
    ```
 
-   Kom ihåg att vi nu returnerar ett objekt av typen `ComponentData`. Det här objektet innehåller en get-metod `getJson()` och detta används för att fylla i `data-cmp-data-layer` -attribut.
+   Kom ihåg att vi nu returnerar ett objekt av typen `ComponentData`. Det här objektet innehåller en get-metod `getJson()` och det används för att fylla i attributet `data-cmp-data-layer`.
 
-1. Öppna ett terminalfönster. Bygg och driftsätt endast `ui.apps` för att använda dina Maven-kunskaper:
+1. Öppna ett terminalfönster. Skapa och distribuera bara modulen `ui.apps` med dina Maven-kunskaper:
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -383,13 +383,13 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
    ```
 
 1. Gå tillbaka till webbläsaren och öppna sidan igen med komponenten Byline tillagd: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
-1. Öppna webbläsarens utvecklarverktyg och skriv följande kommando i **Konsol**:
+1. Öppna webbläsarens utvecklarverktyg och ange följande kommando i **konsolen**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-1. Navigera under svaret under `component` för att hitta instansen av `byline` komponent:
+1. Navigera under svaret under `component` för att hitta instansen av komponenten `byline`:
 
    ![Byline Data Layer Updated](assets/adobe-client-data-layer/byline-data-layer-builder.png)
 
@@ -409,22 +409,22 @@ En verktygsklass, `DataLayerBuilder`, finns för att utföra större delen av gr
        repo:modifyDate: "2019-10-18T20:17:24Z"
    ```
 
-   Observera att det nu finns en `image` objekt inuti `byline` komponentpost. Här finns mycket mer information om resursen i DAM. Observera även att `@type` och det unika ID:t (i det här fallet `byline-136073cfcb`) har fyllts i automatiskt och `repo:modifyDate` som anger när komponenten ändrades.
+   Observera att det nu finns ett `image`-objekt i `byline`-komponentposten. Här finns mycket mer information om resursen i DAM. Observera också att `@type` och det unika ID:t (i det här fallet `byline-136073cfcb`) har fyllts i automatiskt och att `repo:modifyDate` anger när komponenten ändrades.
 
 ## Ytterligare exempel {#additional-examples}
 
-1. Ett annat exempel på hur du utökar datalagret kan visas genom att undersöka `ImageList` i WKND-kodbasen:
-   * `ImageList.java` - Java i `core` -modul.
-   * `ImageListImpl.java` - Sling Model i `core` -modul.
-   * `image-list.html` - HTML-mall i `ui.apps` -modul.
+1. Ett annat exempel på hur du utökar datalagret kan visas genom att undersöka komponenten `ImageList` i WKND-kodbasen:
+   * `ImageList.java` - Java-gränssnittet i modulen `core`.
+   * `ImageListImpl.java` - Sling Model i modulen `core`.
+   * `image-list.html` - HTML-mall i modulen `ui.apps`.
 
    >[!NOTE]
    >
-   > Det är lite svårare att ta med anpassade egenskaper som `occupation` när du använder [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html). Men om du utökar en Core-komponent som innehåller en bild eller sida sparar verktyget mycket tid.
+   > Det är lite svårare att inkludera anpassade egenskaper som `occupation` när [ DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) används. Men om du utökar en Core-komponent som innehåller en bild eller sida sparar verktyget mycket tid.
 
    >[!NOTE]
    >
-   > Om du skapar ett avancerat datalager för objekt som återanvänds under en implementering bör du extrahera datalagrets element till deras egna datalagerspecifika Java™-objekt. Commerce Core Components har till exempel lagt till gränssnitt för `ProductData` och `CategoryData` eftersom dessa kan användas i många komponenter i en Commerce-implementering. Granska [koden i aem-cif-core-components repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) för mer information.
+   > Om du skapar ett avancerat datalager för objekt som återanvänds under en implementering bör du extrahera datalagrets element till deras egna datalagerspecifika Java™-objekt. Commerce Core Components har till exempel lagt till gränssnitt för `ProductData` och `CategoryData` eftersom dessa kan användas på många komponenter i en Commerce-implementering. Granska [koden i rapporten om aem-cif-core-components](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) om du vill ha mer information.
 
 ## Grattis! {#congratulations}
 
@@ -432,6 +432,6 @@ Du har utforskat några sätt att utöka och anpassa datalagret för klienten i 
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
+* [Adobe-datalagerdokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [Datalagerintegrering med kärnkomponenterna](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
-* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

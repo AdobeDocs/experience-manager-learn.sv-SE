@@ -1,6 +1,6 @@
 ---
-title: Använda CI/CD-pipeline i Adobe Cloud Manager
-description: Adobe Cloud Manager är en enkel, men ändå flexibel självbetjäningsmodul för CI/CD som gör det möjligt för AEM projektteam att snabbt, säkert och konsekvent driftsätta kod i alla AEM miljöer som AMS är värd för. I den här videoserien utforskas hur du konfigurerar och kör Cloud Managers CI/CD-pipeline i både felfallsscenarier och framgångsscenarier.
+title: Använda CI/CD Pipeline i Adobe Cloud Manager
+description: Adobe Cloud Manager erbjuder en enkel, men ändå flexibel självbetjäning-CI/CD Pipeline som gör att AEM kan driftsätta kod snabbt, säkert och konsekvent i alla AEM miljöer som AMS är värd för. I den här videoserien utforskas hur du konfigurerar och kör Cloud Manager CI/CD Pipeline i både felsöknings- och framgångsscenarier.
 sub-product: Experience Manager Cloud Manager, Experience Manager
 doc-type: Feature Video
 topic: Architecture
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ---
 
-# Använda CI/CD-pipeline i Adobe Cloud Manager
+# Använda CI/CD Pipeline i Adobe Cloud Manager
 
-Adobe Cloud Manager är en enkel, men ändå flexibel självbetjäningsmodul för CI/CD som gör det möjligt för AEM projektteam att snabbt, säkert och konsekvent driftsätta kod i alla AEM miljöer som AMS är värd för. I den här videoserien utforskas hur du konfigurerar och kör Cloud Managers CI/CD-pipeline i både felfallsscenarier och framgångsscenarier.
+Adobe Cloud Manager erbjuder en enkel, men ändå flexibel självbetjäning-CI/CD Pipeline som gör att AEM kan driftsätta kod snabbt, säkert och konsekvent i alla AEM miljöer som AMS är värd för. I den här videoserien utforskas hur du konfigurerar och kör Cloud Manager CI/CD Pipeline i både felsöknings- och framgångsscenarier.
 
 ## Introduktion
 
-En introduktion till programmen Cloud Manager och Cloud Manager.
+En introduktion till Cloud Manager och Cloud Manager.
 
 >[!NOTE]
 >
@@ -40,21 +40,21 @@ I den här videon utforskas hur du konfigurerar pipeline för programmet i Cloud
 
 ## Körning av pipeline misslyckades
 
-I den här videon utforskas körningen av CI/CD Pipeline med kod som inte klarar Cloud Managers nödvändiga kvalitetskontroller med hjälp av **[!DNL yellow]** databasgren.
+I den här videon utforskas körningen av CI/CD-pipeline med kod som inte Cloud Manager nödvändiga kvalitetskontroller från med hjälp av databasgrenen **[!DNL yellow]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084?quality=12&learn=on)
 
 ## Slutförd pipeline-körning
 
-I den här videon utforskas den lyckade körningen av CI/CD-pipeline med hjälp av kod som klarar de kvalitetskontroller som krävs av Cloud Manager med hjälp av **[!DNL master]** databasgren.
+I den här videon utforskas den lyckade körningen av CI/CD-pipeline med hjälp av kod som klarar Cloud Manager obligatoriska kvalitetskontroller med hjälp av databasgrenen **[!DNL master]**.
 
-Den här videon vidrör även [!UICONTROL Activity] i Cloud Manager, som gör det möjligt att komma in på nytt i aktiva körningar eller granska slutförda eller misslyckade körningar.
+Den här videon rör även konsolen [!UICONTROL Activity] i Cloud Manager, som gör att du kan starta om till aktiva körningar eller granska slutförda eller misslyckade körningar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
 ## Stödmaterial
 
-* [Användarhandbok för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [Cloud Manager Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [Hämta kodskanning [!DNL SonarQube] regler](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
    * *XLSX finns längst ned i det länkade avsnittet*
 * [[!DNL SonarQube] Java™-regelindex](https://rules.sonarsource.com/java/)

@@ -1,6 +1,6 @@
 ---
 title: Felsöka AEM med databasläsaren
-description: Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service miljö.
+description: Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service-miljön.
 feature: Developer Tools
 version: Cloud Service
 doc-type: Tutorial
@@ -20,29 +20,29 @@ ht-degree: 0%
 
 # Felsöka AEM as a Cloud Service med Databasläsaren
 
-Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service miljö. Databasläsaren har stöd för en skrivskyddad vy över resurser och egenskaper för AEM på produktions-, scen- och utvecklingsstadiet samt författar-, publicerings- och förhandsgranskningstjänster.
+Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service-miljön. Databasläsaren har stöd för en skrivskyddad vy över resurser och egenskaper för AEM på produktions-, scen- och utvecklingsstadiet samt för tjänsterna Author, Publish och Preview.
 
 >[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
-Databasläsaren är __ENDAST__ tillgängliga i AEM as a Cloud Service miljöer (användning [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) för att felsöka den lokala AEM SDK).
+Databasläsaren är __ENDAST__ tillgänglig i AEM as a Cloud Service-miljöer (använd [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) för att felsöka den lokala AEM SDK).
 
 ## Åtkomst till databasläsaren
 
-Så här öppnar du Databasläsaren på AEM as a Cloud Service:
+Så här öppnar du Databasläsaren i AEM as a Cloud Service:
 
-1. Se till att din användare har [nödvändig åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
+1. Kontrollera att din användare har [den nödvändiga åtkomsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
 1. Logga in på [Cloud Manager](https://my.cloudmanager.adobe.com)
-1. Välj det program som innehåller den AEM as a Cloud Service miljön som ska felsökas
-1. Öppna [Developer Console](./developer-console.md) motsvarar den AEM as a Cloud Service miljön som ska felsökas
-1. Välj __Databasläsare__ tab
+1. Välj det program som innehåller AEM as a Cloud Service-miljön som ska felsökas
+1. Öppna den [Developer Console](./developer-console.md) som motsvarar AEM as a Cloud Service-miljön som ska felsökas
+1. Välj fliken __Databasläsare__
 1. Välj AEM tjänstnivå att bläddra i
    + Alla författare
    + Alla utgivare
    + Alla förhandsvisningar
 1. Välj __Öppna databasläsaren__
 
-Databasläsaren öppnas för den valda tjänstnivån (Författare, Publicera eller Förhandsgranska) i skrivskyddat läge och visar resurser och egenskaper som användaren har tillgång till.
+Databasläsaren öppnas för den valda tjänstnivån (Författare, Publish eller Förhandsgranska) i skrivskyddat läge och visar resurser och egenskaper som användaren har åtkomst till.
 
-## Åtkomst till publicera och förhandsgranska
+## Publish- och Preview-åtkomst
 
-Som standard är åtkomsten till Publicera eller Förhandsgranska begränsad, vilket minskar antalet tillgängliga resurser i Databasläsaren. [Om du vill visa alla resurser för Publicera (eller Förhandsgranska) lägger du till användare i en administratörsroll för Publicera (eller Förhandsgranska).](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+Som standard är åtkomsten till Publish eller Preview begränsad, vilket minskar antalet tillgängliga resurser i Databasläsaren. [Om du vill visa alla resurser på Publish (eller Förhandsgranska) lägger du till användare i en administratörsroll för Publish (eller Förhandsgranska).](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)

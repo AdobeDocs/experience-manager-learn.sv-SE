@@ -1,5 +1,5 @@
 ---
-title: Arkitektur AEM as a Cloud Service
+title: Arkitektur för AEM as a Cloud Service
 description: Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services.
 role: Architect, Developer
 level: Beginner
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# Arkitektur AEM as a Cloud Service
+# Arkitektur för AEM as a Cloud Service
 
 {{edge-delivery-services}}
 

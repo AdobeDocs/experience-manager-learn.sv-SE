@@ -1,6 +1,6 @@
 ---
 title: Verktyget Innehållsöverföring
-description: Lär dig hur du med verktyget Innehållsöverföring effektivt kan flytta innehåll från AEM 6.5 till AEM as a Cloud Service.
+description: Läs om hur du med verktyget Innehållsöverföring effektivt kan flytta innehåll från AEM 6.5 till AEM as a Cloud Service.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Verktyget Innehållsöverföring
 
-Lär dig hur du med verktyget Innehållsöverföring effektivt kan flytta innehåll från AEM 6.5 till AEM as a Cloud Service.
+Läs om hur du med verktyget Innehållsöverföring effektivt kan flytta innehåll från AEM 6.5 till AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336692?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: Implementeringsfaserna i Cloud Acceleration Manager
+title: Implementeringsfaserna för Cloud Acceleration Manager
 description: Granska och förstå de viktigaste implementeringsfaserna eller gå över till AEM as a Cloud Service med Cloud Acceleration Manager.
 version: Cloud Service
 feature: Migration
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Implementeringsfaserna i Cloud Acceleration Manager
+# Implementeringsfaserna för Cloud Acceleration Manager
 
 Granska och förstå de viktigaste implementeringsfaserna eller gå över till AEM as a Cloud Service med Cloud Acceleration Manager.
 

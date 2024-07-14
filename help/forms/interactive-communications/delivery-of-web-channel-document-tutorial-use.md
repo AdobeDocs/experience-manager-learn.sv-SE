@@ -24,7 +24,7 @@ I den här artikeln tittar vi på e-post som en leveransmekanism för dokument i
 
 Låt oss titta på följande kodfragment. Den här koden är en del av GET.jsp som aktiveras när användaren klickar på länken i e-postmeddelandet för att visa webbkanalsdokumentet. Vi får den inloggade användaren med den schackanin UserManager. När vi får den inloggade användaren får vi värdet för egenskapen accountNumber som är associerad med användarens profil.
 
-Sedan associerar vi värdet accountNumber med en nyckel som kallas kontonummer på kartan. Nyckeln **kontonummer** är definierad i formulärdata modal som ett Request Attribute. Värdet för det här attributet skickas som en indataparameter till lästjänstmetoden Form Data Modal.
+Sedan associerar vi värdet accountNumber med en nyckel som kallas kontonummer på kartan. Nyckeln **kontonummer** definieras i formulärdata som ett Request Attribute. Värdet för det här attributet skickas som en indataparameter till lästjänstmetoden Form Data Modal.
 
 Rad 7: Vi skickar den mottagna begäran till en annan server, baserat på den resurstyp som identifieras av URL:en för interaktivt kommunikationsdokument. Svaret som returneras av den här andra servern inkluderas i den första serverns svar.
 
@@ -42,8 +42,8 @@ wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatemen
 
 Visuell representation av rad 7-kod
 
-![Parameterkonfiguration för begäran](assets/requestparameter.png)
+![Begär parameterkonfiguration](assets/requestparameter.png)
 
 Begärandeattribut definierat för lästjänsten för modala formulärdata
 
-[AEM](assets/webchanneldelivery.zip).
+[Exempel AEM paket](assets/webchanneldelivery.zip).

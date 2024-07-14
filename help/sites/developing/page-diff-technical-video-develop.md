@@ -26,7 +26,7 @@ I den här videon visas hur du kan skapa anpassade format för AEM Sites siddiff
 
 >[!NOTE]
 >
->I den här videon läggs anpassad CSS till i webbbiblioteket.Butiksklientbiblioteket, där dessa ändringar ska göras i anpassarens AEM Sites-projekt, i exempelkoden nedan: `my-project`.
+>I den här videon läggs anpassad CSS till i webbbiblioteket. Butiksklientbiblioteket, där dessa ändringar ska göras i anpassarens AEM Sites-projekt, i exempelkoden nedan: `my-project`.
 
 AEM sidskillnad hämtar OTB-CSS via en direkt inläsning av `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
 
@@ -36,7 +36,7 @@ Fördelen med detta är att dessa anpassade åsidosättningar av stilar kan vara
 
 ### Förbered redigeringsklientlib {#prepare-the-authoring-clientlib}
 
-Se till att det finns en `authoring` clientlib for your project at `/apps/my-project/clientlib/authoring.`
+Kontrollera att det finns en `authoring`-klientlib för ditt projekt på `/apps/my-project/clientlib/authoring.`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ Se till att det finns en `authoring` clientlib for your project at `/apps/my-pro
 
 ### Ange anpassad CSS {#provide-the-custom-css}
 
-Lägg till i projektets `authoring` klientlib a `css.txt` som pekar på den mindre fil som ger de åsidosättande formaten. [Mindre](https://lesscss.org/) är att föredra på grund av dess många praktiska funktioner, bland annat klassomslutning, som används i det här exemplet.
+Lägg till `authoring`-klienten i projektets `css.txt` som pekar på den mindre fil som kommer att tillhandahålla de åsidosättande formaten. [Mindre](https://lesscss.org/) rekommenderas eftersom det finns många praktiska funktioner, bland annat klassomslutning som används i det här exemplet.
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-Skapa `less` filen som innehåller formatåsidosättningar i `/apps/my-project/clientlibs/authoring/css/htmldiff.less`och ange önskade format.
+Skapa filen `less` som innehåller formatåsidosättningarna på `/apps/my-project/clientlibs/authoring/css/htmldiff.less` och ange de överliggande formaten efter behov.
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,9 +103,9 @@ body {
 
 ### Inkludera redigeringsklientlib-CSS via sidkomponenten {#include-the-authoring-clientlib-css-via-the-page-component}
 
-Inkludera kategorin för redigeringsklienter i projektets bassida `/apps/my-project/components/structure/page/customheaderlibs.html` direkt före `</head>` för att säkerställa att formaten läses in.
+Inkludera kategorin för redigeringsklienter i projektets bassidas `/apps/my-project/components/structure/page/customheaderlibs.html` direkt före taggen `</head>` för att säkerställa att formaten läses in.
 
-Dessa format bör begränsas till [!UICONTROL Edit] och [!UICONTROL preview] WCM-lägen.
+Dessa format bör begränsas till [!UICONTROL Edit]- och [!UICONTROL preview] WCM-lägen.
 
 ```xml
 <head>
@@ -121,6 +121,6 @@ Slutresultatet av en avvikande d-sida med formaten ovan tillämpade skulle se ut
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Ladda ned exempelwebbplatsen för web.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [Hämta exempelwebbplatsen för web.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [Använda AEM klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [Mindre CSS-dokumentation](https://lesscss.org/)

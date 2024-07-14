@@ -1,6 +1,6 @@
 ---
 title: Anpassade behörigheter för Cloud Manager
-description: Lär dig hur du använder anpassade behörigheter i Cloud Manager i AEM för att strategiskt hantera åtkomsten för olika team och säkerställa effektiv och säker projekthantering och driftsättning.
+description: Lär dig använda Cloud Manager anpassade behörigheter i AEM för att strategiskt hantera åtkomsten för olika team och säkerställa effektiv och säker projekthantering och driftsättning.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Anpassade behörigheter för Cloud Manager
 
-Lär dig använda Cloud Manager [anpassade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html) AEM att strategiskt hantera åtkomsten för olika team och säkerställa effektiv och säker projektledning och driftsättning.
+Lär dig hur du använder Cloud Manager [anpassade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html) i AEM för att hantera åtkomsten för olika team på ett strategiskt sätt, vilket säkerställer effektiv och säker projekthantering och driftsättning.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)

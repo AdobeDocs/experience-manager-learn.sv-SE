@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att lägga till AEM Forms PDFG-användare i Windows Server 2016.
 
-*I den här videon går du igenom de ytterligare stegen för att lägga till AEM Forms PDFG-användare i Windows 2016.*
+*Den här videon går igenom de ytterligare stegen för att lägga till AEM Forms PDFG-användare i Windows 2016.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335479?quality=12&learn=on)

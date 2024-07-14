@@ -19,18 +19,18 @@ ht-degree: 6%
 
 + [Ökning](overview.md)
 
-+ Konfigurerar{#configuring}
++ Konfigurerar {#configuring}
    + [Originalmappar](configuring/baseline-folders.md)
    + [Baslinjebehörigheter](configuring/baseline-permissions.md)
    + [Taggar](configuring/tagging.md)
    + [Metadata-scheman](configuring/metadata-schemas.md)
    + [Metadataprofiler](configuring/metadata-profiles.md)
    + [Mappscheman för metadata](configuring/metadata-folder-schemas.md)
-   + [Resursadministratörssökspår](configuring/assets-admin-search-rail.md)
+   + [Assets administratörssökfält](configuring/assets-admin-search-rail.md)
    + [Bearbetar profiler](configuring/processing-profiles.md)
    + [Starta arbetsflöden automatiskt](configuring/auto-start-workflows.md)
 
-+ Redigering{#authoring}
++ Redigerar{#authoring}
    + [Växla vy](./authoring/switch-views.md)
    + [Navigering](./authoring/navigation.md)
    + [Grundläggande åtgärder](./authoring/basic-operations.md)
@@ -38,7 +38,7 @@ ht-degree: 6%
    + [Återgivningar](./authoring/renditions.md)
    + [Relatera och inte relatera](./authoring/relate-unrelate.md)
 
-+ Samarbete{#collaboration}
++ Collaboration{#collaboration}
    + [Titta](./collaboration/watch.md)
    + [Tidslinje och inkorg](./collaboration/timeline-and-inbox.md)
    + [Kommentarer och anteckningar](./collaboration/comments-and-annotations.md)
@@ -46,7 +46,7 @@ ht-degree: 6%
    + [Versioner](./collaboration/versions.md)
    + [Granska uppgift](./collaboration/review-task.md)
 
-+ Sök och hitta{#search-and-discovery}
++ Sökning och identifiering {#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
    + [Sammanhangsbaserad sökning](./search-and-discovery/contextual-search.md)
    + [Integrering med Adobe Firefly](./search-and-discovery/adobe-firefly.md)
@@ -55,9 +55,9 @@ ht-degree: 6%
    + [Sök efter liknande bilder](./search-and-discovery/find-similar-images.md)
 
 + Avancerade funktioner{#advanced}
-   + [3D-resurser](./advanced/3d-assets.md)
+   + [3D Assets](./advanced/3d-assets.md)
    + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
-   + [Resursrapporter](./advanced/asset-reports.md)
+   + [Assets Reports](./advanced/asset-reports.md)
    + [Blockerade taggar](./advanced/blocked-tags.md)
    + [Extrahera arkiv](./advanced/extract-archive.md)
    + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
@@ -75,9 +75,9 @@ ht-degree: 6%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Delning och distribution{#sharing}
-   + [Hämta resurser](./sharing/download.md)
-   + [Exportera resurser](./sharing/export.md)
-   + [Publicera resurser](./sharing/publish.md)
+   + [Ladda ned Assets](./sharing/download.md)
+   + [Exportera Assets](./sharing/export.md)
+   + [Publish Assets](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
@@ -97,7 +97,7 @@ ht-degree: 6%
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
-+ Adobe Asset Link{#adobe-asset-link}
++ Adobe-resurslänk {#adobe-asset-link}
    + [Inställningar](./adobe-asset-link/setup.md)
    + [Åtkomst till Adobe-resurslänk](./adobe-asset-link/launch-adobe-asset-link.md)
    + [Panelöversikt](./adobe-asset-link/panel-overview.md)
@@ -110,7 +110,7 @@ ht-degree: 6%
    + [Endast för placering (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Resurssökning](./adobe-asset-link/asset-search.md)
 
-+ Automatisering av innehåll{#content-automation}
++ Automatisering av innehåll {#content-automation}
    + [Ökning](./content-automation/overview.md)
    + [Kreativa åtgärder](./content-automation/creative-operations.md)
    + [Photoshop Actions](./content-automation/photoshop-actions.md)
@@ -129,7 +129,7 @@ ht-degree: 6%
       + [DASH adaptive streaming](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
       + [Videospelare](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + Tittare {#viewers}
+   + Visare {#viewers}
       + [Tittare](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panoramabilder och bildvisningsprogram](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [Tittare med Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
@@ -145,18 +145,18 @@ ht-degree: 6%
       + [Skapa bildförinställningar](dynamic-media/tutorials/creating-image-presets.md)
       + [Skapa profiler för smart beskärning](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [Skapa videoprofiler](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [Bearbetar resurser](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [Bearbetar Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [Konfigurera en säker förhandsgranskningsserver](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [Generera URL:er och bädda in koder](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [Starta ett exportjobb](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
       + [CDN-cachen är ogiltig](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Använda Dynamic Media Core Components](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [Hämta resurser i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Ladda ned Assets i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
-+ Workfront Integration{#workfront}
-   + Förbättrad anslutning{#enhanced-connector}
++ Workfront-integrering{#workfront}
+   + Utökad koppling {#enhanced-connector}
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
       + AEM Experts Series{#aem-experts-series}
@@ -167,7 +167,7 @@ ht-degree: 6%
          + [Avancerade inställningar och arbetsflöden](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + Översättning {#translation}
-   + [Översättning av källfil](translation/source-file-translation-feature-video-use.md)
+   + [Source File Translation](translation/source-file-translation-feature-video-use.md)
    + [Smart översättning-sökning](translation/smart-translation-search-feature-video-use.md)
    + [Konfigurera smart översättningssökning](translation/smart-translation-search-technical-video-setup.md)
 

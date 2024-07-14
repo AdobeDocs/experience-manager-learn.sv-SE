@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka problem med PDFG-konvertering för flera användare i en Windows-installation
 
-*I den här videon beskrivs processen att felsöka problem med PDFG-konvertering för flera användare i en Windows-installation.*
+*Den här videon beskriver processen att felsöka problem med PDFG-konvertering för flera användare i en Windows-installation.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335550?quality=12&learn=on)

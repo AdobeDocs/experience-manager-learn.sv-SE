@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Konfigurera trafikfilterregler inklusive WAF-regler
 
-Läs **konfigurera** trafikfilterregler, inklusive WAF-regler. Läs om hur du skapar, distribuerar, testar och analyserar resultat.
+Lär dig **hur du konfigurerar** trafikfilterregler, inklusive WAF-regler. Läs om hur du skapar, distribuerar, testar och analyserar resultat.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425407?quality=12&learn=on)
 
@@ -29,20 +29,20 @@ Läs **konfigurera** trafikfilterregler, inklusive WAF-regler. Läs om hur du sk
 
 Installationsprocessen omfattar följande:
 
-- _skapa regler_ med en lämplig AEM projektstruktur och konfigurationsfil.
-- _distribuera regler_ med Adobe Cloud Managers konfigurationsflöde.
-- _testregler_ med olika verktyg för att generera trafik.
-- _analysera resultaten_ med hjälp av AEMCS CDN-loggar och instrumentpanelsverktyg.
+- _skapar regler_ med en lämplig AEM projektstruktur och konfigurationsfil.
+- _distribuerar regler_ med konfigurationsflödet Adobe Cloud Manager.
+- _testar regler_ med olika verktyg för att generera trafik.
+- _analyserar resultaten_ med hjälp av AEMCS CDN-loggar och instrumentpanelsverktyg.
 
 ### Skapa regler i ditt AEM projekt
 
 Så här skapar du regler:
 
-1. Skapa en mapp på den översta nivån i AEM `config`.
+1. Skapa en mapp `config` på den översta nivån i AEM.
 
-1. I `config` mapp, skapa en ny fil med namnet `cdn.yaml`.
+1. Skapa en ny fil med namnet `cdn.yaml` i mappen `config`.
 
-1. Lägg till följande metadata i `cdn.yaml` fil:
+1. Lägg till följande metadata i filen `cdn.yaml`:
 
 ```yaml
 kind: CDN
@@ -57,7 +57,7 @@ data:
     rules:
 ```
 
-Se ett exempel på `cdn.yaml` i AEM Guides WKND Sites Project:
+Se ett exempel på filen `cdn.yaml` i AEM Guides WKND Sites Project:
 
 ![WKND AEM projektregelfil och -mapp](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
@@ -65,43 +65,43 @@ Se ett exempel på `cdn.yaml` i AEM Guides WKND Sites Project:
 
 Så här distribuerar du reglerna:
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till _Pipelines_ från _Programöversikt_ och klickar på **+Lägg till** och välj önskad pipeline-typ.
+1. Navigera till kortet _Pipelines_ på sidan _Programöversikt_ och klicka på knappen **+Lägg till** och välj önskad pipelinetyp.
 
-   ![Molnhanteringskort för pipeline](./assets/cloud-manager-pipelines-card.png)
+   ![Cloud Manager Pipelines-kort](./assets/cloud-manager-pipelines-card.png)
 
-   I exemplet ovan, för demonstrationssyften _Lägg till icke-produktionsförlopp_ har valts eftersom en dev-miljö används.
+   I exemplet ovan har _Lägg till icke-produktionsförlopp_ valts för demoändamål eftersom en utvecklingsmiljö används.
 
-1. I _Lägg till icke-produktionsförlopp_ väljer du och anger följande information:
+1. Välj och ange följande information i dialogrutan _Lägg till icke-produktionspipeline_:
 
    1. Konfigurationssteg:
 
       - **Typ**: Distributionsförlopp
       - **Pipelinenamn**: Dev-Config
 
-      ![Dialogrutan Cloud Manager Config Pipeline](./assets/cloud-manager-config-pipeline-step1-dialog.png)
+      ![Dialogrutan Cloud Manager Config Pipeline ](./assets/cloud-manager-config-pipeline-step1-dialog.png)
 
-   2. Källkodsteg:
+   2. Source Code step:
 
-      - **Kod att distribuera**: Målinriktad distribution
-      - **Inkludera**: Konfig
-      - **Distributionsmiljö**: Namnet på miljön, till exempel wknd-program-dev.
+      - **Kod för distribution**: Måldistribution
+      - **Inkludera**: Konfiguration
+      - **Distributionsmiljö**: Miljöns namn, till exempel wk-program-dev.
       - **Databas**: Git-databasen varifrån pipelinen ska hämta koden, till exempel `wknd-site`
-      - **Git-gren**: Namnet på Git-databasgrenen.
-      - **Kodplats**: `/config`motsvarar den konfigurationsmapp på den översta nivån som skapades i föregående steg.
+      - **Git-grenen**: Namnet på Git-databasgrenen.
+      - **Kodplats**: `/config`, som motsvarar den konfigurationsmapp på den översta nivån som skapades i föregående steg.
 
-      ![Dialogrutan Cloud Manager Config Pipeline](./assets/cloud-manager-config-pipeline-step2-dialog.png)
+      ![Dialogrutan Cloud Manager Config Pipeline ](./assets/cloud-manager-config-pipeline-step2-dialog.png)
 
 ### Testa regler genom att generera trafik
 
 För att testa regler finns det olika tredjepartsverktyg att tillgå, och din organisation kan ha ett verktyg som du föredrar. För demosyftet använder vi följande verktyg:
 
-- [Rullning](https://curl.se/) för grundläggande tester, som att anropa en URL och kontrollera svarskoden.
+- [Rullande](https://curl.se/) för grundläggande testning, som att anropa en URL och kontrollera svarskoden.
 
-- [Vegeta](https://github.com/tsenart/vegeta) för att utföra denial of service (DOS). Följ installationsanvisningarna på [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta) för att utföra denial of service-attacker (DOS). Följ installationsanvisningarna från [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
 
-- [Nikto](https://github.com/sullo/nikto/wiki) för att hitta potentiella problem och säkerhetsluckor som XSS, SQL injection med mera. Följ installationsanvisningarna från [Nikto GitHub](https://github.com/sullo/nikto).
+- [Nikto](https://github.com/sullo/nikto/wiki) om du vill hitta potentiella problem och säkerhetsluckor som XSS, SQL-injektion med mera. Följ installationsanvisningarna från [Nikto GitHub](https://github.com/sullo/nikto).
 
 - Kontrollera att verktygen är installerade och tillgängliga i terminalen genom att köra kommandona nedan:
 
@@ -119,15 +119,15 @@ För att testa regler finns det olika tredjepartsverktyg att tillgå, och din or
 
 ### Analysera resultaten med kontrollpanelsverktygen
 
-När du har skapat, distribuerat och testat reglerna kan du analysera resultaten med **CDN** loggar **AEMCS-CDN-Log-Analysis-Tooling**. Verktyget innehåller en uppsättning instrumentpaneler för att visualisera resultatet för Splunk- och ELK-stacken (Elasticsearch, Logstash och Kibana).
+När du har skapat, distribuerat och testat reglerna kan du analysera resultaten med hjälp av **CDN**-loggar och **AEMCS-CDN-Log-Analysis-Tooling**. Verktyget innehåller en uppsättning instrumentpaneler för att visualisera resultatet för Splunk- och ELK-stacken (Elasticsearch, Logstash och Kibana).
 
-Verktyget kan klonas från [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-databas. Följ sedan instruktionerna för att installera och läsa in **Kontrollpanel för CDN-trafik** och **WAF-instrumentpanel** instrumentpaneler för det observerbarhetsverktyg du föredrar.
+Verktyget kan klonas från GitHub-databasen [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Följ sedan instruktionerna för att installera och läsa in kontrollpanelerna **CDN Traffic Dashboard** och **WAF Dashboard** för det observerbarhetsverktyg du föredrar.
 
-I den här självstudiekursen använder vi ELK-stacken. Följ [ELK Docker container for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) instruktioner för att ställa in ELK-stacken.
+I den här självstudiekursen använder vi ELK-stacken. Följ instruktionerna för [ELK Docker-behållaren för AEMCS CDN-logganalys](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) för att konfigurera ELK-stacken.
 
 - När du har läst in exempelinstrumentpanelen bör sidan med verktyget Elastic Dashboard se ut så här:
 
-  ![Kontrollpanel för regler för ELK-trafikfilter](./assets/elk-dashboard.png)
+  ![Kontrollpanel för ELK-trafikfilterregler](./assets/elk-dashboard.png)
 
 >[!NOTE]
 >
@@ -136,4 +136,4 @@ I den här självstudiekursen använder vi ELK-stacken. Följ [ELK Docker contai
 
 ## Nästa steg
 
-Lär dig hur du deklarerar trafikfilterregler inklusive WAF-regler i [Exempel och resultatanalys](./examples-and-analysis.md) -kapitel med hjälp av AEM WKND Sites Project.
+Lär dig hur du deklarerar trafikfilterregler inklusive WAF-regler i kapitlet [Exempel och resultatanalys](./examples-and-analysis.md) med hjälp av AEM WKND Sites Project.

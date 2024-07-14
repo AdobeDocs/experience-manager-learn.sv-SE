@@ -28,6 +28,6 @@ I den andra videon som handlar om innehållsmigrering diskuterar James och Darin
 + utvärdering av de instanser du vill migrera
    + BPA - analysverktyg för bästa praxis
    + CAM - molnaccelerationshanteraren
-+ [repostatus](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
++ [repostats](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 + [Migreringsverktyg för Cloud Service](https://github.com/adobe/aem-cloud-service-source-migration)

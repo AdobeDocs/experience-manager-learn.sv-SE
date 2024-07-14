@@ -24,4 +24,4 @@ I den här videon visas hur du skapar en formulärdatamodell baserad på en JDBC
 
 >[!NOTE]
 >
->Alla RDBMS-datakällor kan användas så länge som de nödvändiga databasdrivrutinerna distribueras till AEM som ett OSGi-paket. Konfigurera en RDBMS-datakälla i AEM beskrivs i [Konfigurera dataintegrering med AEM Forms](/help/forms/adaptive-forms/data-integration-technical-video-setup.md).
+>Alla RDBMS-datakällor kan användas så länge som de nödvändiga databasdrivrutinerna distribueras till AEM som ett OSGi-paket. Konfigurationen av en RDBMS-datakälla i AEM beskrivs i [Konfigurera dataintegrering med AEM Forms](/help/forms/adaptive-forms/data-integration-technical-video-setup.md).

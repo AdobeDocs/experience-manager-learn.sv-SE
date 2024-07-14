@@ -28,19 +28,19 @@ Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett T
 
 ## Inläsningsregel för sida
 
-Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show` . I videon `tags Library Loaded` regeln anropas med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
+Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show`. I videon anropas regeln `tags Library Loaded` med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
 ![Händelsekonfiguration som visas på sidan och anpassad kod](assets/load-and-fire-target-call.png)
 
-Lägg till en ny i taggegenskapen **Händelse** till **Regel**
+Lägg till en ny **Event** i **Rule** i taggegenskapen
 
 + __Tillägg:__ Core
-+ __Typ av händelse:__ Egen kod
-+ __Namn:__ Visa sidhändelsehanterare (eller något beskrivande)
++ __Händelsetyp:__ Anpassad kod
++ __Namn:__ Händelsehanterare för sidvisning (eller något beskrivande)
 
-Tryck på __Öppna redigeraren__ och klistra in i följande kodfragment. Den här koden __måste__ läggs till i __Händelsekonfiguration__ och en efterföljande __Åtgärd__.
+Tryck på knappen __Öppna redigeraren__ och klistra in följande kodfragment. Koden __måste__ läggas till i __händelsekonfigurationen__ och en efterföljande __åtgärd__.
 
 ```javascript
 // Define the event handler function
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-En anpassad funktion definierar `pageShownEventHandler`, och lyssnar efter händelser som skickas av AEM Core Components, hämtar den relevanta informationen från Core Component, paketerar den i ett händelseobjekt och aktiverar taggen Event med den härledda händelseinformationen vid dess nyttolast.
+En anpassad funktion definierar `pageShownEventHandler` och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser taggen Event med den härledda händelseinformationen vid dess nyttolast.
 
-Taggregeln aktiveras med hjälp av taggarna `trigger(...)` funktion som __endast__ som är tillgängliga från en Regels egen kodfragmentsdefinition för händelsen.
+Taggregeln aktiveras med hjälp av taggarnas `trigger(...)`-funktion, som __endast__ är tillgänglig inifrån händelsekodfragmentsdefinitionen för en regel.
 
-The `trigger(...)` funktionen tar ett händelseobjekt som en parameter som i sin tur visas i taggar som dataelement, med ett annat reserverat namn i taggar som heter `event`. Dataelement i taggar kan nu referera till data från det här händelseobjektet från `event` objekt med syntax som `event.component['someKey']`.
+Funktionen `trigger(...)` tar ett händelseobjekt som en parameter som i sin tur visas i taggar som dataelement, med ett annat reserverat namn i taggar som heter `event`. Dataelement i taggar kan nu referera till data från det här händelseobjektet från objektet `event` med syntax som `event.component['someKey']`.
 
-If `trigger(...)` används utanför kontexten för händelsetypen Custom Code (t.ex. i en Action), JavaScript-felet `trigger is undefined` genereras på den webbplats som är integrerad med taggegenskapen.
+Om `trigger(...)` används utanför kontexten för händelsetypen Custom Code (till exempel i en åtgärd) genereras JavaScript-felet `trigger is undefined` på den webbplats som är integrerad med taggegenskapen.
 
 
 ### Dataelement
 
 ![Dataelement](assets/data-elements.png)
 
-Taggar dataelement mappar data från händelseobjektet [utlöses i den anpassade händelsen Visa sida](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Custom Code Data Element Type.
+Taggar dataelement mappar data från händelseobjektet [som utlöses i den anpassade sidvisningshändelsen](#page-event) till variabler som är tillgängliga i Adobe Target, via Core-tilläggets Elementtyp för anpassade koddata.
 
 #### Dataelement för sid-ID
 
@@ -129,7 +129,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 
 Den här koden returnerar AEM sidtitel.
 
-![Sidrubrik](assets/pagetitle.png)
+![Sidtitel](assets/pagetitle.png)
 
 ## Felsökning
 
@@ -137,7 +137,7 @@ Den här koden returnerar AEM sidtitel.
 
 #### Felmeddelande när mboxDisable cookie inte är inställd
 
-![Fel på Cookie-måldomän](assets/target-cookie-error.png)
+![Målcookie-domänfel](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
@@ -146,7 +146,7 @@ Den här koden returnerar AEM sidtitel.
 #### Lösning
 
 Målgrupper använder ibland molnbaserade instanser med Target för testning eller för enkla konceptbevis. Dessa domäner, och många andra, ingår i Public Suffix-listan .
-I moderna webbläsare sparas inte cookies om du använder dessa domäner om du inte anpassar `cookieDomain` ställa in med `targetGlobalSettings()`.
+Moderna webbläsare sparar inte cookies om du använder dessa domäner om du inte anpassar inställningen `cookieDomain` med `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
@@ -160,7 +160,7 @@ window.targetGlobalSettings = {
 
 ## Stödlänkar
 
-+ [Dokumentation för Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe-datalagerdokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-+ [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

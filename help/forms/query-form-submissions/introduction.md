@@ -33,9 +33,9 @@ Om du vill följa den här självstudiekursen rekommenderar vi att du har tillg�
 
 
 
-Om du är utvecklare och vill veta mer om koden och andra detaljer för implementeringen av det här användningsfallet importerar du det här [AEM i VSCode eller IntelliJ.](assets/azuredemoproject.zip)
+Om du är utvecklare och vill förstå koden och annan information om implementeringen av det här användningsfallet importerar du det här [AEM-projektet i VSCode eller IntelliJ.](assets/azuredemoproject.zip)
 
-Om du bara vill att det här exemplet ska fungera i ditt lokala system följer du de steg som anges [del 5 i den här självstudiekursen](./part5.md)
+Om du bara vill att det här exemplet ska fungera i ditt lokala system följer du de steg som anges i [del 5 av den här självstudiekursen](./part5.md)
 
 Följande steg har gjorts för att skapa lösningen
 

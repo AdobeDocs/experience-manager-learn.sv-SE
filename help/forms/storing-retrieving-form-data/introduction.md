@@ -25,7 +25,7 @@ I den här självstudiekursen får du hjälp med att spara och hämta anpassade 
 
 * Ring en POST till en servett. Den här servern lagrar data i databasen. De lagrade data är associerade med ett GUID
 
-* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med hjälp av **request.setAttribute** -metod.
+* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med metoden **request.setAttribute**.
 
 ## Demonstration av användningsfallet
 

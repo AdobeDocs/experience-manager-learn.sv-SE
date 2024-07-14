@@ -1,6 +1,6 @@
 ---
 title: AEM Champion Tips and Tricks - Cloud Manager UI
-description: Läs de här tipsen om hur du använder användargränssnittet i Cloud Manager från AEM och experten Rakesh Pasupuleti.
+description: Här hittar du tips om hur du använder Cloud Manager användargränssnitt från AEM mästare och expert, Rakesh Pasupuleti.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # AEM Champion Tips and Tricks - Cloud Manager UI
 
-Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är Adobe Experience Manager-mästare och förklarar hur man navigerar i och förstår användargränssnittet i Cloud Manager.
+Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh är Adobe Experience Manager-mästare och förklarar hur man navigerar och förstår Cloud Manager användargränssnitt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419298?quality=12&learn=on)
 

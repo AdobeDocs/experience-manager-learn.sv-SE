@@ -39,7 +39,7 @@ I den här delen ska vi lägga till cirkeldiagram för att visa den aktuella och
 
 * Observera datamodellobjektet som är bundet till X- och Y-axlarna. Du måste markera rotelementet i formulärdatamodellen och sedan gå ned på detaljnivå för att välja rätt element.
 
-* ![currentassetmix](assets/currentassetmixchart.png)
+* ![currentassemix](assets/currentassetmixchart.png)
 
 ## Modellresursblandning {#model-asset-mix}
 

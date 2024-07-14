@@ -20,7 +20,7 @@ ht-degree: 0%
 Du kan distribuera exempelresurserna för att få lösningen att fungera på din lokala AEM Forms-instans
 
 * [Importera klientbiblioteket och den anpassade komponenten för att överföra PDF-formuläret via Package Manager](./assets/client-libs-custom-component.zip)
-* Hämta och distribuera paketet med OSGi-webbkonsolen[Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Hämta och distribuera paketet med OSGi-webbkonsolen [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Hämta och distribuera paketet med OSGi-webbkonsolen[importera data från pdf-fil](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)
-* Lägg till posten _**DevelopingWithServiceUser.core:getResourceSolver=data**_ i _**Användarmappningstjänsten för Apache Sling-tjänsten**_ OSGi-konfigurationskonsol
+* Hämta och distribuera paketet med OSGi-webbkonsolen[Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Hämta och distribuera paketet med OSGi-webbkonsolen [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Hämta och distribuera paketet med OSGi-webbkonsolen[importera data från PDF-filen](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)
+* Lägg till posten _**DevelopingWithServiceUser.core:getresouresolver=data**_ i _**Användarmappningstjänsten för Apache Sling-tjänsten**_ OSGi-konfigurationskonsolen

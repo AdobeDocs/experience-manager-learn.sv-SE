@@ -25,7 +25,7 @@ I videon förklaras de olika stegen som krävs för att konfigurera ett adaptivt
 
 >[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
 
-Resurser relaterade till den här videon kan hämtas via följande länk
+Assets för den här videon kan hämtas via följande länk
 
 * [Ändring av bidragsmottagande formulär](assets/change-of-beneficiary-form.zip)
 

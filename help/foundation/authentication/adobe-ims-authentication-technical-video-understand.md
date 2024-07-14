@@ -26,7 +26,7 @@ Adobe Experience Manager introducerar stöd för Admin Console för AEM och Adob
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Stöd för Adobe Experience Manager IMS-autentisering är endast avsett för&quot;interna&quot; användare (författare, granskare, administratörer, utvecklare och så vidare) och inte för externa slutanvändare, som besökare på webbplatser.
-* [Admin Console](https://adminconsole.adobe.com/) representerar AEM Managed Services-kunder som IMS-organisationer och de AEM instanserna som produktkontexter. Admin Console system- och produktadministratörer kan definiera och hantera.
+* [Admin Console](https://adminconsole.adobe.com/) representerar AEM Managed Services-kunder som IMS-organisationer och AEM som produktkontexter. Admin Console system- och produktadministratörer kan definiera och hantera.
 * AEM Managed Services synkronisera din topologi med Admin Console och skapa en 1:1-mappning mellan en produktkontext och AEM.
 * Produktprofilen i Admin Console avgör vilka AEM som en användare kan komma åt.
 * Autentiseringsstödet innefattar kundens SAML2-kompatibla IDP för enkel inloggning.
@@ -44,4 +44,4 @@ I Admin Console bör användare ges åtkomst via användargrupper på produktkon
 
 ### Tillämpa behörigheter i Adobe Experience Manager
 
-I Adobe Experience Manager bör användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html), som är förkonfigurerad med lämplig behörighet för att köra specifika uppsättningar uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+I Adobe Experience Manager ska användargrupper som synkroniseras från Adobe IMS läggas till i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html), som är förkonfigurerade med rätt behörighet för att köra vissa uppgifter i AEM. Användare som synkroniseras från Adobe IMS ska inte läggas till direkt i [AEM användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).

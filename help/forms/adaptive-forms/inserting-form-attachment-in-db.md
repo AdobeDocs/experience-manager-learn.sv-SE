@@ -26,7 +26,7 @@ För att uppnå detta har följande steg utförts:
 
 ## Skapa databastabell för formulärdata och bilagor
 
-En tabell som anropades när den skapades för att innehålla formulärdata. Lägg märke till kolumnnamnsbilden av typen **LONGBLOB** för att lagra den bifogade filen
+En tabell som anropades när den skapades för att innehålla formulärdata. Lägg märke till kolumnnamnsbilden av typen **LONGBLOB** för att lagra den bifogade formulärfilen
 ![table-schema](assets/insert-picture-table.png)
 
 ## Skapa formulärdatamodell
@@ -34,11 +34,11 @@ En tabell som anropades när den skapades för att innehålla formulärdata. Lä
 En formulärdatamodell skapades för att kommunicera med MySQL-databasen. Du måste skapa följande
 
 * [JDBC-datakälla i AEM](./data-integration-technical-video-setup.md)
-* [Formulärdatamodell som bygger på JDBC-datakällan](./jdbc-data-model-technical-video-use.md)
+* [Formulärdatamodell baserad på JDBC-datakällan](./jdbc-data-model-technical-video-use.md)
 
 ## Skapa arbetsflöde
 
-Om du konfigurerar ditt adaptiva formulär så att det skickas till ett AEM arbetsflöde kan du välja att spara formulärbilagorna i en arbetsflödesvariabel eller spara de bifogade filerna i en angiven mapp under nyttolasten. I det här fallet måste vi spara de bifogade filerna i en arbetsflödesvariabel av typen ArrayList of Document. Från denna ArrayList måste vi extrahera det första objektet och initiera en dokumentvariabel. Arbetsflödesvariablerna anropas **listOfDocuments** och **employeePhoto** skapades.
+Om du konfigurerar ditt adaptiva formulär så att det skickas till ett AEM arbetsflöde kan du välja att spara formulärbilagorna i en arbetsflödesvariabel eller spara de bifogade filerna i en angiven mapp under nyttolasten. I det här fallet måste vi spara de bifogade filerna i en arbetsflödesvariabel av typen ArrayList of Document. Från denna ArrayList måste vi extrahera det första objektet och initiera en dokumentvariabel. Arbetsflödesvariablerna **listOfDocuments** och **employeePhoto** skapades.
 När det adaptiva formuläret skickas för att utlösa arbetsflödet initierar ett steg i arbetsflödet variabeln employeePhoto med ECMA-skriptet. Följande är ECMA-skriptkoden
 
 ```javascript
@@ -56,7 +56,7 @@ log.info("Employee Photo updated");
 
 Nästa steg i arbetsflödet är att infoga data och den bifogade formuläret i tabellen med hjälp av tjänstkomponenten Anropa formulärdatamodell.
 ![insert-pic](assets/fdm-insert-pic.png)
-[Hela arbetsflödet med exempelskriptet för eMap kan laddas ned härifrån](assets/add-new-employee.zip).
+[Det fullständiga arbetsflödet med exempelskriptet för eCHA kan hämtas här](assets/add-new-employee.zip).
 
 >[!NOTE]
 > Du måste skapa en ny JDBC-baserad formulärdatamodell och använda den formulärdatamodellen i arbetsflödet

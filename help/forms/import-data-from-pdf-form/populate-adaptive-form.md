@@ -58,8 +58,8 @@ function handleFiles(formData) {
 }
 ```
 
-Servern är monterad på **_/bin/ExtractDataFromPDF_** extraherar data från filen PDF och returnerar sökvägen till crx-noden där extraherade data lagras.
-The [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) -metoden används sedan för att ange data i det adaptiva formuläret.
+Servern som är monterad på **_/bin/ExtractDataFromPDF_** extraherar data från filen PDF och returnerar sökvägen till crx-noden där extraherade data lagras.
+Metoden [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) används sedan för att ange data i det adaptiva formuläret.
 
 ## Nästa steg
 

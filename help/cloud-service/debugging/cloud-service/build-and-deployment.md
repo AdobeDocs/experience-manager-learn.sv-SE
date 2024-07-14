@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# Felsökning AEM as a Cloud Service byggteknik och distributioner
+# Felsöka AEM as a Cloud Service byggen och driftsättningar
 
 Adobe Cloud Manager underlättar kodbygget och distributionen till AEM as a Cloud Service. Fel kan uppstå under steg i byggprocessen, vilket kräver åtgärder för att åtgärda dem. Den här guiden går igenom hur man förstår vanliga fel i distributionen och hur man bäst hanterar dem.
 
@@ -26,55 +26,55 @@ Adobe Cloud Manager underlättar kodbygget och distributionen till AEM as a Clou
 
 ## Validering
 
-Valideringssteget säkerställer helt enkelt att de grundläggande konfigurationerna för Cloud Manager är giltiga. Vanliga valideringsfel:
+Valideringssteget säkerställer helt enkelt att grundläggande Cloud Manager-konfigurationer är giltiga. Vanliga valideringsfel:
 
 ### Miljön är i ett ogiltigt tillstånd
 
 + __Felmeddelande:__ Miljön är i ett ogiltigt tillstånd.
   ![Miljön är i ett ogiltigt tillstånd](./assets/build-and-deployment/validation__invalid-state.png)
-+ __Orsak:__ Rörledningens målmiljö är i ett övergångstillstånd då den inte kan ta emot nya byggen.
-+ __Upplösning:__ Vänta tills tillståndet har lösts till ett tillstånd som körs (eller som är tillgängligt för uppdatering). Om miljön tas bort kan du återskapa miljön eller välja en annan miljö att bygga på.
++ __Orsak:__ Pipelinens målmiljö är i ett övergångstillstånd där den inte kan ta emot nya byggen.
++ __Upplösning:__ Vänta på att tillståndet ska matchas till ett tillstånd som körs (eller som kan uppdateras). Om miljön tas bort kan du återskapa miljön eller välja en annan miljö att bygga på.
 
 ### Miljön som är associerad med pipelinen kan inte hittas
 
 + __Felmeddelande:__ Miljön har markerats som borttagen.
   ![Miljön har markerats som borttagen](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
-+ __Orsak:__ Miljön som pipeline är konfigurerad att använda har tagits bort.
++ __Orsak:__ Miljön som pipelinen är konfigurerad att använda har tagits bort.
 Även om en ny miljö med samma namn återskapas kommer Cloud Manager inte automatiskt att koppla pipelinen till den miljö med samma namn.
-+ __Upplösning:__ Redigera pipelinekonfigurationen och välj sedan den miljö som du vill distribuera till igen.
++ __Upplösning:__ Redigera pipelinekonfigurationen och välj den miljö som ska distribueras på nytt.
 
 ### Git-grenen som är associerad med pipelinen kan inte hittas
 
 + __Felmeddelande:__ Ogiltig pipeline: XXXXXX. Orsak=Förgrening=xxxx hittades inte i databasen.
   ![Ogiltig pipeline: XXXXXX. Orsak=Förgrening=xxxx hittades inte i databasen](./assets/build-and-deployment/validation__branch-not-found.png)
-+ __Orsak:__ Git-grenen som pipeline är konfigurerad att använda har tagits bort.
-+ __Upplösning:__ Återskapa den saknade Git-grenen med exakt samma namn eller konfigurera om pipelinen så att den byggs från en annan befintlig gren.
++ __Orsak:__ Git-grenen som pipelinen är konfigurerad att använda har tagits bort.
++ __Upplösning:__ Återskapa den saknade Git-grenen med exakt samma namn, eller konfigurera om pipelinen så att den byggs från en annan befintlig gren.
 
 ## Build &amp; Unit Testing
 
 ![Bygg- och enhetstestning](./assets/build-and-deployment/build-and-unit-testing.png)
 
-Scenen Build and Unit Testing utför en Maven-byggnad (`mvn clean package`) av projektet som har checkats ut från pipelinens konfigurerade Git-gren.
+Fasen Build and Unit Testing utför en Maven-bygge (`mvn clean package`) av projektet som är utcheckad från pipelinens konfigurerade Git-gren.
 
 Fel som upptäcks i den här fasen bör kunna reproduceras lokalt, med följande undantag:
 
-+ Ett maven-beroende är inte tillgängligt på [Maven Central](https://search.maven.org/) används och Maven-databasen som innehåller beroendet är antingen:
-   + Det går inte att nå från Cloud Manager, till exempel en privat intern Maven-databas, eller så kräver Maven-databasen autentisering och felaktiga autentiseringsuppgifter har angetts.
-   + Inte uttryckligen registrerad i projektets `pom.xml`. Observera att Maven-databaser inte bör inkluderas eftersom byggtiden ökar.
++ Ett maven-beroende som inte är tillgängligt för [Maven Central](https://search.maven.org/) används och Maven-databasen som innehåller beroendet är antingen:
+   + Det går inte att nå från Cloud Manager, t.ex. en privat intern Maven-databas, eller Maven-databasen kräver autentisering och de felaktiga inloggningsuppgifterna har angetts.
+   + Inte explicit registrerad i projektets `pom.xml`. Observera att Maven-databaser inte bör inkluderas eftersom byggtiden ökar.
 + Enhetstester misslyckas på grund av timingproblem. Detta kan inträffa när enhetstester är tidskänsliga. En stark indikator förlitar sig på `.sleep(..)` i testkoden.
 + Användning av Maven-plugin-program som inte stöds.
 
 ## Kodskanning
 
-![Kodskanning](./assets/build-and-deployment/code-scanning.png)
+![Kodsökning](./assets/build-and-deployment/code-scanning.png)
 
 Kodskanning utför statisk kodanalys med en blandning av Java och AEM bästa praxis.
 
-Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen är ofullständig och kan resultera i [falsk positiv](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
+Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen inte är perfekt och kan resultera i [falskt positiva ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
 
-Lös problem med kodskanning genom att hämta den CSV-formaterade rapporten från Cloud Manager via **Ladda ned information** och granska alla bidrag.
+Lös problem med kodskanning genom att hämta den CSV-formaterade rapporten från Cloud Manager via knappen **Hämta information** och granska eventuella poster.
 
-Mer information finns AEM särskilda regler i Dokumentation för Cloud Manager. [anpassade AEM-specifika regler för kodskanning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+Mer information finns AEM särskilda regler i Cloud Manager-dokumentations [anpassade AEM-specifika regler för kodskanning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
 
 ## Skapa bilder
 
@@ -96,44 +96,44 @@ set the 'mergeConfigurations' flag to 'true' if you want to merge multiple confi
 
 #### Orsak 1
 
-+ __Orsak:__ Det AEM projektets hela paket innehåller flera kodpaket och samma OSGi-konfiguration tillhandahålls av fler än ett av kodpaketen, vilket resulterar i en konflikt, vilket resulterar i att steget Build Image inte kan avgöra vilket som ska användas, vilket gör att bygget misslyckas. Observera att detta inte gäller OSGi-fabrikskonfigurationer, så länge de har unika namn.
-+ __Upplösning:__ Granska alla kodpaket (inklusive eventuella inkluderade kodpaket från tredje part) som distribueras som en del av AEM program, och leta efter duplicerade OSGi-konfigurationer som via runmode kan matchas mot målmiljön. Felmeddelandets vägledning om&quot;set the mergeConfigurations flag to true&quot; är inte möjlig i AEM som en molntjänst och bör ignoreras.
++ __Orsak:__ Det AEM hela paketet innehåller flera kodpaket och samma OSGi-konfiguration tillhandahålls av fler än ett av kodpaketen, vilket resulterar i en konflikt, vilket resulterar i att steget Skapa bild inte kan avgöra vilken som ska användas, vilket gör att bygget misslyckas. Observera att detta inte gäller OSGi-fabrikskonfigurationer, så länge de har unika namn.
++ __Upplösning:__ Granska alla kodpaket (inklusive eventuella inkluderade kodpaket från tredje part) som distribueras som en del av det AEM programmet, och leta efter duplicerade OSGi-konfigurationer som via körläge matchar målmiljön. Felmeddelandets vägledning om&quot;set the mergeConfigurations flag to true&quot; är inte möjlig i AEM som en molntjänst och bör ignoreras.
 
 #### Orsak 2
 
 + __Orsak:__ Det AEM projektet innehåller felaktigt samma kodpaket två gånger, vilket resulterar i duplicering av alla OSGi-konfigurationer som ingår i det paketet.
-+ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har `filevault-package-maven-plugin` [konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) ange till `<cloudManagerTarget>none</cloudManagerTarget>`.
++ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har `filevault-package-maven-plugin` [configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) inställd på `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 ### Felformaterat ompekningsskript
 
-Repoinit-skript definierar baslinjeinnehåll, användare, åtkomstkontrollistor osv. I AEM as a Cloud Service tillämpas repoinit-skript under Build Image, men på AEM SDK:s lokala snabbstart tillämpas de när OSGi-repoinit-fabrikskonfigurationen aktiveras. På grund av detta kan Repoinit-skript i tysthet misslyckas (med loggning) på AEM SDK:s lokala snabbstart, men orsakar fel i steget Skapa bild och avbryter distributionen.
+Repoinit-skript definierar baslinjeinnehåll, användare, åtkomstkontrollistor osv. I AEM as a Cloud Service tillämpas repoinit-skript under Build Image (Byggbild), men på AEM SDK:s lokala snabbstart används de när OSGi-referenspunktens fabrikskonfiguration aktiveras. På grund av detta kan Repoinit-skript i tysthet misslyckas (med loggning) på AEM SDK:s lokala snabbstart, men orsakar fel i steget Skapa bild och avbryter distributionen.
 
 + __Orsak:__ Ett ompekningsskript har fel format. Detta kan lämna databasen i ett ofullständigt tillstånd eftersom eventuella repoinit-skript efter att det misslyckade skriptet inte körs mot databasen.
-+ __Upplösning:__ Granska AEM SDK:s lokala snabbstart när ompekningsskriptet OSGi-konfigurationen distribueras för att avgöra om och vilka fel som finns.
++ __Upplösning:__ Granska AEM SDK:s lokala snabbstart när ompekningsskriptets OSGi-konfiguration distribueras för att avgöra om och vilka fel som finns.
 
 ### Otillfredsställd återpeka innehållsberoende
 
 Repoinit-skript definierar baslinjeinnehåll, användare, åtkomstkontrollistor osv. I AEM SDK:s lokala snabbstart används repoinit-skript när repoden OSGi-fabrikskonfigurationen aktiveras, med andra ord efter att databasen är aktiv och kan ha fått innehållsändringar direkt eller via innehållspaket. I AEM as a Cloud Service tillämpas repoinit-skript under Build Image (Skapa bild) mot en databas som kanske inte innehåller innehåll som poinit-skriptet är beroende av.
 
-+ __Orsak:__ Ett poinit-skript är beroende av innehåll som inte finns.
++ __Orsak:__ Ett ompekningsskript är beroende av innehåll som inte finns.
 + __Upplösning:__ Kontrollera att innehållet som pekskriptet är beroende av finns. Detta visar ofta på ett otillräckligt definierat repoinitskript som saknar direktiv som definierar de saknade, men nödvändiga, innehållsstrukturerna. Detta kan reproduceras lokalt genom att ta bort AEM, packa upp JAR-filen och lägga till den OSGi-konfiguration för repoinit som innehåller repoinit-skriptet i installationsmappen och starta AEM. Felet kommer att finnas i den lokala snabbstartsloggen AEM SDK.
 
 
 ### Programmets Core Components-version är större än den distribuerade versionen
 
-_Problemet gäller endast icke-produktionsmiljöer som INTE automatiskt uppdaterar till den senaste AEM._
+_Det här problemet påverkar endast icke-produktionsmiljöer som INTE automatiskt uppdaterar till den senaste AEM._
 
-AEM as a Cloud Service innehåller automatiskt den senaste Core Components-versionen i varje AEM, vilket innebär att när en AEM as a Cloud Service miljö har uppdaterats automatiskt eller manuellt har den senaste versionen av Core Components distribuerats till den.
+AEM as a Cloud Service inkluderar automatiskt den senaste versionen av Core Components i varje AEM, vilket innebär att när en AEM as a Cloud Service-miljö uppdateras automatiskt eller manuellt har den senaste versionen av Core Components distribuerats till den.
 
 Går att genomföra om steget Skapa bild inte fungerar när:
 
-+ Distributionsprogrammet uppdaterar Core Components maven-beroendeversionen i `core` (OSGi bundle)
-+ Distribueringsprogrammet distribueras sedan till en sandlåda (icke-produktion) AEM as a Cloud Service miljö som inte har uppdaterats för att använda en AEM som innehåller den nya Core Components-versionen.
++ Distributionsprogrammet uppdaterar Core Components maven-beroendeversionen i `core`-projektet (OSGi bundle)
++ Distribueringsprogrammet distribueras sedan till en sandlådemiljö (icke-produktionsmiljö) i AEM as a Cloud Service som inte har uppdaterats för att använda en AEM som innehåller den nya Core Components-versionen.
 
-För att förhindra det här felet ska du, när en uppdatering av den AEM as a Cloud Service miljön är tillgänglig, inkludera uppdateringen som en del av nästa build/deploy och alltid se till att uppdateringarna inkluderas efter att Core Components-versionen har ökats i programkodsbasen.
+För att förhindra detta fel ska du, när en uppdatering av AEM as a Cloud Service-miljön är tillgänglig, inkludera uppdateringen som en del av nästa build/deploy och alltid se till att uppdateringarna inkluderas efter att Core Components-versionen har ökats i programkodbasen.
 
-+ __Symtom:__
-Steget Skapa bild misslyckas med en FELrapportering som `com.adobe.cq.wcm.core.components...` paket i specifika versionsintervall kunde inte importeras av `core` projekt.
++ __Symtomen:__
+Steget Skapa bild misslyckas med en FELrapportering om att `com.adobe.cq.wcm.core.components...` -paket i specifika versionsintervall inte kan importeras av `core` -projektet.
 
   ```
   [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
@@ -143,72 +143,72 @@ Steget Skapa bild misslyckas med en FELrapportering som `com.adobe.cq.wcm.core.c
   [INFO] ------------------------------------------------------------------------
   ```
 
-+ __Orsak:__  Programmets OSGi-paket (definieras i `core` projekt) importerar Java-klasser från Core Components Core-beroenden, på en annan versionsnivå än vad som distribueras till AEM as a Cloud Service.
++ __Orsak:__ Programmets OSGi-paket (som definieras i `core` -projektet) importerar Java-klasser från kärnberoendet för kärnkomponenter, på en annan versionsnivå än den som distribueras till AEM as a Cloud Service.
 + __Upplösning:__
-   + Använd Git för att återgå till en fungerande implementering som finns före den inkrementella versionen av Core Component. Överför implementeringen till en Cloud Manager Git-gren och utför en uppdatering av miljön från den här grenen. Detta uppgraderar AEM as a Cloud Service till den senaste AEM versionen, som kommer att innehålla den senare Core Components-versionen. När den AEM as a Cloud Service har uppdaterats till den senaste AEM versionen, som har den senaste Core Components-versionen, distribuerar du den kod som misslyckades.
-   + För att återskapa problemet lokalt måste du se till att AEM SDK-versionen är samma version AEM den version som används i den AEM as a Cloud Service miljön.
+   + Använd Git för att återgå till en fungerande implementering som finns före den inkrementella versionen av Core Component. Överför implementeringen till en Cloud Manager Git-gren och utför en miljöuppdatering från den här grenen. Detta kommer att uppgradera AEM as a Cloud Service till den senaste AEM-versionen, som kommer att innehålla den senare Core Components-versionen. När AEM as a Cloud Service har uppdaterats till den senaste AEM-versionen, som har den senaste Core Components-versionen, distribuerar du den kod som misslyckades.
+   + För att återskapa problemet lokalt måste du se till att AEM SDK-versionen är samma version AEM AEM as a Cloud Service-miljön använder.
 
 
 ### Skapa ett supportärende för Adobe
 
 Om ovanstående felsökningsmetoder inte löser problemet kan du skapa ett supportärende för Adobe via:
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) > fliken Support > Create Case
++ [Adobe Admin Console](https://adminconsole.adobe.com) > fliken Support > Skapa ärende
 
   _Om du är medlem i flera Adobe-organisationer måste du se till att den Adobe-organisation som har misslyckad pipeline är markerad i Adobe Orgs-väljaren innan du skapar ärendet._
 
 ## Distribuera till
 
-Steget Distribuera till ansvarar för att ta kodartefakten som genereras i Build Image, startar nya AEM Author- och Publish-tjänster som använder den och när det är klart tar bort alla gamla AEM Author- och Publish-tjänster. Även paket och index med ändringsbart innehåll installeras och uppdateras i det här steget.
+Steget Distribuera till ansvarar för att ta kodartefakten som genererats i Build Image, startar nya AEM Author- och Publish-tjänster som använder den och tar sedan bort alla gamla AEM Author- och Publish-tjänster när åtgärden är klar. Även paket och index med ändringsbart innehåll installeras och uppdateras i det här steget.
 
-Bekanta dig med [AEM as a Cloud Service loggar](./logs.md) innan du felsöker steget Distribuera till. The `aemerror` loggen innehåller information om start och avstängning av poster som kan vara relevanta för distribuering av problem. Observera att loggen som är tillgänglig via knappen Hämta logg i steget Distribuera till i Cloud Manager inte är `aemerror` loggar och innehåller ingen detaljerad information som gäller när programmen startas.
+Bekanta dig med [AEM as a Cloud Service-loggar](./logs.md) innan du felsöker Distribuera till steg. Loggen `aemerror` innehåller information om start och avstängning av poder som kan vara relevant för distribution av utgåvor. Observera att loggen som är tillgänglig via knappen Hämtningslogg i steget Cloud Manager Deploy to inte är loggen `aemerror` och inte innehåller detaljerad information om hur du startar program.
 
 ![Distribuera till](./assets/build-and-deployment/deploy-to.png)
 
 De tre främsta anledningarna till varför Distribuera till steg kan misslyckas:
 
-### Molnhanterarens pipeline innehåller en gammal AEM
+### Cloud Manager pipeline innehåller en gammal AEM
 
 + __Orsak:__ En Cloud Manager-pipeline innehåller en äldre version av AEM än vad som distribueras till målmiljön. Detta kan inträffa när en pipeline återanvänds och pekas på en ny miljö som kör en senare version av AEM. Detta kan identifieras genom att kontrollera om miljöns AEM är större än pipelinens AEM version.
-  ![Molnhanterarens pipeline innehåller en gammal AEM](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
+  ![Cloud Manager-pipeline innehåller en gammal AEM ](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
 + __Upplösning:__
    + Om målmiljön har en tillgänglig uppdatering väljer du Uppdatera från miljöns åtgärder och kör sedan bygget igen.
    + Om målmiljön inte har en tillgänglig uppdatering innebär det att den kör den senaste versionen av AEM. Lös detta genom att ta bort pipelinen och återskapa den.
 
 
-### Molnhanteraren gör timeout
+### Cloud Manager timeout
 
-Kod som körs under starten av den nyligen distribuerade AEM tar så lång tid att Cloud Manager körs innan distributionen kan slutföras. I dessa fall kan distributionen eventuellt lyckas, även om Cloud Manager-statusen rapporterades som Misslyckad.
+Kod som körs under starten av den nyligen distribuerade AEM tar så lång tid att Cloud Manager timeout inträffar innan distributionen är klar. I dessa fall kan distributionen eventuellt lyckas, även om Cloud Manager-status rapporterades som Misslyckad.
 
-+ __Orsak:__ Anpassad kod kan köra åtgärder, som stora frågor eller innehållsgenomgångar, som aktiveras tidigt i OSGi-paketet eller komponentlivscykler som avsevärt försenar starttiden för AEM.
-+ __Upplösning:__ Granska implementeringen av kod som körs tidigt i OSGi Bundles livscykel och granska `aemerror` loggar för AEM författar- och publiceringstjänster vid tidpunkten för felet (loggtid i GMT) enligt Cloud Manager, och söker efter loggmeddelanden som indikerar anpassade loggprocesser som körs.
++ __Orsak:__ Anpassad kod kan köra åtgärder, till exempel stora frågor eller innehållsgenomgångar, som aktiveras tidigt i OSGi-paketet eller komponentlivscykler, vilket avsevärt försenar starttiden för AEM.
++ __Upplösning:__ Granska implementeringen av kod som körs tidigt i OSGi Bundles livscykel och granska `aemerror` loggarna för AEM Author och Publish services vid tidpunkten för felet (loggtid i GMT) enligt Cloud Manager, och sök efter loggmeddelanden som indikerar eventuella egna loggprocesser som körs.
 
 ### Inkompatibel kod eller konfiguration
 
 De flesta kod- och konfigurationsfel fångas upp tidigare i bygget, men det är möjligt att anpassad kod eller konfiguration inte är kompatibel med AEM as a Cloud Service och inte upptäcks förrän den körs i behållaren.
 
-+ __Orsak:__ Anpassad kod kan anropa långa operationer, till exempel stora frågor eller innehållsgenomgångar, som aktiveras tidigt i OSGi-paketet eller komponentens livscykler som avsevärt försenar starttiden för AEM.
-+ __Upplösning:__ Granska `aemerror` loggar för AEM författare- och publiceringstjänster runt tiden (loggtid i GMT) för felet, vilket visas i molnhanteraren.
++ __Orsak:__ Anpassad kod kan anropa långsamma åtgärder, som stora frågor eller innehållsgenomgångar, som aktiveras tidigt i OSGi-paketet eller komponentlivscykler, vilket avsevärt försenar starttiden för AEM.
++ __Upplösning:__ Granska `aemerror` loggarna för AEM författare och Publish-tjänster vid tidpunkten (loggtid i GMT) för felet enligt Cloud Manager.
    1. Granska loggarna efter eventuella FEL som genererats av Java-klasserna i det anpassade programmet. Lös eventuella problem, tryck på den fasta koden och bygg om pipeline.
    1. Granska loggarna för eventuella FEL som rapporterats av AEM som du utökar/interagerar med i ditt anpassade program och ta reda på dessa. Dessa FEL kan eventuellt inte direkt tillskrivas Java-klasser. Lös eventuella problem, tryck på den fasta koden och bygg om pipeline.
 
 ### Inkludera /var i innehållspaketet
 
-`/var` kan ändras och innehåller ett antal olika typer av transient runtime-innehåll. Inklusive `/var` i ett innehållspaket (ex. `ui.content`) som distribueras via Cloud Manager kan få distributionen att misslyckas.
+`/var` kan inte ändras och innehåller en mängd övergående körningsinnehåll. Inkluderar `/var` i innehållspaket (t.ex. `ui.content`) som distribueras via Cloud Manager kan göra att distributionen misslyckas.
 
 Det här problemet är svårt att identifiera eftersom det inte leder till ett fel i den initiala distributionen, bara i efterföljande distributioner. Exempel på märkbara symtom är:
 
-+ Den initiala distributionen lyckas, oavsett om nytt eller ändrat muterbart innehåll, som är en del av distributionen, verkar inte finnas i AEM Publiceringstjänst.
++ Den initiala distributionen lyckas, oavsett hur nytt eller ändrat innehåll som kan ändras, som är en del av distributionen, verkar inte finnas på AEM Publish-tjänst.
 + Aktivering/inaktivering av innehåll i AEM författare är blockerad
 + Efterföljande distributioner misslyckas i steget Distribuera till, med felet Distribuera till efter cirka 60 minuter.
 
 Så här validerar du problemet:
 
-1. Kontrollera att minst ett innehållspaket som är en del av distributionen skriver till `/var`.
+1. Kontrollerar att minst ett innehållspaket som ingår i distributionen skriver till `/var`.
 1. Kontrollera att den primära (fetstilta) distributionskön är blockerad på:
    + AEM Author > Tools > Deployment > Distribution
-     ![Blockerad distributionskö](./assets/build-and-deployment/deploy-to__var--distribution.png)
-1. Om efterföljande distribution misslyckas hämtar du loggarna för distribution av Cloud Manager med knappen Hämtningslogg:
+     ![Spärrad distributionskö](./assets/build-and-deployment/deploy-to__var--distribution.png)
+1. Om efterföljande distribution misslyckas hämtar du Cloud Manager Distribuera till-loggar med knappen Hämtningslogg:
 
    ![Hämta distribution till loggar](./assets/build-and-deployment/deploy-to__var--download-logs.png)
 
@@ -226,17 +226,17 @@ Så här validerar du problemet:
 
    Observera att loggen inte innehåller dessa indikatorer för de initiala distributionerna som rapporterar att de lyckades, och endast för efterföljande misslyckade distributioner.
 
-+ __Orsak:__ AEM som används för att distribuera innehållspaket till AEM publiceringstjänst kan inte skriva till `/var` på AEM Publish. Detta leder till att distributionen av innehållspaketet till AEM publiceringstjänst misslyckas.
-+ __Upplösning:__ Följande sätt att lösa problemet visas i prioritetsordning:
-   1. Om `/var` resurser behöver inte tas bort `/var` från innehållspaket som distribueras som en del av ditt program.
-   2. Om `/var` resurser är nödvändiga, definiera nodstrukturerna med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas till AEM författare, AEM publicering eller båda, via OSGi-runmodes.
-   3. Om `/var` resurser krävs bara för AEM författare och kan inte modelleras med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit), flytta dem till ett separat innehållspaket som bara installeras på AEM författare av [bädda in](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) den i `all` paket i en AEM Author-runmode-mapp (`<target>/apps/example-packages/content/install.author</target>`).
-   4. Ange lämpliga åtkomstkontrollistor för `sling-distribution-importer` tjänstanvändare enligt beskrivningen i detta [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
++ __Orsak:__ AEM replikeringstjänstanvändare som används för att distribuera innehållspaket till den AEM Publish-tjänsten kan inte skriva till `/var` på AEM Publish. Detta leder till att distributionen av innehållspaketet till AEM Publish-tjänsten misslyckas.
++ __Lösning:__ Följande sätt att lösa problemet visas i prioritetsordning:
+   1. Om resurserna för `/var` inte behövs tar du bort resurser under `/var` från innehållspaket som distribueras som en del av programmet.
+   2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas till AEM författare, AEM Publish eller båda, via OSGi-runmodes.
+   3. Om `/var`-resurserna bara krävs för AEM författare och inte kan modelleras med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) kan du flytta dem till ett diskret innehållspaket, som bara installeras på AEM författare genom [inbäddning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) i paketet `all` i en AEM författarkörningsmapp (`<target>/apps/example-packages/content/install.author</target>`).
+   4. Ange lämpliga åtkomstkontrollistor till tjänstanvändaren `sling-distribution-importer` enligt beskrivningen i denna [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
 
 ### Skapa ett supportärende för Adobe
 
 Om ovanstående felsökningsmetoder inte löser problemet kan du skapa ett supportärende för Adobe via:
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) > fliken Support > Create Case
++ [Adobe Admin Console](https://adminconsole.adobe.com) > fliken Support > Skapa ärende
 
   _Om du är medlem i flera Adobe-organisationer måste du se till att den Adobe-organisation som har misslyckad pipeline är markerad i Adobe Orgs-väljaren innan du skapar ärendet._

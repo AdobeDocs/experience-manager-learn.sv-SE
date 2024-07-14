@@ -1,5 +1,5 @@
 ---
-title: Kapitel 3 - Avancerade ämnen i Dispatcher-cache
+title: Kapitel 3 - Avancerade ämnen i Dispatcher-cachning
 description: Detta är del 3 i en tredelsserie som cachelagras i AEM. Där de två första delarna fokuserade på vanlig http-cachning i Dispatcher och vilka begränsningar det finns. Här diskuteras några idéer om hur man övervinner dessa begränsningar.
 feature: Dispatcher
 topic: Architecture
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Kapitel 3 - Avancerade cachelagringsämnen
 
-*&quot;Det finns bara två svåra saker inom datavetenskap: cache-lagring av ogiltigförklaring och namngivning.&quot;*
+*&quot;Det finns bara två svåra saker i datavetenskap: cacheogiltigförklaring och namngivning.&quot;*
 
 - PHIL KARLTON
 
@@ -27,13 +27,13 @@ Detta är del 3 av en tredelad serie som cachelagras i AEM. Där de två första
 
 ## Cachelagring i allmänhet
 
-[Kapitel 1](chapter-1.md) och [Kapitel 2](chapter-2.md) i den här serien fokuserade huvudsakligen på Dispatcher. Vi har förklarat grunderna, begränsningarna och var ni behöver göra vissa kompromisser.
+[Kapitel 1](chapter-1.md) och [Kapitel 2](chapter-2.md) i den här serien är huvudsakligen inriktade på Dispatcher. Vi har förklarat grunderna, begränsningarna och var ni behöver göra vissa kompromisser.
 
-Cachelagringens komplexitet och krånglighet är inte unika för Dispatcher. Cachelagring är i allmänhet svår.
+Cachelagringen av komplexitet och krånglighet är inte något problem som är unikt för Dispatcher. Cachelagring är i allmänhet svår.
 
-Att ha Dispatcher som enda verktyg i verktygslådan skulle egentligen vara en riktig begränsning.
+Att ha Dispatcher som det enda verktyget i verktygslådan är faktiskt en verklig begränsning.
 
-I det här kapitlet vill vi bredda vår syn på cachelagring ytterligare och utveckla några idéer om hur du kan övervinna några av Dispatcher:s brister. Det finns ingen silverkula - du måste göra affärer i ditt projekt. Kom ihåg att när det gäller cachning och invalideringskvalitet kommer alltid komplex, och med komplexitet kommer risken för fel.
+I det här kapitlet vill vi bredda vår syn på cachelagring ytterligare och utveckla några idéer om hur du kan övervinna några av Dispatcher brister. Det finns ingen silverkula - du måste göra affärer i ditt projekt. Kom ihåg att när det gäller cachning och invalideringskvalitet kommer alltid komplex, och med komplexitet kommer risken för fel.
 
 Du måste göra kompromisser inom dessa områden,
 
@@ -52,9 +52,9 @@ De här dimensionerna är sammanlänkade i ett relativt komplext system. Det fin
 
 När du levererar en sida från en server till en kunds webbläsare går det över en mängd olika system och undersystem. Om du tittar noga kan det finnas ett antal humledata som behöver tas från källan till dräneringen, som var och en är en potentiell kandidat för cachelagring.
 
-![Dataflöde i ett typiskt CMS-program](assets/chapter-3/data-flow-typical-cms-app.png)
+![Dataflöde för ett typiskt CMS-program](assets/chapter-3/data-flow-typical-cms-app.png)
 
-*Dataflöde i ett typiskt CMS-program*
+*Dataflöde för ett typiskt CMS-program*
 
 <br> 
 
@@ -66,7 +66,7 @@ För det första har själva hårddisken viss inbyggd cache i maskinvaran. För 
 
 #### Innehållsdatabas
 
-Nästa nivå är CRX eller Oak - dokumentdatabasen som används av AEM. CRX och Oak delar in data i segment som kan cachas i minnet, och för att undvika långsammare åtkomst till hårddisken.
+Nästa nivå är CRX eller Oak - dokumentdatabasen som används av AEM. CRX och Oak delar in data i segment som kan cachas i minnet och undviker att åtkomsten till hårddisken blir långsammare.
 
 #### Tredjepartsdata
 
@@ -74,7 +74,7 @@ De flesta större webbinstallationer har även data från tredje part; data frå
 
 #### Business Layer - App/Model
 
-Vanligtvis återges inte Raw-innehåll som kommer från CRX via JCR API i mallskript. Det troligaste är att du har ett affärslager däremellan som sammanfogar, beräknar och/eller omformar data i ett affärsdomänsobjekt. Gissa vad - om de här åtgärderna är dyra bör du överväga att cachelagra dem.
+Vanligtvis återges inte Raw-innehåll som kommer från CRX via JCR-API:t av mallskript. Det troligaste är att du har ett affärslager däremellan som sammanfogar, beräknar och/eller omformar data i ett affärsdomänsobjekt. Gissa vad - om de här åtgärderna är dyra bör du överväga att cachelagra dem.
 
 #### Markeringsfragment
 
@@ -82,7 +82,7 @@ Modellen är nu basen för återgivningen av koden för en komponent. Varför in
 
 #### Dispatcher, CDN och andra proxy
 
-Av går den återgivna HTML-sidan till Dispatcher. Vi har redan diskuterat att huvudsyftet med Dispatcher är att cachelagra HTML sidor och andra webbresurser (trots dess namn). Innan resurserna når webbläsaren kan en omvänd proxy skickas - som kan cachelagras och ett CDN - som också används för cachelagring. Klienten kan sitta på ett kontor som endast ger webbåtkomst via en proxy - och den proxyn kan bestämma sig för att cache-lagra och spara trafik.
+Av går den renderade HTML-sidan till Dispatcher. Vi har redan diskuterat att huvudsyftet med Dispatcher är att cacha HTML sidor och andra webbresurser (trots dess namn). Innan resurserna når webbläsaren kan en omvänd proxy skickas - som kan cachelagras och ett CDN - som också används för cachelagring. Klienten kan sitta på ett kontor som endast ger webbåtkomst via en proxy - och den proxyn kan bestämma sig för att cache-lagra och spara trafik.
 
 #### Webbläsarcache
 
@@ -96,19 +96,19 @@ Men var i den kedjan är det vettigt att cachelagra över huvud taget? I början
 
 För att ge dig en ungefärlig uppfattning om vilka faktorer du kan tänka dig,
 
-**Dags att leva** - Om objekt har en kort inbyggd livstid (trafikdata kan ha kortare livstid än väderdata) är det inte säkert att det är värt cachning.
+**Dags att leva** - Om objekt har en kort inbyggd livstid (trafikdata kan ha kortare livstid än väderdata) kanske det inte är värt att cachelagra.
 
-**Produktionskostnad -** Hur dyr (i termer av processorcykler och I/O) är återproduktion och leverans av ett objekt. Om det är billig cachelagring kanske inte behövs.
+**Produktionskostnad -** Hur dyrt (i termer av processorcykler och I/O) är återproduktion och leverans av ett objekt. Om det är billig cachelagring kanske inte behövs.
 
 **Storlek** - Stora objekt kräver fler resurser för att cachelagras. Detta kan vara en begränsande faktor och måste vägas mot nyttan.
 
 **Åtkomstfrekvens** - Om objekt används sällan kanske cachelagring inte fungerar. De blir helt enkelt inaktuella eller ogiltigförklarade innan de får åtkomst till andra gången från cachen. Sådana objekt skulle bara blockera minnesresurser.
 
-**Delad åtkomst** - Data som används av mer än en enhet bör cachas ytterligare uppåt i kedjan. Egentligen är cachelagringskedjan inte en kedja, utan ett träd. En datadel i databasen kan användas av mer än en modell. Dessa modeller kan i sin tur användas av mer än ett återgivningsskript för att generera fragment i HTML. Dessa fragment finns på flera sidor som distribueras till flera användare med sina privata cacheminnen i webbläsaren. &quot;Delning&quot; innebär alltså inte att man bara delar mellan människor, utan snarare mellan programdelar. Om du vill hitta ett eventuellt delat cacheminne kan du bara spola tillbaka trädet till roten och hitta ett vanligt överordnat objekt - det är där du bör cache-lagra.
+**Delad åtkomst** - Data som används av mer än en entitet ska cachelagras ytterligare i kedjan. Egentligen är cachelagringskedjan inte en kedja, utan ett träd. En datadel i databasen kan användas av mer än en modell. Dessa modeller kan i sin tur användas av mer än ett återgivningsskript för att generera fragment i HTML. Dessa fragment finns på flera sidor som distribueras till flera användare med sina privata cacheminnen i webbläsaren. &quot;Delning&quot; innebär alltså inte att man bara delar mellan människor, utan snarare mellan programdelar. Om du vill hitta ett eventuellt delat cacheminne kan du bara spola tillbaka trädet till roten och hitta ett vanligt överordnat objekt - det är där du bör cache-lagra.
 
-**Geospatial distribution** - Om dina användare distribueras över hela världen kan det hjälpa till att minska latensen om du använder ett distribuerat nätverk av cacher.
+**Geospatial distribution** - Om dina användare distribueras över hela världen kan fördröjningen minskas om du använder ett distribuerat nätverk av cacher.
 
-**Nätverksbandbredd och fördröjning** - På tal om latens, vilka är era kunder och vilket slags nätverk använder de? Kunderna kanske är mobilkunder i ett underutvecklat land som använder 3G-uppkoppling från äldre smarttelefoner? Du kan skapa mindre objekt och cachelagra dem i webbläsarens cacheminne.
+**Nätverksbandbredd och fördröjning** - På tal om latens, vilka är dina kunder och vilken typ av nätverk använder de? Kunderna kanske är mobilkunder i ett underutvecklat land som använder 3G-uppkoppling från äldre smarttelefoner? Du kan skapa mindre objekt och cachelagra dem i webbläsarens cacheminne.
 
 Den här listan är inte heltäckande, men vi tror att du har fått idén vid det här laget.
 
@@ -118,15 +118,15 @@ Igen - cachelagring är svår. Låt oss dela några grundregler som vi har extra
 
 #### Undvik dubbel cachelagring
 
-Var och en av lagren som introducerades i det sista kapitlet innehåller ett visst värde i cachelagringskedjan. Antingen genom att spara datorcykler eller genom att föra data närmare konsumenten. Det är inte fel att cachelagra data i flera steg i kedjan - men du bör alltid tänka på vilka fördelar och kostnader nästa steg innebär. Att cachelagra en hel sida i publiceringssystemet ger vanligtvis ingen fördel, eftersom detta redan har gjorts i Dispatcher.
+Var och en av lagren som introducerades i det sista kapitlet innehåller ett visst värde i cachelagringskedjan. Antingen genom att spara datorcykler eller genom att föra data närmare konsumenten. Det är inte fel att cachelagra data i flera steg i kedjan - men du bör alltid tänka på vilka fördelar och kostnader nästa steg innebär. Att cachelagra en hel sida i Publish-systemet ger vanligtvis ingen fördel, vilket redan är fallet i Dispatcher.
 
 #### Blanda invalideringsstrategier
 
 Det finns tre grundläggande strategier för ogiltigförklaring:
 
-* **TTL, time to live:** Ett objekt förfaller efter en fast tidsperiod (t.ex. &quot;2 timmar från nu&quot;)
-* **Förfallodatum:** Objektet förfaller vid en definierad tidpunkt i framtiden (t.ex.&quot;10 juni 2019 kl. 17:00)
-* **Händelsebaserad:** Objektet ogiltigförklaras uttryckligen av en händelse som inträffade på plattformen (t.ex. när en sida ändras och aktiveras)
+* **TTL, Live-tid:** Ett objekt förfaller efter en fast tidsperiod (t.ex. &quot;2 timmar från nu&quot;)
+* **Förfallodatum:** Objektet förfaller vid en definierad tidpunkt i framtiden (t.ex. &quot;10 juni 2019 kl. 5:00)
+* **Händelsebaserad:** Objektet ogiltigförklaras uttryckligen av en händelse som inträffar på plattformen (t.ex. när en sida ändras och aktiveras)
 
 Nu kan du använda olika strategier på olika cachelager, men det finns några &quot;giftiga&quot; lager.
 
@@ -144,7 +144,7 @@ Kort och gott: cacherna blir ogiltiga en i taget efter att objektet har ändrats
 
 Du behöver bara tänka på en regel:
 
-Gör alltid cacheminnet ogiltigt från insidan till utsidan. Om du först ogiltigförklarade ett yttre cacheminne kan det cachelagra om inaktuellt innehåll från ett internt. Gör inga antaganden vid vilken tidpunkt ett cacheminne är nytt - kontrollera det. Bäst, genom att aktivera ogiltigförklaringen av den yttre cachen _efter_ gör den inre ogiltig.
+Gör alltid cacheminnet ogiltigt från insidan till utsidan. Om du först ogiltigförklarade ett yttre cacheminne kan det cachelagra om inaktuellt innehåll från ett internt. Gör inga antaganden vid vilken tidpunkt ett cacheminne är nytt - kontrollera det. Bäst, genom att aktivera ogiltigförklaringen av den yttre cachen _när_ har gjort den inre ogiltig.
 
 Det är teorin. Men i praktiken finns det ett antal gotchas. Händelserna måste distribueras - eventuellt via ett nätverk. I praktiken är detta det svåraste sättet att införa invalideringssystemet.
 
@@ -164,7 +164,7 @@ Det är också ett mycket vanligt system. Du staplar flera lager med cacheminnen
 
 Det är lätt att implementera. Tyvärr är det svårt att förutsäga den effektiva livslängden för en datadel.
 
-![Yttre kontur som förlänger ett inre objekts livspanel](assets/chapter-3/outer-cache.png)
+![Yttre kontur som förlänger ett inre objekts livscykel ](assets/chapter-3/outer-cache.png)
 
 *Yttre cache som förlänger ett inre objekts livslängd*
 
@@ -174,7 +174,7 @@ Titta på bilden ovan. Varje cachningslager har en TTL på 2 min. Den totala TTL
 
 Vi säger inte att det är ett dåligt system. Du borde bara veta dess begränsningar. Och det är en trevlig och enkel strategi att börja med. Det är bara om trafiken på din webbplats ökar som du kan tänka dig en mer korrekt strategi.
 
-*Synkronisera invalideringstid genom att ange ett specifikt datum*
+*Synkroniserar invalideringstid genom att ange ett specifikt datum*
 
 #### Förfallodatumbaserad invalidering
 
@@ -198,15 +198,15 @@ Alla cacheminnen kan dock inte sprida datumen. Och det kan bli otrevligt när de
 
 Ett vanligt schema i AEM är också att använda händelsebaserad ogiltigförklaring vid de inre cacheminnen (t.ex. cacheminnen där händelser kan bearbetas i nära realtid) och TTL-baserade cacheminnen utanför - där du kanske inte har tillgång till explicit ogiltigförklaring.
 
-I AEM skulle du ha ett cache-minne för affärsobjekt och HTML-fragment i publiceringssystemen, som ogiltigförklaras när de underliggande resurserna ändras och du sprider den här ändringshändelsen till dispatchern som också arbetar händelsebaserat. Därför måste du till exempel ha ett TTL-baserat CDN.
+I AEM skulle du ha ett cache-minne för affärsobjekt och fragment i HTML i Publish-systemen, som ogiltigförklaras när de underliggande resurserna ändras och du sprider den här ändringshändelsen till dispatchern som också arbetar händelsebaserat. Därför måste du till exempel ha ett TTL-baserat CDN.
 
-Om du har ett lager (kort) TTL-baserad cachelagring framför en Dispatcher kan du på ett effektivt sätt mjuka upp en tagg som vanligtvis inträffar efter en automatisk ogiltigförklaring.
+Om du har ett lager (kort) TTL-baserad cachelagring framför en Dispatcher kan du effektivt mjuka upp en tagg som vanligtvis inträffar efter en automatisk ogiltigförklaring.
 
 #### Blandning av TTL - och händelsebaserad invalidering
 
-![Blandning av TTL - och händelsebaserad invalidering](assets/chapter-3/toxic.png)
+![Blandar TTL - och händelsebaserad invalidering](assets/chapter-3/toxic.png)
 
-*Toxic: Mixing TTL - och händelsebaserad invalidering*
+*Toxic: Blandar TTL - och händelsebaserad invalidering*
 
 <br> 
 
@@ -226,7 +226,7 @@ Du kan ansluta till scenen i återgivningsprocessen för att lägga till cachela
 
 #### Respect Access Control
 
-De tekniker som beskrivs här är mycket kraftfulla och _måste-ha_ i varje AEM verktygslåda. Men bli inte för ivrig, använd dem klokt. Genom att lagra ett objekt i ett cacheminne och dela det med andra användare i uppföljningsbegäranden innebär det i själva verket att åtkomstkontrollen kringgås. Det är vanligtvis inte något problem på offentliga webbplatser, men det kan vara det när en användare måste logga in innan han eller hon kan få åtkomst.
+Teknikerna som beskrivs här är mycket kraftfulla och _måste-ha_ i varje AEM verktygslåda. Men bli inte för ivrig, använd dem klokt. Genom att lagra ett objekt i ett cacheminne och dela det med andra användare i uppföljningsbegäranden innebär det i själva verket att åtkomstkontrollen kringgås. Det är vanligtvis inte något problem på offentliga webbplatser, men det kan vara det när en användare måste logga in innan han eller hon kan få åtkomst.
 
 Tänk på att du lagrar HTML-koden för en webbplats på huvudmenyn i ett cacheminne för att dela den mellan olika sidor. Det är faktiskt ett perfekt exempel på hur man lagrar delvis återgivna HTML som att skapa en navigering är ofta dyrt eftersom det kräver att man går igenom många sidor.
 
@@ -262,14 +262,14 @@ Den här serien handlar om att förstå koncept och ge dig möjlighet att skapa 
 
 Vi marknadsför inte något särskilt verktyg. Men ge er tips om hur ni kan utvärdera dem. AEM har till exempel en enkel inbyggd cache med en fast TTL sedan version 6.0. Ska du använda den? Troligen inte vid publicering där en händelsebaserad cache följer i kedjan (tips: Dispatcher). Men det kan vara ett bra val för en författare. Det finns också ett HTTP-cacheminne av Adobe ACS-kommandon som kan vara värt att överväga.
 
-Eller så bygger du upp en egen lösning baserat på ett moget cachelagringsramverk som [Ehcache](https://www.ehcache.org). Detta kan användas för att cachelagra Java-objekt och återgivna markeringar (`String` objekt).
+Eller så skapar du en egen, baserad på ett moget cachelagringsramverk som [Ehcache](https://www.ehcache.org). Detta kan användas för att cachelagra Java-objekt och återgivna markeringar (`String` objekt).
 
 I vissa enkla fall kanske du också är med på att använda samtidiga hash-kartor - här ser du snabbt gränser - antingen i verktyget eller i dina kunskaper. Samtidighet är lika svårt att hantera som namngivning och cachelagring.
 
 #### Referenser
 
-* [http-cache för ACS-kommandon](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
-* [Ehcache-cachelagringsramverk](https://www.ehcache.org)
+* [ACS-kommandon http-cache](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+* [Cache-cachelagringsramverket](https://www.ehcache.org)
 
 ### Grundläggande villkor
 
@@ -277,7 +277,7 @@ Vi kommer inte att gå in i cachelagringsteorin för djupt här, men vi känner 
 
 #### Cacheavlägsnande
 
-Vi pratade mycket om invalidering och rening. _Cacheavlägsnande_ är relaterat till dessa termer: Efter en post är den inte längre tillgänglig. Men vradering sker inte när en post är inaktuell, utan när cachen är full. Nyare eller&quot;viktigare&quot; objekt flyttar äldre eller mindre viktiga objekt ut ur cachen. De tävlingsbidrag du måste offra är ett beslut från fall till fall. Du kanske vill avlägsna de äldsta eller de som har använts mycket sällan eller sist.
+Vi pratade mycket om invalidering och rening. _Cacheavlägsnandet_ är relaterat till dessa termer: Efter en post som avlägsnas är den inte längre tillgänglig. Men vradering sker inte när en post är inaktuell, utan när cachen är full. Nyare eller&quot;viktigare&quot; objekt flyttar äldre eller mindre viktiga objekt ut ur cachen. De tävlingsbidrag du måste offra är ett beslut från fall till fall. Du kanske vill avlägsna de äldsta eller de som har använts mycket sällan eller sist.
 
 #### Preemptive caching
 
@@ -287,7 +287,7 @@ Preemptive Caching betyder att posten återskapas med nytt innehåll i det ögon
 
 Cacheuppvärmningen är nära förknippad med förebyggande cachning. Men du skulle inte använda den termen för ett livesystem. Och det är mindre tidsbegränsat än det första. Du cachelagrar inte omedelbart efter ogiltigförklaring, men du fyller så småningom i cacheminnet när tiden är inne.
 
-Du kan till exempel ta ut ett Publicera-/Dispatcher-ben från belastningsutjämnaren för att uppdatera det. Innan du integrerar om den crawlar du automatiskt de mest använda sidorna så att de kommer in i cachen igen. När cacheminnet är &quot;varmt&quot; - tillräckligt fyllt integrerar du benet på nytt i belastningsutjämnaren.
+Du kan till exempel ta ut ett Publish-/Dispatcher-ben från belastningsutjämnaren för att uppdatera det. Innan du integrerar om den crawlar du automatiskt de mest använda sidorna så att de kommer in i cachen igen. När cacheminnet är &quot;varmt&quot; - tillräckligt fyllt integrerar du benet på nytt i belastningsutjämnaren.
 
 Eller så integrerar du benet på en gång, men du stryper trafiken till benet så att det har en chans att värma upp det genom vanlig användning.
 
@@ -317,15 +317,15 @@ Vilka objekt som är beroende av vilka andra som är äkta i respektive program.
 
 ### Cachelagring av fragment för HTML
 
-![Återanvända ett återgivet fragment på olika sidor](assets/chapter-3/re-using-rendered-fragment.png)
+![Återanvänder ett återgivet fragment på olika sidor](assets/chapter-3/re-using-rendered-fragment.png)
 
-*Återanvända ett återgivet fragment på olika sidor*
+*Återanvänder ett återgivet fragment på olika sidor*
 
 <br> 
 
 HTML Fragment Caching är ett kraftfullt verktyg. Tanken är att cachelagra den HTML-kod som har genererats av en komponent i ett cacheminne. Du kan fråga, varför ska jag göra det? Jag cachelagrar hela sidans kod i dispatchern ändå - inklusive den komponentens kod. Vi är överens. Det gör du - men en gång per sida. Du delar inte den markeringen mellan sidorna.
 
-Tänk dig att du återger en navigering ovanpå varje sida. Markeringen ser likadan ut på varje sida. Men du återger det om och om igen för varje sida, som inte finns i Dispatcher. Och kom ihåg: Efter automatisk ogiltigförklaring måste alla sidor återges på nytt. Du kör alltså samma kod med samma resultat hundratals gånger.
+Tänk dig att du återger en navigering ovanpå varje sida. Markeringen ser likadan ut på varje sida. Men du återger det om och om igen för varje sida, det vill säga inte i Dispatcher. Och kom ihåg: Efter automatisk ogiltigförklaring måste alla sidor återges på nytt. Du kör alltså samma kod med samma resultat hundratals gånger.
 
 Enligt vår erfarenhet är det en väldigt dyr uppgift att återge en kapslad toppnavigering. Vanligtvis går du igenom en bra del av dokumentträdet för att generera navigeringsobjekten. Även om du bara behöver navigeringsrubriken och URL-adressen måste sidorna läsas in i minnet. Och här klär de värdefulla resurser. Om och om igen.
 
@@ -360,7 +360,7 @@ På den gamla tiden, där du använde JSP som mallmotor, var det ganska vanligt 
 
 Den anpassade taggen än skulle hämta dess brödtext och skriva den i cachen eller förhindra körning av brödtexten och i stället mata ut cache-postens nyttolast.
 
-Nyckeln är komponentsökvägen som den skulle ha på hemsidan. Vi använder inte komponentens sökväg på den aktuella sidan eftersom det skulle skapa en cachepost per sida, vilket skulle strida mot vår avsikt att dela den komponenten. Vi använder inte heller bara komponenternas relativa sökväg (`jcr:conten/mainnavigation`) eftersom det skulle förhindra oss från att använda olika navigeringskomponenter på olika platser.
+Nyckeln är komponentsökvägen som den skulle ha på hemsidan. Vi använder inte komponentens sökväg på den aktuella sidan eftersom det skulle skapa en cachepost per sida, vilket skulle strida mot vår avsikt att dela den komponenten. Vi använder inte heller bara komponenternas relativa sökväg (`jcr:conten/mainnavigation`) eftersom det skulle hindra oss från att använda olika navigeringskomponenter på olika platser.
 
 &quot;Cache&quot; är en indikator där posten ska lagras. Du har vanligtvis mer än en cache där du lagrar objekt. Var och en av dem kan bete sig lite annorlunda. Så det är bra att skilja ut det som lagras - även om det i slutänden bara är strängar.
 
@@ -390,7 +390,7 @@ I det här fallet kan du ge [Sling Dynamic Includes](https://sling.apache.org/do
 
 I SDI-dokumentationen anges att du bör inaktivera cachelagring för URL:er som slutar med &quot;*.nocache.html&quot;, vilket är rimligt - när du arbetar med dynamiska komponenter.
 
-Du kanske ser ett annat alternativ för att använda SDI: Om du _inte_ Om du inaktiverar dispatchercachen för inkluderingarna fungerar Dispatcher som ett fragment-cache-minne som liknar det som beskrivs i det senaste kapitlet: Sidor och komponentfragment cachelagras lika och oberoende av varandra i dispatchern och sammanfogas av SSI-skriptet på Apache-servern när sidan begärs. På så sätt kan du implementera delade komponenter som huvudnavigeringen (förutsatt att du alltid använder samma komponent-URL).
+Du kan se ett annat alternativ för att använda SDI: Om du _inte_ inaktiverar dispatchercachen för inkluderingarna fungerar Dispatcher som ett fragment-cache som liknar det som beskrivs i det senaste kapitlet: Sidor och komponentfragment cachelagras lika och oberoende av varandra i dispatchern och sammanfogas av SSI-skriptet på Apache-servern när sidan begärs. På så sätt kan du implementera delade komponenter som huvudnavigeringen (förutsatt att du alltid använder samma komponent-URL).
 
 Det borde fungera - i teorin. Men...
 
@@ -403,7 +403,7 @@ Vi rekommenderar att du noggrant studerar SDI-dokumentationen. Det finns några 
 * [docs.oracle.com - Skriva egna JSP-taggar](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
 * [Dominik Süß - Skapa och använda komponentfilter](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
 * [sling.apache.org - Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
-* [helpx.adobe.com - Konfigurera Sling Dynamic Includes i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
+* [helpx.adobe.com - Konfigurera Dynamiska Sling-inkluderingar i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
 
 
 #### Modellcachelagring
@@ -416,7 +416,7 @@ Vi rekommenderar att du noggrant studerar SDI-dokumentationen. Det finns några 
 
 Låt oss gå igenom ärendet igen med navigeringen. Vi antog att varje sida skulle kräva samma kod för navigeringen.
 
-Men det är kanske inte fallet. Du kanske vill återge olika markeringar för objektet i navigeringen som representerar _aktuell sida_.
+Men det är kanske inte fallet. Du kanske vill återge olika kod för objektet i navigeringen som representerar den _aktuella sidan_.
 
 ```
 Travel Destinations
@@ -447,7 +447,7 @@ News
 <is
 ```
 
-Det här är två helt olika återgivningar. Än så länge har _affärsobjekt_ - hela navigeringsträdet - är detsamma.  The _affärsobjekt_  Här finns ett objektdiagram som representerar noderna i trädet. Det här diagrammet kan enkelt lagras i en minnescache. Tänk dock på att det här diagrammet inte får innehålla några objekt eller referenser till objekt som du inte har skapat själv - särskilt nu JCR-noder.
+Det här är två helt olika återgivningar. Ändå är _business-objektet_ - det fullständiga navigeringsträdet - detsamma.  Det _affärsobjekt_ här skulle vara ett objektdiagram som representerar noderna i trädet. Det här diagrammet kan enkelt lagras i en minnescache. Tänk dock på att det här diagrammet inte får innehålla några objekt eller referenser till objekt som du inte har skapat själv - särskilt nu JCR-noder.
 
 #### Cachelagra i webbläsaren
 
@@ -459,11 +459,11 @@ Webbläsarcachelagring kan alltså utnyttjas på två olika sätt:
 
 1. Webbläsaren har en cachelagrad resurs som känner till det exakta förfallodatumet. I så fall begär den inte resursen igen.
 
-2. Webbläsaren har en resurs, men det är inte säkert om den fortfarande är giltig. I så fall frågar den webbservern (i vårt fall Dispatcher). Ge mig resursen om den har ändrats sedan du senast levererade den. Om den inte har ändrats svarar servern med &quot;304 - inte ändrat&quot; och bara metadata överfördes.
+2. Webbläsaren har en resurs, men det är inte säkert om den fortfarande är giltig. I så fall frågar den webbservern (Dispatcher i vårt fall). Ge mig resursen om den har ändrats sedan du senast levererade den. Om den inte har ändrats svarar servern med &quot;304 - inte ändrat&quot; och bara metadata överfördes.
 
 #### Felsökning
 
-Om du optimerar Dispatcher-inställningarna för webbläsarcachelagring är det mycket användbart att använda en skrivbordsproxyserver mellan webbläsaren och webbservern. Vi föredrar &quot;Charles Web Debugging Proxy&quot; av Karl von Randow.
+Om du optimerar dina Dispatcher-inställningar för webbläsarcachelagring är det mycket användbart att använda en skrivbordsproxyserver mellan webbläsaren och webbservern. Vi föredrar &quot;Charles Web Debugging Proxy&quot; av Karl von Randow.
 
 Med Charles kan du läsa förfrågningar och svar som skickas till och från servern. Och du kan lära dig mycket om HTTP-protokollet. Moderna webbläsare har också vissa felsökningsfunktioner, men funktionerna i en skrivbordsproxy är helt nya. Ni kan hantera överförda data, begränsa överföringen, spela upp enstaka förfrågningar och mycket annat. Och användargränssnittet är tydligt organiserat och mycket omfattande.
 
@@ -477,7 +477,7 @@ Det finns bara en sak vi ber dig att inte göra när du felsöker cachen:
 
 Läs inte in sidorna igen i webbläsaren!
 
-En &quot;webbläsaromladdning&quot;, _enkel uppladdning_ samt _forcerad återinläsning_ (&quot;_shift-reload_&quot;) är inte detsamma som en vanlig sidbegäran. En enkel begäran om omladdning anger ett huvud
+En&quot;webbläsaromläsning&quot;, en _enkel omläsning_ samt en _tvingad omläsning_ (&quot;_shift-reload_&quot;) är inte samma sak som en vanlig sidbegäran. En enkel begäran om omladdning anger ett huvud
 
 ```
 Cache-Control: max-age=0
@@ -499,28 +499,28 @@ Använd din Charles Proxy för att se vad vi pratar om. Ja - och medan du har de
 
 Genom att använda en proxy får du en uppfattning om hur sidorna kommer att fungera. Det är förstås inte alls ett prestandatest.  Ett prestandatest skulle kräva ett antal kunder som begär dina sidor parallellt.
 
-Ett vanligt misstag, som vi har sett alltför ofta, är att prestandatestet bara inkluderar ett mycket litet antal sidor och dessa sidor levereras endast från Dispatcher-cachen.
+Ett vanligt misstag, som vi har sett alltför ofta, är att prestandatestet bara inkluderar ett mycket litet antal sidor och dessa sidor levereras endast från Dispatcher cache.
 
 Om du befordrar ditt program till det aktiva systemet är belastningen helt annorlunda än vad du har testat.
 
-I det aktiva systemet är åtkomstmönstret inte så litet antal lika distribuerade sidor som du har i tester (hemsida och få innehållssidor). Antalet sidor är mycket större och förfrågningarna är mycket ojämnt fördelade. Och - naturligtvis - live-sidor kan inte hanteras till 100 % från cacheminnet: Det finns ogiltigförklaringar från publiceringssystemet som automatiskt gör en stor del av dina värdefulla resurser ogiltiga.
+I det aktiva systemet är åtkomstmönstret inte så litet antal lika distribuerade sidor som du har i tester (hemsida och få innehållssidor). Antalet sidor är mycket större och förfrågningarna är mycket ojämnt fördelade. Och - naturligtvis - live-sidor kan inte hanteras till 100 % från cacheminnet: Det finns ogiltigförklaringar från Publish-systemet som automatiskt gör en stor del av dina värdefulla resurser ogiltiga.
 
-Ah yes - och när du återskapar Dispatcher Cache får du reda på att Publish-systemet också beter sig helt annorlunda, beroende på om du bara begär en handfull sidor - eller ett större antal. Även om alla sidor är lika komplexa spelar deras nummer en roll. Minns du vad vi sa om kedjad cachning? Om du alltid begär samma låga antal sidor är chanserna goda, att de enligt blocken med rådata finns i hårddiskcachen eller att blocken cachas av operativsystemet. Det finns också en bra möjlighet att databasen har cachelagrat segmentet i huvudminnet. Det innebär att återgivningen är betydligt snabbare än när andra sidor vrider varandra nu och sedan från olika cacher.
+Ah yes - och när du återskapar din Dispatcher-cache kommer du att få veta att Publish-systemet också beter sig helt annorlunda, beroende på om du bara begär en handfull sidor - eller ett större antal. Även om alla sidor är lika komplexa spelar deras nummer en roll. Minns du vad vi sa om kedjad cachning? Om du alltid begär samma låga antal sidor är chanserna goda, att de enligt blocken med rådata finns i hårddiskcachen eller att blocken cachas av operativsystemet. Det finns också en bra möjlighet att databasen har cachelagrat segmentet i huvudminnet. Det innebär att återgivningen är betydligt snabbare än när andra sidor vrider varandra nu och sedan från olika cacher.
 
 Cachelagring är svår, och det är också testning av ett system som är beroende av cachning. Så vad kan du göra för att få ett mer korrekt scenario i verkligheten?
 
 Vi tror att du måste göra mer än ett test och att du måste tillhandahålla mer än ett prestandaindex som ett mått på kvaliteten på din lösning.
 
-Om du redan har en befintlig webbplats, mät antalet förfrågningar och hur de distribueras. Försök att modellera ett test som använder en liknande distribution av begäranden. Att lägga till lite slumpmässighet kan inte skada. Du behöver inte simulera en webbläsare som läser in statiska resurser som JS och CSS - de som egentligen inte spelar någon roll. De cachelagras i webbläsaren eller i Dispatcher så småningom, och de ökar inte avsevärt inläsningen. Men refererade bilder spelar roll. Hitta också deras distribution i gamla loggfiler och modellera ett liknande begärandemönster.
+Om du redan har en befintlig webbplats, mät antalet förfrågningar och hur de distribueras. Försök att modellera ett test som använder en liknande distribution av begäranden. Att lägga till lite slumpmässighet kan inte skada. Du behöver inte simulera en webbläsare som läser in statiska resurser som JS och CSS - de som egentligen inte spelar någon roll. De cachelagras i webbläsaren eller i Dispatcher så småningom och de ökar inte nämnvärt upp till belastningen. Men refererade bilder spelar roll. Hitta också deras distribution i gamla loggfiler och modellera ett liknande begärandemönster.
 
-Gör nu ett test med Dispatcher som inte cachelagras alls. Det är ditt värsta scenario. Ta reda på vilken toppbelastning ditt system blir instabilt under dessa värsta förhållanden. Om du vill kan du göra det ännu värre genom att ta bort några Dispatcher-/Publish-ben.
+Gör nu ett test med Dispatcher som inte cachelagras alls. Det är ditt värsta scenario. Ta reda på vilken toppbelastning ditt system blir instabilt under dessa värsta förhållanden. Du kan också förvärra den genom att ta ut några Dispatcher/Publish ben om du vill.
 
 Gör sedan samma test med alla cacheinställningar som krävs till &quot;på&quot;. Rita upp dina parallella förfrågningar långsamt för att värma cacheminnet och se hur mycket systemet kan ta under dessa bästa fallförhållanden.
 
-Ett genomsnittligt scenario skulle vara att köra testet med Dispatcher aktiverat, men också med vissa ogiltigförklaringar. Du kan simulera det genom att trycka på statusfilerna i ett cronjob eller genom att skicka invalideringsbegäranden i oregelbundna intervall till Dispatcher. Glöm inte att rensa bort några av de icke-automatiskt ogiltigförklarade resurserna ibland.
+Ett genomsnittligt scenario skulle vara att köra testet med Dispatcher aktiverat, men också med vissa ogiltigförklaringar. Du kan simulera det genom att trycka på statusfilerna i ett cronjob eller genom att skicka invalideringsbegäranden med oregelbundna intervall till Dispatcher. Glöm inte att rensa bort några av de icke-automatiskt ogiltigförklarade resurserna ibland.
 
 Du kan variera det sista scenariot genom att öka antalet ogiltigförklaringar och genom att öka belastningen.
 
 Det är lite mer komplext än bara ett linjärt laddningstest - men ger mer självförtroende för lösningen.
 
-Du kanske blundar från arbetet. Utför dock ett pessimistiskt test i publiceringssystemet med ett större antal sidor (jämnt fördelade) för att se systemets begränsningar. Tänk på att tolka numret på det bästa scenariot korrekt och förse systemen med tillräckligt med utrymme.
+Du kanske blundar från arbetet. Men om man så önskar ska man göra ett pessimistiskt test på Publish-systemet med ett större antal sidor (jämnt fördelade) för att se systemets begränsningar. Tänk på att tolka numret på det bästa scenariot korrekt och förse systemen med tillräckligt med utrymme.

@@ -24,5 +24,5 @@ Har du någonsin undrat varför varje objekt gör i sitt sammanhang AEM i Admin 
 
 ## Innehåll som behandlas i den här videon
 
-+ [Förstå Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
++ [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
 + [Översikt över Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)

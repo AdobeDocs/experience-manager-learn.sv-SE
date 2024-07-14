@@ -24,9 +24,9 @@ Följ instruktionerna nedan för att få den här funktionen att fungera på din
 * [Skapa databasschemat](assets/icdrafts.sql)
 * [Importera klientbiblioteket](assets/icdrafts.zip)
 * [Importera det adaptiva formuläret](assets/SavedDraftsAdaptiveForm.zip)
-* Skapa datakälla anropad _SparaOchFortsätt_
+* Skapa en datakälla med namnet _SaveAndContinue_
 
-![Skapa datakälla](assets/data-source.png)
+![Skapa data-Source](assets/data-source.png)
 
 | Egenskapsnamn | Egenskapsvärde |
 |---|---|
@@ -35,7 +35,7 @@ Följ instruktionerna nedan för att få den här funktionen att fungera på din
 | URL för JDBC-anslutning | `jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&useSSL=false&characterEncoding=utf8&useUnicode=true` |
 
 * [Distribuera kasseringsprogrampaketet](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
-* Se till att du _Aktivera Spara med CCRDocumentInstanceService_ i OSGI-konfigurationen enligt nedan
+* Se till att du _aktiverar Spara med CCRDocumentInstanceService_ i OSGI-konfigurationen enligt nedan
   ![Aktivera utkast](assets/enable-drafts.png)
 * Öppna interaktiv kommunikation. Klicka på Spara som utkast för att spara
 * [Visa sparade utkast](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
@@ -43,4 +43,4 @@ Följ instruktionerna nedan för att få den här funktionen att fungera på din
 >[!NOTE]
 >XML-filerna lagras i rotmappen i AEM serverinstallation. Du kan anpassa lösningen efter dina behov med hjälp av projektet >Förmörka.
 
-Det explicita projektet med exempelimplementering kan [hämtad härifrån](assets/icdrafts-eclipse-project.zip)
+Det överlappande projektet med exempelimplementering kan [hämtas härifrån](assets/icdrafts-eclipse-project.zip)

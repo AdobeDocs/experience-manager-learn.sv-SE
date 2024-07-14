@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Extrahera bundna data och spara dem i en strängvariabel
 
-Med den här funktionen kan du inkludera skickade data i e-postmeddelandet. Det anpassade processsteget extraherar **bundna data** från den adaptiva formuläröverföringen och fyller i en variabel av typen sträng med data. Du kan sedan använda den här strängvariabeln för att infoga data i din e-postmall.
+Med den här funktionen kan du inkludera skickade data i e-postmeddelandet. Det anpassade processsteget extraherar **bundna data** från den anpassade formuläröverföringen och fyller i en variabel av typen sträng med data. Du kan sedan använda den här strängvariabeln för att infoga data i din e-postmall.
 I följande skärmbild visas de argument som du behöver skicka till det anpassade steget
-![processteg](assets/save-submitted-data-string.png)
+![process-step](assets/save-submitted-data-string.png)
 
 Följande parametrar
 

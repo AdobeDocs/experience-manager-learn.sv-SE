@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Välj ett formulär som ska fyllas i från en nedrullningsbar lista
 
-Listrutor är ett kompakt och organiserat sätt att presentera en lista med alternativ för användarna. Objekten i den nedrullningsbara listan fylls i med resultaten från [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+Listrutor är ett kompakt och organiserat sätt att presentera en lista med alternativ för användarna. Objekten i listrutan fylls i med resultatet av [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
 
-![kortvy](./assets/forms-drop-down.png)
+![kort-vy](./assets/forms-drop-down.png)
 
 ## Listruta
 
-Följande kod användes för att fylla i den nedrullningsbara listan med resultaten från API-anropet för listformulär. Beroende på vad användaren väljer visas det anpassade formuläret så att användaren kan fylla i och skicka det. [Material, UI-komponenter](https://mui.com/) har använts för att skapa gränssnittet
+Följande kod användes för att fylla i den nedrullningsbara listan med resultaten från API-anropet för listformulär. Beroende på vad användaren väljer visas det anpassade formuläret så att användaren kan fylla i och skicka det. [Material-gränssnittskomponenter](https://mui.com/) har använts för att skapa gränssnittet
 
 ```javascript
 import * as React from 'react';
@@ -129,7 +129,7 @@ Följande två API-anrop användes när användargränssnittet skapades
 * [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). Anropet om att hämta formulären görs bara en gång när komponenten återges. Resultatet av API-anropet lagras i afForms-variabeln.
 I ovanstående kod itererar vi igenom afForms med hjälp av mappningsfunktionen och för varje objekt i afForms-arrayen skapas en MenuItem-komponent som läggs till i Select-komponenten.
 
-* Hämta formulär - ett get-anrop görs till [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), där ID:t är ID:t för det valda adaptiva formuläret av användaren i listrutan. Resultatet av det här GET-anropet lagras i selectedForm.
+* Hämta formulär - Ett get-anrop görs till [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), där ID:t är ID:t för det valda adaptiva formuläret av användaren i listrutan. Resultatet av det här GET-anropet lagras i selectedForm.
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);

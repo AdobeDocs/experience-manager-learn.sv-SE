@@ -28,19 +28,19 @@ AEM Headless-program har stöd för integrerad förhandsgranskning. Förhandsgra
 Om du vill använda förhandsgranskning av innehållsfragment måste flera villkor vara uppfyllda:
 
 1. Appen måste distribueras till en URL som författarna kan komma åt
-1. Appen måste konfigureras för att ansluta till AEM Author-tjänsten (i stället för AEM Publish-tjänsten)
-1. Appen måste utformas med URL:er eller vägar som kan använda [Sökväg eller ID för innehållsfragment](#url-expressions) för att välja vilka innehållsfragment som ska visas för förhandsgranskning i appupplevelsen.
+1. Appen måste vara konfigurerad för att ansluta till AEM Author-tjänsten (i stället för den AEM Publish-tjänsten)
+1. Appen måste utformas med URL:er eller vägar som kan använda sökvägen [för innehållsfragment eller ID](#url-expressions) för att välja vilka innehållsfragment som ska visas för förhandsgranskning i appupplevelsen.
 
 ## Förhandsgranska URL:er
 
-Förhandsgranska URL:er, använda [URL-uttryck](#url-expressions), anges i Egenskaper för innehållsfragmentmodellen.
+URL:er för förhandsgranskning, som använder [URL-uttryck](#url-expressions), anges i egenskaperna för modellen för innehållsfragment.
 
 ![URL för förhandsgranskning av innehållsfragmentmodell](./assets/preview/cf-model-preview-url.png)
 
 1. Logga in på AEM Author Service som administratör
 1. Navigera till __Verktyg > Allmänt > Modeller för innehållsfragment__
-1. Välj __Content Fragment Model__ och markera __Egenskaper__ i det övre åtgärdsfältet.
-1. Ange förhandsgransknings-URL:en för innehållsfragmentmodellen med [URL-uttryck](#url-expressions)
+1. Markera __modellen för innehållsfragment__ och välj __Egenskaper__ i det övre åtgärdsfältet.
+1. Ange förhandsgransknings-URL för innehållsfragmentmodellen med [URL-uttryck](#url-expressions)
    + Förhandsgransknings-URL:en måste peka på en distribution av programmet som ansluter till AEM författartjänst.
 
 ### URL-uttryck
@@ -57,12 +57,12 @@ Varje Content Fragment Model kan ha en URL för förhandsgranskning. URL:en för
 
 Exempel på URL för förhandsgranskning:
 
-+ En förhandsgransknings-URL på __Adventure__ modell kan se ut som `https://preview.app.wknd.site/adventure${contentFragment.path}` som ger `https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali`
-+ En förhandsgransknings-URL på __Artikel__ modell kan se ut som `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` lösningar `https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main`
++ En förhandsgransknings-URL i modellen __Adventure__ kan se ut som `https://preview.app.wknd.site/adventure${contentFragment.path}` som ger resultatet `https://preview.app.wknd.site/adventure/content/dam/wknd-shared/en/adventures/surf-camp-bali/surf-camp-bali`
++ En förhandsgransknings-URL i __artikel__-modellen kan se ut som `https://preview.news.wknd.site/${contentFragment.model.name}/${contentFragment.id}.html?variation=${contentFragment.variation}` med matchningarna `https://preview.news.wknd.site/article/99c34317-1901-2ab3-35b6-d7890aa1c23c.html?variation=main`
 
 ## Förhandsgranskning i appen
 
-Alla innehållsfragment som använder den konfigurerade innehållsfragmentmodellen har en förhandsgranskningsknapp. Knappen Förhandsgranska öppnar förhandsvisnings-URL:en för innehållsfragmentmodellen och injicerar värdena för det öppna innehållsfragmentet i [URL-uttryck](#url-expressions).
+Alla innehållsfragment som använder den konfigurerade innehållsfragmentmodellen har en förhandsgranskningsknapp. Knappen Förhandsgranska öppnar förhandsvisnings-URL:en för innehållsfragmentmodellen och infogar de öppna värdena för innehållsfragmentet i [URL-uttrycken](#url-expressions).
 
 ![Knappen Förhandsgranska](./assets/preview/preview-button.png)
 
@@ -76,9 +76,9 @@ Exempelkoden finns på [Github.com](https://github.com/adobe/aem-guides-wknd-gra
 
 ## URL:er och vägar
 
-De URL:er eller vägar som används för att förhandsgranska ett innehållsfragment måste vara sammansatta med hjälp av [URL-uttryck](#url-expressions). I den här förhandsgranskningsaktiverade versionen av WKND-appen visas äventyrens innehållsfragment via `AdventureDetail` som är bunden till flödet `/adventure<CONTENT FRAGMENT PATH>`. Därför måste WKND Adventure-modellens preview URL anges till `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` för att matcha den här vägen.
+De URL:er eller vägar som används för att förhandsgranska ett innehållsfragment måste kunna sammanställas med [URL-uttryck](#url-expressions). I den här förhandsgranskningsaktiverade versionen av WKND-appen visas äventyrsinnehållsfragment via komponenten `AdventureDetail` som är bunden till vägen `/adventure<CONTENT FRAGMENT PATH>`. Därför måste WKND Adventure-modellens förhandsgransknings-URL anges till `https://preview.app.wknd.site:3000/adventure${contentFragment.path}` för att matcha den här vägen.
 
-Förhandsgranskning av innehållsfragment fungerar bara om appen har en adresserbar väg som kan fyllas med [URL-uttryck](#url-expressions) som återger det innehållsfragmentet i appen på ett sätt som kan förhandsgranskas.
+Förhandsgranskning av innehållsfragment fungerar bara om appen har en adresserbar väg som kan fyllas i med [URL-uttryck](#url-expressions) som återger det innehållsfragmentet i appen på ett förhandsvisningsbart sätt.
 
 + `src/App.js`
 
@@ -109,7 +109,7 @@ export default App;
 
 ### Visa det redigerade innehållet
 
-The `AdventureDetail` analyserar bara sökvägen för innehållsfragment, som matas in i URL:en för förhandsgranskning via `${contentFragment.path}` [URL-uttryck](#url-expressions), från rutten-URL:en, och använder den för att samla in och återge WKND-äventyret.
+Komponenten `AdventureDetail` tolkar bara sökvägen för innehållsfragment, som matas in i förhandsgransknings-URL:en via `${contentFragment.path}` [URL-uttrycket](#url-expressions), från rutt-URL:en, och använder den för att samla in och återge WKND Adventure.
 
 + `src/components/AdventureDetail.js`
 

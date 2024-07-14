@@ -24,8 +24,9 @@ Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2 och Oracle RDBMS
 
 1. AEM användarprofil
 1. RESTful web services
-1. SOAP-baserade webbtjänster
-1. OData-tjänster I den här artikeln beskrivs hur du integrerar AEM användarprofilinformation med Adaptive Forms.
+1. SOAP webbtjänster
+1. OData-tjänster
+I den här artikeln beskrivs hur du integrerar AEM användarprofilinformation med Adaptive Forms.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432?quality=12&learn=on)
 

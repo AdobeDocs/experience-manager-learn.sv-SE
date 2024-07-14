@@ -40,12 +40,12 @@ I den här videon beskrivs följande funktioner:
 * Lägga till innehåll i en befintlig komponent
 * Lägga till en ny komponent på sidan
 * Sidegenskaper
-   * Publicera sida
+   * Publish Page
    * Avpublicera sida
    * Redigera mall
    * Visa som publicerad
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
 * [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

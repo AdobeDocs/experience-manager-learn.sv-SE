@@ -71,7 +71,7 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Arbetsflödet för signaturuppdateringsstatus kan vara [hämtad härifrån](assets/update-signature-status-workflow.zip)
+Arbetsflödet för signaturuppdateringsstatus kan [hämtas här](assets/update-signature-status-workflow.zip)
 
 ## Nästa steg
 

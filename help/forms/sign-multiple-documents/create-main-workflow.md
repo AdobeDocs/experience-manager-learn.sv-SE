@@ -23,11 +23,11 @@ Huvudarbetsflödet aktiveras när användaren skickar det ursprungliga formulär
 
 ![huvudarbetsflöde](assets/main-workflow.PNG)
 
-**Lagra Forms att signera** är ett anpassat processsteg.
+**Store Forms To Sign** är ett anpassat processsteg.
 
-Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM arbetsflöde. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till `insertData` i tjänsten SignMultipleForms. The `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
+Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM arbetsflöde. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till metoden `insertData` i tjänsten SignMultipleForms. Metoden `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
 
-Koden i det här anpassade processsteget refererar till `SignMultipleForms` service.
+Koden i det här anpassade processsteget refererar till tjänsten `SignMultipleForms`.
 
 
 
@@ -118,7 +118,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Arbetsflödet Signera flera Forms i den här artikeln kan [hämtad härifrån](assets/sign-multiple-forms-workflows.zip)
+Arbetsflödet Signera flera Forms som används i den här artikeln kan [hämtas här](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
 > Konfigurera Day CQ Mail Service för att skicka e-postmeddelanden. E-postmallen finns också i ovanstående paket.

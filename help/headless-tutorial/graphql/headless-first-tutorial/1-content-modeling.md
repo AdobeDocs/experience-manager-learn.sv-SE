@@ -41,16 +41,16 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![Skapa mapp](./assets/1/create-configuration.png)
 
-   Ange en __title__ och __name__ och kontrollera __GraphQL Beständiga frågor__ och __Modeller för innehållsfragment__.
+   Ange en __titel__ och __namn__ och kontrollera __GraphQL Persisted Queries__ och __Content Fragment Models__.
 
 
 ## Modeller för innehållsfragment
 
-1. Navigera till __Verktyg > Content Fragment Models__ och markera mappen med namnet på konfigurationen som skapades i steg 1.
+1. Navigera till __Verktyg > Innehållsfragmentmodeller__ och markera mappen med namnet på konfigurationen som skapades i steg 1.
 
    ![Modellmapp](./assets/1/model-folder.png)
 
-1. I mappen väljer du __Skapa__ och namnge modellen __Teaser__. Lägg till följande datatyper i __Teaser__ modell.
+1. I mappen väljer du __Skapa__ och ger modellen namnet __Teaser__. Lägg till följande datatyper i modellen __Teaser__.
 
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|
@@ -62,7 +62,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![Teaser model](./assets/1/teaser-model.png)
 
-1. Skapa en andra modell i mappen __Erbjudande__. Klicka på Skapa och ge modellen namnet&quot;Erbjudande&quot; och lägg till följande datatyper:
+1. I mappen skapar du en andra modell med namnet __Erbjudande__. Klicka på Skapa och ge modellen namnet&quot;Erbjudande&quot; och lägg till följande datatyper:
 
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|
@@ -72,26 +72,26 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![Erbjudandemodell](./assets/1/offer-model.png)
 
-1. Skapa en tredje modell med namnet i mappen __Bildlista__. Klicka på Skapa och ge modellen namnet &quot;Bildlista&quot; och lägg till följande datatyper:
+1. I mappen skapar du en tredje modell med namnet __Bildlista__. Klicka på Skapa och ge modellen namnet &quot;Bildlista&quot; och lägg till följande datatyper:
 
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|
    | Fragmentreferens | Listobjekt | ja | Återge som flera fält. Tillåten modell för innehållsfragment är Erbjudande. |
 
-   ![Bildlistemodell](./assets/1/imagelist-model.png)
+   ![Bildlistmodell](./assets/1/imagelist-model.png)
 
 ## Innehållsfragment
 
-1. Navigera nu till Resurser och skapa en mapp för den nya platsen. Klicka på Skapa och ge mappen ett namn.
+1. Navigera nu till Assets och skapa en mapp för den nya webbplatsen. Klicka på Skapa och ge mappen ett namn.
 
    ![Lägg till mapp](./assets/1/create-folder.png)
 
-1. När mappen har skapats markerar du mappen och öppnar den __Egenskaper__.
-1. I mappens __Molnkonfigurationer__ väljer du konfigurationen [skapades tidigare](#enable-content-fragments-and-graphql).
+1. När mappen har skapats markerar du mappen och öppnar dess __Egenskaper__.
+1. Välj konfigurationen [som skapades tidigare](#enable-content-fragments-and-graphql) på fliken __Molnkonfigurationer__ i mappen.
 
    ![Resursmapp AEM Headless-molnkonfiguration](./assets/1/cloud-config.png)
 
-   Klicka i den nya mappen och skapa ett teaser. Klicka __Skapa__ och __Innehållsfragment__ och väljer __Teaser__ modell. Namnge modellen __Hero__ och klicka __Skapa__.
+   Klicka i den nya mappen och skapa ett teaser. Klicka på __Skapa__ och __Innehållsfragment__ och välj modellen __Teaser__. Namnge modellen __Hero__ och klicka på __Skapa__.
 
    | Namn | Anteckningar |
    |----------|------|
@@ -109,13 +109,13 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    ![AEM GraphiQL](./assets/1/endpoint-nav.png)
 
-1. Klicka __Skapa__ och ge den nya slutpunkten ett namn och välj den nya konfigurationen.
+1. Klicka på __Skapa__ och ge den nya slutpunkten ett namn och välj den nya konfigurationen.
 
-   ![AEM Headless GraphQL endpoint](./assets/1/endpoint.png)
+   ![AEM Headless GraphQL-slutpunkt](./assets/1/endpoint.png)
 
 ## GraphQL Beständiga frågor
 
-1. Låt oss testa den nya slutpunkten. Navigera till __Verktyg > GraphQL Query Editor__ och väljer slutpunkt för listrutan i fönstrets övre högra hörn.
+1. Låt oss testa den nya slutpunkten. Navigera till __Verktyg > GraphQL Query Editor__ och välj slutpunkt för listrutan i fönstrets övre högra hörn.
 
 1. Skapa några olika frågor i frågeredigeraren.
 
@@ -130,7 +130,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
    }
    ```
 
-   Du bör hämta en lista som innehåller det skapade fragmentet [ovan](#create-content).
+   Du bör hämta en lista som innehåller det enskilda fragmentet som skapades [ovan](#create-content).
 
    För den här övningen skapar du en fullständig fråga som AEM headless-appen använder. Skapa en fråga som returnerar ett enskilt teaser per sökväg. Ange följande fråga i frågeredigeraren:
 
@@ -174,7 +174,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
    }
    ```
 
-   I __frågevariabler__ anger du indata längst ned:
+   I __frågevariablerna__ anger du indata längst ned:
 
    ```json
    {
@@ -189,10 +189,10 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    Kör frågan för att ta emot resultaten från det innehållsfragment som skapades tidigare.
 
-1. Klicka __Spara__  för att behålla (spara) frågan och namnge frågan __teaser__. Detta gör att vi kan referera till frågan efter namn i programmet.
+1. Klicka på __Spara__ om du vill behålla (spara) frågan och ge frågan namnet __teaser__. Detta gör att vi kan referera till frågan efter namn i programmet.
 
 ## Nästa steg
 
-Grattis! Du har konfigurerat AEM as a Cloud Service så att det går att skapa innehållsfragment och GraphQL slutpunkter. Du har också skapat en innehållsfragmentmodell och ett innehållsfragment, och definierat en GraphQL-slutpunkt och en beständig fråga. Du är nu redo att gå vidare till nästa självstudiekurs där du får lära dig hur du skapar ett AEM Headless React-program som använder de innehållsfragment och GraphQL-slutpunkter som du har skapat i det här kapitlet.
+Grattis! Du har konfigurerat AEM as a Cloud Service så att innehållsfragment och GraphQL slutpunkter kan skapas. Du har också skapat en innehållsfragmentmodell och ett innehållsfragment, och definierat en GraphQL-slutpunkt och en beständig fråga. Du är nu redo att gå vidare till nästa självstudiekurs där du får lära dig hur du skapar ett AEM Headless React-program som använder de innehållsfragment och GraphQL-slutpunkter som du har skapat i det här kapitlet.
 
 [Nästa kapitel: AEM Headless APIs and React](./2-aem-headless-apis-and-react.md)

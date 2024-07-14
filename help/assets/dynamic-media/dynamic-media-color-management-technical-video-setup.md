@@ -125,4 +125,4 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Konfigurera Dynamic Media färghantering](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurerar Dynamic Media Color Management](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Hur man tillämpar en profil som skapats med dokumentsäkerhetsmodulen i Acrobat
 
-*I den här videon går vi igenom hur du tillämpar en profil som har skapats med dokumentsäkerhetsmodulen i Acrobat.*
+*I den här videon går du igenom processen för att tillämpa en profil som skapats med hjälp av dokumentsäkerhetsmodulen i Acrobat.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

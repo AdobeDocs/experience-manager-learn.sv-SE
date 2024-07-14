@@ -1,6 +1,6 @@
 ---
 title: Konfigurera resursdelningskommentarer på lokala AEM
-description: Material för både funktionell och teknisk förståelse Assets Share Commons
+description: Material för både funktionell och teknisk förståelse av Assets Share Commons
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution

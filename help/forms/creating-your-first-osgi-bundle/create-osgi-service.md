@@ -24,7 +24,7 @@ En OSGi-tjänst definieras semantiskt av dess tjänstgränssnitt och implementer
 
 ## Definiera gränssnittet
 
-Ett enkelt gränssnitt med en metod för att sammanfoga data med <span class="x x-first x-last">XDP</span> mall.
+Ett enkelt gränssnitt med en metod för att sammanfoga data med mallen <span class="x x-first x-last">XDP</span>.
 
 ```java
 package com.mysite.samples;
@@ -40,7 +40,7 @@ public interface MyfirstInterface
 
 ## Implementera gränssnittet
 
-Skapa ett nytt paket som heter `com.mysite.samples.impl` för implementering av gränssnittet.
+Skapa ett nytt paket med namnet `com.mysite.samples.impl` för implementeringen av gränssnittet.
 
 ```java
 package com.mysite.samples.impl;
@@ -78,9 +78,9 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 }
 ```
 
-Anteckningen `@Component(...)` På rad 10 görs den här Java-klassen till en OSGi-komponent och registreras som en OSGi-tjänst.
+Anteckningen `@Component(...)` på rad 10 markerar den här Java-klassen som en OSGi-komponent samt registrerar den som en OSGi-tjänst.
 
-The `@Reference` anteckningen ingår i OSGi-deklarationstjänster och används för att mata in en referens till [OutputService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
+Anteckningen `@Reference` ingår i OSGi-deklarativa tjänster och används för att mata in en referens för [ OutputService ](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
 
 
 ## Bygg och distribuera paketet
@@ -90,7 +90,7 @@ The `@Reference` anteckningen ingår i OSGi-deklarationstjänster och används f
 * Kör kommandot `mvn clean install -PautoInstallBundle`
 * Ovanstående kommando skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
 
-Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med [Felix webbkonsol.](http://localhost:4502/system/console/bundles)
+Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med webbkonsolen [Felix.](http://localhost:4502/system/console/bundles)
 
 ## Använda tjänsten
 
@@ -101,13 +101,13 @@ MyFirstAEMFormsService myFirstAEMFormsService = sling.getService(com.mysite.samp
 com.adobe.aemfd.docmanager.Document generatedDocument = myFirstAEMFormsService.mergeDataWithXDPTemplate(xdp_or_pdf_template,xmlDocument);
 ```
 
-Exempelpaketet som innehåller JSP-sidan kan [hämtad härifrån](assets/learning_aem_forms.zip)
+Exempelpaketet som innehåller JSP-sidan kan [hämtas här](assets/learning_aem_forms.zip)
 
 [Det fullständiga paketet kan hämtas](assets/mysite.core-1.0.0-SNAPSHOT.jar)
 
 ## Testa paketet
 
-Importera och installera paketet i AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+Importera och installera paketet i AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
 Använd postman för att ringa ett POST-samtal och ange indataparametrarna som visas på bilden nedan
 ![postman](assets/test-service-postman.JPG)

@@ -20,6 +20,6 @@ ht-degree: 2%
 
 # Introduktion
 
-Introduktion till användningsexemplet för integrering av Adobe Experience Manager Forms as a Cloud Service API:er och Document Cloud.
+Introduktion till användningsexemplet för integrering av Adobe Experience Manager Forms as a Cloud Service och Document Cloud.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333241?quality=12&learn=on)

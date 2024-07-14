@@ -23,7 +23,7 @@ AEM har stöd för anpassning av anteckningens utdata till PDF.
 
 ## PDF, anteckningssling:OsgiConfig-definition
 
-Om du vill anpassa PDF-anteckningar skapar du en **sling:OsgiConfig** nod i ditt AEM projekt under
+Om du vill anpassa PDF-anteckningar skapar du en **sling:OsgiConfig** -nod i ditt AEM projekt under
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` och justera värdena efter behov:
 

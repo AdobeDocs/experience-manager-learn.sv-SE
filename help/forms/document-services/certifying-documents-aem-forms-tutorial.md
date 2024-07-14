@@ -22,7 +22,7 @@ Ett certifierat dokument ger PDF dokument och formulärmottagare ytterligare gar
 
 Om du vill certifiera ett dokument kan du använda Acrobat DC på skrivbordet eller AEM Forms Document Services som en del av en automatiserad process på en server.
 
-I den här artikeln finns exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Koden som används i exemplet är [finns här](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+Den här artikeln innehåller exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Koden som används i exemplet är [tillgänglig här](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 För att certifiera dokument med AEM Forms måste följande steg följas
 
@@ -31,7 +31,7 @@ För att certifiera dokument med AEM Forms måste följande steg följas
 Följ stegen nedan för att lägga till certifikatet i nyckelbehållaren i AEM
 
 * [Initiera globalt förtroendearkiv](http://localhost:4502/libs/granite/security/content/truststore.html)
-* [Sök efter fd-service](http://localhost:4502/security/users.html) användare
+* [Sök efter fd-service](http://localhost:4502/security/users.html)-användare
 * **Du måste rulla resultatsidan för att läsa in alla användare för att hitta Fd-service-användaren**
 * Dubbelklicka på fd-service-användaren för att öppna fönstret med användarinställningar
 * Klicka på Lägg till privat nyckel från nyckelfilen.Ange det alias och lösenord som är specifikt för certifikatet
@@ -42,8 +42,8 @@ Följ stegen nedan för att lägga till certifikatet i nyckelbehållaren i AEM
 
 Du kan skriva ett eget OSGi-paket och använda AEM Forms Client SDK för att implementera en tjänst för att certifiera PDF-dokument. Följande länkar kan vara användbara för att skriva ett eget OSGi-paket
 
-* [Skapa ditt första OSGi-paket](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
-* [Använd API för dokumenttjänst](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+* [Skapar ditt första OSGi-paket](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
+* [Använd API:t för dokumenttjänsten](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
 
@@ -53,11 +53,11 @@ Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
 
 ## Testa exemplet på din lokala dator
 
-* Hämta och installera [Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Hämta och installera [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [Kontrollera att du har lagt till följande post i användarmappningstjänsten för Apache Sling Service](http://localhost:4502/system/console/configMgr)
-  **DevelopingWithServiceUser.core:getformsresourceReser=fd-service** som visas på skärmbilden nedan
-  ![User-Mapper](assets/user-mapper-service.PNG)
+* Hämta och installera [paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Hämta och installera [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [Kontrollera att du har lagt till följande post i användarmappningstjänsten för Apache Sling-tjänsten](http://localhost:4502/system/console/configMgr)
+  **DevelopingWithServiceUser.core:getformsresouresolver=fd-service**, vilket visas på skärmbilden nedan
+  ![Användarmappare](assets/user-mapper-service.PNG)
 * [Importera anpassat exempelformulär](assets/certify-pdf-af.zip)
 * [Importera och installera den anpassade överföringen](assets/custom-submit-certify.zip)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)

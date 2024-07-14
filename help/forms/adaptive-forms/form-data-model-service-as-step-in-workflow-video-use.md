@@ -26,16 +26,16 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodel
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet som anger metadataegenskaper.
->I AEM Forms 6.5 och senare finns den här funktionen att få direkt tillgång till som [beskriv här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+>I AEM Forms 6.5 och senare är den här funktionen tillgänglig direkt, vilket [beskrivs här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)Krigsfilen som distribueras i Tomcat har koden som returnerar sökandens poäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html). Krigsfilen som distribueras i Tomcat har koden som returnerar sökandens kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
-* [Importera resurser till AEM med hjälp av pakethanteraren](assets/invoke-fdm-as-service-step.zip)Paketet innehåller följande:
+* [Importera resurserna till AEM med pakethanteraren](assets/invoke-fdm-as-service-step.zip). Paketet innehåller följande:
 
    * Arbetsflödesmodell som använder FDM-steg.
    * Formulärdatamodell som används i FDM-steget.
    * Anpassad form som utlöser arbetsflödet när det skickas.
-* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas in [arbetsflöde för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) aktiveras.
+* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas aktiveras arbetsflödet [för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html).
 
 ![ arbetsflöde ](assets/fdm-as-service-step-workflow.PNG).
 Arbetsflödet använder eller delar komponenten för att dirigera programmet till administratören om kreditpoängen är över 500. Om kreditpoängen är mindre än 500 dirigeras programmet till kaveri

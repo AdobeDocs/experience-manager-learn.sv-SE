@@ -26,7 +26,7 @@ Skapa ett JSON-fragment som definierar:
 + parameters
 + utdata.
 
-Information om detta [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+Information om den här [formulärparametern finns här.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
 
 Den exempelkod som visas nedan genererar JSON-fragmentet för alla Office 365-dokumenttyper.
 

@@ -62,7 +62,7 @@ Det beror på att CMS på företagsnivå i slutändan handlar om innehåll. Inne
 
 Vi har gång på gång sett att resan från en isolerad modell till en flexibel och snabb kommer från den inledande och kraftfulla ledaren. För att förstå att det krävs en ombildning av innehållet i teamet för att man ska kunna närma sig innehållets livscykel på ett sätt - från skapare till provare. Och den beslutspunkten - den realisationen - att skapa innehåll är inte en fråga om vilket verktyg, utan hur vi tänker på det.
 
-_&quot;När man börjar tänka om innehållet på ett annat sätt kan man ta fram olika grupper som kanske inte har varit tillsammans. Från produkt och utveckling till kundledd upplevelsedesign - ni har olika parter för att bygga upp dessa saker. För oss var ledarstöd och inköp internt den enskilt största faktorn för vår digitala omvandling.&quot;_ - Monique Misrahi, T-Mobile
+_&quot;När du börjar tänka på innehåll på ett annat sätt kan du ta med olika grupper till tabellen som kanske inte har varit tillsammans. Från produkt och utveckling till kundledd upplevelsedesign - ni har olika parter för att bygga upp dessa saker. För oss var ledarstöd och inköp internt den enskilt största faktorn för vår digitala omvandling.&quot;_ - Monique Misrahi, T-Mobile
 
 _&quot;Ledarskapsstöd, riktning och vision var en kritisk faktor. Det fantastiska var att vårt ledarskap var inkluderande och öppet för synpunkter. De lyssnade.&quot;_ - Amy Bergstrom, Deloitte
 
@@ -78,7 +78,7 @@ Vi ska ta en titt på ett exempel på en företagsorganisation med olika varumä
 
 Frågan är om ni kommer att vänta med att omarbeta innehållet tills alla varumärken fungerar på ett enhetligt sätt? Är det klokt att lösa förändringen för dem alla?
 
-Svaret är nej. Detta skulle öka komplexiteten. Dessutom kommer många intressenter att bli frustrerade av att aldrig ha avslutat konversationer runt om i världen, vilket kommer att skapa frustrerande försök att skapa det nya. En låses in i en konversation _om_ i stället för att göra det.
+Svaret är nej. Detta skulle öka komplexiteten. Dessutom kommer många intressenter att bli frustrerade av att aldrig ha avslutat konversationer runt om i världen, vilket kommer att skapa frustrerande försök att skapa det nya. En av konversationerna _om_ låses i stället för att den ändras.
 
 Det som behövs är ett konkret ramverk. Ett nytt paradigm att arbeta för. Något som folk kan se och känna. Tidigare kan innehåll ha betraktats som en sida, en kampanj eller något annat som föreställt sig i en enda. Den grundläggande förändringen är att se innehåll som innehåll i sig: att återanvändas, formateras om och återvinnas till redigeringsgruppen. Den viktigaste nya utvecklingen bör användas för målrika upplevelser.
 
@@ -89,9 +89,9 @@ För många kunder är det bästa sättet att införa förändringar att skapa e
 * Öka sannolikheten för och hastigheten på köp av intressenter
 * Lös de taktiska nötterna och bultarna och avlägsna mellanrummen innan du tillämpar ändringarna på nytt
 
-_&quot;Vi har förändrat vår upplevelsedesignorganisation till en mer kanalövergripande bild av kunden. Vi har byggt upp ett ramverksteam för designsystem som helt definierar vad våra innehållskomponenter kommer att vara och hur de kommer att användas. Detta har hjälpt oss att nå en nivå av innehållshastighet som vi inte kunnat föreställa oss tidigare.&quot;_ - Monique Misrahi, T-Mobile
+_&quot;Vi har ändrat vår upplevelsedesignorganisation till en mer flerkanalsvy över kunden. Vi har byggt upp ett ramverksteam för designsystem som helt definierar vad våra innehållskomponenter kommer att vara och hur de kommer att användas. Detta har hjälpt oss att nå en nivå av innehållshastighet som vi inte kunnat föreställa oss tidigare.&quot;_ - Monique Misrahi, T-Mobile
 
-_&quot;Vi visste att det kom ut för mycket innehåll. Så vi forskade lite med vår publik för att ta reda på om de kunde hitta våra ledande personer. Det visade sig att det var förvirring, så vi använde en unik strategi, segmenterade ut alla de bästa idéerna på en pilotwebbplats och varumärke för det innehållet. Vi skapade ett dedikerat område för det innehållet och odlade en stor publik för det. Flera år senare har vi nu kunnat återintegrera detta på vår bredare webbplats och nu hjälper vårt innehåll som visar tankeledarskap människor genom säljcykeln.&quot;_ - Amy Bergstrom, Deloitte
+_&quot;Vi visste att det var för mycket innehåll på gång. Så vi forskade lite med vår publik för att ta reda på om de kunde hitta våra ledande personer. Det visade sig att det var förvirring, så vi använde en unik strategi, segmenterade ut alla de bästa idéerna på en pilotwebbplats och varumärke för det innehållet. Vi skapade ett dedikerat område för det innehållet och odlade en stor publik för det. Flera år senare har vi nu kunnat återintegrera detta på vår bredare webbplats och nu hjälper vårt innehåll som visar tankeledarskap människor genom säljcykeln.&quot;_ - Amy Bergstrom, Deloitte
 
 ### Körning
 
@@ -101,9 +101,9 @@ När du bygger ut ramverket finns det några gemensamma paradigmer som du måste
 
 Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
-1. **Definiera grunden för er globala taxonomi.**
+1. **Definiera grunden för organisationens globala taxonomi.**
 
-   När vi pratar om taxonomi refererar vi inte bara till mappstrukturen, utan snarare till vem som skapar vad och när. Dessutom måste vi överväga [annan behörighet](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) strukturer som måste utformas för varje typ av författare.
+   När vi pratar om taxonomi refererar vi inte bara till mappstrukturen, utan snarare till vem som skapar vad och när. Dessutom måste vi överväga de [olika behörigheterna](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) som måste skapas för varje typ av författare.
 
    I det här skedet bör du fundera över om du vill ha en centraliserad styrningsmodell eller en decentraliserad modell. Å ena sidan skapar en centraliserad styrningsmodell en konsoliderad taxonomistrategi som erbjuder tätare kvalitetskontroll och processinsikter som är omöjliga, eller åtminstone minst svåra i en decentraliserad ram.
 
@@ -113,7 +113,7 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    Vilken riktning man ska ta beror i slutändan på organisationens övergripande strategiska mål. Det kan handla om att välja mellan förbättrad flexibilitet för företagsanvändare eller en enhetlig upplevelse över alla varumärken. Att justera efter rätt modell är avgörande för en ljudkörning.
 
-1. **Genomför en granskning av ägarskap av innehåll**
+1. **Utför en granskning av innehållsägarskap**
 
    Tänk på följande scenario:
 
@@ -139,15 +139,15 @@ Här är fyra milstolpar som ska byggas ut under körningsfasen:
 
    Skapa ett team med tydliga riktlinjer i stället för att designa för&quot;kanten&quot;. Vackra enkelheter är själva kärnan i innehållets snabbhet. Och glöm inte att inkludera tillgänglighetsteam för allt som är designat och utvecklat. Ett designsystem måste hitta en balans mellan att möta en mycket speciell upplevelse och flexibiliteten att arbeta på ett systematiskt sätt i ett företags-CMS. Kärnkomponenterna och stilsystemen är otroligt anpassningsbara till en mängd olika upplevelser och ger mer än tillräcklig frihet att möta skaparnas estetiska ambitioner. Men det är ändå viktigt för snabbhet och skala att en rationell strategi tillämpas när man bestämmer hur en upplevelse ska köras. Det är nödvändigt att justera prioriteringarna. När du utformar ett system ser du till grunderna om återanvändbarhet och hastighet. De allra flesta upplevelserna på en webbplats bör utföras med OTB-komponenter och formatsystem.
 
-   _&quot;Det behövs mindre ändringar kring innehållet. Många som arbetar med innehåll har arbetat med kanalspecifikt, varumärkesspecifikt eller sidspecifikt innehåll under sin karriär. Det är dags att tänka holistiskt och lägga tid på att experimentera.&quot;_ - Monique Misrahi, T-Mobile
+   _&quot;Mindet-förskjutning krävs runt innehåll. Många som arbetar med innehåll har arbetat med kanalspecifikt, varumärkesspecifikt eller sidspecifikt innehåll under sin karriär. Det är dags att tänka holistiskt och lägga tid på att experimentera.&quot;_ - Monique Misrahi, T-Mobile
 
-   _&quot;En centraliserad innehållsstrategi hjälper oss att undvika dubbelarbete. Vi övermättar inte marknaden, vi säger inte olika saker om liknande frågor. Det hjälper oss att optimera hela vårt innehållsbibliotek och tala med en enhetlig röst över hela världen.&quot;_ - Amy Bergstrom, Deloitte
+   _&quot;En centraliserad innehållsstrategi hjälper oss att undvika dubbletter. Vi övermättar inte marknaden, vi säger inte olika saker om liknande frågor. Det hjälper oss att optimera hela vårt innehållsbibliotek och tala med en enhetlig röst över hela världen.&quot;_ - Amy Bergstrom, Deloitte
 
 ## Rekommenderad praxis: Snabb, återanvändbar modell för att skapa innehåll
 
 I allmänhet är det bäst att följa dessa tumregler:
 
-* Målet är att inte mindre än 80 % av upplevelserna ska köras genom [Ut ur kartongkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en) och [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Genom kundutlåtanden kommer detta inte bara att skapa en mer skalbar grund som gör att ni kan dra nytta av produktplanen, utan det kommer också att öka hastigheten med upp till 50 %.
+* Målet är att ha minst 80 % av upplevelserna som drivs genom [Utanför Box-komponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en) och [Style Systems](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Genom kundutlåtanden kommer detta inte bara att skapa en mer skalbar grund som gör att ni kan dra nytta av produktplanen, utan det kommer också att öka hastigheten med upp till 50 %.
 * [Konfigurera redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en) och gå bort från statiska mallar. När du skapar redigerbara mallar (som krävs för att använda formatsystem) måste du tilldela en mallskapare som styr de olika format som är tillgängliga för en sida eller ett avsnitt på webbplatsen. Dessa uppdateringar av själva mallen är relativt minimala när det gäller det dagliga arbetet.
 * Använd [Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en) där det är möjligt. Även om det allmänna användningsexemplet för upplevelsefragment är för flerkanalsdistribution kan de också användas effektivt på hela webbplatsen för att fylla i innehåll i ett område åt gången i stället för att uppdatera innehåll manuellt i flera områden. Detta kan spara mycket tid och arbete och kommer att frigöra teamet från att arbeta med mer specifika och innehållsrika upplevelser.
 * Skapa rikare upplevelser. Genom att använda regeln 80/20 (enligt ovan) kan en organisation använda specifik CSS och serverutveckling för utvalda upplevelser i stället för vanliga underhållsuppdateringar.
@@ -176,8 +176,8 @@ Här är några möjliga fallgropar att undvika:
    * Maximerar vi organiskt område?
 * Är upplevelsen tillgänglig för alla?
 
-* Visa lösningar på ett isolerat sätt. Att enbart fokusera på den tekniska aspekten av AEM implementering kommer till exempel inte att få alla affärsfördelar. Istället rekommenderar vi att ni tittar på användningsfall och scenarier, och sedan väljer arkitektur och design, eftersom detta ger en bättre bild av AEM. Anurandha Pentareddy från Adobe aktier: _&quot;En sak jag rekommenderar är att titta på era värdefulla mål direkt för den plattform ni implementerar.&quot;_
+* Visa lösningar på ett isolerat sätt. Att enbart fokusera på den tekniska aspekten av AEM implementering kommer till exempel inte att få alla affärsfördelar. Istället rekommenderar vi att ni tittar på användningsfall och scenarier, och sedan väljer arkitektur och design, eftersom detta ger en bättre bild av AEM. Anurandha Pentareddy från Adobe delar: _En sak jag rekommenderar är att titta på era värdemål direkt för den plattform du implementerar.&quot;_
 
-Om du vill ha en mer djupgående diskussion om innehållets hastighet kan du lyssna på den här timmen [paneldiskussion](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) med Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) och Adobe Anuradha Pentareddy.
+Om du vill ha en mer ingående diskussion om innehållets hastighet kan du lyssna på den här [paneldiskussionen](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) som innehåller Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) och Adobe Anuradha Pentareddy.
 
-Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) nav.
+Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html).

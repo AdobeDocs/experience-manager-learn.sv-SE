@@ -1,6 +1,6 @@
 ---
-title: Ändra konfigurationsinställningar för datakälla.
-description: Ändra värdnamnet och andra inställningar i Konfigurationsinställningar för datakälla.
+title: Ändra konfigurationsinställningar för Data Source.
+description: Ändra värdnamnet och andra inställningar i konfigurationsinställningarna för Data Source.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Möjlighet att ändra konfigurationsinställningar för datakälla{#ability-to-modify-data-source-configuration-settings}
+# Möjlighet att ändra konfigurationsinställningarna för Data Source{#ability-to-modify-data-source-configuration-settings}
 
 Fram till version 6.4 av AEM Forms kunde du inte ändra schema, Host, Base Path för RESTful-tjänsten när en datakälla hade konfigurerats. Detta var problematiskt om du ville testa datakällorna mot olika miljöer.
 
@@ -24,8 +24,8 @@ I och med AEM Forms 6.5 kan du nu enkelt ändra ovannämnda egenskaper. Med den 
 
 Skärmbilderna nedan visar konfigurationsinställningarna för datakällor i AEM Forms 6.4 och Forms 6.5
 
-**Konfiguration av datakälla i AEM 6.4**
+**Data Source Configuration in AEM 6.4**
 
 ![64DataSource Configuration](assets/64release.gif)
-**Redigerbar datakällkonfiguration i AEM 6.5 och senare**
-![65DataSource-konfiguration](assets/modifiable_data_source.png)
+**Redigerbara data-Source-konfigurationer i AEM 6.5 och senare**
+![65Konfiguration för datakälla](assets/modifiable_data_source.png)

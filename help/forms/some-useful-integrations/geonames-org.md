@@ -25,34 +25,35 @@ En överlappande nedrullningsbar lista är en serie beroende DropDownList-kontro
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-I den här självstudiekursen har jag använt [Geonames REST API](https://www.geonames.org/export/web-services.html) för att visa denna förmåga.
+I den här självstudiekursen har jag använt [Geonames REST API](https://www.geonames.org/export/web-services.html) för att demonstrera den här funktionen.
 Det finns ett antal organisationer som erbjuder den här typen av tjänster och så länge de har väldokumenterade REST API:er kan du enkelt integrera med AEM Forms med hjälp av dataintegreringsfunktionen
 
 Följande steg har utförts för att implementera listrutor i listrutan för överlappande i AEM Forms
 
 ## Skapa utvecklarkonto
 
-Skapa ett utvecklarkonto med [Geonames](https://www.geonames.org/login). Anteckna användarnamnet. Användarnamnet behövs för att anropa REST API:er för mappen geonames.org.
+Skapa ett utvecklarkonto med [geografiska namn](https://www.geonames.org/login). Anteckna användarnamnet. Användarnamnet behövs för att anropa REST API:er för mappen geonames.org.
 
 ## Skapa Swagger/OpenAPI-fil
 
 OpenAPI-specifikationen (tidigare Swagger-specifikationen) är ett API-beskrivningsformat för REST API:er. Med en OpenAPI-fil kan du beskriva hela ditt API, inklusive:
 
 * Tillgängliga slutpunkter (/användare) och åtgärder för varje slutpunkt (GET /användare, POST /användare)
-* Åtgärdsparametrar Indata och utdata för varje åtgärd Autentiseringsmetoder
+* Operationsparametrar Indata och utdata för varje åtgärd
+Autentiseringsmetoder
 * Kontaktinformation, licens, användningsvillkor och annan information.
 * API-specifikationer kan skrivas i YAML eller JSON. Formatet är lätt att lära sig och kan läsas av både människor och datorer.
 
-Om du vill skapa din första swagger/OpenAPI-fil följer du [OpenAPI-dokumentation](https://swagger.io/docs/specification/2-0/basic-structure/)
+Följ [OpenAPI-dokumentationen](https://swagger.io/docs/specification/2-0/basic-structure/) för att skapa din första swagger/OpenAPI-fil
 
 >[!NOTE]
 > AEM Forms stöder OpenAPI Specification version 2.0 (FKA Swagger).
 
-Använd [swagger editor](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver de åtgärder som hämtar alla länder och underordnade element för landet eller staten. Swagger-filen kan skapas i JSON- eller YAML-format.
+Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swagger-fil som beskriver åtgärderna som hämtar alla länder och underordnade element för landet eller staten. Swagger-filen kan skapas i JSON- eller YAML-format.
 
 ## Skapa datakällor
 
-För att integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i molntjänstkonfigurationen. Använd [växla filer](assets/geonames-swagger-files.zip) för att skapa datakällor.
+Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filerna](assets/geonames-swagger-files.zip) för att skapa datakällor.
 Du måste skapa två datakällor (en för att hämta alla länder och andra för att få underordnade element)
 
 
@@ -76,19 +77,20 @@ Länklistan fylls i när formuläret initieras för första gången. I följande
 #### Fyll i listrutan Region
 
 Vi måste fylla i den nedrullningsbara listan Stat/provins baserat på det valda landet. Följande skärmbild visar konfigurationen för regelredigeraren
-![state-Province-options](assets/state-province-options.png)
+![state-Region-options](assets/state-province-options.png)
 
 ### Utövning
 
 Lägg till två nedrullningsbara listor med namnet fylken och städer i formuläret för att lista fylken och staden baserat på valt land och vald stat/provins.
-![träning](assets/cascading-drop-down-exercise.png)
+![övning](assets/cascading-drop-down-exercise.png)
 
 
-### Exempelresurser
+### Exempel på Assets
 
-Du kan hämta följande resurser för att få ett försprång när du skapar överlappande listruteexempel De färdiga swagger-filerna kan hämtas från [här](assets/geonames-swagger-files.zip)
+Du kan ladda ned följande resurser för att få ett försprång i överlappande listruteexempel
+De färdiga swagger-filerna kan hämtas från [här](assets/geonames-swagger-files.zip)
 Swagger-filerna beskriver följande REST API
-* [Skaffa alla länder](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [Hämta alla länder](https://secure.geonames.org/countryInfoJSON?username=yourusername)
 * [Hämta underordnade objekt för Geoname-objekt](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
-Slutförd [Du kan hämta formulärdatamodellen härifrån](assets/geonames-api-form-data-model.zip)
+Den färdiga [formulärdatamodellen kan hämtas här](assets/geonames-api-form-data-model.zip)

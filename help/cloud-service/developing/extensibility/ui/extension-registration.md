@@ -20,13 +20,13 @@ ht-degree: 0%
 
 # Tillägg - registrering
 
-AEM är en specialiserad app i App Builder som bygger på React och använder [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/) Gränssnittsramverk.
+Gränssnittstilläggen för AEM är specialiserade App Builder-appar som bygger på React och använder gränssnittsramverket [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
 
 För att definiera var och hur AEM UI-tillägg ska visas krävs två konfigurationer i tilläggets App Builder-app: approutning och tilläggsregistrering.
 
 ## Appvägar{#app-routes}
 
-Tillägget `App.js` deklarerar [Reagera router](https://reactrouter.com/en/main) som innehåller en indexväg som registrerar tillägget i AEM.
+Tilläggets `App.js` deklarerar [Reaktionsroutern](https://reactrouter.com/en/main) som innehåller en indexväg som registrerar tillägget i AEM.
 
 Indexflödet anropas när AEM-gränssnittet läses in och målet för den här vägen definierar hur tillägget visas i konsolen.
 
@@ -55,13 +55,13 @@ function App(props) {
 
 `ExtensionRegistration.js` måste läsas in omedelbart via tilläggets indexflöde och fungerar som registreringspunkt för tillägget.
 
-Baserat på den AEM UI-tilläggsmallen som valts när [initiera apptillägget App Builder](./app-initialization.md), stöds olika tilläggspunkter.
+Baserat på den AEM UI-tilläggsmallen som valdes när [App Builder-programtillägget ](./app-initialization.md) initierades stöds olika tilläggspunkter.
 
 + [Tillägg för innehållsfragment i användargränssnittet](./content-fragments/overview.md#extension-points)
 
 ## Inkludera tillägg villkorligt
 
-AEM UI-tillägg kan utföra anpassad logik för att begränsa de AEM miljöer som tillägget finns i. Den här kontrollen utförs före `register` ring i `ExtensionRegistration` och returnerar omedelbart om tillägget inte ska visas.
+AEM UI-tillägg kan utföra anpassad logik för att begränsa de AEM miljöer som tillägget finns i. Den här kontrollen utförs före anropet `register` i komponenten `ExtensionRegistration` och returnerar omedelbart om tillägget inte ska visas.
 
 Den här kontrollen har begränsad kontext:
 
@@ -70,10 +70,10 @@ Den här kontrollen har begränsad kontext:
 
 De vanligaste kontrollerna för att läsa in ett tillägg är:
 
-+ Använda AEM (`new URLSearchParams(window.location.search).get('repo')`) för att avgöra om tillägget ska läsas in.
++ Använd AEM värd (`new URLSearchParams(window.location.search).get('repo')`) för att avgöra om tillägget ska läsas in.
    + Visa bara tillägget i AEM miljöer som ingår i ett visst program (som visas i exemplet nedan).
    + Visa bara tillägget i en viss AEM (AEM värd).
-+ Använda [Adobe I/O Runtime action](./runtime-action.md) för att göra ett HTTP-anrop till AEM för att avgöra om den aktuella användaren ska se tillägget.
++ Använder en [Adobe I/O Runtime-åtgärd](./runtime-action.md) för att göra ett HTTP-anrop till AEM för att avgöra om den aktuella användaren ska se tillägget.
 
 I exemplet nedan visas hur du begränsar tillägget till alla miljöer i programmet `p12345`.
 

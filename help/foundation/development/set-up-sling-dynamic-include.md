@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Konfigurera [!DNL Sling Dynamic Include]
 
-En videogenomgång av installation och användning [!DNL Apache Sling Dynamic Include] med [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) körs [!DNL Apache HTTP Web Server].
+En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) som körs på [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
@@ -27,10 +27,10 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
 >
 > Kontrollera att den senaste versionen av AEM Dispatcher är installerad lokalt.
 
-1. Hämta och installera [[!DNL Sling Dynamic Include] paket](https://sling.apache.org/downloads.cgi).
+1. Hämta och installera [[!DNL Sling Dynamic Include] paketet](https://sling.apache.org/downloads.cgi).
 1. Konfigurera [!DNL Sling Dynamic Include] via [!DNL OSGi Configuration Factory] på **http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
 
-   Eller, om du vill lägga till i en AEM kodbas, skapa **sling:OsgiConfig** nod vid:
+   Eller, om du vill lägga till en AEM kodbas, skapar du lämplig **sling:OsgiConfig** -nod på:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +54,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
    -->
    ```
 
-1. (Valfritt) Upprepa det sista steget för att tillåta komponenter på [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) att delges via [!DNL SDI] också. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
+1. (Valfritt) Upprepa det sista steget för att även tillåta att komponenter i [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) kan hanteras via [!DNL SDI]. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -78,7 +78,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
    -->
    ```
 
-1. Uppdatera [!DNL Apache HTTPD Web server]&#39;s `httpd.conf` -fil för att aktivera [!DNL Include] -modul.
+1. Uppdatera filen `httpd.conf` för [!DNL Apache HTTPD Web server] för att aktivera modulen [!DNL Include].
 
    ```shell
    $ sudo vi .../httpd.conf
@@ -88,7 +88,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
    LoadModule include_module libexec/apache2/mod_include.so
    ```
 
-1. Uppdatera [!DNL vhost] fil som ska följas innehåller direktiv.
+1. Uppdatera filen [!DNL vhost] så att den respekterar direktiv om inkludering.
 
    ```shell
    $ sudo vi .../vhosts/aem-publish.local.conf
@@ -113,7 +113,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
    </VirtualHost>
    ```
 
-1. Uppdatera dispatcher.alla konfigurationsfiler som stöds (1) `nocache` väljare och (2) aktivera stöd för TTL.
+1. Uppdatera dispatcher.any-konfigurationsfilen så att den stöder (1) `nocache` väljare och (2) aktivera stöd för TTL.
 
    ```shell
    $ sudo vi .../conf/dispatcher.any
@@ -131,7 +131,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
 
    >[!TIP]
    >
-   > Lämna efterföljande `*` av i glob `*.nocache.html*` linje före, kan resultera i [problem vid begäran om underresurser](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
+   > Om du lämnar det avslutande `*` i glob `*.nocache.html*`-regeln ovan kan det leda till [problem i förfrågningar för underresurser](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16).
 
    ```shell
    /cache {
@@ -140,7 +140,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
    }
    ```
 
-1. Starta alltid om [!DNL Apache HTTP Web Server] efter att ha gjort ändringar i konfigurationsfilerna eller `dispatcher.any`.
+1. Starta alltid om [!DNL Apache HTTP Web Server] när du har gjort ändringar i konfigurationsfilerna eller i `dispatcher.any`.
 
    ```shell
    $ sudo apachectl restart
@@ -148,7 +148,7 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
 
 >[!NOTE]
 >
->Om du använder [!DNL Sling Dynamic Includes] för servering av SSI (edge-side includes), se till att cachelagra relevanta [svarsrubriker i dispatchercachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
+>Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;
@@ -163,4 +163,4 @@ En videogenomgång av installation och användning [!DNL Apache Sling Dynamic In
 ## Stödmaterial
 
 * [Ladda ned paketet Sling Dynamic Include](https://sling.apache.org/downloads.cgi)
-* [Dokumentation för Apache Sling Dynamic Include](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [Dokumentation för Dynamisk inkludering av Apache Sling ](https://github.com/Cognifide/Sling-Dynamic-Include)

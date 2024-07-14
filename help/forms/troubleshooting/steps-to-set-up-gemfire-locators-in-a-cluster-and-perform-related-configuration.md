@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att konfigurera gemfire-lokaliserare i ett kluster och utföra relaterad konfiguration
 
-*I den här videon går du igenom stegen för att konfigurera gemfire-lokaliserare i ett kluster och utföra relaterad konfiguration.*
+*Den här videon går igenom stegen för att konfigurera gemfire-lokaliserare i ett kluster och utför relaterad konfiguration.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335544?quality=12&learn=on)

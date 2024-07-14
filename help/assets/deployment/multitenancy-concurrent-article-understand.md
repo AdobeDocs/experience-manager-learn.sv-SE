@@ -110,7 +110,7 @@ Eftersom det är en global systemsökväg som inte är specifik för en webbplat
 
 ### Övertäckningar {#overlays}
 
-Övertäckningar används ofta för att utöka eller ersätta AEM, men om du använder en övertäckning påverkas hela AEM (dvs. alla funktionsändringar görs tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupperna samarbeta för att komma överens om funktionaliteten och utseendet hos AEM administrativa konsoler.
+Övertäckningar används ofta för att utöka eller ersätta AEM, men om du använder en övertäckning påverkas hela AEM (dvs. alla funktionsändringar görs tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupperna samarbeta för att komma överens om hur AEM administrativa konsoler ska fungera och se ut.
 
 Om konsensus inte kan nås mellan de olika affärsenheterna är en möjlig lösning att helt enkelt inte använda övertäckningar. Skapa i stället en egen kopia av funktionen och visa den via olika sökvägar för varje klientorganisation. På så sätt kan varje klientorganisation ha en helt annan användarupplevelse, men det här tillvägagångssättet ökar också kostnaden för implementering och efterföljande uppgraderingar.
 

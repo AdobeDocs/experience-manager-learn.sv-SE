@@ -1,5 +1,5 @@
 ---
-title: Hur fungerar Content Publishing AEM as a Cloud Service?
+title: Hur fungerar Content Publishing i AEM as a Cloud Service?
 description: Se hur innehållspublicering i AEM as a Cloud Service fungerar, inklusive koncept för innehållsdistribution och Adobe Pipeline.
 role: Developer
 level: Beginner

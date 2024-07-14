@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka DDX-relaterade problem
 
-*I den här videon går du igenom stegen för att hämta in nödvändig information för att felsöka DDX-relaterade problem i tjänsten Forms Assembler.*
+*I den här videon går du igenom stegen för att hämta den information som krävs för att felsöka DDX-relaterade problem i tjänsten Forms Assembler.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)

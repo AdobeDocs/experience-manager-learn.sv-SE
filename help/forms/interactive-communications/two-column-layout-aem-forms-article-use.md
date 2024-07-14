@@ -28,9 +28,9 @@ Nedan beskrivs de steg som krävs för att skapa 2 kolumnlayouter med AEM Forms 
 * Skapa en andra mallsida med ett innehållsområde (standard)
 * Välj fliken Sidnumrering (namnlöst delformulär) (sidan 1) och (namnlöst delformulär) (sidan 2) och ange egenskaperna enligt skärmbilderna nedan.
 
-![page1](assets/untitledsubform_paginationproperties.gif)
+![sida1](assets/untitledsubform_paginationproperties.gif)
 
-![page2](assets/untitled_subformpage2.gif)
+![sida2](assets/untitled_subformpage2.gif)
 
 När sidnumreringsegenskaperna är inställda kan vi lägga till delformulär eller målområden under (namnlöst delformulär) (sidan 1).
 
@@ -39,4 +39,4 @@ Vi kan sedan lägga till dokumentfragment till dessa delformulär eller målomr�
 Om du vill testa detta på den lokala servern hämtar du resurserna som hör till den här artikeln. Bläddra nedåt till den här sidans nederkant
 
 * [Hämta och installera ett provkanalsdokument med hjälp av pakethanteraren](assets/print-channel-with-two-column-layout.zip)
-* [Förhandsgranska dokument för utskriftskanal](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
+* [Förhandsgranska dokumentet för utskriftskanalen](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)

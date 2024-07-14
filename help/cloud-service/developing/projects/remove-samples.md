@@ -52,7 +52,7 @@ Ta bort `<div class="helloworld" ...></div>` från:
 ui.frontend/src/main/webpack/static/index.html
 ```
 
-Ta bort `<helloworld>` komponentinstansdefinition från:
+Ta bort komponentinstansdefinitionen `<helloworld>` från:
 
 ```
 ui.content/src/main/content/jcr_root/content/wknd-examples/us/en/.content.xml

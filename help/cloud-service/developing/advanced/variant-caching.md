@@ -27,13 +27,13 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 + Identifiera variantnyckeln och antalet värden som den kan ha. I vårt exempel varierar vi mellan olika delstater, så det högsta antalet är 50. Detta är tillräckligt litet för att inte orsaka problem med variantgränserna vid CDN. [Granska avsnittet med variantbegränsningar](#variant-limitations).
 
-+ AEM måste ange cookie-filen __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den initiala HTTP-begärans motsvarande HTTP-svar.
++ AEM måste ange cookien __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den inledande HTTP-begärans motsvarande HTTP-svar.
 
-+ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookien omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till avsändaren.
++ Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookien omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till dispatchern.
 
-+ En regel för omskrivning av Apache ändrar sökvägen till begäran så att den inkluderar rubrikvärdet i sidans URL som en Apache Sling-väljare (t.ex. `/page.variant=NY.html`). Detta gör att AEM kan leverera olika innehåll baserat på väljaren och avsändaren kan cachelagra en sida per variant.
++ En regel för omskrivning av Apache ändrar sökvägen till begäran så att den inkluderar rubrikvärdet i sidans URL som en Apache Sling-väljare (t.ex. `/page.variant=NY.html`). Detta gör att AEM Publish kan leverera olika innehåll baserat på väljaren och avsändaren kan cachelagra en sida per variant.
 
-+ Svaret som skickas av AEM Dispatcher måste innehålla en HTTP-svarshuvud `Vary: x-aem-variant`. Detta instruerar CDN att lagra olika cachekopior för olika rubrikvärden.
++ Svaret som skickas av AEM Dispatcher måste innehålla HTTP-svarshuvudet `Vary: x-aem-variant`. Detta instruerar CDN att lagra olika cachekopior för olika rubrikvärden.
 
 >[!TIP]
 >
@@ -49,21 +49,21 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Användning
 
-1. För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering som ett exempel.
+1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)s implementering som exempel.
 
-1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM att ange `x-aem-variant` cookie på HTTP-svaret, med ett variantvärde.
+1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM för att ange `x-aem-variant` cookie för HTTP-svaret, med ett variantvärde.
 
-1. AEM CDN omformas automatiskt `x-aem-variant` cookie till en HTTP-rubrik med samma namn.
+1. Om du AEM CDN transformeras `x-aem-variant`-cookie automatiskt till en HTTP-rubrik med samma namn.
 
-1. Lägg till en Apache Web Server-mod_rewrite-regel i din `dispatcher` -projekt, som ändrar begärandesökvägen så att den innehåller variantväljaren.
+1. Lägg till en Apache Web Server mod_rewrite-regel i ditt `dispatcher`-projekt, som ändrar sökvägen till begäran så att den innehåller variantväljaren.
 
-1. Distribuera filtret och skriv om regler med hjälp av Cloud Manager.
+1. Distribuera filtret och skriv om reglerna med Cloud Manager.
 
 1. Testa det övergripande begärandeflödet.
 
 ## Kodexempel
 
-+ Exempel på SlingServletFilter som ska anges `x-aem-variant` cookie med ett värde i AEM.
++ Exempel på SlingServletFilter som anger `x-aem-variant`-cookie med ett värde i AEM.
 
   ```
   package com.adobe.aem.guides.wknd.core.servlets.filters;
@@ -120,7 +120,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
   }
   ```
 
-+ Exempelregel för omskrivning i __dispatcher/src/conf.d/rewrite.rules__ som hanteras som källkod i Git och distribueras med Cloud Manager.
++ Exempelregel för omskrivning i filen __dispatcher/src/conf.d/rewrite.rules__ som hanteras som källkod i Git och distribueras med Cloud Manager.
 
   ```
   ...
@@ -134,7 +134,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Variantbegränsningar
 
-+ AEM kan hantera upp till 200 varianter. Det betyder att `x-aem-variant` kan ha upp till 200 unika värden. Mer information finns i [CDN-konfigurationsgränser](https://docs.fastly.com/en/guides/resource-limits).
++ AEM CDN kan hantera upp till 200 varianter. Det innebär att rubriken `x-aem-variant` kan ha upp till 200 unika värden. Mer information finns i [CDN-konfigurationsbegränsningarna](https://docs.fastly.com/en/guides/resource-limits).
 
 + Var noga med att se till att din valda variantnyckel aldrig överstiger detta antal.  Ett användar-ID är till exempel inte en bra nyckel eftersom det enkelt skulle överskrida 200 värden för de flesta webbplatser, medan delstaterna/territorierna i ett land passar bättre om det finns färre än 200 delstater i det landet.
 

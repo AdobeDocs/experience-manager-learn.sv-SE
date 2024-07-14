@@ -1,6 +1,6 @@
 ---
-title: Konfigurera App Builder för Asset compute-utbyggbarhet
-description: Asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
+title: Konfigurera App Builder för utbyggbarhet för Asset compute
+description: Asset Compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna installeras och driftsättas.
 feature: Asset Compute Microservices
 version: Cloud Service
 doc-type: Tutorial
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Konfigurera App Builder
 
-Asset compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna konfigureras och distribueras.
+Asset Compute-projekt är särskilt definierade App Builder-projekt, och som sådana kräver de tillgång till App Builder i Adobe Developer Console för att de ska kunna installeras och driftsättas.
 
 ## Skapa och konfigurera App Builder i Adobe Developer Console{#set-up}
 
@@ -28,43 +28,43 @@ Asset compute-projekt är särskilt definierade App Builder-projekt, och som så
 
 _Klicka igenom konfigurationen av App Builder (inget ljud)_
 
-1. Logga in på [Adobe Developer Console](https://console.adobe.io) med den Adobe ID som är associerad med den tilldelade [konton och tjänster](./accounts-and-services.md). Se till att du är __Systemadministratör__ eller i __Utvecklarroll__ för rätt Adobe Org.
-1. Skapa ett App Builder-projekt genom att trycka __Skapa nytt projekt > Projekt från mall > App Builder__
+1. Logga in på [Adobe Developer Console](https://console.adobe.io) med den Adobe ID som är kopplad till de [konton och tjänster som är tilldelade](./accounts-and-services.md). Kontrollera att du är __systemadministratör__ eller i __utvecklarrollen__ för rätt Adobe-organisation.
+1. Skapa ett App Builder-projekt genom att trycka på __Skapa nytt projekt > Projekt från mall > App Builder__
 
-   _Om__ Skapa nytt projekt __eller__ App Builder __typen är inte tillgänglig, det innebär att din Adobe Org inte är tillgänglig [tillhandahålls med App Builder](#request-adobe-project-app-builder)._
+   _Om knappen__ Skapa nytt projekt __eller typen__ App Builder __inte är tillgänglig innebär det att din Adobe-organisation inte [har etablerats med App Builder](#request-adobe-project-app-builder)._
 
-   + __Projektets titel__: `WKND AEM Asset Compute`
+   + __Projekttitel__: `WKND AEM Asset Compute`
    + __Programnamn__: `wkndAemAssetCompute<YourName>`
-      + The __Programnamn__ måste vara unik för alla FApp Builderrefly-projekt och kan inte ändras senare. Att lägga till prefix för företagets eller organisationens namn och efterhandskorrigering med ett meningsfullt suffix är ett bra tillvägagångssätt, till exempel: `wkndAemAssetCompute`.
-      + För självaktivering är det oftast bäst att lägga ditt namn på __Programnamn__, till exempel `wkndAemAssetComputeJaneDoe` för att undvika konflikter med andra App Builder-projekt.
-   + Under __Arbetsytor__ lägg till en ny miljö med namnet `Development`
-   + Under __Adobe I/O Runtime__ säkerställa __Inkludera körtid i varje arbetsyta__ är markerat
-   + Tryck __Spara__ spara projektet
-1. Välj `Development` från arbetsyteväljaren
-1. Tryck __+ Lägg till tjänst > API__ för att öppna __Lägg till ett API__ använder du den här metoden för att lägga till följande API:er:
+      + __Programnamnet__ måste vara unikt för alla FApp Builderirefly-projekt och kan inte ändras senare. Det är bra att lägga till prefix för företagets eller organisationens namn och postfix med ett meningsfullt suffix, till exempel: `wkndAemAssetCompute`.
+      + För självaktivering är det oftast bäst att skjuta upp ditt namn till __programnamnet__, till exempel `wkndAemAssetComputeJaneDoe`, för att undvika kollisioner med andra App Builder-projekt.
+   + Lägg till en ny miljö med namnet `Development` under __Arbetsytor__
+   + Under __Adobe I/O Runtime__ ser du till att __Inkludera körtid med varje arbetsyta__ är markerat
+   + Tryck på __Spara__ för att spara projektet
+1. I App Builder-projektet väljer du `Development` i arbetsyteväljaren
+1. Tryck på __+ Add Service > API__ för att öppna guiden __Add an API__ och använd den här metoden för att lägga till följande API:er:
 
-   + __EXPERIENCE CLOUD > ASSET COMPUTE__
-      + Välj __Generera ett nyckelpar__ och tryck på __Generera nyckelpar__ och spara de hämtade `config.zip` till en säker plats för [senare använda](#private-key)
-      + Tryck __Nästa__
-      + Välj produktprofil __Integreringar - Cloud Service__ och knacka __Spara konfigurerat API__
-   + __Adobe Services > I/O Events__ och knacka __Spara konfigurerat API__
-   + __Adobe Services > I/O Management API__ och knacka __Spara konfigurerat API__
+   + __Experience Cloud > Asset compute__
+      + Välj __Generera ett nyckelpar__ och tryck på knappen __Generera nyckelpar__ och spara det hämtade `config.zip` på en säker plats för [senare användning](#private-key)
+      + Tryck på __Nästa__
+      + Markera produktprofilen __Integreringar - Cloud Service__ och tryck på __Spara konfigurerat API__
+   + __Adobe-tjänster > I/O-händelser__ och tryck på __Spara konfigurerat API__
+   + __Adobe-tjänster > I/O-hanterings-API__ och tryck på __Spara konfigurerat API__
 
 ## Öppna private.key{#private-key}
 
-När du ställer in [API-integrering för asset compute](#set-up) ett nytt nyckelpar skapades och en `config.zip` filen laddades ned automatiskt. Detta `config.zip` innehåller det genererade offentliga certifikatet och matchningen `private.key` -fil.
+När [Asset compute API-integreringen](#set-up) konfigurerades genererades ett nytt nyckelpar och en `config.zip`-fil hämtades automatiskt. `config.zip` innehåller det genererade offentliga certifikatet och den matchande `private.key`-filen.
 
-1. Zippa upp `config.zip` till en säker plats i filsystemet som `private.key` är [används senare](../develop/environment-variables.md)
+1. Zippa upp `config.zip` till en säker plats i filsystemet eftersom `private.key` används [senare](../develop/environment-variables.md)
    + Hemligheter och privata nycklar bör aldrig läggas till i Git som en säkerhetsfråga.
 
 ## Granska JWT-autentiseringsuppgifterna (Service Account)
 
-Det här Adobe I/O-projektets autentiseringsuppgifter används av den lokala [Asset compute Development Tool](../develop/development-tool.md) för att interagera med Adobe I/O Runtime och måste införlivas i Asset compute. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
+Det här Adobe I/O-projektets autentiseringsuppgifter används av det lokala [Asset compute-utvecklingsverktyget](../develop/development-tool.md) för att interagera med Adobe I/O Runtime och måste införlivas i Asset compute. Bekanta dig med JWT-autentiseringsuppgifterna (Service Account).
 
-![Autentiseringsuppgifter för Adobe Developer-tjänstkonto](./assets/app-builder/service-account.png)
+![Adobe Developer tjänstkonto - autentiseringsuppgifter](./assets/app-builder/service-account.png)
 
-1. I Adobe I/O Project App Builder-projektet ser du till att `Development` arbetsytan är markerad
-1. Tryck på __Tjänstkonto (JWT)__ under __Referenser__
+1. Kontrollera att arbetsytan `Development` är markerad i Adobe I/O Project App Builder-projektet
+1. Tryck på __tjänstkonto (JWT)__ under __Autentiseringsuppgifter__
 1. Granska inloggningsuppgifterna för Adobe I/O som visas
-   + The __publik nyckel__ längst ned finns __private.key__ motpart i `config.zip` laddas ned när __ASSET COMPUTE API__ har lagts till i det här projektet.
+   + Den __publika nyckeln__ som visas längst ned har motsvarande __private.key__ i den `config.zip` som hämtades när __Asset compute API__ lades till i det här projektet.
       + Om den privata nyckeln förloras eller komprometteras kan den matchande offentliga nyckeln tas bort och ett nytt nyckelpar genereras i eller överförs till Adobe I/O med det här gränssnittet.

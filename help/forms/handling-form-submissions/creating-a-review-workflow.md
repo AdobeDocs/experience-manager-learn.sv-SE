@@ -25,10 +25,10 @@ Arbetsflöden används vanligtvis för att skicka inskickade data för gransknin
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguide](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
 
 I följande video förklaras hur du skapar arbetsflöden för granskning och godkännande med AEM Forms Components
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)
 
 
-Om du av någon anledning inte kan skapa arbetsflödet kan du hämta det färdiga arbetsflödet från [här](assets/review-submitted-data-workflow.zip) och importera samma [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp) i AEM.
+Om du av någon anledning inte kan skapa arbetsflödet kan du hämta det slutförda arbetsflödet från [här](assets/review-submitted-data-workflow.zip) och importera det med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp) i din AEM.

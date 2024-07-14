@@ -32,20 +32,20 @@ Följande verktyg bör installeras lokalt:
 
 ## 1. Installera AEM SDK {#aem-sdk}
 
-Den här inställningen använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) för att utforska AEM GraphQL API:er. I det här avsnittet finns en snabbguide till hur du installerar AEM SDK och kör det i redigeringsläge. En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
+I den här konfigurationen används [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) för att utforska AEM GraphQL API:er. I det här avsnittet finns en snabbguide till hur du installerar AEM SDK och kör det i redigeringsläge. En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
 
 >[!NOTE]
 >
-> Du kan också följa självstudiekursen med [AEM as a Cloud Service miljö](./cloud-service.md). Ytterligare information om hur du använder en molnmiljö finns i självstudiekursen.
+> Du kan också följa självstudiekursen med en [AEM as a Cloud Service-miljö](./cloud-service.md). Ytterligare information om hur du använder en molnmiljö finns i självstudiekursen.
 
-1. Navigera till **[Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEM as a Cloud Service** och ladda ned den senaste versionen av **AEM SDK**.
+1. Gå till **[portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)** > **AEM as a Cloud Service** och hämta den senaste versionen av **AEM SDK**.
 
    ![Programdistributionsportal](assets/quick-setup/aem-sdk/downloads__aem-sdk.png)
 
-1. Zippa upp nedladdningen och kopiera Quickstart jar (`aem-sdk-quickstart-XXX.jar`) till en dedikerad mapp, dvs. `~/aem-sdk/author`.
+1. Zippa upp hämtningen och kopiera Quickstart jar (`aem-sdk-quickstart-XXX.jar`) till en dedikerad mapp, dvs. `~/aem-sdk/author`.
 1. Byt namn på filen jar till `aem-author-p4502.jar`.
 
-   The `author` name anger att QuickStart jar startar i redigeringsläge. The `p4502` Anger att QuickStart körs på port 4502.
+   Namnet `author` anger att QuickStart jar startar i redigeringsläge. `p4502` anger att QuickStart körs på port 4502.
 
 1. Om du vill installera och starta AEM öppnar du kommandotolken i mappen som innehåller jar-filen och kör följande kommando:
 
@@ -54,51 +54,51 @@ Den här inställningen använder [AEM as a Cloud Service SDK](https://experienc
    $ java -jar aem-author-p4502.jar
    ```
 
-1. Ange ett administratörslösenord som `admin`. Alla administratörslösenord godkänns, men du bör använda dem `admin` för lokal utveckling för att minska behovet av att omkonfigurera.
-1. När AEM har installerat klart öppnas ett nytt webbläsarfönster i [http://localhost:4502](http://localhost:4502).
-1. Logga in med användarnamnet `admin` och lösenordet som valdes under AEM starten (vanligtvis `admin`).
+1. Ange ett administratörslösenord som `admin`. Ett administratörslösenord accepteras, men du bör använda `admin` för lokal utveckling för att minska behovet av att konfigurera om.
+1. När AEM har installerat klart öppnas ett nytt webbläsarfönster på [http://localhost:4502](http://localhost:4502).
+1. Logga in med användarnamnet `admin` och det lösenord som valts när den första starten AEM (vanligtvis `admin`).
 
 ## 2. Installera exempelinnehåll {#install-sample-content}
 
-Exempelinnehåll från **WKND-referensplats** används för att snabba upp självstudiekursen. WKND är ett fiktivt vardagsmärke som ofta används med AEM utbildning.
+Exempelinnehåll från **WKND-referenswebbplatsen** används för att snabba upp självstudiekursen. WKND är ett fiktivt vardagsmärke som ofta används med AEM utbildning.
 
-WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL slutpunkter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) i kundprojektet. A [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program, mer information om [CORS](#cors-config) finns nedan.
+WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL-slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL-slutpunkterna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) i ditt kundprojekt. En [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program. Mer information om [CORS](#cors-config) finns nedan.
 
-1. Ladda ned det senaste kompilerade AEM-paketet för WKND-webbplatsen: [aem-guides-wknd.all-x.x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
+1. Hämta det senaste kompilerade AEM för WKND-platsen: [aem-guides-wknd.all-x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
    >[!NOTE]
    >
-   > Glöm inte att hämta standardversionen som är kompatibel med AEM as a Cloud Service och **not** den `classic` version.
+   > Se till att hämta standardversionen som är kompatibel med AEM as a Cloud Service och **inte** `classic` -versionen.
 
-1. Från **AEM** meny, navigera till **verktyg** > **Distribution** > **Paket**.
+1. Gå till **Verktyg** > **Distribution** > **Paket** på menyn **AEM Start**.
 
    ![Navigera till paket](assets/quick-setup/aem-sdk/aem-sdk__packages.png)
 
-1. Klicka **Överför paket** och väljer det WKND-paket som hämtades i föregående steg. Klicka **Installera** för att installera paketet.
+1. Klicka på **Överför paket** och välj det WKND-paket som hämtades i det föregående steget. Klicka på **Installera** för att installera paketet.
 
-1. Från **AEM** meny, navigera till **Resurser** > **Filer** > **WKND delad** > **Engelska** > **Annonser**.
+1. Gå till **Assets** > **Filer** > **WKND delad** > **Engelska** > **Anteckningar** på menyn **AEM Start**.
 
    ![Mappvy över annonser](assets/quick-setup/aem-sdk/aem-sdk__assets-folder.png)
 
    Det här är en mapp med alla resurser som består av de olika annonser som WKND-varumärket främjar. Detta inkluderar traditionella medietyper som bilder och video och media som är specifika för AEM som **Innehållsfragment**.
 
-1. Klicka på **Nedförsbacke Skiing Wyoming** och klickar på **Nedförsbacke Skiing Wyoming Content Fragment** kort:
+1. Klicka på mappen **Skiing Wyoming** nedåt och klicka på **Skiing Wyoming Content Fragment** -kortet:
 
    ![Innehållsfragmentkort](assets/quick-setup/aem-sdk/aem-sdk__content-fragment.png)
 
 1. Redigeraren för innehållsfragment öppnas för Hoing Wyoming-äventyret.
 
-   ![Innehållsfragmentsredigerare](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
+   ![Redigera innehållsfragment](assets/quick-setup/aem-sdk/aem-sdk__content-fragment-editor.png)
 
-   Observera att olika fält som **Titel**, **Beskrivning** och **Aktivitet** Definiera fragmentet.
+   Observera att olika fält som **Title**, **Description** och **Activity** definierar fragmentet.
 
-   **Innehållsfragment** är ett av sätten att hantera innehåll i AEM. Innehållsfragment är återanvändbart, presentationsbaserat innehåll som består av strukturerade dataelement som text, formaterad text, datum eller referenser till andra innehållsfragment. Innehållsfragment utforskas i detalj senare i snabbinställningarna.
+   **Innehållsfragment** är ett sätt att hantera innehåll i AEM. Innehållsfragment är återanvändbart, presentationsbaserat innehåll som består av strukturerade dataelement som text, formaterad text, datum eller referenser till andra innehållsfragment. Innehållsfragment utforskas i detalj senare i snabbinställningarna.
 
-1. Klicka **Avbryt** för att stänga fragmentet. Du kan navigera i några andra mappar och utforska det andra innehållet i Adventure.
+1. Klicka på **Avbryt** för att stänga fragmentet. Du kan navigera i några andra mappar och utforska det andra innehållet i Adventure.
 
 >[!NOTE]
 >
-> Om du använder en Cloud Service-miljö läser du dokumentationen om hur du [distribuera en kodbas som WKND Reference-webbplatsen till en Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
+> Om du använder en Cloud Service-miljö läser du dokumentationen om hur du [distribuerar en kodbas som WKND-referensplatsen till en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
 
 ## 3. Ladda ned och kör appen WKND React {#sample-app}
 
@@ -111,8 +111,8 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
    $ cd aem-guides-wknd-graphql/react-app
    ```
 
-1. Öppna appen React i `aem-guides-wknd-graphql/react-app` i den utvecklingsmiljö du föredrar.
-1. Öppna filen i IDE `.env.development` på `/.env.development`. Verifiera `REACT_APP_AUTHORIZATION` raden är okommenterad och filen deklarerar följande variabler:
+1. Öppna appen React i `aem-guides-wknd-graphql/react-app` i den utvecklingsmiljö du vill använda.
+1. Öppna filen `.env.development` vid `/.env.development` i IDE. Kontrollera att raden `REACT_APP_AUTHORIZATION` inte är kommenterad och att filen deklarerar följande variabler:
 
    ```plain
    REACT_APP_HOST_URI=http://localhost:4502
@@ -121,11 +121,11 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
    REACT_APP_AUTHORIZATION=admin:admin
    ```
 
-   Säkerställ `REACT_APP_HOST_URI` pekar på ditt lokala AEM SDK. Den här snabbstarten kopplar appen React till  **AEM**. **Upphovsman** tjänsterna kräver autentisering, så appen använder `admin` användare för att upprätta anslutningen. Att koppla en app till AEM Author är vanligt under utvecklingen eftersom det gör det enklare att snabbt iterera i innehållet utan att behöva publicera ändringar.
+   Se till att `REACT_APP_HOST_URI` pekar på din lokala AEM SDK. Den här snabbstarten ansluter appen React till **AEM Author**. **Författartjänster** kräver autentisering, så appen använder `admin`-användaren för att upprätta anslutningen. Att koppla en app till AEM Author är vanligt under utvecklingen eftersom det gör det enklare att snabbt iterera i innehållet utan att behöva publicera ändringar.
 
    >[!NOTE]
    >
-   > I ett produktionsscenario ansluter appen till en AEM **Publicera** miljö. Detta beskrivs mer ingående i _Produktionsdistribution_ -avsnitt.
+   > I ett produktionsscenario ansluter appen till en AEM **Publish** -miljö. Detta beskrivs mer ingående i avsnittet _Produktionsdistribution_.
 
 
 1. Installera och starta React-appen:
@@ -136,17 +136,17 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
    $ npm start
    ```
 
-1. Ett nytt webbläsarfönster öppnas automatiskt i [http://localhost:3000](http://localhost:3000).
+1. Appen öppnas automatiskt i ett nytt webbläsarfönster på [http://localhost:3000](http://localhost:3000).
 
-   ![Reagera på startprogram](assets/quick-setup/aem-sdk/react-app__home-view.png)
+   ![Reagera startprogram](assets/quick-setup/aem-sdk/react-app__home-view.png)
 
    En lista över äventyret från AEM visas.
 
 1. Klicka på en av äventyrsbilderna för att visa äventyrsdetaljer. En begäran görs om att AEM ska returnera detaljerna för ett äventyr.
 
-   ![Vyn Adventure Details](assets/quick-setup/aem-sdk/react-app__adventure-view.png)
+   ![Vyn Adventure Details (Information)](assets/quick-setup/aem-sdk/react-app__adventure-view.png)
 
-1. Använd webbläsarens utvecklarverktyg för att inspektera **Nätverk** förfrågningar. Visa **XHR** begär och observera flera GETTER `/graphql/execute.json/...`. Det här sökvägsprefixet anropar AEM beständiga frågeslutpunkten och väljer den beständiga frågan som ska köras med namnet och de kodade parametrarna efter prefixet.
+1. Använd webbläsarens utvecklingsverktyg för att inspektera **nätverkets**-begäranden. Visa **XHR**-begäranden och observera flera GETTER till `/graphql/execute.json/...`. Det här sökvägsprefixet anropar AEM beständiga frågeslutpunkten och väljer den beständiga frågan som ska köras med namnet och de kodade parametrarna efter prefixet.
 
    ![GraphQL Endpoint XHR-begäran](assets/quick-setup/aem-sdk/react-app__graphql-request.png)
 
@@ -155,28 +155,28 @@ Ett av målen med den här självstudiekursen är att visa hur du använder AEM 
 När React-appen är igång uppdaterar du innehållet i AEM och ser att ändringen återspeglas i appen.
 
 1. Navigera till AEM [http://localhost:4502](http://localhost:4502).
-1. Navigera till **Resurser** > **Filer** > **WKND delad** > **Engelska** > **Annonser** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd-shared/en/adventures/bali-surf-camp)**.
+1. Navigera till **Assets** > **Filer** > **WKND delad** > **Engelska** > **Anteckningar** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd-shared/en/adventures/bali-surf-camp)**.
 
-   ![Mappen Bali Surf Camp](assets/setup/bali-surf-camp-folder.png)
+   ![Bali Surf Camp-mappen](assets/setup/bali-surf-camp-folder.png)
 
-1. Klicka på **Bali Surf Camp** innehållsfragment för att öppna redigeraren för innehållsfragment.
-1. Ändra **Titel** och **Beskrivning** av äventyret.
+1. Klicka på innehållsfragmentet **Bali Surf Camp** för att öppna innehållsfragmentredigeraren.
+1. Ändra **titeln** och **beskrivningen** för äventyret.
 
    ![Ändra innehållsfragment](assets/setup/modify-content-fragment-bali.png)
 
-1. Klicka **Spara** för att spara ändringarna.
-1. Uppdatera React-appen på [http://localhost:3000](http://localhost:3000) för att se ändringarna:
+1. Klicka på **Spara** för att spara ändringarna.
+1. Uppdatera React-appen på [http://localhost:3000](http://localhost:3000) för att se dina ändringar:
 
-   ![Uppdaterat Bali Surf Camp Adventure](assets/setup/overnight-bali-surf-camp-changes.png)
+   ![Bali Surf Camp Adventure har uppdaterats](assets/setup/overnight-bali-surf-camp-changes.png)
 
 ## 5. Utforska GraphiQL {#graphiql}
 
-1. Öppna [GraphiQL](http://localhost:4502/aem/graphiql.html) genom att navigera till **verktyg** > **Allmänt** > **GraphQL Query Editor**
+1. Öppna [GraphiQL](http://localhost:4502/aem/graphiql.html) genom att gå till **Verktyg** > **Allmänt** > **GraphQL Query Editor**
 1. Välj befintliga beständiga frågor till vänster och kör dem för att se resultatet.
 
    >[!NOTE]
    >
-   > Verktyget GraphiQL och GraphQL API är [utforskad i detalj senare i självstudiekursen](../multi-step/explore-graphql-api.md).
+   > Verktyget GraphiQL och GraphQL API har [utforskats i detalj senare i självstudiekursen](../multi-step/explore-graphql-api.md).
 
 ## Grattis!{#congratulations}
 

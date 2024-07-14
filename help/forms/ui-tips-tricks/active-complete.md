@@ -22,21 +22,30 @@ ht-degree: 0%
 
 När du har ett anpassat formulär med vänster fliknavigering kanske du vill visa ikoner som anger flikens status. Du kan t.ex. visa en ikon som anger att fliken är aktiv och en ikon som anger att den är klar, vilket visas på skärmbilden nedan.
 
-![verktygsfältsavstånd](assets/active-completed.png)
+![verktygsfält-spacing](assets/active-completed.png)
 
 ## Skapa ett adaptivt formulär
 
 Ett enkelt adaptivt formulär baserat på den grundläggande mallen och Canvas 3.0-temat användes för att skapa exempelformuläret.
-The [ikoner som används i den här artikeln](assets/icons.zip) kan laddas ned härifrån.
+De [ikoner som används i den här artikeln](assets/icons.zip) kan hämtas härifrån.
 
 
 ## Formatera standardläge
 
-Öppna formuläret i redigeringsläge Se till att du är i formatlagret och välj en flik (till exempel fliken Allmänt).
+Öppna formuläret i redigeringsläge
+Kontrollera att du befinner dig i stillagret och välj en flik (till exempel fliken Allmänt).
 Du är i standardläget när du öppnar formatredigeraren för fliken så som visas på skärmbilden nedan
 ![navigeringsflik](assets/navigation-tab.png)
 
-Ange CSS-egenskaper för standardläget enligt nedan | Kategori | Egenskapsnamn | Egenskapsvärde | |:—|:—|:—| | Dimensioner och position | Bredd | 50px | | Text | Teckenbredd| Fet | | Text | Färg | #FFF | |Text | Radhöjd| 3 | |Text | Textjustering | Vänster | |Bakgrund| Färg | #056dae |
+Ange CSS-egenskaper för standardläget enligt nedan
+| Kategori | Egenskapsnamn  |  Egenskapsvärde |
+|:—|:—|:—|
+| Dimensioner och position | Bredd | 50px |
+| Text | Teckenbredd| Fet |
+| Text | Färg | #FFF |
+|Text | Radhöjd| 3 |
+|Text  | Textjustering | Vänster |
+|Bakgrund| Färg | #056dae |
 
 Spara ändringarna
 

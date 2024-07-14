@@ -34,7 +34,7 @@ Konfigurera en lokal utvecklingsmiljö för utveckling av Edge Delivery Services
    $ sudo npm install -g @adobe/aem-cli
    ```
 
-1. Ändra katalog till din projektkatalog som är en Git-databas som skapats från [AEM](https://github.com/adobe/aem-boilerplate) mall.
+1. Ändra katalog till din projektkatalog som är en Git-databas som skapats från mallen [AEM ](https://github.com/adobe/aem-boilerplate).
 
    ```
    $ git clone git@github.com:my-org/my-project.git

@@ -24,11 +24,11 @@ En sidkomponent är en vanlig komponent som återger en sida. Vi ska skapa en ny
 ## Skapa sidkomponent
 
 Logga in på din lokala molnförberedda AEM Forms-instans. Skapa följande struktur under mappen Apps
-![page-component](./assets/page-component1.png)
+![sidkomponent](./assets/page-component1.png)
 
 1. Högerklicka på sidmappen och skapa en nod med namnet storeandfetch av typen cq:Component
 1. Spara ändringarna
-1. Lägg till följande egenskaper i `storeandfetch` noda och spara
+1. Lägg till följande egenskaper i noden `storeandfetch` och spara
 
 | **Egenskapsnamn** | **Egenskapstyp** | **Egenskapsvärde** |
 |-------------------------|-------------------|----------------------------------------|
@@ -37,7 +37,7 @@ Logga in på din lokala molnförberedda AEM Forms-instans. Skapa följande struk
 | jcr:title | Sträng | Sida för anpassad formulärmall |
 | sling:resourceSuperType | Sträng | `fd/af/components/page2/aftemplatedpage` |
 
-Kopiera `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` och klistra in den under `storeandfetch` nod. Byt namn på `aftemplatedpage.jsp` till `storeandfetch.jsp`.
+Kopiera `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp` och klistra in den under noden `storeandfetch`. Byt namn på `aftemplatedpage.jsp` till `storeandfetch.jsp`.
 
 Öppna `storeandfetch.jsp` och lägg till följande rad:
 
@@ -58,7 +58,8 @@ Den färdiga koden ska se ut så här
 <cq:include script="azureportal.jsp"/>
 ```
 
-Skapa en fil med namnet azureportal.jsp under noden storeandfetch, kopiera följande kod till azureportal.jsp och spara ändringarna
+Skapa en fil med namnet azureportal.jsp under noden storeandfetch
+kopiera följande kod till azureportal.jsp och spara ändringarna
 
 ```jsp
 <%@page session="false" %>
@@ -78,7 +79,7 @@ Skapa en fil med namnet azureportal.jsp under noden storeandfetch, kopiera följ
 %>
 ```
 
-I den här koden får vi värdet på parametern request **guid** och lagra den i en variabel som kallas BlobId. Detta BlobId skickas sedan till försäljningsbegäran med attributet paramMap. För att den här koden ska fungera antas det att du har ett formulär som är baserat på en Azure Storage-baserad formulärdatamodell och att lästjänsten för formulärdatamodellen är bunden till ett begärandeattribut som kallas BlobId, vilket visas i skärmbilden nedan.
+I den här koden hämtar vi värdet för begärandeparametern **guid** och lagrar den i en variabel som kallas BlobId. Detta BlobId skickas sedan till försäljningsbegäran med attributet paramMap. För att den här koden ska fungera antas det att du har ett formulär som är baserat på en Azure Storage-baserad formulärdatamodell och att lästjänsten för formulärdatamodellen är bunden till ett begärandeattribut som kallas BlobId, vilket visas i skärmbilden nedan.
 
 ![fdm-request-attribute](./assets/fdm-request-attribute.png)
 

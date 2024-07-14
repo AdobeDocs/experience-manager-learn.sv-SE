@@ -21,16 +21,16 @@ ht-degree: 0%
 
 Formulärdatamodellen kan baseras på RDBMS-, RESTfull-, SOAP- eller OData-källor. Kursen fokuserar på att förfylla adaptiva formulär med hjälp av formulärdatamodell som stöds av RDBMS-datakällan. I den här självstudiekursen användes MYSQL-databasen. Vi skapade följande två tabeller för att visa användningsfallet
 
-* **newhire** table - This table stores the newhere information
+* tabellen **ne** - den här tabellen lagrar information om nyheter
 
-  ![newhire](assets/newhire-table.png)
+  ![Nwire](assets/newhire-table.png)
 
 
-* **stödmottagare** table - Här lagras alla mottagare
+* Tabellen **mottagare** - Här lagras alla mottagare
 
-  ![stödmottagare](assets/beneficiaries-table.png)
+  ![mottagare](assets/beneficiaries-table.png)
 
-Du kan importera [SQL-fil](assets/db-schema.sql) använda MySQL workbench för att skapa till tabeller med exempeldata.
+Du kan importera [sql-filen](assets/db-schema.sql) med MySQL workbench för att skapa till tabeller med exempeldata.
 
 ## Nästa steg
 

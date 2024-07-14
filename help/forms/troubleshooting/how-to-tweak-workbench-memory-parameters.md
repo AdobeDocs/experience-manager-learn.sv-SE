@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här justerar du Workbench-minnesparametrar
 
-*I den här videon går du igenom processen för att justera Workbench-minnesparametrar.*
+*Den här videon går igenom processen för att justera Workbench-minnesparametrar.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335509?quality=12&learn=on)

@@ -33,9 +33,9 @@ Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM
 
 ### Absoluta URL för webbplatskarta{#absolute-sitemap-urls}
 
-AEM sitemap stöder absoluta URL:er med [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta gör du genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor (vanligtvis AEM Publiceringstjänst).
+AEM webbplatskartan stöder absoluta URL:er genom att använda [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta görs genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor (vanligtvis den AEM Publish-tjänsten).
 
-Exempel på noddefinition för Sling-mappning för `https://wknd.com` kan definieras under `/etc/map/https` enligt följande:
+Ett exempel på en noddefinition för Sling-mappning för `https://wknd.com` kan definieras under `/etc/map/https` enligt följande:
 
 | Bana | Egenskapsnamn | Egenskapstyp | Egenskapsvärde |
 |------|----------|---------------|-------|
@@ -43,14 +43,14 @@ Exempel på noddefinition för Sling-mappning för `https://wknd.com` kan defini
 | `/etc/map/https/wknd-site` | `sling:internalRedirect` | Sträng | `/content/wknd/(.*)` |
 | `/etc/map/https/wknd-site` | `sling:match` | Sträng | `wknd.com/$1` |
 
-Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local` (en lokal värdnamnsmappning körs på `http`).
+Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local` (en lokal värdnamnsmappning som körs på `http`).
 
-![Konfiguration av absolut URL för platskarta](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+![Konfiguration av absolut URL för webbplatskarta](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
 
 ### OSGi-konfiguration för schemaläggare för platskarta
 
-Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron-uttryck](https://cron.help/)) webbplatskartor genereras om/cachelagras i AEM.
+Definierar fabrikskonfigurationen [OSGi](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron expressions](https://cron.help/)) återskapas/genereras och cachas i AEM.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -62,7 +62,7 @@ Definierar [OSGi-fabrikskonfiguration](http://localhost:4502/system/console/conf
 }
 ```
 
-### Filterregel för Tillåt utskickning
+### Dispatcher Tillåt filterregel
 
 Tillåt HTTP-begäranden för platskarteläge och platskartefiler.
 
@@ -77,7 +77,7 @@ Tillåt HTTP-begäranden för platskarteläge och platskartefiler.
 
 ### Omskrivningsregel för Apache-webbserver
 
-Säkerställ `.xml` HTTP-begäranden för platskarta dirigeras till rätt underliggande AEM. Om URL-förkortning inte används, eller om delningskartor används för att uppnå URL-förkortning, behövs inte den här konfigurationen.
+Kontrollera att `.xml` platskarta HTTP-begäranden dirigeras till rätt underliggande AEM. Om URL-förkortning inte används, eller om delningskartor används för att uppnå URL-förkortning, behövs inte den här konfigurationen.
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 
@@ -89,8 +89,8 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Resurser
 
-+ [AEM webbplatskartdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
++ [AEM Dokumentation för webbplatskartan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org för Dreamweaver](https://www.sitemaps.org/protocol.html)
-+ [Sitemap.org för indexfiler för platskartor](https://www.sitemaps.org/protocol.html#index)
-+ [Cron Helper](https://cron.help/)
++ [Sitemap.org för webbplatskartan](https://www.sitemaps.org/protocol.html)
++ [Sitemap.org Dokumentation för indexfil för platskarta](https://www.sitemaps.org/protocol.html#index)
++ [Kronhjälpen](https://cron.help/)

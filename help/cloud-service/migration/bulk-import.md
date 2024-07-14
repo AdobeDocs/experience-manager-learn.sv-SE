@@ -1,6 +1,6 @@
 ---
 title: Använda massimport med AEM Assets
-description: Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser i bulk från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
+description: Med verktyget för massimport i AEM as a Cloud Service kan administratörer importera resurser från molnlagring (Azure Blob Storage eller Amazon S3) på ett säkert och effektivt sätt.
 version: Cloud Service
 doc-type: technical-video
 feature: Migration
@@ -25,9 +25,9 @@ Med verktyget för massimport i AEM as a Cloud Service kan administratörer impo
 
 >[!BEGINTABS]
 
->[!TAB Resursvy]
+>[!TAB Assets-vy]
 
-Lär dig hur du importerar många filer till AEM Assets med [Resursvy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [Massimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html), med Dropbox som exempelleverantör av molnlagring för en tydlig och lättillgänglig integrationsprocess.
+Lär dig hur du importerar flera filer till AEM Assets med [resursvyn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [Massimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html), där Dropbox fungerar som en exempelleverantör av molnlagring för en tydlig och lätthanterlig integrationsprocess.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
@@ -37,7 +37,7 @@ Lär dig hur du importerar många filer till AEM Assets med [Resursvy](https://e
 
 >[!TIP]
 >
-> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i produktens tillgängliga alternativ. [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i tillgängliga alternativ i produkten eller i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 ## Schemalägg bulkimport
 

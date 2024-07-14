@@ -32,8 +32,8 @@ Du kan anpassa en inkorg i Experience Manager om du vill ändra en kolumns stand
 
 ## Kolumnanpassning
 
-[Öppna AEM](http://localhost:4502/aem/inbox)
-Öppna Admin Control genom att klicka på _Listvy_ ikon och sedan markera _Administratörskontroll_ som visas på skärmbilden nedan
+[Öppna AEM inkorg](http://localhost:4502/aem/inbox)
+Öppna Admin Control genom att klicka på ikonen _Listvy_ och sedan välja _Administratörskontroll_ så som visas på bilden nedan
 
 ![admin-control](assets/open-customization.png)
 

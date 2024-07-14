@@ -30,13 +30,13 @@ AEM Sites funktioner för sidskillnad ger en snabb, färgkodad vy över vilket i
 
 **HTML ändringar**
 
-* **Grön**: Nytt innehåll
-* **Röd**: Borttaget innehåll
+* **Grönt**: Nytt innehåll
+* **Röd**: Innehållet har tagits bort
 
 **Komponentändringar**
 
 * **Grön**: Ny komponent
-* **Röd**: Borttagen komponent
+* **Röd**: Komponenten har tagits bort
 * **Blå**: Ändrad komponent
 
 ## Jämföra startsidor {#comparing-launch-pages}

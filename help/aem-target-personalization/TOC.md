@@ -17,9 +17,9 @@ ht-degree: 34%
 # Komma igång med AEM och mål {#aem-target-tutorial}
 
 + [Ökning](./overview.md)
-+ [Personalisering med AEM Experience Fragments](./personalization-use-case-1.md)
-+ [Personalisering med Visual Experience Composer](./personalization-use-case-3.md)
-+ [Personalisering av fullständiga webbsidesupplevelser](./personalization-use-case-2.md)
++ [Personalization med AEM Experience Fragments](./personalization-use-case-1.md)
++ [Personalization med Visual Experience Composer](./personalization-use-case-3.md)
++ [Personalization of Full Web Page Experiences](./personalization-use-case-2.md)
 + Implementering {#aem-target-implementation}
    + [Introduktion](./implementation.md)
    + [AEM och Adobe Target med taggar och Adobe I/O](./using-launch-adobe-io.md)

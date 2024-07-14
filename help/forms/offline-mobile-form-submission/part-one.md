@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # Skapa anpassad profil
 
-I den här delen ska vi skapa en [egen profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP-filen som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar ett interaktivt PDF och strömmar tillbaka dem till det anropande programmet.
+I den här delen skapar vi en [anpassad profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar ett interaktivt PDF och strömmar tillbaka dem till det anropande programmet.
 
-Hämta formulärdata med `formBridge` JavaScript API. Vi använder `getDataXML()` metod:
+Hämta formulärdata med JavaScript-API:t `formBridge`. Vi använder metoden `getDataXML()`:
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -59,7 +59,7 @@ var suc = function(obj) {
 
 ## Generera interaktiv PDF
 
-Nedan följer den serletkod som ansvarar för att återge interaktiv PDF och returnera PDF-filen till det anropande programmet. Serleten anropar `mobileFormToInteractivePdf` för den anpassade DocumentServices OSGi-tjänsten.
+Nedan följer den serletkod som ansvarar för att återge interaktiv PDF och returnera PDF-filen till det anropande programmet. Servern anropar metoden `mobileFormToInteractivePdf` för den anpassade DocumentServices OSGi-tjänsten.
 
 ```java
 import java.io.File;
@@ -121,7 +121,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### Återge interaktiv PDF
 
-Följande kod använder [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktivt PDF med data från mobilformuläret.
+Följande kod använder [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktiv PDF med data från mobilformuläret.
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -144,7 +144,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-För att se möjligheten att ladda ned interaktiva PDF från delvis ifyllda mobilformulär, [klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
+[Klicka här](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content) om du vill se möjligheten att hämta interaktiva PDF från delvis ifyllda mobilformulär.
 När PDF har laddats ned är nästa steg att skicka PDF för att starta ett AEM arbetsflöde. Det här arbetsflödet sammanfogar data från det inskickade PDF och genererar icke-interaktiva PDF för granskning.
 
 Den anpassade profil som skapats för det här användningsfallet är tillgänglig som en del av den här självstudiekursen.

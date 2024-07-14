@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här bäddar du in teckensnitt för Forms och konverteringar av utdatatjänster
 
-*I den här videon går du igenom stegen för att bädda in teckensnitt för Forms och konvertera utdatatjänster.*
+*Den här videon går igenom stegen för att bädda in teckensnitt för Forms och konverteringar av utdatatjänster.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)

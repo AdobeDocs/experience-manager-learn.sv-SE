@@ -1,6 +1,6 @@
 ---
 title: Lägga till Symlinks i GIT på rätt sätt
-description: Instruktioner om hur och var du ska lägga till länkar när du arbetar med Dispatcher-konfigurationer.
+description: Instruktioner om hur och var du ska lägga till länkar när du arbetar med dina Dispatcher-konfigurationer.
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 [Innehållsförteckning](./overview.md)
 
-[&lt;- Föregående: Dispatcher Health Check](./health-check.md)
+[&lt;- Föregående: Dispatcher hälsokontroll](./health-check.md)
 
 I AMS får du en färdigfylld GIT-databas som innehåller källkoden för din dispatcher och är klar att börja utveckla och anpassa.
 
-När du skapat din första `.vhost` eller översta nivån `farm.any` filen som du måste skapa en symbolisk länk från `available_*` till `enabled_*` katalog. Att använda rätt länktyp är avgörande för en lyckad distribution via molnhanterarens pipeline. På den här sidan får du hjälp att göra detta.
+När du har skapat din första `.vhost`-fil eller `farm.any`-fil på den översta nivån måste du skapa en symbolisk länk från katalogen `available_*` till katalogen `enabled_*`. Att använda rätt länktyp är avgörande för en lyckad driftsättning via Cloud Manager pipeline. På den här sidan får du hjälp att göra detta.
 
 ## Dispatcher Archetype
 
-AEM startar sitt projekt vanligtvis från [AEM](https://github.com/adobe/aem-project-archetype)
+AEM utvecklare startar sitt projekt vanligtvis från [AEM-arkitypen](https://github.com/adobe/aem-project-archetype)
 
 Här följer ett exempel på området i källkoden där du kan se de symboler som används:
 
@@ -67,9 +67,9 @@ dispatcher
 17 directories, 60 files
 ```
 
-Som ett exempel `/etc/httpd/conf.d/available_vhosts/` katalogen innehåller den mellanlagrade potentialen `.vhost` filer som vi kan använda i vår konfigurering som körs.
+Som exempel innehåller katalogen `/etc/httpd/conf.d/available_vhosts/` de mellanlagrade potentiella `.vhost`-filer som kan användas i konfigurationen som körs.
 
-Den aktiverade `.vhost` filer visas som en relativ sökväg `symlinks` innanför `/etc/httpd/conf.d/enabled_vhosts/` katalog.
+De aktiverade `.vhost`-filerna visas som en relativ sökväg `symlinks` i katalogen `/etc/httpd/conf.d/enabled_vhosts/`.
 
 ## Skapa en länk
 
@@ -98,7 +98,7 @@ $ cd aem-project-archetype/src/main/archetype/dispatcher.ams/src/conf.d/enabled_
 $ ln -s ../available_vhosts/aem_flush.vhost aem_flush.vhost
 ```
 
-Här är ett exempel på länken nu, om du listar filen med `ls` kommando:
+Här är ett exempel på länken nu, om du listar filen med kommandot `ls`:
 
 ```
 ls -l
@@ -108,15 +108,15 @@ lrwxrwxrwx. 1 root root 35 Oct 13 21:38 aem_flush.vhost -> ../available_vhosts/a
 
 ### Windows
 
-> `Note:` MS Windows (bättre, NTFS) har stöd för symboliska länkar sedan ... Windows Vista!
+> `Note:` Visar att MS Windows (bättre, NTFS) har stöd för symboliska länkar sedan.. Windows Vista!
 
 ![Bild av Windows-kommandotolken som visar hjälputdata för kommandot mklink](./assets/git-symlinks/windows-terminal-mklink.png)
 
-> `Warning:` Kommandot mklink för att skapa symboler kräver administratörsbehörighet för att kunna köras korrekt. Även som ett administratörskonto måste du köra Kommandotolken &quot;Som administratör&quot; om inte utvecklarläget är aktiverat
+> Kommandot `Warning:` mklink för att skapa symboler kräver administratörsbehörighet för att kunna köras korrekt. Även som ett administratörskonto måste du köra Kommandotolken &quot;Som administratör&quot; om inte utvecklarläget är aktiverat
 > <br/>Felaktiga behörigheter:
-> ![Bild av Windows-kommandotolken som visar det kommando som misslyckades på grund av behörigheter](./assets/git-symlinks/windows-mklink-underpriv.png)
+> ![Bild av Windows-kommandotolken som visar att kommandot misslyckades på grund av behörighet ](./assets/git-symlinks/windows-mklink-underpriv.png)
 > <br/>Rätt behörigheter:
-> ![Bild av Windows-kommandotolken kördes som administratör](./assets/git-symlinks/windows-mklink-properpriv.png)
+> ![Bilden av Windows-kommandotolken kördes som administratör ](./assets/git-symlinks/windows-mklink-properpriv.png)
 
 Här är kommandona som skapar länken:
 
@@ -136,7 +136,7 @@ symbolic link created for aem_flush.vhost <<===>> ..\available_vhosts\aem_flush.
 
 #### Utvecklarläge ( Windows 10 )
 
-Vid inläggning på [Utvecklarläge](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development)I Windows 10 kan du enklare testa appar som du utvecklar, använda Ubuntu Bash-gränssnittsmiljön, ändra en mängd inställningar för utvecklare och göra andra saker.
+När du använder [Utvecklarläge](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development) kan du i Windows 10 enklare testa program som du utvecklar, använda Ubuntu Bash-gränssnittsmiljön, ändra en mängd inställningar för utvecklare och göra andra saker.
 
 Microsoft verkar fortsätta lägga till funktioner i utvecklarläget, eller aktivera vissa av dessa funktioner som standard när de har blivit mer spridda och betraktas som stabila (t.ex. med Creators Update, Ubuntu Bash Shell-miljö behöver inte längre vara i utvecklarläget).
 
@@ -146,7 +146,7 @@ Symboler då? När utvecklarläget är aktiverat behöver du inte köra en komma
 
 Nu kan du se kommandot fungera utan att köra som administratör
 
-![Bild av kommandotolken i Windows körs som en vanlig användare med utvecklarläget aktiverat](./assets/git-symlinks/windows-mklink-devmode.png)
+![Bild av Windows-kommandotolken körs som en vanlig användare med utvecklarläge aktiverat](./assets/git-symlinks/windows-mklink-devmode.png)
 
 #### Alternativ/programmatisk metod
 
@@ -163,31 +163,31 @@ CON:
 
 Kör `gpedit.msc`, lägg till/ändra användare efter behov. Administratörer finns där som standard
 
-![Fönstret Grupprincipredigerare som visar behörighet att justera](./assets/git-symlinks/windows-localpolicies-symlinks.png)
+![Fönstret Grupprincipredigerare visar behörighet att justera](./assets/git-symlinks/windows-localpolicies-symlinks.png)
 
 #### Aktivera symboler i GIT
 
 Git hanterar symboler enligt alternativet core.symlinks
 
-Källa: [Git - git-config Documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
+Source: [Git - git-config-dokumentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
 
 *Om core.symbollinks är false checkas symboliska länkar ut som små oformaterade filer som innehåller länktexten. `git-update-index[1]` och `git-add[1]` ändrar inte den inspelade typen till vanlig fil. Användbart i filsystem som FAT som inte stöder symboliska länkar.
-Standardvärdet är true, förutom `git-clone[1]` eller `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.` I de flesta fall antar Git att Windows inte är bra för symboler och att det är false.*
+Standardvärdet är true, förutom `git-clone[1]` eller `git-init[1] will probe and set core.symlinks false if appropriate when the repository is created.` I de flesta fall antar Git att Windows inte är bra för symboler och att det kommer att anges som false.*
 
 Beteendet för Git i Windows förklaras här: Symboliska länkar ・ Git-for-windows/git Wiki ・ GitHub
 
-> `Info`: De antaganden som anges i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer&#39;s Setup i Windows, främst NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
+> `Info`: Antagandena i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer&#39;s Setup i Windows, framför allt NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
 
-Här är de goda nyheterna, sedan [Git för Windows version 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) installationsprogrammet har en [explicit alternativ för att aktivera stöd för symboliska länkar.](https://github.com/git-for-windows/git/issues/921)
+Här är de goda nyheterna eftersom [Git för Windows version 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) har installeraren ett [explicit alternativ för att aktivera stöd för symboliska länkar.](https://github.com/git-for-windows/git/issues/921)
 
-> `Warning`: Alternativet core.symlink kan anges vid körning när databasen klonas, eller kan på annat sätt lagras som en global konfiguration.
+> `Warning`: Alternativet core.symlink kan anges vid körning när databasen klonas, eller också kan det lagras som en global konfiguration.
 
-![Visar GIT-installationsprogram med stöd för länkar](./assets/git-symlinks/windows-git-install-symlink.png)
+![Visar GIT-installationsprogrammet med stöd för länkar](./assets/git-symlinks/windows-git-install-symlink.png)
 
-Git för Windows lagrar globala inställningar i `"C:\Program Files\Git\etc\gitconfig"` . De här inställningarna kanske inte beaktas av andra Git-klientprogram.
+Git för Windows lagrar globala inställningar i `"C:\Program Files\Git\etc\gitconfig"`. De här inställningarna kanske inte beaktas av andra Git-klientprogram.
 Här är haken, alla utvecklare kommer inte att använda Git-klienten (t.ex. Git Cmd, Git Bash), och vissa av Git-skrivbordsapparna (t.ex. GitHub Desktop, Atlassian SourceTree) kan ha olika inställningar/standardinställningar för att använda System eller ett inbäddat Git
 
-Här är ett exempel på vad som finns i `gitconfig` fil
+Här är ett exempel på vad som finns i filen `gitconfig`
 
 ```
 [diff "astextplain"]
@@ -220,7 +220,7 @@ Det kan finnas scenarier där du måste skapa nya symboliska länkar (t.ex. läg
 
 I dokumentationen ovan har vi sett att Windows erbjuder ett&quot;mklink&quot;-kommando för att skapa symboliska länkar.
 
-Om du arbetar i en Git Bash-miljö kan du i stället använda standardkommandot Bash `ln -s` men den måste föregås av en specialinstruktion som i exemplet här:
+Om du arbetar i en Git Bash-miljö kan du i stället använda standardkommandot Bash `ln -s`, men det måste föregås av en specialinstruktion som i exemplet här:
 
 ```
 MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/available_vhosts/default.vhost
@@ -236,6 +236,6 @@ För att få Git-hanteringssymboler på rätt sätt (åtminstone för omfånget 
 | Filsystem | NTFS | NTFS |
 | Möjlighet att hantera symboler för Windows-användare | `"Create symbolic links"` grupp/lokal princip `under "Group Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment"` | Windows 10 Developer Mode är aktiverat |
 | GIT | Inbyggd klientversion 1.5.3 | Inbyggd klientversion 2.10.2 eller senare |
-| Git-konfiguration | `--core.symlinks=true` alternativ när du gör en Git-klon från kommandoraden | Git global konfiguration<br/>`[core]`<br/>    symbols = true <br/> Sökväg till Git-klientkonfiguration: `C:\Program Files\Git\etc\gitconfig` <br/>Standardplats för Git Desktop-klienter: `%HOMEPATH%\.gitconfig` |
+| Git-konfiguration | Alternativet `--core.symlinks=true` vid Git-kloning från kommandoraden | Git global konfiguration <br/>`[core]`<br/>    symlinks = true <br/> Konfigurationssökväg för inbyggda Git-klienter: `C:\Program Files\Git\etc\gitconfig` <br/> Standardplats för Git Desktop-klienter: `%HOMEPATH%\.gitconfig` |
 
-> `Note:` Om du redan har en lokal databas måste du klona om från ursprungsläget. Du kan klona till en ny plats och manuellt sammanfoga dina ej genomförda/ej mellanlagrade lokala ändringar i den nya klonade databasen.
+> `Note:` Om du redan har en lokal databas måste du klona om från början. Du kan klona till en ny plats och manuellt sammanfoga dina ej genomförda/ej mellanlagrade lokala ändringar i den nya klonade databasen.

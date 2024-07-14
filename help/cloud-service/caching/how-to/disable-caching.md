@@ -21,17 +21,17 @@ ht-degree: 0%
 
 # Inaktivera CDN-cachning
 
-Lär dig hur du inaktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN. Cachelagring av svar styrs av `Cache-Control`, `Surrogate-Control`, eller `Expires` Cache-rubriker för HTTP-svar.
+Lär dig hur du inaktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN. Cachelagringen av svar styrs av `Cache-Control`, `Surrogate-Control` eller `Expires` cachehuvuden för HTTP-svar.
 
-Dessa cache-huvuden anges vanligtvis i AEM Dispatcher-värdkonfigurationer med `mod_headers`, men kan även anges i anpassad Java™-kod som körs i AEM Publish.
+Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan också anges i anpassad Java™-kod som körs i AEM Publish.
 
 ## Standardbeteende för cachelagring
 
-Granska standardbeteendet för cachning för AEM och författare när en [AEM Project Archettype](./enable-caching.md#default-caching-behavior) AEM distribueras.
+Granska standardbeteendet för cachning för AEM Publish och författare när ett [AEM Project Archetype](./enable-caching.md#default-caching-behavior)-baserat AEM distribueras.
 
 ## Inaktivera cachelagring
 
-Om du stänger av cachelagring kan det påverka prestandan för den AEM as a Cloud Service instansen negativt, så var försiktig när du stänger av standardcachelagring.
+Om du stänger av cachelagring kan det påverka prestandan negativt för din AEM as a Cloud Service-instans, så var försiktig när du stänger av standardcachelagring.
 
 Det finns dock vissa scenarier där du kanske vill inaktivera cachelagring, som:
 
@@ -40,14 +40,14 @@ Det finns dock vissa scenarier där du kanske vill inaktivera cachelagring, som:
 
 Om du vill inaktivera cachelagring kan du uppdatera cacherubrikerna på två sätt.
 
-1. **Dispatcher-värdkonfiguration:** Endast tillgängligt för AEM.
-1. **Anpassad Java™-kod:** Finns för både AEM och författare.
+1. **Dispatcher-värdkonfiguration:** Endast tillgänglig för AEM Publish.
+1. **Anpassad Java™-kod:** Tillgänglig för både AEM Publish och författare.
 
 Låt oss titta närmare på de här alternativen.
 
 ### Dispatcher-värdkonfiguration
 
-Det här alternativet rekommenderas för att inaktivera cachelagring, men det är bara tillgängligt för AEM. Om du vill uppdatera cacherubrikerna använder du `mod_headers` modul och `<LocationMatch>` -direktivet i Apache HTTP-serverns värdfil. Den allmänna syntaxen är följande:
+Det här alternativet rekommenderas för att inaktivera cachelagring, men det är bara tillgängligt för AEM Publish. Om du vill uppdatera cacherubrikerna använder du direktivet `mod_headers` module och `<LocationMatch>` i Apache HTTP Server-serverns värdfil. Den allmänna syntaxen är följande:
 
 ```
 <LocationMatch "$URL$ || $URL_REGEX$">
@@ -62,12 +62,12 @@ Det här alternativet rekommenderas för att inaktivera cachelagring, men det ä
 
 #### Exempel
 
-Inaktivera CDN-cachning för **CSS-innehållstyper** för vissa felsökningssyften, följ dessa steg.
+Följ de här stegen för att inaktivera CDN-cachelagring av **CSS-innehållstyper** i vissa felsökningssyften.
 
 Observera att om du vill åsidosätta den befintliga CSS-cachen måste du ändra CSS-filen för att skapa en ny cachenyckel för CSS-filen.
 
-1. Leta reda på önskad värdfil i AEM projekt `dispatcher/src/conf.d/available_vhosts` katalog.
-1. Uppdatera värden (t.ex. `wknd.vhost`) på följande sätt:
+1. Leta reda på önskad värdfil från katalogen `dispatcher/src/conf.d/available_vhosts` i ditt AEM projekt.
+1. Uppdatera Vhost-filen (t.ex. `wknd.vhost`) enligt följande:
 
    ```
    <LocationMatch "^/etc.clientlibs/.*\.(css)$">
@@ -80,12 +80,12 @@ Observera att om du vill åsidosätta den befintliga CSS-cachen måste du ändra
    </LocationMatch>
    ```
 
-   Värdfilerna i `dispatcher/src/conf.d/enabled_vhosts` katalogen är **symboler** till filerna i `dispatcher/src/conf.d/available_vhosts` ska du se till att det inte finns några länkar.
-1. Distribuera värdändringarna till AEM as a Cloud Service miljö med [Cloud Manager - Konfigurationspipeline för webbnivå](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) eller [RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
+   Värdfilerna i katalogen `dispatcher/src/conf.d/enabled_vhosts` är **symlinks** till filerna i katalogen `dispatcher/src/conf.d/available_vhosts`, så se till att du skapar symboler om sådana inte finns.
+1. Distribuera värdändringarna till önskad AEM as a Cloud Service-miljö med [Cloud Manager - konfigurationspipeline för webbnivå](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) eller [RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
 ### Anpassad Java™-kod
 
-Det här alternativet är tillgängligt för både AEM och författare. Om du vill uppdatera cacherubrikerna använder du `SlingHttpServletResponse` -objekt i egen Java™-kod (Sling-serverlet, Sling-serverletsfilter). Den allmänna syntaxen är följande:
+Det här alternativet är tillgängligt för både AEM Publish och författare. Om du vill uppdatera cacherubrikerna använder du objektet `SlingHttpServletResponse` i anpassad Java™-kod (Sling-servlet, Sling-serverletsfilter). Den allmänna syntaxen är följande:
 
 ```java
 response.setHeader("Cache-Control", "private");

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Kombinera valda nyhetsbrev i en PDF
 
-Användarens val sparas i ett dolt fält. Värdet i det här dolda fältet skickas till servern som kombinerar markeringarna till en PDF med [Forms Assembler](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+Användarens val sparas i ett dolt fält. Värdet för det här dolda fältet skickas till servern som kombinerar markeringarna till en PDF med hjälp av [Forms Assembler-tjänsten](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
 
 
 ## Servlet to assemble pdf files

@@ -318,4 +318,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## Nästa steg
 
-Skriv en [OSGi-servicewrapper som visar Acrobat Sign API](./wrapper-sign-api.md)
+Skriv en [OSGi-tjänstomslutning för att visa Acrobat Sign API](./wrapper-sign-api.md)

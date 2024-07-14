@@ -21,7 +21,7 @@ Variabler av typen ArrayList har införts i AEM Forms 6.5. Ett vanligt användni
 
 Om du vill använda variabeln ArrayList i ett AEM arbetsflöde måste du skapa ett adaptivt formulär som genererar upprepade element i skickade data. Ett vanligt tillvägagångssätt är att definiera ett schema som innehåller ett arrayelement. I den här artikeln har jag skapat ett enkelt JSON-schema som innehåller arrayelement. Användningsexemplet är att en anställd fyller i en utgiftsrapport. I utgiftsrapporten tar vi reda på vem som har skickat in inskickarens namn och chefens namn. Hanterarens namn lagras i en array som kallas hanterarkedja. På skärmbilden nedan visas utgiftsrapportformuläret och data från inskickandet av Adaptiv Forms.
 
-![expensereport](assets/expensereport.jpg)
+![utgiftsrapport](assets/expensereport.jpg)
 
 Nedan följer data från den adaptiva formuläröverföringen. Det adaptiva formuläret baserades på JSON-schema. De data som är bundna till schemat lagras under elementet data i afBoundData-elementet. Hanterkedjan är en array och vi måste fylla i ArrayList med objektets name-element inuti hanterarkedjearrayen.
 
@@ -66,9 +66,9 @@ Nedan följer data från den adaptiva formuläröverföringen. Det adaptiva form
 
 Om du vill initiera ArrayList-variabeln för en deltypssträng kan du antingen använda JSON-punktnotationsläget eller XPath-mappningsläget. På följande skärmbild visas hur du fyller i en ArrayList-variabel som kallas CustomRoutes med JSON Dot Notation. Se till att du pekar på ett element i ett arrayobjekt så som visas på skärmbilden nedan. Vi fyller i CustomRoutes ArrayList med namnen på arrayobjektet managementChain.
 ArrayList för anpassade vägar används sedan för att fylla i rutorna i komponenten AssignTask
-![kundvägar](assets/arraylist.jpg)
+![anpassade vägar](assets/arraylist.jpg)
 När variabeln CustomRoutes ArrayList initieras med värden från skickade data fylls rutorna för komponenten AssignTask i med variabeln CustomRoutes. På skärmbilden nedan visas de anpassade vägarna i en AssignTask
-![tilldelninguppgift](assets/customactions.jpg)
+![asingtask](assets/customactions.jpg)
 
 Så här testar du arbetsflödet på datorn:
 
@@ -81,4 +81,4 @@ Så här testar du arbetsflödet på datorn:
 * En ny uppgift med namnet&quot;Tilldela till utgiftsadministratör&quot; ska visas
 * Öppna formuläret som är associerat med uppgiften
 * Du bör se två anpassade vägar med chefsnamnen
-  [Utforska ReviewExpenseReportWorkflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) I det här arbetsflödet används variabeln ArrayList, variabeln JSON-typ, regelredigeraren i komponenten Or-Split
+  [Utforska arbetsflödet ReviewExpenseReportWorkflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) Det här arbetsflödet använder variabeln ArrayList, variabeln JSON-typ, regelredigeraren i komponenten Or-Split

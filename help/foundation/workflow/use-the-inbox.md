@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Använda Inkorgen i AEM
 
-AEM Inkorgen ger bättre samarbete och synlighet i uppgifter och arbetsflöden. I Inkorgens kalendervy kan du hålla ordning på projekt och uppgifter i en tidsbaserad vy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
+AEM i Inkorgen förenklar samarbete och synlighet i uppgifter och arbetsflöden. I Inkorgens kalendervy kan du hålla ordning på projekt och uppgifter i en tidsbaserad vy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16827?quality=12&learn=on)

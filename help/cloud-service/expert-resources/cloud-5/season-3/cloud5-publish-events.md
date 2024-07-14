@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 - Publicera, avpublicera evenemang i Edge Delivery Services
+title: Cloud 5 - Publish, avpublicera evenemang i Edge Delivery Services
 description: Utforska händelser som utlöses vid publicering och avpublicering i Edge Delivery Services samt användningsexempel och exempel för att använda dessa händelser.
 feature: Edge Delivery Services
 topic: Development
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# Cloud 5 - Publicera, avpublicera evenemang i Edge Delivery Services
+# Cloud 5 - Publish, avpublicera evenemang i Edge Delivery Services
 
 Utforska händelser som utlöses vid publicering och avpublicering i Edge Delivery Services samt användningsexempel och exempel för att använda dessa händelser.
 

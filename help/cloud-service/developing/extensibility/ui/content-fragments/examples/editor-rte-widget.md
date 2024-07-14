@@ -25,36 +25,36 @@ Lär dig hur du lägger till widgetar i RTF-redigeraren i AEM Content Fragment E
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
-Om du vill lägga till det dynamiska innehållet i RTF-redigeraren väljer du **widgetar** kan användas. Widgetarna hjälper dig att integrera det enkla eller komplexa användargränssnittet i RTE och användargränssnittet kan skapas med valfritt JS-ramverk. De kan ses som dialogrutor som öppnas genom att man trycker `{` specialtangenten i textredigeraren.
+Om du vill lägga till det dynamiska innehållet i RTF-redigeraren kan du använda **widgetfunktionen**. Widgetarna hjälper dig att integrera det enkla eller komplexa användargränssnittet i RTE och användargränssnittet kan skapas med valfritt JS-ramverk. De kan betraktas som dialogrutor som öppnas genom att trycka på `{`-specialtangenten i textredigeraren.
 
 I vanliga fall används widgetarna för att infoga det dynamiska innehållet som har ett externt systemberoende eller som kan ändras baserat på det aktuella sammanhanget.
 
-The **widgetar** läggs till i **RTE** i Content Fragment Editor med `rte` tilläggspunkt. Använda `rte` tilläggspunkter `getWidgets()` metod en eller flera widgetar läggs till. De aktiveras genom att du trycker på `{` specialtangenten för att öppna snabbmenyalternativet och markera sedan önskad widget för att läsa in det anpassade användargränssnittet i dialogrutan.
+**widgetarna** läggs till i **RTE** i redigeraren för innehållsfragment med tilläggspunkten `rte`. En eller flera widgetar läggs till med `rte`-tilläggets `getWidgets()`-metod. De aktiveras genom att du trycker på specialtangenten `{` för att öppna snabbmenyalternativet och sedan väljer önskad widget för att läsa in det anpassade dialogrutans användargränssnitt.
 
-I det här exemplet visas hur du lägger till en widget som kallas _Rabattkodlista_ för att hitta, välja och lägga till WKND-annonsspecifik rabattkod i ett RTE-innehåll. Dessa rabattkoder kan hanteras i ett externt system som Orderhanteringssystem (OMS), Product Information Management (PIM), hemmabruk eller en Adobe AppBuilder-åtgärd.
+I det här exemplet visas hur du lägger till en widget med namnet _Rabattkod_ för att hitta, välja och lägga till den WKND-äventyrsspecifika rabattkoden i ett RTE-innehåll. Dessa rabattkoder kan hanteras i externa system som Order Management System (OMS), Product Information Management (PIM), hemmabruk eller en Adobe AppBuilder-åtgärd.
 
-I det här exemplet används [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) för att utveckla widgeten eller dialoggränssnittet och hårdkodat WKND-äventynamn, rabattkodsdata.
+I det här exemplet används ramverket [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) för att utveckla widgetens eller dialogrutans gränssnitt och hårdkodade WKND-äventyernamn, rabattkodsdata för att göra det enkelt.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `rte` om du vill lägga till en widget i textredigeraren i Content Fragment Editor.
+Det här exemplet utökas till tilläggspunkten `rte` för att lägga till en widget i textredigeraren i innehållets fragmentredigerare.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
-| [Innehållsfragmentsredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Widgetar för textredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
+| [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Widgetar för textredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## Exempel på tillägg
 
-I följande exempel skapas en _Rabattkodlista_ widget. Tryck på `{` specialtangenten i textredigeraren öppnas snabbmenyn, och sedan väljer du _Rabattkodlista_ på snabbmenyn öppnas dialogrutans användargränssnitt.
+I följande exempel skapas widgeten _Rabattlista_. Genom att trycka på specialtangenten `{` i textredigeraren öppnas snabbmenyn och sedan öppnas användargränssnittet genom att välja alternativet _Rabattlista_ på snabbmenyn.
 
 WKND-innehållsförfattarna kan hitta, välja och lägga till aktuell Adventure-specifik rabattkod, om sådan finns.
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
+`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
 
-+ Widgetdefinitionen i `getWidgets()` function with `id, label and url` attribut.
-+ The `url` attributvärde, en relativ URL-sökväg (`/index.html#/discountCodes`) för att läsa in dialogrutans användargränssnitt.
++ Widgetdefinitionen i funktionen `getWidgets()` med attributen `id, label and url`.
++ Attributvärdet `url`, en relativ URL-sökväg (`/index.html#/discountCodes`) för att läsa in dialogrutans användargränssnitt.
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -92,9 +92,9 @@ function ExtensionRegistration() {
 export default ExtensionRegistration;
 ```
 
-### Lägg till `discountCodes` rutt in `App.js`{#add-widgets-route}
+### Lägg till `discountCodes`-väg i `App.js`{#add-widgets-route}
 
-I huvudkomponenten React `App.js`, lägg till `discountCodes` för att återge användargränssnittet för ovanstående relativa URL-sökväg.
+Lägg till `discountCodes`-vägen i huvudkomponenten `App.js` för att återge gränssnittet för den relativa URL-sökvägen ovan.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -114,15 +114,15 @@ I huvudkomponenten React `App.js`, lägg till `discountCodes` för att återge a
 ...
 ```
 
-### Skapa `DiscountCodes` Reaktionskomponent{#create-widget-react-component}
+### Skapa `DiscountCodes`-reaktionskomponent{#create-widget-react-component}
 
-Widgeten eller dialogrutans gränssnitt skapas med [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) ramverk. The `DiscountCodes` är som nedan, här är viktiga markeringar:
+Widgeten eller dialoggränssnittet skapas med ramverket [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html). Komponentkoden för `DiscountCodes` är som nedan, här är viktiga högdagrar:
 
-+ Gränssnittet återges med React Spectrum-komponenter, som [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [Knapp](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ The `adventureDiscountCodes` -matrisen har hårdkodad mappning av annonsnamn och rabattkod. I verkligheten kan dessa data hämtas från Adobe AppBuilder-åtgärd eller externa system som PIM, OMS eller hemmabruk eller molnproviderbaserad API-gateway.
-+ The `guestConnection` initieras med `useEffect` [Reaktionskrok](https://react.dev/reference/react/useEffect) och hanteras som komponentläge. Den används för att kommunicera med AEM.
-+ The `handleDiscountCodeChange` hämtar rabattkoden för det valda äventyrsnamnet och uppdaterar lägesvariabeln.
-+ The `addDiscountCode` funktion använda `guestConnection` -objektet innehåller RTE-instruktioner som ska köras. I detta fall `insertContent` instruktion och kodfragment för HTML av faktisk rabattkod som ska infogas i textredigeraren.
++ Gränssnittet återges med React Spectrum-komponenter, som [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
++ `adventureDiscountCodes`-matrisen har hårdkodad mappning av äventyrsnamn och rabattkod. I verkligheten kan dessa data hämtas från Adobe AppBuilder-åtgärd eller externa system som PIM, OMS eller hemmabruk eller molnproviderbaserad API-gateway.
++ `guestConnection` initieras med `useEffect` [React-krok](https://react.dev/reference/react/useEffect) och hanteras som komponenttillstånd. Den används för att kommunicera med AEM.
++ Funktionen `handleDiscountCodeChange` hämtar rabattkoden för det valda äventyrsnamnet och uppdaterar lägesvariabeln.
++ Funktionen `addDiscountCode` som använder objektet `guestConnection` tillhandahåller RTE-instruktion att köra. I det här fallet ska `insertContent`-instruktionen och kodfragmentet HTML av den faktiska rabattkoden infogas i textredigeraren.
 
 `src/aem-cf-editor-1/web-src/src/components/DiscountCodes.js`
 

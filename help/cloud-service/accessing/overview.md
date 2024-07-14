@@ -1,6 +1,6 @@
 ---
 title: Konfigurera åtkomst till AEM as a Cloud Service
-description: AEM as a Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggning av användare, både administratörer och vanliga användare, AEM författartjänsten. Läs om hur Adobe IMS-användare, användargrupper och produktprofiler används tillsammans med AEM och behörigheter för att ge specifik åtkomst till AEM författare.
+description: AEM as a Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggning för användare, både administratörer och vanliga användare, AEM författartjänsten. Läs om hur Adobe IMS-användare, användargrupper och produktprofiler används tillsammans med AEM och behörigheter för att ge specifik åtkomst till AEM författare.
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -25,7 +25,7 @@ ht-degree: 0%
 >title="Introduktion till Adobe IMS"
 >abstract="AEM as a Cloud Service använder Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, AEM tjänsten Author. Läs om hur användare, grupper och produktprofiler i Adobe IMS används tillsammans med AEM och behörigheter för att ge detaljerad åtkomst till AEM Author-tjänsten."
 
-AEM as a Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen, och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, till AEM författartjänsten.
+AEM as a Cloud Service är det molnbaserade sättet att utnyttja de AEM programmen och utnyttjar därför Adobe IMS (Identity Management System) för att underlätta inloggningen för användare, både administratörer och vanliga användare, AEM författartjänsten.
 
 ![Adobe Admin Console](./assets/hero.png)
 
@@ -33,7 +33,7 @@ Läs om hur användare, grupper och produktprofiler i Adobe IMS används tillsam
 
 ## Adobe IMS-användare
 
-Användare som behöver åtkomst till AEM Author-tjänsten hanteras som [Adobe IMS-användare](https://helpx.adobe.com/enterprise/using/set-up-identity.html) in [Adobe AdminConsole](https://adminconsole.adobe.com). Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
+Användare som behöver åtkomst till AEM Author-tjänsten hanteras som [Adobe IMS-användare](https://helpx.adobe.com/enterprise/using/set-up-identity.html) i [Adobe AdminConsole](https://adminconsole.adobe.com). Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
 
 >[!NOTE]
 >
@@ -44,16 +44,16 @@ Användare som behöver åtkomst till AEM Author-tjänsten hanteras som [Adobe I
 
 ## Adobe IMS-användargrupper
 
-Användare som har åtkomst till AEM Author-tjänsten ska organiseras i logiska grupper med hjälp av [Adobe IMS-användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html) in [Adobe AdminConsole](https://adminconsole.adobe.com). Adobe IMS-användargrupper ger inte direkt behörighet eller åtkomst till AEM (det här är jobbet för [Produktprofiler för Adobe IMS](#adobe-ims-product-profiles)) är de dock ett bra sätt att definiera logiska användargrupper som i sin tur kan översättas till specifika åtkomstnivåer i AEM Author-tjänsten, med hjälp av AEM grupper och behörigheter.
+Användare som använder AEM Author-tjänsten bör organiseras i logiska grupper med hjälp av [Adobe IMS-användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html) i [Adobe AdminConsole](https://adminconsole.adobe.com). Adobe IMS-användargrupper ger inte direkt behörighet eller åtkomst till AEM (det här är jobbet för [Adobe IMS-produktprofiler](#adobe-ims-product-profiles)), men det är ett bra sätt att definiera logiska användargrupper som i sin tur kan översättas till specifika åtkomstnivåer i AEM författartjänst, med hjälp av AEM grupper och behörigheter.
 
 [Läs om Adobe IMS-användargrupper](./adobe-ims-user-groups.md)
 
 ## Produktprofiler för Adobe IMS
 
-[Produktprofiler för Adobe IMS](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html), hanteras i [Adobe AdminConsole](https://adminconsole.adobe.com), är den mekanik som ger [Adobe IMS-användare](#adobe-ims-users) behörighet att logga in på AEM Author-tjänsten med en basåtkomstnivå.
+[Adobes IMS-produktprofiler](https://helpx.adobe.com/enterprise/using/manage-permissions-and-roles.html), som hanteras i [Adobe AdminConsole](https://adminconsole.adobe.com), är den mekanism som ger [Adobe IMS-användare](#adobe-ims-users) tillgång till tjänsten AEM författare med grundläggande åtkomstnivå.
 
-+ The __AEM__ Med produktprofilen får användare skrivskyddad åtkomst till AEM via medlemskap i AEM Contributors-gruppen.
-+ The __AEM administratörer__ produktprofilen ger användarna full, administrativ åtkomst till AEM.
++ Produktprofilen __AEM Användare__ ger användare skrivskyddad åtkomst till AEM via medlemskap AEM Contributors-gruppen.
++ Produktprofilen __AEM Administratörer__ ger användarna fullständig, administrativ åtkomst till AEM.
 
 [Läs om produktprofiler för Adobe IMS](./adobe-ims-product-profiles.md)
 
@@ -71,7 +71,7 @@ En förkortad genomgång som konfigurerar Adobe IMS-användare, användargrupper
 
 ## Fler Adobe Admin Console-resurser
 
-Följande dokumentationsmaterial [Adobe Admin Console](https://adminconsole.adobe.com)-specifik information och frågor som kan hjälpa till att få en bättre förståelse för Adobe Admin Console och använda det för att hantera användare och få tillgång till det mellan Experience Cloud-produkter.
+I följande dokumentation beskrivs [Adobe Admin Console](https://adminconsole.adobe.com) -specifik information och problem som kan hjälpa till att få en bättre förståelse för Adobe Admin Console och använda det för att hantera användare och komma åt mellan Experience Cloud-produkter.
 
 + [Adobe Admin Console Identity - översikt](https://helpx.adobe.com/enterprise/using/identity.html)
 + [Adobe Admin Console Admin-roller](https://helpx.adobe.com/enterprise/using/admin-roles.html)

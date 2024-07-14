@@ -1,5 +1,5 @@
 ---
-title: Lagra och hämta formulärdata från MySQL-databasen - Konfigurera datakälla
+title: Lagra och hämta formulärdata från MySQL-databasen - Konfigurera data Source
 description: Flera delar av en självstudiekurs som visar hur du arbetar med att lagra och hämta formulärdata
 version: 6.4,6.5
 feature: Adaptive Forms
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ---
 
-# Konfigurera datakälla
+# Konfigurera Source
 
 Det finns många sätt att integrera AEM med externa databaser. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
-Det första steget är att ladda ned och installera rätt [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEM.
+Det första steget är att hämta och distribuera rätt [MySql-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) i AEM.
 Skapa den poolade datakällan för Apache Sling-anslutningen och ange de egenskaper som anges i skärmbilden nedan. Databasschemat är en del av den här självstudiekursen.
 
 ![datakälla](assets/save-continue.PNG)
@@ -27,10 +27,10 @@ Databasen har en tabell som heter formdata med de tre kolumnerna som visas på s
 
 ![databas](assets/data-base-tables.PNG)
 
-SQL-filen som ska skapa schemat kan vara [hämtad härifrån](assets/form-data-db.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
+SQL-filen som ska användas för att skapa schemat kan [hämtas här](assets/form-data-db.sql). Du måste importera den här filen med MySQL Workbench för att skapa schemat och tabellen.
 
 >[!NOTE]
->Ge datakällan ett namn **SparaOchFortsätt**. Exempelkoden använder namnet för att ansluta till databasen.
+>Kontrollera att du namnger datakällan **SaveAndContinue**. Exempelkoden använder namnet för att ansluta till databasen.
 
 | Egenskapsnamn | Värde |
 | ------------------------|---------------------------------------|

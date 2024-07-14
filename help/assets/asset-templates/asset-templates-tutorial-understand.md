@@ -25,21 +25,21 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign 
 >[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
 1. Hämta och öppna [**InDesignens filmall**](assets/asset-templates-tutorial-video--supporting-files.zip)
-2. **Öppna märkordspanelen** Granska namnkonventionen och notera att elementen som kan redigeras i InDesignen redan är taggade. Kom ihåg att bara taggade element kan redigeras i AEM.
+2. **Öppna märkordspanelen,** granska märkordsnamnkonventionen och observera att de element som kan redigeras i InDesignen redan är taggade. Kom ihåg att bara taggade element kan redigeras i AEM.
 
    * **Fönster > Verktyg > Taggar**
 
-3. På sidan lägger du till ett nytt textelement, anger texten&quot;Sidhuvud&quot; och använder kommandot **Rubrik** Styckeformat.
+3. På sidan lägger du till ett nytt textelement, anger texten&quot;Sidhuvud&quot; och använder styckeformatet **Rubrik**.
 
    * **Fönster > Format > Styckeformat**
 
    Skapa och använd sedan en ny tagg med namnet **Page2Heading.**
 
-4. Lägg till FPO-logotypbilden ([anges i zip-filen](assets/asset-templates-tutorial-video--supporting-files.zip)) till Logo-elementet på mallsidan.
+4. Lägg till FPO-logotypbilden ([som finns i zip](assets/asset-templates-tutorial-video--supporting-files.zip)) i Logo-elementet på mallsidan.
 
-   * **Högerklicka** och markera **Passning > Passningsalternativ för ram.. > Innehållspassning > Fyll ram proportionellt**
+   * **Högerklicka** och välj **Passning > Passningsalternativ för ram.. > Innehållspassning > Fyll ram proportionellt**
 
-   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames)och som passar ditt sätt att arbeta.
+   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames) och vilket som passar dig bäst.
 
 5. Kopiera rubriken (logotyp och företagsnamn) från mallmallen på sidan och sidan via Klistra in på plats.
 
@@ -57,24 +57,24 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign 
 
 >[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
-1. **Starta InDesign Server** på hamn 8080.
-2. Kontrollera **AEM Author-instansen är konfigurerad att interagera med InDesignen Server**(och vice versa).
+1. **Starta InDesign Server** på port 8080.
+2. Kontrollera att författarinstansen **AEM har konfigurerats för att interagera med InDesignen Server** (och vice versa).
 
-   * [Konfiguration av IDS Worker-Cloud Service](http://localhost:4502/etc/cloudservices/proxy/ids.html)
-   * [Konfiguration av proxyserver för molnet](http://localhost:4502/etc/cloudservices/proxy.html)
-   * [AEM Externalizer OSGi-konfiguration](http://localhost:4502/system/console/configMgr)
+   * [IDS Worker-Cloud Servicens konfiguration](http://localhost:4502/etc/cloudservices/proxy/ids.html)
+   * [Konfiguration av proxyserver i molnet](http://localhost:4502/etc/cloudservices/proxy.html)
+   * [AEM OSGi-konfiguration för Externalizer](http://localhost:4502/system/console/configMgr)
 
-3. **InDesignen har överförts till AEM Assets** så att AEM arbetsflöde och InDesign Server kan bearbeta materialet fullt ut.
-4. **Skapa en ny mall** under **Resurser > Mallar** och markera den överförda InDesignen till AEM i steg 4.
-5. **Redigera resursmallen** som skapats i steg 5 och författare till redigerbara fält.
-6. Klicka **Klar** för att generera de slutliga återgivningarna av resursmallen med hög återgivning.
+3. **InDesignen har överförts till AEM Assets** och AEM arbetsflöde och InDesign Server kan bearbeta resurserna till fullo.
+4. **Skapa en ny mall** under **Assets > Mallar** och markera den InDesign som har överförts till AEM i steg 4.
+5. **Redigera resursmallen** som skapats i steg 5 och redigera de redigerbara fälten.
+6. Klicka på **Klar** för att generera de slutliga återgivningarna med hög återgivning av resursmallen.
 7. Klicka på resursmallkortet för att öppna och granska resursåtergivningarna för att hämta återgivningarna med hög återgivning.
 
 ## Ytterligare resurser {#additional-resources}
 
 InDesign mallfil och bildstöd
 
-Ladda ned [InDesign mallfil och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
+Hämta [InDesignens mallfil och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [Ladda ned testversion av InDesign CC](https://creative.adobe.com/products/download/indesign)
-* Testversionen av InDesignen Server kan hämtas från [Adobe Prerelease site](https://www.adobeprerelease.com/) eller [CC Enterprise-kunder kan kontakta sin Account Executive för att begära en testlicens för InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
+* [Hämta testversion av InDesign CC](https://creative.adobe.com/products/download/indesign)
+* Testversionen av InDesignen Server kan hämtas från [Adobe Prerelease-webbplatsen](https://www.adobeprerelease.com/) eller [CC Enterprise-kunder kan kontakta sin Account Executive för att begära en provlicens av InDesignen Server](https://www.adobe.com/products/indesignserver/faq.html)

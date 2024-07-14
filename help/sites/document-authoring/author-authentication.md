@@ -10,13 +10,13 @@ doc-type: Technical Video
 duration: 89
 last-substantial-update: 2024-06-07T00:00:00Z
 jira: KT-15674
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+exl-id: 12738182-69e4-43a7-adf9-7771b0d92773
+source-git-commit: 3001560b62cb4dbec92179a9db42abd84590c400
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%
 
 ---
-
 
 # Autentisering av författare
 

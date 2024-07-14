@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Hur man undersöker SAML-relaterade problem
 
-*I den här videon går vi igenom stegen för att undersöka SAML-relaterade problem i AEM.*
+*Den här videon går igenom stegen för att undersöka SAML-relaterade problem i AEM.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335466?quality=12&learn=on)

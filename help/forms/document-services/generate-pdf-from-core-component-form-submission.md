@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Här är den reviderade texten med&quot;Core Components&quot; (kärnkomponenter) med inledande versal:
 
-Ett typiskt scenario är att generera ett PDF från data som skickas via en Core Components-baserad adaptiv form. Dessa data är alltid i JSON-format. Om du vill skapa en PDF med API:t Render PDF måste JSON-data konverteras till XML-format. The `toString` metod för `org.json.XML` används för den här konverteringen. Mer information finns i [dokumentation av `org.json.XML.toString` method](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
+Ett typiskt scenario är att generera ett PDF från data som skickas via en Core Components-baserad adaptiv form. Dessa data är alltid i JSON-format. Om du vill skapa en PDF med API:t Render PDF måste JSON-data konverteras till XML-format. Metoden `toString` i `org.json.XML` används för den här konverteringen. Mer information finns i [dokumentationen för `org.json.XML.toString` method](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
 
 ## Anpassningsbart formulär baserat på JSON-schema
 
@@ -39,11 +39,11 @@ Så här effektiviserar du processen:
 
 ### Generera JSON-schema från XML-data
 
-Du kan använda vilket kostnadsfritt onlineverktyg du vill [konvertera XML till JSON](https://jsonformatter.org/xml-to-jsonschema) med de XML-data som genererades i föregående steg.
+Du kan använda vilket kostnadsfritt onlineverktyg som helst för att [konvertera XML till JSON](https://jsonformatter.org/xml-to-jsonschema) med hjälp av XML-data som genererats i föregående steg.
 
 ### Anpassad arbetsflödesprocess för att konvertera JSON till XML
 
-Den angivna koden konverterar JSON till XML och lagrar den resulterande XML-koden i en arbetsflödesprocessvariabel med namnet `dataXml`.
+Den angivna koden konverterar JSON till XML och lagrar den resulterande XML-koden i en arbetsflödesprocessvariabel som heter `dataXml`.
 
 ```java
 import org.slf4j.LoggerFactory;
@@ -121,7 +121,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera det anpassade paketet via AEM OSGi-webbkonsolen](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
 1. [Importera arbetsflödespaketet](assets/workflow_to_render_pdf.zip).
-1. [Importera exemplet Adaptiv form och XDP-mall](assets/adaptive_form_and_xdp_template.zip).
+1. [Importera exemplet Adaptivt formulär och XDP-mall](assets/adaptive_form_and_xdp_template.zip).
 1. [Förhandsgranska det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled).
 1. Fyll i några formulärfält.
 1. Skicka formuläret för att starta AEM arbetsflöde.

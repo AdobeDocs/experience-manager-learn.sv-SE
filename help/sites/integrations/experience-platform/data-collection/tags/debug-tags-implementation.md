@@ -28,9 +28,9 @@ En introduktion till vanliga verktyg och tekniker som används för att felsöka
 
 ## Felsökning på klientsidan via satellitobjekt
 
-Felsökning på klientsidan är användbart för att verifiera inläsning av taggegenskapsregler eller körningsordning. När en taggegenskap läggs till på webbplatsen kan `_satellite` JavaScript-objekt finns i webbläsaren för att underlätta klientsidans händelse- och dataspårning.
+Felsökning på klientsidan är användbart för att verifiera inläsning av taggegenskapsregler eller körningsordning. När en taggegenskap läggs till på webbplatsen finns JavaScript-objektet `_satellite` i webbläsaren för att underlätta klientsidans händelse- och dataspårning.
 
-Om du vill aktivera felsökning på klientsidan ringer du `setDebug(true)` metoden på `_satellite` -objekt.
+Om du vill aktivera felsökning på klientsidan anropar du metoden `setDebug(true)` för objektet `_satellite`.
 
 1. Öppna webbläsarkonsolen och kör kommandot nedan.
 
@@ -38,19 +38,19 @@ Om du vill aktivera felsökning på klientsidan ringer du `setDebug(true)` metod
        _satellite.setDebug(true);
    ```
 
-1. Läs in AEM webbplatssida igen och verifiera konsolloggen _utlöst regel_ som nedan.
+1. Läs in den AEM webbplatssidan igen och verifiera konsolloggen så visas _rule utlöst_-meddelande som nedan.
 
-   ![Tagga egenskap på författar- och publiceringssidor](assets/satellite-object-debugging.png)
+   ![Taggegenskap på författarsidor och Publish-sidor](assets/satellite-object-debugging.png)
 
 ## Felsökning via Adobe Experience Platform Debugger
 
-Adobe tillhandahåller Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) att felsöka, förstå och få insikter i integreringen.
+Adobe tillhandahåller [Chrome-tillägget ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) för Adobe Experience Platform Debugger för att felsöka, förstå och få insikter i integreringen.
 
-1. Öppna tillägget Adobe Experience Platform Debugger och öppna webbplatssidan i Publish-instansen
+1. Öppna tillägget Adobe Experience Platform Debugger och öppna webbplatssidan på Publish-instansen
 
-2. I **Adobe Experience Platform Debugger > Sammanfattning > Adobe Experience Platform-taggar** kontrollerar du dina taggegenskapsdetaljer som Namn, Version, Byggdatum, Miljö och Tillägg.
+2. I avsnittet **Adobe Experience Platform Debugger > Sammanfattning > Adobe Experience Platform-taggar** kontrollerar du taggegenskapsinformationen, till exempel Namn, Version, Byggdatum, Miljö och Tillägg.
 
-   ![Egenskapsinformation för Adobe Experience Platform Debugger och tagg](assets/tag-property-details.png)
+   ![Information om Adobe Experience Platform Debugger och taggegenskaper](assets/tag-property-details.png)
 
 ## Ytterligare resurser {#additional-resources}
 

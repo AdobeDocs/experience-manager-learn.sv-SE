@@ -30,13 +30,13 @@ AEM Sites har flera alternativ för publicering och avpublicering av innehåll. 
 I AEM Sites finns flera metoder för publicerat och opublicerat innehåll, baserat på författarens arbetsflöde.
 
 * Publicera den aktuella sidan från AEM Sites Page Editor
-   * Publicera den aktuella sidan och tillåt valfritt urval av referenser
+   * Publish den aktuella sidan och tillval för val av referenser
    * Avpublicera den aktuella sidan
-* Snabbpublicering från AEM Sites Admin
+* Snabb Publish från AEM Sites Admin
    * Publicera de markerade sidorna med ett klick och publicera alla opublicerade referenser automatiskt
 * Hantera publikation från AEM Sites Admin
    * Robust konsol för detaljerad hantering av masspublicering och avpublicering.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för publiceringssidor](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [Publicerar siddokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)

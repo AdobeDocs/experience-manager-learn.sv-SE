@@ -33,7 +33,7 @@ Eftersom bilder utgör huvuddelen av en sidas laddningstid kan prestandaförbät
 
 Smart Imaging utnyttjar Adobe Sensei AI-funktioner och arbetar med befintliga bildförinställningar för att automatiskt konvertera bilder till nästa generationens optimala bildformat som WebP, samtidigt som den visuella återgivningen bibehålls.
 
-Läs mer om [Så fungerar Smart Imaging](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive detaljer som bildformat som stöds (och vad som händer om du inte använder dessa format) och dess påverkan på befintliga bildförinställningar som används.
+Läs mer om [Hur smart bildbehandling fungerar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive information om bildformat som stöds (och vad som händer om du inte använder dessa format) och hur de påverkar befintliga bildförinställningar som används.
 
 ## Effekter av Smart Imaging
 
@@ -51,8 +51,8 @@ Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa
 
 När du har aktiverat Smart Imaging vill du kontrollera att den fungerar som förväntat.
 
-Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Vanliga frågor](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
+Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## Ytterligare resurser
 
-Titta på [Dynamic Media Classic Optimizing Page Performance Performance Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand-webbinarium där du kan lära dig mer om Smart Imaging.
+Titta på [Dynamic Media Classic Optimizing Page Performance SKill Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) on-demand-webbinariet om du vill veta mer om Smart Imaging.

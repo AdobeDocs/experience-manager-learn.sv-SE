@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här kör du processtömningsverktyget från kommandoraden
 
-*I den här videon går du igenom stegen för att köra verktyget för processtömning från kommandoraden.*
+*I den här videon går du igenom stegen för att köra processrensningsverktyget från kommandoraden.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)

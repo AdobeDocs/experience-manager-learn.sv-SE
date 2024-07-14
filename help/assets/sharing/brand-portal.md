@@ -33,7 +33,7 @@ Brand Portal Assets Sourcing används för att samla in resurser från tredjepar
 
 *Experience Manager Author 6.5 SP2 (6.5.2) eller senare krävs för att använda Resurser*
 
-Granska [Aktivera Experience Manager författare för resurskälla](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en) om du vill ha instruktioner om hur du konfigurerar och konfigurerar Resurser för författare av Experience Manager.
+Granska [Aktivera författaren av Experience Manager för resurskälla](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en) om du vill ha instruktioner om hur du konfigurerar och konfigurerar resurskälla för författaren av Experience Manager.
 
 ## Brand Portal februari 2019 Funktioner och förbättringar{#brand-portal-features-and-enhancements-644}
 
@@ -51,7 +51,7 @@ Läs vidare om du vill veta mer om partiell textsökning och jokerteckensökning
 
 Nu kan du söka efter resurser genom att endast ange en del - det vill säga ett eller två - av den sökda frasen i filtreringsrutan.
 
-**Använd skiftläge** : Delvis frassökning är användbart när du är osäker på den exakta kombinationen av ord som förekommer i den sökda frasen.
+**Använd skiftläge** : Delvis frassökning är användbart när du är osäker på den exakta kombinationen av ord som förekommer i den sökta frasen.
 
 Om ditt sökformulär i Brand Portal till exempel använder egenskapspredikatet för partiell sökning på resurstitel, kommer alla resurser med ordet läger i sin titelfras att returneras när du anger termen läger.
 
@@ -71,12 +71,12 @@ På samma sätt kan du ange:
 #### Aktivera mapphierarki
 
 Administratörer kan nu konfigurera hur mapparna visas för icke-adminanvändare (redigerare, visningsprogram och gästanvändare) vid inloggning.
-[Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) -konfigurationen läggs till i Allmänna inställningar på panelen Administrationsverktyg. Om konfigurationen är:
+Konfigurationen [Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) har lagts till i Allmänna inställningar på panelen Administrationsverktyg. Om konfigurationen är:
 
 * Aktiverat är det mappträd som börjar från rotmappen synligt för användare som inte är administratörer. Det innebär att de får en navigeringsupplevelse som liknar administratörerna.
 * Inaktiverat visas bara de delade mapparna på landningssidan.
 
-[Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) om funktionen är aktiverad kan du skilja mappar åt med samma namn som delas från olika hierarkier. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
+[Aktivera mapphierarki](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) (när det här alternativet är aktiverat) hjälper dig att skilja på mappar med samma namn som delas från olika hierarkier. När du loggar in kan användare som inte är administratörer nu se de virtuella överordnade (och överordnade) mapparna för de delade mapparna.
 
 De delade mapparna ordnas i respektive katalog i virtuella mappar. Du känner igen dessa virtuella mappar med en låsikon.
 
@@ -101,7 +101,7 @@ Dynamic Media Video encodes kan laddas ned från:
 
 ### Schemalagd publicering till Brand Portal
 
-Arbetsflöde för publicering av resurser (och mappar) från [AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Författarinstansen till Brand Portal kan schemaläggas för ett senare datum, tid.
+Assets (och mappar) publiceringsarbetsflöde från [AEM (6.4.2.0)](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Författarinstans till Brand Portal kan schemaläggas för ett senare datum och en senare tidpunkt.
 
 Publicerade resurser kan också tas bort från portalen vid ett senare datum (tid) genom att schemalägga arbetsflödet för att avpublicera från Brand Portal.
 
@@ -110,11 +110,11 @@ Publicerade resurser kan också tas bort från portalen vid ett senare datum (ti
 Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i den befintliga portalwebbadressen måste man kontakta supporten för Adobe.
 
 Observera att endast prefixet för Brand Portal URL kan anpassas och inte hela URL:en.
-Exempel: en organisation med befintlig domän `wknd.brand-portal.adobe.com` kan få `wkndinc.brand-portal.adobe.com` skapad på begäran.
+En organisation med den befintliga domänen `wknd.brand-portal.adobe.com` kan till exempel få `wkndinc.brand-portal.adobe.com` skapad på begäran.
 
-AEM författarinstans kan dock vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) endast med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
+AEM Author-instansen kan bara vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
 
-**Använd skiftläge** : Organisationer kan anpassa portalens URL-adress istället för att följa den URL-adress som Adobe tillhandahåller.
+**Använd fall** : Organisationer kan uppfylla sina varumärkesbehov genom att anpassa portalens URL i stället för att följa den URL som Adobe tillhandahåller.
 
 ## Brand Portal December 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-642}
 
@@ -128,7 +128,7 @@ AEM Brand-portalen ger gäster åtkomst till portalen. En gästanvändare behöv
 
 Brand Portal-användare kan utnyttja Aspera-baserade snabba nedladdningar för att få upp till 25 gånger snabbare och få en smidig nedladdningsupplevelse oavsett var i världen de befinner sig. Om du vill hämta resurserna snabbare från Brand Portal eller via en delad länk måste du välja alternativet Aktivera acceleration för hämtning i hämtningsdialogrutan, förutsatt att hämtningsacceleration är aktiverat i organisationen.
 
-* [Guide för snabbare nedladdning från Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
+* [Guide för att snabba upp hämtningar från Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Aspera Connect Test Server](https://test-connect.asperasoft.com/)
 
 ### Rapport om användarinloggning
@@ -154,12 +154,12 @@ Sex nya konfigurationer har lagts till för administratörer för att aktivera/i
 
 ### Andra förbättringar
 
-* *Mapphierarkisökväg för kort- och listvyer* - gör att användarna kan ta reda på var de mappar som lagras i en Brand Portal-instans finns. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
-* *Alternativet Översikt* — innehåller metadata för andra användare än administratören om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
+* *Sökväg till mapphierarkin på kort- och listvyer* - gör att användarna kan hitta de mappar som lagras i en Brand Portal-instans. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
+* *Översiktsalternativ* - ger icke-adminanvändare metadata om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
 
 ### Adobe I/O Värdar-användargränssnittet för att konfigurera autentiseringsintegreringar
 
-Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) -gränssnitt för att skapa JWT-program, som gör det möjligt att konfigurera autentiseringsintegreringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns gränssnittet för konfiguration av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med Brand Portal för publicering av material och samlingar i Brand Portal finns i [Konfigurera AEM Assets-integrering med Brand Portal](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) -gränssnittet för att skapa JWT-program, som gör det möjligt att konfigurera autentiseringsintegreringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns användargränssnittet för konfigurering av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med Brand Portal för publicering av resurser och samlingar i Brand Portal finns i [Konfigurera AEM Assets-integrering med Brand Portal](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Brand Portal, februari 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-632}
 
@@ -206,8 +206,8 @@ Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 ## Ytterligare resurser{#additional-resources}
 
 * [Nyheter i Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [AEM Author Replication Agents](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
-* [Guide to Accelerated Download](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
+* [AEM Författarreplikeringsagenter](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [Guide till accelererad hämtning](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal Adobe Docs](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic Media Adobe Docs](https://experienceleague.adobe.com/docs/)
 * [Hämta Aspera Connect](https://downloads.asperasoft.com/connect2/)

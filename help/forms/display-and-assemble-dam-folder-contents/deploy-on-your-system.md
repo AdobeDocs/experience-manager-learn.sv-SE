@@ -20,13 +20,13 @@ ht-degree: 0%
 
 Följ stegen nedan för att få det här användningsexemplet att fungera på din lokala AEM.
 
-* [Distribuera paketet DevelopingWithServiceUser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) som finns i zip-filen.
+* [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) som finns i zip-filen.
 
-* Lägg till följande post i användarmappningstjänsten för Apache Sling **DevelopingWithServiceUser.core:getformsresourceReser=fd-service** med [configMgr](http://localhost:4502/system/console/configMgr).
+* Lägg till följande post i användarmappningstjänsten för Apache Sling Service **DevelopingWithServiceUser.core:getformsresourceServer=fd-service** med [configMgr](http://localhost:4502/system/console/configMgr).
 
 * [Distribuera nyhetsbrevet](assets/Newsletters.core-1.0.0-SNAPSHOT.jar). Paketet innehåller koden som listar mappinnehållet och sätter ihop de valda nyhetsbreven.
 
-* [Importera paketet med hjälp av Pakethanteraren](assets/newsletter.zip). Paketet innehåller klientbibliotek och exempel på PDF-filer för att testa lösningen.
+* [Importera paketet med pakethanteraren](assets/newsletter.zip). Paketet innehåller klientbibliotek och exempel på PDF-filer för att testa lösningen.
 
 * [Importera det adaptiva exempelformuläret](assets/sample-adaptive-form.zip). I det här formuläret visas de nyhetsbrev som kan väljas.
 

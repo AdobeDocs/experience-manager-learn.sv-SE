@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att samla in felsökningsloggar för mobilformulär
 
-*I den här videon går du igenom stegen för att hämta felsökningsloggar för mobilformulär.*
+*Den här videon går igenom stegen för att hämta felsökningsloggar för mobilformulär.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)

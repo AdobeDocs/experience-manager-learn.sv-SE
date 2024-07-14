@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # Så här använder du Rapid Development Environment
 
-Läs **använda** Rapid Development Environment (RDE) på AEM as a Cloud Service. Distribuera kod och innehåll för snabbare utvecklingscykler med kod som nästan är färdig i den integrerade utvecklingsmiljön (IDE).
+Lär dig **hur du använder** RDE (Rapid Development Environment) i AEM as a Cloud Service. Distribuera kod och innehåll för snabbare utvecklingscykler med kod som nästan är färdig i den integrerade utvecklingsmiljön (IDE).
 
-Använda [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) får du lära dig hur du distribuerar olika AEM till RDE genom att köra AEM-RDE:er `install` från din favoritutvecklingsmiljö.
+Med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) får du lära dig hur du distribuerar olika AEM till RDE genom att köra AEM-RDE:s `install`-kommando från din favoritutvecklingsmiljö.
 
 - AEM kod och innehållspaket (all, ui.apps)-distribution
 - Driftsättning av OSGi-paket och konfigurationsfiler
 - Apache och Dispatcher konfigurerar distributionen som en zip-fil
-- Enskilda filer som HTML, `.content.xml` (dialog-XML) distribution
+- Enskilda filer som HTML, `.content.xml` (dialogrute-XML)-distribution
 - Granska andra RDE-kommandon som `status, reset and delete`
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415491?quality=12&learn=on)
 
 ## Förutsättning
 
-Klona [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) och öppna den i din favoritutvecklingsmiljö för att distribuera de AEM artefakterna till den lokala utvecklingsmiljön.
+Klona projektet [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) och öppna det i din favoritutvecklingsmiljö för att distribuera de AEM artefakterna till den virtuella utvecklingsmiljön.
 
 ```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git
@@ -49,11 +49,11 @@ $ mvn clean package
 
 ## Distribuera AEM med plugin-programmet AEM-RDE
 
-Använda `aem:rde:install` kommandot, låt oss distribuera olika AEM.
+Med kommandot `aem:rde:install` kan vi distribuera olika AEM.
 
-### Distribuera `all` och `dispatcher` paket
+### Distribuera `all`- och `dispatcher`-paket
 
-En vanlig utgångspunkt är att först distribuera `all` och `dispatcher` paket genom att köra följande kommandon.
+En vanlig utgångspunkt är att först distribuera `all`- och `dispatcher`-paketen genom att köra följande kommandon.
 
 ```shell
 # Install the 'all' package
@@ -67,10 +67,10 @@ Kontrollera WKND-webbplatsen på både författaren och publiceringstjänsterna 
 
 ### Förbättra och distribuera en komponent
 
-Låt oss förbättra `Hello World Component` och driftsätta den på den lokala utvecklingsmiljön.
+Låt oss förbättra `Hello World Component` och distribuera den till den lokala utvecklingsmiljön.
 
-1. Öppna dialogrutan XML (`.content.xml`) fil från `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/` mapp
-1. Lägg till `Description` textfält efter befintlig `Text` dialogrutefält
+1. Öppna XML-filen för dialogrutan (`.content.xml`) från mappen `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/`
+1. Lägg till textfältet `Description` efter det befintliga fältet i dialogrutan `Text`
 
    ```xml
    ...
@@ -82,8 +82,8 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
    ...
    ```
 
-1. Öppna `helloworld.html` fil från `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld` mapp
-1. Återge `Description` egenskapen efter befintlig `<div>` -elementet i `Text` -egenskap.
+1. Öppna filen `helloworld.html` från mappen `ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld`
+1. Återge egenskapen `Description` efter det befintliga `<div>`-elementet för egenskapen `Text`.
 
    ```html
    ...
@@ -96,7 +96,7 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
 
 1. Verifiera ändringarna i lokala AEM-SDK genom att utföra maven-bygget eller synkronisera enskilda filer.
 
-1. Distribuera ändringarna till RDE via `ui.apps` eller genom att distribuera de enskilda dialogrutorna och HTML-filerna.
+1. Distribuera ändringarna till RDE via `ui.apps`-paketet eller genom att distribuera de enskilda dialogrute- och HTML-filerna.
 
    ```shell
    # Using 'ui.apps' package
@@ -113,24 +113,24 @@ Låt oss förbättra `Hello World Component` och driftsätta den på den lokala 
    $ aio aem:rde:install ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml -t content-xml -p /apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplats.
+1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplatssida.
 
-### Granska `install` kommandoalternativ
+### Granska kommandoalternativen för `install`
 
-I exemplet med det ovan enskilda fildistributionskommandot `-t` och `-p` flaggor används för att ange JCR-sökvägens typ och mål. Låt oss titta på det tillgängliga `install` genom att köra följande kommando.
+I ovanstående exempel på enskilda fildistributionskommandon används flaggorna `-t` och `-p` för att ange typen och målet för JCR-sökvägen. Vi granskar de tillgängliga kommandoalternativen för `install` genom att köra följande kommando.
 
 ```shell
 $ aio aem:rde:install --help
 ```
 
-Flaggorna är självförklarande, `-s` -flaggan är användbar för att rikta distributionen enbart till författaren eller publiceringstjänsterna. Använd `-t` flagga vid distribution av **content-file eller content-xml** filer tillsammans med `-p` för att ange mål-JCR-sökvägen i AEM RDE-miljö.
+Flaggorna är självförklarande, flaggan `-s` är användbar för att rikta distributionen enbart till författaren eller publiceringstjänsterna. Använd flaggan `-t` när du distribuerar **content-file- eller content-xml**-filer tillsammans med flaggan `-p` för att ange mål-JCR-sökvägen i AEM RDE-miljö.
 
 ### Distribuera OSGi-paketet
 
-Om du vill lära dig hur man driftsätter OSGi-paketet kan vi förbättra `HelloWorldModel` Klassen Java™ och driftsätt den i RDE.
+Om du vill lära dig hur du distribuerar OSGi-paketet kan du förbättra Java™-klassen `HelloWorldModel` och distribuera den till den lokala utvecklingsmiljön.
 
-1. Öppna `HelloWorldModel.java` fil från `core/src/main/java/com/adobe/aem/guides/wknd/core/models` mapp
-1. Uppdatera `init()` metod enligt nedan:
+1. Öppna filen `HelloWorldModel.java` från mappen `core/src/main/java/com/adobe/aem/guides/wknd/core/models`
+1. Uppdatera metoden `init()` enligt nedan:
 
    ```java
    ...
@@ -141,7 +141,7 @@ Om du vill lära dig hur man driftsätter OSGi-paketet kan vi förbättra `Hello
    ...
    ```
 
-1. Verifiera ändringarna i lokal AEM-SDK genom att distribuera `core` paket via maven, kommando
+1. Verifiera ändringarna på lokal AEM-SDK genom att distribuera `core`-paketet via kommandot maven
 1. Distribuera ändringarna till RDE genom att köra följande kommando
 
    ```shell
@@ -150,7 +150,7 @@ Om du vill lära dig hur man driftsätter OSGi-paketet kan vi förbättra `Hello
    $ aio aem:rde:install target/aem-guides-wknd.core-2.1.3-SNAPSHOT.jar
    ```
 
-1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplats.
+1. Verifiera ändringar i RDE genom att lägga till eller redigera `Hello World Component` på en WKND-webbplatssida.
 
 ### Distribuera OSGi-konfiguration
 
@@ -168,14 +168,14 @@ $ aio aem:rde:install target/aem-guides-wknd.ui.config-2.1.3-SNAPSHOT.zip
 
 >[!TIP]
 >
->Om du bara vill installera en OSGi-konfiguration på en författare eller publiceringsinstans använder du `-s` flagga.
+>Om du bara vill installera en OSGi-konfiguration på en författare eller publiceringsinstans använder du flaggan `-s`.
 
 
 ### Distribuera Apache eller Dispatcher-konfiguration
 
-Konfigurationsfilerna för Apache eller Dispatcher **kan inte distribueras individuellt**, men hela Dispatcher-mappstrukturen måste distribueras i form av en ZIP-fil.
+Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individuellt**, men hela Dispatcher-mappstrukturen måste distribueras i form av en ZIP-fil.
 
-1. Ändra konfigurationsfilen för `dispatcher` för demoändamål, uppdatera `dispatcher/src/conf.d/available_vhosts/wknd.vhost` för att cachelagra `html` -filer i endast 60 sekunder.
+1. Gör en önskad ändring i config-filen för modulen `dispatcher` och uppdatera `dispatcher/src/conf.d/available_vhosts/wknd.vhost` för att endast cachelagra `html`-filerna i 60 sekunder.
 
    ```
    ...
@@ -188,7 +188,7 @@ Konfigurationsfilerna för Apache eller Dispatcher **kan inte distribueras indiv
    ...
    ```
 
-1. Verifiera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) för mer information.
+1. Kontrollera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) för mer information.
 1. Distribuera ändringarna i RDE genom att köra följande kommando:
 
    ```shell
@@ -223,13 +223,13 @@ Med ovanstående kommandon kan din utvecklingsmiljö hanteras från din favoritu
 
 ## Nästa steg
 
-Läs mer om [livscykeln för utveckling/driftsättning med RDE](./development-life-cycle.md) för att leverera funktioner snabbt.
+Lär dig mer om [livscykeln för utveckling/distribution med RDE](./development-life-cycle.md) för att leverera funktioner med hastighet.
 
 
 ## Ytterligare resurser
 
 [Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
 
-[Adobe I/O Runtime CLI Plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
+[Adobe I/O Runtime CLI-plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)

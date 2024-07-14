@@ -23,16 +23,16 @@ I AEM Forms 6.5 introducerades möjligheten att definiera JavaScript-funktioner 
 AEM Forms har ett antal anpassade funktioner som du kan använda, men du måste definiera egna funktioner och använda dem i flera formulär.
 
 Så här definierar du din första anpassade funktion:
-* [Logga in i crx](http://localhost:4502/crx/de/index.jsp#/apps/experience-league/clientlibs)
+* [Logga in på crx](http://localhost:4502/crx/de/index.jsp#/apps/experience-league/clientlibs)
 * Skapa en ny mapp under program som kallas upplevelsegrupp (mappnamnet kan vara ett namn du väljer)
 * Spara ändringarna.
 * I mappen experience-leag skapar du en ny nod av typen cq:ClientLibraryFolder som kallas clientlibs.
 * Markera mappen clientlibs och lägg till egenskaperna allowProxy och categories som visas på skärmbilden. Spara ändringarna.
 
 ![client-lib](assets/custom-functions.png)
-* Skapa en mapp med namnet **js** under **klientlibs** mapp
-* Skapa en fil med namnet **functions.js** under **js** mapp
-* Skapa en fil med namnet **js.txt** under **klientlibs** mapp. Spara ändringarna.
+* Skapa en mapp med namnet **js** under mappen **clientlibs**
+* Skapa en fil med namnet **functions.js** i mappen **js**
+* Skapa en fil med namnet **js.txt** under mappen **clientlibs**. Spara ändringarna.
 * Mappstrukturen bör se ut som skärmbilden nedan.
 
 ![Regelredigeraren](assets/folder-structure.png)
@@ -72,7 +72,7 @@ function convertUTC(strUTCString)
 }
 ```
 
-Please [referera till jsdoc](https://jsdoc.app/index.html)om du vill ha mer information om hur du kommenterar javascript-funktioner.
+Mer information om att anteckna javascript-funktioner finns i [jsdoc](https://jsdoc.app/index.html).
 Koden ovan har två funktioner:
 **getCountyNamesList** - returnerar en array med strängar
 **convertUTC** - Konverterar UTC-tidsstämpel till lokal tidszon

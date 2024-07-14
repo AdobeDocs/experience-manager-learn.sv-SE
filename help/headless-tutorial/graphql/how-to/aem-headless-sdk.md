@@ -24,30 +24,30 @@ AEM Headless SDK är en uppsättning bibliotek som kunder kan använda för att 
 AEM Headless SDK finns för olika plattformar:
 
 + [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
-+ [AEM Headless SDK for server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
-+ [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
++ [AEM Headless SDK för server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
++ [AEM Headless SDK för Java™](https://github.com/adobe/aem-headless-client-java)
 
 ## Beständiga GraphQL-frågor
 
-Fråga AEM använda GraphQL med beständiga frågor (i motsats till [klientdefinierade GraphQL-frågor](#graphl-queries)) gör att utvecklare kan behålla en fråga (men inte dess resultat) i AEM och sedan begära att frågan ska köras efter namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
+Genom att fråga AEM använda GraphQL med beständiga frågor (till skillnad från [klientdefinierade GraphQL-frågor](#graphl-queries)) kan utvecklare behålla en fråga (men inte dess resultat) i AEM, och sedan begära att frågan körs efter namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
 
-Beständiga frågor är bättre än klientdefinierade GraphQL-frågor, eftersom beständiga frågor körs med HTTP GET, som kan cachelagras på CDN- och AEM Dispatcher-nivåer. Beständiga frågor är också aktiva, definiera ett API och frigör behovet av att utvecklaren förstår detaljerna för varje modell för innehållsfragment.
+Beständiga frågor är bättre än klientdefinierade GraphQL-frågor eftersom beständiga frågor körs med HTTP GET, som kan cachelagras på CDN- och AEM Dispatcher-nivåer. Beständiga frågor är också aktiva, definiera ett API och frigör behovet av att utvecklaren förstår detaljerna för varje modell för innehållsfragment.
 
 ### Exempel på koder{#persisted-graphql-queries-code-examples}
 
 Nedan följer kodexempel på hur du kör en GraphQL-beständig fråga mot AEM.
 
-+++ JavaScript-exempel
++++ Exempel på JavaScript
 
-Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) genom att köra `npm install` från roten i ditt Node.js-projekt.
+Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) genom att köra kommandot `npm install` från roten för ditt Node.js-projekt.
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-I det här kodexemplet visas hur du ställer AEM med [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm-modul använda `async/await` syntax. AEM Headless SDK för JavaScript har också stöd för [Promise syntax](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
+I det här kodexemplet visas hur du ställer AEM med [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm-modulen med syntaxen `async/await`. AEM Headless SDK för JavaScript har även stöd för [Promise-syntax](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
 
-Den här koden förutsätter en beständig fråga med namnet `wknd/adventureNames` har skapats AEM författare och publicerats till AEM Publish.
+Den här koden antar att en beständig fråga med namnet `wknd/adventureNames` har skapats AEM författaren och publicerats till AEM Publish.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -90,20 +90,20 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++ Reagera useEffect(..) exempel
 
-Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) genom att köra `npm install` från roten i React-projektet.
+Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) genom att köra kommandot `npm install` från roten för React-projektet.
 
 ```
 $ npm i @adobe/aem-headless-client-js
 ```
 
-I det här kodexemplet visas hur du använder [Reagera useEffect(..) krok](https://reactjs.org/docs/hooks-effect.html) för att utföra ett asynkront anrop till AEM GraphQL.
+I det här kodexemplet visas hur du använder [React useEffect(..) krok](https://reactjs.org/docs/hooks-effect.html) för att köra ett asynkront anrop till AEM GraphQL.
 
-Använda `useEffect` om du vill göra det asynkrona GraphQL-anropet i React användbart eftersom:
+Att använda `useEffect` för att göra det asynkrona GraphQL-anropet i React är användbart eftersom:
 
 1. Den tillhandahåller synkron wrapper för det asynkrona anropet till AEM.
 1. Det minskar behovet av AEM.
 
-Den här koden förutsätter en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats AEM författare och publicerats till AEM Publish med GraphiQL.
+Koden förutsätter att en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats på AEM författare och publicerats till AEM Publish med GraphiQL.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -186,7 +186,7 @@ export function useAdventureBySlug(slug) {
 }
 ```
 
-Anropa den anpassade reaktionen `useEffect` krocka från andra ställen i en React-komponent.
+Anropa den anpassade `useEffect`-kroken från någon annan plats i en React-komponent.
 
 ```javascript
 import useAdventureBySlug from '...';
@@ -194,7 +194,7 @@ import useAdventureBySlug from '...';
 let { data, errors } = useAdventureBySlug('bali-surf-camp');
 ```
 
-Nytt `useEffect` Det går att skapa kopplingar för varje beständig fråga som React-appen använder.
+Nya `useEffect`-kopplingar kan skapas för varje beständig fråga som React-appen använder.
 
 +++
 
@@ -206,7 +206,7 @@ AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa sättet at
 
 ## Webpack 5+
 
-AEM Headless JS SDK är beroende av `util` som inte ingår i Webpack 5+ som standard. Om du använder Webpack 5+ får du följande fel:
+Den AEM Headless JS SDK har beroenden av `util` som inte ingår i Webpack 5+ som standard. Om du använder Webpack 5+ får du följande fel:
 
 ```
 Compiled with problems:
@@ -223,7 +223,7 @@ If you don't want to include a polyfill, you can use an empty module like this:
     resolve.fallback: { "util": false }
 ```
 
-Lägg till följande `devDependencies` till `package.json` fil:
+Lägg till följande `devDependencies` i din `package.json`-fil:
 
 ```json
   "devDependencies": {
@@ -237,4 +237,4 @@ Lägg till följande `devDependencies` till `package.json` fil:
   },
 ```
 
-Kör sedan `npm install` för att installera beroenden.
+Kör sedan `npm install` för att installera beroendena.

@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Fyll i formulär i förväg med inskickade data och bilagor
 
-När **Administratör** Klicka på ViewLink i sökresultattabellen så fylls formuläret i med inskickade data.
+När **Administratören** klickar på ViewLink i sökresultattabellen fylls formuläret i förväg med skickade data.
 
 En förifyllningstjänst användes för att hämta data som är associerade med BlobId från Azure-portalen.
 
-[Det finns en separat artikel här om hur du förifyller formulär med data och bilagor.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
+[Det finns en separat artikel om att förifylla formulär med data och bifogade filer här.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
 
 ## Nästa steg
 

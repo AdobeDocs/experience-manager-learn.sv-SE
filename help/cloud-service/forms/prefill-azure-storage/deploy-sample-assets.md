@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Distribuera följande resurser på ditt lokala molnförberedda system för att få det här användningsfallet att fungera på ditt system.
 
-* Se till att du har skapat alla konfigurationer/konton som krävs enligt[introduktionsdokument](./introduction.md)
+* Kontrollera att du har skapat alla konfigurationer/konton som krävs och som listas i [introduktionsdokumentet](./introduction.md)
 
 * [Installera den anpassade formulärmallen och den tillhörande sidkomponenten](./assets/azure-portal-template-page-component.zip)
 

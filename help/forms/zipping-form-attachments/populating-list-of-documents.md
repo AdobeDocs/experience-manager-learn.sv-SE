@@ -19,14 +19,14 @@ ht-degree: 0%
 # Anpassat processsteg
 
 
-Ett anpassat processsteg implementerades för att fylla i arbetsflödesvariabler av typen Array List med bilagor och bilagenamn. Den här variabeln används sedan i arbetsflödeskomponenten Skicka e-post. Om du inte är bekant med att skapa OSGi-paket kan du [Följ dessa anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+Ett anpassat processsteg implementerades för att fylla i arbetsflödesvariabler av typen Array List med bilagor och bilagenamn. Den här variabeln används sedan i arbetsflödeskomponenten Skicka e-post. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa OSGi-paket.
 
 Koden i det anpassade processsteget gör följande
 
 * Fråga efter alla adaptiva formulärbilagor under nyttolastmappen. Mappnamnet skickas som ett processargument till processsteget.
 
-* Fylla `listOfDocuments` arbetsflödesvariabel
-* Fylla `attachmentNames` arbetsflödesvariabel
+* Fyll i arbetsflödesvariabeln `listOfDocuments`
+* Fyll i arbetsflödesvariabeln `attachmentNames`
 * Ange värdet för arbetsflödesvariabeln (`no_of_attachments`)
 
 ```java
@@ -115,7 +115,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 > Kontrollera att du har följande variabler definierade i arbetsflödet för att koden ska fungera
 > *listOfDocuments* - variabel av typen ArrayList med dokument
 > *attachmentNames* - variabel av typen ArrayList of String
-> *antal_bilagor* - variabel av typen Double
+> *no_of_attachments* - variabel av typen Double
 
 ## Nästa steg
 

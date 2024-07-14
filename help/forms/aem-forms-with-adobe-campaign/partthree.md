@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I den här delen förifyller vi Adaptiv form med profilinformation som hämtats från ACS. AEM Forms har denna kraftfulla funktion för att förifylla anpassningsbara formulär.
 
-Läs detta om du vill veta mer om hur du fyller i adaptiva formulär i förväg [självstudiekurs](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
+Läs den här [självstudiekursen](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html) om du vill veta mer om hur du fyller i anpassade formulär i förväg.
 
 Om du vill fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM. Om e-post-ID:t för den person som är inloggad AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
 

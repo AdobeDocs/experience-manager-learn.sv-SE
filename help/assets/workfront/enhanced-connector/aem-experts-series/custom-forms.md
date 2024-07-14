@@ -22,10 +22,10 @@ ht-degree: 0%
 
 # Workfront anpassade blanketter och metadatamappning
 
-![AEM Experts Series](./assets/banner.png)
+![AEM expertsserie](./assets/banner.png)
 
 Lär dig hur du konfigurerar Workfront och AEM Assets för att hantera och synkronisera metadata för resurser med hjälp av anpassade Workfront-formulär och AEM metadatamatchningar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
 
-_Del 2 i en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
+_Del 2 av en [fyra delars expertserie om den utökade anslutningen för Workfront för Experience Manager](./overview.md)_

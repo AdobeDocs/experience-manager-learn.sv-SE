@@ -23,10 +23,10 @@ ht-degree: 0%
 
 # Avancerade inställningar och arbetsflöden
 
-![AEM Experts Series](./assets/banner.png)
+![AEM expertsserie](./assets/banner.png)
 
 Lär dig mer om avancerade inställningar för Workfront för AEM förbättrade anslutningsprogram och hur du konfigurerar avancerade arbetsflöden och startprogram i AEM för att hantera synkroniseringen av data mellan AEM och Workfront.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340397?quality=12&learn=on)
 
-_Del fyra i en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
+_Del fyra av en [fyra-delars expertserie om den utökade anslutningen för Workfront för Experience Manager](./overview.md)_

@@ -24,4 +24,4 @@ Upptäck hur du enkelt kan skapa och redigera innehåll i Adobe Experience Manag
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-Lär dig även hur du konfigurerar [AEM Assets inbyggda integrering med Adobe Express](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) för smidig åtkomst till AEM Assets från Adobe Expressen.
+Lär dig även hur du konfigurerar den inbyggda [AEM Assets-integreringen med Adobe Express](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) för smidig åtkomst till AEM Assets från Adobe Expressen.

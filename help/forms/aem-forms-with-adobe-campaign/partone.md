@@ -29,7 +29,7 @@ För att kunna använda ACS API med AEM Forms måste vi skapa JWT i ett OSGi-pak
 
 ![konfiguration](assets/campaignconfiguration.gif)
 
-**S.** Värdena som visas här är &quot;dummy&quot;-värden
+**A.** Värdena som visas här är &quot;dummy&quot;-värden
 
 Följande kod hämtar information om Adobe Campaign Server från OSGI-konfigurationen. Vi skapar en privat nyckel från raderna 80 till 104.
 

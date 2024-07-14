@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att begränsa ForcedDisconnectException
 
-*Den här videon går igenom möjliga orsaker och steg för att minska ForcedDisconnectException*
+*Den här videon går igenom möjliga orsaker och steg för att mildra ForcedDisconnectException*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335483?quality=12&learn=on)

@@ -29,16 +29,16 @@ Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. D
 
 - Samarbeta med ditt säkerhetsteam för att ta reda på vilka regler som är lämpliga för din organisation.
 - Testa alltid regler i Dev-miljöer innan du distribuerar dem till scen- och produktionsmiljöer.
-- När du deklarerar och validerar regler börjar du alltid med `action` type `log` för att säkerställa att regeln inte blockerar legitim trafik.
-- För vissa regler gäller att övergången från `log` till `block` bör endast bygga på en analys av tillräcklig platstrafik.
+- När regler deklareras och valideras börjar du alltid med `action` typ `log` för att se till att regeln inte blockerar legitim trafik.
+- För vissa regler bör övergången från `log` till `block` endast baseras på en analys av tillräcklig webbplatstrafik.
 - Lägg in regler stegvis och överväg att involvera era testteam (QA, prestanda, penetrationstestning) i processen.
-- Analysera regelns påverkan regelbundet med [kontrollpanelsverktyg](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Beroende på webbplatsens trafikvolym kan analysen göras varje dag, varje vecka eller varje månad.
+- Analysera regelns påverkan regelbundet med [instrumentpanelsverktyget](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Beroende på webbplatsens trafikvolym kan analysen göras varje dag, varje vecka eller varje månad.
 - Om du vill blockera skadlig trafik som du kanske känner till efter analysen lägger du till eventuella ytterligare regler. Exempel: vissa IP-adresser som har attackerat din webbplats.
 - Regelframtagning, driftsättning och analys ska vara en pågående, iterativ process. Det är inte en engångsaktivitet.
 
 ## Bästa tillvägagångssätt för trafikfilterregler
 
-Aktivera trafikfilterreglerna nedan för ditt AEM. De värden du vill använda för `rateLimit` och `clientCountry` egenskaperna måste fastställas i samarbete med säkerhetsteamet.
+Aktivera trafikfilterreglerna nedan för ditt AEM. De önskade värdena för egenskaperna `rateLimit` och `clientCountry` måste dock fastställas i samarbete med säkerhetsteamet.
 
 ```yaml
 kind: CDN
@@ -87,13 +87,13 @@ data:
 
 >[!WARNING]
 >
->Samarbeta med webbsäkerhetsteamet i produktionsmiljön för att ta reda på vilka värden som är lämpliga för `rateLimit`
+>Samarbeta med webbsäkerhetsteamet för att fastställa lämpliga värden för `rateLimit` i din produktionsmiljö
 
 ## Bästa tillvägagångssätt för WAF-regler
 
 När WAF har licensierats och aktiverats för programmet visas WAF-flaggor som matchar trafik i diagram och begärandeloggar, även om du inte deklarerat dem i en regel. Ni är alltså alltid medvetna om potentiellt ny skadlig trafik och kan skapa regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
 
-Titta på WAF-reglerna nedan för ditt AEM. De värden du vill använda för `action` och `wafFlags` egenskapen måste fastställas i samarbete med säkerhetsteamet.
+Titta på WAF-reglerna nedan för ditt AEM. De önskade värdena för egenskapen `action` och `wafFlags` måste dock fastställas i samarbete med säkerhetsteamet.
 
 ```yaml
 kind: CDN

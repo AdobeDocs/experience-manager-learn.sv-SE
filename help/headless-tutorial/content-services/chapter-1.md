@@ -21,27 +21,27 @@ Den senaste versionen av AEM och AEM WCM Core Components rekommenderas alltid.
 
 * AEM 6.5 eller senare
 * AEM WCM Core Components 2.4.0 eller senare
-   * Ingår i [WKND Mobile AEM Application Content Package below](#wknd-mobile-application-packages)
+   * Ingår i innehållspaketet för [WKND-AEM ](#wknd-mobile-application-packages) nedan
 
-Innan du startar den här självstudiekursen bör du kontrollera att följande AEM förekomster [installerat och körs på din lokala dator](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install):
+Innan du startar den här självstudiekursen kontrollerar du att följande AEM har [installerats och körs på din lokala dator](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install):
 
-* **AEM** på **port 4502**
+* **AEM Författare** på **port 4502**
 * **AEM Publish** på **port 4503**
 
 ## WKND Mobile-programpaket{#wknd-mobile-application-packages}
 
-Installera följande AEM i **båda** AEM författare och AEM publicera, använda [!DNL AEM Package Manager].
+Installera följande AEM innehållspaket på **både** AEM författare och AEM Publish med [!DNL AEM Package Manager].
 
 * [ui.apps: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.ui.apps-x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile Empty Template Type]
-   * [!DNL WKND Mobile] Proxykomponent för AEM WCM-kärnkomponenter
-   * [!DNL WKND Mobile] AEM Content Services pages&#39;CSS (for minor styling)
-* [ui.content: GitHub > com.adobe.aem.guides.wknd-mobile.ui.content-x.x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+   * [!DNL WKND Mobile]-proxykomponent för AEM WCM-kärnkomponenter
+   * [!DNL WKND Mobile] AEM Content Services-sidornas CSS (för mindre formatering)
+* [ui.content: GitHub > com.adobe.aem.guides.wknd-mobile.ui.content-x.x.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
    * [!DNL WKND Mobile] Platsstruktur
    * [!DNL WKND Mobile] DAM-mappstruktur
    * [!DNL WKND Mobile] bildresurser
 
-I [Kapitel 7](./chapter-7.md) vi ska köra [!DNL WKND Mobile] Android-mobilapp som använder [Android Studio](https://developer.android.com/studio) och det medföljande APK-paketet (Android-programpaket):
+I [Kapitel 7](./chapter-7.md) kör vi [!DNL WKND Mobile] Android-mobilappen med [Android Studio](https://developer.android.com/studio) och den medföljande APK-filen (Android Application Package):
 
 * [[!DNL Android Mobile App: GitHub > Assets > wknd-mobile.x.x.x.apk]](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
@@ -49,20 +49,20 @@ I [Kapitel 7](./chapter-7.md) vi ska köra [!DNL WKND Mobile] Android-mobilapp s
 
 Den här uppsättningen innehållspaket skapar innehåll och konfiguration som beskrivs i det associerade kapitlet och alla föregående kapitel. Dessa paket är valfria men kan göra det lättare att skapa innehåll.
 
-* [Kapitel 2 Innehåll: GitHub > Resurser > com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
-* [Kapitel 3 Innehåll: GitHub > Resurser > com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
-* [Kapitel 4 Innehåll: GitHub > Resurser > com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
-* [Kapitel 5 Innehåll: GitHub > Resurser > com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+* [Kapitel 2 Innehåll: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+* [Kapitel 3 Innehåll: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-3.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+* [Kapitel 4 Innehåll: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
+* [Kapitel 5 Innehåll: GitHub > Assets > com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest)
 
-## Källkod
+## Source Code
 
-Källkoden för både AEM och [!DNL Android Mobile App] finns på [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile). Källkoden behöver inte byggas eller ändras för den här självstudiekursen, utan finns för att ge fullständig genomskinlighet i hur alla delar av självstudiekursen byggs.
+Källkoden för både AEM och [!DNL Android Mobile App] är tillgänglig på [[!DNL AEM Guides - WKND Mobile GitHub Project]](https://github.com/adobe/aem-guides-wknd-mobile). Källkoden behöver inte byggas eller ändras för den här självstudiekursen, utan finns för att ge fullständig genomskinlighet i hur alla delar av självstudiekursen byggs.
 
-Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
 ## Hoppa till slutet
 
-Om du vill gå till slutet av självstudiekursen går du till [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaketet kan installeras på **båda** AEM Författare och AEM Publicera. Observera att innehåll och konfiguration inte visas som de publicerats i AEM Author, men på grund av manuell distribution är allt innehåll och all konfiguration som krävs tillgängligt i AEM Publish, vilket innebär att [!DNL WKND Mobile App] för att komma åt innehållet.
+Om du vill gå till slutet av självstudiekursen kan innehållspaketet [com.adobe.aem.guides.wknd-mobile.content.chapter-5.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) installeras på **både** AEM Author och AEM Publish. Observera att innehåll och konfiguration inte visas som publicerade i AEM författare, men på grund av den manuella distributionen är allt nödvändigt innehåll och konfiguration tillgängligt på AEM Publish, vilket ger [!DNL WKND Mobile App] åtkomst till innehållet.
 
 
 ## Nästa steg

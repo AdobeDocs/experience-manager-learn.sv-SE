@@ -1,6 +1,6 @@
 ---
 title: Integrera AEM Forms med Microsoft OneDrive
-description: Lär dig hur du lagrar as a Cloud Service inlämningsdata från Adobe Experience Manager Forms i Microsoft OneDrive.
+description: Lär dig hur du lagrar Adobe Experience Manager Forms as a Cloud Service inskickade data i Microsoft OneDrive.
 feature: Adaptive Forms
 type: Documentation
 role: Developer

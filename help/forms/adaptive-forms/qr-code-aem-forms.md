@@ -9,7 +9,8 @@ role: Developer
 level: Beginner
 jira: KT-15603
 last-substantial-update: 2024-05-28T00:00:00Z
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
+exl-id: 0c6079f4-601e-4a82-976c-71dbb2faa671
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -44,7 +45,7 @@ Följande kod användes i body.jsp för QR-code-generator-komponenten.
 
 
 
-Följande kod använder makeCode-metoden för QRCode.js-biblioteket i klientbiblioteket för QR-code-generator-komponenten. Den genererade QR-koden läggs till i den div som identifieras av id **&quot;qrcode&quot;**.
+Följande kod använder makeCode-metoden för QRCode.js-biblioteket i klientbiblioteket för QR-code-generator-komponenten. Den genererade QR-koden läggs till i div-koden som identifieras av id **&quot;qrcode&quot;**.
 
 ```javascript
 $(document).ready(function()
@@ -60,5 +61,3 @@ $(document).ready(function()
 * [Hämta och installera QR-kodkomponenten med Package Manager.](assets/qrcode.zip)
 * [Hämta och installera det adaptiva exempelformuläret med Package Manager.](assets/form-with-qr-code.zip)
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/qrcode/w9form/jcr:content?wcmmode=disabled). Formulärets hjälpavsnitt innehåller QR-koden.
-
-

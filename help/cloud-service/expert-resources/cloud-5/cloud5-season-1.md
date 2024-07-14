@@ -1,6 +1,6 @@
 ---
 title: Moln 5 - Årstid 1
-description: Lär dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe expertingenjörer som bygger den och experttjänsterna som levererar den.
+description: Läs om Adobe Experience Manager (AEM) as a Cloud Service från Adobe expertingenjörer som bygger upp det och experttjänsterna som levererar det.
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## Introduktion
 
-Välkommen till Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att tillhandahålla användbar information om AEM as a Cloud Service på 5 minuter eller mindre.
+Välkommen till Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att leverera användbar information om AEM as a Cloud Service på 5 minuter eller mindre.
 
-Besök [Förslagsruta](https://forms.office.com/r/74P5Xz4UH0) för att skicka in ämnesförslag.
+Besök [förslagsrutan](https://forms.office.com/r/74P5Xz4UH0) om du vill skicka in förslag på ämnen.
 
 ## Säsong 1
 
@@ -33,7 +33,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part1.md"><strong>AEM CDN Deep Dive (del 1)</strong></a>         
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
@@ -46,11 +46,11 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
       </a>
       <div>
          <a href="./cloud5-aem-cdn-part2.md"><strong>AEM CDN Deep Dive (del 2)</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
-         Del 2 är en fortsättning på vår AEM as a Cloud Service CDN. Vi besvarar några av de vanligaste frågorna och myterna om vilka funktioner du får med nya CDN.
+         Del 2 är en fortsättning på vår syn på AEM as a Cloud Service CDN. Vi besvarar några av de vanligaste frågorna och myterna om vilka funktioner du får med nya CDN.
       </p>
    </td>
      <td>
@@ -59,11 +59,11 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </a>
       <div>
          <a href="./cloud5-aem-log-files.md"><strong>Loggfiler och loggning</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
-         Här får du en snabb inblick i hur du kommer åt loggar på AEM as a Cloud Service, inklusive hur du kommer åt dem via användargränssnittet och API:er.
+         Här får du en snabb genomgång av hur du kommer åt loggar i AEM as a Cloud Service, inklusive hur du kommer åt dem via användargränssnittet och API:er.
       </p>
    </td> 
   </tr>
@@ -74,7 +74,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </a>
       <div>
         <a href="./cloud5-getting-login-token-integrations.md"><strong>Integrera med åtkomsttoken</strong></a>        
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
@@ -87,11 +87,11 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
        </a>  
       <div>
         <a href="./cloud5-aem-dispatcher-cloud.md"><strong>Dispatcher i molnet</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
-        Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips och skillnader från AMS/On-Prem. 
+        Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några bästa metoder och skillnader från AMS/On-Prem. 
       </p>
    </td>
      <td>
@@ -100,7 +100,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </a>
       <div>
          <a href="./cloud5-aem-content-migration-part-1.md"><strong>Migrering (del 1)</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Dr. Applesmith</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Dr. Applesmith </em>
       </div>
       <p>
         <br/>
@@ -115,7 +115,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </a>
       <div>
         <a href="./cloud5-aem-content-migration-part-2.md"><strong>Migrering (del 2)</strong></a>     
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
@@ -127,8 +127,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             <img alt="Dispatcher Validator" src="./imgs/008-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher Validator</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher-validerare</strong></a>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
@@ -140,8 +140,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             <img alt="Indexerings- och söktips" src="./imgs/009-thumb.png"/>
         </a>
       <div>
-         <a href="./cloud5-aem-search-and-indexing.md"><strong>Indexerings- och söktips</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>Tips för indexering och sökning</strong></a>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
@@ -156,7 +156,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./cloud5-adobe-app-builder.md"><strong>Adobe App Builder</strong></a><br/>        
-                <em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Amol Anand</em>
+                <em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects &amp; Amol Anand </em>
             </div>
             <p><br/>
                 Kolla in några coola saker som du kan göra med Adobe App Builder och lär dig något nytt om framtiden för anpassningar i molnet.

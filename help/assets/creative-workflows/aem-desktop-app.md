@@ -32,7 +32,7 @@ Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som ha
 
 >[!NOTE]
 >
-> [Adobe Asset Link](./adobe-asset-link.md) är en dedikerad Adobe-lösning för att arbeta med AEM material i Adobe Creative Cloud-program: Photoshop, Illustrator, InDesign. När du använder AEM Assets i dessa program är Adobe Asset Link att föredra framför AEM skrivbordsapp.
+> [Adobe Asset Link](./adobe-asset-link.md) är en Adobe-lösning för att arbeta med AEM resurser i Adobe Creative Cloud-program: Photoshop, Illustrator, InDesign. När du använder AEM Assets i dessa program är Adobe Asset Link att föredra framför AEM skrivbordsapp.
 
 ## Ytterligare resurser
 

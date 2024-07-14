@@ -28,13 +28,13 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 
 >[!NOTE]
 >
->Om du vill skicka det ifyllbara makroformuläret för signering med Acrobat Sign, måste du namnge fälten därefter. Du kan till exempel ge ett fält ett namn **`Sig_es_:signer1:signature`**. Det här är syntaxen som Acrobat Sign förstår.
+>Om du vill skicka det ifyllbara makroformuläret för signering med Acrobat Sign, måste du namnge fälten därefter. Du kan till exempel ge fältet namnet **`Sig_es_:signer1:signature`**. Det här är syntaxen som Acrobat Sign förstår.
 
 >[!NOTE]
 >
 >Om du skickar ett XFA-baserat dokument måste du förenkla dokumentet och Acrobat Sign-signaturtaggarna måste finnas som statisk text i dokumentet.
 
-[Acrobat Sign-dokument för texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign-texttaggdokument](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

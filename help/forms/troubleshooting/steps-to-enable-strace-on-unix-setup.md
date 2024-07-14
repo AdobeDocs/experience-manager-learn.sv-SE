@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att aktivera strängspårning i Unix-inställningar
 
-*I den här videon går du igenom stegen för att aktivera spårningsfunktionen i Unix-inställningarna för AEM Forms PDFG.*
+*Den här videon går igenom steg för att aktivera spårning av strängar i Unix-inställningen för AEM Forms PDFG.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)

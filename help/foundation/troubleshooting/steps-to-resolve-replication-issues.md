@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Steg för att lösa replikeringsproblem i AEM
 
-*I den här videon går du igenom stegen för att lösa replikeringsproblem i AEM.*
+*Den här videon går igenom stegen för att lösa replikeringsproblem i AEM.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335471?quality=12&learn=on)

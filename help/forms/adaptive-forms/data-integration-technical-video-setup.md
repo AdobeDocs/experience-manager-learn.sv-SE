@@ -28,6 +28,6 @@ Konfigurera dataanslutning till en JDBC-datakälla
 
 ## Stödmaterial {#supporting-materials}
 
-* [Ladda ned MySQL JDBC OSGi Bundle](https://dev.mysql.com/downloads/connector/j/)
+* [Hämta MySQL JDBC OSGi Bundle](https://dev.mysql.com/downloads/connector/j/)
 
-   * Ladda ned, zippa upp och installera JAR-filen via [AEM Web Console](http://localhost:4502/system/console/bundles)
+   * Hämta, zippa upp och installera JAR-filen via [AEM Web Console](http://localhost:4502/system/console/bundles)

@@ -1,6 +1,6 @@
 ---
 title: Distribuera via pipeline i frontend-läget
-description: Lär dig hur du skapar och kör en frontend-pipeline som bygger front-end-resurser och distribuerar till det inbyggda CDN på AEM as a Cloud Service.
+description: Lär dig hur du skapar och kör en frontpipeline som bygger frontendresurser och distribuerar till det inbyggda CDN i AEM as a Cloud Service.
 version: Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 # Distribuera via pipeline i frontend-läget
 
-I det här kapitlet skapar och kör vi en frontpipeline i Adobe Cloud Manager. Det bygger bara filer från `ui.frontend` och distribuerar dem till det inbyggda CDN på AEM as a Cloud Service. Gå bort från  `/etc.clientlibs` för leverans av särskilda resurser.
+I det här kapitlet skapar och driver vi en rörledning i Adobe Cloud Manager. Den skapar bara filer från modulen `ui.frontend` och distribuerar dem till det inbyggda CDN-numret i AEM as a Cloud Service. På så sätt flyttas bort från den `/etc.clientlibs`-baserade leveransen av frontendresurser.
 
 
 ## Mål {#objectives}
 
 * Skapa och kör en frontendpipeline.
-* Verifiera att frontendresurserna INTE levereras från `/etc.clientlibs` men från ett nytt värdnamn som börjar med `https://static-`
+* Verifiera att serverresurser INTE levereras från `/etc.clientlibs` utan från ett nytt värdnamn som börjar med `https://static-`
 
 ## Använda den främre rörledningen
 
@@ -36,67 +36,67 @@ I det här kapitlet skapar och kör vi en frontpipeline i Adobe Cloud Manager. D
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att stegen som beskrivs i [Uppdatera AEM](./update-project.md) har slutförts.
+Det här är en självstudiekurs i flera delar och det antas att de steg som beskrivs i [Uppdatera AEM ](./update-project.md) har slutförts.
 
-Se till att du har [behörighet att skapa och distribuera rörledningar i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) och [åtkomst till en AEM as a Cloud Service miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
+Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ## Byt namn på befintlig pipeline
 
-Byt namn på befintlig pipeline från __Distribuera till Dev__ till  __FullStack WKND Distribuera till Dev__ genom att gå till __Konfiguration__ flikar __Namn på icke-produktionsförlopp__ fält. Detta för att tydligt ange om en pipeline är en hel hög eller en front-end genom att bara titta på dess namn.
+Byt namn på den befintliga pipelinen från __Distribuera till Dev__ till __FullStack WKND-distribuera till Dev__ genom att gå till fältet __Konfiguration__ på fliken __Icke-produktionsförlopp__. Detta för att tydligt ange om en pipeline är en hel hög eller en front-end genom att bara titta på dess namn.
 
 ![Byt namn på pipeline](assets/fullstack-wknd-deploy-dev-pipeline.png)
 
 
-I __Källkod__ ska du kontrollera att fältvärdena Databas och Git Branch är korrekta och att grenen har ditt avtal för frontend-pipeline ändrat.
+Se även till att fälten Databas och Git Branch är korrekta på fliken __Source-kod__ och att grenen har sina front end-pipeline-kontrakt ändrade.
 
-![Källkodskonfigurationspipeline](assets/fullstack-wknd-source-code-config.png)
+![Source Code Configuration Pipeline](assets/fullstack-wknd-source-code-config.png)
 
 
 ## Skapa en pipeline för säljprojektet
 
-Till __ENDAST__ bygga och driftsätta resurser från `ui.frontend` utför du följande steg:
+Utför följande steg för att __ENDAST__ skapa och distribuera frontendresurserna från modulen `ui.frontend`:
 
-1. I användargränssnittet för Cloud Manager kan du gå till __Pipelines__ avsnitt, klicka __Lägg till__ knapp och sedan markera __Lägg till icke-produktionsförlopp__ (eller __Lägg till produktionspipeline__) baserat på den AEM as a Cloud Service miljön som du vill distribuera till.
+1. I Cloud Manager-användargränssnittet klickar du på __Lägg till__ i avsnittet __Pipeliner__ och väljer sedan __Lägg till icke-Production Pipeline__ (eller __Lägg till produktionspipeline__) baserat på den AEM as a Cloud Service-miljö som du vill distribuera till.
 
-1. I __Lägg till icke-produktionsförlopp__ som en del av __Konfiguration__ steg väljer du __Distributionsförlopp__ option, name it as __FrontEnd WKND Distribuera till Dev__ och klicka __Fortsätt__
+1. I dialogrutan __Lägg till icke-produktionsförlopp__, som en del av __konfigurationen__ , väljer du alternativet __Distributionsförlopp__, ger den namnet __FrontEnd WKND-distribution till Dev__ och klickar på __Fortsätt__
 
-![Skapa frontlinjeförslutskonfigurationer](assets/create-frontend-pipeline-configs.png)
+![Skapa konfiguration av frontpipeline](assets/create-frontend-pipeline-configs.png)
 
-1. Som en del av __Källkod__ steg väljer du __Front End-kod__ och välj miljö __Berättigade driftsättningsmiljöer__. I __Källkod__ kontrollerar du att fälten Databas och Git Branch är korrekta och att grenen har ditt avtal för frontend-pipeline ändrat.
-Och __viktigast__ för __Kodplats__ fält där värdet är `/ui.frontend` och slutligen klickar du __Spara__.
+1. Som en del av __Source Code__ -stegen väljer du alternativet __Front End Code__ och väljer miljö från __Berättigade distributionsmiljöer__. I avsnittet __Source-kod__ kontrollerar du att fälten Databas och Git Branch har korrekta värden och att grenen har ditt avtal för pipeline för frontend-leverans har ändrats.
+Och __viktigast__ för fältet __Kodplats__ är värdet `/ui.frontend` och slutligen klickar du på __Spara__.
 
-![Skapa källkod för frontpipeline](assets/create-frontend-pipeline-source-code.png)
+![Skapa frontpipeline-Source-kod](assets/create-frontend-pipeline-source-code.png)
 
 
 ## Distributionssekvens
 
-* Kör först det nya namnet __FullStack WKND Distribuera till Dev__ för att ta bort WKND-klientfiler från AEM. Och viktigast av allt, förbered AEM för det rörliga slutavtalet genom att lägga till __Sling-konfiguration__ filer (`SiteConfig`, `HtmlPageItemsConfig`).
+* Kör först den nyligen namnändrade __FullStack WKND-distributionen till AVD__-pipelinen för att ta bort WKND-klientfilerna från AEM. Och viktigast av allt är att förbereda AEM för det rörliga slutavtalet genom att lägga till __Sling config__-filer (`SiteConfig`, `HtmlPageItemsConfig`).
 
-![Oformaterad WKND-plats](assets/unstyled-wknd-site.png)
+![WKND-plats utan formatering](assets/unstyled-wknd-site.png)
 
 >[!WARNING]
 >
->Efter __FullStack WKND Distribuera till Dev__ slutförande av pipeline kommer att ha __oformaterad__ WKND-plats, som kan se trasig ut. Planera ett driftstopp eller en driftsättning under udda timmar. Detta är en engångsstörning som du måste planera för under den initiala övergången från att använda en enda pipeline i full hög till den främre pipelinen.
+>Efter slutförandet av pipeline-funktionen __FullStack WKND Deploy to Dev__ får du en __WKND-plats som inte har formaterats__ som kan se bruten ut. Planera ett driftstopp eller en driftsättning under udda timmar. Detta är en engångsstörning som du måste planera för under den initiala övergången från att använda en enda pipeline i full hög till den främre pipelinen.
 
 
-* Till sist kör du __FrontEnd WKND Distribuera till Dev__ endast bygga `ui.frontend` och driftsätta resurserna direkt till CDN:n.
+* Kör slutligen __FrontEnd WKND Deploy to Dev__ för att endast bygga `ui.frontend`-modulen och distribuera frontendresurserna direkt till CDN.
 
 >[!IMPORTANT]
 >
->Du märker att __oformaterad__ WKND-webbplatsen är nu normal igen och den här gången __FrontEnd__ körningen av pipeline var mycket snabbare än den fullständiga pipeline-stacken.
+>Du märker att WKND-webbplatsen __unstyled__ återgår till det normala och att körningen av __FrontEnd__-pipelinen var mycket snabbare än i helstackspipelinen.
 
 ## Verifiera formatändringar och nya leveranssätt
 
-* Öppna WKND-webbplatsens alla sidor så ser du textfärgen __Adobe röd__ och frontend-resurserna (CSS, JS) levereras från CDN. Resursbegärans värdnamn börjar med `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css` och på samma sätt som site.js eller andra statiska resurser som du refererade till i `HtmlPageItemsConfig` -fil.
+* Öppna WKND-platsens alla sidor och du kan se textfärgen __Adobe Red__ och frontend-resursfilerna (CSS, JS) levereras från CDN. Värdnamnet för resursbegäran börjar med `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css` och jämför site.js eller andra statiska resurser som du refererade till i filen `HtmlPageItemsConfig`.
 
 
-![WKND-webbplats med ny formatering](assets/newly-styled-wknd-site.png)
+![Ny formaterad WKND-webbplats](assets/newly-styled-wknd-site.png)
 
 
 
 >[!TIP]
 >
->The `$HASH_VALUE$` det här är samma som det du ser i __FrontEnd WKND Distribuera till Dev__  pipeline __INNEHÅLLSHASH__ fält. AEM meddelas om frontend-resursens CDN-URL, värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under __prefixPath__ -egenskap.
+>`$HASH_VALUE$` här är samma som det du ser i __FrontEnd WKND-distributionen till Developer__-pipelinets __CONTENT HASH__-fält. AEM meddelas om frontend-resursens CDN-URL och värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under egenskapen __prefixPath__.
 
 
 ![Hash-värdekorrelation](assets/hash-value-correlartion.png)
@@ -109,4 +109,4 @@ Gratulerar, du skapade, körde och verifierade frontpipeline som bara bygger och
 
 ## Nästa steg {#next-steps}
 
-I nästa kapitel [Överväganden](considerations.md)kommer du att granska hur utvecklingsprocessen påverkar både den interna och den bakre utvecklingsprocessen.
+I nästa kapitel, [Saker att tänka på](considerations.md), ska du granska effekten på utvecklingsprocessen fram och tillbaka.

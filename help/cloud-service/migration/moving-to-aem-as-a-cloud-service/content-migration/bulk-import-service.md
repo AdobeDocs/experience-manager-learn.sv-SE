@@ -33,16 +33,16 @@ Tjänsten för massimport används för att överföra filer som lagras i Azure 
 
 >[!TIP]
 >
-> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i produktens tillgängliga alternativ. [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i tillgängliga alternativ i produkten eller i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
 
 ## Viktiga aktiviteter
 
 + Överför de filer som ska importeras till din molnlagringsleverantör.
-+ Konfigurera och kör tjänsten för massimport från AEM as a Cloud Service författare.
++ Konfigurera och kör tjänsten för massimport från AEM as a Cloud Service Author.
 + Kör bulktjänstimporteraren som en engångsimport eller schemalägg en periodisk import.
 
 ## Andra resurser
 
 + [Konfigurationsalternativ för bulkimporttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ [Adobe Developers Live session om tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [Adobe Developers Live-session på tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
 

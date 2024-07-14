@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I den här delen använder vi anpassade funktioner och kodredigeraren för att skapa affärsregler.
 
-du redan har installerat [ClientLib med anpassad funktion](assets/client-libs-and-logo.zip) tidigare i den här kursen.
+du har redan installerat [ClientLib med anpassad funktion](assets/client-libs-and-logo.zip) tidigare i den här självstudien.
 
 Ett klientbibliotek består vanligtvis av CSS- och JavaScript-filer. Det här klientbiblioteket innehåller javascript-filen som visar en funktion för att fylla i värden i listrutor.
 

@@ -27,13 +27,13 @@ Lär dig hur du konfigurerar nya responsiva brytpunkter för AEM responsiv sidre
 
 Skapa först brytpunkter för media i CSS för AEM responsiva stödraster som den responsiva AEM följer.
 
-I `/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/less/grid.less` skapar du brytpunkter som ska användas tillsammans med emulatorn för mobila enheter. Anteckna `max-width` för varje brytpunkt, när detta kopplar CSS-brytpunkterna till AEM responsiva sidredigerarens brytpunkter.
+Skapa brytpunkter som ska användas tillsammans med mobilemulatorn i filen `/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/less/grid.less`. Notera `max-width` för varje brytpunkt, eftersom detta mappar CSS-brytpunkterna till de AEM responsiva sidredigeringsbrytpunkterna.
 
 ![Skapa nya responsiva brytpunkter](./assets/responsive-breakpoints/create-new-breakpoints.jpg)
 
 ## Anpassa mallens brytpunkter
 
-Öppna `ui.content/src/main/content/jcr_root/conf/<app name>/settings/wcm/templates/page-content/structure/.content.xml` fil och uppdatera `cq:responsive/breakpoints` med nya brytpunktsnoddefinitioner. Varje [CSS-brytpunkt](#create-new-css-breakpoints) ska ha en motsvarande nod under `breakpoints` med `width` egenskap inställd på CSS-brytpunktens `max-width`.
+Öppna filen `ui.content/src/main/content/jcr_root/conf/<app name>/settings/wcm/templates/page-content/structure/.content.xml` och uppdatera `cq:responsive/breakpoints` med de nya brytpunktsnoddefinitionerna. Varje [CSS-brytpunkt ](#create-new-css-breakpoints) ska ha en motsvarande nod under `breakpoints` med egenskapen `width` inställd på CSS-brytpunktens `max-width`.
 
 ![Anpassa mallens responsiva brytpunkter](./assets/responsive-breakpoints/customize-template-breakpoints.jpg)
 
@@ -43,19 +43,20 @@ AEM måste definieras så att författare kan välja den responsiva vyn som ska 
 
 Skapa emulatornoder under `/ui.apps/src/main/content/jcr_root/apps/<app name>/emulators`
 
-Till exempel: `/ui.apps/src/main/content/jcr_root/apps/wknd-examples/emulators/phone-landscape`. Kopiera en referensemulatornod från `/libs/wcm/mobile/components/emulators` i CRXDE Lite till och uppdatera kopian för att underlätta noddefinitionen.
+Exempel: `/ui.apps/src/main/content/jcr_root/apps/wknd-examples/emulators/phone-landscape`. Kopiera en referensemulatornod från `/libs/wcm/mobile/components/emulators` i CRXDE Lite till och uppdatera kopian för att underlätta noddefinitionen.
 
 ![Skapa nya emulatorer](./assets/responsive-breakpoints/create-new-emulators.jpg)
 
 ## Skapa enhetsgrupp
 
-Gruppera emulatorerna till [göra dem tillgängliga AEM sidredigeraren](#update-the-templates-device-group).
+Gruppera emulatorerna för att [göra dem tillgängliga AEM sidredigeraren](#update-the-templates-device-group).
 
-Skapa `/apps/settings/mobile/groups/<name of device group>` nodstruktur under `/ui.apps/src/main/content/jcr_root`.
+Skapa nodstrukturen `/apps/settings/mobile/groups/<name of device group>` under `/ui.apps/src/main/content/jcr_root`.
 
 ![Skapa ny enhetsgrupp](./assets/responsive-breakpoints/create-new-device-group.jpg)
 
-Skapa en `.content.xml` fil i `/apps/settings/mobile/groups/<device group name>` och definiera de nya emulatorerna med kod som liknar den nedan:
+Skapa en `.content.xml`-fil i `/apps/settings/mobile/groups/<device group name>` och definiera
+de nya emulatorerna med kod som liknar den nedan:
 
 ![Skapa ny enhet](./assets/responsive-breakpoints/create-new-device.jpg)
 
@@ -63,4 +64,4 @@ Skapa en `.content.xml` fil i `/apps/settings/mobile/groups/<device group name>`
 
 Koppla slutligen enhetsgruppen tillbaka till sidmallen så att emulatorerna är tillgängliga i sidredigeraren för sidor som skapas från den här mallen.
 
-Öppna `ui.content/src/main/content/jcr_root/conf/[app name]/settings/wcm/templates/page-content/structure/.content.xml` och uppdatera `cq:deviceGroups` egenskap som refererar till den nya mobilgruppen (till exempel `cq:deviceGroups="[mobile/groups/customdevices]"`)
+Öppna filen `ui.content/src/main/content/jcr_root/conf/[app name]/settings/wcm/templates/page-content/structure/.content.xml` och uppdatera egenskapen `cq:deviceGroups` så att den refererar till den nya mobilgruppen (till exempel `cq:deviceGroups="[mobile/groups/customdevices]"`)

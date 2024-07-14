@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Snabb åtkomst
 
-Läs om hur My Workspaces widget för snabb åtkomst kan öka din produktivitet och effektivisera arbetsflödet genom att fungera som ett personligt objektiv i AEM Assets och ha alla resurser du behöver för dina tilldelade uppgifter nära till hands.
+Läs om hur Min Workspace-widget för snabbåtkomst kan öka din produktivitet och effektivisera ditt arbetsflöde genom att fungera som din egen lins i AEM Assets, så att du har alla resurser du behöver för dina tilldelade uppgifter nära till hands.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420975/?learn=on)

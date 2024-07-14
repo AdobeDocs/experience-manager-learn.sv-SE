@@ -68,7 +68,7 @@ Logga in på AEM Forms.
 
 >[!NOTE]
 >
->Titta på **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
+>Ta en titt på filen **/apps/AEMForms/fetchad/GET.jsp** i crx. Kontrollera att strängvariabeln webChannelDocument pekar på en giltig kommunikationsdokumentsökväg.
 
 ## Nästa steg
 

@@ -22,7 +22,7 @@ Upptäck hur du konfigurerar och använder komponenten Delning i sociala medier.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
-I den här videon utforskas följande funktioner i komponenten Delning i sociala medier (ingår i [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)) med [Vi.butik](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) exempelwebbplats.
+I den här videon utforskas följande funktioner i komponenten Delning i sociala medier (ingår i [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)) med exempelwebbplatsen [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) .
 
 * 0:00 - Lägga till och konfigurera komponenten Delning i sociala medier
 * 1:00 - Dela till Facebook
@@ -31,16 +31,16 @@ I den här videon utforskas följande funktioner i komponenten Delning i sociala
 
 ## Inställningar för externalisering {#externalizer-setup}
 
-![Day CQ Link Externalizer](assets/externalizer.png)
+![Dagens CQ Link Externalizer](assets/externalizer.png)
 
 [http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl)
 
-[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) ska vara konfigurerat på både AEM författare och AEM publicering för att mappa publiceringsmiljön till den offentliga domän som används för att komma åt AEM publicering.
+[AEM externalizer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) ska konfigureras på både AEM Author och AEM Publish för att mappa publiceringskörningsläget till den offentliga domän som används för åtkomst till AEM Publish.
 
-I den här videon använder vi `/etc/hosts` till spoof *www.example.com* för att lösa till localhost och använda [grundläggande AEM Dispatcher-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för att www.example.com ska kunna AEM publicera.
+I den här videon använder vi `/etc/hosts` för att hitta *www.example.com* för att matcha till localhost och använder en [grundläggande AEM Dispatcher-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för att www.example.com ska kunna användas framför AEM Publish.
 
 ## Stödmaterial {#supporting-materials}
 
-* [Ladda ned AEM kärnkomponenter](https://github.com/adobe/aem-core-wcm-components/releases)
-* [Ladda ned webb.butik](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [Hämta AEM kärnkomponenter](https://github.com/adobe/aem-core-wcm-components/releases)
+* [Ladda ned We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)

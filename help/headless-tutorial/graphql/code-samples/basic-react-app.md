@@ -23,11 +23,11 @@ ht-degree: 0%
 
 # Basic React-app
 
-Detta [Reagera](https://reactjs.org/) app visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor. Det här programmet återger en filterbar version av WKND Adventures, och när du väljer ett äventyr visas all information om äventyren.
+Den här [React](https://reactjs.org/)-appen visar hur du kan fråga efter innehåll med hjälp av AEM GraphQL-API:er med beständiga frågor. Det här programmet återger en filterbar version av WKND Adventures, och när du väljer ett äventyr visas all information om äventyren.
 
 Den här koden:
 
-+ Ansluter till en AEM-publiceringstjänst och kräver ingen autentisering
++ Ansluter till en AEM Publish-tjänst och kräver ingen autentisering
 + Använder WKND:s beständiga frågor: `wknd-shared/adventures-all` och `wknd-shared/adventures-by-slug`
 
-Om du vill ha en mer detaljerad genomgång av hur den här appen Next.js byggs kan du gå igenom [exempel Reagera-appdokumentation](../example-apps/react-app.md).
+Mer information om hur den här appen Next.js byggs finns i [exempeldokumentationen för appen React](../example-apps/react-app.md).

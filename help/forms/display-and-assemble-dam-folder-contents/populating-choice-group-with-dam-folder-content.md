@@ -83,7 +83,7 @@ public class ListFolderContent extends SlingSafeMethodsServlet {
 }
 ```
 
-## Skapa klientbibliotek med JavaScript-funktion
+## Skapa klientbibliotek med JavaScript
 
 Servern anropas från en JavaScript-funktion. Funktionen returnerar ett arrayobjekt som används för att fylla i alternativgruppskomponenten
 
@@ -111,11 +111,11 @@ function getDAMFolderAssets(damFolder) {
 
 ## Skapa anpassat formulär
 
-Skapa ett anpassat formulär och koppla formuläret till klientbiblioteket **listormappresurser**. Lägg till en kryssrutekomponent i formuläret. Använd regelredigeraren för att fylla i alternativen för kryssrutan så som de visas på skärmbilden
+Skapa ett anpassat formulär och associera formuläret med klientbibliotekets **listmappresurser**. Lägg till en kryssrutekomponent i formuläret. Använd regelredigeraren för att fylla i alternativen för kryssrutan så som de visas på skärmbilden
 ![set-options](assets/set-options-newsletter.png)
 
-Vi anropar javascript-funktionen som anropas **getDAMFolderAssets** och skickar sökvägen till resursen i DAM-mappen till listan i formuläret.
+Vi anropar javascript-funktionen **getDAMFolderAssets** och skickar sökvägen till DAM-mappens resurser som ska visas i formuläret.
 
 ## Nästa steg
 
-[Sammanställ markerade resurser](./assemble-selected-newsletters.md)
+[Montera valda Assets](./assemble-selected-newsletters.md)

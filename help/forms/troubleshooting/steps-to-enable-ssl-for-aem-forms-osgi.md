@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att aktivera SSL för AEM Forms OSGi-instansen
 
-*I den här videon går du igenom stegen för att aktivera SSL för AEM Forms OSGi-instansen.*
+*Den här videon går igenom stegen för att aktivera SSL för AEM Forms OSGi-instansen.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335524?quality=12&learn=on)

@@ -31,7 +31,7 @@ Följande distributionskonfiguration måste finnas på plats för mobilappsdistr
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |
-| [AEM](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [AEM värdar](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## Exempel på mobilappar
 
@@ -53,7 +53,7 @@ Adobe tillhandahåller exempel på iOS- och Android™-mobilappar.
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/ios-swiftui-app.md" title="iOS">iOS</a></p>
                    <p class="is-size-6">Ett exempel på en iOS-app, skriven i SwiftUI, som konsumerar innehåll från AEM Headless GraphQL API:er.</p>
                    <a href="../example-apps/ios-swiftui-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exempel </span>
                    </a>
                </div>
            </div>
@@ -64,17 +64,17 @@ Adobe tillhandahåller exempel på iOS- och Android™-mobilappar.
        <div class="card">
            <div class="card-image">
                <figure class="image is-16by9">
-                   <a href="../example-apps/android-app.md" title="Android™-app" tabindex="-1">
-                       <img class="is-bordered-r-small" src="../example-apps/assets/android-java-app/android-app-card.png" alt="Android-app">
+                   <a href="../example-apps/android-app.md" title="Android™" tabindex="-1">
+                       <img class="is-bordered-r-small" src="../example-apps/assets/android-java-app/android-app-card.png" alt="Android">
                    </a>
                </figure>
            </div>
            <div class="card-content is-padded-small">
                <div class="content">
-                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/android-app.md" title="Android™-app">Android™-app</a></p>
+                   <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/android-app.md" title="Android™">Android™</a></p>
                    <p class="is-size-6">Ett exempel på en Java™ Android™-app som använder innehåll från AEM Headless GraphQL API:er.</p>
                    <a href="../example-apps/android-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exempel </span>
                    </a>
                </div>
            </div>

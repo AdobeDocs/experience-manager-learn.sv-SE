@@ -27,16 +27,16 @@ Exempelformuläret som används i det här arbetsflödet är baserat på en anpa
 
 ### Hämta adaptiva formulärmallar
 
-* Ladda ned [Adaptiv formulärmall](assets/af-form-template.zip)
+* Hämta [Adaptiv formulärmall](assets/af-form-template.zip)
 * [Importera mallen med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * Överför och installera mallen för adaptiva formulär
 
 ### Hämta exemplet med adaptiv form
 
-* Ladda ned [Adaptiv form](assets/peak-application-form.zip)
-* Bläddra till [Formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Hämta [anpassat formulär](assets/peak-application-form.zip)
+* Bläddra till [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa -> Filöverföring
-* Det adaptiva exempelformuläret placeras i en mapp som heter [Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* Det adaptiva exempelformuläret placeras i en mapp med namnet [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 I följande video förklaras hur du konfigurerar ett adaptivt formulär för att aktivera ett AEM arbetsflöde
 >[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)

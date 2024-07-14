@@ -25,7 +25,7 @@ I följande video får du hjälp med att skapa integreringen.
 >[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)
 
 I den här självstudiekursen skapades en formulärdatamodell med namnet SaveAndRetrieveFromAzurePortal med entiteten CreditApplications
-![fdm-enhet](./assets/fdm-entity.png)
+![fdm-entity](./assets/fdm-entity.png)
 
 ## Nästa steg
 

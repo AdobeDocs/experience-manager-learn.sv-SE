@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Adobe Experience Manager utökningsbara OAuth-scope ger åtkomstkontroll för resurser från ett klientprogram som godkänts av en slutanvändare. Diagrammet nedan visar hur förfrågningen flödar i samband med AEM.
 
-![Oauth-omfångsflöde](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
+![Autoanpassa omfångsflöde](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
 
 AEM har tre omfattningar:
 
@@ -28,7 +28,7 @@ AEM har tre omfattningar:
 * Offlineåtkomst
 * Replikera
 
-AEM utökningsbara OAuth-omfång tillåter andra anpassade omfång att definieras. Ett anpassat omfång kan till exempel utvecklas och distribueras till AEM som tillåter att en mobilapp som auktoriserats via OAuth begränsas till läsning, men inte till att skriva resurser.
+AEM utökningsbara OAuth-omfång gör det möjligt att definiera andra anpassade omfång. Ett anpassat omfång kan till exempel utvecklas och distribueras till AEM som tillåter att en mobilapp som auktoriserats via OAuth begränsas till läsning, men inte till att skriva resurser.
 
 OAuth är den metod som rekommenderas för att auktorisera ett klientprogram eftersom den använder en åtkomsttoken i stället för att kräva att en AEM användares autentiseringsuppgifter anges för det programmet.
 

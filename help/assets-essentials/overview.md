@@ -8,7 +8,7 @@ doc-type: Catalog
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Kolla in de här videofilmerna om hur du använder Assets Essentials för att ha
    </a>
    <div>
       <a href="./basics/managing.md">
-      <strong>Komma igång med Assets Essentials</strong>
+      <strong>Komma igång med Assets Essentials </strong>
       </a>
    </div>
    <p>
@@ -56,11 +56,11 @@ Kolla in de här videofilmerna om hur du använder Assets Essentials för att ha
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Integrering med Adobe Journey Optimizer</strong>
+      <strong> Integrering med Adobe Journey Optimizer </strong>
       </a>
    </div>
    <p>
-      <em>Se hur Assets Essentials kan integreras med Adobe Journey Optimizer!</em>
+      <em>Lär dig hur Assets Essentials kan integreras med Adobe Journey Optimizer!</em>
    <p>
 </td>
 </table>

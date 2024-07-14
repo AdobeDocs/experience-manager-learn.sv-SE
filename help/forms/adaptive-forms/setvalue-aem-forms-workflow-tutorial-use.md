@@ -43,15 +43,15 @@ Så här distribuerar du resurserna på ditt lokala system:
 * [Distribuera exempelpaketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet som gör att du kan ange värden för ett element i skickade XML-data
 
 * [Hämta och extrahera innehållet i zip-filen](assets/setvalueassets.zip)
-* Peka webbläsaren till [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Peka webbläsaren på [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * Importera och installera setValueWorkflow.zip. Detta är en exempelarbetsflödesmodell.
-* Peka webbläsaren till [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Peka webbläsaren på [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring
 * Överför TimeOfRequestForm.zip
 * Öppna [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * Fyll i de tre obligatoriska fälten och skicka
 * Logga in som &#39;admin&#39; i AEM(om du inte redan gjort det)
-* Gå till [&quot;AEM Inkorg&quot;](http://localhost:4502/aem/inbox)
+* Gå till [AEM inkorgen](http://localhost:4502/aem/inbox)
 * Öppna formuläret&quot;Tid för avbeställning av granskning&quot;
 * Observera att fälten på den första panelen är inaktiverade. Det beror på att formuläret öppnas av granskaren. Lägg märke till att panelen för att godkänna eller avvisa begäran nu visas
 

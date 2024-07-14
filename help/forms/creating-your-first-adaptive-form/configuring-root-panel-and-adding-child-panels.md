@@ -25,7 +25,7 @@ Lägg till underordnade paneler i rotpanelen.
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
 
 >[!NOTE]
->När du lägger till underordnade paneler i rotpanelen, **Kontrollera att du är i redigeringsläge. Redigeringsknappen finns längst upp till höger i webbläsaren.**
+>När du lägger till underordnade paneler i rotpanelen måste du **kontrollera att du är i redigeringsläge. Redigeringsknappen finns längst upp till höger i webbläsaren.**
 
 ## Nästa steg
 

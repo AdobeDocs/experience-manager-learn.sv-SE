@@ -22,13 +22,13 @@ ht-degree: 0%
 
 ## Förhandsgranska omfinansieringsformuläret
 
-Användningsfallet utlöses när kundtjänstagenten fyller i och skickar in [refinansieringsblankett](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
+Användningsexemplet utlöses när kundtjänstagenten fyller i och skickar [refinansieringsformuläret](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
 
 Arbetsflödet Signera flera Forms aktiveras när formuläret skickas och kunden får ett e-postmeddelande med en länk för att börja fylla i och signera formuläret.
 
 ## Fylla i formulär i paketet
 
-Kunden får fylla i och signera det första formuläret i paketet. När formuläret har signerats kan kunden navigera till nästa formulär i paketet. När alla blanketter är ifyllda och signerade får kunden texten **AllaKlar**&quot;.
+Kunden får fylla i och signera det första formuläret i paketet. När formuläret har signerats kan kunden navigera till nästa formulär i paketet. När alla formulär har fyllts i och signerats visas formuläret **AllDone** för kunden.
 
 ## Felsökning
 
@@ -50,4 +50,4 @@ När ett formulär har signerats i paketet aktiveras arbetsflödet Uppdatera sig
 
 ### Visas inte formuläret AllDone
 
-När det inte finns fler formulär att signera i paketet visas formuläret AllDone för användaren. Om du inte ser formuläret AllDone kontrollerar du URL:en som används på rad 33 i filen GetNextFormToSign.js som är en del av **getnextform** klientlib.
+När det inte finns fler formulär att signera i paketet visas formuläret AllDone för användaren. Om du inte ser formuläret AllDone kontrollerar du URL:en som används på rad 33 i filen GetNextFormToSign.js som är en del av **getnextform** -klientens lib.

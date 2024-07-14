@@ -18,12 +18,12 @@ ht-degree: 0%
 
 # Hantera inlämning av PDF
 
-I den här delen ska vi skapa en enkel server som körs AEM publicering för att hantera PDF som skickas från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-begäran till en server som körs i en AEM författare som är direkt ansvarig för att spara skickade data som en `nt:file` i AEM Authors databas.
+I det här avsnittet ska vi skapa en enkel server AEM Publish som hanterar PDF från Acrobat/Reader. Den här servern kommer i sin tur att göra en HTTP-POST-begäran till en server som körs i en AEM författare som är direkt ansvarig för att spara skickade data som en `nt:file`-nod i AEM författarens databas.
 
-Nedan följer koden för den server som hanterar PDF-överföringen. I den här serleten ringer vi en POST till en serlet som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM författares databas.
+Nedan följer koden för den server som hanterar PDF-överföringen. I den här servertjänsten gör vi ett anrop till en POST som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM författares databas.
 
 
-## AEM Publish servlet
+## AEM Publish-server
 
 ```java
 package com.aemforms.handlepdfsubmission.core.servlets;
@@ -100,7 +100,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM författarserver
 
-Nästa steg är att lagra skickade data i AEM författares databas. Servern är monterad på `/bin/startworkflow` sparar skickade data.
+Nästa steg är att lagra skickade data i AEM författares databas. Servern som är monterad på `/bin/startworkflow` sparar skickade data.
 
 ```java
 import java.io.BufferedReader;
@@ -198,6 +198,6 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-En startfunktion för ett AEM arbetsflöde har konfigurerats att utlösa varje gång en ny resurs av typen `nt:file` skapas under `/content/pdfsubmissions` nod. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
+En AEM startfunktion för arbetsflödet har konfigurerats att utlösa varje gång en ny resurs av typen `nt:file` skapas under noden `/content/pdfsubmissions`. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
 
-Lagra skickade data under `/content/pdfsubmissions` nod, använder vi `GetResolver` Med OSGi-tjänsten kan vi spara skickade data med `fd-service` systemanvändare som finns i alla AEM Forms-installationer.
+Om du vill lagra skickade data under noden `/content/pdfsubmissions` använder vi `GetResolver` OSGi-tjänsten för att spara skickade data med `fd-service`-systemanvändaren som är tillgänglig i varje AEM Forms-installation.

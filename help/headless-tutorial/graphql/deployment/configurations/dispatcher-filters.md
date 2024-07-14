@@ -21,24 +21,24 @@ ht-degree: 0%
 
 Adobe Experience Manager as a Cloud Service använder AEM Publish Dispatcher-filter för att säkerställa att endast förfrågningar som ska nå AEM når AEM. Som standard nekas alla begäranden och mönster för tillåtna URL:er måste läggas till explicit.
 
-| Klienttyp | [Single-page app (SPA)](../spa.md) | [Webbkomponent/JS](../web-component.md) | [Mobil](../mobile.md) | [Server-till-server](../server-to-server.md) |
+| Klienttyp | [Enkelsidig app (SPA)](../spa.md) | [Webbkomponent/JS](../web-component.md) | [Mobil](../mobile.md) | [Server-till-server](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| Kräver konfiguration av Dispatcher-filter | ✔ | ✔ | ✔ | ✔ |
+| Kräver Dispatcher-filterkonfiguration | ✔ | ✔ | ✔ | ✔ |
 
 >[!TIP]
 >
 > Följande konfigurationer är exempel. Se till att du justerar dem så att de passar projektets krav.
 
-## Dispatcher-filterkonfiguration
+## Dispatcher filterkonfiguration
 
-Filterkonfigurationen AEM Publish Dispatcher definierar de URL-mönster som tillåts AEM och måste innehålla URL-prefixet för den AEM beständiga frågeslutpunkten.
+Filterkonfigurationen för AEM Publish Dispatcher definierar URL-mönster som tillåts nå AEM och måste innehålla URL-prefixet för den AEM beständiga frågeslutpunkten.
 
 | Klienten ansluter till | AEM | AEM Publish | AEM |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
-| Kräver konfiguration av Dispatcher-filter | ✘ | ✔ | ✔ |
+| Kräver Dispatcher-filterkonfiguration | ✘ | ✔ | ✔ |
 
-Lägg till en `allow` linje med URL-mönstret `/graphql/execute.json/*`och kontrollera fil-ID:t (till exempel `/0600`, är unik i exempelfilen för servergruppen).
-Detta tillåter HTTP GET-begäran till den beständiga frågeslutpunkten, som `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` till AEM Publish.
+Lägg till en `allow`-regel med URL-mönstret `/graphql/execute.json/*` och kontrollera att fil-ID:t (till exempel `/0600`, är unikt i exempelservergruppsfilen).
+Detta tillåter HTTP GET-begäran till den beständiga frågeslutpunkten, till exempel `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` till AEM Publish.
 
 Om du använder Experience Fragments i din AEM Headless-upplevelse ska du göra samma sak för de här sökvägarna.
 

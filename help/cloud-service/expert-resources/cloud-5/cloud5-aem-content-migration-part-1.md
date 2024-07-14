@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # Migrera till molnet - del 1
 
-Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
+Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några bästa metoder och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
@@ -28,6 +28,6 @@ Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips oc
 + utvärdering av de instanser du vill migrera
    + BPA - analysverktyg för bästa praxis
    + CAM - molnaccelerationshanteraren
-+ [repostatus](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
++ [repostats](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 + [Migreringsverktyg för Cloud Service](https://github.com/adobe/aem-cloud-service-source-migration)

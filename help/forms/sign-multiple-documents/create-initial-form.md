@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # Skapa ursprungligt formulär
 
-Det ursprungliga formuläret (ReFinance Form) används för att signera flera formulär genom att aktivera **Signera flera Forms** AEM. Du kan ange valfria värden men se till att följande fält läggs till i formuläret.
+Det ursprungliga formuläret (ReFinance Form) används för att signera flera formulär genom att arbetsflödet **Signera flera Forms** AEM aktiveras. Du kan ange valfria värden men se till att följande fält läggs till i formuläret.
 
 | Fälttyp | Namn | Syfte | Dold | Standardvärde |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
@@ -29,12 +29,12 @@ Det ursprungliga formuläret (ReFinance Form) används för att signera flera fo
 | TextField | customerEmail | E-post till kund som skickar meddelande | N |
 | CheckBox | formsToSign | Objekten identifierar formulären i paketet | N |
 
-Det ursprungliga formuläret måste konfigureras för att aktivera ett AEM som kallas **signmultiplexa**
-Kontrollera att sökvägen till datafilen är inställd på **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
+Det inledande formuläret måste konfigureras för att utlösa ett AEM som kallas **signmultipleforms**
+Kontrollera att sökvägen till datafilen är inställd på **Data.xml** . Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
 
 ## Assets
 
-Det initiala formuläret (ReFinance Form) kan vara [hämtad härifrån](assets/refinance-form.zip)
+Det ursprungliga formuläret (ReFinance Form) kan [laddas ned här](assets/refinance-form.zip)
 
 ## Nästa steg
 

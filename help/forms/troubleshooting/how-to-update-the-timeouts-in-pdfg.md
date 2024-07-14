@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här uppdaterar du serverkonverteringen och den globala tidsgränsen i PDFG-tjänsten
 
-*I den här videon beskrivs processen att uppdatera serverkonverteringen och serverns globala timeout i tjänsten Forms PDFG.*
+*Den här videon beskriver processen att uppdatera serverkonverteringen och serverns globala timeout i tjänsten Forms PDFG.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335514?quality=12&learn=on)

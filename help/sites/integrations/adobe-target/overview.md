@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM) och Adobe Target är kraftfulla lösningar med ko
 
 I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälper dig att förstå vad som fungerar bäst för din organisation.
 
-* __Scenario 1__ Personalisering med AEM Experience Fragment Offers
+* __Scenario 1:__ Personalization med AEM Experience Fragment Offers
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
@@ -40,13 +40,13 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
    1. [Exportera AEM Experience Fragments till Adobe Target](./export-experience-fragment-target.md)
    1. [Anpassa en del av en webbsida med Experience Fragment-erbjudanden](./create-target-activity.md)
 
-* __Scenario 2__ Personalisering med Visual Experience Composer (VEC)
+* __Scenario 2:__ Personalization med Visual Experience Composer (VEC)
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Anpassa en del av en webbsida med Visual Experience Composer](./personalization-using-vec.md)
 
-* __Scenario 3__ Personalisering av kompletta webbsidor
+* __Scenario 3:__ Personalization för webbsidesupplevelser
 
    1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)

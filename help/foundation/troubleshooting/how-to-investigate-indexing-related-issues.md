@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Hur du undersöker indexeringsrelaterade problem i AEM
 
-*I den här videon går du igenom stegen för att undersöka hur du indexerar relaterade problem i AEM.*
+*Den här videon går igenom stegen för att undersöka hur du indexerar relaterade problem i AEM.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)

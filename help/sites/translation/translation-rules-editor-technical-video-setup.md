@@ -22,7 +22,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 >[!NOTE]
 >
-> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder gränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Se [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) för mer information.
+> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När användargränssnittet för översättningskonfiguration används i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -44,7 +44,7 @@ Gå till gränssnittet för översättningskonfiguration:
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
-* [Översätta innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
+* [Identifierar innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
+* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
 * [Bästa praxis för översättning](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)

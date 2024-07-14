@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Distribuera resurser på ditt system
 
-Distribuera [summary-component](assets/summarize-component.zip).
+Distribuera [summarize-component](assets/summarize-component.zip).
 
-[Distribuera exempeladaptiva formulär](assets/sample-adaptive-form.zip).
+[Distribuera det adaptiva exempelformuläret](assets/sample-adaptive-form.zip).
 
 [Förhandsgranska exempelformuläret](http://localhost:4502/content/dam/formsanddocuments/testsummary/jcr:content?wcmmode=disabled)
 
-Fyll i formulärfälten och navigera till sammanfattningsskärmen genom att klicka på **nästa** för att se hur formulärdata granskas. Du kan också redigera formulärdata genom att klicka på pennikonen.
+Fyll i formulärfälten och navigera till sammanfattningsskärmen genom att klicka på knappen **nästa** för att visa formulärdata. Du kan också redigera formulärdata genom att klicka på pennikonen.

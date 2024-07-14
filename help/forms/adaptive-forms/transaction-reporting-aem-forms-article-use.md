@@ -37,7 +37,7 @@ Om du vill visa transaktionsrapporten loggar du in på AEM Forms som administrat
 
 Välj verktyg | Forms | Visa transaktionsrapport
 
-eller visa transaktionsrapporten genom att klicka på [här](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+eller visa transaktionsrapporten genom att klicka [här](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
 ![TransctionReporting](assets/transactionreporting.gif)
 
@@ -49,4 +49,4 @@ En transaktion finns kvar i bufferten under en angiven period (Tömningstid för
 
 Om du visar transaktionsrapporten för författarinstansen kontrollerar du att omvänd replikering har konfigurerats för alla publiceringsinstanser.
 
-Mer information om transaktionsrapportering [klicka här](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+Om du vill veta mer om transaktionsrapportering [klickar du här](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)

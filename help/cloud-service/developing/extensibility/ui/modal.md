@@ -24,20 +24,20 @@ ht-degree: 0%
 
 AEM är ett sätt att koppla anpassade användargränssnitt till AEM användargränssnittstillägg.
 
-Modulerna är React-applikationer som bygger på [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/)och kan skapa valfritt anpassat användargränssnitt som krävs av tillägget, inklusive, men inte begränsat till:
+Modaler är React-program som baseras på [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) och kan skapa valfritt anpassat användargränssnitt som krävs av tillägget, inklusive, men inte begränsat till:
 
 + Bekräftelsedialogrutor
-+ [Inmatningsformulär](https://react-spectrum.adobe.com/react-spectrum/#forms)
-+ [Progress-indikatorer](https://react-spectrum.adobe.com/react-spectrum/#status)
-+ [Sammanfattning av resultat](https://react-spectrum.adobe.com/react-spectrum/#collections)
++ [Indataformulär](https://react-spectrum.adobe.com/react-spectrum/#forms)
++ [Förloppsindikatorer](https://react-spectrum.adobe.com/react-spectrum/#status)
++ [Resultatsammanfattning](https://react-spectrum.adobe.com/react-spectrum/#collections)
 + Felmeddelanden
 + ... eller till och med ett fullfjädrat React-program med flera vyer!
 
 ## Modala vägar
 
-Den modala upplevelsen definieras av appen App Builder React som definieras i `web-src` mapp. Precis som med React-appar är den fullständiga upplevelsen organiserad med [Reaktionsvägar](https://reactrouter.com/en/main/components/routes) som återges [Reagera på komponenter](https://reactjs.org/docs/components-and-props.html).
+Den modala upplevelsen definieras av tillägget App Builder React som definieras i mappen `web-src`. Precis som med React-appar är den fullständiga upplevelsen utformad med [React route](https://reactrouter.com/en/main/components/routes) som återger [React components](https://reactjs.org/docs/components-and-props.html).
 
-Minst en väg krävs för att generera den inledande modala vyn. Den här initiala vägen anropas i [tilläggsregistrering](#extension-registration)&#39;s `onClick(..)` enligt nedan.
+Minst en väg krävs för att generera den inledande modala vyn. Den här initiala vägen anropas i funktionen `onClick(..)` för [tilläggsregistrering](#extension-registration), vilket visas nedan.
 
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
@@ -81,12 +81,12 @@ function App(props) {
 
 ## Tillägg - registrering
 
-Om du vill öppna en modal anrop `guestConnection.host.modal.showUrl(..)` görs från tilläggets `onClick(..)` funktion. `showUrl(..)` skickas ett JavaScript-objekt med nyckel/värden:
+Om du vill öppna ett modalt anrop till `guestConnection.host.modal.showUrl(..)` görs det från tilläggets `onClick(..)`-funktion. `showUrl(..)` skickas som ett JavaScript-objekt med nyckelvärden:
 
-+ `title` innehåller namnet på namnet på spärrkoden som visas för användaren
-+ `url` är den URL som anropar [Reaktionsflöde](#modal-routes) ansvarar för modets inledande vy.
++ `title` anger namnet på titeln för spärrformen som visas för användaren
++ `url` är den URL som anropar den [Reaktionsväg](#modal-routes) som är ansvarig för modets inledande vy.
 
-Det är av största vikt att `url` skickat till `guestConnection.host.modal.showUrl(..)` löser problemet så att det går att dirigera i tillägget, i annat fall visas ingenting i det modala.
+Det är av största vikt att `url` som skickas till `guestConnection.host.modal.showUrl(..)` tolkas så att den dirigeras i tillägget, annars visas inget i modala medier.
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -109,7 +109,7 @@ function ExtensionRegistration() {
 
 ## Modal component
 
-Utbyggnadens alla rutter [det där är inte `index` rutt](./extension-registration.md#app-routes), mappar till en React-komponent som kan återges i tilläggets modal.
+Varje väg i tillägget, [, som inte är `index` route](./extension-registration.md#app-routes), mappas till en React-komponent som kan återges i tilläggets modal.
 
 En modal kan bestå av ett valfritt antal React-rutter, från en enkel enkelvägstrafik till en komplex flervägstrafik.
 
@@ -185,9 +185,9 @@ export default function MyModal() {
 
 ## Stäng spärren
 
-![AEM UI-tilläggets modala stängningsknapp](./assets/modal/close.png){align="center"}
+![AEM spärrknapp för spärrning av gränssnittstillägg](./assets/modal/close.png){align="center"}
 
-Modalerna måste ha sin egen nära kontroll. Detta har gjorts genom att anropa `guestConnection.host.modal.close()`.
+Modalerna måste ha sin egen nära kontroll. Detta görs genom att anropa `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">

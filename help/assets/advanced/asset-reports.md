@@ -1,5 +1,5 @@
 ---
-title: Resursrapporter i AEM Assets
+title: Assets-rapporter i AEM Assets
 description: AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse.
 feature: Asset Reports
 topic: Administration
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Resursrapporter{#using-reports-in-aem-assets}
+# Assets Reports{#using-reports-in-aem-assets}
 
 AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas för stora databaser via en intuitiv användarupplevelse.
 
@@ -28,4 +28,4 @@ AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas f
 
 >[!IMPORTANT]
 >
->AEM 6.5 ger möjlighet att konfigurera [tillgångsrapporter](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting), vilket gör det möjligt för administratörer att definiera vad som ska spåras och inkluderas i rapporterna.
+>I AEM 6.5 kan du konfigurera [tillgångsrapporter](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting) så att administratörer kan definiera vad som ska spåras och inkluderas i rapporterna.

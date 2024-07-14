@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att kryptera nyckellösenord som ska användas i lc_körkey.xml
 
-*I den här videon går du igenom stegen för att kryptera lösenordet för nyckelbehållaren som ska användas i lc_körkey.xml.*
+*I den här videon går du igenom stegen för att kryptera lösenordet för nyckelbehållaren som ska användas i lc_turnkey.xml.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335538?quality=12&learn=on)

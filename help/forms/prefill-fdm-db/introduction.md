@@ -25,7 +25,7 @@ När kursen är slut har du lärt dig följande.
 
 * Skapa RDBMS-baserad formulärdatamodell
 * Skapa association mellan två entiteter
-* Fyll i tabellen med data som returnerats av _get_ tjänst för formulärdatamodell
+* Fyll i tabellen med data som returnerats av tjänsten _get_ i formulärdatamodellen
 * Använd formulärdatamodellens attribut för begäran
 
 I följande video visas en översikt över kursen

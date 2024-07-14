@@ -20,11 +20,11 @@ ht-degree: 0%
 
 Arbetsflödeskomponenten samlar in information om sidan med resurser som sidmall, komponentresurstyp och basmappen där de genererade sidorna lagras.
 
-![workflow-component](assets/workflow-component.png)
+![arbetsflödeskomponent](assets/workflow-component.png)
 
 ## Implementering av arbetsflödesprocess
 
-Följande java-kod associerades med arbetsflödeskomponenten. Koden skapar välkomstpaketsidan, extraherar värden från arbetsflödesvariablerna (SubmitName och documentsSelected). Dessa värden anges sedan som egenskaper för komponenterna som används på sidan. Koden anger också värdet för arbetsflödets processvariabel **svetcomekiturl**.
+Följande java-kod associerades med arbetsflödeskomponenten. Koden skapar välkomstpaketsidan, extraherar värden från arbetsflödesvariablerna (SubmitName och documentsSelected). Dessa värden anges sedan som egenskaper för komponenterna som används på sidan. Koden anger också värdet för arbetsflödets processvariabel **welcomekiturl**.
 
 ```java
 package com.welcomekit.core.workflowprocess;

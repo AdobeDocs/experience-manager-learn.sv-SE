@@ -1,6 +1,6 @@
 ---
 title: Etablerar Assets Essentials
-description: Lär dig hur du distribuerar Assets Essentials med hjälp av Cloud Manager och ger användarna åtkomst.
+description: Lär dig hur du distribuerar Assets Essentials med Cloud Manager och ger användaråtkomst.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Etablerar Assets Essentials
 
-Lär dig hur du distribuerar Assets Essentials med hjälp av Cloud Manager och ger användarna åtkomst.
+Lär dig hur du distribuerar Assets Essentials med Cloud Manager och ger användaråtkomst.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335952?quality=12&learn=on)

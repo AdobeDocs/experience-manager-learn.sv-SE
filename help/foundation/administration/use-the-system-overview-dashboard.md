@@ -18,15 +18,15 @@ ht-degree: 0%
 
 # Använda kontrollpanelen för systemöversikt
 
-Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för den AEM instansen från en enda kontrollpanel.
+Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för den AEM instansen från en enda instrumentpanel.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. Systemöversikten finns här: **AEM** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
+1. Du kommer åt systemöversikten från: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
 
-   Direkt vid **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   Direkt **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. Information från [!UICONTROL System Overview] kan exporteras genom att klicka på [!UICONTROL Download] -knappen. Informationen visas också via följande [!DNL REST] slutpunkt:
+1. Du kan exportera informationen från [!UICONTROL System Overview] genom att klicka på knappen [!UICONTROL Download]. Informationen visas även via följande [!DNL REST]-slutpunkt:
 1. Nedan visas ett exempel på JSON-utdata som exporteras från [!UICONTROL System Overview]:
 
    ```json

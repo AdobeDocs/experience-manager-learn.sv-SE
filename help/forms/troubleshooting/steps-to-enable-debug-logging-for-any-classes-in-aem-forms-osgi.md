@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att aktivera felsökningsloggning för alla klasser i AEM Forms OSGi
 
-*I den här videon går du igenom stegen för att aktivera felsökningsloggning för alla klasser i AEM Forms OSGi.*
+*Den här videon går igenom stegen för att aktivera felsökningsloggning för klasser i AEM Forms OSGi.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335521?quality=12&learn=on)

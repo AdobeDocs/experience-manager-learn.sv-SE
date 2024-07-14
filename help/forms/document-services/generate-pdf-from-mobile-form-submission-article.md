@@ -79,7 +79,7 @@ $("#file1").click();
 });
 ```
 
-[Egen profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Om du använder en anpassad profil blir det enklare att manipulera HTML DOM-objekt i mobilformuläret. Ett dolt filelement läggs till i HTML.jsp. När användaren klickar på&quot;Lägg till ditt foto&quot; utlöser vi klickhändelsen för filelementet. På så sätt kan användaren bläddra och välja det foto som ska bifogas. Sedan använder vi Javascript FileReader-objektet för att hämta den base64-kodade strängen för bilden. base64-bildsträngen lagras i textfältet i formuläret. När formuläret skickas extraherar vi det här värdet och infogar det i img-elementet för XML. Denna XML används sedan för att sammanfoga med xdp för att generera den slutliga PDF-filen.
+[Anpassad profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Om du använder en anpassad profil blir det enklare att manipulera HTML DOM-objekt i mobilformuläret. Ett dolt filelement läggs till i HTML.jsp. När användaren klickar på&quot;Lägg till ditt foto&quot; utlöser vi klickhändelsen för filelementet. På så sätt kan användaren bläddra och välja det foto som ska bifogas. Sedan använder vi Javascript FileReader-objektet för att hämta den base64-kodade strängen för bilden. base64-bildsträngen lagras i textfältet i formuläret. När formuläret skickas extraherar vi det här värdet och infogar det i img-elementet för XML. Denna XML används sedan för att sammanfoga med xdp för att generera den slutliga PDF-filen.
 
 Den anpassade profil som används för den här artikeln har gjorts tillgänglig som en del av artikelns resurser.
 
@@ -116,7 +116,7 @@ Så här testar du den här funktionen på din egen server:
 
 * [Hämta och installera det paket som är kopplat till den här artikeln.](assets/pdf-from-mobile-form-submission.zip)
 
-* Kontrollera att skicka-URL:en och HTML-återgivningsprofilen är rätt inställda genom att visa egenskapssidan på  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* Kontrollera att skicka-URL:en och HTML-återgivningsprofilen är rätt inställda genom att visa egenskapssidan för [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
 * [Förhandsgranska XDP som html](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 

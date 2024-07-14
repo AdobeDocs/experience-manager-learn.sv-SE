@@ -32,7 +32,7 @@ Formulärförfattarna kan markera dessa fälttyper som sökbara enligt nedan
 
 Fälten utökades genom att följande struktur skapades
 
-![extendedField](assets/extend-component.png)
+![extended-fields](assets/extend-component.png)
 
 Innehållet i filen .content.xml
 

@@ -24,18 +24,18 @@ Installera [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/
 ## Importera AEM projekt
 
 * Starta IntelliJ
-* Importera det AEM projektet som du skapade i det tidigare steget. När projektet har importerats ska skärmen se ut ungefär så här ![aem-Banking-app](assets/aem-banking-app.png). Du arbetar vanligtvis med underprojekt core, ui.apps, ui.config och ui.content.
+* Importera det AEM projektet som du skapade i det tidigare steget. När projektet har importerats ska skärmen se ut som den här ![aem-Banking-appen](assets/aem-banking-app.png). Du arbetar vanligtvis med underprojekt core, ui.apps, ui.config och ui.content.
 * Om du inte ser maven och terminalfönstret går du till view->Tools Window och väljer Maven and Terminal
 
 ## Lägg till teckensnittsmodulen
 
 Om du vill använda anpassade teckensnitt i PDF måste du överföra de anpassade teckensnitten till AEM Forms CS-instansen. Följ följande steg
 
-* Skapa en mapp med namnet **teckensnitt** i C:\CloudManager\aem-banking-application
-* Extrahera innehållet i [font.zip](assets/fonts.zip) till mappen med nya teckensnitt
+* Skapa en mapp med namnet **fonts** i C:\CloudManager\aem-banking-application
+* Extrahera innehållet i [font.zip](assets/fonts.zip) till mappen med nyligen skapade teckensnitt
 * I teckensnittsmodulen finns några anpassade teckensnitt.Du kan lägga till organisationens anpassade teckensnitt i mappen C:\CloudManager\aem-banking-application\fonts\src\main\resources i teckensnittsmodulen
 * Öppna C:\CloudManager\aem-banking-application\pom.xml
-* Lägg till följande rad  ```<module>fonts</module>``` i modulavsnittet i pom.xml
+* Lägg till följande rad ```<module>fonts</module>``` i modulavsnittet i pom.xml
 * Spara din pom.xml
 * Uppdatera aem-Banking-applikationsprojektet i IntelliJ
 

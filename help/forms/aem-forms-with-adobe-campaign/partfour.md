@@ -23,7 +23,7 @@ Steg som används för att skapa Adobe Campaign Standard-profil med AEM Forms Fo
 
 ## Skapa anpassad autentisering {#create-custom-authentication}
 
-När du skapar en datakälla med swagger-filen har AEM Forms stöd för följande typer av autentisering
+När du skapar Data Source med swagger-filen stöder AEM Forms följande typer av autentisering
 
 * Ingen
 * OAuth 2.0
@@ -102,11 +102,11 @@ private Logger log = LoggerFactory.getLogger(CampaignAuthentication.class);
 }
 ```
 
-## Skapa datakälla {#create-data-source}
+## Skapa data-Source {#create-data-source}
 
 Det första steget är att skapa swagger-filen. Swagger-filen definierar REST API som ska användas för att skapa en profil i Adobe Campaign Standard. Swagger-filen definierar indataparametrarna och utdataparametrarna för REST API.
 
-En datakälla skapas med swagger-filen. När du skapar en datakälla kan du ange autentiseringstypen. I det här fallet ska vi använda anpassad autentisering för att autentisera mot Adobe Campaign. Koden som anges ovan användes för att autentisera mot Adobe Campaign.
+En datakälla skapas med swagger-filen. När du skapar Data Source kan du ange autentiseringstyp. I det här fallet ska vi använda anpassad autentisering för att autentisera mot Adobe Campaign. Koden som anges ovan användes för att autentisera mot Adobe Campaign.
 
 Du får en exempelfil som en del av resursens relaterade artikel.**Kontrollera att du ändrar host och basePath i swagger-filen så att den matchar ACS-instansen**
 
@@ -115,7 +115,8 @@ Du får en exempelfil som en del av resursens relaterade artikel.**Kontrollera a
 Följ följande steg för att testa lösningen:
 * [Kontrollera att du har följt de steg som beskrivs här](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Hämta och zippa upp den här filen för att hämta swagger-filen](assets/create-acs-profile-swagger-file.zip)
-* Skapa datakälla med swagger-filen Skapa formulärdatamodell och basera den på datakällan som skapades i föregående steg
+* Skapa data-Source med swagger-filen
+Skapa formulärdatamodell och basera den på data-Source som skapades i föregående steg
 * Skapa ett anpassat formulär baserat på den formulärdatamodell som skapades i det tidigare steget.
 * Dra och släpp följande element från fliken Datakällor till det adaptiva formuläret
 

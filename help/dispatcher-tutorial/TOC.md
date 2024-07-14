@@ -8,15 +8,15 @@ index: y
 team: TM
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 75%
+source-wordcount: '39'
+ht-degree: 66%
 
 ---
 
 
 # Självstudiekurs om AEM Dispatcher Cache{#dispatcher-tutorial}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 + [1 - Begrepp, mönster och mönster](chapter-1.md)
 + [2 - Infrastrukturmönster](chapter-2.md)
 + [3 - Avancerade Caching-ämnen](chapter-3.md)

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här hämtar du nätverksloggar/verktyg som ska användas
 
-*I den här videon går du igenom stegen för att hämta nätverksloggar/verktyg som ska användas.*
+*Den här videon går igenom stegen för att hämta nätverksloggar/verktyg som ska användas.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335491?quality=12&learn=on)

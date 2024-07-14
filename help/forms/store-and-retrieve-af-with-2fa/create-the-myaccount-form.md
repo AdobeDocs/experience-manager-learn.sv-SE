@@ -24,31 +24,31 @@ Formuläret **MyAccountForm** används för att hämta det delvis ifyllda adapti
 
 ![mitt kontoformulär](assets/6599.JPG)
 
-När användaren anger program-ID:t och klickar på **FetchApplication** -knappen hämtas det mobilnummer som är associerat med program-id:t från databasen med åtgärden Hämta i formulärdatamodellen.
+När användaren anger program-ID:t och klickar på knappen **FetchApplication** hämtas det mobilnummer som är associerat med program-ID:t från databasen med åtgärden Hämta i formulärdatamodellen.
 
-I det här formuläret används POSTENS anrop av formulärdatamodellen för att verifiera mobilnumret med hjälp av engångslösenord. Formulärets sändningsåtgärd aktiveras när mobilnumret har verifierats med följande kod. Vi utlöser klickhändelsen för skicka-knappen med namnet **submitForm**.
+I det här formuläret används POSTENS anrop av formulärdatamodellen för att verifiera mobilnumret med hjälp av engångslösenord. Formulärets sändningsåtgärd aktiveras när mobilnumret har verifierats med följande kod. Vi utlöser klickhändelsen för skicka-knappen **submitForm**.
 
 >[!NOTE]
-> Du måste ange API-nyckeln och API-hemlighetsvärdena som är specifika för din [Nexmo](https://dashboard.nexmo.com/) konto i lämpliga fält i MyAccountForm
+> Du måste ange API-nyckeln och API-hemlighetsvärdena som är specifika för ditt [Nexmo](https://dashboard.nexmo.com/)-konto i fälten för MyAccountForm
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-Det här formuläret är associerat med en anpassad skickaåtgärd som vidarebefordrar formuläröverföringen till servern som är monterad på **/bin/renderaf**
+Det här formuläret är associerat med en anpassad skickaåtgärd som vidarebefordrar formuläröverföringen till serverleten som är monterad på **/bin/renderaf**
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-Koden i serverutrymmet som är monterat på **/bin/renderaf** vidarebefordrar begäran om att återge lagret tillsammans med bilagor med adaptiv form förifyllda med sparade data.
+Koden i serverutrymmet som är monterat på **/bin/renderaf** vidarebefordrar begäran om att återge butiken med bilagor i adaptiv form ifyllda med sparade data.
 
 
-* MyAccountForm kan vara [hämtad härifrån](assets/my-account-form.zip)
+* MyAccountForm kan [hämtas härifrån](assets/my-account-form.zip)
 
-* Exempelformulär bygger på [anpassad mall för anpassningsbara formulär](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
+* Exempelformulär baseras på [en anpassad adaptiv formulärmall](assets/custom-template-with-page-component.zip) som måste importeras till AEM för att exempelformulären ska återges korrekt.
 
-* [Anpassad överföringshanterare](assets/custom-submit-my-account-form.zip) som är associerat med MyAccountForm-inlämningen måste importeras till AEM.
+* [En anpassad överföringshanterare](assets/custom-submit-my-account-form.zip) som är associerad med MyAccountForm-överföringen måste importeras till AEM.
 
 ## Nästa steg
 

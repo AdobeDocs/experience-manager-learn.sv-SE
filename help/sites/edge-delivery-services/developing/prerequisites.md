@@ -27,6 +27,6 @@ I den här videon beskrivs alla delar som en utvecklare behöver för att börja
 
 ## Installera Node.js
 
-Att börja utveckla för Edge Delivery Services, att [Node.js](https://nodejs.org) som är installerade i ditt system är nödvändigt. Du kan kontrollera om Node.js redan är installerat genom att köra `node -v` på kommandoraden, som visar den aktuella versionen om den finns. Om Node.js inte är installerat på datorn kan du få detaljerade installationsanvisningar i den bifogade videon nedan.
+Om du vill börja utveckla för Edge Delivery Services måste du ha [Node.js](https://nodejs.org) installerat på datorn. Du kan verifiera om Node.js redan är installerat genom att köra `node -v` på kommandoraden, som visar den aktuella versionen om den finns. Om Node.js inte är installerat på datorn kan du få detaljerade installationsanvisningar i den bifogade videon nedan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425710/?learn=on)

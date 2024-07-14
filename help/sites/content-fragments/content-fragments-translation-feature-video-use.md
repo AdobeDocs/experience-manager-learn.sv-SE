@@ -28,15 +28,15 @@ Lär dig hur innehållsfragment kan lokaliseras och översättas med Adobe Exper
 
 Innehållsfragment är en godkänd innehållstyp som AEM extraheras och skickas till en extern översättningstjänst. Flera användningsområden stöds inte:
 
-1. Ett innehållsfragment kan vara [väljs direkt i Assets-konsolen för språkkopiering och översättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+1. Ett innehållsfragment kan [väljas direkt i Assets-konsolen för språkkopiering och översättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
 2. Content Fragments referenced on a Sites page are copied to the appropriate language folder and extract for translation when the Sites page is selected for language copy.
 3. Material för textbundna media som är inbäddade i ett innehållsfragment kan extraheras och översättas.
 4. Resurssamlingar som är kopplade till ett innehållsfragment kan extraheras och översättas.
 
 ## Redigerare för översättningsregler {#translation-rules-editor}
 
-Experience Manager kan uppdatera översättningsbeteendet med **Redigerare för översättningsregler**. Om du vill uppdatera översättningen går du till **verktyg** > **Allmänt** > **Översättningskonfiguration** på [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
+Översättningsbeteendet för Experience Manager kan uppdateras med **redigeraren för översättningsregler**. Om du vill uppdatera översättningen går du till **Verktyg** > **Allmänt** > **Översättningskonfiguration** på [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
 
-Utanför förpackningen refererar konfigurationer till innehållsfragment vid `fragmentPath` med en resurstyp av `core/wcm/components/contentfragment/v1/contentfragment`. Alla komponenter som ärver från `v1/contentfragment` identifieras av standardkonfigurationen.
+Slut på konfiguration refererar till innehållsfragment vid `fragmentPath` med resurstypen `core/wcm/components/contentfragment/v1/contentfragment`. Alla komponenter som ärver från `v1/contentfragment` känns igen av standardkonfigurationen.
 
 ![Redigerare för översättningsregler](assets/translation-configuration.png)

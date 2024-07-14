@@ -1,5 +1,5 @@
 ---
-title: Personalisering med Visual Experience Composer
+title: Personalization med Visual Experience Composer
 description: Lär dig skapa en Adobe Target-aktivitet med Visual Experience Composer.
 version: Cloud Service
 jira: KT-6352
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ---
 
-# Personalisering med Visual Experience Composer {#personalization-vec}
+# Personalization med Visual Experience Composer {#personalization-vec}
 
 Lär dig hur du skapar en A/B Test Target-aktivitet med Visual Experience Composer (VEC).
 
@@ -37,38 +37,38 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller de bästa sakerna a
 
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
-1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till __Verksamhet__ tab
+1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till fliken __Aktiviteter__
 
-   + Om du inte ser __Mål__ Kontrollera att rätt Adobe-organisation har valts i organisationsväljaren i det övre högra hörnet på kontrollpanelen Experience Cloud och att användaren har beviljats åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Om du inte ser __Mål__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation har valts i organisationsväljaren i det övre högra hörnet och att den användaren har beviljats åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. Klicka **Skapa aktivitet** och sedan välja **A/B-test** aktivitet
+1. Klicka på knappen **Skapa aktivitet** och välj sedan aktiviteten **A/B-test**
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
 
-1. Välj **Visual Experience Composer** anger du aktivitets-URL:en och klickar sedan på **Nästa**
+1. Välj alternativet **Visual Experience Composer**, ange aktivitets-URL:en och klicka sedan på **Nästa**
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med hjälp av **Lägg till upplevelse** -knappen.
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Experience A* och *Experience B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med knappen **Lägg till upplevelse** .
 
-   ![Upplevelse A](assets/experience.png)
+   ![Upplev A](assets/experience.png)
 
 1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda elementet HTML.
 
    ![Element](assets/select-element.png)
 
-1. Ändra texten från *Camping i Western Australia* till *Australiens äventyr*. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
+1. Ändra texten från *Camping i Western Australia* till *Adventures of Australia*. En lista över ändringar som har lagts till i en upplevelse visas under Ändringar. Du kan klicka på och redigera det ändrade objektet för att visa dess CSS-väljare och det nya innehållet som lagts till i det.
 
-   ![Annonser](assets/adventures.png)
+   ![Anteckningar](assets/adventures.png)
 
-1. Byt namn *Upplevelse A* till *Adventure*
-1. Uppdatera texten på samma sätt *Upplevelse B* från *Camping i Western Australia* till *Utforska Australiens vildhet*.
+1. Byt namn på *Upplev A* till *Äventyr*
+1. Uppdatera texten på *Experience B* från *Camping i Western Australia* till *Explore the Australian Wilderness*.
 
    ![Utforska](assets/explore.png)
 
-1. Klicka **Nästa** för att gå över till Targeting och vi behåller en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
+1. Klicka på **Nästa** om du vill gå över till Riktning och vi behåller en manuell trafikallokering på 50-50 mellan de två upplevelserna.
 
-   ![Målinriktning](assets/targeting.png)
+   ![Målgruppsanpassning](assets/targeting.png)
 
 1. För Mål och inställningar väljer du Rapporteringskällan som Adobe Target och väljer Mått som konvertering med en sidvisningsåtgärd.
 

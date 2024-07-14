@@ -26,13 +26,13 @@ Läs om hur du mappar data som samlats in från en Adobe Experience Manager-webb
 
 ## Vad du ska bygga {#what-build}
 
-WKND:s marknadsföringsteam är intresserade av att veta vilka `Call to Action (CTA)` -knapparna fungerar bäst på hemsidan. I den här självstudiekursen skapar du ett projekt i **Analysis Workspace** för att visualisera prestandan för olika CTA-knappar och förstå användarbeteendet på webbplatsen. Följande information hämtas med Adobe Analytics när en användare klickar på en Call to Action-knapp (CTA) på WKND-hemsidan.
+WKND:s marknadsföringsteam är intresserade av att veta vilka `Call to Action (CTA)`-knappar som fungerar bäst på hemsidan. I den här självstudiekursen skapar du ett projekt i **Analysis Workspace** för att visualisera prestandan för olika CTA-knappar och förstå användarbeteendet på webbplatsen. Följande information hämtas med Adobe Analytics när en användare klickar på en Call to Action-knapp (CTA) på WKND-hemsidan.
 
 **Analysvariabler**
 
 Nedan följer Analytics-variablerna som för närvarande spåras:
 
-* `eVar5` -  `Page template`
+* `eVar5` - `Page template`
 * `eVar6` - `Page Id`
 * `eVar7` - `Page last modified date`
 * `eVar8` - `CTA Button Id`
@@ -40,22 +40,22 @@ Nedan följer Analytics-variablerna som för närvarande spåras:
 * `event8` - `CTA Button Click event`
 * `prop8` - `CTA Button Id`
 
-![CTA Click Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
+![CTA Klicka på Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
 ### Mål {#objective}
 
 1. Skapa en rapportsvit eller använd en befintlig.
-1. Konfigurera [Konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) och [Success Events (Events)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) i Report Suite.
-1. Skapa en [Analysis Workspace-projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) att analysera data med hjälp av verktyg som gör det möjligt att snabbt skapa, analysera och dela insikter.
+1. Konfigurera [konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) och [lyckade händelser (händelser)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) i rapportsviten.
+1. Skapa ett [Analysis Workspace-projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) för att analysera data med hjälp av verktyg som gör att du kan skapa, analysera och dela insikter snabbt.
 1. Dela Analysis Workspace-projektet med andra teammedlemmar.
 
 ## Förutsättningar
 
-Den här självstudiekursen är en fortsättning på [Spåra klickade komponenter med Adobe Analytics](./track-clicked-component.md) och förutsätter att du har:
+Den här självstudiekursen är en fortsättning på komponenten [Spåra klickade med Adobe Analytics](./track-clicked-component.md) och förutsätter att du har:
 
-* A **Taggegenskap** med [Adobe Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverad
-* **Adobe Analytics** test/dev report suite ID and tracking server. Se följande dokumentation för [skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* [Felsökning för Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) webbläsartillägget har konfigurerats med en taggegenskap inläst på [WKND-plats](https://wknd.site/us/en.html) eller en AEM med datalagret Adobe aktiverat.
+* En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverat
+* **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
+* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med en taggegenskap inläst på [WKND-platsen](https://wknd.site/us/en.html) eller en AEM webbplats med datalagret Adobe aktiverat.
 
 ## Konverteringsvariabler (eVars) och lyckade händelser (Event)
 
@@ -77,17 +77,17 @@ Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse so
 
    ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
 
-1. Klicka på i verktygsfältet Analytics **Administratör** > **Rapportsviter** och hitta din Report Suite.
+1. Klicka på **Admin** > **Rapportsviter** i verktygsfältet Analyser och hitta din rapportsvit.
 
    ![Analytics Report Suite](assets/create-analytics-workspace/select-report-suite.png)
 
-1. Välj Report Suite > **Redigera inställningar** > **Konvertering** > **Konverteringsvariabler**
+1. Välj Report Suite > **Edit Settings** > **Conversion** > **Conversion Variables**
 
    ![Analyskonverteringsvariabler](assets/create-analytics-workspace/conversion-variables.png)
 
-1. Använda **Lägg till ny** kan vi skapa konverteringsvariabler för att mappa schemat enligt nedan:
+1. Med alternativet **Lägg till ny** skapar vi konverteringsvariabler för att mappa schemat enligt nedan:
 
-   * `eVar5` -  `Page Template`
+   * `eVar5` - `Page Template`
    * `eVar6` - `Page ID`
    * `eVar7` - `Last Modified Date`
    * `eVar8` - `Button Id`
@@ -103,9 +103,9 @@ Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse so
 
 Sedan skapar vi en händelse för att spåra CTA-knappklickningen.
 
-1. Från **Report Suite Manager** väljer du **Report Suite-ID** och klicka **Redigera inställningar**.
-1. Klicka **Konvertering** > **Success Events**
-1. Använda **Lägg till ny** kan du skapa en anpassad händelse för att spåra CTA-knappens klickning och sedan **Spara** dina ändringar.
+1. I fönstret **Report Suite Manager** väljer du **Report Suite-ID** och klickar på **Redigera inställningar**.
+1. Klicka på **Konvertering** > **Slutförda händelser**
+1. Använd alternativet **Lägg till ny** för att skapa en anpassad success-händelse för att spåra CTA-knappens klickning och sedan **Spara** dina ändringar.
    * `Event` : `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
@@ -116,27 +116,27 @@ Sedan skapar vi en händelse för att spåra CTA-knappklickningen.
 
 Analysis Workspace är ett flexibelt webbläsarverktyg som gör att du snabbt kan skapa analyser och dela insikter. Med dra-och-släpp-gränssnittet kan ni utforma analyser, lägga till visualiseringar för att ge liv åt data, strukturera en datauppsättning, dela och schemalägga projekt med vem som helst i organisationen.
 
-Skapa sedan en [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) för att bygga en kontrollpanel för att analysera CTA-knapparnas prestanda på hela webbplatsen.
+Skapa sedan ett [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) för att bygga en kontrollpanel som analyserar CTA-knapparnas prestanda på hela webbplatsen.
 
-1. Välj **Arbetsyta** och klicka på **Skapa ett nytt projekt**.
+1. Välj **Workspace** i verktygsfältet Analyser och klicka på **Skapa ett nytt projekt**.
 
-   ![Arbetsyta](assets/create-analytics-workspace/create-workspace.png)
+   ![Workspace](assets/create-analytics-workspace/create-workspace.png)
 
-1. Välj att börja från en **tomt projekt** eller välj någon av de färdiga mallarna, antingen från Adobe eller från egna mallar som skapats av din organisation. Det finns flera tillgängliga mallar, beroende på vilken analys eller vilket användningsfall du har tänkt dig. [Läs mer](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) om de olika mallalternativen.
+1. Välj om du vill börja i ett **tomt projekt** eller välja någon av de fördefinierade mallarna, antingen från Adobe eller från anpassade mallar som skapats av din organisation. Det finns flera tillgängliga mallar, beroende på vilken analys eller vilket användningsfall du har tänkt dig. [Läs mer](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) om de olika mallalternativen.
 
    I ditt Workspace-projekt nås paneler, tabeller, visualiseringar och komponenter från den vänstra listen. De skapar byggstenar för ditt projekt.
 
-   * **[Komponenter](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** - Komponenter är dimensioner, mått, segment eller datumintervall, som alla kan kombineras i en Freeform-tabell för att du ska kunna börja besvara din affärsfråga. Kom ihåg att bekanta dig med varje komponenttyp innan du går in i analysen. När du har mastered component terminology kan du börja dra och släppa för att skapa en analys i en Freeform-tabell.
+   * **[Komponenter](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** - Komponenter är dimensioner, mått, segment eller datumintervall, som alla kan kombineras i en Freeform-tabell för att du ska kunna besvara din företagsfråga. Kom ihåg att bekanta dig med varje komponenttyp innan du går in i analysen. När du har mastered component terminology kan du börja dra och släppa för att skapa en analys i en Freeform-tabell.
    * **[Visualiseringar](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** - Visualiseringar, t.ex. en stapel eller ett linjediagram, läggs sedan till ovanpå data för att ge dem liv visuellt. På den vänstra listen väljer du ikonen för mellanvisualisering för att se en fullständig lista över tillgängliga visualiseringar.
-   * **[Panel](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)** - En panel är en samling tabeller och visualiseringar. Du kommer åt panelerna från den övre vänstra ikonen i arbetsytan. Paneler är användbara när du vill ordna dina projekt efter tidsperioder, rapportsviter eller användningsexempel för analyser. Följande paneltyper är tillgängliga i Analysis Workspace:
+   * **[Paneler](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)** - En panel är en samling tabeller och visualiseringar. Du kommer åt panelerna från den övre vänstra ikonen i Workspace. Paneler är användbara när du vill ordna dina projekt efter tidsperioder, rapportsviter eller användningsexempel för analyser. Följande paneltyper är tillgängliga i Analysis Workspace:
 
    ![Mallval](assets/create-analytics-workspace/workspace-tools.png)
 
 ### Lägg in datavisualisering med Analysis Workspace
 
-Skapa sedan en tabell för att skapa en visuell representation av hur användarna interagerar med `Call to Action (CTA)` på WKND-webbplatsens hemsida. Om du vill skapa en sådan representation använder vi de data som samlats in i [Spåra klickade komponenter med Adobe Analytics](./track-clicked-component.md). Nedan följer en snabb sammanfattning av data som spårats för användarinteraktioner med knapparna Call to Action för WKND-webbplatsen.
+Skapa sedan en tabell för att skapa en visuell representation av hur användare interagerar med `Call to Action (CTA)`-knappar på WKND-webbplatsens hemsida. Om du vill skapa en sådan representation använder vi de data som samlats in i komponenten [Spåra klickade med Adobe Analytics](./track-clicked-component.md). Nedan följer en snabb sammanfattning av data som spårats för användarinteraktioner med knapparna Call to Action för WKND-webbplatsen.
 
-* `eVar5` -  `Page template`
+* `eVar5` - `Page template`
 * `eVar6` - `Page Id`
 * `eVar7` - `Page last modified date`
 * `eVar8` - `CTA Button Id`
@@ -144,11 +144,11 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användarn
 * `event8` - `CTA Button Click event`
 * `prop8` - `CTA Button Id`
 
-1. Dra och släpp **Sida** dimensionskomponenten till friformstabellen. Nu bör du kunna visa en visualisering som visar sidnamnet (eVar9) och motsvarande sidvyer (förekomster) som visas i tabellen.
+1. Dra och släpp dimensionskomponenten **Sida** till frihandstabellen. Nu bör du kunna visa en visualisering som visar sidnamnet (eVar9) och motsvarande sidvyer (förekomster) som visas i tabellen.
 
    ![Dimensionen Sida](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. Dra och släpp **CTA Click** (event8) metrisk information om förekomstmått och ersätt den. Nu kan du visa en visualisering som visar sidnamnet (eVar9) och motsvarande antal CTA Click-händelser på en sida.
+1. Dra och släpp **CTA-klickningsmåttet** (event8) på händelsemätverket och ersätt det. Nu kan du visa en visualisering som visar sidnamnet (eVar9) och motsvarande antal CTA Click-händelser på en sida.
 
    ![Sidmått - CTA-klick](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -158,7 +158,7 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användarn
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **Efter**
-     ![eVar5-statistik](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5-mått](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. För att förstå hur användare interagerar med CTA-knappar när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till måttet för Knapp-ID (eVar8).
 
@@ -168,7 +168,7 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användarn
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. Du kan ersätta värdet för Knapp-ID med ett användarvänligare namn med hjälp av Adobe Analytics Classifications. Du kan läsa mer om hur du skapar en klassificering för ett specifikt mått [här](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). I det här fallet har vi ett klassificeringsmått `Button Section (Button ID)` inställningar för `eVar8` som mappar knapp-ID till ett användarvänligt namn.
+1. Du kan ersätta värdet för Knapp-ID med ett användarvänligare namn med hjälp av Adobe Analytics Classifications. Du kan läsa mer om hur du skapar en klassificering för ett specifikt mått [här](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). I det här fallet har vi en inställning för klassificeringsmåttet `Button Section (Button ID)` för `eVar8` som mappar knapp-ID till ett användarvänligt namn.
 
    ![Knappavsnitt](assets/create-analytics-workspace/button-section.png)
 
@@ -176,21 +176,21 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användarn
 
 ### Konverteringsklassificeringar
 
-Analysklassificering är ett sätt att kategorisera Analytics-variabeldata och sedan visa data på olika sätt när du genererar rapporter. Om du vill förbättra hur Knapp-ID visas i arbetsytrapporten för Analytics kan du skapa en klassificeringsvariabel för Knapp-ID (eVar8). När du klassificerar etablerar du en relation mellan variabeln och de metadata som är relaterade till den variabeln.
+Analysklassificering är ett sätt att kategorisera Analytics-variabeldata och sedan visa data på olika sätt när du genererar rapporter. För att förbättra hur Button ID visas i Analytics Workspace-rapporten skapar vi en klassificeringsvariabel för Button Id (eVar8). När du klassificerar etablerar du en relation mellan variabeln och de metadata som är relaterade till den variabeln.
 
 Sedan skapar vi en klassificeringsvariabel för Analytics.
 
-1. Från **Administratör** verktygsfältmeny, välja **Rapportsviter**
-1. Välj **Report Suite-ID** från **Report Suite Manager** fönster och klicka **Redigera inställningar** > **Konvertering** > **Konverteringsklassificeringar**
+1. Välj **Rapportsviter** på verktygsmenyn **Admin**
+1. Välj **Report Suite-ID** i fönstret **Report Suite Manager** och klicka på **Redigera inställningar** > **Konvertering** > **Konverteringsklassificeringar**
 
    ![Konverteringsklassificering](assets/create-analytics-workspace/conversion-classification.png)
 
-1. Från **Välj klassificeringstyp** väljer du variabeln (eVar8-Knapp-ID) för att lägga till en klassificering.
+1. I listrutan **Välj klassificeringstyp** väljer du variabeln (eVar8-Knapp-ID) för att lägga till en klassificering.
 1. Klicka på pilen till höger bredvid Klassificeringsvariabeln som listas under Klassificeringar för att lägga till en ny klassificering.
 
    ![Konverteringsklassificeringstyp](assets/create-analytics-workspace/select-classification-variable.png)
 
-1. I **Redigera en klassificering** anger du ett lämpligt namn för textklassificeringen. En dimensionskomponent med textklassificeringsnamnet skapas.
+1. Ange ett lämpligt namn för textklassificeringen i dialogrutan **Redigera en klassificering**. En dimensionskomponent med textklassificeringsnamnet skapas.
 
    ![Konverteringsklassificeringstyp](assets/create-analytics-workspace/new-classification.png)
 
@@ -206,8 +206,8 @@ Innan du importerar klassificeringar till marknadsföringsrapporter kan du hämt
 
 Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 
-1. Navigera till **Administratör** > **Klassificeringsimportör**
-1. Vi laddar ned en klassificeringsmall för konverteringsvariabeln från **Ladda ned mall** Tabb.
+1. Navigera till **Admin** > **Klassificeringsimporteraren**
+1. Vi hämtar en klassificeringsmall för konverteringsvariabeln från fliken **Hämta mall**.
    ![Konverteringsklassificeringstyp](assets/create-analytics-workspace/classification-importer.png)
 
 1. På fliken Hämtningsmall anger du datamallens konfiguration.
@@ -215,18 +215,18 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
    * **Datauppsättning som ska klassificeras** : Välj datatyp för datafilen. Menyn innehåller alla rapporter i rapportsviterna som är konfigurerade för klassificeringar.
    * **Kodning** : Välj teckenkodning för datafilen. Standardkodningsformatet är UTF-8.
 
-1. Klicka **Ladda ned** och spara mallfilen på ditt lokala system. Mallfilen är en tabbavgränsad datafil (.tab filename) som stöds av de flesta kalkylbladsprogram.
+1. Klicka på **Hämta** och spara mallfilen på det lokala systemet. Mallfilen är en tabbavgränsad datafil (.tab filename) som stöds av de flesta kalkylbladsprogram.
 1. Öppna den tabbavgränsade datafilen med valfri redigerare.
 1. Lägg till Knapp-ID (eVar9) och ett motsvarande knappnamn i den tabbavgränsade filen för varje eVar9-värde från steg 9 i avsnittet.
 
    ![Nyckelvärde](assets/create-analytics-workspace/key-value.png)
 
 1. **Spara** den tabbavgränsade filen.
-1. Navigera till **Importera fil** -fliken.
+1. Navigera till fliken **Importera fil**.
 1. Konfigurera målet för filimporten.
    * **Välj Report Suite** : WKND Site AEM (Report Suite)
    * **Datauppsättning som ska klassificeras** : Knapp-ID (konverteringsvariabel eVar8)
-1. Klicka på **Välj fil** för att ladda upp den tabbavgränsade filen från datorn och klicka sedan på **Importera fil**
+1. Klicka på alternativet **Välj fil** om du vill överföra den tabbavgränsade filen från datorn och klicka sedan på **Importera fil**
 
    ![Filimporteraren](assets/create-analytics-workspace/file-importer.png)
 
@@ -236,25 +236,25 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 
 #### Ersätt konverteringsvariabel med klassificeringsvariabel
 
-1. Välj **Arbetsyta** och öppna arbetsytan som skapats i [Skapa ett projekt i Analysis Workspace](#create-a-project-in-analysis-workspace) i den här självstudiekursen.
+1. Välj **Workspace** i verktygsfältet Analyser och öppna arbetsytan som skapats i avsnittet [Skapa ett projekt i Analysis Workspace](#create-a-project-in-analysis-workspace) i den här självstudien.
 
-   ![Knapp-ID för arbetsyta](assets/create-analytics-workspace/workspace-report-button-id.png)
+   ![Workspace-knapp-ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. Ersätt sedan **Knapp-ID** mätvärden på arbetsytan som visar ID:t för en Call to Action-knapp (CTA) med det klassificeringsnamn som skapades i föregående steg.
+1. Ersätt sedan måttet **Knapp-ID** på arbetsytan som visar ID:t för en CTA-knapp (Call to Action) med det klassificeringsnamn som skapades i föregående steg.
 
-1. I komponentsökaren söker du efter **WKND CTA-knappar** och dra-och-släpp **WKND CTA-knappar (Knapp-ID)** -dimensionen på Button Id-måttet och ersätt det.
+1. I komponentsökaren söker du efter **WKND CTA-knappar** och drar och släpper dimensionen **WKND CTA-knappar (Knapp-ID)** till måttet för Knapp-ID och ersätter den.
 
    * **Före**
-     ![Knappen Arbetsyta före](assets/create-analytics-workspace/wknd-button-before.png)
+     ![Workspace-knapp före](assets/create-analytics-workspace/wknd-button-before.png)
    * **Efter**
-     ![Knappen Arbetsyta efter](assets/create-analytics-workspace/wknd-button-after.png)
+     ![Workspace-knapp efter](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. Du kan lägga märke till att det knapp-ID-mått som innehåller knapp-id:t för en CTA-knapp nu har ersatts med ett motsvarande namn i klassificeringsmallen.
-1. Låt oss jämföra tabellen Analytics Workspace med startsidan för WKND och förstå antalet klick i CTA-knappen och dess analys. Baserat på arbetsytans frihandstabelldata är det tydligt att 22 gånger användarna har klickat på **SKAL NU** och fyra gånger för WKND Home Page Camping i västra Australien **Läs mer** -knappen.
+1. Låt oss jämföra Analytics Workspace-tabellen med WKND-startsidan och förstå CTA-knappens klickräkning och dess analys. Baserat på arbetsytans frihandstabelldata är det tydligt att 22 gånger användare har klickat på knappen **SKI NOW** och fyra gånger för WKND Home Page Camping i Western Australia **Läs mer** .
 
    ![CTA-rapport](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
-1. Spara ditt Adobe Analytics Workspace-projekt och ange ett namn och en beskrivning. Du kan också lägga till taggar i ett arbetsyteprojekt.
+1. Spara ditt Adobe Analytics Workspace-projekt och ge en beskrivning. Du kan också lägga till taggar i ett arbetsyteprojekt.
 
    ![Spara projekt](assets/create-analytics-workspace/save-project.png)
 

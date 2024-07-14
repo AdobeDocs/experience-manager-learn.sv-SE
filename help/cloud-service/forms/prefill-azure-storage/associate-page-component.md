@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Koppla sidkomponenten till mallen
 
-Nästa steg är att koppla sidkomponenten till den nya adaptiva formulärmallen. Detta garanterar att koden i sidkomponenten körs varje gång ett adaptivt formulär som är baserat på den nya mallen återges. I den här självstudiekursen finns en ny adaptiv formulärmall som kallas **StoreAndRestoreFromAzure** skapades i **AzurePortalStorage** mapp.
+Nästa steg är att koppla sidkomponenten till den nya adaptiva formulärmallen. Detta garanterar att koden i sidkomponenten körs varje gång ett adaptivt formulär som är baserat på den nya mallen återges. I den här självstudiekursen skapades en ny adaptiv formulärmall med namnet **StoreAndRestoreFromAzure** i mappen **AzurePortalStorage**.
 Navigera till /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/initial/jcr:content-nod, lägg till följande egenskap och spara ändringarna.
 
 | **Egenskapsnamn** | **Egenskapstyp** | **Egenskapsvärde** |
@@ -26,7 +26,9 @@ Navigera till /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefro
 | sling:resourceType | Sträng | azureportalpagecomponent/component/page/storeandfetch |
 
 Navigera till /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content-nod, lägg till följande egenskap och spara ändringarna.
-| **Egenskapsnamn**  | **Egenskapstyp** | **Egenskapsvärde**                                    | |—|—|—| | sling:resourceType | Sträng | azureportalpagecomponent/component/page/storeandfetch |
+| **Egenskapsnamn**  | **Egenskapstyp** | **Egenskapsvärde**                                    |
+|—|—|—|
+| sling:resourceType | Sträng            | azureportalpagecomponent/component/page/storeandfetch |
 
 
 ## Nästa steg

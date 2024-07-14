@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Ett vanligt användningssätt är att visa ett PDF-dokument med de data som användaren har angett.
 
-Vi har använt [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+Vi har använt [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) för att uppnå den här användningen.
 
 Följande steg utfördes för att slutföra integreringen
 
@@ -31,7 +31,7 @@ En anpassad komponent (embed-pdf) skapades för att bädda in den PDF-fil som re
 
 ## Klientbibliotek
 
-Följande kod körs när `viewPDF` är markerad. Vi skickar adaptiva formulärdata, mallnamn till slutpunkten för att generera PDF-filen. Den genererade PDF-filen visas sedan för formuläranvändaren med hjälp av JavaScript-biblioteket för inbäddning av pdf.
+Följande kod körs när användaren klickar på kryssruteknappen `viewPDF`. Vi skickar adaptiva formulärdata, mallnamn till slutpunkten för att generera PDF-filen. Den genererade PDF-filen visas sedan för formuläranvändaren med hjälp av JavaScript-biblioteket för inbäddning.
 
 ```javascript
 $(document).ready(function() {
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 ## Generera XSD från XML-data
 
-Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
+Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från de XML-data som genererades i föregående steg.
 
 ## Överför mallen
 
@@ -103,21 +103,22 @@ Se till att du överför xdp-mallen till [AEM Forms](http://localhost:4502/aem/f
 ## Skapa anpassat formulär
 
 Skapa anpassningsbara formulär baserat på XSD från föregående steg.
-Lägg till en ny flik i adaptiven. Lägg till en kryssrutekomponent och bädda in pdf-komponent på den här fliken Kontrollera att du namnger kryssrutevyn PDF.
+Lägg till en ny flik i adaptiven. Lägg till en kryssrutekomponent och bädda in en pdf-komponent på den här fliken
+Se till att du namnger kryssrutevyn PDF.
 Konfigurera komponenten embed-pdf enligt skärmbilden nedan
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**Bädda in PDF API-nyckel** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan [egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
+**Bädda in API-nyckel för PDF** - Det här är nyckeln som du kan använda för att bädda in PDF-filen. Den här nyckeln fungerar bara med localhost. Du kan skapa [din egen nyckel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) och associera den med en annan domän.
 
-**Slutpunkt som returnerar PDF-filen** - Det här är den anpassade servern som sammanfogar data med xdp-mallen och returnerar PDF-filen.
+**Slutpunkten som returnerar PDF-filen** - Det här är den anpassade servern som sammanfogar data med xdp-mallen och returnerar PDF-filen.
 
 **Mallnamn** - Detta är sökvägen till xdp. Vanligtvis lagras den under mappen för formulärsanddokument.
 
-**Filnamn för PDF** - Det här är strängen som kommer att visas i den inbäddade PDF-komponenten.
+**PDF-filnamn** - Det här är strängen som kommer att visas i den inbäddade PDF-komponenten.
 
 ## Skapa anpassad servett
 
-En anpassad servlet skapades för att sammanfoga data med XDP-mallen och returnera PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i [inbäddat pdf-paket](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+En anpassad servlet skapades för att sammanfoga data med XDP-mallen och returnera PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i det [inbäddade PDF-paketet](assets/embedpdf.core-1.0-SNAPSHOT.jar)
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -229,7 +230,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera det inbäddade PDF-paketet](assets/embedpdf.core-1.0-SNAPSHOT.jar).
 Detta har serverleten för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen.
-1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet med uteslutna sökvägar i CSRF-filtret för Adobe Granite med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [Ramverk för CSRF-skydd](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet Undantagna sökvägar i Adobe Granite CSRF-filtret med hjälp av [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [CSRF-skyddsramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [Importera klientbiblioteket och den anpassade komponenten](assets/embed-pdf.zip)
 1. [Importera det adaptiva formuläret och mallen](assets/embed-pdf-form-and-xdp.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

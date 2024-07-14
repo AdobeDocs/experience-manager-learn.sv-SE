@@ -27,7 +27,7 @@ Stängda användargrupper (CUG) är en funktion som används för att begränsa 
 
 ## CUG (Closed User Group) med AEM Assets
 
-* Utformad för att begränsa åtkomst till resurser i en AEM Publish-instans.
+* Utformad för att begränsa åtkomst till resurser på en AEM Publish-instans.
 * Ger läsåtkomst till en uppsättning användare/grupper.
 * CUG kan bara konfigureras på mappnivå. CUG kan inte anges för enskilda resurser.
 * CUG-profiler ärvs automatiskt av alla undermappar och tillämpade resurser.
@@ -39,12 +39,12 @@ Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används f
 
 |                   | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på **aktuell** AEM. | Konfigurera CUG-principer för innehåll på AEM **författare** -instans. Använd CUG-profiler för innehåll på AEM **publicera** instans(er). |
+| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på den **aktuella** AEM instansen. | Konfigurera CUG-principer för innehåll på AEM **author**-instans. Använd CUG-principer för innehåll på AEM **publicera** instans(er). |
 | Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst till *alla andra* användare/grupper. |
-| Publicering | ACL:er är *not* publicerat med innehåll. | CUG-principer *är* publicerat med innehåll. |
+| Publicering | ACL-listor är *inte* publicerade med innehåll. | CUG-principer *publiceras* med innehåll. |
 
 ## Stödlänkar {#supporting-links}
 
-* [Hantera resurser och stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
-* [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
-* [Dokumentation för stängd användargrupp](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)
+* [Hantera Assets och stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
+* [Skapar en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
+* [Dokumentation för Oak stängd användargrupp](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)

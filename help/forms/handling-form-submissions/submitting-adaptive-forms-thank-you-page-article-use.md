@@ -28,7 +28,7 @@ Alternativet Skicka till REST-slutpunkt skickar data som är ifyllda i formulär
 
 På skärmbilden nedan skickar vi det adaptiva formuläret för att tacka dig på sidan /content/thankyou. Till denna tacksida skickar vi tre begärandeattribut som innehåller formulärfältets värden.
 
-![Tack](assets/thankyoupage.gif)
+![Tack!](assets/thankyoupage.gif)
 
 Du kan också skicka till den externa slutpunkten via POST. För att uppnå detta behöver du bara markera kryssrutan&quot;aktivera efterbeställning&quot; och ange URL:en för den externa slutpunkten. När du skickar in formuläret får du en tacksida och POSTENS slutpunkt anropas samtidigt.
 
@@ -36,7 +36,7 @@ Du kan också skicka till den externa slutpunkten via POST. För att uppnå dett
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
-* Importera [resursfil som är associerad med den här artikeln till AEM med hjälp av pakethanteraren](assets/submittingtorestendpoint.zip)
-* Peka webbläsaren mot [Frågeformulär - tid](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Importera [resursfilen som är associerad med den här artikeln till AEM med pakethanteraren](assets/submittingtorestendpoint.zip)
+* Peka webbläsaren på formuläret [Tid kvar](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i det obligatoriska fältet och skicka formuläret
 * Du bör få en tacksida där informationen finns på sidan

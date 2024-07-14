@@ -26,19 +26,19 @@ Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA. Lär
 
 1. Förstå Sling Models roll när det gäller att hantera JSON-modellens API som tillhandahålls av AEM.
 2. Lär dig hur du skapar AEM komponentdialogrutor.
-3. Lär dig skapa en **anpassad** AEM som är kompatibel med det SPA redigeringsramverket.
+3. Lär dig att skapa en **anpassad** AEM-komponent som är kompatibel med SPA redigeringsramverk.
 
 ## Vad du ska bygga
 
-Fokus på tidigare kapitel var att utveckla SPA komponenter och mappa dem till *befintlig* AEM kärnkomponenter. Det här kapitlet fokuserar på hur du skapar och utökar *new* AEM komponenter och manipulera JSON-modellen som hanteras av AEM.
+Fokus på tidigare kapitel var att utveckla SPA komponenter och mappa dem till *befintliga* AEM kärnkomponenter. I det här kapitlet fokuseras på hur du skapar och utökar *nya* AEM komponenter och manipulerar den JSON-modell som AEM hanterar.
 
-Ett enkelt `Custom Component` visar de steg som behövs för att skapa en ny AEM.
+En enkel `Custom Component` illustrerar de steg som behövs för att skapa en ny AEM.
 
-![Meddelande som visas i versaler](assets/custom-component/message-displayed.png)
+![Meddelande visas i Endast versaler](assets/custom-component/message-displayed.png)
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
 ### Hämta koden
 
@@ -56,29 +56,29 @@ Granska de verktyg och instruktioner som krävs för att ställa in en [lokal ut
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Om du använder [AEM 6.x](overview.md#compatibility) lägg till `classic` profil:
+   Om du använder [AEM 6.x](overview.md#compatibility) lägger du till profilen `classic`:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installera det färdiga paketet för det traditionella [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest). Bilderna från [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/releases/latest) återanvänds på WKND-SPA. Paketet kan installeras med [AEM](http://localhost:4502/crx/packmgr/index.jsp).
+3. Installera det färdiga paketet för den traditionella [WKND-referensplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest). Bilderna som tillhandahålls av [WKND-referensplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest) återanvänds på WKND-SPA. Paketet kan installeras med [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
-   ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Pakethanteraren installerades wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/custom-component-solution`.
 
 ## Definiera AEM
 
-En AEM definieras som en nod och egenskaper. I projektet representeras dessa noder och egenskaper som XML-filer i `ui.apps` -modul. Skapa sedan AEM i `ui.apps` -modul.
+En AEM definieras som en nod och egenskaper. I projektet representeras dessa noder och egenskaper som XML-filer i modulen `ui.apps`. Skapa sedan AEM i modulen `ui.apps`.
 
 >[!NOTE]
 >
-> En snabb uppdatering på [AEM kan vara till hjälp](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
+> En snabb uppdatering av [grunderna i AEM kan vara användbar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
 
-1. Öppna `ui.apps` i valfri IDE.
+1. Öppna mappen `ui.apps` i den utvecklingsmiljö du vill använda.
 2. Navigera till `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components` och skapa en mapp med namnet `custom-component`.
-3. Skapa en fil med namnet `.content.xml` under `custom-component` mapp. Fyll i `custom-component/.content.xml` med följande:
+3. Skapa en fil med namnet `.content.xml` under mappen `custom-component`. Fyll i `custom-component/.content.xml` med följande:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -92,10 +92,10 @@ En AEM definieras som en nod och egenskaper. I projektet representeras dessa nod
 
    `jcr:primaryType="cq:Component"` - identifierar att den här noden är en AEM.
 
-   `jcr:title` är värdet som visas för innehållsförfattare och `componentGroup` bestämmer grupperingen av komponenter i redigeringsgränssnittet.
+   `jcr:title` är det värde som visas för innehållsförfattare och `componentGroup` bestämmer grupperingen av komponenter i redigeringsgränssnittet.
 
-4. Under `custom-component` mapp, skapa en annan mapp med namnet `_cq_dialog`.
-5. Under `_cq_dialog` mapp skapa en fil med namnet `.content.xml` och fylla i den med följande:
+4. Skapa en annan mapp med namnet `_cq_dialog` under mappen `custom-component`.
+5. Under mappen `_cq_dialog` skapar du en fil med namnet `.content.xml` och fyller i den med följande:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -148,35 +148,35 @@ En AEM definieras som en nod och egenskaper. I projektet representeras dessa nod
 
    ![Anpassad komponentdefinition](assets/custom-component/dialog-custom-component-defintion.png)
 
-   XML-filen ovan genererar en enkel dialogruta för `Custom Component`. Den kritiska delen av filen är den inre `<message>` nod. Den här dialogrutan innehåller en enkel `textfield` namngiven `Message` och bibehåller textfältets värde för en egenskap med namnet `message`.
+   XML-filen ovan genererar en enkel dialogruta för `Custom Component`. Den kritiska delen av filen är den inre `<message>`-noden. Den här dialogrutan innehåller en enkel `textfield` med namnet `Message` och behåller textfältets värde till egenskapen `message`.
 
-   En Sling-modell skapas bredvid för att visa värdet för `message` via JSON-modellen.
+   En Sling-modell skapas bredvid för att visa värdet för egenskapen `message` via JSON-modellen.
 
    >[!NOTE]
    >
-   > Du kan visa mycket mer [exempel på dialogrutor genom att visa definitionerna för kärnkomponenten](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Du kan även visa ytterligare formulärfält, som `select`, `textarea`, `pathfield`, tillgängligt under `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
+   > Du kan visa fler [exempel på dialogrutor genom att visa Core Component Definition](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Du kan även visa ytterligare formulärfält, som `select`, `textarea`, `pathfield`, som är tillgängliga under `/libs/granite/ui/components/coral/foundation/form` i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
-   Med en traditionell AEM [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) skript krävs vanligtvis. Eftersom SPA återger komponenten behövs inget HTML-skript.
+   I en traditionell AEM krävs vanligtvis ett [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)-skript. Eftersom SPA återger komponenten behövs inget HTML-skript.
 
 ## Skapa segmentmodellen
 
-Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) används vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM.
+Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) fungerar vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM komponenter.
 
-I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Export av försäljningsmodell](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
-1. I den utvecklingsmiljö du väljer öppnar du `core` -modul. `CustomComponent.java` och `CustomComponentImpl.java` har redan skapats och lagts till som en del av kapitelstartkoden.
+1. Öppna modulen `core` i den IDE du väljer. `CustomComponent.java` och `CustomComponentImpl.java` har redan skapats och bäddats ut som en del av kapitelstartkoden.
 
    >[!NOTE]
    >
    > Om du använder Visual Studio Code IDE kan det vara praktiskt att installera [tillägg för Java™](https://code.visualstudio.com/docs/java/extensions).
 
-2. Öppna Java™ `CustomComponent.java` på `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`:
+2. Öppna Java™-gränssnittet `CustomComponent.java` på `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/CustomComponent.java`:
 
    ![Gränssnittet CustomComponent.java](assets/custom-component/custom-component-interface.png)
 
    Detta är det Java™-gränssnitt som implementeras av Sling Model.
 
-3. Uppdatera `CustomComponent.java` så att den utökar `ComponentExporter` gränssnitt:
+3. Uppdatera `CustomComponent.java` så att det utökar gränssnittet för `ComponentExporter`:
 
    ```java
    package com.adobe.aem.guides.wknd.spa.angular.core.models;
@@ -189,15 +189,15 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    }
    ```
 
-   Implementera `ComponentExporter` -gränssnittet är ett krav för att Sling-modellen ska hämtas automatiskt av JSON-modellens API.
+   Implementering av gränssnittet `ComponentExporter` är ett krav för att Sling-modellen ska hämtas automatiskt av JSON-modellens API.
 
-   The `CustomComponent` -gränssnittet innehåller en enda get-metod `getMessage()`. Det här är metoden som visar värdet för författardialogrutan via JSON-modellen. Endast get-metoder med tomma parametrar `()` exporteras i JSON-modellen.
+   Gränssnittet `CustomComponent` innehåller en enda get-metod, `getMessage()`. Det här är metoden som visar värdet för författardialogrutan via JSON-modellen. Endast get-metoder med tomma parametrar `()` exporteras i JSON-modellen.
 
-4. Öppna `CustomComponentImpl.java` på `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java`.
+4. Öppna `CustomComponentImpl.java` `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java`.
 
-   Detta är genomförandet av `CustomComponent` gränssnitt. The `@Model` kommentaren identifierar Java™-klassen som en Sling Model. The `@Exporter` Anteckning gör att Java™-klassen kan serialiseras och exporteras via Sling Model Exporter.
+   Detta är implementeringen av gränssnittet `CustomComponent`. Anteckningen `@Model` identifierar Java™-klassen som en Sling Model. Anteckningen `@Exporter` gör att Java™-klassen kan serialiseras och exporteras via Sling Model Exporter.
 
-5. Uppdatera den statiska variabeln `RESOURCE_TYPE` för att peka på AEM `wknd-spa-angular/components/custom-component` som skapats i föregående övning.
+5. Uppdatera den statiska variabeln `RESOURCE_TYPE` så att den pekar på den AEM komponenten `wknd-spa-angular/components/custom-component` som skapades i föregående övning.
 
    ```java
    static final String RESOURCE_TYPE = "wknd-spa-angular/components/custom-component";
@@ -205,7 +205,7 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
 
    Komponentens resurstyp är den som binder Sling-modellen till AEM-komponenten och mappar slutligen till komponenten Angular.
 
-6. Lägg till `getExportedType()` metoden till `CustomComponentImpl` klass som returnerar komponentresurstypen:
+6. Lägg till metoden `getExportedType()` i klassen `CustomComponentImpl` för att returnera komponentresurstypen:
 
    ```java
    @Override
@@ -214,9 +214,9 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
    }
    ```
 
-   Den här metoden krävs vid implementering av `ComponentExporter` gränssnitt och visar den resurstyp som tillåter mappning till Angularna.
+   Den här metoden krävs vid implementering av `ComponentExporter`-gränssnittet och visar den resurstyp som tillåter mappningen till Angular-komponenten.
 
-7. Uppdatera `getMessage()` metod som returnerar värdet för `message` egenskapen beständig av författardialogrutan. Använd `@ValueMap` anteckningen är mappad till JCR-värdet `message` till en Java™-variabel:
+7. Uppdatera metoden `getMessage()` för att returnera värdet för egenskapen `message` som bevaras av författardialogrutan. Använd `@ValueMap`-anteckningen för att mappa JCR-värdet `message` till en Java™-variabel:
 
    ```java
    import org.apache.commons.lang3.StringUtils;
@@ -235,15 +235,15 @@ I SPA Editor visar Sling Models en komponents innehåll via JSON-modellen via en
 
    >[!NOTE]
    >
-   > Du kan visa [slut CustomComponentImpl.java här](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
+   > Du kan visa den [färdiga CustomComponentImpl.java här](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
 ## Uppdatera Angular-komponenten
 
 Koden för den anpassade Angularna har redan skapats. Därefter gör du några uppdateringar för att mappa Angularna till AEM.
 
-1. I `ui.frontend` öppna filen i modulen `ui.frontend/src/app/components/custom/custom.component.ts`
-2. Observera `@Input() message: string;` linje. Det omformade versalvärdet förväntas mappas till den här variabeln.
-3. Importera `MapTo` -objekt från AEM JS SDK för redigeraren och använd det för att mappa till den AEM komponenten:
+1. Öppna filen `ui.frontend/src/app/components/custom/custom.component.ts` i modulen `ui.frontend`
+2. Observera raden `@Input() message: string;`. Det omformade versalvärdet förväntas mappas till den här variabeln.
+3. Importera objektet `MapTo` från AEM JS SDK för redigeraren och använd det för att mappa till den AEM komponenten:
 
    ```diff
    + import {MapTo} from '@adobe/cq-angular-editable-components';
@@ -256,7 +256,7 @@ Koden för den anpassade Angularna har redan skapats. Därefter gör du några u
    + MapTo('wknd-spa-angular/components/custom-component')(CustomComponent, CustomEditConfig);
    ```
 
-4. Öppna `cutom.component.html` och observera att `{{message}}` visas på sidan en `<h2>` -tagg.
+4. Öppna `cutom.component.html` och observera att värdet för `{{message}}` visas i en `<h2>` -tagg.
 5. Öppna `custom.component.css` och lägg till följande regel:
 
    ```css
@@ -265,7 +265,7 @@ Koden för den anpassade Angularna har redan skapats. Därefter gör du några u
    }
    ```
 
-   För AEM Editor-platshållaren visas korrekt när komponenten är tom `:host-context` eller en annan `<div>` måste anges till `display: block;`.
+   För att AEM platshållare för redigeraren ska visas korrekt när komponenten är tom måste `:host-context` eller en annan `<div>` anges till `display: block;`.
 
 6. Distribuera uppdateringarna i en lokal AEM från projektets rot med hjälp av dina Maven-kunskaper:
 
@@ -276,9 +276,9 @@ Koden för den anpassade Angularna har redan skapats. Därefter gör du några u
 
 ## Uppdatera mallprincipen
 
-Navigera sedan till AEM för att verifiera uppdateringarna och tillåta `Custom Component` som ska läggas till i SPA.
+Navigera sedan till AEM för att verifiera uppdateringarna och tillåt att `Custom Component` läggs till i SPA.
 
-1. Verifiera registreringen av den nya Sling-modellen genom att navigera till [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels).
+1. Verifiera registreringen av den nya Sling-modellen genom att gå till [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels).
 
    ```plain
    com.adobe.aem.guides.wknd.spa.angular.core.models.impl.CustomComponentImpl - wknd-spa-angular/components/custom-component
@@ -286,23 +286,23 @@ Navigera sedan till AEM för att verifiera uppdateringarna och tillåta `Custom 
    com.adobe.aem.guides.wknd.spa.angular.core.models.impl.CustomComponentImpl exports 'wknd-spa-angular/components/custom-component' with selector 'model' and extension '[Ljava.lang.String;@6fb4a693' with exporter 'jackson'
    ```
 
-   Du bör se de två raderna ovan som anger `CustomComponentImpl` är associerad med `wknd-spa-angular/components/custom-component` och att den är registrerad via Sling Model Exporter.
+   Du bör se de två raderna ovan som anger att `CustomComponentImpl` är associerad med komponenten `wknd-spa-angular/components/custom-component` och att den är registrerad via Sling Model Exporter.
 
 2. Navigera till SPA sidmall på [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
-3. Uppdatera layoutbehållarens profil för att lägga till den nya `Custom Component` som en tillåten komponent:
+3. Uppdatera layoutbehållarens princip så att den nya `Custom Component` läggs till som en tillåten komponent:
 
-   ![Princip för behållare för uppdaterad layout](assets/custom-component/custom-component-allowed.png)
+   ![Uppdatera behållarprincipen för layout](assets/custom-component/custom-component-allowed.png)
 
-   Spara ändringarna i profilen och observera `Custom Component` som en tillåten komponent:
+   Spara ändringarna i principen och observera `Custom Component` som en tillåten komponent:
 
    ![Anpassad komponent som en tillåten komponent](assets/custom-component/custom-component-allowed-layout-container.png)
 
 ## Skapa den anpassade komponenten
 
-Nästa steg är att skapa `Custom Component` med AEM SPA Editor.
+Därefter redigerar du `Custom Component` med AEM SPA Editor.
 
-1. Navigera till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
-2. I `Edit` läge, lägga till `Custom Component` till `Layout Container`:
+1. Gå till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
+2. I `Edit`-läget lägger du till `Custom Component` i `Layout Container`:
 
    ![Infoga ny komponent](assets/custom-component/insert-custom-component.png)
 
@@ -314,9 +314,9 @@ Nästa steg är att skapa `Custom Component` med AEM SPA Editor.
 
 4. Spara ändringarna. Observera att det visade meddelandet är i versaler.
 
-   ![Meddelande som visas i versaler](assets/custom-component/message-displayed.png)
+   ![Meddelande visas i Endast versaler](assets/custom-component/message-displayed.png)
 
-5. Visa JSON-modellen genom att navigera till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Sök efter `wknd-spa-angular/components/custom-component`:
+5. Visa JSON-modellen genom att gå till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Sök efter `wknd-spa-angular/components/custom-component`:
 
    ```json
    "custom_component_208183317": {
@@ -335,4 +335,4 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ### Nästa steg {#next-steps}
 
-[Utöka en kärnkomponent](extend-component.md) - Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering.
+[Utöka en kärnkomponent](extend-component.md) - Lär dig hur du utökar en befintlig kärnkomponent som ska användas med AEM SPA. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering.

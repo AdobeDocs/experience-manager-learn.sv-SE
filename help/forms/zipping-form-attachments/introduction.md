@@ -26,7 +26,7 @@ Kunderna skulle normalt packa de bifogade filerna eller skicka dem som enskilda 
 
 ## Skicka formulärbilagor i en ZIP-fil
 
-Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfallet. I det här anpassade steget skapas en ZIP-fil med de bifogade formulären och lagras under nyttolastmappen i en fil med namnet *zipped_attachments.zip*
+Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfallet. I det här anpassade steget skapar och lagrar en ZIP-fil med formulärbilagor i en fil med namnet *zipped_attachments.zip* under nyttolastmappen
 
 ![send-form-attachments](assets/send-form-attachments.JPG)
 
@@ -34,7 +34,7 @@ Ett anpassat arbetsflödesprocessteg skrevs för att slutföra användningsfalle
 
 Ett anpassat arbetsflödesprocesssteg har skrivits för att det här användningsexemplet ska kunna användas. I det här anpassade steget fyller vi i arbetsflödesvariabler av typen ArrayList of Documents and ArrayList of Strings.
 
-![skicka-lista-för-dokument](assets/send-list-of-documents.JPG)
+![send-list-of-documents](assets/send-list-of-documents.JPG)
 
 ## Nästa steg
 

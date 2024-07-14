@@ -25,12 +25,12 @@ Vi ska skapa en ny mall för adaptiva formulär för den här självstudiekursen
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[Du kan följa den här artikeln när du vill veta hur du skapar en adaptiv formulärmall och en sidkomponent](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[Du kan följa den här artikeln om du vill veta hur du skapar en adaptiv formulärmall och en sidkomponent](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
 
 
 ## Assets
 
-Mallen och sidkomponenten som används i den här självstudien kan [hämtad härifrån](assets/sign-multiple-forms-template.zip)
+Mallen och sidkomponenten som används i den här självstudiekursen kan [hämtas härifrån](assets/sign-multiple-forms-template.zip)
 
 ## Nästa steg
 

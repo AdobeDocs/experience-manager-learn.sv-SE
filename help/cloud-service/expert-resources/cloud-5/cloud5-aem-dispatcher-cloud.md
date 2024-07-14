@@ -1,6 +1,6 @@
 ---
 title: Använda Dispatcher i molnet
-description: Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
+description: Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några bästa metoder och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Använda Dispatcher i molnet
 
-Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några metodtips och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
+Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några bästa metoder och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
 

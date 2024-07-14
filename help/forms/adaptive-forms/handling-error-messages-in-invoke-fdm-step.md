@@ -26,7 +26,7 @@ Från och med AEM Forms 6.5.1 har vi nu möjlighet att samla in felmeddelanden o
 * Ange en kryssruta för att anpassa arbetsflödets körning. Användaren kan nu alltså gå vidare med arbetsflödeskörningen, även om steget Anropa formulärdatamodell genererar undantag.
 
 * Lagra viktig information om fel som uppstått på grund av valideringsundantag. Tre variabelväljare av typen Autocomplete har införlivats för att välja relevanta variabler för lagring av ErrorCode(String), ErrorMessage(String) och ErrorDetails(JSON). ErrorDetails ställs dock in på null om undantaget inte är ett DermisValidationException.
-  ![hämta felmeddelanden](assets/fdm-error-details.PNG)
+  ![fångar felmeddelanden](assets/fdm-error-details.PNG)
 
 Med de här ändringarna kontrollerar steget Anropa formulärdatamodelltjänst att indatavärdena följer databegränsningarna i swagger-filen. Följande felmeddelande visas till exempel när värdena accountId och balance inte är kompatibla med de databegränsningar som anges i swagger-filen.
 

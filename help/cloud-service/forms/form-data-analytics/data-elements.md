@@ -28,10 +28,10 @@ I taggegenskapen lade vi till två nya dataelement (ApplicantsStateOfResidence o
 
 ## SökandeRegionVaraktighet
 
-The **SökandeRegionVaraktighet** dataelement konfigurerades genom att markera **Core** i listrutan för tillägg och **Egen kod** för dataelementtypen enligt skärmbilden nedan
+Dataelementet **ContactStateOfResidence** konfigurerades genom att välja **Core** i listrutan för tillägg och **Anpassad kod** för dataelementtypen enligt skärmbilden nedan
 ![sökande-stat-bosättning](assets/applicantstateofresidence.png)
 
-Följande anpassade kod användes för att hämta värdet från **_läge_** adaptivt formulärfält.
+Följande anpassade kod användes för att hämta värdet från det adaptiva formulärfältet **_state_**.
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -43,11 +43,11 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-The **ValidationError** dataelement konfigurerades genom att markera **Core** i listrutan för tillägg och **Egen kod** för dataelementtypen enligt skärmbilden nedan
+Dataelementet **ValidationError** konfigurerades genom att välja **Core** i den nedrullningsbara listan över tillägg och **Anpassad kod** för dataelementtypen enligt bilden nedan
 
 ![validation-error](assets/validation-error.png)
 
-Följande anpassade kod skrevs för att ställa in `validationError` dataelementvärde.
+Följande anpassade kod skrevs för att ange dataelementvärdet `validationError`.
 
 ```javascript
 var validationError = "";

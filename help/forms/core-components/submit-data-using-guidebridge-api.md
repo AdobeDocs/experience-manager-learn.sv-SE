@@ -70,7 +70,7 @@ Följande JavaScript-funktion skrevs för att skicka data till den angivna slutp
 
 ## Kod på serversidan
 
-Följande Java-kod på serversidan har skrivits för att hantera formulärdata. Följande Java-server körs i AEM som anropas via XHR-anropet i ovanstående JavaScript.
+Följande Java-kod på serversidan har skrivits för att hantera formulärdata. Nedan följer den Java-server som körs i AEM som anropas via XHR-anropet i ovanstående JavaScript.
 
 ```java
 package com.azuredemo.core.servlets;

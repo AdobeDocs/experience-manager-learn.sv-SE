@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Forms CS innehåller en färdig åtgärd för att lagra formulärdata i Azure, men den har inte möjlighet att skapa blobindextaggar på blobben. För att tillgodose användningsfallet skapades en anpassad skicka-tjänst för att lagra skickade data i Azure och skapa datataggar för blobbindex med hjälp av de fält som markerats som sökbara i formuläret.
 
-[Här finns ett exempel på en anpassad överföringshanterare för grundläggande komponentbaserad adaptiv form](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Följande anpassade sändning har skrivits för att hantera formuläröverföringen
+[Här finns ett exempel på en anpassad hanterare för att skicka kärnkomponenter baserat på adaptiv form.](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Följande anpassade sändning har skrivits för att hantera formuläröverföringen
 
 ```java
 package com.aemforms.saveandfecthfromazure.prefill;

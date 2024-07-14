@@ -28,7 +28,7 @@ Aktivera anpassade resurstyper för listning i AEMForms-portalen
 
 ## Ange grundsökväg {#specify-base-path}
 
-Bassökvägen är databassökvägen på den översta nivån som innehåller alla resurser som en användare kan vilja visa i söknings- och listkomponenten. Om så önskas kan användaren även konfigurera specifika platser i bassökvägen från dialogrutan för komponentredigering, så att sökningen utlöses på specifika platser i stället för att söka igenom alla noder i bassökvägen. Som standard används grundsökvägen som sökvägskriterier för att hämta resurserna, såvida inte användaren konfigurerar en uppsättning specifika sökvägar från den här platsen. Det är viktigt att du har ett optimalt värde för den här sökvägen för att kunna göra en prestandasökning. Standardvärdet för bassökvägen förblir som **_/content/dam/formSanddocuments_** eftersom alla AEM Forms-resurser finns i **_/content/dam/formSanddocuments._**
+Bassökvägen är databassökvägen på den översta nivån som innehåller alla resurser som en användare kan vilja visa i söknings- och listkomponenten. Om så önskas kan användaren även konfigurera specifika platser i bassökvägen från dialogrutan för komponentredigering, så att sökningen utlöses på specifika platser i stället för att söka igenom alla noder i bassökvägen. Som standard används grundsökvägen som sökvägskriterier för att hämta resurserna, såvida inte användaren konfigurerar en uppsättning specifika sökvägar från den här platsen. Det är viktigt att du har ett optimalt värde för den här sökvägen för att kunna göra en prestandasökning. Standardvärdet för bassökvägen förblir **_/content/dam/formSanddocuments_** eftersom alla AEM Forms-resurser finns i **_/content/dam/formSanddocuments._**
 
 Steg för att konfigurera bassökvägen
 
@@ -44,7 +44,7 @@ Steg för att konfigurera bassökvägen
 1. Ändra värdet för egenskapen path till **/content/dam**
 1. Klicka på Spara
 
-Genom att ange egenskapen path till **/content/dam** Du anger i princip Bas-sökvägen till /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
+Genom att ange egenskapen path till **/content/dam** anger du i princip Base Path till /content/dam. Du kan verifiera detta genom att öppna komponenten Sök och Lister.
 
 ![basepath](assets/basepath.png)
 
@@ -59,12 +59,12 @@ Vi har lagt till en ny flik (Resurslista) i sök- och listkomponenten. På den h
 
 **Steg för att registrera en anpassad resurstyp**
 
-1. Skapa överläggsnod av **/libs/fd/fp/extensions/querybuilder/assettypes**
+1. Skapa övertäckningsnod för **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. Ställ in övertäckningsplatsen till &quot;/apps&quot;
-1. Navigera till den nya strukturen som skapades på `/apps/fd/fp/extensions/querybuilder/assettypes`
+1. Navigera till den nya strukturen som skapades `/apps/fd/fp/extensions/querybuilder/assettypes`
 
-1. Skapa en nod av typen &quot;nt:unStructed&quot; under den här platsen för den typ som ska registreras, namnge noden **mp4files. Lägg till följande två egenskaper i den här mp4files-noden**
+1. Under den här platsen skapar du en nod av typen &quot;nt:unstructed&quot; för den typ som ska registreras och ger noden namnet **mp4files. Lägg till följande två egenskaper i den här mp4files-noden**
 
    1. Lägg till jcr:title-egenskap för att ange resurstypens visningsnamn. Ställ in värdet för jcr:title på &quot;Mp4 Files&quot;.
    1. Lägg till egenskapen type och ange värdet till videos. Det här är värdet som vi använder i vår mall för att lista resurser av typen videor. Spara ändringarna.
@@ -85,6 +85,6 @@ När du har utfört stegen ovan börjar den nya resurstypen (Mp4-filer) visas i 
 
 ![mp4files](assets/mp4files.png)
 
-[Om du har problem med att få det att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tittar på **/apps/fd/fp/extensions/querybuilder/assettypes**
+[Om du har problem med att få det här att fungera kan du importera följande paket.](assets/assettypeskt1.zip) Paketet har två anpassade resurstyper definierade. MP4-filer och Word-dokument. Föreslå att du tittar på **/apps/fd/fp/extensions/querybuilder/assettypes**
 
 [Installera det anpassade portalpaketet](assets/customportalpage.zip). Paketet innehåller exempel på portalsida. Den här sidan används i del 2 av den här självstudien

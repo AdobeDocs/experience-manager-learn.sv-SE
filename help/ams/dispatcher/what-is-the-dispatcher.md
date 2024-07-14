@@ -1,6 +1,6 @@
 ---
 title: Vad är "The Dispatcher"?
-description: Förstå vad en Dispatcher egentligen är.
+description: Förstå vad en Dispatcher faktiskt är.
 version: 6.5
 topic: Administration
 feature: Dispatcher
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 [Innehållsförteckning](./overview.md)
 
-Börja med den grundläggande beskrivningen av vad som medför en AEM Dispatcher.
+Börja med den grundläggande beskrivningen av vad som innebär en AEM Dispatcher.
 
 ## Apache Web Server
 
@@ -29,7 +29,7 @@ Börja med en grundläggande installation av Apache Web Server på en Linux-serv
 
 Grundläggande förklaring av vad en Apache-server gör:
 
-- Följ enkla regler för att skicka filer över HTTP(s)-protokollen från dess statiska dokumentkatalog (`DocumentRoot`)
+- Följer enkla regler för att hantera filer över HTTP(s)-protokoll från dess statiska dokumentkatalog (`DocumentRoot`)
 - Filer som lagras på en standardplats (`/var/www/html`) matchas på begäranden och återges i den begärande klientens webbläsare
 
 
@@ -37,12 +37,12 @@ Grundläggande förklaring av vad en Apache-server gör:
 
 ## AEM specifik modulfil (`mod_dispatcher.so`)
 
-Lägg sedan till ett plugin-program till Apache-webbservern som kallas Dispatcher-modulen
+Lägg sedan till ett plugin-program till webbservern Apache som kallas Dispatcher-modulen
 
-Grundläggande förklaring av vad gör Adobe AEM Dispatcher-modulen:
+Grundläggande förklaring av vad Dispatcher-modulen Adobe AEM gör:
 
 - Utökar standardfilhanteraren
-- Filtrerar bort felaktiga begäranden/Skyddar AEM mjuk näsa/slutpunkter
+- Filtrerar bort felaktiga begäranden/Skyddar AEM mjuka nudd/slutpunkter
 - Läs in saldon om det finns mer än en renderare
 - Tillåter en cachekatalog i realtid/stöder tömning av mellanlagringsfiler
 - Det är ytterdörren till alla AMS-installationer och levererar webbplatser och material till klientens webbläsare
@@ -65,7 +65,7 @@ End User's Browser request
                     → End User
 ```
 
-<b>Färskt innehåll från AEM</b>
+<b>Serverar nytt innehåll från AEM</b>
 
 ```
 End User's Browser request 
@@ -78,7 +78,7 @@ End User's Browser request
                             → End User
 ```
 
-<b>Publicera och ändra innehåll</b>
+<b>Innehållspublicering/ändringar</b>
 
 ```
 AEM Author User activates content 

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att köra och tolka utdata från AEM Forms PDFG System Readiness Tool
 
-*I den här videon går vi igenom processen att köra och tolka utdata från AEM Forms PDFG System Readiness Tool (SRT).*
+*Den här videon går igenom processen att köra och tolka utdata från AEM Forms PDFG System Readiness Tool (SRT).*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335543?quality=12&learn=on)

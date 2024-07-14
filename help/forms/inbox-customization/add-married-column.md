@@ -79,15 +79,15 @@ return isMarried(inboxItem);
 
 ## Testa på servern
 
-* [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
+* [Logga in AEM webbkonsolen](http://localhost:4502/system/console/bundles)
 * [Distribuera och starta anpassningspaketet för inkorgen](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [Öppna din inkorg](http://localhost:4502/aem/inbox)
-* Öppna administrationskontrollen genom att klicka på _Listvy_ ikon bredvid _Skapa_ knapp
+* Öppna administrationskontrollen genom att klicka på ikonen _Listvy_ bredvid knappen _Skapa_
 * Lägg till en gift kolumn i Inkorgen och spara ändringarna
-* [Gå till användargränssnittet för FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Importera exempelformuläret](assets/snap-form.zip) genom att välja _Filöverföring_ från _Skapa_ meny
+* [Gå till gränssnittet FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Importera exempelformuläret](assets/snap-form.zip) genom att välja _Filöverföring_ på menyn _Skapa_
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Välj _civilstånd_ och skicka in formuläret
+* Välj _civilstånd_ och skicka formuläret
   [visa inkorg](http://localhost:4502/aem/inbox)
 
 Om du skickar formuläret kommer arbetsflödet att utlösas och en uppgift tilldelas&quot;admin&quot;-användaren. Du bör se ett värde under kolumnen Gift, vilket visas i skärmbilden

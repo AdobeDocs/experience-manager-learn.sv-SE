@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM GraphQL-frågor utan rubriker kan returnera stora resultat. I den här artikeln beskrivs hur du arbetar med stora resultat i AEM Headless för att få bästa prestanda för ditt program.
 
-AEM Headless stöder [offset/limit](#list-query) och [markörbaserad sidnumrering](#paginated-query) frågor till mindre delmängder av en större resultatmängd. Flera förfrågningar kan göras för att samla in så många resultat som behövs.
+AEM Headless har stöd för en [offset/limit](#list-query) - och [markörbaserad sidnumrering](#paginated-query) -frågor till mindre delmängder av en större resultatmängd. Flera förfrågningar kan göras för att samla in så många resultat som behövs.
 
 I exemplen nedan används små delmängder av resultat (fyra poster per begäran) för att demonstrera teknikerna. I ett verkligt program skulle du använda ett större antal poster per begäran för att förbättra prestandan. 50 poster per begäran är en bra baslinje.
 
@@ -37,7 +37,7 @@ När du arbetar med stora datauppsättningar kan både förskjutning, begränsni
 
 ### Förskjutning/gräns
 
-Listfrågor, använda `limit` och `offset` erbjuder en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
+Listfrågor där `limit` och `offset` används ger en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
 
 #### GraphQL query
 
@@ -65,7 +65,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 #### GraphQL svar
 
-Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500` så [listfråga](#list-queries) anger att äventyr med samma pris sedan sorteras efter titel i stigande ordning.)
+Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500`), så [listfrågan](#list-queries) anger äventyren med samma pris sorteras sedan efter rubrik i stigande ordning.)
 
 ```json
 {
@@ -100,7 +100,7 @@ Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte me
 
 ### Sidnumrerad fråga
 
-Markörbaserad sidnumrering, som är tillgänglig i sidnumrerade frågor, innebär att du använder en markör (en referens till en viss post) för att hämta nästa resultatuppsättning. Det här arbetssättet är effektivare eftersom det inte behövs någon genomsökning av alla tidigare poster för att hämta den datadeluppsättning som krävs. Sidnumrerade frågor fungerar bra för att iterera genom stora resultatuppsättningar från början, till en punkt i mitten eller till slutet. Listfrågor, använda `limit` och `offset` erbjuder en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
+Markörbaserad sidnumrering, som är tillgänglig i sidnumrerade frågor, innebär att du använder en markör (en referens till en viss post) för att hämta nästa resultatuppsättning. Det här arbetssättet är effektivare eftersom det inte behövs någon genomsökning av alla tidigare poster för att hämta den datadeluppsättning som krävs. Sidnumrerade frågor fungerar bra för att iterera genom stora resultatuppsättningar från början, till en punkt i mitten eller till slutet. Listfrågor där `limit` och `offset` används ger en enkel metod som anger startpunkten (`offset`) och antalet poster som ska hämtas (`limit`). Med den här metoden kan du välja en delmängd av resultaten var som helst i den fullständiga resultatuppsättningen, till exempel hoppa till en viss resultatsida. Det är enkelt att implementera, men det kan vara långsamt och ineffektivt när du hanterar stora resultat, eftersom det krävs genomsökning av alla föregående poster för att hämta många poster. Den här metoden kan också leda till prestandaproblem när förskjutningsvärdet är högt, eftersom många resultat kan behöva hämtas och tas bort.
 
 #### GraphQL query
 
@@ -134,7 +134,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### GraphQL svar
 
-Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500` så [listfråga](#list-queries) anger att äventyr med samma pris sedan sorteras efter titel i stigande ordning.)
+Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte mest kostsamma äventyret. De första två äventyren i resultatet har samma pris (`4500`), så [listfrågan](#list-queries) anger äventyren med samma pris sorteras sedan efter rubrik i stigande ordning.)
 
 ```json
 {
@@ -177,7 +177,7 @@ Det resulterande JSON-svaret innehåller det andra, tredje, fjärde och femte me
 
 #### Nästa uppsättning sidnumrerade resultat
 
-Nästa resultatuppsättning kan hämtas med `after` -parametern och `endCursor` från föregående fråga. Om det inte finns fler resultat att hämta, `hasNextPage` är `false`.
+Nästa resultatuppsättning kan hämtas med parametern `after` och värdet `endCursor` från föregående fråga. Om det inte finns fler resultat att hämta är `hasNextPage` `false`.
 
 ##### Frågevariabler
 
@@ -190,7 +190,7 @@ Nästa resultatuppsättning kan hämtas med `after` -parametern och `endCursor` 
 
 ## Reaktionsexempel
 
-Följande är React-exempel som visar hur du använder [offset och limit](#offset-and-limit) och [markörbaserad sidnumrering](#cursor-based-pagination) metoder. Vanligtvis är antalet resultat per begäran större, men för dessa exempel är gränsen satt till 5.
+Följande är React-exempel som visar hur du använder metoderna [offset och limit](#offset-and-limit) och [markörbaserad sidnumrering](#cursor-based-pagination). Vanligtvis är antalet resultat per begäran större, men för dessa exempel är gränsen satt till 5.
 
 ### Exempel på förskjutning och begränsning
 
@@ -200,7 +200,7 @@ Med förskjutning och begränsning kan delmängder av resultat enkelt hämtas oc
 
 #### useEffect-krok
 
-The `useEffect` krok anropar en beständig fråga (`adventures-by-offset-and-limit`) som hämtar en lista med annonser. Frågan använder `offset` och `limit` parametrar för att ange startpunkten och antalet resultat som ska hämtas. The `useEffect` kroken anropas när `page` värdeändringar.
+Koppeln `useEffect` anropar en beständig fråga (`adventures-by-offset-and-limit`) som hämtar en lista med annonser. Frågan använder parametrarna `offset` och `limit` för att ange startpunkten och antalet resultat som ska hämtas. Haken `useEffect` anropas när värdet `page` ändras.
 
 
 ```javascript
@@ -243,7 +243,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### Komponent
 
-Komponenten använder `useOffsetLimitAdventures` krok för att hämta en lista med annonser. The `page` värdet ökas och minskas för att hämta nästa och föregående resultatuppsättning. The `hasMore` -värdet används för att bestämma om knappen för nästa sida ska aktiveras.
+Komponenten använder kroken `useOffsetLimitAdventures` för att hämta en lista med annonser. Värdet `page` ökas och minskas för att hämta nästa och föregående resultatuppsättning. Värdet `hasMore` används för att avgöra om knappen för nästa sida ska aktiveras.
 
 ```javascript
 import { useState } from "react";
@@ -312,7 +312,7 @@ Med markörbaserad sidnumrering kan du enkelt hämta och visa stora resultatupps
 
 #### UseEffect-krok
 
-The `useEffect` krok anropar en beständig fråga (`adventures-by-paginated`) som hämtar en lista med annonser. Frågan använder `first` och `after` parametrar för att ange antalet resultat som ska hämtas och från vilken markör. `fetchData` hela tiden slingor, som samlar in nästa uppsättning numrerade resultat, tills det inte finns några fler resultat att hämta.
+Koppeln `useEffect` anropar en beständig fråga (`adventures-by-paginated`) som hämtar en lista med annonser. Frågan använder parametrarna `first` och `after` för att ange antalet resultat som ska hämtas och markören som ska börja från. `fetchData` gör kontinuerliga slingor och samlar in nästa uppsättning sidnumrerade resultat tills det inte finns fler resultat att hämta.
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -367,7 +367,7 @@ export function usePaginatedAdventures() {
 
 #### Komponent
 
-Komponenten använder `usePaginatedAdventures` krok för att hämta en lista med annonser. The `queryCount` -värdet används för att visa antalet HTTP-begäranden som gjorts för att hämta listan över annonser.
+Komponenten använder kroken `usePaginatedAdventures` för att hämta en lista med annonser. Värdet `queryCount` används för att visa antalet HTTP-begäranden som har gjorts för att hämta listan med annonser.
 
 ```javascript
 import { useState } from "react";

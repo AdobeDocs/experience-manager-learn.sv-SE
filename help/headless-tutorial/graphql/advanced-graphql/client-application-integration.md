@@ -19,11 +19,11 @@ ht-degree: 0%
 
 I föregående kapitel skapade och uppdaterade du beständiga frågor med GraphiQL Explorer.
 
-I det här kapitlet beskrivs de olika stegen för att integrera de beständiga frågorna med WKND-klientprogrammet (även WKND App) med HTTP-GET-begäranden i befintliga **Reagera på komponenter**. Det är också en valfri utmaning att använda dina AEM Headless-kunskaper och kodningskunskaper för att förbättra WKND-klientapplikationen.
+I det här kapitlet får du hjälp med att integrera de beständiga frågorna med WKND-klientprogrammet (även WKND App) med HTTP-GET-begäranden i befintliga **React-komponenter**. Det är också en valfri utmaning att använda dina AEM Headless-kunskaper och kodningskunskaper för att förbättra WKND-klientapplikationen.
 
 ## Förutsättningar {#prerequisites}
 
-Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att föregående kapitel har fyllts i innan du fortsätter med det här kapitlet. WKND-klientprogrammet ansluter till AEM publiceringstjänst, så det är viktigt att du **publicerade följande till AEM publiceringstjänst**.
+Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att föregående kapitel har fyllts i innan du fortsätter med det här kapitlet. WKND-klientprogrammet ansluter till AEM publiceringstjänst, så det är viktigt att du **har publicerat följande till den AEM publiceringstjänsten**.
 
 * Projektkonfigurationer
 * GraphQL slutpunkter
@@ -31,32 +31,32 @@ Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att
 * Skapat innehåll
 * GraphQL beständiga frågor
 
-The _Skärmbilder från IDE i det här kapitlet kommer från [Visual Studio Code](https://code.visualstudio.com/)_
+Skärmbilderna _IDE i det här kapitlet kommer från [Visual Studio-kod](https://code.visualstudio.com/)_
 
 ### Kapitel 1-4 Lösningspaket (valfritt) {#solution-package}
 
-Det finns ett lösningspaket som kan installeras och som slutför stegen i AEM för kapitel 1-4. Det här paketet är **behövs inte** om föregående kapitel har fyllts i.
+Det finns ett lösningspaket som kan installeras och som slutför stegen i AEM för kapitel 1-4. Det här paketet behövs **inte** om de föregående kapitlen har slutförts.
 
-1. Ladda ned [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
-1. I AEM navigerar du till **verktyg** > **Distribution** > **Paket** för åtkomst **Pakethanteraren**.
+1. Hämta [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
+1. I AEM går du till **Verktyg** > **Distribution** > **Paket** för att komma åt **Pakethanteraren**.
 1. Ladda upp och installera det paket (zip-fil) som laddats ned i föregående steg.
-1. Replikera paketet till AEM
+1. Replikera paketet till AEM Publish-tjänst
 
 ## Mål {#objectives}
 
-I den här självstudiekursen får du lära dig hur du integrerar begäranden om beständiga frågor i exempelappen WKND GraphQL React med [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js).
+I den här självstudiekursen får du lära dig hur du integrerar begäranden om beständiga frågor i exempelappen WKND GraphQL React med [AEM Headless Client för JavaScript](https://github.com/adobe/aem-headless-client-js).
 
 ## Klona och kör exempelklientprogrammet {#clone-client-app}
 
 För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
-1. Klona [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) databas:
+1. Klona databasen [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql):
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Redigera `aem-guides-wknd-graphql/advanced-tutorial/.env.development` fil och ange `REACT_APP_HOST_URI` för att peka på AEM publiceringstjänst.
+1. Redigera filen `aem-guides-wknd-graphql/advanced-tutorial/.env.development` och ställ in `REACT_APP_HOST_URI` så att den pekar på AEM.
 
    Uppdatera autentiseringsmetoden om du ansluter till en författarinstans.
 
@@ -79,12 +79,12 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
    REACT_APP_BASIC_AUTH_PASS=
    ```
 
-   ![Reagera App Development Environment](assets/client-application-integration/react-app-dev-env-settings.png)
+   ![React App Development Environment](assets/client-application-integration/react-app-dev-env-settings.png)
 
 
    >[!NOTE]
    > 
-   > Instruktionerna ovan är att ansluta React-appen till **AEM Publiceringstjänst**, men ansluta till **AEM Author Service** hämta en lokal utvecklingstoken för AEM as a Cloud Service målmiljö.
+   > Ovanstående instruktioner är att ansluta React-appen till **AEM Publish-tjänsten**, men om du vill ansluta till **AEM Author-tjänsten** får du en lokal utvecklingstoken för AEM as a Cloud Service-målmiljön.
    >
    > Det går också att ansluta appen till en [lokal författarinstans med AEMaaCS SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) med grundläggande autentisering.
 
@@ -97,66 +97,66 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
    $ npm start
    ```
 
-1. Ett nytt webbläsarfönster ska läsas in [http://localhost:3000](http://localhost:3000)
+1. Ett nytt webbläsarfönster ska läsas in på [http://localhost:3000](http://localhost:3000)
 
 
-1. Tryck **Camping** > **Yosemite Backpackaging** om du vill visa Yosemite Backpackaging-presentationsinformation.
+1. Tryck på **Camping** > **Yosemite Backpackaging** för att visa Yosemite Backpackaging-äventyrsinformation.
 
    ![Yosemite Backpackaging Screen](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
-1. Öppna webbläsarens utvecklarverktyg och kontrollera `XHR` förfrågan
+1. Öppna webbläsarens utvecklarverktyg och granska `XHR`-begäran
 
    ![POST GraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
-   Du borde se `GET` begäranden till GraphQL-slutpunkten med projektkonfigurationsnamn (`wknd-shared`), beständigt frågenamn (`adventure-by-slug`), variabelnamn (`slug`), värde (`yosemite-backpacking`) och specialteckenkodningar.
+   Du bör se `GET` begäranden till GraphQL-slutpunkten med projektkonfigurationsnamn (`wknd-shared`), beständigt frågenamn (`adventure-by-slug`), variabelnamn (`slug`), värde (`yosemite-backpacking`) och specialteckenkodningar.
 
 >[!IMPORTANT]
 >
->    Om du undrar varför GraphQL API-begäran görs mot `http://localhost:3000` och INTE mot AEM Publish Service-domän, granska [Under hålet](../multi-step/graphql-and-react-app.md#under-the-hood) från Grundläggande självstudiekurs.
+>    Om du undrar varför GraphQL API-begäran görs mot `http://localhost:3000` och INTE mot AEM Publish tjänstdomän kan du gå igenom [Under språkversionen](../multi-step/graphql-and-react-app.md#under-the-hood) från den grundläggande självstudiekursen.
 
 
 ## Granska koden
 
-I [Grundläggande självstudiekurs - Bygg en React-app som använder AEM GraphQL API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) steg som vi granskat och förbättrat några viktiga filer för att få expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
+I [den grundläggande självstudiekursen - Bygg en React-app där vi AEM GraphQL API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) steg som vi granskat och förbättrat några nyckelfiler för att få praktisk expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
 
 * [Granska objektet AEMHeadless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
 
 * [Implementera för att köra AEM GraphQL beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
 
-### Granska `Adventures` Reaktionskomponent
+### Granska `Adventures`-reaktionskomponent
 
-Huvudvyn i appen WKND React är listan över alla annonser och du kan filtrera dessa annonser baserat på aktivitetstyp som _Camping, Cycling_. Den här vyn återges av `Adventures` -komponenten. Nedan finns de viktigaste implementeringsdetaljerna:
+Huvudvyn i appen WKND React är listan över alla annonser och du kan filtrera dessa annonser baserat på aktivitetstyp som _Camping, Cycling_. Den här vyn återges av komponenten `Adventures`. Nedan finns de viktigaste implementeringsdetaljerna:
 
-* The `src/components/Adventures.js` samtal `useAllAdventures(adventureActivity)` krok och här `adventureActivity` argument är aktivitetstyp.
+* `src/components/Adventures.js` anropar `useAllAdventures(adventureActivity)`-kroken och här `adventureActivity`-argumentet är aktivitetstyp.
 
-* The `useAllAdventures(adventureActivity)` kroken definieras i `src/api/usePersistedQueries.js` -fil. Baserat på `adventureActivity` värdet avgör det vilken beständig fråga som ska anropas. Om värdet inte är null anropas `wknd-shared/adventures-by-activity`, annars får du alla tillgängliga äventyr `wknd-shared/adventures-all`.
+* Koppeln `useAllAdventures(adventureActivity)` definieras i filen `src/api/usePersistedQueries.js`. Baserat på värdet `adventureActivity` avgör det vilken beständig fråga som ska anropas. Om värdet inte är null anropas `wknd-shared/adventures-by-activity`, annars får alla tillgängliga äventyr `wknd-shared/adventures-all`.
 
-* Haken använder huvudsidan `fetchPersistedQuery(..)` funktion som delegerar frågekörningen till `AEMHeadless` via `aemHeadlessClient.js`.
+* Haken använder huvudfunktionen `fetchPersistedQuery(..)` som delegerar frågekörningen till `AEMHeadless` via `aemHeadlessClient.js`.
 
-* Haken returnerar också endast relevanta data från AEM GraphQL-svar vid `response.data?.adventureList?.items`, som tillåter `Adventures` Reaktionsvykomponenter som är agnostiska för de överordnade JSON-strukturerna.
+* Haken returnerar bara relevanta data från det AEM GraphQL-svaret på `response.data?.adventureList?.items`, vilket gör att komponenterna i vyn `Adventures` kan vara agnostiska för de överordnade JSON-strukturerna.
 
-* När frågan har körts `AdventureListItem(..)` återgivningsfunktion från `Adventures.js` lägger till HTML-element för att visa _Bild, klipplängd, pris och titel_ information.
+* Vid slutförd frågekörning lägger renderingsfunktionen `AdventureListItem(..)` från `Adventures.js` till HTML-element för att visa information om _Bild, Trip Length, Price och Title_.
 
-### Granska `AdventureDetail` Reaktionskomponent
+### Granska `AdventureDetail`-reaktionskomponent
 
-The `AdventureDetail` Reaktionskomponenten återger detaljer om äventyret. Nedan finns de viktigaste implementeringsdetaljerna:
+Reaktionskomponenten `AdventureDetail` återger informationen om äventyret. Nedan finns de viktigaste implementeringsdetaljerna:
 
-* The `src/components/AdventureDetail.js` samtal `useAdventureBySlug(slug)` krok och här `slug` argument är frågeparameter.
+* Argumentet `src/components/AdventureDetail.js` anropar `useAdventureBySlug(slug)`-krok och här `slug` är frågeparameter.
 
-* Precis som ovan, `useAdventureBySlug(slug)` kroken definieras i `src/api/usePersistedQueries.js` -fil. Det ringer `wknd-shared/adventure-by-slug` beständig fråga genom delegering till `AEMHeadless` via `aemHeadlessClient.js`.
+* Precis som ovan definieras kroken `useAdventureBySlug(slug)` i filen `src/api/usePersistedQueries.js`. Den anropar `wknd-shared/adventure-by-slug` beständig fråga genom delegering till `AEMHeadless` via `aemHeadlessClient.js`.
 
-* När frågan har körts `AdventureDetailRender(..)` återgivningsfunktion från `AdventureDetail.js` lägger till elementet HTML för att visa Adventure-informationen.
+* När frågan har körts lägger återgivningsfunktionen `AdventureDetailRender(..)` från `AdventureDetail.js` till elementet HTML för att visa Adventure-informationen.
 
 
 ## Förbättra koden
 
 ### Använd `adventure-details-by-slug` beständig fråga
 
-I föregående kapitel skapade vi `adventure-details-by-slug` beständig fråga, ger ytterligare Adventure-information som _plats, instruktörsgrupp och administratör_. Låt oss ersätta `adventure-by-slug` med `adventure-details-by-slug` beständig fråga för att återge denna ytterligare information.
+I det föregående kapitlet skapade vi den `adventure-details-by-slug` beständiga frågan, som innehåller ytterligare Adventure-information som _location, instructorTeam och administrator_. Låt oss ersätta `adventure-by-slug` med `adventure-details-by-slug` beständig fråga för att återge denna ytterligare information.
 
 1. Öppna `src/api/usePersistedQueries.js`.
 
-1. Leta reda på funktionen `useAdventureBySlug()` och uppdatera fråga som
+1. Leta reda på funktionen `useAdventureBySlug()` och uppdatera frågan som
 
 ```javascript
  ...
@@ -285,7 +285,7 @@ I föregående kapitel skapade vi `adventure-details-by-slug` beständig fråga,
 
 ### Definiera nya format
 
-1. Öppna `src/components/AdventureDetail.scss` och lägga till följande klassdefinitioner
+1. Öppna `src/components/AdventureDetail.scss` och lägg till följande klassdefinitioner
 
    ```CSS
    .adventure-detail-administrator,
@@ -304,19 +304,19 @@ I föregående kapitel skapade vi `adventure-details-by-slug` beständig fråga,
 
 >[!TIP]
 >
->De uppdaterade filerna är tillgängliga under **AEM Guides WKND - GraphQL** projekt, se [Avancerad självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) -avsnitt.
+>De uppdaterade filerna är tillgängliga under **AEM Guides WKND - GraphQL** -projektet, se avsnittet [Avancerad självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial).
 
 
-När du är klar med ovanstående förbättringar ser WKND-appen ut så här nedan och webbläsarens utvecklarverktyg visar `adventure-details-by-slug` beständig fråga.
+När du har slutfört förbättringarna ovan ser WKND-appen ut så här nedan och webbläsarens utvecklarverktyg visar `adventure-details-by-slug` beständiga frågeanrop.
 
 ![Förbättrad WKND-APP](assets/client-application-integration/Enhanced-WKND-APP.gif)
 
 ## Utökad utmaning (valfritt)
 
-I huvudvyn i appen WKND React kan du filtrera dessa annonser baserat på aktivitetstyp som _Camping, Cycling_. WKND:s affärsteam vill dock ha en extra _Plats_ baserad filtreringsfunktion. Kraven är
+I huvudvyn i appen WKND React kan du filtrera dessa annonser baserat på aktivitetstyp som _Camping, Cycling_. WKND:s affärsteam vill dock ha en extra _Location_-baserad filtreringsfunktion. Kraven är
 
-* Lägg till i det övre vänstra eller högra hörnet i WKND-appens huvudvy _Plats_ filtreringsikon.
-* Klicka _Plats_ filtreringsikonen ska visa en lista med platser.
+* I huvudvyn för WKND-programmet lägger du till filterikonen _Plats_ i det övre vänstra eller högra hörnet.
+* Om du klickar på _Plats_-filtreringsikonen visas en lista med platser.
 * Om du klickar på ett önskat platsalternativ i listan visas endast matchande annonser.
 * Om det bara finns en matchande Adventure visas Adventure Details-vyn.
 

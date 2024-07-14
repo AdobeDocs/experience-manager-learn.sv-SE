@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Baslinjebehörigheter
 
-Hantera användaråtkomst på [originalresursmappar](./baseline-folders.md) är en viktig aspekt i styrningen och säkerställer att processerna kan stödjas på rätt sätt.
+Hantering av användaråtkomst på [basresursmapparna](./baseline-folders.md) är en viktig aspekt när det gäller styrning och säkerställer att processerna stöds på rätt sätt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)

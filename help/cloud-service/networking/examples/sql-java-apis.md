@@ -1,6 +1,6 @@
 ---
 title: SQL-anslutningar med Java™ API:er
-description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Service med hjälp av Java™ SQL API:er och utgångsportar.
+description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Service med Java™ SQL API:er och utgångsportar.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste vara AEM.
 
-Undantaget till den här regeln är när [IP-adress för dedikerad egress](../dedicated-egress-ip-address.md) används och tjänsten finns på Adobe eller Azure.
+Undantaget till den här regeln är när [den dedikerade IP-adressen](../dedicated-egress-ip-address.md) används och tjänsten är på Adobe eller Azure.
 
 ## Avancerat nätverksstöd
 
 Följande kodexempel stöds av följande avancerade nätverksalternativ.
 
-Kontrollera att [lämplig](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
+Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) avancerade nätverkskonfigurationen har konfigurerats innan du följer den här självstudien.
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -35,7 +35,7 @@ Kontrollera att [lämplig](../advanced-networking.md#advanced-networking) avance
 
 ## OSGi-konfiguration
 
-Eftersom hemligheter inte får lagras i kod bör du ange SQL-anslutningens användarnamn och lösenord via [hemlig OSGi-konfigurationsvariabel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), anges med API:er för AIO CLI eller Cloud Manager.
+Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API:er.
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 
@@ -46,7 +46,7 @@ Eftersom hemligheter inte får lagras i kod bör du ange SQL-anslutningens anvä
 }
 ```
 
-Följande `aio CLI` kommandot kan användas för att ange OSGi-hemligheter per miljö:
+Följande `aio CLI`-kommando kan användas för att ange OSGi-hemligheter per miljö:
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
@@ -54,7 +54,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern SQL-server via följande Cloud Manager `portForwards` regel för [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) operation.
+Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern SQL-server via följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
 
 ```json
 ...
@@ -151,11 +151,11 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL-drivrutinsberoenden
 
-AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Att tillhandahålla drivrutinerna är oftast bäst om du bäddar in OSGi-paketartefakter som innehåller dessa drivrutiner i AEM-projektet via `all` paket.
+AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Det bästa sättet att tillhandahålla drivrutinerna är oftast att bädda in OSGi-paketartefakter som innehåller de här drivrutinerna i det AEM projektet via paketet `all`.
 
 ### Reaktorprom.xml
 
-Inkludera databasdrivrutinernas beroenden i reaktorn `pom.xml` och sedan referera till dem i `all` delprojekt.
+Inkludera databasdrivrutinernas beroenden i reaktorn `pom.xml` och referera sedan till dem i `all` -delprojekten.
 
 + `pom.xml`
 
@@ -177,7 +177,7 @@ Inkludera databasdrivrutinernas beroenden i reaktorn `pom.xml` och sedan referer
 
 ## Alla pom.xml
 
-Bädda in beroendeartefakter för databasdrivrutiner i `all` till de distribueras och är tillgängliga på AEM as a Cloud Service. Dessa artefakter __måste__ vara OSGi-paket som exporterar Java™-klassen för databasdrivrutinen.
+Bädda in beroendeartefakter för databasdrivrutiner i paketet `all` till de distribueras och är tillgängliga på AEM as a Cloud Service. De här artefakterna __måste__ vara OSGi-paket som exporterar Java™-klassen för databasdrivrutinen.
 
 + `all/pom.xml`
 

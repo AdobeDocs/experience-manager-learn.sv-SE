@@ -19,17 +19,17 @@ ht-degree: 0%
 
 {{aem-headless-trials-promo}}
 
-Den kompletta självstudiekursen fortsätter med [grundläggande självstudiekurs](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och de AEM GraphQL beständiga frågorna, inklusive användning av GraphQL beständiga frågor i ett klientprogram.
+Den här kompletta självstudiekursen fortsätter med den [grundläggande självstudiekursen](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och de AEM GraphQL beständiga frågorna, inklusive användning av GraphQL beständiga frågor i ett klientprogram.
 
 ## Förutsättningar
 
-Slutför [snabbinstallation för AEM as a Cloud Service](../quick-setup/cloud-service.md) för att konfigurera din AEM as a Cloud Service miljö.
+Slutför [snabbinstallationen för AEM as a Cloud Service](../quick-setup/cloud-service.md) för att konfigurera din AEM as a Cloud Service-miljö.
 
-Vi rekommenderar att du slutför föregående [grundläggande självstudiekurs](../multi-step/overview.md) och [videoserie](../video-series/modeling-basics.md) självstudiekurser innan du fortsätter med den här avancerade självstudiekursen. Även om du kan slutföra självstudiekursen i en lokal AEM omfattar den här självstudiekursen bara arbetsflödet för AEM as a Cloud Service.
+Vi rekommenderar att du slutför de tidigare [grundläggande självstudiekurserna](../multi-step/overview.md) och [videoserierna](../video-series/modeling-basics.md) innan du fortsätter med den här avancerade självstudiekursen. Även om du kan slutföra självstudiekursen i en lokal AEM omfattar den här självstudiekursen bara arbetsflödet för AEM as a Cloud Service.
 
 >[!CAUTION]
 >
->Om du inte har tillgång till AEM as a Cloud Service miljö kan du slutföra [AEM Headless-snabbinställning med lokal SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
+>Om du inte har tillgång till AEM as a Cloud Service-miljön kan du slutföra [AEM Headless-snabbinstallationen med den lokala SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
 
 
 
@@ -51,37 +51,37 @@ I följande video visas en översikt på hög nivå över de koncept som beskriv
 
 >[!CAUTION]
 >
->I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. Men i nyare versioner av AEM som Cloud Service är det inbyggda **GraphiQL Explorer** tillhandahålls, vilket innebär att paketinstallation inte krävs. Se [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) för mer information.
+>I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. I senare versioner av AEM som Cloud Service finns dock en inbyggd **GraphiQL Explorer**, vilket innebär att paketinstallation inte krävs. Mer information finns i [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html).
 
 
 ## Projektinställningar
 
-WKND Site-projektet har alla konfigurationer som behövs, så du kan starta självstudiekursen direkt när du har slutfört [snabbinställningar](../quick-setup/cloud-service.md). I det här avsnittet beskrivs bara några viktiga steg som du kan använda när du skapar ett eget AEM Headless-projekt.
+WKND-webbplatsprojektet har alla nödvändiga konfigurationer, så du kan starta självstudiekursen direkt när du har slutfört [snabbinstallationen](../quick-setup/cloud-service.md). I det här avsnittet beskrivs bara några viktiga steg som du kan använda när du skapar ett eget AEM Headless-projekt.
 
 
 ### Granska befintlig konfiguration
 
-Det första steget till att starta ett nytt projekt i AEM är att skapa dess konfiguration, som en arbetsyta och att skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+Det första steget till att starta ett nytt projekt i AEM är att skapa dess konfiguration, som en arbetsyta och att skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
 ![Navigera till Configuration Browser](assets/overview/create-configuration.png)
 
-Observera att `WKND Shared` platskonfiguration har redan skapats för självstudiekursen. Om du vill skapa en konfiguration för ditt eget projekt väljer du **Skapa** i det övre högra hörnet och fyll i formuläret i det modala Create Configuration som visas.
+Observera att webbplatskonfigurationen `WKND Shared` redan har skapats för självstudiekursen. Om du vill skapa en konfiguration för ditt eget projekt väljer du **Skapa** i det övre högra hörnet och fyller i formuläret i Create Configuration modal som visas.
 
 ![Granska WKND-delad konfiguration](assets/overview/review-wknd-shared-configuration.png)
 
 ### Granska GraphQL API-slutpunkter
 
-Sedan måste du konfigurera API-slutpunkter att skicka GraphQL-frågor till. Om du vill granska befintliga slutpunkter eller skapa en går du till **verktyg** > **Allmänt** > **GraphQL**.
+Sedan måste du konfigurera API-slutpunkter att skicka GraphQL-frågor till. Om du vill granska befintliga slutpunkter eller skapa en går du till **Verktyg** > **Allmänt** > **GraphQL**.
 
 ![Konfigurera slutpunkter](assets/overview/endpoints.png)
 
-Observera att `WKND Shared Endpoint` har redan skapats. Om du vill skapa en slutpunkt för projektet väljer du **Skapa** i det övre högra hörnet och följ arbetsflödet.
+Observera att `WKND Shared Endpoint` redan har skapats. Om du vill skapa en slutpunkt för projektet väljer du **Skapa** i det övre högra hörnet och följer arbetsflödet.
 
 ![Granska WKND-delad slutpunkt](assets/overview/review-wknd-shared-endpoint.png)
 
 >[!NOTE]
 >
-> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 
 ### Granska WKND-innehållets struktur och språkets rotmapp
 
@@ -89,15 +89,15 @@ En väldefinierad innehållsstruktur är avgörande för att AEM headless-implem
 
 En språkrotmapp är en mapp med en ISO-språkkod som namn, till exempel EN eller FR. Det AEM översättningshanteringssystemet använder dessa mappar för att definiera det primära språket för ditt innehåll och dina språk för översättning av innehåll.
 
-Gå till **Navigering** > **Resurser** > **Filer**.
+Gå till **Navigering** > **Assets** > **Filer**.
 
 ![Navigera till filer](assets/overview/files.png)
 
-Navigera till **WKND delad** mapp. Lägg märke till mappen med titeln &quot;English&quot; och namnet &quot;EN&quot;. Den här mappen är språkrotmappen för WKND-platsprojektet.
+Gå till mappen **WKND Shared**. Lägg märke till mappen med titeln &quot;English&quot; och namnet &quot;EN&quot;. Den här mappen är språkrotmappen för WKND-platsprojektet.
 
 ![Engelsk mapp](assets/overview/english.png)
 
-Skapa en språkrotmapp i konfigurationen för ditt eget projekt. Se avsnittet om [skapa mappar](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders) för mer information.
+Skapa en språkrotmapp i konfigurationen för ditt eget projekt. Mer information finns i avsnittet [Skapa mappar](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#create-folders).
 
 ### Tilldela en konfiguration till den kapslade mappen
 
@@ -107,7 +107,7 @@ Om du vill tilldela språkets rotmapp till konfigurationen markerar du mappen oc
 
 ![Välj egenskaper](assets/overview/properties.png)
 
-Navigera sedan till **Cloud Service** och väljer mappikonen i **Molnkonfiguration** fält.
+Gå sedan till fliken **Cloud Service** och välj mappikonen i fältet **Cloud-konfiguration** .
 
 ![Molnkonfiguration](assets/overview/cloud-conf.png)
 
@@ -122,17 +122,17 @@ Nedan följer de bästa sätten att skapa egna projekt i AEM:
 
 ## Starter- och lösningspaket
 
-Två AEM **paket** är tillgängliga och kan installeras via [Pakethanteraren](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)
+Två AEM **paket** är tillgängliga och kan installeras via [Package Manager](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md#sample-content)
 
-* [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) används senare i självstudiekursen och innehåller exempelbilder och mappar.
-* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) innehåller den färdiga lösningen för kapitel 1-4 inklusive nya modeller för innehållsfragment, innehållsfragment och beständiga GraphQL-frågor. Användbar för dem som vill hoppa direkt in i [Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) kapitel.
+* [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) används senare i självstudien och innehåller exempelbilder och mappar.
+* [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) innehåller den färdiga lösningen för kapitel 1-4 inklusive nya modeller för innehållsfragment, innehållsfragment och beständiga GraphQL-frågor. Användbar för dem som vill hoppa direkt in i kapitlet [Integrering av klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
 
 
-The [React App - Advanced Tutorial - WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) kan du granska och utforska exempelprogrammet. Det här exempelprogrammet hämtar innehållet från AEM genom att anropa de beständiga GraphQL-frågorna och återger det i en engagerande upplevelse.
+Projektet [React App - Advanced Tutorial - WKND Adventures](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/advanced-tutorial/README.md) är tillgängligt för att granska och utforska exempelprogrammet. Det här exempelprogrammet hämtar innehållet från AEM genom att anropa de beständiga GraphQL-frågorna och återger det i en engagerande upplevelse.
 
 ## Komma igång
 
 Så här kommer du igång med den här avancerade självstudiekursen:
 
 1. Konfigurera en utvecklingsmiljö med [AEM as a Cloud Service](../quick-setup/cloud-service.md).
-1. Starta självstudiekursens kapitel på [Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md).
+1. Starta självstudiekursens kapitel i [Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md).

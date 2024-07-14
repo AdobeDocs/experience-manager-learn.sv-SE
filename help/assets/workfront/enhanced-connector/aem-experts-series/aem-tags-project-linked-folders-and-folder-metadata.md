@@ -23,14 +23,14 @@ ht-degree: 0%
 
 # AEM, projektlänkade mappar och mappmetadata
 
-![AEM Experts Series](./assets/banner.png)
+![AEM expertsserie](./assets/banner.png)
 
 Lär dig hur du använder AEM taggar på resurser via Workfront-data, konfigurerar och använder projektlänkade mappar och Workfront-data för att AEM metadatamappsscheman.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_Del tre av en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
+_Del tre av en [fyra delars expertserie om den utökade anslutningen för Workfront för Experience Manager](./overview.md)_
 
 ## Korrigeringar
 
-+ __@ 4:34 och 6:20__ AEM taggar har fel syntax. Videoskärmar `we-retail:apparel/footwear`. Rätt syntax är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.
++ __@ 4:34 och 6:20__ AEM taggsyntaxen är felaktig. Videon visar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.

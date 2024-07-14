@@ -1,6 +1,6 @@
 ---
 title: Autentiseringsuppgifter för AEM Forms
-description: Hämta autentiseringsuppgifter för tjänsten från AEM Developer Console.
+description: Hämta tjänstens autentiseringsuppgifter från AEM Developer Console.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Autentiseringsuppgifter för AEM Forms
 
-Integrationer med AEM as a Cloud Service måste kunna autentiseras på ett säkert sätt till AEM. AEM Developer Console genererar autentiseringsuppgifter som används av externa program, system och tjänster för att programmässigt interagera med AEM Author eller Publish services via HTTP.
+Integrationer med AEM as a Cloud Service måste kunna autentiseras säkert för AEM. AEM Developer Console genererar inloggningsuppgifter som används av externa program, system och tjänster för att interagera programmatiskt med AEM Author eller Publish-tjänster via HTTP.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 

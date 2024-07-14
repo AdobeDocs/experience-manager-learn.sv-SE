@@ -1,6 +1,6 @@
 ---
 title: Kodomfaktoriseringsverktyg
-description: AEM Code Refactoring Tools automatiserar konverteringen av befintliga AEM så att de blir AEM as a Cloud Service kompatibla.
+description: Läs om hur AEM Code Refactoring Tools kan automatisera konverteringen av befintliga AEM till AEM as a Cloud Service-kompatibla projekt.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Kodomfaktoriseringsverktyg
 
-AEM Code Refactoring Tools automatiserar konverteringen av befintliga AEM så att de blir AEM as a Cloud Service kompatibla.
+Läs om hur AEM Code Refactoring Tools kan automatisera konverteringen av befintliga AEM till AEM as a Cloud Service-kompatibla projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Introduktion
 
-I den här självstudiekursen får du lära dig hur du implementerar ett enkelt användningsexempel för förifyllning **kärnkomponent** baserat formulär med skickade data och bilagor.
+I den här självstudiekursen får du lära dig hur du implementerar ett enkelt användningsfall för förifyllning av **kärnkomponentbaserade**-formulär med skickade data och bilagor.
 
 ## Krav
 

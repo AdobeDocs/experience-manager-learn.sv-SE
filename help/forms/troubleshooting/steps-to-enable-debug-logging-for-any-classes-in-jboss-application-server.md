@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att aktivera felsökningsloggning för alla klasser i JBoss-programservern
 
-*I den här videon går du igenom stegen för att aktivera felsökningsloggning för alla klasser i JBoss-programservern.*
+*Den här videon går igenom stegen för att aktivera felsökningsloggning för alla klasser i JBoss-programservern.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335522?quality=12&learn=on)

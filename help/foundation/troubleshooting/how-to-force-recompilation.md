@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Hur man tvingar fram en omkompilering av alla Sling-skript, jsps, java och
 
-*I den här videon går du igenom stegen för att tvinga fram en omkompilering av alla Sling-skript jsps, java och lätt.*
+*I den här videon går du igenom stegen för att tvinga fram en omkompilering av alla Sling-skript, jsps, java och lätt.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)

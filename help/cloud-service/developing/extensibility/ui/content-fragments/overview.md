@@ -27,9 +27,9 @@ Gränssnittet AEM innehållsfragment är ett kraftfullt, utbyggbart gränssnitt 
 
 Content Fragment Console i AEM (Adobe Experience Manager) är ett användargränssnitt som är en central plats för hantering och organisering av innehållsfragment. Det innehåller en omfattande uppsättning verktyg och funktioner för att skapa, redigera, publicera och spåra innehållsfragment, vilket gör det möjligt för användare att effektivt hantera strukturerat innehåll över olika kanaler och kontaktytor.
 
-![Konsol för innehållsfragment](./assets/overview/cfc.png)
+![Konsolen för innehållsfragment](./assets/overview/cfc.png)
 
-[AEM Content Fragments Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) är ett utbyggbart gränssnitt för att lista och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med `@adobe/aem-cf-admin-ui-ext-tpl` App Builder-mall.
+[AEM Console för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) är ett utökningsbart gränssnitt för att visa och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med App Builder-mallen `@adobe/aem-cf-admin-ui-ext-tpl`.
 
 Följande utökningspunkter för Content Fragments Console är tillgängliga:
 
@@ -48,7 +48,7 @@ Följande utökningspunkter för Content Fragments Console är tillgängliga:
               <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" title="Åtgärdsfält" target="_blank" rel="referrer">Åtgärdsfält</a></p>
               <p class="is-size-6">Anpassa åtgärder för när en eller flera innehållsfragment är markerade.</p>
               <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
               </a>
             </div>
           </div>
@@ -68,7 +68,7 @@ Följande utökningspunkter för Content Fragments Console är tillgängliga:
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" title="Stödrasterkolumner" target="_blank" rel="referrer">Stödrasterkolumner</a></p>
           <p class="is-size-6">Anpassa de data som visas i listan Innehållsfragment.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
           </a>
         </div>
       </div>
@@ -88,7 +88,7 @@ Följande utökningspunkter för Content Fragments Console är tillgängliga:
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" title="Sidhuvudsmenyn" target="_blank" rel="referrer">Sidhuvudsmenyn</a></p>
           <p class="is-size-6">Anpassa åtgärder för när inga innehållsfragment är markerade.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
           </a>
         </div>
       </div>
@@ -102,7 +102,7 @@ Innehållsfragmentsredigeraren i AEM (Adobe Experience Manager) är en användar
 
 ![Redigera innehållsfragment](./assets/overview/cfe.png)
 
-AEM Content Fragments Editor är ett utbyggbart gränssnitt för redigering av innehållsfragment. [AEM tillägg för innehållsfragmentredigeraren skapas](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) med `@adobe/aem-cf-editor-ui-ext-tpl` App Builder-mall.
+AEM Content Fragments Editor är ett utbyggbart gränssnitt för redigering av innehållsfragment. [AEM tillägg för innehållsfragmentredigeraren skapas](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) med App Builder-mallen `@adobe/aem-cf-editor-ui-ext-tpl`.
 
 Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
 
@@ -121,7 +121,7 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
             <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/" title="Sidhuvudsmenyn" target="_blank" rel="referrer">Sidhuvudsmenyn</a></p>
             <p class="is-size-6">Anpassa åtgärder på rubrikmenyn i Content Fragment Editor.</p>
             <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
             </a>
           </div>
         </div>
@@ -141,7 +141,7 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" title="Verktygsfältet för textredigeraren"  target="_blank" rel="referrer">Verktygsfältet för textredigeraren</a></p>
           <p class="is-size-6">Lägg till en anpassad knapp i RTE (Rich Text Editor) i Content Fragment Editor.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
           </a>
         </div>
       </div>
@@ -162,7 +162,7 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/" title="RTF-redigeringswidgetar" target="_blank" rel="referrer">RTF-redigeringswidgetar</a></p>
           <p class="is-size-6">Anpassa åtgärder i RTE som är bundna till tangenttryckningar.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
           </a>
         </div>
       </div>
@@ -182,7 +182,7 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
           <p class="headline is-size-6 has-text-weight-bold"><a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/ " title="Märken för textredigerare" target="_blank" rel="referrer">Märken för textredigerare</a></p>
           <p class="is-size-6">Anpassa icke-redigerbara formaterade block inuti RTE.</p>
           <a href="https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" target="_blank" rel="referrer">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa dokumenten</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa dokumenten </span>
           </a>
         </div>
       </div>
@@ -209,7 +209,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-bulk-property-update.md" title="Uppdatering av massegenskap">Egenskapsuppdatering för massinnehåll</a></p>
           <p class="is-size-6">Ett tillägg till åtgärdsfältet för Content Fragment Console med modal- och Adobe I/O Runtime-åtgärd.</p>
           <a href="./examples/console-bulk-property-update.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -229,7 +229,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
                     <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM">Generering av OpenAPI-bilder</a></p>
                     <p class="is-size-6">Utforska ett exempel på ett åtgärdsfälttillägg som genererar en bild med OpenAI, överför den till AEM och uppdaterar bildegenskapen för det valda innehållsfragmentet.</p>
                     <a href="./examples/console-image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
                     </a>
                 </div>
             </div>
@@ -249,7 +249,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/custom-grid-columns.md" title="Anpassade kolumner">Anpassade kolumner</a></p>
           <p class="is-size-6">Lägg till en anpassad kolumn i konsolen för innehållsfragment.</p>
           <a href="./examples/custom-grid-columns.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -269,7 +269,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-export-to-xml.md" title="Exportera till XML">Exportera till XML</a></p>
           <p class="is-size-6">Exportera ett innehållsfragment som XML från Content Fragment Editor.</p>
           <a href="./examples/editor-export-to-xml.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -289,7 +289,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="RTF-redigerare (verktygsfältsknapp)">RTF-redigerare (verktygsfältsknapp)</a></p>
           <p class="is-size-6">Lägg till anpassade verktygsfältsknappar i RTE-fält i Content Fragment Editor.</p>
           <a href="./examples/editor-rte-toolbar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -309,7 +309,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="Widget för textredigeraren">Widget för textredigeraren</a></p>
           <p class="is-size-6">Lägg till widgetar i RTF-redigeraren i Content Fragment Editor.</p>
           <a href="./examples/editor-rte-widget.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -329,7 +329,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-badges.md" title="Rich Text Editor Badge">Rich Text Editor Badge</a></p>
           <p class="is-size-6">Lägg till märken i RTF-redigeraren i Content Fragment Editor.</p>
           <a href="./examples/editor-rte-badges.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>
@@ -350,7 +350,7 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
           <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-custom-field.md" title="Anpassade fält">Anpassade fält</a></p>
           <p class="is-size-6">Skapa anpassade fält för innehållsfragment.</p>
           <a href="./examples/editor-custom-field.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exemplet</span>
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>
           </a>
         </div>
       </div>

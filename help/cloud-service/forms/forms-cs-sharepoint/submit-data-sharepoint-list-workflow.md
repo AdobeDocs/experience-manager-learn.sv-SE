@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I den här artikeln beskrivs stegen som krävs för att infoga data i SharePoint-listan med hjälp av steget invoke FDM i AEM arbetsflöde.
 
-Den här artikeln förutsätter att du har [anpassat formulär för att skicka data till SharePoint lista har konfigurerats.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+I den här artikeln förutsätts att du har [konfigurerat adaptivt formulär för att skicka data till SharePoint-listan.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
 
 
 ## Skapa en formulärdatamodell baserad på SharePoint listdatakälla
@@ -89,14 +89,14 @@ De data som skickas har följande format. Extrahera ContactUS JSON-objektet med 
 }
 ```
 
-![grundbaserad form](assets/foundation-based-form.png)
+![grundbaserad-form](assets/foundation-based-form.png)
 
 ## Konfigurera anpassat formulär för att aktivera AEM arbetsflöde
 
 * Skapa anpassat formulär med den formulärdatamodell som skapades i det tidigare steget.
 * Dra och släpp fält från datakällan till formuläret.
 * Konfigurera skicka-åtgärden för formuläret enligt nedan
-* ![skicka-åtgärd](assets/configure-af.png)
+* ![submit-action](assets/configure-af.png)
 
 
 

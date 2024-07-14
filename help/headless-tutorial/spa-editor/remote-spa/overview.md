@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Välkommen till flerdelssjälvstudiekursen för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) SPA med redigerbart AEM med AEM SPA Editor.
 
-Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder innehåll AEM innehållsfragment över GraphQL-API:er, men som inte innehåller någon sammanhangsbaserad redigering av SPA.
+Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som förbrukar AEM Content Fragment-innehåll framför AEM GraphQL-API:er, men har ingen sammanhangsberoende redigering av SPA.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
@@ -32,16 +32,16 @@ Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleag
 
 Självstudiekursen är tänkt att illustrera hur en SPA, eller en SPA som körs utanför AEM, kan uppdateras för att använda och leverera innehåll som skapats i AEM.
 
-De flesta aktiviteterna i självstudiekursen fokuserar på JavaScript-utveckling, men viktiga aspekter beskrivs som AEM. Dessa aspekter kan vara att definiera var innehållet skapas och lagras i AEM och mappa SPA till AEM sidor.
+De flesta aktiviteter i självstudiekursen fokuserar på JavaScript-utveckling, men de viktigaste aspekterna beskrivs som kretsar kring AEM. Dessa aspekter kan vara att definiera var innehållet skapas och lagras i AEM och mappa SPA till AEM sidor.
 
 Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och består av två projekt:
 
-1. The __AEM__ innehåller konfiguration och innehåll som måste distribueras till AEM.
-1. __WKND-app__ är SPA som ska integreras med AEM SPA
+1. __AEM-projektet__ innehåller konfiguration och innehåll som måste distribueras till AEM.
+1. __WKND App__ -projektet är SPA som ska integreras med AEM SPA
 
 ## Senaste kod
 
-+ Startpunkten för den här självstudiekursens kod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) i `remote-spa-tutorial` mapp.
++ Startpunkten för den här självstudiekursens kod finns i [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/remote-spa-tutorial) i mappen `remote-spa-tutorial`.
 
 ## Förutsättningar
 
@@ -52,20 +52,20 @@ Den här självstudiekursen kräver följande:
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd.all-2.1.0.zip eller större](https://github.com/adobe/aem-guides-wknd/releases)
 + [källkoden aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 I den här självstudien förutsätts:
 
 + [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) som IDE
 + En arbetskatalog för `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial`
-+ Köra AEM SDK som en författartjänst på `http://localhost:4502`
-+ Köra AEM SDK med lokala `admin` konto med lösenord `admin`
++ Kör AEM SDK som en författartjänst på `http://localhost:4502`
++ Kör AEM SDK med det lokala `admin`-kontot med lösenordet `admin`
 + SPA körs på `http://localhost:3000`
 
 >[!NOTE]
 >
-> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
 ## 1. Konfigurera AEM för SPA Editor
 

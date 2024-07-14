@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Designvyn i AEM Forms Designer
 
-Kort video om designervyn i AEM Forms Designer
+Kort video om designvyn i AEM Forms Designer
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)

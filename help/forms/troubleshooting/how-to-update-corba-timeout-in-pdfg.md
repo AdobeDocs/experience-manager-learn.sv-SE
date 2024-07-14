@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här uppdaterar du CORBA-timeout i PDFG för att minska problem med återställning av transaktioner
 
-*I den här videon beskrivs processen att uppdatera CORBA-timeout i Forms PDFG för att minska problem med återställning av transaktioner.*
+*Den här videon beskriver processen att uppdatera CORBA-timeout i Forms PDFG för att minska problem med återställning av transaktion.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335512?quality=12&learn=on)

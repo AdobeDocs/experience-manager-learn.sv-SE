@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Innehållsarkiv
 
-Om du vill integrera Adobe Experience Manager (AEM) med Edge Delivery Services börjar du med att konfigurera [SharePoint](#sharepoint) eller [Google Drive](#google-drive) som ert innehållslager. Båda plattformarna fungerar bra tillsammans med AEM, vilket ger smidig hantering och leverans av innehåll. Välj den som är anpassad efter dina inställningar och följ stegen för att komma igång med AEM och Edge Delivery Services.
+Om du vill integrera Adobe Experience Manager (AEM) med Edge Delivery Services börjar du med att konfigurera [SharePoint](#sharepoint) eller [Google Drive](#google-drive) som innehållsdatabas. Båda plattformarna fungerar bra tillsammans med AEM, vilket ger smidig hantering och leverans av innehåll. Välj den som är anpassad efter dina inställningar och följ stegen för att komma igång med AEM och Edge Delivery Services.
 
 ## Alternativ för dokumentredigering
 

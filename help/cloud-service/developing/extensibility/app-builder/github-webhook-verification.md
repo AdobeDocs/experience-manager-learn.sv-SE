@@ -8,23 +8,23 @@ role: Developer
 level: Intermediate
 jira: KT-15714
 last-substantial-update: 2023-06-06T00:00:00Z
-source-git-commit: 4b9f784de5fff7d9ba8cf7ddbe1802c271534010
+exl-id: 5492dc7b-f034-4a7f-924d-79e083349e26
+source-git-commit: 8f64864658e521446a91bb4c6475361d22385dc1
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
-
 # Github.com av webbkrok
 
-Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumererar på vissa händelser på GitHub.com. När en av dessa händelser utlöses skickar GitHub en HTTP-POST-nyttolast till webboks konfigurerade URL. Av säkerhetsskäl är det dock viktigt att verifiera att inkommande webkrok-begäran faktiskt kommer från GitHub och inte från en skadlig aktör. Den här självstudiekursen vägleder dig genom stegen för att verifiera en GitHub.com webkrok-förfrågan i en Adobe App Builder-åtgärd med hjälp av en delad hemlighet.
+Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumererar på vissa händelser på GitHub.com. När en av dessa händelser utlöses skickar GitHub en HTTP-POST-nyttolast till webboks konfigurerade URL. Av säkerhetsskäl är det dock viktigt att verifiera att inkommande webkrok-begäran faktiskt kommer från GitHub och inte från en skadlig aktör. Den här självstudiekursen vägleder dig genom stegen för att verifiera en GitHub.com webbkrok-förfrågan i en åtgärd från Adobe App Builder med hjälp av en delad hemlighet.
 
 ## Konfigurera Github-hemlighet i AppBuilder
 
-1. **Lägg till hemlighet i `.env` fil:**
+1. **Lägg till hemlighet i `.env`-filen:**
 
-   I App Builder-projektets `.env` lägger du till en anpassad nyckel för GitHub.com-webbhollhemlighet:
+   I App Builder-projektets `.env`-fil lägger du till en anpassad nyckel för GitHub.com-webbkrokhemligheten:
 
    ```env
    # Specify your secrets here
@@ -33,15 +33,15 @@ Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumer
    GITHUB_SECRET=my-github-webhook-secret-1234!
    ```
 
-2. **Uppdatera `ext.config.yaml` fil:**
+2. **Uppdatera `ext.config.yaml`-fil:**
 
-   The `ext.config.yaml` filen måste uppdateras för att verifiera GitHub.com webkrok-förfrågan.
+   Filen `ext.config.yaml` måste uppdateras för att GitHub.com ska kunna verifieras.
 
-   - Ange AppBuilder-åtgärden `web` konfiguration till `raw` om du vill ha texten för obearbetade förfrågningar från GitHub.com.
-   - Under `inputs` i AppBuilder-åtgärdskonfigurationen lägger du till `GITHUB_SECRET` nyckel, mappa den till `.env` fält som innehåller hemligheten. Värdet för den här nyckeln är `.env` fältnamn prefix med `$`.
-   - Ange `require-adobe-auth` anteckning i AppBuilder-åtgärdskonfigurationen till `false` så att åtgärden kan anropas utan att autentisering av Adobe krävs.
+   - Ställ in konfigurationen `web` för AppBuilder-åtgärden på `raw` för att ta emot texten för Raw-begäran från GitHub.com.
+   - Lägg till nyckeln `GITHUB_SECRET` under `inputs` i åtgärdskonfigurationen för AppBuilder och mappa den till fältet `.env` som innehåller hemligheten. Värdet för den här nyckeln är fältnamnet `.env` som har prefixet `$`.
+   - Ange `require-adobe-auth`-anteckningen i AppBuilder-åtgärdskonfigurationen till `false` så att åtgärden kan anropas utan att autentisering från Adobe krävs.
 
-   Resultatet `ext.config.yaml` filen ska se ut ungefär så här:
+   Den resulterande `ext.config.yaml`-filen ska se ut ungefär så här:
 
    ```yaml
    operations:
@@ -69,7 +69,7 @@ Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumer
 
 ## Lägg till verifieringskod i AppBuilder-åtgärden
 
-Lägg sedan till JavaScript-koden som anges nedan (kopieras från [GitHub.coms dokumentation](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example)) till din AppBuilder-åtgärd. Se till att exportera `verifySignature` funktion.
+Lägg sedan till den JavaScript-kod som anges nedan (kopieras från [GitHub.coms dokumentation](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#javascript-example)) till din AppBuilder-åtgärd. Se till att exportera funktionen `verifySignature`.
 
 ```javascript
 // src/dx-excshell-1/actions/generic/github-webhook-verification.js
@@ -124,9 +124,9 @@ module.exports = { verifySignature };
 
 ## Implementera verifiering i AppBuilder-åtgärd
 
-Verifiera sedan att begäran kommer från GitHub genom att jämföra signaturen i begärandehuvudet med signaturen som genereras av `verifySignature` funktion.
+Verifiera sedan att begäran kommer från GitHub genom att jämföra signaturen i begärandehuvudet med signaturen som genereras av funktionen `verifySignature`.
 
-I AppBuilder-åtgärdens `index.js`lägger du till följande kod i `main` funktion:
+Lägg till följande kod i funktionen `main` i AppBuilder-åtgärdens `index.js`:
 
 
 ```javascript
@@ -208,10 +208,10 @@ async function main(params) {
 
 ## Konfigurera webkrok i GitHub
 
-Gå tillbaka till GitHub.com och ange samma hemliga värde för GitHub.com när du skapar webkroken. Använd det hemliga värdet som anges i `.env` fil `GITHUB_SECRET` -tangenten.
+Gå tillbaka till GitHub.com och ange samma hemliga värde för GitHub.com när du skapar webkroken. Använd det hemliga värde som anges i `.env`-filens `GITHUB_SECRET`-nyckel.
 
-Gå till databasinställningarna i GitHub.com och redigera webkroken. Ange det hemliga värdet i webbkrokinställningarna `Secret` fält. Klicka __Uppdatera webkrok__ längst ned för att spara ändringarna.
+Gå till databasinställningarna i GitHub.com och redigera webkroken. Ange det hemliga värdet i fältet `Secret` i webkrokinställningarna. Klicka på __Uppdatera webkrok__ längst ned om du vill spara ändringarna.
 
 ![Github Webkrok Secret](./assets/github-webhook-verification/github-webhook-settings.png)
 
-Genom att följa de här stegen ser du till att din App Builder-åtgärd på ett säkert sätt kan verifiera att inkommande webkrok verkligen kommer från din GitHub.com.
+Följ de här stegen för att se till att din App Builder-åtgärd på ett säkert sätt kan verifiera att inkommande webkrok-begäranden verkligen kommer från din GitHub.com.

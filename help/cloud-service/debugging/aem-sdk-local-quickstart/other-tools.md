@@ -25,7 +25,7 @@ En mängd andra verktyg kan hjälpa dig att felsöka programmet på AEM SDK:s lo
 
 ![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
-CRXDE Lite är ett webbaserat gränssnitt för interaktion med JCR-AEM. CRXDE Lite ger fullständig synlighet i JCR-rapporterna, inklusive noder, egenskaper, egenskapsvärden och behörigheter.
+CRXDE Lite är ett webbaserat gränssnitt som används för att interagera med JCR, AEM datalagret. CRXDE Lite ger fullständig synlighet i JCR-rapporterna, inklusive noder, egenskaper, egenskapsvärden och behörigheter.
 
 CRXDE Lite ligger på:
 
@@ -44,7 +44,7 @@ CRXDE Lite ger direktåtkomst till JCR. Det innehåll som visas via CRXDE Lite b
 
 ![CRXDE Lite - Felsöka innehåll](./assets/other-tools/crxde-lite__debugging-content.png)
 
-Ändringar som görs direkt i AEM SDK via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till AEM innehållspaket (`ui.content`) och engagerade i Git. Helst utgår alla innehållsändringar i programmet från kodbasen och flödar in i AEM SDK via distributioner, i stället för att göra ändringar direkt i AEM SDK via CRXDE Lite.
+Ändringar som görs direkt i AEM SDK via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till det ändringsbara innehållspaketet (`ui.content`) för AEM som är kopplat till Git. Helst utgår alla innehållsändringar i programmet från kodbasen och flödar in i AEM SDK via distributioner, i stället för att göra ändringar direkt i AEM SDK via CRXDE Lite.
 
 ### Åtkomstkontroller för felsökning
 
@@ -62,11 +62,11 @@ Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går d
 
 Resultaten visas nedan:
 
-+ __Bana__ upprepar sökvägen som utvärderades
-+ __kapitalbelopp__ upprepar användaren eller gruppen som sökvägen utvärderades för
-+ __Huvudkonton__ visar alla huvudobjekt som det valda huvudobjektet är en del av.
++ __Sökvägen__ upprepar sökvägen som utvärderades
++ __Principal__ upprepar användaren eller gruppen som sökvägen utvärderades för
++ __Huvudkonton__ visar alla huvudkonton som det valda huvudkontot är en del av.
    + Detta är praktiskt om du vill veta mer om de tillfälliga gruppmedlemskap som kan ge behörigheter via arv
-+ __Behörigheter vid sökväg__ visar alla JCR-behörigheter som det valda huvudkontot har på den utvärderade sökvägen
++ __Behörigheter på sökvägen__ visar alla JCR-behörigheter som det valda huvudkontot har på den utvärderade sökvägen
 
 ## Förklara fråga
 
@@ -83,7 +83,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökaren är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med hjälp av AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) syntax.
+QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med hjälp av AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) -syntax.
 
 Felsökaren för QueryBuilder finns på:
 

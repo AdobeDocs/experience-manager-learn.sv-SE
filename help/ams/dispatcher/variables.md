@@ -1,6 +1,6 @@
 ---
-title: Använda och förstå variabler i AEM Dispatcher Configuration
-description: Lär dig hur du använder variabler i dina konfigurationsfiler för Apache- och Dispatcher-moduler för att ta dem till nästa nivå.
+title: Använda och förstå variabler i din AEM Dispatcher-konfiguration
+description: Lär dig hur du använder variabler i dina konfigurationsfiler för Apache och Dispatcher-moduler för att ta dem till nästa nivå.
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Mer om cache](./understanding-cache.md)
 
-I det här dokumentet beskrivs hur du kan utnyttja variablerna på webbservern i Apache och i konfigurationsfilerna för modulen Dispatcher.
+I det här dokumentet beskrivs hur du kan utnyttja variablerna i webbservern Apache och i konfigurationsfilerna för modulen Dispatcher.
 
 ## Variabel
 
@@ -33,8 +33,8 @@ Vi kan utnyttja dessa för att göra många användbara saker som:
 
 - Kontrollera att allt som är miljöspecifikt inte är infogat i konfigurationerna utan extraheras för att säkerställa att konfigurationsfilerna från dev fungerar med samma funktionella utdata.
 - Växla mellan funktioner och ändra loggnivåer för oföränderliga filer som AMS tillhandahåller och du kan inte ändra dem.
-- Ändra vilket inkluderar att använda baserat på variabler som `RUNMODE` och `ENV_TYPE`
-- Matcha `DocumentRoot`och `VirtualHost` DNS-namn mellan Apache-konfigurationer och modulkonfigurationer.
+- Ändra vilket inkluderar som ska användas baserat på variabler som `RUNMODE` och `ENV_TYPE`
+- Matcha DNS-namn för `DocumentRoot` och `VirtualHost` mellan Apache-konfigurationer och modulkonfigurationer.
 
 ## Använda baslinjevariabler
 
@@ -42,9 +42,9 @@ Eftersom AMS baslinjefiler är skrivskyddade och oföränderliga finns det funkt
 
 ### Baslinjevariabler
 
-AMS-standardvariabler deklareras i filen `/etc/httpd/conf.d/variables/ootb.vars`.  Filen går inte att redigera, men finns för att säkerställa att variablerna inte har null-värden.  De ingår först, sedan än vi inkluderar `/etc/httpd/conf.d/variables/ams_default.vars`.  Du kan redigera filen för att ändra värdena på variablerna eller till och med inkludera samma variabelnamn och värden i din egen fil.
+AMS-standardvariabler deklareras i filen `/etc/httpd/conf.d/variables/ootb.vars`.  Filen går inte att redigera, men finns för att säkerställa att variablerna inte har null-värden.  De inkluderas först efter än vi inkluderar `/etc/httpd/conf.d/variables/ams_default.vars`.  Du kan redigera filen för att ändra värdena på variablerna eller till och med inkludera samma variabelnamn och värden i din egen fil.
 
-Här är ett exempel på filens innehåll `/etc/httpd/conf.d/variables/ams_default.vars`:
+Här är ett exempel på innehållet i filen `/etc/httpd/conf.d/variables/ams_default.vars`:
 
 ```
 Define DISP_LOG_LEVEL info
@@ -56,7 +56,7 @@ Define PUBLISH_FORCE_SSL 0
 
 ### Exempel 1 - Tvinga SSL
 
-Variablerna som visas ovan `AUHOR_FORCE_SSL`, eller `PUBLISH_FORCE_SSL` kan ställas in på 1 för att koda om omskrivningsregler som tvingar slutanvändare när de kommer in på http-begäran att omdirigeras till https
+Variablerna som visas ovan `AUHOR_FORCE_SSL`, eller `PUBLISH_FORCE_SSL` kan anges till 1 för att koda omskrivningsregler som tvingar slutanvändare när de kommer in på http-begäran att omdirigeras till https
 
 Här är konfigurationsfilens syntax som gör att den här växlingen fungerar:
 
@@ -75,7 +75,7 @@ Som du kan se är reglerna för omskrivning vad som har koden som omdirigerar sl
 
 ### Exempel 2 - Loggningsnivå
 
-Variablerna `DISP_LOG_LEVEL` kan användas för att ange vad du vill ha för loggnivån som faktiskt används i den konfiguration som körs.
+Variablerna `DISP_LOG_LEVEL` kan användas för att ange vad du vill ha för loggnivån som faktiskt används i den konfiguration som körs.
 
 Här är syntaxexemplet som finns i AMS-konfigurationsfilerna för baslinjen:
 
@@ -86,7 +86,7 @@ Här är syntaxexemplet som finns i AMS-konfigurationsfilerna för baslinjen:
 </IfModule>
 ```
 
-Om du behöver öka loggningsnivån för Dispatcher uppdaterar du bara `ams_default.vars` variabel `DISP_LOG_LEVEL` till den nivå du vill ha.
+Om du behöver öka loggningsnivån för Dispatcher behöver du bara uppdatera `ams_default.vars`-variabeln `DISP_LOG_LEVEL` till den nivå du vill ha.
 
 Exempelvärden kan vara ett heltal eller ordet:
 
@@ -100,7 +100,7 @@ Exempelvärden kan vara ett heltal eller ordet:
 
 ### Exempel 3 - Vitalister
 
-Variablerna `AUTHOR_WHITELIST_ENABLED` och `PUBLISH_WHITELIST_ENABLED` kan anges till 1 för att aktivera regler för omskrivning som innehåller regler som tillåter eller tillåter inte användartrafik baserat på IP-adress.  Om du vill aktivera den här funktionen måste du kombinera den med att skapa en whitelist-regelfil så att den kan inkluderas.
+Variablerna `AUTHOR_WHITELIST_ENABLED` och `PUBLISH_WHITELIST_ENABLED` kan anges till 1 för att aktivera omskrivningsregler som innehåller regler som tillåter eller tillåter inte slutanvändartrafik baserat på IP-adress.  Om du vill aktivera den här funktionen måste du kombinera den med att skapa en whitelist-regelfil så att den kan inkluderas.
 
 Här är några syntaxexempel på hur variabeln aktiverar inkluderingen av vitlistfiler och ett exempel på vitlistfiler
 
@@ -124,13 +124,13 @@ Här är några syntaxexempel på hur variabeln aktiverar inkluderingen av vitli
 </RequireAny>
 ```
 
-Som du kan se `sample_whitelist.rules` tvingar IP-begränsningen men om variabeln växlas kan den inkluderas i `sample.vhost`
+Som du kan se tillämpar `sample_whitelist.rules` IP-begränsningen, men om du växlar variabeln kan den inkluderas i `sample.vhost`
 
 ## Var variablerna ska placeras
 
 ### Startargument för webbserver
 
-AMS placerar server-/topologispecifika variabler i Apache-processens startargument i filen `/etc/sysconfig/httpd`
+AMS placerar server-/topologispecifika variabler i Apache-processens startargument i filen `/etc/sysconfig/httpd`
 
 Den här filen har fördefinierade variabler som visas här:
 
@@ -153,7 +153,7 @@ Detta är inte något du kan ändra, men det är bra att utnyttja i dina konfigu
 
 ### Variabelfiler (`.vars`)
 
-Egna variabler som anges i koden ska finnas i `.vars` filer i katalogen `/etc/httpd/conf.d/variables/`
+Anpassade variabler som tillhandahålls av koden ska finnas i `.vars` filer i katalogen `/etc/httpd/conf.d/variables/`
 
 De här filerna kan innehålla valfria anpassade variabler och vissa syntaxexempel kan visas i följande exempelfiler
 
@@ -178,42 +178,42 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-När du skapar egna variabler namnger filerna enligt deras innehåll och följer namngivningsstandarderna i handboken [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  I exemplet ovan ser du att variabelfilen är värd för de olika DNS-posterna som variabler som ska användas i konfigurationsfilerna.
+När du skapar dina egna variabelfiler namnger de efter deras innehåll och följer namngivningsstandarderna i handboken [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  I exemplet ovan ser du att variabelfilen är värd för de olika DNS-posterna som variabler som ska användas i konfigurationsfilerna.
 
 ## Använda variabler
 
 Nu när du har definierat variablerna i dina variabelfiler vill du veta hur du använder dem på rätt sätt i dina andra konfigurationsfiler.
 
-Vi ska använda exemplet `.vars` filer ovan för att illustrera ett korrekt användningssätt.
+Vi använder exempelfilerna `.vars` ovan för att illustrera ett korrekt användningsexempel.
 
-Vi vill inkludera alla miljöbaserade variabler globalt så skapar vi filen `/etc/httpd/conf.d/000_load_env_vars.conf`
+Vi vill ta med alla miljöbaserade variabler globalt skapar vi filen `/etc/httpd/conf.d/000_load_env_vars.conf`
 
 ```
 IncludeOptional /etc/httpd/conf.d/variables/*_${ENV_TYPE}.vars
 IncludeOptional /etc/httpd/conf.d/variables/*_${RUNMODE}.vars
 ```
 
-Vi vet att när httpd-tjänsten startas hämtas den in de variabler som AMS anger i `/etc/sysconfig/httpd` och har variabeluppsättningen `ENV_TYPE` och `RUNMODE`
+Vi vet att när httpd-tjänsten startas hämtas den in i de variabler som AMS anger i `/etc/sysconfig/httpd` och har variabeluppsättningen `ENV_TYPE` och `RUNMODE`
 
-När denna globala `.conf` filen hämtas in tidigt eftersom filernas inbördes ordning `conf.d` är en alfanumerisk inläsningsordning som innebär 000 i filnamnet, vilket garanterar att det läses in före de andra filerna i katalogen.
+När den här globala `.conf`-filen hämtas kommer den att hämtas tidigt eftersom inkluderingsordningen för filer i `conf.d` är alfanumerisk, vilket innebär 000 i filnamnet, vilket garanterar att den läses in före de andra filerna i katalogen.
 
-Programsatsen include använder också en variabel i filnamnet.  Detta kan ändra vilken fil som läses in baserat på vilket värde som finns i `ENV_TYPE` och `RUNMODE` variabler.
+Programsatsen include använder också en variabel i filnamnet.  Detta kan ändra vilken fil som läses in baserat på vilket värde som finns i variablerna `ENV_TYPE` och `RUNMODE`.
 
-Om `ENV_TYPE` värdet är `dev` så är filen som används:
+Om värdet `ENV_TYPE` är `dev` är filen som används:
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`
 
-Om `ENV_TYPE` värdet är `stage` så är filen som används:
+Om värdet `ENV_TYPE` är `stage` är filen som används:
 
 `/etc/httpd/conf.d/variables/weretail_domains_stage.vars`
 
-Om `RUNMODE` värdet är `preview` så är filen som används:
+Om värdet `RUNMODE` är `preview` är filen som används:
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
 När den filen inkluderas kan vi använda de variabelnamn som finns lagrade i den.
 
-I vår `/etc/httpd/conf.d/available_vhosts/weretail.vhost` kan vi byta ut den normala syntaxen som bara fungerade för dev:
+I vår `/etc/httpd/conf.d/available_vhosts/weretail.vhost`-fil kan vi byta ut den normala syntaxen som bara fungerade för dev:
 
 ```
 <VirtualHost *:80> 
@@ -229,7 +229,7 @@ Med en nyare syntax som utnyttjar kraften i variabler för att arbeta med dev, s
  ServerAlias ${WERETAIL_ALT_DOMAIN}
 ```
 
-I vår `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` kan vi byta ut den normala syntaxen som bara fungerade för dev:
+I vår `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`-fil kan vi byta ut den normala syntaxen som bara fungerade för dev:
 
 ```
 "dev.weretail.com" 
@@ -259,7 +259,7 @@ Hur variablerna såg ut i din kompilerade Apache-konfiguration:
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep -v "#"
 ```
 
-Hur variablerna såg ut i den kompilerade Dispatcher-konfigurationen:
+Hur variablerna såg ut i din kompilerade Dispatcher-konfiguration:
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
@@ -285,7 +285,7 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep DocumentRoot
 DocumentRoot /mnt/var/www/html
 ```
 
-Konfiguration för kompilerad utskickare:
+Kompilerad Dispatcher-konfiguration:
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY | grep docroot

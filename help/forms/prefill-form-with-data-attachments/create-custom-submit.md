@@ -40,7 +40,7 @@ För att tillgodose användningsfallet skapades en anpassad skicka-tjänst för 
 }
 ```
 
-Elementet _**Contractcopy**_ representerar en bifogad fil och används för att hämta bilagor som har skickats med formuläret.
+Elementet _**ContractCopy**_ representerar en bifogad fil och används för att hämta bifogade filer som har skickats med formuläret.
 För att kunna förifylla anpassningsbara formulär med data och bilagor, sparas de skickade bilagorna i Azure Portal och dataelementet för kontraktkopieobjektet i de skickade data uppdateras med URL:en för den sparade bilagan.
 Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure-portalen.  Uppdaterade inskickade data ser ut så här
 
@@ -66,7 +66,7 @@ Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure
 ```
 
 
-[Här finns ett exempel på en anpassad överföringshanterare för grundläggande komponentbaserad adaptiv form](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Följande anpassade sändning har skrivits för att hantera formuläröverföringen
+[Här finns ett exempel på en anpassad hanterare för att skicka kärnkomponenter baserat på adaptiv form.](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Följande anpassade sändning har skrivits för att hantera formuläröverföringen
 
 ```java
 package com.azuredemo.core;

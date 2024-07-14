@@ -78,11 +78,12 @@ Om xdp-filen inte är baserad på XSD följer du de här stegen för att skapa X
 
 ### Generera XSD från XML-data
 
-Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
+Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från de XML-data som genererades i föregående steg.
 
 ### Skapa anpassat formulär
 
-Skapa anpassningsbara formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet. Följande kod aktiveras när _Hämta PDF_ klickas
+Skapa anpassningsbara formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet
+Följande kod aktiveras när användaren klickar på PDF _Hämta_
 
 ```javascript
 $(document).ready(function() {
@@ -117,7 +118,7 @@ $(document).ready(function() {
 
 ## Skapa anpassad servett
 
-Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i [AEMFormsDocumentServices.core-1.0-SNAPSHOT-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
+Skapa en anpassad servett som sammanfogar data med XDP-mallen och returnerar PDF-filen. Koden för att uppnå detta listas nedan. Den anpassade servern ingår i paketet [AEMFormsDocumentServices.core-1.0-SNAPSHOT](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -217,14 +218,15 @@ I exempelkoden extraherar vi xdp-namnet och andra parametrar från begäranobjek
 Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. Lägg till följande post i användarmappningstjänsten för Apache Sling Service DevelopingWithServiceUser.core:getformsresourceSolver=fd-service
-1. [Hämta och installera det anpassade Document Services-paketet](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
+1. Lägg till följande post i användarmappningstjänsten för Apache Sling
+DevelopingWithServiceUser.core:getformsresourceReser=fd-service
+1. [Hämta och installera det anpassade DocumentServices-paketet](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Detta har serverutrymmet för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen
 1. [Importera klientbiblioteket](assets/generate-interactive-dor-client-lib.zip)
-1. [Importera artikelresurser (adaptiv form, XDP-mallar och XSD)](assets/generate-interactive-dor-sample-assets.zip)
+1. [Importera artikeln Assets(Adaptiv form, XDP-mallar och XSD)](assets/generate-interactive-dor-sample-assets.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Fyll i några av formulärfälten.
 1. Klicka på Hämta PDF för att hämta PDF. Du kanske måste vänta några sekunder på att PDF ska hämta.
 
 >[!NOTE]
 >
->Du kan prova samma användningsfall med [icke-xsd-baserad adaptiv form](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Se till att du skickar rätt parametrar till slutpunkten för posten i streampdf.js som finns i irs clientlib.
+>Du kan prova samma användningsfall med [icke-xsd-baserat adaptivt formulär](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Se till att du skickar rätt parametrar till slutpunkten för posten i streampdf.js som finns i irs clientlib.

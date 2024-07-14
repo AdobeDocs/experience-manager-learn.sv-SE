@@ -22,11 +22,11 @@ ht-degree: 0%
 
 I den här delen skapar vi en formulärdatamodell. Med formulärdatamodellen kan du konfigurera och ansluta till olika datakällor. Den tillhandahåller ett intuitivt användargränssnitt för att skapa ett enhetligt databerderingsschema för affärsenheter och tjänster över anslutna datakällor. I följande videofilm går du igenom stegen för att skapa formulärdatamodell.
 
-**Skapa formulärdatamodell i AEM Forms**
+**Skapar formulärdatamodell i AEM Forms**
 
 >[!VIDEO](https://video.tv.adobe.com/v/27763?quality=12&learn=on)
 
-Formulärdatamodellen är beroende av en korrekt konfigurerad datakälla. Den datakälla som konfigurerats i föregående steg används som bas för den här formulärdatamodellen.
+Formulärdatamodellen är beroende av en korrekt konfigurerad Data Source. Vi använder de data som Source konfigurerade i föregående steg som grund för den här formulärdatamodellen.
 
 Form Data Model är grunden för all interaktiv kommunikation. Funktionen Hämta/läs för formulärdatamodellen hämtar data från backend-datakällan och används för att fylla i Interactive Communications-dokumentet.
 

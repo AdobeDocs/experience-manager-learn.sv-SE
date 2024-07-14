@@ -1,6 +1,6 @@
 ---
 title: Introduktion till tema i Resursdelningskommentarer
-description: Material för både funktionell och teknisk förståelse Assets Share Commons
+description: Material för både funktionell och teknisk förståelse av Assets Share Commons
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
@@ -76,9 +76,9 @@ I den här videon skapas ett nytt tema baserat på det mörka temat Resursdelnin
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Ladda ned [Tema för anpassat klientbibliotek](assets/asc-theme-demo.zip)
+Hämta [temat för anpassat klientbibliotek](assets/asc-theme-demo.zip)
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Kommentarer för resursdelning - versionshämtningar](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+ nedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Kommentarer för resursdelning, versionshämtningar](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+ versionsnedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

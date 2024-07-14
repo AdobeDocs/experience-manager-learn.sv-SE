@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Ändra koden för att skicka mallens URL som en av parametrarna för begäran om POST.
 
-Koden i `DocumentGeneration.java` måste ändras så att mallens URL skickas.
+Koden i `DocumentGeneration.java` måste ändras för att skicka mallens URL.

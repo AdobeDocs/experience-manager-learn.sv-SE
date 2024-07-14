@@ -26,11 +26,11 @@ När du har skapat och testat ditt dokument för tryckkanaler behöver vi en mek
 
 När du konfigurerar en bevakad mapp i AEM associerar du ett ECMA-skript eller en Java-kod som körs när en fil släpps i den bevakade mappen. I den här artikeln fokuserar vi på ECMA-skript som genererar dokument för tryckkanaler och sparar dem i filsystemet.
 
-Den bevakade mappkonfigurationen och ECMA-skriptet är en del av de resurser du importerade på [början av den här självstudien](introduction.md)
+Den bevakade mappkonfigurationen och ECMA-skriptet är en del av de resurser du importerade i [början av den här självstudiekursen](introduction.md)
 
 Indatafilen som släpps i den bevakade mappen har följande struktur. ECMA-skript läser kontonumren och genererar dokument för utskriftskanaler för vart och ett av dessa konton.
 
-Mer information om ECMA-skriptet för att generera dokument finns i [referera till den här artikeln](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+Mer information om ECMA-skriptet för att generera dokument finns i [den här artikeln](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -54,7 +54,7 @@ Följ stegen nedan för att generera dokument för utskriftskanaler med hjälp a
 * Kontrollera att sökvägen till interactiveCommunicationsDocument pekar på rätt dokument som du vill skriva ut.( Rad 1)
 * Notera saveLocation(Line 2).Du kan ändra den efter behov.
 * Kontrollera att indataparametern för formulärdatamodellen är bunden till Request Attribute och att dess bindningsvärde är inställt på AccountNumber. Se skärmbilden nedan.
-  ![förfrågan](assets/requestattributeprintchannel.gif)
+  ![begäran](assets/requestattributeprintchannel.gif)
 
 * Skapa filen accountNumbers.xml med följande innehåll
 

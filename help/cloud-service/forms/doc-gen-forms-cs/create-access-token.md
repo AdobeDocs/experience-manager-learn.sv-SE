@@ -21,7 +21,7 @@ ht-degree: 0%
 # Exchange JWT för åtkomsttoken
 
 
-Den JWT-fil som skapades i föregående steg byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för att komma åt AEM as a Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST med JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
+Den JWT-fil som skapades i det föregående steget byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för åtkomst till AEM as a Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST med JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
 
 Följande kod användes för att generera utbyte-JWT för åtkomsttoken
 

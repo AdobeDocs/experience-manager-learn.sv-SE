@@ -23,24 +23,24 @@ ht-degree: 0%
 
 Redigerbara Reaktionskomponenter kan vara&quot;fasta&quot; eller hårdkodade i SPA. Detta gör att utvecklare kan placera SPA redigerarkompatibla komponenter i SPA och tillåta användare att skapa komponenternas innehåll i AEM SPA Editor.
 
-![Fasta komponenter](./assets/spa-fixed-component/intro.png)
+![Korrigerade komponenter](./assets/spa-fixed-component/intro.png)
 
-I det här kapitlet ersätter vi hemvyns titel&quot;Aktuella anteckningar&quot;, som är hårdkodad text i `Home.js` med en fast, men redigerbar Title-komponent. Fasta komponenter garanterar titelns placering, men tillåter även att titeltexten kan redigeras och ändras utanför utvecklingscykeln.
+I det här kapitlet ersätter vi hemvyns rubrik,&quot;Aktuella annonser&quot;, som är hårdkodad text i `Home.js` med en fast, men redigerbar titelkomponent. Fasta komponenter garanterar titelns placering, men tillåter även att titeltexten kan redigeras och ändras utanför utvecklingscykeln.
 
 ## Uppdatera WKND-appen
 
-Lägga till en __Fast__ till hemvyn:
+Så här lägger du till en __fast__-komponent i hemvyn:
 
 + Skapa en anpassad redigerbar titelkomponent och registrera den i projektets titelresurstyp
 + Placera den redigerbara titelkomponenten i SPA hemvy
 
 ### Skapa en redigerbar React Title-komponent
 
-Ersätt den hårdkodade texten i SPA hemvy `<h2>Current Adventures</h2>` med en anpassad redigerbar Title-komponent. Innan komponenten Title kan användas måste vi:
+I SPA hemvy ersätter du den hårdkodade texten `<h2>Current Adventures</h2>` med en anpassad redigerbar titelkomponent. Innan komponenten Title kan användas måste vi:
 
 1. Skapa en anpassad titelreaktionskomponent
-1. Dekorera den anpassade komponenten Title med metoder från `@adobe/aem-react-editable-components` för att göra det redigerbart.
-1. Registrera den redigerbara titelkomponenten med `MapTo` så att den kan användas i [behållarkomponent senare](./spa-container-component.md).
+1. Dekorera den anpassade Title-komponenten med metoder från `@adobe/aem-react-editable-components` för att göra den redigerbar.
+1. Registrera den redigerbara titelkomponenten med `MapTo` så att den kan användas i [behållarkomponenten senare](./spa-container-component.md).
 
 Så här gör du:
 
@@ -132,14 +132,14 @@ Så här gör du:
    export default EditableTitle;
    ```
 
-   Detta `EditableTitle` Reaktionskomponenten kapslar in `Title` Reagera på komponenter, kapsla in och dekorera dem och redigera dem AEM redigeraren SPA.
+   Den här `EditableTitle`-reaktionskomponenten kapslar in `Title`-komponenten och kapslar in den så att den kan redigeras AEM redigeraren.
 
 ### Använda komponenten React EditableTitle
 
 Nu när React-komponenten EditableTitle är registrerad i och tillgänglig för användning i React-appen ersätter du den hårdkodade titeltexten i hemvyn.
 
 1. Redigera `react-app/src/components/Home.js`
-1. I `Home()` längst ned, importera `EditableTitle` och ersätt den hårdkodade titeln med den nya `AEMTitle` komponent:
+1. I `Home()` längst ned importerar du `EditableTitle` och ersätter den hårdkodade titeln med den nya `AEMTitle`-komponenten:
 
    ```javascript
    ...
@@ -159,18 +159,18 @@ Nu när React-komponenten EditableTitle är registrerad i och tillgänglig för 
    }
    ```
 
-The `Home.js` filen ska se ut så här:
+Filen `Home.js` ska se ut så här:
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
 ## Skapa komponenten Title i AEM
 
 1. Logga in på AEM författare
-1. Navigera till __Sites > WKND App__
-1. Tryck __Startsida__ och markera __Redigera__ i det övre åtgärdsfältet
+1. Navigera till __Webbplatser > WKND-app__
+1. Tryck på __Hem__ och välj __Redigera__ i det övre åtgärdsfältet
 1. Välj __Redigera__ i redigeringslägesväljaren längst upp till höger i sidredigeraren
 1. Håll muspekaren över standardtexten under WKND-logotypen och ovanför äventyrslistan tills den blå redigeringsramen visas
-1. Tryck för att visa komponentens åtgärdsfält och tryck sedan på __wrench__  för att redigera
+1. Tryck för att visa komponentens åtgärdsfält och tryck sedan på __skiftnyckeln__ för att redigera
 
    ![Åtgärdsfält för titelkomponent](./assets/spa-fixed-component/title-action-bar.png)
 
@@ -180,11 +180,11 @@ The `Home.js` filen ska se ut så här:
 
      ![Dialogrutan Titelkomponent](./assets/spa-fixed-component/title-dialog.png)
 
-1. Tryck __Klar__ spara
+1. Tryck på __Klar__ för att spara
 1. Förhandsgranska ändringarna i AEM SPA
-1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000) och se hur den skrivna texten ändras direkt.
+1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000) och se hur den skapade titeln omedelbart återspeglas.
 
-   ![Rubrikkomponent i SPA](./assets/spa-fixed-component/title-final.png)
+   ![Titelkomponent i SPA](./assets/spa-fixed-component/title-final.png)
 
 ## Grattis!
 
@@ -196,4 +196,4 @@ Du har lagt till en fast, redigerbar komponent i WKND-appen! Nu kan du:
 
 ## Nästa steg
 
-Nästa steg är att [lägga till en AEM ResponsiveGrid-behållarkomponent](./spa-container-component.md) till SPA där författaren kan lägga till och redigera komponenter i SPA!
+Nästa steg är att [lägga till en AEM ResponsiveGrid-behållarkomponent](./spa-container-component.md) i SPA som gör att författaren kan lägga till och redigera komponenter i SPA!

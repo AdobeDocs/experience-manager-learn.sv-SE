@@ -1,5 +1,5 @@
 ---
-title: Felsökning AEM as a Cloud Service
+title: Felsökning av AEM as a Cloud Service
 description: Lär dig hur du felsöker och felsöker AEM SDK, AEM as a Cloud Service och bygg- och distributionsprocessen.
 version: Cloud Service
 topic: Migration, Upgrade
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Felsökning AEM as a Cloud Service
+# Felsökning av AEM as a Cloud Service
 
 Lär dig hur du felsöker och felsöker AEM SDK, AEM as a Cloud Service och bygg- och distributionsprocessen.
 

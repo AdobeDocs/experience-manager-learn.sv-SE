@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Steg för att justera parametrar på JMX-konsolen
 
-*I den här videon går du igenom stegen för att justera parametrar på JMX-konsolen.*
+*Den här videon går igenom stegen för att justera parametrar på JMX-konsolen.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)

@@ -26,17 +26,17 @@ I den här artikeln beskrivs hur du skapar olika typer av PDF. Det hjälper er a
 
 Här följer ett exempel på en PDF/A-fil i Acrobat DC.
 
-![Pdfa](assets/pdfa-file-in-acrobat.png)
+![PDF](assets/pdfa-file-in-acrobat.png)
 
-Exempelfiler kan vara [hämtad härifrån](assets/pdf-file-types.zip)
+Exempelfiler kan [hämtas här](assets/pdf-file-types.zip)
 
 ## XML Forms Architecture PDF(XFA PDF)
 
-Adobe använder termen XFA PDF för att hänvisa till den interaktiva och dynamiska Forms som du skapar med AEM Forms Designer. De Forms-filer och filer du skapar med Designer är baserade på Adobe XML Forms Architecture (XFA). På många sätt ligger filformatet XFA PDF närmare en HTML-fil än en traditionell PDF. Följande kod visar hur ett enkelt textobjekt ser ut i en XFA PDF-fil.
+Adobe använder termen XFA PDF för att hänvisa till den interaktiva och dynamiska Forms du skapar med AEM Forms Designer. Forms och de filer du skapar med Designer baseras på Adobe XML Forms Architecture (XFA). På många sätt ligger filformatet XFA PDF närmare en HTML-fil än en traditionell PDF. Följande kod visar hur ett enkelt textobjekt ser ut i en XFA PDF-fil.
 
 ![Textfält](assets/text-field.JPG)
 
-XFA Forms är XML-baserade. Detta välstrukturerade och flexibla format gör att en AEM Forms Server kan omvandla dina Designer-filer till olika format, bland annat PDF, PDF/A och HTML. Du kan se den fullständiga XML-strukturen för din Forms i Designer genom att välja fliken XML-källa i layoutredigeraren. Du kan skapa både statiska och dynamiska XFA-Forms i AEM Forms Designer.
+XFA Forms är XML-baserade. Detta välstrukturerade och flexibla format gör att en AEM Forms Server kan omvandla dina Designer-filer till olika format, bland annat PDF, PDF/A och HTML. Du kan se hela XML-strukturen för din Forms i Designer genom att välja fliken XML Source i layoutredigeraren. Du kan skapa både statiska och dynamiska XFA-Forms i AEM Forms Designer.
 
 ## Statisk PDF
 
@@ -50,7 +50,7 @@ Statisk XFA PDF forms-layout ändras aldrig vid körning, men kan vara interakti
 
 >[!NOTE]
 >
-> Du kan skapa statisk PDF med AEM Forms Designer genom att spara XDP som Adobe Static PDF Form
+> Du kan skapa statisk PDF med AEM Forms Designer genom att spara XDP som ett statiskt PDF-formulär för Adobe
 
 
 
@@ -61,7 +61,7 @@ Dynamisk XFA-PDF kan ändra layouten under körning, vilket innebär att komment
 * Dynamiska formulär har stöd för klientskript som ändrar formulärets layout och sidnumrering. Exempelvis kommer Purchase Order.xdp att expandera och paginera för att rymma en oändlig mängd data om du sparar den som ett dynamiskt formulär
 * Dynamiska formulär har stöd för alla egenskaper i formuläret vid körning, medan statiska formulär bara har stöd för en delmängd
 
-* [Läs det här dokumentet för att förstå skillnaderna mellan statiska och dynamiska PDF-formulär](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [Mer information om skillnaderna mellan statiska och dynamiska PDF-formulär finns i det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >
@@ -86,10 +86,11 @@ Ett certifierat dokument ger PDF dokument och formulärmottagare ytterligare gar
 
 ### Acroforms
 
-Acroforms är AdobeÄldre interaktiv formulärteknik; de är tillbaka till Acrobat version 3. Adobe tillhandahåller [Acrobat Forms API Reference](assets/FormsAPIReference.pdf), daterat i maj 2003, för att ge de tekniska detaljerna om denna teknik. Acrobat är en kombination av följande objekt:
+Acroforms är AdobeÄldre interaktiv formulärteknik; de är tillbaka till Acrobat version 3. Adobe tillhandahåller [API-referens för Acrobat Forms](assets/FormsAPIReference.pdf) från maj 2003 med teknisk information om den här tekniken. Acrobat är en kombination av
+följande objekt:
 
 * Ett traditionellt PDF som definierar formulärets statiska layout och grafik.
-* Interaktiva formulärfält som markeras ovanpå formulärverktygen i Adobe Acrobat. Dessa formulärverktyg utgör en liten del av vad som är tillgängligt i AEM Forms Designer.
+* Interaktiva formulärfält som markeras ovanpå formulärverktygen i Adobe Acrobat. Dessa formulärverktyg utgör en liten del av vad som finns i AEM Forms Designer.
 
 ### PDF/A (PDF för arkivering)
 
@@ -115,7 +116,7 @@ Två filer i exempelfilerna skapades från samma Microsoft Word-fil. Den ena ska
 
 Dokumenten ser likadana ut, men PDF/A-filen öppnas med ett blått fält längst upp, vilket anger att dokumentet visas i PDF/A-läge. Det här blå fältet är Acrobat dokumentmeddelandefält som visas när du öppnar vissa typer av PDF-filer.
 
-![PDF-img](assets/pdfa-message.png)
+![pdf-img](assets/pdfa-message.png)
 
 Dokumentets meddelandefält innehåller instruktioner, och eventuellt knappar, som hjälper dig att slutföra en uppgift. Den är färgkodad och du ser den blå färgen när du öppnar särskilda typer av PDF (som den här PDF/A-filen) samt certifierat och digitalt signerat PDF. Fältet ändras till lila för PDF forms och gult när du deltar i en PDF-granskning.
 

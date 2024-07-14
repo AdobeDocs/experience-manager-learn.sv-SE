@@ -32,7 +32,7 @@ I följande skärmbild visas blobindextaggarna i Azure Portal
 
 ![blob-index-tags](assets/blob-index-tags.png)
 
-Den anpassade skicka-koden finns i **_StoreFormDataWithBlobIndexTagsInAzure_** och koden för att lagra och hämta data från Azure finns i komponenten **_SparaOchHämtaFrånAzure_**
+Den anpassade skicka-koden finns i **_StoreFormDataWithBlobIndexTagsInAzure_** och koden för att lagra och hämta data från Azure finns i komponenten **_SaveAndFetchFromAzure_**
 
 ## Nästa steg
 

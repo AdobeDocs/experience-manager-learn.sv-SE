@@ -30,5 +30,5 @@ AEM 6.3 Forms introducerar möjligheten att låta användare skapa testfall i AE
 >
 >**Användbara länkar**
 >
->* [Calvin SDK-namnutrymme](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
+>* [Calvin SDK-namnområde](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 >* [Hobbes.js-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)

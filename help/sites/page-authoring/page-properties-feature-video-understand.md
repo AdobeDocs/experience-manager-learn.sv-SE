@@ -53,13 +53,13 @@ I den här videon beskrivs följande sidegenskapselement:
 * Miniatyrbild
 * Delning i sociala medier
 * Konfigurationer av Cloud Service
-* Personalisering
+* Personalization
    * ContextHub-konfigurationer
    * Målkonfiguration
 * Behörigheter
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigera dokumentationen för Sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [Redigera dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [Redigerar dokumentationen för Sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

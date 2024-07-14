@@ -1,6 +1,6 @@
 ---
-title: Så här installerar du Designer-korrigeringar
-description: I den här artikeln får du stegvisa anvisningar om hur du installerar AEM Forms Designer-korrigeringsfiler
+title: Så här installerar du Designer Patches
+description: I den här artikeln får du stegvisa anvisningar om hur du installerar AEM Forms Designer-patchar
 type: Troubleshooting
 role: Admin
 level: Beginner
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Så här installerar du Designer-korrigeringar
+# Så här installerar du Designer Patches
 
-*I den här videon går du igenom processen med att installera Designer-korrigeringar.*
+*Den här videon går igenom processen att installera Designer-korrigeringar.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335504?quality=12&learn=on)

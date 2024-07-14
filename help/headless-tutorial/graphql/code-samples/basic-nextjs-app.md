@@ -23,15 +23,15 @@ ht-degree: 0%
 
 # Basic Next.js-app
 
-Detta [Next.js](https://nextjs.org/) app visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor. Det här programmet återger en filterbar version av WKND Adventures, och när du väljer ett äventyr visas all information om äventyren.
+Den här [Next.js](https://nextjs.org/)-appen visar hur du kan fråga innehåll med hjälp av AEM GraphQL-API:er med beständiga frågor. Det här programmet återger en filterbar version av WKND Adventures, och när du väljer ett äventyr visas all information om äventyren.
 
 Den här koden:
 
-+ Ansluter till en AEM-publiceringstjänst och kräver ingen autentisering
++ Ansluter till en AEM Publish-tjänst och kräver ingen autentisering
 + Använder WKND:s beständiga frågor: `wknd-shared/adventures-all` och `wknd-shared/adventures-by-slug`
 
-Om du vill ha en mer detaljerad genomgång av hur den här appen Next.js byggs kan du gå igenom [Exempel på dokumentation för appen Next.js](../example-apps/next-js.md).
+Mer information om hur den här appen Next.js byggs finns i [exempeldokumentationen för appen Next.js](../example-apps/next-js.md).
 
 >[!IMPORTANT]
 >
-> Codesandbox.io stöder inte redigering av Next.js-programmet i den inbäddade IDE:n. Om du vill redigera det här kodexemplet [öppna appen Next.js direkt i codesandbox.io](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
+> Codesandbox.io stöder inte redigering av Next.js-programmet i den inbäddade IDE:n. [Öppna appen Next.js direkt i codesandbox.io](https://codesandbox.io/s/wknd-next-js-app-u8x5f8) om du vill redigera det här kodexemplet.

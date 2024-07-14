@@ -17,7 +17,7 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
+Adobe Experience Manager (AEM) är nu as a Cloud Service. AEM as a Cloud Service introducerar nästa generation av produktlinjen Experience Manager, som bygger på tidigare investeringar och innovationer och bevarar och utökar alla användningsfall och -funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
@@ -39,11 +39,11 @@ Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Servi
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>Konfigurera åtkomst till AEM</strong>
+         <strong>Konfigurera åtkomst till AEM </strong>
          </a>
       </div>
       <p>
-         <em>Konfigurera IMS-användare i Adobe Admin Console för att få åtkomst till AEM.</em>
+         <em>Konfigurera IMS-användare i Adobe Admin Console för åtkomst till AEM.</em>
       <p>
    </td>   
    <td>
@@ -52,11 +52,11 @@ Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Servi
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>Självstudiekurs om installation av lokal utvecklingsmiljö</strong>
+         <strong>Lokal utvecklingsmiljö - självstudiekurs</strong>
          </a>
       </div>
       <p>
-         <em>Gör din lokala dev-dator redo för AEM as a Cloud Service utveckling!</em>
+         <em>Gör din lokala dev-dator redo för AEM as a Cloud Service-utveckling!</em>
       <p>
    </td>   
    <td>
@@ -65,7 +65,7 @@ Adobe Experience Manager (AEM) finns nu as a Cloud Service. AEM as a Cloud Servi
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-         <strong>Felsöka AEM SDK</strong>
+         <strong> Felsöka AEM SDK </strong>
          </a>
       </div>
       <p>

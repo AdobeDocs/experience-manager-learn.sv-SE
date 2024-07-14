@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du definierar och distribuerar anpassade [namnutrymmen](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) till AEM as a Cloud Service.
 
-Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår en `:`. AEM använder flera namnutrymmen som:
+Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår `:`. AEM använder flera namnutrymmen som:
 
 + `jcr` för JCR-systemegenskaper
 + `cq` för AEM (tidigare Adobe CQ) egenskaper
@@ -33,17 +33,17 @@ Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår en
 
 Namnutrymmen kan användas för att ange en egenskaps omfång och avsikt. Om du skapar ett anpassat namnutrymme, ofta ditt företagsnamn, blir det lättare att identifiera noder eller egenskaper som är specifika för din AEM och innehåller data som är specifika för ditt företag.
 
-Anpassade namnutrymmen hanteras i [Initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) skript och distribuerar till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` projekt.
+Anpassade namnutrymmen hanteras i [Repoinit (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html) -skript och distribueras till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` -projektet i ditt   -projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## Resurser
 
-+ [Dokumentation om initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
++ [Dokumentation för initiering av lagringsplats (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
 
 ## Code
 
-Följande kod används för att konfigurera en `wknd` namnutrymme.
+Följande kod används för att konfigurera ett `wknd`-namnutrymme.
 
 ### RepositoryInitializer OSGi-konfiguration
 
@@ -58,4 +58,4 @@ Följande kod används för att konfigurera en `wknd` namnutrymme.
 }
 ```
 
-Detta tillåter anpassade egenskaper med `wknd` namnutrymme, som den första parametern efter `register namespace` anvisningar, att användas i AEM. Mer avancerade skriptdefinitioner finns i exemplen i [Dokumentation om initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
+Detta gör att anpassade egenskaper med namnutrymmet `wknd`, som anges som den första parametern efter instruktionen `register namespace`, kan användas i AEM. Mer avancerade skriptdefinitioner finns i exemplen i [Repoinit-dokumentationen (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).

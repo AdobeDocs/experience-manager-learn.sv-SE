@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # HTTP/HTTPS-anslutningar för dedikerad IP-adress och VPN
 
-HTTP-/HTTPS-anslutningar proxioneras automatiskt från AEM as a Cloud Service med dedikerad IP-adress för utgångar eller VPN, och de behöver inga särskilda `portForwards` regler.
+HTTP-/HTTPS-anslutningar proxyeras automatiskt ut från AEM as a Cloud Service med dedikerad IP-adress för utgångar eller VPN, och de behöver inga särskilda `portForwards`-regler.
 
 ## Avancerat nätverksstöd
 
 Följande kodexempel stöds av följande avancerade nätverksalternativ.
 
-Kontrollera att [dedikerad IP-adress för utgångar eller VPN](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
+Kontrollera att den [dedikerade IP-adressen för utgångar eller den avancerade VPN](../advanced-networking.md#advanced-networking)-nätverkskonfigurationen har konfigurerats innan du följer den här självstudien.
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -33,14 +33,14 @@ Kontrollera att [dedikerad IP-adress för utgångar eller VPN](../advanced-netwo
 
 >[!CAUTION]
 >
-> Det här kodexemplet är bara för [Dedikerad IP-adress för börs](../dedicated-egress-ip-address.md) och [VPN](../vpn.md). Ett liknande men annat kodexempel finns för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
+> Det här kodexemplet gäller bara för [IP-adressen ](../dedicated-egress-ip-address.md) och [VPN](../vpn.md) för det dedikerade uttrycket. Ett liknande, men annat kodexempel är tillgängligt för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som kan köras AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. HTTPS- (eller HTTP)-anslutningarna proxyeras automatiskt från AEM as a Cloud Service och kräver ingen särskild utveckling.
+Detta Java™-kodexempel är en OSGi-tjänst som kan köras i AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. HTTPS-anslutningarna (eller HTTP) proxyeras automatiskt från AEM as a Cloud Service och kräver ingen särskild utveckling.
 
 >[!NOTE]
-> Det rekommenderas att [Java™ 11 HTTP API:er](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) används för att göra HTTP/HTTPS-anrop från AEM.
+> Vi rekommenderar att [Java™ 11 HTTP API:er](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) används för att göra HTTP/HTTPS-anrop från AEM.
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 

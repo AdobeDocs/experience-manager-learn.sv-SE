@@ -25,7 +25,7 @@ Rapporten Bandwidth &amp; Storage visar hur mycket Image Server-bandbredd som ha
 
 ![bild](assets/valuable-reports/reports-1.jpg)
 
-_Bandwidth &amp; Storage-rapporten visar det här kontot som en överlagring på 30 GB._
+_Rapporten för bandbredd och lagring visar det här kontot som en överlagring på 30 GB._
 
 ## Bildfelsrapport
 
@@ -41,7 +41,7 @@ Vi hoppas att du har hittat innehållet i den här metodguiden som hjälper dig 
 
 Läs mer om Dynamic Media Classic här:
 
-- [Dynamic Media Classic på Experience League - Get to Value](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic på Experience League - Gå till värde](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic på Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media Newsletter Archives](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media Classic Documentation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
+- [Dynamic Media nyhetsbrev arkiveras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Dynamic Media Classic-dokumentation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)

@@ -31,4 +31,4 @@ Med Adobes IMS-produktprofiler kan användare logga in på en AEM Author-tjänst
 
 ## Ytterligare resurser
 
-+ [Hantera produkter och användaråtkomst i dokumentationen för Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [Hantera produkter och användaråtkomst i Admin Console-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)

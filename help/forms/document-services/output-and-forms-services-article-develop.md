@@ -22,7 +22,7 @@ Lär dig hur du utvecklar med Output och Forms Service API i AEM Forms.
 
 I den här artikeln ska vi titta på följande
 
-* [Output Service](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) - Vanligtvis används den här tjänsten för att sammanfoga xml-data med xdp-mall eller pdf för att generera en förenklad pdf.
+* [Utdatatjänst](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf.
 * [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) - Det här är en mycket mångsidig tjänst som gör att du kan återge xdp som pdf och exportera/importera data från och till PDF.
 
 
@@ -93,28 +93,28 @@ Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjä
 #### Importera data
 
 * Använd FormsService-importData för att importera data till PDF-filen
-* **POSTS-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **POST-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 
 * **Begärandeparametrar:**
 
-   * **pdffile** : Den PDF-fil som du vill sammanfoga data med
-   * **xmlfile**: XML-datafilen som sammanfogas med PDF-filen
+   * **pdffile** : PDF-filen som du vill sammanfoga data med
+   * **xmlfile**: XML-datafilen som sammanfogas med pdf-filen
    * **saveLocation**: Den plats där det återgivna dokumentet ska sparas i filsystemet. Till exempel `c:\\outputsample.pdf`.
 
 #### Exportera data
 
 * Använd FormsService-API:t för export av data från PDF-filen
-* **POSTS-URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **POST-URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **Begärandeparametrar:**
 
-   * **pdffile** : Den PDF-fil som du vill exportera data från
-   * **saveLocation**: Den plats där exporterade data ska sparas i filsystemet. Till exempel c:\\documents\\exported_data.xml
+   * **pdffile** : PDF-filen som du vill exportera data från
+   * **saveLocation**: Platsen där exporterade data ska sparas i filsystemet. Till exempel c:\\documents\\exported_data.xml
 
 #### Återge XDP
 
 * Återge XDP-mall som statisk/dynamisk pdf
 * Använd FormsService-återgivnings-API:t PDFForm för att återge xdp-mallen som PDF
-* **POSTS-URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* **POST-URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
 * Begäranparameter:
    * xdpName: Namnet på xdp-filen som ska återges som en pdf
 

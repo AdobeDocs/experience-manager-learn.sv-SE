@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Arbetsflöde för att granska och godkänna det inskickade PDF
 
-Det sista och sista steget är att skapa AEM arbetsflöde som genererar ett statiskt eller icke-interaktivt PDF för granskning och godkännande. Arbetsflödet utlöses via en AEM som konfigurerats på noden `/content/pdfsubmissions`.
+Det sista och sista steget är att skapa AEM arbetsflöde som genererar ett statiskt eller icke-interaktivt PDF för granskning och godkännande. Arbetsflödet utlöses via en AEM startare som konfigurerats på noden `/content/pdfsubmissions`.
 
 Följande skärmbild visar de steg som ingår i arbetsflödet.
 
@@ -30,12 +30,12 @@ XDP-mallen och de data som ska sammanfogas med mallen anges här. De data som sk
 
 ![arbetsflöde](assets/generate-pdf1.PNG)
 
-Det genererade PDF tilldelas arbetsflödesvariabeln som anropas `submittedPDF`.
+Det genererade PDF tilldelas arbetsflödesvariabeln `submittedPDF`.
 
 ![arbetsflöde](assets/generate-pdf2.PNG)
 
 ### Tilldela den genererade PDF-filen för granskning och godkännande
 
-Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och Dokument i arbetsflödeskomponenten Tilldela uppgift.
+Tilldela arbetsflödeskomponent för uppgift används här för att tilldela den genererade PDF för granskning och godkännande. Variabeln `submittedPDF` används på fliken Forms och dokument i arbetsflödeskomponenten Tilldela uppgift.
 
 ![arbetsflöde](assets/assign-task.PNG)

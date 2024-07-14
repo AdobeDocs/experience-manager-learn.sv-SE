@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka OpenOffice-specifika fel i en Windows-installation för AEM Forms PDFG-konvertering
 
-*I den här videon går vi igenom processen att felsöka OpenOffice-specifika fel i en Windows-installation.*
+*Den här videon går igenom processen att felsöka OpenOffice-specifika fel i en Windows-installation.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335481?quality=12&learn=on)

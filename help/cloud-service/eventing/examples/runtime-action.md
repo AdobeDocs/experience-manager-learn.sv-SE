@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Adobe I/O Runtime Action and AEM Events
 
-Lär dig hur du tar emot AEM med [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) Åtgärda och granska händelseinformation som nyttolast, huvuden och metadata.
+Lär dig hur du tar emot AEM händelser med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) och granskar händelseinformation som nyttolast, huvuden och metadata.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427053?quality=12&learn=on)
 
 Adobe I/O Runtime är en serverlös plattform som tillåter exekvering av kod som svar på Adobe I/O Events. Detta hjälper dig att bygga händelsestyrda program utan att behöva bekymra dig om infrastrukturen.
 
-I det här exemplet skapar du en Adobe I/O Runtime [Åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) som tar emot AEM händelser och loggar händelseinformationen.
+I det här exemplet skapar du en [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) från Adobe I/O Runtime som tar emot AEM händelser och loggar händelseinformationen.
 https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 Stegen på hög nivå är:
@@ -41,23 +41,23 @@ Stegen på hög nivå är:
 
 För att kunna genomföra den här självstudiekursen behöver du:
 
-- AEM as a Cloud Service miljö med [AEM Eventing aktiverad](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- AEM as a Cloud Service-miljö med [AEM Eventing aktiverat](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
 
 - Åtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
 
-- [ADOBE DEVELOPER CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) installeras på din lokala dator.
+- [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) är installerat på din lokala dator.
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Service Eventing är bara tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM på din AEM as a Cloud Service miljö kontaktar du [AEM](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service Eventing är endast tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM i din AEM as a Cloud Service-miljö kontaktar du [AEM-Eventing team](mailto:grp-aem-events@adobe.com).
 
 ## Skapa projekt i Adobe Developer Console
 
 Så här skapar du ett projekt i Adobe Developer Console:
 
-- Navigera till [Adobe Developer Console](https://developer.adobe.com/) och klicka **Konsol** -knappen.
+- Navigera till [Adobe Developer Console](https://developer.adobe.com/) och klicka på knappen **Konsol** .
 
-- I **Snabbstart** avsnitt, klicka **Skapa projekt från mall**. Sedan i **Bläddra bland mallar** dialogruta, välja **App Builder** mall.
+- Klicka på **Skapa projekt från mall** i avsnittet **Snabbstart**. I dialogrutan **Bläddra bland mallar** väljer du sedan mallen **App Builder**.
 
 - Uppdatera projekttitel, appnamn och Lägg till arbetsyta om det behövs. Klicka sedan på **Spara**.
 
@@ -74,17 +74,17 @@ Om du vill lägga till Adobe I/O Runtime Action i projektet måste du initiera p
   aio app init
   ```
 
-- Välj `Organization`, `Project` som du skapade i föregående steg och arbetsytan. I `What templates do you want to search for?` steg, välja `All Templates` alternativ.
+- Markera `Organization`, `Project` som du skapade i föregående steg och arbetsytan. Välj alternativet `All Templates` i steget `What templates do you want to search for?`.
 
-  ![Projektval - Initiera projekt](../assets/examples/runtime-action/all-templates.png)
+  ![Organisationsprojektval - Initiera projekt](../assets/examples/runtime-action/all-templates.png)
 
-- I malllistan väljer du `@adobe/generator-app-excshell` alternativ.
+- Välj alternativet `@adobe/generator-app-excshell` i listan Mallar.
 
   ![Utbyggbarhetsmall - Initiera projekt](../assets/examples/runtime-action/extensibility-template.png)
 
 - Öppna projektet i din favoritutvecklingsmiljö, till exempel VSCode.
 
-- Den markerade _Utbyggbarhetsmall_ (`@adobe/generator-app-excshell`) innehåller en allmän körningsåtgärd, koden finns i `src/dx-excshell-1/actions/generic/index.js` -fil. Låt oss uppdatera den så att den blir enkel, logga händelseinformationen och returnera ett svar om att åtgärden lyckades. I nästa exempel förbättras dock bearbetningen av mottagna AEM händelser.
+- Den valda _utökningsmallen_ (`@adobe/generator-app-excshell`) innehåller en allmän körningsåtgärd, koden finns i filen `src/dx-excshell-1/actions/generic/index.js`. Låt oss uppdatera den så att den blir enkel, logga händelseinformationen och returnera ett svar om att åtgärden lyckades. I nästa exempel förbättras dock bearbetningen av mottagna AEM händelser.
 
   ```javascript
   const fetch = require("node-fetch");
@@ -137,40 +137,40 @@ Om du vill lägga till Adobe I/O Runtime Action i projektet måste du initiera p
 
 ## Konfigurera projekt i Adobe Developer Console
 
-Om du vill ta emot AEM händelser och köra Adobe I/O Runtime-åtgärden som skapades i föregående steg konfigurerar du projektet i Adobe Developer Console.
+Om du vill ta emot AEM händelser och köra Adobe I/O Runtime-åtgärden som skapades i det föregående steget konfigurerar du projektet i Adobe Developer Console.
 
-- I Adobe Developer Console går du till [projekt](https://developer.adobe.com/console/projects) som skapades i föregående steg och klicka för att öppna det. Välj `Stage` arbetsytan, det är här som åtgärden har distribuerats.
+- I Adobe Developer Console går du till det [projekt](https://developer.adobe.com/console/projects) som skapades i föregående steg och klickar för att öppna det. Välj arbetsytan `Stage`, det är här åtgärden distribuerades.
 
-- Klicka **Lägg till tjänst** knapp och markera **API** alternativ. I **Lägg till ett API** modal, välj **Adobes tjänster** > **API för I/O-hantering** och klicka **Nästa** följer du ytterligare konfigurationssteg och klickar på **Spara konfigurerat API**.
+- Klicka på knappen **Lägg till tjänst** och välj alternativet **API** . I **Lägg till ett API** modal väljer du **Adobe-tjänster** > **I/O-hanterings-API** och klickar på **Nästa**, följer ytterligare konfigurationssteg och klickar på **Spara konfigurerat API**.
 
   ![Lägg till tjänst - Konfigurera projekt](../assets/examples/runtime-action/add-io-management-api.png)
 
-- Klicka på samma sätt **Lägg till tjänst** knapp och markera **Händelse** alternativ. I **Lägg till händelser** dialogruta, välja **Experience Cloud** > **AEM Sites** och klicka **Nästa**. Följ ytterligare konfigurationssteg, välj AEMCS-instans, händelsetyper och annan information.
+- Klicka på knappen **Lägg till tjänst** och välj alternativet **Händelse**. I dialogrutan **Lägg till händelser** väljer du **Experience Cloud** > **AEM Sites** och klickar på **Nästa**. Följ ytterligare konfigurationssteg, välj AEMCS-instans, händelsetyper och annan information.
 
-- Äntligen i **Så här tar du emot händelser** steg, expandera **Körningsåtgärd** och väljer _generisk_ åtgärd som skapades i föregående steg. Klicka **Spara konfigurerade händelser**.
+- I steget **Så här tar du emot händelser** expanderar du alternativet **Körningsåtgärd** och väljer den _generiska_ åtgärden som skapades i föregående steg. Klicka på **Spara konfigurerade händelser**.
 
   ![Körningsåtgärd - Konfigurera projekt ](../assets/examples/runtime-action/select-runtime-action.png)
 
-- Granska informationen om eventregistrering, även **Felsökningsspårning** och verifiera **Utmaningsanalys** begäran och svar.
+- Granska informationen om händelseregistrering, även fliken **Felsökningsspårning**, och verifiera **Utfrågningsavsökningen** - förfrågan och svar.
 
   ![Information om händelseregistrering](../assets/examples/runtime-action/debug-tracing-challenge-probe.png)
 
 
 ## Utlös AEM
 
-Så här utlöser du AEM händelser från din AEM as a Cloud Service miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
+Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
 
 - Få åtkomst till och logga in i AEM as a Cloud Service redigeringsmiljö via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
-- Beroende på din **Prenumererade händelser**, skapa, uppdatera, ta bort, publicera eller avpublicera ett innehållsfragment.
+- Beroende på dina **Prenumererade händelser** kan du skapa, uppdatera, ta bort, publicera eller avpublicera ett innehållsfragment.
 
 ## Granska händelseinformation
 
 När du har slutfört ovanstående steg bör du se de AEM händelser som levereras till den allmänna åtgärden.
 
-Du kan granska händelseinformationen i **Felsökningsspårning** -fliken i informationen om händelseregistrering.
+Du kan granska händelseinformationen på fliken **Felsökningsspårning** i informationen om händelseregistrering.
 
-![Information om AEM](../assets/examples/runtime-action/aem-event-details.png)
+![AEM händelseinformation](../assets/examples/runtime-action/aem-event-details.png)
 
 
 ## Nästa steg

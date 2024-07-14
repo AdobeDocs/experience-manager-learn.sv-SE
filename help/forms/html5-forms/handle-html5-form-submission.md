@@ -25,9 +25,9 @@ HTML5-formulär kan skickas till en server som finns i AEM. De data som skickas 
 
 ## Skapa en Skicka-hanterare
 
-Du kan skapa en enkel servett som hanterar HTML5-formuläröverföringen. De data som skickas kan sedan extraheras med följande kod. Detta [servlet](assets/html5-submit-handler.zip) som ingår i den här självstudiekursen. Installera [servlet](assets/html5-submit-handler.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+Du kan skapa en enkel servett som hanterar HTML5-formuläröverföringen. De data som skickas kan sedan extraheras med följande kod. Den här [servern](assets/html5-submit-handler.zip) är tillgänglig som en del av den här självstudiekursen. Installera [servleten](assets/html5-submit-handler.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
-Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [SDK-konfiguration för Adobe-klient](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
+Koden från rad 9 kan användas för att anropa J2EE-processen. Kontrollera att du har konfigurerat [Adobe LiveCycle Client SDK Configuration](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa J2EE-processen.
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -63,7 +63,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 * Tryck på xdp och klicka på _Egenskaper_->_Avancerat_
 * kopiera http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html och klistra in detta i textfältet Skicka URL
-* Klicka _SparaOchStäng_ -knappen.
+* Klicka på knappen _SaveAndClose_.
 
 ### Lägg till post i Uteslut banor
 
@@ -82,4 +82,4 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### Ytterligare läsning
 
-Detta [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) Vi rekommenderar också att man genererar PDF från HTML5-formulär.
+Den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) om hur du genererar PDF från HTML5-formulärsändning rekommenderas också.

@@ -22,5 +22,5 @@ Nästa steg är att sammanfoga XML-data med mallen för att skapa PDF. PDF skick
 
 ## Använda OutputService för att generera PDF
 
-The [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) OutputService-metoden användes för att generera PDF.
+Metoden [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) i OutputService användes för att generera PDF.
 Det genererade PDF skickades sedan för signering med Adobe Sign REST API.

@@ -22,13 +22,13 @@ Nästa steg är att skapa ett schema från den Acrobat som skapades i det tidiga
 1. Logga in på [CRXDE Lite](http://localhost:4502/crx/de)
 2. Öppna i filen `/apps/AemFormsSamples/components/createxsd/POST.jsp`
 3. Ändra `saveLocation` till en lämplig mapp på hårddisken. Kontrollera att mappen som du sparar i redan har skapats.
-4. Peka webbläsaren till [Skapa XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) sida som finns på AEM.
+4. Peka webbläsaren på sidan [Skapa XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) som finns på AEM.
 5. Dra och släpp Acrobat.
 6. Kontrollera mappen som anges i steg 3. Schemafilen sparas på den här platsen.
 
 ## Ladda upp Acroform
 
-För att den här demon ska fungera på ditt system måste du skapa en mapp med namnet `acroforms` i AEM Assets. Överför Acrobat till denna `acroforms` mapp.
+För att den här demonstrationen ska fungera på ditt system måste du skapa en mapp med namnet `acroforms` i AEM Assets. Överför Acrobat till den här `acroforms`-mappen.
 
 >[!NOTE]
 >

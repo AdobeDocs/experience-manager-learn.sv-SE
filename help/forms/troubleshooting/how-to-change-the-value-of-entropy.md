@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här ändrar du värdet för entropi
 
-*I den här videon går du igenom stegen för att ändra värdet för entropi.*
+*Den här videon går igenom stegen för att ändra värdet för entropi.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)

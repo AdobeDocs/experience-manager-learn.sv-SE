@@ -33,7 +33,7 @@ I följande video får du hjälp med att skapa en konfiguration för molntjänst
 
 Om du får ett felmeddelande när du konfigurerar molnkonfigurationen för Adobe Sign kan du göra följande för att felsöka
 * Kontrollera att den omdirigerings-URL som anges i Acrobat Sign API-programmet har följande format
-&lt;your instance=&quot;&quot; name=&quot;&quot;>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html&lt;container>.
+&lt;ditt instansnamn>/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/&lt;container>.
 Till exempel: https://author-p24107-e32034.adobeaemcloud.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/FormsCS. FormsCS är namnet på den behållare som ska innehålla molnkonfigurationen
 * Kontrollera att autentiseringsadressen är korrekt
 * Kontrollera klient-ID och klienthemlighet

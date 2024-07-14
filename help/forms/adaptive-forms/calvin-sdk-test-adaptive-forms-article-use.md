@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Automatiserad testning av Adaptive Forms med Calvin SDK
 
-Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Testramverket i Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
+Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå testramverket [Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
 
 I den här självstudiekursen skapar du följande:
 
@@ -31,7 +31,7 @@ I den här självstudiekursen skapar du följande:
 
 ## Komma igång {#getting-started}
 
-[Hämta och installera resurser med Package Manager](assets/testingadaptiveformsusingcalvinsdk1.zip)Paketet innehåller exempelskript och flera adaptiva Forms.Dessa adaptiva Forms har byggts med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK API:er som finns för att testa Adaptive Forms. De allmänna stegen för testning AEM Adaptive Forms är:
+[Hämta och installera Assets med Package Manager](assets/testingadaptiveformsusingcalvinsdk1.zip)Paketet innehåller exempelskript och flera adaptiva Forms. Dessa adaptiva Forms har skapats med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK API:er som finns för att testa Adaptive Forms. De allmänna stegen för testning AEM Adaptive Forms är:
 
 * Navigera till formuläret som behöver testas
 * Ange fältets värde
@@ -39,7 +39,7 @@ I den här självstudiekursen skapar du följande:
 * Sök efter felmeddelanden
 
 Exempelskripten i paketet visar alla ovanstående åtgärder.
-Låt oss utforska koden i `mortgageForm.js`
+Låt oss utforska koden för `mortgageForm.js`
 
 ```javascript
 var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
@@ -50,9 +50,9 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 
 Koden ovan skapar en ny testsvit.
 
-* Namnet på TestSuite i det här fallet är `Mortgage Form Test` &#39;.
+* Namnet på TestSuite i det här fallet är `Mortgage Form Test`.
 * Anges som absolut sökväg i AEM till JS-filen som innehåller testsviten.
-* Registerparametern när den anges till &#39; `true` &#39;, gör testsviten tillgänglig i testgränssnittet.
+* Registerparametern när den anges till `true` gör testsviten tillgänglig i testgränssnittet.
 
 ```javascript
 .addTestCase(new hobs.TestCase("Calculate amount to borrow")
@@ -69,18 +69,18 @@ Koden ovan skapar en ny testsvit.
 
 Testfall kan läggas till för testsviten som ska köras mot en adaptiv form.
 
-* Använd `addTestCase` metoden för TestSuite-objektet.
-* The `addTestCase` metoden tar ett TestCase-objekt som parameter.
-* Om du vill skapa TestCase använder du `hobs.TestCase(..)` -metod.
+* Om du vill lägga till ett testfall till testsviten använder du metoden `addTestCase` i TestSuite-objektet.
+* Metoden `addTestCase` tar ett TestCase-objekt som parameter.
+* Använd metoden `hobs.TestCase(..)` om du vill skapa TestCase.
 * Obs! Den första parametern är namnet på det testfall som visas i användargränssnittet.
 * När du har skapat ett testfall kan du lägga till åtgärder i testfallet.
 * Åtgärder som omfattar `navigateTo`, `asserts.isTrue` kan läggas till som åtgärder i testfallet.
 
 ## Köra automatiska tester {#running-the-automated-tests}
 
-[OpenThetestsuite](http://localhost:4502/libs/granite/testing/hobbes.html)Expandera Test Suite och kör testerna. Om allt fungerar som det ska visas följande utdata.
+[Öppna testsviten](http://localhost:4502/libs/granite/testing/hobbes.html)Utöka testsviten och kör testerna. Om allt fungerar som det ska visas följande utdata.
 
-![kalvinsdk](assets/calvinimage.png)
+![calvinsdk](assets/calvinimage.png)
 
 ## Testa testsviterna {#try-out-the-sample-test-suites}
 

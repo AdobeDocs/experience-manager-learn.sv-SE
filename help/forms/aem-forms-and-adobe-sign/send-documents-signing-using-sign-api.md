@@ -25,20 +25,20 @@ I vissa fall kan du behöva skicka ett dokument för signering utan att använda
 
 [Distribuera OSGi-paketet](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) via AEM OSGi Web Console. Ange API-integreringsnyckeln och API-användaren med OSGi-konfigurationen som visas nedan via AEM OSGi Web Console Configuration Manager.
 
- Observera att `AdobeSignHelperMethods` OSGi-paketet känns inte igen som en Adobe Experience Manager-produktkod (AEM) och stöds därför inte av Adobe Support.
+ Observera att `AdobeSignHelperMethods` OSGi-paketet inte känns igen som en Adobe Experience Manager-produktkod (AEM) och att det därför inte stöds av Adobe Support.
 ![sign-configuration](assets/sign-configuration.png)
 
 
 ## API-dokumentation
 
-Följande är tillgängliga via `AcrobatSignHelperMethods` OSGi-tjänsten tillhandahålls i OSGi-paketet.
+Följande är tillgängliga via OSGi-tjänsten `AcrobatSignHelperMethods` som ingår i OSGi-paketet.
 
 ### getTransientDocumentID
 
 `String getTransientDocumentID(Document documentForSigning) throws IOException`
 
 
-Dokumentet som används för att skapa ett avtal eller ett webbformulär. Dokumentet överförs först till Acrobat Sign av avsändaren. Detta kallas för _övergående_ eftersom det endast är tillgängligt för användning i 7 dagar efter överföringen. Den här metoden accepterar `com.adobe.aemfd.docmanager.Document` och returnerar tillfälligt dokument-ID.
+Dokumentet som används för att skapa ett avtal eller ett webbformulär. Dokumentet överförs först till Acrobat Sign av avsändaren. Detta kallas _transient_ eftersom det bara kan användas i 7 dagar efter överföringen. Den här metoden accepterar `com.adobe.aemfd.docmanager.Document` och returnerar tillfälligt dokument-ID.
 
 ### getAgreementID
 
@@ -60,7 +60,7 @@ Hämta en widget-URL för ett specifikt widget-ID. Denna widget-URL kan sedan vi
 
 ## Använda API
 
-The `AcrobatSignHelperMethods` är en OSGi-tjänst, så den måste kommenteras med @Reference-anteckningen i din java-kod.
+`AcrobatSignHelperMethods` är en OSGi-tjänst, så den måste kommenteras med @Reference-anteckningen i din java-kod.
 
 ```java
 ...

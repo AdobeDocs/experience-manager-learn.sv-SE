@@ -1,6 +1,6 @@
 ---
 title: Skapa ett flerspråkigt översättningsprojekt
-description: Lär dig hur du skapar, redigerar och hanterar ett flerspråkigt översättningsprojekt för din språkkopia AEM projektkonsolen
+description: Lär dig hur du skapar, redigerar och hanterar ett flerspråkigt översättningsprojekt för din språkkopia från AEM projektkonsolen
 feature: Language Copy, Multi Site Manager
 doc-type: Feature Video
 version: 6.4, 6.5, Cloud Service
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Skapa ett flerspråkigt översättningsprojekt {#create-multi-language-translation-projects}
 
-Lär dig hur du skapar, redigerar och hanterar ett flerspråkigt översättningsprojekt för din språkkopia AEM projektkonsolen
+Lär dig hur du skapar, redigerar och hanterar ett flerspråkigt översättningsprojekt för din språkkopia från AEM projektkonsolen
 
 >[!VIDEO](https://video.tv.adobe.com/v/36485?quality=12&learn=on)

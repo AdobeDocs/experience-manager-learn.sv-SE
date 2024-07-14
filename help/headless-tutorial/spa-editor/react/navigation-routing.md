@@ -25,85 +25,85 @@ Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med S
 ## Syfte
 
 1. Förstå de alternativ för SPA modellroutning som är tillgängliga när du använder SPA Editor.
-1. Lär dig använda [Reagera router](https://reacttraining.com/react-router) för att navigera mellan olika vyer av SPA.
+1. Lär dig att använda [Reaktionsrouter](https://reacttraining.com/react-router) för att navigera mellan olika vyer av SPA.
 1. Använd AEM React Core Components för att implementera en dynamisk navigering som styrs av den AEM sidhierarkin.
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [Kärnkomponent för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html).
+I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och den JSON-modell som finns i [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html) används.
 
 ![Navigering har lagts till](assets/navigation-routing/navigation-added.png)
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att ställa in en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Det här kapitlet är en fortsättning på [Mappa komponenter](map-components.md) för att följa med i det hela behöver du ett SPA-aktiverat AEM-projekt som distribueras till en lokal AEM.
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). Det här kapitlet är en fortsättning på kapitlet [Mappa komponenter](map-components.md), men för att följa med i allt du behöver finns ett SPA-aktiverat AEM-projekt som distribueras till en lokal AEM.
 
 ## Lägg till navigeringen i mallen {#add-navigation-template}
 
 1. Öppna en webbläsare och logga in på AEM, [http://localhost:4502/](http://localhost:4502/). Startkodbasen ska redan distribueras.
-1. Navigera till **SPA**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. Markera den yttre **Rotlayoutbehållare** och klicka på **Policy** -ikon. Var försiktig **not** för att välja **Layoutbehållare** ej låst för redigering.
+1. Navigera till **SPA sidmall**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
+1. Markera den yttre **rotlayoutbehållaren** och klicka på ikonen **Princip** . Var försiktig så att **inte** **layoutbehållaren** inte är låst för redigering.
 
    ![Välj ikon för rotlayoutbehållarprincipen](assets/navigation-routing/root-layout-container-policy.png)
 
-1. Skapa en ny princip med namnet **SPA**:
+1. Skapa en ny princip med namnet **SPA Struktur**:
 
-   ![SPA](assets/navigation-routing/spa-policy-update.png)
+   ![SPA Strukturprincip](assets/navigation-routing/spa-policy-update.png)
 
-   Under **Tillåtna komponenter** > **Allmänt** > välj **Layoutbehållare** -komponenten.
+   Välj komponenten **Layoutbehållare** under **Tillåtna komponenter** > **Allmänt** >.
 
-   Under **Tillåtna komponenter** > **WKND SPA REACT - STRUKTUR** > välj **Navigering** komponent:
+   Under **Tillåtna komponenter** > **WKND SPA REACT - STRUKTUR** > väljer du komponenten **Navigation**:
 
    ![Välj navigeringskomponent](assets/navigation-routing/select-navigation-component.png)
 
-   Under **Tillåtna komponenter** > **WKND SPA REACT - Innehåll** > välj **Bild** och **Text** -komponenter. Du bör välja totalt 4 komponenter.
+   Under **Tillåtna komponenter** > **WKND SPA REACT - Innehåll** > markerar du komponenterna **Bild** och **Text**. Du bör välja totalt 4 komponenter.
 
-   Klicka **Klar** för att spara ändringarna.
+   Klicka på **Klar** för att spara ändringarna.
 
-1. Uppdatera sidan och lägg till **Navigering** -komponenten ovanför det olåsta **Layoutbehållare**:
+1. Uppdatera sidan och lägg till komponenten **Navigation** ovanför den olåsta **layoutbehållaren**:
 
    ![lägg till navigeringskomponent i mall](assets/navigation-routing/add-navigation-component.png)
 
-1. Välj **Navigering** och klicka på dess **Policy** om du vill redigera profilen.
-1. Skapa en ny profil med en **Principtitel** av **SPA**.
+1. Markera **navigeringskomponenten** och klicka på dess **princip**-ikon för att redigera profilen.
+1. Skapa en ny princip med en **principtitel** på **SPA Navigering**.
 
    Under **Egenskaper**:
 
    * Ange **Navigeringsrot** till `/content/wknd-spa-react/us/en`.
    * Ange **Uteslut rotnivåer** till **1**.
    * Avmarkera **Samla in alla underordnade sidor**.
-   * Ange **Navigeringsstrukturens djup** till **3**.
+   * Ange **Navigeringsstrukturdjupet** till **3**.
 
    ![Konfigurera navigeringsprincip](assets/navigation-routing/navigation-policy.png)
 
-   Detta samlar in navigeringen 2 nivåer under `/content/wknd-spa-react/us/en`.
+   Detta samlar in navigering 2 nivåer under `/content/wknd-spa-react/us/en`.
 
-1. När du har sparat ändringarna bör du se det ifyllda `Navigation` som en del av mallen:
+1. När du har sparat dina ändringar bör du se det ifyllda `Navigation` som en del av mallen:
 
-   ![Fylld navigeringskomponent](assets/navigation-routing/populated-navigation.png)
+   ![Populerad navigeringskomponent](assets/navigation-routing/populated-navigation.png)
 
 ## Skapa underordnade sidor
 
 Skapa sedan ytterligare sidor i AEM som ska fungera som de olika vyerna i SPA. Vi kommer också att inspektera den hierarkiska strukturen i JSON-modellen som AEM tillhandahåller.
 
-1. Navigera till **Webbplatser** konsol: [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). Välj **WKND SPA React Home Page** och klicka **Skapa** > **Sida**:
+1. Gå till konsolen **Platser**: [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). Markera **WKND SPA React Home Page** och klicka på **Create** > **Page**:
 
    ![Skapa ny sida](assets/navigation-routing/create-new-page.png)
 
-1. Under **Mall** välj **SPA**. Under **Egenskaper** enter **Sida 1** för **Titel** och **page-1** som namn.
+1. Under **Mall** väljer du **SPA sida**. Under **Egenskaper** anger du **Sida 1** som namn för **Titel** och **sida-1**.
 
-   ![Ange egenskaper för den inledande sidan](assets/navigation-routing/initial-page-properties.png)
+   ![Ange egenskaperna för den inledande sidan](assets/navigation-routing/initial-page-properties.png)
 
-   Klicka **Skapa** och i dialogrutan klickar du på **Öppna** för att öppna sidan i AEM SPA Editor.
+   Klicka på **Skapa** och klicka på **Öppna** i popup-dialogrutan för att öppna sidan i AEM SPA.
 
-1. Lägg till en ny **Text** till huvudkomponenten **Layoutbehållare**. Redigera komponenten och ange texten: **Sida 1** med RTE och **H2** -element.
+1. Lägg till en ny **Text**-komponent i **huvudlayoutbehållaren**. Redigera komponenten och ange texten: **Sida 1** med RTE och elementet **H2** .
 
    ![Exempel på innehåll, sida 1](assets/navigation-routing/page-1-sample-content.png)
 
    Du kan lägga till ytterligare innehåll, som en bild.
 
-1. Återgå till AEM Sites-konsolen och upprepa stegen ovan och skapa en andra sida med namnet **Sidan 2** som ett syskon av **Sida 1**.
-1. Skapa slutligen en tredje sida, **Sidan 3** men som **child** av **Sidan 2**. När webbplatshierarkin är klar ska den se ut så här:
+1. Gå tillbaka till AEM Sites-konsolen och upprepa stegen ovan, och skapa en andra sida med namnet **Sida 2** som motsvarar **sidan 1**.
+1. Skapa slutligen en tredje sida, **Sida 3**, men som **underordnad** till **sida 2**. När webbplatshierarkin är klar ska den se ut så här:
 
    ![Exempel på webbplatshierarki](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
@@ -111,9 +111,9 @@ Skapa sedan ytterligare sidor i AEM som ska fungera som de olika vyerna i SPA. V
 
    ![Navigering och routning](assets/navigation-routing/navigation-working.gif)
 
-1. Öppna sidan utanför AEM: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). Använd **Navigering** för att navigera till olika vyer av programmet.
+1. Öppna sidan utanför AEM: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). Använd komponenten **Navigation** för att navigera till olika vyer av programmet.
 
-1. Använd webbläsarens utvecklarverktyg för att inspektera nätverksförfrågningar när du navigerar. Skärmbilder nedan hämtas från webbläsaren Google Chrome.
+1. Använd webbläsarens utvecklarverktyg för att inspektera nätverksförfrågningar när du navigerar. Skärmbilder nedan hämtas från Google Chrome webbläsare.
 
    ![Observera nätverksbegäranden](assets/navigation-routing/inspect-network-requests.png)
 
@@ -123,7 +123,7 @@ Skapa sedan ytterligare sidor i AEM som ska fungera som de olika vyerna i SPA. V
 
 Kontrollera sedan den JSON-modell som driver SPA upplevelse av flera vyer.
 
-1. På en ny flik öppnar du JSON-modell-API:t från AEM: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Det kan vara praktiskt att använda ett webbläsartillägg för [formatera JSON](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
+1. På en ny flik öppnar du JSON-modell-API:t som tillhandahålls av AEM: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Det kan vara praktiskt att använda ett webbläsartillägg för att [formatera JSON](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
 
    Detta JSON-innehåll begärs när SPA läses in första gången. Den yttre strukturen ser ut så här:
 
@@ -148,25 +148,25 @@ Kontrollera sedan den JSON-modell som driver SPA upplevelse av flera vyer.
    }
    ```
 
-   Under `:children` Du bör se en post för varje sida som skapas. Innehållet för alla sidor finns i den här inledande JSON-begäran. Med navigeringsroutningen läses efterföljande vyer av SPA in snabbt eftersom innehållet redan är tillgängligt på klientsidan.
+   Under `:children` ska du se en post för varje sida som skapas. Innehållet för alla sidor finns i den här inledande JSON-begäran. Med navigeringsroutningen läses efterföljande vyer av SPA in snabbt eftersom innehållet redan är tillgängligt på klientsidan.
 
-   Det är inte klokt att läsa in **ALLA** av innehållet i en SPA i den inledande JSON-begäran, eftersom detta skulle göra den inledande sidinläsningen långsammare. Sedan ska vi titta på hur sidornas hierarkidjup samlas in.
+   Det är inte klokt att läsa in **ALL** av innehållet i en SPA i den inledande JSON-begäran, eftersom det skulle göra den inledande sidinläsningen långsammare. Sedan ska vi titta på hur sidornas hierarkidjup samlas in.
 
-1. Navigera till **SPA** mall på: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
+1. Gå till mallen **SPA Root** på: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
 
-   Klicka på **Meny för sidegenskaper** > **Sidprofil**:
+   Klicka på menyn **Sidegenskaper** > **Sidprofil**:
 
-   ![Öppna sidprincipen för SPA](assets/navigation-routing/open-page-policy.png)
+   ![Öppna sidprincipen för SPA ](assets/navigation-routing/open-page-policy.png)
 
-1. The **SPA** mallen har en extra **Hierarkisk struktur** för att kontrollera det insamlade JSON-innehållet. The **Strukturdjup** avgör hur djupt i platshierarkin underordnade sidor ska samlas under **root**. Du kan också använda **Strukturmönster** om du vill filtrera ut ytterligare sidor baserat på ett reguljärt uttryck.
+1. Mallen **SPA Root** har en extra **hierarkisk struktur**-flik som styr JSON-innehållet som samlas in. **Strukturdjupet** avgör hur djupt i platshierarkin underordnade sidor ska samlas under **rotmappen**. Du kan också använda fältet **Strukturmönster** för att filtrera bort ytterligare sidor baserat på ett reguljärt uttryck.
 
-   Uppdatera **Strukturdjup** till **2**:
+   Uppdatera **strukturdjupet** till ****:
 
    ![Uppdatera strukturdjup](assets/navigation-routing/update-structure-depth.png)
 
-   Klicka **Klar** om du vill spara ändringarna i profilen.
+   Klicka på **Klar** om du vill spara ändringarna i profilen.
 
-1. Öppna JSON-modellen igen [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
+1. Öppna JSON-modellen [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) igen.
 
    ```json
    {
@@ -188,31 +188,31 @@ Kontrollera sedan den JSON-modell som driver SPA upplevelse av flera vyer.
    }
    ```
 
-   Observera att **Sidan 3** Sökvägen har tagits bort: `/content/wknd-spa-react/us/en/home/page-2/page-3` från den ursprungliga JSON-modellen. Det beror på att **Sidan 3** är på nivå 3 i hierarkin och vi har uppdaterat policyn till att endast inkludera innehåll på högst nivå 2.
+   Observera att sökvägen **Sidan 3** har tagits bort: `/content/wknd-spa-react/us/en/home/page-2/page-3` från den ursprungliga JSON-modellen. Detta beror på att **sidan 3** är på nivå 3 i hierarkin och att vi har uppdaterat principen så att endast innehåll med maximalt djup på nivå 2 inkluderas.
 
-1. Öppna SPA hemsida igen: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) och öppna utvecklarverktygen i webbläsaren.
+1. Öppna SPA startsida igen: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) och öppna webbläsarens utvecklingsverktyg.
 
-   Uppdatera sidan så ska du se XHR-begäran för att `/content/wknd-spa-react/us/en.model.json`, som är SPA. Observera att endast tre underordnade sidor inkluderas baserat på hierarkidjupets konfiguration till SPA rotmall som skapades tidigare i självstudiekursen. Detta inkluderar inte **Sidan 3**.
+   Uppdatera sidan så ska du se XHR-begäran till `/content/wknd-spa-react/us/en.model.json`, som är SPA. Observera att endast tre underordnade sidor inkluderas baserat på hierarkidjupets konfiguration till SPA rotmall som skapades tidigare i självstudiekursen. Detta inkluderar inte **sidan 3**.
 
-   ![Initial JSON-begäran - SPA](assets/navigation-routing/initial-json-request.png)
+   ![Initial JSON-begäran - SPA ](assets/navigation-routing/initial-json-request.png)
 
-1. Med utvecklingsverktygen öppna kan du använda `Navigation` -komponent som du navigerar direkt till **Sidan 3**:
+1. När utvecklingsverktygen är öppna använder du komponenten `Navigation` för att navigera direkt till **sidan 3**:
 
    Observera att en ny XHR-begäran görs till: `/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
 
-   ![Sida tre XHR-begäran](assets/navigation-routing/page-3-xhr-request.png)
+   ![Sidan tre XHR-begäran](assets/navigation-routing/page-3-xhr-request.png)
 
-   AEM Modellhanteraren förstår att **Sidan 3** JSON-innehåll är inte tillgängligt och utlöser automatiskt ytterligare XHR-begäran.
+   Den AEM modellhanteraren förstår att JSON-innehållet **Sidan 3** inte är tillgängligt och utlöser automatiskt den ytterligare XHR-begäran.
 
-1. Experimentera med länkar genom att navigera direkt till: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Tänk också på att webbläsarens bakåtknapp fortsätter att fungera.
+1. Experimentera med djupa länkar genom att navigera direkt till: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Tänk också på att webbläsarens bakåtknapp fortsätter att fungera.
 
 ## Inspect React Routing  {#react-routing}
 
-Navigering och routning implementeras med [Reagera router](https://reactrouter.com/en/main). React Router är en samling navigeringskomponenter för React-program. [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) använder funktionerna i React Router för att implementera **Navigering** -komponenten som användes i föregående steg.
+Navigering och routning implementeras med [Reaktionsrouter](https://reactrouter.com/en/main). React Router är en samling navigeringskomponenter för React-program. [AEM React Core Components](https://github.com/adobe/aem-react-core-wcm-components-base) använder funktioner i React Router för att implementera komponenten **Navigation** som användes i föregående steg.
 
-Kontrollera sedan hur React Router är integrerat med SPA och experimentera med React Routers [Länk](https://reactrouter.com/en/main/components/link) -komponenten.
+Kontrollera sedan hur React Router är integrerat med SPA och experimentera med React Routers [Link](https://reactrouter.com/en/main/components/link) -komponent.
 
-1. Öppna filen i IDE `index.js` på `ui.frontend/src/index.js`.
+1. I IDE öppnar du filen `index.js` vid `ui.frontend/src/index.js`.
 
    ```js
    /* index.js */
@@ -237,9 +237,9 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
    });
    ```
 
-   Observera att `App` är inkapslad i `Router` komponent från [Reagera router](https://reacttraining.com/react-router). The `ModelManager`, som tillhandahålls av AEM JS SDK, lägger till dynamiska vägar till AEM sidor baserat på JSON-modellens API.
+   Observera att `App` är omsluten i komponenten `Router` från [React Router](https://reacttraining.com/react-router). `ModelManager`, som tillhandahålls av AEM JS SDK-redigeraren för SPA, lägger till dynamiska vägar till AEM sidor baserat på JSON-modellens API.
 
-1. Öppna filen `Page.js` på `ui.frontend/src/components/Page/Page.js`
+1. Öppna filen `Page.js` vid `ui.frontend/src/components/Page/Page.js`
 
    ```js
    class AppPage extends Page {
@@ -256,10 +256,10 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
    );
    ```
 
-   The `Page` SPA använder `MapTo` funktion som ska mappas **Sidor** i AEM till en motsvarande SPA. The `withRoute` kan du dirigera SPA dynamiskt till rätt AEM underordnad sida baserat på `cqPath` -egenskap.
+   Komponenten `Page` SPA använder funktionen `MapTo` för att mappa **sidor** i AEM till en motsvarande SPA. Verktyget `withRoute` hjälper till att dynamiskt dirigera SPA till rätt AEM underordnad sida baserat på egenskapen `cqPath`.
 
-1. Öppna `Header.js` komponent vid `ui.frontend/src/components/Header/Header.js`.
-1. Uppdatera `Header` för att radbryta `<h1>` i en [Länk](https://reactrouter.com/en/main/components/link) till hemsidan:
+1. Öppna komponenten `Header.js` på `ui.frontend/src/components/Header/Header.js`.
+1. Uppdatera `Header` för att kapsla in taggen `<h1>` i en [länk](https://reactrouter.com/en/main/components/link) på startsidan:
 
    ```diff
      //Header.js
@@ -282,9 +282,9 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
        }
    ```
 
-   I stället för att använda en standardinställning `<a>` ankartagg som vi använder `<Link>` tillhandahålls av React Router. Så länge `to=` pekar på en giltig rutt, SPA byter till den rutten och **not** utföra en fullständig uppdatering av sidan. Här kan vi helt enkelt hårdkoda länken till hemsidan för att visa hur man använder `Link`.
+   I stället för att använda standardankartaggen `<a>` använder vi `<Link>` som tillhandahålls av React Router. Så länge som `to=` pekar på en giltig väg, kommer SPA att växla till den vägen och **inte** utföra en uppdatering av hela sidan. Här kan vi helt enkelt hårdkoda länken till hemsidan för att visa hur `Link` används.
 
-1. Uppdatera testet på `App.test.js` på `ui.frontend/src/App.test.js`.
+1. Uppdatera testet `App.test.js` `ui.frontend/src/App.test.js`.
 
    ```diff
    + import { BrowserRouter as Router } from 'react-router-dom';
@@ -308,13 +308,13 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
 
 1. Navigera till en av sidorna i SPA i AEM: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
 
-   I stället för att använda `Navigation` om du vill navigera använder du länken i `Header`.
+   Använd länken i `Header` i stället för att använda komponenten `Navigation` för att navigera.
 
-   ![Sidhuvudslänk](assets/navigation-routing/header-link.png)
+   ![Huvudlänk](assets/navigation-routing/header-link.png)
 
-   Observera att en uppdatering av hela sidan är **not** aktiveras och att SPA fungerar.
+   Observera att en uppdatering av hela sidan har **inte** utlösts och att SPA fungerar.
 
-1. Experimentera med `Header.js` fil med en standard `<a>` ankartagg:
+1. Du kan också experimentera med filen `Header.js` med en `<a>` -ankartagg som standard:
 
    ```js
    <a href="/content/wknd-spa-react/us/en/home.html">
@@ -326,4 +326,4 @@ Kontrollera sedan hur React Router är integrerat med SPA och experimentera med 
 
 ## Grattis! {#congratulations}
 
-Grattis! Du har lärt dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering har implementerats med React Router och lagts till i `Header` -komponenten.
+Grattis! Du har lärt dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering har implementerats med React Router och lagts till i komponenten `Header`.

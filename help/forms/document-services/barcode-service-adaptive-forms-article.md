@@ -140,10 +140,10 @@ Rad 23 - Anropa metoden extractBarCode för DocumentServices så att JSON-objekt
 
 Så här kör du det här på datorn:
 
-1. [Ladda ned BarcodeService.zip](assets/barcodeservice.zip) och importera till AEM med pakethanteraren
+1. [Hämta BarcodeService.zip](assets/barcodeservice.zip) och importera till AEM med pakethanteraren
 1. [Hämta och installera paketet med anpassade Document Services](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Ladda ned exempelformuläret PDF](assets/barcode.pdf)
-1. Peka webbläsaren mot [exempeladaptiv form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Peka webbläsaren på det [exempel på anpassningsbara formuläret](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. Överför exempelfilen PDF
 1. Du bör se formulären som innehåller data

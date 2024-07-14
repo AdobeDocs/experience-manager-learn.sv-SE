@@ -23,23 +23,23 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfält](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) tillägg som satsvis uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
+Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
 
 Det funktionella flödet för exempeltillägget är följande:
 
 ![Adobe I/O Runtime åtgärdsflöde](./assets/bulk-property-update/flow.png){align="center"}
 
-1. Välj Innehållsfragment och klicka på tilläggets knapp i dialogrutan [åtgärdsfält](#extension-registration) öppnar [modal](#modal).
-2. The [modal](#modal) visar ett anpassat indataformulär som skapats med [Reagera spektrum](https://react-spectrum.adobe.com/react-spectrum/).
-3. När du skickar formuläret skickas listan med markerade innehållsfragment och AEM värd till [anpassad Adobe I/O Runtime-åtgärd](#adobe-io-runtime-action).
-4. The [Adobe I/O Runtime action](#adobe-io-runtime-action) validerar indata och gör HTTP PUT-begäranden om att AEM uppdatera de markerade innehållsfragmenten.
+1. Välj Innehållsfragment och klicka på tilläggets knapp i [åtgärdsfältet](#extension-registration) för att öppna [modal](#modal).
+2. [modal](#modal) visar ett anpassat indataformulär som skapats med [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
+3. När du skickar formuläret skickas listan med markerade innehållsfragment och AEM värd till den [anpassade Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action).
+4. [Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action) verifierar indata och gör HTTP PUT-begäranden om AEM av att uppdatera de markerade innehållsfragmenten.
 5. En serie HTTP-PUT för varje innehållsfragment som ska uppdatera den angivna egenskapen.
-6. AEM as a Cloud Service kvarstår egenskapsuppdateringarna för innehållsfragmentet och returnerar svar om Adobe I/O Runtime-åtgärden om huruvida åtgärden lyckades eller inte.
+6. AEM as a Cloud Service består av egenskapsuppdateringarna för innehållsfragmentet och returnerar svar om huruvida åtgärden Adobe I/O Runtime lyckades eller inte.
 7. modal fick svaret från Adobe I/O Runtime-åtgärden och visar en lista över lyckade bulkuppdateringar.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `actionBar` om du vill lägga till en anpassad knapp i konsolen för innehållsfragment.
+Det här exemplet utökar till tilläggspunkten `actionBar` för att lägga till en anpassad knapp i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
@@ -48,13 +48,13 @@ Det här exemplet utökar till tilläggspunkten `actionBar` om du vill lägga ti
 
 ## Exempel på tillägg
 
-I exemplet används ett befintligt Adobe Developer Console-projekt och följande alternativ används när appen App Builder initieras via `aio app init`.
+I exemplet används ett befintligt Adobe Developer Console-projekt och följande alternativ används när App Builder-appen initieras, via `aio app init`.
 
-+ Vilka mallar vill du söka efter? `All Extension Points`
++ Vilka mallar vill du söka efter?: `All Extension Points`
 + Välj de mallar som ska installeras:` @adobe/aem-cf-admin-ui-ext-tpl`
-+ Vad vill du ge tillägget ett namn? `Bulk property update`
-+ Ange en kort beskrivning av ditt tillägg: `An example action bar extension that bulk updates a single property one or more content fragments.`
-+ Vilken version vill du börja med? `0.0.1`
++ Vad vill du kalla tillägget? `Bulk property update`
++ Ange en kort beskrivning av tillägget: `An example action bar extension that bulk updates a single property one or more content fragments.`
++ Vilken version vill du börja med?: `0.0.1`
 + Vad vill du göra nu?
    + `Add a custom button to Action Bar`
       + Ange knappens etikettnamn: `Bulk property update`
@@ -62,23 +62,23 @@ I exemplet används ett befintligt Adobe Developer Console-projekt och följande
    + `Add server-side handler`
       + Med Adobe I/O Runtime kan du anropa serverlös kod vid behov. Hur vill du namnge den här åtgärden?: `generic`
 
-Den skapade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
+Den genererade App Builder-tilläggsappen uppdateras enligt beskrivningen nedan.
 
 ### Appvägar{#app-routes}
 
-The `src/aem-cf-console-admin-1/web-src/src/components/App.js` innehåller [Reagera router](https://reactrouter.com/en/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js` innehåller [Reaktionsroutern](https://reactrouter.com/en/main).
 
 Det finns två logiska uppsättningar vägar:
 
-1. Den första rutten mappar begäranden till `index.html`, som anropar React-komponenten som ansvarar för [tilläggsregistrering](#extension-registration).
+1. Den första vägen mappar begäranden till `index.html`, som anropar React-komponenten som ansvarar för [tilläggsregistreringen](#extension-registration).
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. The `:selection` -param representerar en avgränsad sökväg för innehållsfragment.
+1. Den andra uppsättningen vägar mappar URL:er till React-komponenter som återger innehållet i tilläggets modal. Param `:selection` representerar en begränsad sökväg för innehållsfragment i listan.
 
-   Om tillägget har flera knappar för att anropa diskreta åtgärder ska varje [tilläggsregistrering](#extension-registration) mappar till en väg som definieras här.
+   Om tillägget har flera knappar för att anropa diskreta åtgärder mappas varje [tilläggsregistrering](#extension-registration) till en väg som definieras här.
 
    ```javascript
    <Route
@@ -89,11 +89,11 @@ Det finns två logiska uppsättningar vägar:
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappas till `index.html` rutt, är ingångspunkten för AEM tillägg och definierar:
+`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM och definierar:
 
-1. Platsen för tilläggsknappen visas i AEM (`actionBar` eller `headerMenu`)
-1. Tilläggsknappens definition i `getButtons()` function
-1. Knappens klickningshanterare i `onClick()` function
+1. Platsen för tilläggsknappen visas i AEM-redigeringsgränssnittet (`actionBar` eller `headerMenu`)
+1. Tilläggsknappens definition i funktionen `getButtons()`
+1. Knappens klickningshanterare i funktionen `onClick()`
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -160,18 +160,18 @@ export default ExtensionRegistration;
 
 ### Modal
 
-Varje rutt för tillägget, enligt definition i [`App.js`](#app-routes), mappar till en React-komponent som återges i tilläggets modal.
+Varje väg i tillägget, enligt definition i [`App.js`](#app-routes), mappas till en React-komponent som återges i tilläggets modal.
 
-I det här exemplet finns det en modal React-komponent (`BulkPropertyUpdateModal.js`) som har tre lägen:
+I den här exempelappen finns en modal React-komponent (`BulkPropertyUpdateModal.js`) som har tre lägen:
 
 1. Läser in, vilket anger att användaren måste vänta
 1. Formuläret för uppdatering av massegenskaper där användaren kan ange egenskapsnamnet och värdet som ska uppdateras
 1. Svaret på uppdateringsåtgärden för bulkegenskapen, en lista över de innehållsfragment som uppdaterades och de som inte kunde uppdateras
 
-Viktigt är att all interaktion med AEM från tillägget ska delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
+Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Adobe I/O Runtime-åtgärder för att kommunicera med AEM används för att undvika anslutningsproblem med korsorigo Resource Sharing (CORS).
 
-När formuläret för uppdatering av massegenskaper skickas, en anpassad `onSubmitHandler()` anropar Adobe I/O Runtime-åtgärden och skickar den aktuella AEM (domänen) och användarens AEM åtkomsttoken, som i sin tur anropar [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
+När formuläret för uppdatering av massegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM (domän) och användarens AEM åtkomsttoken, som i sin tur anropar [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modal-åtgärden så att resultatet av bulkegenskapsuppdateringen visas.
 
@@ -433,14 +433,14 @@ export default function BulkPropertyUpdateModal() {
 
 ### Adobe I/O Runtime action
 
-En AEM app i App Builder kan definiera eller använda 0 eller många av Adobe I/O Runtime åtgärder.
+Ett AEM tillägg som App Builder kan definiera eller använda 0 eller många Adobe I/O Runtime-åtgärder.
 Åtgärder i Adobe-miljön bör vara ansvarsfulla arbeten som kräver interaktion med AEM eller andra webbtjänster från Adobe.
 
-I det här exemplet använder Adobe I/O Runtime-åtgärden - som använder standardnamnet `generic` - ansvarar för
+I det här exempelprogrammet ansvarar Adobe I/O Runtime-åtgärden, som använder standardnamnet `generic`, för:
 
 1. Skapa en serie HTTP-begäranden till API:t för AEM innehållsfragment för att uppdatera innehållsfragmenten.
 1. Samla in svaren från dessa HTTP-begäranden och sortera dem till lyckade och misslyckade
-1. Returnera listan över lyckade och misslyckade åtgärder som visas av modal (`BulkPropertyUpdateModal.js`)
+1. Returnerar listan över lyckade och misslyckade visningslägen för modala (`BulkPropertyUpdateModal.js`)
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 

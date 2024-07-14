@@ -1,5 +1,5 @@
 ---
-title: Samarbete i Assets Essentials
+title: COLLABORATION i ASSETS ESSENTIALS
 description: Lär dig samarbeta i resurshantering med kommentarer, anteckningar och uppgifter.
 version: Cloud Service
 feature: Assets Essentials
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Samarbete i Assets Essentials
+# COLLABORATION i ASSETS ESSENTIALS
 
 Lär dig samarbeta om resurshantering med hjälp av kommentarer, anteckningar och uppgifter.
 

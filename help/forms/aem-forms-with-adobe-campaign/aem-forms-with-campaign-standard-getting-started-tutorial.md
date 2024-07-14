@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Integrera AEM Forms och Adobe Campaign Standard
 
-![formulärsandkampanj](assets/helpx-cards-forms.png)
+![formsandcampaign](assets/helpx-cards-forms.png)
 
 Lär dig integrera AEM Forms med Adobe Campaign Standard (ACS).
 
@@ -36,7 +36,7 @@ Om du vill integrera AEM Forms med ACS måste du göra följande:
 Följ nedanstående instruktioner för att komma igång
 
 * [Ladda ned och zippa upp resurser som hör till kursen.](assets/aem-forms-and-acs-bundles.zip)
-* Distribuera paketen med [Felix webbkonsol](http://localhost:4502/system/console/bundles)
+* Distribuera paketen med [Felix-webbkonsolen](http://localhost:4502/system/console/bundles)
 * Ange lämpliga inställningar för Adobe Campaign i Felix OSGI Configuration.
 * [Skapa en tjänstanvändare enligt den här artikeln](/help/forms/adaptive-forms/service-user-tutorial-develop.md). Distribuera det OSGi-paket som är kopplat till artikeln.
 * Lagra den privata ACS-nyckeln i etc/key/campaign/private.key. Du måste skapa en mapp som kallas kampanj under etc/key.

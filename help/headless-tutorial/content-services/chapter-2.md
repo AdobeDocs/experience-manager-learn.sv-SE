@@ -28,52 +28,52 @@ I det här kapitlet beskrivs hur du aktiverar och definierar Content Fragment-mo
 
 ## Aktivera modeller för innehållsfragment
 
-Modeller för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**.
+Modellerna för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**.
 
-Om modeller för innehållsfragment är **not** aktiverad för en konfiguration **[!UICONTROL Create]>[!UICONTROL Content Fragment]** visas inte för den aktuella AEM-konfigurationen.
+Om Content Fragment Models **inte** är aktiverat för en konfiguration visas inte knappen **[!UICONTROL Create]>[!UICONTROL Content Fragment]** för den aktuella AEM.
 
 >[!NOTE]
 >
->AEM är en uppsättning [kontextmedvetna klientkonfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) lagras under `/conf`. Vanligtvis AEM konfigurationer korrelerar med en viss webbplats som hanteras i AEM Sites eller en affärsenhet som ansvarar för en underuppsättning av innehåll (resurser, sidor osv.) AEM.
+>AEM representerar en uppsättning [kontextmedvetna klientkonfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) som lagras under `/conf`. Vanligtvis AEM konfigurationer korrelerar med en viss webbplats som hanteras i AEM Sites eller en affärsenhet som ansvarar för en underuppsättning av innehåll (resurser, sidor osv.) AEM.
 >
->För att en konfiguration ska kunna påverka en innehållshierarki måste det finnas referenser till konfigurationen via `cq:conf` på den innehållshierarkin. (Detta uppnås för [!DNL WKND Mobile] konfiguration i **Steg 5** nedan).
+>För att en konfiguration ska kunna påverka en innehållshierarki måste det finnas en referens till konfigurationen via egenskapen `cq:conf` i den innehållshierarkin. (Detta uppnås för konfigurationen [!DNL WKND Mobile] i **steg 5** nedan).
 >
->När `global` konfigurationen används, konfigurationen gäller allt innehåll, och `cq:conf` behöver inte anges.
+>När konfigurationen `global` används gäller konfigurationen allt innehåll och `cq:conf` behöver inte anges.
 >
->Se [[!UICONTROL Configuration Browser] dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html) för mer information.
+>Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
 
 1. Logga in på AEM författare som en användare med tillräcklig behörighet för att ändra den relevanta konfigurationen.
-   * För den här självstudiekursen **admin** kan användas.
+   * I den här självstudiekursen kan användaren **admin** användas.
 1. Navigera till **[!UICONTROL Tool]> [!UICONTROL General] >[!UICONTROL Configuration Browser]**
-1. Tryck på **mappikon** nästa **[!DNL WKND Mobile]** för att markera och sedan trycka på **[!UICONTROL Edit]knapp** överst till vänster.
-1. Välj **[!UICONTROL Content Fragment Models]** och trycka **[!UICONTROL Save & Close]** längst upp till höger.
+1. Tryck på mappikonen **** bredvid **[!DNL WKND Mobile]** för att markera och tryck sedan på knappen **[!UICONTROL Edit]** i det övre vänstra hörnet.
+1. Välj **[!UICONTROL Content Fragment Models]** och tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet.
 
-   Detta aktiverar Content Fragment Models på innehållsträd i resursmappen som har [!DNL WKND Mobile] konfiguration används.
+   Detta aktiverar innehållsfragmentsmodeller i innehållsträden i resursmappen där konfigurationen [!DNL WKND Mobile] används.
 
    >[!NOTE]
    >
-   >Den här konfigurationsändringen går inte att ångra från [!UICONTROL AEM Configuration] Webbgränssnitt. Så här ångrar du den här konfigurationen:
+   >Den här konfigurationsändringen kan inte ångras från webbgränssnittet [!UICONTROL AEM Configuration]. Så här ångrar du den här konfigurationen:
    >    
    >    1. Öppna [CRXDE Lite](http://localhost:4502/crx/de)
    >    1. Navigera till `/conf/wknd-mobile/settings/dam/cfm`
-   >    1. Ta bort `models` nod
+   >    1. Ta bort noden `models`
    >    
-   >Alla befintliga modeller för innehållsfragment som skapas med den här konfigurationen tas bort, och deras definitioner lagras under `/conf/wknd-mobile/settings/dam/cfm/models`.
+   >Alla befintliga modeller för innehållsfragment som skapas under den här konfigurationen tas bort, och deras definitioner lagras under `/conf/wknd-mobile/settings/dam/cfm/models`.
 
-1. Använd **[!DNL WKND Mobile]** till **[!DNL WKND Mobile]Resursmapp** om du vill tillåta att innehållsfragment från modeller för innehållsfragment skapas i mapphierarkin för resurser:
+1. Använd konfigurationen **[!DNL WKND Mobile]** i **[!DNL WKND Mobile]Assets-mappen** för att tillåta att innehållsfragment från modeller för innehållsfragment skapas i den mapphierarkin i Assets:
 
    1. Navigera till **[!UICONTROL AEM]> [!UICONTROL Assets] >[!UICONTROL Files]**
-   1. Välj **[!UICONTROL WKND Mobile]mapp**
-   1. Tryck på **[!UICONTROL Properties]** knappen i det övre åtgärdsfältet för att öppna [!UICONTROL Folder Properties]
-   1. I [!UICONTROL Folder Properties], tryck på **[!UICONTROL Cloud Services]** tab
-   1. Verifiera **[!UICONTROL Cloud Configuration]** fältet är inställt på **/conf/wknd-mobile**
-   1. Tryck **[!UICONTROL Save & Close]** i det övre högra hörnet om du vill behålla ändringarna
+   1. Välj mappen **[!UICONTROL WKND Mobile]**
+   1. Tryck på knappen **[!UICONTROL Properties]** i det övre åtgärdsfältet för att öppna [!UICONTROL Folder Properties]
+   1. Tryck på fliken **[!UICONTROL Cloud Services]** i [!UICONTROL Folder Properties]
+   1. Kontrollera att fältet **[!UICONTROL Cloud Configuration]** är inställt på **/conf/wknd-mobile**
+   1. Tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet om du vill behålla ändringarna
 
 >[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
-> __Modeller för innehållsfragment__ har flyttats från __Verktyg > Resurser__ till __Verktyg > Allmänt__.
+> __Modeller för innehållsfragment__ har flyttats från __Verktyg > Assets__ till __Verktyg > Allmänt__.
 
 ## Förstå innehållsfragmentmodellen som ska skapas
 
@@ -81,25 +81,25 @@ Innan vi definierar vår Content Fragment-modell ska vi granska upplevelsen vi s
 
 Vi kan dela upp datapunkter som definierar en händelse på följande sätt:
 
-![Skapa innehållsfragmentmodellen](assets/chapter-2/design-to-model-mapping.png)
+![Skapar innehållsfragmentmodellen](assets/chapter-2/design-to-model-mapping.png)
 
 Med mappningen kan vi definiera innehållsfragment som används för att samla in och exponera händelsedata.
 
 ## Skapa innehållsfragmentmodellen
 
 1. Navigera till **[!UICONTROL Tools]> [!UICONTROL General] >[!UICONTROL Content Fragment Models]**.
-1. Tryck på **[!DNL WKND Mobile]** mapp att öppna.
-1. Tryck **[!UICONTROL Create]** om du vill öppna guiden Skapa innehållsfragmentmodell.
-1. Retur **[!DNL Event]** som **[!UICONTROL Model Title]** *(description is optional)* och knacka **[!UICONTROL Create]** att spara.
+1. Tryck på mappen **[!DNL WKND Mobile]** för att öppna den.
+1. Tryck på **[!UICONTROL Create]** för att öppna guiden Skapa innehållsfragmentmodell.
+1. Ange **[!DNL Event]** som **[!UICONTROL Model Title]** *(description is optional)* och tryck på **[!UICONTROL Create]** för att spara.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## Definiera strukturen för innehållsfragmentmodellen
 
 1. Navigera till **[!UICONTROL Tools]> [!UICONTROL General] > [!UICONTROL Content Fragment Models] >[!DNL WKND]**.
-1. Välj **[!DNL Event]** Content Fragment Model och tryck **[!UICONTROL Edit]** i det övre åtgärdsfältet.
-1. Från **[!UICONTROL Data Types]tab** till höger drar du **[!UICONTROL Single line text input]** till vänster släppzon för att definiera **[!DNL Question]** fält.
-1. Se till att nya **[!UICONTROL Single line text input]** markeras till vänster och **[!UICONTROL Properties]tab** är markerat till höger. Fyll i egenskapsfälten enligt följande:
+1. Markera **[!DNL Event]**-innehållsfragmentmodellen och tryck på **[!UICONTROL Edit]** i det övre åtgärdsfältet.
+1. Dra **[!UICONTROL Single line text input]** från fliken **[!UICONTROL Data Types]** till höger till den vänstra släppzonen för att definiera fältet **[!DNL Question]**.
+1. Kontrollera att nya **[!UICONTROL Single line text input]** är markerat till vänster och att **[!UICONTROL Properties]tab** är markerad till höger. Fyll i egenskapsfälten enligt följande:
 
    * [!UICONTROL Render As] : `textfield`
    * [!UICONTROL Field Label] : `Event Title`
@@ -111,7 +111,7 @@ Upprepa dessa steg med indatadefinitionerna som definieras nedan för att skapa 
 
 >[!NOTE]
 >
-> The **Egenskapsnamn** fälten MÅSTE matcha exakt eftersom Android-programmet är programmerat för att göra dessa namn transparenta.
+> Fälten **Egenskapsnamn** MÅSTE matcha exakt eftersom Android-programmet är programmerat för att komma åt dessa namn.
 
 ### Händelsebeskrivning
 
@@ -172,7 +172,7 @@ Upprepa dessa steg med indatadefinitionerna som definieras nedan för att skapa 
 
 >[!NOTE]
 >
->The **[!UICONTROL Property Name]** anger **båda** JCR-egenskapsnamnet där värdet lagras samt nyckeln i JSON-filen. Det ska vara ett semantiskt namn som inte ändras under Content Fragment Model.
+>**[!UICONTROL Property Name]** betecknar både **båda** JCR-egenskapsnamnet där det här värdet lagras och nyckeln i JSON-filen. Det ska vara ett semantiskt namn som inte ändras under Content Fragment Model.
 
 När du är klar med att skapa innehållsfragmentmodellen bör du avsluta med en definition som ser ut så här:
 
@@ -181,6 +181,6 @@ När du är klar med att skapa innehållsfragmentmodellen bör du avsluta med en
 
 ## Nästa steg
 
-Du kan också installera [com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) innehållspaket på AEM författare via [AEM](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i den här delen av självstudiekursen.
+Du kan också installera innehållspaketet [com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) på AEM Author via [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Det här paketet innehåller de konfigurationer och det innehåll som beskrivs i den här delen av självstudiekursen.
 
 * [Kapitel 3 - Innehållsfragment för redigeringshändelse](./chapter-3.md)

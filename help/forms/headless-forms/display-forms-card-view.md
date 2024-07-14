@@ -21,13 +21,13 @@ ht-degree: 0%
 Kortvyformatet är ett designmönster som visar information eller data i form av kort. Varje kort representerar ett diskret innehålls- eller datainmatningskort och består vanligtvis av en visuellt distinkt behållare med specifika element i.
 Klickbara kort i React är interaktiva komponenter som liknar kort eller rutor och som användaren kan klicka på eller trycka på. När en användare klickar eller trycker på ett klickbart kort utlöses en viss åtgärd eller ett visst beteende, till exempel navigering till en annan sida, öppning av ett modalt kort eller uppdatering av användargränssnittet.
 
-I den här artikeln använder vi [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) för att hämta formulären och visa dem i kortformat och öppna det anpassningsbara formuläret vid klickhändelsen.
+I den här artikeln använder vi [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) för att hämta formulären och visa formulären i kortformat och öppna det adaptiva formuläret i click-händelsen.
 
-![kortvy](./assets/card-view-forms.png)
+![kort-vy](./assets/card-view-forms.png)
 
 ## Kortmall
 
-Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets rubrik och beskrivning tillsammans med Adobe logotyp. [Material, UI-komponenter](https://mui.com/) har använts när layouten skapades.
+Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets rubrik och beskrivning tillsammans med Adobe logotyp. [Material-gränssnittskomponenter](https://mui.com/) har använts för att skapa den här layouten.
 
 
 

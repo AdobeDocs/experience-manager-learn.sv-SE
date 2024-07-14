@@ -1,6 +1,6 @@
 ---
 title: Använda Adobe Cloud Manager - miljöer
-description: Cloud Manager-miljöer består av tjänsterna AEM författare, AEM publicering och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
+description: Cloud Manager Environment består av AEM Author, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
 doc-type: feature video
 version: Cloud Service
 jira: KT-6871
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Använda Adobe Cloud Manager - miljöer
 
-[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) består av AEM, AEM och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
+[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) består av tjänsterna AEM författare, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)

@@ -1,5 +1,5 @@
 ---
-title: Söka och indexera på AEM as a Cloud Service
+title: Söka och indexera i AEM as a Cloud Service
 description: Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar AEM 6 indexdefinitioner och hur du distribuerar index.
 version: Cloud Service
 feature: Search
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 # Söka och indexera
 
-Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar AEM 6-indexdefinitioner till AEM as a Cloud Service kompatibla och hur du distribuerar index till AEM as a Cloud Service.
+Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar AEM 6-indexdefinitioner till AEM as a Cloud Service-kompatibla och hur du distribuerar index till AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
 
 ## Indexkonverterare
 
-![Indexkonverterare](./assets/index-converter.png)
+![Indexkonverteringsverktyg](./assets/index-converter.png)
 
-När du omfaktoriserar din kodbas använder du [Indexkonverteringsverktyg](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) om du vill konvertera anpassade indexdefinitioner för ekv till AEM as a Cloud Service kompatibla indexdefinitioner.
+Som en del av omfaktoriseringen av kodbasen använder du [indexkonverteringsverktyget](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) för att konvertera anpassade Oak-indexdefinitioner till AEM as a Cloud Service-kompatibla indexdefinitioner.
 
-Granska [dokumentation för konverterare av index](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html) för den kompletta och aktuella uppsättningen indexkonverterarfunktioner.
+Granska [dokumentationen för indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html) för att se om det finns en komplett och aktuell uppsättning funktioner för indexkonverteraren.
 
 ## Viktiga aktiviteter
 
-+ Använd [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) verktyg för att migrera arbetsflöden för bearbetning av resurser så att de kan använda Asset compute mikrotjänster.
-+ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och driftsätta anpassade index. Se till att de uppdaterade indexen är uppdaterade.
-+ Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service utvecklingsmiljö och fortsätt att validera.
-+ Om du ändrar ett utanför rutans index **ALLTID** kopiera den senaste indexdefinitionen från en AEM as a Cloud Service miljö som körs i den senaste versionen. Ändra den kopierade indexdefinitionen efter dina behov.
++ Använd verktyget [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) för att migrera arbetsflöden för bearbetning av resurser så att de kan använda Asset compute-mikrotjänsterna.
++ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och distribuera anpassade index. Se till att de uppdaterade indexen är uppdaterade.
++ Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service-utvecklingsmiljö och fortsätt att validera.
++ Om du ändrar ett utanför rutans index **kopierar** alltid den senaste indexdefinitionen från en AEM as a Cloud Service-miljö som körs i den senaste versionen. Ändra den kopierade indexdefinitionen efter dina behov.
 
 ## Handövning
 
@@ -67,7 +67,7 @@ Se även till att du har fullföljt tidigare övningar:
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes#cloud-acceleration-bootcamp---session-7-search-and-indexing" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testa med indexering</span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testa indexering</span>
             </a>
         </td>
     </tr>

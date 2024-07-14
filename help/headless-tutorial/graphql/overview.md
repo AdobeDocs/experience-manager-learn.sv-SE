@@ -20,7 +20,8 @@ ht-degree: 0%
 
 {{aem-headless-trials-promo}}
 
-AEM GraphQL API:er för innehållsfragment har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
+AEM GraphQL API:er för innehållsfragment
+har stöd för headless CMS-scenarier där externa klientprogram återger upplevelser med innehåll som hanteras i AEM.
 
 Ett modernt API för innehållsleverans är avgörande för effektiviteten och prestandan i Javascript-baserade klientprogram. Att använda ett REST API medför utmaningar:
 
@@ -41,13 +42,13 @@ Den här videon är en översikt över GraphQL API som implementerats i AEM. Gra
 
 ## AEM Headless GraphQL Video Series
 
-Lär dig mer om AEM funktioner i GraphQL genom den djupgående genomgången av Content Fragments och AEM GraphQL API:er och utvecklingsverktyg.
+Lär dig mer om hur du AEM GraphQL-funktioner genom den djupgående genomgången av innehållsfragment och AEM GraphQL API:er och utvecklingsverktyg.
 
 * [AEM Headless GraphQL Video Series](./video-series/modeling-basics.md)
 
 ## AEM Headless GraphQL Hands-on Tutorial
 
-Utforska AEM GraphQL funktioner genom att bygga ut en React App som förbrukar innehållsfragment via AEM GraphQL API:er.
+Utforska AEM GraphQL-funktioner genom att bygga ut en React App som förbrukar innehållsfragment via AEM GraphQL API:er.
 
 * [AEM Headless GraphQL Hands-on Tutorial](./multi-step/overview.md)
 

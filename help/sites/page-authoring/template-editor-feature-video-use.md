@@ -27,18 +27,18 @@ Med redigerbara mallar kan man skapa och uppdatera sidmallar och hantera avancer
 
 Redigerbara mallar är en rekommendation att skapa nya AEM Sites.
 
-**Enhetlig upplevelse** - Förbättringar i AEM Sites-redigering överförs till mallredigering, inklusive infogat layoutläge och innehållsträdspanelen.
+**Konsekvent författarupplevelse** - Förbättringar i AEM Sites-redigering överförs till mallredigering, inklusive infogat layoutläge och innehållsträdspanelen.
 
-**Avancerade principkonfigurationer** - Nedan beskrivs några avancerade principkonfigurationer som gjorts tillgängliga med redigerbara mallar:
+**Avancerade principkonfigurationer** - Följande beskriver några avancerade principkonfigurationer som är tillgängliga med redigerbara mallar:
 
-* **Layoutbehållare** - möjlighet att konfigurera tillåtna komponenter, hantera mappningen Dra och släpp av resurser och kolumner för responsiva stödraster.
-* **Textkomponent** - möjlighet att konfigurera plugin-program för textredigering med ett nytt användargränssnitt och återanvända RTE-profiler för alla mallar.
-* **Bildkomponent** - möjlighet att aktivera/inaktivera funktioner som beskärning, filöverföring till skrivbordet med ett nytt användargränssnitt och återanvända bildprofiler i olika mallar.
+* **Layoutbehållare** - möjlighet att konfigurera tillåtna komponenter, hantera dra och släpp-mappningen för Assets och responsiva stödrasterkolumner.
+* **Textkomponent** - möjlighet att konfigurera plugin-program för RTF-redigerare med ett nytt användargränssnitt och återanvända RTE-principer mellan mallar.
+* **Bildkomponent** - möjlighet att aktivera/inaktivera funktioner som beskärning, överföring av skrivbordsfiler med ett nytt användargränssnitt och återanvända bildprofiler mellan mallar.
 
-Redigerbara mallar finns under **verktyg** `>` **Allmänt** `>` **Mallar**.\
+Redigerbara mallar finns under **Verktyg** `>` **Allmänt** `>` **Mallar**.\
 URL för redigerbara mallar (lokal AEM): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Redigerbara sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [Skapa sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
+* [Skapar sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)

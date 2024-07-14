@@ -1,6 +1,6 @@
 ---
 title: Skapa XML-databindning i XDP-baserade formulär
-description: Kort video som beskriver hur du binder ett AEM till en XML-datakälla
+description: Short Video (Kort video) som beskriver hur du binder ett AEM till en XML Data Source
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Skapa XML-databindning i AEM Forms Designer
 
-Kort video som beskriver hur du binder ett AEM till en XML-datakälla
+Short Video (Kort video) som beskriver hur du binder ett AEM till en XML Data Source
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)

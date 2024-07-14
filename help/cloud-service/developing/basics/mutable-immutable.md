@@ -1,5 +1,5 @@
 ---
-title: Vad är Mutable and Immutable content i AEM as a Cloud Service?
+title: Vad är Mutable and Immutable-innehåll i AEM as a Cloud Service?
 description: Se hur databaserna och paketen använder både ändringsbart och oföränderligt innehåll och varför det är viktigt i AEM as a Cloud Service.
 role: Developer
 level: Beginner
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Muterbart och oföränderligt innehåll
 
-Läs om vikten av och skillnaderna i [muterbart och oföränderligt innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM som ett moln, och hur det påverkar hur ni utvecklar.
+Lär dig om vikten och skillnaderna mellan [muterbart och oföränderligt innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM som ett moln, och hur det påverkar hur du utvecklar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330555?quality=12&learn=on)

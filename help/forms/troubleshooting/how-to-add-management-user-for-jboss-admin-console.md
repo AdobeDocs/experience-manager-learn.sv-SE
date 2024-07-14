@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Lägga till hanteringsanvändare för JBoss Admin Console
 
-*I den här videon går du igenom stegen för att lägga till hanteringsanvändare för JBoss Admin Console.*
+*Den här videon går igenom stegen för att lägga till hanteringsanvändare för JBoss-administratörskonsolen.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335484?quality=12&learn=on)

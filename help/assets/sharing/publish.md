@@ -1,6 +1,6 @@
 ---
-title: Publicera resurser med AEM
-description: Lär dig hur du publicerar resurser och deras återgivningar från AEM författare till AEM publicera.
+title: Så här använder du Publish Assets med AEM
+description: Lär dig hur du publicerar resurser och deras återgivningar från AEM författare till AEM Publish.
 feature: Asset Management
 version: Cloud Service
 jira: KT-330932
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 ---
 
-# Publicera
+# Publish
 
-Lär dig hur du publicerar resurser och deras återgivningar från AEM författare till AEM publicera.
+Lär dig hur du publicerar resurser och deras återgivningar från AEM författare till AEM Publish.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
 
-_Kontrollera att AEM Assets-distributionen har en AEM Publish-tjänst licensierad innan du publicerar mediefiler._
+_Kontrollera att AEM Assets-distributionen har en AEM Publish-tjänst licensierad innan du publicerar resurser._

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Här tittar vi på layoutfilen som skapats med AEM Forms Designer.
 
-Alla dokument i tryckkanaler baseras på en mall som skapats med verktyget AEM Forms Designer. Vanligtvis skapar du avsnitt eller målområden i mallen för att lagra dokumentfragment, bilder eller layoutfragment. Helst har layouten inget definierat innehåll. Detta frigör layouten från det innehåll som rekommenderas.
+Alla dokument i tryckkanaler är baserade på en mall som skapats med verktyget AEM Forms Designer. Vanligtvis skapar du avsnitt eller målområden i mallen för att lagra dokumentfragment, bilder eller layoutfragment. Helst har layouten inget definierat innehåll. Detta frigör layouten från det innehåll som rekommenderas.
 
 I följande video markeras de avsnitt eller målområden som definieras i den layout som används i den här självstudiekursen.
 

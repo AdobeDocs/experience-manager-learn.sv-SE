@@ -27,17 +27,17 @@ När du släpper en fil i den bevakade mappen körs ett skript som är kopplat t
 
 Filen som släpps i bevakad mapp har följande struktur. Koden genererar programsatser för alla kontonummer som anges i XML-dokumentet.
 
-&lt;accountnumbers>
+&lt;kontonummer>
 
-&lt;accountnumber>509840&lt;/accountnumber>
+&lt;kontonummer>509840&lt;/kontonummer>
 
-&lt;accountnumber>948576&lt;/accountnumber>
+&lt;kontonummer>948576&lt;/kontonummer>
 
-&lt;accountnumber>398762&lt;/accountnumber>
+&lt;kontonummer>398762&lt;/kontonummer>
 
-&lt;accountnumber>291723&lt;/accountnumber>
+&lt;kontonummer>291723&lt;/kontonummer>
 
-&lt;/accountnumbers>
+&lt;/account numbers>
 
 Kodlistan nedan gör följande:
 
@@ -109,9 +109,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **Följ följande anvisningar för att testa detta på din lokala dator:**
 
-* Konfigurera Tomcat enligt beskrivningen i detta [artikel.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat har krigsfilen som genererar exempeldata.
-* Konfigurera tjänst-a-systemanvändare enligt beskrivningen i detta [artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-Kontrollera att den här systemanvändaren har läsbehörighet för följande nod. Så här ger du behörighet att logga in på [användaradministratör](https://localhost:4502/useradmin) och söka efter systemanvändaren &quot;data&quot; och ge läsbehörighet på följande nod genom att tabba till fliken permissions
+* Konfigurera Tomcat enligt beskrivningen i den här [-artikeln.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat har krigsfilen som genererar exempeldata.
+* Konfigurera en tjänst för en systemanvändare enligt beskrivningen i den här [artikeln](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+Kontrollera att den här systemanvändaren har läsbehörighet för följande nod. Om du vill ge behörighet att logga in på [användaradministratör](https://localhost:4502/useradmin) och söka efter systemanvändarens&quot;data&quot; och ge läsbehörighet på följande nod genom att gå till fliken Behörigheter
    * /content/dam/formSanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -120,7 +120,7 @@ Kontrollera att den här systemanvändaren har läsbehörighet för följande no
 
 * [Exempel på interaktivt kommunikationsdokument](assets/retirementstatementprint.zip)
 * [Bevakat mappskript](assets/printchanneldocumentusingwatchedfolder.zip)
-* [Konfiguration av datakälla](assets/datasource.zip)
+* [Data Source Configuration](assets/datasource.zip)
 
 * Öppna filen /etc/fd/watchfolder/scripts/PrintPDF.ecma. Se till att sökvägen till interactiveCommunicationsDocument på rad 1 pekar på rätt dokument som du vill skriva ut
 

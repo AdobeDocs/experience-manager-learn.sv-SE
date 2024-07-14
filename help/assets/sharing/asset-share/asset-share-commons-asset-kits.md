@@ -21,8 +21,8 @@ ht-degree: 0%
 
 # Resursdelningskommentar Tillgångspaket
 
-Lär dig hur du använder resurser i Dela gemensamt [tillgångspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) för att generera skräddarsydda, delbara webbsidor som listar resurser från AEM Assets-mappar eller samlingar.
+Lär dig hur du använder [resurspaketet](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) för att skapa anpassade, delningsbara webbsidor med resurser från AEM Assets-mappar eller samlingar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
 
-_[Tillgångspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) är bara tillgängligt på Assets Share Commands 2.5.4+_
+_[Resurspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) är bara tillgängligt för resursdelningskommentarer {2.5.4+_

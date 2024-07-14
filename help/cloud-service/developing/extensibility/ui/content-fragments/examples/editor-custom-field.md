@@ -24,7 +24,7 @@ Lär dig hur du skapar anpassade fält i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-AEM UI-tillägg bör utvecklas med [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) ramverket, eftersom det bibehåller ett konsekvent utseende och känsla med resten av AEM och har ett omfattande bibliotek med fördefinierade funktioner, vilket minskar utvecklingstiden.
+AEM UI-tillägg bör utvecklas med ramverket [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) eftersom det bibehåller ett konsekvent utseende och känsla med resten av AEM och har ett omfattande bibliotek med fördefinierade funktioner, vilket minskar utvecklingstiden.
 
 ## Tilläggspunkt
 
@@ -32,17 +32,17 @@ Det här exemplet ersätter ett befintligt fält i Content Fragment Editor med e
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
-| [Innehållsfragmentsredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Elementåtergivning för anpassat formulär](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
+| [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Egen återgivning av formulärelement](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## Exempel på tillägg
 
 I det här exemplet visas en begränsning av fältvärden i redigeraren för innehållsfragment till en fördefinierad uppsättning genom att ersätta standardfältet med en anpassad listruta med fördefinierade SKU:er. Författare kan välja i den här specifika SKU-listan. SKU:er kommer vanligtvis från ett PIM-system (Product Information Management), men det här exemplet förenklar genom att en statisk lista över SKU:er finns.
 
-Källkoden för det här exemplet är [finns för nedladdning](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
+Källkoden för det här exemplet är [tillgänglig för hämtning](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
 
 ### Modelldefinition för innehållsfragment
 
-Det här exemplet binder till alla fält för innehållsfragment vars namn är `sku` (via [matchning av reguljärt uttryck](#extension-registration) av `^sku$`) och ersätter det med ett anpassat fält. I exemplet används WKND Adventure Content Fragment-modellen som har uppdaterats och definitionen är följande:
+Det här exemplet binder till ett fält för innehållsfragment vars namn är `sku` (via ett [reguljärt uttryck som matchar](#extension-registration) av `^sku$`) och ersätter det med ett anpassat fält. I exemplet används WKND Adventure Content Fragment-modellen som har uppdaterats och definitionen är följande:
 
 ![Modelldefinition för innehållsfragment](./assets/editor-custom-field/content-fragment-editor.png)
 
@@ -51,7 +51,7 @@ Trots att det anpassade SKU-fältet visas som en listruta konfigureras dess unde
 
 ### Appvägar
 
-I huvudkomponenten React `App.js`, inkluderar `/sku-field` för att återge `SkuField` Reaktionskomponent.
+I huvudkomponenten `App.js` tar du med `/sku-field`-vägen för att återge React-komponenten `SkuField`.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -85,14 +85,14 @@ function App() {
 ...
 ```
 
-Den här anpassade vägen för `/sku-field` mappar till `SkuField` används nedan i [Tillägg - registrering](#extension-registration).
+Den här anpassade vägen för `/sku-field` mappar till komponenten `SkuField` används nedan i [tilläggsregistreringen](#extension-registration).
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
+`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
 
-+ Widgetdefinitionen i `getDefinitions()` function with `fieldNameExp` och `url` attribut. Den fullständiga listan över tillgängliga attribut finns i [API-referens för anpassad formulärelementåtergivning](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
-+ The `url` attributvärde, en relativ URL-sökväg (`/index.html#/skuField`) för att läsa in fältgränssnittet.
++ Widgetdefinitionen i funktionen `getDefinitions()` med attributen `fieldNameExp` och `url`. Den fullständiga listan över tillgängliga attribut finns i [API-referens för anpassade formulärelementåtergivning](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
++ Attributvärdet `url`, en relativ URL-sökväg (`/index.html#/skuField`) som läser in fältets användargränssnitt.
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -132,13 +132,13 @@ export default ExtensionRegistration;
 
 ### Anpassat fält
 
-The `SkuField` React-komponenten uppdaterar Content Fragment Editor med ett anpassat användargränssnitt, med Adobe React Spectrum för dess väljarform. Högdagrarna är följande:
+Komponenten `SkuField` React uppdaterar innehållsfragmentredigeraren med ett anpassat användargränssnitt, och använder Adobe React Spectrum för sin väljarform. Högdagrarna är följande:
 
 + Använder `useEffect` för initiering och anslutning till AEM Content Fragment Editor, med ett inläsningstillstånd som visas tills installationen är klar.
-+ Återgivning inuti en iFrame-ram justeras höjden på iFrame dynamiskt via `onOpenChange` funktion för att hantera Adobe React Spectrum Pickers listruta.
-+ Skickar tillbaka fältval till värden med `connection.host.field.onChange(value)` i `onSelectionChange` och ser till att det valda värdet valideras och sparas automatiskt enligt riktlinjerna för innehållsfragmentmodellen.
++ Rendering inuti en iFrame, justerar den dynamiskt iFrame-höjden via funktionen `onOpenChange` för att passa Adobe React Spectrum Pickers listruta.
++ Kommunicerar tillbaka fältval till värden med `connection.host.field.onChange(value)` i funktionen `onSelectionChange` och ser till att det valda värdet valideras och sparas automatiskt enligt riktlinjerna i Content Fragment Model.
 
-Anpassade fält återges i en iFrame som injiceras i Content Fragment Editor. Kommunikationen mellan den anpassade fältkoden och Content Fragment Editor sker enbart via `connection` -objekt, upprättat av `attach` funktionen från `@adobe/uix-guest` paket.
+Anpassade fält återges i en iFrame som injiceras i Content Fragment Editor. Kommunikationen mellan den anpassade fältkoden och innehållsfragmentredigeraren sker enbart via objektet `connection`, som etableras av funktionen `attach` från paketet `@adobe/uix-guest`.
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 

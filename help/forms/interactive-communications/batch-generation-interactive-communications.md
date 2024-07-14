@@ -27,25 +27,25 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 
 ## Gruppgenerering med bevakad mapp
 
-* Importera [Mall för interaktiv kommunikation](assets/Beneficiaries-confirmation.zip) till din AEM Forms-server.
-* Importera [konfiguration av bevakad mapp](assets/batch-generation-api.zip). Detta skapar en mapp med namnet `batchAPI` i C-enheten.
+* Importera [mallen för interaktiv kommunikation](assets/Beneficiaries-confirmation.zip) till din AEM Forms-server.
+* Importera [bevakad mappkonfiguration](assets/batch-generation-api.zip). Detta skapar en mapp med namnet `batchAPI` i C-enheten.
 
-**Om du kör AEM Forms på ett operativsystem som inte är ett Windows-operativsystem, följ de tre stegen nedan:**
+**Om du kör AEM Forms på ett operativsystem som inte är ett Windows-operativsystem följer du de tre stegen som anges nedan:**
 
 1. [Öppna bevakad mapp](http://localhost:4502/libs/fd/core/WatchfolderUI/content/UI.html)
 2. Välj BatchAPIWatchedFolder och klicka på Redigera.
 3. Ändra sökvägen så att den matchar ditt operativsystem.
 
-![bana](assets/watched-folder-batch-api-basic.PNG)
+![sökväg](assets/watched-folder-batch-api-basic.PNG)
 
-* Hämta och extrahera innehållet i [zip-fil](assets/jsonfile.zip). ZIP-filen innehåller en mapp med namnet `jsonfile` som innehåller `beneficiaries.json` -fil. Den här filen innehåller data för att generera 3 dokument.
+* Hämta och extrahera innehållet i [zip-filen](assets/jsonfile.zip). ZIP-filen innehåller mappen `jsonfile` som innehåller filen `beneficiaries.json`. Den här filen innehåller data för att generera 3 dokument.
 
-* Släpp `jsonfile` till indatamappen för den bevakade mappen.
+* Släpp mappen `jsonfile` i indatamappen för den bevakade mappen.
 * När mappen har tagits upp för bearbetning kontrollerar du resultatmappen för den bevakade mappen. 3 genererade PDF-filer bör visas
 
 ## Batchgenerering med REST-begäranden
 
-Du kan anropa [Batch-API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) via REST-begäran. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
+Du kan anropa [batch-API:t](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) via REST-begäranden. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
 De exempelresurser som tillhandahålls visar REST-slutpunkten för generering av interaktiva kommunikationsdokument. Servern accepterar följande parametrar:
 
 * fileName - Sökväg till datafilen i filsystemet.
@@ -59,8 +59,8 @@ I följande skärmbild visas parametrarna och deras värden
 
 ## Distribuera exempelresurser på servern
 
-* Importera [ICTemplate](assets/ICTemplate.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera [Anpassad överföringshanterare](assets/BatchAPICustomSubmit.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera [Adaptiv form](assets/BatchGenerationAPIAF.zip) med [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Distribuera och starta [Anpassat OSGI-paket](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) använda [Felix webbkonsol](http://localhost:4502/system/console/bundles)
-* [Utlös batchgenerering genom att skicka formuläret](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
+* Importera [ICTTemplate](assets/ICTemplate.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera [anpassad överföringshanterare](assets/BatchAPICustomSubmit.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera [anpassat formulär](assets/BatchGenerationAPIAF.zip) med [Forms- och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Distribuera och starta [Anpassat OSGI-paket](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) med [Felix-webbkonsol](http://localhost:4502/system/console/bundles)
+* [Utlös gruppgenerering genom att skicka formuläret](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)

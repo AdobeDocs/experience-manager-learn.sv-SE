@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här aktiverar du Performance Logging i AEM Forms för att felsöka problem med Forms &amp; utdatatjänst
 
-*I den här videon går du igenom processen för att aktivera prestandaloggning i AEM Forms för att felsöka problem som rör Forms &amp; utdatatjänsten.*
+*Den här videon går igenom processen för att aktivera prestandaloggning i AEM Forms för att felsöka problem som rör Forms &amp; utdatatjänsten.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)

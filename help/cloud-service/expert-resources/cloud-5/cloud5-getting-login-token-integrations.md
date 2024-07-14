@@ -32,4 +32,4 @@ En djupguide om hur du får en inloggningstoken för Cloud Service-integreringar
 + Verifiering av tekniskt konto
 + Enkel användning av genererad token
 
-Om du vill ha mer information om det här ämnet kan du använda självstudiekursen på [tokenbaserad autentisering](/help/headless-tutorial/authentication/overview.md).
+Om du vill ha mer information om det här avsnittet kan du referera till självstudiekursen om [tokenbaserad autentisering](/help/headless-tutorial/authentication/overview.md).

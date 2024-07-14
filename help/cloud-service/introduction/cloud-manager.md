@@ -1,6 +1,6 @@
 ---
-title: Utforska vikten av Cloud Manager i AEM
-description: Utforska syftet med Cloud Manager och hur det fungerar med AEM as a Cloud Service.
+title: Upptäck Cloud Manager betydelse i AEM
+description: Upptäck syftet med Cloud Manager och hur det fungerar med AEM as a Cloud Service.
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Cloud Manager och AEM as a Cloud Service
 
-Utforska syftet med Cloud Manager och hur det fungerar med AEM as a Cloud Service.
+Upptäck syftet med Cloud Manager och hur det fungerar med AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330545?quality=12&learn=on)

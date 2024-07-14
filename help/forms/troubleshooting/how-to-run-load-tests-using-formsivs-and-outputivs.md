@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Köra belastningstester med FormsIVS och OutputIVS
 
-*I den här videon går du igenom stegen för att köra inläsningstester från användargränssnittet med FormsIVS- och OutputIVS-exempel.*
+*Den här videon går igenom stegen för att köra inläsningstester från användargränssnittet med FormsIVS- och OutputIVS-exempel.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)

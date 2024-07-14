@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här aktiverar du felsökningsutdata för Workbench
 
-*I den här videon går du igenom processen för att aktivera felsökningsutdata för Workbench.*
+*Den här videon går igenom processen för att aktivera felsökningsutdata för Workbench.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335497?quality=12&learn=on)

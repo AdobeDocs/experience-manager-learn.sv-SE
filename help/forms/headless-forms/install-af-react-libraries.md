@@ -32,11 +32,11 @@ Uppdatera package.json så att den innehåller följande beroenden. När 0.22.41
 
 >[!NOTE]
 >
->Listrutan och kortlayouten i den här självstudiekursen skapades med [Bibliotek för materialgränssnitt](https://mui.com/). Du måste hämta lämpliga materialgränssnittspaket för att koden ska fungera i ditt system.
+>Listrutan och kortlayouten i den här självstudiekursen skapades med [materialgränssnittsbiblioteket](https://mui.com/). Du måste hämta lämpliga materialgränssnittspaket för att koden ska fungera i ditt system.
 
 ## Konfigurera proxy
 
-Cross-Origin Resource Sharing (CORS) är en säkerhetsmekanism som förhindrar webbläsare från att göra förfrågningar till en annan domän än den som appen finns på. CORS-fel kan uppstå när du försöker hämta data från ett API på en annan domän. Genom att konfigurera en proxy kan du kringgå CORS-begränsningar och göra förfrågningar till API:t från din React-app. Jag har använt följande kod i filen setUpProxy.js i mappen src. **Se till att du ändrar målet så att det pekar på publiceringsinstansen.**
+Cross-Origin Resource Sharing (CORS) är en säkerhetsmekanism som förhindrar webbläsare från att göra förfrågningar till en annan domän än den som appen finns på. CORS-fel kan uppstå när du försöker hämta data från ett API på en annan domän. Genom att konfigurera en proxy kan du kringgå CORS-begränsningar och göra förfrågningar till API:t från din React-app. Jag har använt följande kod i filen setUpProxy.js i mappen src. **Kontrollera att du ändrar målet så att det pekar på din publiceringsinstans.**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -56,7 +56,7 @@ module.exports = function(app) {
 };
 ```
 
-Du måste också installera och lägga till **http-proxy-middleware** till ditt projekt.
+Du måste också installera och lägga till modulen **http-proxy-middleware** i ditt projekt.
 
 ## Nästa steg
 

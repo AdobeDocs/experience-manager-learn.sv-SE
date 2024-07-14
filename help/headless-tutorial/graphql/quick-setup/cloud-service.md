@@ -25,10 +25,10 @@ Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med inn
 
 Följande krävs för att följa den här snabbinstallationen:
 
-+ AEM as a Cloud Service sandlådemiljö (helst Development)
-+ Åtkomst till AEM as a Cloud Service och Cloud Manager
-   + __AEM__ åtkomst till AEM as a Cloud Service
-   + __Cloud Manager - Distributionshanteraren__ åtkomst till Cloud Manager
++ AEM as a Cloud Service sandlådemiljö (helst Utveckling)
++ Tillgång till AEM as a Cloud Service och Cloud Manager
+   + __AEM__-administratör åtkomst till AEM as a Cloud Service
+   + __Cloud Manager - Deployment Manager__ åtkomst till Cloud Manager
 + Följande verktyg måste installeras lokalt:
    + [Node.js v18](https://nodejs.org/en/)
    + [Git](https://git-scm.com/)
@@ -42,17 +42,17 @@ _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339073?quality=12&learn=on)
 
 1. Navigera till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com)
-1. Välj Cloud Manager __Program__ som innehåller den AEM as a Cloud Service miljön som ska användas för den här snabbinstallationen
+1. Välj den __Program__ för Cloud Manager som innehåller den AEM as a Cloud Service-miljö som ska användas för den här snabbinstallationen
 1. Skapa en Git-databas för WKND-webbplatsprojektet
    1. Välj __Databaser__ i den övre navigeringen
    1. Välj __Lägg till databas__ i det övre åtgärdsfältet
    1. Namnge den nya Git-databasen: `aem-headless-quick-setup-wknd`
       + Git-databasnamn måste vara unika per Adobe-organisation,
-   1. Välj __Spara__ och vänta på att Git-databasen ska initieras
+   1. Välj __Spara__ och vänta tills Git-databasen initieras
 
-## 2. Överför exempelprojektet WKND Site till Cloud Manager Git Repository
+## 2. Push sample WKND Site project to Cloud Manager Git Repository
 
-När Cloud Manager Git-databasen har skapats klonar du WKND-webbplatsens källkod från GitHub och skickar den till Cloud Manager Git-databasen. Nu kan Cloud Manager komma åt och driftsätta WKND Site-projektet i den AEM as a Cloud Service miljön.
+När Cloud Manager Git-databasen har skapats klonar du WKND Site-projektets källkod från GitHub och skickar den till Cloud Manager Git-databasen. Nu kan Cloud Manager komma åt och driftsätta WKND Site-projektet i AEM as a Cloud Service.
 
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339074?quality=12&learn=on)
@@ -67,8 +67,8 @@ _Genomgång av steg_
 
 1. Lägg till Cloud Manager Git-databasen som en fjärrserver
    1. Välj __Databaser__ i den övre navigeringen
-   1. Välj __Åtkomst till svarsinformation__ i det övre åtgärdsfältet
-   1. Kör kommando hittades i __Lägg till en fjärranslutning till din Git-databas__ från kommandoraden
+   1. Välj __Åtkomst till replikinformation__ i det övre åtgärdsfältet
+   1. Kommandot Kör hittades i __Lägg till en fjärranslutning till Git-databasen__ från kommandoraden
 
       ```shell
       $ cd aem-guides-wknd
@@ -81,44 +81,44 @@ _Genomgång av steg_
    $ git push adobe main:main
    ```
 
-   När du uppmanas att ange autentiseringsuppgifter anger du __Användarnamn__ och __Lösenord__ från Cloud Managers __Databasinformation__ modal.
+   Ange __användarnamn__ och __lösenord__ från Cloud Manager __databasinformation__ när du uppmanas att ange autentiseringsuppgifter.
 
 ## 3. Distribuera WKND-webbplatsen till AEM as a Cloud Service
 
-Med WKND-webbplatsprojektet överfört till Cloud Manager Git-databasen kan det inte distribueras till AEM as a Cloud Service med hjälp av Cloud Manager-pipelines.
+När WKND Site-projektet skickas till Cloud Manager Git-databasen kan det inte distribueras till AEM as a Cloud Service med Cloud Manager-pipelines.
 
 Kom ihåg att WKND Site-projektet innehåller exempelinnehåll som React-appen förbrukar AEM Headless GraphQL API:er.
 
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
-1. Bifoga en __Distributionsförlopp som inte är i produktion__ till den nya Git-databasen
-   1. Välj __Pipelines__ i den övre navigeringen
+1. Bifoga en __icke-produktionsdistributionspipeline__ till den nya Git-databasen
+   1. Välj __Förgreningar__ i den övre navigeringen
    1. Välj __Lägg till pipeline__ i det övre åtgärdsfältet
-   1. På __Konfiguration__ tab
-      1. Välj __Distributionsförlopp__ option
-      1. Ange __Namn på icke-produktionsförlopp__ till `Dev Deployment pipeline`
-      1. Välj __Deployment Trigger > On Git Changes__
-      1. Välj __Beteende vid viktiga måttfel > Fortsätt omedelbart__
+   1. På fliken __Konfiguration__
+      1. Välj alternativet __Distributionspipeline__
+      1. Ange __icke-produktionsförloppsnamnet__ till `Dev Deployment pipeline`
+      1. Välj __Distributionsutlösare > Vid Git-ändringar__
+      1. Välj __Beteende vid viktiga mätfel > Fortsätt omedelbart__
       1. Välj __Fortsätt__
-   1. På __Källkod__ tab
-      1. Välj __Fullständig stapelkod__ option
-      1. Välj __AEM as a Cloud Service utvecklingsmiljö__ från __Berättigade driftsättningsmiljöer__ välj ruta
-      1. Välj `aem-headless-quick-setup-wknd` i __Databas__ välj ruta
-      1. Välj `main` från __Git-gren__ välj ruta
+   1. På fliken __Source Code__
+      1. Välj alternativet __Fullständig stackkod__
+      1. Välj __AEM as a Cloud Service-utvecklingsmiljö__ i rutan __Berättigade distributionsmiljöer__
+      1. Välj `aem-headless-quick-setup-wknd` i valrutan __Databas__
+      1. Välj `main` i __Git-grenen__
       1. Välj __Spara__
-1. Kör __Utveckla distributionskanal__
-   1. Välj __Ökning__ i den övre navigeringen
-   1. Leta reda på den nyskapade __Utveckla distributionsförlopp__ i __Pipelines__ section
-   1. Välj __...__ till höger om pipeline-posten
-   1. Välj __Kör__ och bekräfta i modala
-   1. Välj __...__ till höger om den nu pågående pipeline
-   1. Välj __Visa detaljer__
+1. Kör __Dev Deployment Pipeline__
+   1. Markera __Översikt__ i den övre navigeringen
+   1. Leta reda på den nyskapade __Dev Deployment-pipelinen__ i avsnittet __Pipelines__
+   1. Välj __..__ till höger om pipeline-posten
+   1. Välj __Kör__ och bekräfta i den modala
+   1. Välj __..__ till höger om den pipeline som nu körs
+   1. Välj __Visa information__
 1. Övervaka förloppet tills det har slutförts utifrån information om pipelinekörningen. Körning av pipeline bör ta mellan 30 och 40 minuter.
 
 ## 4. Ladda ned och kör appen WKND React
 
-När AEM as a Cloud Service har startat med innehållet från WKND Site-projektet hämtar och startar du exempelappen WKND React som använder WKND-webbplatsens innehåll i AEM Headless GraphQL API:er.
+När AEM as a Cloud Service har startat med innehållet från WKND Site-projektet hämtar och startar du exempelappen WKND React som använder WKND-webbplatsens innehåll AEM Headless GraphQL API:er.
 
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339076?quality=12&learn=on)
@@ -130,9 +130,9 @@ _Genomgång av steg_
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Öppna mappen `~/Code/aem-guides-wknd-graphql/react-app` i din utvecklingsmiljö.
-1. Öppna filen i IDE `.env.development`.
-1. Peka på AEM as a Cloud Service __Publicera__ tjänstens värd-URI från  `REACT_APP_HOST_URI` -egenskap.
+1. Öppna mappen `~/Code/aem-guides-wknd-graphql/react-app` i din IDE.
+1. Öppna filen `.env.development` i IDE.
+1. Peka på AEM as a Cloud Service __Publish__-tjänstens värd-URI från egenskapen `REACT_APP_HOST_URI`.
 
    ```plain
    REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
@@ -141,12 +141,12 @@ _Genomgång av steg_
 
    Så här hittar du AEM as a Cloud Service Publish-tjänstens värd-URI:
 
-   1. I Cloud Manager väljer du __Miljö__ i den övre navigeringen
-   1. Välj __Utveckling__ miljö
-   1. Leta reda på __Publiceringstjänst (AEM &amp; Dispatcher)__ link __Miljösegment__ table
-   1. Kopiera länkens adress och använd den som den AEM as a Cloud Service publiceringstjänstens URI
+   1. I Cloud Manager väljer du __Miljö__ i den översta navigeringen
+   1. Välj __Utvecklingsmiljö__
+   1. Leta reda på tabellen __Publish Service (AEM &amp; Dispatcher)__ link __Environment Segments__
+   1. Kopiera länkens adress och använd den som AEM as a Cloud Service Publish-tjänstens URI
 
-1. Spara ändringarna i IDE `.env.development`
+1. I IDE sparar du ändringarna i `.env.development`
 1. Kör React App från kommandoraden
 
    ```shell
@@ -155,7 +155,7 @@ _Genomgång av steg_
    $ npm start
    ```
 
-1. React-appen som körs lokalt börjar på [http://localhost:3000](http://localhost:3000) och visar en lista med äventyr, som kommer från AEM as a Cloud Service med AEM Headless GraphQL API:er.
+1. React-appen, som körs lokalt, börjar [http://localhost:3000](http://localhost:3000) och visar en lista över äventyren som kommer från AEM as a Cloud Service med GraphQL API:er AEM Headless.
 
 ## 5. Redigera innehåll i AEM
 
@@ -164,19 +164,19 @@ Med exempelappen WKND React App som ansluter till och förbrukar innehåll från
 _Genomgång av steg_
 >[!VIDEO](https://video.tv.adobe.com/v/339077?quality=12&learn=on)
 
-1. Logga in på AEM as a Cloud Service Author Service
-1. Navigera till __Assets > Files > WKND Shared > English > Adventures__
-1. Öppna __Cycling Southern Utah__ Mapp
-1. Välj __Cycling Southern Utah__ Innehållsfragment och markera __Redigera__ i det övre åtgärdsfältet
+1. Logga in på tjänsten AEM as a Cloud Service Author
+1. Navigera till __Assets > Filer > WKND Delad > Engelska > Tillägg__
+1. Öppna mappen __Cycling Southern Utah__
+1. Markera innehållsavsnittet __Cycling Southern Utah__ och välj __Redigera__ i det övre åtgärdsfältet
 1. Uppdatera vissa fält i innehållsfragmentet, till exempel:
    + Titel: `Cycling Utah's National Parks`
-   + Resans längd: `6 Days`
+   + Reselängd: `6 Days`
    + Svårighet: `Intermediate`
    + Pris: `3500`
    + Primär bild: `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. Välj __Spara__ i det övre åtgärdsfältet
-1. Välj __Snabbpublicering__ i det övre åtgärdsfältets __...__
-1. Uppdatera React App som körs den [http://localhost:3000](http://localhost:3000).
+1. Välj __Snabb Publish__ i det övre åtgärdsfältets __..__
+1. Uppdatera React App som körs [http://localhost:3000](http://localhost:3000).
 1. I React App (Reagera app) markerar du det nu uppdaterade Cycling-äventyret och verifierar innehållsändringarna i Content Fragment.
 
 1. På samma sätt i AEM Author-tjänsten:
@@ -191,7 +191,7 @@ _Genomgång av steg_
 
 Grattis! Du har använt AEM Headless för att driva en React App!
 
-Om du vill veta mer om hur React App konsumerar innehåll från AEM as a Cloud Service kan du kolla [den AEM självstudiekursen Headless](../multi-step/overview.md). I självstudiekursen utforskas hur innehållsfragment i AEM har skapats och hur denna React App konsumerar sitt innehåll som JSON.
+Om du vill veta mer om hur React App konsumerar innehåll från AEM as a Cloud Service kan du titta på [den AEM Headless-självstudiekursen](../multi-step/overview.md). I självstudiekursen utforskas hur innehållsfragment i AEM har skapats och hur denna React App konsumerar sitt innehåll som JSON.
 
 ### Nästa steg
 

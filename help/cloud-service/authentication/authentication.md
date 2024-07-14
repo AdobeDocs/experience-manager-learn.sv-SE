@@ -1,6 +1,6 @@
 ---
-title: Autentisering på AEM as a Cloud Service
-description: Lär dig mer om autentisering i AEM as a Cloud Service.
+title: Autentisering i AEM as a Cloud Service
+description: Läs mer om autentisering i AEM as a Cloud Service.
 version: Cloud Service
 feature: Security
 topic: Development, Integrations, Security
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ---
 
-# AEM as a Cloud Service autentisering
+# AEM as a Cloud Service-autentisering
 
-AEM as a Cloud Service stöder flera autentiseringsalternativ och varierar beroende på tjänsttyp.
+AEM as a Cloud Service har stöd för flera autentiseringsalternativ och varierar beroende på tjänstetyp.
 
 |                       | AEM | AEM Publish |
 |-----------------------|:----------:|:-----------:|
@@ -49,7 +49,7 @@ Klicka på motsvarande länk nedan om du vill ha mer information om hur du konfi
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        Autentisera webbplatsens användare till en IDP med hjälp AEM Publiceringstjänstens SAML 2.0-integrering.
+        Autentisera webbplatsens användare till en IDP med hjälp AEM Publish tjänsts SAML 2.0-integrering.
       </p>
     </td>   
    <td>

@@ -1,5 +1,5 @@
 ---
-title: Navigera i molnaccelerationshanteraren
+title: Navigera i Cloud Acceleration Manager
 description: Upptäck navigeringsfunktionerna i Cloud Acceleration Manager för Experience Manager as a Cloud Service.
 version: Cloud Service
 feature: Migration
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Navigera i molnaccelerationshanteraren
+# Navigera i Cloud Acceleration Manager
 
 Upptäck navigeringsfunktionerna i Cloud Acceleration Manager för Experience Manager as a Cloud Service.
 

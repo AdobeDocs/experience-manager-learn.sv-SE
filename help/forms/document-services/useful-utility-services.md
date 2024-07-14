@@ -35,7 +35,7 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 }
 ```
 
-Exempelpaketet kan [hämtad härifrån](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
+Exempelpaketet kan [hämtas här](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
 
 ## Exempelkod som använder verktygstjänsten/verktygen
 
@@ -53,4 +53,4 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 Du måste distribuera [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) och starta paketet.
 
 
-Om du tänker spara dokument i CRX-databasen med hjälp av denna verktygstjänst följer du [utveckla med tjänstanvändarens artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Se till att du anger [nödvändiga behörigheter](http://localhost:4502/useradmin) till rätt CRX-mappar för Fd-service-användaren.
+Om du ska spara dokument i CRX-databasen med den här verktygstjänsten följer du artikeln [Utveckla med tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Se till att du anger de [nödvändiga behörigheterna](http://localhost:4502/useradmin) i rätt CRX-mappar till fd-service-användaren.

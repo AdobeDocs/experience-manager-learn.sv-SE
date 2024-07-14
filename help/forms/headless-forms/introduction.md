@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Bädda in Headless Adaptive Form
 
-Detta [självstudiekursen kommer att omfatta de olika rubrikfria API:erna](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) som gör att du kan lista, visa och skicka formuläret.
+Den här [självstudiekursen kommer att omfatta de olika rubrikfria API:erna](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) som gör att du kan visa, visa och skicka formuläret.
 
 I den här artikeln beskrivs de olika rubrikfria API:erna som du kan använda för att lista, visa och skicka adaptiva formulär utan att behöva använda huvud.
 

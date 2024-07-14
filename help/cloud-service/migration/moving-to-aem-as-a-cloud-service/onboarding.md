@@ -1,6 +1,6 @@
 ---
 title: Onboarding för AEM as a Cloud Service
-description: Lär dig mer om att komma igång AEM as a Cloud Service, från avtalsfasen hela vägen till konfiguration av miljöer med Cloud Manager.
+description: Läs om hur du kommer igång med AEM as a Cloud Service, från avtalsfasen hela vägen till konfiguration av miljöer med Cloud Manager.
 version: Cloud Service
 feature: Onboarding
 topic: Migration, Upgrade
@@ -19,21 +19,21 @@ ht-degree: 5%
 
 # Onboarding för AEM as a Cloud Service
 
-Lär dig mer om att komma igång med AEM as a Cloud Service från avtalsfasen genom att konfigurera miljöerna med Cloud Manager.
+Läs om hur du kommer igång med AEM as a Cloud Service från avtalsfasen hela vägen genom att konfigurera miljöerna med Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
 
 ## Cloud Manager och Admin Console
 
-![High level-diagram för introduktion](assets/onboarding-diagram.png)
+![Startar högnivådiagram](assets/onboarding-diagram.png)
 
-En viktig del av introduktionen är att skapa AEM as a Cloud Service program och tillhandahålla olika miljöer med hjälp av Adobe Cloud Manager. The [Admin Console](https://adminconsole.adobe.com/) används för att tilldela roller och ge användare i organisationen åtkomst till AEM miljöer.
+En viktig del av nyanställda är att skapa AEM as a Cloud Service-program och tillhandahålla olika miljöer med hjälp av Adobe Cloud Manager. [Admin Console](https://adminconsole.adobe.com/) används för att tilldela roller och ge användare i din organisation åtkomst till AEM miljöer.
 
 ## Viktiga aktiviteter
 
-+ En systemadministratör använder [Admin Console](https://adminconsole.adobe.com/) för att tilldela en eller flera användare till [Cloud Manager - Business Owner](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) produktprofil.
-+ Användare som tilldelats till företagsägarens produktprofil använder självbetjäningsfunktionerna i [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) till [skapa program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) och [lägg till miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ Använd [Admin Console](https://adminconsole.adobe.com/) tilldela olika utvecklare och användare [Cloud Manager-roller](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) och ge tillstånd till olika AEM miljöer.
++ En systemadministratör använder [Admin Console](https://adminconsole.adobe.com/) för att tilldela en eller flera användare till produktprofilen [Cloud Manager - Business Owner](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
++ Användare som har tilldelats till företagsägarens produktprofil använder självbetjäningsfunktionerna i [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) för att [skapa program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) och [lägga till miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
++ Använd [Admin Console](https://adminconsole.adobe.com/) för att tilldela utvecklare och användare till olika [Cloud Manager-roller](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) och ge behörighet till olika AEM miljöer.
 
 ## Handövning
 
@@ -59,7 +59,7 @@ Se även till att du har fullföljt tidigare övningar:
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">Handsnack med introduktion</div>
             <p style="margin:1rem 0">
-                Utforska AEM as a Cloud Service introduktionsprocessen och hur du distribuerar ett AEM till AEM SDK.
+                Utforska AEM as a Cloud Service introduktionsprocess och hur du distribuerar ett AEM till AEM SDK.
             </p>
             <a  rel="noreferrer"
                 target="_blank"

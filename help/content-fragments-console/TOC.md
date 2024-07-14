@@ -12,19 +12,19 @@ role: User
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 1%
+source-wordcount: '54'
+ht-degree: 0%
 
 ---
 
 
 # AEM Content Fragment console videos {#content-fragments-console}
 
-+ [Översikt](overview.md)
-+ Grunderna{#basics}
++ [Ökning](overview.md)
++ Grunderna {#basics}
    + [Konsolöversikt](./basics/content-fragments-console.md)
    + [Översikt över redigeraren](./basics/content-fragment-editor.md)
-+ Sökning och identifiering{#search}
++ Sökning och identifiering {#search}
    + [Snabb filtrering](search/fast-filtering.md)
    + [Referenser](search/references.md)
 + Redigerare{#editor}

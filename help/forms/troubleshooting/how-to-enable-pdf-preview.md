@@ -1,5 +1,5 @@
 ---
-title: Designer Preview PDF inaktiverat - hur du aktiverar Preview PDF
+title: Designer Preview PDF inaktiverat - hur du aktiverar Förhandsgranska PDF
 description: Steg för att konfigurera PDF Preview i Designer
 type: Troubleshooting
 role: Developer

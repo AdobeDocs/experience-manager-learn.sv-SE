@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att ansluta Workbench till AEM Forms-servern med HTTPS
 
-*I den här videon går du igenom stegen för att ansluta Workbench till AEM Forms-servern med HTTPS.*
+*Den här videon går igenom stegen för att ansluta Workbench till AEM Forms-servern med HTTPS.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335482?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
 title: Generera åtkomsttoken för server-till-server i App Builder-åtgärden
-description: Lär dig hur du skapar en åtkomsttoken med hjälp av autentiseringsuppgifter för OAuth Server-till-Server som kan användas i en App Builder-åtgärd.
+description: Lär dig hur du genererar en åtkomsttoken med hjälp av autentiseringsuppgifter för OAuth Server-till-Server för användning i en App Builder-åtgärd.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -19,19 +19,19 @@ ht-degree: 0%
 
 # Generera åtkomsttoken för server-till-server i App Builder-åtgärden
 
-App Builder-åtgärder kan behöva interagera med Adobe API:er som stöder **OAuth Server-till-Server-autentiseringsuppgifter** och är kopplade till Adobe Developer Console-projekt som appen App Builder är distribuerad.
+App Builder-åtgärder kan behöva interagera med Adobe API:er som har stöd för **OAuth Server-till-Server-autentiseringsuppgifter** och som är kopplade till Adobe Developer Console-projekt som App Builder-appen är distribuerad.
 
-I den här guiden beskrivs hur du skapar en åtkomsttoken med _OAuth Server-till-Server-autentiseringsuppgifter_ för användning i en App Builder-åtgärd.
+I den här guiden beskrivs hur du skapar en åtkomsttoken med hjälp av _OAuth Server-to-Server-inloggningsuppgifter_ som kan användas i en App Builder-åtgärd.
 
 >[!IMPORTANT]
 >
 > JWT-autentiseringsuppgifterna (Service Account) har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server. Det finns dock fortfarande vissa Adobe-API:er som bara stöder JWT-autentiseringsuppgifter och migrering till OAuth Server-till-Server pågår. Läs Adobe API-dokumentationen för att ta reda på vilka autentiseringsuppgifter som stöds.
 
-## Projektkonfigurationer för Adobe Developer Console
+## Adobe Developer Console projektkonfigurationer
 
-När du lägger till önskat Adobe-API i Adobe Developer Console-projekt finns det i _Konfigurera API_ väljer du **OAuth Server-till-server** autentiseringstyp.
+När du lägger till önskat Adobe-API i Adobe Developer Console-projektet väljer du autentiseringstypen **OAuth Server-till-Server** i steget _Konfigurera API_ .
 
-![Adobe Developer Console - OAuth Server-till-server](./assets/s2s-auth/oauth-server-to-server.png)
+![Adobe Developer Console - OAuth Server-till-Server](./assets/s2s-auth/oauth-server-to-server.png)
 
 Välj önskad produktprofil om du vill tilldela det ovan automatiskt skapade integrationstjänstkontot. Det innebär att tjänstkontots behörigheter styrs via produktprofilen.
 
@@ -39,7 +39,7 @@ Välj önskad produktprofil om du vill tilldela det ovan automatiskt skapade int
 
 ## .env-fil
 
-I App Builder-projektets `.env` lägg till anpassade nycklar för Adobe Developer Console-projektets OAuth Server-till-Server-autentiseringsuppgifter. Autentiseringsvärdena för OAuth Server-till-Server kan hämtas från Adobe Developer Console-projektets __Referenser__ > __OAuth Server-till-server__ för en viss arbetsyta.
+Lägg till anpassade nycklar för Adobe Developer Console-projektets OAuth Server-till-Server-autentiseringsuppgifter i App Builder-projektets `.env`-fil. Autentiseringsvärdena för OAuth Server-till-Server kan hämtas från Adobe Developer Console-projektets __Credentials__ > __OAuth Server-till-Server__ för en angiven arbetsyta.
 
 ![Adobe Developer Console OAuth Server-till-server-autentiseringsuppgifter](./assets/s2s-auth/oauth-server-to-server-credentials.png)
 
@@ -50,11 +50,11 @@ OAUTHS2S_CLIENT_SECRET=p8e-EIRF6kY6EHLBSdw2b-pLUWKodDqJqSz3
 OAUTHS2S_CECREDENTIALS_METASCOPES=AdobeID,openid,ab.manage,additional_info.projectedProductContext,read_organizations,read_profile,account_cluster.read
 ```
 
-Värdena för `OAUTHS2S_CLIENT_ID`, `OAUTHS2S_CLIENT_SECRET`, `OAUTHS2S_CECREDENTIALS_METASCOPES` kan kopieras direkt från Adobe Developer Console-projektets skärm OAuth Server-till-Server-autentiseringsuppgifter.
+Värdena för `OAUTHS2S_CLIENT_ID`, `OAUTHS2S_CLIENT_SECRET`, `OAUTHS2S_CECREDENTIALS_METASCOPES` kan kopieras direkt från Adobe Developer Console-projektets inloggningsskärm OAuth Server-to-Server.
 
 ## Indatamappning
 
-Med autentiseringsuppgiften OAuth Server-to-Server angiven i `.env` måste de mappas till AppBuilder-åtgärdsindata så att de kan läsas i själva åtgärden. Det gör du genom att lägga till poster för varje variabel i `ext.config.yaml` åtgärd `inputs` i formatet: `PARAMS_INPUT_NAME: $ENV_KEY`.
+Med autentiseringsuppgiftsvärdet OAuth Server-to-Server angivet i filen `.env` måste de mappas till åtgärdsindata i AppBuilder så att de kan läsas i själva åtgärden. Det gör du genom att lägga till poster för varje variabel i `ext.config.yaml`-åtgärden `inputs` i formatet: `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 Till exempel:
 
@@ -83,13 +83,13 @@ runtimeManifest:
             final: true
 ```
 
-De tangenter som definieras under `inputs` finns på `params` -objekt som anges för App Builder-åtgärden.
+Nycklarna som definieras under `inputs` är tillgängliga för objektet `params` som tillhandahålls för App Builder-åtgärden.
 
 ## OAuth Server-till-Server-autentiseringsuppgifter för att komma åt token
 
-I App Builder-åtgärden är autentiseringsuppgifterna för OAuth Server-till-Server tillgängliga i `params` -objekt. Med dessa autentiseringsuppgifter kan åtkomsttoken genereras med [OAuth 2.0-bibliotek](https://oauth.net/code/). Du kan också använda [Nodhämtningsbibliotek](https://www.npmjs.com/package/node-fetch) om du vill göra en POST-förfrågan till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
+I App Builder-åtgärden är autentiseringsuppgifterna för OAuth Server-till-Server tillgängliga i objektet `params`. Med dessa autentiseringsuppgifter kan åtkomsttoken genereras med [OAuth 2.0-bibliotek](https://oauth.net/code/). Du kan också använda biblioteket [Nodhämtning](https://www.npmjs.com/package/node-fetch) för att göra en POST-förfrågan till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
 
-I följande exempel visas hur du använder `node-fetch` bibliotek för att göra en begäran om POST till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
+I följande exempel visas hur du använder biblioteket `node-fetch` för att göra en POST-förfrågan till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
 
 ```javascript
 const fetch = require("node-fetch");

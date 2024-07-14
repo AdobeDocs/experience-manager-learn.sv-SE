@@ -38,7 +38,7 @@ En bildförinställning har ett dollartecken ($) på båda sidor om namnet och f
 >Skapa en bildförinställning per unik bildstorlek på webbplatsen. Om du till exempel behöver en bild på 350 x 350 för produktinformationssidan, en bild på 120 x 120 för bläddrings-/söksidorna och en bild på 90 x 90 för korsförsäljning/aktuellt objekt behöver du tre förinställningar, oavsett om du har 500 bilder eller 500 000.
 
 - Läs mer om [Bildförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Lär dig hur [Skapa en bildförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Lär dig hur du [skapar en bildförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## Bildförinställningar och skärpa
 
@@ -64,6 +64,6 @@ Läs mer om [Dynamic Media Classic skärpealternativ](https://experienceleague.a
 
 ## Ytterligare resurser
 
-[Guide för bildförinställningar](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). Inställningar som ska användas för att optimera bildkvalitet och inläsningshastighet.
+[Guiden Bildförinställning](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). Inställningar som ska användas för att optimera bildkvalitet och inläsningshastighet.
 
-[Bilden är allt som är del 2: Det är aldrig bara en oskärpa - kvalitet jämfört med hastighet](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). Ett blogginlägg där man diskuterar hur man använder bildförinställningar för att leverera högkvalitativa, snabba bilder.
+[Bilden är allt del 2: Den är aldrig bara en oskärpa - kvalitet jämfört med hastighet](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). Ett blogginlägg där man diskuterar hur man använder bildförinställningar för att leverera högkvalitativa, snabba bilder.

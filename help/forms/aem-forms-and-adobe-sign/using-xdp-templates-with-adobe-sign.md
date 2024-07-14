@@ -24,7 +24,7 @@ Utnyttja befintliga XDP-mallar med AEM Forms- och Sign-integrering.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
 
-Resurser relaterade till den här videon kan hämtas från följande länkar
+Assets för den här videon kan hämtas från följande länkar
 
 * [NDA-mall](assets/nda-agreement-xdp-template.zip)
 * [Adaptiv form](assets/nda-agreement-af-with-xdp-template.zip)

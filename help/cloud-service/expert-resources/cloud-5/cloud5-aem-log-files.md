@@ -1,6 +1,6 @@
 ---
 title: Loggfiler AEM Cloud 5
-description: Detta är en djupdykning i hur du får åtkomst till loggar på AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
+description: Detta är en djupdykning i hur du får åtkomst till loggar i AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -18,15 +18,15 @@ ht-degree: 0%
 
 # Loggfiler AEM Cloud 5
 
-Detta är en djupdykning i hur du får åtkomst till loggar på AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
+Detta är en djupdykning i hur du får åtkomst till loggar i AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
 
 >[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 
-+ Loggfiler [Ökning](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
++ Loggfiler [Översikt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
 + Åtkomst till loggfiler via användargränssnittet
 + Använda Adobe CLI
    + [Adobe I/O Extensible CLI](https://github.com/adobe/aio-cli)
-   + [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
+   + [aio-cli-plugin-cloudManager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
 + Utseendeloggfiler

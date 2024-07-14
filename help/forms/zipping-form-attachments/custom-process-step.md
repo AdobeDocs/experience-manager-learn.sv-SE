@@ -19,7 +19,7 @@ ht-degree: 0%
 # Anpassat processsteg
 
 
-Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. Om du inte är bekant med att skapa OSGi-paket kan du [Följ dessa anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa OSGi-paket.
 
 Koden i det anpassade processsteget gör följande
 
@@ -160,7 +160,7 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Kontrollera att du har en variabel som heter  *antal_bilagor* av typen Double i ditt arbetsflöde för att koden ska fungera.
+> Kontrollera att du har en variabel som heter *no_of_attachments* av typen Double i arbetsflödet för att koden ska fungera.
 
 ## Nästa steg
 

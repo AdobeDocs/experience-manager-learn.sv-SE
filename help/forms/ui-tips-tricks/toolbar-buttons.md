@@ -22,7 +22,7 @@ ht-degree: 0%
 
 När du lägger till knapparna Nästa och Föregående i verktygsfältet i AEM Forms placeras knapparna som standard bredvid varandra. Du kanske vill trycka på Nästa-knappen längst till höger i verktygsfältet samtidigt som du håller knappen Föregående/Bakåt till vänster
 
-![verktygsfältsavstånd](assets/toolbar-spacing.png)
+![verktygsfält-spacing](assets/toolbar-spacing.png)
 
 
 ## Formatera verktygsfältet

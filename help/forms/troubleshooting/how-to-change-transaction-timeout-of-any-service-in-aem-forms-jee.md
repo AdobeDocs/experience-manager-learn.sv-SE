@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här ändrar du tidsgränsen för en transaktion för en tjänst i AEM Forms JEE
 
-*I den här videon går du igenom stegen för att ändra tidsgränsen för en transaktion för en tjänst i AEM Forms JEE.*
+*Den här videon går igenom stegen för att ändra tidsgränsen för en transaktion för en tjänst i AEM Forms JEE.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335495?quality=12&learn=on)

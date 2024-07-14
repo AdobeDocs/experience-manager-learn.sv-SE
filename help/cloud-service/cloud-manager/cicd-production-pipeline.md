@@ -29,12 +29,12 @@ ht-degree: 0%
 
 ## Konfiguration
 
-The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html) konfiguration definierar den utlösare som initierar pipelinen, parametrar som styr produktionsdistributionen och parametrar för prestandatestning.
+Konfigurationen [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html) definierar utlösaren som initierar pipelinen, parametrar som styr produktionsdistributionen och prestandatestparametrarna.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Körning av pipeline
 
-The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) används för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar tiden till värde.
+Produktionspipelinen [CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) används för att skapa och distribuera kod genom scenen till produktionsmiljön, vilket minskar tiden till värde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

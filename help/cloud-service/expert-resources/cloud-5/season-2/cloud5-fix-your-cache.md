@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Cloud 5 - Korrigera din.. Cache
 
-I två delar av säsongen utforskar vi några saker som du kan titta på som snabbar upp cachningen AEM as a Cloud Service.
+I två delar av säsongen utforskar vi några saker som du kan titta på och som snabbar upp din cachning på AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/343475?quality=12&learn=on)
 
 ## Innehåll som behandlas i den här videon
 
 + [Cachelagring och innehållsleverans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
-+ [Google Lighthuse](https://developers.google.com/web/tools/lighthouse)
++ [Google Lightroom](https://developers.google.com/web/tools/lighthouse)

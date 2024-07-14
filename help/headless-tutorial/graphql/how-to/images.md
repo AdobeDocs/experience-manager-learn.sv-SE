@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # Optimerade bilder med AEM Headless {#images-with-aem-headless}
 
-Bilder är en viktig aspekt av [utveckla multimediala, övertygande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
+Bilder är en viktig aspekt av [att utveckla engagerande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
 
-Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ange URL:er till bilder baserat på varifrån bilden refereras.
+Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ge URL:er till bilder baserat på varifrån bilden refereras.
 
-The `ImageRef` -typen har fyra URL-alternativ för innehållsreferenser:
+Typen `ImageRef` har fyra URL-alternativ för innehållsreferenser:
 
 + `_path` är den refererade sökvägen i AEM och innehåller inte AEM (värdnamn)
-+ `_dynamicUrl` är webbadressen till bildresursens webboptimerade leverans.
-   + The `_dynamicUrl` innehåller inte AEM ursprung, så domänen (AEM författare eller AEM publiceringstjänst) måste anges av klientprogrammet.
-+ `_authorUrl` är den fullständiga URL:en till bildresursen på AEM författare
-   + [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsvisning av programmet utan huvud.
-+ `_publishUrl` är den fullständiga URL:en till bildresursen vid AEM
++ `_dynamicUrl` är URL:en till för webboptimerad leverans av bildresurser.
+   + `_dynamicUrl` innehåller inte något AEM ursprung, så domänen (AEM författare eller AEM Publish-tjänst) måste anges av klientprogrammet.
++ `_authorUrl` är den fullständiga URL:en till bildresursen AEM författaren
+   + [AEM Författare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsgranskning av det headless-programmet.
++ `_publishUrl` är den fullständiga URL:en till bildresursen på AEM Publish
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
-The `_dynamicUrl` är den rekommenderade URL som ska användas för leverans av bildresurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
+`_dynamicUrl` är den rekommenderade URL-adressen som ska användas för leverans av bildresurser och bör ersätta användningen av `_path`, `_authorUrl` och `_publishUrl` när det är möjligt.
 
 |                                | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -48,15 +48,15 @@ The `_dynamicUrl` är den rekommenderade URL som ska användas för leverans av 
 
 ## Content Fragment Model
 
-Kontrollera att fältet Innehållsfragment som innehåller bildreferensen är av __innehållsreferens__ datatyp.
+Kontrollera att fältet Innehållsfragment som innehåller bildreferensen har datatypen __content reference__.
 
-Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)genom att markera fältet och kontrollera __Egenskaper__ till höger.
+Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html) genom att markera fältet och kontrollera fliken __Properties__ till höger.
 
-![Content Fragment Model med innehållsreferens till en bild](./assets/images/content-fragment-model.jpeg)
+![Modell för innehållsfragment med innehållsreferens till en bild](./assets/images/content-fragment-model.jpeg)
 
 ## GraphQL beständig fråga
 
-I GraphQL-frågan returnerar du fältet `ImageRef` och begär `_dynamicUrl` fält. Du kan till exempel ställa frågor till ett äventyr i [WKND-webbplatsprojekt](https://github.com/adobe/aem-guides-wknd) och inkludera bildens URL för bildresursens referenser i dess `primaryImage` fält, kan utföras med en ny beständig fråga `wknd-shared/adventure-image-by-path` definieras som:
+I GraphQL-frågan returnerar du fältet som `ImageRef`-typ och begär fältet `_dynamicUrl`. Du kan till exempel ställa frågor om ett äventyr i [WKND-platsprojektet](https://github.com/adobe/aem-guides-wknd) och inkludera bild-URL för bildresursreferenserna i fältet `primaryImage` med en ny beständig fråga `wknd-shared/adventure-image-by-path` som definieras som:
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -92,21 +92,21 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 }
 ```
 
-The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
+Variabeln `$path` som används i filtret `_path` kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
 
-The `_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
+`_assetTransform` definierar hur `_dynamicUrl` är konstruerad för att optimera den serverade bildåtergivningen. Webbadresserna för webboptimerade bilder kan också justeras på klienten genom att URL-adressens frågeparametrar ändras.
 
 | GraphQL-parameter | Beskrivning | Obligatoriskt | GraphQL variabelvärden |
 |-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | Bildresursens format. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
-| `seoName` | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumeriska, `-`, eller `_` |
+| `seoName` | Namn på filsegment i URL. Om inget anges används bildresursnamnet. | ✘ | Alfanumerisk, `-` eller `_` |
 | `crop` | Beskär bildrutor som tagits ut från bilden, måste vara inom bildens storlek | ✘ | Positiva heltal som definierar ett beskärningsområde inom gränserna för de ursprungliga bilddimensionerna |
 | `size` | Storlek på utdatabilden (både höjd och bredd) i pixlar. | ✘ | Positiva heltal |
 | `rotation` | Bildens rotation i grader. | ✘ | `R90`, `R180`, `R270` |
 | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
 | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 |
-| `width` | Utdatabildens bredd i pixlar. När `size` anges `width` ignoreras. | ✘ | Positivt heltal |
-| `preferWebP` | If `true` och AEM fungerar som en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
+| `width` | Utdatabildens bredd i pixlar. När `size` anges ignoreras `width`. | ✘ | Positivt heltal |
+| `preferWebP` | Om `true` och AEM visar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
 
 
 ## GraphQL svar
@@ -129,9 +129,9 @@ Det resulterande JSON-svaret innehåller de begärda fälten som innehåller den
 }
 ```
 
-Om du vill läsa in den webboptimerade bilden av den refererade bilden i ditt program använder du `_dynamicUrl` i `primaryImage` som bildens käll-URL.
+Om du vill läsa in den webboptimerade bilden av den refererade bilden i ditt program använder du `_dynamicUrl` för `primaryImage` som bildens käll-URL.
 
-I Reagera ser det ut så här när en webboptimerad bild från AEM Publicera visas:
+I Reagera ser det ut så här när en webboptimerad bild från AEM Publish visas:
 
 ```jsx
 // The AEM host is usually read from a environment variable of the SPA.
@@ -142,11 +142,11 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-Kom ihåg: `_dynamicUrl` innehåller inte den AEM domänen, så du måste ange det önskade ursprunget för den bild-URL som ska tolkas.
+Kom ihåg att `_dynamicUrl` inte innehåller den AEM domänen, så du måste ange den önskade källan för den bild-URL som ska matchas.
 
 ## Responsiva URL:er
 
-Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som bas. `width` är en URL-parameter som du sedan kan lägga till i `_dynamicUrl` för olika responsiva vyer.
+Exemplet ovan visar hur du använder en bild med en storlek, men i webbupplevelser krävs ofta responsiva bilduppsättningar. Responsiva bilder kan implementeras med [img-uppsättningar](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) eller [picture-element](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Följande kodfragment visar hur du använder `_dynamicUrl` som bas. `width` är en URL-parameter som du sedan kan lägga till i `_dynamicUrl` för att driva olika responsiva vyer.
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
@@ -179,26 +179,26 @@ document.body.innerHTML=`<picture>
 
 Låt oss skapa ett enkelt React-program som visar webboptimerade bilder efter [responsiva bildmönster](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). Det finns två huvudmönster för responsiva bilder:
 
-+ [Img-element med srset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) för bättre prestanda
++ [Bildelement med resurs](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) för bättre prestanda
 + [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) för designkontroll
 
 ### Img-element med srset
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-[Bildelement med skärpa](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) används med `sizes` för att tillhandahålla olika bildresurser för olika skärmstorlekar. Bilduppsättningar är användbara när du tillhandahåller olika bildresurser för olika skärmstorlekar.
+[Bildelement med raduppsättningen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) används med attributet `sizes` för att tillhandahålla olika bildresurser för olika skärmstorlekar. Bilduppsättningar är användbara när du tillhandahåller olika bildresurser för olika skärmstorlekar.
 
 ### Bildelement
 
-[Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) används med flera `source` -element om du vill ha olika bildresurser för olika skärmstorlekar. Bildelement är användbara när du vill ha olika bildåtergivningar för olika skärmstorlekar.
+[Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) används med flera `source`-element för att tillhandahålla olika bildresurser för olika skärmstorlekar. Bildelement är användbara när du vill ha olika bildåtergivningar för olika skärmstorlekar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
 ### Exempelkod
 
-Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless API:er om ett Adventure-innehåll och visa den webboptimerade bilden med [img-element med resurs](#img-element-with-srcset) och [bildelement](#picture-element). The `srcset` och `sources` använda en anpassad `setParams` funktion för att lägga till den webboptimerade parametern för leveransfråga i `_dynamicUrl` av bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
+Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless-API:er efter ett Adventure-innehåll och visar den webboptimerade bilden med [img-elementet med srcset](#img-element-with-srcset) och [picture-elementet](#picture-element). `srcset` och `sources` använder en anpassad `setParams`-funktion för att lägga till den webboptimerade frågeparametern för leverans till `_dynamicUrl` för bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
 
-Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
+Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder den AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
 
 ```javascript
 // src/App.js

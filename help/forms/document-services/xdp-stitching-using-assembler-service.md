@@ -19,9 +19,9 @@ ht-degree: 0%
 # XDP Stitching using assembler Service
 
 I den här artikeln finns de resurser som du kan använda för att visa möjligheten att sammanfoga xdp-dokument med hjälp av sammansättningstjänsten.
-Följande jsp-kod har skrivits för att infoga ett delformulär med namnet **adress** från xdp-dokument med namnet address.xdp till en insättningspunkt med namnet **adress** i master.xdp-dokument. Den resulterande xdp-filen sparades i rotmappen för AEM.
+Följande jsp-kod skrevs för att infoga ett delformulär med namnet **address** från xdp-dokumentet med namnet address.xdp i en insättningspunkt med namnet **address** i master.xdp-dokumentet. Den resulterande xdp-filen sparades i rotmappen för AEM.
 
-Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva manipuleringen av PDF-dokument. Du kan se [DDX-referensdokument här](assets/ddxRef.pdf).Sidan 40 innehåller information om xdp-sammanfogning.
+Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva manipuleringen av PDF-dokument. Du kan referera till [DDX-referensdokumentet här](assets/ddxRef.pdf).Sidan 40 innehåller information om xdp-sammanfogning.
 
 ```java
     javax.servlet.http.Part ddxFile = request.getPart("xdpstitching.ddx");
@@ -53,7 +53,7 @@ Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva
     finalXDP.copyToFile(new java.io.File("stitched.xdp"));
 ```
 
-DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformuläret  **adress** från address.xdp till insättningspunkten som anropas **adress** i master.xdp. Det resulterande dokumentet med namnet **sydda.xdp** sparas i filsystemet.
+DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformuläret **address** från address.xdp i insättningspunkten **address** i master.xdp. Det resulterande dokumentet **stitched.xdp** sparas i filsystemet.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -68,8 +68,8 @@ DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformul
 
 För att få den här funktionen att fungera på din AEM
 
-* Ladda ned [XDP Stitching-paket](assets/xdp-stitching.zip) till ditt lokala system.
-* Överför och installera paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Hämta [XDP-titelpaketet](assets/xdp-stitching.zip) till din lokala dator.
+* Överför och installera paketet med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Extrahera innehållet i zip-filen](assets/xdp-and-ddx.zip) för att hämta exempelfilen för xdp och DDX
 
 **När du har installerat paketet måste du tillåtslista följande URL:er i Adobe Granite CSRF-filtret.**
@@ -79,8 +79,10 @@ För att få den här funktionen att fungera på din AEM
 1. Sök efter Adobe Granite CSRF-filter
 1. Lägg till följande sökväg i de uteslutna avsnitten och spara `/content/AemFormsSamples/assemblerservice`
 1. Sök efter filtret &quot;Sling Referrer&quot;
-1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte) Det finns flera sätt att testa exempelkoden. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
-Starta programmet och ange följande URL för att testa API:t för exportdata http://localhost:4502/content/AemFormsSamples/assemblerservice.html
+1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
+Starta programmet och ange följande URL för att testa API:t för exportdata
+http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 
 Ange följande indataparametrar enligt skärmbilden. Du kan använda exempeldokumenten som du hämtade tidigare,
 ![xdp-stitch-postman](assets/xdp-stitching-postman.png)

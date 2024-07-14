@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Anpassade stödrasterkolumner
 
-![Kolumn med anpassat stödraster för konsolen Innehållsfragment](./assets/custom-grid-columns/hero.png){align="center"}
+![Kolumn för anpassat stödraster i konsolen för innehållsfragment](./assets/custom-grid-columns/hero.png){align="center"}
 
-Du kan lägga till anpassade stödrasterkolumner i konsolen för innehållsfragment med hjälp av  `contentFragmentGrid` tilläggspunkt. I det här exemplet visas hur du lägger till en anpassad kolumn som visar sidan Innehållsfragment, baserat på dess senaste ändringsdatum, i läsbart format.
+Anpassade stödrasterkolumner kan läggas till på konsolen för innehållsfragment med hjälp av tilläggspunkten `contentFragmentGrid`. I det här exemplet visas hur du lägger till en anpassad kolumn som visar sidan Innehållsfragment, baserat på dess senaste ändringsdatum, i läsbart format.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `contentFragmentGrid` om du vill lägga till en anpassad kolumn i konsolen för innehållsfragment.
+Det här exemplet utökar till tilläggspunkten `contentFragmentGrid` för att lägga till en anpassad kolumn i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
@@ -35,18 +35,18 @@ Det här exemplet utökar till tilläggspunkten `contentFragmentGrid` om du vill
 
 ## Exempel på tillägg
 
-I följande exempel skapas en egen kolumn: `Age` som visar innehållets ålder i läsbart format. Åldern beräknas från det senaste ändringsdatumet för innehållsfragmentet.
+I följande exempel skapas en anpassad kolumn, `Age`, som visar innehållets ålder i läsbart format. Åldern beräknas från det senaste ändringsdatumet för innehållsfragmentet.
 
 Koden visar hur Content Fragment-metadata kan hämtas i tilläggets registreringsfil och hur Content Fragment-innehållets JSON-innehåll kan omformas kan exporteras.
 
-I det här exemplet används [Luxon](https://moment.github.io/luxon/) bibliotek för att beräkna innehållets ålder, installerat via `npm i luxon`.
+I det här exemplet används biblioteket [Luxon](https://moment.github.io/luxon/) för att beräkna åldern på innehållsfragmentet som installeras via `npm i luxon`.
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
+`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
 
-+ Platsen för tillägget injicerar sig själv (`contentFragmentGrid`) i AEM
-+ Definitionen av den anpassade kolumnen i `getColumns()` function
++ Platsen för tillägget injicerar sig själv (`contentFragmentGrid`) i AEM.
++ Definitionen av den anpassade kolumnen i funktionen `getColumns()`
 + Värdena för varje anpassad kolumn, efter rad
 
 ```javascript
@@ -149,7 +149,7 @@ export default ExtensionRegistration;
 
 #### Data för innehållsfragment
 
-The `render(..)` metod i `getColumns()` skickas som en array med fragment. Varje objekt i arrayen representerar en rad i rutnätet och innehåller följande metadata om innehållsfragmentet. Dessa metadata kan användas för populära anpassade kolumner i rutnätet.
+Metoden `render(..)` i `getColumns()` har en array med fragment. Varje objekt i arrayen representerar en rad i rutnätet och innehåller följande metadata om innehållsfragmentet. Dessa metadata kan användas för populära anpassade kolumner i rutnätet.
 
 
 ```javascript
@@ -161,7 +161,7 @@ render: async function (fragments) {
 }
 ```
 
-Exempel på JSON för innehållsfragment som är tillgänglig som ett element i `fragments` -parametern i `render(..)` -metod.
+Exempel på JSON för innehållsfragment som är tillgängligt som ett element i parametern `fragments` i metoden `render(..)`.
 
 ```json
 {
@@ -208,9 +208,9 @@ Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begärande
 
 >[!IMPORTANT]
 >
-> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som appen AppBuilder körs på. Tillåtna ursprung inkluderar `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
+> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
 >
-> Tillägget kan även anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som begär AEM författare för tilläggets räkning.
+> Tillägget kan också anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som gör begäran till AEM författare för tilläggets räkning.
 
 
 ```javascript
@@ -227,9 +227,9 @@ const response = await fetch(`${context.aemHost}${fragment.id.slice('/content/da
 
 #### Kolumndefinition
 
-Resultatet av återgivningsmetoden är ett JavaScript-objekt vars nycklar är sökvägen till innehållsfragmentet (eller `fragment.id`) och värdet är ett värde som ska visas i kolumnen.
+Resultatet av återgivningsmetoden är ett JavaScript-objekt vars nycklar är sökvägen till innehållsfragmentet (eller `fragment.id`) och värdet är det värde som ska visas i kolumnen.
 
-Det här tilläggets resultat för `age` kolumnerna är:
+Det här tilläggets resultat för kolumnen `age` är till exempel:
 
 ```json
 {

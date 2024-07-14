@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Ändra tidsgränsen för en transaktion för en programserver i PDFG-tjänsten
 
-*I den här videon beskrivs processen för att ändra tidsgränsen för transaktioner för en programserver i Forms PDFG-tjänsten.*
+*Den här videon beskriver processen att ändra tidsgränsen för transaktioner för en programserver i Forms PDFG-tjänsten.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335555?quality=12&learn=on)

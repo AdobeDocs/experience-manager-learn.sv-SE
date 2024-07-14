@@ -28,15 +28,15 @@ Följ följande anvisningar för att få det här användningsfallet att fungera
 
 ## Skapa databas
 
-I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa [databasschema genom att importera schemafilen](assets/data-base-schema.sql) till MySQL workbench.
+I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa databasschemat [genom att importera schemafilen ](assets/data-base-schema.sql) till MySQL workbench.
 
 ## Skapa datakälla
 
-Du måste skapa en sammanslagen datakälla för Apache Sling-anslutningen med namnet **StoreAndRetrieveAfData** peka på databasschemat som skapades i det tidigare steget. Koden i OSGi-paketet använder det här datakällnamnet.
+Du måste skapa en sammanslagen datakälla för Apache Sling-anslutningen med namnet **StoreAndRetrieveAfData** som pekar på databasschemat som skapades i det tidigare steget. Koden i OSGi-paketet använder det här datakällnamnet.
 
 ## Skapa formulärdatamodell
 
-Formulärdatamodell måste skapas baserat på den här datakällan som anropas **StoreAndRetrieveAfData**. Den här formulärdatamodellen används för att hämta det mobiltelefonnummer som är kopplat till program-ID:t. Formulärdatamodellen kan [laddas ned härifrån.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+Formulärdatamodell måste skapas baserat på den här datakällan med namnet **StoreAndRetrieveAfData**. Den här formulärdatamodellen används för att hämta det mobiltelefonnummer som är kopplat till program-ID:t. Formulärdatamodellen kan [hämtas härifrån.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
 ## Skapa utvecklarkonto med nexmo
 
@@ -44,8 +44,8 @@ Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skic
 
 ## Distribuera följande OSGi-paket
 
-Distribuera det paket som har [kod för att lagra och hämta data från databasen](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
-Ladda ned och zippa upp [utvecklamed servicuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
+Distribuera det paket som innehåller [koden för att lagra och hämta data från databasen ](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
+Ladda ned och zippa upp [developingwith serviceUser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) .
 Distribuera filen DevelopingWithServiceUser.jar med Felix webbkonsol.
 
 ## Distribuera klientbiblioteket
@@ -54,11 +54,11 @@ Exemplet använder två klientbibliotek. Importera dessa [klientbibliotek](asset
 
 ## Importera en anpassad formulärmall
 
-Exempelformulären som används i den här demon är baserade på en anpassad mall. Importera [anpassad mall till AEM](assets/custom-template-with-page-component.zip)
+Exempelformulären som används i den här demon är baserade på en anpassad mall. Importera den anpassade mallen [till AEM](assets/custom-template-with-page-component.zip)
 
 ## Importera exempeladaptiva formulär
 
-De två formulär som utgör det här exemplet måste importeras till AEM. Exempelformulären kan [hämtad härifrån](assets/sample-forms.zip)
+De två formulär som utgör det här exemplet måste importeras till AEM. Exempelformulären kan [hämtas här](assets/sample-forms.zip)
 
 Öppna [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) i redigeringsläge. Ange Vonage API Key- och API Secret-värden i lämpliga fält i det adaptiva formuläret.
 

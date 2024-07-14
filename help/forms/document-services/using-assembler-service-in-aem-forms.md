@@ -103,19 +103,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 För att få den här funktionen att fungera på din AEM
 
-* Ladda ned [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
-* Överför och installera paketet med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
-* Ladda ned[Paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Ladda ned [Utveckla med Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Distribuera och starta paketen med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
-* Peka webbläsaren till [SammanställPDF.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
+* Hämta [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
+* Överför och installera paketet med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* Hämta[paket med anpassade dokumenttjänster](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Hämta [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Distribuera och starta paketen med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
+* Peka webbläsaren på [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * Dra och släpp några filer med PDF-filer
 
 >[!NOTE]
 >
 >Kontrollera att AEM Forms-installationen är klar. Alla paket måste vara i aktivt läge.
 >
->Se till att du har lagt till - Boot delegera RSA- och BouncyCastle-bibliotek enligt vad som anges i detta [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Kontrollera att du har lagt till - Boot delegate RSA- och BouncyCastle-bibliotek som nämns i denna [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
 >**Caveats for this Demo**
 >

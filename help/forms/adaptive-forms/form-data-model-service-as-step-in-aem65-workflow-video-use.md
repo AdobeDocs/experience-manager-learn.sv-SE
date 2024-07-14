@@ -28,7 +28,7 @@ Från och med AEM Forms 6.4 har vi nu möjlighet att använda Form Data Model Se
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern
 
-* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html).Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera för katt med filen SampleRest.war enligt beskrivningen [här](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html).Krigsfilen som distribueras i Tomcat har koden som returnerar den sökandes kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
 * [Importera resurser till AEM med hjälp av pakethanteraren](assets/aem65-loanapplication.zip)
 * Paketet innehåller följande:
@@ -36,7 +36,7 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
    * Arbetsflödesmodell som använder FDM-steg.
    * Formulärdatamodell som används i FDM-steget.
    * Anpassad form som utlöser arbetsflödet när det skickas.
-* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas in [arbetsflöde för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) aktiveras.
+* Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas aktiveras arbetsflödet [för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html).
 
 ![ arbetsflöde ](assets/invokefdm651.PNG).
 Arbetsflödet använder eller delar komponenten för att dirigera programmet till administratören om kreditpoängen är över 500. Om kreditpoängen är mindre än 500 dirigeras programmet till klotter.

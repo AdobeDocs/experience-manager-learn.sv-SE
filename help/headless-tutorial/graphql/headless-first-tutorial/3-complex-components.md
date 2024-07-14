@@ -35,7 +35,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   Vi vill skapa ett fragment av typen `imagelist` (modell är `imagelist`) så ger vi den titeln `imagelist`.
+   Vi vill skapa ett fragment av typen `imagelist` (modellen är `imagelist`) och vi ger det titeln `imagelist`.
 
    I Content Fragment Editor har vi möjlighet att välja ett fragment som ska inkluderas eller skapa ett fragment.  Välj Skapa ett fragment.
 
@@ -191,7 +191,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. Vi går tillbaka till frågeredigeraren och hämtar den nya komponenten.  Observera att vi refererar till `OfferModel` i vår fråga och de metadata som vi ska använda för kortets titel.
+1. Vi går tillbaka till frågeredigeraren och hämtar den nya komponenten.  Observera att vi refererar till `OfferModel` i vår fråga och de metadata som vi kommer att använda för kortets titel.
 
    ```graphql
    query imageList {
@@ -227,13 +227,13 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
    }
    ```
 
-1. Koppla det här till vår app.  I vår `home.js`kommer vi att referera till vår nya fråga. Över `useEffect()` vi ställer in `list` och `setList`.
+1. Koppla det här till vår app.  I `home.js` refererar vi till vår nya fråga. Ovanför `useEffect()` anger vi `list` och `setList`.
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   Insidan `useEffect()` en ny begäran för bildlistefrågan.
+   Inuti `useEffect()` finns en ny begäran för bildlistefrågan.
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -295,7 +295,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
 ## Aktivera universell redigerare
 
-1. Lägg till `<meta />` till appen.  Öppna `App.js` och infoga import högst upp i filen.
+1. Lägg till `<meta />` i appen.  Öppna `App.js` och infoga import högst upp i filen.
 
    ```javascript
    import { Helmet } from 'react-helmet';
@@ -311,7 +311,7 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
    >[!TIP]
    >
-   > Vi använder Helmet-biblioteket för att göra detta dynamiskt baserat på `.env` -filen, men du kan hårdkoda den i `index.html`.
+   > Vi använder hjälpbiblioteket för att göra det dynamiskt baserat på filen `.env`, men du kan hårdkoda det i `index.html`.
 
 1. Nu ska vi uppdatera Card för att identifiera fragment och datatyp för redigering av varje kort.
 
@@ -331,13 +331,13 @@ I slutet av det här självstudiekursen har du en fullt fungerande och redigerba
 
 1. Identifiera nu vad som kan redigeras.
 
-   Till `<h3 />` lägg till:
+   Lägg till `<h3 />`:
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   Till våra `<div />` lägg till:
+   Till `<div />`:
 
    ```javascript
    itemProp="description" itemType="richtext"

@@ -26,7 +26,7 @@ Följande resurser/konfigurationer har distribuerats på en AEM Forms-publicerin
 * [Exempel på mall för interaktiv kommunikation](assets/waiver-interactive-communication.zip)
 * [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
 * Lägg till följande post i användarmappningstjänsten för Apache Sling med OSGi configMgr
-  **DevelopingWithServiceUser.core:getformsresourceReser=fd-service**
+  **DevelopingWithServiceUser.core:getformsresourceServer=fd-service**
 
 ## Distribuera exempelappen
 
@@ -59,6 +59,6 @@ npm start
 
 Om du vill att POSTEN ska kunna anropa AEM-slutpunkten från REACT-appen måste du ange rätt poster i fältet Tillåtna ursprung i konfigurationen av resursdelningsprincipen för korsursprung för Adobe Granite.
 
-![cors-setting](assets/cors-settings.png)
+![Cors-setting](assets/cors-settings.png)
 
-Se [förstå CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html) för mer information om CORS-konfigurationsalternativ.
+Mer information om CORS-konfigurationsalternativ finns i [Förstå CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).

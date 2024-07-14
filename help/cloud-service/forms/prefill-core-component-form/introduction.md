@@ -24,12 +24,12 @@ I den här självstudiekursen kommer vi att gå igenom hur man fyller i grundlä
 ## Krav
 
 * Upplev AEM Forms CS.
-* Upplev hur man distribuerar kod med Adobe Cloud Manager.
+* Upplev hur man driftsätter kod med Adobe Cloud Manager.
 * Tillgång till en molnklar instans av AEM Forms CS.
 
 För att implementera ovanstående användningsexempel i AEM Forms CS behöver du följande
 
-* [AEM Forms CS cloud ready instance](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
+* [AEM Forms CS molnklar instans](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
 
 ### Nästa steg
 

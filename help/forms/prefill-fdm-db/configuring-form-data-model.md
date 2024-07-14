@@ -23,8 +23,8 @@ ht-degree: 0%
 
 Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att konfigurera Apache Sling Connection Pooled DataSource. Konfigurera datakällan genom att följa stegen nedan:
 
-* Peka webbläsaren till [configMgr](http://localhost:4502/system/console/configMgr)
-* Sök efter **Poolad datakälla för Apache Sling-anslutning**
+* Peka webbläsaren på [configMgr](http://localhost:4502/system/console/configMgr)
+* Sök efter **Sammanslagen datakälla för Apache Sling-anslutning**
 * Lägg till en ny post och ange de värden som visas på skärmbilden.
 * ![datakälla](assets/data-source.png)
 * Spara ändringarna
@@ -35,18 +35,18 @@ Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att k
 
 ## Skapar formulärdatamodell
 
-* Peka webbläsaren till [Dataintegrering](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)
-* Klicka _Skapa_->_Formulärdatamodell_
-* Ge formulärdatamodellen beskrivande namn och titel som **Medarbetare**
-* Klicka _Nästa_
+* Peka webbläsaren på [Dataintegreringar](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm)
+* Klicka på _Skapa_->_Formulärdatamodell_
+* Ange beskrivande namn och titel för formulärdatamodell som **Medarbetare**
+* Klicka på _Nästa_
 * Markera datakällan som skapades i det tidigare avsnittet (forumen)
-* Klicka _Skapa_->Redigera för att öppna den nya formulärdatamodellen i redigeringsläge
-* Expandera _forum_ nod för att se medarbetarschemat. Expandera medarbetarnoden för att se de två tabellerna
+* Klicka på _Skapa_->Redigera om du vill öppna den nya formulärdatamodellen i redigeringsläge
+* Expandera noden _forums_ om du vill visa medarbetarschemat. Expandera medarbetarnoden för att se de två tabellerna
 
 ## Lägg till entiteter i din modell
 
 * Kontrollera att medarbetarnoden är expanderad
-* Välj enhet för nybörjare och mottagare och klicka på _Lägg till markerade_
+* Markera entiteter för nybörjare och mottagare och klicka på _Lägg till markerade_
 
 ## Lägg till lästjänsten till en ny enhet
 
@@ -58,32 +58,32 @@ Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att k
 * ![get-service](assets/get-service.png)
 >[!NOTE]
 > get-tjänsten förväntar sig ett värde som mappas till empID-kolumnen för entiteten. Det finns flera sätt att skicka det här värdet och i den här självstudien skickas empID via frågeparametern empID.
-* Klicka _Klar_ för att spara argumenten för get-tjänsten
-* Klicka _Klar_ spara ändringar i formulärdatamodellen
+* Klicka på _Klar_ för att spara argumenten för tjänsten get
+* Klicka på _Klar_ om du vill spara ändringar i formulärdatamodellen
 
 ## Lägg till association mellan två entiteter
 
 Associationerna som definieras mellan databasentiteter skapas inte automatiskt i formulärdatamodellen. Associationerna mellan entiteter måste definieras med formulärdatamodellens redigerare. Varje enhet som kan ha en eller flera mottagare måste vi definiera en-till-många-associering mellan de nya och stödmottagande enheterna.
 Följande steg visar hur du skapar en en-till-många-association
 
-* Välj en enhet och klicka på _Lägg till association_
+* Välj en entitet och klicka på _Lägg till association_
 * Ange en meningsfull titel och identifierare för associationen och andra egenskaper enligt skärmbilden nedan
   ![association](assets/association-entities-1.png)
 
-* Klicka på _redigera_ ikon under avsnittet Argument
+* Klicka på ikonen _redigera_ under avsnittet Argument
 
 * Ange de värden som visas på den här skärmbilden
 * ![association-2](assets/association-entities.png)
-* **Vi länkar de två enheterna med empID-kolumnen för mottagare och alla enheter.**
+* **Vi länkar de två entiteterna med empID-kolumnen för mottagare och aldrig entiteter.**
 * Klicka på _Klar_ för att spara ändringarna
 
 ## Testa formulärdatamodellen
 
-Vår formulärdatamodell har nu **_get_** tjänst som godkänner empID och returnerar uppgifter om nybörjaren och dess mottagare. Testa tjänsten genom att följa stegen nedan.
+Vår formulärdatamodell har nu **_get_**-tjänst som godkänner empID och returnerar information om nybörjaren och dess mottagare. Testa tjänsten genom att följa stegen nedan.
 
 * Välj en enhet
 * Klicka på _Testmodellobjekt_
-* Ange ett giltigt empID och klicka på _Testa_
+* Ange ett giltigt empID och klicka på _Test_
 * Du bör få resultat enligt bilden nedan
 * ![test-fdm](assets/test-form-data-model.png)
 

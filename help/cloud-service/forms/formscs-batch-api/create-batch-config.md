@@ -22,7 +22,7 @@ ht-degree: 0%
 Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en körning som baseras på den konfigurationen. I följande video visas en demonstration av hur du skapar en gruppkonfiguration med API:t
 
 >[!NOTE]
->Kontrollera att AEM tillhör ```forms-users``` grupp för att göra API-anrop.
+>Kontrollera att AEM tillhör gruppen ```forms-users``` för att göra API-anrop.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)

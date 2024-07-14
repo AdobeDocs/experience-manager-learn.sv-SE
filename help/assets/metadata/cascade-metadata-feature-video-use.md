@@ -27,8 +27,8 @@ Med avancerad metadatahantering kan användare skapa överlappande fältregler f
 
 Det finns tre dynamiska regeluppsättningar som kan aktiveras för ett givet metadatafält:
 
-1. **Krav** : ett fält kan dynamiskt markeras som obligatoriskt baserat på värdet i ett annat listrutefält.
+1. **Krav** : ett fält kan dynamiskt markeras som nödvändigt för att baseras på värdet i ett annat listrutefält.
 
 2. **Synlighet** : fält kan alltid vara synliga eller bara synliga baserat på värdet i ett annat listrutefält.
 
-3. **Val** : (endast tillgängligt för listrutefält) filtrera de alternativ som visas för användaren baserat på det valda värdet för ett annat listrutefält.
+3. **Alternativ** : (endast tillgängligt för listrutefält) filtrerar de alternativ som visas för användaren baserat på det valda värdet för ett annat listrutefält.

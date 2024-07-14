@@ -202,7 +202,7 @@ public class MarketoConfigurationService {
 ```
 
 1. Bygg och distribuera paketet på din AEM.
-1. [Peka webbläsaren på configMgr](http://localhost:4502/system/console/configMgr) och sök efter&quot;Marketo Credentials Service Configuration&quot;
+1. [Peka din webbläsare på configMgr](http://localhost:4502/system/console/configMgr) och sök efter &quot;Marketo Credentials Service Configuration&quot;
 1. Ange lämpliga egenskaper för din Marketo-instans
 
 ## Nästa steg

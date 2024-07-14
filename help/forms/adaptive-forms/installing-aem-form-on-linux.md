@@ -37,12 +37,13 @@ När AEM FORMS OSGi eller AEM Forms j2EE distribueras i Linux måste du se till 
 * libXext (Bibliotek för vanliga tillägg till X11-protokollet)
 * libXinerama (X11-tillägg som har stöd för att utöka en stationär dator över flera skärmar. Namnet heter Cinerama, ett widescreen-filmsformat med flera projektorer. libXtreama är biblioteket som interagerar med RandR-tillägget)
 * libXrandr (tillägget Xinerama är i stort sett föråldrat nuförtiden - det har ersatts av tillägget RandR)
-* libXrender (klientbibliotek för X Rendering Extension) nss-softokn-free (Freebl-bibliotek för Network Security Services)
+* libXrender (klientbiblioteket X Rendering Extension)
+nss-softokn-free (Freebl-bibliotek för Network Security Services)
 * zlib (allmänt, patentfritt, förlustfritt datakomprimeringsbibliotek)
 
 Från och med Red Hat Enterprise Linux 6 har 32-bitarsversionen av ett bibliotek filnamnstillägget .686 medan 64-bitarsversionen har .x86_64. Exempel: expat.i686. Före RHEL 6 hade 32-bitarsversionerna filnamnstillägget .i386. Innan du installerar 32-bitarsutgåvorna kontrollerar du att de senaste 64-bitarsutgåvorna är installerade. Om 64-bitarsversionen av ett bibliotek är äldre än den 32-bitarsversion som installeras visas ett felmeddelande enligt nedan:
 
-0mError: Protected multilib versions: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mError: Versionsproblem för multilib hittades.]
+0mError: Protected multilib versions: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mFel: Det finns flera versionsproblem för multitilib.]
 
 ## Första installationen
 
@@ -70,29 +71,60 @@ I Red Hat Enterprise Linux använder du YUM (YellowDog Update Modifier) för att
 
 ## Symlänkar
 
-Dessutom måste du skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på de senaste 32-bitarsversionerna av biblioteken libcurl, libcrypto och libssl. Du hittar filerna i /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
+Dessutom måste du skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på de senaste 32-bitarsversionerna av biblioteken libcurl, libcrypto och libssl. Du kan hitta filerna i /usr/lib/
+ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so
+ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so
+ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
 
 ## Uppdateringar av befintligt system
 
-Det kan finnas konflikter mellan x86_64- och i686-arkitekturer under uppdateringar, till exempel: Fel: Transaktionskontrollfel: fil /lib/ld-2.28.so från installation av glibc-2.28-72.el8.i686 står i konflikt med fil från paketet glibc32-2.28-2 42.1.el8.x86_64
+Det kan finnas konflikter mellan x86_64- och i686-arkitekturer under uppdateringar, som:
+Fel: Transaktionskontrollfel:
+filen /lib/ld-2.28.so från installation av glibc-2.28-72.el8.i686 står i konflikt med filen från paketet glibc32-2.28-42.1.el8.x86_64
 
-Om du stöter på detta avinstallerar du först det felaktiga paketet, som i det här fallet: yum remove glibc32-2.28-42.1.el8.x86_64
+Om du stöter på detta avinstallerar du först det felaktiga paketet, som i det här fallet:
+yum remove glibc32-2.28-42.1.el8.x86_64
 
-Allt detta är klart och du vill att versionerna x86_64 och i686 ska vara exakt desamma, som till exempel den här utskriften till kommandot: yum info glibc
+Du vill att versionerna x86_64 och i686 ska vara exakt desamma, som till exempel utdata till kommandot:
+yum info glibc
 
-Senaste kontroll av förfallodatum för metadata: 0:41:För 33 år sedan den 18 januari 2020 11:37:08 EST.
-Namn på installerade paket: glibc Version : 2.28 Release : 72.el8 Architecture : i686 Size : 13 M Source : glibc-2.28-72.el8.src.rpm Repository : @System From repo : BaseOS Summary : The GNU libc libraries URL : http://www.gnu.org/software/glibc/ License : LGPL v2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL Description: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och : minne, samt för att underlätta uppgraderingen, finns en gemensam systemkod: som lagras på ett ställe och som delas mellan program. Det här paketet innehåller de viktigaste uppsättningarna med delade bibliotek: standardbiblioteket C : och standardbiblioteket för matematik. Utan dessa två bibliotek fungerar inte a: Linux-systemet.
+Senaste metadataförfallokontroll: 0:41:33 sedan den 18 januari 2020 :37:08 AM EST.
+Installerade paket
+Namn: glibc
+Version: 2.28
+Version: 72.el8
+Arkitektur: i686
+Storlek: 13 MB
+Source: glibc-2.28-72.el8.src.rpm
+Repository : @System
+Från repo : BaseOS
+Sammanfattning: GNU-biblioteken
+URL: http://www.gnu.org/software/glibc/
+Licens: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL
+Beskrivning: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och : minne, samt för att underlätta uppgraderingen, finns en gemensam systemkod: som lagras på ett ställe och som delas mellan program. Det här paketet innehåller de viktigaste uppsättningarna med delade bibliotek: standardbiblioteket C : och standardbiblioteket för matematik. Utan dessa två bibliotek fungerar inte a: Linux-systemet.
 
-Namn : glibc Version : 2.28 Release : 72.el8 Architecture : x86_64 Size : 15 M Source : glibc-2.28-72.el8.src.rpm Repository : @System From repo : BaseOS Summary : GNU libc libraries URL : http://www.gnu.org/software/glibc/ License : LGPLv 2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL Description: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och : minne, samt för att underlätta uppgraderingen, finns en gemensam systemkod: som lagras på ett ställe och som delas mellan program. Det här paketet innehåller de viktigaste uppsättningarna med delade bibliotek: standardbiblioteket C : och standardbiblioteket för matematik. Utan dessa två bibliotek fungerar inte a: Linux-systemet.
+Namn: glibc
+Version: 2.28
+Version: 72.el8
+Arkitektur : x86_64
+Storlek: 15 M
+Source: glibc-2.28-72.el8.src.rpm
+Repository : @System
+Från repo : BaseOS
+Sammanfattning: GNU-biblioteken
+URL: http://www.gnu.org/software/glibc/
+Licens: LGPLv2+ och LGPLv2+ med undantag och GPLv2+ och GPLv2+ med undantag samt BSD och Inner-Net och ISC och Public Domain och GFDL
+Beskrivning: Glibc-paketet innehåller standardbibliotek som används av : flera program i systemet. För att spara diskutrymme och : minne, samt för att underlätta uppgraderingen, finns en gemensam systemkod: som lagras på ett ställe och som delas mellan program. Det här paketet innehåller de viktigaste uppsättningarna med delade bibliotek: standardbiblioteket C : och standardbiblioteket för matematik. Utan dessa två bibliotek fungerar inte a: Linux-systemet.
 
 ## Några praktiska yum-kommandon
 
-yumlista installerad yumsökning [part_of_package_name]
-yum what [package_name]
-yum-installation [package_name]
-ominstallation [package_name]
+yumlistan är installerad
+yum search [part_of_package_name]
+yum what provides [package_name]
+yum install [package_name]
+yum reinstall [package_name]
 yum info [package_name]
 yum deplist [package_name]
-yumborttagning [package_name]
+yum remove [package_name]
 yum check-update [package_name]
-yumuppdatering [package_name]
+yum update [package_name]

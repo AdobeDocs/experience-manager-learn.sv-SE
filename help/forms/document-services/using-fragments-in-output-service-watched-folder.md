@@ -20,19 +20,19 @@ ht-degree: 0%
 # Generera PDF-dokument med fragment med ECMA-skript{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i xdp måste du skapa en mapp med namnet **fragment** under din AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
+I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i din xdp måste du skapa en mapp med namnet **fragments** under din AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
 * c:\xdptemplates - Detta kommer att innehålla xdp-basmallen
 * c:\xdptemplates\fragments - Den här mappen innehåller fragment och huvudmallen refererar till fragmentet enligt nedan
   ![fragment-xdp](assets/survey-fragment.png).
-* Mappens xdpdokument kommer att innehålla din basmall och fragmenten i **fragment** mapp
+* Mappens xdpdocuments innehåller din basmall och fragmenten i mappen **fragments**
 
-Du kan skapa den struktur som behövs med hjälp av [formulär och dokumentgränssnitt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+Du kan skapa den struktur som krävs med hjälp av [formulären och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 Nedan följer mappstrukturen för exempelkoden xdp som använder 2 fragment
 ![formulär&amp;dokument](assets/fragment-folder-structure-ui.png)
 
 
-* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för Output-tjänsten. I det här exemplet använder vi fragment som finns i crx-databasen.
+* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för utdatatjänsten. I det här exemplet använder vi fragment som finns i crx-databasen.
 
 
 Följande ECMA-skript användes för att generera PDF. Observera att ResourceResolver och ResourceResolverHelper används i koden. ResourceReolver behövs eftersom koden körs utanför användarkontexten.
@@ -67,11 +67,11 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **Testa exempelpaketet på datorn**
 * [Distribuera DevelopingWithServiceUSer-paketet](assets/DevelopingWithServiceUser.jar)
-* Lägg till posten **DevelopingWithServiceUser.core:getformsresourceReser=fd-service** i tillägget för tjänsten för användarmappning, vilket visas på skärmbilden nedan
+* Lägg till posten **DevelopingWithServiceUser.core:getformsresourceSolver=fd-service** i tillägget för användarmappningstjänsten, vilket visas på skärmbilden nedan
   ![tillägg för användarmappning](assets/user-mapper-service-amendment.png)
 * [Hämta och importera xdp-exempelfiler och ECMA-skript](assets/watched-folder-fragments-ecma.zip).
 Detta skapar en bevakad mappstruktur i din c:/fragmentsandoutputService-mapp
 
-* [Extrahera exempelfilen](assets/usingFragmentsSampleData.zip) och placera den i installationsmappen för den bevakade mappen (c:\fragmentsandoutputservice\install)
+* [Extrahera exempeldatafilen](assets/usingFragmentsSampleData.zip) och placera den i installationsmappen för den bevakade mappen (c:\fragmentsandoutputservice\install)
 
 * Kontrollera resultatmappen för den bevakade mappkonfigurationen för den genererade PDF-filen

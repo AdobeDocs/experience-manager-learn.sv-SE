@@ -27,8 +27,8 @@ Vi har använt SendGrid API för att skicka e-postmeddelanden med hjälp av en d
 
 Följ de här stegen för att skapa integreringen mellan AEM Forms och SendGrid
 
-* Skapa en RESTful-datakälla med [swagger-fil](./assets/SendGridWithDynamicTemplate.yaml). [Följ den här videon för detaljerade anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) om att skapa datakällor i AEM Forms
-* Skapa formulärdatamodell baserat på den datakälla som skapades i det tidigare steget.[Följ den detaljerade dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html) när formulärdatamodellen skapas.
+* Skapa en RESTful-datakälla med hjälp av [swagger-filen](./assets/SendGridWithDynamicTemplate.yaml). [Följ den här videon för detaljerade anvisningar](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) om hur du skapar datakällor i AEM Forms
+* Skapa formulärdatamodell baserat på den datakälla som skapades i det tidigare steget.[Följ den detaljerade dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html) när du skapar formulärdatamodell.
 
 Den formulärdatamodell som skapats för den här självstudiekursen ingår som en del av artikelresurserna.
 

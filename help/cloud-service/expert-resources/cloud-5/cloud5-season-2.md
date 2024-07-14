@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 - Säsong 2
-description: Med den andra säsongen kan du lära dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe egna tekniker som bygger upp det och de experttjänster som levererar det.
+description: Med andra säsongen kan du lära dig mer om Adobe Experience Manager (AEM) as a Cloud Service från Adobe egna expertingenjörer som bygger den och de experttjänster som levererar den.
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ## Introduktion
 
-Välkommen till tvåårens Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att tillhandahålla användbar information om AEM as a Cloud Service på 5 minuter eller mindre.
+Välkommen till tvåårens Cloud 5 Series från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att leverera användbar information om AEM as a Cloud Service på 5 minuter eller mindre.
 
 ## Förslagsruta
 
-Besök [Förslagsruta](https://forms.office.com/r/74P5Xz4UH0) för att skicka in ämnesförslag.
+Besök [förslagsrutan](https://forms.office.com/r/74P5Xz4UH0) om du vill skicka in förslag på ämnen.
 
 ## Säsong 2
 
@@ -37,7 +37,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
             </a>
             <div>
                 <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>Fragment</strong></a>        
-                <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+                <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
             </div>
             <p>
                 <br/>
@@ -50,7 +50,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
             </a>
             <div>
                 <a href="season-2/cloud5-repo-modernizer.md"><strong>Databasmodernisering</strong></a> 
-               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+               <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
             </div>
             <p>
                 <br/>
@@ -63,7 +63,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
             </a>
             <div>
                   <a href="season-2/cloud5-admin-console.md"><strong>Admin Console</strong></a>
-               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+               <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
             </div>
             <p>
             <br/>
@@ -77,8 +77,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                  <img alt="Försäljningsjobb" src="./imgs/s2/003-thumb.png"/>
             </a>
             <div>
-                  <a href="season-2/cloud5-sling-job-scheduler.md"><strong>Försäljningsjobb</strong></a>
-               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+                  <a href="season-2/cloud5-sling-job-scheduler.md"><strong>Sling-jobb</strong></a>
+               <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
             </div>
             <p>
             <br/>
@@ -91,7 +91,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
             </a>
             <div>
                   <a href="season-2/cloud5-repoinit.md"><strong>Sling-databasinitierare</strong></a>
-               <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+               <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
             </div>
             <p>
             <br/>
@@ -103,8 +103,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                <img alt="Korrigera din cache" src="./imgs/s2/005-thumb.png"/>
             </a>
       <div>
-         <a href="season-2/cloud5-fix-your-cache.md"><strong>Korrigera... Cache</strong></a>
-         <br/><em>med Damian Langsweirdt och James Talbot, Senior Cloud Architects</em>
+         <a href="season-2/cloud5-fix-your-cache.md"><strong>Korrigera dina.. Cache </strong></a>
+         <br/><em> med Damian Langsweirdt och James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
          <br/>
@@ -118,12 +118,12 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                <img alt="Korrigera...skrivningar" src="./imgs/s2/006-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>Korrigera... Skriver om</strong></a>
-         <br/><em>med Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>Korrigera dina.. Skriver om </strong></a>
+         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
-         Snabb inblick i saker som kan snabba upp skrivningen och optimeringen på AEM as a Cloud Service.
+         Snabb inblick i saker som kan snabba upp skrivningen och optimeringen av AEM as a Cloud Service.
       </p>
      </td>   
      <td>
@@ -131,8 +131,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                <img alt="Mysteries of Cloud Manager.. Experience Audit" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Mysteries of Cloud Manager.. Experience Audit</strong></a>
-         <br/><em>med Darin Kuntze, Senior Cloud Architect</em>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Mysteries of Cloud Manager... Experience Audit </strong></a>
+         <br/><em> med Darin Kuntze, Senior Cloud Architect </em>
       </div>
       <p>
         <br/>
@@ -144,12 +144,12 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                <img alt="Mysteries of Cloud Manager.. Enhetstester" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Mysteries of Cloud Manager.. Enhetstester</strong></a>
-         <br/><em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Mysteries of Cloud Manager... Enhetstester </strong></a>
+         <br/><em> med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects </em>
       </div>
       <p>
         <br/>
-        Darin och Bryan diskuterar hur Cloud Manager integrerar körning av enhetstester och rapportering av kodtäckning i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
+        Darin och Bryan diskuterar hur Cloud Manager integrerar körning av enhetstester och rapportering av kodtäckningar i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
       </p>
    </td> 
   </tr>
@@ -159,11 +159,11 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen för 
                    <img alt="Mysteries of Cloud Manager.. Funktionstester" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Mysteries of Cloud Manager.. Funktionstester</strong><br/></a>        
-                <em>med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects</em>
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Mysteries of Cloud Manager... Funktionstester </strong><br/></a>        
+                <em> med Darin Kuntze &amp; Bryan Stopp, Senior Cloud Architects </em>
             </div>
             <p><br/>
-                Darin och Bryan diskuterar olika typer av funktionstestning som är inbyggda i den AEM as a Cloud Service distributionsprocessen för att säkerställa kvaliteten och tillförlitligheten i koden.
+                Darin och Bryan diskuterar olika typer av funktionstestning som är inbyggda i AEM as a Cloud Service driftsättningsprocess för att säkerställa kvaliteten och tillförlitligheten i koden.
             </p>
         </td>
         <td></td>

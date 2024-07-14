@@ -29,7 +29,7 @@ Byggblock är en underfunktion till Experience Fragments. Med byggblock kan skri
 
 >[!NOTE]
 >
-> Mallen som används för Experience Fragments måste innehålla **Byggblock** som en tillåten komponent.
+> Mallen som används för Experience Fragments måste innehålla **Building Blocks** som en tillåten komponent.
 
 * Byggblock gör det enkelt att återanvända komponenter i olika varianter.
 * Ändringar i huvudbyggblocket återspeglas automatiskt i alla referenser. Ändringar i byggblockets layout påverkas inte.

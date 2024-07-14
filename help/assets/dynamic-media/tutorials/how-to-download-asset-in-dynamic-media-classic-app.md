@@ -1,5 +1,5 @@
 ---
-title: Hämta resurser i AEM Dynamic Media Classic App
+title: Ladda ned Assets i AEM Dynamic Media Classic App
 description: Steg för att hämta resurser i Dynamic Media Classic App
 version: Cloud Service
 role: Developer
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Hämta resurser i AEM Dynamic Media Classic App
+# Ladda ned Assets i AEM Dynamic Media Classic App
 
 I den här videon går du igenom stegen för att hämta resurser i Dynamic Media Classic App.
 

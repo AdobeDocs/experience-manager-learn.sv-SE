@@ -34,7 +34,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 
 ### Testa JDK-versionen
 
-Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör gå tillbaka till den version av JDK som identifieras av `JAVA_HOME` variabel
+Öppna ett nytt kommandotolkfönster och skriv: `java -version`. Du bör återställa den version av JDK som identifieras av variabeln `JAVA_HOME`
 
 ![datakälla](assets/java-version.JPG)
 
@@ -43,25 +43,25 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 Maven är ett automatiserat byggverktyg som främst används för Java-projekt. Följ de här stegen för att installera maven på din lokala dator.
 
 * Skapa en mapp med namnet `maven` i C-enheten
-* Ladda ned [binärt zip-arkiv](http://maven.apache.org/download.cgi)
+* Hämta det [binära zip-arkivet](http://maven.apache.org/download.cgi)
 * Extrahera innehållet i zip-arkivet till `c:\maven`
-* Skapa en miljövariabel med namnet `M2_HOME` med värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är **mvn** version är 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
-* Lägg till `%M2_HOME%\bin` till din bana
+* Skapa en miljövariabel med namnet `M2_HOME` och värdet `C:\maven\apache-maven-3.6.0`. I mitt fall är versionen **mvn** 3.6.0. När den här artikeln skrivs är den senaste versionen av maven 3.6.3
+* Lägg till `%M2_HOME%\bin` i din sökväg
 * Spara ändringarna
-* Öppna en ny kommandotolk och skriv in `mvn -version`. Du borde se **mvn** version som visas på skärmbilden nedan
+* Öppna en ny kommandotolk och skriv in `mvn -version`. Du bör se **mvn**-versionen som visas på skärmbilden nedan
 
 ![datakälla](assets/mvn-version.JPG)
 
 ## Settings.xml
 
-A Maven `settings.xml` -filen definierar värden som konfigurerar Maven-körningen på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
+En Maven `settings.xml`-fil definierar värden som konfigurerar Maven-körning på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
 
 Navigera till `C:\Users\<username>\.m2 folder`
-Extrahera innehållet i [settings.zip](assets/settings.zip) och montera den i `.m2` mapp.
+Extrahera innehållet i filen [ settings.zip ](assets/settings.zip) och placera det i mappen `.m2` .
 
 ## Installera Eclipse
 
-Installera den senaste versionen av [förmörka](https://www.eclipse.org/downloads/)
+Installera den senaste versionen av [eclipse](https://www.eclipse.org/downloads/)
 
 ## Skapa ditt första projekt
 
@@ -88,36 +88,37 @@ Om allt blir bra kan du se ett meddelande om att bygget fungerar i kommandoföns
 ## Skapa förmörkande projekt från ditt maven-projekt
 
 Ändra arbetskatalogen till `learningaemforms`.
-Kör `mvn eclipse:eclipse` från kommandoraden Ovanstående kommando läser din PDF-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse förstår projekttyper, relationer, klassökväg osv.
+Kör `mvn eclipse:eclipse` från kommandoraden
+Ovanstående kommando läser din pom-fil och skapar Eclipse-projekt med korrekta metadata så att Eclipse förstår projekttyper, relationer, klassökväg osv.
 
 ## Importera projektet till förmörkning
 
 Starta **Eclipse**
 
-Gå till **Arkiv -> Importera** och markera **Befintliga Maven-projekt** som visas här
+Gå till **Arkiv -> Importera** och välj **Befintliga Maven-projekt** så som visas här
 
 ![datakälla](assets/import-mvn-project.JPG)
 
 Klicka på Nästa
 
-Välj `c:\aemformsbundles\learningaemform`s genom att klicka **Bläddra** knapp
+Markera `c:\aemformsbundles\learningaemform` genom att klicka på knappen **Bläddra**
 
 ![datakälla](assets/select-mvn-project.JPG)
 
 >[!NOTE]
 >Du kan välja att importera lämpliga moduler beroende på dina behov. Välj och importera endast kärnmodulen om du bara ska skapa Java-kod i ditt projekt.
 
-Klicka **Slutför** för att starta importprocessen
+Klicka på **Slutför** för att starta importprocessen
 
 Projektet importeras till Eclipse och du ser ett antal `learningaemforms.xxxx` mappar
 
-Expandera `src/main/java` under `learningaemforms.core` mapp. Det här är den mapp där du skriver större delen av koden.
+Expandera `src/main/java` under mappen `learningaemforms.core`. Det här är den mapp där du skriver större delen av koden.
 
 ![datakälla](assets/learning-core.JPG)
 
 ## Bygg ditt projekt
 
-När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera rätt klient-SDK i Maven-projektet. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet i `pom.xml` för kärnprojektet enligt nedan.
+När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
 
 ```xml
 <dependency>
@@ -132,4 +133,4 @@ Så här skapar du ditt projekt:
 * Öppna **kommandotolkfönstret**
 * Navigera till `c:\aemformsbundles\learningaemforms\core`
 * Kör kommandot `mvn clean install`
-Om allt blir bra ska du se paketet på följande plats `C:\AEMFormsBundles\learningaemforms\core\target`. Paketet är nu klart att distribueras till AEM med Felix webbkonsol.
+Om allt fungerar bra bör du se paketet på följande plats `C:\AEMFormsBundles\learningaemforms\core\target` . Paketet är nu klart att distribueras till AEM med Felix webbkonsol.

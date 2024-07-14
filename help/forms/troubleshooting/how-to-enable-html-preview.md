@@ -1,5 +1,5 @@
 ---
-title: Förhandsgranska HTML i Designer - hur du aktiverar Förhandsgranska HTML
+title: Designer Preview HTML Preview - hur du aktiverar Förhandsgranska HTML
 description: Steg för att konfigurera HTML Preview i Designer
 type: Troubleshooting
 role: Developer

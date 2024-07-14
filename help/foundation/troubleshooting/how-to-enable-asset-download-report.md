@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Så här aktiverar du en tillgångshämtningsrapport
 
-*I den här videon går du igenom stegen för att aktivera resurshämtningsrapport.*
+*Den här videon går igenom stegen för att aktivera resurshämtningsrapport.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335463?quality=12&learn=on)

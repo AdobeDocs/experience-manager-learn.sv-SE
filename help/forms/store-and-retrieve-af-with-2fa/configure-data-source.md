@@ -1,5 +1,5 @@
 ---
-title: Konfigurera datakälla
+title: Konfigurera Source
 description: Skapa en datakälla som pekar på MySQL-databasen
 feature: Adaptive Forms
 type: Tutorial
@@ -18,14 +18,14 @@ ht-degree: 0%
 
 ---
 
-# Konfigurera datakälla
+# Konfigurera Source
 
-Det finns många sätt på vilka AEM kan integreras med en extern databas. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection Pooled DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
-Det första steget är att ladda ned och installera rätt [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
+Det finns många sätt på vilka AEM kan integreras med en extern databas. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
+Det första steget är att hämta och distribuera rätt [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
 Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika för databasen. På följande skärmbild visas de inställningar som används för den här självstudiekursen. Databasschemat är en del av den här självstudiekursen.
 
 >[!NOTE]
->Ge datakällan ett namn `StoreAndRetrieveAfData` eftersom detta är namnet som används i OSGi-tjänsten.
+>Kontrollera att du namnger datakällan `StoreAndRetrieveAfData` eftersom det här är namnet som används i OSGi-tjänsten.
 
 
 ![datakälla](assets/data-source.JPG)
@@ -41,27 +41,27 @@ Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika
 ## Skapa databas
 
 
-Följande databas användes för det här användningsfallet. Databasen har en tabell som heter `formdatawithattachments` med de fyra kolumnerna som visas på skärmbilden nedan.
+Följande databas användes för det här användningsfallet. Databasen har en tabell med namnet `formdatawithattachments` och de fyra kolumnerna som visas på skärmbilden nedan.
 ![databas](assets/table-schema.JPG)
 
 * Kolumnen **afdata** kommer att innehålla adaptiva formulärdata.
 * Kolumnen **attachmentsInfo** innehåller information om de bifogade formulären.
-* Kolumnerna **phoneNumber** innehåller det mobila numret för den person som fyller i formuläret.
+* Kolumnerna **phoneNumber** innehåller mobilnumret för den person som fyller i formuläret.
 
-Skapa databasen genom att importera [databasschema](assets/data-base-schema.sql)
+Skapa databasen genom att importera [databasschemat](assets/data-base-schema.sql)
 med MySQL Workbench.
 
 ## Skapa formulärdatamodell
 
 Skapa formulärdatamodellen och basera den på datakällan som skapades i föregående steg.
-Konfigurera **get** tjänsten för den här formulärdatamodellen som visas på skärmbilden nedan.
-Se till att du inte returnerar en array i **get** service.
+Konfigurera **get**-tjänsten för den här formulärdatamodellen så som visas på skärmbilden nedan.
+Kontrollera att du inte returnerar en matris i tjänsten **get**.
 
-Syftet med detta **get** är att hämta det telefonnummer som är kopplat till program-ID:t.
+Syftet med den här **get**-tjänsten är att hämta det telefonnummer som är associerat med program-ID:t.
 
 ![get-service](assets/get-service.JPG)
 
-Den här formulärdatamodellen används sedan i **MyAccountForm** för att hämta det telefonnummer som är kopplat till program-ID:t.
+Den här formulärdatamodellen används sedan i **MyAccountForm** för att hämta telefonnumret som är kopplat till program-ID:t.
 
 ## Nästa steg
 

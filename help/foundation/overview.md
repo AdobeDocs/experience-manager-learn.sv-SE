@@ -50,11 +50,11 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>Konfigurera Sling Dynamic Include (SDI)</strong>
+    <strong> Konfigurera Sling Dynamic Include (SDI) </strong>
     </a>
     </div>
     <p>
-    <em>Lär dig hur du konfigurerar Sling Dynamic Include (SDI) och låter dynamiska AEM alltid leverera aktuellt innehåll.</em>
+    <em>Upptäck hur du konfigurerar SDI (Sling Dynamic Include) och tillåt att dynamiska AEM alltid kan leverera aktuellt innehåll.</em>
     <p>
   </td>
   <td>
@@ -63,11 +63,11 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <strong>Förstå skäl att uppgradera AEM</strong>
+    <strong>Förstå orsaker att uppgradera AEM</strong>
     </a>
     </div>
     <p>
-    <em>En högnivåbeskrivning av de viktigaste funktionerna att förstå när man överväger att uppgradera till den senaste versionen av AEM.</em>
+    <em>En högnivåbeskrivning av viktiga funktioner som ska tolkas när du överväger att uppgradera till den senaste versionen av AEM.</em>
     </p>
   </td>
 </tr>
@@ -77,7 +77,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
 
 ## Ytterligare resurser
 
-* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Sites videor och självstudiekurser](/help/sites/overview.md)
 * [AEM Assets videor och självstudiekurser](/help/assets/overview.md)
 * [AEM Forms videor och självstudiekurser](/help/forms/overview.md)

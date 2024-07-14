@@ -24,7 +24,7 @@ Nästa steg är att skapa en tjänst som infogar en ny rad i databasen för att 
 Följande skärmbild visar en rad i databasen.
 
 
-![samplingsrad](assets/sample-row.JPG)
+![exempelrad](assets/sample-row.JPG)
 
 
 Följande kod infogar en ny rad i databasen med lämpliga data

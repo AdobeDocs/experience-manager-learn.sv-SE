@@ -1,6 +1,6 @@
 ---
 title: Blockera DoS- och DDoS-attacker med trafikfilterregler
-description: Lär dig hur du blockerar DoS- och DDoS-attacker med trafikfilterregler på AEM as a Cloud Service som tillhandahålls av CDN.
+description: Lär dig hur du blockerar DoS- och DDoS-attacker med trafikfilterregler på det CDN som tillhandahålls av AEM as a Cloud Service.
 version: Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
@@ -21,36 +21,36 @@ ht-degree: 0%
 
 # Blockera DoS- och DDoS-attacker med trafikfilterregler
 
-Lär dig hur du blockerar DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med **trafikfilter för hastighetsbegränsning** regler och andra strategier på AEM as a Cloud Service (AEMCS) som hanteras av CDN. Dessa attacker orsakar trafiktoppar vid CDN och eventuellt vid AEM Publish Service (även kallat origin) och kan påverka webbplatsens tillgänglighet och tillgänglighet.
+Lär dig hur du blockerar DoS-attacker (Denial of Service) och DoS-attacker (Distributed Denial of Service) med hjälp av **rate limit-trafikfilterregler** och andra strategier på det CDN som hanteras av AEM as a Cloud Service (AEMCS). Dessa attacker orsakar trafiktoppar vid CDN och eventuellt vid AEM Publish-tjänst (även kallat origin) och kan påverka webbplatsens tillgänglighet och tillgänglighet.
 
-Den här självstudiekursen fungerar som en guide om _analysera dina trafikmönster och konfigurera hastighetsbegränsning [trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_ för att mildra dessa attacker. I självstudiekursen beskrivs även hur du [konfigurera aviseringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) så att du meddelas när en misstänkt attack inträffar.
+Den här självstudiekursen fungerar som en guide om _hur du analyserar dina trafikmönster och konfigurerar [trafikfilterregler ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)_ för att minska dessa attacker. I självstudien beskrivs även hur du [konfigurerar aviseringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) så att du meddelas när en misstänkt attack inträffar.
 
 ## Förstå skydd
 
 Lär dig mer om standardskyddet för DDoS på din AEM webbplats:
 
-- **Cachelagring:** Med bra cachelagringsprinciper är effekten av en DDoS-attack mer begränsad eftersom CDN förhindrar att de flesta förfrågningar kommer till början och orsakar prestandaförsämring.
-- **Automatisk skalning:** AEM skapar och publicerar tjänster automatiskt för att hantera trafiktoppar, även om de fortfarande kan påverkas av plötsliga, stora trafikökningar.
-- **Blockering:** CDN i Adobe blockerar trafik till ursprungsläget om den överskrider en Adobe-definierad frekvens från en viss IP-adress, per CDN-postleverantör (Point of Presence).
-- **Varning:** Åtgärdscentret skickar en trafiktopp på grund av varningsmeddelanden när trafiken överskrider en viss nivå. Denna varning utlöses när trafiken till en viss CDN PoP överstiger en _Adobe-definierad_ begärandefrekvens per IP-adress. Se [Varningar om trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) för mer information.
+- **Cachelagring:** Med bra cachelagringsprinciper är effekten av en DDoS-attack mer begränsad eftersom CDN förhindrar att de flesta begäranden kommer till ursprungsläget och orsakar prestandaförsämring.
+- **Automatisk skalning:** AEM författare och publicerar tjänster automatiskt för att hantera trafiktoppar, även om de fortfarande kan påverkas av plötsliga, massiva trafikökningar.
+- **Blockering:** Adobe CDN blockerar trafik till ursprungsläget om den överskrider en Adobe-definierad frekvens från en viss IP-adress, per CDN PoP (Point of Presence).
+- **Varning!** Åtgärdscentret skickar en trafikspik med varningsmeddelanden om trafiken överskrider en viss nivå. Den här varningen utlöses när trafiken till en angiven CDN PoP överskrider en _Adobe-definierad_ förfrågningsfrekvens per IP-adress. Mer information finns i [Varningar om trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts).
 
-Dessa inbyggda skydd bör betraktas som en baslinje för en organisations förmåga att minimera prestandapåverkan av en DDoS-attack. Eftersom varje webbplats har olika prestandaegenskaper och kan se att prestandan försämras innan hastighetsgränsen för Adobe har uppnåtts bör du utöka standardskyddet genom att _kundkonfiguration_.
+Dessa inbyggda skydd bör betraktas som en baslinje för en organisations förmåga att minimera prestandapåverkan av en DDoS-attack. Eftersom varje webbplats har olika prestandaegenskaper och kan se att prestandaförsämringen innan hastighetsgränsen som definieras av Adobe uppfylls, bör du utöka standardskyddet med _kundkonfigurationen_.
 
 Låt oss titta på några ytterligare, rekommenderade åtgärder som kunderna kan vidta för att skydda sina webbplatser mot DDoS-attacker:
 
-- Deklarera **regler för trafikfilter för hastighetsbegränsning** för att blockera trafik som överskrider en viss hastighet från en enda IP-adress, per PoP. Dessa är vanligtvis ett lägre tröskelvärde än den Adobe-definierade hastighetsgränsen.
-- Konfigurera **varningar** om regler för hastighetsbegränsning för trafikfilter genom en varningsåtgärd, så att ett meddelande från Åtgärdscenter skickas när regeln aktiveras.
-- Öka cachemängden genom att deklarera **begäranomvandlingar** för att ignorera frågeparametrar.
+- Deklarera **hastighetsbegränsningen för trafikfilterregler** för att blockera trafik som överskrider en viss hastighet från en enskild IP-adress, per PoP. Dessa är vanligtvis ett lägre tröskelvärde än den Adobe-definierade hastighetsgränsen.
+- Konfigurera **varningar** om hastighetsbegränsningar för trafikfilterregler via en varningsåtgärd så att ett meddelande från Åtgärdscenter skickas när regeln aktiveras.
+- Öka cachetäckningen genom att deklarera **begäranomvandlingar** för att ignorera frågeparametrar.
 
 >[!NOTE]
 >
->The [aviseringar om trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) har inte släppts ännu. För att få tillgång till informationen via e-post **<aemcs-waf-adopter@adobe.com>**.
+>Funktionen [trafikfilterregelvarningar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) har inte släppts ännu. Om du vill få åtkomst via det tidiga adopterprogrammet skickar du e-post **<aemcs-waf-adopter@adobe.com>**.
 
 ### Variationer i trafikregler för hastighetsbegränsning {#rate-limit-variations}
 
 Det finns två variationer av trafikreglerna för avgiftsbegränsning:
 
-1. Edge - blockbegäranden baserade på hastigheten för all trafik (inklusive den som kan betjänas från CDN-cache) för en viss IP-adress, per PoP.
+1. Edge - blockera förfrågningar baserat på hastigheten för all trafik (inklusive den som kan betjänas från CDN-cache) för en viss IP-adress, per PoP.
 1. Ursprung - blockera förfrågningar baserat på andelen trafik som är avsedd för ursprunget, för en given IP-adress, per PoP.
 
 ## Kundresa
@@ -71,29 +71,29 @@ Som tidigare nämnts blockerar Adobe som standard trafik vid CDN som överskride
 
 Helst konfigurerar du reglerna innan du går direkt till produktion. I praktiken deklarerar många organisationer aktivt regler endast en gång som varnats för en trafiktoppar, vilket tyder på en trolig attack.
 
-Adobe skickar en trafikspik på ursprungsvarningen som [Meddelande från Åtgärdscenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center) när en standardtröskel för trafik från en enda IP-adress överskrids, för en angiven PoP. Om du har fått en sådan varning rekommenderar vi att du konfigurerar en trafikfilterregel för hastighetsbegränsning. Den här standardvarningen skiljer sig från de varningar som kunderna uttryckligen måste aktivera när de definierar trafikfilterregler, som du kommer att lära dig om i ett framtida avsnitt.
+Adobe skickar en trafiktopp på ursprungsvarningen som ett [meddelande från Åtgärdscenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center) när en standardtröskel för trafik från en enskild IP-adress överskrids, för en angiven PoP. Om du har fått en sådan varning rekommenderar vi att du konfigurerar en trafikfilterregel för hastighetsbegränsning. Den här standardvarningen skiljer sig från de varningar som kunderna uttryckligen måste aktivera när de definierar trafikfilterregler, som du kommer att lära dig om i ett framtida avsnitt.
 
 
 ## Analysera trafikmönster {#analyze-traffic}
 
 Om webbplatsen redan är aktiv kan du analysera trafikmönstren med hjälp av CDN-loggar och instrumentpaneler från Adobe.
 
-- **Kontrollpanel för CDN-trafik**: ger insikter om trafiken via CDN och antalet förfrågningar om ursprung, felfrekvenserna 4xx och 5xx samt icke-cachelagrade förfrågningar. Ger även maximalt antal CND- och origin-begäranden per sekund per klient-IP-adress och fler insikter för att optimera CDN-konfigurationerna.
+- **CDN Traffic Dashboard**: ger insikter om trafiken via CDN och begärandefrekvens för ursprung, felfrekvens på 4xx och 5xx samt icke-cachelagrade begäranden. Ger även maximalt antal CND- och origin-begäranden per sekund per klient-IP-adress och fler insikter för att optimera CDN-konfigurationerna.
 
-- **CDN-cacheträffrekvens**: ger insikter om det totala antalet träffar i cacheminnet och det totala antalet förfrågningar från HIT-, PASS- och MISS-status. Tillhandahåller även de bästa URL:erna för HIT, PASS och MISS.
+- **Träffgrad för CDN-cache**: ger insikter om den totala träffkvoten för cache och det totala antalet begäranden med HIT-, PASS- och MISS-status. Tillhandahåller även de bästa URL:erna för HIT, PASS och MISS.
 
-Konfigurera kontrollpanelsverktygen med _något av följande alternativ_:
+Konfigurera instrumentpanelsverktygen med _ett av följande alternativ_:
 
 ### ELK - konfigurera kontrollpanelsverktyg
 
-The **Elasticsearch, Logstash och Kibana (ELK)** Instrumentpanelsverktyg från Adobe kan användas för att analysera CDN-loggarna. Verktyget innehåller en kontrollpanel som visualiserar trafikmönstren, vilket gör det enklare att fastställa optimala tröskelvärden för trafikfilterreglerna för din hastighetsbegränsning.
+Kontrollpanelsverktygen **Elasticsearch, Logstash och Kibana (ELK)** från Adobe kan användas för att analysera CDN-loggarna. Verktyget innehåller en kontrollpanel som visualiserar trafikmönstren, vilket gör det enklare att fastställa optimala tröskelvärden för trafikfilterreglerna för din hastighetsbegränsning.
 
-- Klona [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-databas.
-- Konfigurera verktygen genom att följa följande [Så här ställer du in ELK Docker-behållaren](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) steg.
-- Som en del av konfigurationen importerar du `traffic-filter-rules-analysis-dashboard.ndjson` fil för att visualisera data. The _CDN-trafik_ Kontrollpanelen innehåller visualiseringar som visar det maximala antalet begäranden per IP/POP vid CDN Edge och Origin.
-- Från [Cloud Manager](https://my.cloudmanager.adobe.com/)&#39;s _Miljö_ hämtar du AEMCS Publish-tjänstens CDN-loggar.
+- Klona GitHub-databasen [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling).
+- Konfigurera verktyget genom att följa stegen [Så här konfigurerar du ELK Docker-behållaren](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container).
+- Som en del av konfigurationen importerar du filen `traffic-filter-rules-analysis-dashboard.ndjson` för att visualisera data. Kontrollpanelen _CDN-trafik_ innehåller visualiseringar som visar det maximala antalet begäranden per IP/POP på CDN Edge och origin.
+- Hämta CDN-loggarna för tjänsten AEMCS Publish från _Cloud Manager_[](https://my.cloudmanager.adobe.com/)s Environmental -kortet.
 
-  ![CDN-logghämtningar för Cloud Manager](./assets/cloud-manager-cdn-log-downloads.png)
+  ![Cloud Manager CDN-logghämtningar](./assets/cloud-manager-cdn-log-downloads.png)
 
   >[!TIP]
   >
@@ -101,9 +101,9 @@ The **Elasticsearch, Logstash och Kibana (ELK)** Instrumentpanelsverktyg från A
 
 ### Segment - konfigurera instrumentpanelsverktyg
 
-Kunder som har [Splunk Log-vidarebefordran har aktiverats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
+Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
-Så här skapar du instrumentpaneler i Splunk: [Splunk dashboards for AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) steg.
+Om du vill skapa kontrollpaneler i Splunk följer du stegen [Splunk dashboards för AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
 ### Data granskas
 
@@ -114,16 +114,16 @@ Följande visualiseringar finns på panelerna ELK och Splunk:
   **ELK Dashboard**:
   ![ELK-kontrollpanel - max antal begäranden per IP/POP](./assets/elk-edge-max-per-ip-pop.png)
 
-  **Splunk Dashboard**:\
-  ![Splunk dashboard - max antal begäranden per IP/POP](./assets/splunk-edge-max-per-ip-pop.png)
+  **Segmentkontrollpanel**:\
+  ![Splunk-instrumentpanel - max antal begäranden per IP/POP](./assets/splunk-edge-max-per-ip-pop.png)
 
 - **Ursprunglig RPS per klient-IP och POP**: Den här visualiseringen visar det maximala antalet begäranden per IP/POP **vid ursprung**. Toppvärdet i visualiseringen anger det maximala antalet begäranden.
 
   **ELK Dashboard**:
-  ![ELK-kontrollpanel - max antal ursprungsbegäranden per IP/POP](./assets/elk-origin-max-per-ip-pop.png)
+  ![ELK-kontrollpanel - max antal ursprungliga begäranden per IP/POP](./assets/elk-origin-max-per-ip-pop.png)
 
-  **Splunk Dashboard**:
-  ![Splunk dashboard - max origin-begäranden per IP/POP](./assets/splunk-origin-max-per-ip-pop.png)
+  **Segmentkontrollpanel**:
+  ![Splunk-instrumentpanel - max antal origin-begäranden per IP/POP](./assets/splunk-origin-max-per-ip-pop.png)
 
 ## Välja tröskelvärden
 
@@ -131,8 +131,8 @@ Tröskelvärdena för trafikfiltreringsregler för hastighetsbegränsning bör b
 
 | Variation | Värde |
 | :--------- | :------- |
-| Ursprung | Använd det högsta värdet för Max Origin Requests per IP/POP under **normal** trafikförhållanden (dvs. inte hastigheten vid tidpunkten för ett DDoS) och öka den med flera |
-| Kant | Använd det högsta värdet för Max edge-begäranden per IP/POP under **normal** trafikförhållanden (dvs. inte hastigheten vid tidpunkten för ett DDoS) och öka den med flera |
+| Ursprung | Använd det högsta värdet för Max Origin Requests per IP/POP under **normala** trafikförhållanden (d.v.s. inte hastigheten vid tidpunkten för ett DDoS) och öka den med flera |
+| Edge | Ta det högsta värdet av Max Edge-begäranden per IP/POP under **normala** trafikförhållanden (d.v.s. inte hastigheten vid tidpunkten för ett DDoS) och öka den med flera |
 
 Den mängd som ska användas beror på dina förväntningar på normala trafiktoppar på grund av organisk trafik, kampanjer och andra händelser. En multipel mellan 5 och 10 kan vara rimlig.
 
@@ -140,14 +140,14 @@ Om webbplatsen ännu inte är aktiv finns det inga data att analysera, och du b�
 
 | Variation | Värde |
 |------------------------------ |:-----------:|
-| Kant | 500 |
+| Edge | 500 |
 | Ursprung | 100 |
 
 ## Konfigurera regler {#configure-rules}
 
-Konfigurera **trafikfilter för hastighetsbegränsning** regler i AEM `/config/cdn.yaml` -fil, med värden som baseras på diskussionen ovan. Kontakta vid behov webbsäkerhetsteamet för att säkerställa att gränsvärdena är lämpliga och inte blockerar legitim trafik.
+Konfigurera trafikfilterreglerna **hastighetsbegränsningen** i AEM `/config/cdn.yaml`-filen, med värden som baseras på diskussionen ovan. Kontakta vid behov webbsäkerhetsteamet för att säkerställa att gränsvärdena är lämpliga och inte blockerar legitim trafik.
 
-Se [Skapa regler i ditt AEM projekt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project) för mer information.
+Mer information finns i [Skapa regler i ditt AEM projekt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#create-rules-in-your-aem-project).
 
 ```yaml
 kind: CDN
@@ -194,23 +194,23 @@ data:
           
 ```
 
-Observera att både origo- och edge-reglerna deklareras och att egenskapen alert är inställd på `true` så att du kan få varningar varje gång tröskelvärdet uppnås, vilket sannolikt tyder på en attack.
+Observera att både ursprungs- och kantregler deklareras och att egenskapen alert är inställd på `true` så att du kan få aviseringar när tröskelvärdet uppnås, vilket troligen tyder på en attack.
 
 >[!NOTE]
 >
->The _experimentell_ prefix_ framför experimentell_alert tas bort när varningsfunktionen släpps. Om du vill gå med i det tidiga adopterprogrammet skickar du e-post **<aemcs-waf-adopter@adobe.com>**.
+>Prefixet _experimentell__ framför experimentell_varning tas bort när varningsfunktionen släpps. Om du vill gå med i det tidiga adopterprogrammet skickar du e-post **<aemcs-waf-adopter@adobe.com>**.
 
 Vi rekommenderar att åtgärdstypen är inställd på att logga initialt så att du kan övervaka trafiken under några timmar eller dagar och se till att den legitima trafiken inte överstiger dessa taxor. Efter några dagar växlar du till blockläge.
 
 Följ stegen nedan för att distribuera ändringarna till din AEMCS-miljö:
 
 - Verkställ och skicka ändringarna ovan till din Cloud Manager Git-databas.
-- Distribuera ändringarna i AEMCS-miljön med hjälp av Cloud Managers Config-pipeline. Referens [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager) för mer information.
-- Verifiera **trafikfilterregel för hastighetsbegränsning** fungerar som väntat kan du simulera en attack enligt beskrivningen i [Attacksimulering](#attack-simulation) -avsnitt. Begränsa antalet begäranden till ett värde som är högre än det hastighetsgränsvärde som angetts i regeln.
+- Distribuera ändringarna i AEMCS-miljön med hjälp av Cloud Manager Config-pipeline. Mer information finns i [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+- Du kan simulera en attack enligt beskrivningen i avsnittet [Attacksimulering](#attack-simulation) för att verifiera att trafikfilterregeln **för frekvensbegränsning** fungerar som förväntat. Begränsa antalet begäranden till ett värde som är högre än det hastighetsgränsvärde som angetts i regeln.
 
 ### Konfigurerar omformningsregler för begäran {#configure-request-transform-rules}
 
-Utöver trafikfilterreglerna för hastighetsbegränsning bör du använda [begäranomvandlingar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations) för att ta bort frågeparametrar som inte behövs av programmet för att minimera sätt att kringgå cacheminnet med hjälp av cachepubliceringstekniker. Om du till exempel bara vill tillåta `search` och `campaignId` frågeparametrar kan följande regel deklareras:
+Utöver hastighetsbegränsningen för trafikfilterregler rekommenderar vi att du använder [begäranomvandlingar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations) för att ta bort frågeparametrar som inte behövs av programmet för att minimera sätt att kringgå cacheminnet med hjälp av cachelagringstekniker. Om du till exempel bara vill tillåta `search`- och `campaignId`-frågeparametrar kan följande regel deklareras:
 
 ```yaml
 kind: "CDN"
@@ -234,7 +234,7 @@ data:
 
 ## Varningar om trafikfilterregler tas emot {#receiving-alerts}
 
-Som nämnts ovan, om trafikfilterregeln innehåller *experimentell_varning: true*, tas en varning emot när regeln matchas.
+Om trafikfilterregeln innehåller *experimentell_alert: true* får du en varning när regeln matchas.
 
 ## Åtgärda varningar {#acting-on-alerts}
 
@@ -248,13 +248,13 @@ I det här avsnittet beskrivs metoder för att simulera en DoS-attack, som kan a
 >
 > Utför inte dessa steg i en produktionsmiljö. Följande steg är endast avsedda för simulering.
 > 
->Om du fick en varning om trafikökning går du vidare till [Analysera trafikmönster](#analyzing-traffic-patterns) -avsnitt.
+>Om du fick ett varningsmeddelande om att trafiken har ökat går du vidare till avsnittet [Analyserar trafikmönster](#analyzing-traffic-patterns).
 
-Verktyg som [Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html), [Apache JMeter](https://jmeter.apache.org/), [Vegeta](https://github.com/tsenart/vegeta)och andra kan användas.
+Verktyg som [Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html), [Apache JMeter](https://jmeter.apache.org/), [Vegeta](https://github.com/tsenart/vegeta) och andra kan användas för att simulera en attack.
 
-### Kantförfrågningar
+### Edge-förfrågningar
 
-Använda följande [Vegeta](https://github.com/tsenart/vegeta) kan du göra många förfrågningar till din webbplats:
+Med följande [Vegeta](https://github.com/tsenart/vegeta)-kommando kan du göra många förfrågningar till din webbplats:
 
 ```shell
 $ echo "GET https://<YOUR-WEBSITE-DOMAIN>" | vegeta attack -rate=120 -duration=5s | vegeta report
@@ -264,5 +264,5 @@ Ovanstående kommando gör 120 begäranden i 5 sekunder och skickar en rapport. 
 
 ### Ursprungsbegäranden
 
-Om du vill kringgå CDN-cachen och göra förfrågningar till ursprungsläget (AEM publiceringstjänsten) kan du lägga till en unik frågeparameter till URL:en. Se exempelskriptet för Apache JMeter från [Simulera DoS-attack med JMeter-skript](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)
+Om du vill kringgå CDN-cachen och göra förfrågningar till origo (AEM Publish-tjänsten) kan du lägga till en unik frågeparameter till URL:en. Se exempelskriptet för Apache JMeter från [Simulate DoS-attacken med JMeter-skriptet](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection#simulate-dos-attack-using-jmeter-script)
 

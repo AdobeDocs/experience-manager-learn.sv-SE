@@ -25,7 +25,7 @@ Hittills har vi skapat följande
 * Konfigurerad datakälla för anslutningen för Apache Sling
 * RDBMS-baserad formulärdatamodell
 
-Nästa steg är att skapa och konfigurera ett adaptivt formulär för att använda formulärdatamodellen.  För att komma igång snabbt kan du [hämta och importera](assets/fdm-demo-af.zip) exempelformulär. Exempelformuläret innehåller ett avsnitt som visar information om medarbetarna och ett annat avsnitt som visar medarbetarnas mottagare.
+Nästa steg är att skapa och konfigurera ett adaptivt formulär för att använda formulärdatamodellen.  Om du vill få förstartsstart kan du [hämta och importera](assets/fdm-demo-af.zip) exempelformulär. Exempelformuläret innehåller ett avsnitt som visar information om medarbetarna och ett annat avsnitt som visar medarbetarnas mottagare.
 
 ## Koppla formulär till formulärdatamodell
 
@@ -41,10 +41,10 @@ Exempelformuläret som ingår i kursen är inte kopplat till någon formulärdat
 
 Det första steget är att koppla förifyllningstjänsten för formuläret. Följ stegen nedan för att associera förifyllningstjänsten
 
-* Välj `FDMDemo` formulär
-* Klicka _Redigera_ öppna formuläret i redigeringsläge
+* Markera formuläret `FDMDemo`
+* Klicka på _Redigera_ för att öppna formuläret i redigeringsläge
 * Välj Formulärbehållare i innehållshierarkin och klicka på skiftnyckelsikonen för att öppna dess egenskapssida
-* Välj _Förfyllningstjänst för formulärdatamodell_ från listrutan Prefill Service
+* Välj _Förfyllningstjänsten för formulärdatamodell_ i listrutan Förifyll tjänst
 * Klicka på den blå ☑ för att spara ändringarna
 
 * ![prefill-service](assets/fdm-prefill.png)
@@ -70,10 +70,10 @@ Nästa steg är att visa de anställdas förmånstagare i tabellform. Exempelfor
 * Öppna formuläret i redigeringsläge.
 * Expandera rotpanelen->Dina mottagare->Tabell
 * Välj Rad1 och klicka på skiftnyckelsikonen för att öppna egenskapsbladet.
-* Ställ in bindningsreferensen på **/newhire/GetEmployeeBeneficiaries**
+* Ange bindningsreferensen till **/newhere/GetEmployeeBeneficiaries**
 * Ange inställningarna för Upprepa - Minsta antal till 1 och Högsta antal till 5.
 * Din konfiguration av Row1 bör se ut som skärmbilden nedan
-  ![radkonfigurera](assets/configure-row.PNG)
+  ![row-configure](assets/configure-row.PNG)
 * Klicka på den blå ☑ för att spara ändringarna
 
 ## Bind radceller
@@ -96,7 +96,7 @@ Slutligen måste vi binda radcellerna till elementen i formulärdatamodellen.
 
 Vi måste nu öppna formuläret med rätt empID i URL:en. Följande två länkar fyller i formulär med information från databasen
 [Formulär med empID=207](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=207)
-[Formulär med empID=208](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
+[ Formulär med empID=208 ](http://localhost:4502/content/dam/formsanddocuments/fdmdemo/jcr:content?wcmmode=disabled&amp;empID=208)
 
 ## Felsökning
 

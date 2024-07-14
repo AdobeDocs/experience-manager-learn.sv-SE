@@ -32,9 +32,9 @@ Du behöver följande:
 
 * **Du måste köra AEM Forms version 6.4 eller senare på localhost:4502.**
 
-* [Ladda ned client-libs-and-logo](assets/client-libs-and-logo.zip) och [getting-started-fragment](assets/getting-started-fragment.zip) till hårddisken.
+* [Hämta klient-libs-and-logo](assets/client-libs-and-logo.zip) och [getting-started-fragment](assets/getting-started-fragment.zip) till hårddisken.
 
-* Importera zip-filer till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* Importera zip-filerna till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
 ## Nästa steg
 

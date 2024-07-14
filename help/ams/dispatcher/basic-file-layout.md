@@ -1,6 +1,6 @@
 ---
-title: Grundläggande fillayout för AMS Dispatcher
-description: Förstå den grundläggande layouten för filerna Apache och Dispatcher.
+title: AMS Dispatcher Basic File Layout
+description: Förstå den grundläggande fillayouten i Apache och Dispatcher.
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
@@ -59,9 +59,9 @@ När vi följer och följer installationsdesignen/-strukturen får vi följande 
 - Tillåter patchningscykler som stöds fullt ut av operativsystemet utan konflikter eller manuella justeringar
 - Undviker SELinux-överträdelser av felmärkta filkontexter
 
->[!BEGINSHADEBOX &quot;Anteckning&quot;]
+>[!BEGINSHADEBOX &quot;Obs!&quot;]
 
-Adobe Managed Services-serverbilder har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis monteras i `/mnt`
+Adobe Managed Services-serverbilder har vanligtvis små rotenheter i operativsystemet.  Vi placerar våra data i en separat volym som vanligtvis är monterad i `/mnt`
 Sedan använder vi volymen i stället för standardvärdena för följande standardkataloger
 
 `DocumentRoot`
@@ -86,7 +86,7 @@ AMS lägger till ytterligare information i grundinstallationen av Apache Web Ser
 AMS-standarddokumentrötter:
 - Författare:
    - `/mnt/var/www/author/`
-- Publicera:
+- Publish:
    - `/mnt/var/www/html/`
 - Underhåll av alla- och hälsokontroller
    - `/mnt/var/www/default/`
@@ -95,33 +95,33 @@ AMS-standarddokumentrötter:
 
 Med följande kataloger kan du bygga ut konfigurationsfiler med ett mellanlagringsområde som du kan arbeta med filer och bara aktivera när de är klara.
 - `/etc/httpd/conf.d/available_vhosts/`
-   - Den här mappen är värd för alla VirtualHost/filer som anropas `.vhost`
+   - Den här mappen är värd för alla dina VirtualHost/filer med namnet `.vhost`
 - `/etc/httpd/conf.d/enabled_vhosts/`
-   - När du är redo att använda `.vhost` filer, finns inuti `available_vhosts` mapplänka dem med en relativ sökväg till `enabled_vhosts` katalog
+   - När du är redo att använda filerna för `.vhost` finns det en relativ sökväg i mappen `available_vhosts` som länkar dem till katalogen `enabled_vhosts`
 
-### Ytterligare `conf.d` Kataloger
+### Ytterligare `conf.d` kataloger
 
 Det finns ytterligare delar som är vanliga i Apache-konfigurationer och vi har skapat underkataloger för att göra det möjligt att separera dessa filer på ett rent sätt och inte ha alla filer i en katalog
 
 #### Skriver om katalog
 
-Den här katalogen kan innehålla alla `_rewrite.rules` filer som du skapar och som innehåller dina vanliga RewriteRuleSyntax som engagerar Apache-webbservrar [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) modul
+Den här katalogen kan innehålla alla `_rewrite.rules` filer som du skapar och som innehåller din vanliga RewriteRuleSyntax som används på Apache-webbservrar i modulen [ mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
 
 - `/etc/httpd/conf.d/rewrites/`
 
 #### Katalogen Whitelists
 
-Den här katalogen kan innehålla alla `_whitelist.rules` filer som du skapar och som innehåller `IP Allow` eller `Require IP`syntax som engagerar Apache-webbservrar [åtkomstkontroller](https://httpd.apache.org/docs/2.4/howto/access.html)
+Den här katalogen kan innehålla alla `_whitelist.rules` filer som du skapar och som innehåller din typiska `IP Allow` - eller `Require IP`syntax som använder Apache-webbservrar [åtkomstkontroller](https://httpd.apache.org/docs/2.4/howto/access.html)
 
 - `/etc/httpd/conf.d/whitelists/`
 
 #### Variabelkatalog
 
-Den här katalogen kan innehålla alla `.vars` filer som du skapar och som innehåller variabler som du kan använda i dina konfigurationsfiler
+Den här katalogen kan innehålla alla `.vars`-filer som du skapar och som innehåller variabler som du kan använda i dina konfigurationsfiler
 
 - `/etc/httpd/conf.d/variables/`
 
-### Dispatcher-modulspecifik konfigurationskatalog
+### Dispatcher modulspecifik konfigurationskatalog
 
 Apache Web Server är mycket utbyggbar och när en modul har många konfigurationsfiler är det bäst att skapa en egen konfigurationskatalog under installationens baskatalog i stället för att rensa upp standardkatalogen.
 
@@ -135,23 +135,23 @@ Vi följer den bästa metoden och skapar en egen
 
 Med följande kataloger kan du bygga ut konfigurationsfiler med ett mellanlagringsområde som du kan arbeta med filer och bara aktivera när de är klara.
 - `/etc/httpd/conf.dispatcher.d/available_farms/`
-   - Den här mappen är värd för alla `/myfarm {` filer anropade `_farm.any`
+   - Den här mappen är värd för alla dina `/myfarm {`-filer som kallas `_farm.any`
 - `/etc/httpd/conf.dispatcher.d/enabled_farms/`
    - När du är redo att använda servergruppsfilen finns det en länk i mappen available_farm med en relativ sökväg till katalogen enabled_farm
 
-### Ytterligare `conf.dispatcher.d` Kataloger
+### Ytterligare `conf.dispatcher.d` kataloger
 
-Det finns ytterligare delar som är underavsnitt i filkonfigurationerna för Dispatcher-servergruppen och vi har skapat underkataloger för att göra det möjligt att separera dessa filer på ett rent sätt och inte ha alla filer i en katalog
+Det finns ytterligare delar som är underavsnitt i Dispatcher servergruppskonfigurationer och vi har skapat underkataloger för att göra det möjligt att separera dessa filer på ett rent sätt och inte ha alla filer i en katalog
 
 #### Cachekatalog
 
-Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller regler för hur du vill att modulen ska hantera cachelagrade element som kommer från AEM samt syntaxen för ogiltighetsregler.  Mer information finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller dina regler om hur du vill att modulen ska hantera cachelagrade element från AEM samt syntax för ogiltighetsregler.  Mer information finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
 #### Katalog för klientrubriker
 
-Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar som innehåller listor med klientrubriker som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
+Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar och som innehåller listor med klienthuvuden som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 
@@ -163,7 +163,7 @@ Den här katalogen kan innehålla alla `_filters.any` filer som du skapar och so
 
 #### Återger katalog
 
-Den här katalogen kan innehålla alla `_renders.any` filer som du skapar och som innehåller anslutningsinformationen till varje backend-server som avsändaren kommer att använda innehåll från
+Den här katalogen kan innehålla alla `_renders.any` filer som du skapar och som innehåller anslutningsinformationen till varje backend-server som dispatchern kommer att använda innehåll från
 
 - `/etc/httpd/conf.dispatcher.d/renders/`
 
@@ -276,20 +276,20 @@ Enterprise Linux har patchcykler för Apache Webserver Package (httpd).
 
 De mindre installerade standardfilerna som du ändrar blir bättre. Om några patchade säkerhetskorrigeringar eller konfigurationsförbättringar tillämpas via kommandot RPM/Yum kommer korrigeringarna inte att tillämpas ovanpå en ändrad fil.
 
-Istället skapas en `.rpmnew` -filen bredvid originalet.  Det innebär att du kommer att sakna vissa ändringar som du kan ha önskat och skapat mer skräp i konfigurationsmapparna.
+I stället skapas en `.rpmnew`-fil bredvid originalet.  Det innebär att du kommer att sakna vissa ändringar som du kan ha önskat och skapat mer skräp i konfigurationsmapparna.
 
-RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om det finns i `unaltered` ange att den *ersätt* filen så får du de viktigaste uppdateringarna.  Om `httpd.conf` var `altered` sedan *ersätter inte* filen och i stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många korrigeringar som du vill göra finns i filen som inte gäller vid tjänststart.
+RPM:en under uppdateringsinstallationen kommer att undersöka `httpd.conf` om den är i läget `unaltered`, den kommer att *ersätta* filen och du får de viktiga uppdateringarna.  Om `httpd.conf` var `altered` ersätter det *inte* filen. I stället skapas en referensfil med namnet `httpd.conf.rpmnew` och de många önskade korrigeringarna finns i filen som inte används vid tjänststart.
 
-Enterprise Linux har konfigurerats korrekt för att hantera det här användningsexemplet på ett bättre sätt.  De ger dig områden där du kan utöka eller åsidosätta de standardvärden som de anger åt dig.  I grundinstallationen av httpd hittar du filen `/etc/httpd/conf/httpd.conf`och har en syntax som:
+Enterprise Linux har konfigurerats korrekt för att hantera det här användningsexemplet på ett bättre sätt.  De ger dig områden där du kan utöka eller åsidosätta de standardvärden som de anger åt dig.  I grundinstallationen av httpd hittar du filen `/etc/httpd/conf/httpd.conf` och den har en syntax som:
 
 ```
 Include conf.modules.d/.conf
 IncludeOptional conf.d/.conf
 ```
 
-Apache vill att du ska utöka modulerna och konfigurationerna genom att lägga till nya filer i `/etc/httpd/conf.d/` och `/etc/httpd/conf.modules.d/` kataloger med filtillägg för `.conf`
+Apache vill att du ska utöka modulerna och konfigurationerna genom att lägga till nya filer i katalogerna `/etc/httpd/conf.d/` och `/etc/httpd/conf.modules.d/` med filtillägget `.conf`
 
-Som det perfekta exemplet när du lägger till modulen Dispatcher i Apache skapar du en modul `.so` fil i ` /etc/httpd/modules/` och sedan inkludera den genom att lägga till en fil i `/etc/httpd/conf.modules.d/02-dispatcher.conf` med innehåll som ska läsa in modulen `.so` fil
+Som det perfekta exemplet när du lägger till Dispatcher-modulen i Apache skapar du en modul `.so`-fil i ` /etc/httpd/modules/` och tar sedan med den genom att lägga till en fil i `/etc/httpd/conf.modules.d/02-dispatcher.conf` med innehållet som läser in modulfilen `.so`
 
 ```
 LoadModule dispatcher_module modules/mod_dispatcher.so
@@ -299,7 +299,7 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 >
 >Inga redan befintliga filer som Apache har tillhandahållits ändrades. Istället har vi lagt till våra i katalogerna de ska gå.
 
-Nu använder vi vår modul i vår fil <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> som initierar modulen och läser in den initiala modulspecifika konfigurationsfilen
+Nu använder vi modulen i filen <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b> som initierar modulen och läser in den initiala modulspecifika konfigurationsfilen
 
 ```
 <IfModule disp_apache2.c> 

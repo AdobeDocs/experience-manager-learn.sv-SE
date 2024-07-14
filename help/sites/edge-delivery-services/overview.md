@@ -24,7 +24,7 @@ Lär dig hur du snabbt skapar webbplatser med Edge Delivery Services.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) om du vill ha fullständig information om Edge Delivery Services och dess funktioner.
+Granska [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) om du vill ha fullständig information om Edge Delivery Services och dess funktioner.
 
 ## Komma igång med Edge Delivery Services
 
@@ -55,7 +55,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -70,7 +70,8 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
             <a href="./developing/aem-boilerplate.md" title="Använd mall för mallsida"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Konfigurera standardmall">
+                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Inställningar
+                Mallplatta">
             </a>
           </figure>
         </div>
@@ -79,14 +80,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/aem-boilerplate.md" title="Använd mall för mallsida">AEM</a>
+              <a href="./developing/aem-boilerplate.md" title="Använd mall för mallsida">AEM-mallsida</a>
             </p>
             <p class="is-size-6">Använd mallen AEM mallar för att konfigurera koddatabasen.</p>
             <a href="./developing/aem-boilerplate.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -117,7 +118,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -148,7 +149,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -160,10 +161,10 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/preview-and-publish.md" title="Förhandsgranska och publicera innehåll"
+            <a href="./developing/preview-and-publish.md" title="Förhandsgranska och Publish Content"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Förhandsgranska och publicera innehåll">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Förhandsgranska och Publish Content">
             </a>
           </figure>
         </div>
@@ -172,14 +173,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/preview-and-publish.md" title="Förhandsgranska och publicera innehåll">Förhandsgranska och publicera innehåll</a>
+              <a href="./developing/preview-and-publish.md" title="Förhandsgranska och Publish Content">Förhandsgranska och publicera innehåll</a>
             </p>
             <p class="is-size-6">Förhandsgranska och publicera innehåll med AEM Sidekick.</p>
             <a href="./developing/preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -211,7 +212,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -243,7 +244,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -275,7 +276,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -307,7 +308,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -344,7 +345,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -376,7 +377,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -408,7 +409,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/en/docs/experience-ma
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 ---
 title: Förstå användarupplevelsen för resursdelningskommandon
-description: Material för både funktionell och teknisk förståelse Assets Share Commons
+description: Material för både funktionell och teknisk förståelse av Assets Share Commons
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
@@ -35,5 +35,5 @@ I den här videon finns en förkortad översikt över de grundläggande funktion
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Kommentarer för resursdelning - versionshämtningar](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+ nedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Kommentarer för resursdelning, versionshämtningar](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [ACS AEM Commons 3.11.0+ versionsnedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

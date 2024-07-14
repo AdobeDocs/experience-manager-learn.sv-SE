@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Experience Manager Content Fragments Console gör det enkelt att hantera och skapa innehållsfragment! Lär dig hur du får ut så mycket som möjligt av Content Fragments Console med dessa videor.
 
-Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)  om du vill ha fullständig information om Content Fragments Console och dess funktioner.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) om du vill ha fullständig information om Content Fragments Console och dess funktioner.
 
 ## Videor
 
@@ -48,14 +48,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragments-console.md" title="Översikt">Konsolöversikt</a>
+              <a href="./basics/content-fragments-console.md" title="Ökning">Konsolöversikt</a>
             </p>
-            <p class="is-size-6">En kort översikt över konsolen Innehållsfragment.</p>
+            <p class="is-size-6">En kort översikt över innehållsfragmenten
+              konsol.</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -80,14 +81,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">4 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragment-editor.md" title="Översikt">Översikt över redigeraren</a>
+              <a href="./basics/content-fragment-editor.md" title="Ökning">Översikt över redigeraren</a>
             </p>
-            <p class="is-size-6">En kort översikt över redigeraren för innehållsfragment.</p>
+            <p class="is-size-6">En kort översikt över innehållsfragmenten
+              redigerare.</p>
             <a href="./basics/content-fragment-editor.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -102,7 +104,8 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <a href="./search/fast-filtering.md" title="Snabb filtrering"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Snabb filtrering">
+                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Snabb
+                filtrering">
             </a>
           </figure>
         </div>
@@ -111,14 +114,16 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./search/fast-filtering.md" title="Snabb filtrering">Snabb filtrering</a>
+              <a href="./search/fast-filtering.md" title="Snabb filtrering">Snabb
+                filtrering </a>
             </p>
-            <p class="is-size-6">Hitta snabbt innehållsfragment med intern filtrering.</p>
+            <p class="is-size-6">Hitta snabbt innehållsfragment med textbunden text
+              filtrering.</p>
             <a href="./search/fast-filtering.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -133,7 +138,8 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <a href="./editor/new-editor-toggle.md" title="Växla mellan redigeringsprogram"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Växla mellan redigeringsprogram">
+                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Nytt
+                Växla redigerare">
             </a>
           </figure>
         </div>
@@ -142,14 +148,16 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/new-editor-toggle.md" title="Växla mellan redigeringsprogram">Växla mellan redigeringsprogram</a>
+              <a href="./editor/new-editor-toggle.md" title="Växla mellan redigeringsprogram">Nytt
+                Växla mellan redigerare </a>
             </p>
-            <p class="is-size-6">Gå smidigt från klassiska till nya redigeraren.</p>
+            <p class="is-size-6">Smidig övergång från klassiska till nya
+              redigerare.</p>
             <a href="./editor/new-editor-toggle.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -161,7 +169,8 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/non-asset-content-references.md" title="Innehållsreferenser som inte är resurser" tabindex="-1">
+            <a href="./editor/non-asset-content-references.md" title="Ej tillgång
+              innehållreferenser" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3419313?format=jpeg"
                 alt="Innehållsreferenser som inte är resurser">
@@ -173,14 +182,16 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/non-asset-content-references.md" title="Innehållsreferenser som inte är resurser">Innehållsreferenser som inte är resurser</a>
+              <a href="./editor/non-asset-content-references.md" title="Ej tillgång
+                innehållreferenser">Innehållsreferenser som inte är resurser</a>
             </p>
-            <p class="is-size-6">Lägg in upplevelsefragment och sidor i era innehållsfragment.</p>
+            <p class="is-size-6">Lägg in fragment och sidor i
+              dina innehållsfragment.</p>
             <a href="./editor/non-asset-content-references.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -195,7 +206,8 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <a href="./editor/rte-variant-compare.md" title="Jämför RTE-variant"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="Jämför RTE-variant">
+                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE
+                variantjämförelse">
             </a>
           </figure>
         </div>
@@ -204,14 +216,16 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/rte-variant-compare.md" title="Jämför RTE-variant">Jämför RTE-variant</a>
+              <a href="./editor/rte-variant-compare.md" title="RTE-variant
+                jämför">Jämför RTE-variant</a>
             </p>
-            <p class="is-size-6">Anpassa enkelt innehållet i din RTF-text till olika kanaler.</p>
+            <p class="is-size-6">Justera enkelt innehållet i olika typer av text
+              kanaler.</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -236,14 +250,16 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/language-copies.md" title="Språkversioner">Språkversioner</a>
+              <a href="./editor/language-copies.md" title="Språkversioner">Språk
+                kopior</a>
             </p>
-            <p class="is-size-6">Hantera enkelt era kopior av Content Fragment-språk</p>
+            <p class="is-size-6">Hantera enkelt ditt språk för innehållsfragment
+              kopior</p>
             <a href="./editor/language-copies.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -275,7 +291,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Verifiera ett tillägg
 
-AEM UI-tillägg kan verifieras mot alla AEM as a Cloud Service miljöer i den Adobe-organisation som tillägget tillhör.
+AEM UI-tillägg kan verifieras mot alla AEM as a Cloud Service-miljöer i Adobe-organisationen som tillägget tillhör.
 
 Testning av ett tillägg görs via en URL som skapats för ändamålet och som instruerar AEM att läsa in tillägget, endast för den begäran som skickas.
 
@@ -28,18 +28,18 @@ Testning av ett tillägg görs via en URL som skapats för ändamålet och som i
 
 >[!IMPORTANT]
 >
-> I videon ovan visas hur ett tillägg till Content Fragment Console används för att illustrera förhandsgranskning och verifiering av apptillägg i App Builder. Det är dock viktigt att komma ihåg att de koncept som omfattas kan tillämpas på alla AEM UI-tillägg.
+> I videon ovan visas hur ett tillägg till Content Fragment Console används för att illustrera förhandsgranskning och verifiering av App Builder-tilläggsappar. Det är dock viktigt att komma ihåg att de koncept som omfattas kan tillämpas på alla AEM UI-tillägg.
 
 ## AEM URL
 
-![URL för AEM Content Fragment Console](./assets/verify/content-fragment-console-url.png){align="center"}
+![AEM URL:en för konsolen Innehållsfragment](./assets/verify/content-fragment-console-url.png){align="center"}
 
-Om du vill skapa en URL som monterar det icke-producerade tillägget i AEM måste URL:en för det AEM användargränssnittet som tillägget matas in i hämtas. Navigera till den AEM as a Cloud Service miljön för att verifiera tillägget och öppna gränssnittet som tillägget ska förhandsgranskas i.
+Om du vill skapa en URL som monterar det icke-producerade tillägget i AEM måste URL:en för det AEM användargränssnittet som tillägget matas in i hämtas. Navigera till AEM as a Cloud Service-miljön för att verifiera tillägget och öppna användargränssnittet som tillägget ska förhandsgranskas i.
 
 Om du till exempel vill förhandsgranska ett tillägg för konsolen Innehållsfragment:
 
 1. Logga in på önskad AEM as a Cloud Service-miljö.
-1. Välj __Innehållsfragment__ -ikon.
+1. Välj ikonen __Innehållsfragment__ .
 1. Vänta tills AEM Content Fragment Console läses in i webbläsaren.
 1. Kopiera URL:en för AEM Content Fragment Console från webbläsarens adressfält. Den ska likna:
 
@@ -65,14 +65,14 @@ Den här URL:en används nedan när du skapar URL:er för utveckling och scenver
      -> https://experience.adobe.com/?devMode=true#/custom-apps/?localDevUrl=https://localhost:9080
    ```
 
-Observera den lokala URL:en för programmet som visas ovan som `-> https://localhost:9080`
+Observera den lokala program-URL:en som visas ovan som `-> https://localhost:9080`
 
-1. Först (och när du ser ett anslutningsfel) öppnas `https://localhost:9080` (eller vilken URL-adress som helst för ditt lokala program) i webbläsaren och acceptera manuellt [HTTPS-certifikatet](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
-1. Lägg till följande två frågeparametrar i [URL för AEM](#aem-ui-url)
+1. Först (och när du ser ett anslutningsfel) öppnar du `https://localhost:9080` (eller någon annan URL för ditt lokala program) i webbläsaren och accepterar [HTTPS-certifikatet](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) manuellt.
+1. Lägg till följande två frågeparametrar i [AEM-gränssnittets URL](#aem-ui-url)
    + `&devMode=true`
-   + `&ext=<LOCAL APPLICATION URL>`, vanligtvis `&ext=https://localhost:9080`.
+   + `&ext=<LOCAL APPLICATION URL>`, vanligen `&ext=https://localhost:9080`.
 
-   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __först__ frågeparametrar i URL:en. AEM utökningsbart användargränssnitt använder hash-vägar (`#/@wknd/aem/...`), så att parametrarna efterkorrigeras felaktigt efter `#` fungerar inte.
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrar i URL:en. AEM utökningsbart användargränssnitt använder hash-vägar (`#/@wknd/aem/...`), vilket gör att parametrarna inte fungerar korrekt efter att `#` har åtgärdats.
 
    URL:en för förhandsgranskning ska se ut så här:
 
@@ -93,7 +93,7 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 ## Verifiera scenbyggen
 
 1. Öppna en kommandorad i tilläggsprojektets rot.
-1. Kontrollera att scenarbetsytan är aktiv (eller den arbetsyta som används för verifiering).
+1. Kontrollera att scenarbetsytan är aktiv (eller den Workspace som används för verifiering).
 
    ```shell
    $ aio app use -w Stage
@@ -101,7 +101,7 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 
    Sammanfoga alla ändringar i `.env` och `.aio`.
 
-1. Distribuera den uppdaterade appen App Builder. Om du inte är inloggad kör du `aio login` först.
+1. Distribuera det uppdaterade tillägget i App Builder-appen. Om du inte är inloggad kör du `aio login` först.
 
    ```shell
    $ aio app deploy
@@ -117,11 +117,11 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
    Successful deployment 🏄
    ```
 
-1. Lägg till följande två frågeparametrar i [URL för AEM](#aem-ui-url)
+1. Lägg till följande två frågeparametrar i [AEM-gränssnittets URL](#aem-ui-url)
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
-   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __först__ frågeparametrar i URL:en, eftersom utökningsbara gränssnitt AEM använder en hash-väg (`#/@wknd/aem/...`), så att parametrarna efterkorrigeras felaktigt efter `#` fungerar inte.
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrarna i URL:en, eftersom utökningsbara gränssnitt AEM använder en hash-väg (`#/@wknd/aem/...`), vilket innebär att korrigeringen av parametrarna efter att `#` inte fungerar korrekt.
 
    URL:en för förhandsgranskning ska se ut så här:
 
@@ -134,14 +134,14 @@ Observera den lokala URL:en för programmet som visas ovan som `-> https://local
 
 Kom ihåg att när du använder den här metoden injiceras tillägget Mellanlagring bara på AEM Content Fragment Console när du får tillgång till den här programmeringsscenens URL.
 
-1. Distribuerade tillägg kan uppdateras genom att köra `aio app deploy` igen, och dessa ändringar återspeglas automatiskt när du använder URL:en för förhandsgranskning.
-1. Om du vill ta bort ett tillägg för verifiering kör du `aio app undeploy`.
+1. Distribuerade tillägg kan uppdateras genom att köra `aio app deploy` igen, och dessa ändringar återspeglas automatiskt när URL:en för förhandsgranskning används.
+1. Kör `aio app undeploy` om du vill ta bort ett tillägg för verifiering.
 
 ## Förhandsgranska bokmärkesdiagram
 
 För att förenkla skapandet av förhandsgransknings- och förhandsgransknings-URL:er som beskrivs ovan kan ett JavaScript-bokmärke som läser in tillägget skapas.
 
-Bokmärket nedan förhandsvisar [lokala utvecklingsverktyg](#verify-local-development-builds) för tillägget på `https://localhost:9080`. Förhandsgranska [scenbyggen](#verify-stage-builds), skapa ett bokmärkesdiagram med `previewApp` variabeln inställd på URL:en för den distribuerade appen App Builder.
+Bokmärkesschemat nedan förhandsvisar de [lokala utvecklingsbyggen](#verify-local-development-builds) för tillägget på `https://localhost:9080`. Om du vill förhandsgranska [scenbyggen](#verify-stage-builds) skapar du ett bokmärkesdiagram med variabeln `previewApp` inställd på URL:en för den distribuerade App Builder-appen.
 
 1. Skapa ett bokmärke i webbläsaren.
 1. Redigera bokmärket.
@@ -165,4 +165,4 @@ Bokmärket nedan förhandsvisar [lokala utvecklingsverktyg](#verify-local-develo
 
 >[!TIP]
 >
-> Om App Builder-tillägget inte läses in när du använder `&ext=https://localhost:9080`, öppna värden och porten direkt på en webbläsarflik och acceptera det självsignerade certifikatet. Prova sedan bokmärket igen.
+> Om App Builder-tillägget inte läses in när `&ext=https://localhost:9080` används, öppnar du värden och porten direkt på en webbläsarflik och godkänner det självsignerade certifikatet. Prova sedan bokmärket igen.

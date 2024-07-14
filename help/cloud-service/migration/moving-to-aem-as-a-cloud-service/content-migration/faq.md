@@ -1,5 +1,5 @@
 ---
-title: Vanliga frågor om migrering av as a Cloud Service innehåll
+title: Vanliga frågor om migrering av AEM as a Cloud Service-innehåll
 description: Få svar på vanliga frågor om innehållsmigrering till AEM as a Cloud Service.
 version: Cloud Service
 doc-type: article
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# Vanliga frågor om migrering av as a Cloud Service innehåll
+# Vanliga frågor om migrering av AEM as a Cloud Service-innehåll
 
 Få svar på vanliga frågor om innehållsmigrering till AEM as a Cloud Service.
 
@@ -33,7 +33,7 @@ Få svar på vanliga frågor om innehållsmigrering till AEM as a Cloud Service.
 
 Använd mallen nedan om du vill ha mer information när du skapar supportbiljetter för CTT-relaterade Adobe.
 
-![Mall för supportanmälan för innehållsmigrering på Adobe](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
+![Mall för innehållsmigrering på Adobe - supportanmälan](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
 
 ## Allmänna frågor om innehållsmigrering
 
@@ -43,17 +43,17 @@ Det finns tre olika metoder
 
 + Använda verktyget Innehållsöverföring (AEM 6.3+ → AEMaaCS)
 + Via Package Manager (AEM → AEMaaCS)
-+ Utanför paketet med bulkimporttjänst för resurser (S3/Azure → AEMaaCS)
++ Körklar bulkimporttjänst för Assets (S3/Azure → AEMaaCS)
 
 ### F: Finns det någon gräns för hur mycket innehåll som kan överföras med CTT?
 
 Nej. CTT som ett verktyg kan extrahera från AEM och importera till AEMaaCS. Det finns dock specifika begränsningar för AEMaaCS-plattformen som bör beaktas före migreringen.
 
-Mer information finns i [krav för molnmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
+Mer information finns i [Krav för molnmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
 
 ### F: Jag har den senaste BPA-rapporten från mitt källsystem, vad ska jag göra med den?
 
-Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [som är kopplad till din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+Exportera rapporten som CSV och överför den sedan till Cloud Acceleration Manager, [associerad med din IMS-organisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html). Gå sedan igenom granskningsprocessen som [beskrivs i beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
 
 Granska den bedömning av kod och innehållskomplexitet som verktyget erbjuder och notera associerade åtgärdsobjekt som leder till eftersläpning i kodomfaktoriseringen eller utvärdering av molnmigrering.
 
@@ -79,9 +79,9 @@ Om klonmiljöer används för migrering kommer detta inte att påverka resursutn
 
 ### F: Vad betyder termerna&quot;svep&quot; och&quot;skriv över&quot; i samband med CTT?
 
-I samband med [extraheringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase), är alternativen att antingen skriva över data i mellanlagringsbehållaren från tidigare extraheringscykler eller lägga till differentialen (tillagd/uppdaterad/borttagen) i den. Mellanlagringsbehållaren är ingenting, men den blob-lagringsbehållare som är associerad med migreringsuppsättningen. Varje migreringsuppsättning får en egen mellanlagringsbehållare.
+I kontexten för [extraheringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#extraction-setup-phase) är alternativen antingen att skriva över data i mellanlagringsbehållaren från tidigare extraheringscykler eller att lägga till differentialen (tillagd/uppdaterad/borttagen) i den. Mellanlagringsbehållaren är ingenting, men den blob-lagringsbehållare som är associerad med migreringsuppsättningen. Varje migreringsuppsättning får en egen mellanlagringsbehållare.
 
-I samband med [matningsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html), är alternativen + för att ersätta hela innehållsdatabasen i AEMaaCS eller för att synkronisera differentiellt (tillagt/uppdaterat/borttaget) innehåll från mellanlagringsmigreringsbehållaren.
+I kontexten för [överföringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html) är alternativen + för att ersätta hela innehållsdatabasen i AEMaaCS eller för att synkronisera differentiellt (tillagt/uppdaterat/borttaget) innehåll från mellanlagringsmigreringsbehållaren.
 
 ### F: Det finns flera webbplatser, associerade resurser, användare och grupper i källsystemet. Går det att migrera dem i faser till AEMaaCS?
 
@@ -103,17 +103,17 @@ Ja. Slutanvändartrafiken avbryts inte av innehållsmigreringsaktiviteten. Förf
 
 Ja. Den saknade ursprungliga återgivningen innebär att resursens binärfil inte överförs korrekt från början. Om du ser det som felaktiga data bör du granska, säkerhetskopiera med Package Manager (efter behov) och ta bort dem från AEM innan du kör extraheringen. Felaktiga data kommer att få negativa resultat i tillgångsbearbetningsstegen.
 
-### F: BPA-rapporten innehåller artiklar som är relaterade till saknad `jcr:content` nod för mappar. Vad ska jag göra med dem?
+### F: BPA-rapporten innehåller objekt som är relaterade till den saknade `jcr:content`-noden för mappar. Vad ska jag göra med dem?
 
-När `jcr:content` saknas på mappnivå, åtgärder för att sprida inställningar som bearbetningsprofiler osv. från föräldrar bryts på den här nivån. Granska orsaken till saknad `jcr:content`. Även om dessa mappar kan migreras bör du tänka på att sådana mappar försämrar användarupplevelsen och orsakar onödiga felsökningscykler senare.
+När `jcr:content` saknas på mappnivå kan du sprida inställningar som bearbetningsprofiler, osv. från föräldrar bryts på den här nivån. Granska orsaken till att `jcr:content` saknas. Även om dessa mappar kan migreras bör du tänka på att sådana mappar försämrar användarupplevelsen och orsakar onödiga felsökningscykler senare.
 
 ### F: Jag har skapat en migreringsuppsättning. går det att kontrollera dess storlek?
 
-Ja, det finns en [Kontrollera storlek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size) som ingår i CTT.
+Ja, det finns en [Kontrollera storlek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size)-funktion som ingår i CTT.
 
 ### F: Jag utför migreringen (extrahering, förtäring). Går det att validera att allt mitt extraherade innehåll hämtas till målet?
 
-Ja, det finns en [validering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html) som ingår i CTT.
+Ja, det finns en [validering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html)-funktion som ingår i CTT.
 
 ### F: Kunden måste flytta innehåll mellan AEMaaCS-miljöer som AEMaaCS Dev till AEMaaCS Stage eller till AEMaaCS Prod. Kan jag använda verktyget för innehållsöverföring för de här användningsområdena?
 
@@ -125,7 +125,7 @@ Extraheringsfasen är en involverad process som kräver att flera aspekter funge
 
 Den offentliga dokumentationen förbättras kontinuerligt baserat på inlärningen, men här finns några problemkategorier på hög nivå och möjliga bakomliggande orsaker.
 
-![Extraheringsproblem för as a Cloud Service innehållsmigrering](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
+![Extraheringsproblem för AEM as a Cloud Service-innehållsmigrering](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
 
 ### F: Vilken typ av problem förväntas vid intag?
 
@@ -133,20 +133,20 @@ Inmatningsfasen sker helt och hållet i molnplattformen och kräver hjälp från
 
 Här är möjliga problemkategorier (se inte detta som en exklusiv lista)
 
-![AEM problem med as a Cloud Service innehållsmigrering](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
+![Inläsningsproblem för AEM as a Cloud Service-innehållsmigrering](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
 
 
 
 ### F: Måste min källserver ha en utgående internetanslutning för att CTT ska fungera?
 
-Det korta svaret är &quot;**Ja**&quot;.
+Det korta svaret är **Ja**.
 
 CTT-processen kräver anslutning till resurserna nedan:
 
-+ Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
++ AEM as a Cloud Service-målmiljö: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 
-Mer information om [källanslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity).
+Mer information om [källanslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity) finns i dokumentationen.
 
 ## Tillgångshantering Dynamic Media relaterade frågor
 
@@ -166,7 +166,7 @@ Ja, tänk på följande när AEM har Dynamic Media Integration.
 + Om metoden är att migrera från källkloninstanser är det säkert att inaktivera DM-integrering på klon som skulle användas för CTT. Detta steg är enbart för att undvika skrivningar till DM eller för att undvika belastning på DM-trafiken.
 + Observera att CTT migrerar noder, metadata för en migreringsuppsättning från AEM till AEMaaCS. Den utför inga åtgärder direkt på DM.
 
-### F: Vilka olika migreringsmetoder använder DM-integrering på AEM?
+### F: Vilka olika migreringsstrategier gäller när DM-integrering finns på Source AEM?
 
 Läs ovanstående fråga och svar innan
 
@@ -177,10 +177,10 @@ Läs ovanstående fråga och svar innan
 Om antalet resurser/noder i källmiljön ligger på en lägre nivå (~100 kB), under förutsättning att dessa kan migreras under en period på 24 + 72 timmar, inklusive extrahering och förtäring, är den bättre metoden att
 
 + Utför migrering direkt från produktionen
-+ Kör en första extrahering och intag i AEMaaCS med `wipe=true`
++ Kör en första extrahering och förtäring i AEMaaCS med `wipe=true`
    + Det här steget migrerar alla noder och binärfiler
 + Fortsätt arbeta på plats/med utvecklaren av AMS-produkten
-+ Från och med nu kan du köra alla andra korrekturrundor med `wipe=true`
++ Från och med nu kan du köra alla andra bevis för migreringscykler med `wipe=true`
    + Observera att den här åtgärden migrerar hela nodarkivet, men endast ändrade blobbar i motsats till hela blobbar. Den tidigare uppsättningen blober finns i Azure-blobbbutiken för AEMaaCS-målinstansen.
    + Använd det här migreringsbeviset för att mäta migreringens varaktighet, testning och validering av alla andra funktioner
 + Utför slutligen en svepning=verklig migrering före veckan då det publiceras
@@ -207,8 +207,8 @@ Ovanstående metod kan bara användas för att mäta migreringstiden, men den m�
 
 ## Ytterligare resurser
 
-+ [Tips och tricks för migrering till Experience Manager i molnet (Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [Tips och tricks för migrering till Experience Manager i molnet ( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
-+ [Video om CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
++ [Video från CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 
-+ [Videofilmer om andra AEMaaCS-ämnen från expertserier](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)
++ [Videofilmer om andra AEMaaCS-ämnen från expertseriet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-experts-series.html)

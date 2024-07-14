@@ -26,7 +26,7 @@ Följande skärmbild visar att ett formulär skickas med åtgärden Skicka i for
 
 ![tacksida](./assets/thank-you-page-fdm-submit.png)
 
-POSTEN för en formulärdatamodell returnerar alltid ett JSON-objekt i svaret. Denna JSON är tillgänglig på Tack-sidans URL som en frågeparameter som kallas _fdmSubmitResult_. Du kan tolka den här frågeparametern och visa JSON-elementen på tacksidan.
+POSTEN för en formulärdatamodell returnerar alltid ett JSON-objekt i svaret. Denna JSON är tillgänglig på Tack-sidans URL som en frågeparameter med namnet _fdmSubmitResult_. Du kan tolka den här frågeparametern och visa JSON-elementen på tacksidan.
 Följande exempelkod tolkar JSON-svaret för att extrahera värdet för nummerfältet. Lämplig XML skapas sedan och skickas i slingRequest för att fylla i formuläret. Den här koden skrivs vanligtvis i jsp för den sidkomponent som är kopplad till mallen Adaptivt formulär.
 
 ```java
@@ -46,6 +46,8 @@ Vi rekommenderar att du baserar din tack-sida på en ny adaptiv formulärmall d�
 
 Skapa ett adaptivt formulär och konfigurera för att skicka formuläret med formulärdatamodellens överföringsåtgärd.
 [Distribuera exempelmallen för anpassningsbara formulär](assets/thank-you-page-template.zip)
-Skapa ett tackformulär baserat på den här mallen Associera den här tacksidan med huvudformuläret Ändra jsp-koden i [createXml.jsp](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) för att skapa den XML som behövs för att förifylla ditt adaptiva formulär.
+Skapa ett tackformulär baserat på den här mallen
+Koppla den här tacksidan till huvudformuläret
+Ändra jsp-koden i [ createXml.jsp ](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) för att skapa den XML som behövs för att förifylla ditt adaptiva formulär.
 Förhandsgranska och skicka in ditt anpassningsbara formulär.
 Tacka-sidan ska visas och fyllas i i förväg med data som anges i XML

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Hur man gör ett webbtjänstanrop från HTML5-formuläret
 
-*I den här videon går du igenom processen för att ringa webbtjänstanrop från HTML5-formuläret.*
+*Den här videon går igenom processen för att ringa webbtjänstanrop från HTML5-formuläret.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

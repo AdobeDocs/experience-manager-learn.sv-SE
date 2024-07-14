@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Det finns flera sätt att förifylla adaptiva formulärfält. I den här artikeln ska vi titta närmare på hur man fyller i anpassningsbara formulär med AEM Forms förifyllningstjänst.
 
-Om du vill veta mer om olika metoder för att förifylla adaptiva formulär, [följ dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+[Följ den här dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice) om du vill veta mer om olika metoder för att förifylla adaptiva formulär.
 
-Om du vill förifylla ett anpassat formulär med förifyllningstjänsten måste du skapa en klass som implementerar `com.adobe.forms.common.service.DataXMLProvider` gränssnitt. Metoden `getDataXMLForDataRef` har den logik som krävs för att skapa och returnera data som det adaptiva formuläret använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataströmmen för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
+Om du vill förifylla ett anpassat formulär med förifyllningstjänsten måste du skapa en klass som implementerar gränssnittet `com.adobe.forms.common.service.DataXMLProvider`. Metoden `getDataXMLForDataRef` har logiken för att skapa och returnera data som det adaptiva formuläret använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataströmmen för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
 
 I kodfragmentet nedan har vi en klass som implementerar gränssnittet DataXMLProvider. Vi får åtkomst till den inloggade användaren och hämtar sedan den inloggade användarens profilinformation. Sedan skapar vi ett XML-dokument med ett rotelemente som kallas&quot;data&quot; och lägger till lämpliga element till den här datanoden. När XML-dokumentet har konstruerats returneras XML-dokumentets indataström.
 
@@ -139,11 +139,11 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 
 Utför följande för att testa den här funktionen på servern:
 
-* Kontrollera att du är inloggad [användarens profil](http://localhost:4502/security/users.html) informationen fylls i. Exemplet söker efter egenskaperna FirstName, LastName och Email för den inloggade användaren.
+* Kontrollera att den inloggade [användarens ](http://localhost:4502/security/users.html)-profilinformationen är ifylld. Exemplet söker efter egenskaperna FirstName, LastName och Email för den inloggade användaren.
 * [Hämta och extrahera innehållet i zip-filen till datorn](assets/prefillservice.zip)
 * Distribuera paketet prefill.core-1.0.0-SNAPSHOT med [AEM webbkonsol](http://localhost:4502/system/console/bundles)
-* Importera det adaptiva formuläret med Skapa | Filöverföring från [Avsnittet FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Se till att [formulär](http://localhost:4502/editor.html/content/forms/af/prefill.html) använder **&quot;Custom AEM Forms PreFill Service&quot;** som förifyllningstjänst. Detta kan verifieras med hjälp av konfigurationsegenskaperna i **Formulärbehållare** -avsnitt.
+* Importera det adaptiva formuläret med Skapa | Filöverföring från avsnittet [FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Kontrollera att [formuläret](http://localhost:4502/editor.html/content/forms/af/prefill.html) använder **&quot;anpassad AEM Forms PreFill-tjänst&quot;** som förifyllningstjänst. Detta kan verifieras från konfigurationsegenskaperna i avsnittet **Formulärbehållare**.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/prefill/jcr:content?wcmmode=disabled). Du bör se formuläret ifyllt med rätt värden.
 
 >[!NOTE]

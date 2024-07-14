@@ -28,7 +28,7 @@ Lär dig grunderna i OSGi-utvecklingen av tjänster, inklusive:
 
 ## Resurser
 
-+ [@Component JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.html)
++ [@Komponent-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/service/component/annotations/Component.html)
 + [@ProviderType JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/ProviderType.html)
 + [@Version JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/osgi/annotation/versioning/Version.html)
 
@@ -95,4 +95,4 @@ package com.adobe.aem.wknd.examples.core.adventures;
 import org.osgi.annotation.versioning.Version;
 ```
 
-Lägga till en `package-info.java` krävs för att säkerställa att andra OSGi-paket i AEM kan lösa OSGi-tjänstgränssnittet (eller valfri Java-klass). Om `package-info.java` saknas exporteras inte Java-paketet och dess Java-interf eller -klasser. Andra OSGi-paket som försöker importera dessa Java-gränssnitt eller klasser från det här Java-paketet kommer att felsöka meddelandet __Kan inte lösas__ i AEM OSGi Bundle-konsolen.
+Det krävs att du lägger till en `package-info.java` för att säkerställa att andra OSGi-paket i AEM kan matcha OSGi-tjänstgränssnittet (eller valfri Java-klass). Om `package-info.java` saknas exporteras inte Java-paketet och dess Java-interf eller klasser. Andra OSGi-paket som försöker importera dessa Java-gränssnitt eller klasser från det här Java-paketet kommer att få felmeddelandet __Kan inte lösas__ i AEM OSGi Bundle-konsol.

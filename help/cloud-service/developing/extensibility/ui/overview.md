@@ -1,6 +1,6 @@
 ---
 title: AEM UI-utökningsmöjligheter
-description: Lär dig mer om AEM UI-utbyggbarhet med App Builder för att skapa tillägg.
+description: Lär dig mer om AEM UI-utökningsmöjligheter med App Builder för att skapa tillägg.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # AEM UI-utökningsmöjligheter
 
-Adobe Experience Manager (AEM) har ett kraftfullt användargränssnitt för att skapa digitala upplevelser. Adobe introducerade App Builder för att anpassa och utöka användargränssnittet. Med det här verktyget kan utvecklare förbättra användarupplevelsen utan komplex kodning med JavaScript och React.
+Adobe Experience Manager (AEM) har ett kraftfullt användargränssnitt för att skapa digitala upplevelser. Adobe har introducerat App Builder för att anpassa och utöka användargränssnittet. Med det här verktyget kan utvecklare förbättra användarupplevelsen utan komplex kodning med JavaScript och React.
 
-I App Builder finns ett implementeringslager för att skapa tillägg som är bundna till väl definierade tilläggspunkter i AEM. App Builder kan integreras smidigt med AEM vilket möjliggör förhandsgranskning och testning i realtid. Det går snabbt och smidigt att driftsätta AEM. Genom att använda App Builder sparar utvecklarna både tid och kraft och kan snabbt skapa prototyper och samarbeta med intressenter.
+App Builder tillhandahåller ett implementeringslager för att skapa tillägg som är bundna till bra definierade tilläggspunkter i AEM. App Builder kan integreras smidigt med AEM, vilket möjliggör förhandsgranskning och testning i realtid. Det går snabbt och smidigt att driftsätta AEM. Genom att använda App Builder sparar utvecklarna både tid och kraft, vilket möjliggör snabb framtagning av prototyper och samarbete med intressenter.
 
 ## Utveckla ett AEM
 
@@ -45,4 +45,4 @@ I videoklippen och genomgångarna nedan visas hur ett tillägg till Content Frag
 
 ## Adobe Developer-dokumentation
 
-Adobe Developer innehåller utvecklarinformation om AEM UI-utbyggbarhet. Granska [Adobe Developer content for more technical details](https://developer.adobe.com/uix/docs/).
+Adobe Developer innehåller utvecklarinformation om AEM UI-utbyggbarhet. Mer teknisk information finns i [Adobe Developer-innehållet](https://developer.adobe.com/uix/docs/).

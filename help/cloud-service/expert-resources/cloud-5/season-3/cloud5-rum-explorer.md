@@ -12,13 +12,13 @@ recommendations: noDisplay, noCatalog
 duration: 388
 last-substantial-update: 2024-06-13T00:00:00Z
 jira: KT-15734
-source-git-commit: 272ed4e4782b03f284886a3046440960df538286
+exl-id: 6650922d-755c-466e-a882-4f6038839125
+source-git-commit: 0a197cfda02c42cf4960becbe6d65a337823a22f
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
-
 
 # Cloud 5 - utforskaren för övervakning av verkliga användare (RUM)
 

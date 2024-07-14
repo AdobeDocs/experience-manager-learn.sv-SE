@@ -1,6 +1,6 @@
 ---
 title: Server-till-server-appen Node.js - AEM Headless-exempel
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Node.js-programmet på serversidan visar hur du kan fråga efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här Node.js-programmet på serversidan visar hur du kan fråga innehåll med hjälp av AEM GraphQL API:er med beständiga frågor.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-10798
 thumbnail: KT-10798.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
+badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
 duration: 135
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 # Server-till-server-appen Node.js
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här server-till-server-programmet visar hur du ställer frågor till innehåll med hjälp AEM GraphQL API:er med beständiga frågor och skriver ut det på terminalen.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Det här server-till-server-programmet visar hur du ställer frågor till innehåll med hjälp av AEM GraphQL API:er med beständiga frågor och skriver ut det på terminalen.
 
 ![Server-till-server-appen Node.js med AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
 
-Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)
+Visa [källkoden på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server)
 
 ## Förutsättningar {#prerequisites}
 
@@ -36,16 +36,16 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras.
+Programmet Node.js fungerar med följande AEM distributionsalternativ. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ Valfritt, [autentiseringsuppgifter för tjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) om begäranden auktoriseras (till exempel anslutning till AEM författartjänst).
++ [tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) kan också anges om begäranden auktoriseras (till exempel anslutning till AEM författartjänst).
 
 Det här Node.js-programmet kan ansluta till AEM Author eller AEM Publish baserat på kommandoradsparametrarna.
 
 ## Så här använder du
 
-1. Klona `adobe/aem-guides-wknd-graphql` databas:
+1. Klona `adobe/aem-guides-wknd-graphql`-databasen:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
@@ -64,7 +64,7 @@ Det här Node.js-programmet kan ansluta till AEM Author eller AEM Publish basera
    $ node index.js <AEM_HOST> <OPTIONAL_SERVICE_CONFIG_FILE_PATH>
    ```
 
-   Om du till exempel vill köra programmet mot AEM Publicera utan auktorisering:
+   Så här kör du appen mot AEM Publish utan behörighet:
 
    ```shell
    $ node index.js https://publish-p123-e789.adobeaemcloud.com
@@ -163,9 +163,9 @@ async function run() {
 
 ### Kör GraphQL beständig fråga
 
-AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för Node.js](https://github.com/adobe/aem-headless-client-nodejs) används för att [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) mot AEM och hämtar äventyrsinnehållet.
+AEM beständiga frågor körs via HTTP-GET och därför används klienten [AEM Headless för Node.js](https://github.com/adobe/aem-headless-client-nodejs) för att [köra de beständiga GraphQL-frågorna](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) mot AEM och hämta äventyrsinnehållet.
 
-Den beständiga frågan anropas genom anrop `aemHeadlessClient.runPersistedQuery(...)`och skickar det beständiga GraphQL-frågenamnet. När GraphQL har skickat in uppgifterna skickar du dem till den förenklade `doSomethingWithDataFromAEM(..)` som skriver ut resultaten, men vanligtvis skickar data till ett annat system, eller skapar utdata baserat på hämtade data.
+Den beständiga frågan anropas genom att `aemHeadlessClient.runPersistedQuery(...)` anropas och det beständiga GraphQL-frågenamnet skickas. När GraphQL returnerar data skickar du dem till den förenklade funktionen `doSomethingWithDataFromAEM(..)` som skriver ut resultaten, men skickar vanligtvis data till ett annat system eller genererar utdata baserat på hämtade data.
 
 ```js
 // index.js

@@ -80,13 +80,13 @@ En metadatamodell är vanligtvis utformad för att uppfylla följande användnin
 * Korsreferens: Associativa metadata som fångar relationen mellan två eller flera resurser (syntesen av metadata möjliggör korsreferenser och sammanhängande gruppordning)
 * Navigera: Mappstrukturen som resurserna lagras i (används för att hämta information genom att bläddra)
 
-*Framtagningsmetadata har huvudsakligen stöd för operationsprocesser. Publicera har stöd för användningsfall för hämtning och distribution.*
+*Metadata för författare har huvudsakligen stöd för driftsprocesser. Publish stöder användningsfall för hämtning och distribution.*
 
 ## Använda taggar som fördefinierade termer
 
 En tagg är ett nyckelord eller en term som tilldelats till en informationsdel. I stället för att ange &quot;car&quot;, &quot;car&quot;, &quot;car&quot;, tillåter ett taggsystem endast ett värde att välja mellan, vilket gör sökningen mer förutsägbar.  Taggar normaliserar och förenklar kategoriseringen av resurser.
 
-*Obs! Även om AEM tillåter ad hoc-taggning är det bäst att hålla sig borta från detta eftersom det kan leda till odefinierad och oomfattande taxonomi.*
+*Obs! Även om AEM tillåter ad hoc-taggning är det bäst att hålla sig från detta eftersom det kan leda till odefinierad och ohanterlig taxonomi.*
 
 Vanliga användningsområden för taggar:
 
@@ -111,19 +111,31 @@ När taggar används i AEM kan de bidra till att uppnå en mycket kortare implem
 En taxonomi är ett system för att ordna taggar baserat på delade egenskaper, som vanligtvis är hierarkiskt strukturerade efter organisatoriska behov. Strukturen kan hjälpa dig att hitta en tagg snabbare eller införa en generalisering.
 Exempel: Man måste kategorisera bilderna.  Taxonomin kan se ut så här:
 
-/subject/car/ /subject/car/sportscar/subject/car/sportscar/porsche /subject/car/sportscar/ferrari ... /subject/car/minivan /subject/car/minivan/mercedes /subject/car/minivan/volkswagen ... /subject/car/limousine ...
+/subject/car/
+/subject/car/sportscar
+/subject/car/sportscar/porsche
+/subject/car/sportscar/ferrari
+...
+/subject/car/minivan
+/subject/car/minivan/mercedes
+/subject/car/minivan/volkswagen
+...
+/subject/car/limousinus
+...
 
 Nu kan användaren välja om han vill söka upp bilder på sportärr i allmänhet eller en Porsche i synnerhet. Båda är ju sportärr.
 Bästa praxis: Undvik platta taxonomier. Platta taxonomier saknar de fördelar som beskrivs ovan och kräver konstant underhåll
 
-**Använda en taxonomi som synonymordbok.**  När en användare söker efter ett nyckelord skapas en andra sökning efter alla synonymer som finns där.
+**Använda en taxonomi som synonymordbok.** När en användare söker efter ett nyckelord skapas en andra sökning efter alla synonymer som finns där.
 I stället för att skriva &quot;car&quot; manuellt kan systemet dessutom tillhandahålla en lista med nyckelord för att förbättra enhetligheten.
 
 **Använda en taxonomi som ordlista.** I stället för att bara skriva ut &quot;car&quot; kan du utöka den enskilda taggen och använda alla taggens synonymer.
 
 **Flera kategorier.** I motsats till en mapphierarki kan taggar användas för att uttrycka flera kategoriseringar samtidigt. En resurs taggad med:
 
-/subject/car/minivan/mercedes/subject/people/family/color/red
+/subject/car/minivan/mercedes
+/subject/people/family
+/color/red
 
 ## Metadata jämfört med tagg
 
@@ -147,11 +159,11 @@ Se till att skribenterna vet hur de kan föreslå ändringar och att redaktörer
 
 **Standardisera taggar.** Skapa en ordlista som innehåller ett auktoritativt språk. Utan att etablera standarder kommer dubbelarbete att medföra problem. Dessutom bör du inte bara granska taxonomin utan även hur taggarna används.
 
-**Övertagga inte.** Taggar kan förlora sin betydelse om de är för ofta distribuerade.Prensa bort överflödiga taggar för optimal effektivitet.
+**Övertagga inte.**-taggar kan förlora sin betydelse om de är för ofta distribuerade.Prensa bort överflödiga taggar för optimal effektivitet.
 
-**Utvärdera taggar på nytt över tid.** Kom ihåg att företagsterminologi och företagskontext sällan förblir statiska. Du kan behöva göra om taggarna och lägga till dem på nytt.
+**Utvärderar taggar igen över tid.** Kom ihåg att företagsterminologi och företagskontext sällan förblir statiska. Du kan behöva göra om taggarna och lägga till dem på nytt.
 
-**Använda AI-baserad smart taggning.** Smart taggning [se länk] är en AI-funktion i AEM för att minska arbetet med att tagga resurser manuellt. Smart taggning använder en AI för att få information om motivet i en bild. Den genererar beskrivande taggar som beskriver innehållet i en bild.
+**Använder AI-baserad smart taggning.** Smart taggning [Se link] är en AI-funktion i AEM som minskar behovet av att tagga resurser manuellt. Smart taggning använder en AI för att få information om motivet i en bild. Den genererar beskrivande taggar som beskriver innehållet i en bild.
 
 ## Metadatakvalitet och underhåll
 
@@ -159,7 +171,7 @@ Förståelse av affärskrav är ett viktigt steg när det gäller att implemente
 
 Dessutom bör metadata samlas in så tidigt som möjligt när innehållet skapas. Om metadata inte används vid rätt tidpunkt finns det en liten risk att använda dem retroaktivt.
 
-**Använd metadata** för att förbättra samarbetet: Använd Adobe Asset Link, Adobe Bridge och AEM Desktop för att knyta samman den kreativa processen och utnyttja metadata för att effektivisera arbetsflödena. Med dessa verktyg blir metadata bättre och användarupplevelsen bättre i hela den kreativa processen.
+**Använd metadata** för att förbättra samarbetet: Använd Adobe Asset Link, Adobe Bridge och AEM Desktop för att knyta ihop den kreativa processen och utnyttja metadata för att effektivisera de kreativa arbetsflödena. Med dessa verktyg blir metadata bättre och användarupplevelsen bättre i hela den kreativa processen.
 
 ## Bästa praxis för metadatahantering
 
@@ -174,19 +186,19 @@ Dessutom bör metadata samlas in så tidigt som möjligt när innehållet skapas
 
 Några riktlinjer kan hjälpa dig att bestämma hur metadata ska kategoriseras:
 
-**Beskrivning** - Om data beskriver resursen eller innehållet bör de ingå i de bifogade metadata.
+**Beskrivning** - Om data beskriver resursen eller innehållet bör det ingå i de bifogade metadata.
 
-**Sök** - Om metadata ska användas i sökningar måste de bifogas.
+**Sök** - Om metadata ska användas i sökningen måste den bifogas.
 
-**Exponering** - Om du visar metadata på en distributionsplattform för en tredje part ska du se till att inte visa interna metadata.
+**Exponering** - Om du exponerar metadata på en distributionsplattform för en tredje part ska du se till att inte visa interna metadata.
 
-**Varaktighet** - Ju längre metadata ska vara live, desto troligare är det att det är en bra kandidat för bifogade metadata.
+**Varaktighet** - Ju längre metadata ska vara live, desto troligare är det att det är att det är en bra kandidat för bifogade metadata.
 
-**Närliggande affärsprocesser** - Det är definitivt praktiskt att ha ett permanent produkt-ID som en del av metadata. Men kategorin för en artikel i relation till produktkatalogen är en tvivelaktig metadata för resursen.
+**Relaterade affärsprocesser** - Det kan vara bra att ha ett permanent produkt-ID som en del av metadata. Men kategorin för en artikel i relation till produktkatalogen är en tvivelaktig metadata för resursen.
 
-**Organisation och hantering** - Om metadatans art är organisatorisk, t.ex. i ett arbetsflöde för godkännande eller ägarskap av en viss avdelning, bör externa metadata övervägas framför att bifoga metadata till resursen.
+**Organisation och bearbetning** - Om metadatatypen är organisatorisk, till exempel i ett godkännandearbetsflöde eller ägarskap för en viss avdelning, bör externa metadata övervägas framför att bifoga metadata till resursen.
 
-*Ställ följande frågor för att skapa strategin:*
+*Ställ följande frågor om du vill skapa strategin:*
 
 * Vilken typ av innehåll och&quot;ytterligare information&quot; (= metadata) behövs för att lösa affärsproblem/affärsfrågor/affärsfrågor?
 * Vilka är variablerna, fälten i schemat och vilka är möjliga värden? Vilka variabler som kräver fritextindata, vilka kan minskas med typ (tal, datum, boolesk, ...), en uppsättning fasta värden (t.ex. länder) eller taggar från en given taxonomi. Hur många taggar krävs, tillåts?

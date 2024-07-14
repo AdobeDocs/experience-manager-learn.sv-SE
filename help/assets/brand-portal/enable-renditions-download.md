@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Aktivera hämtning av återgivningar i Brand Portal
 
-*I den här videon går du igenom stegen för att aktivera hämtning av renderingar i Brand Portal.*
+*Den här videon går igenom stegen för att aktivera hämtning av återgivningar i Brand Portal.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335449?quality=12&learn=on)

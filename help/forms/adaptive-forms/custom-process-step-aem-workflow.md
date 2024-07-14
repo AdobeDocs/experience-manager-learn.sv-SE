@@ -29,12 +29,12 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
 
-Öppna Maven-projektet i din Eclipse-utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera `src/main/java` mapp. Ett paket som slutar med `core`. Skapa en Java™-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande:
+Öppna Maven-projektet i din Eclipse-utvecklingsmiljö. Expandera mappen **projektnamn** > **kärna**. Expandera mappen `src/main/java`. Du bör se ett paket som slutar med `core`. Skapa en Java™-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande:
 
 ```java
 public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException 
@@ -42,7 +42,7 @@ public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaData
 
 Körningsmetoden ger åtkomst till följande tre variabler:
 
-**WorkItem**: Variabeln workItem ger åtkomst till data som är relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
 **WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
 
@@ -133,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-Rad 1 - definierar komponentens egenskaper. The `process.label` -egenskapen är vad du kommer att se när du associerar OSGi-komponenten med processsteget, vilket visas i en av skärmbilderna nedan.
+Rad 1 - definierar komponentens egenskaper. Egenskapen `process.label` är vad du kommer att se när du associerar OSGi-komponenten med processsteget, vilket visas i en av skärmbilderna nedan.
 
 Rader 13-15 - Processargumenten som skickas till den här OSGi-komponenten delas med avgränsaren &quot;,&quot;. Värdena för attachmentPath och saveToLocation extraheras sedan från strängarrayen.
 
@@ -150,12 +150,12 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen `nt:file` u
 
 >[!NOTE]
 >
->Eftersom vi använder ett Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt Maven-projekt. Grupp-ID är `com.adobe.aemfd` och artefakt-id är `aemfd-client-sdk`.
+>Eftersom vi använder ett Document-objekt som är specifikt för AEM Forms måste du ta med beroendet aemfd-client-sdk i ditt Maven-projekt. Grupp-ID är `com.adobe.aemfd` och artefakt-ID är `aemfd-client-sdk`.
 
 #### Bygg och driftsätt
 
 [Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
-[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
+[Kontrollera att paketet är distribuerat och i aktivt läge ](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.
 

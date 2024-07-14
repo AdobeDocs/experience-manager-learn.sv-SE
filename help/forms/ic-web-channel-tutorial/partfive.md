@@ -27,7 +27,7 @@ Dokumentfragment innehåller textinnehållet i interaktiva kommunikationsdokumen
 
 RTF-redigeraren är tillräckligt intuitiv för att en affärsanvändare ska kunna skapa text och infoga formulärelement. Dokumentfragmentredigeraren kan formatera text, ange teckensnittstyper och format, infoga specialtecken och skapa hyperlänkar.
 
-Dokumentfragmentredigeraren kan även infoga infogade villkor i texten, vilket visas i detta [video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Dokumentfragmentredigeraren kan även infoga infogade villkor i texten, vilket visas i denna [video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >

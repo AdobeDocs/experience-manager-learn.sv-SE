@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar dokumentredigering så att AEM kan redigera och publicera dokument med Microsoft Word eller Google Docs.
 
-Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) om du vill ha fullständig information om hur du skapar dokument.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) om du vill ha fullständig information om hur du konfigurerar dokumentredigering.
 
 ## Komma igång med dokumentutveckling
 
@@ -53,7 +53,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -85,7 +85,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -116,7 +116,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -140,14 +140,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="default-content-and-sections.md" title="Standardinnehåll och avsnitt">Ny redigerare</a>
+              <a href="default-content-and-sections.md" title="Standardinnehåll och avsnitt">Växla mellan redigeringsprogram</a>
             </p>
             <p class="is-size-6">Ta en titt på hur du skapar standardinnehåll och -avsnitt i dokument.</p>
             <a href="default-content-and-sections.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -172,14 +172,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="blocks-and-autoblocks.md" title="Block och autoblocks">
-                Block och autoblocks</a>
+                Block och autoblocks </a>
             </p>
             <p class="is-size-6">Upptäck koncepten när du skapar block och automatiska block.</p>
             <a href="blocks-and-autoblocks.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -210,7 +210,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -235,14 +235,15 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 minut</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="bulk-metadata.md" title="Massmetadata">Språkversioner</a>
+              <a href="bulk-metadata.md" title="Massmetadata">Språk
+                kopior</a>
             </p>
             <p class="is-size-6">Se hur massmetadata hanteras vid dokumentredigering.</p>
             <a href="bulk-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -274,7 +275,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -306,7 +307,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -343,7 +344,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -375,7 +376,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -407,7 +408,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -439,7 +440,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -471,7 +472,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -503,7 +504,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -528,14 +529,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/image-alt-text.md" title="Använda Alt-text">Alt-text för redigeringsbild</a>
+              <a href="./how-to/image-alt-text.md" title="Använda Alt-text">Redigeringsbild alt text</a>
             </p>
             <p class="is-size-6">Läs om hur dokumentredigering hanterar bildalternativ text.</p>
             <a href="./how-to/image-alt-text.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -567,7 +568,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -599,7 +600,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -624,14 +625,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="Platsmigrering med importverktyget">Platsmigrering med importverktyget</a>
+              <a href="./how-to/migration-using-importer.md" title="Platsmigrering med importverktyget">Platsmigrering med importeraren</a>
             </p>
             <p class="is-size-6">Lär dig hur du migrerar platser till Edge Delivery Services med AEM importverktyg.</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -663,7 +664,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -688,14 +689,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="Massimport med hjälp av importverktyget">Massimport med hjälp av importverktyget</a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="Massimport med hjälp av importverktyget">Massimport med importverktyget</a>
             </p>
             <p class="is-size-6">Lär dig hur du kan massimportera webbsidor med AEM importverktyg när du migrerar webbplatser.</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -732,7 +733,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -764,7 +765,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -789,14 +790,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="Generera variationer - promptmallar">Generera variationer - promptmallar</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="Generera variationer - promptmallar">Generera variationer - Uppmaningsmallar</a>
             </p>
             <p class="is-size-6">Lär dig hur du använder mallar för att generera variationer.</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -828,7 +829,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -853,14 +854,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - spara egna promptmallar">Generera variationer - spara egna promptmallar</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - spara egna promptmallar">Generera variationer - Spara egna promptmallar</a>
             </p>
             <p class="is-size-6">Lär dig hur du sparar de anpassade promptmallarna för Generera variationer.</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -892,7 +893,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -924,7 +925,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -956,7 +957,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -988,7 +989,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -1020,7 +1021,7 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -1045,14 +1046,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk">Översikt över experimentella ramverk</a>
+              <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk">Översikt över experimenteringsramverket</a>
             </p>
             <p class="is-size-6">Utforska det experimentella ramverk som gör det möjligt för marknadsförare att testa vilka innehållsvariationer som är mest effektiva.</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -1077,14 +1078,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk">Konfigurera experimentella ramverk</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk">Konfigurerar experimenteringsramverket</a>
             </p>
             <p class="is-size-6">Upptäck hur du konfigurerar experimenteringsramverket i Edge Delivery Services Document Authoring.</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>
@@ -1109,14 +1110,14 @@ Granska [dokumentation](https://experienceleague.adobe.com/docs/experience-manag
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-add-metadata.md" title="Lägga till metadata för experiment">Lägga till metadata för experiment</a>
+              <a href="./how-to/experimentation-add-metadata.md" title="Lägga till metadata för experiment">Lägger till metadata för experiment</a>
             </p>
             <p class="is-size-6">Utforska tillägg av metadata för experiment</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
               <span class="spectrum-Button-label has-no-wrap
-                has-text-weight-bold">Se videon</span>
+                has-text-weight-bold"> Se videon </span>
             </a>
           </div>
         </div>

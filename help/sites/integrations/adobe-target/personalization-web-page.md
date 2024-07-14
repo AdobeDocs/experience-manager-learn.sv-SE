@@ -1,5 +1,5 @@
 ---
-title: Personalisering av en hel webbsida - upplevelse
+title: Personalization of full web page Experience
 description: Lär dig hur du skapar en Target-aktivitet för att dirigera om dina AEM webbsidor till nya sidor med Adobe Target.
 jira: KT-6353
 thumbnail: 6353-personalization-web-page.jpg
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Personalisering av en hel webbsida - upplevelse {#personalization-fpe}
+# Personalization of full web page Experience {#personalization-fpe}
 
 Lär dig hur du skapar en aktivitet som dirigerar om de webbsidor som finns på AEM till en ny sida med Adobe Target.
 
@@ -37,29 +37,29 @@ WKND:s webbplats har gjort om sin hemsida och vill dirigera om sina nuvarande be
 ## Steg för att skapa ett A/B-test med Visual Experience Composer (VEC)
 
 1. Logga in på Adobe Target och navigera till aktivitetsfliken
-1. Klicka **Skapa aktivitet** och sedan välja **A/B-test** aktivitet
+1. Klicka på knappen **Skapa aktivitet** och välj sedan aktiviteten **A/B-test**
 
    ![A/B-aktivitet](assets/ab-target-activity.png)
 
-1. Välj **Visual Experience Composer** anger du aktivitets-URL:en och klickar sedan på **Nästa**
+1. Välj alternativet **Visual Experience Composer**, ange aktivitets-URL:en och klicka sedan på **Nästa**
 
    ![Aktivitets-URL](assets/ab-test-url.png)
 
-1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Upplevelse A* och *Upplevelse B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med hjälp av **Lägg till upplevelse** -knappen.
+1. I Visual Experience Composer visas två flikar till vänster när du har skapat en aktivitet: *Experience A* och *Experience B*. Välj en upplevelse i listan. Du kan lägga till nya upplevelser i listan med knappen **Lägg till upplevelse** .
 
-   ![Experience Options](assets/experience-options.png)
+   ![Upplevelsealternativ](assets/experience-options.png)
 
-1. Visa tillgängliga alternativ för Experience A och välj sedan **Omdirigera till URL** och ange en URL för den nya WKND-webbplatsens hemsida.
+1. Visa tillgängliga alternativ för Experience A och välj sedan alternativet **Omdirigera till URL** och ange en URL för den nya WKND-webbplatsens hemsida.
 
-   ![Omdirigeringsadress](assets/redirect-url.png)
+   ![Omdirigerings-URL](assets/redirect-url.png)
 
-1. Byt namn *Upplevelse A* till *Ny WKND-startsida* och *Upplevelse B* till *WKND - startsida*
+1. Byt namn på *Upplev A* till *Ny WKND-startsida* och *Upplev B* till *WKND-startsida*
 
-   ![Annonser](assets/new-experiences.png)
+   ![Anteckningar](assets/new-experiences.png)
 
-1. Klicka **Nästa** för att gå över till målinriktning och behålla en manuell trafiktilldelning på 50-50 mellan de två upplevelserna.
+1. Klicka på **Nästa** för att gå till Riktning och behålla en manuell trafikallokering på 50-50 mellan de två upplevelserna.
 
-   ![Målinriktning](assets/targeting.png)
+   ![Målgruppsanpassning](assets/targeting.png)
 
 1. För Mål och inställningar väljer du Rapporteringskällan som Adobe Target och väljer Mått som konvertering med en sidvisningsåtgärd.
 

@@ -29,7 +29,7 @@ Logga in på AEM Forms och gå till Adobe Experience Manager > Forms > Forms &am
 
 AEM Forms 6.4 har gjort det enkelt att visa data med olika typer av diagram. Vi kommer att använda ett linjediagram för att visa saldon per år.
 
-Tryck på **Kontoförlopp** målområdet till höger och klicka på plusikonen (+) för att öppna dialogrutan för infogningskomponenten.
+Tryck på målområdet **Kontoförlopp** till höger och klicka på plustecknet (+) för att öppna dialogrutan för att infoga komponent.
 
 Välj Diagram om du vill infoga diagramkomponenten.
 

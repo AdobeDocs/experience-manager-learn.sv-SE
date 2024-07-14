@@ -21,17 +21,17 @@ ht-degree: 0%
 
 ## Hämta empID-parameter
 
-Nästa steg är att få åtkomst till parametern empID från URL:en. Värdet för parametern empID-begäran skickas sedan till **_get_** tjänståtgärd för formulärdatamodellen.
+Nästa steg är att få åtkomst till parametern empID från URL:en. Värdet på parametern empID-begäran skickas sedan till tjänståtgärden **_get_** i formulärdatamodellen.
 För kursen har vi skapat följande
 
-* Adaptiv formulärmall har anropats **_FDMDemo_**
-* Page Component called **_fdmdemo_**
+* Den adaptiva formulärmallen **_FDMDemo_** har anropats
+* Sidkomponenten anropade **_fdmdemo_**
 * Inkluderade vårt anpassade jsp med sidkomponenten
 * Kopplade den adaptiva formulärmallen till sidkomponenten
 
 Genom att göra detta kommer vår kod i den anpassade jsp endast att köras när anpassningsbara formulär baserade på den här anpassade mallen återges
 
-* [Importera paketet](assets/template-page-component.zip) använda [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+* [Importera paketet](assets/template-page-component.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Öppna fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * Avkommentera kommentarsraderna.
 * Spara ändringarna

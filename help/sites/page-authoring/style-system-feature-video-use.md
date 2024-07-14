@@ -1,6 +1,6 @@
 ---
 title: Använda formatsystemet med AEM Sites
-description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
+description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM kärnkomponenter, mallredigerare och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
 feature: Style System
 version: Cloud Service
 jira: KT-974
@@ -28,10 +28,10 @@ Adobe Experience Manager Style System möjliggör visuella variationer av kompon
 
 I den här videon visas hur Style System kan användas för att skapa helt olika visuella utseenden för en enskild komponent, med enbart CSS.
 
-Formaten som visas tillhandahålls av [WKND-program](https://github.com/adobe/aem-guides-wknd). Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTML-skriptet eller Sling Model.
+De format som visas tillhandahålls av [WKND-programmet](https://github.com/adobe/aem-guides-wknd). Dessa format definieras som CSS och kräver inga ändringar i komponentens serverdelslogik, HTML-skriptet eller Sling Model.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vill du lära dig hur du utvecklar med Style System? Titta på följande självstudiekurser:
 
-* [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [Utveckla med formatsystemet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)

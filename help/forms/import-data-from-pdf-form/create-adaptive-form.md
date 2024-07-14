@@ -32,7 +32,7 @@ Använd schemat för att skapa ett anpassat formulär
 * Klicka på Generera.
 * Ange ett beskrivande filnamn som `form-data.xml`
 
-Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från XML-data som genererats i föregående steg.
+Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [generera XSD](https://www.freeformatter.com/xsd-generator.html) från de XML-data som genererades i föregående steg.
 
 Skapa ett anpassat formulär baserat på schemat från föregående steg.
 
@@ -40,12 +40,12 @@ Skapa ett anpassat formulär baserat på schemat från föregående steg.
 >Vi rekommenderar alltid att du undersöker de data som genereras när du skickar in adaptiva formulär. Då får du en bra uppfattning om XML-formatet för de data som behöver sammanfogas med det anpassade formuläret.
 
 Data från adaptiv form
-![skickade data](./assets/af-submitted-data.png)
+![skickad-data](./assets/af-submitted-data.png)
 
 Data som exporterats från PDF
 ![exporterade data](./assets/exported-data.png)
 
-Du måste extrahera de exporterade data **_topmostSubform_** en nod med lämpliga namnutrymmen bevarade så att data kan sammanfogas med det adaptiva formuläret.
+Från exporterade data måste du extrahera noden **_topmostSubform_** med rätt namnutrymmen bevarade för att data ska kunna sammanfogas med det adaptiva formuläret.
 
 ## Nästa steg
 

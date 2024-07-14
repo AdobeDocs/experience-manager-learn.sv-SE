@@ -24,7 +24,7 @@ Ett vanligt användningssätt är att visa de bilder som finns i crx-databasen i
 
 ## Lägg till platshållarbild
 
-Det första steget är att lägga till en platshållar-div som prefix till panelkomponenten. I koden nedanför identifieras panelkomponenten av CSS-klassnamnet för fotoöverföring. JavaScript-funktionen är en del av klientbiblioteket som är associerat med de adaptiva formulären. Den här funktionen anropas i initialize-händelsen för den bifogade filkomponenten.
+Det första steget är att lägga till en platshållar-div som prefix till panelkomponenten. I koden nedanför identifieras panelkomponenten av CSS-klassnamnet för fotoöverföring. JavaScript-funktionen är en del av klientbiblioteket som är kopplat till de adaptiva formulären. Den här funktionen anropas i initialize-händelsen för den bifogade filkomponenten.
 
 ```javascript
 /**
@@ -83,8 +83,8 @@ async function createFile(imageName){
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbibliotek och exempelbilder](assets/InlineDAMImage.zip) på AEM med AEM Package Manager.
-* Hämta och installera [exempelformulär](assets/FieldInspectionForm.zip) på AEM med AEM pakethanterare.
-* Peka webbläsaren till [FileInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* Hämta och installera [klientbiblioteket och exempelbilderna](assets/InlineDAMImage.zip) på din AEM med AEM Package Manager.
+* Hämta och installera [exempelformuläret](assets/FieldInspectionForm.zip) till din AEM med AEM pakethanterare.
+* Peka webbläsaren på [FileInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
 * Välj en av korrigeringarna
 * Bilden ska visas i formuläret

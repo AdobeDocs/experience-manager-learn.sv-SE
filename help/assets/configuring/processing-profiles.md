@@ -1,6 +1,6 @@
 ---
 title: Bearbetar profiler
-description: Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser på AEM as a Cloud Service.
+description: Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser i AEM as a Cloud Service.
 feature: Asset Compute Microservices
 version: Cloud Service
 jira: KT-4993
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Bearbetar profiler
 
-Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser på AEM as a Cloud Service.
+Bearbetningsprofiler definierar de återgivningar som ska skapas för resurser i AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)

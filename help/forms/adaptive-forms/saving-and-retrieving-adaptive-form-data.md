@@ -20,7 +20,7 @@ ht-degree: 0%
 
 I den här artikeln får du hjälp med att spara och hämta anpassade formulärdata från databasen. MySQL-databasen användes för att lagra data för adaptiva formulär. På en hög nivå är följande steg för att uppnå användningsfallet:
 
-* [Konfigurera datakälla](#Configure-Data-Source)
+* [Konfigurera Source](#Configure-Data-Source)
 * [Skapa server för att skriva data till databasen](#create-servlet)
 * [Skapa en OSGI-tjänst för att hämta lagrade data](#create-osgi-service)
 * [Skapa klientbibliotek](#create-client-library)
@@ -28,7 +28,7 @@ I den här artikeln får du hjälp med att spara och hämta anpassade formulärd
 * [Funktionsdemonstration](#capability-demo)
 * [Distribuera på servern](#deploy-on-your-server)
 
-## Konfigurera datakälla {#Configure-Data-Source}
+## Konfigurera Source {#Configure-Data-Source}
 
 Den poolade DataSource för Apache Sling-anslutningen har konfigurerats för att peka på databasen som ska användas för att lagra data för det adaptiva formuläret. I följande skärmbild visas konfigurationen för min instans. Följande egenskaper kan kopieras och klistras in
 
@@ -38,7 +38,7 @@ Den poolade DataSource för Apache Sling-anslutningen har konfigurerats för att
 
 * `JDBC Connection URL:jdbc:mysql://localhost:3306/aemformstutorial`
 
-![anslutningpool](assets/storingdata.PNG)
+![anslutningspool](assets/storingdata.PNG)
 
 ### Skapa server {#create-servlet}
 

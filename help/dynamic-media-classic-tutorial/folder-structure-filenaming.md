@@ -45,7 +45,7 @@ För er mappstrategi bör ni fundera över vad som passar er organisation bäst.
 
 Hur du namnger filer är kanske det viktigaste tidiga beslutet du kommer att fatta om Dynamic Media Classic. Detta beror på att alla resurser i Dynamic Media Classic måste ha unika namn, oavsett var de lagras på kontot.
 
-Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett tillgångs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. Till exempel: _896649.jpg_ hämtar resurs _ID 896649_.
+Alla URL:er och transaktioner i Dynamic Media Classic styrs av ett tillgångs-ID, som är en tillgångs unika identifierare i databasen. När du överför en fil skapas resurs-ID:t genom att filnamnet tas bort och tillägget tas bort. _896649.jpg_ får till exempel resurs _ID 896649_.
 
 Regler för tillgångs-ID:
 

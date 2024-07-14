@@ -24,18 +24,18 @@ Få snabb genomslagskraft i organisationen genom att göra det enklare för krea
 
 ## Inställning av tillgångslänk för AEM as a Cloud Service
 
-Lär dig hur du konfigurerar Adobe Asset Link för AEM as a Cloud Service, konfigurerar användarberättiganden och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
+Lär dig hur du konfigurerar Adobe Asset Link för AEM as a Cloud Service, konfigurerar användarrättigheter och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
-Adobe Asset Link visas inte i videon ovan och kan läggas till via __Hanterat paket__ från Creative Cloud-pakethanteraren:
+Adobe Asset Link visas inte i videon ovan och kan läggas till via alternativet __Hanterat paket__ från pakethanteraren i Creative Cloud:
 
-1. Välj __Adobe Asset Link CEP__ in __Välj plugin-program__ steg
-2. På __Alternativsteg__ välj __Aktivera självbetjäningsinstallation__ och __Tillåt icke-administratörer att uppdatera och installera appar__ för att ge icke-administratörer behörighet att hantera program och plugin-program från Creative Cloud.
+1. Välj __Adobe Asset Link CEP__ i steget __Välj plugin-program__
+2. I __alternativsteget__ väljer du __Aktivera självbetjäningsinstallation__ och __Tillåt icke-administratörer att uppdatera och installera program__ för att ge icke-administratörer behörighet att hantera program och plugin-program i Creative Cloud.
 
 ## Inställning av tillgångslänk för Managed Services och lokal
 
-Lär dig hur du konfigurerar Adobe Asset Link för AEM 6 som körs i Adobe Managed Services eller på plats, konfigurerar användarberättiganden och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
+Lär dig hur du konfigurerar Adobe Asset Link för AEM 6 som körs i Adobe Managed Services eller på plats, konfigurerar användarrättigheter och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 

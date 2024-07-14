@@ -60,18 +60,18 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-När knappen GetResult klickas anropas Get till **&quot;/bin/querydata&quot;**. Vi skickar frågan som skapats av QueryBuilder-användargränssnittet till servern via frågeparametern. Servern masserar sedan frågan till SQL-fråga som kan användas för att fråga databasen. Om du till exempel söker efter alla produkter med namnet &quot;Mouse&quot; är frågesträngen i Frågebyggaren `$.productname = 'Mouse'`. Den här frågan konverteras sedan till följande
+När du klickar på knappen GetResult görs ett Get-anrop till **/bin/querydata**. Vi skickar frågan som skapats av QueryBuilder-användargränssnittet till servern via frågeparametern. Servern masserar sedan frågan till SQL-fråga som kan användas för att fråga databasen. Om du till exempel söker efter alla produkter med namnet &quot;Mouse&quot; är frågesträngen i Query Builder `$.productname = 'Mouse'`. Den här frågan konverteras sedan till följande
 
-MARKERA &#42; från aemformswithjson .  formsending where JSON_EXTRACT( formsending.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
+VÄLJ &#42; från aemformswithjson .  formsending where JSON_EXTRACT( formsending.formdata,&quot;$.productName &quot;)= &#39;Mouse&#39;
 
 Resultatet av den här frågan returneras för att fylla i tabellen i användargränssnittet.
 
 Utför följande steg om du vill att exemplet ska köras på ditt lokala system:
 
-1. [Se till att du har följt alla steg som nämns här](part2.md)
-1. [Importera Dashboardv2.zip med AEM Package Manager.](assets/dashboardv2.zip) Det här paketet innehåller alla nödvändiga paket, konfigurationsinställningar, anpassad sändning och exempelsida för att fråga efter data.
+1. [Kontrollera att du har följt alla steg som nämns här](part2.md)
+1. [Importera Dashboard v2.zip med AEM Package Manager.](assets/dashboardv2.zip) Det här paketet innehåller alla nödvändiga paket, konfigurationsinställningar, anpassad sändning och exempelsida för att fråga efter data.
 1. Skapa ett adaptivt formulär med exempelschema för json
 1. Konfigurera det adaptiva formuläret att skicka till den anpassade åtgärden för att skicka till&quot;customSubmithelpx&quot;
 1. Fyll i formuläret och skicka in
-1. Peka webbläsaren till [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. Peka webbläsaren på [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
 1. Markera formuläret och gör en enkel fråga

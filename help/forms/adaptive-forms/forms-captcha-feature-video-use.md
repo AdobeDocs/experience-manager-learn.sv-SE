@@ -22,7 +22,7 @@ Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*I den här videon går vi igenom hur du lägger till en CAPTCHA i ett AEM adaptivt formulär med både den inbyggda AEM CAPTCHA-tjänsten och Google reCAPTCHA-tjänsten.*
+*Den här videon går igenom processen att lägga till en CAPTCHA i ett AEM adaptivt formulär med både den inbyggda AEM CAPTCHA-tjänsten och Google reCAPTCHA-tjänsten.*
 
 >[!NOTE]
 >
@@ -30,11 +30,11 @@ Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 
 >[!NOTE]
 >
->**Följ stegen för att konfigurera reCaptcha för publiceringsinstansen**
+>**Följ stegen** för att konfigurera reCaptcha för publiceringsinstansen.
 >
 >Konfigurera reCaptach för författarinstans
 >
->öppna Felix [webbkonsol](http://localhost:4502/system/console/bundles) på författarinstansen
+>öppna Felix [webbkonsolen](http://localhost:4502/system/console/bundles) på författarinstansen
 >
 >sök efter com.adobe.granite.crypto.file bundle
 >
@@ -45,7 +45,7 @@ Lägga till och använda en CAPTCHA med AEM Adaptive Forms.
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * Kopiera HMAC- och mallfiler
 >
-Öppna [felix-webbkonsol](http://localhost:4502/system/console/bundles) på din publiceringsinstans. Sök efter paketet com.adobe.granite.crypto.file. Observera paket-ID
+Öppna [felix-webbkonsolen](http://localhost:4502/system/console/bundles) på din publiceringsinstans. Sök efter paketet com.adobe.granite.crypto.file. Observera paket-ID
 >
 Navigera till paket-ID:t i filsystemet för din publiceringsinstans
 >

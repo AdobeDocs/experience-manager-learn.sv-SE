@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Steg för att aktivera felsökningsloggning för klasser i Websphere Application Server
 
-*I den här videon går du igenom stegen för att aktivera felsökningsloggning för alla klasser i Websphere Application Server.*
+*Den här videon går igenom stegen för att aktivera felsökningsloggning för alla klasser i Websphere Application Server.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)

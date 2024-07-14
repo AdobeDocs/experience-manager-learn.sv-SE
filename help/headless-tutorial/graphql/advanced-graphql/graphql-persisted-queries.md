@@ -17,13 +17,13 @@ ht-degree: 0%
 
 # Beständiga GraphQL-frågor
 
-Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan också köras med HTTP-POST-begäranden som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM har full kontroll över dem. Det är **god praxis och mycket rekommenderad** om du vill använda beständiga frågor när du arbetar med AEM GraphQL API.
+Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan också köras med HTTP-POST-begäranden som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM har full kontroll över dem. Det är **bästa sättet och rekommenderas** att använda beständiga frågor när du arbetar med AEM GraphQL API.
 
 I det föregående kapitlet har du utforskat några avancerade GraphQL-frågor för att samla in data för WKND-appen. I det här kapitlet kvarstår frågorna som ska AEM och du får lära dig hur du använder cachekontroll på beständiga frågor.
 
 ## Förutsättningar {#prerequisites}
 
-Det här dokumentet är en del av en självstudiekurs i flera delar. Se till att [föregående kapitel](explore-graphql-api.md) har slutförts innan du fortsätter med detta kapitel.
+Det här dokumentet är en del av en självstudiekurs i flera delar. Kontrollera att det [föregående kapitlet](explore-graphql-api.md) har slutförts innan du fortsätter med det här kapitlet.
 
 ## Mål {#objectives}
 
@@ -32,13 +32,13 @@ Läs om hur du gör följande i det här kapitlet:
 * Behåll GraphQL-frågor med parametrar
 * Använd parametrar för cachekontroll med beständiga frågor
 
-## Granska _GraphQL Beständiga frågor_ konfigurationsinställning
+## Granska konfigurationsinställningen för _GraphQL-beständiga frågor_
 
-Låt oss granska det _GraphQL Beständiga frågor_ är aktiverade för WKND Site-projektet i din AEM.
+Låt oss kontrollera att _GraphQL Persisted Queries_ har aktiverats för WKND Site-projektet i din AEM.
 
-1. Navigera till **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+1. Navigera till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
-1. Välj **WKND delad** väljer **Egenskaper** i det övre navigeringsfältet för att öppna konfigurationsegenskaper. På sidan Konfigurationsegenskaper ser du att **GraphQL Beständiga frågor** behörighet är aktiverad.
+1. Välj **WKND delad** och välj sedan **Egenskaper** i det övre navigeringsfältet för att öppna konfigurationsegenskaper. På sidan Konfigurationsegenskaper ser du att behörigheten **GraphQL Persistent Queries** är aktiverad.
 
    ![Konfigurationsegenskaper](assets/graphql-persisted-queries/configuration-properties.png)
 
@@ -157,7 +157,7 @@ I det här avsnittet ska vi behålla den GraphQL-fråga som senare används i kl
 
    Kontrollera att frågan fungerar innan du sparar den.
 
-1. Tryck sedan på Save As (Spara som) och ange `adventure-details-by-slug` som frågenamn.
+1. Tryck sedan på Spara som och ange `adventure-details-by-slug` som frågenamn.
 
    ![Behåll GraphQL-fråga](assets/graphql-persisted-queries/persist-graphql-query.png)
 
@@ -171,7 +171,7 @@ För att köra en beständig fråga gör klientprogrammet en GET-begäran med f�
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 ```
 
-Så här kör du en beständig fråga _med en variabel_&#x200B;ändras syntaxen ovan till:
+Om du vill köra en beständig fråga _med variabeln_ ändras syntaxen ovan till:
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>;variable1=value1;variable2=value2
@@ -179,9 +179,9 @@ GET <AEM_HOST>/graphql/execute.json/<Project-Config-Name>/<Persisted-Query-Name>
 
 Specialtecken som semikolon (;), likhetstecken (=), snedstreck (/) och blanksteg måste konverteras för att motsvarande UTF-8-kodning ska kunna användas.
 
-Genom att köra `getAllAdventureDetailsBySlug` frågor från kommandoradsterminalen, vi granskar dessa koncept i praktiken.
+Genom att köra `getAllAdventureDetailsBySlug`-frågan från kommandoradsterminalen granskar vi dessa koncept i praktiken.
 
-1. Öppna GraphiQL Explorer och klicka på **ellipser** (...) bredvid den beständiga frågan `getAllAdventureDetailsBySlug`och sedan klicka **Kopiera URL**. Klistra in kopierad URL i en textruta ser ut så här:
+1. Öppna GraphiQL Explorer och klicka på **ellipserna** (..) bredvid den beständiga frågan `getAllAdventureDetailsBySlug`. Klicka sedan på **Kopiera URL**. Klistra in kopierad URL i en textruta ser ut så här:
 
    ```code
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug;slug=
@@ -199,7 +199,7 @@ Genom att köra `getAllAdventureDetailsBySlug` frågor från kommandoradstermina
        http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
    ```
 
-1. Öppna en kommandoradsterminal och använda [Rullning](https://curl.se/) köra frågan
+1. Öppna en kommandoradsterminal och kör frågan med [Curl](https://curl.se/)
 
    ```shell
    $ curl -X GET http://<AEM_HOST>/graphql/execute.json/wknd-shared/getAllAdventureDetailsBySlug%3Bslug%3Dyosemite-backpacking
@@ -207,9 +207,9 @@ Genom att köra `getAllAdventureDetailsBySlug` frågor från kommandoradstermina
 
 >[!TIP]
 >
->    Om du kör frågan ovan mot AEM författarmiljö måste du skicka inloggningsuppgifterna. Se [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) för att demonstrera den och [Anropa AEM API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api) för dokumentationsinformation.
+>    Om du kör frågan ovan mot AEM författarmiljö måste du skicka inloggningsuppgifterna. Mer information finns i [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) och i [Anropa AEM-API:t](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api).
 
-Granska även [Så här kör du en fråga som är sparad](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables)och [Kodning av fråge-URL för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) för att lära sig hur klientapplikationerna beständiga frågekörningen fungerar.
+Granska även [Så här kör du en beständig fråga](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables) och [Kodar fråge-URL:en för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) för att lära dig beständig frågekörning av klientprogram.
 
 ## Uppdatera parametrar för cachekontroll i beständiga frågor {#cache-control-all-adventures}
 
@@ -217,21 +217,21 @@ Med AEM GraphQL API kan du uppdatera standardparametrarna för cachekontroll til
 
 * 60 sekunder är standardvärde (maxage=60) för klientens TTL (t.ex. en webbläsare)
 
-* 7200 sekunder är standardvärdet (s-maxage=7200) för TTL för Dispatcher och CDN, som också kallas delade cacheminnen
+* 7200 sekunder är standardvärdet (s-maxage=7200) för TTL för Dispatcher och CDN, även kallat delade cacheminnen
 
-Använd `adventures-all` fråga för att uppdatera parametrar för cachekontroll. Frågesvaret är stort och det är användbart att styra dess `age` i cachen. Den här beständiga frågan används senare för att uppdatera [klientprogram](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
+Använd frågan `adventures-all` för att uppdatera parametrarna för cachekontroll. Frågesvaret är stort och det är användbart att kontrollera dess `age` i cachen. Den beständiga frågan används senare för att uppdatera [klientprogrammet](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md).
 
-1. Öppna GraphiQL Explorer och klicka på **ellipser** (...) bredvid den beständiga frågan och klicka sedan på **Sidhuvuden** att öppna **Cachekonfiguration** modal.
+1. Öppna GraphiQL Explorer och klicka på **ellipserna** (..) bredvid den beständiga frågan. Klicka sedan på **Huvuden** för att öppna modal **Cache Configuration** .
 
    ![Behåll GraphQL Header Option](assets/graphql-persisted-queries/persist-graphql-header-option.png)
 
 
-1. I **Cachekonfiguration** modal, uppdatera `max-age` rubrikvärde till `600 `sekunder (10 min) och klicka sedan **Spara**
+1. Uppdatera sidhuvudsvärdet `max-age` till `600 ` sekunder (10 min) i **Cache Configuration** modal och klicka sedan på **Save**
 
    ![Behåll GraphQL-cachekonfiguration](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-Granska [Cachelagra beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) om du vill ha mer information om standardparametrar för cachekontroll.
+Granska [Cachelagra dina beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) om du vill ha mer information om standardparametrar för cachekontroll.
 
 
 ## Grattis!
@@ -240,4 +240,4 @@ Grattis! Du har nu lärt dig att behålla GraphQL-frågor med parametrar, uppdat
 
 ## Nästa steg
 
-I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)implementerar du förfrågningarna för beständiga frågor i WKND-appen.
+I [nästa kapitel](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md) implementerar du förfrågningar för beständiga frågor i WKND-appen.

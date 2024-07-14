@@ -38,18 +38,18 @@ Lär dig hur du exporterar AEM Experience Fragment som Adobe Target-erbjudanden.
 
 Om du exporterar Experience Fragment till Adobe Target utan rätt behörighet i Adobe Admin Console uppstår följande fel i AEM Author-tjänsten:
 
-![Fel i mål-API](assets/error-target-offer.png)
+![Mål-API-gränssnittsfel](assets/error-target-offer.png)
 
-... och följande loggmeddelanden i `aemerror` log:
+... och följande loggmeddelanden i `aemerror`-loggen:
 
 ![Mål-API-konsolfel](assets/target-console-error.png)
 
 #### Upplösning
 
-1. Logga in på [Admin Console](https://adminconsole.adobe.com/) med administratörsbehörighet för Adobe Target produktprofil som används, men AEM integrering
+1. Logga in på [Admin Console](https://adminconsole.adobe.com/) med administratörsbehörighet för Adobe Target produktprofil som används men AEM integrering
 2. Välj __Produkter > Adobe Target > Produktprofil__
-3. Under __Integreringar__ väljer du integrering för AEM as a Cloud Service miljö (samma namn som Adobe Developer-projektet)
-4. Tilldela __Redigerare__ eller __Godkännare__ roll
+3. Under fliken __Integrationer__ väljer du integrering för din AEM as a Cloud Service-miljö (samma namn som Adobe Developer-projektet)
+4. Tilldela rollen __Redigerare__ eller __Godkännare__
 
    ![Mål-API-fel](assets/target-permissions.png)
 

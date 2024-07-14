@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Växla vy
 
-Lär dig hur du effektivt växlar mellan [Resursvy och administratörsvy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences) i AEM Assets as a Cloud Service för smidig filhantering.
+Lär dig hur du effektivt växlar mellan [Assets-vyn och administratörsvyn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html#persona-based-experiences) i AEM Assets as a Cloud Service och säkerställer smidig resurshantering.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)

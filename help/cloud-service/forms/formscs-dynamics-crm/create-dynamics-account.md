@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa och konfigurera Dynamics-konto
 
-[Inloggning](https://dynamics.microsoft.com/en-us/) till ditt Microsoft Dynamics-konto. Du kan skapa [kostnadsfritt provkonto](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) om du inte har något Dynamics-konto.
+[Logga in](https://dynamics.microsoft.com/en-us/) på ditt Microsoft Dynamics-konto. Du kan skapa ett [kostnadsfritt utvärderingskonto](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) om du inte har något Dynamics-konto.
 
 >[!NOTE]
 >Ersätt server- och portnumret i URI:n nedan för att få URI:n för nytt försök. Du behöver denna URI för att försöka igen när du konfigurerar programmet med Azure Active Directory.

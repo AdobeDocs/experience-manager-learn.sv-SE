@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Microservices och gå över till AEM as a Cloud Service
-description: Se hur AEM Assets as a Cloud Service mikrotjänster på asset compute gör det möjligt att automatiskt och effektivt generera alla renderingar av dina resurser och ersätta det traditionella AEM arbetsflödet.
+title: AEM Assets Microservices och flytt till AEM as a Cloud Service
+description: Läs om hur AEM Assets as a Cloud Service mikrotjänster för asset compute gör att du automatiskt och effektivt kan generera alla återgivningar av dina resurser och ersätta det traditionella AEM arbetsflödet.
 version: Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 # AEM Assets Microservices - Moving to AEM as a Cloud Service
 
-Se hur AEM Assets as a Cloud Service mikrotjänster på asset compute gör det möjligt att automatiskt och effektivt generera alla renderingar av dina resurser och ersätta det traditionella AEM arbetsflödet.
+Läs om hur AEM Assets as a Cloud Service mikrotjänster för asset compute gör att du automatiskt och effektivt kan generera alla återgivningar av dina resurser och ersätta det traditionella AEM arbetsflödet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
 ## Arbetsflödesmigreringsverktyg
 
-![Migreringsverktyg för arbetsflöde för resurs](./assets/asset-workflow-migration.png)
+![Resursarbetsflödesmigreringsverktyg](./assets/asset-workflow-migration.png)
 
-När du omfaktoriserar din kodbas använder du [Verktyget för arbetsflödesmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) för att migrera befintliga arbetsflöden för att använda Asset compute-mikrotjänsterna på AEM as a Cloud Service.
+Som en del av omfaktoriseringen av din kodbas använder du verktyget [Resursarbetsflödesmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) för att migrera befintliga arbetsflöden och använda Asset compute-mikrotjänsterna i AEM as a Cloud Service.
 
 ## Viktiga aktiviteter
 
-+ Använd [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) verktyg för att migrera arbetsflöden för bearbetning av resurser så att de kan använda Asset compute mikrotjänster.
-+ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och driftsätta de uppdaterade arbetsflödena. Manuell justering kan behövas för komplexa arbetsflöden.
++ Använd verktyget [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) för att migrera arbetsflöden för bearbetning av resurser så att de kan använda Asset compute-mikrotjänsterna.
++ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och distribuera de uppdaterade arbetsflödena. Manuell justering kan behövas för komplexa arbetsflöden.
 + Fortsätt att iterera i en lokal utvecklingsmiljö med AEM SDK tills det uppdaterade arbetsflödet matchar funktionsparitet.
-+ Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service utvecklingsmiljö och fortsätt att validera.
++ Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service-utvecklingsmiljö och fortsätt att validera.
 
 ## Handövning
 

@@ -25,36 +25,36 @@ Lär dig hur du lägger till en anpassad knapp i verktygsfältet RTE (Rich Text 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-Anpassade knappar kan läggas till i **RTE-verktygsfält** i Content Fragment Editor med `rte` tilläggspunkt. I det här exemplet visas hur du lägger till en anpassad knapp med namnet _Lägg till tips_ till RTE-verktygsfältet och ändra innehållet i RTE.
+Du kan lägga till anpassade knappar i verktygsfältet **RTE** i Content Fragment Editor med hjälp av tilläggspunkten `rte`. I det här exemplet visas hur du lägger till en anpassad knapp med namnet _Lägg till tips_ i verktygsfältet för textredigering och ändrar innehållet i textredigeraren.
 
-Använda `rte` tilläggspunkter `getCustomButtons()` metod en eller flera anpassade knappar kan läggas till i **RTE-verktygsfält**. Det går också att lägga till eller ta bort standardknappar för RTE som _Kopiera, Klistra in, Fet och Kursiv_ använda `getCoreButtons()` och `removeButtons)` metoder.
+Med metoden `getCustomButtons()` för tilläggspunkten `rte` kan en eller flera anpassade knappar läggas till i verktygsfältet **RTE**. Det går också att lägga till eller ta bort standardknappar för textredigering som _Kopiera, Klistra in, Fet och Kursiv_ med metoderna `getCoreButtons()` respektive `removeButtons)`.
 
-I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med hjälp av anpassad _Lägg till tips_ i verktygsfältet. Det markerade antecknings- eller tipsinnehållet har en speciell formatering som används via elementen HTML och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med `onClick()` callback-metoden för `getCustomButtons()`.
+I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med en anpassad _Lägg till tips_-verktygsfältsknapp. Det markerade antecknings- eller tipsinnehållet har en speciell formatering som används via elementen HTML och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med callback-metoden `onClick()` för `getCustomButtons()`.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `rte` om du vill lägga till en anpassad knapp i verktygsfältet för textredigering i redigeraren för innehållsfragment.
+Det här exemplet utökas till tilläggspunkten `rte` för att lägga till en anpassad knapp i verktygsfältet för textredigering i redigeraren för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
-| [Innehållsfragmentsredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Verktygsfältet för textredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
+| [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Verktygsfältet RTF-redigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## Exempel på tillägg
 
-I följande exempel skapas en _Lägg till tips_ egen knapp i verktygsfältet för textredigering. Klicka-åtgärden för att infoga platshållartexten vid den aktuella inmatningspositionen i textredigeraren.
+I följande exempel skapas en anpassad _Lägg till tips_-knapp i textredigeringsverktygsfältet. Klicka-åtgärden för att infoga platshållartexten vid den aktuella inmatningspositionen i textredigeraren.
 
 I koden visas hur du lägger till den anpassade knappen med en ikon och registrerar klickhanterarfunktionen.
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
+`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
 
-+ The RTE toolbar button&#39;s definition in `getCustomButtons()` function with `id, tooltip and icon` attribut.
-+ Knappens klickningshanterare i `onClick()` funktion.
-+ Klickhanterarfunktionen tar emot `state` -objekt som ett argument för att hämta RTE-filens innehåll i HTML eller textformat. I det här exemplet används det dock inte.
-+ click-hanterarfunktionen returnerar en instruktionsarray. Den här arrayen har ett objekt med `type` och `value` attribut. Om du vill infoga innehållet `value` attribut HTML-kodfragment, `type` attributet använder `insertContent`. Om det finns ett användningsfall för att ersätta innehållet ska du använda skiftläget `replaceContent` instruktionstyp.
++ RTE-verktygsfältsknappens definition i funktionen `getCustomButtons()` med `id, tooltip and icon`-attribut.
++ Klickhanteraren för knappen i funktionen `onClick()`.
++ Klickhanterarfunktionen tar emot objektet `state` som ett argument för att hämta RTE-innehållet i HTML eller textformat. I det här exemplet används det dock inte.
++ click-hanterarfunktionen returnerar en instruktionsarray. Den här arrayen har ett objekt med attributen `type` och `value`. För att infoga innehållet, HTML-kodfragmentet `value` attribut, använder attributet `type` `insertContent`. Om det finns ett användningsfall för att ersätta innehållet ska du använda instruktionstypen `replaceContent`.
 
-The `insertContent` värdet är en HTML-sträng, `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. CSS-klasserna `cmp-contentfragment__element-tip` som används för att visa värdet definieras inte i widgeten, utan implementeras i webbupplevelsen. Det här fältet Innehållsfragment visas i.
+Värdet `insertContent` är en HTML-sträng, `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. CSS-klasserna `cmp-contentfragment__element-tip` som används för att visa värdet definieras inte i widgeten, utan implementeras i webbupplevelsen när det här fältet för innehållsfragment visas.
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`

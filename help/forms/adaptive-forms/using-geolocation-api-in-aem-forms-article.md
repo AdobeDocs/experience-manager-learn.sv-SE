@@ -22,7 +22,7 @@ I den här artikeln ska vi titta närmare på hur du använder Google Geolocatio
 
 Följande steg har utförts för att använda Geolocation-API:t i Adaptive Forms.
 
-1. [Hämta API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key) från Google till Google Maps. Du kan få en provnyckel som gäller i ett år.
+1. [Hämta API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key) från Google för att använda Google Maps-plattformen. Du kan få en provnyckel som gäller i ett år.
 
 1. Anpassat formulärfragment skapades med fält för den aktuella adressen
 
@@ -75,7 +75,7 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.c
 }
 ```
 
-![Fälten fylls i med geoloaction API](assets/capture-4.gif)
+![Fält fylls i med geoloaction-API:t](assets/capture-4.gif)
 
 På rad 1 används HTML Geolocation API för att hämta den aktuella platsen. När den aktuella platsen har hämtats skickar vi den aktuella platsen till funktionen showPosition.
 
@@ -94,12 +94,12 @@ Den JSON som returneras av API tolkas sedan för att ange fälten för adaptiv f
 Så här aktiverar du den här funktionen på servern:
 
 * Installera och starta AEM Forms-servern.
-> Den här funktionen testades i AEM Forms 6.3 och senare
+> Den här funktionen testades på AEM Forms 6.3 och senare
 * [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
 * [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * Öppna regelredigeraren för komponenten Bildval.
-* Ersätt &lt;your_api_key> med Google API Key.
+* Ersätt &lt;your_api_key> med Google API-nyckeln.
 * Spara ändringarna.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
 * Klicka på ikonen &quot;geolocation&quot; (geopositionering).

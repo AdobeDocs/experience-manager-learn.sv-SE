@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Inkludera tredjepartspaket i ditt AEM
 
-I den här artikeln går vi igenom de steg som ingår i att ta med OSGi-paket från tredje part i ditt AEM-projekt.I den här artikeln ska vi ta med [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) i vårt AEM.  Om OSGi är tillgängligt i maven-databasen inkluderas paketets beroende i projektets POM.xml-fil.
+I den här artikeln går vi igenom de steg som ingår i att inkludera OSGi-paket från tredje part i ditt AEM. I den här artikeln ska vi inkludera [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) i vårt AEM.  Om OSGi är tillgängligt i maven-databasen inkluderas paketets beroende i projektets POM.xml-fil.
 
 >[!NOTE]
 > Det antas att tredjepartsbehållaren är ett OSGi-paket
@@ -34,7 +34,7 @@ I den här artikeln går vi igenom de steg som ingår i att ta med OSGi-paket fr
 </dependency>
 ```
 
-Om ditt OSGi-paket finns i filsystemet skapar du en mapp med namnet **localjar** under projektets baskatalog (C:\aemformsbundles\AEMFormsProcessStep\localjar) ser beroendet ut ungefär så här
+Om ditt OSGi-paket finns i ditt filsystem skapar du en mapp med namnet **localjar** under projektets baskatalog(C:\aemformsbundles\AEMFormsProcessStep\localjar) så ser beroendet ut ungefär så här
 
 ```java
 <dependency>
@@ -48,12 +48,13 @@ Om ditt OSGi-paket finns i filsystemet skapar du en mapp med namnet **localjar**
 
 ## Skapa mappstrukturen
 
-Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som bor i **c:\aemformsbundles** mapp
+Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som finns i mappen **c:\aemformsbundles**
 
-* Öppna **filter.xml** från mappen C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault i ditt projekt Anteckna rotattributet för filterelementet.
+* Öppna mappen **filter.xml** från mappen C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault i ditt projekt
+Notera filterelementets rotattribut.
 
 * Skapa följande mappstruktur C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
-* The **apps/AEMFormsProcessStep-vendor-packages** är rotattributvärdet i filter.xml
+* **apps/AEMFormsProcessStep-vendor-packages** är rotattributvärdet i filter.xml
 * Uppdatera beroendeavsnittet i projektets POM.xml
 * Öppna kommandotolken. Navigera till projektmappen (c:\aemformsbundles\AEMFormsProcessStep) i mitt fall. Kör följande kommando
 
@@ -61,5 +62,5 @@ Vi lägger till det här paketet i vårt AEM projekt **AEMFormsProcessStep** som
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med [felix-webbkonsol](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i `crx` databas som visas nedan
-![tredje part](assets/custom-bundle1.png)
+Om allt blir bra installeras paketet tillsammans med tredjepartspaketet i din AEM. Du kan söka efter paketet med hjälp av webbkonsolen [felix](http://localhost:4502/system/console/bundles). Tredjepartspaketet är tillgängligt i mappen /apps i databasen `crx` enligt nedan
+![tredjepartsleverantör](assets/custom-bundle1.png)

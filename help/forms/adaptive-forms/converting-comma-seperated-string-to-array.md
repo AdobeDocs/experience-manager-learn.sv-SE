@@ -27,14 +27,14 @@ Ett processsteg används i ett AEM arbetsflöde när vi vill att arbetsflödet s
 
 De data som skickas har följande format. Värdet för elementet businessUnits är en kommaavgränsad sträng som måste konverteras till en array med strängar.
 
-![skickade data](assets/submitted-data-string.png)
+![skickad-data](assets/submitted-data-string.png)
 
 Indatadata för resten av slutpunkten som är associerad med formulärdatamodellen förväntar sig en array med strängar som visas på den här skärmbilden. Den anpassade koden i processsteget konverterar skickade data till rätt format.
 
 ![fdm-string-array](assets/string-array-fdm.png)
 
 Vi skickar JSON-objektsökvägen och elementnamnet till processsteget. Koden i processsteget ersätter elementets kommaseparerade värden i en array med strängar.
-![processteg](assets/create-string-array.png)
+![process-step](assets/create-string-array.png)
 
 >[!NOTE]
 >
@@ -142,4 +142,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-Exempelpaketet kan [hämtad härifrån](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+Exempelpaketet kan [hämtas här](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

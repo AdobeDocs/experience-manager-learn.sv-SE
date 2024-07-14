@@ -21,32 +21,32 @@ ht-degree: 0%
 
 I AEM 6.5 måste GraphiQL IDE-verktyget installeras manuellt.
 
-1. Navigera till **[Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
-1. Sök efter &quot;GraphiQL&quot; (se till att inkludera **i** in **GraphiQL**).
-1. Ladda ned den senaste **Innehållspaket för GraphiQL v.x.x.x**.
+1. Navigera till **[portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
+1. Sök efter &quot;GraphiQL&quot; (se till att inkludera **i** i **GraphiQL**).
+1. Hämta det senaste **GraphiQL-innehållspaketet v.x.x.x**.
 
    ![Hämta GraphiQL-paket](assets/graphiql/software-distribution.png)
 
    Zip-filen är ett AEM som kan installeras direkt.
 
-1. Gå till AEM Start-menyn **verktyg** > **Distribution** > **Paket**.
-1. Klicka **Överför paket** och välj det paket som laddats ned i föregående steg. Klicka **Installera** för att installera paketet.
+1. Gå till **Verktyg** > **Distribution** > **Paket** från AEM Start-menyn.
+1. Klicka på **Överför paket** och välj det paket som hämtades i det föregående steget. Klicka på **Installera** för att installera paketet.
 
-   ![Installera GraphiQL-paket](assets/graphiql/install-graphiql-package.png)
+   ![Installera GraphiQL-paketet](assets/graphiql/install-graphiql-package.png)
 
-1. Navigera till **CRXDE Lite** > **Databaspanel** > markera `/content/graphiql` nod (till exempel <http://localhost:4502/crx/de/index.jsp#/content/graphiql>).
-1. I **Egenskaper** tabbändringsvärde för `endpoint` egenskap till `/content/_cq_graphql/wknd-shared/endpoint.json`.
-   ![Ändra egenskapsvärde för slutpunkt](assets/graphiql/endpoint-prop-value-change.png)
+1. Navigera till **CRXDE Lite** > **Databaspanel** > markera `/content/graphiql`-nod (till exempel <http://localhost:4502/crx/de/index.jsp#/content/graphiql>).
+1. Ändra värdet för egenskapen `endpoint` till `/content/_cq_graphql/wknd-shared/endpoint.json` på fliken **Egenskaper**.
+   ![Värdeändring för slutpunktsegenskapen](assets/graphiql/endpoint-prop-value-change.png)
 
-1. Navigera till **Konfiguration av webbkonsol** Gränssnitt > Sök efter **CSRF-filter** konfiguration (till exempel<http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>
-1. I `Excluded Paths` egenskapsnamnfältsuppdatering, WKND-slutpunktssökvägen för GraphQL till `/content/cq:graphql/wknd-shared/endpoint`.
+1. Navigera till **webbkonsolkonfigurationen** Användargränssnitt > Sök efter **CSRF-filter**-konfigurationen (till exempel <http://localhost:4502/system/console/configMgr/com.adobe.granite.csrf.impl.CSRFFilter)>)
+1. I uppdateringen av fältet för egenskapsnamn i `Excluded Paths` är WKND-slutpunktssökvägen för GraphQL `/content/cq:graphql/wknd-shared/endpoint`.
 
-![Uteslut ändringar i egenskapsvärde för sökvägar](assets/graphiql/exclude-paths-value-change.png)
+![Uteslut egenskapsvärdeändring för sökvägar](assets/graphiql/exclude-paths-value-change.png)
 
-1. Få åtkomst till GraphiQL-redigeraren med `//HOST:PORT/content/graphiql.html`och verifiera att du kan skapa en ny fråga eller köra en befintlig fråga. (t.ex. <http://localhost:4502/content/graphiql.html>)
+1. Använd GraphiQL-redigeraren med `//HOST:PORT/content/graphiql.html` och verifiera att du kan skapa en ny fråga eller köra en befintlig fråga. (t.ex. <http://localhost:4502/content/graphiql.html>)
 
-![GraphiQL Editor](assets/graphiql/graphiql-editor.png)
+![GraphiQL-redigerare](assets/graphiql/graphiql-editor.png)
 
 >[!TIP]
 >
->För att stödja ditt projektspecifika GraphQL-schema och -frågekörning måste du göra motsvarande ändringar för `endpoint` och `Excluded Paths` värden i ovanstående steg.
+>Om du vill ha stöd för ditt projektspecifika GraphQL-schema och frågekörning måste du göra motsvarande ändringar för värdena `endpoint` och `Excluded Paths` i ovanstående steg.

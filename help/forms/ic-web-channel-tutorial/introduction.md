@@ -25,11 +25,11 @@ Interactive Communications är nytt för AEM Forms 6.4. Det här dokumentet guid
 
 [Hämta och importera mediefilen som är relaterad till den här självstudiekursen till AEM med pakethanteraren.](assets/gettingstartedassets.zip). Den här ZIP-filen innehåller bilder och dokumentfragment som används i den här självstudien
 
-[Ladda ned och zippa upp filen.](assets/warfileandswaggerfile.zip) Den här filen innehåller filen SampleRest.war som måste distribueras till Tomcat och swagger som ska användas för att konfigurera datakällan.
+[Hämta och zippa upp den här filen.](assets/warfileandswaggerfile.zip) Den här filen innehåller filen SampleRest.war som måste distribueras till Tomcat och swagger-filen som måste användas för att konfigurera datakällan.
 
 När du är klar med den här självstudiekursen har du lärt dig följande:
 
-* Skapa datakälla
+* Skapa data-Source
 * Skapa formulärdatamodell
 * Skapa dokumentfragment
 * Konfigurera tabeller och diagram

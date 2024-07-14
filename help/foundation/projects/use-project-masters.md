@@ -24,14 +24,14 @@ Project Masters förenklar användar- och teamhanteringen avsevärt med [!DNL AE
 
 >[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
 
-Administratörer kan nu skapa en **[!DNL Master Project]** och tilldela användare roller/behörigheter som en del av ett projektteam. Du kan skapa projekt från ett huvudprojekt och automatiskt ärva teammedlemskapet. Detta ger flera fördelar:
+Administratörer kan nu skapa en **[!DNL Master Project]** och tilldela användare till roller/behörigheter som en del av ett projektteam. Du kan skapa projekt från ett huvudprojekt och automatiskt ärva teammedlemskapet. Detta ger flera fördelar:
 
 * Återanvänd befintliga team i flera projekt
 * Snabbare projektframtagning eftersom team inte behöver återskapas manuellt
 * Hantera teammedlemskap från en central plats och uppdateringar av team ärvs automatiskt av projekt
 * undviker att skapa dubbletter av ACL:er som kan orsaka prestandaproblem
 
-[!DNL Master Projects] kan skapas under [!UICONTROL Masters] mapp under [!UICONTROL AEM Projects]. När du har skapat ett huvudprojekt visas det som ett alternativ tillsammans med tillgängliga mallar i guiden när nya projekt skapas.
+[!DNL Master Projects] kan skapas under mappen [!UICONTROL Masters] under [!UICONTROL AEM Projects]. När du har skapat ett huvudprojekt visas det som ett alternativ tillsammans med tillgängliga mallar i guiden när nya projekt skapas.
 
 [!DNL Project Masters] URL (lokal AEM Author instance): [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
@@ -41,7 +41,7 @@ Om du tar bort ett huvudprojekt blir det oanvändbara härledda projekt.
 
 Innan du tar bort ett huvudprojekt måste du se till att alla härledda projekt är avslutade och borttagna från AEM. Spara alla nödvändiga projektdata innan du tar bort de härledda projekten. När alla härledda projekt har tagits bort från AEM kan huvudprojektet tas bort.
 
-## Märk [!DNL Project Masters] som inaktiv
+## Markera [!DNL Project Masters] som inaktiv
 
 Genom att ändra huvudprojektets status till inaktiv i projektets egenskaper, försvinner de inaktiva huvudprojekten från huvudprojektlistan.
 
@@ -51,6 +51,6 @@ Om du vill visa inaktiva huvudprojekt växlar du till filterknappen &quot;visa a
 
 ![Projektmallar, teknisk vy](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters] arbeta genom att definiera en uppsättning AEM användargrupper (ägare, redigerare och observatör) och tillåta att härledda projekt refererar till och återanvänder dessa centralt definierade användargrupper.
+[!DNL Project Masters] fungerar genom att definiera en uppsättning AEM användargrupper (ägare, redigerare och observatör) och tillåter härledda projekt att referera till och återanvända dessa centralt definierade användargrupper.
 
-Detta minskar det totala antalet användargrupper som krävs i AEM. Före [!DNL Project Masters]skapade varje projekt tre användargrupper med tillhörande ACE:n för att framtvinga behörighetshantering, vilket innebar att 100 projekt genererade 300 användargrupper. Med Projektmallar kan valfritt antal projekt återanvända samma tre grupper, förutsatt att det delade medlemskapet är anpassat till företagets krav i hela projektet.
+Detta minskar det totala antalet användargrupper som krävs i AEM. Före [!DNL Project Masters] skapade varje projekt tre användargrupper med de medföljande ACE:n för att framtvinga behörighet, vilket innebar att 100 projekt genererade 300 användargrupper. Med Projektmallar kan valfritt antal projekt återanvända samma tre grupper, förutsatt att det delade medlemskapet är anpassat till företagets krav i hela projektet.

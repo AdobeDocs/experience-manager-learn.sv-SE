@@ -1,5 +1,5 @@
 ---
-title: AMS Dispatcher - skrivskyddade eller oföränderliga filer
+title: AMS Dispatcher skrivskyddade eller oföränderliga filer
 description: Förstå varför vissa filer är skrivskyddade eller inte går att redigera och hur du gör de funktionsändringar du vill
 version: 6.5
 topic: Administration, Development
@@ -32,7 +32,7 @@ När AMS etablerar ett system kommer det att implementera en baslinjekonfigurati
 Layouten förhindrar inte att du ändrar deras beteende och åsidosätter ändringar som du behöver.  I stället för att du ändrar de här filerna täcker du över din egen fil som ersätter originalfilen.
 
 Detta gör också att du kan vara säker på att när AMS korrigerar utskickarna med de senaste korrigeringarna och säkerhetsförbättringarna så ändras inte filerna.  Sedan kan du fortsätta att dra nytta av förbättringarna och bara använda de ändringar du vill.
-![Visar ett bowlingband med en boll som rullar längs körfältet.  Kulan har en pil med ordet som visar dig.  Spaltmellanrummen är upphöjda och de har orden oföränderliga filer ovanför dem.](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
+![Visar ett bowlingfält med en boll som rullar längs körfältet.  Kulan har en pil med ordet som visar dig.  Spaltmellanrummen är upphöjda och de har orden oföränderliga filer ovanför dem.](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
 Som framgår av bilden ovan hindrar inte oföränderliga filer dig från att spela spelet.  De hindrar dig bara från att skada din prestanda och håller dig i farten.  Med den här metoden får vi några viktiga funktioner:
 
 - Anpassningar hanteras i sina egna säkra utrymmen
@@ -126,7 +126,7 @@ Här är en typisk lista över filer som distribuerats med en Dispatcher:
     └── mod_dispatcher.so
 ```
 
-Om du vill ta reda på vilka filer som inte kan ändras kan du köra följande kommando på en Dispatcher för att se:
+Du kan ta reda på vilka filer som inte kan ändras genom att köra följande kommando på en Dispatcher för att se:
 
 ```
 $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
@@ -186,7 +186,7 @@ Här följer ett exempel på svar där filer inte kan ändras:
 
 ### Variabel
 
-Med variabler kan du göra funktionella ändringar utan att ändra själva konfigurationsfilerna.  Vissa element i konfigurationen kan justeras genom att variabelvärdena justeras.  Ett exempel som kan markeras från filen `/etc/httpd/conf.d/dispatcher_vhost.conf` visas här:
+Med variabler kan du göra funktionella ändringar utan att ändra själva konfigurationsfilerna.  Vissa element i konfigurationen kan justeras genom att variabelvärdena justeras.  Ett exempel som kan markeras från filen `/etc/httpd/conf.d/dispatcher_vhost.conf` visas här:
 
 ```
 Include /etc/httpd/conf.d/variables/ams_default.vars
@@ -199,7 +199,7 @@ IfModule disp_apache2.c
 /IfModule
 ```
 
-Se hur direktivet DispatcherLogLevel har variabeln `DISP_LOG_LEVEL` i stället för det normala värdet skulle du se där.  Ovanför det kodavsnittet visas även en include-sats till en variabelfil.  Variabelfilen `/etc/httpd/conf.d/variables/ams_default.vars` är där vi vill titta vidare.  Här är innehållet i variabelfilen:
+Se hur direktivet DispatcherLogLevel har en variabel på `DISP_LOG_LEVEL` i stället för det normalvärde som du skulle se där.  Ovanför det kodavsnittet visas även en include-sats till en variabelfil.  Variabelfilen `/etc/httpd/conf.d/variables/ams_default.vars` är den plats där vi vill söka efter nästa.  Här är innehållet i variabelfilen:
 
 ```
 Define DISP_LOG_LEVEL info
@@ -211,11 +211,11 @@ Define PUBLISH_FORCE_SSL 0
 Define LIVECYCLE_FORCE_SSL 1
 ```
 
-Det aktuella värdet för `DISP_LOG_LEVEL` variabeln is `info`.  Vi kan justera detta för att spåra eller felsöka, eller det talvärde/den nivå du väljer.  Nu kan du justera loggnivån automatiskt överallt som styr loggen.
+Du ser ovan att det aktuella värdet för variabeln `DISP_LOG_LEVEL` är `info`.  Vi kan justera detta för att spåra eller felsöka, eller det talvärde/den nivå du väljer.  Nu kan du justera loggnivån automatiskt överallt som styr loggen.
 
 ### Överläggsmetod
 
-Ta reda på den översta nivån med filer eftersom dessa blir den plats där du börjar göra anpassningar.  För att börja med ett enkelt exempel har vi ett scenario där vi vill lägga till ett nytt domännamn som vi tänker peka på denna Dispatcher.  Domänexemplet som vi använder är is we-retail.adobe.com.  Vi börjar med att kopiera en befintlig konfigurationsfil till en ny där vi kan lägga till våra ändringar:
+Ta reda på den översta nivån med filer eftersom dessa blir den plats där du börjar göra anpassningar.  För att börja med ett enkelt exempel har vi ett scenario där vi vill lägga till ett nytt domännamn som vi tänker peka på i den här Dispatcher-versionen.  Domänexemplet som vi använder är is we-retail.adobe.com.  Vi börjar med att kopiera en befintlig konfigurationsfil till en ny där vi kan lägga till våra ändringar:
 
 ```
 $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/available_vhosts/weretail_publish.vhost
@@ -259,13 +259,13 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-Nu har vi uppdaterat vår `ServerName` och `ServerAlias` för att matcha de nya domännamnen samt för att uppdatera andra rubriker i vägbeskrivningar.  Låt oss nu aktivera vår nya fil så att apache kan använda vår nya fil:
+Nu har vi uppdaterat `ServerName` och `ServerAlias` så att de matchar de nya domännamnen samt uppdaterat andra sidhuvuden.  Låt oss nu aktivera vår nya fil så att apache kan använda vår nya fil:
 
 ```
 $ cd /etc/httpd/conf.d/enabled_vhosts/; ln -s ../available_vhosts/weretail_publish.vhost .
 ```
 
-Nu vet webbservern att domänen är något som den ska generera trafik för, men vi måste ändå informera Dispatcher-modulen om att den har ett nytt domännamn att respektera.  Vi börjar med att skapa ett nytt `*_vhost.any` fil `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` och i den filen ska vi ange det domännamn som vi vill använda:
+Nu vet webbservern att domänen är något som den ska generera trafik för, men vi måste ändå informera Dispatcher-modulen om att den har ett nytt domännamn att respektera.  Vi börjar med att skapa en ny `*_vhost.any`-fil `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` och i den filen placerar vi domännamnet som vi vill använda:
 
 ```
 "we-retail.adobe.com"
@@ -301,7 +301,7 @@ Efter:
 }
 ```
 
-Nu har vi uppdaterat servergruppsnamnet och tagit med det i `/virtualhosts` i servergruppskonfigurationen.  Vi måste aktivera den här nya servergruppsfilen så att den kan användas i konfigurationen som körs:
+Nu har vi uppdaterat servergruppsnamnet och tagit med det i avsnittet `/virtualhosts` i servergruppskonfigurationen.  Vi måste aktivera den här nya servergruppsfilen så att den kan användas i konfigurationen som körs:
 
 ```
 $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_weretail_publish_farm.any .
@@ -313,4 +313,4 @@ Nu läser vi bara in webbservertjänsten igen och använder vår nya domän!
 >
 >Observera att vi bara ändrade de delar vi behövde för att ändra och utnyttja den befintliga inkluderings- och koden som medföljde konfigurationsfilerna för baslinjen.  Vi behöver bara dra slutsatser om det vi behöver ändra.  Gör det enklare och gör att vi kan underhålla mindre kod
 
-[Nästa -> Sändningshälsokontroll](./health-check.md)
+[Nästa -> Dispatcher hälsokontroll](./health-check.md)

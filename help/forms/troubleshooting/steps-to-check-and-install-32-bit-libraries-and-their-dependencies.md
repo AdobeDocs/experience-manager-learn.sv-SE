@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att kontrollera och installera de 32-bitars Microsoft Visual C++-omdistribuerbara komponenterna
 
-*I den här videon går vi igenom processen med att kontrollera och installera de 32-bitars omdistribuerbara Microsoft Visual C++-komponenterna som krävs.*
+*I den här videon går du igenom processen för att kontrollera och installera de 32-bitars omdistribuerbara Microsoft Visual C++ som krävs.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

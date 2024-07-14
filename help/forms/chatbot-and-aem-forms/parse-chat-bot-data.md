@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Tolka chattBot-data
 
-A [ChatBot-webkrok](https://www.chatbot.com/help/webhooks/what-are-webhooks/) användes för att skicka ChatBot-data till en AEM.
+En [ChatBot-webkrok](https://www.chatbot.com/help/webhooks/what-are-webhooks/) användes för att skicka ChatBot-data till en AEM.
 Data som hämtas i ChatBot är i JSON-format med användardata i attributobjektet enligt nedan
 ![chatbot-data](assets/chat-bot-data.png)
 

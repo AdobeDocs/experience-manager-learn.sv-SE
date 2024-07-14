@@ -30,56 +30,56 @@ Lär dig hur du skapar en taggegenskap med lägsta möjliga konfiguration som ka
 
 Om du vill skapa en taggegenskap följer du de här stegen.
 
-1. I webbläsaren går du till [Adobe Experience Cloud Home](https://experience.adobe.com/) och logga in med Adobe ID.
+1. Gå till [Adobe Experience Cloud Home](https://experience.adobe.com/)-sidan i webbläsaren och logga in med Adobe ID.
 
-1. Klicka på **Datainsamling** från _Snabb åtkomst_ på Adobe Experience Cloud hemsida.
+1. Klicka på programmet **Datainsamling** i avsnittet _Snabbåtkomst_ på Adobe Experience Cloud hemsida.
 
-1. Klicka på **Taggar** menyalternativ från den vänstra navigeringen och klicka sedan på **Ny egenskap** från det övre högra hörnet.
+1. Klicka på menyobjektet **Taggar** i den vänstra navigeringen och klicka sedan på **Ny egenskap** i det övre högra hörnet.
 
-1. Namnge taggegenskapen med **Namn** obligatoriskt fält. För fältet Domäner anger du domännamnet eller om AEM as a Cloud Service miljön anger `adobeaemcloud.com` och klicka **Spara**.
+1. Namnge taggegenskapen med det obligatoriska fältet **Namn**. I fältet Domäner anger du ditt domännamn eller om du använder AEM as a Cloud Service-miljön anger du `adobeaemcloud.com` och klickar på **Spara**.
 
    ![Taggegenskaper](assets/tag-properties.png)
 
 ## Skapa en ny regel
 
-Öppna den nyligen skapade taggegenskapen genom att klicka på dess namn i dialogrutan **Taggegenskaper** vy. Även under _Min senaste aktivitet_ som du ser att Core-tillägget har lagts till. Core-taggtillägget är standardtillägget och innehåller händelsetyper som sidinläsning, webbläsare, formulär och andra händelsetyper, se [Översikt över Core Extension](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html) för mer information.
+Öppna den nyligen skapade taggegenskapen genom att klicka på dess namn i vyn **Taggegenskaper** . Under rubriken _Min senaste aktivitet_ kan du även se att Core-tillägget har lagts till i det. Core-taggtillägget är standardtillägg och innehåller händelsetyper som sidinläsning, webbläsare, formulär och andra händelsetyper. Mer information finns i [Översikt över kärntillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html).
 
-Med regler kan du ange vad som ska hända när besökaren interagerar med AEM. För att förenkla saker och ting loggar vi två meddelanden till webbläsarkonsolen för att visa hur datainsamling Tagg-integrering kan mata in JavaScript-kod i AEM utan att uppdatera AEM projektkod.
+Med regler kan du ange vad som ska hända när besökaren interagerar med AEM. För att förenkla saker och ting loggar vi två meddelanden till webbläsarkonsolen för att visa hur integrering av datainsamling och taggar kan mata in JavaScript-kod i AEM utan att uppdatera AEM projektkod.
 
 Om du vill skapa en regel följer du de här stegen.
 
-1. Klicka **Regler** från _REDIGERA_ till vänster och klicka sedan på **Skapa ny regel**
+1. Klicka på **Regler** i avsnittet _REDIGERING_ i den vänstra navigeringen och klicka sedan på **Skapa ny regel**
 
-1. Namnge regeln med **Namn** obligatoriskt fält.
+1. Namnge regeln med det obligatoriska fältet **Namn**.
 
-1. Klicka **Lägg till** från _HÄNDELSER_ -avsnittet, sedan i _Händelsekonfiguration_ formulär, i **Händelsetyp** listruteväljare _Bibliotek inläst (sidan ovanpå)_ och klicka **Behåll ändringar**.
+1. Klicka på **Lägg till** i avsnittet _HÄNDELSER_ och sedan i formuläret _Händelsekonfiguration_ i listrutan **Händelsetyp**, markera alternativet _Bibliotek inläst (sidan överst)_ och klicka på **Behåll ändringar**.
 
-1. Klicka **Lägg till** från _ÅTGÄRDER_ -avsnittet, sedan i _Åtgärdskonfiguration_ formulär, i **Åtgärdstyp** listruteväljare _Egen kod_ och klicka **Öppna redigeraren**.
+1. Klicka på **Lägg till** i avsnittet _ÅTGÄRDER_, markera sedan alternativet _Egen kod_ i formuläret _Åtgärdskonfiguration_ i listrutan **Åtgärdstyp** och klicka på **Öppna redigerare**.
 
-1. I _Redigera kod_ modal, ange följande JavaScript-kodfragment och klicka sedan på **Spara** och slutligen klicka **Behåll ändringar**.
+1. Ange följande JavaScript-kodfragment i _Redigera kod_, klicka sedan på **Spara** och slutligen på **Behåll ändringar**.
 
    ```javascript
    console.log('Tags Property loaded, all set for...');
    console.log('capabilities such as capturing data, conversion tracking and delivering unique and personalized experiences');
    ```
 
-1. Klicka **Spara** för att slutföra regelskapandet.
+1. Klicka på **Spara** för att slutföra regelskapandeprocessen.
 
    ![Ny regel](assets/new-rule.png)
 
 ## Lägg till bibliotek och publicera det
 
-Egenskapen Tagg _Regler_ aktiveras med ett bibliotek, tänk på biblioteket som ett paket som innehåller JavaScript-kod. Aktivera den nya regeln genom att följa stegen.
+Taggegenskapen _Regler_ aktiveras med ett bibliotek, tänk på biblioteket som ett paket som innehåller JavaScript-kod. Aktivera den nya regeln genom att följa stegen.
 
-1. Klicka **Publiceringsflöde** från _PUBLICERING_ till vänster och klicka sedan på **Lägg till bibliotek**
+1. Klicka på **Publiceringsflöde** i avsnittet _PUBLISHING_ i den vänstra navigeringen och klicka sedan på **Lägg till bibliotek**
 
-1. Namnge biblioteket med **Namn** fält och markera _Utveckling_ alternativ för **Miljö** nedrullningsbar meny.
+1. Namnge biblioteket med fältet **Namn** och välj alternativet _Utveckling(development)_ i listrutan **Miljö**.
 
-1. Om du vill välja alla ändrade resurser sedan taggegenskapen skapades klickar du på **+ Lägg till alla ändrade resurser**. Den här åtgärden lägger till den nya regeln och kärntilläggsresursen i biblioteket. Klicka till sist **Spara och bygg till utveckling**.
+1. Om du vill välja alla ändrade resurser sedan taggegenskapen skapades klickar du på **+ Lägg till alla ändrade resurser**. Den här åtgärden lägger till den nya regeln och kärntilläggsresursen i biblioteket. Klicka slutligen på **Spara och skapa till utveckling**.
 
-1. När biblioteket har byggts för **Utveckling** simbana, använda _ellipser_ välj **Skicka för godkännande**
+1. När biblioteket har byggts för simbanan **Utveckling** väljer du _ellipsen_ **Skicka för godkännande**
 
-1. Sedan i **Skickat** simbana med _ellipser_ välj **Godkänn för publicering**, på samma sätt **Bygg och publicera i produktion** i **Godkänd** simbana.
+1. I det **skickade** simbanor som använder _ellipser_ väljer du **Godkänn för publicering**, på samma sätt som **Skapa och Publish till produktion** i det **Godkänd** simbanan.
 
 ![Publicerat bibliotek](assets/published-library.png)
 

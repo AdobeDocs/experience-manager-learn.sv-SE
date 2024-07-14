@@ -29,18 +29,18 @@ Lär dig hur du använder metadatafunktionerna för import och export i Adobe Ex
 
 >[!TIP]
 >
-> När du öppnar en CSV-fil för export av metadata i Excel använder du [Excel-import](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) i stället för att dubbelklicka på filen för att undvika problem med UTF-8-kodade CSV-filer.
+> När du öppnar CSV-fil för metadataexport i Excel använder du [Excel-importeraren](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) i stället för att dubbelklicka på filen för att undvika problem med UTF-8-kodade CSV-filer.
 >
 > Så här öppnar du CSV-filen för metadataexport i Excel:
 > 
 > 1. Öppna Microsoft Excel
-> 1. Välj __Arkiv > Nytt__ skapa ett tomt kalkylblad
-> 1. Öppna det tomma kalkylbladet och markera __Arkiv > Importera__
-> 1. Välj __Text__ och klicka på __Importera__
+> 1. Välj __Arkiv > Nytt__ om du vill skapa ett tomt kalkylblad
+> 1. Öppna det tomma kalkylbladet och välj __Arkiv > Importera__
+> 1. Markera filen __Text__ och klicka på __Importera__
 > 1. Markera den exporterade CSV-filen i filsystemet och klicka på __Hämta data__
-> 1. I steg 1 i importguiden väljer du __Avgränsad__ och ange __Filens ursprung__ till __Unicode (UTF-8)__ och klicka __Nästa__
-> 1. I steg 2 anger du __Avgränsare__ till __Komma__ och klicka __Nästa__
-> 1. I steg 3 lämnar du __Kolumndataformat__ som det är och klicka __Slutför__
+> 1. I steg 1 i importguiden väljer du __Avgränsad__ och anger __Filens ursprung__ till __Unicode (UTF-8)__. Klicka sedan på __Nästa__
+> 1. I steg 2 anger du __avgränsarna__ till __komma__ och klickar på __Nästa__
+> 1. I steg 3 låter du __kolumndataformatet__ vara kvar och klickar på __Slutför__
 > 1. Välj __Importera__ för att lägga till data i kalkylblad
 
 ## Import av metadata {#metadata-import}

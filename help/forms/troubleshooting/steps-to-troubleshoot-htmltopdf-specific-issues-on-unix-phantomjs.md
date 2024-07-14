@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (PhantomJS)
 
-*I den här videon går du igenom stegen för att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (PhantomJS).*
+*Den här videon går igenom stegen för att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (PhantomJS).*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335546?quality=12&learn=on)

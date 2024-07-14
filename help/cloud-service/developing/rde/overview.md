@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Snabba utvecklingsmiljöer
 
-Läs om Rapid Development Environment (RDE) på AEM as a Cloud Service.
+Läs om Rapid Development Environment (RDE) i AEM as a Cloud Service.
 
 Den här videon:
 
@@ -31,12 +31,12 @@ Den här videon:
 
 ## Nästa steg
 
-Läs [konfigurera](./how-to-setup.md) en RDE på AEM as a Cloud Service.
+Lär dig [hur du konfigurerar](./how-to-setup.md) en RDE i AEM as a Cloud Service.
 
 ## Ytterligare resurser
 
 [Introduktion till RDE-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
 
-[Cloud Manager CI/CD Pipelines](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
+[Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
 
-[Ställ in utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)
+[Konfigurera utvecklings-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)

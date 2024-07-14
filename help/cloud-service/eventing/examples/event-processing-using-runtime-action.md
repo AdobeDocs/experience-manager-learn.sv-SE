@@ -21,39 +21,39 @@ ht-degree: 0%
 
 # AEM händelsehantering med Adobe I/O Runtime Action
 
-Lär dig hur du bearbetar mottagna AEM händelser med [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) Åtgärd. Det här exemplet förbättrar det tidigare exemplet [Adobe I/O Runtime Action and AEM Events](runtime-action.md)kontrollerar du att du har slutfört den innan du fortsätter med den här.
+Lär dig hur du bearbetar mottagna AEM med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/). Det här exemplet förbättrar det tidigare exemplet [Adobe I/O Runtime Action och AEM Events](runtime-action.md). Kontrollera att du har slutfört det innan du fortsätter med det här exemplet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
-I det här exemplet lagrar händelsebearbetningen de ursprungliga händelsedata och mottagna händelser som ett aktivitetsmeddelande i Adobe I/O Runtime-lagringen. Men om händelsen är _Innehållsfragmentet har ändrats_ skriver du, anropar AEM författartjänst för att hitta ändringsinformationen. Slutligen visas händelseinformationen i ett enda program (SPA).
+I det här exemplet lagrar händelsebearbetningen de ursprungliga händelsedata och mottagna händelser som ett aktivitetsmeddelande i Adobe I/O Runtime-lagringen. Om händelsen är av typen _Innehållsfragment ändrat_ anropas även AEM författartjänst för att hitta ändringsinformationen. Slutligen visas händelseinformationen i ett enda program (SPA).
 
 ## Krav
 
 För att kunna genomföra den här självstudiekursen behöver du:
 
-- AEM as a Cloud Service miljö med [AEM Eventing aktiverad](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment). Dessutom innehåller exemplet [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) projektet måste distribueras till det.
+- AEM as a Cloud Service-miljö med [AEM Eventing aktiverat](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment). Dessutom måste exempelprojektet [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) distribueras till det.
 
 - Åtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
 
-- [ADOBE DEVELOPER CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) installeras på din lokala dator.
+- [Adobe Developer CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) är installerat på din lokala dator.
 
-- Lokalt initierat projekt från det tidigare exemplet [Adobe I/O Runtime Action and AEM Events](./runtime-action.md#initialize-project-for-local-development).
+- Lokalt initierat projekt från det tidigare exemplet [Adobe I/O Runtime Action och AEM Events](./runtime-action.md#initialize-project-for-local-development).
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Service Eventing är bara tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM på din AEM as a Cloud Service miljö kontaktar du [AEM](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service Eventing är endast tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM i din AEM as a Cloud Service-miljö kontaktar du [AEM-Eventing team](mailto:grp-aem-events@adobe.com).
 
 ## Processor för AEM-händelser
 
-I det här exemplet använder händelseprocessorn [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) utför följande uppgifter:
+I det här exemplet utför händelseprocessorn [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) följande uppgifter:
 
 - Tolkar mottagen händelse i ett aktivitetsmeddelande.
-- Om mottagen händelse är av _Innehållsfragmentet har ändrats_ skriv, anropa tillbaka till AEM författartjänst för att hitta ändringsinformationen.
+- Om den mottagna händelsen är av typen _Innehållsfragment ändrat_, kan du ringa AEM författartjänsten för att hitta ändringsinformationen.
 - Bevarar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådana finns) i Adobe I/O Runtime-lagringsutrymme.
 
 För att utföra ovanstående uppgifter börjar vi med att lägga till en åtgärd i projektet, utveckla JavaScript-moduler för att utföra ovanstående uppgifter och slutligen uppdatera åtgärdskoden så att den använder de utvecklade modulerna.
 
-Se bifogad fil [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip) för hela koden och de viktigaste filerna markeras i avsnittet nedan.
+Se den bifogade filen [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-processing-using-runtime-action/WKND-AEM-Eventing-Runtime-Action.zip) för den fullständiga koden och i avsnittet nedan markeras nyckelfilerna.
 
 ### Lägg till åtgärd
 
@@ -63,7 +63,7 @@ Se bifogad fil [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-p
   aio app add action
   ```
 
-- Välj `@adobe/generator-add-action-generic` som åtgärdsmall, namnge åtgärden som `aem-event-processor`.
+- Välj `@adobe/generator-add-action-generic` som åtgärdsmall och ge åtgärden namnet `aem-event-processor`.
 
   ![Lägg till åtgärd](../assets/examples/event-processing-using-runtime-action/add-action-template.png)
 
@@ -71,7 +71,7 @@ Se bifogad fil [WKND-AEM-Eventing-Runtime-Action.zip](../assets/examples/event-p
 
 För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScript-moduler.
 
-- The `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js` bestämmer om den mottagna händelsen är av _Innehållsfragmentet har ändrats_ typ.
+- Modulen `src/dx-excshell-1/actions/aem-event-processor/eventValidator.js` avgör om den mottagna händelsen är av typen _Innehållsfragment ändrat_ .
 
   ```javascript
   async function needsAEMCallback(aemEvent) {
@@ -98,7 +98,7 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
   module.exports = needsAEMCallback;
   ```
 
-- The `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js` modulen anropar AEM författartjänst för att hitta ändringsinformationen.
+- Modulen `src/dx-excshell-1/actions/aem-event-processor/loadEventDetailsFromAEM.js` anropar AEM författartjänst för att hitta ändringsinformationen.
 
   ```javascript
   ...
@@ -166,9 +166,9 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
   ...
   ```
 
-  Se [Självstudiekurs om AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) om du vill veta mer om det. Dessutom finns [Konfigurationsfiler för App Builder](https://developer.adobe.com/app-builder/docs/guides/configuration/) för att hantera hemligheter och åtgärdsparametrar.
+  Mer information finns i självstudiekursen [AEM Tjänstautentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en). [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
 
-- The `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` i lagras de ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådana finns) i Adobe I/O Runtime-lagringen.
+- Modulen `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` lagrar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådan finns) i Adobe I/O Runtime-lagringsutrymme.
 
   ```javascript
   ...
@@ -193,7 +193,7 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
 
 ### Uppdatera åtgärdskod
 
-Slutligen ska du uppdatera åtgärdskoden på `src/dx-excshell-1/actions/aem-event-processor/index.js` för att använda de utvecklade modulerna.
+Uppdatera åtgärdskoden på `src/dx-excshell-1/actions/aem-event-processor/index.js` för att använda de utvecklade modulerna.
 
 ```javascript
 ...
@@ -251,10 +251,10 @@ if (params.challenge) {
 
 ## Ytterligare resurser
 
-- The `src/dx-excshell-1/actions/model` mappen innehåller `aemEvent.js` och `errors.js` filer, som används av åtgärden för att analysera den mottagna händelsen och hantera fel.
-- The `src/dx-excshell-1/actions/load-processed-aem-events` -mappen innehåller åtgärdskod. Den här åtgärden används av SPA för att läsa in de bearbetade AEM händelserna från Adobe I/O Runtime-lagringen.
-- The `src/dx-excshell-1/web-src` -mappen innehåller den SPA koden som visar de bearbetade AEM.
-- The `src/dx-excshell-1/ext.config.yaml` filen innehåller åtgärdskonfiguration och parametrar.
+- Mappen `src/dx-excshell-1/actions/model` innehåller `aemEvent.js`- och `errors.js`-filer, som används av åtgärden för att tolka den mottagna händelsen och hantera fel.
+- Mappen `src/dx-excshell-1/actions/load-processed-aem-events` innehåller åtgärdskod. Den här åtgärden används av SPA för att läsa in de bearbetade AEM händelserna från Adobe I/O Runtime-lagringsutrymmet.
+- Mappen `src/dx-excshell-1/web-src` innehåller den SPA koden som visar de bearbetade AEM.
+- Filen `src/dx-excshell-1/ext.config.yaml` innehåller åtgärdskonfiguration och parametrar.
 
 ## Koncept och viktiga arbetsmoment
 

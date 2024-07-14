@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Konfigurera resurskälla med Brand Portal
 
-*I den här videon går vi igenom processen med att konfigurera medieinköpen med Brand Portal.*
+*I den här videon går vi igenom processen att konfigurera resurskälla med Brand Portal.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)

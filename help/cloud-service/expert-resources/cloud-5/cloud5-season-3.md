@@ -21,7 +21,7 @@ Välkommen till 3:an Cloud 5 Series från AEM Engineering. Ett av de största pr
 
 ## Förslagsruta
 
-Besök [Förslagsruta](https://forms.office.com/r/74P5Xz4UH0) för att skicka in ämnesförslag.
+Besök [förslagsrutan](https://forms.office.com/r/74P5Xz4UH0) om du vill skicka in förslag på ämnen.
 
 ## Säsong 3
 
@@ -35,8 +35,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
-                <strong>Sökning från tredje part</strong></a>        
-                <br/><em>med James Talbot och Varun Mitra, AEM Engineering</em>
+                <strong> Sökning från tredje part </strong></a>        
+                <br/><em>med James Talbot och Varun Mitra, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -49,8 +49,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-rum.md">
-                <strong>Real User Monitoring (RUM)</strong></a>        
-                <br/><em>med James Talbot och Damian Langsweirdt, AEM Engineering</em>
+                <strong> Real User Monitoring (RUM) </strong></a>        
+                <br/><em>med James Talbot &amp; Damian Langsweirdt, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -79,8 +79,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
-                <strong>Edge arbetare</strong></a>        
-                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering</em>
+                <strong>Edge-arbetare</strong></a>        
+                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -95,8 +95,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
-                <strong>Publish, avpublicera evenemang i Edge Delivery Services</strong></a>        
-                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering</em>
+                <strong> Publish, avpublicera händelser i Edge Delivery Services </strong></a>        
+                <br/><em>med James Talbot &amp; Amol Anand, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -109,8 +109,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>Frågeindex och Excel-formler </strong></a>        
-                <br/><em>med James Talbot och Varun Mitra, AEM Engineering</em>
+                <strong> Frågeindex och Excel-formler </strong> </a>        
+                <br/><em>med James Talbot och Varun Mitra, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -123,8 +123,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <strong>Använd ditt eget CloudFlex CDN</strong></a>        
-                <br/><em>med James Talbot &amp; Kunwar Saluja, AEM Engineering</em>
+                <strong> Ta med ditt eget CloudBridge CDN </strong> </a>        
+                <br/><em>med James Talbot &amp; Kunwar Saluja, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -139,8 +139,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
-                <strong>Integrera AEM Assets med dokumentframställning</strong></a>        
-                <br/><em>med James Talbot och Darin Kuntze, AEM Engineering</em>
+                <strong> Integrera AEM Assets med dokumentredigering </strong> </a>        
+                <br/><em>med James Talbot &amp; Darin Kuntze, AEM Engineering </em>
             </div>
             <p>
                 <br/>
@@ -153,8 +153,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
-                <strong>Generativ AI i AEM Sites</strong></a>        
-                <br/><em>med James Talbot och Karthik Muralidharan, AEM produktmarknadsföring</em>
+                <strong> Generativ AI i AEM Sites </strong></a>        
+                <br/><em>med James Talbot &amp; Karthik Muralidharan, AEM produktmarknadsföring </em>
             </div>
             <p>
                 <br/>                
@@ -167,8 +167,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </a>
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
-                <strong>Exploring Universal Editor</strong></a>        
-                <br/><em>med James Talbot &amp; Dirk Rudolph, AEM Engineering</em>
+                <strong> Utforska den universella redigeraren </strong> </a>        
+                <br/><em>med James Talbot &amp; Dirk Rudolph, AEM Engineering </em>
             </div>
             <p>
                 <br/>                

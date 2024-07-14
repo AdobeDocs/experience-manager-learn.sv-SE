@@ -23,9 +23,9 @@ ht-degree: 16%
 
 {{edge-delivery-services}}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte använt **SPA** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Appen React har utvecklats och utformats för att användas med AEM SPA Editor, som mappar React-komponenter till AEM komponenter. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte har använt funktionen **SPA Editor** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en React-applikation för ett fiktivt livsstilsmärke, WKND. Appen React har utvecklats och utformats för att användas med AEM SPA Editor, som mappar React-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
-![Slutlig SPA implementerad](assets/wknd-spa-implementation.png)
+![Slutlig SPA har implementerats](assets/wknd-spa-implementation.png)
 
 *WKND-SPA*
 
@@ -37,16 +37,16 @@ Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** 
 
 All självstudiekod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-The [senaste kodbas](https://github.com/adobe/aem-guides-wknd-spa/releases) finns som hämtningsbara AEM.
+Den [senaste kodbasen](https://github.com/adobe/aem-guides-wknd-spa/releases) är tillgänglig som hämtningsbara AEM.
 
 ## Förutsättningar
 
 Innan du startar den här självstudiekursen behöver du följande:
 
 * Grundläggande kunskaper i HTML, CSS och JavaScript
-* Grundläggande kunskap om [Reagera](https://reactjs.org/tutorial/tutorial.html)
+* Grundläggande kunskap om [Reaktion](https://reactjs.org/tutorial/tutorial.html)
 
-*Även om det inte är nödvändigt är det bra att ha en grundläggande förståelse för [utveckla traditionella AEM Sites-komponenter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
+*Även om det inte krävs är det bra att ha en grundläggande förståelse för [utveckling av traditionella AEM Sites-komponenter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).*
 
 ## Lokal utvecklingsmiljö {#local-dev-environment}
 
@@ -61,10 +61,10 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 >[!NOTE]
 >
-> **Är du inte AEM as a Cloud Service?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+> **Ny på AEM as a Cloud Service?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 >
-> **Har du inte använt AEM 6.5 tidigare?** Kolla in [följa guiden för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+> **Har du inte använt AEM 6.5 tidigare?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till [Skapa projekt](create-project.md) och lär dig hur du skapar ett projekt som SPA redigeraren har aktiverat med hjälp av AEM Project Archetype.
+Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [Skapa projekt](create-project.md) och lär dig hur du skapar ett projekt som är aktiverat för SPA redigeringsprogram med hjälp av AEM Project Archetype.

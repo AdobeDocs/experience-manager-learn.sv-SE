@@ -31,9 +31,9 @@ Följ de stegvisa instruktionerna i det här dokumentet för att utnyttja de kra
 
 Innan du fortsätter med att skicka e-postmeddelanden med dynamiska mallar för SendGrid från AEM Forms måste du kontrollera att du har uppfyllt följande krav:
 
-1. **SendGrid-konto**: Registrera dig för ett SendGrid-konto på [https://sendgrid.com](https://sendgrid.com) för att få tillgång till sina e-posttjänster. Du behöver kontoinloggningsuppgifterna för att kunna integrera SendGrid med AEM Forms.
-1. **Förmåga att skapa datakällor**: Ha kunskap i hur man skapar datakällor i AEM Forms. Om det behövs kan du läsa dokumentationen om [skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) för detaljerade anvisningar.
-1. **Förtrogenhet med formulärdatamodellen**: Förstå begreppet formulärdatamodell i AEM Forms. Om det behövs kan du läsa dokumentationen om [skapa formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) för att säkerställa att ni får den nödvändiga förståelsen.
+1. **SendGrid-konto**: Registrera ett SendGrid-konto på [https://sendgrid.com](https://sendgrid.com) för att få tillgång till deras e-postleveranstjänster. Du behöver kontoinloggningsuppgifterna för att kunna integrera SendGrid med AEM Forms.
+1. **Bekanta dig med att skapa datakällor**: Lär dig att skapa datakällor i AEM Forms. Om det behövs finns detaljerade anvisningar i dokumentationen om [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html).
+1. **Bekanta dig med formulärdatamodellen**: Förstå begreppet formulärdatamodell i AEM Forms. Om det behövs kan du läsa dokumentationen om [att skapa formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) för att kontrollera att du har den förståelse som krävs.
 
 Genom att uppfylla dessa krav får du de kunskaper och resurser du behöver för att effektivt skicka e-postmeddelanden med dynamiska mallar för SendGrid från AEM Forms.
 
@@ -49,10 +49,10 @@ Du kan använda den medföljande Swagger-filen som referens eller utgångspunkt 
 
 Följ de här stegen för att testa funktionen som beskrivs i den här handboken:
 
-1. Ladda ned [swagger-fil](assets/SendGridWithDynamicTemplate.yaml) finns i resursmappen.
+1. Hämta [swagger-filen](assets/SendGridWithDynamicTemplate.yaml) som finns i resursmappen.
 2. Skapa en återställd datakälla med den hämtade swagger-filen och inloggningsuppgifterna för SendGrid.
 3. Skapa en formulärdatamodell baserad på datakällan Restful.
-4. Anropa `mail/send` POST av formulärdatamodellens funktion enligt dina krav. Du kan till exempel utlösa e-postmeddelandet med en knapp genom att klicka eller ta med det i ditt AEM Forms-arbetsflöde.
+4. Anropa åtgärden `mail/send` POST för formulärdatamodellen enligt dina krav. Du kan till exempel utlösa e-postmeddelandet med en knapp genom att klicka eller ta med det i ditt AEM Forms-arbetsflöde.
 
 Nyttolastexemplet för tjänsten är följande. Ersätt platshållarvärdena med dina egna data:
 
@@ -75,6 +75,6 @@ Nyttolastexemplet för tjänsten är följande. Ersätt platshållarvärdena med
 }
 ```
 
-Se till att `template_id` motsvarar ID:t för den dynamiska e-postmallen för SendGrid, och e-postadresserna är giltiga och verifierade av SendGrid. Värdena i `personalizations` kan du anpassa e-postmeddelandet med användarangivna data från det anpassade formuläret.
+Kontrollera att `template_id` motsvarar ID:t för den dynamiska e-postmallen för SendGrid, och att e-postadresserna är giltiga och verifierade av SendGrid. Med värdena i avsnittet `personalizations` kan du anpassa e-postmeddelandet med användarangivna data från det anpassade formuläret.
 
 Genom att följa de här stegen och anpassa den tillhandahållna nyttolasten kan du effektivt testa integrationen av dynamiska mallar i SendGrid med AEM Forms.

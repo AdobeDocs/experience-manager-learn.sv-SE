@@ -30,4 +30,4 @@ Du behöver följande:
 
 ## Nästa steg
 
-Skriv [egen java-kod genom att implementera gränssnittet WorkflowProcess](./custom-process-step-aem-workflow.md)
+Skriv din [anpassade java-kod genom att implementera WorkflowProcess-gränssnittet](./custom-process-step-aem-workflow.md)

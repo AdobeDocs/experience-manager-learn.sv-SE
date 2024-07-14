@@ -1,6 +1,6 @@
 ---
-title: Lägga till komponenter i avsnittet Resurser
-description: Konfigurera dragspelslayout för resurspanelen. Dragspelslayouten ger en bättre slutanvändarupplevelse när du lägger till repeterbara avsnitt.
+title: Lägga till komponenter i Assets-avsnittet
+description: Konfigurera dragspelslayout för Assets-panelen. Dragspelslayouten ger en bättre slutanvändarupplevelse när du lägger till repeterbara avsnitt.
 feature: Adaptive Forms
 version: 6.4,6.5
 jira: KT-4212
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 ---
 
-# Lägga till komponenter i resurspanelen {#adding-components-to-assets-section}
+# Lägga till komponenter i panelen Assets {#adding-components-to-assets-section}
 
-Konfigurera dragspelslayout för resurspanelen. Dragspelslayouten ger en bättre slutanvändarupplevelse när du lägger till repeterbara avsnitt.
+Konfigurera dragspelslayout för Assets-panelen. Dragspelslayouten ger en bättre slutanvändarupplevelse när du lägger till repeterbara avsnitt.
 
-**Konfigurera resurspanelen**
+**Konfigurera Assets-panelen**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
 

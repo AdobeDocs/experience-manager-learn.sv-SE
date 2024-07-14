@@ -1,5 +1,5 @@
 ---
-title: Hälsokontroll för AMS Dispatcher
+title: AMS Dispatcher Health Check
 description: AMS tillhandahåller ett cgi-bin-skript för hälsokontroll som molnbelastningsutjämnarna kommer att köra för att se om AEM är hälsosamt och bör fortsätta vara i tjänst för allmän trafik.
 version: 6.5
 topic: Administration
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# Hälsokontroll för AMS Dispatcher
+# AMS Dispatcher Health Check
 
 [Innehållsförteckning](./overview.md)
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 När du har en AMS-baslinje installerad som dispatcher levereras den med några kostnadsfria funktioner.  En av dessa funktioner är en uppsättning hälsokontrollsskript.
 Dessa skript gör att belastningsutjämnaren som AEM i stacken kan känna till vilka ben som är felfria och hålla dem i drift.
 
-![Animerat GIF som visar trafikflödet](assets/load-balancer-healthcheck/health-check.gif "Hälsokontrollsteg")
+![Animerat GIF visar trafikflödet](assets/load-balancer-healthcheck/health-check.gif "Hälsokontrollsteg")
 
 ## Hälsokontroll för grundläggande belastningsutjämnare
 
@@ -38,13 +38,13 @@ Alla förfrågningar som kommer via belastningsutjämnaren rundar av robin till 
 
 Standardkontrollen är vanligtvis en portkontroll för att se om servrarna som är målinriktade i belastningsutjämnaren lyssnar på porttrafiken är på (dvs. TCP 80 och 443)
 
-> `Note:` Även om detta fungerar har det ingen riktig mätare för om AEM är hälsosamt.  Testar bara om Dispatcher (webbservern Apache) är igång och körs.
+> `Note:` Det här fungerar men det finns ingen riktig mätare för om AEM är hälsosam.  Testar bara om Dispatcher (webbservern Apache) är igång och körs.
 
 ## Hälsokontroll för AMS
 
-För att undvika att skicka trafik till en hälsosam dispatcher som kör en icke-hälsosam AEM skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
+För att undvika att skicka trafik till en hälsosam dispatcher som står framför en icke-hälsosam AEM skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
 
-![Bilden visar de olika delarna som hälsokontrollen ska fungera i](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroller")
+![Bilden visar de olika delarna som hälsokontrollen kan användas för ](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
 
 Hälsokontrollen består av följande delar
 - 1 `Load balancer`
@@ -64,7 +64,7 @@ För att ange om AEM fungerar måste du göra en grundläggande sidkompilering o
 
 Här är sidan.  Den visar databas-ID:t för installationen
 
-![Bilden visar sidan AMS Regent](assets/load-balancer-healthcheck/health-check-page.png "Health-check-page")
+![Bilden visar sidan AMS Regent ](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
 
 > `Note:` Vi ser till att sidan inte kan cachelagras.  Det skulle inte kontrollera den faktiska statusen om varje gång den returnerade en cachelagrad sida!
 
@@ -74,15 +74,15 @@ Det här är den lätta viktslutpunkten som vi kan testa för att se att AEM är
 
 Vi konfigurerar belastningsutjämnarna så att de pekar på en CGI-BIN-slutpunkt i stället för att använda en portkontroll.
 
-![Bild visar hälsokontrollskonfigurationen för AWS belastningsutjämnare](assets/load-balancer-healthcheck/aws-settings.png "aws-lb-settings")
+![Bilden visar hälsokontrollskonfigurationen för AWS belastningsutjämnare](assets/load-balancer-healthcheck/aws-settings.png "aws-lb-settings")
 
-![Bilden visar hälsokontrollskonfigurationen för Azure-belastningsutjämnaren](assets/load-balancer-healthcheck/azure-settings.png "azure-lb-settings")
+![Bilden visar Azure-belastningsutjämnarens hälsokontrollskonfiguration](assets/load-balancer-healthcheck/azure-settings.png "azure-lb-settings")
 
 ### Virtuella värddatorer för hälsoutkontroll i Apache
 
-#### Virtuell värd för CGI-BIN `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
+#### Virtuell CGI-BIN-värd `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
 
-Det här är `<VirtualHost>` Konfigurationsfil för Apache som gör att CGI-Bin-filerna kan köras.
+Detta är den `<VirtualHost>` Apache-konfigurationsfil som gör att CGI-Bin-filerna kan köras.
 
 ```
 Listen 81
@@ -101,7 +101,7 @@ Listen 81
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-Dessa filer har namn `000_` som prefix för syfte.  Det är avsiktligt konfigurerat att använda samma domännamn som den publicerade webbplatsen.  Avsikten är att den här filen ska aktiveras när hälsokontrollen upptäcker ett problem med en av de AEM.  Erbjud sedan en felsida istället för bara en 503 HTTP-svarskod utan någon sida.  Det kommer att stjäla trafik från det normala `.vhost` eftersom filen lästes in innan det `.vhost` samtidigt som samma `ServerName` eller `ServerAlias`.  Detta resulterar i sidor som är avsedda för en viss domän att gå till den ohälsosamma värden i stället för standardvärden, vilket är det normala trafikflödet.
+Dessa filer namnges `000_` som prefix för syfte.  Det är avsiktligt konfigurerat att använda samma domännamn som den publicerade webbplatsen.  Avsikten är att den här filen ska aktiveras när hälsokontrollen upptäcker ett problem med en av de AEM.  Erbjud sedan en felsida istället för bara en 503 HTTP-svarskod utan någon sida.  Den stjäl trafik från den normala `.vhost`-filen eftersom den läses in före den `.vhost`-filen och delar samma `ServerName` eller `ServerAlias`.  Detta resulterar i sidor som är avsedda för en viss domän att gå till den ohälsosamma värden i stället för standardvärden, vilket är det normala trafikflödet.
 
 När hälsokontrollsskripten körs loggar de ut sin aktuella hälsostatus.  En gång i minuten körs ett cronjob på servern som söker efter felfria poster i loggen.  Om den upptäcker att AEM inte är felfri kommer den att aktivera symbolen:
 
@@ -138,7 +138,7 @@ Giltiga alternativ:
 - ingen
    - Det här alternativet hoppar över den här funktionen i hälsokontrollen
 
-När du tittar på `VirtualHost` om du anger dessa ser du att de läser in samma dokument som en felsida för varje begäran som kommer när den är aktiverad:
+När du tittar på inställningen `VirtualHost` för dessa ser du att de läser in samma dokument som en felsida för varje begäran som kommer när den är aktiverad:
 
 ```
 <VirtualHost *:80>
@@ -177,7 +177,7 @@ X-Vhost: unhealthy-author
 
 Istället för en tom sida får de den här sidan.
 
-![Bilden visar standardunderhållssidan](assets/load-balancer-healthcheck/unhealthy-page.png "felfri sida")
+![Bilden visar standardunderhållssidan](assets/load-balancer-healthcheck/unhealthy-page.png "sida som inte är felfri")
 
 ### CGI-fackskript
 
@@ -185,27 +185,27 @@ Det finns fem olika skript som kan konfigureras i inställningarna för belastni
 
 #### /bin/checkauthor
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `author` AEM är inte felfri
+Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om AEM `author` inte är felfri
 
-> `Note:` Tänk på att om publiceringsinstansen AEM inte är felfri stannar dispatchern i tjänst så att trafik kan flöda till AEM författarinstans
+> `Note:` Tänk på att om publiceringsinstansen AEM inte är felfri så stannar dispatchern i tjänst så att trafik kan flöda till AEM författarinstans
 
 #### /bin/checkpublish (default)
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `publish` AEM är inte felfri
+Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om AEM `publish` inte är felfri
 
 > `Note:` Tänk på att om författarinstansen AEM felfri så stannar dispatchern i tjänst så att trafik kan flöda till AEM publiceringsinstansen
 
 #### /bin/checkeither
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `author` eller `publisher` AEM är inte felfri
+Det här skriptet används för att kontrollera och logga alla förekomster som det kommer att köra framåt, men returnerar bara ett fel om `author`- eller `publisher`-AEM inte är felfri
 
-> `Note:` Tänk på att om publiceringsinstansen eller författaren AEM instansen inte är felfri så skulle dispatchern sluta använda tjänsten.  Betyder att om någon av dem var hälsosam så skulle den inte heller få någon trafik
+> `Note:` Tänk på att om publiceringsinstansen eller författarinstansen AEM felfri så skulle dispatchern sluta använda tjänsten.  Betyder att om någon av dem var hälsosam så skulle den inte heller få någon trafik
 
 #### /bin/checkboth
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om `author` och `publisher` AEM instansen är inte felfri
+Det här skriptet används för att kontrollera och logga alla förekomster som det kommer att köra framåt, men returnerar bara ett fel om `author`- och `publisher`-AEM inte är felfria
 
-> `Note:` Kom ihåg att om publiceringsinstansen AEM eller författaren AEM instansen inte är felfri kommer dispatchern inte att sluta använda tjänsten.  Det innebär att om någon av dem var ohälsosam så skulle den även i fortsättningen få trafik och ge fel till personer som begär resurser.
+> `Note:` Tänk på att om publiceringsinstansen eller författaren AEM instansen inte är felfri så skulle dispatchern inte sluta använda tjänsten.  Det innebär att om någon av dem var ohälsosam så skulle den även i fortsättningen få trafik och ge fel till personer som begär resurser.
 
 #### /bin/fresh
 

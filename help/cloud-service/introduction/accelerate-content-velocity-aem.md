@@ -53,7 +53,7 @@ Stilsystem har några olika varianter:
 
 >[!NOTE]
 >
->Vi rekommenderar att du tittar på [Webbinariet Customer Success](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk.
+>Vi rekommenderar att du tittar på vårt [Customer Success-webbinarium](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk för en demonstration av de här funktionerna.
 
 ## God praxis
 
@@ -91,6 +91,6 @@ Saker är helt enkelt renare. HTML i kärnkomponenterna är mycket detaljerade. 
 
 Slutligen är användningen av Style Systems mer konst än vetenskapen. Som vi har diskuterat finns det ett antal bästa metoder, men du får flexibilitet i hur du anpassar organisationens konfiguration.
 
-Mer information finns på [Customer Success Webinar](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk.
+Mer information finns på vårt [Customer Success Webinar](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk.
 
-Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) nav.
+Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html).

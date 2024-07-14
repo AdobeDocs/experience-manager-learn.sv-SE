@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Ett tack för att du skickar in formulär är ett omtänksamt sätt att tacka användaren för att han/hon fyllt i och skickat in ett formulär. Det är en bekräftelse på att deras inlagor har tagits emot och uppskattats. Tacka-meddelandet har konfigurerats med fliken för att skicka i behållaren för den adaptiva formulärguiden
 
-![tackmeddelande](assets/thank-you-message.png)
+![tack-du-message](assets/thank-you-message.png)
 
 Det konfigurerade tackmeddelandet finns i händelsehanteraren onSuccess för superkomponenten AdaptiveForm.
 Koden för att associera onSuccess-händelsen och koden för onSuccess-händelsehanteraren visas nedan
@@ -106,4 +106,4 @@ export default function Contact(){
 }
 ```
 
-Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan laddas ned härifrån](./assets/native-components.zip)
+Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan hämtas härifrån](./assets/native-components.zip)

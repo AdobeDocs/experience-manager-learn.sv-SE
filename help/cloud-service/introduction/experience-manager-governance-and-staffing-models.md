@@ -39,11 +39,11 @@ Det finns två operationsströmmar för [!DNL AEM Sites] och [!DNL AEM Assets]:
 
 1. Strategi- och omvandlingsarbete, t.ex. stora projekt inom flera organisationer
 
-![operationsströmmar](assets/streams-of-operationalization.png)
+![strömmar av driftsättning](assets/streams-of-operationalization.png)
 
 ### AEM resursroller på hög nivå
 
-**Allmänt mellanrum:** Denna baslinje stöder centraliserade och decentraliserade modeller. Om du har en decentraliserad modell kan AEM användas abstrakt. Observera att produktägarrollen måste användas kreativt, men du måste också ha en produktägare som äger de olika formaten för en typ av resurs och en annan som ansvarar för hela organisationen.
+**Allmänt mellanrum:** Denna baslinje har stöd för centraliserade och decentraliserade modeller. Om du har en decentraliserad modell kan AEM användas abstrakt. Observera att produktägarrollen måste användas kreativt, men du måste också ha en produktägare som äger de olika formaten för en typ av resurs och en annan som ansvarar för hela organisationen.
 
 1. Grundläggande körnings- och operationsroller
 
@@ -61,7 +61,7 @@ Det finns två operationsströmmar för [!DNL AEM Sites] och [!DNL AEM Assets]:
 
 **Exempelscenarier**
 
-1. **Kör och arbeta:**
+1. **Kör och använd:**
 
 Nedan följer några exempel på hur man arbetar med ett ljust (sportklädföretag) och tungt (kosmetiskt företag) scenario:
 
@@ -81,7 +81,7 @@ Nedan följer några exempel på hur man arbetar med ett ljust (sportklädföret
    * 4 små och medelstora företag per varumärke
    * 1 teknisk arkitekt
 
-### Hög nivå [!DNL AEM Sites] roller
+### [!DNL AEM Sites]-roller på hög nivå
 
 1. Baskörning och drift
 
@@ -126,12 +126,12 @@ Nedan följer några exempel på roller för ett lätt och tungt kundscenario:
 
 ### Viktiga uppgifter
 
-**Förstå arketyperna** - Börja långsamt, förstå och analysera arkitekterna. Var kreativ och flexibel, tänk på att det inte finns en korrekt modell att följa.
+**Förstå arkitekterna** - Börja sakta, förstå och analysera arkitekterna. Var kreativ och flexibel, tänk på att det inte finns en korrekt modell att följa.
 
-**Förstå er färdplan** - Vissa organisationer har många milstolpar som de vill genomföra. Var beredd att tilldela mer tekniska resurser än du tror.
+**Förstå din färdplan** - Vissa organisationer har många milstolpar som de vill köra. Var beredd att tilldela mer tekniska resurser än du tror.
 
 **Utnyttja interna resurser** - Mellanrum kan komma oväntat. Du kanske kan fylla i dem snabbare genom att skaffa interna teammedlemmar, i stället för att söka utanför organisationen.
 
-Om du vill ha en mer ingående diskussion om styrnings- och personalmodeller samt arkitekter kan du lyssna på den här paneldiskussionen på en timme: [Rollarkityper och skapa en operativ ram för [!DNL AEM Assets] och [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
+Om du vill ha en mer ingående diskussion om styrnings- och personalmodeller och arkitekttyper kan du lyssna på den här entimmars paneldiskussionen: [Rollarkityper och Skapa ett användningsramverk för [!DNL AEM Assets] och [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
 
-Läs mer om strategi och tankeledarskap på [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) nav.
+Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html).

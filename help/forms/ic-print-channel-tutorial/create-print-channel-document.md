@@ -23,7 +23,7 @@ ht-degree: 0%
 
 I den här delen skapas en kanal för interaktivt kommunikationsdokument för utskrift.
 
-När vi har definierat och konfigurerat datakällan och formulärdatamodellen kommer vi nu att skapa vår interaktiva kommunikation för utskriftskanalen
+När vi har definierat och konfigurerat Data Source och Form Data Model kommer vi nu att skapa vår interaktiva Communication for Print Channel
 
 >[!VIDEO](https://video.tv.adobe.com/v/37888?quality=12&learn=on)
 

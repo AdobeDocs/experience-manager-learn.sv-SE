@@ -24,7 +24,7 @@ Adobe Experience Manager förnyar personaliseringsarbetsflödet mellan AEM och T
 
 >[!NOTE]
 >
->Rekommenderas att använda `at.js` klientbibliotek och det bästa sättet är att använda tagghanteringslösningar som taggar i Adobe Experience Platform eller någon annan tagghanteringslösning från tredje part för att lägga till målbibliotek på webbplatsens sidor
+>`at.js`-klientbiblioteket bör användas och det bästa sättet är att använda tagghanteringslösningar som taggar i Adobe Experience Platform eller någon annan tredjepartslösning för tagghantering för att lägga till målbibliotek på webbplatsens sidor
 
 
 * Adobe Experience Manager lättanvända och kraftfulla mekanism för innehållsframtagning tillsammans med Adobe Target Artificial Intelligence (AI) och Machine Learning hjälper skribenter att skapa och hantera innehåll för alla kanaler på en central plats. Tack vare möjligheten att exportera Experience Fragments till Adobe Target som erbjudanden från HTML har nu marknadsförarna större flexibilitet att skapa en mer personaliserad upplevelse med hjälp av dessa erbjudanden och kan nu testa och skala varje upplevelse de skapar.

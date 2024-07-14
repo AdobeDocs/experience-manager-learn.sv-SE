@@ -26,8 +26,8 @@ Lär dig hur du skapar och använder tjänstanvändare i din AEM kod för att ge
 
 ## Resurser
 
-+ [Dokumentation om initiering av Sling-databas (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)
-+ [Autentiseringsdokumentation för Sling-tjänsten](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
++ [Dokumentation för initiering av lagringsplats (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)
++ [Verifieringsdokumentation för delningstjänst](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
 ## Code
 

@@ -40,7 +40,7 @@ Vi rekommenderar att du är bekant med följande ämnen i avsnittet Krav för at
 1. Grundläggande kunskap om växlingsfiler
 1. Skapa adaptiv Forms
 
-**Klienthemligt ID och klienthemlighetsnyckel**
+**Klienthemlighet-ID och klienthemlighet**
 
 Det första steget i integreringen av Marketo med AEM Forms är att hämta de API-autentiseringsuppgifter som behövs för att göra REST-anrop med API. Du behöver följande
 
@@ -53,7 +53,7 @@ Det första steget i integreringen av Marketo med AEM Forms är att hämta de AP
 
 **Innan du börjar**
 
-[Hämta och zippa upp resurser som hör till den här artikeln.](assets/aemformsandmarketo.zip) ZIP-filen innehåller följande:
+[Ladda ned och zippa upp resurserna som hör till den här artikeln.](assets/aemformsandmarketo.zip) ZIP-filen innehåller följande:
 
 1. BlankTemplatePackage.zip - Det här är den adaptiva formulärmallen. Importera detta med pakethanteraren.
 1. marketo.json - Det här är swagger-filen som används för att konfigurera datakällan.

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Här följer den fullständiga koden för den klass som implementerar gränssnittet.
 
-Den här klassen använder två verktygsmetoder `getAccessToken`, `getJWTToken` och statisk metod `getContentAnalyserRequest` av `GetContentAnalyser` klassen.
+Den här klassen använder två verktygsmetoder `getAccessToken`, `getJWTToken` och den statiska metoden `getContentAnalyserRequest` i klassen `GetContentAnalyser`.
 
 
 ```java

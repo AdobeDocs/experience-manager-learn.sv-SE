@@ -10,13 +10,13 @@ doc-type: Technical Video
 duration: 104
 last-substantial-update: 2024-06-07T00:00:00Z
 jira: KT-15673
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+exl-id: 6a722682-7d9e-4ef0-abd7-5fce27601d3a
+source-git-commit: 3001560b62cb4dbec92179a9db42abd84590c400
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
-
 
 # Använda Dynamic Media i Edge Delivery Services
 

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här justerar du prestandaparametrar för Workbench
 
-*I den här videon går du igenom processen för att justera prestandaparametrarna för Workbench.*
+*Den här videon går igenom processen för att justera prestandaparametrarna för Workbench.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)

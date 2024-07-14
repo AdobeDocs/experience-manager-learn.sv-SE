@@ -1,6 +1,6 @@
 ---
 title: Konfigurera ditt BPA- och CAM-projekt
-description: Läs om hur Best Practices Analyzer och Cloud Acceleration Manager ger en anpassad guide för migrering till AEM as a Cloud Service.
+description: Läs om hur Best Practices Analyzer och Cloud Acceleration Manager kan ge en anpassad guide för migrering till AEM as a Cloud Service.
 version: Cloud Service
 feature: Developer Tools
 topic: Migration, Upgrade
@@ -27,14 +27,14 @@ Läs om hur Best Practices Analyzer (BPA) och Cloud Acceleration Manager (CAM) g
 
 ![Högnivådiagram för BPA och CAM](assets/bpa-cam-diagram.png)
 
-BPA-paketet ska installeras på en klon av produktionsmiljön AEM 6.x. BPA kommer att generera en rapport som sedan kan överföras till CAM, som ger vägledning om de viktigaste aktiviteter som behöver utföras för att gå över till AEM as a Cloud Service.
+BPA-paketet ska installeras på en klon av produktionsmiljön AEM 6.x. BPA kommer att generera en rapport som sedan kan överföras till CAM, som ger vägledning om de viktigaste aktiviteter som behöver utföras för att kunna flyttas till AEM as a Cloud Service.
 
 ## Viktiga aktiviteter
 
 + Klona produktionen i 6.x-miljö. När du migrerar innehåll och kodar för omfakturor är det viktigt att ha en klon av en produktionsmiljö för att testa olika verktyg och ändringar.
-+ Hämta det senaste BPA-verktyget från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och installera i din AEM 6.x-klonade miljö.
-+ Använd BPA-verktyget för att generera en rapport som kan överföras till Cloud Acceleration Manager (CAM). CAM är tillgängligt via [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
-+ Använd CAM för att få vägledning om vilka uppdateringar som behöver göras i den aktuella kodbasen och miljön för att gå över till AEM as a Cloud Service.
++ Hämta det senaste BPA-verktyget från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och installera i din AEM 6.x-klonade miljö.
++ Använd BPA-verktyget för att generera en rapport som kan överföras till Cloud Acceleration Manager (CAM). CAM nås via [https://experience.adobe.com/](https://experience.adobe.com/) > **Experience Manager** > **Cloud Acceleration Manager**.
++ Använd CAM för att få vägledning om vilka uppdateringar som behöver göras i den aktuella kodbasen och -miljön för att kunna gå över till AEM as a Cloud Service.
 
 ## Handövning
 
@@ -45,7 +45,7 @@ Innan du provar övningen bör du kontrollera att du har tittat på och förstå
 + [Tänk annorlunda om AEM as a Cloud Service](./introduction.md)
 + [Vad är AEM as a Cloud Service?](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
 + [Arkitekturen för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
-+ [Muterbart och oföränderligt innehåll](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
++ [Innehåll som kan ändras och inte kan ändras](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
 + [Skillnader i utveckling för AEM as a Cloud Service och AEM 6.x](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
 
 <table style="border-width:0">

@@ -21,7 +21,7 @@ I den här artikeln beskrivs hur du skapar en tjänstanvändare i AEM Forms
 
 I tidigare versioner av Adobe Experience Manager (AEM) användes den administrativa resurslösaren för backend-bearbetning som krävde åtkomst till databasen. Användningen av den administrativa resurslösaren har tagits bort i AEM 6.3. I stället används en systemanvändare med specifik behörighet i databasen.
 
-Läs mer om [skapa och använda tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
+Läs mer om hur du [skapar och använder tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
 I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar egenskaperna för användarmappningen.
 
@@ -31,8 +31,8 @@ I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar 
 1. Klicka på Skapa systemanvändare
 1. Ange användartypen som data och klicka på den gröna ikonen för att slutföra processen att skapa systemanvändaren
 1. [Öppna configMgr](http://localhost:4502/system/console/configMgr)
-1. Sök efter _Användarmappningstjänsten för Apache Sling-tjänsten_ och klicka för att öppna egenskaperna
-1. Klicka på *+* ikon (plus) för att lägga till följande Service Mapping
+1. Sök efter _användarmappningstjänsten för Apache Sling-tjänsten_ och klicka för att öppna egenskaperna
+1. Klicka på ikonen *+* (plus) för att lägga till följande tjänstmappning
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -47,7 +47,7 @@ Vi kan också hämta resurslösare för Fd-service-användare. Den här tjänsta
 1. Navigera till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. Ladda upp och starta OSGi-paketet
 1. Kontrollera att paketet är i aktivt läge
-1. Du har nu skapat en *Systemanvändare* och även distribuerade *Tjänstanvändarpaket*.
+1. Du har nu skapat en *systemanvändare* och även distribuerat *tjänstanvändarpaketet*.
 
    Ge systemanvändaren (&#39; data &#39;) läsbehörighet på innehållsnoden för att ge åtkomst till /content.
 

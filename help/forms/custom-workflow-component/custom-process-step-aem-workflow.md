@@ -24,12 +24,13 @@ Följande steg krävs för att skriva java-klassen och distribuera klassen som e
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen finns i den här [artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
 
-Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera **projectname** > **kärna** mapp. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Den körda metodens signatur är följande offentliga void execute(WorkItem, WorkflowSession workflowSession, MetaDataMap processArguments) orsakar WorkflowException
+Öppna maven-projektet i din förmörkade utvecklingsmiljö. Expandera mappen **projektnamn** > **kärna**. Expandera mappen src/main/java. Du bör se ett paket som avslutas med &quot;core&quot;. Skapa Java-klass som implementerar WorkflowProcess i det här paketet. Du måste åsidosätta körningsmetoden. Signaturen för execute-metoden är följande
+public void execute(WorkItem workItem, WorkflowSession, workflowSession, MetaDataMap processArguments)returnerar WorkflowException
 
 I den här självstudiekursen ska vi skriva de bilagor som lagts till i det anpassade formuläret i filsystemet som en del av AEM arbetsflöde.
 
@@ -143,9 +144,9 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 #### Bygg och driftsätt
 
 [Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
-[Kontrollera att paketet är distribuerat och i aktivt läge](http://localhost:4502/system/console/bundles)
+[Kontrollera att paketet är distribuerat och i aktivt läge ](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg
 
-Skapa [anpassad arbetsflödeskomponent](./custom-workflow-component.md)
+Skapa din [anpassade arbetsflödeskomponent](./custom-workflow-component.md)
 

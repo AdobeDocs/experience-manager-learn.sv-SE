@@ -33,7 +33,7 @@ Välj Tabell om du vill infoga tabellkomponenten.
 
 Möjligheten att visa tabelldata med hjälp av tabeller i Interactive Communication Document introducerades i AEM Forms 6.4. I följande videofilm visas de steg som krävs för att konfigurera en tabell i webbkanalsdokumentet.
 
-**Konfigurera tabell i webbkanalsdokument - AEM Forms 6.4**
+**Konfigurerar tabell i webbkanalsdokument - AEM Forms 6.4**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22360?quality=12&learn=on)
 

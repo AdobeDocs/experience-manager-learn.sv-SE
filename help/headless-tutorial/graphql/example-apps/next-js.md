@@ -1,6 +1,6 @@
 ---
 title: Next.js - Exempel på AEM Headless
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Next.js-programmet visas hur du frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor.
+description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Next.js-programmet visas hur du kan söka efter innehåll med hjälp av AEM GraphQL API:er med beständiga frågor.
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ level: Beginner
 jira: KT-10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
+badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 duration: 210
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 # Next.js App
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Next.js-programmet visas hur du frågar efter innehåll med hjälp AEM GraphQL API:er med beständiga frågor. AEM Headless Client för JavaScript används för att köra GraphQL beständiga frågor som stöder programmet.
+Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Next.js-programmet visas hur du kan söka efter innehåll med hjälp av AEM GraphQL API:er med beständiga frågor. AEM Headless Client för JavaScript används för att köra de beständiga GraphQL-frågor som stöder appen.
 
-![Next.js-appen med AEM Headless](./assets/next-js/next-js.png)
+![appen Next.js med AEM Headless](./assets/next-js/next-js.png)
 
-Visa [källkod på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js)
+Visa [källkoden på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js)
 
 ## Förutsättningar {#prerequisites}
 
@@ -37,23 +37,23 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Appen Next.js fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver [WKND delad v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) eller [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras i den AEM as a Cloud Service miljön.
+Appen Next.js fungerar med följande AEM driftsättningsalternativ. För alla distributioner krävs att [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) eller [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installeras i AEM as a Cloud Service-miljön.
 
-Det här exemplet på appen Next.js är utformat för att ansluta till __AEM Publish__ service.
+Det här exemplet på appen Next.js är utformat för att ansluta till tjänsten __AEM Publish__.
 
 ### Krav för AEM författare
 
-Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång till oskyddat innehåll. Next.js kan konfigureras att ansluta till AEM Author via `.env` egenskaper som beskrivs nedan. Bilder som hanteras från AEM författare kräver autentisering, och därför måste användaren som använder appen Next.js också loggas in AEM Author.
+Next.js är utformad för att ansluta till __AEM Publish__-tjänsten och få åtkomst till oskyddat innehåll. Next.js kan konfigureras att ansluta till AEM Author via egenskaperna `.env` som beskrivs nedan. Bilder som hanteras från AEM författare kräver autentisering, och därför måste användaren som använder appen Next.js också loggas in AEM Author.
 
 ## Så här använder du
 
-1. Klona `adobe/aem-guides-wknd-graphql` databas:
+1. Klona `adobe/aem-guides-wknd-graphql`-databasen:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Redigera `aem-guides-wknd-graphql/next-js/.env.local` fil och ange `NEXT_PUBLIC_AEM_HOST` till AEM.
+1. Redigera filen `aem-guides-wknd-graphql/next-js/.env.local` och ange `NEXT_PUBLIC_AEM_HOST` till AEM.
 
    ```plain
    # AEM service
@@ -63,7 +63,7 @@ Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång til
 
    Om du ansluter till AEM Author-tjänsten måste du ange AEM Author-tjänsten som standard.
 
-   Använda en lokal AEM `AEM_AUTH_METHOD=basic` och ange användarnamn och lösenord i `AEM_AUTH_USER` och `AEM_AUTH_PASSWORD` egenskaper.
+   Om du vill använda en lokal AEM `AEM_AUTH_METHOD=basic` och ange användarnamn och lösenord i egenskaperna `AEM_AUTH_USER` och `AEM_AUTH_PASSWORD`.
 
    ```plain
    ...
@@ -73,7 +73,7 @@ Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång til
    AEM_AUTH_PASSWORD=password-for-the-aem-user-account
    ```
 
-   Så här använder du [AEM as a Cloud Service lokal utvecklingstoken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token) set `AEM_AUTH_METHOD=dev-token` och ange det fullständiga dev-tokenvärdet i `AEM_AUTH_DEV_TOKEN` -egenskap.
+   Om du vill använda en [lokal utvecklingstoken från AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token) anger du `AEM_AUTH_METHOD=dev-token` och anger det fullständiga dev-tokenvärdet i egenskapen `AEM_AUTH_DEV_TOKEN`.
 
    ```plain
    ...
@@ -82,9 +82,9 @@ Next.js är utformad för att ansluta till __AEM Publish__ och få tillgång til
    AEM_AUTH_DEV_TOKEN=my-dev-token
    ```
 
-1. Redigera `aem-guides-wknd-graphql/next-js/.env.local` fil och validera  `NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT` är inställd på rätt AEM GraphQL-slutpunkt.
+1. Redigera filen `aem-guides-wknd-graphql/next-js/.env.local` och validera att `NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT` är inställt på rätt AEM GraphQL-slutpunkt.
 
-   När du använder [WKND delad](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) eller [WKND-plats](https://github.com/adobe/aem-guides-wknd/releases/latest), använder du `wknd-shared` GraphQL API-slutpunkt.
+   Använd GraphQL API-slutpunkten `wknd-shared` när du använder [WKND delad](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) eller [WKND-plats](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
    ```plain
    ...
@@ -153,7 +153,7 @@ query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFor
 }
 ```
 
-+ `wknd/adventure-by-slug` beständig fråga, som returnerar ett enda äventyr av `slug` (en anpassad egenskap som unikt identifierar ett äventyr) med en komplett uppsättning egenskaper. Den här beständiga frågan styr äventyrsdetaljvyerna.
++ `wknd/adventure-by-slug` beständig fråga, som returnerar ett enskilt äventyr från `slug` (en anpassad egenskap som unikt identifierar ett äventyr) med en fullständig uppsättning egenskaper. Den här beständiga frågan styr äventyrsdetaljvyerna.
 
 ```
 # Retrieves an Adventure Fragment based on it's unique slug.
@@ -224,11 +224,11 @@ query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: Str
 
 ### Kör GraphQL beständig fråga
 
-AEM beständiga frågor körs via HTTP-GET och därmed [AEM Headless-klient för JavaScript](https://github.com/adobe/aem-headless-client-js) används för att [köra beständiga GraphQL-frågor](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) mot AEM och läsa in äventyrsinnehållet i appen.
+AEM beständiga frågor körs via HTTP-GET och därför används klienten [AEM Headless för JavaScript](https://github.com/adobe/aem-headless-client-js) för att [köra de beständiga GraphQL-frågorna](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) mot AEM och läsa in äventyrsinnehållet i appen.
 
 Varje beständig fråga har en motsvarande funktion i `src/lib//aem-headless-client.js`, som anropar den AEM GraphQL-slutpunkten och returnerar äventyrsdata.
 
-Varje funktion i sin tur anropar `aemHeadlessClient.runPersistedQuery(...)`, kör den beständiga GraphQL-frågan.
+Varje funktion anropar i sin tur `aemHeadlessClient.runPersistedQuery(...)` och kör den beständiga GraphQL-frågan.
 
 ```js
 // src/lib/aem-headless-client.js
@@ -263,20 +263,20 @@ Appen Next.js använder två sidor för att presentera äventyrsdata.
 
 + `src/pages/index.js`
 
-  Användningsområden [Next.js&#39;s getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) ringa `getAllAdventures()` och visar varje äventyr som ett kort.
+  Använder [Next.js getServerSideProps()](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) för att anropa `getAllAdventures()` och visar varje äventyr som ett kort.
 
-  Användning av `getServerSiteProps()` möjliggör återgivning på serversidan av denna Next.js-sida.
+  Användning av `getServerSiteProps()` tillåter återgivning på serversidan av den här Next.js-sidan.
 
 + `src/pages/adventures/[...slug].js`
 
-  A [Next.js Dynamic Route](https://nextjs.org/docs/routing/dynamic-routes) som visar information om ett enskilt äventyr. Den här dynamiska vägen förhämtar varje annons data med [Next.js&#39;s getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) via ett samtal till `getAdventureBySlug(slug, queryVariables)` med `slug` param som skickas via äventyret på `adventures/index.js` och `queryVariables` för att styra bildformat, bredd och kvalitet.
+  En [dynamisk väg för Next.js](https://nextjs.org/docs/routing/dynamic-routes) som visar information om ett enskilt äventyr. Den här dynamiska vägen förhämtar data för varje äventyr med hjälp av [Next.js getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) via ett anrop till `getAdventureBySlug(slug, queryVariables)` med hjälp av den `slug` -parameter som skickas via äventyrsmarkeringen på `adventures/index.js` -sidan och `queryVariables` för att styra bildformatet, bredden och kvaliteten.
 
-  Den dynamiska vägen kan förhämta information för alla äventyr genom att använda [Next.js getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) och fylla i alla möjliga ruttpermutationer baserat på den fullständiga listan över äventyr som returneras av GraphQL-frågan  `getAdventurePaths()`
+  Den dynamiska vägen kan förhämta information för alla äventyr genom att använda [Next.js getStaticPaths()](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) och fylla i alla möjliga vägpermutationer baserat på den fullständiga listan över äventyr som returneras av GraphQL-frågan `getAdventurePaths()`
 
-  Användning av `getStaticPaths()` och `getStaticProps(..)` tillåter Statisk platsgenerering för dessa Next.js-sidor.
+  Användningen av `getStaticPaths()` och `getStaticProps(..)` tillät generering av statiska platser för dessa Next.js-sidor.
 
 ## Distributionskonfiguration
 
 Next.js-appar, särskilt när det gäller SSR (Server-side rendering) och SSG (Server-side generation), kräver inte avancerade säkerhetskonfigurationer som CORS (Cross-origin Resource Sharing).
 
-Om Next.js däremot gör HTTP-begäranden till AEM från klientens kontext kan säkerhetskonfigurationer i AEM behövas. Granska [AEM Headless single-page app deployment tutorial](../deployment/spa.md) för mer information.
+Om Next.js däremot gör HTTP-begäranden till AEM från klientens kontext kan säkerhetskonfigurationer i AEM behövas. Mer information finns i självstudiekursen [AEM Headless Single-page app deployment](../deployment/spa.md).

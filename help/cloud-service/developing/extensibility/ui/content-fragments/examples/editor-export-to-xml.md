@@ -23,17 +23,17 @@ ht-degree: 0%
 
 ![Exempel på filnamnstillägg för rubrikmenyn i Content Fragment Editor](./assets/export-to-xml/hero.png){align="center"}
 
-Du kan lägga till anpassade knappar på rubrikmenyn i Content Fragment Editor med hjälp av `headerMenu` tilläggspunkt. I det här exemplet visas hur du lägger till en knapp på rubrikmenyn och hur du hanterar click-händelsen för att exportera det aktiva innehållsfragmentet som XML eller CSV.
+Du kan lägga till anpassade knappar på rubrikmenyn i Content Fragment Editor med hjälp av tilläggspunkten `headerMenu`. I det här exemplet visas hur du lägger till en knapp på rubrikmenyn och hur du hanterar click-händelsen för att exportera det aktiva innehållsfragmentet som XML eller CSV.
 
 Sidhuvudsknappar kan finnas som en enda knapp eller som en knapp med underordnade objekt. I det här exemplet visas hur du implementerar en knapp med underobjekt, men det innehåller den kommenterade utkoden för att implementera en enskild knapp.
 
 ## Tilläggspunkt
 
-Det här exemplet utökar till tilläggspunkten `headerBar` om du vill lägga till en anpassad knapp i Content Fragment Editor.
+Det här exemplet utökar till tilläggspunkten `headerBar` för att lägga till en anpassad knapp i redigeraren för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
 | ------------------------ | --------------------- | 
-| [Innehållsfragmentsredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Sidhuvud-menyn](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
+| [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Huvudmeny](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## Exempel på tillägg
 
@@ -43,9 +43,9 @@ Koden visar hur innehållet i innehållsfragmentet kan hämtas i tilläggets reg
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, som mappas till flödet index.html, är startpunkten för tillägget AEM och definierar:
+`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
 
-+ Platsen för tilläggsknappen visas (`headerMenu`) i AEM
++ Platsen för tilläggsknappen visas (`headerMenu`) i AEM.
 + Tilläggsknappens definition i funktionen getButton()
 + Knappens klickningshanterare, funktionen onClick() eller en lista med underobjekt och deras klickningshanterare.
 
@@ -148,13 +148,13 @@ export default ExtensionRegistration;
 
 #### Data för innehållsfragment
 
-Det aktiva innehållsfragmentet kan hämtas med `getContentFragment()` metoden på `guestConnection.host.contentFragment` -objekt.
+Det aktiva innehållsfragmentet kan hämtas med metoden `getContentFragment()` för objektet `guestConnection.host.contentFragment`.
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-The `contentFragment` -objektet innehåller all information om innehållsfragmentet, inklusive sökväg, modell, metadata, huvudinnehåll och eventuella varianter.
+Objektet `contentFragment` innehåller all information om innehållsfragmentet, inklusive sökväg, modell, metadata, huvudinnehåll och eventuella varianter.
 
 ```json
 {

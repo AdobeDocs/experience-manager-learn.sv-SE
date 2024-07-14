@@ -1,6 +1,6 @@
 ---
 title: Sök
-description: Lär dig använda AEM Omnissearch för att snabbt hitta resurser.
+description: Lär dig hur du använder AEM för att snabbt hitta resurser.
 feature: Search
 version: Cloud Service
 jira: KT-4312
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Sök{#aem-assets-search}
 
-Lär dig använda AEM Omnissearch för att snabbt hitta resurser.
+Lär dig hur du använder AEM för att snabbt hitta resurser.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32054?quality=12&learn=on)

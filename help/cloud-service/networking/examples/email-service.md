@@ -19,27 +19,27 @@ ht-degree: 0%
 
 # E-posttjänst
 
-Skicka e-post från AEM as a Cloud Service genom att konfigurera AEM `DefaultMailService` för att använda avancerade nätverksportar.
+Skicka e-postmeddelanden från AEM as a Cloud Service genom att konfigurera AEM `DefaultMailService` så att avancerade nätverksportar används.
 
 Eftersom (de flesta) e-posttjänster inte körs via HTTP/HTTPS måste anslutningar till e-posttjänster från AEM as a Cloud Service proxideras.
 
-+ `smtp.host` är inställd på OSGi-miljövariabeln `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` så den slussas genom utgången.
-   + `$[env:AEM_PROXY_HOST]` är en reserverad variabel som AEM as a Cloud Service mappar till den interna `proxy.tunnel` värd.
-   + Försök INTE att ställa in `AEM_PROXY_HOST` via Cloud Manager.
-+ `smtp.port` är inställt på `portForward.portOrig` port som mappar till e-posttjänstens målvärd och port. I det här exemplet används mappningen: `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`.
-   + The `smpt.port` är inställt på `portForward.portOrig` och INTE SMTP-serverns faktiska port. Mappningen mellan `smtp.port` och `portForward.portOrig` porten har upprättats av Cloud Manager `portForwards` rule (enligt nedan).
++ `smtp.host` är inställd på OSGi-miljövariabeln `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` så den dirigeras genom utgången.
+   + `$[env:AEM_PROXY_HOST]` är en reserverad variabel som AEM as a Cloud Service mappar till den interna `proxy.tunnel`-värden.
+   + Försök INTE att ange `AEM_PROXY_HOST` via Cloud Manager.
++ `smtp.port` är inställd på porten `portForward.portOrig` som mappar till målets e-posttjänst och port. I det här exemplet används mappningen: `AEM_PROXY_HOST:30465` → `smtp.sendgrid.com:465`.
+   + `smpt.port` är inställd på porten `portForward.portOrig` och INTE på SMTP-serverns faktiska port. Mappningen mellan `smtp.port` och `portForward.portOrig`-porten upprättas av Cloud Manager `portForwards`-regeln (som visas nedan).
 
-Eftersom hemligheter inte får lagras i kod bör e-posttjänstens användarnamn och lösenord anges med [hemlig OSGi-konfigurationsvariabel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), anges med AIO CLI eller Cloud Manager API.
+Eftersom hemligheter inte får lagras i kod bör e-posttjänstens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API.
 
-Vanligtvis [flexibel portutgång](../flexible-port-egress.md) används för att underlätta integrering med en e-posttjänst, såvida det inte är nödvändigt att `allowlist` Adobe IP, i vilket fall [IP-adress för dedikerad egress](../dedicated-egress-ip-address.md) kan användas.
+Vanligtvis används [flexibel portutgång](../flexible-port-egress.md) för att underlätta integrering med en e-posttjänst, såvida det inte är nödvändigt att `allowlist` IP-adressen för Adobe, och i så fall kan [dedikerad IP-adress](../dedicated-egress-ip-address.md) användas.
 
-Läs även AEM dokumentation om [skicka e-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+Granska även AEM dokumentation om [att skicka e-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 ## Avancerat nätverksstöd
 
 Följande kodexempel stöds av följande avancerade nätverksalternativ.
 
-Kontrollera att [lämplig](../advanced-networking.md#advanced-networking) avancerad nätverkskonfiguration har konfigurerats innan du följer den här självstudiekursen.
+Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) avancerade nätverkskonfigurationen har konfigurerats innan du följer den här självstudien.
 
 | Inga avancerade nätverk | [Flexibel portutgång](../flexible-port-egress.md) | [Dedikerad IP-adress för utgångar](../dedicated-egress-ip-address.md) | [Virtuellt privat nätverk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -47,7 +47,7 @@ Kontrollera att [lämplig](../advanced-networking.md#advanced-networking) avance
 
 ## OSGi-konfiguration
 
-I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards` regel för [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) operation.
+I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
 
 ```json
 ...
@@ -61,7 +61,7 @@ I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att 
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) som din e-postleverantör kräver (t.ex. `smtp.ssl`, osv.).
+Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) enligt e-postleverantörens behov (t.ex. `smtp.ssl`).
 
 ```json
 {
@@ -78,10 +78,10 @@ Konfigurera AEM [DefaultMailService](https://experienceleague.adobe.com/docs/exp
 }
 ```
 
-The `EMAIL_USERNAME` och `EMAIL_PASSWORD` OSGi-variabeln och hemligheten kan anges per miljö med antingen:
+Variabeln och hemligheten `EMAIL_USERNAME` och `EMAIL_PASSWORD` OSGi kan anges per miljö, antingen med:
 
-+ [Miljökonfiguration för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
-+ eller med `aio CLI` kommando
++ [Cloud Manager-miljökonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ eller med kommandot `aio CLI`
 
   ```shell
   $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret EMAIL_USERNAME "myApiKey" --secret EMAIL_PASSWORD "password123"

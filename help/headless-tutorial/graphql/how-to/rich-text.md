@@ -1,6 +1,6 @@
 ---
 title: Använda RTF med AEM Headless
-description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av GraphQL API:er som JSON som kan användas av headless-program.
+description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras genom att AEM GraphQL API:er som JSON som ska användas av headless-program.
 version: Cloud Service
 doc-type: article
 jira: KT-9985
@@ -27,7 +27,7 @@ AEM GraphQL API har en robust funktion för att returnera RTF som HTML, oformate
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-I Innehållsfragmentsredigeraren har menyraden för flerradiga textfält försetts med formateringsfunktioner som **fet**, *kursiv* och understrykning. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som stycketext, sök och ersätt, stavningskontroll med mera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
+I Content Fragment Editor ger menyraden för flerradiga textfält författare standardfunktioner för RTF-formatering, som **bold**, *italics* och underline. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som Stycketyp, sök och ersätt, stavningskontroll och mycket mer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
 >[!NOTE]
 >
@@ -35,41 +35,41 @@ I Innehållsfragmentsredigeraren har menyraden för flerradiga textfält förset
 
 ## Datatyp för flerradig text {#multi-line-data-type}
 
-Använd **Flerradstext** datatyp när du definierar innehållsfragmentmodellen för att aktivera RTF-redigering.
+Använd datatypen **Flerradig text** när du definierar innehållsfragmentmodellen för att aktivera RTF-redigering.
 
-![RTF-datatyp för flera rader](assets/rich-text/multi-line-rich-text.png)
+![RTF-datatyp med flera rader](assets/rich-text/multi-line-rich-text.png)
 
 Flera egenskaper för flerradsfältet kan konfigureras.
 
-The **Återge som** -egenskapen kan anges till:
+Egenskapen **Återge som** kan anges till:
 
 * Textområde - återger ett enskilt fält med flera rader
 * Flera fält - återger flera fält med flera rader
 
 
-The **Standardtyp** kan anges till:
+**Standardtypen** kan anges till:
 
 * RTF
 * Markering
 * Oformaterad text
 
-The **Standardtyp** -alternativet påverkar redigeringsmiljön direkt och avgör om det finns RTF-verktyg.
+Alternativet **Standardtyp** påverkar redigeringsupplevelsen direkt och avgör om RTF-verktygen finns.
 
-Du kan också [aktivera textbundna referenser](#insert-fragment-references) till andra innehållsfragment genom att kontrollera **Tillåt fragmentreferens** och konfigurera **Tillåtna modeller för innehållsfragment**.
+Du kan även [aktivera textbundna referenser](#insert-fragment-references) till andra innehållsfragment genom att kontrollera **Tillåt fragmentreferens** och konfigurera **Tillåtna innehållsfragmentmodeller**.
 
-Kontrollera **Översättningsbar** om innehållet ska lokaliseras. Endast RTF och normal text kan lokaliseras. Se [arbeta med lokaliserat innehåll för mer information](./localized-content.md).
+Markera rutan **Översättningsbar** om innehållet ska lokaliseras. Endast RTF och normal text kan lokaliseras. Mer information finns i [Arbeta med lokaliserat innehåll](./localized-content.md).
 
 ## RTF-svar med GraphQL API
 
-När du skapar en GraphQL-fråga kan utvecklare välja olika svarstyper från `html`, `plaintext`, `markdown`och `json` från ett fält med flera rader.
+När du skapar en GraphQL-fråga kan utvecklare välja olika svarstyper från `html`, `plaintext`, `markdown` och `json` från ett flerradsfält.
 
-Utvecklare kan använda [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) i Content Fragment-redigeraren för att visa alla värden för det aktuella innehållsfragmentet som kan returneras med GraphQL API.
+Utvecklare kan använda [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) i redigeraren för innehållsfragment för att visa alla värden i det aktuella innehållsfragmentet som kan returneras med GraphQL API.
 
 ## GraphQL beständig fråga
 
-Markera `json` svarsformatet för flerradsfältet ger den flexibilitet som krävs när du arbetar med RTF-innehåll. RTF-innehållet levereras som en array med JSON-nodtyper som kan bearbetas unikt baserat på klientplattformen.
+Om du väljer svarsformatet `json` för flerradsfältet blir det mest flexibelt när du arbetar med RTF-innehåll. RTF-innehållet levereras som en array med JSON-nodtyper som kan bearbetas unikt baserat på klientplattformen.
 
-Nedan visas en JSON-svarstyp för ett flerradigt fält med namnet `main` som innehåller ett stycke: &quot;*Det här är ett stycke som innehåller **important**innehåll.*&quot; där &quot;important&quot; är markerad som **fet**.
+Nedan finns en JSON-svarstyp för ett flerradsfält med namnet `main` som innehåller ett stycke: *Det här är ett stycke som innehåller **important**-innehåll.* där&quot;important&quot; har markerats som **bold**.
 
 ```graphql
 query ($path: String!) {
@@ -85,9 +85,9 @@ query ($path: String!) {
 }
 ```
 
-The `$path` variabel som används i `_path` filtret kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd/en/magazine/sample-article`).
+Variabeln `$path` som används i filtret `_path` kräver den fullständiga sökvägen till innehållsfragmentet (till exempel `/content/dam/wknd/en/magazine/sample-article`).
 
-**GraphQL svar:**
+**GraphQL-svar:**
 
 ```json
 {
@@ -129,11 +129,11 @@ The `$path` variabel som används i `_path` filtret kräver den fullständiga s�
 
 ### Andra exempel
 
-Nedan visas flera exempel på svarstyper för ett flerradigt fält med namnet `main` som innehåller ett stycke:&quot;Detta är ett stycke som innehåller **important** innehåll.&quot; där&quot;important&quot; markeras som **fet**.
+Nedan visas flera exempel på svarstyper för ett flerradsfält med namnet `main` som innehåller ett stycke:&quot;Det här är ett stycke som innehåller **viktigt** -innehåll.&quot; där&quot;important&quot; har markerats som **bold**.
 
 +++HTML, exempel
 
-**GraphQL beständiga fråga:**
+**GraphQL beständig fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -149,7 +149,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL svar:**
+**GraphQL-svar:**
 
 ```json
 {
@@ -170,7 +170,7 @@ query ($path: String!) {
 
 +++Exempel på markering
 
-**GraphQL beständiga fråga:**
+**GraphQL beständig fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -186,7 +186,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL svar:**
+**GraphQL-svar:**
 
 ```json
 {
@@ -207,7 +207,7 @@ query ($path: String!) {
 
 +++Exempel på oformaterad text
 
-**GraphQL beständiga fråga:**
+**GraphQL beständig fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -223,7 +223,7 @@ query ($path: String!) {
 }
 ```
 
-**GraphQL svar:**
+**GraphQL-svar:**
 
 ```json
 {
@@ -240,7 +240,7 @@ query ($path: String!) {
 }
 ```
 
-The `plaintext` renderingsalternativet tar bort all formatering.
+Återgivningsalternativet `plaintext` tar bort all formatering.
 
 +++
 
@@ -249,7 +249,7 @@ The `plaintext` renderingsalternativet tar bort all formatering.
 
 Flerradsfältets RTF-JSON-svar är strukturerat som ett hierarkiskt träd. Varje objekt eller nod representerar ett HTML-block av den formaterade texten.
 
-Nedan visas ett exempel på JSON-svar för ett textfält med flera rader. Observera att varje objekt, eller nod, innehåller en `nodeType` som representerar HTML-blocket från den RTF-text som `paragraph`, `link`och `text`. Varje nod kan innehålla `content` som är en underordnad array som innehåller underordnade noder till den aktuella noden.
+Nedan visas ett exempel på JSON-svar för ett textfält med flera rader. Observera att varje objekt, eller nod, innehåller en `nodeType` som representerar HTML-blocket från RTF-texten som `paragraph`, `link` och `text`. Varje nod kan innehålla `content`, som är en undergrupp som innehåller underordnade noder till den aktuella noden.
 
 ```json
 "json": [// root "content" or child nodes
@@ -281,9 +281,9 @@ Nedan visas ett exempel på JSON-svar för ett textfält med flera rader. Observ
 ]
 ```
 
-Det enklaste sättet att återge flerradiga `json` är att bearbeta varje objekt, eller nod, i svaret och sedan bearbeta eventuella underordnade noder till den aktuella noden. En rekursiv funktion kan användas för att gå igenom JSON-trädet.
+Det enklaste sättet att återge det flerradiga `json`-svaret är att bearbeta varje objekt, eller nod, i svaret och sedan bearbeta eventuella underordnade noder till den aktuella noden. En rekursiv funktion kan användas för att gå igenom JSON-trädet.
 
-Nedan visas exempelkod som illustrerar en rekursiv genomgång. Exemplen är JavaScript-baserade och använder React&#39;s [JSX](https://reactjs.org/docs/introducing-jsx.html)programmeringskoncepten kan dock tillämpas på alla språk.
+Nedan visas exempelkod som illustrerar en rekursiv genomgång. Exemplen är JavaScript-baserade och använder React [JSX](https://reactjs.org/docs/introducing-jsx.html), men programmeringsbegreppen kan tillämpas på alla språk.
 
 ```javascript
 // renderNodeList - renders a list of nodes
@@ -300,7 +300,7 @@ function renderNodeList(childNodes) {
 }
 ```
 
-`renderNodeList` är en rekursiv funktion som tar en array med `childNodes`. Varje nod i arrayen skickas sedan till en funktion `renderNode`som i sin tur anropar `renderNodeList` om noden har underordnade noder.
+`renderNodeList` är en rekursiv funktion som tar en matris av `childNodes`. Varje nod i arrayen skickas sedan till funktionen `renderNode`, som i sin tur anropar `renderNodeList` om noden har underordnade noder.
 
 ```javascript
 // renderNode - renders an individual node
@@ -314,7 +314,7 @@ function renderNode(node) {
 }
 ```
 
-The `renderNode` funktionen förväntar sig ett enda objekt med namnet `node`. En nod kan ha underordnade noder som bearbetas rekursivt med `renderNodeList` funktionen som beskrivs ovan. Äntligen en `nodeMap` används för att återge innehållet i noden baserat på dess `nodeType`.
+Funktionen `renderNode` förväntar sig ett enskilt objekt med namnet `node`. En nod kan ha underordnade noder som bearbetas rekursivt med funktionen `renderNodeList` som beskrivs ovan. Slutligen används en `nodeMap` för att återge innehållet i noden baserat på dess `nodeType`.
 
 ```javascript
 // nodeMap - object literal that maps a JSX response based on a given key (nodeType)
@@ -329,14 +329,14 @@ const nodeMap = {
 }
 ```
 
-The `nodeMap` är en JavaScript-objektlitteral som används som en karta. Var och en av &quot;tangenterna&quot; representerar olika `nodeType`. Parametrar för `node` och `children` kan skickas till de resulterande funktioner som återger noden. Returtypen som används i det här exemplet är JSX, men metoden kan anpassas för att skapa en stränglitteral som representerar HTML-innehåll.
+`nodeMap` är en JavaScript Object-litteral som används som en karta. Var och en av nycklarna representerar en annan `nodeType`. Parametrarna för `node` och `children` kan skickas till de resulterande funktionerna som återger noden. Returtypen som används i det här exemplet är JSX, men metoden kan anpassas för att skapa en stränglitteral som representerar HTML-innehåll.
 
 ### Exempel på fullständig kod
 
-Ett återanvändbart RTF-återgivningsverktyg finns i [WKND GraphQL React-exempel](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+Ett återanvändbart RTF-återgivningsverktyg finns i [WKND GraphQL React-exemplet](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 * [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js) - återanvändbart verktyg som visar en funktion `mapJsonRichText`. Det här verktyget kan användas av komponenter som vill återge ett JSON-svar med RTF-text som React JSX.
-* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - Exempelkomponent som gör en GraphQL-förfrågan som innehåller RTF-text. Komponenten använder `mapJsonRichText` för att återge den formaterade texten och eventuella referenser.
+* [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - Exempelkomponent som gör en GraphQL-begäran som innehåller RTF-text. Komponenten använder verktyget `mapJsonRichText` för att återge den formaterade texten och eventuella referenser.
 
 
 ## Lägga till textbundna referenser i formaterad text {#insert-fragment-references}
@@ -345,27 +345,27 @@ I fältet Flera rader kan författare infoga bilder eller andra digitala resurse
 
 ![infoga bild](assets/rich-text/insert-image.png)
 
-Skärmbilden ovan visar en bild som infogats i fältet med flera rader med hjälp av **Infoga resurs** -knappen.
+Skärmbilden ovan visar en bild som infogats i fältet med flera rader med knappen **Infoga resurs**.
 
-Referenser till andra innehållsfragment kan också länkas eller infogas i flerradsfältet med **Infoga innehållsfragment** -knappen.
+Referenser till andra innehållsfragment kan också länkas eller infogas i flerradsfältet med knappen **Infoga innehållsfragment** .
 
 ![Infoga innehållsfragmentreferens](assets/rich-text/insert-contentfragment.png)
 
-Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide till LA Skate Parks, som infogas i fältet med flera rader. De typer av innehållsfragment som kan infogas i fält styrs av **Tillåtna modeller för innehållsfragment** i [datatyp med flera rader](#multi-line-data-type) i Content Fragment Model.
+Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide till LA Skate Parks, som infogas i fältet med flera rader. De typer av innehållsfragment som kan infogas i fältet styrs av konfigurationen **Tillåtna modeller för innehållsfragment** i datatypen [Flera rader](#multi-line-data-type) i modellen för innehållsfragment.
 
 ## Fråga textbundna referenser med GraphQL
 
-Med GraphQL API kan utvecklare skapa en fråga som innehåller ytterligare egenskaper om referenser som infogats i ett flerradsfält. JSON-svaret innehåller ett separat `_references` objekt som listar de här extra egenskaperna. JSON-svaret ger utvecklarna full kontroll över hur referenserna eller länkarna ska återges i stället för att de ska behöva hantera åskådliggjorda HTML.
+Med GraphQL API kan utvecklare skapa en fråga som innehåller ytterligare egenskaper om referenser som infogats i ett flerradsfält. JSON-svaret innehåller ett separat `_references`-objekt som listar de här extra egenskaperna. JSON-svaret ger utvecklarna full kontroll över hur referenserna eller länkarna ska återges i stället för att de ska behöva hantera åskådliggjorda HTML.
 
 Du kanske vill:
 
 * Inkludera anpassad routningslogik för hantering av länkar till andra innehållsfragment vid implementering av ett Single Page-program, som React Router eller Next.js
-* Rendera en textbunden bild med den absoluta sökvägen till en AEM publiceringsmiljö som `src` värde.
+* Rendera en textbunden bild med den absoluta sökvägen till en AEM Publish-miljö som `src`-värde.
 * Bestäm hur en inbäddad referens ska återges till ett annat innehållsfragment med ytterligare anpassade egenskaper.
 
-Använd `json` returtyp och inkludera `_references` -objekt när en GraphQL-fråga skapas:
+Använd returtypen `json` och inkludera objektet `_references` när du skapar en GraphQL-fråga:
 
-**GraphQL beständiga fråga:**
+**GraphQL beständig fråga:**
 
 ```graphql
 query ($path: String!) {
@@ -392,7 +392,7 @@ query ($path: String!) {
 }
 ```
 
-I frågan ovan visas `main` fältet returneras som JSON. The `_references` objektet innehåller fragment för hantering av referenser som är av typen `ImageRef` eller av typen `ArticleModel`.
+I ovanstående fråga returneras fältet `main` som JSON. Objektet `_references` innehåller fragment för hantering av referenser av typen `ImageRef` eller `ArticleModel`.
 
 **JSON-svar:**
 
@@ -474,13 +474,13 @@ I frågan ovan visas `main` fältet returneras som JSON. The `_references` objek
 }
 ```
 
-JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. The `_references` innehåller sedan alla referenser.
+JSON-svaret innehåller var referensen infogades i den RTF-text som innehåller `"nodeType": "reference"`. Objektet `_references` innehåller sedan alla referenser.
 
 ## Återge textbundna referenser i formaterad text
 
-Om du vill återge textbundna referenser är det rekursiva sättet som beskrivs i [Rendera ett JSON-svar med flera rader](#render-multiline-json-richtext) kan utökas.
+För att återge textbundna referenser kan den rekursiva metod som beskrivs i [Återgivning av ett JSON-svar på flera rader](#render-multiline-json-richtext) expanderas.
 
-Plats `nodeMap` är kartan som återger JSON-noderna.
+Där `nodeMap` är kartan som återger JSON-noderna.
 
 ```javascript
 const nodeMap = {
@@ -506,9 +506,9 @@ const nodeMap = {
     }
 ```
 
-Det övergripande tillvägagångssättet är att inspektera närhelst en `nodeType` är lika med `reference` i Mutli Line JSON-svaret. En anpassad återgivningsfunktion kan sedan anropas som innehåller `_references` som returneras i GraphQL-svaret.
+Det övergripande tillvägagångssättet är att inspektera när `nodeType` är lika med `reference` i JSON-svaret för flera rader. En anpassad återgivningsfunktion kan sedan anropas som innehåller det `_references`-objekt som returneras i GraphQL-svaret.
 
-Den textbundna referenssökvägen kan sedan jämföras med motsvarande post i `_references` objekt och en annan anpassad karta `renderReference` kan anropas.
+Den infogade referenssökvägen kan sedan jämföras med motsvarande post i objektet `_references` och en annan anpassad mappning `renderReference` kan anropas.
 
 ```javascript
 const renderReference = {
@@ -525,11 +525,11 @@ const renderReference = {
 }
 ```
 
-The `__typename` i `_references` kan användas för att mappa olika referenstyper till olika återgivningsfunktioner.
+`__typename` för objektet `_references` kan användas för att mappa olika referenstyper till olika återgivningsfunktioner.
 
 ### Exempel på fullständig kod
 
-Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns i [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) som en del av [WKND GraphQL React-exempel](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns i [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) som en del av [WKND GraphQL React-exemplet](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 ## Exempel från början till slut
 
@@ -537,12 +537,12 @@ Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns
 
 >[!NOTE]
 >
-> Videon ovan använder `_publishUrl` för att återge bildreferensen. I stället vill du `_dynamicUrl` enligt vad som anges i [webboptimerade bilder](./images.md);
+> I videon ovan används `_publishUrl` för att återge bildreferensen. Använd i stället `_dynamicUrl` enligt anvisningarna i [webboptimerade bilder ](./images.md);
 
 
 I föregående video visas ett exempel från början till slut:
 
 1. Uppdatera ett textfält med flera rader i en innehållsfragmentmodell så att fragmentreferenser tillåts
 2. Använd Content Fragment Editor för att inkludera en bild och referera till ett annat fragment i ett textfält med flera rader.
-3. Skapa en GraphQL-fråga som innehåller flerradstextsvar som JSON och alla `_references` används.
+3. Skapar en GraphQL-fråga som innehåller flerradssvaret som JSON och eventuella `_references` som används.
 4. Skriva en SPA som återger textbundna referenser för RTF-svaret.

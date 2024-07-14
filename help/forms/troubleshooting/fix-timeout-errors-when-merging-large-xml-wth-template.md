@@ -30,8 +30,10 @@ Så här åtgärdar du ovanstående fel
 ## Ändra tidsgränsen för listor
 
 * Stoppa AEM
-* Skapa en mapp med namnet **installera** under mappen crx-quickstart i AEM
-* Skapa en fil med namnet **org.apache.aries.transaction.config** med följande innehåll aries.transaction.timeout=&quot;1200&quot; under installationsmappen. Du kan ändra timeout-värdet enligt dina önskemål. Timeout-värdet är i sekunder
+* Skapa en mapp med namnet **install** i mappen crx-quickstart i AEM
+* Skapa en fil med namnet **org.apache.aries.transaction.config** med följande innehåll
+aries.transaction.timeout=&quot;1200&quot;
+under installationsmappen. Du kan ändra timeout-värdet enligt dina önskemål. Timeout-värdet är i sekunder
 
 >[!NOTE]
 > När du har skapat konfigurationen org.apache.aries.transaction kan du redigera transaktionens timeout-värden från [configMgr](http://localhost:4502/system/console/configMgr) i stället för att redigera filen
@@ -41,5 +43,7 @@ Så här åtgärdar du ovanstående fel
 
 * [Öppna OSGi ConfigMgr](http://localhost:4502/system/console/configMgr)
 * Sök efter **Jacorb ORB Provider**
-* Lägg till följande post jacorb.connection.client.pending_reply_timeout=600000 Ovanstående inställning anger timeout för väntande svar (kallas även CORBA-klienttimeout) till 600 sekunder.
+* Lägg till följande post
+jacorb.connection.client.pending_reply_timeout=600000
+Ovanstående inställning anger timeout för väntande svar (kallas även CORBA-klienttimeout) till 600 sekunder.
 * Spara ändringarna

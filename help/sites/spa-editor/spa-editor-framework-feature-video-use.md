@@ -1,6 +1,6 @@
 ---
 title: Använda SPA Editor med AEM Sites
-description: AEM ramverk för Single Page Application Editor ger författare möjlighet att redigera innehåll för ett Single Page-program eller -SPA. Utvecklare som använder någon av React-ramverken skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda AEM Sites välbekanta redigeringsverktyg.
+description: AEM ramverk för Single Page Application Editor ger författare möjlighet att redigera innehåll för ett Single Page-program eller en SPA. Utvecklare som använder någon av React-ramverken skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda AEM Sites välbekanta redigeringsverktyg.
 version: 6.4, 6.5, Cloud Service
 topic: SPA
 feature: SPA Editor
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Videoöversikt över hur du skapar innehåll för ett Single Page-program i AEM Sites.
 
-AEM SPA Editor ger författare möjlighet att redigera innehåll för ett enkelsidigt program eller SPA. Utvecklare som använder React-ramverket skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda AEM Sites välbekanta redigeringsverktyg. I videon nedan visas några av de sammanhangsberoende redigeringsfunktionerna på exempelwebbplatsen för WKND SPA. WKND-SPA innehåller båda en React-implementering.
+AEM SPA Editor ger författare möjlighet att redigera innehåll för ett Single Page-program eller SPA. Utvecklare som använder React-ramverket skapar en SPA och mappar sedan delar av SPA till AEM komponenter, så att författarna kan använda AEM Sites välbekanta redigeringsverktyg. I videon nedan visas några av de sammanhangsberoende redigeringsfunktionerna på exempelwebbplatsen för WKND SPA. WKND-SPA innehåller båda en React-implementering.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
@@ -36,8 +36,8 @@ AEM SPA Editor ger författare möjlighet att redigera innehåll för ett enkels
 
 Implementeringen av WKND-SPA har endast stöd för AEM 6.4.8+, AEM 6.5.5+ och AEM as a Cloud Service.
 
-Hämta och installera lämpliga [WKND-SPA](https://github.com/adobe/aem-guides-wknd-spa/releases) baserat på din version av AEM. Det finns olika versioner för **Reagera**.
+Hämta och installera lämpligt [WKND-SPA](https://github.com/adobe/aem-guides-wknd-spa/releases) baserat på din version av AEM. Det finns olika versioner för **Reaktion**.
 
 En detaljerad självstudiekurs om hur du utvecklar med SPA Editor finns i:
 
-* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+* [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)

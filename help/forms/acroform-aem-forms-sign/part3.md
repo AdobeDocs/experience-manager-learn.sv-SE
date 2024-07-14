@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # Testa den här funktionen på datorn
 
-[Hämta och importera det här paketet till AEM](assets/acro-form-aem-form.zip)
+[Hämta och importera paketet till AEM](assets/acro-form-aem-form.zip)
 Det här paketet innehåller exempelarbetsflödet och HTML-sidan som gör att du kan skapa schemat från det överförda Acrobat.
 
 ## Konfigurera arbetsflöde
@@ -33,7 +33,7 @@ Det här paketet innehåller exempelarbetsflödet och HTML-sidan som gör att du
 1. Skapa ett anpassat formulär med det schema som skapades i det tidigare steget.
 2. Dra och släpp några schemaelement i det adaptiva formuläret.
 3. Konfigurera skicka-åtgärden för det adaptiva formuläret som ska skickas till AEM (MergeAcrobatData).
-4. **Se till att du anger sökvägen till datafilen som &quot;Data.xml&quot;. Detta är mycket viktigt eftersom exempelkoden söker efter filen Data.xml i arbetsflödets nyttolast.**
+4. **Se till att du anger sökvägen till datafilen som &quot;Data.xml&quot;. Detta är mycket viktigt eftersom exempelkoden söker efter en fil med namnet Data.xml i arbetsflödets nyttolast.**
 5. Förhandsgranska anpassat formulär, fyll i formuläret och skicka in det.
 6. Du bör se PDF med data som sammanfogats sparade i den mapp som anges i steg 4 under konfigurationsarbetsflödet
 

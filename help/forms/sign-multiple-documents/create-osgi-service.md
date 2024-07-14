@@ -165,7 +165,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## Hämta nästa formulär att signera
 
-Följande kod användes för att hämta nästa formulär för signering för ett givet customerID med statusen 0. Om SQL-frågan inte returnerar några rader returnerar vi strängen **&quot;AllDone&quot;** som anger att det inte finns fler formulär för signering för det angivna kund-ID:t.
+Följande kod användes för att hämta nästa formulär för signering för ett givet customerID med statusen 0. Om SQL-frågan inte returnerar några rader returnerar vi strängen **&quot;AllDone&quot;** som anger att det inte finns fler formulär för signering för angivet kund-ID.
 
 ```java
 @Override
@@ -205,7 +205,7 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-OSGi-paketet med ovannämnda tjänster kan [hämtad härifrån](assets/sign-multiple-forms.jar)
+OSGi-paketet med de ovannämnda tjänsterna kan [hämtas här](assets/sign-multiple-forms.jar)
 
 ## Nästa steg
 

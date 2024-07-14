@@ -29,18 +29,18 @@ Användningsexemplet är att utlösa ett AEM arbetsflöde för att skicka ett ad
 
    * Sök efter JDBC-anslutningspool. Skapa en ny JDBC-anslutningspool för dagkommentarer. Ange inställningarna som är specifika för databasen.
 
-   * ![OSGi-konfiguration för JDBC-anslutningspool](assets/aemformstutorial-jdbc.png)
+   * ![JDBC-anslutningspoolens OSGi-konfiguration](assets/aemformstutorial-jdbc.png)
 
 ## Ange databasinformation
 
-* Sök efter &quot;**Ange databasinformation**&quot;
+* Sök efter **Ange databasinformation**
 * Ange egenskaper som är specifika för databasen.
    * DataSourceName:Namn på datakällan som du konfigurerade tidigare.
    * TableName - namnet på den tabell där du vill lagra AF-data
    * FormName - Kolumnnamn som ska innehålla formulärets namn
    * ColumnName - kolumnnamn som AF-data ska lagras i
 
-  ![Ange databasinformation i OSGi-konfiguration](assets/specify-database-details.png)
+  ![Ange databasinformation för OSGi-konfiguration](assets/specify-database-details.png)
 
 
 
@@ -215,7 +215,7 @@ public class InsertAfData implements WorkflowProcess {
 
    * Distribuera jar-filen med [AEM webbkonsol](http://localhost:4502/system/console/bundles). Den här jar-filen innehåller koden som används för att lagra formulärdata i databasen.
 
-   * Importera de två ZIP-filerna till [AEM med pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig [exempelarbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och [exempeladaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som kommer att utlösa arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Se hur [adaptiv form](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) har konfigurerats för att utlösa AEM arbetsflöde vid överföring och datafilskonfigurationen (data.xml)
+   * Importera de två ZIP-filerna till [AEM med hjälp av pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig arbetsflödet [för exempel](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och det [exempel på adaptiva formulär](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som utlöser arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Observera hur det adaptiva formuläret [ ](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) är konfigurerat för att utlösa det AEM arbetsflödet när det skickas och datafilskonfigurationen (data.xml)
 
    * Förhandsgranska och fyll i formuläret och skicka. Du bör se en ny rad som har skapats i databasen
 

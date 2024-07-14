@@ -27,19 +27,19 @@ I den här artikeln tittar vi på ett enkelt arbetsflöde som används för att 
 * Administratören öppnar formuläret. Administratören ska inte kunna redigera någon information som fyllts i av den som skickar in formuläret.
 * Godkännaravsnittet ska vara synligt för godkännaren (i det här fallet är det AEM adminanvändaren).
 
-För att uppfylla ovanstående krav använder vi ett dolt fält som kallas **initialsteg** i formuläret och dess standardvärde är inställt på Ja. När formuläret skickas anges värdet för initialsteget till Nej i det första steget i arbetsflödet. Formuläret har affärsregler för att dölja och visa lämpliga avsnitt baserat på det initiala stegvärdet.
+För att uppfylla ovanstående krav använder vi ett dolt fält med namnet **initialstep** i formuläret och dess standardvärde är inställt på Ja. När formuläret skickas anges värdet för initialsteget med det första steget i arbetsflödet till Nej. Formuläret har affärsregler för att dölja och visa lämpliga avsnitt baserat på det initiala stegvärdet.
 
-**Konfigurera formuläret för att utlösa AEM arbetsflöde**
+**Konfigurera formuläret för att utlösa AEM**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
-**Genomgång av arbetsflöden**
+**Genomgång av arbetsflöde**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
 
-**Avsändarens vy över formuläret Tid för avbeställning**
+**Avsändarens vy över formuläret Tid för avbegäran**
 
-![initialsteg](assets/initialstep.gif)
+![initialstep](assets/initialstep.gif)
 
 **Godkännarvy för formuläret**
 
@@ -51,8 +51,8 @@ Följ stegen nedan för att testa det här arbetsflödet i ditt system:
 * [Hämta och distribuera DevelopingWitheServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [Hämta och distribuera det anpassade paketet SetValue OSGI](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [Importera resurser som hör till den här artikeln till AEM](assets/helpxworkflow.zip)
-* Öppna [Frågeformulär - tid](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Öppna formuläret [Tid kvar på begäran](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Fyll i uppgifterna och skicka in
-* Öppna [inkorg](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Du bör se en ny uppgift som har tilldelats. Öppna formuläret. Den som skickar uppgifterna ska vara skrivskyddade och ett nytt godkännaravsnitt ska vara synligt.
-* Utforska [arbetsflödesmodell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* Öppna [inkorgen](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Du bör se en ny uppgift som har tilldelats. Öppna formuläret. Den som skickar uppgifterna ska vara skrivskyddade och ett nytt godkännaravsnitt ska vara synligt.
+* Utforska [arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * Utforska processteget. Detta är steget som ställer in värdet för initialsteget till Nej.

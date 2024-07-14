@@ -27,7 +27,7 @@ Om du vill lagra skickade data i databasen skriver vi en serverlet som extrahera
 
 Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår tjänstserver.
 
-Läs det här om du vill veta mer om anpassade inlämningsförfrågningar [artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+Läs den här [artikeln](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html) om du vill veta mer om anpassade inskickningsalternativ.
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/stoconfirmSubmit&quot;,null,null);
 
@@ -137,7 +137,7 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![anslutningpool](assets/connectionpooled.gif)
+![anslutningspool](assets/connectionpooled.gif)
 
 Så här fungerar ditt system:
 

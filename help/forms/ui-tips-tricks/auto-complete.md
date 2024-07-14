@@ -79,8 +79,8 @@ minLength: 1, source: values, delay: 0
 );
 ```
 
-The [exempelformulär kan laddas ned](assets/auto-complete-form.zip) härifrån. Se till att du anger din egen användarnamn/API-nyckel med kodredigeraren för koden för att kunna göra REST-anrop.
+Exempelformuläret [kan hämtas](assets/auto-complete-form.zip) härifrån. Se till att du anger din egen användarnamn/API-nyckel med kodredigeraren för koden för att kunna göra REST-anrop.
 
 >[!NOTE]
 >
-> Se till att formuläret använder följande klientbibliotek för att slutföra automatiskt **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.
+> För att automatisk komplettering ska fungera måste formuläret använda följande klientbibliotek: **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.

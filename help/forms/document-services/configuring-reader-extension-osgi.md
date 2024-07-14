@@ -42,6 +42,6 @@ Följ videon för att lägga till inloggningsuppgifterna till användaren av fd-
 
 Kommandot som listar information om pfx-filen är. Följande kommando förutsätter att du finns i samma katalog som pfx-filen.
 
-**keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
+**keytool -v -list -storetype pkcs12 -keystore &lt;namn på pfx-filen>**
 
 Exempel: keytool -v -list -storetype pkcs12 -keystore 1005566.pfx där 1005566.pfx är namnet på min pfx-fil

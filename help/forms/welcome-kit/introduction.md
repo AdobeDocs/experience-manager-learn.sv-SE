@@ -24,6 +24,7 @@ Den här självstudiekursen hjälper dig att sätta ihop en AEM sida med länkar
 
 Du behöver följande:
 
-En fungerande instans av AEM med Form Add-on-paket installerade Core-komponenter
+En fungerande instans av AEM med tilläggspaketet Form installerat
+Kärnkomponenter har installerats
 
 [Utvecklingsmiljö som konfigurerats enligt det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Använda Multi Site Manager {#using-multi-site-manager-with-aem-sites}
 
-Översikt över Live Copy och Konfigurationshanteraren för utkast är AEM redigeringsgränssnitt för att arbeta med [Multi Site Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) i Adobe Experience Manager Sites.
+Översikt över Live Copy och Konfigurationshanteraren för utkast är AEM gränssnitt för författare som används med [Multi Site Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) i Adobe Experience Manager Sites.
 
 ## Live Copy - översikt {#live-copy-overview}
 
@@ -30,10 +30,10 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
-*I AEM 6.3 introduceras ett Touch UI-gränssnitt för hantering av designkonfigurationer för användning i Multi Site Manager.*
+*AEM 6.3 introducerar ett Touch UI-gränssnitt för att hantera designkonfigurationer för användning i Multi Site Manager.*
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Översiktskonsol för Live Copy](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
-* [Skapa och synkronisera Live-kopior](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
+* [Konsolen Live-kopia - översikt](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy-overview.html)
+* [Skapar och synkroniserar live-kopior](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-livecopy.html)
 * [MSM Best Practices](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

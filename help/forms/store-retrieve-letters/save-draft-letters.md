@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Spara och hämta utkast
 
-Följande kod används för att spara bokstavsinstansen. Bokstavsinstansens metadata lagras i _isutkast_ tabell. En unik sträng (draftID) genereras och returneras. Den här unika strängen används sedan för att hämta den sparade bokstavsinstansen.
+Följande kod används för att spara bokstavsinstansen. Metadata för bokstavsinstansen lagras i tabellen _icdraft_. En unik sträng (draftID) genereras och returneras. Den här unika strängen används sedan för att hämta den sparade bokstavsinstansen.
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -168,4 +168,4 @@ Du kan anpassa frågan för att hämta de sparade bokstavsinstanserna. I det hä
 
 ### Eclipse-projekt
 
-Det explicita projektet med exempelimplementering kan [hämtad härifrån](assets/icdrafts-eclipse-project.zip)
+Det överlappande projektet med exempelimplementering kan [hämtas härifrån](assets/icdrafts-eclipse-project.zip)

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Samla in Workbench-loggar från Hjälp-menyn
 
-*I den här videon går du igenom processen för att samla in Workbench-loggar från Hjälp-menyn .*
+*Den här videon går igenom processen för att samla in Workbench-loggar från Hjälp-menyn.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335501?quality=12&learn=on)

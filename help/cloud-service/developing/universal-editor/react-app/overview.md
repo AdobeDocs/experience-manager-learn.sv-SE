@@ -32,8 +32,8 @@ Den här självstudiekursen handlar om följande ämnen:
 - En kort översikt över Universal Editor
 - Konfigurera den lokala utvecklingsmiljön
    - **AEM SDK**: innehåller innehåll som lagras i innehållsfragment för React-appen med GraphQL API:er.
-   - **Reagera-app**: ett enkelt användargränssnitt som visar innehållet från AEM.
-   - **Universell redigeringstjänst**: a _lokal kopia av Universal Editor-tjänsten_ som binder Universal Editor och AEM SDK.
+   - **Reagera app**: Ett enkelt användargränssnitt som visar innehållet från AEM.
+   - **Universal Editor Service**: en _lokal kopia av Universal Editor-tjänsten_ som binder Universal Editor och AEM SDK.
 - Hur man instrumenterar React-appen för att redigera innehåll med Universal Editor
 - Redigera innehållet i React-appen med Universal Editor
 
@@ -50,14 +50,14 @@ Den universella redigeraren ger möjlighet för skribenter och utvecklare (front
 
 ## Sample React-app
 
-Den här självstudiekursen använder [**WKND Teams**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) som exempelappen React. The **WKND Teams** React-appen visar en lista över teammedlemmar och deras information.
+I den här självstudien används [**WKND Teams**](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#react-app---basic-tutorial---teampersons) som exempelapp för React. I appen **WKND Teams** React visas en lista med teammedlemmar och deras information.
 
-Teaminformation som titel, beskrivning och teammedlemmar lagras som _Team_ Innehållsfragment i AEM. Personinformation som namn, biografi och profilbild lagras på samma sätt som _Person_ Innehållsfragment i AEM.
+Teaminformation som titel, beskrivning och teammedlemmar lagras som _Team_-innehållsfragment i AEM. Personinformation som namn, biografi och profilbild lagras på samma sätt som _Person_ i AEM.
 
-Innehållet i React-appen tillhandahålls av AEM med GraphQL API:er och användargränssnittet byggs med två React-komponenter, `Teams` och `Person`.
+Innehållet för React-appen tillhandahålls av AEM med GraphQL API:er och användargränssnittet har byggts med två React-komponenter, `Teams` och `Person`.
 
-Det finns en motsvarande självstudiekurs om hur du skapar **WKND Teams** Reagera-app. Du hittar självstudiekursen [här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+Det finns en motsvarande självstudiekurs som lär dig hur du bygger appen **WKND Teams**. Självstudiekursen [finns här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
 
 ## Nästa steg
 
-Lär dig hur [konfigurera den lokala utvecklingsmiljön](./local-development-setup.md).
+Lär dig hur du [konfigurerar den lokala utvecklingsmiljön](./local-development-setup.md).

@@ -20,6 +20,6 @@ ht-degree: 2%
 
 # Introduktion
 
-Lär dig hur du lagrar as a Cloud Service data från AEM Forms som skickas till ett Azure-lagringskonto.
+Lär dig hur du lagrar AEM Forms as a Cloud Service inskickningsdata till ett Azure-lagringskonto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336028?quality=12&learn=on)

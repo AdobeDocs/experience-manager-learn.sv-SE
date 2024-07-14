@@ -27,7 +27,7 @@ I den här självstudiekursen får du hjälp med att spara och hämta adaptiva f
 
 * Ring en POST till en servett. Den här servern lagrar data i databasen och formulärbilagor i CRX-databasen. De lagrade data i databasen är kopplade till ett GUID.
 
-* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med hjälp av **request.setAttribute** -metod.
+* När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med metoden **request.setAttribute**.
 
 ## Demonstration av användningsfallet
 
@@ -45,4 +45,4 @@ Målgruppen för det här innehållet förväntas ha viss erfarenhet inom följa
 
 ## Nästa steg
 
-[Konfigurerar datakälla](./configure-data-source.md)
+[Konfigurera Data Source](./configure-data-source.md)

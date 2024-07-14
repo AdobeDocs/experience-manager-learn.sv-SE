@@ -1,6 +1,6 @@
 ---
 title: Lagra bifogade formulär
-description: Extrahera formulärbilagorna och lagra dem på en ny plats i CRX-databasen.
+description: Extrahera de bifogade filerna och spara dem på en ny plats i CRX-databasen.
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Lagra bifogade formulär
 
-När du lägger till bilagor i ett anpassat formulär lagras bilagorna på en tillfällig plats i CRX-databasen. För att vi ska kunna arbeta måste vi lagra de bifogade formulären på en ny plats i CRX-databasen.
+När du lägger till bilagor i ett anpassat formulär lagras bilagorna på en tillfällig plats i CRX-databasen. För att vi ska kunna arbeta måste vi lagra de bifogade filerna på en ny plats i CRX.
 
-OSGi-tjänsten skapas för att lagra formulärbilagor på en ny plats i CRX-databasen. En ny filmappning skapas med den nya platsen för de bifogade filerna i CRX och returneras till det anropande programmet.
+OSGi-tjänsten skapas för att lagra de bifogade filerna på en ny plats i CRX-databasen. En ny filmappning skapas med den nya platsen för de bifogade filerna i CRX och returneras till det anropande programmet.
 Följande är den FileMap som skickas till servern. Nyckeln är det adaptiva formulärfältet och värdet är den temporära platsen för den bifogade filen. På vår server extraherar vi den bifogade filen och sparar den på en ny plats i AEM och uppdaterar FileMap med den nya platsen
 
 ```java
@@ -32,7 +32,7 @@ Följande är den FileMap som skickas till servern. Nyckeln är det adaptiva for
 }
 ```
 
-Följande kod extraherar de bifogade filerna från begäran och lagrar dem under **/content/fetstil** mapp
+Följande kod extraherar de bifogade filerna från begäran och lagrar dem under mappen **/content/fettments**
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {

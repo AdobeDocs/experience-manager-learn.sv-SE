@@ -31,9 +31,9 @@ Innan du kör skriptet måste du konfigurera det med din AEM instans-URL, inlogg
 
 ## Exportera skript
 
-Skriptet, skrivet som en JavaScript-modul, är en del av ett Node.js-projekt eftersom det är beroende av `node-fetch`. Du kan [hämta projektet som en zip-fil](./assets/export/export-aem-assets-script.zip)eller kopiera skriptet nedan till ett tomt Node.js-projekt av typen `module`och köra `npm install node-fetch` för att installera beroendet.
+Skriptet, skrivet som en JavaScript-modul, är en del av ett Node.js-projekt eftersom det är beroende av `node-fetch`. Du kan [hämta projektet som en zip-fil](./assets/export/export-aem-assets-script.zip), eller kopiera skriptet nedan till ett tomt Node.js-projekt av typen `module`, och köra `npm install node-fetch` för att installera beroendet.
 
-Skriptet leder mappträdet för AEM Assets och hämtar resurser och mappar till en lokal mapp på datorn. Den använder [AEM ASSETS HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för att hämta mapp- och resursdata och hämta de ursprungliga återgivningarna av resurserna.
+Skriptet leder mappträdet för AEM Assets och hämtar resurser och mappar till en lokal mapp på datorn. Den använder [AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för att hämta mapp- och resursdata och hämtar de ursprungliga återgivningarna av resurserna.
 
 ```javascript
 // export-assets.js
@@ -243,7 +243,7 @@ console.timeEnd('Download AEM assets');
 
 När skriptet har laddats ned uppdaterar du konfigurationsvariablerna längst ned i skriptet.
 
-The `AEM_ACCESS_TOKEN` kan hämtas med stegen i [Tokenbaserad autentisering till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) självstudie. Ofta räcker det med en utvecklartoken på 24 timmar, så länge det tar mindre än 24 timmar att slutföra exporten och den användare som genererar token har läsåtkomst till resurserna som ska exporteras.
+`AEM_ACCESS_TOKEN` kan hämtas med hjälp av stegen i självstudiekursen [Tokenbaserad autentisering till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview). Ofta räcker det med en utvecklartoken på 24 timmar, så länge det tar mindre än 24 timmar att slutföra exporten och den användare som genererar token har läsåtkomst till resurserna som ska exporteras.
 
 ```javascript
 ...
@@ -270,7 +270,7 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 
 Kör skriptet med Node.js för att exportera resurserna till din lokala dator.
 
-Beroende på antalet resurser och deras storlek kan skriptet ta en stund att slutföra. När skriptet körs [loggar förloppet](#output) till konsolen.
+Beroende på antalet resurser och deras storlek kan skriptet ta en stund att slutföra. När skriptet körs loggar det [förloppet](#output) till konsolen.
 
 ```shell
 $ node export-assets.js
@@ -294,6 +294,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view), för [massimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM eller för säkerhetskopiering.
+De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) som stöds, för [bulkimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM eller för säkerhetskopiering.
 
 ![Exporterade resurser](./assets/export/exported-assets.png)

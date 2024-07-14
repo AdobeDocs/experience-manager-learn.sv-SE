@@ -25,7 +25,7 @@ Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-aut
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
-mTLS eller tvåvägs TLS-autentisering förbättrar säkerheten för TLS-protokollet genom att kräva **både klienten och servern autentiserar varandra**. Autentiseringen görs med digitala certifikat. Det används ofta i scenarier där stark säkerhet och identitetsverifiering är avgörande.
+mTLS- eller tvåvägs TLS-autentisering förbättrar TLS-protokollets säkerhet genom att kräva att **både klienten och servern autentiserar varandra**. Autentiseringen görs med digitala certifikat. Det används ofta i scenarier där stark säkerhet och identitetsverifiering är avgörande.
 
 Som standard misslyckas anslutningen när du försöker göra en HTTPS-anslutning till ett webb-API som kräver mTLS-autentisering. Följande fel uppstår:
 
@@ -35,7 +35,7 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_required
 
 Det här problemet inträffar när klienten inte har något certifikat som kan autentiseras.
 
-Lär dig hur du kan anropa API:er som kräver mTLS-autentisering med [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM KeyStore och TrustStore**.
+Låt oss lära oss hur du kan anropa API:er som kräver mTLS-autentisering med [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM KeyStore och TrustStore**.
 
 
 ## HttpClient och läsa in AEM KeyStore-material
@@ -92,21 +92,21 @@ Om API-providern använder ett självsignerat certifikatutfärdarcertifikat tar 
 
 Så här importerar du AEM certifikat:
 
-1. Logga in på **AEM** som **administratör**.
+1. Logga in på **AEM författare** som **administratör**.
 
 1. Navigera till **AEM Författare > Verktyg > Dokumentskydd > Användare > Skapa eller välj en befintlig användare**.
 
    ![Skapa eller välj en befintlig användare](assets/mutual-tls-authentication/create-or-select-user.png)
 
-   För demonstrationssyften: en ny användare med namnet `mtl-demo-user` skapas.
+   För demoändamål skapas en ny användare med namnet `mtl-demo-user`.
 
-1. Öppna **Användaregenskaper** klickar du på användarnamnet.
+1. Klicka på användarnamnet för att öppna **användaregenskaperna**.
 
-1. Klicka **Nyckelbehållare** och sedan klicka på **Skapa nyckelbehållare** -knappen. Sedan i **Ange lösenord för KeyStore-åtkomst** anger du ett lösenord för användarens nyckelbehållare och klickar på Spara.
+1. Klicka på fliken **Nyckelbehållare** och sedan på knappen **Skapa nyckelbehållare** . Ange sedan ett lösenord för användarens nyckelbehållare i dialogrutan **Ange lösenord för KeyStore-åtkomst** och klicka på Spara.
 
    ![Skapa nyckelbehållare](assets/mutual-tls-authentication/create-keystore.png)
 
-1. På den nya skärmen, under **LÄGG TILL PRIVAT NYCKEL FRÅN DER-FIL** följer du stegen nedan:
+1. Följ stegen nedan på den nya skärmen under avsnittet **LÄGG TILL PRIVAT KEY FRÅN DER FILE**:
 
    1. Ange alias
 
@@ -120,7 +120,7 @@ Så här importerar du AEM certifikat:
 
 1. Kontrollera att certifikatet har importerats.
 
-   ![AEM privat nyckel och certifikat har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
+   ![AEM Privat nyckel och certifikat har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
 Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material).
 
@@ -128,7 +128,7 @@ Om AEM använder ett självsignerat CA-certifikat ber du API-providern att impor
 
 ### Prototypisk mTLS API-anropskod med HttpClient
 
-Uppdatera Java™-kod enligt nedan. Används `@Reference` anteckning för att hämta AEM `KeyStoreService` den anropande koden måste vara en OSGi-komponent/tjänst eller en Sling-modell (och `@OsgiService` används där).
+Uppdatera Java™-kod enligt nedan. Om du vill använda `@Reference`-anteckningen för att hämta AEM `KeyStoreService`-tjänsten måste den anropande koden vara en OSGi-komponent eller en Sling-modell (och `@OsgiService` används där).
 
 
 ```java
@@ -212,21 +212,21 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 ...
 ```
 
-- Injicera OTB `com.adobe.granite.keystore.KeyStoreService` OSGi-tjänst i OSGi-komponenten.
-- Hämta användarens AEM KeyStore med `KeyStoreService` och `ResourceResolver`, `getAEMKeyStore(...)` metoden gör det.
-- Om API-providern använder ett självsignerat CA-certifikat hämtar du det globala AEM TrustStore, `getAEMTrustStore(...)` metoden gör det.
+- Mata in OTB `com.adobe.granite.keystore.KeyStoreService` OSGi-tjänsten i OSGi-komponenten.
+- Hämta användarens AEM KeyStore med `KeyStoreService` och `ResourceResolver`, det gör metoden `getAEMKeyStore(...)`.
+- Om API-providern använder ett självsignerat CA-certifikat hämtar du det globala AEM TrustStore, gör metoden `getAEMTrustStore(...)` det.
 - Skapa ett objekt av `SSLContextBuilder`, se Java™ [API-information](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html).
-- Läs in användarens AEM KeyStore i `SSLContextBuilder` använda `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)` -metod.
-- Lösenordet för nyckelbehållaren är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Värden för hemlig konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values).
+- Läs in användarens AEM KeyStore till `SSLContextBuilder` med metoden `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)`.
+- Nyckellösenordet är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values).
 
 ## Undvik JVM-nyckelbehållarändringar
 
-Ett vanligt tillvägagångssätt för att effektivt anropa mTLS API:er med privata certifikat är att ändra JVM Keystore. Detta uppnås genom att de privata certifikaten importeras med Java™ [nyckelverktyg](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) -kommando.
+Ett vanligt tillvägagångssätt för att effektivt anropa mTLS API:er med privata certifikat är att ändra JVM Keystore. Detta uppnås genom att importera privata certifikat med kommandot Java™ [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) .
 
-Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM erbjuder ett överlägset alternativ genom att använda **Användarspecifik KeyStores och Global TrustStore** och [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM erbjuder ett överlägset alternativ genom att använda **användarspecifika KeyStores och Global TrustStore** och [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
 
 ## Lösningspaket
 
-Exempelprojektet Node.js som demonstreras i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
+Exempelprojektet Node.js som har nedgraderats i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
 
-Den AEM serletkoden finns i WKND Sites Project `tutorial/web-api-invocation` gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+Den AEM serletkoden är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).

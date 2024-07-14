@@ -1,6 +1,6 @@
 ---
 title: Förstå Adobe Cloud Manager
-description: Adobe Cloud Manager är en enkel men ändå robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM miljöer.
+description: Adobe Cloud Manager är en enkel men ändå robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM.
 sub-product: Experience Manager Cloud Manager, Experience Manager
 doc-type: Feature Video
 topic: Architecture
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Förstå Adobe Cloud Manager
 
-Adobe Cloud Manager är en enkel men ändå robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM miljöer.
+Adobe Cloud Manager är en enkel men ändå robust lösning som gör det enkelt att hantera, granska och självbetjäna AEM.
 
-## Översikt över Cloud Manager
+## Cloud Manager - översikt
 
-I den här videoserien utforskas de viktigaste funktionerna i Cloud Managers för AEM:
+I denna videoserie utforskas de viktigaste funktionerna i Cloud Manager för AEM:
 
 * [Program](#programs)
 * [Miljö](#environments)
@@ -33,7 +33,7 @@ I den här videoserien utforskas de viktigaste funktionerna i Cloud Managers fö
 * [Icke-produktionsförlopp för CI/CD](#cicd-non-production-pipeline)
 * [Aktivitet](#activity)
 
-En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
+En fullständig översikt finns i [Cloud Manager användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
 ## Program {#programs}
 
@@ -43,19 +43,19 @@ En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://
 
 ## Miljö {#environments}
 
-[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) består av AEM Author, AEM Publish and Dispatcher-instanser. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipelines (beskrivs nedan). Cloud Manager-miljöer har vanligtvis en produktionsmiljö och en scenmiljö.
+[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) består av AEM författare, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipelines (beskrivs nedan). Cloud Manager-miljöer har vanligtvis en produktionsmiljö och en scenmiljö.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
 
 ## Rapporter {#reports}
 
-[Cloud Manager-rapporter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) ge en översikt över programmets miljöer och AEM genom en uppsättning diagram som rapporterar och håller reda på olika mätvärden för varje AEM.
+[Cloud Manager-rapporter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) ger en översikt över programmets miljöer och AEM genom en uppsättning diagram som rapporterar och spårar olika mått för varje AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
 ## CI/CD Production Pipeline {#cicd-production-pipeline}
 
-*[Använda CI/CD-pipeline i Adobe Cloud Manager](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) videoserien ger en djupdykning i körningen av produktionspipelinen, bland annat utforskande av misslyckade och lyckade distributioner.*
+*[Använd CI/CD Pipeline i videoserien Adobe Cloud Manager](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) som ger dig en djupdykning i körningen av produktionspipelinen, inklusive utforskning av misslyckade och lyckade distributioner.*
 
 >[!NOTE]
 >
@@ -63,26 +63,26 @@ En fullständig översikt finns i [Användarhandbok för Cloud Manager](https://
 
 ### Konfiguration
 
-The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) konfiguration definierar den utlösare som initierar pipelinen och parametrar som styr produktionsdistributionen och prestandatestparametrarna.
+Konfigurationen [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) definierar utlösaren som initierar pipelinen och parametrar som styr produktionsdistributionen och prestandatestparametrarna.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Körning av pipeline
 
-The [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) används för att skapa och distribuera kod genom Stage till produktionsmiljön, vilket minskar tiden till värde.
+Produktionspipelinen [CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) används för att skapa och distribuera kod genom scenen till produktionsmiljön, vilket minskar tiden till värde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
 
 ## Icke-produktionsförlopp för CI/CD {#cicd-non-production-pipeline}
 
-[Rörledningar för CI/CD, ej produktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) är uppdelade i två kategorier, Kodkvalitetsledningar och distributionsledningar. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Managers skanning av kodkvalitet. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
+[Icke-producerade pipelines för CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) är indelade i två kategorier, Kodkvalitetspipelines och Distributionspipelines. Kodkvalitetsledningarna genererar all kod från en Git-gren och utvärderas mot Cloud Manager kodkvalitetssökning. Driftsättningspipelines stöder automatisk driftsättning av kod från Git-databasen till valfri icke-produktionsmiljö, vilket innebär en provisionerad AEM som inte är Stage eller Production.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
 
 ## Aktivitet {#activity}
 
-Cloud Manager ger en samlad vy över en aktivitet i ett program, med en lista över alla CI/CD Pipeline-körningar, både produktion och icke-produktion, som ger insyn i den tidigare och nuvarande aktiviteten och alla aktiviteters detaljer kan granskas.
+Cloud Manager ger en samlad översikt över en programaktivitet, med en lista över alla CI/CD Pipeline-exekveringar, både produktion och icke-produktion, som ger insyn i den tidigare och nuvarande aktiviteten och alla aktiviteters detaljer kan granskas.
 
-Cloud Manager kan även integreras per användare med [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html), som ger en heltäckande bild av händelser och intressanta åtgärder.
+Cloud Manager kan även integreras per användare med [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html), vilket ger en helhetsbild av händelser och intressanta åtgärder.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

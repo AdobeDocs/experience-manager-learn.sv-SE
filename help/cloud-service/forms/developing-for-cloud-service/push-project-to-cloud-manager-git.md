@@ -21,7 +21,8 @@ ht-degree: 0%
 
 I föregående steg synkroniserade vi vårt AEM med det adaptiva Forms och de teman som skapades i AEM.
 Vi måste nu lägga till dessa ändringar i vår lokala Git-databas och sedan överföra den lokala Git-databasen till molnhanterarens Git-databas.
-Öppna kommandotolken och navigera till c:\cloudmanager\aem-Banking-app Kör följande kommandon
+Öppna kommandotolken och navigera till c:\cloudmanager\aem-Banking-app
+Utför följande kommandon
 
 ```
 git add .

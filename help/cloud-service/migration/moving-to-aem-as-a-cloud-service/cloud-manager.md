@@ -1,6 +1,6 @@
 ---
 title: Använda Cloud Manager med AEM as a Cloud Service
-description: Lär dig mer om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM på Adobe Manage Services (AMS).
+description: Läs om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM om Adobe Manage Services (AMS).
 version: Cloud Service
 feature: Cloud Manager
 topic: Migration, Upgrade
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Cloud Manager
 
-Lär dig mer om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM på Adobe Manage Services (AMS).
+Läs om Cloud Manager för AEM as a Cloud Service och dess skillnader med Cloud Manager för AEM om Adobe Manage Services (AMS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
@@ -46,9 +46,9 @@ Se även till att du har fullföljt tidigare övningar:
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">Handtag med Cloud Manager</div>
+            <div style="font-size:1.25rem;font-weight:400;">Handstil med Cloud Manager</div>
             <p style="margin:1rem 0">
-                Lär dig utlösa en pipeline för Cloud Manager med hjälp av plugin-programmet för AIO CLI Cloud Manager.
+                Utlösa en Cloud Manager-pipeline med hjälp av Cloud Manager-pluginmodulen AIO CLI.
             </p>
             <a  rel="noreferrer"
                 target="_blank"

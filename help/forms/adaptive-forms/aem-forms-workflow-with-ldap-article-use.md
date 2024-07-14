@@ -22,7 +22,7 @@ Tilldela AEM Forms-arbetsflödesuppgift till den som skickar in formuläret.
 
 När du använder Adaptivt formulär i AEM arbetsflöde vill du dynamiskt tilldela en uppgift till formulärskickarens hanterare. För att uppnå detta måste vi konfigurera AEM med Ldap.
 
-Hur du konfigurerar AEM med LDAP beskrivs i [här.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+De steg som krävs för att konfigurera AEM med LDAP beskrivs i [detalj här.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 I den här artikeln bifogas konfigurationsfiler som används för att konfigurera AEM med Adobe Ldap. Dessa filer ingår i paketet som kan importeras med hjälp av pakethanteraren.
 
@@ -62,13 +62,13 @@ Vi får tag i den person som initierade arbetsflödet. Sedan får vi värdet fö
 
 Beroende på hur hanteraregenskapen lagras i LDAP kan du behöva göra någon strängändring för att få hanterar-ID:t.
 
-Läs den här artikeln för att implementera din egen [ParticipantChooser .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+Läs den här artikeln för att implementera din egen [ParticipantChooser.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 Om du vill testa detta på datorn (för anställda på Adobe kan du använda det här exemplet direkt)
 
 * [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här är det anpassade OSGI-paketet för att ställa in chefens egendom.
 * [Hämta och installera DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [Importera de resurser som är associerade med den här artikeln till AEM med hjälp av pakethanteraren](assets/aem-forms-ldap.zip).Ingår i detta paket som LDAP-konfigurationsfiler, arbetsflöde och en anpassningsbar form.
+* [Importera den Assets som är associerad med den här artikeln till AEM med pakethanteraren](assets/aem-forms-ldap.zip).Som ingår i det här paketet är LDAP-konfigurationsfiler, arbetsflöde och ett anpassat formulär.
 * Konfigurera AEM med LDAP med lämpliga LDAP-autentiseringsuppgifter.
 * Logga in på AEM med dina LDAP-autentiseringsuppgifter.
 * Öppna [timeoffrequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)

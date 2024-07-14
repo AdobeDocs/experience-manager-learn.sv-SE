@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Databasstrukturpaket
 
-Utforska ett AEM [Databasstrukturpaket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html), dess betydelse och hur den ska definieras optimalt.
+Utforska ett AEM [databasstrukturpaket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html), dess betydelse och hur du optimalt definierar det.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)

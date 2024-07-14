@@ -29,7 +29,7 @@ React är ett populärt JavaScript-bibliotek för att bygga användargränssnitt
 
 Genom att utnyttja AEM Headless API:er kan du hämta innehåll, resurser och data från din AEM och använda dem för att ge kraft åt ditt React-program. GraphQL, ett flexibelt frågespråk för API:er, är ett effektivt och exakt sätt att begära specifika data från din AEM, vilket möjliggör en smidig integrering mellan React och AEM.
 
-![AEM Headless First tutorial](./assets/overview/overview.png)
+![AEM Headless First Tutorial](./assets/overview/overview.png)
 
 Under den här självstudiekursen går vi steg för steg igenom processen att skapa en webbupplevelse med React och AEM Headless API:er med GraphQL. Du får lära dig hur du konfigurerar utvecklingsmiljön, upprättar en anslutning mellan Reagera och AEM, hämtar innehåll med GraphQL-frågor och återger det dynamiskt i webbprogrammet.
 
@@ -43,11 +43,11 @@ I slutet av den här självstudiekursen får du en god förståelse för hur du 
 
 + Kompetens för Reaktion
 + Kunskap i GraphQL
-+ Baskunskaper om AEM as a Cloud Service
++ Grundläggande kunskaper i AEM as a Cloud Service
 
 ### AEM as a Cloud Service
 
-Den här självstudiekursen kräver administratörsåtkomst till en AEM as a Cloud Service miljö.
+Den här självstudiekursen kräver administratörsåtkomst till en AEM as a Cloud Service-miljö.
 
 ### Programvara
 
@@ -58,10 +58,10 @@ Den här självstudiekursen kräver administratörsåtkomst till en AEM as a Clo
 + [Git](https://git-scm.com/)
    + Kontrollera Git-versionen genom att köra `git -v` från kommandoraden
 
-Använd [nodversionshanterare (nvm)](https://github.com/nvm-sh/nvm) för att hantera flera versioner av node.js på samma dator.
+Använd [nodversionshanteraren (nvm)](https://github.com/nvm-sh/nvm) för att adressera med flera versioner av node.js på samma dator.
 
 Kontrollera att du har behörighet att installera program globalt på datorn.
 
 ## Nästa steg
 
-Nu när miljön är klar går vi vidare till nästa steg: [Konfigurera och redigera innehåll på AEM as a Cloud Service](./1-content-modeling.md)
+Nu när miljön är konfigurerad går vi vidare till nästa steg: [Konfigurera och redigera innehåll i AEM as a Cloud Service](./1-content-modeling.md)

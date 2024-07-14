@@ -1,6 +1,6 @@
 ---
 title: Översättningsförbättringar i AEM
-description: AEM robusta översättningsramverk gör att AEM kan översättas smidigt av översättningsleverantörer som stöds. Läs om de senaste förbättringarna.
+description: AEM robusta översättningsramverk gör att AEM kan översättas sömlöst av översättningsleverantörer som stöds. Läs om de senaste förbättringarna.
 version: 6.4, 6.5
 topic: Localization
 feature: Multi Site Manager, Language Copy
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Översättningsförbättringar med Multi-Site Manager {#translation-enhancements}
 
-AEM robusta översättningsramverk gör att AEM kan översättas smidigt av översättningsleverantörer som stöds.
+AEM robusta översättningsramverk gör att AEM kan översättas sömlöst av översättningsleverantörer som stöds.
 
 ## Översättningsförbättringar i AEM 6.5
 
@@ -26,13 +26,13 @@ AEM robusta översättningsramverk gör att AEM kan översättas smidigt av öve
 
 AEM 6.5-översättningsförbättringar:
 
-**Godkänn översättningsjobb automatiskt**: Godkännandeflaggan i översättningsjobbet är en binär egenskap. Den kan inte köra eller integreras med färdiga arbetsflöden för granskning och godkännande. För att minimera antalet steg i ett översättningsjobb anges det som standard till &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt. Om din organisation kräver godkännande för ett översättningsjobb kan du avmarkera alternativet &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt.
+**Godkänn översättningsjobb automatiskt**: Godkännandeflaggan i översättningsjobbet är en binär egenskap. Den kan inte köra eller integreras med färdiga arbetsflöden för granskning och godkännande. Om du vill hålla antalet steg i ett översättningsjobb minimalt anges det som standard som&quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] i ett översättningsprojekt. Om din organisation kräver godkännande för ett översättningsjobb kan du avmarkera alternativet &quot;Godkänn automatiskt&quot; i [!UICONTROL Advanced Properties] för ett översättningsprojekt.
 
-**Ta bort översättningsstarter automatiskt**: I stället för att manuellt ta bort översättningsstarter i Launches Admin efter faktumet går det nu att automatiskt ta bort översättningsstarter när de har befordrats.
+**Ta bort översättningar automatiskt när de startas**: I stället för att ta bort översättningar som startas manuellt i Startar Admin efter faktumet går det nu att ta bort översättningar automatiskt när de har befordrats.
 
-**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare versioner stöder XML- och XLIFF-format för översättningsobjekt. Nu kan du konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration]och sedan kan du välja exportformatet som JSON.
+**Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare stöder XML- och XLIFF-format för översättningsobjekt. Du kan nu konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration] och sedan kan du välja exportformatet som JSON.
 
-**Uppdatera översatt AEM i översättningsminnet (TMS)**: Den lokala författaren som inte har åtkomst till AEM kan uppdatera översatt innehåll som redan har importerats till AEM, direkt i TM (översättningsminne, i TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobb från TMS till AEM
+**Uppdatera översatt AEM i översättningsminnet (TMS)**: Den lokala författaren som inte har tillgång till AEM kan uppdatera översatt innehåll som redan har importerats till AEM direkt i översättningsminnet (TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobbet från TMS till AEM igen
 
 ## Översättningsförbättringar i AEM 6.4
 
@@ -42,6 +42,6 @@ Nu kan man snabbt och enkelt skapa flerspråkiga översättningsprojekt direkt f
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Översätta innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
+* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
 * [Bästa praxis för översättning](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)

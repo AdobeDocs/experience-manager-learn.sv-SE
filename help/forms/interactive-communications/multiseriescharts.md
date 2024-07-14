@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I AEM Forms 6.5 fanns möjligheten att skapa och konfigurera diagram för flera serier. Diagrammen för flera serier används vanligtvis tillsammans med diagramtypen Line, Bar och Column. Följande diagram är ett bra exempel på diagram med flera serier. Diagrammet visar tillväxten på 10 000 USD i tre olika gemensamma fonder under en tidsperiod. För att kunna skapa och använda diagram av den här typen i AEM Forms måste du skapa en lämplig formulärdatamodell.
 
-![Diagram över flera serier](assets/series_charts.png)
+![Flerseriediagram](assets/series_charts.png)
 
 Om du vill skapa diagram i flera serier i AEM Forms måste du skapa en lämplig formulärdatamodell med nödvändiga enheter och associationer mellan enheterna. Följande skärmbild visar enheterna och associationerna mellan de tre entiteterna. På den översta nivån har vi en enhet som heter&quot;Organisation&quot;, som har en en-till-många-association med fondenheten. Fondenheten har i sin tur en-till-många-association med resultatenheten.
 
@@ -39,7 +39,7 @@ Följ de här stegen för att testa detta på datorn
 
 * [Hämta och importera filen MutualFundFactSheet.zip med AEM Package Manager.](assets/mutualfundfactsheet.zip)
 * [Hämta SeriesChartSampleData.json till hårddisken.](assets/serieschartsampledata.json) Detta är exempeldata som används för att fylla i diagrammet.
-* [Navigera till Forms och Dokument.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Navigera till Forms och dokument.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Välj försiktigt den interaktiva kommunikationsmallen &quot;MutualFundGrowthFactSheet&quot;.
 * Klicka på Förhandsgranska | Utskriftskanal | Överför exempeldata.
 * Bläddra till exempeldatafilen som ingår i den här artikeln.

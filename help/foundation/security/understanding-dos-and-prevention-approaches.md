@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Förstå DoS/DDoS-skydd i AEM
 
-Läs mer om de alternativ som finns för att förhindra och begränsa DoS- och DDoS-attacker på din AEM. Innan man börjar använda förebyggande mekanismer, en kort översikt över [GörS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack) och [DDoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service).
+Läs mer om de alternativ som finns för att förhindra och begränsa DoS- och DDoS-attacker på din AEM. En kort översikt över [DoS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack) och [DDoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service) innan du börjar använda de förebyggande mekanismerna.
 
 - DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) är båda skadliga försök att störa den normala funktionen hos en målserver, tjänst eller nätverk, vilket gör den oåtkomlig för de avsedda användarna.
 - DoS-attacker kommer vanligtvis från en enda källa, medan DDoS-attacker kommer från flera källor.
@@ -48,22 +48,22 @@ I följande tabell beskrivs hur du förhindrar och minskar DoS- och DDoS-attacke
         </tr>
         <tr>
             <td>ModSecurity</td>
-            <td>ModSecurity (även kallad "mod_security" Apache-modulen) är en plattformsoberoende lösning med öppen källkod som skyddar mot en rad attacker mot webbprogram.<br/> I AEM as a Cloud Service gäller detta endast för AEM Publish-tjänsten eftersom det inte finns någon Apache-webbserver och AEM Dispatcher framför AEM Author-tjänsten.</td>
+            <td>ModSecurity (även kallad "mod_security" Apache-modulen) är en plattformsoberoende lösning med öppen källkod som skyddar mot en rad attacker mot webbprogram.<br/> I AEM as a Cloud Service gäller detta endast AEM Publish eftersom det inte finns någon Apache-webbserver och AEM Dispatcher framför AEM Author-tjänsten.</td>
             <td colspan="3"><a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection" target="_blank">Aktivera ModSecurity </a></td>
         </tr>
         <tr>
             <td>Trafikfilterregler</td>
             <td>Trafikfilterregler kan användas för att blockera eller tillåta förfrågningar i CDN-lagret.</td>
             <td><a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis" target="_blank">Exempel på trafikfilterregler</a></td>
-            <td><a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-rate-based.html" target="_blank">AWS</a> eller <a href="https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/rate-limiting-overview" target="_blank">Azure</a> regelbegränsningsfunktioner.</td>
+            <td><a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-rate-based.html" target="_blank">Regelbegränsningsfunktioner för AWS</a> eller <a href="https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/rate-limiting-overview" target="_blank">Azure</a>.</td>
             <td>Den lösning du föredrar</td>
         </tr>
     </tbody>
 </table>
 
-## Analys efter incident och kontinuerlig förbättring
+## Post incidentanalys och kontinuerlig förbättring
 
-Det finns inte ett standardflöde som passar alla för att identifiera och förhindra DoS/DDoS-attacker, och det beror på organisationens säkerhetsprocess. The **analys efter incident och kontinuerlig förbättring** är ett viktigt steg i processen. Här är några tips att tänka på:
+Det finns inte ett standardflöde som passar alla för att identifiera och förhindra DoS/DDoS-attacker, och det beror på organisationens säkerhetsprocess. **Efterfallsanalysen och den kontinuerliga förbättringen** är ett viktigt steg i processen. Här är några tips att tänka på:
 
 - Identifiera grundorsaken till DoS/DDoS-attacken genom att utföra en analys efter incidenten, inklusive granskning av loggar, nätverkstrafik och systemkonfigurationer.
 - Förbättra de förebyggande mekanismerna baserat på resultaten av analysen efter incidenter.

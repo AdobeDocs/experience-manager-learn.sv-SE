@@ -28,11 +28,11 @@ Med Experience Fragments kan innehållsförfattare återanvända innehåll i oli
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. Till exempel en *Titel*, *Bild*, *Beskrivning* och *Knappen Anrop till åtgärd* kan kombineras för att skapa en teaserupplevelse.
+En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. En *titel*, *bild*, *beskrivning* och *Anrop till åtgärdsknapp* kan till exempel kombineras för att skapa en helskärmsfunktion.
 
 Med Experience Fragments kan marknadsförarna
 
 * Återanvänd en upplevelse i alla kanaler (både egna kanaler och externa kontaktpunkter)
 * Skapa varianter av en upplevelse för specifika användningsfall
 * Synkronisera variationerna med Live Copy
-* Social Post-upplevelser till Facebook och Pinterest direkt
+* Post för Facebook och Pinterest i sociala medier

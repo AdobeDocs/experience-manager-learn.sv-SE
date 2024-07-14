@@ -22,7 +22,7 @@ ht-degree: 0%
 Det här anpassade steget är att skapa ett nytt XML-dokument genom att extrahera nod från ett annat XML-dokument. Du måste använda detta när du vill sammanfoga skickade data med xdp-mallen för att generera PDF-filen. När du till exempel skickar ett anpassat formulär finns de data som du behöver sammanfoga med xdp-mallen inuti dataelementet. I det här fallet måste du skapa ett till XML-dokument genom att extrahera rätt dataelement.
 
 I följande skärmbild visas de argument som du behöver skicka till det anpassade steget
-![processteg](assets/create-xml-process-step.png)
+![process-step](assets/create-xml-process-step.png)
 Följande parametrar
 * Data.xml - XML-filen som du vill extrahera noden från
 * datatomerge.xml - Den nya xml-filen som skapas med den extraherade noden

@@ -1,6 +1,6 @@
 ---
-title: Introduktion till redigerings- och publiceringsnivå
-description: En introduktion till redigerings- och publiceringsnivåerna som en del av arkitekturen i Adobe Experience Manager.
+title: Introduktion till författare och Publish-nivå
+description: En introduktion till lagren Author och Publish som en del av arkitekturen i Adobe Experience Manager.
 doc-type: technical video
 version: Cloud Service
 jira: KT-4639
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 ---
 
-# Introduktion till redigerings- och publiceringsnivå {#introduction-author-publish}
+# Introduktion till författare och Publish-nivå {#introduction-author-publish}
 
-En introduktion till redigerings- och publiceringsnivåerna som en del av arkitekturen i Adobe Experience Manager.
+En introduktion till lagren Author och Publish som en del av arkitekturen i Adobe Experience Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)

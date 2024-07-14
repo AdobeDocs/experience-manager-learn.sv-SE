@@ -25,8 +25,8 @@ Amol Anand släpper in oss för att minska integreringen med Adobe App Builder o
 
 ## Innehåll som behandlas i den här videon
 
-+ Översikt [App Builder](https://developer.adobe.com/app-builder/docs/overview/)
++ Översikt över [App Builder](https://developer.adobe.com/app-builder/docs/overview/)
 + [Tutorials och Code Labs](https://developer.adobe.com/app-builder/docs/resources/)
 + [Loggning och övervakning](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
-+ Inställning [Systembegränsningar](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
++ Anger [systembegränsningar](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
 + [Lokal utveckling](https://developer.adobe.com/app-builder/docs/resources/debugging/) Tips

@@ -48,7 +48,7 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>Använda AEM datorprogram</strong>
+      <strong> Använda AEM datorprogram </strong>
       </a>
    </div>
    <p>
@@ -61,11 +61,11 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
    </a>
    <div>
       <a href="../assets-essentials/overview.md">
-      <strong>Komma igång med Assets Essentials</strong>
+      <strong>Komma igång med Assets Essentials </strong>
       </a>
    </div>
    <p>
-      <em>Snabba upp upplevelseframtagningen från koncept till design till leverans.</em>
+      <em>Snabba upp skapandet av upplevelser från koncept till design till leverans.</em>
    <p>
 </td>
 <td>
@@ -74,11 +74,11 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamic Media - översikt</strong>
+      <strong> Dynamic Media - översikt </strong>
       </a>
    </div>
    <p>
-      <em>Hantera och få tillgång till mediematerial med Dynamic Media</em>
+      <em>Hantera och få åtkomst till medieinnehåll med Dynamic Media</em>
    <p>
 </td>
 </table>
@@ -88,7 +88,7 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
 ## Ytterligare resurser
 
 * [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Sites självstudiekurser](/help/sites/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
 * [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

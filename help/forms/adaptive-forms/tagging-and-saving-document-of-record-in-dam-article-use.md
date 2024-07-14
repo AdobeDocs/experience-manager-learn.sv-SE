@@ -168,12 +168,12 @@ Följ stegen nedan om du vill att det här exemplet ska fungera i ditt system:
 
 * Klicka på Skapa | Filöverföring och överföring av taggen-and-store-in-dam-adaptive-form.zip
 
-* [Importera artikelresurser](assets/tag-and-store-in-dam-assets.zip) med AEM
-* Öppna [exempelformulär i förhandsgranskningsläge](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Fyll i alla fält** och skicka in formuläret.
+* [Importera artikelresurserna](assets/tag-and-store-in-dam-assets.zip) med AEM pakethanterare
+* Öppna [exempelformuläret i förhandsgranskningsläge](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Fyll i alla fält** och skicka formuläret.
 * [Navigera till toppmapp i DAM](http://localhost:4502/assets.html/content/dam/Peak). Se DoR i mappen Peak. Kontrollera dokumentets egenskaper. Den bör taggas på lämpligt sätt.
 Grattis! Exemplet har installerats på datorn
 
-* Låt oss utforska [arbetsflöde](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) som aktiveras när formulär skickas.
+* Låt oss utforska [arbetsflödet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) som aktiveras när formulär skickas.
 * Det första steget i arbetsflödet skapar ett unikt filnamn genom att sammanfoga de sökandes namn och land där de bor.
 * I det andra steget i arbetsflödet skickas tagghierarkin och de formulärfältselement som måste taggas. Processsteget extraherar värdet från skickade data och skapar den taggtitel som ska tagga dokumentet.
 * Om du vill lagra DoR i en annan mapp i DAM anger du mapplatsen med konfigurationsegenskaperna som anges i skärmbilden nedan.

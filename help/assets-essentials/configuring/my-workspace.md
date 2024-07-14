@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials Min arbetsyta
-description: Lär dig hur du arbetar effektivare med Min arbetsytas användarkonfigurerbara widgetar.
+title: Assets Essentials My Workspace
+description: Lär dig arbeta effektivare med Mina Workspace användarkonfigurerbara widgetar.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ---
 
-# Min arbetsyta i Assets Essentials
+# Min Workspace i Assets Essentials
 
-Lär dig hur du arbetar effektivare med Min arbetsytas användarkonfigurerbara widgetar.
+Lär dig arbeta effektivare med Mina Workspace användarkonfigurerbara widgetar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)

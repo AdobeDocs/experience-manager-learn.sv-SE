@@ -1,6 +1,6 @@
 ---
 title: Översikt över konsolen Innehållsfragment
-description: Läs om de grundläggande funktionerna i AEM as a Cloud Service redigeringskonsol för innehållsfragment.
+description: Läs om de grundläggande funktionerna i redigeringskonsolen för AEM as a Cloud Service Content Fragments.
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Översikt över konsolen Innehållsfragment
 
-Läs om de grundläggande funktionerna i AEM as a Cloud Service redigeringskonsol för innehållsfragment.
+Läs om de grundläggande funktionerna i redigeringskonsolen för AEM as a Cloud Service Content Fragments.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)

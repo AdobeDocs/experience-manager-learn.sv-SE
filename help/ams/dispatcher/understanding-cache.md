@@ -1,6 +1,6 @@
 ---
-title: Dispatcher - cachning
-description: Lär dig hur Dispatcher-modulen fungerar sin cache.
+title: Dispatcher förstärkta cachning
+description: Lär dig hur Dispatcher-modulen fungerar, dess cache.
 topic: Administration, Performance
 version: 6.5
 role: Admin
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Förklaring av konfigurationsfiler](./explanation-config-files.md)
 
-Det här dokumentet förklarar hur Dispatcher-cachning sker och hur det kan konfigureras
+Det här dokumentet förklarar hur Dispatcher cachning går till och hur det kan konfigureras
 
 ## Cachelagra kataloger
 
@@ -43,7 +43,7 @@ När varje begäran går igenom Dispatcher följer förfrågningarna de konfigur
 
 ## Konfigurationsfiler
 
-Dispatcher kontrollerar vad som kvalificerar sig som cacheable i dialogrutan `/cache {` i en servergruppsfil. 
+Dispatcher kontrollerar vad som kvalificerar sig som cacheable i avsnittet `/cache {` i en servergruppsfil. 
 I AMS baslinjekonfigurationsgrupper hittar du våra inkluderingar enligt nedan:
 
 
@@ -55,7 +55,7 @@ I AMS baslinjekonfigurationsgrupper hittar du våra inkluderingar enligt nedan:
 ```
 
 
-När du skapar regler för vad som ska cachas eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+När du skapar regler för vad som ska cachelagras eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
 
 
 ## Cacheförfattare
@@ -65,7 +65,7 @@ De saknar en stor uppgradering vad gäller prestanda och lyhördhet för förfat
 
 Låt oss prata om strategin som har tagits för att konfigurera vår författargrupp så att den cachelagras ordentligt.
 
-Här är en basförfattare `/cache {` del av vår författarfil:
+Här är en `/cache {`-del av författarservergruppens fil:
 
 
 ```
@@ -96,9 +96,9 @@ Det viktiga att notera här är att `/docroot` är inställt på cachekatalogen 
 
 >[!NOTE]
 >
->Se till att `DocumentRoot` i författarens `.vhost` filen matchar servergrupperna `/docroot` parameter
+>Kontrollera att `DocumentRoot` i författarens `.vhost`-fil matchar parametern `/docroot` för servergrupper
 
-Cachereglerna innehåller en -programsats som innehåller filen `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` som innehåller dessa regler:
+Cachereglerna innehåller programsatsen filen `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` som innehåller följande regler:
 
 ```
 /0000 { 
@@ -132,15 +132,15 @@ Cachereglerna innehåller en -programsats som innehåller filen `/etc/httpd/conf
 ```
 
 I ett författarscenario ändras innehållet hela tiden och i rätt syfte. Du vill bara cachelagra objekt som inte ändras så ofta.
-Vi har regler att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
+Vi har regler för att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
 
 >[!NOTE]
 >
->Kom ihåg att dessa regler även cachelagrar <b>`/apps`</b> det är här som anpassad programkod finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM blir det också ovanligt och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
+>Kom ihåg att de här reglerna även cachelagrar <b>`/apps`</b>, det är här den anpassade programkoden finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM blir det också ovanligt och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
 
 ## ServeOnStale (AKA-server vid föråldrad/SOS)
 
-Det här är en av dessa pärlor i Dispatcher. Om utgivaren är under belastning eller inte svarar kommer den oftast att generera en http-svarskod på 502 eller 503. Om det händer och den här funktionen är aktiverad instrueras Dispatcher att ändå leverera det innehåll som finns kvar i cachen som en bra åtgärd, även om det inte är en ny kopia. Det är bättre att skicka något om du har det, i stället för att bara visa ett felmeddelande som inte har någon funktionalitet.
+Det här är en av dessa pärlor i en av Dispatcher:s särdrag. Om utgivaren är under belastning eller inte svarar kommer den oftast att generera en http-svarskod på 502 eller 503. Om det händer och den här funktionen är aktiverad får Dispatcher instruktioner att fortsätta leverera det som finns kvar i cachen som en bra åtgärd, även om det inte är en ny kopia. Det är bättre att skicka något om du har det, i stället för att bara visa ett felmeddelande som inte har någon funktionalitet.
 
 >[!NOTE]
 >
@@ -157,11 +157,11 @@ Den här inställningen kan ställas in i vilken grupp som helst, men det är ba
 
 >[!NOTE]
 >
->Ett av de normala beteendena i modulen Dispatcher är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`) går den inte att cachelagra filen och direkt till AEM. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
+>Ett av de normala beteendena för modulen Dispatcher är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`), kommer den att hoppa över cachelagring av filen och gå direkt till AEM. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
 
-Se det här [artikel](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) visa hur viktiga frågeparametrar kan påverka webbplatsens prestanda.
+Se den här [artikeln](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) som visar hur viktiga frågeparametrar kan påverka webbplatsens prestanda.
 
-Som standard vill du ange `ignoreUrlParams` regler som tillåter `*`.  Betyder att alla frågeparametrar ignoreras och tillåter att alla sidor cachelagras oavsett vilka parametrar som används.
+Som standard vill du ange att reglerna `ignoreUrlParams` ska tillåta `*`.  Betyder att alla frågeparametrar ignoreras och tillåter att alla sidor cachelagras oavsett vilka parametrar som används.
 
 Här är ett exempel där någon har skapat en mekanism för djuplänksreferens för sociala medier som använder argumentreferensen i URI:n för att ta reda på var personen kom ifrån.
 
@@ -171,7 +171,7 @@ Här är ett exempel där någon har skapat en mekanism för djuplänksreferens 
 - https://www.we-retail.com/home.html?reference=facebook
 
 Sidan är 100 % tillgänglig men cachelagras inte eftersom argumenten finns. 
-Konfigurera `ignoreUrlParams` som tillåtelselista kommer att hjälpa till att lösa detta problem:
+Om du konfigurerar `ignoreUrlParams` som tillåtelselista kan du åtgärda det här problemet:
 
 ```
 /cache { 
@@ -180,9 +180,9 @@ Konfigurera `ignoreUrlParams` som tillåtelselista kommer att hjälpa till att l
     }
 ```
 
-När Dispatcher ser begäran kommer den att ignorera det faktum att begäran har `query` parameter för `?` referens och fortfarande cachelagra sidan
+När Dispatcher ser begäran kommer den att ignorera det faktum att begäran har parametern `query` för referensen `?` och fortfarande cachelagra sidan
 
-<b>Exempel:</b>
+<b>Dynamiskt exempel:</b>
 
 - https://www.we-retail.com/search.html?q=fruit
 - https://www.we-retail.com/search.html?q=vegetables
@@ -229,9 +229,9 @@ Här är alltså HTML-källan för varje sökning:
 </html>
 ```
 
-Om du besökte `/search.html?q=fruit` först cachelagras html med resultat som visar frukt.
+Om du besökte `/search.html?q=fruit` först cachelagrades HTML-koden med resultat som visar frukt.
 
-Sedan besöker du `/search.html?q=vegetables` för det andra, men det skulle visa resultat av frukt.
+Sedan besöker du `/search.html?q=vegetables` sekunder, men då visas resultatet av frukten.
 Detta beror på att frågeparametern för `q` ignoreras när det gäller cachelagring.  För att undvika det här problemet måste du anteckna sidor som återger olika HTML baserat på frågeparametrar och neka cachelagring för dessa.
 
 Exempel:
@@ -252,7 +252,7 @@ Sidor som använder frågeparametrar via Javascript fungerar fortfarande helt oc
 
 ## Cachelagra svarsrubriker
 
-Det är ganska uppenbart att Dispatcher caches `.html` sidor och klientlibs (dvs. `.js`, `.css`), men visste du att den även kan cachelagra särskilda svarshuvuden längs med innehållet i en fil med samma namn men en `.h` filtillägg. På så sätt kan nästa svar inte bara på innehållet utan även på de svarshuvuden som ska följa med det från cachen.
+Det är ganska uppenbart att Dispatcher cachelagrar `.html` sidor och klientlibs (t.ex. `.js`, `.css`), men visste du att det även kan cachelagra vissa svarshuvuden längs med innehållet i en fil med samma namn men ett `.h` filtillägg. På så sätt kan nästa svar inte bara på innehållet utan även på de svarshuvuden som ska följa med det från cachen.
 
 AEM kan hantera mer än bara UTF-8-kodning
 
@@ -260,7 +260,7 @@ Ibland har objekt särskilda rubriker som hjälper till att styra cachefilens ko
 
 Dessa värden rensas som standard när de cachelagras och Apache httpd-webbservern gör sin egen bearbetning av resursen med sina vanliga filhanteringsmetoder, som vanligtvis är begränsad till mime-typgissning baserat på filtillägg.
 
-Om du har Dispatcher cachelagrar resursen och de rubriker du vill ha kan du visa rätt upplevelse och försäkra dig om att all information gör den till klientens webbläsare.
+Om du har Dispatcher cachelagrar resursen och de rubriker du vill ha kan du visa rätt upplevelse och se till att alla detaljer gör det i klientens webbläsare.
 
 Här är ett exempel på en servergrupp med de rubriker som ska cachelagras angivna:
 
@@ -290,11 +290,11 @@ På AEM system som har mycket aktivitet från författare som gör många sidakt
 
 ### Exempel på hur detta fungerar:
 
-Om du har 5 begäranden om ogiltigförklaring `/content/exampleco/en/` allt sker inom en 3-sekundersperiod.
+Om du har fem begäranden om att ogiltigförklara `/content/exampleco/en/` inträffar alla inom en 3-sekundersperiod.
 
-Om den här funktionen är inaktiverad blir cachekatalogen ogiltig `/content/exampleco/en/` 5 gånger
+Om den här funktionen är inaktiverad blir cachekatalogen `/content/exampleco/en/` ogiltig fem gånger
 
-Om den här funktionen är aktiverad och inställd på 5 sekunder blir cachekatalogen ogiltig `/content/exampleco/en/` <b>en</b>
+Om den här funktionen är aktiverad och inställd på 5 sekunder blir cachekatalogen `/content/exampleco/en/` <b>en gång</b> ogiltig
 
 Här följer ett exempel på syntaxen för den här funktionen som konfigureras för en respitperiod på 5 sekunder:
 
@@ -305,7 +305,7 @@ Här följer ett exempel på syntaxen för den här funktionen som konfigureras 
 
 ## TTL-baserad invalidering
 
-En nyare funktion i modulen Dispatcher var `Time To Live (TTL)` baserade invalideringsalternativ för cachelagrade objekt. När ett objekt cachelagras söker det efter cachekontrollhuvuden och skapar en fil i cachekatalogen med samma namn och en `.ttl` tillägg.
+En nyare funktion i Dispatcher-modulen var `Time To Live (TTL)`-baserade invalideringsalternativ för cachelagrade objekt. När ett objekt cachelagras söker det efter cachekontrollhuvuden och skapar en fil i cachekatalogen med samma namn och ett `.ttl`-tillägg.
 
 Här är ett exempel på funktionen som konfigureras i servergruppens konfigurationsfil:
 
@@ -316,7 +316,7 @@ Här är ett exempel på funktionen som konfigureras i servergruppens konfigurat
 
 >[!NOTE]
 >
->Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör inte Dispatcher något särskilt här.
+>Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör Dispatcher ingenting särskilt här.
 
 ## Regler för cachefilter
 

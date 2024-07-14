@@ -22,7 +22,7 @@ Välkommen till vår självstudiekurs om hur du använder en ChatBot för att fy
 
 ChatBot skapades med [chatbot](https://www.chatbot.com/).
 
-I den här självstudiekursen sammanfogar vi data som samlats in i ChatBot med en [Formulär W-9](assets/fw9.xdp)
+I den här självstudiekursen sammanfogar vi data som samlats in i ChatBot med ett [W-9-formulär](assets/fw9.xdp)
 
 I följande video visas användningsfallet.
 

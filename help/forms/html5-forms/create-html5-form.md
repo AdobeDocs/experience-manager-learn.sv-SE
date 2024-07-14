@@ -25,7 +25,7 @@ HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder åter
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguide](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
 
 ## Skapa ditt första HTML5-formulär
 
@@ -41,7 +41,7 @@ xdp kan förhandsvisas i HTML5- eller PDF-format. Om du vill förhandsgranska xd
 * Tryck på den nyligen överförda xdp-filen och klicka på _Förhandsgranska -> Förhandsgranska som HTML_. Du bör se xdp renderas som HTML5
 
 >[!NOTE]
->När du väljer _Förhandsgranska som PDF_ det återgivna PDF visas inte i webbläsaren eftersom AEM Forms återger dynamiska PDF-filer som kräver Acrobat-plugin.Du måste hämta PDF och öppna det med Adobe Acrobat/Reader för att kunna visa
+>När du väljer alternativet _Förhandsgranska som PDF_ visas inte det återgivna PDF i webbläsaren eftersom AEM Forms återger dynamiska PDF-filer som kräver Acrobat-plugin.Du måste hämta PDF och öppna det med Adobe Acrobat/Reader för att kunna visa
 
 
 ## Förhandsgranska med data
@@ -53,10 +53,10 @@ Om du vill förhandsgranska xdp-filen i HTML5-format med datafilen gör du så h
 
 ## Utforska avancerade egenskaper för xdp-mallen
 
-Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, skicka-hanterare, återgivningsprofil för formuläret, förifyllningstjänst osv. Om du vill visa de avancerade egenskaperna för mallen trycker du på xdp och klickar på _properties -> Advanced_. Här hittar du ett antal egenskaper. Vissa av dessa egenskaper beskrivs här.
+Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, skicka-hanterare, återgivningsprofil för formuläret, förifyllningstjänst osv. Om du vill visa de avancerade egenskaperna för mallen trycker du på xdp och klickar på _egenskaper -> Avancerat_. Här hittar du ett antal egenskaper. Vissa av dessa egenskaper beskrivs här.
 
-**Skicka URL** - Det här är den URL som kommer att hantera din inskickning av HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
+**Skicka-URL** - Det här är den URL som kommer att hantera ditt HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
 
-**Återgivningsprofil för HTML** - HTML5-formulär har en uppfattning om profiler som visas som REST-slutpunkter för att möjliggöra mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan du [egen profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) kan skapas och kopplas till formuläret.
+**Återgivningsprofil för HTML** - HTML5-formulär kan tolkas som profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
 
-**Förifyllningstjänst** - förifyllningstjänsten används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.
+**förifyllningstjänst** - förifyllningstjänsten används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.

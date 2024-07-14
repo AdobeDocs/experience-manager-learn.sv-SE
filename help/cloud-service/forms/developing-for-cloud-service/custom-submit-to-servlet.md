@@ -45,7 +45,7 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## Skapa anpassad överföringshanterare
 
-Skapa en anpassad sändningsåtgärd i `apps/bankingapplication` på samma sätt som i [tidigare versioner av AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). I den här självstudiekursen skapar jag en mapp med namnet SubmitToAEMServlet under `apps/bankingapplication` i CRX-databasen.
+Skapa en anpassad sändningsåtgärd i mappen `apps/bankingapplication` på samma sätt som du skapar i de [tidigare versionerna av AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). I den här självstudien skapar jag en mapp med namnet SubmitToAEMServlet under noden `apps/bankingapplication` i CRX-databasen.
 
 Följande kod i post.POST.jsp vidarebefordrar enkelt begäran till den server som är monterad på /bin/formstutorial. Det här är samma server som skapades i det tidigare steget
 
@@ -53,12 +53,12 @@ Följande kod i post.POST.jsp vidarebefordrar enkelt begäran till den server so
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-I ditt AEM i IntelliJ högerklickar du på `apps/bankingapplication` och välj Ny | Paketera och skriv i SubmitToAEMServlet efter apps.bankingapplication i den nya paketdialogrutan. Högerklicka på noden SubmitToAEMServlet och välj repo | Hämta kommando för att synkronisera AEM projekt med AEM serverdatabas.
+Högerklicka på mappen `apps/bankingapplication` i ditt AEM i IntelliJ och välj Nytt | Paketera och skriv i SubmitToAEMServlet efter apps.bankingapplication i den nya paketdialogrutan. Högerklicka på noden SubmitToAEMServlet och välj repo | Hämta kommando för att synkronisera AEM projekt med AEM serverdatabas.
 
 
 ## Konfigurera anpassat formulär
 
-Nu kan du konfigurera alla adaptiva formulär att skicka till den här anpassade överföringshanteraren som kallas **Skicka till AEM**
+Du kan nu konfigurera alla adaptiva formulär som ska skickas till den här anpassade överföringshanteraren med namnet **Skicka till AEM**
 
 ## Nästa steg
 

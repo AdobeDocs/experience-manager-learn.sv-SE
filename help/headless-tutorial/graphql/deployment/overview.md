@@ -26,15 +26,15 @@ Beroende på klienten och hur den distribueras har AEM Headless-distributioner o
 
 ## AEM
 
-Innan du utforskar olika aspekter av driftsättningen är det viktigt att förstå AEM logiska arkitektur och hur åtskilda och roller AEM as a Cloud Service tjänstenivåer har. AEM as a Cloud Service består av två logiska tjänster:
+Innan du utforskar olika aspekter av driftsättningen är det viktigt att du förstår AEM logiska arkitekturen och hur de olika tjänstenivåerna i AEM as a Cloud Service är uppdelade och har olika roller. AEM as a Cloud Service består av två logiska tjänster:
 
-+ __AEM__ är den tjänst där team skapar, samarbetar och publicerar innehållsfragment (och andra resurser).
-+ __AEM Publish__ är den tjänst som publicerades när innehållsfragment (och andra resurser) replikeras för allmän användning.
-+ __AEM__ är en tjänst som påminner om AEM publicera på ett sätt, men som publicerar innehåll för förhandsgranskning eller granskning. AEM Preview är avsett för interna målgrupper och inte för allmän leverans av innehåll. Det är valfritt att använda AEM förhandsgranskning, baserat på önskat arbetsflöde.
++ __AEM Författare__ är den tjänst där team skapar, samarbetar och publicerar innehållsfragment (och andra resurser).
++ __AEM Publish__ är den tjänst som publicerades som innehållsfragment (och andra resurser) replikeras för allmän användning.
++ __AEM Preview__ är den tjänst som påminner AEM Publish i beteendet, men har innehåll publicerat till den för förhandsgranskning eller granskning. AEM Preview är avsett för interna målgrupper och inte för allmän leverans av innehåll. Det är valfritt att använda AEM förhandsgranskning, baserat på önskat arbetsflöde.
 
-![AEM](./assets/overview/aem-service-architecture.png)
+![AEM tjänstarkitektur](./assets/overview/aem-service-architecture.png)
 
-Vanlig AEM as a Cloud Service arkitektur för headless-driftsättning_
+Typiskt AEM as a Cloud Service headless-driftsättningsarkitektur_
 
 AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis med AEM Publish, som innehåller det godkända publicerade innehållet. Klienter som interagerar med AEM författare måste vara särskilt försiktiga, eftersom AEM författare är säker som standard, kräver behörighet för alla förfrågningar och kan även innehålla pågående arbete eller icke godkänt innehåll.
 
@@ -56,7 +56,7 @@ AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis 
                    <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="Single-page App (SPA)">Single-page app (SPA)</a></p>
                    <p class="is-size-6">Lär dig mer om distributionsaspekter för single-page-appar (SPA).</p>
                    <a href="./spa.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig</span>
                    </a>
                </div>
            </div>
@@ -75,9 +75,9 @@ AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis 
        <div class="card-content is-padded-small">
            <div class="content">
                <p class="headline is-size-6 has-text-weight-bold"><a href="./web-component.md" title="Webbkomponent/JS">Webbkomponent/JS</a></p>
-               <p class="is-size-6">Lär dig mer om driftsättningsaspekter för webbkomponenter och webbläsarbaserade JavaScript-användare utan gränssnitt.</p>
+               <p class="is-size-6">Läs om driftsättningsaspekter för webbkomponenter och webbläsarbaserade hemlösa JavaScript-kunder.</p>
                <a href="./web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig</span>
                </a>
            </div>
        </div>
@@ -98,7 +98,7 @@ AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis 
                <p class="headline is-size-6 has-text-weight-bold"><a href="./mobile.md" title="Mobilappar">Mobilapp</a></p>
                <p class="is-size-6">Läs mer om distributionsaspekter för mobilappar.</p>
                <a href="./mobile.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig</span>
                </a>
            </div>
        </div>
@@ -119,7 +119,7 @@ AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis 
                <p class="headline is-size-6 has-text-weight-bold"><a href="./server-to-server.md" title="Server-till-server-appar">Server-till-server-app</a></p>
                <p class="is-size-6">Läs mer om distributionsaspekter för server-till-server-appar</p>
                <a href="./server-to-server.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig</span>
                </a>
            </div>
        </div>

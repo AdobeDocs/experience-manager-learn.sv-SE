@@ -1,5 +1,5 @@
 ---
-title: Ange förfallodatum för Oak-inloggningstoken-session
+title: Ange förfallodatum för Oak inloggningstoken
 description: Steg för att ange timeout för sessionens förfallotid för token för ekningens ursprung
 type: Troubleshooting
 role: Admin
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Ange förfallodatum för Oak-inloggningstoken-session
+# Ange förfallodatum för Oak inloggningstoken
 
-*I den här videon går du igenom stegen för att ange att sessionens Oak-inloggningstoken ska förfalla.*
+*I den här videon går du igenom stegen för att ange förfallodatum för Oak inloggningstoken.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335468?quality=12&learn=on)

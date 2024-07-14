@@ -30,7 +30,7 @@ I den här självstudiekursen lär du dig hur du implementerar ett enkelt använ
 
 För att implementera ovanstående användningsexempel i AEM Forms CS behöver du följande
 
-* [AEM Forms CS cloud ready instance](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
+* [AEM Forms CS molnklar instans](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync.html?lang=en#set-up-aem-author-instance)
 * [Azure Portal-konto](https://portal.azure.com/)
 
 

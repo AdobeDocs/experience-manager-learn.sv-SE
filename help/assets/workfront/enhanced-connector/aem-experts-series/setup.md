@@ -23,10 +23,10 @@ ht-degree: 0%
 
 # Inledande konfiguration och konfiguration
 
-![AEM Experts Series](./assets/banner.png)
+![AEM expertsserie](./assets/banner.png)
 
 Lär dig hur du konfigurerar och konfigurerar den utökade Workfront-anslutningen för Experience Manager och frigör AEM Assets och Workfront kombinerade kapacitet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340331?quality=12&learn=on)
 
-_Detta är en del av en [fyra-delars expertserie om den utökade anslutningen Workfront för Experience Manager](./overview.md)_
+_Det här är en del av en [expertserie i fyra delar på Workfront för den utökade anslutningen Experience Manager](./overview.md)_

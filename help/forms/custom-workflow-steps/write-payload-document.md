@@ -27,7 +27,7 @@ Den anpassade processen tar följande kommaseparerade argument
 ChangeBeneficiary.pdf,c:\confirmation
 ```
 
-Det första argumentet är namnet på dokumentet som du vill spara i filsystemet. Det andra argumentet är den mapp där du vill spara dokumentet. I exemplet ovan skrivs dokumentet till `c:\confirmation\ChangeBeneficiary.pdf`
+Det första argumentet är namnet på dokumentet som du vill spara i filsystemet. Det andra argumentet är den mapp där du vill spara dokumentet. I ovanstående exempel skrivs dokumentet till `c:\confirmation\ChangeBeneficiary.pdf`
 
 I följande skärmbild visas de argument som du behöver skicka till det anpassade steget
 ![write-payload-file-system](assets/write-payload-file-system.png)

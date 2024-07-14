@@ -20,7 +20,7 @@ ht-degree: 0%
 # Utöka komponenterna för alternativgrupper
 
 Komponenterna för kryssrutegrupper, listrutor och alternativknappar utökades så att de innehöll fliken Ytterligare egenskaper. Fliken Ytterligare egenskaper har en kryssruta som anger om fältet ska användas som blobindexflik
-![additional-properties](assets/drop-down-additonal-properties.png). När kryssrutan är markerad skapas en egenskap med namnet Sökbar och dess värde ställs in på true i jcr-databasen, vilket visas i följande skärmbild
+![Ytterligare egenskaper](assets/drop-down-additonal-properties.png). När kryssrutan är markerad skapas en egenskap med namnet Sökbar och dess värde ställs in på true i jcr-databasen, vilket visas i följande skärmbild
 ![sökbar](assets/searchable-true.png).
 
 Följande .content.xml skapades under mappen _cq_dialog.

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # AEM driftsättningar av webbkomponenter utan headless
 
-AEM Headless [Webbkomponent](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS-distributioner är rena JavaScript-program som körs i en webbläsare och som använder och interagerar med innehåll i AEM på ett headless sätt. Webbkomponent-/JS-distributioner skiljer sig från [SPA](./spa.md) på så sätt att de inte använder ett robust SPA ramverk och förväntas vara inbäddade i sammanhanget för någon webbplats, leverera till innehåll från AEM.
+AEM [Webbkomponentdistributioner för ](https://developer.mozilla.org/en-US/docs/Web/Web_Components)/JS utan rubrik är rena JavaScript-program som körs i en webbläsare och som använder och interagerar med innehåll i AEM på ett headless-sätt. Webbkomponent-/JS-distributioner skiljer sig från [SPA distributioner](./spa.md) på så sätt att de inte använder ett robust SPA ramverk och förväntas vara inbäddade i kontexten för någon webbplats, leverera till ytinnehåll från AEM.
 
 
 ## Distributionskonfigurationer
@@ -29,8 +29,8 @@ Följande distributionskonfiguration måste finnas på plats för Web Component/
 | Webbkomponent/JS-program ansluter till | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
-| [Cross-origin resource sharing (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEM](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [Resursdelning mellan ursprung (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
+| [AEM värdar](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## Exempel på webbkomponent
 
@@ -50,9 +50,9 @@ Adobe tillhandahåller en exempelwebbkomponent.
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/web-component.md" title="Webbkomponent">Webbkomponent</a></p>
-                   <p class="is-size-6">Ett exempel på en webbkomponent som är skriven i rent JavaScript och som använder innehåll från AEM Headless GraphQL API:er.</p>
+                   <p class="is-size-6">Ett exempel på en webbkomponent, skriven i ren JavaScript, som förbrukar innehåll från AEM Headless GraphQL API:er.</p>
                    <a href="../example-apps/web-component.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Visa exempel</span>
+                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exempel </span>
                    </a>
                </div>
            </div>

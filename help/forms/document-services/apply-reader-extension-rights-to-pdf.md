@@ -21,7 +21,7 @@ ht-degree: 0%
 Med Reader Extensions kan du ändra användningsrättigheter för PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga i Acrobat men inte i Adobe Reader. Funktionen som styrs av Reader Extensions innefattar möjligheten att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. PDF-dokument som har användarrättigheter tillagda kallas för rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Adobe Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
 
 För att uppnå detta måste vi göra följande:
-* [Lägg till certifikatet för Reader-tillägg](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) till `fd-service` användare.
+* [Lägg till certifikatet ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) för Reader-tillägg till användaren `fd-service`.
 
 ## Skapa en anpassad OSGi-tjänst
 
@@ -196,7 +196,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 Så här testar du detta på den lokala servern:
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Hämta och installera ares.ares.core-ares Bundle](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användarrättigheter och strömma tillbaka PDF-filen
+1. [Hämta och installera ares.ares.core-ares-paketet](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användarrättigheter och strömma tillbaka PDF-filen
 1. [Importera klientlibs och anpassad sändning](assets/applyaresdemo.zip)
 1. [Importera det adaptiva formuläret](assets/applyaresform.zip)
 1. Lägg till certifikatet för Reader-tillägg till användaren fd-service. Kontrollera att aliaset är &quot;ares&quot;.

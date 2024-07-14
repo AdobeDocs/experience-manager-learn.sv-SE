@@ -21,6 +21,6 @@ ht-degree: 0%
 
 ## Sammanställ PDF-filer
 
-Ändra `assemble2pdfs.ddx` för att sammanställa 3 PDF-filer.
+Ändra filen `assemble2pdfs.ddx` för att sätta ihop 3 PDF-filer.
 
 Du placerar den tredje PDF-filen i mappen resources/pdffiles.

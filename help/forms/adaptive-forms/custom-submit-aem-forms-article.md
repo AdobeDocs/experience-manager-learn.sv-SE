@@ -74,4 +74,4 @@ I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd 
 
 Nu ska du se&quot;CustomSubmitHelpx&quot; i skicka-åtgärderna i ditt adaptiva formulär som i den här bilden.
 
-![Anpassat formulär med anpassad inskickning](assets/capture-2.gif)
+![Anpassat formulär med anpassad sändning](assets/capture-2.gif)

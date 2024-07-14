@@ -34,7 +34,8 @@ Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager. De till
 I följande skärmbild visas de definierade miljövariablerna azure_key och azure_connection_string
 ![environment_variables](assets/environment-variables.png)
 
-Dessa miljövariabler kan sedan anges i konfigurationsfilerna som ska användas i lämplig miljö. Om du till exempel vill att alla författarinstanser ska använda dessa miljövariabler definierar du konfigurationsfilen i mappen config.author enligt vad som anges nedan
+Dessa miljövariabler kan sedan anges i konfigurationsfilerna som ska användas i lämplig miljö
+Om du till exempel vill att alla författarinstanser ska använda dessa miljövariabler definierar du konfigurationsfilen i mappen config.author enligt nedan
 
 ## Skapa konfigurationsfil
 

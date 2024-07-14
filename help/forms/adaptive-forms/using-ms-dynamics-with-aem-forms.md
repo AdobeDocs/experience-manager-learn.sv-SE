@@ -23,7 +23,7 @@ Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakäl
 Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2 och Oracle RDBMS
 1. AEM användarprofil
 1. RESTful web services
-1. SOAP-baserade webbtjänster
+1. SOAP webbtjänster
 1. OData-tjänster
 
 I den här videon går vi igenom ett arbetsflöde som visar hur AEM Forms kan arbeta med Microsoft Dynamics som en back-end-datakälla för att leverera interaktiv, personlig kommunikation.

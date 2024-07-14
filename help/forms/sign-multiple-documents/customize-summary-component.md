@@ -47,7 +47,7 @@ Summary.jsp har följande kod. Den har en referens till klientbiblioteket som id
 
 ## Assets
 
-Den anpassade sammanfattningskomponenten kan [hämtad härifrån](assets/custom-summary-step.zip)
+Den anpassade sammanfattningskomponenten kan [hämtas härifrån](assets/custom-summary-step.zip)
 
 ## Nästa steg
 

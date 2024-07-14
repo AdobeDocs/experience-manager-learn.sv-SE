@@ -10,7 +10,7 @@ recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 
 >[!TIP]
 >
->Den här samlingen självstudiekurser är utformad för dem som föredrar att **lära sig göra**. Om du föredrar att lära dig koncept från grunden kan du kolla in [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
+>Den här samlingen självstudiekurser är utformade för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du ta en titt på [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
 ## Tutorials efter API
 
@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-    <strong>GRAPHQL API</strong>
+    <strong> GraphQL API </strong>
     </a>
     </div>
     <p>
@@ -48,7 +48,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-    <strong>Tokenautentisering</strong>
+    <strong> Tokenautentisering </strong>
     </a>
     </div>
     <p>
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
-        <strong>Innehållstjänster</strong>
+        <strong> Content Services </strong>
       </a>
     </div>
     <p>
@@ -83,11 +83,11 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
-    <strong>iOS SwiftUI-exempel</strong>
+    <strong> iOS SwiftUI-exempel </strong>
     </a>
     </div>
     <p>
-    <em>Ett iOS-program med AEM GraphQL API:er.</em>
+    <em>Ett iOS-program som AEM GraphQL API:er.</em>
     <p>
   </td>
   <td>
@@ -96,11 +96,11 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android™-exempel</strong>
+    <strong> Android™ Example</strong>
     </a>
     </div>
     <p>
-    <em>En Android™-applikation med AEM GraphQL API:er.</em>
+    <em>Ett Android™-program som AEM GraphQL API:er.</em>
     </p>
   </td>
   <td>
@@ -109,11 +109,11 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
-        <strong>Reaktionsexempel</strong>
+        <strong> Reaktionsexempel </strong>
       </a>
     </div>
     <p>
-    <em>Ett React-program som drivs av AEM GraphQL API:er.</em>
+    <em>Ett React-program som AEM GraphQL API:er.</em>
     <p>
   </td>
 </tr>
@@ -131,11 +131,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
-    <strong>Reaktion - utan huvud</strong>
+    <strong>Reagera - Headless </strong>
     </a>
     </div>
     <p>
-    <em>Bygg en React JS-app med GraphQL i ett helt headless-scenario.</em>
+    <em>Skapa en React JS-app med GraphQL i ett helheadless-scenario.</em>
     <p>
   </td>
   <td>
@@ -148,7 +148,7 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
     </div>
     <p>
-    <em>Skapa sammanhangsberoende delar av ett React-program på fjärrbasis.</em>
+    <em>Skapa en del av ett React-program som körs på en fjärrserver.</em>
     </p>
   </td>
   <td>
@@ -157,11 +157,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>Reagera - SPA</strong>
+        <strong>Reagera - SPA </strong>
       </a>
     </div>
     <p>
-    <em>Använd AEM redigerare för SPA för att hantera hela React-appupplevelsen.</em>
+    <em>Använd AEM SPA redigerare för att hantera hela React-appupplevelsen.</em>
     <p>
   </td>
 </tr>
@@ -176,7 +176,7 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
     </div>
     <p>
-    <em>Använd Content Services och REST för att driva en mobil Android™-applikation.</em>
+    <em>Använd Content Services och REST för att driva ett mobilt Android™-program.</em>
     </p>
   </td>
   <td>
@@ -185,11 +185,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
-        <strong>Node.js - Autentisering</strong>
+        <strong> Node.js - Autentisering </strong>
       </a>
     </div>
     <p>
-    <em>Bygg en Node.js-app med utvecklare och tjänsttokens för autentisering.</em>
+    <em>Skapa en Node.js-app med utvecklare och tjänsttoken för autentisering.</em>
     <p>
   </td>
   <td></td>

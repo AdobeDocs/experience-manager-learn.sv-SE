@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du integrerar Assets Essentials med Adobe Creative Cloud Libraries, så att du kan:
 
-+ Filer från Assets Essentials som du smidigt kan komma åt via Creative Cloud Libraries
++ Filer från Assets Essentials som du smidigt kommer åt via Creative Cloud Libraries
 + Filer från Creative Cloud Libraries som ska delas med Assets Essentials
 
 >[!VIDEO](https://video.tv.adobe.com/v/336069?quality=12&learn=on)

@@ -23,9 +23,9 @@ I följande video visas den grundläggande processen att skapa en adaptiv formul
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
-Se [dokumentation för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) för mer information
+Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
 
-Vid behov kan du ladda ned [adaptiv formulärmall](assets/peak-application-template.zip) och importera till AEM med [pakethanterare](http://localhost:4502/crx/packmgr/index.jsp)
+Om det behövs kan du hämta den [adaptiva formulärmallen](assets/peak-application-template.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
 ## Nästa steg
 

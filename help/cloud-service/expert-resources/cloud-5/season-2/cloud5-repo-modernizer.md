@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Cloud 5 - Databasmodernisering
 
-Killarna tittar närmare på hur databasmoderniseringen hjälper dig att gå över till AEM as a Cloud Service med en praktisk översikt över hur det fungerar och varför.
+Killarna tittar närmare på hur databasmoderniseringen hjälper er att gå över till AEM as a Cloud Service med en praktisk översikt över hur det fungerar och varför.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342865?quality=12&learn=on)
 

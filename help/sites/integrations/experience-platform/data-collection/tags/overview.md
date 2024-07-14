@@ -33,15 +33,15 @@ Taggar är Adobe Experience Platform nästa generation av tagghanteringsteknik. 
 
 Följande krävs när du integrerar taggar för Experience Platform-datainsamling.
 
-+ AEM administratörsåtkomst till AEM as a Cloud Service miljö
-+ En referenswebbplats som [WKND](https://github.com/adobe/aem-guides-wknd) distribueras på den.
++ AEM administratörsåtkomst till AEM as a Cloud Service-miljön
++ En referenswebbplats som [WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till den.
 + Tillgång till Adobe Experience Platform datainsamling
 + Systemadministratörsåtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/)
 
 
 ## Stegen på hög nivå
 
-+ I Adobe Experience Platform Data Collection skapar du en taggegenskap och redigerar den till _Lägg till regel_. Sedan _Lägg till bibliotek_, markera den nya regeln, godkänn och publicera den.
++ Skapa en taggegenskap i Adobe Experience Platform Data Collection och redigera den till _Lägg till regel_. _Lägg till bibliotek_, markera den nya regeln, godkänn och publicera den.
 + Anslut AEM och taggar med befintlig (eller ny) IMS-konfiguration
 + I AEM skapar du en tagg i molntjänstkonfigurationen, tillämpar den sedan på en befintlig plats och kontrollerar slutligen att taggegenskapen och dess bibliotek läses in på webbplatsen Publicerad eller Författare.
 
@@ -51,6 +51,6 @@ Följande krävs när du integrerar taggar för Experience Platform-datainsamlin
 
 ## Ytterligare resurser {#additional-resources}
 
-+ [Integrering med Experience Platform med program från Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
++ [Integrering med Experience Platform med Experience Cloud-program](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
 + [Översikt över taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 + [Implementera Experience Cloud på webbplatser med taggar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)

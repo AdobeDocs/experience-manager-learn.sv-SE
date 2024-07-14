@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Så här rensar du processposter från jobbhanteraren
 
-*I den här videon går du igenom stegen för att rensa processposter från jobbhanteraren.*
+*Den här videon går igenom stegen för att rensa processposter från jobbhanteraren.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)

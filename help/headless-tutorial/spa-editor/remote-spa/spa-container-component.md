@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Redigerbara behållarkomponenter
 
-[Fasta komponenter](./spa-fixed-component.md) ger viss flexibilitet vid framtagning SPA innehåll, men det här tillvägagångssättet är stelt och kräver att utvecklare definierar den exakta kompositionen för det redigerbara innehållet. SPA Editor stöder användningen av behållarkomponenter i SPA för att skapa exceptionella upplevelser för författare. Med behållarkomponenter kan författare dra och släppa tillåtna komponenter i behållaren och redigera dem, precis som i traditionell AEM Sites-redigering!
+[Fasta komponenter](./spa-fixed-component.md) ger viss flexibilitet vid redigering SPA innehåll, men det här tillvägagångssättet är stelt och kräver att utvecklare definierar den exakta kompositionen för det redigerbara innehållet. SPA Editor stöder användningen av behållarkomponenter i SPA för att skapa exceptionella upplevelser för författare. Med behållarkomponenter kan författare dra och släppa tillåtna komponenter i behållaren och redigera dem, precis som i traditionell AEM Sites-redigering!
 
 ![Redigerbara behållarkomponenter](./assets/spa-container-component/intro.png)
 
@@ -31,7 +31,7 @@ I det här kapitlet lägger vi till en redigerbar behållare i hemvyn som gör a
 
 Så här lägger du till en behållarkomponent i hemvyn:
 
-+ Importera AEM React Editable-komponentens `ResponsiveGrid` komponent
++ Importera AEM React Editable Components `ResponsiveGrid`-komponent
 + Importera och registrera anpassade redigerbara React-komponenter (text och bild) för användning i ResponsiveGrid-komponenten
 
 ### Använda komponenten ResponsiveGrid
@@ -39,18 +39,18 @@ Så här lägger du till en behållarkomponent i hemvyn:
 Så här lägger du till ett redigerbart område i hemvyn:
 
 1. Öppna och redigera `react-app/src/components/Home.js`
-1. Importera `ResponsiveGrid` komponent från `@adobe/aem-react-editable-components` och lägg till det i `Home` -komponenten.
-1. Ange följande attribut för `<ResponsiveGrid...>` komponent
+1. Importera komponenten `ResponsiveGrid` från `@adobe/aem-react-editable-components` och lägg till den i komponenten `Home`.
+1. Ange följande attribut för komponenten `<ResponsiveGrid...>`
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   Detta instruerar `ResponsiveGrid` för att hämta dess innehåll från AEM:
+   Detta instruerar komponenten `ResponsiveGrid` att hämta sitt innehåll från den AEM resursen:
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
-   The `itemPath` mappar till `responsivegrid` noden som definieras i `Remote SPA Page` AEM och skapas automatiskt på nya AEM sidor som skapas från `Remote SPA Page` AEM.
+   `itemPath` mappar till noden `responsivegrid` som definieras i AEM `Remote SPA Page` och skapas automatiskt på nya AEM sidor som skapas från AEM `Remote SPA Page`.
 
-   Uppdatera `Home.js` för att lägga till `<ResponsiveGrid...>` -komponenten.
+   Uppdatera `Home.js` om du vill lägga till komponenten `<ResponsiveGrid...>`.
 
    ```javascript
    ...
@@ -74,7 +74,7 @@ Så här lägger du till ett redigerbart område i hemvyn:
    }
    ```
 
-The `Home.js` filen ska se ut så här:
+Filen `Home.js` ska se ut så här:
 
 ![Home.js](./assets/spa-container-component/home-js.png)
 
@@ -82,7 +82,7 @@ The `Home.js` filen ska se ut så här:
 
 För att få full effekt av de flexibla redigeringsfunktionerna i SPA. Vi har redan skapat en redigerbar Title-komponent, men vi ska göra några till så att författarna kan använda redigerbar text och bilder i den nyligen tillagda ResponsiveGrid-komponenten.
 
-De nya redigerbara komponenterna Text och Bildredigering skapas med det redigerbara komponentdefinitionsmönstret som exporteras i [redigerbara fasta komponenter](./spa-fixed-component.md).
+De nya redigerbara komponenterna Text och Bildredigering skapas med hjälp av det redigerbara komponentdefinitionsmönstret som exporteras i [redigerbara fasta komponenter](./spa-fixed-component.md).
 
 ### Redigerbar textkomponent
 
@@ -245,7 +245,7 @@ export default EditableImage;
     }
    ```
 
-1. Importera `EditableImage.scss` in `EditableImage.js`
+1. Importera `EditableImage.scss` i `EditableImage.js`
 
    ```javascript
    ...
@@ -260,7 +260,7 @@ Implementeringen av den redigerbara bildkomponenten ska se ut så här:
 
 ### Importera redigerbara komponenter
 
-Den nyskapade `EditableText` och `EditableImage` Reaktionskomponenter refereras i SPA och instansieras dynamiskt baserat på den JSON som returneras av AEM. Om du vill vara säker på att de här komponenterna är tillgängliga för SPA skapar du importprogramsatser för dem i `Home.js`
+De nyskapade komponenterna `EditableText` och `EditableImage` React refereras i SPA och instansieras dynamiskt baserat på den JSON som returneras av AEM. Om du vill vara säker på att de här komponenterna är tillgängliga för SPA skapar du importprogramsatser för dem i `Home.js`
 
 1. Öppna SPA i din utvecklingsmiljö
 1. Öppna filen `src/Home.js`
@@ -278,15 +278,15 @@ Resultatet ska se ut så här:
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-Om denna import _not_ har lagts till, `EditableText` och `EditableImage` Koden anropas inte av SPA och komponenterna mappas därför inte till de angivna resurstyperna.
+Om dessa importer _inte_ läggs till anropas inte `EditableText`- och `EditableImage`-koden av SPA, och komponenterna mappas därför inte till de angivna resurstyperna.
 
 ## Konfigurera behållaren i AEM
 
 AEM behållarkomponenter använder profiler för att styra deras tillåtna komponenter. Detta är en viktig konfiguration när du använder SPA Editor, eftersom endast AEM komponenter som har mappade SPA komponentmotsvarigheter kan återges av SPA. Se till att endast de komponenter som vi har SPA implementeringar för tillåts:
 
-+ `EditableTitle` mappad till `wknd-app/components/title`
-+ `EditableText` mappad till `wknd-app/components/text`
-+ `EditableImage` mappad till `wknd-app/components/image`
++ `EditableTitle` har mappats till `wknd-app/components/title`
++ `EditableText` har mappats till `wknd-app/components/text`
++ `EditableImage` har mappats till `wknd-app/components/image`
 
 Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
@@ -296,13 +296,13 @@ Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
    ![Principer för responsiva stödraster](./assets/spa-container-component/templates-remote-spa-page.png)
 
-1. Välj __Struktur__ i lägesväljaren längst upp till höger
-1. Tryck för att välja __Layoutbehållare__
-1. Tryck på __Policy__ ikon i popup-fältet
+1. Välj __Struktur__ i lägesväljaren i det övre högra hörnet
+1. Tryck för att välja __layoutbehållaren__
+1. Tryck på ikonen __Policy__ i popup-fältet
 
    ![Principer för responsiva stödraster](./assets/spa-container-component/templates-policies-action.png)
 
-1. Till höger, under __Tillåtna komponenter__ flik, expandera __WKND APP - INNEHÅLL__
+1. Till höger, under fliken __Tillåtna komponenter__, expanderar du __WKND APP - CONTENT__
 1. Se till att endast följande är markerade:
    + Bild
    + Text
@@ -310,42 +310,42 @@ Så här konfigurerar du SPA på fjärrsidmallens reponsivegrid-behållare:
 
    ![SPA](./assets/spa-container-component/templates-allowed-components.png)
 
-1. Tryck __Klar__
+1. Tryck på __Klar__
 
 ## Redigerar behållaren i AEM
 
-Efter att SPA uppdaterats för att bädda in `<ResponsiveGrid...>`, omslag för tre redigerbara React-komponenter (`EditableTitle`, `EditableText`och `EditableImage`), och AEM uppdateras med en matchande mallprincip, kan vi börja skapa innehåll i behållarkomponenten.
+När SPA har uppdaterats för att bädda in `<ResponsiveGrid...>`, omslutningar för tre redigerbara React-komponenter (`EditableTitle`, `EditableText` och `EditableImage`) och AEM har uppdaterats med en matchande Template-princip, kan vi börja skapa innehåll i behållarkomponenten.
 
 1. Logga in på AEM författare
-1. Navigera till __Sites > WKND App__
-1. Tryck __Startsida__ och markera __Redigera__ i det övre åtgärdsfältet
+1. Navigera till __Webbplatser > WKND-app__
+1. Tryck på __Hem__ och välj __Redigera__ i det övre åtgärdsfältet
    + En&quot;Hello World&quot;-textkomponent visas, eftersom den lades till automatiskt när projektet genererades från den AEM projekttypen
-1. Välj __Redigera__ från lägesväljaren i det övre högra hörnet i sidredigeraren
-1. Leta reda på __Layoutbehållare__ redigerbart område under titeln
-1. Öppna __Sidredigerarens sidlist__ och väljer __Komponentvy__
-1. Dra följande komponenter till __Layoutbehållare__
+1. Välj __Redigera__ i lägesväljaren längst upp till höger i sidredigeraren
+1. Leta reda på det redigerbara området __Layoutbehållare__ under rubriken
+1. Öppna sidredigerarens __sidfält__ och välj __vyn Komponenter__
+1. Dra följande komponenter till __layoutbehållaren__
    + Bild
    + Titel
 1. Dra komponenterna för att ordna om dem till följande ordning:
    1. Titel
    1. Bild
    1. Text
-1. __Upphovsman__ den __Titel__ komponent
-   1. Tryck på komponenten Title (Rubrik) och tryck på __wrench__ ikon till __redigera__ komponenten Title
+1. __Författare__ komponenten __Title__
+   1. Tryck på komponenten Title (Rubrik) och tryck på ikonen __wrench__ för att __redigera__ komponenten Title (Rubrik)
    1. Lägg till följande text:
       + Titel: __Sommaren kommer, vi får ut det mesta av den!__
       + Typ: __H1__
-   1. Tryck __Klar__
-1. __Upphovsman__ den __Bild__ komponent
-   1. Dra en bild i från sidofältet (efter växling till resursvyn) på komponenten Bild
-   1. Tryck på komponenten Bild och tryck på __wrench__ ikon som ska redigeras
-   1. Kontrollera __Bilden är dekorativ__ kryssruta
-   1. Tryck __Klar__
-1. __Upphovsman__ den __Text__ komponent
-   1. Redigera Text-komponenten genom att trycka på Text-komponenten och trycka på __wrench__ icon
+   1. Tryck på __Klar__
+1. __Författare__ komponenten __Bild__
+   1. Dra en bild i från sidfältet (efter att du växlat till Assets-vyn) på bildkomponenten
+   1. Tryck på bildkomponenten och tryck på ikonen __skiftnyckel__ för att redigera
+   1. Markera kryssrutan __Bilden är dekorativ__
+   1. Tryck på __Klar__
+1. __Författare__ komponenten __Text__
+   1. Redigera textkomponenten genom att trycka på textkomponenten och trycka på ikonen __skiftnyckel__
    1. Lägg till följande text:
-      + _Just nu kan ni få 15 % på alla veckolånga äventyr och 20 % rabatt på alla äventyr som är två veckor eller längre! I kassan lägger du till kampanjkoden SUMMERISCOMING för att få rabatterna!_
-   1. Tryck __Klar__
+      + _Just nu kan du få 15 % på alla veckolånga äventyr och 20 % rabatt på alla äventyr som är två veckor eller längre! Lägg till kampanjkoden SUMMERISCOMING för att få dina rabatter i kassan!_
+   1. Tryck på __Klar__
 
 1. Dina komponenter är nu redigerade, men staplas lodrätt.
 
@@ -353,15 +353,15 @@ Efter att SPA uppdaterats för att bädda in `<ResponsiveGrid...>`, omslag för 
 
 Använd AEM layoutläge för att justera komponenternas storlek och layout.
 
-1. Växla till __Layoutläge__ med lägesväljaren i det övre högra hörnet
-1. __Ändra storlek__ Bild- och textkomponenterna, så att de visas sida vid sida
-   + __Bild__ ska vara __8 kolumner bred__
-   + __Text__ ska vara __3 kolumner bred__
+1. Växla till __layoutläge__ med lägesväljaren i det övre högra hörnet
+1. __Ändra storlek__ på bild- och textkomponenterna så att de visas sida vid sida
+   + __Bild__-komponenten ska vara __8 kolumner bred__
+   + __Komponenten Text__ ska vara __3 kolumner bred__
 
    ![Layoutkomponenter](./assets/spa-container-component/layout-components.png)
 
-1. __Förhandsgranska__ dina ändringar AEM sidredigeraren
-1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000) om du vill se ändringarna du skrivit!
+1. __Förhandsgranska__ dina ändringar i AEM Page Editor
+1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000) om du vill se de ändringar som har skapats.
 
    ![Behållarkomponent i SPA](./assets/spa-container-component/localhost-final.png)
 
@@ -370,7 +370,7 @@ Använd AEM layoutläge för att justera komponenternas storlek och layout.
 
 Du har lagt till en behållarkomponent som gör att redigerbara komponenter kan läggas till av författare i WKND-appen! Nu kan du:
 
-+ Använda AEM React Editable Components `ResponsiveGrid` i SPA
++ Använd AEM React Editable Components `ResponsiveGrid` i SPA
 + Skapa och registrera redigerbara React-komponenter (text och bild) för användning i SPA via behållarkomponenten
 + Konfigurera SPA för att tillåta de SPA komponenterna
 + Lägga till redigerbara komponenter i behållarkomponenten

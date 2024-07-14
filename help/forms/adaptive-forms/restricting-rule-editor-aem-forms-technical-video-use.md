@@ -22,7 +22,7 @@ Begränsa redigeraren för anpassade formulärregler till specifika grupper i AE
 
 >[!VIDEO](https://video.tv.adobe.com/v/19470?quality=12&learn=on)
 
-*I den här videon går vi igenom processen att begränsa redigeraren för anpassade formulärregler till specifika grupper i AEM.*
+*Den här videon går igenom processen att begränsa redigeraren för anpassade formulärregler till specifika grupper i AEM.*
 
 >[!NOTE]
 >

@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
+exl-id: 40617082-4d23-4c91-a016-2d947187052b
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # Använda DocAssurance API
 
-The [DocAssurance-tjänst](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) ger möjlighet att utföra olika åtgärder för digitala signaturer eller kryptering med PDF-dokument, som signering, certifiering, tillägg av signaturfält, kryptering, dekryptering osv.
+Tjänsten [DocAssurance](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) ger möjlighet att utföra olika åtgärder för digitala signaturer eller kryptering med PDF-dokument, som signering, certifiering, tillägg av signaturfält, kryptering, dekryptering osv.
 I den här artikeln finns Java-kodfragment som hjälper dig att komma igång med API:t. Kodfragmentet använder åtkomsttoken. [I den här artikeln beskrivs stegen som krävs för att generera åtkomsttoken](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
 
 
@@ -27,7 +28,7 @@ I den här artikeln finns Java-kodfragment som hjälper dig att komma igång med
 ## Förutsättningar
 
 * Upplev AEM Forms Cloud Service
-* Upplevelse när du använder [Apache HTTP-komponenter](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* Upplevelsen av [Apache HTTP-komponenter](https://hc.apache.org/httpcomponents-client-4.5.x/)
 * Tillgång till AEM Forms Cloud Service
 
 ## Inspect-dokument
@@ -157,4 +158,4 @@ if (response.getStatusLine().getStatusCode() == 200) {
 
 ### Postman Collection
 
-En Postman-samling av API:t kan vara [hämtas härifrån i testsyfte](assets/DocAssuranceAPI.postman_collection.json). Du kan använda grundläggande autentisering eller autentiseringstypen Bearer Token för att anropa API:t.
+En Postman-samling av API:t kan [laddas ned härifrån i testsyfte](assets/DocAssuranceAPI.postman_collection.json). Du kan använda grundläggande autentisering eller autentiseringstypen Bearer Token för att anropa API:t.

@@ -1,6 +1,6 @@
 ---
 title: Checka in och Checka ut
-description: Lär dig använda AEM in- och utcheckningsfunktioner för att underlätta samarbete mellan flera användare om resurser.
+description: Lär dig hur du använder AEM funktioner för in- och utcheckning för att underlätta samarbete mellan flera användare om resurser.
 feature: Asset Management
 version: Cloud Service
 jira: KT-4542
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Checka in och Checka ut
 
-Lär dig använda AEM in- och utcheckningsfunktioner för att underlätta samarbete mellan flera användare om resurser.
+Lär dig hur du använder AEM funktioner för in- och utcheckning för att underlätta samarbete mellan flera användare om resurser.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)

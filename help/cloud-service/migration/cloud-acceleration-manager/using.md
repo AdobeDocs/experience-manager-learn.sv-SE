@@ -1,6 +1,6 @@
 ---
-title: Använda verktygen i Cloud Acceleration Manager
-description: En berättarröst om hur du använder verktygen i Cloud Acceleration Manager.
+title: Använda Cloud Acceleration Manager verktyg
+description: En berättarröst om hur du använder Cloud Acceleration Manager verktyg.
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# Använda verktygen i Cloud Acceleration Manager
+# Använda Cloud Acceleration Manager verktyg
 
-En berättarröst om hur du använder verktygen i Cloud Acceleration Manager.
+En berättarröst om hur du använder Cloud Acceleration Manager verktyg.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)

@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Steg för att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (WebKit-konvertering)
 
-*I den här videon går vi igenom processen att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (WebKit-konvertering).*
+*Den här videon går igenom processen att felsöka HtmltoPDF-specifika problem i en Unix-konfiguration (WebKit-konvertering).*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335548?quality=12&learn=on)

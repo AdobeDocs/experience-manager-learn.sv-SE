@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Utvecklingsaspekter
 
-När du har aktiverat frontend-pipelinen för att endast distribuera frontendresurserna i AEM as a Cloud Service miljö påverkas den lokala AEM utvecklingen och du måste justera Git-förgreningsmodellen.
+När frontend-pipelinen har aktiverats för att endast distribuera frontresurserna i AEM as a Cloud Service-miljön har det en viss inverkan på den lokala AEM-utvecklingen och du måste justera Git-förgreningsmodellen.
 
 ## Syfte
 
@@ -37,9 +37,9 @@ När du har aktiverat frontend-pipelinen för att endast distribuera frontendres
 
 ## Justerad utvecklingsmetod
 
-* För den lokala utvecklingen med AEM SDK behöver back-end dev-teamet fortfarande generering av klientlib via `ui.frontend` men under distributionen av Cloud Manager till AEM as a Cloud Service miljö måste du hoppa över den. Det här utgör en utmaning om hur du isolerar ändringar i projektkonfigurationen som beskrivs i [Uppdatera projekt](update-project.md) kapitel.
+* För den lokala utvecklingen med AEM SDK behöver back-end-dev-teamet fortfarande klientlib-generering via modulen `ui.frontend`, men under Cloud Manager-distributionen till AEM as a Cloud Service-miljön måste du hoppa över det. Det här visar en utmaning om hur du isolerar ändringar i projektkonfigurationen som beskrivs i kapitlet [Uppdatera projekt](update-project.md).
 
-A __lösning__ kan vara att justera Git-förgreningsmodellen och se till att AEM ändringar i projektkonfigurationen aldrig kommer tillbaka till __lokal utveckling__ som AEM bakomliggande utvecklare använder.
+En __lösning__ kan vara att justera Git-förgreningsmodellen och se till att AEM ändringar i projektkonfigurationen aldrig kommer tillbaka till den __lokala utvecklingsgrenen__ som används av AEM.
 
 
-* Som en del av en pågående förbättring av AEM projekt, om du inför nya komponenter eller uppdaterar en befintlig komponent som har ändringar i båda `ui.app` och `ui.frontend` måste du köra både fullstacks- och frontendpipelines.
+* Om du inför nya komponenter eller uppdaterar en befintlig komponent som har ändrats i både `ui.app` och `ui.frontend` -modulen måste du, som en del av en pågående förbättring av ditt AEM, köra både fullständiga och främre rörledningar.

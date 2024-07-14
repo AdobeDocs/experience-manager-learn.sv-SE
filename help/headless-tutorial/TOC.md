@@ -22,7 +22,7 @@ ht-degree: 7%
 + GraphQL {#graphql}
    + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [Ökning](./graphql/overview.md)
-   + Snabbinställningar {#quick-setup}
+   + Snabbkonfiguration {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
@@ -31,14 +31,14 @@ ht-degree: 7%
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
       + [4 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL Endpoints](./graphql/video-series/graphql-endpoints.md)
-      + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
+      + [6 - Författare och Publish-arkitektur](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL: Beständiga frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Grundläggande självstudiekurs{#multi-step}
       + [Ökning](./graphql/multi-step/overview.md)
       + [1 - Definiera modeller för innehållsfragment](./graphql/multi-step/content-fragment-models.md)
       + [2 - Skapa innehållsfragment](./graphql/multi-step/author-content-fragments.md)
       + [3 - Utforska GraphQL API:er](./graphql/multi-step/explore-graphql-api.md)
-      + [4 - Bygg en React-app](./graphql/multi-step/graphql-and-react-app.md)
+      + [4 - Skapa en React-app](./graphql/multi-step/graphql-and-react-app.md)
    + Avancerad självstudiekurs{#advanced-tutorial}
       + [Ökning](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 - Skapa modeller för innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
@@ -51,13 +51,13 @@ ht-degree: 7%
       + [1 - Innehållsmodellering](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 - AEM Headless API:er och React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
       + [3 - Komplexa komponenter](./graphql/headless-first-tutorial/3-complex-components.md)
-+ Distributioner{#deployments}
++ Distributioner {#deployments}
    + [Översikt](./graphql/deployment/overview.md)
-   + [Single-page app](./graphql/deployment/spa.md)
+   + [Enkelsidig app](./graphql/deployment/spa.md)
    + [Webbkomponent](./graphql/deployment/web-component.md)
    + [Mobil](./graphql/deployment/mobile.md)
    + [Server-till-server](./graphql/deployment/server-to-server.md)
-   + Konfigurationer{#configurations}
+   + Konfigurationer {#configurations}
       + [AEM](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher-filter](./graphql/deployment/configurations/dispatcher-filters.md)
@@ -77,8 +77,8 @@ ht-degree: 7%
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
-+ SPA{#spa-editor}
-   + Reagera{#react}
++ SPA Editor{#spa-editor}
+   + Reagera {#react}
       + [Ökning](./spa-editor/react/overview.md)
       + [1 - Skapa projekt](./spa-editor/react/create-project.md)
       + [2 - SPA](./spa-editor/react/integrate-spa.md)
@@ -101,7 +101,7 @@ ht-degree: 7%
       + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
-   + Så här gör du{#how-to}
+   + Använda {#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
 + Tokenbaserad autentisering {#authentication}
    + [Ökning](./authentication/overview.md)
@@ -114,7 +114,7 @@ ht-degree: 7%
    + [3 - Innehållsfragment för redigeringshändelser](./content-services/chapter-3.md)
    + [4 - Definiera mallar för innehållstjänster](./content-services/chapter-4.md)
    + [5 - Skapa sidor för innehållstjänster](./content-services/chapter-5.md)
-   + [6 - Visa innehållet vid AEM publicering för leverans](./content-services/chapter-6.md)
+   + [6 - Visa innehållet på AEM Publish för leverans](./content-services/chapter-6.md)
    + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
 + Kodexempel {#code-samples}
    + [Filtrera React-app](./graphql/code-samples/filtering-react-app.md)

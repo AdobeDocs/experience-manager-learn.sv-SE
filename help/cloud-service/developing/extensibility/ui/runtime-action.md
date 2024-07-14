@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Adobe I/O Runtime action
 
-![Körningsåtgärder för AEM UI-tillägg](./assets/runtime-action/action-runtime-flow.png){align="center"}
+![AEM åtgärder för UI-tillägg för körningsmiljö](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
 AEM UI-tillägg kan innehålla valfritt antal [Adobe I/O Runtime-åtgärder](https://developer.adobe.com/runtime/docs/).
 
@@ -32,7 +32,7 @@ Fördelarna med att använda Adobe I/O Runtime-funktionsmakron är:
 + Funktionsmakron kan inte avbrytas av användaren (till exempel uppdatering av webbläsaren)
 + Åtgärderna är asynkrona, så de kan köras så länge som behövs utan att blockera användaren
 
-I AEM UI-tillägg används åtgärder ofta för att kommunicera AEM as a Cloud Service direkt:
+När det gäller AEM UI-tillägg används åtgärder ofta för att kommunicera direkt med AEM as a Cloud Service:
 
 + Samla in relaterade data från AEM om det markerade eller aktuella innehållet
 + Utföra anpassade åtgärder för innehåll
@@ -44,12 +44,12 @@ AEM UI-tillägg finns i specifika gränssnitt, tillägg och tillhörande åtgär
 
 Adobe I/O Runtime-åtgärder anropas främst från två platser i ett AEM användargränssnitt:
 
-1. The [tilläggsregistrering](./extension-registration.md) `onClick(..)` hanterare
+1. ](./extension-registration.md) `onClick(..)`-hanteraren för [tilläggsregistreringen
 1. Inom en [modal](./modal.md)
 
 ### Från tilläggsregistrering
 
-Adobe I/O Runtime-åtgärder kan anropas direkt från tilläggsregistreringskoden. Det vanligaste användningsfallet är att binda en åtgärd till en [rubrikmeny](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/)knappen som inte använder [modaler](./modal.md).
+Adobe I/O Runtime-åtgärder kan anropas direkt från tilläggsregistreringskoden. Det vanligaste användningsfallet är att binda en åtgärd till knappen för en [rubrikmeny](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/header-menu/) som inte använder [modaler](./modal.md).
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -112,7 +112,7 @@ export default ExtensionRegistration;
 
 Adobe I/O Runtime-åtgärder kan anropas direkt från modulerna för att utföra mer engagerande arbete, särskilt arbete som bygger på kommunikation med AEM as a Cloud Service, Adobe webbtjänst eller till och med tredjepartstjänster.
 
-Adobe I/O Runtime-åtgärder är Node.js-baserade JavaScript-program som körs i den serverlösa Adobe I/O Runtime-miljön. Dessa åtgärder kan adresseras via HTTP av SPA.
+Adobe I/O Runtime åtgärder är Node.js-baserade JavaScript-program som körs i den serverlösa Adobe I/O Runtime-miljön. Dessa åtgärder kan adresseras via HTTP av SPA.
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -307,10 +307,10 @@ async function main (params) {
 Följande AEM HTTP-API:er används ofta för interaktion med AEM från tillägg:
 
 + [AEM GraphQL API:er](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-+ [AEM ASSETS HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
++ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
    + [Stöd för Content Fragments i AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
 + [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [Fullständig AEM as a Cloud Service API-referens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [Fullständig API-referens för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
 
 
 ## Adobe npm-moduler
@@ -319,13 +319,13 @@ Följande är användbara npm-moduler för utveckling av Adobe I/O Runtime-åtg�
 
 + [@adobe/aio-sdk](https://www.npmjs.com/package/@adobe/aio-sdk)
    + [Core SDK](https://github.com/adobe/aio-sdk-core)
-   + [Tillståndsbibliotek](https://github.com/adobe/aio-lib-state)
+   + [Statusbibliotek](https://github.com/adobe/aio-lib-state)
    + [Filbibliotek](https://github.com/adobe/aio-lib-files)
    + [Adobe Target Library](https://github.com/adobe/aio-lib-target)
    + [Adobe Analytics Library](https://github.com/adobe/aio-lib-analytics)
    + [Adobe Campaign Standard Library](https://github.com/adobe/aio-lib-campaign-standard)
    + [Adobe kundprofilbibliotek](https://github.com/adobe/aio-lib-customer-profile)
    + [Adobe Audience Manager kunddatabibliotek](https://github.com/adobe/aio-lib-audience-manager-cd)
-   + [Adobe I/O Events](https://github.com/adobe/aio-lib-events)
+   + [Adobe I/O-händelser](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-network](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)

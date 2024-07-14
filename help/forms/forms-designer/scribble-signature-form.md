@@ -1,5 +1,5 @@
 ---
-title: Använda klottersignaturer i Forms Designer
+title: Använda signaturer i Forms Designer
 description: Kort video som beskriver hur du lägger till en klottrig signatur i AEM Forms
 version: 6.5
 feature: Forms Designer,Designer
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# Använda klottersignaturer i AEM Forms Designer
+# Använda signaturer i AEM Forms Designer
 
 Short Video (Kort video) som beskriver hur du lägger till en pratbubblad signatur i AEM Forms
 

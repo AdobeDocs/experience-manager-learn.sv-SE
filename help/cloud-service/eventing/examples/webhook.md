@@ -25,31 +25,31 @@ Lär dig hur du tar emot AEM på en webbkrok och granskar händelseinformation s
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
-I det här exemplet används en Adobe _webbkrok_ gör att du kan ta emot AEM händelser utan att behöva skapa en egen webkrok. Den här webbkroken som tillhandahålls av Adobe är värd för [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar utveckling och driftsättning av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
+I det här exemplet kan du använda en _webbkrok_ som tillhandahålls av Adobe för att ta emot AEM händelser utan att behöva konfigurera en egen webbkrok. Den här webbkroken som tillhandahålls av Adobe finns på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
 
 ## Förutsättningar
 
 För att kunna genomföra den här självstudiekursen behöver du:
 
-- AEM as a Cloud Service miljö med [AEM Eventing aktiverad](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- AEM as a Cloud Service-miljö med [AEM Eventing aktiverat](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
 
-- [Adobe Developer Console-projekt konfigurerat för AEM](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- [Adobe Developer Console-projekt konfigurerat för AEM ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Service Eventing är bara tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM på din AEM as a Cloud Service miljö kontaktar du [AEM](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service Eventing är endast tillgängligt för registrerade användare i förhandsversionsläge. Om du vill aktivera AEM i din AEM as a Cloud Service-miljö kontaktar du [AEM-Eventing team](mailto:grp-aem-events@adobe.com).
 
 ## Åtkomst till webkrok
 
 Följ de här stegen för att få åtkomst till webbkroken som tillhandahålls av Adobe:
 
-- Kontrollera att du har åtkomst till [Glitch - webbkrok som värd](https://lovely-ancient-coaster.glitch.me/) på en ny flik i webbläsaren.
+- Kontrollera att du har åtkomst till [Glitch - webbhokrok](https://lovely-ancient-coaster.glitch.me/) på en ny webbläsarflik.
 
-  ![Glitch - webbkrok som värd](../assets/examples/webhook/glitch-hosted-webhook.png)
+  ![Fel - webbkrok som finns på webben](../assets/examples/webhook/glitch-hosted-webhook.png)
 
-- Ange ett unikt namn för din webkrok, till exempel `<YOUR_PETS_NAME>-aem-eventing` och klicka **Anslut**. Du borde se `Connected to: ${YOUR-WEBHOOK-URL}` visas på skärmen.
+- Ange ett unikt namn för din webkrok, till exempel `<YOUR_PETS_NAME>-aem-eventing`, och klicka på **Anslut**. Du bör se `Connected to: ${YOUR-WEBHOOK-URL}` meddelande visas på skärmen.
 
-  ![Glitch - skapa webkrok](../assets/examples/webhook/glitch-create-webhook.png)
+  ![Fel - skapa webkrok](../assets/examples/webhook/glitch-create-webhook.png)
 
 - Anteckna **Webkroks-URL**. Du behöver det senare i den här självstudiekursen.
 
@@ -57,17 +57,17 @@ Följ de här stegen för att få åtkomst till webbkroken som tillhandahålls a
 
 Följ de här stegen för att ta emot AEM händelser på webbkroks-URL:en ovan:
 
-- I [Adobe Developer Console](https://developer.adobe.com)navigera till projektet och klicka för att öppna det.
+- Gå till ditt projekt i [Adobe Developer Console](https://developer.adobe.com) och klicka för att öppna det.
 
-- Under **Produkter och tjänster** avsnitt, klicka på ovaler `...` bredvid det önskade händelsekortet som ska skicka AEM till webbkroken och välja **Redigera**.
+- Under avsnittet **Produkter och tjänster** klickar du på ellipser `...` bredvid önskat händelsekort som ska skicka AEM till webbkroken och välja **Redigera**.
 
-  ![Redigera Adobe Developer Console-projekt](../assets/examples/webhook/adobe-developer-console-project-edit.png)
+  ![Adobe Developer Console Project Edit](../assets/examples/webhook/adobe-developer-console-project-edit.png)
 
-- I den nyligen öppnade **Konfigurera händelseregistrering** dialogruta, klicka **Nästa** fortsätta till **Så här tar du emot händelser** steg.
+- I den nyligen öppnade dialogrutan **Konfigurera händelseregistrering** klickar du på **Nästa** för att fortsätta till **Så här tar du emot händelser**.
 
-  ![Konfigurera Adobe Developer Console-projekt](../assets/examples/webhook/adobe-developer-console-project-configure.png)
+  ![Adobe Developer Console Project Configure](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- I **Så här tar du emot händelser** steg, välja **Webkrok** och klistra in **Webkroks-URL** du kopierade tidigare från Glitch-webbkroken och klicka på **Spara konfigurerade händelser**.
+- I steget **Så här tar du emot händelser** väljer du alternativet **Webkrok** och klistrar in den **Webkrok-URL** som du kopierade tidigare från webkroken Glitch. Klicka sedan på **Spara konfigurerade händelser**.
 
   ![Adobe Developer Console Project Webkrok](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
@@ -78,11 +78,11 @@ Följ de här stegen för att ta emot AEM händelser på webbkroks-URL:en ovan:
 
 ## Utlös AEM
 
-Så här utlöser du AEM händelser från din AEM as a Cloud Service miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
+Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
 
 - Få åtkomst till och logga in i AEM as a Cloud Service redigeringsmiljö via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
-- Beroende på din **Prenumererade händelser**, skapa, uppdatera, ta bort, publicera eller avpublicera ett innehållsfragment.
+- Beroende på dina **Prenumererade händelser** kan du skapa, uppdatera, ta bort, publicera eller avpublicera ett innehållsfragment.
 
 ## Granska händelseinformation
 
@@ -154,8 +154,8 @@ Här är viktig information om POSTEN:
 }
 ```
 
-Du kan se att informationen om AEM har all information som krävs för att bearbeta händelsen i webkroken. Händelsetypen (`type`), händelsekälla (`source`), händelse-id (`event_id`), händelsetid (`time`) och händelsedata (`data`).
+Du kan se att informationen om AEM har all information som krävs för att bearbeta händelsen i webkroken. Händelsetypen (`type`), händelsekällan (`source`), händelse-ID (`event_id`), händelsetypen (`time`) och händelsedata (`data`).
 
 ## Ytterligare resurser
 
-- [Källkod för webbkrok med fel](https://glitch.com/edit/#!/bedårande-antika-coaster) finns att referera till.
+- [Källkoden för Glitch-webkrok](https://glitch.com/edit/#!/bedårande-antika-coaster) är tillgänglig för referens.

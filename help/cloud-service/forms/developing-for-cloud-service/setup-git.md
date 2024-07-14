@@ -21,7 +21,9 @@ ht-degree: 0%
 
 
 [Installera Git](https://git-scm.com/downloads). Du kan välja standardinställningar och slutföra installationsprocessen.
-Gå till kommandotolken Navigera till typen c:\cloudmanager\aem-Banking-app i Git —version. Du bör se den version av GIT som är installerad på datorn
+Gå till kommandotolken
+Navigera till c:\cloudmanager\aem-Banking-app
+type in git —version. Du bör se den version av GIT som är installerad på datorn
 
 ## Initiera lokal Git-databas
 

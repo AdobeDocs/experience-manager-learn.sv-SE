@@ -1,6 +1,6 @@
 ---
-title: Ställ in Dispatcher Tools för AEM as a Cloud Service Development
-description: AEM SDKs Dispatcher Tools underlättar den lokala utvecklingen av Adobe Experience Manager-projekt (AEM) genom att göra det enkelt att installera, köra och felsöka Dispatcher lokalt.
+title: Konfigurera Dispatcher Tools for AEM as a Cloud Service Development
+description: AEM SDK's Dispatcher Tools underlättar den lokala utvecklingen av Adobe Experience Manager-projekt (AEM) genom att göra det enkelt att installera, köra och felsöka Dispatcher lokalt.
 version: Cloud Service
 topic: Development
 feature: Dispatcher, Developer Tools
@@ -22,56 +22,56 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_dispatcher"
->title="Local Dispatcher Tools"
->abstract="Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön. AEM as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera validering och simulera Dispatcher lokalt."
+>title="Dispatcher verktyg lokalt"
+>abstract="Dispatcher är en integrerad del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön. AEM as a Cloud Service SDK innehåller den rekommenderade Dispatcher Tools-versionen som underlättar konfigurering av validering och simulering av Dispatcher lokalt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="Dispatcher i molnet"
 >additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="Hämta AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM) Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsskiktet. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
+Adobe Experience Manager (AEM) Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN-nivån och AEM Publish-nivån. Dispatcher är en integrerad del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
 
-AEM as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools som gör det lättare att konfigurera validering och simulera Dispatcher lokalt. Dispatcher Tools består av:
+AEM as a Cloud Service SDK innehåller den rekommenderade Dispatcher Tools-versionen som underlättar konfigurering av validering och simulering av Dispatcher lokalt. Dispatcher Tools består av:
 
-+ en basuppsättning med konfigurationsfiler för Apache HTTP-webbserver och Dispatcher, som finns på `.../dispatcher-sdk-x.x.x/src`
-+ en konfigurationsvaliderare för CLI-verktyg, som finns på `.../dispatcher-sdk-x.x.x/bin/validate`
++ en basuppsättning med Apache HTTP-webbserver och Dispatcher konfigurationsfiler, som finns på `.../dispatcher-sdk-x.x.x/src`
++ ett CLI-verktyg för konfigurationsvalideraren, som finns på `.../dispatcher-sdk-x.x.x/bin/validate`
 + ett CLI-verktyg för konfigurationsgenerering som finns på `.../dispatcher-sdk-x.x.x/bin/validator`
 + ett CLI-verktyg för konfigurationsdistribution, som finns på `.../dispatcher-sdk-x.x.x/bin/docker_run`
-+ en oföränderlig konfigurationsfil som skriver över CLI-verktyget, finns på `.../dispatcher-sdk-x.x.x/bin/update_maven`
++ en oföränderlig konfigurationsfil som skriver över CLI-verktyget, som finns på `.../dispatcher-sdk-x.x.x/bin/update_maven`
 + en Docker-bild som kör Apache HTTP Web Server med modulen Dispatcher
 
-Observera att `~` används som kortskrift för användarkatalogen. I Windows motsvarar detta `%HOMEPATH%`.
+Observera att `~` används som kortskrift för användarens katalog. I Windows motsvarar detta `%HOMEPATH%`.
 
 >[!NOTE]
 >
-> Videorna på den här sidan spelades in på macOS. Windows-användare kan följa med, men använda motsvarande Dispatcher Tools Windows-kommandon som finns i varje video.
+> Videorna på den här sidan spelades in på macOS. Windows-användare kan följa med, men använda motsvarande Dispatcher Tools Windows-kommandon, som medföljer varje video.
 
 ## Förutsättningar
 
 1. Windows-användare måste använda Windows 10 Professional (eller en version som stöder Docker)
-1. Installera [Experience Manager Publish Quickstart JAR](./aem-runtime.md) på den lokala utvecklingsdatorn.
+1. Installera [Experience Manager Publish Quickstart Jar](./aem-runtime.md) på den lokala utvecklingsdatorn.
 
-+ Du kan också installera den senaste [AEM webbplats](https://github.com/adobe/aem-guides-wknd/releases) på den lokala AEM. Den här webbplatsen används i den här självstudiekursen för att visualisera en fungerande Dispatcher.
++ Du kan även installera den senaste [AEM referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/releases) på den lokala AEM Publish-tjänsten. Den här webbplatsen används i den här självstudiekursen för att visualisera en fungerande Dispatcher.
 
 1. Installera och starta den senaste versionen av [Docker](https://www.docker.com/) (Docker Desktop 2.2.0.5+ / Docker Engine v19.03.9+) på den lokala utvecklingsdatorn.
 
 ## Ladda ned Dispatcher Tools (som en del av AEM SDK)
 
-Den AEM as a Cloud Service SDK, eller AEM SDK, innehåller Dispatcher-verktygen som används för att köra Apache HTTP-webbservern med Dispatcher-modulen lokalt för utveckling, och den kompatibla QuickStart Jar.
+AEM as a Cloud Service SDK, eller AEM SDK, innehåller de Dispatcher-verktyg som används för att köra Apache HTTP Web-servern med Dispatcher-modulen lokalt för utveckling, samt den kompatibla QuickStart Jar.
 
-Om AEM as a Cloud Service SDK redan har hämtats till [konfigurera lokal AEM](./aem-runtime.md)behöver den inte laddas ned på nytt.
+Om AEM as a Cloud Service SDK redan har laddats ned för att [installera den lokala AEM ](./aem-runtime.md) behöver den inte laddas ned igen.
 
 1. Logga in på [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=1) med din Adobe ID
-   + Din Adobe-organisation __måste__ etableras för AEM as a Cloud Service för att ladda ned AEM as a Cloud Service SDK
-1. Klicka på den senaste __AEM SDK__ resultatrad som ska hämtas
+   + Din Adobe-organisation __måste__ etableras för att AEM as a Cloud Service ska kunna hämta AEM as a Cloud Service SDK
+1. Klicka på den senaste __AEM SDK__-resultatraden som ska hämtas
 
-## Extrahera Dispatcher-verktygen från AEM SDK
+## Extrahera Dispatcher Tools från AEM SDK
 
 >[!TIP]
 >
-> Windows-användare kan inte ha blanksteg eller specialtecken i sökvägen till mappen som innehåller Lokala Dispatcher-verktyg. Om det finns blanksteg i sökvägen `docker_run.cmd` misslyckas.
+> Windows-användare får inte ha blanksteg eller specialtecken i sökvägen till den mapp som innehåller de lokala Dispatcher-verktygen. Om det finns blanksteg i sökvägen misslyckas `docker_run.cmd`.
 
-Versionen av Dispatcher Tools skiljer sig från AEM SDK. Kontrollera att versionen av Dispatcher Tools finns i den AEM SDK-version som matchar den AEM as a Cloud Service versionen.
+Versionen av Dispatcher Tools skiljer sig från AEM SDK. Kontrollera att den version av Dispatcher Tools som finns i den AEM SDK-version som matchar AEM as a Cloud Service-versionen finns tillgänglig.
 
-1. Zippa upp det nedladdade `aem-sdk-xxx.zip` fil
+1. Zippa upp den hämtade `aem-sdk-xxx.zip`-filen
 1. Packa upp Dispatcher Tools i `~/aem-sdk/dispatcher`
 
 >[!BEGINTABS]
@@ -85,7 +85,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!TAB Windows]
 
-Zippa upp `aem-sdk-dispatcher-tools-x.x.x-windows.zip` till `C:\Users\<My User>\aem-sdk\dispatcher` (skapar saknade mappar efter behov).
+Zippa upp `aem-sdk-dispatcher-tools-x.x.x-windows.zip` i `C:\Users\<My User>\aem-sdk\dispatcher` (skapar saknade mappar efter behov).
 
 >[!TAB Linux®]
 
@@ -96,26 +96,26 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!ENDTABS]
 
-Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen innehåller det expanderande Dispatcher-verktygsinnehållet.
+Alla kommandon som anges nedan förutsätter att den aktuella arbetskatalogen innehåller det expanderande Dispatcher Tools-innehållet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601?quality=12&learn=on)
 
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat.*
 
-## Förstå Dispatcher-konfigurationsfilerna
+## Förstå Dispatcher konfigurationsfiler
 
 >[!TIP]
-> Experience Manager-projekt skapade från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, så du behöver inte kopiera över från Src-mappen Dispatcher Tools.
+> Experience Manager-projekt som skapats från [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) är förifyllda i den här uppsättningen Dispatcher-konfigurationsfiler, vilket innebär att du inte behöver kopiera från Dispatcher Tools Src-mappen.
 
 Dispatcher Tools innehåller en uppsättning konfigurationsfiler för Apache HTTP Web Server och Dispatcher som definierar beteendet för alla miljöer, inklusive lokal utveckling.
 
-Filerna ska kopieras till ett Experience Manager Maven-projekt till `dispatcher/src` om de inte finns i Experience Manager Maven-projektet.
+Dessa filer är avsedda att kopieras till ett Experience Manager Maven-projekt till mappen `dispatcher/src`, om de inte finns i Experience Manager Maven-projektet.
 
 En fullständig beskrivning av konfigurationsfilerna finns i de opackade Dispatcher-verktygen som `dispatcher-sdk-x.x.x/docs/Config.html`.
 
 ## Validera konfigurationer
 
-Alternativt kan du konfigurera webbservern Dispatcher och Apache (via `httpd -t`) kan valideras med `validate` skript (ska inte blandas ihop med `validator` körbar). The `validate` är ett praktiskt sätt att köra [tre faser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) i `validator`.
+Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan valideras med skriptet `validate` (ska inte blandas ihop med den körbara filen `validator`). Skriptet `validate` är ett praktiskt sätt att köra [ tre faser ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) i `validator`.
 
 
 >[!BEGINTABS]
@@ -142,7 +142,7 @@ $ ./bin/validate.sh ./src
 
 ## Kör Dispatcher lokalt
 
-AEM Dispatcher körs lokalt med Docker mot `src` Dispatcher och konfigurationsfiler för webbservern Apache.
+AEM Dispatcher körs lokalt med Docker mot konfigurationsfilerna för `src` Dispatcher- och Apache-webbservrar.
 
 
 >[!BEGINTABS]
@@ -153,7 +153,7 @@ AEM Dispatcher körs lokalt med Docker mot `src` Dispatcher och konfigurationsfi
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-The `docker_run_hot_reload` körbar fil föredras framför `docker_run` när konfigurationsfiler läses in igen när de ändras, utan att du behöver avsluta och starta om manuellt `docker_run`. Alternativt `docker_run` kan användas, men manuell avslutning och omstart krävs `docker_run` när konfigurationsfiler ändras.
+Den körbara filen `docker_run_hot_reload` är att föredra framför `docker_run` eftersom den läser in konfigurationsfiler igen när de ändras, utan att behöva avsluta och starta om `docker_run` manuellt. Du kan också använda `docker_run`, men det kräver att `docker_run` avslutas manuellt och startas om när konfigurationsfiler ändras.
 
 >[!TAB Windows]
 
@@ -167,15 +167,15 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-The `docker_run_hot_reload` körbar fil föredras framför `docker_run` när konfigurationsfiler läses in igen när de ändras, utan att du behöver avsluta och starta om manuellt `docker_run`. Alternativt `docker_run` kan användas, men manuell avslutning och omstart krävs `docker_run` när konfigurationsfiler ändras.
+Den körbara filen `docker_run_hot_reload` är att föredra framför `docker_run` eftersom den läser in konfigurationsfiler igen när de ändras, utan att behöva avsluta och starta om `docker_run` manuellt. Du kan också använda `docker_run`, men det kräver att `docker_run` avslutas manuellt och startas om när konfigurationsfiler ändras.
 
 >[!ENDTABS]
 
-The `<aem-publish-host>` kan anges till `host.docker.internal`, innehåller en särskild DNS-namnDocker i behållaren som matchar värddatorns IP-adress. Om `host.docker.internal` inte går att lösa, se [felsökning](#troubleshooting-host-docker-internal) nedan.
+`<aem-publish-host>` kan anges till `host.docker.internal`. En speciell DNS-namnDocker tillhandahåller i behållaren som matchar värddatorns IP-adress. Om `host.docker.internal` inte kan lösas kan du läsa avsnittet [felsökning](#troubleshooting-host-docker-internal) nedan.
 
-Om du till exempel vill starta Dispatcher Docker-behållaren med de standardkonfigurationsfiler som finns i Dispatcher-verktygen:
+Du kan till exempel starta Dispatcher Docker-behållaren med standardkonfigurationsfilerna som finns i Dispatcher-verktygen:
 
-Starta Dispatcher Docker-behållaren med sökvägen till Dispatcher-konfigurationens src-mapp:
+Starta Dispatcher Docker-behållaren och ange sökvägen till Dispatcher konfigurationsmapp:
 
 >[!BEGINTABS]
 
@@ -199,9 +199,9 @@ $ ./bin/docker_run_hot_reload.sh ./src host.docker.internal:4503 8080
 
 >[!ENDTABS]
 
-Den AEM as a Cloud Service SDK:s publiceringstjänst som körs lokalt på port 4503 är tillgänglig via Dispatcher på `http://localhost:8080`.
+AEM as a Cloud Service SDK:s Publish-tjänst som körs lokalt på port 4503 är tillgänglig via Dispatcher på `http://localhost:8080`.
 
-Om du vill köra Dispatcher Tools mot Dispatcher-konfigurationen för ett Experience Manager-projekt pekar du på projektets `dispatcher/src` mapp.
+Om du vill köra Dispatcher-verktyg mot ett Experience Manager-projekts Dispatcher-konfiguration pekar du på ditt projekts `dispatcher/src`-mapp.
 
 >[!BEGINTABS]
 
@@ -226,21 +226,21 @@ $ ./bin/docker_run_hot_reload.sh ~/code/my-project/dispatcher/src host.docker.in
 >[!ENDTABS]
 
 
-## Loggar för Dispatcher Tools
+## Dispatcher Tools-loggar
 
-Distributionsloggar är användbara under lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan ställas in genom att prefix för körningen av `docker_run` med miljöparametrar.
+Dispatcher loggar är användbara vid lokal utveckling för att förstå om och varför HTTP-begäranden blockeras. Loggnivån kan anges genom att köra `docker_run` med miljöparametrar som prefix.
 
-Loggar för utskicksverktyg skickas till standard-out när `docker_run` är körd.
+Loggar för Dispatcher-verktyg skickas till standard-out när `docker_run` körs.
 
 Användbara parametrar för felsökning av Dispatcher är:
 
-+ `DISP_LOG_LEVEL=Debug` anger att inloggning i modulen Dispatcher ska vara felsökningsnivå
++ `DISP_LOG_LEVEL=Debug` ställer in Dispatcher modulinloggning på Felsökningsnivå
    + Standardvärdet är: `Warn`
-+ `REWRITE_LOG_LEVEL=Debug` anger Apache HTTP Web server rewrite module loggning till Felsökningsnivå
++ `REWRITE_LOG_LEVEL=Debug` anger Apache HTTP Web Server Rewrite Module-loggning till Felsökningsnivå
    + Standardvärdet är: `Warn`
-+ `DISP_RUN_MODE` anger körningsläget för Dispatcher-miljön och läser in motsvarande körningslägen Dispatcher-konfigurationsfiler.
++ `DISP_RUN_MODE` anger körningsläget för Dispatcher-miljön och läser in motsvarande Dispatcher-konfigurationsfiler för körningslägen.
    + Standardvärdet är `dev`
-+ Giltiga värden: `dev`, `stage`, eller `prod`
++ Giltiga värden: `dev`, `stage` eller `prod`
 
 En eller flera parametrar kan skickas till `docker_run`
 
@@ -268,18 +268,18 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run_hot_reload.sh ~/
 
 ### Loggfilsåtkomst
 
-Du kan komma åt Apache-webbservern och AEM Dispatcher-loggarna direkt i Docker-behållaren:
+Du kan komma åt Apache-webbservern och AEM Dispatcher-loggar direkt i Docker-behållaren:
 
 + [Åtkomst till loggar i Docker-behållaren](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
 + [Kopiera Docker-loggarna till det lokala filsystemet](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## När Dispatcher Tools ska uppdateras{#dispatcher-tools-version}
 
-Dispatcher Tools-versionerna ökar inte lika ofta som Experience Manager och Dispatcher Tools kräver därför färre uppdateringar i den lokala utvecklingsmiljön.
+Dispatcher Tools-versionerna ökar inte lika ofta som Experience Manager och därför kräver Dispatcher Tools färre uppdateringar i den lokala utvecklingsmiljön.
 
-Den rekommenderade versionen av Dispatcher Tools är den som medföljer AEM as a Cloud Service SDK som överensstämmer med den as a Cloud Service Experience Manager-versionen. Versionen av AEM as a Cloud Service finns via [Cloud Manager](https://my.cloudmanager.adobe.com/).
+Den rekommenderade Dispatcher Tools-versionen är den som medföljer AEM as a Cloud Service SDK som överensstämmer med Experience Manager as a Cloud Service-versionen. Versionen av AEM as a Cloud Service finns via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
-+ __Cloud Manager > Miljöer__, per miljö som anges av __AEM__ label
++ __Cloud Manager > Miljöer__, per miljö som anges av etiketten __AEM__
 
 ![Experience Manager version](./assets/dispatcher-tools/aem-version.png)
 
@@ -287,20 +287,20 @@ Den rekommenderade versionen av Dispatcher Tools är den som medföljer AEM as a
 
 ## Så här uppdaterar du baslinjeuppsättningen med Apache- och Dispatcher-konfigurationer
 
-Baslinjeuppsättningen av konfigurationen för Apache och Dispatcher förbättras regelbundet och släpps med den AEM as a Cloud Service SDK-versionen. Det är bästa sättet att införliva förbättringarna av baslinjekonfigurationen i AEM projekt och undvika [lokal validering](#validate-configurations) och fel i molnhanterarens pipeline. Uppdatera dem med `update_maven.sh` skript `.../dispatcher-sdk-x.x.x/bin` mapp.
+Baslinjeuppsättningen med Apache- och Dispatcher-konfigurationer förbättras regelbundet och släpps med AEM as a Cloud Service SDK-versionen. Det är en god vana att inkludera förbättringarna av baslinjekonfigurationen i ditt AEM och undvika [lokal validering](#validate-configurations) och fel i Cloud Manager pipeline. Uppdatera dem med skriptet `update_maven.sh` från mappen `.../dispatcher-sdk-x.x.x/bin`.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
 *I den här videon används macOS för illustrativa ändamål. Motsvarande Windows/Linux-kommandon kan användas för att uppnå liknande resultat.*
 
 
-Låt oss anta att du tidigare har skapat ett AEM projekt med [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)var de ursprungliga konfigurationerna för Apache och Dispatcher aktuella. Med hjälp av dessa baslinjekonfigurationer har dina projektspecifika konfigurationer skapats genom att återanvända och kopiera filer som `*.vhost`, `*.conf`, `*.farm` och `*.any` från `dispatcher/src/conf.d` och `dispatcher/src/conf.dispatcher.d` mappar. Din lokala Dispatcher-validering och Cloud Manager-pipelines fungerade som de ska.
+Vi antar att du tidigare har skapat ett AEM projekt med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype). Baslinjen för Apache och Dispatcher var aktuella. Med hjälp av dessa baslinjekonfigurationer skapades dina projektspecifika konfigurationer genom att återanvända och kopiera filer som `*.vhost`, `*.conf`, `*.farm` och `*.any` från mapparna `dispatcher/src/conf.d` och `dispatcher/src/conf.dispatcher.d`. Din lokala Dispatcher-validering och Cloud Manager-rörledningar fungerade bra.
 
-Samtidigt har Apache- och Dispatcher-konfigurationerna förbättrats för baslinjen av olika skäl, till exempel nya funktioner, säkerhetskorrigeringar och optimering. De släpps via en nyare version av Dispatcher Tools som en del av den AEM as a Cloud Service versionen.
+Samtidigt har Apache- och Dispatcher-konfigurationerna förbättrats av olika skäl, till exempel nya funktioner, säkerhetskorrigeringar och optimering. De släpps via en nyare version av Dispatcher Tools som en del av AEM as a Cloud Service.
 
-När du validerar projektspecifika Dispatcher-konfigurationer mot den senaste Dispatcher Tools-versionen börjar de nu misslyckas. För att lösa detta måste baslinjekonfigurationerna uppdateras genom att följa stegen nedan:
+När du validerar dina projektspecifika Dispatcher-konfigurationer mot den senaste Dispatcher Tools-versionen börjar de nu misslyckas. För att lösa detta måste baslinjekonfigurationerna uppdateras genom att följa stegen nedan:
 
-+ Verifiera att valideringen inte fungerar med den senaste versionen av Dispatcher Tools
++ Verifiera att valideringen misslyckas mot den senaste Dispatcher Tools-versionen
 
   ```shell
   $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -312,7 +312,7 @@ När du validerar projektspecifika Dispatcher-konfigurationer mot den senaste Di
   ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
   ```
 
-+ Uppdatera oföränderliga filer med `update_maven.sh` script
++ Uppdatera de oföränderliga filerna med skriptet `update_maven.sh`
 
   ```shell
   $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -329,7 +329,7 @@ När du validerar projektspecifika Dispatcher-konfigurationer mot den senaste Di
   Cloud manager validator 2.0.53
   ```
 
-+ Verifiera uppdaterade oföränderliga filer som `dispatcher_vhost.conf`, `default.vhost`och `default.farm` och vid behov göra relevanta ändringar i dina anpassade filer som härleds från dessa filer.
++ Verifiera de uppdaterade oföränderliga filerna som `dispatcher_vhost.conf`, `default.vhost` och `default.farm` och gör vid behov relevanta ändringar i dina anpassade filer som härleds från dessa filer.
 
 + Verifiera konfigurationen på nytt, det bör gå
 
@@ -351,31 +351,31 @@ Phase 3 finished
 
 ### docker_run resulterar i meddelandet&quot;Väntar tills host.docker.internal är tillgänglig&quot;{#troubleshooting-host-docker-internal}
 
-The `host.docker.internal` är ett värdnamn som tillhandahålls Docker-behållaren som löses till värden. Per docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
+`host.docker.internal` är ett värdnamn som anges för Docker-behållaren som löses till värden. Per docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
 
 > Från och med Docker 18.03 rekommenderar vi att du ansluter till det särskilda DNS-namnet host.docker.internal, som matchar den interna IP-adressen som används av värden
 
-När `bin/docker_run src host.docker.internal:4503 8080` i meddelandet __Väntar tills host.docker.internal är tillgänglig__ och sedan:
+När `bin/docker_run src host.docker.internal:4503 8080` resulterar i meddelandet __Väntar tills host.docker.internal är tillgänglig__:
 
 1. Kontrollera att den installerade versionen av Docker är 18.03 eller senare
-1. Det kan finnas en lokal dator som förhindrar registrering/upplösning av `host.docker.internal` namn. Använd i stället din lokala IP-adress.
+1. Du kan ha konfigurerat en lokal dator som förhindrar registrering/upplösning av namnet `host.docker.internal`. Använd i stället din lokala IP-adress.
 
 >[!BEGINTABS]
 
 >[!TAB macOS]
 
-+ Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
-+ Kör sedan `docker_run` med hjälp av värdens IP-adress: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Kör `ifconfig` från Terminal och spela in IP-adressen för värddatorn __inet__, vanligtvis __en0__-enheten.
++ Kör sedan `docker_run` med IP-värdadressen: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
-+ Kör från kommandotolken `ipconfig`och registrera värddatorns __IPv4-adress__ värddatorn.
-+ Kör sedan `docker_run` med denna IP-adress: `$ bin\docker_run src <HOST IP>:4503 8080`
++ Kör `ipconfig` från kommandotolken och registrera värddatorns __IPv4-adress__.
++ Kör sedan `docker_run` med följande IP-adress: `$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux®]
 
-+ Från Terminal, kör `ifconfig` och registrera värden __inet__ IP-adress, vanligtvis __en0__ enhet.
-+ Kör sedan `docker_run` med hjälp av värdens IP-adress: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Kör `ifconfig` från Terminal och spela in IP-adressen för värddatorn __inet__, vanligtvis __en0__-enheten.
++ Kör sedan `docker_run` med IP-värdadressen: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 
@@ -394,6 +394,6 @@ Waiting until host.docker.internal is available
 
 + [Hämta AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
-+ [Ladda ned Docker](https://www.docker.com/)
-+ [Ladda ned AEM webbplats (WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience Manager Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Hämta Docker](https://www.docker.com/)
++ [Hämta AEM referenswebbplats (WKND)](https://github.com/adobe/aem-guides-wknd/releases)
++ [Experience Manager Dispatcher Documentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

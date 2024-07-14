@@ -30,6 +30,6 @@ Följ stegen nedan för att skapa en sådan nod i crx:
 * Du måste skapa en egenskap av typen String som kallas resurstyper (du kan namnge den efter behov). Kontrollera att egenskapen är ett multivärde. Ange de värden som du vill ha och spara.
   ![item-load-path](assets/item-load-path-crx.png)
 
-Om du vill läsa in dessa värden i listrutan anger du följande sökväg i objektets egenskap för inläsningssökväg  **/content/assets/assettypes**
+Om du vill läsa in dessa värden i den nedrullningsbara listan anger du följande sökväg i objektets inläsningssökvägsegenskap **/content/assets/assettypes**
 
-Exempelpaketet kan [hämtad härifrån](assets/item-load-path-package.zip)
+Exempelpaketet kan [hämtas här](assets/item-load-path-package.zip)

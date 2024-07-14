@@ -29,10 +29,10 @@ I följande video visas några av de viktigaste funktionerna i sidredigeraren.
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
 
-Se [AEM för en fullständig översikt över funktionerna i Page Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html).
+I [AEM-dokumentationen finns en fullständig översikt över funktionerna i sidredigeraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html).
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för AEM Page Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
-* [Redigera dokumentation om sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
+* [AEM Dokumentation för sidredigeraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
 * [Användarhandbok för utveckling av webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)

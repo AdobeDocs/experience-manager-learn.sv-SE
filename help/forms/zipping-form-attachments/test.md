@@ -18,21 +18,21 @@ ht-degree: 0%
 
 # Steg som krävs för att testa de två metoderna
 
-* Konfigurera [Dagens CQ-tjänst för e-post](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) för att skicka e-post från AEM Forms server
-* Distribuera [formulärbilagor](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar) paket med [felix-webbkonsol](http://localhost:4502/system/console/bundles)
+* Konfigurera [Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) för att skicka e-post från AEM Forms-servern
+* Distribuera paketet [formulärbilagor](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar) med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
 
 ## Skicka zip-fil som e-postbilaga
 
 
 
-* Distribuera [Arbetsflödet SendFormAttachmentsViaEmail.](assets/zipped-form-attachments-model.zip) Det här arbetsflödet använder skicka-e-postkomponenten för att skicka filen zipped_attachments.zip, som sparas i nyttolastmappen i det anpassade processsteget. Konfigurera avsändarens och mottagarnas e-postadresser efter dina behov.
-* Importera [exempelformulär](assets/zip-form-attachments-form.zip) från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) och lägg till några bilagor och skicka in formuläret.
+* Distribuera arbetsflödet [SendFormAttachmentsViaEmail.](assets/zipped-form-attachments-model.zip) Det här arbetsflödet använder skicka-e-postkomponenten för att skicka filen zipped_attachments.zip som sparas under nyttolastmappen i det anpassade processsteget. Konfigurera avsändarens och mottagarnas e-postadresser efter dina behov.
+* Importera [exempelformuläret](assets/zip-form-attachments-form.zip) från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/zippformattachments/jcr:content?wcmmode=disabled) och lägg till några bilagor och skicka formuläret.
 * Arbetsflödet bör aktiveras och ett e-postmeddelande med zip-filen skickas.
 
 ## Skicka bilagor som enskilda filer
 
-* Distribuera [Arbetsflöde för SendForm.](assets/send-form-attachments-model.zip) I det här arbetsflödet används skicka e-postkomponent för att skicka formulärbilagor som enskilda filer. Konfigurera e-postadressen för avsändare och mottagare efter dina behov.
-* Importera [exempelformulär](assets/send-list-attachments-form.zip) från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/sendlistofattachments/jcr:content?wcmmode=disabled) och lägg till några bilagor och skicka in formuläret.
+* Distribuera arbetsflödet [SendForm.](assets/send-form-attachments-model.zip) Det här arbetsflödet använder skicka e-postkomponent för att skicka formulärbilagor som enskilda filer. Konfigurera e-postadressen för avsändare och mottagare efter dina behov.
+* Importera [exempelformuläret](assets/send-list-attachments-form.zip) från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/sendlistofattachments/jcr:content?wcmmode=disabled) och lägg till några bilagor och skicka formuläret.
 * Arbetsflödet bör utlösas och ett e-postmeddelande med de bifogade formulärfilerna skickas.

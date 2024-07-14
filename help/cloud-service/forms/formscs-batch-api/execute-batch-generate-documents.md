@@ -26,7 +26,7 @@ Kör gruppen genom att göra en POST-förfrågan till följande API
 ```
 
 Denna API förväntar sig ett tomt json-objekt som en parameter i begärandetexten.
-Detta API returnerar en unik URL i svarshuvudet som identifieras av **plats** -tangenten.
+Detta API returnerar en unik URL i svarshuvudet som identifieras av nyckeln **location**.
 En GET-begäran till den här unika URL:en talar om batchkörningens status
 
 I följande video visas hur batchkonfigurationen aktiveras

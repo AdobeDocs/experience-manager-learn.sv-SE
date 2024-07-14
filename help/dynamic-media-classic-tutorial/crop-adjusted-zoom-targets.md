@@ -40,10 +40,10 @@ Dynamic Media Classic har ett antal lättanvända bildredigeringsverktyg i anvä
 
 ### Använda beskärningsverktyget
 
-Du kommer åt beskärningsverktyget i Dynamic Media Classic från detaljsidan för en resurs eller genom att klicka på **Redigera** -knappen. Du kan beskära på två sätt med verktyget:
+Du kommer åt beskärningsverktyget i Dynamic Media Classic från detaljsidan för en resurs eller genom att klicka på knappen **Redigera** . Du kan beskära på två sätt med verktyget:
 
-- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller skriver värden i rutan Storlek. Lär dig hur [Beskär manuellt](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
-- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur [Beskär efter trimning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller skriver värden i rutan Storlek. Lär dig hur du [beskär](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) manuellt.
+- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _Manuell beskärning_
 
@@ -63,19 +63,19 @@ Bilden till höger blir mycket mer framträdande genom att det extra utrymmet ru
 
 >[!NOTE]
 >
->Trimma skapar inte genomskinlighet runt bilden. Därför måste du bädda in en urklippsbana i bilden och använda **Skapa mask från klippbana** överföringsalternativ.
+>Trimma skapar inte genomskinlighet runt bilden. Därför måste du bädda in en urklippsbana i bilden och använda överföringsalternativet **Skapa mask från urklippsbana** .
 >
->Om du vill återställa en bild till det ursprungliga läget efter att du har beskurit den när du har använt **Spara** visas bilden i beskärningsredigeraren och väljer **Återställ** -knappen.
+>Om du vill återställa en bild till det ursprungliga läget efter att du har beskurit den när du har använt alternativet **Spara**, visar du bilden på skärmen Beskärningsredigeraren och väljer knappen **Återställ** .
 
-### _Beskärning vid överföring_
+### _Beskär vid överföring_
 
-Som tidigare nämnts kan du även välja att beskära bilderna när du överför dem. Om du vill använda beskärning vid överföring klickar du på **Jobbalternativ** och under Beskärningsalternativ väljer du **Rensa**.
+Som tidigare nämnts kan du även välja att beskära bilderna när du överför dem. Om du vill använda beskärning vid överföring klickar du på knappen **Jobbalternativ** och väljer **Beskär** under Beskärningsalternativ.
 
 Dynamic Media Classic kommer ihåg det här alternativet för nästa överföring. Du kanske vill beskära bilder för den här överföringen, men du kanske inte vill att de ska beskäras för varje överföring. Ett annat alternativ är att ange ett särskilt schemalagt FTP-överföringsjobb och lägga beskärningsalternativen där. På så sätt körs jobbet bara när du behöver beskära bilderna.
 
 >[!IMPORTANT]
 >
->Om du ställer in en beskärning för överföringen lägger Dynamic Media Classic en cookie för att komma ihåg den inställningen nästa gång. Ett tips är att klicka på **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som finns kvar från den senaste överföringen. I annat fall kan du av misstag beskära nästa grupp med bilder.
+>Om du ställer in en beskärning för överföringen lägger Dynamic Media Classic en cookie för att komma ihåg den inställningen nästa gång. Det bästa är att klicka på knappen **Återställ till företagsstandard** före nästa överföring för att ta bort eventuella beskärningsalternativ som finns kvar från den senaste överföringen. I annat fall kan du av misstag beskära nästa grupp med bilder.
 
 ### Beskärning efter URL
 
@@ -83,8 +83,8 @@ Dynamic Media Classic kommer ihåg det här alternativet för nästa överförin
 
 När du använder beskärningsverktyget visas URL-värdena i fältet längst ned. Du kan använda dessa värden och använda dem direkt på en bild som URL-modifierare.
 
-![image](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
-_Kommandomodifierare för beskärning längst ned i Beskärningsredigeraren_
+![bild](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
+_Kommandomodifierare för beskärning längst ned i beskärningsredigeraren_
 
 ![bild](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
 
@@ -94,7 +94,7 @@ Eftersom storleken måste beräknas per bild när du använder beskärning genom
 
 Bildförinställningar har ett fält där du kan lägga till extra bildserverkommandon. Om du vill lägga till samma beskärning som ovan i bildförinställningen redigerar du förinställningen och klistrar in eller skriver in värdena i fältet URL-modifierare. Spara och publicera sedan.
 
-![image](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
+![bild](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
 _Lägg till beskärningskommandon (eller valfritt kommando) i URL-modifierarna för bildförinställningen._
 
 Beskärningen kommer nu att ingå i den förinställda bilden och tillämpas automatiskt varje gång den används. Den här metoden beror förstås på alla bilder som behöver samma beskärningsmängd. Om inte alla bilder är tagna på samma sätt skulle den här metoden inte fungera för dig.
@@ -103,7 +103,7 @@ Beskärningen kommer nu att ingå i den förinställda bilden och tillämpas aut
 
 När du använder beskärningsverktyget kan du välja att **Spara som ytterligare vy av mallsida**. När den sparas skapas en ny typ av Dynamic Media Classic-resurs - en justerad bild. En justerad bild, som även kallas en variant, är en virtuell bild. Det är inte en bild alls, utan en databasreferens (som ett alias eller en genväg) till den fysiska huvudbilden.
 
-### Stå upp med den riktiga bilden`?`
+### Stå upp för den riktiga bilden `?`
 
 Kan du se vilken som är mallsida och vilken bild som är justerad?
 
@@ -117,14 +117,14 @@ En justerad bild använder inget diskutrymme eftersom den bara finns som ett rad
 
 Vanligtvis skapar du justerade bilder med beskärningsverktyget, men du kan även skapa dem med andra bildredigeringsprogram - verktygen Justera och Skärpa.
 
-Justerade bilder kräver ett unikt resurs-ID. När de publiceras (du måste publicera som vilken annan resurs som helst) fungerar de som vilken bild som helst och anropas på en URL av deras resurs-ID. På detaljsidan kan du visa justerade bilder som är kopplade till en mallbild under **Byggda och derivat** -fliken.
+Justerade bilder kräver ett unikt resurs-ID. När de publiceras (du måste publicera som vilken annan resurs som helst) fungerar de som vilken bild som helst och anropas på en URL av deras resurs-ID. På sidan Detalj kan du visa justerade bilder som är kopplade till en huvudbild på fliken **Byggda &amp; derivat** .
 
-![image](assets/crop-adjusted-zoom-targets/derivatives.jpg)
+![bild](assets/crop-adjusted-zoom-targets/derivatives.jpg)
 _Justerade vyer för huvudbilden ASIAN_BR_MAIN_
 
 ## Zoommål
 
-Zoommål finns också på **Redigera** meny och **Information** sida i en bild. Med dem kan du ange&quot;aktiveringspunkter&quot; för att framhäva specifika försäljningsfunktioner i en zoombild. I stället för att skapa separata bilder genom att beskära en stor mallsida kan zoomningsvisningsprogrammet visa detaljerna ovanför bilden tillsammans med en kort etikett som du skapar.
+Zoommål finns också på **Redigera** -menyn och **Information** -sidan i en bild. Med dem kan du ange&quot;aktiveringspunkter&quot; för att framhäva specifika försäljningsfunktioner i en zoombild. I stället för att skapa separata bilder genom att beskära en stor mallsida kan zoomningsvisningsprogrammet visa detaljerna ovanför bilden tillsammans med en kort etikett som du skapar.
 
 ![bild](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -134,7 +134,7 @@ Processen är mycket enkel - klicka på funktionen, ge den ett beskrivande namn 
 
 Ett annat sätt att avgöra om du ska använda zoommål är att välja visningsprogram. Alla visningsprogramtyper kan inte visa zoommål (t.ex. saknar visningsprogrammet stöd för dem).
 
-Lär dig hur [Skapa zoommål](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
+Lär dig hur du [skapar zoommål](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
 
 ![bild](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
@@ -142,15 +142,15 @@ Lär dig hur [Skapa zoommål](https://experienceleague.adobe.com/docs/dynamic-me
 
 Här är arbetsflödet för att skapa mål i Dynamic Media Classic.
 
-1. Bläddra till bilden och klicka på **Redigera** och välj **Zoommål**.
+1. Bläddra till bilden, klicka på knappen **Redigera** och välj **Zoommål**.
 2. Zoommålredigeraren läses in. Bilden visas i mitten, med några knappar överst och en tom målpanel till höger. I det nedre vänstra hörnet visas en visningsförinställning markerad. Standardvärdet är &quot;Zoom1-Guidad&quot;.
 3. Flytta den röda rutan med musen och klicka för att skapa ett nytt mål.
 
    - Den röda rutan är målområdet. När en användare klickar på det målet zoomas det in i området inuti rutan.
-   - Målstorleken bestäms av visningsstorleken i visningsförinställningen. Detta avgör storleken på den huvudsakliga zoombilden. Se _Ange visningsstorlek_, nedan.
+   - Målstorleken bestäms av visningsstorleken i visningsförinställningen. Detta avgör storleken på den huvudsakliga zoombilden. Se _Ange visningsstorlek_ nedan.
 
 4. Målet som du just skapade blir blått och till höger visas en miniatyrversion av målet samt standardnamnet&quot;target-0&quot;.
-5. Om du vill byta namn på målet klickar du på dess miniatyrbild och skriver ett nytt **Namn** och klicka **Retur** eller **Tabb** — om du bara klickar på en annan plats sparas inte ditt namn.
+5. Om du vill byta namn på målet klickar du på dess miniatyrbild, skriver ett nytt **namn** och klickar på **Enter** eller **Tabb** - om du bara klickar på ett annat namn sparas inte ditt namn.
 6. När målet är markerat har rutan gröna streckade linjer runt sig och du kan ändra storlek på och flytta den. Dra i hörnen för att ändra storlek eller dra i målrutan för att flytta den.
 
    - Bilden läses in i standardvisningsprogrammet för anpassad zoomning. Kontrollera att visningsförinställningen har stöd för zoomningsmål. I allmänhet har alla standardförinställningar som har ordet&quot;-Guidad&quot; utformats för användning med zoommål. Om du vill använda målen håller du pekaren över målminiatyrbilden (eller hotspot-ikonen) för att visa etiketten och klickar på den för att se visningsprogrammet zooma in på den funktionen.
@@ -158,9 +158,9 @@ Här är arbetsflödet för att skapa mål i Dynamic Media Classic.
 
      ![bild](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
-7. Om du behöver ta bort ett mål markerar du det genom att klicka på dess miniatyrbild och trycker på **Ta bort mål** eller tryck på DELETE på tangentbordet.
+7. Om du behöver ta bort ett mål markerar du det genom att klicka på dess miniatyrbild och trycker på knappen **Ta bort mål** eller trycker på DELETE på tangentbordet.
 8. Fortsätt att klicka för att lägga till nya mål, byta namn och/eller ändra storlek när du har lagt till dem.
-9. Klicka på **Spara** och sedan **Förhandsgranska**.
+9. När du är klar klickar du på knappen **Spara** och sedan på **Förhandsgranska**.
 
 ### Ange visningsstorlek i förinställningen för zoomvisningsprogrammet
 
@@ -180,7 +180,7 @@ Den inbyggda förinställningen har storleken 900 x 550, vilket innebär att må
 
 Om du vill ange visningsstorlek skapar eller redigerar du en visningsförinställning med stöd för zoommål.
 
-1. I visningsförinställningen går du till **Zoominställningar** alternativ.
+1. Gå till alternativet **Zoominställningar** i visningsförinställningen.
 2. Ange bredd och höjd.
 3. Spara förinställningen och stäng den. Om du vill använda den förinställningen på den publicerade webbplatsen måste du även publicera den senare.
 4. Gå till zoommålverktyget och välj den förinställning som du redigerade längst ned till vänster. Du kommer omedelbart att se den nya visningsstorleken återspeglas i dina mål.

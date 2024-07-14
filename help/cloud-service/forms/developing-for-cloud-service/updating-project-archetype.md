@@ -28,12 +28,12 @@ Följande steg har utförts för att migrera projektet som skapats med arkivtyp 
 
 * Öppna kommandotolken och navigera till c:\cloudmanager
 * Skapa maven-projekt med den senaste arkitypen.
-* Kopiera och klistra in innehållet i [textfil](assets/creating-maven-project.txt) i kommandotolken. Du kan behöva ändra DarchetypeVersion=33 beroende på [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Arketypen 33 innehåller nya AEM Forms-teman.
-Eftersom vi skapar det nya maven-projektet i molnhanterarmappen som redan har ett aem-Banking-applikationsprojekt, bör du ändra **DartifactId** från aem-Banking till något annat. Jag har använt aem-Banking-application1 för den här artikeln.
+* Kopiera och klistra in innehållet i [textfilen](assets/creating-maven-project.txt) i kommandotolken. Du kan behöva ändra DarchetypeVersion=33 beroende på den [senaste versionen](https://github.com/adobe/aem-project-archetype/releases). Arketypen 33 innehåller nya AEM Forms-teman.
+Eftersom vi skapar det nya maven-projektet i molnhanterarmappen som redan har ett aem-Banking-application-projekt, bör du ändra **DartifactId** från aem-Banking-application till något annat. Jag har använt aem-Banking-application1 för den här artikeln.
 
 >[!NOTE]
 >
->Om du distribuerar det nya projektet som det är i molntjänstinstansen kommer HandleFormSubmission och SubmitToAEMServlet inte att finnas. Det beror på att varje gång du distribuerar ett projekt med Cloud Manager finns det något under `/apps` mappen tas bort och skrivs över.
+>Om du distribuerar det nya projektet som det är i molntjänstinstansen kommer HandleFormSubmission och SubmitToAEMServlet inte att finnas. Detta beror på att varje gång du distribuerar ett projekt med Cloud Manager, tas allt under mappen `/apps` bort och skrivs över.
 
 ## Kopiera din java-kod
 
@@ -44,7 +44,7 @@ till
   ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
 * Kopiera CustomSubmit från
-  ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` från aem-Banking-application till aem-Banking-application1 project
+  ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` från aem-Banking-application till aem-Banking-application1-projekt
 
 * importera det nya projektet till IntelliJ
 

@@ -19,22 +19,22 @@ ht-degree: 0%
 
 # Generera JWT-åtkomsttoken i App Builder-åtgärd
 
-App Builder-åtgärder kan behöva interagera med Adobe-API:er som är kopplade till Adobe Developer Console-projekt, eftersom appen App Builder också är distribuerad.
+App Builder-åtgärder kan behöva interagera med Adobe API:er som är kopplade till Adobe Developer Console-projekt som App Builder-appen också är distribuerad till.
 
-Detta kan kräva att App Builder-åtgärden genererar en egen JWT-åtkomsttoken som är associerad med det önskade Adobe Developer Console-projektet.
+Detta kan kräva att App Builder-åtgärden genererar en egen JWT-åtkomsttoken som är kopplad till önskat Adobe Developer Console-projekt.
 
 >[!IMPORTANT]
 >
-> Granska [Säkerhetsdokumentation för App Builder](https://developer.adobe.com/app-builder/docs/guides/security/) för att förstå när det är lämpligt att generera åtkomsttoken och inte använda tillhandahållna åtkomsttoken.
+> Granska [App Builder säkerhetsdokumentation](https://developer.adobe.com/app-builder/docs/guides/security/) för att förstå när det är lämpligt att generera åtkomsttoken jämfört med att använda tillhandahållna åtkomsttoken.
 >
-> Den anpassade åtgärden kan behöva tillhandahålla egna säkerhetskontroller för att säkerställa att bara behöriga användare kan komma åt App Builder-åtgärden och de underliggande Adobe-tjänsterna.
+> Den anpassade åtgärden kan behöva tillhandahålla egna säkerhetskontroller för att säkerställa att bara de som tillåts komma åt App Builder-åtgärden, och de Adobe-tjänster som ligger till grund för den, får åtkomst till åtgärden.
 
 
 ## .env-fil
 
-I App Builder-projektets `.env` lägger du till egna nycklar för vart och ett av Adobe Developer Console-projektets JWT-uppgifter. JWT-referensvärdena kan hämtas från Adobe Developer Console-projektets __Referenser__ > __Tjänstkonto (JWT)__ för en viss arbetsyta.
+I App Builder-projektets `.env`-fil lägger du till anpassade nycklar för varje Adobe Developer Console-projekts JWT-autentiseringsuppgifter. JWT-autentiseringsuppgifter kan hämtas från Adobe Developer Console-projektets __autentiseringsuppgifter__ > __tjänstkonto (JWT)__ för en viss arbetsyta.
 
-![Autentiseringsuppgifter för tjänsten Adobe Developer Console JWT](./assets/jwt-auth/jwt-credentials.png)
+![Adobe Developer Console JWT-tjänstautentiseringsuppgifter](./assets/jwt-auth/jwt-credentials.png)
 
 ```
 ...
@@ -46,14 +46,14 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-Värdena för `JWT_CLIENT_ID`, `JWT_CLIENT_SECRET`, `JWT_TECHNICAL_ACCOUNT_ID`, `JWT_IMS_ORG` kan kopieras direkt från Adobe Developer Console-projektets skärm JWT Credentials.
+Värdena för `JWT_CLIENT_ID`, `JWT_CLIENT_SECRET`, `JWT_TECHNICAL_ACCOUNT_ID`, `JWT_IMS_ORG` kan kopieras direkt från Adobe Developer Console-projektets JWT-inloggningsskärm.
 
 ### Metasskop
 
-Bestäm vilka Adobe-API:er och deras metascope som App Builder-åtgärden interagerar med. Visa metascopes med kommaavgränsare i dialogrutan `JWT_METASCOPES` -tangenten. Giltiga metasskop visas i [Adobe JWT Metascope-dokumentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+Bestäm vilka Adobe-API:er och deras metaskop App Builder-åtgärden interagerar med. Visa metaseparerade områden med kommaavgränsare i tangenten `JWT_METASCOPES`. Giltiga metascopes listas i [Adobe JWT Metascope documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
 
 
-Följande värde kan till exempel läggas till i `JWT_METASCOPES` i `.env`:
+Följande värde kan till exempel läggas till i nyckeln `JWT_METASCOPES` i `.env`:
 
 ```
 ...
@@ -63,7 +63,7 @@ JWT_METASCOPES=https://ims-na1.adobelogin.com/s/ent_analytics_bulk_ingest_sdk,ht
 
 ### Privat nyckel
 
-The `JWT_PRIVATE_KEY` måste vara särskilt formaterad eftersom det är ett internt flerradsvärde, vilket inte stöds i `.env` filer. Det enklaste sättet är att base64 koda den privata nyckeln. Base64-kodning av den privata nyckeln (`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`) kan göras med hjälp av inbyggda verktyg från ditt operativsystem.
+`JWT_PRIVATE_KEY` måste vara speciellt formaterad eftersom den är ett flerradsvärde som inte stöds i `.env`-filer. Det enklaste sättet är att base64 koda den privata nyckeln. Base64-kodning av den privata nyckeln (`-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----`) kan utföras med inbyggda verktyg från operativsystemet.
 
 >[!BEGINTABS]
 
@@ -91,7 +91,7 @@ The `JWT_PRIVATE_KEY` måste vara särskilt formaterad eftersom det är ett inte
 
 >[!ENDTABS]
 
-Följande base64-kodade privata nyckel kan till exempel läggas till i `JWT_PRIVATE_KEY` i `.env`:
+Följande base64-kodade privata nyckel kan till exempel läggas till i nyckeln `JWT_PRIVATE_KEY` i `.env`:
 
 ```
 ...
@@ -100,7 +100,7 @@ JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 
 ## Indatamappning
 
-Med JWT-autentiseringsvärdet inställt i `.env` måste de mappas till AppBuilder-åtgärdsindata så att de kan läsas i själva åtgärden. Det gör du genom att lägga till poster för varje variabel i `ext.config.yaml` åtgärd `inputs` i formatet: `PARAMS_INPUT_NAME: $ENV_KEY`.
+När JWT-autentiseringsuppgiftsvärdet har angetts i filen `.env` måste de mappas till åtgärdsindata för AppBuilder så att de kan läsas i själva åtgärden. Det gör du genom att lägga till poster för varje variabel i `ext.config.yaml`-åtgärden `inputs` i formatet: `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 Till exempel:
 
@@ -131,12 +131,12 @@ runtimeManifest:
             final: true
 ```
 
-De tangenter som definieras under `inputs` finns på `params` -objekt som anges för App Builder-åtgärden.
+Nycklarna som definieras under `inputs` är tillgängliga för objektet `params` som tillhandahålls för App Builder-åtgärden.
 
 
 ## JWT-autentiseringsuppgifter för att komma åt token
 
-I App Builder-åtgärden är JWT-inloggningsuppgifterna tillgängliga i `params` objekt och kan användas av [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) för att generera en åtkomsttoken, som i sin tur kan komma åt andra Adobe-API:er och -tjänster.
+I App Builder-åtgärden är JWT-autentiseringsuppgifterna tillgängliga i `params`-objektet och kan användas av [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) för att generera en åtkomsttoken, som i sin tur kan komma åt andra Adobe API:er och tjänster.
 
 ```javascript
 const fetch = require("node-fetch");

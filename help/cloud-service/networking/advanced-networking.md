@@ -1,6 +1,6 @@
 ---
 title: Avancerade nätverk
-description: Läs mer om AEM as a Cloud Service avancerade nätverksalternativ.
+description: Läs om AEM as a Cloud Service avancerade nätverksalternativ.
 version: Cloud Service
 feature: Security
 topic: Development, Integrations, Security
@@ -20,16 +20,16 @@ ht-degree: 0%
 
 # Avancerade nätverk
 
-AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt hantering av anslutningar till och från AEM as a Cloud Service program.
+AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt hantering av anslutningar till och från AEM as a Cloud Service-program.
 
 |                                                   | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | Stöd för avancerade nätverk | ✔ | ✘ |
 
 
-AEM avancerade nätverk består av tre alternativ för hantering av anslutning med externa tjänster. Ett Cloud Manager-program och dess AEM as a Cloud Service miljöer kan bara använda en enda typ av avancerad nätverkskonfiguration åt gången, så se till att den mest lämpliga typen väljs.
+AEM avancerade nätverk består av tre alternativ för hantering av anslutning med externa tjänster. Ett Cloud Manager-program, och dess AEM as a Cloud Service-miljöer, kan bara använda en enda typ av avancerad nätverkskonfiguration åt gången, så se till att du väljer den lämpligaste typen.
 
-|                                   | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Inga proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa AEM Publicera trafik per IP |
+|                                   | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Inga proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa trafik AEM Publish per IP |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __Inga avancerade nätverk__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__Flexibel portutgång__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |
@@ -37,7 +37,7 @@ AEM avancerade nätverk består av tre alternativ för hantering av anslutning m
 | [__Virtuellt privat nätverk__](./vpn.md) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 
-Mer information om vad du bör tänka på när du väljer lämplig avancerad nätverkstyp finns i [dokumentation för avancerat nätverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html).
+Mer information om vad du bör tänka på när du väljer lämplig avancerad nätverkstyp finns i [avancerad nätverksdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html).
 
 ## Avancerade självstudiekurser för nätverk
 
@@ -49,14 +49,14 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
       <a  href="./flexible-port-egress.md"><img alt="Flexibel portutgång" src="./assets/flexible-port-egress.png"/></a>
       <div><strong><a href="./flexible-port-egress.md">Flexibel portutgång</a></strong></div>
       <p>
-          Tillåt utgående AEM as a Cloud Service trafik på icke-standardportar.
+          Tillåt utgående AEM as a Cloud Service-trafik på icke-standardportar.
       </p>
     </td>   
    <td>
       <a  href="./dedicated-egress-ip-address.md"><img alt="FleDedicated egress IP-adress" src="./assets/dedicated-egress-ip-address.png"/></a>
       <div><strong><a href="./dedicated-egress-ip-address.md">Dedikerad IP-adress för utgångar</a></strong></div>
       <p>
-        Ursprunglig utgående AEM as a Cloud Service trafik från en dedikerad IP.
+        Ursprunglig utgående AEM as a Cloud Service-trafik från en dedikerad IP-adress.
       </p>
     </td>   
    <td>
@@ -73,7 +73,7 @@ När det lämpligaste avancerade nätverksalternativet baserat på organisatione
 
 Den här samlingen innehåller exempel på den konfiguration och kod som krävs för att utnyttja avancerade nätverksfunktioner för specifika användningsområden.
 
-Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigurerats innan du följer dessa självstudier.
+Kontrollera att rätt [avancerad nätverkskonfiguration](#advanced-networking) har konfigurerats innan du följer dessa självstudier.
 
 <table><tr>
    <td>
@@ -87,7 +87,7 @@ Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigu
         <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
         <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
         <p>
-            Exempel på Java™-kod som gör HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst med HTTP/HTTPS-protokoll.
+            Exempel på Java™-kod som skapar HTTP/HTTPS-anslutning från AEM as a Cloud Service till en extern tjänst med HTTP/HTTPS-protokoll.
         </p>
     </td>
     <td>
@@ -107,16 +107,16 @@ Se till att [avancerad nätverkskonfiguration](#advanced-networking) har konfigu
     </td>   
     <td>
       <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Använda ett IP-tillåtelselista</a></strong></div>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Använder en IP-tillåtelselista</a></strong></div>
       <p>
             Konfigurera en IP-tillåtelselista så att endast VPN-trafik kan komma åt AEM.
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish</a></strong></div>
       <p>
-            Kräv VPN-åtkomst för specifika sökvägar vid AEM.
+            Kräv VPN-åtkomst för specifika sökvägar i AEM Publish.
       </p>
     </td>
 </tr>

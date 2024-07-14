@@ -37,11 +37,11 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/introduction-and-setup.md">
-    <strong>Skapa ditt första adaptiva formulär</strong>
+    <strong> Skapa ditt första adaptiva formulär </strong>
     </a>
     </div>
     <p>
-    <em>Adaptiva formulär är nya generationer som är dynamiska och responsiva. Ni kan använda adaptiva formulär för att leverera personaliserade upplevelser</em>
+    <em>Anpassningsbara formulär är nya generationer som är dynamiska och responsiva. Du kan använda adaptiva formulär för att leverera personaliserade upplevelser </em>
     <p>
   </td>
    <td>
@@ -50,7 +50,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
-    <strong>Skapa ditt första dokument för utskriftskanal</strong>
+    <strong> Skapa ditt första dokument för utskriftskanaler </strong>
     </a>
     </div>
     <p>
@@ -63,11 +63,11 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-    <strong>Använda formulärdatamodell i AEM arbetsflöde</strong>
+    <strong> Använda formulärdatamodell i AEM arbetsflöde </strong>
     </a>
     </div>
     <p>
-    <em>Anropa formulärdatamodellens tjänst som ett steg i AEM arbetsflöde</em>
+    <em>Anropa tjänsten för formulärdatamodellen som ett steg i AEM </em>
     <p>
   </td>
 </tr>
@@ -78,11 +78,11 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 ## Ytterligare resurser
 
-* [AEM Sites Authoring documentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
 * [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites Administering - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [Dokumentation för AEM Sites Deploying](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [AEM as a Cloud Service självstudier](/help/cloud-service/overview.md)
+* [AEM Sites Administering-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Assets självstudiekurser](/help/assets/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
 * [AEM Foundation - självstudiekurser](/help/foundation/overview.md)

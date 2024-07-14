@@ -21,18 +21,18 @@ ht-degree: 0%
 
 Nästa steg är att skapa de adaptiva formulär som du vill ska ingå i paketet. Tänk på följande när du skapar formulär för signering:
 
-* Kontrollera att formulären är baserade på **SignMultipleForms** mall. Detta garanterar att formulären är förifyllda med data som hämtats från databasen.
+* Kontrollera att formulären är baserade på mallen **SignMultipleForms**. Detta garanterar att formulären är förifyllda med data som hämtats från databasen.
 
 * Formulären måste konfigureras för att använda Acrobat Sign och signerarfältet1 måste associeras med kundens e-postfält
-* Formulären måste också kopplas till clientLib som anropas **getnextform**
+* Formulären måste också associeras med clientLib som kallas **getnextform**
 * Formulären måste använda komponenten Signature Step.
-* Formuläret måste även använda den anpassade **Signera flera formulär** -komponenten. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.
-* Överföringen av formuläret måste konfigureras för att starta AEM arbetsflöde **Uppdatera signaturstatus**
+* Formuläret måste också använda den anpassade komponenten **Signera flera formulär**. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.
+* Överföringen av formuläret måste konfigureras för att utlösa AEM **Uppdatera signaturstatus**
 * Kontrollera att sökvägen till datafilen är inställd på **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
 
-När du har skrivit formuläret ska du inkludera **vanliga** adaptivt formulärfragment i formuläret. Fragmentet är markerat som dolt. Detta fragment innehåller följande fält.
+När du har skapat formuläret inkluderar du det adaptiva formulärfragmentet **commonField** i formuläret. Fragmentet är markerat som dolt. Detta fragment innehåller följande fält.
 
-* **signerad** - Det fält som innehåller signaturens status
+* **signerad** - Fältet som signaturens status ska lagras i
 * **guid** - Unik identifierare som identifierar formuläret i paketet
 * **customerEmail** - Det här fältet innehåller kundens e-postadress
 
@@ -47,7 +47,7 @@ När alla formulär i paketet är ifyllda och signerade måste vi visa rätt med
 
 ## Assets
 
-Exempelformulären som innehåller de som används i den här självstudiekursen kan [hämtad härifrån](assets/forms-for-signing.zip)
+Exempelformulären, inklusive de som används i den här självstudiekursen, kan [hämtas här](assets/forms-for-signing.zip)
 
 ## Nästa steg
 

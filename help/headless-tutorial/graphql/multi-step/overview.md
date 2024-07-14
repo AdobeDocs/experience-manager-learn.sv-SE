@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{aem-headless-trials-promo}}
 
-En komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med hjälp av AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
+En komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med hjälp av AEM GraphQL-API:er och som används av en extern app, i ett headless CMS-scenario.
 
 I den här självstudiekursen utforskas hur AEM GraphQL API:er och headless-funktioner kan användas för att ge kraft åt upplevelser som upplevs i en extern app.
 
@@ -40,7 +40,7 @@ Den här självstudiekursen handlar om följande ämnen:
 
 Du måste följa den här självstudiekursen på följande sätt:
 
-* Grundläggande färdigheter i HTML och JavaScript
+* Baskunskaper i HTML och JavaScript
 * Följande verktyg måste installeras lokalt:
    * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
@@ -48,14 +48,14 @@ Du måste följa den här självstudiekursen på följande sätt:
 
 ### AEM
 
-För att slutföra den här självstudiekursen rekommenderar vi att du har AEM administratörsåtkomst till en AEM as a Cloud Service miljö. Om du inte har tillgång till en AEM as a Cloud Service miljö, vänligen [registrera dig för AEM Headless-testversionen](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en) för att utforska AEM headless-funktioner.
+För att slutföra den här självstudiekursen rekommenderar vi att du har AEM administratörsåtkomst till en AEM as a Cloud Service-miljö. Om du inte har tillgång till en AEM as a Cloud Service-miljö [måste du registrera dig för AEM Headless-testversionen](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en) för att kunna utforska AEM headless-funktioner.
 
 ## Kom så börjar vi!
 
-Starta självstudien med [Definiera modeller för innehållsfragment](content-fragment-models.md).
+Starta självstudiekursen med [Definiera modeller för innehållsfragment](content-fragment-models.md).
 
 ## GitHub-projekt
 
-Källkoden och innehållspaketen finns på [AEM - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql).
+Källkoden och innehållspaketen är tillgängliga på [AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql).
 
-Om du har problem med självstudiekursen eller koden kan du lämna en [GitHub-problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+Om du har problem med självstudiekursen eller koden kan du lämna ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).

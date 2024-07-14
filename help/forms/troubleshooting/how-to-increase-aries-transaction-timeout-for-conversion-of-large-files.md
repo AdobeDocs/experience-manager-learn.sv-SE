@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Så här ökar du &quot;aries.transaction.timeout&quot; för att åtgärda problem med konvertering av stora filer
 
-*I den här videon går vi igenom processen att öka&quot;aries.transaction.timeout&quot; för att åtgärda problem som rör konvertering av stora filer.*
+*I den här videon går vi igenom processen att öka antalet &quot;aries.transaction.timeout&quot; för att åtgärda problem som rör konvertering av stora filer.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)

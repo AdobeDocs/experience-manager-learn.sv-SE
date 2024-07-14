@@ -28,7 +28,7 @@ Förhandsgranska och skicka formuläret med flera kombinationer av formulärvär
 
 De formulärdata som samlas in i Adobe Analytics presenteras i donut-format
 
-**Inlagor per stat**
+**Sändningar per tillstånd**
 
 ![applicantsbystate](assets/donut.png)
 
@@ -55,10 +55,10 @@ Interagera med formuläret och håll konsolfönstret öppet. Du borde se något 
 
 ## Använd Adobe Experience Platform Debugger
 
-Lägg till [AEP-felsökningstillägg](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) till din webbläsare (du måste logga in) för att få mer felsökningsinformation
+Lägg till [AEP-felsökningstillägget](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) i webbläsaren (du måste logga in) för att få mer felsökningsinformation
 
 ![platform-debugger](assets/platform-debugger.png)
 
 ## Grattis
 
-Du har nu integrerat AEM Forms as a Cloud Service med Adobe Analytics för att rapportera formulärdatafält.
+Du har integrerat AEM Forms as a Cloud Service med Adobe Analytics för att rapportera formulärdatafält.

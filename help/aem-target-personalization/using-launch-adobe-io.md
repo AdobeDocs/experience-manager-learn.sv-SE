@@ -21,18 +21,18 @@ ht-degree: 0%
 
 ## Förutsättningar
 
-* [AEM författare och publicera instans](./implementation.md#set-up-aem) körs på localhost-port 4502 respektive 4503
+* [AEM författare och publiceringsinstans](./implementation.md#set-up-aem) som körs på lokal värdport 4502 respektive 4503
 * **Experience Cloud**
-   * Tillgång till er organisation Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * Åtkomst till ditt företag Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Tillhandahållande av Experience Cloud med följande lösningar
       * [Datainsamling](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe Developer Console](https://developer.adobe.com/console/)
 
      >[!NOTE]
-     >Du bör ha behörighet att utveckla, godkänna, publicera, hantera tillägg och hantera miljöer i datainsamlingen. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om taggbehörigheter finns i [se dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+     >Du bör ha behörighet att utveckla, godkänna, Publish, hantera tillägg och hantera miljöer i datainsamling. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
-* **Webbläsartillägg för Chrome**
+* **Chrome webbläsartillägg**
    * Adobe Experience Cloud Debugger(https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ## Berörda användare
@@ -55,7 +55,7 @@ I det här avsnittet ska vi ta upp följande integreringssteg:
    * Skapa ett dataelement
    * Skapa en sidregel
    * Konfigurera miljöer
-   * Bygg och publicera
+   * Bygg och Publish
 * AEM
    * Skapa en Cloud Service
    * Skapa
@@ -66,9 +66,9 @@ I det här avsnittet ska vi ta upp följande integreringssteg:
 
 En egenskap är en behållare som du fyller med tillägg, regler, dataelement och bibliotek när du distribuerar taggar till webbplatsen.
 
-1. Navigera till dina organisationer [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
+1. Navigera till din organisation [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`)
 1. Logga in med din Adobe ID och kontrollera att du är i rätt organisation.
-1. Klicka på **Experience Platform** och sedan **Datainsamling** och markera **Taggar**.
+1. Klicka på **Experience Platform**, **Datainsamling** och välj **Taggar** i lösningsväljaren.
 
 ![Experience Cloud - taggar](assets/using-launch-adobe-io/exc-cloud-launch.png)
 
@@ -76,10 +76,10 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
    ![Experience Cloud - taggar](assets/using-launch-adobe-io/launch-create-property.png)
 
    *Mer information om hur du skapar egenskaper finns i [Skapa en egenskap](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) i produktdokumentationen.*
-1. Klicka på **Ny egenskap** knapp
-1. Ange ett namn för egenskapen (till exempel *AEM Target Tutorial*)
-1. Som domän anger du *localhost.com* eftersom det är den domän där WKND-demowebbplatsen körs. Trots att *Domän* fältet är obligatoriskt, taggegenskapen fungerar på alla domäner där det implementeras. Det främsta syftet med det här fältet är att förifylla menyalternativ i regelbyggaren.
-1. Klicka på **Spara** -knappen.
+1. Klicka på knappen **Ny egenskap**
+1. Ange ett namn för egenskapen (till exempel *AEM mållokurs*)
+1. Som domän anger du *localhost.com* eftersom det är den domän där WKND-demowebbplatsen körs. Trots att fältet *Domän* krävs fungerar taggegenskapen på alla domäner där det implementeras. Det främsta syftet med det här fältet är att förifylla menyalternativ i regelbyggaren.
+1. Klicka på knappen **Spara**.
 
    ![taggar - ny egenskap](assets/using-launch-adobe-io/exc-launch-property.png)
 
@@ -98,38 +98,38 @@ Tillägget Mål består av två huvuddelar:
    * Lägg till parametrar i global Mbox
    * Fire Global Mbox
 
-1. Under **Tillägg** visas en lista med tillägg som redan är installerade för taggegenskapen. ([Adobe Launch Core Extension](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) installeras som standard)
-2. Klicka på **Tilläggskatalog** och söka efter Mål i filtret.
-3. Välj den senaste versionen av Adobe Target at.js och klicka på **Installera** alternativ.
+1. Under **Tillägg** kan du se en lista över tillägg som redan har installerats för taggegenskapen. ([Kärntillägg för Adobe-start](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) är installerat som standard)
+2. Klicka på alternativet **Tilläggskatalog** och sök efter mål i filtret.
+3. Välj den senaste versionen av Adobe Target at.js och klicka på alternativet **Install** .
    ![Taggar - ny egenskap](assets/using-launch-adobe-io/launch-target-extension.png)
 
-4. Klicka på **Konfigurera** och du kan se konfigurationsfönstret med dina Target-kontoinloggningsuppgifter importerade och at.js-versionen för det här tillägget.
+4. Klicka på knappen **Konfigurera** och du kan se konfigurationsfönstret med dina Target-kontoinloggningsuppgifter importerade och at.js-versionen för det här tillägget.
    ![Mål - Tilläggskonfiguration](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
    När Target distribueras via asynkrona taggar för inbäddning bör du hårdkoda ett fragment som döljs på sidorna före taggarna för att hantera innehållsflimret. Vi kommer att lära oss mer om den fördolda snipparen senare. Du kan hämta det fördolda fragmentet [här](assets/using-launch-adobe-io/prehiding.js)
 
-5. Klicka **Spara** om du vill lägga till måltillägget i taggegenskapen, och du bör nu kunna se måltillägget som listas under **Installerad** tilläggslista.
+5. Klicka på **Spara** för att lägga till måltillägget i taggegenskapen, och du bör nu kunna se måltillägget som listas i listan med **installerade** tillägg.
 
 6. Upprepa stegen ovan om du vill söka efter tillägget Experience Cloud ID-tjänst och installera det.
    ![Tillägg - Experience Cloud ID-tjänst](assets/using-launch-adobe-io/launch-extension-experience-cloud.png)
 
 #### Konfigurera miljöer
 
-1. Klicka på **Miljö** -fliken för platsegenskapen, och du kan se listan över miljöer som skapas för platsegenskapen. Som standard har vi en instans som skapats för utveckling, staging och produktion.
+1. Klicka på fliken **Miljö** för din webbplatsegenskap, så ser du en lista över den miljö som skapas för din webbplatsegenskap. Som standard har vi en instans som skapats för utveckling, staging och produktion.
 
 ![Dataelement - sidnamn](assets/using-launch-adobe-io/launch-environment-setup.png)
 
-#### Bygg och publicera
+#### Bygg och Publish
 
-1. Klicka på **Publicering** -fliken för din webbplatsegenskap, och vi skapar ett bibliotek för att bygga och driftsätta våra ändringar (dataelement, regler) i en utvecklingsmiljö.
+1. Klicka på fliken **Publicering** för din webbplatsegenskap och låt oss skapa ett bibliotek för att bygga och distribuera våra ändringar (dataelement, regler) till en utvecklingsmiljö.
    >[!VIDEO](https://video.tv.adobe.com/v/28412?quality=12&learn=on)
-2. Publicera dina ändringar från utvecklingsmiljön till en mellanlagringsmiljö.
+2. Publish dina ändringar från utvecklingsmiljön till mellanlagringsmiljön.
    >[!VIDEO](https://video.tv.adobe.com/v/28419?quality=12&learn=on)
-3. Kör **Alternativet Bygg för mellanlagring**.
-4. Kör när bygget är klart **Godkänn för publicering**, som flyttar dina ändringar från en mellanlagringsmiljö till en produktionsmiljö.
-   ![Mellanlagring till produktion](assets/using-launch-adobe-io/build-staging.png)
-5. Till sist kör du **Bygg och publicera i produktion** för att göra produktionsförändringar.
-   ![Bygg och publicera i produktion](assets/using-launch-adobe-io/build-and-publish.png)
+3. Kör alternativet **Skapa för mellanlagring**.
+4. När bygget är klart kör du **Godkänn för publicering**, vilket flyttar dina ändringar från en mellanlagringsmiljö till en produktionsmiljö.
+   ![Förproduktion](assets/using-launch-adobe-io/build-staging.png)
+5. Kör slutligen alternativet **Build och Publish till produktion** för att överföra ändringarna till produktionen.
+   ![Skapa och Publish till produktion](assets/using-launch-adobe-io/build-and-publish.png)
 
 ### Adobe Experience Manager
 
@@ -137,15 +137,15 @@ Tillägget Mål består av två huvuddelar:
 
 >[!NOTE]
 >
-> Ge Adobe Developer-integreringen åtkomst till utvalda arbetsytor med lämplig [roll som gör det möjligt för ett centralt team att göra API-drivna ändringar på bara ett fåtal arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
+> Ge Adobe Developer-integreringen åtkomst till utvalda arbetsytor med rätt [roll så att ett centralt team kan göra API-drivna ändringar på bara några få arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
 1. Skapa IMS-integrering i AEM med inloggningsuppgifter från Adobe Developer. (01:12 till 03:55)
-2. Skapa en egenskap i Datainsamling. (täckt [ovan](#create-launch-property))
+2. Skapa en egenskap i Datainsamling. (täckt [över](#create-launch-property))
 3. Använd IMS-integreringen från steg 1 för att skapa taggar för att importera taggegenskaperna.
 4. I AEM mappar du taggintegreringen till en webbplats med webbläsarkonfigurationen. (05:28 till 06:14)
 5. Validera integreringen manuellt. (06:15 till 06:33)
 6. Använda webbläsarplugin-programmet Adobe Experience Cloud Debugger. (06:51 till 07:22)
 
-Nu har du lyckats integrera [AEM med Adobe Target med taggar](./using-aem-cloud-services.md#integrating-aem-target-options) enligt vad som anges i alternativ 1.
+Nu har du integrerat [AEM med Adobe Target med hjälp av taggar](./using-aem-cloud-services.md#integrating-aem-target-options), vilket beskrivs i alternativ 1.
 
 Om du använder AEM Experience Fragment-erbjudanden för att ge dig möjlighet att anpassa dina aktiviteter går vi vidare till nästa kapitel och integrerar AEM med Adobe Target med hjälp av de gamla molntjänsterna.

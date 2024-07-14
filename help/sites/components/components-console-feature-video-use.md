@@ -25,7 +25,7 @@ Med komponentkonsolen kan utvecklare och administratörer hantera alla olika kom
 Komponentkonsolen innehåller följande funktioner:
 
 * Översikt: lista över alla installerade komponenter som är tillgängliga i den aktuella AEM
-* [!UICONTROL Properties]: visar metadata som titeln, gruppen och beskrivningen av en komponent
+* [!UICONTROL Properties]: visar metadata som en komponents titel, grupp och beskrivning
 * [!UICONTROL Policies]: visar alla befintliga principer för en viss komponent och den associerade mallen
 * [!UICONTROL Live Usage]: visar en lista med sidor där komponenten ingår
 

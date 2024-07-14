@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Felsöka beroendeproblem med C++-bibliotek i Designer
 
-*I den här videon går du igenom stegen för att felsöka beroendeproblem med C++-bibliotek i Designer.*
+*Den här videon går igenom stegen för att felsöka beroendeproblem med C++-bibliotek i Designer.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335576?quality=12&learn=on)

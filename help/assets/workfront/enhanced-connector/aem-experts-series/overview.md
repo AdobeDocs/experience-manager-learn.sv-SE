@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Integrera Workfront och AEM Assets med den förbättrade kontakten
 
-![AEM Experts Series](./assets/banner.png)
+![AEM expertsserie](./assets/banner.png)
 
 Delta i Adobe Workfront- och Experience Manager Assets-experterna i den här videoserien, där de demonstrerar och diskuterar allt de behöver för att integrera Workfront och AEM Assets med hjälp av den förbättrade kontakten.
 
@@ -41,7 +41,7 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
       </a>
       <div>
          <a href="./setup.md"><strong>Konfigurera och initiera konfiguration</strong></a>
-         <br/><em>Del 1/4</em>
+         <br/><em>Del 1/4 </em>
       </div>
       <p>
         <br/>
@@ -55,8 +55,8 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
              src="./assets/custom-forms.png">
       </a>
       <div>
-         <a href="./custom-forms.md"><strong>Workfront anpassade blanketter och metadatamappning</strong></a>
-         <br/><em>Del 2/4</em>
+         <a href="./custom-forms.md"><strong>Workfront anpassade formulär och metadatamappning</strong></a>
+         <br/><em>Del 2/4 </em>
       </div>
       <p>
         <br/>
@@ -70,7 +70,7 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
              src="./assets/aem-tags.png">
       </a>
       <div>
-         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM, projektlänkade mappar och mappmetadata</strong></a>
+         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM taggar, länkade projektmappar och mappmetadata</strong></a>
          <br/><em>Del 3/4</em> 
       </div>
       <p>

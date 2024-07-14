@@ -39,8 +39,8 @@ Bildvisning är kanske den mest använda funktionen i Dynamic Media Classic. Fak
 I den här guiden diskuterar vi följande kärnfunktioner i Dynamic Media Classic.
 
 - **Dynamic Imaging.** Paraplytermen för redigering i realtid, formatering och storleksändring samt interaktiv zoom och panorering, visning av färger och texturer, 360-graders rotation, bildmallar och multimediavisare.
-- **Video.** Ladda upp färdiga videor, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
-- **Smart bildbehandling.** Teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
+- **Video.** Överför färdiga videoklipp, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
+- **Smart bildbehandling.**-teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransprestanda genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
 
 Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
 
@@ -52,24 +52,24 @@ Dynamic Media Classic huvudgränssnitt består av tre huvudområden: Global Navi
 
 _Dynamic Media Classic UI_
 
-**Globalt navigeringsfält.** Överst på skärmen finns knapparna i det här fältet för att komma åt nyckelområden och funktioner i lösningen. Du kommer till exempel att använda den för att komma åt uppladdningsfunktioner, öppna olika resursuppbyggnadsområden (bilduppsättning, snurruppsättning osv.), utföra viktiga uppgifter som att konfigurera bildförinställningar och visningsförinställningar och publicera dina resurser. Här kan du också övervaka dina jobb, se de senaste aktiviteterna och välja bland en mängd olika hjälpalternativ.
+**Globalt navigeringsfält.** högst upp på skärmen använder du knapparna i det här fältet för att komma åt nyckelområden och funktioner i lösningen. Du kommer till exempel att använda den för att komma åt uppladdningsfunktioner, öppna olika resursuppbyggnadsområden (bilduppsättning, snurruppsättning osv.), utföra viktiga uppgifter som att konfigurera bildförinställningar och visningsförinställningar och publicera dina resurser. Här kan du också övervaka dina jobb, se de senaste aktiviteterna och välja bland en mängd olika hjälpalternativ.
 
-**Resursbibliotek.** Längst ned till vänster på skärmen finns resursbiblioteket, en panel som du använder för att ordna dina resurser i mappar och undermappar som du skapar. Längst upp på panelen hittar du sök och filter som hjälper dig att hitta resurser. Med avancerad sökning kan du söka genom att ange flera alternativ som sökvillkor, inklusive dolda metadatafält som är kopplade till den aktuella resursen. Längst ned på panelen kan du se borttagna objekt genom att klicka på papperskorgen. Till att börja med börjar du inte med några mappar, förutom den översta mappen som har samma namn som ditt kontonamn.
+**Resursbibliotek.** placerad till vänster på skärmen är resursbiblioteket, en panel som du använder för att ordna dina resurser i mappar och undermappar som du skapar. Längst upp på panelen hittar du sök och filter som hjälper dig att hitta resurser. Med avancerad sökning kan du söka genom att ange flera alternativ som sökvillkor, inklusive dolda metadatafält som är kopplade till den aktuella resursen. Längst ned på panelen kan du se borttagna objekt genom att klicka på papperskorgen. Till att börja med börjar du inte med några mappar, förutom den översta mappen som har samma namn som ditt kontonamn.
 
 >[!NOTE]
 >
->Resurser i papperskorgen tas automatiskt bort permanent sju dagar efter att de placerats där, såvida du inte återställer dem.
+>Assets i papperskorgen tas automatiskt bort permanent sju dagar efter att de har placerats där, såvida du inte återställer dem.
 
-**Panelen Bläddra/bygg.** Det här är mitten av användargränssnittet, där du antingen bläddrar bland resurser i bläddringsläge eller, om du använder det i byggläge, som en arbetsyta för att skapa resurser som en del av ett arbetsflöde. När du loggar in visas panelen Bläddra. Mitten av skärmen är miniatyrversioner av dina bilder i stödrastervyn. Du kan ändra till en listvy eller välja en resurs och visa information om den i detaljvyn.
+**Panelen Bläddra/Skapa.** Det här är mitten av användargränssnittet, där du antingen bläddrar bland resurser i bläddringsläge eller, om du använder det i byggläge, som arbetsyta för att skapa resurser i ett arbetsflöde. När du loggar in visas panelen Bläddra. Mitten av skärmen är miniatyrversioner av dina bilder i stödrastervyn. Du kan ändra till en listvy eller välja en resurs och visa information om den i detaljvyn.
 
 >[!IMPORTANT]
 >
->Förutom varje resurs-ID finns **Markera för publicering** byt. När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
+>Förutom varje resurs-ID finns växeln **Mark for Publish**. När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
 
 ![bild](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
->Välj **Publicera efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
+>Markera kryssrutan **Publish efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
 Läs mer om [Navigera i användargränssnittet i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).

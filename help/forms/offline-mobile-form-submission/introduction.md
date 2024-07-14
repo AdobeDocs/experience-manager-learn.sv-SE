@@ -26,7 +26,7 @@ För att uppnå detta måste vi utföra följande steg:
 * Hantera PDF inlämningen från Acrobat/Reader
 * Utlösa arbetsflödet för Adobe Experience Manager (AEM) för att granska det inskickade PDF
 
-I den här självstudiekursen går du igenom de steg som krävs för att slutföra användningsfallet ovan. Exempelkod och resurser för den här självstudiekursen är [finns här.](part-four.md)
+I den här självstudiekursen går du igenom de steg som krävs för att slutföra användningsfallet ovan. Exempelkod och resurser för den här självstudiekursen är [tillgängliga här.](part-four.md)
 
 I följande video visas en översikt över användningsfallet
 

@@ -1,6 +1,6 @@
 ---
 title: Taggar
-description: Taggar är ett viktigt verktyg för att hantera resurser i resursernas mapphierarki. Det är viktigt att skapa en taggningstaxonomi så att användare kan identifiera och ordna resurser och resurser i AEM.
+description: Taggar är ett viktigt verktyg för att hantera resurser i hela Assets mapphierarki. Det är viktigt att skapa en taggningstaxonomi så att användare kan identifiera och ordna resurser och resurser i AEM.
 feature: Asset Management
 version: Cloud Service
 jira: KT-4871
@@ -21,6 +21,6 @@ ht-degree: 3%
 
 # Taggar
 
-Taggar är ett viktigt verktyg för att hantera resurser i resursernas mapphierarki. Det är viktigt att skapa en taggningstaxonomi så att användare kan identifiera och ordna resurser och resurser i AEM.
+Taggar är ett viktigt verktyg för att hantera resurser i hela Assets mapphierarki. Det är viktigt att skapa en taggningstaxonomi så att användare kan identifiera och ordna resurser och resurser i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)

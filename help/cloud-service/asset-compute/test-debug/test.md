@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Testa en Asset compute-arbetare
 
-Asset compute-projektet definierar ett mönster för att enkelt skapa och köra [test av arbetare i Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Asset compute-projektet definierar ett mönster för att enkelt skapa och köra [test av Asset compute-arbetare](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
 
 ## Anatomi i ett arbetartest
 
@@ -45,7 +45,7 @@ Teststrukturen i ett Asset compute-projekt är följande:
 Varje testskiftning kan ha följande filer:
 
 + `file.<extension>`
-   + Källfil som ska testas (tillägg kan vara vad som helst utom `.link`)
+   + Source-fil att testa (tillägg kan vara vad som helst förutom `.link`)
    + Obligatoriskt
 + `rendition.<extension>`
    + Förväntad återgivning
@@ -55,20 +55,20 @@ Varje testskiftning kan ha följande filer:
    + Valfritt
 + `validate`
    + Ett skript som får förväntade och faktiska sökvägar för återgivningsfilen som argument och måste returnera avslutningskod 0 om resultatet är OK, eller en avslutningskod som inte är noll om valideringen eller jämförelsen misslyckas.
-   + Valfritt, används som standard `diff` kommando
+   + Valfritt, används som standard kommandot `diff`
    + Använd ett skalskript som omsluter ett dockningskommando för olika valideringsverktyg
 + `mock-<host-name>.json`
-   + JSON-formaterade HTTP-svar för [koppla externa tjänstanrop](https://www.mock-server.com/mock_server/creating_expectations.html).
+   + JSON formaterade HTTP-svar för [att slå av externa tjänstanrop](https://www.mock-server.com/mock_server/creating_expectations.html).
    + Valfritt, används bara om arbetskoden gör egna HTTP-begäranden
 
 ## Skriva ett testfall
 
-Det här testfallet kontrollerar parametriserade indata (`params.json`) för indatafilen (`file.jpg`) genererar den förväntade PNG-återgivningen (`rendition.png`).
+Det här testfallet kontrollerar parametriserade indata (`params.json`) för indatafilen (`file.jpg`) och genererar den förväntade PNG-återgivningen (`rendition.png`).
 
-1. Ta först bort den automatiskt genererade `simple-worker` testfall vid `/test/asset-compute/simple-worker` eftersom detta är ogiltigt kopierar vår arbetare inte längre bara källan till återgivningen.
+1. Ta först bort det automatiskt genererade `simple-worker`-testfallet vid `/test/asset-compute/simple-worker` eftersom det är ogiltigt, eftersom vår arbetare inte längre bara kopierar källan till återgivningen.
 1. Skapa en ny testfallsmapp på `/test/asset-compute/worker/success-parameterized` för att testa en lyckad körning av arbetaren som genererar en PNG-återgivning.
-1. I `success-parameterized` mapp, lägg till testet [indatafil](./assets/test/success-parameterized/file.jpg) för det här testfallet och ge det ett namn `file.jpg`.
-1. I `success-parameterized` mapp, lägga till en ny fil med namnet `params.json` som definierar arbetarens indataparametrar:
+1. Lägg till [indatafilen](./assets/test/success-parameterized/file.jpg) för testet i mappen `success-parameterized` och ge det namnet `file.jpg`.
+1. I mappen `success-parameterized` lägger du till en ny fil med namnet `params.json` som definierar arbetarens indataparametrar:
 
    ```json
    { 
@@ -78,22 +78,22 @@ Det här testfallet kontrollerar parametriserade indata (`params.json`) för ind
    }
    ```
 
-   Dessa är samma nyckel/värden som skickas till [Definition av Asset compute-profil för utvecklingsverktyget](../develop/development-tool.md), minus `worker` -tangenten.
+   Detta är samma nyckel/värden som skickas till Asset compute-profildefinitionen för [utvecklingsverktyget](../develop/development-tool.md), minus `worker`.
 
-1. Lägg till förväntat [återgivningsfil](./assets/test/success-parameterized/rendition.png) till det här testfallet och ge det ett namn `rendition.png`. Den här filen representerar förväntade utdata för arbetaren för angivna indata `file.jpg`.
-1. Kör testerna i projektets rot från kommandoraden genom att köra `aio app test`
-   + Säkerställ [Docker Desktop](../set-up/development-environment.md#docker) och stöd för Docker-bilder installeras och startas
+1. Lägg till den förväntade [återgivningsfilen](./assets/test/success-parameterized/rendition.png) i det här testfallet och ge den namnet `rendition.png`. Den här filen representerar förväntade utdata för arbetaren för den angivna inmatningen `file.jpg`.
+1. Kör testerna av projektroten från kommandoraden genom att köra `aio app test`
+   + Kontrollera att [Docker Desktop](../set-up/development-environment.md#docker) och tillhörande Docker-bilder är installerade och startade
    + Avsluta alla instanser av utvecklingsverktyget som körs
 
 ![Test - lyckades ](./assets/test/success-parameterized/result.png)
 
 ## Skriva ett fel vid kontroll av testfall
 
-Det här testfallet testar för att säkerställa att arbetaren orsakar rätt fel när `contrast` parametern är inställd på ett ogiltigt värde.
+Det här testfallet testar för att säkerställa att arbetaren genererar rätt fel när parametern `contrast` är inställd på ett ogiltigt värde.
 
-1. Skapa en ny testfallsmapp på `/test/asset-compute/worker/error-contrast` för att testa en felkörning av arbetaren på grund av ett ogiltigt `contrast` parametervärde.
-1. I `error-contrast` mapp, lägg till testet [indatafil](./assets/test/error-contrast/file.jpg) för det här testfallet och ge det ett namn `file.jpg`. Innehållet i den här filen är inte viktigt för det här testet. Det behöver bara finnas för att komma förbi kontrollen &quot;Skadad källa&quot; för att nå `rendition.instructions` validering kontrollerar att det här testfallet validerar.
-1. I `error-contrast` mapp, lägga till en ny fil med namnet `params.json` som definierar arbetarens indataparametrar med innehållet:
+1. Skapa en ny testfallsmapp på `/test/asset-compute/worker/error-contrast` för att testa en felkörning av arbetaren på grund av ett ogiltigt `contrast`-parametervärde.
+1. Lägg till [indatafilen](./assets/test/error-contrast/file.jpg) för testet i mappen `error-contrast` och ge det namnet `file.jpg`. Innehållet i den här filen är inte väsentligt för det här testet. Det behöver bara finnas för att komma förbi kontrollen &quot;Skadad källa&quot;, för att kunna nå de `rendition.instructions`-valideringskontroller som det här testfallet validerar.
+1. I mappen `error-contrast` lägger du till en ny fil med namnet `params.json` som definierar arbetarens indataparametrar med innehållet:
 
    ```json
    {
@@ -102,15 +102,15 @@ Det här testfallet testar för att säkerställa att arbetaren orsakar rätt fe
    }
    ```
 
-   + Ange `contrast` parametrar till `10`, ett ogiltigt värde, eftersom kontrasten måste vara mellan -1 och 1, för att en `RenditionInstructionsError`.
-   + Kontrollera att rätt fel genereras i tester genom att ställa in `errorReason` nyckeln till orsaken som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern ger [anpassat fel](../develop/worker.md#errors), `RenditionInstructionsError`därför att ange `errorReason` på grund av felet, eller`rendition_instructions_error` för att bekräfta att det kastas.
+   + Ange `contrast`-parametrar till `10`, ett ogiltigt värde eftersom kontrasten måste vara mellan -1 och 1, för att generera `RenditionInstructionsError`.
+   + Kontrollera att rätt fel genereras i tester genom att ange nyckeln `errorReason` till &quot;reason&quot; som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern genererar det [anpassade felet ](../develop/worker.md#errors), `RenditionInstructionsError`, och därför anges `errorReason` till felets orsak, eller `rendition_instructions_error` för att bekräfta att det genereras.
 
-1. Eftersom ingen återgivning ska genereras under en körning av en återgivning bör ingen `rendition.<extension>` filen är nödvändig.
+1. Eftersom ingen återgivning ska genereras under en körning krävs ingen `rendition.<extension>`-fil.
 1. Kör testsviten från projektets rot genom att köra kommandot `aio app test`
-   + Säkerställ [Docker Desktop](../set-up/development-environment.md#docker) och stöd för Docker-bilder installeras och startas
+   + Kontrollera att [Docker Desktop](../set-up/development-environment.md#docker) och tillhörande Docker-bilder är installerade och startade
    + Avsluta alla instanser av utvecklingsverktyget som körs
 
-![Test - felkontrast](./assets/test/error-contrast/result.png)
+![Testa - Felkontrast](./assets/test/error-contrast/result.png)
 
 ## Testfall på Github
 

@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Ett vanligt användningsfall är att man kan fylla i ett anpassningsbart formulär från ett delvis ifyllt PDF-formulär.
 
-Vi kommer att använda [IRS-formulär F23](./assets/f23.pdf)
+Vi kommer att använda [IRS-formulär F23](./assets/f23.pdf) för att demonstrera det här användningsexemplet
 
 ## Förutsättningar
 

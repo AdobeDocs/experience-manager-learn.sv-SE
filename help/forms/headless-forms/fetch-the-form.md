@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Hämta formulärets JSON
 
-Logga in på din AEM Forms-författarinstans och skapa en ny adaptiv med **Tom med kärnkomponenter** mall. Publicera formuläret i din publiceringsinstans.
+Logga in på din AEM Forms-författarinstans och skapa en ny adaptiv med mallen **Blank with Core Components** . Publish formuläret till din publiceringsinstans.
 
 För att bädda in formuläret hämtar vi först jsonen för det adaptiva formuläret genom att ringa ett get-anrop till vår publiceringsserver.
 
-Följande kodfragment hämtar json för det adaptiva formuläret som kallas **konturer**
+Följande kodfragment hämtar json för det adaptiva formuläret **contactus**
 
 ```javascript
 const getForm = async () => {
@@ -78,7 +78,7 @@ export default function Contact(){
 }
 ```
 
-Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan laddas ned härifrån](./assets/native-components.zip)
+Ovanstående kod använder inbyggda HTML-komponenter som är mappade till de komponenter som används i det adaptiva formuläret. Vi mappar till exempel den anpassningsbara formulärkomponenten för textinmatning till TextField-komponenten. De inbyggda komponenterna som används i artikeln [kan hämtas härifrån](./assets/native-components.zip)
 
 ## Nästa steg
 

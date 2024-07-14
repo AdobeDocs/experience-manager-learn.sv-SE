@@ -1,6 +1,6 @@
 ---
-title: Skapa och publicera arkitektur med AEM GraphQL
-description: Lär dig hur och när du ska utnyttja AEM redigerings- och publiceringsmiljöer när du använder AEM GraphQL API:er.
+title: Skapa och Publish Architecture med AEM GraphQL
+description: Lär dig hur och när du ska utnyttja AEM Author- och Publish-miljöer när du AEM GraphQL API:er.
 version: Cloud Service
 topic: Headless, Content Management
 feature: Content Fragments, GraphQL API
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ---
 
-# Skapa och publicera arkitektur
+# Författare och Publish Architecture
 
-Lär dig hur och när du ska utnyttja AEM redigerings- och publiceringsmiljöer när du använder AEM GraphQL API:er.
+Lär dig hur och när du ska utnyttja AEM Author- och Publish-miljöer när du AEM GraphQL API:er.
 
 I den här videon kommer du att:
 
 + Förstå arkitekturen AEM Author och Publish och hur innehållet publiceras
-+ Lär dig de bästa sätten för headless-leverans med en AEM publiceringsmiljö
++ Lär dig de bästa sätten att leverera headless med en AEM Publish-miljö
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)

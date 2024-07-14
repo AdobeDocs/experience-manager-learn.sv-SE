@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Cloud 5 - Korrigera din.. Skriver om
 
-Del två av serien handlar om några saker som du kan titta på som snabbar upp skrivningen och optimeringen på AEM as a Cloud Service.
+I andra delen av serien utforskar vi några saker som du kan titta på som snabbar upp skrivningen och optimeringen av AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/343600?quality=12&learn=on)
 

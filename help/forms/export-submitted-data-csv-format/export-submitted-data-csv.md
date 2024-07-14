@@ -32,7 +32,7 @@ Som du ser är schemats namn en självstudiekurs.I det här schemat är det tabe
 * id: Det här är primärnyckeln och ställs in på automatisk ökning
 
 Tabellnamnet och namnen på två kolumner visas som OSGi-konfigurationsegenskaper enligt skärmbilden nedan:
-![osgi-konfiguration](assets/configuration.PNG)
+![osgi-configuration](assets/configuration.PNG)
 Koden läser dessa värden och skapar den SQL-fråga som ska köras. Följande fråga utförs till exempel baserat på värdena ovan
 
 `SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
@@ -45,7 +45,7 @@ Följande OSGI-tjänst skapades för att exportera skickade data i CSV-format.
 
 * Rad 37: Vi använder den poolade datakällan för Apache Sling-anslutningen.
 
-* Rad 89: Detta är startpunkten till tjänsten.Metoden `getCSVFile(..)` tar in formName som indataparameter och hämtar skickade data som gäller det angivna formulärnamnet.
+* Rad 89: Detta är startpunkten till tjänsten. Metoden `getCSVFile(..)` har formName som indataparameter och hämtar skickade data som gäller det angivna formulärnamnet.
 
 >[!NOTE]
 >
@@ -265,7 +265,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-Följande är serletkoden som anropar `getCSVFile(..)` tjänstens metod. Tjänsten returnerar StringBuffer-objektet som sedan direktuppspelas tillbaka till det anropande programmet
+Nedan följer serverkoden som anropar tjänstens `getCSVFile(..)`-metod. Tjänsten returnerar StringBuffer-objektet som sedan direktuppspelas tillbaka till det anropande programmet
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -307,6 +307,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### Distribuera på servern
 
-* Importera [SQL-fil](assets/formsubmissions.sql) till MySQL-servern med MySQL Workbench. Schemat anropas **aemformstutorial** och tabellen anropas **formulärmaterial** med vissa exempeldata.
+* Importera [SQL-filen](assets/formsubmissions.sql) till MySQL-servern med MySQL Workbench. Schemat **aemformstutorial** skapas och tabellen **formsending** anropas med exempeldata.
 * Distribuera [OSGi Bundle](assets/store-export.jar) med Felix webbkonsol
-* [Så här hämtar du TimeOffRequest-överföringar](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). Du bör få CSV-filen strömmad tillbaka till dig.
+* [För att hämta TimeOffRequest-överföringar](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). Du bör få CSV-filen strömmad tillbaka till dig.

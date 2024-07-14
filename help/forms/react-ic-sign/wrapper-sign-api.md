@@ -21,9 +21,9 @@ ht-degree: 0%
 
 Ett anpassat AEM utvecklades för att skapa och returnera webbformulär till slutanvändaren
 
-* [Skapa tillfälligt dokument](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Dokumentet som överförs via det här anropet kallas för övergående eftersom det är tillgängligt endast i 7 dagar efter överföringen. Det returnerade tillfälliga dokument-ID:t kan användas i API-anrop där den överförda filen behöver refereras. Den tillfälliga dokumentbegäran är en multipart-begäran som består av tre delar - filnamn, mime-typ och filströmmen. Du kan bara överföra en fil åt gången i den här begäran.
-* [Skapa webbformulär](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).Detta är en primär slutpunkt som används för att skapa ett nytt webbformulär. Webbformuläret skapades i ett ACTIVE-läge för att vara värd för webbformuläret omedelbart.
-* [Hämta webbformuläret](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Retrieve&#39;s web form the user. Det här webbformuläret visas sedan för det anropande programmet för signering av dokumentet.
+* [Skapa övergående dokument](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Dokumentet som överförs via det här anropet kallas för övergående eftersom det är tillgängligt endast i 7 dagar efter överföringen. Det returnerade tillfälliga dokument-ID:t kan användas i API-anrop där den överförda filen behöver refereras. Den tillfälliga dokumentbegäran är en multipart-begäran som består av tre delar - filnamn, mime-typ och filströmmen. Du kan bara överföra en fil åt gången i den här begäran.
+* [Skapa webbformulär](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget). Detta är en primär slutpunkt som används för att skapa ett nytt webbformulär. Webbformuläret skapades i ett ACTIVE-läge för att vara värd för webbformuläret omedelbart.
+* [Hämta webbformuläret](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Hämta användarens webbformulär. Det här webbformuläret visas sedan för det anropande programmet för signering av dokumentet.
 
 ## Skapa Acrobat Sign OSGi-konfiguration
 

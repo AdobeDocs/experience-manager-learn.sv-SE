@@ -1,6 +1,6 @@
 ---
 title: Distribuera AEM kodprojekt till AEM as a Cloud Service
-description: Utforska hur du distribuerar ett AEM kodprojekt till AEM as a Cloud Service med Cloud Manager.
+description: Utforska driftsättningen av ett AEM kodprojekt till AEM as a Cloud Service med Cloud Manager.
 role: Developer
 level: Beginner
 type: Tutorial
