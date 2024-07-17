@@ -11,9 +11,9 @@ doc-type: Catalog
 duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: df15dc0426918a0e2263efe6fb0de953f49385df
+source-git-commit: 2aa189c46af16813d2709aa2ec02b509c4bb544e
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,76 @@ Lär dig hur du snabbt skapar webbplatser med Edge Delivery Services.
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
 Granska [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) om du vill ha fullständig information om Edge Delivery Services och dess funktioner.
+
+
+## Självstudiekurser för utvecklare av Edge Delivery Services
+
+
+<div class="columns is-multiline">
+    <!-- Document-based authoring -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Document-based authoring and Edge Delivery Services tutorial" tabindex="0">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="Självstudiekurs om dokumentbaserad redigering av webbplatser"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/document-based-authoring-tutorial.png"
+                alt="Självstudiekurs om dokumentbaserad redigering av webbplatser">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" title="Självstudiekurs om dokumentbaserad redigering av webbplatser">Självstudiekurs om dokumentbaserad redigering av webbplatser</a>
+            </p>
+            <p class="is-size-6">Lär dig hur du skapar Edge Delivery Services webbplatser som har skapats med dokumentbaserad redigering.</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold"> Starta självstudiekursen </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Universal Editor -->
+    <div class="column is-half-tablet is-half-desktop is-one-half-widescreen"
+      aria-label="Universal Editor and Edge Delivery Services tutorial" tabindex="1">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Självstudiekurs om webbplatsen Universal Editor"
+              tabindex="-1">
+              <img class="is-bordered-r-small"
+                src="./assets/overview/universal-editor-tutorial.png"
+                alt="Självstudiekurs om webbplatsen Universal Editor">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content is-padded-small">
+          <div class="content">
+            <p class="headline is-size-6 has-text-weight-bold">
+              <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" title="Självstudiekurs om webbplatsen Universal Editor">Självstudiekurs på webbplatsen Universal Editor</a>
+            </p>
+            <p class="is-size-6">Lär dig hur du skapar Edge Delivery Services webbplatser som har skapats med Universal Editor.</p>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started" class="spectrum-Button
+              spectrum-Button--outline spectrum-Button--primary
+              spectrum-Button--sizeM">
+              <span class="spectrum-Button-label has-no-wrap
+                has-text-weight-bold"> Starta självstudiekursen </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+
+
 
 ## Komma igång med Edge Delivery Services
 
