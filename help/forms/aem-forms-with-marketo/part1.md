@@ -11,9 +11,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -53,12 +53,14 @@ Det första steget i integreringen av Marketo med AEM Forms är att hämta de AP
 
 **Innan du börjar**
 
-[Ladda ned och zippa upp resurserna som hör till den här artikeln.](assets/aemformsandmarketo.zip) ZIP-filen innehåller följande:
+* [Ladda ned och zippa upp resurser som hör till den här självstudiekursen](assets/marketo-integration-assets.zip)
+
+ZIP-filen innehåller följande:
 
 1. BlankTemplatePackage.zip - Det här är den adaptiva formulärmallen. Importera detta med pakethanteraren.
 1. marketo.json - Det här är swagger-filen som används för att konfigurera datakällan.
-1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar - Detta är paketet som utför den anpassade autentiseringen. Du kan använda det här alternativet om du inte kan slutföra självstudiekursen eller om ditt paket inte fungerar som det ska.
+1. Se till att du ändrar egenskapen host i marketo.json så att den pekar på din markering.
 
 ## Nästa steg
 
-[Skapa anpassad autentisering](./part2.md)
+[Skapa data-Source](./part2.md)

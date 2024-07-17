@@ -10,20 +10,24 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
-# Skapa anpassat formulär med hjälp av formulärdatamodell
+# Testa integreringen
 
-Nästa steg är att skapa ett adaptivt formulär och basera det på den formulärdatamodell som skapades i det tidigare steget.
-Användaren anger lead-ID:t och när Marketo-tjänsten tabbas anropas lead by ID:t. Resultatet av tjänståtgärden mappas sedan till lämpliga fält i Adaptive Forms.
+Vi testar integreringen genom att skapa en enkel formulärhämtning och visa ett lead-objekt från Market.
+>[!NOTE]
+>
+>Den här funktionen har testats på formulär baserade på grundkomponenter.
+
+## Skapa anpassat formulär
 
 1. Skapa ett adaptivt formulär och basera det på en tom formulärmall, associera det med den formulärdatamodell som skapades i det tidigare steget.
-1. Öppna formuläret i redigeringsläge
+1. Öppna formuläret i redigeringsläge.
 1. Dra och släpp en TextField-komponent och en panelkomponent i det adaptiva formuläret. Ange rubriken för TextField-komponenten &quot;Enter Lead Id&quot; och ställ in dess namn på &quot;LeadId&quot;
 1. Dra och släpp två TextField-komponenter till panelkomponenten
 1. Ange namn och titel för de två TextField-komponenterna som FirstName och LastName
@@ -35,12 +39,6 @@ I följande skärmbild förklaras inställningarna för regelredigeraren
 
 ![linjeredigeraren](assets/ruleeditor.png)
 
-## Felsökning
-
-Om du använder de paket som ingår i den här artikeln kan du aktivera [felsökningsloggar](http://localhost:4502/system/console/slinglog) för följande klasser:
-
-+ `com.marketoandforms.core.impl.MarketoServiceImpl`
-+ `com.marketoandforms.core.MarketoConfigurationService`
 
 ## Grattis
 
