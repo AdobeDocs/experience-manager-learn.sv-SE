@@ -1,0 +1,495 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "Marketo Rest API",
+		"version": "1.0",
+		"title": "Marketo Rest API",
+		"termsOfService": "https://www.marketo.com/company/legal/",
+		"contact": {
+			"name": "Marketo Developer Relations",
+			"url": "http://developers.marketo.com",
+			"email": "developerfeedback@marketo.com"
+		},
+		"license": {
+			"name": "API License Agreement",
+			"url": "http://developers.marketo.com/api-license/"
+		}
+	},
+	"host": "418-NEY-460.mktorest.com",
+	"schemes": ["https"],
+	"paths": {
+		"/rest/v1/lead/{leadId}.json": {
+			"get": {
+				"tags": ["Leads"],
+				"summary": "Get Lead by Id",
+				"description": "Retrieves a single lead record through it's Marketo id.  Required Permissions: Read-Only Lead, Read-Write Lead",
+				"operationId": "getLeadByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "leadId",
+					"in": "path",
+					"description": "The Marketo lead id",
+					"required": true,
+					"type": "integer"
+
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ResponseOfLead"
+						}
+					}
+				}
+			}
+		},        
+		"/rest/v1/leads.json": {
+			"get": {
+				"summary": "Get Leads by Filter Type",
+				"description": "Returns a list of up to 300 leads based on a list of values in a particular field.  Required Permissions: Read-Only Lead, Read-Write Lead",
+				"operationId": "getLeadsByFilterUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "filterType",
+					"in": "query",
+					"description": "The lead field to filter on.  Any custom field (string, email, or integer types only), and any of the following fields are supported: cookies, email, facebookId, id, leadPartitionId, linkedInId, sfdcAccountId, sfdcContactId, sfdcLeadId, sfdcLeadOwnerId, sfdcOpptyId, twitterId.<br><br>A comprehensive list of fields can be obtained via the <a href=\"http://developers.marketo.com/rest-api/endpoint-reference/lead-database-endpoint-reference/#!/Leads/describeUsingGET_6\">Describe Lead2</a> endpoint.",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"name": "filterValues",
+					"in": "query",
+					"description": "A comma-separated list of values to filter on in the specified fields.",
+					"required": true,
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"collectionFormat": "csv"
+				},
+				{
+					"name": "fields",
+					"in": "query",
+					"description": "A comma-separated list of lead fields to return for each record",
+					"required": false,
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"collectionFormat": "csv"
+				},
+				{
+					"name": "batchSize",
+					"in": "query",
+					"description": "The batch size to return.  The max and default value is 300.",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				},
+				{
+					"name": "nextPageToken",
+					"in": "query",
+					"description": "A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter.  See Paging Tokens for more info.",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ResponseOfLead"
+						}
+					}
+				}
+			},
+			"post": {
+				"summary": "Sync Leads",
+				"description": "Syncs a list of leads to the target instance.  Required Permissions: Read-Write Lead",
+				"operationId": "syncLeadUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"in": "body",
+					"name": "syncLeadRequest",
+					"description": "syncLeadRequest",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/SyncLeadRequest"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ResponseOfLead"
+						}
+					}
+				}
+			}
+		},
+		"/rest/v1/leads/push.json": {
+			"post": {
+				"summary": "Push Lead to Marketo",
+				"description": "Upserts a lead, and generates a Push Lead to Marketo activity.  Required Permissions: Read-Write Lead",
+				"operationId": "pushToMarketoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"in": "body",
+					"name": "pushLeadToMarketoRequest",
+					"description": "pushLeadToMarketoRequest",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/PushLeadToMarketoRequest"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ResponseOfPushLeadToMarketo"
+						}
+					}
+				}
+			}
+		},
+		"/rest/v1/leads/{leadId}/associate.json": {
+			"post": {
+				"summary": "Associate Lead",
+				"description": "Associates a known Marketo lead record to a munchkin cookie and its associated web acitvity history.  Required Permissions: Read-Write Lead",
+				"operationId": "associateLeadUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "leadId",
+					"in": "path",
+					"description": "The id of the lead to associate",
+					"required": true,
+					"type": "integer",
+					"format": "int64"
+				},
+				{
+					"name": "cookie",
+					"in": "query",
+					"description": "The cookie value to associate",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ResponseWithoutResult"
+						}
+					}
+				}
+			}
+		}
+    },
+    "definitions": {
+		"SyncLeadRequest": {
+			"type": "object",
+			"required": ["input"],
+			"properties": {
+				"action": {
+					"type": "string",
+					"description": "Type of sync operation to perform.  Defaults to createOrUpdate if unset",
+					"enum": ["createOnly",
+					"updateOnly",
+					"createOrUpdate",
+					"createDuplicate"]
+				},
+				"asyncProcessing": {
+					"type": "boolean",
+					"example": false,
+					"description": "If set to true, the call will return immediately"
+				},
+				"input": {
+					"type": "array",
+					"description": "List of leads for input",
+					"items": {
+						"$ref": "#/definitions/Lead"
+					}
+				},
+				"lookupField": {
+					"type": "string",
+					"description": "Field to deduplicate on.  The field must be present in each lead record of the input.  Defaults to email if unset"
+				},
+				"partitionCode": {
+					"type": "string"
+				},
+				"partitionName": {
+					"type": "string",
+					"description": "Name of the partition to operate on, if applicable.  Should be set whenever possible, when interacting with an instance where partitions are enabled."
+				}
+			}
+		},
+		"ResponseWithoutResult": {
+			"type": "object",
+			"required": ["requestId",
+			"success"],
+			"properties": {
+				"errors": {
+					"type": "array",
+					"description": "Array of errors that occurred if the request was unsuccessful",
+					"items": {
+						"$ref": "#/definitions/Error"
+					}
+				},
+				"nextPageToken": {
+					"type": "string",
+					"description": "Paging token returned from a previous response"
+				},
+				"requestId": {
+					"type": "string",
+					"description": "Id of the request made"
+				},
+				"success": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the request succeeded"
+				},
+				"warnings": {
+					"type": "array",
+					"description": "Array of warnings given for the operation",
+					"items": {
+						"$ref": "#/definitions/Warning"
+					}
+				}
+			}
+		},
+		"ResponseOfPushLeadToMarketo": {
+			"type": "object",
+			"required": ["errors",
+			"requestId",
+			"result",
+			"success",
+			"warnings"],
+			"properties": {
+				"errors": {
+					"type": "array",
+					"description": "Array of errors that occurred if the request was unsuccessful",
+					"items": {
+						"$ref": "#/definitions/Error"
+					}
+				},
+				"requestId": {
+					"type": "string",
+					"description": "Id of the request made"
+				},
+				"result": {
+					"type": "array",
+					"description": "Array of results for individual records in the operation, may be empty",
+					"items": {
+						"$ref": "#/definitions/Lead"
+					}
+				},
+				"success": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the request succeeded"
+				},
+				"warnings": {
+					"type": "array",
+					"description": "Array of warnings given for the operation",
+					"items": {
+						"$ref": "#/definitions/Warning"
+					}
+				}
+			}
+		},
+		"PushLeadToMarketoRequest": {
+			"type": "object",
+			"properties": {
+				"input": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Lead"
+					}
+				},
+				"lookupField": {
+					"type": "string"
+				},
+				"partitionName": {
+					"type": "string"
+				},
+				"programName": {
+					"type": "string"
+				},
+				"programStatus": {
+					"type": "string"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				}
+			}
+		},
+		"ResponseOfLead": {
+			"type": "object",
+			"required": ["errors",
+			"requestId",
+			"result",
+			"success",
+			"warnings"],
+			"properties": {
+				"errors": {
+					"type": "array",
+					"description": "Array of errors that occurred if the request was unsuccessful",
+					"items": {
+						"$ref": "#/definitions/Error"
+					}
+				},
+				"moreResult": {
+					"type": "boolean",
+					"example": false,
+					"description": "Boolean indicating if there are more results in subsequent pages"
+				},
+				"nextPageToken": {
+					"type": "string",
+					"description": "Paging token given if the result set exceeded the allowed batch size"
+				},
+				"requestId": {
+					"type": "string",
+					"description": "Id of the request made"
+				},
+				"result": {
+					"type": "array",
+					"description": "Array of results for individual records in the operation, may be empty",
+					"items": {
+						"$ref": "#/definitions/Lead"
+					}
+				},
+				"success": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the request succeeded"
+				},
+				"warnings": {
+					"type": "array",
+					"description": "Array of warnings given for the operation",
+					"items": {
+						"$ref": "#/definitions/Warning"
+					}
+				}
+			}
+		},        
+		"ProgramMembership": {
+			"type": "object",
+			"required": ["membershipDate",
+			"progressionStatus"],
+			"properties": {
+				"acquiredBy": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the lead was acquired by the parent program"
+				},
+				"isExhausted": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the lead is currently exhausted in the stream, if applicable"
+				},
+				"membershipDate": {
+					"type": "string",
+					"description": "Date the lead first became a member of the program"
+				},
+				"nurtureCadence": {
+					"type": "string",
+					"description": "Cadence of the parent stream if applicable"
+				},
+				"progressionStatus": {
+					"type": "string",
+					"description": "Program status of the lead in the parent program"
+				},
+				"reachedSuccess": {
+					"type": "boolean",
+					"example": false,
+					"description": "Whether the lead is in a success-status in the parent program"
+				},
+				"stream": {
+					"type": "string",
+					"description": "Stream that the lead is a member of, if the parent program is an engagement program"
+				}
+			}
+		},
+		"Reason": {
+			"type": "object",
+			"required": ["code",
+			"message"],
+			"properties": {
+				"code": {
+					"type": "string",
+					"description": "Integer code of the reason"
+				},
+				"message": {
+					"type": "string",
+					"description": "Message describing the reason for the status of the operation"
+				}
+			}
+		},        
+		"Lead": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"description": "Unique integer id of a lead record"
+				},
+                	"firstName":{
+				  "type":"string"
+				},
+				"lastName":{
+				  "type":"string"
+				},
+				"membership": {
+					"description": "Membership data for the parent program.  Only returned via Get Leads By Program Id",
+					"$ref": "#/definitions/ProgramMembership"
+				},
+				"reason": {
+					"description": "Reason object describing why an operation did not succeed for a record",
+					"$ref": "#/definitions/Reason"
+				},
+				"status": {
+					"type": "string",
+					"description": "Status of the operation performed on the record"
+				}
+			},
+			"description": "Lead record.  Always contains id, but may have any number of other fields, depending on the fields available in the target instance."
+		},        
+		"Warning": {
+			"type": "object",
+			"required": ["code",
+			"message"],
+			"properties": {
+				"code": {
+					"type": "integer",
+					"format": "int32",
+					"description": "Integer code of the warning"
+				},
+				"message": {
+					"type": "string",
+					"description": "Message describing the warning"
+				}
+			}
+		},
+		"Error": {
+			"type": "object",
+			"required": ["code",
+			"message"],
+			"properties": {
+				"code": {
+					"type": "integer",
+					"format": "int32",
+					"description": "Integer error code of the error"
+				},
+				"message": {
+					"type": "string",
+					"description": "Message describing the cause of the Error"
+				}
+			}
+		}        
+    }
+}
