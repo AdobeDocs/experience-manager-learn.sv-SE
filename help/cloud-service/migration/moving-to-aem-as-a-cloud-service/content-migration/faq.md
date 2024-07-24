@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Ja, det är möjligt men kräver noggrann planering av:
    + Verifiera om det går att migrera alla resurser som en del av en migreringsuppsättning och sedan ta med platser som använder dem i faser
 + I det aktuella läget gör redigeringsprocessen att författarinstansen inte är tillgänglig för innehållsredigering, även om publiceringsnivån fortfarande kan hantera innehållet
    + Detta innebär att tills det är klart för användaren att han/hon har skrivit innehållet, fryses innehållsredigeringen
-+ Användare migreras inte längre, men grupper är
++ Användare migreras inte längre, men det gör grupper.
 
 Granska den övre extraherings- och intagsprocessen enligt dokumentationen innan du planerar migreringarna.
 

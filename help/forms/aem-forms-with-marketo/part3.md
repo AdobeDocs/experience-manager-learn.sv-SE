@@ -10,31 +10,14 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Source
-
-Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med lite anpassning kan ni också integrera med andra datakällor.
-
-1. Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2 och Oracle RDBMS
-1. AEM användarprofil
-1. RESTful web services
-1. SOAP webbtjänster
-1. OData-tjänster
-
-För integreringen av AEM Forms med Marketo använder vi RESTful-webbtjänster. Det första steget i integreringen är att konfigurera en [-datakälla.](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) Använd swagger-filen som ingår i den här självstudien. I följande skärmbild visas de viktiga egenskaper som måste anges när datakällan konfigureras.
-![datakälla](assets/datasource.png)
-
-&quot;marketo.json&quot; är swagger-filen som du får som en del av kursens resurser.
-Egenskapsvärden är specifik för din Marketo-instans.
-Autentiseringstypen är anpassad och autentiseringsimplementeringen måste matcha AemForms med Marketo. (Om du inte har ändrat detta i koden).
-
-## Skapa formulärdatamodell
+# Skapa formulärdatamodell
 
 När du har konfigurerat datakällan är nästa steg att skapa en formulärdatamodell som baseras på den datakälla som konfigurerats i det tidigare steget. Så här skapar du en formulärdatamodell:
 

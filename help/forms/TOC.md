@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
+source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2086'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 1%
    + [JDBC-baserad formulärdatamodell](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [Skapa associationer mellan två entiteter i formulärdatamodellen](adaptive-forms/association-data-model-technical-video-use.md)
    + [Använda formulärdatamodellens anropstjänst i regelredigeraren](adaptive-forms/service-data-model-technical-video-use.md)
-   + [Post Binary Data to AEM DAM Using Form Data Model](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
+   + [Posta binära data till AEM DAM med formulärdatamodell](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [Skapa återanvändbara arbetsflödesmodeller](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [Anpassat steg AEM arbetsflöde](adaptive-forms/custom-process-step-aem-workflow.md)
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
@@ -240,8 +240,8 @@ ht-degree: 1%
    + [Del2 - Skapa anpassad mall](listing-custom-asset-types/part2.md)
 + AEM Forms med Marketo{#aem-forms-with-marketo}
    + [Del1 - Introduktion](aem-forms-with-marketo/part1.md)
-   + [Del2 - Anpassad autentisering](aem-forms-with-marketo/part2.md)
-   + [Del3 - Data Source](aem-forms-with-marketo/part3.md)
+   + [Part2 - Data Source](aem-forms-with-marketo/part2.md)
+   + [Del3 - Formulärdatamodell](aem-forms-with-marketo/part3.md)
    + [Del 4 - Sammanfoga allt](aem-forms-with-marketo/part4.md)
 
 + AEM Forms med Adobe Campaign Standard{#aem-forms-with-adobe-campaign}
@@ -280,6 +280,7 @@ ht-degree: 1%
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Använda streckkodstjänsten i AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
    + [Använda PDFG-tjänsten i AEM Forms](document-services/using-pdfg-in-aem-forms.md)
+   + [Kryptera PDF med behörighetslösenord](document-services/encrypt-pdf-permissions-password.md)
    + [Använda Output and Forms Service i AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Använda xdp-fragment i utdatatjänsten](document-services/using-fragments-in-output-service.md)
    + [ECMA-skript för att generera PDF med fragment](document-services/using-fragments-in-output-service-watched-folder.md)

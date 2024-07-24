@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 719d3101-2c27-4165-a9d7-97e6f637d71f
 duration: 161
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # Delning av offentlig länk
 
-Läs om hur Assets Essentials Share Link gör det möjligt för användare att dela resurser med interna och externa intressenter samtidigt som risken för att dela fel resurser eller information minimeras.
+Läs om hur AEM Assets Share Link gör det möjligt för användare att dela resurser med interna och externa intressenter samtidigt som risken för att dela fel resurser eller information minimeras.
 
 >[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)
