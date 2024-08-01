@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1234'
 ht-degree: 5%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 5%
       + [Cachelagrar sidvarianter](./developing/advanced/variant-caching.md)
       + [CSRF-skydd](./developing/advanced/csrf-protection.md)
       + [Anpassade namnutrymmen](./developing/advanced/custom-namespaces.md)
+      + [Hemligheter](./developing/advanced/secrets.md)
       + [Tjänstanvändare](./developing/advanced/service-users.md)
       + [Webboptimerade bild-API:er](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + Snabb utvecklingsmiljö {#rde}
@@ -283,6 +284,10 @@ ht-degree: 5%
       + [PDF/A-verktyg](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testa lösningen](./forms/forms-cs-assembler/test.md)
       + [Utmaning](./forms/forms-cs-assembler/challenge.md)
+   + Integrera med Marketo{#froms-cs-with-marketo}
+      + [Introduktion](./forms/forms-cs-with-marketo/part1.md)
+      + [Skapa data-Source](./forms/forms-cs-with-marketo/part2.md)
+      + [Skapa formulärdatamodell](./forms/forms-cs-with-marketo/part3.md)
    + Lagra formuläröverföringar med blobbindextaggar {#store-submiited-data-with-metadata-tags}
       + [Introduktion](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [Utöka alternativgruppskomponent](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)

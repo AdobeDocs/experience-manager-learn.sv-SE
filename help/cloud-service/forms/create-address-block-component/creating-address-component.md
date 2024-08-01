@@ -9,9 +9,9 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,16 @@ Markera noden ``zip`` och ange dess egenskaper enligt nedan.
 
 Markera noden ``state`` och ange dess egenskaper enligt nedan. Observera tillstånd fieldType - det är inställt på en listruta
 ![läge](assets/state.png)
+
+## Ange standardvärden för tillståndsfältet
+
+Markera noden ``state`` och lägg till följande egenskaper.
+
+| Namn | Typ | Värde |
+|----------|----------|---------------------|
+| enum | Sträng[] | CA,NY |
+| enumNames | Sträng[] | California,New York |
+
 
 Komponenten för det sista adressblocket ser ut så här
 

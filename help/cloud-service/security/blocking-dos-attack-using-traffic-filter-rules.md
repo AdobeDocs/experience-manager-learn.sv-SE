@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,6 @@ Låt oss titta på några ytterligare, rekommenderade åtgärder som kunderna ka
 - Konfigurera **varningar** om hastighetsbegränsningar för trafikfilterregler via en varningsåtgärd så att ett meddelande från Åtgärdscenter skickas när regeln aktiveras.
 - Öka cachetäckningen genom att deklarera **begäranomvandlingar** för att ignorera frågeparametrar.
 
->[!NOTE]
->
->Funktionen [trafikfilterregelvarningar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) har inte släppts ännu. Om du vill få åtkomst via det tidiga adopterprogrammet skickar du e-post **<aemcs-waf-adopter@adobe.com>**.
-
 ### Variationer i trafikregler för hastighetsbegränsning {#rate-limit-variations}
 
 Det finns två variationer av trafikreglerna för avgiftsbegränsning:
@@ -72,7 +68,6 @@ Som tidigare nämnts blockerar Adobe som standard trafik vid CDN som överskride
 Helst konfigurerar du reglerna innan du går direkt till produktion. I praktiken deklarerar många organisationer aktivt regler endast en gång som varnats för en trafiktoppar, vilket tyder på en trolig attack.
 
 Adobe skickar en trafiktopp på ursprungsvarningen som ett [meddelande från Åtgärdscenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/actions-center) när en standardtröskel för trafik från en enskild IP-adress överskrids, för en angiven PoP. Om du har fått en sådan varning rekommenderar vi att du konfigurerar en trafikfilterregel för hastighetsbegränsning. Den här standardvarningen skiljer sig från de varningar som kunderna uttryckligen måste aktivera när de definierar trafikfilterregler, som du kommer att lära dig om i ett framtida avsnitt.
-
 
 ## Analysera trafikmönster {#analyze-traffic}
 
