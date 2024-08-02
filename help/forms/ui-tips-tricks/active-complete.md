@@ -11,7 +11,7 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -38,14 +38,15 @@ Du är i standardläget när du öppnar formatredigeraren för fliken så som vi
 ![navigeringsflik](assets/navigation-tab.png)
 
 Ange CSS-egenskaper för standardläget enligt nedan
-| Kategori | Egenskapsnamn  |  Egenskapsvärde |
-|:—|:—|:—|
+
+| Kategori | Egenskapsnamn | Egenskapsvärde |
+|:---|:---|:---|
 | Dimensioner och position | Bredd | 50px |
-| Text | Teckenbredd| Fet |
+| Text | Teckenbredd | Fet |
 | Text | Färg | #FFF |
-|Text | Radhöjd| 3 |
-|Text  | Textjustering | Vänster |
-|Bakgrund| Färg | #056dae |
+| Text | Radhöjd | 3 |
+| Text | Textjustering | Vänster |
+| Bakgrund | Färg | #056dae |
 
 Spara ändringarna
 
