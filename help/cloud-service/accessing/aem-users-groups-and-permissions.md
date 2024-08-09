@@ -10,10 +10,10 @@ jira: KT-6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
 duration: 315
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 1fcfbc85650d0eb6b6b184883c7178a3b1e0ed93
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 5%
+source-wordcount: '204'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en" text="IMS-stöd för Adobe Experience Manager as a Cloud Service"
 >additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEM användargrupper och deras behörigheter"
 
-Adobe Experience Manager bygger på Adobe IMS-användare, användargrupper och produktprofiler för att ge användarna anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM grupper och behörigheter och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge smidig och anpassningsbar åtkomst till AEM.
+Adobe Experience Manager bygger på Adobe IMS-användare, användargrupper och produktprofiler för att ge användarna anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM och behörigheter som bygger på [AEM tillhandahöll användargrupper](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#built-in-users-and-groups) och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge sömlös och anpassningsbar åtkomst till AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
 
