@@ -1,5 +1,5 @@
 ---
-title: Kryptera PDF med ett behörighetslösenord
+title: Kryptera PDF med ett lösenord för behörighet
 description: Använd DocAssuranceService för att kryptera en PDF
 feature: Document Services
 version: 6.4,6.5
@@ -9,7 +9,7 @@ level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: b823f9e294c42ba258049a942816f9a154a6e1a6
+source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Kryptera PDF med ett behörighetslösenord
 
-Du måste ha ett lösenord för behörighet, som även kallas ägare eller huvudlösenord, för att kunna kopiera, redigera eller skriva ut ett PDF-dokument. Lär dig använda API:t [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) för att tillämpa ett behörighetslösenord på en PDF programmatiskt
+Du måste ha ett lösenord för behörighet, som även kallas ägare eller huvudlösenord, för att kunna kopiera, redigera eller skriva ut ett PDF-dokument. Lär dig att använda API:t [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) för att tillämpa ett behörighetslösenord på en PDF programmatiskt.
 
 Följande JSP-kod krypterar ett PDF med ett behörighetslösenord:
 
