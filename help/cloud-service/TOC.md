@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
+source-git-commit: 13657903c37b90c6d854dcba317dc1801d869de0
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1254'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,6 @@ ht-degree: 5%
    + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivitet](./cloud-manager/activity.md)
-   + [Anpassade domännamn](./cloud-manager/custom-domain-names.md)
    + Dev Ops{#devops}
       + [Distribuera kod](./cloud-manager/devops/deploy-code.md)
       + [Sammanfoga projekt](./cloud-manager/devops/merge-projects.md)
@@ -107,6 +106,7 @@ ht-degree: 5%
       + [Cachelagrar sidvarianter](./developing/advanced/variant-caching.md)
       + [CSRF-skydd](./developing/advanced/csrf-protection.md)
       + [Anpassade namnutrymmen](./developing/advanced/custom-namespaces.md)
+      + [Parametrisera segmenteringsmodeller från HTML](./developing/advanced/sling-model-parameters.md)
       + [Hemligheter](./developing/advanced/secrets.md)
       + [Tjänstanvändare](./developing/advanced/service-users.md)
       + [Webboptimerade bild-API:er](./developing/advanced/web-optimized-image-delivery-java-apis.md)
@@ -138,6 +138,10 @@ ht-degree: 5%
       + Risker {#risks}
          + [Traversal-varningar](./debugging/cloud-service/risks/traversals.md)
 + Innehållsleverans{#content-delivery}
+   + [Anpassat domännamn](./content-delivery/custom-domain-names.md)
+   + [Anpassat domännamn med CDN som hanteras av Adobe](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [Anpassat domännamn med kundens CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
+   + [Cachelagring](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + Cachelagrar{#caching}
    + [Ökning](./caching/overview.md)
