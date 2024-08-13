@@ -4,14 +4,14 @@ description: Lär dig hur du implementerar ett eget domännamn på AEM as a Clou
 version: Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Developer
+role: Admin, Architect, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
 last-substantial-update: 2024-06-21T00:00:00Z
-jira: KT-15121
-thumbnail: KT-15121.jpeg
-source-git-commit: 13657903c37b90c6d854dcba317dc1801d869de0
+jira: KT-15945
+thumbnail: KT-15945.jpeg
+source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%

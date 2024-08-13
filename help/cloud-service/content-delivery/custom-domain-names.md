@@ -4,19 +4,19 @@ description: Lär dig hur du hanterar och implementerar anpassade domännamn fö
 version: Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
-role: Developer, Architect
+role: Admin, Architect, Developer
 level: Intermediate
-doc-type: Article
-duration: 0
+doc-type: Tutorial
+duration: 130
 last-substantial-update: 2024-08-09T00:00:00Z
-jira: KT-15615
-source-git-commit: 13657903c37b90c6d854dcba317dc1801d869de0
+jira: KT-15946
+thumbnail: KT-15946.jpeg
+source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
 
 ---
-
 
 # Alternativ för anpassade domännamn
 
