@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
+source-git-commit: 1e1a33986e202ce2af9cf2d03eca7895514465df
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 12%
+source-wordcount: '241'
+ht-degree: 11%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 12%
 # Videor och självstudiekurser om AEM Foundation {#foundation}
 
 + [Ökning](./overview.md)
++ [POC](./poc.md)
 + Administration {#administration}
    + [Förstå skäl att uppgradera AEM](./administration/understand-reasons-to-upgrade.md)
    + [Använd oak-run.jar för att hantera index](./administration/use-oak-run-jar-to-manage-indexes.md)
@@ -26,6 +27,7 @@ ht-degree: 12%
    + [OAuth-scope](authentication/oauth-code-sample-develop.md)
    + [Förstå autentisering](authentication/authentication-support-article-understand.md)
    + [Förstå IMS-autentisering på AMS](authentication/adobe-ims-authentication-technical-video-understand.md)
+   + [Migrering av JWT-to-OAuth-autentiseringsuppgifter](authentication/jwt-to-oauth-migration.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Förstå Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD-rör](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
@@ -48,6 +50,7 @@ ht-degree: 12%
    + [ModSecurity CRS DoS Attack Protection](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-anslutningar till API:er med privata certifikat](./security/call-internal-apis-having-private-certificate.md)
    + [mTLS-autentisering (Mutual TLS) från AEM](./security/mutual-tls-authentication.md)
+   + [Migrering av JWT-To-OAuth-autentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflöde](./workflow/use-workflow.md)
