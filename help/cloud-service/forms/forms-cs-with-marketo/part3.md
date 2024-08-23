@@ -7,12 +7,12 @@ topic: Integrations, Development
 role: Developer
 level: Experienced
 badgeIntegration: label="Integrering" type="positive"
-badgeVersions: label="AEM Forms Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 835e76695824cc1f155720567ca104a50be4bab8
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
