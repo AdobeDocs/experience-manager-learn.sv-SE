@@ -9,10 +9,11 @@ feature: Output Service
 topic: Development
 jira: KT-9666
 exl-id: 8d010107-8cea-41f0-9ff4-7746744a250c
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 duration: 227
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '90'
 ht-degree: 1%
 
 ---

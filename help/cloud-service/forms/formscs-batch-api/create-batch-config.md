@@ -8,11 +8,12 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9673
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: db25e5a2-e1a8-40ad-af97-35604d515450
 duration: 233
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -39,12 +40,12 @@ Följande är den lägsta konfiguration som måste anges när batchkonfiguration
 
 ```
 {
-	"configName": "monthlystatements",
-	"dataSourceConfigUri": "/conf/batchapi/settings/forms/usc/batch/batchapitutorial",
-	"outputTypes": [
-		"PDF"
-	],
-	"template": "crx:///content/dam/formsanddocuments/formtemplates/custom_fonts.xdp"
+    "configName": "monthlystatements",
+    "dataSourceConfigUri": "/conf/batchapi/settings/forms/usc/batch/batchapitutorial",
+    "outputTypes": [
+        "PDF"
+    ],
+    "template": "crx:///content/dam/formsanddocuments/formtemplates/custom_fonts.xdp"
 
 }
 ```

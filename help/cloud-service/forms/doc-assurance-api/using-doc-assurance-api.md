@@ -7,11 +7,12 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Document Services
 topic: Development
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-15508
 exl-id: 40617082-4d23-4c91-a016-2d947187052b
-source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---

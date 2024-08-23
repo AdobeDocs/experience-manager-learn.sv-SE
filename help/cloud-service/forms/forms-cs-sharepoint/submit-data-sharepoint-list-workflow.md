@@ -10,9 +10,10 @@ topic: Integrations
 jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
-source-git-commit: e8e51fadaa824d615524a8c4c41aefb656d0391d
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
+source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---

@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -174,6 +174,21 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                 <br/>                
                  Lär dig mer om Universal Editor och AEM med Edge Delivery Services.
             </p>
-        </td>                    
+        </td>
+        <td>
+            <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
+                <img alt="Importera webbplatser till AEM Sites med Edge Delivery Services" 
+                     src="https://video.tv.adobe.com/v/3431603?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
+                <strong> Importera platser </strong> </a>        
+                <br/><em>med James Talbot och Varun Mitra, Cloud Architect </em>
+            </div>
+            <p>
+                <br/>                
+                 Läs om hur du importerar webbplatser till AEM Sites med Edge Delivery Services.
+            </p>
+        </td>
     </tr>      
 </table>

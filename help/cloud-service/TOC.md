@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1275'
 ht-degree: 5%
 
 ---
@@ -152,6 +152,7 @@ ht-degree: 5%
    + Använda {#how-to}
       + [Aktivera cachelagring](./caching/how-to/enable-caching.md)
       + [Inaktivera cachelagring](./caching/how-to/disable-caching.md)
+      + [Rensa cache](./caching/how-to/purge-cache.md)
 + Öppnar AEM{#accessing}
    + [Ökning](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
@@ -259,6 +260,10 @@ ht-degree: 5%
       + [2 - Inställningar](./forms/create-address-block-component/set-up.md)
       + [3 - Skapa komponent](./forms/create-address-block-component/creating-address-component.md)
       + [4 - Distribuera komponent](./forms/create-address-block-component/deploy-your-project.md)
+   + Skapa klickbar bildkomponent {#clickable-image-component}
+      + [1 - Introduktion](./forms/clickable-image-component/introduction.md)
+      + [2 - Skapa komponent](./forms/clickable-image-component/create-component.md)
+      + [3 - Hantera klickningshändelse](./forms/clickable-image-component/handle-click-event.md)
    + AEM Forms och Analytics{#forms-and-analytics}
       + [Introduktion](./forms/form-data-analytics/introduction.md)
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
@@ -421,3 +426,4 @@ ht-degree: 5%
          + [Integrera AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [Generativ AI för AEM Sites](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [Exploring Universal Editor](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
+         + [Importera platser](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
