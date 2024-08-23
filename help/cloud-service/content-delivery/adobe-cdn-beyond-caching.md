@@ -1,6 +1,6 @@
 ---
 title: Adobe CDN - Avancerade funktioner förutom cachelagring
-description: Lär dig mer om avancerade funktioner i Adobe CDN utöver cachelagring, som att konfigurera trafik vid CDN, CDN-felsidor och mycket mer.
+description: Lär dig mer om avancerade funktioner i Adobe CDN utöver cachelagring, som att konfigurera trafik på CDN, konfigurera tokens och autentiseringsuppgifter, CDN-felsidor och mycket mer.
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Adobe CDN - Avancerade funktioner förutom cachelagring
 
-Lär dig mer om avancerade funktioner i Adobe CDN utöver cachelagring, som att konfigurera trafik vid CDN, CDN-felsidor och mycket mer.
+Lär dig mer om avancerade funktioner i CDN (Adobe Content Delivery Network) utöver cachelagring, som att konfigurera trafik vid CDN, ställa in tokens och autentiseringsuppgifter, CDN-felsidor och mycket mer.
 
 Förutom att cache-lagra innehåll har Adobe CDN flera avancerade funktioner som kan hjälpa dig att optimera webbplatsens prestanda. Bland dessa funktioner finns:
 
@@ -50,8 +50,7 @@ Låt oss förstå nyckelfunktionerna som rör _Konfigurera CDN-autentiseringsupp
 
 - **Rensa API-token**: Gör att du kan skapa en egen rensningsnyckel för att rensa en enskild eller grupp eller alla resurser från cachen.
 - **Grundläggande autentisering**: En lättviktig autentiseringsmekanism när du vill begränsa åtkomsten till din webbplats eller en del av den. Krävs oftast som en del av olika granskningsprocesser innan de publiceras.
-- **HTTP-huvudvalidering**: Används när ett kundhanterat CDN dirigerar trafik till Adobe CDN. CDN för Adobe validerar inkommande begäran baserat på rubrikvärdet `X-AEM-Edge-Key`.
-Gör att du kan skapa ett eget värde för rubriken `X-AEM-Edge-Key`.
+- **HTTP-huvudvalidering**: Används när ett kundhanterat CDN dirigerar trafik till Adobe CDN. CDN för Adobe validerar inkommande begäran baserat på rubrikvärdet `X-AEM-Edge-Key`. Gör att du kan skapa ett eget värde för rubriken `X-AEM-Edge-Key`.
 
 ## CDN-felsidor
 
@@ -87,7 +86,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## Ytterligare resurser
+## Relaterad Tutorials
 
 [Skydda webbplatser med trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
@@ -100,7 +99,3 @@ data:
 [Konfigurerar CDN-autentiseringsuppgifter och autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
 [Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
-
-
-
-
