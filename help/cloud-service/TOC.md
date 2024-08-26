@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 5%
+source-wordcount: '1289'
+ht-degree: 4%
 
 ---
 
@@ -270,6 +270,10 @@ ht-degree: 5%
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
       + [Skapa regler](./forms/form-data-analytics/rules.md)
       + [Testa lösningen](./forms/form-data-analytics/test.md)
+   + Använda lodräta tabbar{#using-vertical-tabs}
+      + [1. Inledning](./forms/using-vertical-tabs/introduction.md)
+      + [2. Skapa formulär](./forms/using-vertical-tabs/create-af.md)
+      + [3. Navigera](./forms/using-vertical-tabs/navigation.md)
    + Dokumentgenerering i AEM Forms CS{#doc-gen-formscs}
       + [Introduktion](./forms/doc-gen-forms-cs/introduction.md)
       + [Skapa tjänstautentiseringsuppgifter](./forms/doc-gen-forms-cs/service-credentials.md)

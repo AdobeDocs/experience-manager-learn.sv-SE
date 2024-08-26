@@ -9,9 +9,9 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -196,10 +196,18 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 Så här testar du detta på den lokala servern:
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Hämta och installera ares.ares.core-ares-paketet](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användarrättigheter och strömma tillbaka PDF-filen
+
+1. Lägg till följande post i Apache Sling User Mapper Service med hjälp av configMgr-konsolen som visas nedan
+
+```
+       DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper](assets/user-mapper-service.PNG)
+1. [Hämta och installera ares.ares.core-ares-paketet](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användningsrättigheter och strömma tillbaka PDF-filen.
 1. [Importera klientlibs och anpassad sändning](assets/applyaresdemo.zip)
 1. [Importera det adaptiva formuläret](assets/applyaresform.zip)
-1. Lägg till certifikatet för Reader-tillägg till användaren fd-service. Kontrollera att aliaset är &quot;ares&quot;.
+1. Lägg till certifikatet för Reader-tillägg till användaren fd-service. Kontrollera att aliaset är **ares**.
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. Välj rätt behörighet och överför PDF-filen
 1. Klicka på Skicka för att hämta Reader Extended PDF
