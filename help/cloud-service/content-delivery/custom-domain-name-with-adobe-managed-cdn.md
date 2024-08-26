@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -150,7 +150,7 @@ Om du använder **rotdomänen** måste du lägga till en APEX-posttyp (även A, 
 
 Om du vill verifiera att webbplatsen är tillgänglig med det anpassade domännamnet öppnar du en webbläsare och navigerar till den anpassade domän-URL:en. Kontrollera att webbplatsen är tillgänglig och att webbläsaren visar en säker anslutning till hänglåsikonen.
 
-## Avsluta video
+## Heltäckande video
 
 Du kan även titta på en video från början till slut som demonstrerar översikten, förutsättningarna och ovanstående steg för att lägga till ett anpassat domännamn på en AEM as a Cloud Service-värdwebbplats.
 
