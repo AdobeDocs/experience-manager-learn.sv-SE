@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
+source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -31,12 +31,13 @@ Förutom att cache-lagra innehåll har Adobe CDN flera avancerade funktioner som
 
 De här funktionerna är **självbetjäningsfunktioner**. Konfigureras i filen `cdn.yaml` i ditt AEM och distribueras med Cloud Manager konfigurationsflöde.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+
 ## Konfigurera trafik vid leveransnätverket
 
 Låt oss förstå nyckelfunktionerna som är relaterade till _Konfigurera trafik på CDN_:
 
-- **DoS-attacker:** Adobe CDN absorberar DoS-attacker i nätverket
--lager, så att de inte kan nå din ursprungliga server.
+- **DoS-attacker:** Adobe CDN tar upp DoS-attacker i nätverkslagret och förhindrar dem från att nå din ursprungliga server.
 - **Hastighetsbegränsning:** Om du vill skydda din ursprungliga server från att överbelastas med för många begäranden kan du konfigurera hastighetsbegränsning i CDN.
 - **Brandvägg för webbaserade program (WAF):** WAF skyddar din webbplats från vanliga sårbarheter i webbprogram, som SQL-injektion, serveröverskridande skript med mera. Den utökade säkerhetslicensen eller WAF-DDoS-skyddslicensen krävs för att den här funktionen ska kunna användas.
 - **Begäranomvandling:** Ändra inkommande begäranden som att ange eller ta bort rubriker, ändra frågeparametrar, cookies och mycket annat.
