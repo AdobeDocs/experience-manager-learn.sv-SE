@@ -11,7 +11,8 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16023
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+exl-id: c5bbd35e-fd15-4293-901e-c81faf6025f9
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -50,4 +51,3 @@ Följande är regelredigeraren för knapparna Nästa och Föregående
 **Föregående knapp**
 
 ![föregående-knapp](assets/prev-button.png)
-

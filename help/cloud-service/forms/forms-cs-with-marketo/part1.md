@@ -10,7 +10,8 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

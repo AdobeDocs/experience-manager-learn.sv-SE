@@ -8,7 +8,8 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15968
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+exl-id: b635f171-775d-480e-bf7a-c92ab4af0aee
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

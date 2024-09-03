@@ -11,13 +11,13 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16023
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+exl-id: 84c03212-47dc-4398-a197-e69e3f3bf77e
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 1%
 
 ---
-
 
 # Introduktion
 

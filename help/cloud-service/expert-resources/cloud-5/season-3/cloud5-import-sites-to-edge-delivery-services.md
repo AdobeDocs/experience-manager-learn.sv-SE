@@ -12,13 +12,13 @@ last-substantial-update: 2024-08-16T00:00:00Z
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15844
-source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
+exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
-
 
 # Importera webbplatser till AEM Sites med Edge Delivery Services
 

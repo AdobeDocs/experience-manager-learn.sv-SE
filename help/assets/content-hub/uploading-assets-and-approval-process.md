@@ -11,13 +11,13 @@ duration: 260
 last-substantial-update: 2024-08-20T00:00:00Z
 jira: KT-15992
 thumbnail: KT-15992.jpeg
-source-git-commit: 3eb4ed310e08f9dd8a527fdb7c42062b285db84e
+exl-id: d364547b-c738-4bdb-a8e5-2be3ff75f9ec
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
 
 ---
-
 
 # Överför resurser och godkännandeprocess
 

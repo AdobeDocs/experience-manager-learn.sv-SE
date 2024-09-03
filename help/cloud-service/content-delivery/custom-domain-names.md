@@ -11,7 +11,8 @@ duration: 130
 last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -83,4 +84,3 @@ Nu när du har förstått processen för domännamnshantering kan du implementer
 
 **[Anpassade domännamn med Adobe-hanterat CDN](./custom-domain-name-with-adobe-managed-cdn.md)**: I den här självstudiekursen lär du dig hur du lägger till ett eget domännamn på en **AEM as a Cloud Service-webbplats med Adobe-hanterat CDN**.
 **[Anpassade domännamn med kundhanterat CDN](./custom-domain-names-with-customer-managed-cdn.md)**: I den här självstudiekursen får du lära dig hur du lägger till ett anpassat domännamn på en **AEM as a Cloud Service-webbplats med kundhanterat CDN**.
-

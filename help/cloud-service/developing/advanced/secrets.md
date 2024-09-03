@@ -7,13 +7,13 @@ feature: OSGI, Cloud Manager
 role: Developer
 jira: KT-15880
 level: Intermediate, Experienced
-source-git-commit: ba7ba62dbc70b07f73d96a488e7d3088bf9d467a
+exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
 
 ---
-
 
 # Hantera hemligheter i AEM as a Cloud Service
 

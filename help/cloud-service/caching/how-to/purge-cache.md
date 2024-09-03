@@ -11,7 +11,8 @@ duration: 0
 last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
-source-git-commit: e03480e37463b7d35a49203e331ce661b6dc52f9
+exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 0%

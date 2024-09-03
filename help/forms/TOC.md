@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2089'
 ht-degree: 1%
 
 ---
@@ -224,10 +224,11 @@ ht-degree: 1%
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
 + Startar AEM från mobilformulärsinlämningen {#offline-mobile-form-submission}
    + [Introduktion](offline-mobile-form-submission/introduction.md)
-   + [Egen profil](offline-mobile-form-submission/part-one.md)
-   + [Hantera inlämning av PDF](offline-mobile-form-submission/part-two.md)
-   + [Arbetsflöde för granskning PDF](offline-mobile-form-submission/part-three.md)
-   + [Driftsätt i ditt system](offline-mobile-form-submission/part-four.md)
+   + [Egen profil](offline-mobile-form-submission/custom-profile.md)
+   + [Hantera inlämning av formulär](offline-mobile-form-submission/handle-form-submission.md)
+   + [Lagra skickade data](offline-mobile-form-submission/author-servlet.md)
+   + [Arbetsflöde för granskning PDF](offline-mobile-form-submission/review-workflow.md)
+   + [Driftsätt i ditt system](offline-mobile-form-submission/deploy-assets.md)
 + Frågar efter formuläröverföringar {#query-form-submissions}
    + [Introduktion](query-form-submissions/introduction.md)
    + [Skapa sökbara fält](query-form-submissions/part1.md)

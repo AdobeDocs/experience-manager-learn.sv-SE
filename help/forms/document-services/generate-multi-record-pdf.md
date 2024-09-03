@@ -9,9 +9,9 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -127,9 +127,18 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 Följ instruktionerna nedan om du vill testa den här funktionen på servern:
 
-* [Hämta och extrahera zip-filinnehåll till filsystemet](assets/mult-records-template-and-xml-file.zip).Zip-filen innehåller mallen och xml-datafilen.
+* [Hämta exempelresurserna](assets/mult-records-template-and-xml-file.zip).Den här zip-filen innehåller mallen och XML-datafilen.
+* [Importera ]
 * [Peka din webbläsare på Felix-webbkonsolen](http://localhost:4502/system/console/bundles)
 * [Distribuera DevelopingWithServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+* Lägg till följande post i användarmappningstjänsten för Apache Sling Service med configMgr.
+
+```java
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper-service](assets/user-mapper-service-fd-service.png)
+
 * [Distribuera anpassat AEMFormsDocumentServices-paket](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Anpassat paket som genererar PDF-filerna med OutputService API
 * [Peka webbläsaren på pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Importera och installera paketet](assets/generate-multiple-pdf-from-xml.zip). Det här paketet innehåller HTML-sidor som gör att du kan släppa mallen och datafilerna.
