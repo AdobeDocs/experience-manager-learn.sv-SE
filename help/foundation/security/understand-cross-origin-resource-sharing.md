@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -187,7 +187,7 @@ I allmänhet kan samma aspekter för cachelagring av innehåll i Dispatcher anv�
 
 ### Tillåt CORS-begäranderubriker
 
-Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders), måste de tillåtas i Dispatcher-konfigurationens `/clientheaders`.
+Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher `/clientheaders`-konfigurationen.
 
 ```
 /clientheaders {
