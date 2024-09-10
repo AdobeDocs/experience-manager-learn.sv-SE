@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
+source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1295'
 ht-degree: 4%
 
 ---
@@ -433,3 +433,4 @@ ht-degree: 4%
          + [Exploring Universal Editor](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
          + [Importera platser](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
          + [Använda Admin API](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
+         + [Optimering av bakgrundsmusik](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization.md)
