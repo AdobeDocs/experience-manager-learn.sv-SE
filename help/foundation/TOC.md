@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
+source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '244'
 ht-degree: 11%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 11%
    + [Förstå bästa praxis för Java API](./development/understand-java-api-best-practices.md)
    + [Förstå export av försäljningsmodell](./development/understand-sling-model-exporter.md)
    + [Lär dig Oak indexering på bästa sätt](./development/understand-indexing-best-practices.md)
+   + [Installera artefakter från tredje part](./development/install-third-party-artifacts.md)
 + Projekt {#projects}
    + [AEM projekt](./projects/develop-aem-projects.md)
    + [Använd projektmallar](./projects/use-project-masters.md)
