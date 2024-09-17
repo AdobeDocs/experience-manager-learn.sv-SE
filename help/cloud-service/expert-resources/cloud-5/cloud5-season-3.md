@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
+source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -208,13 +208,13 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             </p>
         </td>   
         <td>
-            <a href="./season-3/cloud5-lighthouse-score-optimization.md">
-                <img alt="Optimering av bakgrundsmusik" 
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
+                <img alt="Optimering av bakgrundsmusik - del 1" 
                      src="https://video.tv.adobe.com/v/3433378?format=jpeg"/>
             </a>
             <div>
-                <a href="./season-3/cloud5-lighthouse-score-optimization.md">
-                <strong> Optimering av ljusstyrkespår </strong> </a>        
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
+                <strong> Optimering av ljusstyrkespår - del 1 </strong> </a>
                 <br/><em>med James Talbot och Varun Mitra, Cloud Architect </em>
             </div>
             <p>
@@ -222,5 +222,22 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
                  Lär dig mer om vad en fyr säger och tekniker för att få bästa möjliga fyr-poäng.
             </p>
         </td>            
-    </tr>    
+    </tr> 
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
+                <img alt="Optimering av bakgrundsmusik - del 2"
+                     src="https://video.tv.adobe.com/v/3434042?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
+                <strong> Optimering av ljusstyrkespår - del 2 </strong> </a>
+                <br/><em>med James Talbot och Varun Mitra, Cloud Architect </em>
+            </div>
+            <p>
+                <br/>                
+                 Lär dig mer om tekniker som förbättrar den totala blockeringstiden.
+            </p>
+        </td>            
+    </tr>        
 </table>
