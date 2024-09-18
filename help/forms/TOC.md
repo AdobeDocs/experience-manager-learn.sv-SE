@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2101'
 ht-degree: 1%
 
 ---
@@ -222,13 +222,19 @@ ht-degree: 1%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Startar AEM från mobilformulärsinlämningen {#offline-mobile-form-submission}
-   + [Introduktion](offline-mobile-form-submission/introduction.md)
-   + [Egen profil](offline-mobile-form-submission/custom-profile.md)
-   + [Hantera inlämning av formulär](offline-mobile-form-submission/handle-form-submission.md)
-   + [Lagra skickade data](offline-mobile-form-submission/author-servlet.md)
-   + [Arbetsflöde för granskning PDF](offline-mobile-form-submission/review-workflow.md)
-   + [Driftsätt i ditt system](offline-mobile-form-submission/deploy-assets.md)
++ Startar AEM arbetsflöde vid inskickning av PDF-formulär {#offline-mobile-form-submission}
+   + [Del - 1](offline-mobile-form-submission/introduction.md)
+   + [Del - 2](offline-mobile-form-submission/custom-profile.md)
+   + [Del - 3](offline-mobile-form-submission/handle-form-submission.md)
+   + [Del - 4](offline-mobile-form-submission/author-servlet.md)
+   + [Del - 5](offline-mobile-form-submission/review-workflow.md)
+   + [Del - 6](offline-mobile-form-submission/deploy-assets.md)
++ Utlös AEM arbetsflöde vid överföring av mobilformulär {#trigger-aem-workflow-on-mobile-form-submission}
+   + [Del - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [Del - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [Del - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [Del - 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [Del - 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + Frågar efter formuläröverföringar {#query-form-submissions}
    + [Introduktion](query-form-submissions/introduction.md)
    + [Skapa sökbara fält](query-form-submissions/part1.md)

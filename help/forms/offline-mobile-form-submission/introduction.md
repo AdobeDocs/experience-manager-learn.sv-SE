@@ -1,5 +1,5 @@
 ---
-title: Starta AEM arbetsflöde vid introduktion av formulärinskickning från HTML5
+title: AEM arbetsflöde vid inskickning av PDF-formulär
 description: Fortsätt fylla i mobilformulär i offlineläge och skicka mobilformulär för att aktivera AEM arbetsflöde
 feature: Mobile Forms
 doc-type: article
@@ -12,14 +12,14 @@ last-substantial-update: 2021-04-07T00:00:00Z
 jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# Hämta delvis ifyllda mobilformulär och skicka till AEM arbetsflöde
+# Ladda ned delvis ifyllda mobilformulär och skicka för att aktivera ett AEM arbetsflöde
 
 Ett vanligt användningsexempel är möjligheten att återge XDP som HTML för datainhämtningsaktiviteter. Detta fungerar bra när formulären är enkla och kan fyllas i och skickas online. Om formuläret är komplicerat och användarna kanske inte kan fylla i formuläret online, måste vi ge formuläranvändarna möjlighet att ladda ned interaktiv version av formuläret som ska fyllas i med Acrobat/Reader offline. När formuläret har fyllts i kan användaren vara online för att skicka formuläret.
 För att uppnå detta måste vi utföra följande steg:
