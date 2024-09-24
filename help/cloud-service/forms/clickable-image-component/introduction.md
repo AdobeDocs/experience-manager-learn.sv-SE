@@ -1,6 +1,6 @@
 ---
-title: Skapa klickbar bildkomponent
-description: Skapa klickbar bildkomponent i AEM Forms Cloud Service
+title: Skapa en klickbar bildkomponent
+description: Skapa klickbara bildkomponenter i AEM Forms Cloud Service.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,14 +10,14 @@ topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: c451472f-d282-4662-9852-8a3e73c5c853
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 1fa202910e6c9d21532c6027647c5f3909931e0e
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-# Introduktion
+# Introduktion till klickbara bilder
 
 Med klickbara bilder i Forms kan du skapa en mer engagerande, intuitiv och visuellt tilltalande användarupplevelse. I den här artikeln använde vi SVG för klickbara bilder eftersom det har flera fördelar, särskilt när det gäller flexibilitet, prestanda och användarupplevelse.
 SVG kan skapas med Adobe Illustrator eller något av de kostnadsfria onlineverktygen. Jag har använt [USA Map från](https://simplemaps.com/resources/svg-us)simplemaps för att demonstrera användningsfallet.
