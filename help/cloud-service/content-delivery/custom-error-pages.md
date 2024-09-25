@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-09-24T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: d11b07441d8c46ce9a352e4c623ddc1781b9b9be
+source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Lär dig hur du implementerar anpassade felsidor för din värdbaserade AEM as a
 I den här självstudiekursen lär du dig:
 
 - Standardfelsidor
-- Felsidor från
+- Varifrån felsidor hanteras
    - AEM - författare, publicera, förhandsgranska
    - CDN som hanteras av Adobe
 - Alternativ för att anpassa felsidor
@@ -50,8 +50,14 @@ Standardfelsidan _hanteras_ från _AEM tjänsttyp_ (författare, publicera, för
 
 | Felsida från | Information |
 |---------------------|:-----------------------:|
-| AEM - författare, publicera, förhandsgranska | När sidbegäran hanteras av den AEM tjänsttypen visas felsidan från den AEM tjänsttypen. |
-| CDN som hanteras av Adobe | När det Adobe-hanterade CDN _inte kan nå AEM tjänsttyp_ (ursprunglig server) visas felsidan från det CDN som hanteras av Adobe. **Det är en osannolik händelse men värt att nämna.** |
+| AEM - författare, publicera, förhandsgranska | När sidbegäran hanteras av AEM tjänsttyp och något av ovanstående felscenarier inträffar, visas felsidan från den AEM tjänsttypen. |
+| CDN som hanteras av Adobe | När det Adobe-hanterade CDN _inte kan nå AEM tjänsttyp_ (ursprunglig server) visas felsidan från det CDN som hanteras av Adobe. **Det är en osannolik händelse men det är värt att planera för.** |
+
+
+Standardfelsidorna som hanteras från AEM och Adobe-hanterad CDN är till exempel följande:
+
+![Standardsidor AEM felsidor](./assets/aem-default-error-pages.png)
+
 
 Du kan dock _anpassa både AEM och Adobe-hanterade_ CDN-felsidor så att de matchar ditt varumärke och ger en bättre användarupplevelse.
 
@@ -89,7 +95,11 @@ I den här självstudiekursen får du lära dig hur du anpassar felsidor med dir
 
 - Kontrollera att WKND-webbplatssidorna återges korrekt.
 
-## Direktivet ErrorDocument Apache för att anpassa felsidor{#errordocument-directive}
+## Direktivet ErrorDocument Apache för att anpassa AEM hanterade felsidor{#errordocument}
+
+Använd direktivet `ErrorDocument` Apache om du vill anpassa AEM hanterade felsidor.
+
+I AEM as a Cloud Service gäller direktivet `ErrorDocument` Apache endast för tjänsttyperna för publicering och förhandsgranskning. Det gäller inte för tjänstetypen som författare eftersom Apache + Dispatcher inte ingår i distributionsarkitekturen.
 
 Vi ska granska hur [AEM WKND](https://github.com/adobe/aem-guides-wknd) -projektet använder Apache-direktivet `ErrorDocument` för att visa anpassade felsidor.
 
@@ -123,28 +133,61 @@ Vi ska granska hur [AEM WKND](https://github.com/adobe/aem-guides-wknd) -projekt
 
 - Granska WKND-platsens anpassade felsidor genom att ange ett felaktigt sidnamn eller en felaktig sökväg i miljön, till exempel [https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html).
 
-## ACS AEM Commons-Error Page Handler för att anpassa felsidor{#acs-aem-commons-error-page-handler}
+## ACS AEM Commons-Error Page Handler för att anpassa AEM hanterade felsidor{#acs-aem-commons}
 
-Om du vill anpassa felsidor med hjälp av ACS AEM Commons felsidhanterare går du igenom avsnittet [Använda](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use).
+Du kan använda alternativet [ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html) om du vill anpassa AEM hanterade felsidor för alla _AEM tjänsttyper_.
 
-## CDN-felsidor för att anpassa felsidor{#cdn-error-pages}
+. Detaljerade stegvisa instruktioner finns i avsnittet [Använda](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use).
+
+## CDN-felsidor för att anpassa CDN-hanterade felsidor{#cdn-error-pages}
+
+Om du vill anpassa felsidor som hanteras av det Adobe-hanterade CDN-nätverket använder du alternativet CDN-felsidor.
 
 Låt oss implementera CDN-felsidor för att anpassa felsidor när den Adobe-hanterade CDN inte kan nå AEM (origin server).
 
 >[!IMPORTANT]
 >
-> Observera att det CDN som hanteras av Adobe inte kan nå den AEM tjänstetypen (origin server) är en osannolik händelse men bör planera för.
+> Det _Adobe-hanterade CDN kan inte nå AEM tjänsttyp_ (origin-server) är en **osannolik händelse** men bör planeras för.
+
+Steg på hög nivå för att implementera CDN-felsidor är:
+
+- Utveckla ett anpassat felsidinnehåll som ett enkelsidigt program (SPA).
+- Lägg de statiska filer som krävs för CDN-felsidan på en allmänt tillgänglig plats.
+- Konfigurera CDN-regeln (errorPages) och referera till de statiska filerna ovan.
+- Distribuera den konfigurerade CDN-regeln till AEM as a Cloud Service-miljön med Cloud Manager pipeline.
+- Testa CDN-felsidorna.
 
 
 ### Översikt över CDN-felsidor
 
-CDN-felsidan implementeras som ett Single Page-program (SPA) av det Adobe-hanterade CDN.
+CDN-felsidan implementeras som ett Single Page-program (SPA) av det Adobe-hanterade CDN. Det SPA HTML-dokumentet som levereras av det Adobe-hanterade CDN innehåller det minsta HTML-fragmentet. Innehållet på den anpassade felsidan genereras dynamiskt med en JavaScript-fil. JavaScript-filen måste utvecklas och lagras av kunden på en allmänt tillgänglig plats.
 
-Det WKND-specifika varumärkesinnehållet måste genereras dynamiskt med JavaScript-filen. JavaScript-filen måste finnas på en offentlig plats. Följande statiska filer måste därför utvecklas och lagras på en allmänt tillgänglig plats:
+Det HTML-fragment som levereras av det Adobe-hanterade CDN har följande struktur:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    ...
+
+    <title>{title}</title>
+    <link rel="icon" href="{icoUrl}">
+    <link rel="stylesheet" href="{cssUrl}">
+  </head>
+  <body>
+    <script src="{jsUrl}"></script>
+  </body>
+</html>
+```
+
+HTML-fragmentet innehåller följande platshållare:
 
 1. **jsUrl**: Den absoluta URL:en för JavaScript-filen som återger felsidans innehåll genom att skapa HTML-element dynamiskt.
 1. **cssUrl**: Den absoluta URL:en för CSS-filen som ska formatera felsidans innehåll.
 1. **icoUrl**: Den absoluta URL:en för favoritikonen.
+
+
 
 ### Utveckla en anpassad felsida
 
@@ -339,9 +382,11 @@ Följ stegen nedan för att testa CDN-felsidorna:
 
 ## Sammanfattning
 
-I den här självstudiekursen lärde du dig att implementera anpassade felsidor för din värdbaserade AEM as a Cloud Service-webbplats.
+I den här självstudiekursen lärde du dig om standardfelsidor, varifrån felsidor hanteras och alternativ för att anpassa felsidor. Du lärde dig att implementera anpassade felsidor med hjälp av direktivet `ErrorDocument` Apache, alternativen `ACS AEM Commons Error Page Handler` och `CDN Error Pages`.
 
-Du lärde dig också de detaljerade stegen för alternativet för CDN-felsidor när du vill anpassa felsidor när den Adobe-hanterade CDN inte kan nå den AEM tjänsttypen (ursprunglig server).
+## Ytterligare resurser
 
+- [Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
+- [Cloud Manager - Konfigurera pipelines](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
 
