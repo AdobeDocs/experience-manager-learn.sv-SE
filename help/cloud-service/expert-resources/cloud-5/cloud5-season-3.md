@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
+source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -237,6 +237,21 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
             <p>
                 <br/>                
                  Lär dig mer om tekniker som förbättrar den totala blockeringstiden.
+            </p>
+        </td>            
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+                <img alt="Optimering av bakgrundsmusik - del 3"
+                     src="https://video.tv.adobe.com/v/3435001?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+                <strong> Optimering av bakgrundsmusik i Lightroom - del 3 </strong> </a>
+                <br/><em>med James Talbot och Varun Mitra, Cloud Architect </em>
+            </div>
+            <p>
+                <br/>                
+                 Lär dig mer om tekniker för att förbättra LCP (Störst Content Paint).
             </p>
         </td>            
     </tr>        
