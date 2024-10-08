@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
 duration: 112
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ffd90bec7ef63cac96590e59b1b5a92d043cbc03
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -105,47 +105,6 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
       <p>
         <br/>
          Del ett (av två) av våra tips och trick för att migrera till molnet. Vårt primära fokus i del ett är den bästa metoden och det förarbete som gör att du kan migrera.
-      </p>
-   </td> 
-  </tr>
-<tr>
-   <td>
-        <a href="./cloud5-aem-content-migration-part-2.md">
-            <img alt="Migrering (del 2)" src="./imgs/007-thumb.png"/>
-        </a>
-      <div>
-        <a href="./cloud5-aem-content-migration-part-2.md"><strong>Migrering (del 2)</strong></a>     
-         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
-      </div>
-      <p>
-        <br/>
-         Del två (av två) av våra tips och tricks för migrering till molnet. Del 2 handlar främst om att använda de verktyg som är tillgängliga för migrering.
-      </p>
-     </td>   
-     <td>
-        <a href="./cloud5-aem-dispatcher-validator.md">
-            <img alt="Dispatcher Validator" src="./imgs/008-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-dispatcher-validator.md"><strong>Dispatcher-validerare</strong></a>
-         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
-      </div>
-      <p>
-        <br/>
-         Som en del av de tidigare flyttningsdiskussionerna tar vi en titt på dispatchervalideraren och några av de uppgifter den kan utföra.
-      </p>
-   </td>
-     <td>
-        <a href="./cloud5-aem-search-and-indexing.md">
-            <img alt="Indexerings- och söktips" src="./imgs/009-thumb.png"/>
-        </a>
-      <div>
-         <a href="./cloud5-aem-search-and-indexing.md"><strong>Tips för indexering och sökning</strong></a>
-         <br/><em> med Darin Kuntze &amp; James Talbot, Senior Cloud Architects </em>
-      </div>
-      <p>
-        <br/>
-         För något så komplext som indexering och sökning visar teamet några enkla vinster för att optimera utvecklingstiden och lösa saker innan de blir problem.
       </p>
    </td> 
   </tr>
