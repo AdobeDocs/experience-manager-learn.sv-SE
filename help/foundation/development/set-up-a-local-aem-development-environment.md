@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2394'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen fö
 
 När vi syftar på en lokal AEM talar vi om en kopia av Adobe Experience Manager som körs på en utvecklares personliga maskin. Utvecklingen av ***Alla*** AEM börja med att skriva och köra kod mot en lokal AEM.
 
-Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Författare*** och ***Publish***. ***Författaren*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en) är den miljö som digitala marknadsförare använder för att skapa och hantera innehåll. När du oftast utvecklar kod distribuerar du kod till en Author-instans. På så sätt kan du skapa sidor och lägga till och konfigurera komponenter. AEM Sites är ett CMS för WYSIWYG-redigering och därför kan merparten av CSS och JavaScript testas mot en redigeringsinstans.
+Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Författare*** och ***Publish***. ***Författaren*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en) är den miljö som digitala marknadsförare använder för att skapa och hantera innehåll. När du oftast utvecklar kod distribuerar du kod till en Author-instans. På så sätt kan du skapa sidor och lägga till och konfigurera komponenter. AEM Sites är en CMS för WYSIWYG-redigering och därför kan de flesta CSS- och JavaScript-filer testas mot en redigeringsförekomst.
 
 Det är också *kritisk* testkod mot en lokal ***Publish***-instans. Instansen ***Publish*** är den AEM miljö som besökare på webbplatsen interagerar med. Även om ***Publish***-instansen är samma teknikstack som ***Författaren*** -instansen finns det vissa viktiga skillnader när det gäller konfigurationer och behörigheter. Koden måste testas mot en lokal ***Publish***-instans innan den befordras till miljöer på högre nivå.
 
@@ -181,6 +181,7 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - FTP-liknande verktyg för JCR-innehåll
 * **[aemfed](https://aemfed.io/)** - Snabba upp ditt AEM arbetsflöde
 * **[AEM Synkronisera](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Tillägg som stöds av communityn&#42; för Visual Studio-kod
+* **[WKND-projekt](https://github.com/adobe/aem-guides-wknd)** - Exempel AEM projekt som visas i den här videon.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
