@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Det är upp till dig att dirigera SPA- och AEM-trafik till den delade domänen: 
 
 Nedan visas distributionskonfigurationer som krävs för SPA produktionsdistributioner, när de finns på samma domän som AEM.
 
-| SPA ansluter till | AEM | AEM Publish | AEM |
+| SPA ansluter till → | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |
@@ -70,7 +70,7 @@ Eftersom AEM och SPA används från olika domäner tillämpar webbläsare säker
 
 Nedan visas distributionskonfigurationer som krävs för SPA av produktionsdistributioner, när dessa lagras på en annan domän än AEM.
 
-| SPA ansluter till | AEM | AEM Publish | AEM |
+| SPA ansluter till → | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [Resursdelning mellan ursprung (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
