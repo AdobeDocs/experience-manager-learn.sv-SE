@@ -10,7 +10,7 @@ jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Mobila distributioner kräver minimal konfiguration eftersom HTTP-anslutningar t
 
 Följande distributionskonfiguration måste finnas på plats för mobilappsdistributioner.
 
-| Mobilappen ansluter till | AEM | AEM Publish | AEM |
+| Mobilappen är ansluten till → | AEM | AEM Publish | AEM |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |
