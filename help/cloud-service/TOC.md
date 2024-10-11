@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1307'
 ht-degree: 4%
 
 ---
@@ -269,6 +269,11 @@ ht-degree: 4%
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
       + [Skapa regler](./forms/form-data-analytics/rules.md)
       + [Testa lösningen](./forms/form-data-analytics/test.md)
+   + Skapar knappvariationer {#style-system}
+      + [Introduktion](./forms/style-system/introduction.md)
+      + [Definiera princip](./forms/style-system/style-policy.md)
+      + [Definiera variationer](./forms/style-system/create-variations.md)
+      + [Testvariationer](./forms/style-system/build.md)
    + Använda lodräta tabbar{#using-vertical-tabs}
       + [1. Inledning](./forms/using-vertical-tabs/introduction.md)
       + [2. Skapa formulär](./forms/using-vertical-tabs/create-af.md)
