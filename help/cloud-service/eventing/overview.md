@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
+source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,12 @@ AEM Eventing har många fördelar för systemarkitektur och driftseffektivitet. 
 AEM Eventing har vissa begränsningar att tänka på:
 
 - **Tillgängligheten är begränsad till AEM as a Cloud Service**: För närvarande är AEM endast tillgänglig för AEM as a Cloud Service.
-- **Begränsat händelsestöd**: Nu stöds bara AEM Content Fragment-händelser. Omfattningen förväntas dock expandera med ytterligare händelser i framtiden.
+
+- **Tillgängliga händelsetyper**: Granska den aktuella listan över tillgängliga händelsetyper [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types).
 
 ## Aktivera
 
-AEM Eventing är aktiverat per AEM as a Cloud Service-miljö och är endast tillgängligt för miljöer i pre-release-läge. Kontakta <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing-teamet</a> om du vill aktivera din AEM med AEM Eventing.
-
-Om den redan är aktiverad kan du läsa [Aktivera AEM i din AEM Cloud Service-miljö](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) för nästa steg.
+Gå till [Aktivera AEM i din AEM Cloud Service-miljö](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) för nästa steg.
 
 ## Så här prenumererar du
 
