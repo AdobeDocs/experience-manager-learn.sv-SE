@@ -10,16 +10,17 @@ level: Experienced
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: c6ffa8f7a398b01fc12e1e2efe4382c941900496
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 # AEM arbetsflöde vid inskickning av mobilformulär
 
-Ett vanligt användningsexempel är att kunna återge XDP som HTML för datainhämtningsaktiviteter.När det här formuläret skickas kan det finnas ett behov av att starta ett AEM arbetsflöde. I det AEM arbetsflödet kan vi sammanfoga data med xdp-mallen och presentera det genererade PDF för granskning och godkännande. Formuläret återges i en publiceringsinstans och arbetsflödet aktiveras i en AEM.
+Ett vanligt användningsexempel är att återge XDP som HTML för datainhämtningsaktiviteter. När det här formuläret skickas in kan du behöva starta ett AEM arbetsflöde. I det AEM arbetsflödet kan du sammanfoga data med XDP-mallen och presentera det genererade PDF för granskning och godkännande. Formuläret återges i en publiceringsinstans och arbetsflödet aktiveras för en AEM.
+
 Följande steg ingår i användningsexemplet
 
 * Användaren fyller i och skickar ett HTML5-formulär (HTML5-renderingen av XDP).
