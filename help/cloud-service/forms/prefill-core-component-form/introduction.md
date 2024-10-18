@@ -9,10 +9,11 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14675
 duration: 15
+badgeVersions: label="AEM Forms Cloud Service" before-title="false"
 exl-id: cf2aa174-5e88-4656-8b66-a46fa8c20967
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '85'
 ht-degree: 1%
 
 ---

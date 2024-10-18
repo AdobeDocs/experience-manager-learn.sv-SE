@@ -9,11 +9,12 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-9542
+badgeVersions: label="AEM Forms Cloud Service" before-title="false"
 exl-id: 06621fc7-afde-4073-8f15-fe9eeab1d084
 duration: 451
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---

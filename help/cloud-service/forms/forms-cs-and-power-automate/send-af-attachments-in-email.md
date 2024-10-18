@@ -11,9 +11,10 @@ topic: Development
 jira: KT-11077
 exl-id: 1be90d9b-3669-44a0-84fb-cbdec44074d8
 duration: 391
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+badgeVersions: label="AEM Forms Cloud Service" before-title="false"
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---

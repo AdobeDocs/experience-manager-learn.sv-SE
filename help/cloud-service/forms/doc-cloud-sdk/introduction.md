@@ -9,11 +9,12 @@ version: Cloud Service
 topic: Development
 thumbnail: 333241.jpg
 jira: KT-7857
+badgeVersions: label="AEM Forms Cloud Service" before-title="false"
 exl-id: dbff8764-67d5-43fa-bd41-918c638a9afa
 duration: 89
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '43'
 ht-degree: 2%
 
 ---
