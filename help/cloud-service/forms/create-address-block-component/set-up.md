@@ -1,6 +1,6 @@
 ---
 title: Skapar adresskomponent
-description: Skapa ny adresskomponent i AEM Forms Cloud Service
+description: Skapa en ny adresskomponent i AEM Forms as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,9 +9,9 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '73'
 ht-degree: 0%
 
 ---

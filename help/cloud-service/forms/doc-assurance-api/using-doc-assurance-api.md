@@ -8,9 +8,9 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-badgeVersions: label="AEM Forms Cloud Service" before-title="false"
+badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 40617082-4d23-4c91-a016-2d947187052b
-source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -28,9 +28,9 @@ I den här artikeln finns Java-kodfragment som hjälper dig att komma igång med
 
 ## Förutsättningar
 
-* Upplev AEM Forms Cloud Service
+* Upplev AEM Forms as a Cloud Service
 * Upplevelsen av [Apache HTTP-komponenter](https://hc.apache.org/httpcomponents-client-4.5.x/)
-* Tillgång till AEM Forms Cloud Service
+* Tillgång till AEM Forms as a Cloud Service
 
 ## Inspect-dokument
 

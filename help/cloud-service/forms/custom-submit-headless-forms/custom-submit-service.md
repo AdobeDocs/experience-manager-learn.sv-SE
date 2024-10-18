@@ -11,9 +11,9 @@ topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Så här skriver du en anpassad skicka-tjänst:
 
 ## Skapa AEM
 
-Om du redan har ett AEM Forms Cloud Service-projekt kan du [hoppa till att skriva en anpassad skicka-tjänst](#Write-the-custom-submit-service)
+Om du redan har ett AEM Forms as a Cloud Service-projekt kan du [gå till att skriva en anpassad skicka-tjänst](#Write-the-custom-submit-service)
 
 * Skapa en mapp som kallas molnhanterare på din c-enhet.
 * Navigera till den nya mappen
