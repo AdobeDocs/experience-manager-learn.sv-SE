@@ -7,14 +7,14 @@ feature: Operations, Dispatcher
 role: Developer, Architect
 level: Intermediate
 jira: KT-11466
-last-substantial-update: 2022-10-14T00:00:00Z
+last-substantial-update: 2024-10-22T00:00:00Z
 index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 3cc9b4fa0a30d36638a8c28a73663ffa455ba4a3
+source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ AEM URL-omdirigeringslösningar:
 | [På Edge via AEM CDN](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge/CDN (inbyggt) |
 | [Gå till Edge via ditt eget CDN (BYOCDN)](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN (BYOCDN) |
 | [Apache `mod_rewrite` regler som Dispatcher config](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
-| [ACS-kommandon - Omdirigeringshanteraren](#redirect-map-manager) | ✘ | ✔ | ✘ | Dispatcher |
+| [ACS-kommandon - Omdirigeringshanteraren](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
 | [ACS-kommandon - Omdirigeringshanteraren](#redirect-manager) | ✘ | ✔ | ✔ | AEM |
 | [Sidegenskapen `Redirect`](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
@@ -76,7 +76,7 @@ Det finns två tillgängliga funktioner i [ACS AEM Commons](https://adobe-consul
 
 #### Omdirigeringshanteraren
 
-[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM 6.x-administratörer att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan direkt åtkomst till Apache-webbservern eller kräver att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM distribution. Omdirigeringshanteraren är **INTE AEM as a Cloud Service-kompatibel**.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan direkt åtkomst till Apache-webbservern eller kräver att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM distribution. Omdirigeringshanteraren är kompatibel med både **AEM as a Cloud Service** och **AEM 6.x**.
 
 #### Omdirigeringshanteraren
 
