@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,11 @@ ht-degree: 0%
 # Testa ändringarna
 
 Skapa ett anpassat formulär baserat på mallen **&quot;Tom med kärnkomponenter&quot;**. Dra och släpp 3 knappar på formuläret och etikettera dem som&quot;Företag&quot;,&quot;Marknadsföring&quot; och&quot;Standard&quot;.
-Tilldela passande stilvarianter till knapparna för företag och marknadsföring genom att välja målarpenseln som visas
+Tilldela lämpliga stilvarianter till knapparna för företag och marknadsföring genom att välja målarpenseln enligt nedan.
 
 ![format](assets/marketing-variation.png)
+
+Standardformatet används för den tredje knappen.
 
 ## Bygg temaprojektet
 
