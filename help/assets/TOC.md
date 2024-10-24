@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
+source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '425'
 ht-degree: 6%
 
 ---
@@ -76,10 +76,12 @@ ht-degree: 6%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Content Hub{#content-hub}
-   + [Konfigurera Content Hub](./content-hub/settingup-content-hub.md)
-   + [Överför Assets och godkännandeprocess](./content-hub/uploading-assets-and-approval-process.md)
-   + [Åtkomst och hämtning av Assets](./content-hub/accessing-and-downloading-assets.md)
-   + [Skapa bildvarianter med Adobe Express](./content-hub/creating-image-variants-using-adobe-express.md)
+   + [Konfigurera](./content-hub/set-up.md)
+   + [Lägg till Assets](./content-hub/add-assets.md)
+   + [Ladda ned Assets](./content-hub/download-assets.md)
+   + [Bildvarianter som använder Adobe Express](./content-hub/image-variants.md)
+   + [Samlingar](./content-hub/collections.md)
+   + [Delning](./content-hub/share.md)
 
 + Delning och distribution{#sharing}
    + [Ladda ned Assets](./sharing/download.md)
