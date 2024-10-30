@@ -10,9 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Standardformatet används för den tredje knappen.
 
 ## Bygg temaprojektet
 
-Nästa steg är att skapa temaprojektet. Navigera till rotmappen för temaprojektet och kör kommandot _**npm, kör build**_ enligt skärmbilden nedan
+Nästa steg är att skapa temaprojektet. Navigera till rotmappen för temaprojektet och kör kommandot _**npm, kör build**_ enligt skärmbilden nedan.
 
 ![build-theme](assets/build-theme.png)
 
@@ -46,4 +46,8 @@ När temaprojektet har byggts är du redo att testa ändringarna.
 * Knapparna bör uppdateras med rätt format enligt nedan.
 
 ![final-buttons](assets/final-state-buttons.png)
+
+## Skjut ändringarna
+
+Om du är nöjd med ändringarna kan du överföra ändringarna till din molninstans med [front-end-pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)
 
