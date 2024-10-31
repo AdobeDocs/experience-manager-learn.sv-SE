@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Catalog
 duration: 45
 last-substantial-update: 2024-10-31T00:00:00Z
-source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
+source-git-commit: 6aece3e46b486125e7270ddc094d8f2816db1257
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -260,7 +260,7 @@ Läs Content Hub produktdokumentation och lär dig mer om AEM Assets Content Hub
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="CONTENT HUB FAQ">Vanliga frågor om Content Hub</a>
                     </p>
-                    <p class="is-size-6">Få svar på några av de vanligaste frågorna och svaren om Content Hub.</p>
+                    <p class="is-size-6">Få svar på några av de vanligaste frågorna och svaren för Content Hub.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs dokumentationen </span>
