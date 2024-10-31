@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
+source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -76,6 +76,7 @@ ht-degree: 6%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Content Hub{#content-hub}
+   + [Ökning](./content-hub/overview.md)
    + [Konfigurera](./content-hub/set-up.md)
    + [Lägg till Assets](./content-hub/add-assets.md)
    + [Ladda ned Assets](./content-hub/download-assets.md)
