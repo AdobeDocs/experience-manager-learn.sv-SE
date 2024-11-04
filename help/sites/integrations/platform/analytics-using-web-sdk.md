@@ -14,7 +14,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 # Integrera AEM Sites och Adobe Analytics med Platform Web SDK
 
-Lär dig det **moderna sättet** att integrera Adobe Experience Manager (AEM) och Adobe Analytics med Platform Web SDK. Den här omfattande självstudiekursen vägleder dig genom processen att sömlöst samla in [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-sidvy och CTA-klickdata. Få värdefulla insikter genom att visualisera insamlade data i Adobe Analysis Workspace, där ni kan utforska olika mätvärden och dimensioner. Utforska även plattformsdatauppsättningen för att verifiera och analysera data. Följ oss på den här resan för att utnyttja kraften i AEM och Adobe Analytics för datadrivet beslutsfattande.
+Lär dig det **moderna sättet** att integrera Adobe Experience Manager (AEM) och Adobe Analytics med Platform Web SDK. Den här omfattande självstudiekursen vägleder dig genom processen att sömlöst samla in [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-sidvyn och CTA klickdata. Få värdefulla insikter genom att visualisera insamlade data i Adobe Analysis Workspace, där ni kan utforska olika mätvärden och dimensioner. Utforska även plattformsdatauppsättningen för att verifiera och analysera data. Följ oss på den här resan för att utnyttja kraften i AEM och Adobe Analytics för datadrivet beslutsfattande.
 
 ## Ökning
 
 Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in data om två viktiga mätvärden: sidvisningar och CTA-klick (homepage call-to-action).
 
-Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest uppmärksamhet från användarna. Dessutom ger CTA-klickningar på hemsidan värdefulla insikter om hur effektivt teamets call-to-action-element är. Dessa data kan visa vilka CTA:er som är intressanta för användarna, vilka som behöver justeras, och de kan upptäcka nya möjligheter att öka användarengagemanget och driva konverteringar.
+Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest uppmärksamhet från användarna. Dessutom ger spårning av CTA klickningar på hemsidan värdefull information om hur effektivt teamets anropselement är. Dessa data kan visa vilka CTA:er som är intressanta för användarna, vilka som behöver justeras, och de kan upptäcka nya möjligheter att öka användarengagemanget och driva konverteringar.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -82,7 +82,7 @@ Mer information om koncept och olika element som ska inkluderas i SDR-dokumentet
 
 Det första steget är att konfigurera Adobe Analytics, särskilt att rapportera programpaket med konverteringsvariabler (eller eVar) och framgångshändelser. Konverteringsvariablerna används för att mäta orsak och effekt. Framgångshändelserna används för att spåra åtgärder.
 
-I den här självstudien används `eVar5, eVar6, and eVar7` track _WKND Page Name, WKND CTA ID och WKND CTA Name_ och `event7` för att spåra _WKND CTA Click Event_.
+I den här självstudiekursen används `eVar5, eVar6, and eVar7` för att spåra _WKND-sidnamn, WKND-CTA-id och WKND-CTA-namn_ och `event7` för att spåra _WKND CTA Click Event_.
 
 För att analysera, samla in insikter och dela dessa insikter med andra från insamlade data skapas ett projekt i Analysis Workspace.
 
@@ -92,7 +92,7 @@ Om du vill veta mer om konfiguration och koncept för Analytics rekommenderar vi
 
 + [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
 + [Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [Slutförda händelser](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
++ [Slutförda händelser](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## Uppdatera dataström - lägg till analystjänst
@@ -119,7 +119,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 + Mappar sidnamnet till `eVar5`
 + Startar analysanropet **pageview** ( eller skicka signal)
 + Samla in CTA-data med Adobe Client Data Layer
-+ Mappar CTA-ID:t och namnet till `eVar6` respektive `eVar7`. CTA-klickningsantalet är också `event7`
++ Mappar CTA-ID och namn till `eVar6` respektive `eVar7`. Dessutom räknas CTA-klickningar till `event7`
 + Startar **link click**-analysanropet ( eller skicka beacon)
 
 
@@ -241,15 +241,15 @@ För att generera en meningsfull mängd trafik för testningsändamål utvecklas
 
 ## Datauppsättningsverifiering - WKND-sidvy, CTA-data
 
-Datauppsättningen är en lagrings- och hanteringskonstruktion för en samling data, som en databastabell som följer ett schema. Den datauppsättning som skapades i den [föregående självstudiekursen](./web-sdk.md) återanvänds för att verifiera att sidvyn och CTA-klickdata är inkapslade i datauppsättningen Experience Platform. I datauppsättningens användargränssnitt visas olika detaljer, t.ex. totala poster, storlek och inkapslade batchar, tillsammans med ett visuellt tilltalande stapeldiagram.
+Datauppsättningen är en lagrings- och hanteringskonstruktion för en samling data, som en databastabell som följer ett schema. Den datauppsättning som skapades i den [föregående självstudiekursen](./web-sdk.md) återanvänds för att verifiera att sidvyn och CTA klickdata är inkapslade i datauppsättningen Experience Platform. I datauppsättningens användargränssnitt visas olika detaljer, t.ex. totala poster, storlek och inkapslade batchar, tillsammans med ett visuellt tilltalande stapeldiagram.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
-## Analyser - WKND-sidvy, CTA-datavisualisering
+## Analyser - WKND-sidvy, CTA datavisualisering
 
 Analysis Workspace är ett kraftfullt verktyg i Adobe Analytics som gör det möjligt att utforska och visualisera data på ett flexibelt och interaktivt sätt. Det har ett dra-och-släpp-gränssnitt för att skapa anpassade rapporter, utföra avancerad segmentering och tillämpa olika datavisualiseringar.
 
-Vi öppnar Analysis Workspace-projektet som skapats i steget [Setup Analytics](#setup-analytics---report-suite-analysis-workspace) igen. I avsnittet **Toppsidor** kan du granska olika mätvärden, som besök, unika besökare, poster, studsfrekvens och mycket annat. Dra och släpp WKND-specifika mått (WKND-sidnamn, WKND CTA-namn) och mått (WKND CTA Click Event) för att utvärdera WKND-sidornas och hemsidans prestanda. Dessa insikter är värdefulla för marknadsförarna för att förstå vilka CTA-avtal som är mer effektiva och fatta datadrivna beslut i linje med deras affärsmål.
+Vi öppnar Analysis Workspace-projektet som skapats i steget [Setup Analytics](#setup-analytics---report-suite-analysis-workspace) igen. I avsnittet **Toppsidor** kan du granska olika mätvärden, som besök, unika besökare, poster, studsfrekvens och mycket annat. Dra och släpp WKND-specifika mått (WKND Page Name, WKND CTA Name) och mätvärden (WKND CTA Click Event) för att utvärdera WKND-sidornas och hemsidans prestanda. Dessa insikter är värdefulla för marknadsförarna för att förstå vilka CTA-avtal som är mer effektiva och fatta datadrivna beslut i linje med deras affärsmål.
 
 Om du vill visualisera användarresor använder du Flödesvisualisering, med början från **WKND-sidnamnet** och sedan expanderar till olika sökvägar.
 
@@ -257,7 +257,7 @@ Om du vill visualisera användarresor använder du Flödesvisualisering, med bö
 
 ## Sammanfattning
 
-Snyggt jobb! Du har slutfört konfigurationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA-klickdata.
+Snyggt jobb! Du har slutfört konfigurationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA klickdata.
 
 Implementering av Adobe Analytics är avgörande för att marknadsföringsteamen ska få insikter i användarbeteenden, fatta välgrundade beslut, så att de kan optimera sitt innehåll och fatta datadrivna beslut.
 
