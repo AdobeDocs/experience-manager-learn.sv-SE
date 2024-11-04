@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="Integrering" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -40,12 +40,12 @@ Nedan följer Analytics-variablerna som för närvarande spåras:
 * `event8` - `CTA Button Click event`
 * `prop8` - `CTA Button Id`
 
-![CTA Klicka på Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
+![CTA Click Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
 ### Mål {#objective}
 
 1. Skapa en rapportsvit eller använd en befintlig.
-1. Konfigurera [konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) och [lyckade händelser (händelser)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) i rapportsviten.
+1. Konfigurera [konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) och [lyckade händelser (händelser)](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event) i rapportsviten.
 1. Skapa ett [Analysis Workspace-projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) för att analysera data med hjälp av verktyg som gör att du kan skapa, analysera och dela insikter snabbt.
 1. Dela Analysis Workspace-projektet med andra teammedlemmar.
 
@@ -69,7 +69,7 @@ eVars är bäst att använda för att mäta orsak och effekt, till exempel:
 * Vilka banners som till slut resulterade i en registrering
 * Antalet gånger som en intern sökning användes innan en order skapades
 
-Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse som lyckas. Om en besökare till exempel klickar på en CTA-knapp kan click-händelsen betraktas som en lyckad händelse.
+Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse som lyckas. Om en besökare till exempel klickar på en CTA-knapp kan klickhändelsen betraktas som en lyckad händelse.
 
 ### Konfigurera eVars
 
@@ -101,11 +101,11 @@ Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse so
 
 ### Konfigurera lyckade händelser
 
-Sedan skapar vi en händelse för att spåra CTA-knappklickningen.
+Låt oss sedan skapa en händelse för att spåra CTA Button-klickningen.
 
 1. I fönstret **Report Suite Manager** väljer du **Report Suite-ID** och klickar på **Redigera inställningar**.
 1. Klicka på **Konvertering** > **Slutförda händelser**
-1. Använd alternativet **Lägg till ny** för att skapa en anpassad success-händelse för att spåra CTA-knappens klickning och sedan **Spara** dina ändringar.
+1. Använd alternativet **Lägg till ny** för att skapa en anpassad success-händelse för att spåra CTA Button-klickningen och sedan **Spara** dina ändringar.
    * `Event` : `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
@@ -116,7 +116,7 @@ Sedan skapar vi en händelse för att spåra CTA-knappklickningen.
 
 Analysis Workspace är ett flexibelt webbläsarverktyg som gör att du snabbt kan skapa analyser och dela insikter. Med dra-och-släpp-gränssnittet kan ni utforma analyser, lägga till visualiseringar för att ge liv åt data, strukturera en datauppsättning, dela och schemalägga projekt med vem som helst i organisationen.
 
-Skapa sedan ett [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) för att bygga en kontrollpanel som analyserar CTA-knapparnas prestanda på hela webbplatsen.
+Skapa sedan ett [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) för att skapa en instrumentpanel som analyserar prestanda för CTA-knapparna på hela webbplatsen.
 
 1. Välj **Workspace** i verktygsfältet Analyser och klicka på **Skapa ett nytt projekt**.
 
@@ -148,9 +148,9 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
 
    ![Dimensionen Sida](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. Dra och släpp **CTA-klickningsmåttet** (event8) på händelsemätverket och ersätt det. Nu kan du visa en visualisering som visar sidnamnet (eVar9) och motsvarande antal CTA Click-händelser på en sida.
+1. Dra-och-släpp **CTA Click** (event8)-mätvärdet för förekomster och ersätt det. Nu kan du visa en visualisering som visar sidnamnet (eVar9) och motsvarande antal CTA Click-händelser på en sida.
 
-   ![Sidmått - CTA-klick](assets/create-analytics-workspace/evar8-cta-click.png)
+   ![Sidmått - CTA Click](assets/create-analytics-workspace/evar8-cta-click.png)
 
 1. Låt oss dela upp sidan efter dess malltyp. Välj sidmallsmått från komponenter och dra och släpp måttet för sidmall till dimensionen Sidnamn. Nu kan du visa sidnamnet som är uppdelat efter malltyp.
 
@@ -160,11 +160,11 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
    * **Efter**
      ![eVar5-mått](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. För att förstå hur användare interagerar med CTA-knappar när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till måttet för Knapp-ID (eVar8).
+1. För att förstå hur användare interagerar med CTA Buttons när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till mätvärdet för Button ID (eVar8).
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 
-1. Här nedan ser du en visuell representation av WKND-webbplatsen som är uppdelad efter sidmallen och som ytterligare är uppdelad efter användarinteraktion med WKND Site Click to Action (CTA)-knapparna.
+1. Här nedan ser du en visuell representation av WKND-webbplatsen som är uppdelad efter sidmallen och som ytterligare är uppdelad efter användarinteraktion med WKND Site Click to Action (CTA) Buttons.
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
@@ -240,17 +240,17 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 
    ![Workspace-knapp-ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. Ersätt sedan måttet **Knapp-ID** på arbetsytan som visar ID:t för en CTA-knapp (Call to Action) med det klassificeringsnamn som skapades i föregående steg.
+1. Ersätt sedan måttet **Knapp-ID** på arbetsytan som visar ID:t för en Call to Action-knapp (CTA) med klassificeringsnamnet som skapades i föregående steg.
 
-1. I komponentsökaren söker du efter **WKND CTA-knappar** och drar och släpper dimensionen **WKND CTA-knappar (Knapp-ID)** till måttet för Knapp-ID och ersätter den.
+1. I komponentsökaren söker du efter **WKND CTA Buttons** och drar och släpper dimensionen **WKND CTA Buttons (Knapp-ID)** till måttet för Knapp-ID och ersätter den.
 
    * **Före**
      ![Workspace-knapp före](assets/create-analytics-workspace/wknd-button-before.png)
    * **Efter**
      ![Workspace-knapp efter](assets/create-analytics-workspace/wknd-button-after.png)
 
-1. Du kan lägga märke till att det knapp-ID-mått som innehåller knapp-id:t för en CTA-knapp nu har ersatts med ett motsvarande namn i klassificeringsmallen.
-1. Låt oss jämföra Analytics Workspace-tabellen med WKND-startsidan och förstå CTA-knappens klickräkning och dess analys. Baserat på arbetsytans frihandstabelldata är det tydligt att 22 gånger användare har klickat på knappen **SKI NOW** och fyra gånger för WKND Home Page Camping i Western Australia **Läs mer** .
+1. Du kan lägga märke till att värdet för Knapp-ID som innehåller knapp-ID:t för en Call to Action-knapp (CTA) nu har ersatts med ett motsvarande namn som finns i Klassificeringsmallen.
+1. Låt oss jämföra Analytics Workspace-tabellen med WKND-startsidan och förstå antalet klickningar i CTA Button och dess analys. Baserat på arbetsytans frihandstabelldata är det tydligt att 22 gånger användare har klickat på knappen **SKI NOW** och fyra gånger för WKND Home Page Camping i Western Australia **Läs mer** .
 
    ![CTA-rapport](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 
