@@ -1,5 +1,5 @@
 ---
-title: Använda lodräta tabbar i AEM Forms as a Cloud Service
+title: Lägga till anpassade ikoner
 description: Lägga till anpassade ikoner på lodräta flikar
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,9 +11,10 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16418
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
+source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ Om du lägger till anpassade ikoner på flikar kan du förbättra användarupple
 
 * Förbättrad användarvänlighet: Ikoner kan snabbt förmedla syftet med varje flik, vilket gör det enklare för användarna att snabbt hitta det de letar efter. Visuella ledtrådar som ikoner hjälper användarna att navigera mer intuitivt.
 
-* Visuell hierarki och fokus: Ikoner skapar en mer distinkt separation mellan flikar, vilket förbättrar den visuella hierarkin. Detta kan hjälpa viktiga flikar att sticka ut och leda användarnas uppmärksamhet mer effektivt.
+* Visuell hierarki och fokus: Ikoner skapar en mer distinkt separation mellan flikar, vilket förbättrar den visuella hierarkin. Detta kan hjälpa viktiga flikar att sticka ut och effektivt styra användarnas uppmärksamhet.
 Genom att följa den här artikeln bör du kunna placera ikonerna så som visas nedan
 
 ![ikoner](assets/icons.png)
@@ -42,9 +43,9 @@ De ikoner som är markerade med rött är de nya ikonerna som läggs till.
 
 ## Skapa ikonkarta för att lagra ikonerna
 
-Skapa ikonmappningen till filen _variable.scss. SCSS-mappningen $icon-map är en samling nyckelvärdepar, där varje nyckel representerar ett ikonnamn (som home, family, osv.) och varje värde är sökvägen till bildfilen som är associerad med den ikonen.
+Skapa ikonmappningen i filen _variable.scss. SCSS-mappningen $icon-map är en samling nyckelvärdepar, där varje nyckel representerar ett ikonnamn (som home, family, osv.) och varje värde är sökvägen till bildfilen som är associerad med den ikonen.
 
-![variable-scss](assets/variable.scss)
+![variable-scss](assets/variable_scss.png)
 
 ```css
 $icon-map: (
@@ -81,8 +82,7 @@ Lägg till följande kod i _mixin.scss
 
 Den här blandningen är avsedd att lägga till en anpassad ikon bredvid texten på en lodrät flik. Du kan enkelt ta med en bild som en ikon på flikar, placera den bredvid texten och formatera den för att säkerställa konsekvens och justering.
 
-Uppdelning av blandningen
-Det här gör varje del av mixinen:
+Uppdelning av mixinen, här är vad varje del av mixinen gör:
 
 Parametrar:
 
