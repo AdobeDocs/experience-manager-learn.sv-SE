@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
+source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '434'
+ht-degree: 6%
 
 ---
 
@@ -18,6 +18,10 @@ ht-degree: 0%
 # Videor och självstudiekurser om AEM Assets {#assets}
 
 + [Ökning](overview.md)
+
++ Videouppspelningslistor{#video-playlists}
+   + [Administratörsvy](playlists/admin-view.md)
+   + [Assets view](playlists/assets-view.md)
 
 + Konfigurerar {#configuring}
    + [Originalmappar](configuring/baseline-folders.md)
@@ -36,15 +40,15 @@ ht-degree: 0%
    + [Grundläggande åtgärder](./authoring/basic-operations.md)
    + [Metadata](./authoring/metadata.md)
    + [Återgivningar](./authoring/renditions.md)
-   + [Relatera och inte relatera](./authoring/relate-unrelate.md)
+   + [Relatera och ta bort relation](./authoring/relate-unrelate.md)
 
 + Collaboration{#collaboration}
    + [Titta](./collaboration/watch.md)
    + [Tidslinje och inkorg](./collaboration/timeline-and-inbox.md)
-   + [Kommentarer och anteckningar](./collaboration/comments-and-annotations.md)
-   + [Checka in och Checka ut](./collaboration/check-in-and-check-out.md)
+   + [Kommentarer och kommentarer](./collaboration/comments-and-annotations.md)
+   + [Checka in och checka ut](./collaboration/check-in-and-check-out.md)
    + [Versioner](./collaboration/versions.md)
-   + [Granska uppgift](./collaboration/review-task.md)
+   + [Granskningsuppgift](./collaboration/review-task.md)
 
 + Sökning och identifiering {#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
@@ -52,17 +56,17 @@ ht-degree: 0%
    + [Integrering med Adobe Firefly](./search-and-discovery/adobe-firefly.md)
    + [Samlingar](./search-and-discovery/collections.md)
    + [Sökökning](./search-and-discovery/search-boost.md)
-   + [Sök efter liknande bilder](./search-and-discovery/find-similar-images.md)
+   + [Söka efter liknande bilder](./search-and-discovery/find-similar-images.md)
 
 + Avancerade funktioner{#advanced}
-   + [3D Assets](./advanced/3d-assets.md)
-   + [Utdata för anteckningar PDF](./advanced/customizing-annotations-pdf-output.md)
-   + [Assets Reports](./advanced/asset-reports.md)
+   + [3D-resurser](./advanced/3d-assets.md)
+   + [Anteckningar PDF output](./advanced/customizing-annotations-pdf-output.md)
+   + [Assets-rapporter](./advanced/asset-reports.md)
    + [Blockerade taggar](./advanced/blocked-tags.md)
    + [Extrahera arkiv](./advanced/extract-archive.md)
    + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
-   + [Metadatadrivna behörigheter](./advanced/metadata-driven-permissions.md)
-   + [Videoundertexter](./advanced/video-closed-captions.md)
+   + [Metadatastyrda behörigheter](./advanced/metadata-driven-permissions.md)
+   + [Undertexter för video](./advanced/video-closed-captions.md)
    + [Vattenstämplar](./advanced/watermarks.md)
 
 + Avancerad metadatahantering{#metadata}
@@ -78,29 +82,29 @@ ht-degree: 0%
 + Content Hub{#content-hub}
    + [Ökning](./content-hub/overview.md)
    + [Konfigurera](./content-hub/set-up.md)
-   + [Lägg till Assets](./content-hub/add-assets.md)
-   + [Ladda ned Assets](./content-hub/download-assets.md)
+   + [Lägga till resurser](./content-hub/add-assets.md)
+   + [Hämta resurser](./content-hub/download-assets.md)
    + [Bildvarianter som använder Adobe Express](./content-hub/image-variants.md)
    + [Samlingar](./content-hub/collections.md)
    + [Delning](./content-hub/share.md)
 
-+ Delning och distribution{#sharing}
-   + [Ladda ned Assets](./sharing/download.md)
-   + [Exportera Assets](./sharing/export.md)
-   + [Publish Assets](./sharing/publish.md)
++ Delning och distribution {#sharing}
+   + [Hämta resurser](./sharing/download.md)
+   + [Exportera resurser](./sharing/export.md)
+   + [Publish-resurser](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
       + [Konfigurera resurskälla](brand-portal/configure-asset-sourcing.md)
-      + [Aktivera återgivningshämtningar](brand-portal/enable-renditions-download.md)
+      + [Aktivera hämtning av återgivning](brand-portal/enable-renditions-download.md)
 
-   + Resursresurs{#assets-share}
+   + Resursresurs {#assets-share}
       + [Kommandon för resursdelning](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Konfigurera resursdelningskommentarer på lokala AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Kommandon för att dela resurser med teman](./sharing/asset-share-commons-feature-video-theming.md)
-      + [Resursdelningskommentarer Tillgångar](./sharing/asset-share/asset-share-commons-asset-kits.md)
+      + [Resursresurskombinationspaket](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Kreativa arbetsflöden{#creative-workflows}
++ Kreativa arbetsflöden {#creative-workflows}
    + [Integrering av Adobe Expresser](./creative-workflows/adobe-express.md)
    + [Adobe Express och AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM datorprogram](./creative-workflows/aem-desktop-app.md)
@@ -108,36 +112,36 @@ ht-degree: 0%
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
 + Adobe-resurslänk {#adobe-asset-link}
-   + [Inställningar](./adobe-asset-link/setup.md)
+   + [Konfigurera](./adobe-asset-link/setup.md)
    + [Åtkomst till Adobe-resurslänk](./adobe-asset-link/launch-adobe-asset-link.md)
    + [Panelöversikt](./adobe-asset-link/panel-overview.md)
    + [Filer och samlingar](./adobe-asset-link/files-and-collections.md)
    + [Hämta och överföra](./adobe-asset-link/download-and-upload.md)
-   + [Checka in utcheckning](./adobe-asset-link/check-in-check-out.md)
+   + [Checka in-utcheckning](./adobe-asset-link/check-in-check-out.md)
    + [Versionshantering och kommentarer](./adobe-asset-link/file-versioning-and-comments.md)
    + [Montera kopia](./adobe-asset-link/place-copy.md)
    + [Montera länkad](./adobe-asset-link/place-linked.md)
-   + [Endast för placering (FPO)](./adobe-asset-link/for-placement-only.md)
+   + [Endast för placeringar (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Resurssökning](./adobe-asset-link/asset-search.md)
 
-+ Automatisering av innehåll {#content-automation}
++ Automatisering av innehåll{#content-automation}
    + [Ökning](./content-automation/overview.md)
    + [Kreativa åtgärder](./content-automation/creative-operations.md)
-   + [Photoshop Actions](./content-automation/photoshop-actions.md)
+   + [Photoshop-åtgärder](./content-automation/photoshop-actions.md)
 
 + Dynamic Media{#dynamic-media}
    + [Dynamic Media - översikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [Dynamic Media Classic Desktop Application](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media Classic Desktop](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
-      + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
+      + [Dynamic Media snapshot](dynamic-media/dynamic-media-snapshot.md)
       + [Smart beskärning](dynamic-media/smart-crop-feature-video-use.md)
-      + [Bildskärpa](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [Skärpa](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Färghantering](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + Video {#video}
       + [360-video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [Egna videominiatyrer](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH adaptive streaming](dynamic-media/dynamic-media-dash.md)
-      + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Dynamic Media Smart Crop-video](dynamic-media/dynamic-media-smart-crop-video.md)
       + [Videospelare](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + Visare {#viewers}
       + [Tittare](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
@@ -155,9 +159,9 @@ ht-degree: 0%
       + [Skapa bildförinställningar](dynamic-media/tutorials/creating-image-presets.md)
       + [Skapa profiler för smart beskärning](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [Skapa videoprofiler](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [Bearbetar Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [Bearbetar resurser](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [Konfigurera en säker förhandsgranskningsserver](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
-      + [Generera URL:er och bädda in koder](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [Generera URL:er och inbäddningskoder](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [Starta ett exportjobb](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
       + [CDN-cachen är ogiltig](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Använda Dynamic Media Core Components](dynamic-media/tutorials/using-dm-components-on-site-page.md)
@@ -169,15 +173,15 @@ ht-degree: 0%
    + Utökad koppling {#enhanced-connector}
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
-      + AEM Experts Series{#aem-experts-series}
+      + AEM expertsserie {#aem-experts-series}
          + [Ökning](./workfront/enhanced-connector/aem-experts-series/overview.md)
-         + [Inställningar](./workfront/enhanced-connector/aem-experts-series/setup.md)
+         + [Konfigurera](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-formulär och AEM metadata](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Taggar, projektlänkade mappar och mappmetadata](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
          + [Avancerade inställningar och arbetsflöden](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + Översättning {#translation}
-   + [Source File Translation](translation/source-file-translation-feature-video-use.md)
+   + [Source Filöversättning](translation/source-file-translation-feature-video-use.md)
 
 + Resursmallar{#asset-templates}
    + [Resursmallar](asset-templates/asset-templates-tutorial-understand.md)
@@ -186,6 +190,6 @@ ht-degree: 0%
    + [Använda resurskataloger](asset-templates/asset-catalog-template-feature-video-use.md)
 
 + Distribution{#deployment}
-   + [Multi-tenancy and Concurrent Development](deployment/multitenancy-concurrent-article-understand.md)
+   + [Multi-tenancy och samtidig utveckling](deployment/multitenancy-concurrent-article-understand.md)
 
 + [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
