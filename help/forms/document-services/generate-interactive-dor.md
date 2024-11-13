@@ -10,9 +10,9 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [ge
 
 ### Skapa anpassat formulär
 
-Skapa anpassningsbara formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet
+Skapa ett anpassat formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet.
 Följande kod aktiveras när användaren klickar på PDF _Hämta_
 
 ```javascript
@@ -211,7 +211,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-I exempelkoden extraherar vi xdp-namnet och andra parametrar från begäranobjektet. Om formuläret inte är baserat på XSD skapas det XML-dokument som ska sammanfogas med xdp. Om formuläret är baserat på XSD extraherar vi helt enkelt rätt nod från det adaptiva formuläret som har skickats data för att generera XML-dokument som ska sammanfogas med xdp-mallen.
+I den här exempelkoden extraheras xdp-namnet och andra parametrar från begäranobjektet. Om formuläret inte är baserat på en XSD skapas ett nytt XML-dokument som kan sammanfogas med xdp. Om formuläret är XSD-baserat extraheras dock den relevanta noden direkt från det adaptiva formulärets skickade data, och ett XML-dokument genereras för att sammanfogas med xdp-mallen.
 
 ## Distribuera exemplet på servern
 
@@ -226,6 +226,11 @@ DevelopingWithServiceUser.core:getformsresourceReser=fd-service
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Fyll i några av formulärfälten.
 1. Klicka på Hämta PDF för att hämta PDF. Du kanske måste vänta några sekunder på att PDF ska hämta.
+
+>[!NOTE]
+>
+>När du öppnar det hämtade PDF med webbläsarens PDF-visningsprogram visas inte data i PDF-filen. Öppna det hämtade PDF med Adobe Acrobat eller Adobe Reader.
+
 
 >[!NOTE]
 >
