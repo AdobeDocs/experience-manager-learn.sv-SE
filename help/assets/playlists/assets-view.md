@@ -1,5 +1,5 @@
 ---
-title: AEM Assets Assets visa spellistor
+title: AEM Assets Assets - visa videouppspelningslistor
 description: Lär dig använda AEM Assets as a Cloud Service i Assets-vyn med den här samlingen videouppspelningslistor som är utformade för att öka din produktexpertis.
 version: Cloud Service
 topic: Content Management
@@ -9,9 +9,9 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: 95ff2a6d99039d541092fcc45e9fc45f1a8a2b6a
+source-git-commit: bee9c6dfa7a2e3c55f6ec938cffff4622d800004
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
