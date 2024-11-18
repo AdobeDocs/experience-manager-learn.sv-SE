@@ -8,15 +8,15 @@ level: Beginner
 last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
+source-git-commit: 74e9962dfb7f451d395a3ec1a56989e3cbc4295b
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
-# AEM Assets Admin - visa spellistor
+# Videospellistor i AEM Assets Admin-vyn
 
 Utforska de här spellistorna för att lära dig mer om AEM Assets as a Cloud Service administratörsvy - som omfattar konfiguration, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
 
@@ -256,5 +256,3 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
-
