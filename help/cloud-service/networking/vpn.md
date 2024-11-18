@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 1183fc5614f9547b56f22bafd9b54e10279f310f
+source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,7 @@ Följande krävs när du konfigurerar ett virtuellt privat nätverk med Cloud Ma
 + Cloud Manager miljö-ID:n
 + Ett **Routbaserat** virtuellt privat nätverk med åtkomst till alla nödvändiga anslutningsparametrar.
 
-Mer information finns i följande genomgång om hur du konfigurerar, konfigurerar och hämtar API-autentiseringsuppgifter för Cloud Manager och hur du använder dem för att göra ett Cloud Manager API-anrop.
-
->[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
+Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
 
 I den här självstudien används `curl` för att skapa Cloud Manager API-konfigurationer. De `curl`-kommandon som tillhandahålls förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
 
