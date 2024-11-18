@@ -9,14 +9,14 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 74e9962dfb7f451d395a3ec1a56989e3cbc4295b
+source-git-commit: 0905e084001dafa5445d3ea9d42b07c592af9149
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-# Videospellistor i AEM Assets Admin-vyn
+# AEM Assets Admin - visa videouppspelningslistor
 
 Utforska de här spellistorna för att lära dig mer om AEM Assets as a Cloud Service administratörsvy - som omfattar konfiguration, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
 
