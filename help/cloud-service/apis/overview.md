@@ -11,13 +11,13 @@ jira: KT-16515
 thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 0%
 
 ---
-
 
 # AEM API:er - översikt{#aem-apis-overview}
 
@@ -71,7 +71,7 @@ Låt oss titta närmare på OpenAPI-baserade API:er för AEM och de viktiga begr
 
 **Forms**
 
-- [Forms Acrobat Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): API:er för att arbeta med formulär och dokument.
+- [Forms Communications API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): API:er för att arbeta med formulär och dokument.
 
 I framtida versioner kommer fler OpenAPI-baserade AEM-API:er att läggas till som stöd för fler användningsfall.
 
@@ -89,7 +89,7 @@ OpenAPI-baserade AEM-API:er har stöd för följande autentiseringsmetoder:
 
 Innan du får åtkomst till API:er för Adobe är det viktigt att du förstår dessa viktiga begrepp:
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**: Utvecklarhubben för åtkomst till Adobe API:er, SDK:er, realtidshändelser, serverlösa funktioner med mera. Observera att detta skiljer sig från Developer Console _AEM_ som används för att felsöka AEM program.
+- **[Adobe Developer Console](https://developer.adobe.com/)**: Utvecklarhubben för åtkomst till Adobe API:er, SDK:er, realtidshändelser, serverlösa funktioner med mera. Observera att den skiljer sig från _AEM_ Developer Console, som används för att felsöka AEM program.
 
 - **[Adobe Developer Console Project](https://developer.adobe.com/developer-console/docs/guides/projects/)**: Central plats för hantering av API-integreringar, händelser och körningsfunktioner. Här konfigurerar du API:er, anger autentisering och genererar nödvändiga autentiseringsuppgifter.
 

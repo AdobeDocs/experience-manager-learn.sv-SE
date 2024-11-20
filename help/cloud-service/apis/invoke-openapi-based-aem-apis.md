@@ -1,6 +1,6 @@
 ---
 title: Anropa OpenAPI-baserade AEM API:er
-description: Lär dig hur du anropar OpenAPI-baserade AEM-API:er från ditt program.
+description: Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program.
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -11,17 +11,17 @@ jira: KT-16516
 thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
 
-
 # Anropa OpenAPI-baserade AEM API:er{#invoke-openapi-based-aem-apis}
 
-Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program.
+Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program.
 
 >[!AVAILABILITY]
 >
@@ -501,4 +501,3 @@ Huvudpratbubblorna från exemplet NodeJS-programkod är:
 
 I den här självstudiekursen lärde du dig att anropa OpenAPI-baserade AEM-API:er från anpassade program. Du har aktiverat åtkomst AEM API:er, skapat och konfigurerat ett Adobe Developer Console-projekt (ADC).
 I ADC-projektet lade du till AEM API:er, konfigurerade autentiseringstypen och kopplade till produktprofilen. Du har även konfigurerat AEM för att aktivera ADC-projektkommunikation och utvecklat ett exempel-NodeJS-program som anropar Assets Author API.
-
