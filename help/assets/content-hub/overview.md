@@ -8,9 +8,9 @@ role: User
 level: Beginner
 doc-type: Catalog
 duration: 45
-last-substantial-update: 2024-10-31T00:00:00Z
+last-substantial-update: 2024-11-20T00:00:00Z
 exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
-source-git-commit: b5f8f545772a9b3f4d15e4816d53f81a513c716c
+source-git-commit: 6f5377fadd91451b859f7fd80befae0ea3a5212f
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
