@@ -7,10 +7,10 @@ topic: Content Supply Chain, Content Management
 role: User
 level: Beginner
 doc-type: Catalog
-duration: 45
+duration: 60
 last-substantial-update: 2024-11-20T00:00:00Z
 exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
-source-git-commit: 6f5377fadd91451b859f7fd80befae0ea3a5212f
+source-git-commit: 3a64b985bac3e13755a37064f5e55547b0eb8496
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
