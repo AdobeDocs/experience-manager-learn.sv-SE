@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
+source-git-commit: 30745ba12e9b1bd9e1f3f137c68456efb67cf39a
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '445'
 ht-degree: 6%
 
 ---
@@ -76,9 +76,6 @@ ht-degree: 6%
    + [Smarta taggar för videoklipp](metadata/video-smart-tags.md)
    + [Importera och exportera metadata](metadata/metadata-import-export.md)
 
-+ Edge Delivery Services{#edge-delivery-services}
-   + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
-
 + Content Hub{#content-hub}
    + [Ökning](./content-hub/overview.md)
    + [Konfigurera](./content-hub/set-up.md)
@@ -88,6 +85,12 @@ ht-degree: 6%
    + [Bildvarianter som använder Adobe Express](./content-hub/image-variants.md)
    + [Samlingar](./content-hub/collections.md)
    + [Delning](./content-hub/share.md)
+
++ Edge Delivery Services{#edge-delivery-services}
+   + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
+
++ Adobe GenStudio{#adobe-genstudio}
+   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution {#sharing}
    + [Hämta resurser](./sharing/download.md)
