@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -274,3 +274,4 @@ const SkuField = (props) => {
 
 export default SkuField;
 ```
+
