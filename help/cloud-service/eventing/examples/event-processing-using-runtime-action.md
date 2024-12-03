@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
+source-git-commit: 933493afff905bf27ba3d752c543c2e92732bc4c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -259,4 +259,3 @@ Kraven för händelsebearbetning skiljer sig från projekt till projekt, men de 
 - Händelsebearbetningen kan göras med Adobe I/O Runtime Action.
 - Körningsåtgärden kan kommunicera med system som interna program, tredjepartslösningar och Adobe-lösningar.
 - Körningsåtgärden fungerar som en startpunkt för en affärsprocess som utformats kring en innehållsändring.
-
