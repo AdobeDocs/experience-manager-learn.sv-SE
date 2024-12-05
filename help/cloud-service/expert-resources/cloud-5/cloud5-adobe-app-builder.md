@@ -10,9 +10,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
 duration: 312
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ Amol Anand släpper in oss för att minska integreringen med Adobe App Builder o
 + [Loggning och övervakning](https://adobedocs.github.io/adobeio-runtime/guides/logging_monitoring.html#retrieving-activations-for-blocking-successful-calls)
 + Anger [systembegränsningar](https://adobedocs.github.io/adobeio-runtime/guides/system_settings.html)
 + [Lokal utveckling](https://developer.adobe.com/app-builder/docs/resources/debugging/) Tips
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsongen 1](cloud5-season-1.md).

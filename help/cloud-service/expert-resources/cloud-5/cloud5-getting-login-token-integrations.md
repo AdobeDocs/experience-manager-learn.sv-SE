@@ -9,9 +9,9 @@ hidefromtoc: true
 thumbnail: 341277.jpeg
 exl-id: 41d78e6b-7076-4f4f-8d2c-4bf969b61024
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ En djupguide om hur du får en inloggningstoken för Cloud Service-integreringar
 + Enkel användning av genererad token
 
 Om du vill ha mer information om det här avsnittet kan du referera till självstudiekursen om [tokenbaserad autentisering](/help/headless-tutorial/authentication/overview.md).
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsongen 1](cloud5-season-1.md).

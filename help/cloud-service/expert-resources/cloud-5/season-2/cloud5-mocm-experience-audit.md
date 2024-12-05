@@ -9,9 +9,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 895766fe-aedd-4ae5-b3ba-2ebe769f2db3
 duration: 310
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
@@ -26,3 +26,7 @@ I en del av en tredelsserie utforskar vi grunderna i Cloud Manager och tonar ned
 
 + Cloud Manager - översikt
 + Gränssnittsfamiljer
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 2](../cloud5-season-2.md).

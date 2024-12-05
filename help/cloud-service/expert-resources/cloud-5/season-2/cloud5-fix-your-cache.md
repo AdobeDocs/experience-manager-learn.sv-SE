@@ -9,9 +9,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 591ed430-80b3-49fa-b52f-0d07a2e5ac0e
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '73'
 ht-degree: 0%
 
 ---
@@ -26,3 +26,7 @@ I två delar av säsongen utforskar vi några saker som du kan titta på och som
 
 + [Cachelagring och innehållsleverans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
 + [Google Lightroom](https://developers.google.com/web/tools/lighthouse)
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 2](../cloud5-season-2.md).

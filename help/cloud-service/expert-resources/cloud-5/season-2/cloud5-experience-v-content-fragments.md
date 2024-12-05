@@ -9,10 +9,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
 duration: 278
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 5%
+source-wordcount: '71'
+ht-degree: 4%
 
 ---
 
@@ -27,3 +27,7 @@ En&quot;versus&quot; utgår från skillnaden mellan ett upplevelsefragment och e
 + [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html)
 + [Använda Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)
 + [Upplev fragmentdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html)
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 2](../cloud5-season-2.md).

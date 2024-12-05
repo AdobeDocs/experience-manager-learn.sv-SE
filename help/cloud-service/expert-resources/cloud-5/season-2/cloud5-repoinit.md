@@ -9,9 +9,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 6428d1c2-8453-449c-9d57-bb860e2e9c1a
 duration: 310
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '50'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
@@ -26,3 +26,7 @@ Komma igång med REPOINIT - eller Sling Repository Initializer. Lär dig några 
 
 + ÅTERKOMMANDE Översikt
 + [REPOINIT-syntax](https://sling.apache.org/documentation/bundles/repository-initialization.html#appendix-a-repoinit-syntax-parser-test-scenarios-1)
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 2](../cloud5-season-2.md).

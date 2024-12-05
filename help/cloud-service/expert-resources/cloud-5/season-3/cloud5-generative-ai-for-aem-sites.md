@@ -13,9 +13,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15348
 exl-id: c7020e3e-2664-42f1-a3b4-c23eb17cbf4b
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---
@@ -25,3 +25,7 @@ ht-degree: 0%
 Upptäck de nya generativa AI-funktionerna i AEM Sites dokumentredigering. Vi beskriver funktionalitet, integrering med Adobe Firefly och Adobe Express, liksom den teknik som används i backend-systemet, de datamodeller som används och hur dessa modeller har utbildats.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428436/?learn=on)
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 3](../cloud5-season-3.md).

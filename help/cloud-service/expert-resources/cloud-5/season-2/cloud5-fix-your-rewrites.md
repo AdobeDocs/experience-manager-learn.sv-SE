@@ -9,9 +9,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 38580af1-e5ad-431a-b41d-634fb136ce64
 duration: 290
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '73'
 ht-degree: 1%
 
 ---
@@ -26,3 +26,7 @@ I andra delen av serien utforskar vi några saker som du kan titta på som snabb
 
 + mod_rewrite - översikt
 + [mod_rewrite docs](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
+
+## Ytterligare resurser
+
+Titta på relaterade videor på sidan [Cloud 5, säsong 2](../cloud5-season-2.md).
