@@ -8,16 +8,16 @@ role: Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 duration: 0
-last-substantial-update: 2024-09-24T00:00:00Z
+last-substantial-update: 2024-12-04T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
+exl-id: c3bfbe59-f540-43f9-81f2-6d7731750fc6
+source-git-commit: 97680d95d4cd3cb34956717a88c15a956286c416
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade felsidor
 
@@ -50,14 +50,18 @@ Standardfelsidan _hanteras_ från _AEM tjänsttyp_ (författare, publicera, för
 
 | Felsida från | Information |
 |---------------------|:-----------------------:|
-| AEM - författare, publicera, förhandsgranska | När sidbegäran hanteras av AEM tjänsttyp och något av ovanstående felscenarier inträffar, visas felsidan från den AEM tjänsttypen. |
+| AEM - författare, publicera, förhandsgranska | När sidbegäran hanteras av AEM tjänsttyp och något av ovanstående felscenarier inträffar, visas felsidan från den AEM tjänsttypen. Som standard åsidosätts felsidan 5XX av CDN-felsidan som hanteras av Adobe, såvida inte rubriken `x-aem-error-pass: true` har angetts. |
 | CDN som hanteras av Adobe | När det Adobe-hanterade CDN _inte kan nå AEM tjänsttyp_ (ursprunglig server) visas felsidan från det CDN som hanteras av Adobe. **Det är en osannolik händelse men det är värt att planera för.** |
+
+>[!NOTE]
+>
+>I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. Om du vill tillåta att det faktiska svaret från backend-servern skickas, måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
+>Detta fungerar bara för svar från AEM eller Apache/Dispatcher-lagret. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 
 Standardfelsidorna som hanteras från AEM och Adobe-hanterad CDN är till exempel följande:
 
 ![Standardsidor AEM felsidor](./assets/aem-default-error-pages.png)
-
 
 Du kan dock _anpassa både AEM och Adobe-hanterade_ CDN-felsidor så att de matchar ditt varumärke och ger en bättre användarupplevelse.
 
@@ -110,22 +114,33 @@ Vi ska granska hur [AEM WKND](https://github.com/adobe/aem-guides-wknd) -projekt
    - Värdet [DispatcherPassError](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L133) är satt till 1, så att Apache kan hantera alla fel.
 
   ```
+  # In `wknd.vhost` file:
+  
   ...
-  # ErrorDocument directive in wknd.vhost file
+  
+  ## ErrorDocument directive
   ErrorDocument 404 ${404_PAGE}
   ErrorDocument 500 ${500_PAGE}
   ErrorDocument 502 ${500_PAGE}
   ErrorDocument 503 ${500_PAGE}
   ErrorDocument 504 ${500_PAGE}
   
+  ## Add Header for 5XX error page response
+  <IfModule mod_headers.c>
+    ### By default, CDN overrides 5XX error pages. To allow the actual response of the backend to pass through, add the header x-aem-error-pass: true
+    Header set x-aem-error-pass "true" "expr=%{REQUEST_STATUS} >= 500 && %{REQUEST_STATUS} < 600"
+  </IfModule>
+  
   ...
-  # DispatcherPassError value in wknd.vhost file
+  ## DispatcherPassError directive
   <IfModule disp_apache2.c>
       ...
       DispatcherPassError        1
   </IfModule>
   
-  # Custom error pages path in custom.vars file
+  # In `custom.vars` file
+  ...
+  ## Define the error page paths
   Define 404_PAGE /content/wknd/us/en/errors/404.html
   Define 500_PAGE /content/wknd/us/en/errors/500.html
   ...
@@ -370,7 +385,7 @@ Distribuera slutligen den konfigurerade CDN-regeln till AEM as a Cloud Service-m
 
 Följ stegen nedan för att testa CDN-felsidorna:
 
-- Öppna webbläsaren och gå till Publish-URL:en, lägg till `cdnstatus?code=404` i URL:en, till exempel [https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404) eller använd [URL:en för den anpassade domänen](https://wknd.enablementadobe.com/cdnstatus?code=404)
+- I webbläsaren går du till AEM as a Cloud Service Publish URL och lägger till `cdnstatus?code=404` i URL:en, till exempel [https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404](https://publish-p105881-e991000.adobeaemcloud.com/cdnstatus?code=404) eller använder [URL:en för anpassad domän](https://wknd.enablementadobe.com/cdnstatus?code=404)
 
   ![WKND - CDN-felsida](./assets/wknd-cdn-error-page.png)
 
@@ -389,4 +404,3 @@ I den här självstudiekursen lärde du dig om standardfelsidor, varifrån felsi
 - [Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
 - [Cloud Manager - Konfigurera pipelines](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
-
