@@ -13,7 +13,7 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 - Förstå sökkraven och kontrollera om OTB-indexen stöder sökkraven. Använd **frågeprestandaverktyget**, som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
 
-- Definiera en optimal fråga genom att använda flödesdiagrammet [optimera frågor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) och [JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för referens.
+- Definiera en optimal fråga genom att använda flödesdiagrammet [optimera frågor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) och [JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf) för referens.
 
 - Om OTB-indexen inte stöder sökkraven finns det två alternativ. Granska dock [Tipsen för hur du skapar effektiva index](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassa OOTB-indexet: Det bästa alternativet eftersom det är enkelt att underhålla och uppgradera.
