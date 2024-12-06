@@ -9,9 +9,9 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
+source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets a
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials
+* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials {title=Get started with Assets view}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -70,7 +70,7 @@ Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets a
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="Kom igång med AEM Assets Essentials">Kom igång med AEM Assets Essentials</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="Kom igång med Assets">Kom igång med Assets-vyn</a>
                     </p>
                     <p class="is-size-6">Läs om hur AEM Assets Essentials kan effektivisera resurshanteringen för din avdelning.</p>
                 </div>
@@ -162,6 +162,8 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials
+  { title = Manage Creative Workflows Using Workfront and AEM Assets }
+  { description = Learn how Adobe Workfront and AEM Assets help your organization manage the creative workflow. }
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -179,9 +181,9 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Hantera kreativa arbetsflöden med Workfront och Assets Essentials">Hantera kreativa arbetsflöden med Workfront och Assets Essentials </a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Hantera kreativa arbetsflöden med Workfront och Assets Essentials">Hantera kreativa arbetsflöden med Workfront och AEM Assets</a>
                     </p>
-                    <p class="is-size-6">Läs om hur Adobe Workfront och Experience Manager Assets Essentials hjälper er att hantera det kreativa arbetsflödet.</p>
+                    <p class="is-size-6">Läs om hur Adobe Workfront och AEM Assets hjälper er att hantera det kreativa arbetsflödet.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
