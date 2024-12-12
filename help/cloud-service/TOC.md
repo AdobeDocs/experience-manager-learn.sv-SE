@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+source-git-commit: 891fd1cfdcb82a6d4f1bb031cfa11893a69d0546
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1356'
 ht-degree: 4%
 
 ---
@@ -416,9 +416,10 @@ ht-degree: 4%
    + [AEM Experts Series](./expert-resources/expert-series/aem-experts-series.md)
    + Cloud 5{#cloud-5}
       + [Introduktion](./expert-resources/cloud-5/cloud5-introduction.md)
+      + [Säsong 4](./expert-resources/cloud-5/cloud5-season-4.md)
       + [Säsong 1](./expert-resources/cloud-5/cloud5-season-1.md)
-      + [Säsong 2](./expert-resources/cloud-5/cloud5-season-2.md)
       + [Säsong 3](./expert-resources/cloud-5/cloud5-season-3.md)
+      + [Säsong 2](./expert-resources/cloud-5/cloud5-season-2.md)
       + [AEM CDN del 1](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
       + [AEM CDN del 2](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM loggfiler](./expert-resources/cloud-5/cloud5-aem-log-files.md)
@@ -453,4 +454,7 @@ ht-degree: 4%
          + [Optimering av bakgrundsmusik - del1](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
          + [Optimering av bakgrundsmusik - del 2](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
          + [Optimering av bakgrundsmusik - del3](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
-
+      + Säsong 4{#season-4}
+         + [Bästa praxis](./expert-resources/cloud-5/season-4/cloud5-edge-delivery-services-best-practices.md)
+         + [Sökoptimeringar](./expert-resources/cloud-5/season-4/cloud5-search-optimization.md)
+         + [Google Maps](./expert-resources/cloud-5/season-4/cloud5-google-maps.md)
