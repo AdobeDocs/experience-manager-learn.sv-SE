@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 duration: 30
-last-substantial-update: 2024-12-16T00:00:00Z
+last-substantial-update: 2024-12-15T00:00:00Z
 exl-id: ede3fb19-d803-4b21-8c03-4283f7b4f7f4
-source-git-commit: 9c0c0594d8bcecbf1e0daf7f3c5d7146adcdb08f
+source-git-commit: 1ac985246f81d69340af80b1b457f1a4de8da2b0
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
