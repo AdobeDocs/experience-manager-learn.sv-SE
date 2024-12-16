@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 891fd1cfdcb82a6d4f1bb031cfa11893a69d0546
+source-git-commit: 9c0c0594d8bcecbf1e0daf7f3c5d7146adcdb08f
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 4%
@@ -59,7 +59,7 @@ ht-degree: 4%
 + Installation av lokal utvecklingsmiljö {#local-development-environment-set-up}
    + [Ökning](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
-   + [Lokal AEM SDK](./local-development-environment/aem-runtime.md)
+   + [Local AEM SDK](./local-development-environment/aem-runtime.md)
    + [Dispatcher verktyg lokalt](./local-development-environment/dispatcher-tools.md)
 + Utvecklar{#developing}
    + Utbyggbarhet {#extensibility}
@@ -417,9 +417,9 @@ ht-degree: 4%
    + Cloud 5{#cloud-5}
       + [Introduktion](./expert-resources/cloud-5/cloud5-introduction.md)
       + [Säsong 4](./expert-resources/cloud-5/cloud5-season-4.md)
-      + [Säsong 1](./expert-resources/cloud-5/cloud5-season-1.md)
       + [Säsong 3](./expert-resources/cloud-5/cloud5-season-3.md)
       + [Säsong 2](./expert-resources/cloud-5/cloud5-season-2.md)
+      + [Säsong 1](./expert-resources/cloud-5/cloud5-season-1.md)
       + [AEM CDN del 1](./expert-resources/cloud-5/cloud5-aem-cdn-part1.md)
       + [AEM CDN del 2](./expert-resources/cloud-5/cloud5-aem-cdn-part2.md)
       + [AEM loggfiler](./expert-resources/cloud-5/cloud5-aem-log-files.md)
