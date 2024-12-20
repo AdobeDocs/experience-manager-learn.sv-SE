@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 30745ba12e9b1bd9e1f3f137c68456efb67cf39a
+source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 # Videor och självstudiekurser om AEM Assets {#assets}
 
-+ [Ökning](overview.md)
++ [Översikt](overview.md)
 
 + Videouppspelningslistor{#video-playlists}
    + [Assets view](playlists/assets-view.md)
@@ -27,14 +27,14 @@ ht-degree: 6%
    + [Originalmappar](configuring/baseline-folders.md)
    + [Baslinjebehörigheter](configuring/baseline-permissions.md)
    + [Taggar](configuring/tagging.md)
-   + [Metadata-scheman](configuring/metadata-schemas.md)
+   + [Metadatascheman](configuring/metadata-schemas.md)
    + [Metadataprofiler](configuring/metadata-profiles.md)
    + [Mappscheman för metadata](configuring/metadata-folder-schemas.md)
    + [Assets administratörssökfält](configuring/assets-admin-search-rail.md)
-   + [Bearbetar profiler](configuring/processing-profiles.md)
+   + [Bearbeta profiler](configuring/processing-profiles.md)
    + [Starta arbetsflöden automatiskt](configuring/auto-start-workflows.md)
 
-+ Redigerar{#authoring}
++ Redigering {#authoring}
    + [Växla vy](./authoring/switch-views.md)
    + [Navigering](./authoring/navigation.md)
    + [Grundläggande åtgärder](./authoring/basic-operations.md)
@@ -59,29 +59,30 @@ ht-degree: 6%
    + [Söka efter liknande bilder](./search-and-discovery/find-similar-images.md)
 
 + Avancerade funktioner{#advanced}
-   + [3D-resurser](./advanced/3d-assets.md)
+   + [AEM Assets](./advanced/3d-assets.md)
    + [Anteckningar PDF output](./advanced/customizing-annotations-pdf-output.md)
-   + [Assets-rapporter](./advanced/asset-reports.md)
-   + [Blockerade taggar](./advanced/blocked-tags.md)
-   + [Extrahera arkiv](./advanced/extract-archive.md)
-   + [Behörigheter (CUG)](./advanced/closed-user-groups.md)
-   + [Metadatastyrda behörigheter](./advanced/metadata-driven-permissions.md)
-   + [Undertexter för video](./advanced/video-closed-captions.md)
-   + [Vattenstämplar](./advanced/watermarks.md)
+   + [Materialrapporter](./advanced/asset-reports.md)
+   + [Content credentials](./advanced/content-credentials.md)
+   + [Blocked tags](./advanced/blocked-tags.md)
+   + [Extract archive](./advanced/extract-archive.md)
+   + [Permissions (CUGs)](./advanced/closed-user-groups.md)
+   + [Metadata-driven permissions](./advanced/metadata-driven-permissions.md)
+   + [Video closed captions](./advanced/video-closed-captions.md)
+   + [Watermarks](./advanced/watermarks.md)
 
-+ Avancerad metadatahantering{#metadata}
++ {#metadata}
    + [Överlappande metadata](metadata/cascade-metadata-feature-video-use.md)
-   + [Smarta taggar för bilder](metadata/image-smart-tags.md)
-   + [Anpassade smarta taggar för bilder](metadata/custom-smart-tags.md)
+   + [Smart Tags for images](metadata/image-smart-tags.md)
+   + [Custom Smart Tags for images](metadata/custom-smart-tags.md)
    + [Smarta taggar för videoklipp](metadata/video-smart-tags.md)
-   + [Importera och exportera metadata](metadata/metadata-import-export.md)
+   + [Importera och exportera metadata för material](metadata/metadata-import-export.md)
 
 + Content Hub{#content-hub}
-   + [Ökning](./content-hub/overview.md)
+   + [Översikt](./content-hub/overview.md)
    + [Konfigurera](./content-hub/set-up.md)
-   + [Konfigurera](./content-hub/configure.md)
-   + [Lägga till resurser](./content-hub/add-assets.md)
-   + [Hämta resurser](./content-hub/download-assets.md)
+   + [Konfigurera:](./content-hub/configure.md)
+   + [AEM Assets](./content-hub/add-assets.md)
+   + [AEM Assets](./content-hub/download-assets.md)
    + [Bildvarianter som använder Adobe Express](./content-hub/image-variants.md)
    + [Samlingar](./content-hub/collections.md)
    + [Delning](./content-hub/share.md)
@@ -93,13 +94,13 @@ ht-degree: 6%
    + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution {#sharing}
-   + [Hämta resurser](./sharing/download.md)
-   + [Exportera resurser](./sharing/export.md)
+   + [AEM Assets](./sharing/download.md)
+   + [AEM Assets](./sharing/export.md)
    + [Publish-resurser](./sharing/publish.md)
 
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
-      + [Konfigurera resurskälla](brand-portal/configure-asset-sourcing.md)
+      + [Konfigurera materialdelning](brand-portal/configure-asset-sourcing.md)
       + [Aktivera hämtning av återgivning](brand-portal/enable-renditions-download.md)
 
    + Resursresurs {#assets-share}
@@ -129,15 +130,15 @@ ht-degree: 6%
    + [Resurssökning](./adobe-asset-link/asset-search.md)
 
 + Automatisering av innehåll{#content-automation}
-   + [Ökning](./content-automation/overview.md)
+   + [Översikt](./content-automation/overview.md)
    + [Kreativa åtgärder](./content-automation/creative-operations.md)
    + [Photoshop-åtgärder](./content-automation/photoshop-actions.md)
 
-+ Dynamic Media{#dynamic-media}
-   + [Dynamic Media - översikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
++ Dynamic Media {#dynamic-media}
+   + [Dynamic Media-konfiguration](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic Desktop](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
-      + [Dynamic Media snapshot](dynamic-media/dynamic-media-snapshot.md)
+      + [Dynamic Media-konfiguration](dynamic-media/dynamic-media-snapshot.md)
       + [Smart beskärning](dynamic-media/smart-crop-feature-video-use.md)
       + [Skärpa](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Färghantering](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
@@ -150,26 +151,26 @@ ht-degree: 6%
    + Visare {#viewers}
       + [Tittare](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panoramabilder och bildvisningsprogram](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-      + [Tittare med Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
+      + [Integrera med Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
-      + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
+      + [Dynamic Media-konfiguration](dynamic-media/dynamic-media-3d-feature-video.md)
    + Använda med AEM Sites {#dm-with-aem-sites}
-      + [Upplevelsefragment](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media Core Components](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials {#tutorials}
+   + Självstudiekurser{#tutorials}
       + [Skapa Carousel-uppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Skapa bilduppsättningar](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Skapa bildförinställningar](dynamic-media/tutorials/creating-image-presets.md)
       + [Skapa profiler för smart beskärning](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [Skapa videoprofiler](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
-      + [Bearbetar resurser](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [AEM Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [Konfigurera en säker förhandsgranskningsserver](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
       + [Generera URL:er och inbäddningskoder](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
       + [Starta ett exportjobb](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
       + [CDN-cachen är ogiltig](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Använda Dynamic Media Core Components](dynamic-media/tutorials/using-dm-components-on-site-page.md)
-      + [Tar bort Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
+      + [Dynamic Media-konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Ladda ned Assets i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
@@ -178,7 +179,7 @@ ht-degree: 6%
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
       + AEM expertsserie {#aem-experts-series}
-         + [Ökning](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Översikt](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Konfigurera](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-formulär och AEM metadata](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Taggar, projektlänkade mappar och mappmetadata](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
