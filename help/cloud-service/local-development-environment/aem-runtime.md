@@ -1,6 +1,6 @@
 ---
 title: Konfigurera lokal AEM SDK för AEM as a Cloud Service Development
-description: Konfigurera den lokala AEM SDK-miljön med hjälp av AEM as a Cloud Service SDK:s QuickStart Jar.
+description: Konfigurera den lokala AEM SDK-miljön med AEM as a Cloud Service SDK QuickStart Jar.
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -23,11 +23,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
 >title="Local AEM Runtime"
->abstract="Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK&#39;s Quickstart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö."
+>abstract="Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Hämta AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK&#39;s Quickstart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö.
+Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö.
 
 Observera att `~` används som kortskrift för användarens katalog. I Windows motsvarar detta `%HOMEPATH%`.
 
@@ -62,9 +62,9 @@ $ java --version
 
 ![Java](./assets/aem-runtime/java.png)
 
-## Hämta AEM as a Cloud Service SDK
+## Ladda ned AEM as a Cloud Service SDK
 
-AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som används för att köra AEM Author och Publish lokalt för utveckling, samt den kompatibla versionen av Dispatcher Tools.
+AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som används för att köra AEM Author och Publish lokalt för utveckling, liksom den kompatibla versionen av Dispatcher Tools.
 
 1. Logga in på [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) med din Adobe ID
    + Observera att din Adobe-organisation __måste__ etableras för att AEM as a Cloud Service ska kunna hämta AEM as a Cloud Service SDK.
@@ -73,7 +73,7 @@ AEM as a Cloud Service SDK, eller AEM SDK, innehåller den QuickStart Jar som an
 1. Klicka på den senaste __AEM SDK__-resultatraden
 1. Granska och godkänn slutanvändaravtalet och tryck på knappen __Hämta__
 
-## Extrahera Quickstart Jar från AEM SDK-zip
+## Extrahera Quickstart Jar från AEM SDK zip
 
 1. Zippa upp den hämtade `aem-sdk-XXX.zip`-filen
 
@@ -124,7 +124,7 @@ $ java -jar aem-author-p4502.jar
 
 ## Konfigurera lokal AEM Publish-tjänst
 
-Den lokala AEM Publish-tjänsten förser utvecklarna med den lokala upplevelse som slutanvändarna av AEM har, till exempel genom att surfa på den AEM webbplatsen. En lokal AEM Publish-tjänst är viktig eftersom den integreras med AEM SDK:s [Dispatcher-verktyg](./dispatcher-tools.md) och gör att utvecklare kan röka och finjustera slutanvändarupplevelsen.
+Den lokala AEM Publish-tjänsten förser utvecklarna med den lokala upplevelse som slutanvändarna av AEM har, till exempel genom att surfa på den AEM webbplatsen. En lokal AEM Publish-tjänst är viktig eftersom den integreras med AEM SDK [Dispatcher-verktyg](./dispatcher-tools.md) och gör det möjligt för utvecklare att röka och finjustera slutanvändarupplevelsen.
 
 1. Skapa mappen `~/aem-sdk/publish`
 1. Kopiera __Quickstart JAR__-filen till `~/aem-sdk/publish` och byt namn på den till `aem-publish-p4503.jar`
@@ -281,15 +281,15 @@ Uppdatera AEM SDK minst en gång i månaden, eller kort efter, den sista torsdag
 >
 > Om du uppdaterar Quickstart Jar till en ny version måste du ersätta hela den lokala utvecklingsmiljön, vilket resulterar i att all kod, konfiguration och innehåll i de lokala AEM-databaserna går förlorad. Se till att kod, konfiguration eller innehåll som inte ska förstöras implementeras på ett säkert sätt i Git, eller exporteras från den lokala AEM instansen som AEM.
 
-### Så här undviker du innehållsförluster när du uppgraderar AEM SDK
+### Så undviker du innehållsförluster när du uppgraderar AEM SDK
 
 Genom att uppgradera AEM SDK skapas en helt ny AEM, inklusive en ny databas, vilket innebär att ändringar som gjorts i en tidigare AEM SDK-databas går förlorade. Följande är användbara strategier för att hjälpa till med bestående innehåll mellan AEM SDK-uppgraderingar och kan användas diskret eller i kombination:
 
-1. Skapa ett innehållspaket som är avsett för att innehålla exempelinnehåll som ska vara till hjälp vid utvecklingen, och behåll det i Git. Allt innehåll som ska bevaras genom AEM SDK-uppgraderingar kommer att finnas kvar i det här paketet och återdistribueras efter uppgraderingen av AEM SDK.
+1. Skapa ett innehållspaket som är avsett för att innehålla exempelinnehåll som ska vara till hjälp vid utvecklingen, och behåll det i Git. Allt innehåll som ska behållas genom AEM SDK-uppgraderingar kommer att finnas kvar i det här paketet och återdistribueras efter uppgraderingen av AEM SDK.
 1. Använd [ek-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) med direktivet `includepaths` om du vill kopiera innehåll från den tidigare AEM SDK-databasen till den nya AEM SDK-databasen.
-1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på den tidigare AEM SDK:n och installera om dem på den nya AEM SDK:n.
+1. Säkerhetskopiera allt innehåll med AEM Package Manager och innehållspaket på den tidigare AEM SDK och installera om dem på den nya AEM SDK.
 
-Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar, så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
+Kom ihåg att om du använder ovanstående metoder för att underhålla kod mellan AEM SDK-uppgraderingar så visas ett mönster för utveckling. Kod som inte kan användas för engångsbruk ska ha sitt ursprung i din utvecklingsutvecklingsutvecklingsutvecklingsutvecklingsutvecklingsmiljö och flöda in i AEM SDK via distributioner.
 
 ## Felsökning
 
@@ -364,7 +364,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Detta beror på att AEM as a Cloud Service kräver Java™ SDK 11 och du kör en annan version, troligtvis Java™ 8. Du löser det här problemet genom att hämta och installera [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+Detta beror på att AEM as a Cloud Service kräver Java™ SDK 11 och du kör en annan version, troligen Java™ 8. Du löser det här problemet genom att hämta och installera [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2FDK jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 
 När Oraclet Java™ 11 SDK är installerat kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
 

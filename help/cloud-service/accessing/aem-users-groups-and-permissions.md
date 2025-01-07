@@ -10,7 +10,7 @@ jira: KT-6060
 thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
 duration: 315
-source-git-commit: 1fcfbc85650d0eb6b6b184883c7178a3b1e0ed93
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 4%
@@ -23,8 +23,8 @@ ht-degree: 4%
 >id="aemcloud_adobeims_aem_users_groups"
 >title="AEM användare, grupper och behörigheter"
 >abstract="Adobe Experience Manager bygger på Adobe IMS-användare, användargrupper och produktprofiler för att ge användarna anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM grupper och behörigheter och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge smidig och anpassningsbar åtkomst till AEM."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en" text="IMS-stöd för Adobe Experience Manager as a Cloud Service"
->additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html" text="AEM användargrupper och deras behörigheter"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en" text="IMS-stöd för Adobe Experience Manager as a Cloud Service"
+>additional-url="https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.html" text="AEM användargrupper och deras behörigheter"
 
 Adobe Experience Manager bygger på Adobe IMS-användare, användargrupper och produktprofiler för att ge användarna anpassningsbar åtkomst till AEM. Lär dig hur du definierar AEM och behörigheter som bygger på [AEM tillhandahöll användargrupper](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#built-in-users-and-groups) och hur de fungerar tillsammans med Adobe IMS-abstraktioner för att ge sömlös och anpassningsbar åtkomst till AEM.
 
@@ -32,5 +32,5 @@ Adobe Experience Manager bygger på Adobe IMS-användare, användargrupper och p
 
 ## Ytterligare resurser
 
-+ [IMS-stöd för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html)
-+ [AEM användargrupper och deras behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups)
++ [IMS-stöd för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
++ [AEM användargrupper och deras behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/security.html)
