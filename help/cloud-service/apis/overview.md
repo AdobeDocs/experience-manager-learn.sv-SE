@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -79,11 +79,21 @@ I framtida versioner kommer fler OpenAPI-baserade AEM-API:er att läggas till so
 
 OpenAPI-baserade AEM-API:er har stöd för följande autentiseringsmetoder:
 
-- **Autentiseringsuppgifter för server-till-server**: Perfekt för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Den använder anslagstypen _client_credentials_, vilket möjliggör säker åtkomsthantering på servernivå. Mer information finns i [Autentiseringsuppgifter för OAuth Server-till-server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential).
+- **Autentiseringsuppgifter för OAuth Server-till-Server**: Perfekt för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Den använder anslagstypen _client_credentials_, vilket möjliggör säker åtkomsthantering på servernivå. Mer information finns i [Autentiseringsuppgifter för OAuth Server-till-server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential).
 
 - **Autentiseringsuppgifter för OAuth-webbprogram**: Passar för webbprogram med klientkomponenter och _backend_-komponenter som använder AEM API:er åt användare. Den använder anslagstypen _permission_code_, där serverdelsservern hanterar hemligheter och token på ett säkert sätt. Mer information finns i [Autentiseringsuppgifter för OAuth-webbprogram](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential).
 
 - **Autentiseringsuppgifter för Fristående sidprogram**: Skapat för SPA som körs i webbläsaren, som behöver komma åt API:er för en användare utan serverdelsserver. Den använder anslagstypen _permission_code_ och förlitar sig på säkerhetsmekanismer på klientsidan med PKCE (Proof Key for Code Exchange) för att skydda auktoriseringskodflödet. Mer information finns i [Autentiseringsuppgifter för fristående program för OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
+
+### Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och OAuth Web App/Single Page App{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+
+| | OAuth server-till-server | OAuth-användarautentisering (webbprogram) |
+| --- | --- | --- |
+| Autentiseringssyfte | Utformad för interaktion mellan dator och dator. | Utformad för användardrivna interaktioner. |
+| Tokenbeteende | Utfärdar åtkomsttoken som representerar själva klientprogrammet. | Utfärdar åtkomsttoken för en autentiserad användare. |
+| Användningsexempel | Backend-tjänster som behöver API-åtkomst utan användarinteraktion. | Webbprogram med klientkomponenter och backend-komponenter som använder API:er å användarnas vägnar. |
+| Säkerhetsaspekter | Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. | Användarens autentisering och får en egen temporär åtkomsttoken. Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. |
+| Typ av bidrag | _client_credentials_ | _authentication_code_ |
 
 ## Åtkomst till Adobe API:er och relaterade koncept{#accessing-adobe-apis-and-related-concepts}
 
@@ -102,4 +112,7 @@ Innan du får åtkomst till API:er för Adobe är det viktigt att du förstår d
 Med förståelse för de olika AEM API-typerna, inklusive
 OpenAPI-baserade AEM-API:er och de viktigaste begreppen för att få åtkomst till Adobe API:er är nu färdiga att börja skapa anpassade program som interagerar med AEM.
 
-Låt oss komma igång med självstudiekursen [Så här startar du OpenAPI-baserade AEM-API:er](invoke-openapi-based-aem-apis.md).
+Vi börjar med:
+
+- [Anropa OpenAPI-baserade AEM-API:er för server-till-server-autentisering](invoke-openapi-based-aem-apis.md), som demonstrerar hur du får åtkomst till OpenAPI-baserade AEM-API:er _med hjälp av OAuth Server-till-Server-autentiseringsuppgifter_.
+- [Anropa OpenAPI-baserade AEM-API:er med användarautentisering från en webbapp](invoke-openapi-based-aem-apis-from-web-app.md) som demonstrerar hur du får åtkomst till OpenAPI-baserade AEM-API:er från ett _webbprogram med hjälp av OAuth Web App-autentiseringsuppgifter_.

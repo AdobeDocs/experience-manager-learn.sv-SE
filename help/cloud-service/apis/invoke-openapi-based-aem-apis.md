@@ -1,6 +1,6 @@
 ---
 title: Anropa OpenAPI-baserade AEM API:er
-description: Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program.
+description: Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program med OAuth Server-till-Server-autentisering.
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
 
-# Anropa OpenAPI-baserade AEM API:er{#invoke-openapi-based-aem-apis}
+# Anropa OpenAPI-baserade AEM-API:er för server-till-server-autentisering{#invoke-openapi-based-aem-apis}
 
-Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program.
+Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program med hjälp av _OAuth Server-till-Server_-autentisering.
+
+OAuth Server-till-Server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Den använder tilldelningstypen _client_credentials_ för OAuth 2.0 för att autentisera klientprogrammet.
 
 >[!AVAILABILITY]
 >
@@ -30,7 +32,7 @@ Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as 
 I den här självstudiekursen får du lära dig att:
 
 - Aktivera åtkomst till OpenAPI-baserade AEM API:er för din AEM as a Cloud Service-miljö.
-- Skapa och konfigurera ett Adobe Developer Console-projekt (ADC) för att komma åt AEM API:er med OAuth Server-till-Server-autentisering.
+- Skapa och konfigurera ett Adobe Developer Console-projekt (ADC) för att komma åt AEM API:er med _OAuth Server-till-Server-autentisering_.
 - Utveckla ett exempel på ett NodeJS-program som anropar Assets Author API för att hämta metadata för en viss resurs.
 
 Innan du börjar bör du kontrollera att du har granskat avsnittet [Åtkomst till Adobe-API:er och relaterade koncept](overview.md#accessing-adobe-apis-and-related-concepts).
