@@ -1,5 +1,5 @@
 ---
-title: Anropa OpenAPI-baserade AEM API:er
+title: Anropa OpenAPI-baserade AEM-API:er för server-till-server-autentisering
 description: Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program med OAuth Server-till-Server-autentisering.
 version: Cloud Service
 feature: Developing
@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---

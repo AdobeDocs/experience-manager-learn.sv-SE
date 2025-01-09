@@ -1,5 +1,5 @@
 ---
-title: Anropa OpenAPI-baserade AEM-API:er från ett webbprogram
+title: Anropa OpenAPI-baserade AEM-API:er med användarautentisering från ett webbprogram
 description: Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från ett anpassat webbprogram med OAuth Web App-autentisering.
 version: Cloud Service
 feature: Developing
@@ -9,15 +9,15 @@ level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
 thumbnail: KT-16718.jpeg
-last-substantial-update: 2024-12-17T00:00:00Z
+last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+exl-id: dc35256a-3873-413f-b282-90948efd5f31
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2433'
 ht-degree: 0%
 
 ---
-
 
 # Anropa OpenAPI-baserade AEM-API:er med användarautentisering från ett webbprogram{#invoke-openapi-based-aem-apis-from-web-app}
 
@@ -36,6 +36,8 @@ Innan du börjar ska vi förstå exempelwebbprogrammet, WKND Product Information
 WKND PIM-appen är ett exempelwebbprogram som är utformat för att hantera produktattribut och metadata för resurser som lagras i AEM as a Cloud Service. I det här exemplet visas hur webbprogram kan integreras smidigt med Adobe-API:er för att leverera effektiva, användarcentrerade arbetsflöden.
 
 Adobe Developer Console-projektet (ADC) har konfigurerats för åtkomst till Assets Author API med hjälp av OAuth Web App-autentisering. Den tillhandahåller nödvändiga _client_id_ och _client_secrets_ till WKND-PIM-webbprogrammet för att initiera _permission_code_-anslagsflödet.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
 
 Följande diagram visar det funktionella flödet för WKND-PIM-webbprogrammet _som hämtar användarspecifika åtkomsttoken för interaktion med Assets Author API_.
 
@@ -66,7 +68,7 @@ Innan du börjar bör du kontrollera att du har granskat avsnittet [Åtkomst til
 
 ## Så här använder du den här självstudien{#how-to-use-this-tutorial}
 
-Du kan antingen [Granska kodfragment för webbprogram](#review-web-app-key-code-snippets) för att förstå autentiseringsflödet för OAuth Web App och API-anropa kodfragment som används i WKND-PIM-webbprogrammet. Eller gå direkt till avsnittet [Konfigurera och kör webbprogrammet](#setup-run-web-app) för att konfigurera och köra webbprogrammet WKND-PIM på den lokala datorn.
+Du kan antingen [Granska kodfragment för webbprogram](#review-web-app-key-code-snippets) för att förstå autentiseringsflödet för OAuth-webbprogram och API-anropa kodfragment som används i WKND-PIM-webbprogrammet. Eller gå direkt till avsnittet [Konfigurera och kör webbprogrammet](#setup-run-web-app) för att konfigurera och köra webbprogrammet WKND-PIM på den lokala datorn.
 
 ## Granska kodfragment för webbprogramnycklar{#review-web-app-key-code-snippets}
 
@@ -404,6 +406,11 @@ De OpenAPI-baserade AEM API-anropen görs från serversidan (Express-mellanvara)
 
 Om du vill uppdatera åtkomsttoken innan den upphör att gälla kan du implementera uppdateringstokenflödet. För att göra självstudiekursen enkel implementerar inte webbprogrammet WKND-PIM uppdateringstokenflödet.
 
+
+>[!TIP]
+>
+>Du kan följa nästa avsnitt för att testa WKND-PIM-webbappen på din lokala dator och få en praktisk upplevelse av autentiseringsflödet i OAuth Web App och API-anrop.
+
 ## Konfigurera och köra webbprogram
 
 Låt oss konfigurera och köra WKND-PIM-webbprogrammet på din lokala dator för att förstå autentiseringsflödet för OAuth-webbappen och API-anrop.
@@ -522,11 +529,11 @@ Det görs genom att definiera konfigurationen i filen `config.yaml` i AEM. Distr
 
 Som standard har WKND Sites-projektet inte det nödvändiga metadata-schemat för resurser för lagring av produktattribut. Låt oss skapa och använda metadatamatchemat för resurser i AEM.
 
-1. Logga in på AEM as a Cloud Service Asset-instansen. Navigera med [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
+1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
 
    ![Navigera till mappen](assets/web-app/navigate-to-folder.png)
 
-1. Skapa **PIM** och skapa mappen **Camping** i den. Överför sedan [exempelbilder](./assets/web-app/camping-gear-imgs.zip) i mappen **Camping**.
+1. Skapa en **PIM** och skapa mappen **Camping** i den. Överför sedan [exempelbilder](./assets/web-app/camping-gear-imgs.zip) i mappen **Camping**.
 
    ![PIM-mapp](assets/web-app/pim-folder.png)
 
@@ -644,7 +651,7 @@ Med ovanstående steg kan resurserna i mappen **PIM** lagra metadata för produk
 
 >[!IMPORTANT]
 >
->Om den autentiserade användaren saknar de behörigheter som krävs för att granska eller uppdatera metadata för resurser, returnerar de OpenAPI-baserade AEM-API:erna ett 403 Forbidden-fel. Detta garanterar att även om användaren är autentiserad och har en giltig IMS-åtkomsttoken, kan han/hon inte komma åt AEM utan de nödvändiga behörigheterna.
+>Om den autentiserade användaren saknar de behörigheter som krävs för att granska eller uppdatera metadata för resurser, returnerar de OpenAPI-baserade AEM-API:erna ett 403 Forbidden-fel. Även om användaren är autentiserad och har en giltig IMS-åtkomsttoken kan han eller hon inte komma åt AEM utan de nödvändiga behörigheterna.
 
 
 ### Granska programkoden
