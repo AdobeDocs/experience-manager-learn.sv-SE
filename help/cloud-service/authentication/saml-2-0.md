@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 87dd4873152d4690abb1efcfebd43d10033afa0a
+source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Det typiska flödet av en AEM Publish SAML-integrering är följande:
    + Användaren uppmanas att ange autentiseringsuppgifter av IDP:n.
    + Användaren är redan autentiserad med IDP och behöver inte ange ytterligare autentiseringsuppgifter.
 1. IDP genererar en SAML-försäkran som innehåller användarens data och signerar den med IDP:s privata certifikat.
-1. IDP skickar SAML-försäkran via HTTP-POST via användarens webbläsare till AEM Publish.
+1. IDP skickar SAML-försäkran via HTTP-POST via användarens webbläsare (RESPECTIVE_PROTECTED_PATH/saml_login) till AEM Publish.
 1. AEM Publish får SAML-försäkran och validerar SAML-intygets integritet och autenticitet med IDP:s offentliga certifikat.
 1. AEM Publish hanterar den AEM användarposten baserat på SAML 2.0 OSGi-konfigurationen och innehållet i SAML Assertion.
    + Skapar användare
@@ -440,6 +440,9 @@ När autentiseringen till IDP är klar kommer IDP att dirigera en HTTP-POST till
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
+>[!NOTE]
+>När du distribuerar flera SAML-konfigurationer i AEM för olika skyddade sökvägar och distinkta IDP-slutpunkter ska du se till att IDP skickar data till RESPECTIVE_PROTECTED_PATH/saml_login-slutpunkten för att välja rätt SAML-konfiguration på AEM. Om det finns duplicerade SAML-konfigurationer för samma skyddade sökväg kommer valet av SAML-konfiguration att göras slumpmässigt.
+
 Om URL-omskrivning på Apache-webbservern är konfigurerad (`dispatcher/src/conf.d/rewrites/rewrite.rules`) kontrollerar du att begäranden till `.../saml_login`-slutpunkterna inte av misstag bemannas.
 
 ### Aktivera dynamiskt gruppmedlemskap för SAML-användare i nya miljöer
@@ -561,6 +564,12 @@ Distribuera Cloud Manager Git-målgrenen (i det här exemplet `develop`) med hj�
 ## Anropa SAML-autentisering
 
 SAML-autentiseringsflödet kan anropas från en AEM webbplats genom att skapa en länk eller en knapp. Parametrarna som beskrivs nedan kan ställas in programmatiskt efter behov, så en inloggningsknapp kan till exempel ställa in `saml_request_path`, som är den plats där användaren tas vid lyckad SAML-autentisering, på olika AEM sidor, baserat på knappens kontext.
+
+## Skyddad cachelagring när SAML används
+
+I AEM publiceringsinstans cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+
+Observera att om du cachelagrar skyddade sökvägar utan att aktivera auth_checker kan du uppleva oförutsägbara beteenden.
 
 ### Begäran om GET
 
