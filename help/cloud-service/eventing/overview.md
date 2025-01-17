@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
+source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -125,5 +125,14 @@ Mer information finns i [AEM händelsebearbetning via Adobe I/O-händelser](http
           Lär dig hur du bearbetar mottagna AEM med Adobe I/O Runtime Action. Händelsebearbetningen innehåller AEM återanrop, händelsedatans beständighet och visar dem i SPA.
         </p>
       </td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>
+        <a  href="./examples/assets-pim-integration.md"><img alt="AEM Assets event for PIM integration" src="./assets/examples/assets-pim-integration/PIM-integration-tile.png"/></a>
+        <div><strong><a href="./examples/assets-pim-integration.md">AEM Assets-händelser för PIM-integrering</a></strong></div>
+        <p>
+          Lär dig hur du integrerar AEM Assets- och PIM-system (Product Information Management) för metadatauppdateringar.
+        </p>
+      </td>
+  </tr> 
 </table>
