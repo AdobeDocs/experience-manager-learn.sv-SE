@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '582'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,16 @@ ht-degree: 5%
       + [Dokumentstruktur](edge-delivery-services/developing/document-structure.md)
       + [Lokal utveckling](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
+      + Universell redigerare {#universal-editor}
+         + [Ökning](./edge-delivery-services/developing/universal-editor/0-overview.md)
+         + [Nytt kodprojekt](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
+         + [Ny AEM](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [Lokal utvecklingsmiljö](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
+         + [Webbplatsmärkning](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
+         + [Nytt block](./edge-delivery-services/developing/universal-editor/5-new-block.md)
+         + [Författare till blocket](./edge-delivery-services/developing/universal-editor/6-author-block.md)
+         + [Blockera med endast CSS](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
+         + [Block med CSS och JS](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
    + Instruktioner{#how-to}
       + [RSS-flöden](edge-delivery-services/how-to/rss.md)
       + [Delning i sociala medier](edge-delivery-services/how-to/social-media-sharing.md)
