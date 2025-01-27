@@ -11,9 +11,9 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
+source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-s
 
 - AEM kod och innehållspaket (all, ui.apps)-distribution
 - Driftsättning av OSGi-paket och konfigurationsfiler
-- Apache och Dispatcher konfigurerar distributionen som en zip-fil
+- Installation av Apache- och Dispatcher-konfigurationer som zip-filer
 - Enskilda filer som HTML, `.content.xml` (dialogrute-XML)-distribution
 - Granska andra RDE-kommandon som `status, reset and delete`
 
@@ -40,7 +40,7 @@ Klona projektet [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-s
 $ git clone git@github.com:adobe/aem-guides-wknd.git
 ```
 
-Bygg och distribuera den sedan till det lokala AEM-SDK:t genom att köra följande maven-kommando.
+Sedan kan du bygga och driftsätta den lokalt AEM-SDK genom att köra följande maven-kommando.
 
 ```
 $ cd aem-guides-wknd/
@@ -96,7 +96,7 @@ Låt oss förbättra `Hello World Component` och distribuera den till den lokala
    ...
    ```
 
-1. Verifiera ändringarna i den lokala AEM SDK genom att skapa eller synkronisera enskilda filer i Maven.
+1. Verifiera ändringarna i den lokala AEM SDK genom att utföra Maven-bygget eller synkronisera enskilda filer.
 
 1. Distribuera ändringarna till RDE via `ui.apps`-paketet eller genom att distribuera de enskilda Dialog- och HTML-filerna:
 
@@ -144,7 +144,7 @@ Om du vill lära dig hur du distribuerar OSGi-paketet kan du förbättra Java™
    ...
    ```
 
-1. Verifiera ändringarna på lokal AEM-SDK genom att distribuera `core`-paketet via kommandot maven
+1. Verifiera ändringarna på lokala AEM-SDK genom att distribuera `core`-paketet via kommandot maven
 1. Distribuera ändringarna till RDE genom att köra följande kommando
 
    ```shell
@@ -191,7 +191,7 @@ Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individue
    ...
    ```
 
-1. Kontrollera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally) för mer information.
+1. Kontrollera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools) för mer information.
 1. Distribuera ändringarna i RDE genom att köra följande kommando:
 
    ```shell
@@ -200,7 +200,49 @@ Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individue
    $ aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
    ```
 
+1. Verifiera ändringar i RDE.
+
+### Distribuera konfigurationsfiler (YAML)
+
+Konfigurationsfilerna för CDN, underhållsaktiviteter, loggvidarebefordran och AEM API-autentisering kan distribueras till RDE med kommandot `install`. Dessa konfigurationer hanteras som YAML-filer i mappen `config` i AEM projekt. Mer information finns i [Konfigurationer som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
+
+Om du vill lära dig hur du distribuerar konfigurationsfilerna kan du förbättra konfigurationsfilen för `cdn` och distribuera den till RDE.
+
+1. Öppna filen `cdn.yaml` från mappen `config`
+1. Uppdatera den önskade konfigurationen, till exempel, uppdatera hastighetsgränsen till 200 begäranden per sekund
+
+   ```yaml
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev", "stage", "prod"]
+   data:
+     trafficFilters:
+       rules:
+       #  Block client for 5m when it exceeds an average of 100 req/sec to origin on a time window of 10sec
+       - name: limit-origin-requests-client-ip
+         when:
+           reqProperty: tier
+           equals: 'publish'
+         rateLimit:
+           limit: 200 # updated rate limit
+           window: 10
+           count: fetches
+           penalty: 300
+           groupBy:
+             - reqProperty: clientIp
+         action: log
+   ...
+   ```
+
+1. Distribuera ändringarna till RDE genom att köra följande kommando
+
+   ```shell
+   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   ```
+
 1. Verifiera ändringar i RDE
+
 
 ## Ytterligare AEM RDE-pluginkommandon
 
@@ -222,7 +264,7 @@ aem rde restart  Restart the author and publish of an RDE
 aem rde status   Get a list of the bundles and configs deployed to the current rde.
 ```
 
-Med ovanstående kommandon kan din utvecklingsmiljö hanteras från din favoritutvecklingsmiljö för snabbare utveckling/driftsättning.
+Med ovanstående kommandon kan din utvecklingsmiljö hanteras från din favoritutvecklingsmiljö för en snabbare utveckling/driftsättning.
 
 ## Nästa steg
 
@@ -231,8 +273,8 @@ Lär dig mer om [livscykeln för utveckling/distribution med RDE](./development-
 
 ## Ytterligare resurser
 
-[Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
+[Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 [Adobe I/O Runtime CLI-plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
+[AEM projektinställningar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
