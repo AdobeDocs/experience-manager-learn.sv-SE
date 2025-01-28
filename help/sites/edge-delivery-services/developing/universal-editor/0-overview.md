@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 doc-type: Catalog
 jira: KT-15832
-duration: 89
+duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: aa8ea183639c4c63be74f7ef1ce099c89454c099
+source-git-commit: 9dd07383a3d46d1bbecd2dc8574e6d06a0535fee
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I den här självstudiekursen får du lära dig grunderna i att skapa en AEM web
 
 Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as a Cloud Service. Med den här konfigurationen kan du utveckla material smidigt med den universella redigeraren för att skapa innehåll och snabbt leverera innehåll via Edge Delivery Services.
 
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -87,7 +87,7 @@ Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as 
 ## Utvecklingsinställning
 
 Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsutveckling. Med den här konfigurationen kan du skapa webbplatser smidigt med den universella redigeraren och leverera effektivt innehåll via Edge Delivery Services, vilket ger ett smidigt och optimerat utvecklingsarbetsflöde.
-<!-- XCARDS 
+<!-- CARDS 
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -163,7 +163,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./5-new-block.md" title="Skapa ett block" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/5-new-block/teaser-block.png" alt="Skapa ett block"
+                        <img class="is-bordered-r-small" src="./assets/5-new-block/card.png" alt="Skapa ett block"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,7 +186,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./6-author-block.md" title="Skapa ett block" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/6-author-block/open-new-site.png" alt="Skapa ett block"
+                        <img class="is-bordered-r-small" src="./assets/6-author-block/card.png" alt="Skapa ett block"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -209,7 +209,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7a-block-css.md" title="Utveckla ett block med CSS" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="Utveckla ett block med CSS"
+                        <img class="is-bordered-r-small" src="./assets/7a-block-css/card.png" alt="Utveckla ett block med CSS"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -232,7 +232,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./7b-block-js-css.md" title="Utveckla ett block med CSS och JS" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/7a-block-css/inspect-block-dom.png" alt="Utveckla ett block med CSS och JS"
+                        <img class="is-bordered-r-small" src="./assets/7b-block-js-css/card.png" alt="Utveckla ett block med CSS och JS"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
