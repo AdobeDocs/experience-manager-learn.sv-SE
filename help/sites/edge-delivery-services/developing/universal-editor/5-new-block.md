@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
+source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett nytt block
 
@@ -136,6 +136,12 @@ Teaser består av två logiska områden: bild och text. För att förenkla koden
 - Gruppera textinnehållsfälten med [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) och [fältkomprimering för CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
 
 Om du inte är bekant med [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse), [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) eller [typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) granskar du den länkade dokumentationen innan du fortsätter, eftersom de är nödvändiga för att skapa en välstrukturerad blockmodell.
+
+I exemplet nedan:
+
+- [Typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) används för att automatiskt skapa ett `<img>` HTML-element från fältet `image`. Fältkomprimering används med fälten `image` och `imageAlt` för att skapa ett `<img>` HTML-element. Attributet `src` är inställt på värdet för fältet `image`, medan attributet `alt` är inställt på värdet för fältet `imageAlt`.
+- `textContent` är ett gruppnamn som används för att kategorisera fält. Den ska vara semantisk, men kan vara allt som är unikt för det här blocket. Detta informerar den universella redigeraren om att återge alla fält med det här prefixet i samma `<div>`-element i den slutliga utdatafilen för HTML.
+- Komprimering av fält används också i gruppen `textContent` för anropet till åtgärd (CTA). CTA skapas som en `<a>` via [typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference). Fältet `cta` används för att ange attributet `href` för elementet `<a>` och fältet `ctaText` innehåller textinnehållet för länken inuti `<a ...>` -taggarna.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
