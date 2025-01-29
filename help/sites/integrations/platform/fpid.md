@@ -13,9 +13,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
-source-git-commit: c638c1e012952f2f43806a325d729cde088ab9f5
+source-git-commit: 241c56d34c851cf9bac553cb9fc545a835e495d2
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 # Generera Experience Platform FPID:n med AEM Sites
 
 Integrering av Adobe Experience Manager (AEM) Sites som levereras via AEM Publish med Adobe Experience Platform (AEP) kräver AEM att man skapar och underhåller en unik FPID-cookie för att unikt kunna spåra användaraktivitet.
+
+FPID-cookien ska anges av servern (AEM Publish) i stället för att använda JavaScript för att skapa en cookie på klientsidan. Detta beror på att moderna webbläsare, som Safari och Firefox, kan blockera eller snabbt förfalla cookies som genererats av JavaScript.
 
 Läs stöddokumentationen för att [lära dig mer om hur enhets-ID:n i första delen och Experience Cloud-ID:n fungerar tillsammans](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
 
@@ -170,7 +172,7 @@ Om detta inträffar kommer samma process att försöka igen på nästa sida att 
 HTTP-GETEN till den AEM FPID-servern (`/bin/aep/fpid`) parametriseras med en slumpmässig frågeparameter för att säkerställa att eventuella infrastrukturer mellan webbläsaren och AEM Publish-tjänsten inte cachelagrar svaret från begäran.
 På samma sätt läggs begärandehuvudet `Cache-Control: no-store` till för att det ska gå att undvika cachelagring.
 
-Vid ett anrop av AEM FPID-server hämtas FPID från JSON-svaret och används av [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en) för att skicka det till Experience Platform API:er.
+Vid ett anrop av AEM FPID-serverlet hämtas FPID från JSON-svaret och används av [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en) för att skicka det till API:er för Experience Platform.
 
 Mer information om [att använda FPID:n i identityMap finns i dokumentationen för Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)
 
@@ -238,5 +240,5 @@ Om den här Dispatcher-konfigurationen inte implementeras korrekt resulterar HTT
 Läs följande Experience Platform-dokumentation för FPID (First-party device ID) och hantering av identitetsdata med Platform Web SDK.
 
 + [Generera enhets-ID:n från första part](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
-+ [Första parts enhets-ID i plattformens webb-SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
-+ [Identitetsdata i plattformens webb-SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
++ [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
++ [Identitetsdata på Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
