@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
+source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett kodprojekt för Edge Delivery Services
 
@@ -32,7 +32,7 @@ Följ stegen nedan för att skapa ett kodprojekt för Edge Delivery Services var
 3. **Installera appen AEM Code Sync GitHub** och ge åtkomst till databasen. Du hittar [appen här](https://github.com/apps/aem-code-sync).
 4. **Konfigurera det nya projektets`fstab.yaml`** så att det pekar på rätt AEM författartjänst.
 
-   * Om du vill experimentera kan du använda lägre AEM as a Cloud Service-miljöer (Stage, Dev eller RDE), men verkliga webbplatsimplementeringar bör konfigureras för att använda en AEM Author-tjänst.
+   * Om du vill experimentera kan du använda lägre AEM as a Cloud Service-miljöer (Stage eller Dev), men verkliga webbplatser ska konfigureras för att använda en AEM.
 
 5. **Redigera det nya projektets`paths.json`** om du vill mappa sökvägen AEM författaren till webbplatsens rot.
 
