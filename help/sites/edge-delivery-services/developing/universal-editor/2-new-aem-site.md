@@ -9,9 +9,10 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
+source-git-commit: 567d2803c5cee274104b38f847820f7665320195
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -43,3 +44,4 @@ När du har skapat webbplatsen i AEM Author publicerar du den i förhandsgranskn
 3. Välj **Förhandsgranska** under **Destinationer** och klicka på **Nästa**.
 4. Under **Inkludera underordnade inställningar** markerar du **Inkludera underordnade**, avmarkerar andra alternativ och klickar på **OK**.
 5. Klicka på **Publish** om du vill publicera webbplatsens innehåll för förhandsgranskning.
+6. När sidorna har publicerats för förhandsgranskning är de tillgängliga i förhandsvisningsmiljön för Edge Delivery Services ( visas inte i AEM förhandsvisningstjänst).
