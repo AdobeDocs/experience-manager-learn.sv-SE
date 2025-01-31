@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: 567d2803c5cee274104b38f847820f7665320195
+source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ Den AEM webbplatsen är den plats där webbplatsens innehåll lagras och skapas.
 
 ![Ny AEM för Edge Delivery Services och universell redigerare](./assets/2-new-aem-site/new-site.png)
 
-Följ stegen nedan för att skapa en ny AEM:
-
+Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) för att skapa en ny AEM.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
 1. **Skapa en ny plats** i AEM författare. I den här självstudien används följande webbplatsnamn:
    * Platstitel: `WKND (Universal Editor)`
    * Platsnamn: `aem-wknd-eds-ue`
+
+      * Värdet för platsnamnet måste matcha webbplatsens sökvägsnamn [ som lagts till i `paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping).
+
 2. **Importera den senaste mallen** från [Edge Delivery Servicens med AEM webbplatsmall för redigering](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 3. **Ge platsen** ett namn som matchar GitHub-databasnamnet och ange GitHub-URL:en som databasens URL.
-
-Mer information finns i avsnittet [Skapa och redigera en ny AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) i guiden Komma igång.
 
 ## Publish den nya webbplatsen som ska förhandsgranskas
 
