@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
+source-git-commit: 176be4209409763b69ceff5e893d0e857efa6d30
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Kom ihåg att [AEM webbplatser som levereras av Edge Delivery Services](https://
 
 ![Nytt Edge Delivery Services-projekt](./assets/1-new-project/new-project.png)
 
-Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) för ett kodprojekt för Edge Delivery Services vars innehåll kan redigeras i Universell redigerare.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
+Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) för att skapa ett kodprojekt för Edge Delivery Services vars innehåll kan redigeras i den universella redigeraren.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
 
 1. **Konfigurera ett GitHub-konto.** Om du skapar ett projekt för din organisation ska du kontrollera att organisationen har ett GitHub-konto och att du är medlem.
 2. **Skapa ett nytt kodprojekt** med [AEM-mallens XWalk-projektmall ](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
