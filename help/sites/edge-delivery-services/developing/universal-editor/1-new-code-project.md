@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
+source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Kom ihåg att [AEM webbplatser som levereras av Edge Delivery Services](https://
 
 ![Nytt Edge Delivery Services-projekt](./assets/1-new-project/new-project.png)
 
-Följ stegen nedan för att skapa ett kodprojekt för Edge Delivery Services vars innehåll kan redigeras i Universell redigerare:
+Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) för ett kodprojekt för Edge Delivery Services vars innehåll kan redigeras i Universell redigerare.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
 
 1. **Konfigurera ett GitHub-konto.** Om du skapar ett projekt för din organisation ska du kontrollera att organisationen har ett GitHub-konto och att du är medlem.
 2. **Skapa ett nytt kodprojekt** med [AEM-mallens XWalk-projektmall ](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
@@ -36,4 +36,4 @@ Följ stegen nedan för att skapa ett kodprojekt för Edge Delivery Services var
 
 5. **Redigera det nya projektets`paths.json`** om du vill mappa sökvägen AEM författaren till webbplatsens rot.
 
-Mer detaljerade anvisningar finns i [Skapa ditt GitHub-projektavsnitt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) i guiden Komma igång.
+Den här Git-databasen klonas i kapitlet [lokal utvecklingsmiljö](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/edge-delivery-services/developing/universal-editor/3-local-development-environment) och där kod utvecklas.
