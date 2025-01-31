@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 700
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
+source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera en lokal utvecklingsmiljö
 
@@ -65,7 +65,7 @@ Installera följande på datorn innan du påbörjar utvecklingen:
 
 ## Klona GitHub-databasen
 
-Klona [GitHub-databasen](./1-new-code-project.md) som innehåller AEM Edge Delivery Services-kodprojektet till din lokala utvecklingsmiljö.
+Klona [GitHub-databasen som skapades i det nya kodprojektkapitlet ](./1-new-code-project.md) som innehåller kodprojektet AEM Edge Delivery Services till den lokala utvecklingsmiljön.
 
 ![GitHub-databasklon](./assets/3-local-development-environment/github-clone.png)
 
@@ -120,6 +120,8 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 ```
 
 AEM CLI öppnar webbplatsen i webbläsaren på `http://localhost:3000/`. Ändringar i projektet läses automatiskt in på nytt i webbläsaren, medan innehållsändringar i [kräver publicering i förhandsvisningsmiljön](./6-author-block.md) och uppdatering av webbläsaren.
+
+Om webbplatsen öppnas med en 404-sida är det sannolikt att [fstab.yaml eller paths.json](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) som uppdaterats i [nytt kodprojekt](./1-new-code-project.md) är felaktigt konfigurerade eller att ändringarna inte har implementerats i `main`-grenen.
 
 ## Bygg JSON-fragment
 
@@ -208,4 +210,3 @@ Följande skriptposter kan läggas till i `package.json` `scripts` -arrayen.
 ```
 
 >[!ENDTABS]
-
