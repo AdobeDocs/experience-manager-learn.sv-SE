@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
+source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -322,6 +322,8 @@ Blockdefinitionen registrerar blocket i Universell redigerare. Här är en beskr
 | `definition.plugins.xwalk.page.resourceType` | Definierar Sling-resurstypen för återgivning av komponenten i den universella redigeraren. Använd alltid resurstypen `core/franklin/components/block/v#/block`. |
 | `definition.plugins.xwalk.page.template.name` | Blockets namn. Den ska vara i gemener och avstavad så att den matchar blockets mappnamn. Det här värdet används också för att etikettera blockinstansen i Universella redigerare. |
 | `definition.plugins.xwalk.page.template.model` | Länkar den här definitionen till dess `model`-definition, som styr de redigeringsfält som visas för blocket i den universella redigeraren. Värdet här måste matcha ett `model.id`-värde. |
+| `definition.plugins.xwalk.page.template.classes` | Valfri egenskap, vars värde läggs till i HTML-elementets `class`-attribut. Detta tillåter varianter av samma block. Värdet `classes` kan göras redigerbart genom att [lägga till ett klassfält](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) i blockets [modell](#block-model). |
+
 
 Här är ett exempel på JSON för blockdefinitionen:
 
