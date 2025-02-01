@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
+source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '967'
 ht-degree: 0%
 
 ---
@@ -187,8 +187,8 @@ Dessa skript levereras inte förkonfigurerade med AEM XWalk-mallen för standard
 
 | NPM-skript | Kommando | Beskrivning |
 |------------------|------------------------------------------------|-------------------------------------------------------|
-| `lint:js:fix` | `npm run lint:js --fix` | Korrigerar automatiskt JavaScript lintingproblem. |
-| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css --fix` | Korrigerar automatiskt CSS-lintingproblem. |
+| `lint:js:fix` | `npm run lint:js -- --fix` | Korrigerar automatiskt JavaScript lintingproblem. |
+| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | Korrigerar automatiskt CSS-lintingproblem. |
 | `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | Kör både JS- och CSS-korrigeringsskript för snabb rensning. |
 
 >[!TAB exempel på package.json]
@@ -200,8 +200,8 @@ Följande skriptposter kan läggas till i `package.json` `scripts` -arrayen.
   ...
   "scripts": [
     ...,
-    "lint:js:fix": "npm run lint:js --fix",
-    "lint:css:fix": "npm run lint:css --fix",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
     ...
   ]
