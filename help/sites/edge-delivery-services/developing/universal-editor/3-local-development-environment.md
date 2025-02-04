@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
+source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,11 @@ Utvecklingsverktygen och processerna för ett Edge Delivery Services webbplatspr
 
 ## Utvecklingstopologi
 
-Utvecklingstopologin för ett webbplatsprojekt för Edge Delivery Services som kan redigeras med Universell redigerare består av följande aspekter:
+Den här videon ger en översikt över utvecklingstopologin för ett webbplatsprojekt för Edge Delivery Services som kan redigeras med Universell redigerare.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+
++++Se ytterligare information om utvecklingstopologi
 
 - **GitHub-databas**:
    - **Syfte**: Värdar för webbplatsens kod (CSS och JavaScript).
@@ -54,6 +58,8 @@ Utvecklingstopologin för ett webbplatsprojekt för Edge Delivery Services som k
       - En lokal klon av **GitHub-databasen** för filialbaserad utveckling.
       - **AEM CLI**, som fungerar som en utvecklingsserver, tillämpar lokala kodändringar i **förhandsvisningsmiljön** för att underlätta körning.
    - **Arbetsflöde**: Utvecklare skriver kod lokalt, implementerar ändringar i en arbetsgren, flyttar grenen till GitHub, validerar den i **Universal Editor** (med den angivna grenen) och sammanfogar den i **huvudgrenen** när den är klar för produktionsdistribution.
+
++++
 
 ## Förutsättningar
 
