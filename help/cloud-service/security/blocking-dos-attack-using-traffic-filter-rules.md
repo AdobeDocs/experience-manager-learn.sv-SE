@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
+source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Följande visualiseringar finns på panelerna ELK och Splunk:
   **ELK Dashboard**:
   ![ELK-kontrollpanel - max antal begäranden per IP/POP](./assets/elk-edge-max-per-ip-pop.png)
 
-  **Segmentkontrollpanel**:\
+  **Segmentkontrollpanel**:
   ![Splunk-instrumentpanel - max antal begäranden per IP/POP](./assets/splunk-edge-max-per-ip-pop.png)
 
 - **Ursprunglig RPS per klient-IP och POP**: Den här visualiseringen visar det maximala antalet begäranden per IP/POP **vid ursprung**. Toppvärdet i visualiseringen anger det maximala antalet begäranden.
@@ -168,10 +168,10 @@ data:
           count: all # count all requests
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true
-    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average            
+          alert: true
+    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average
       - name: prevent-dos-attacks-origin
         when:
           reqProperty: tier
@@ -183,17 +183,12 @@ data:
           count: fetches # count only fetches
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true   
-          
+          alert: true
 ```
 
 Observera att både ursprungs- och kantregler deklareras och att egenskapen alert är inställd på `true` så att du kan få aviseringar när tröskelvärdet uppnås, vilket troligen tyder på en attack.
-
->[!NOTE]
->
->Prefixet _experimentell__ framför experimentell_varning tas bort när varningsfunktionen släpps. Om du vill gå med i det tidiga adopterprogrammet skickar du e-post **<aemcs-waf-adopter@adobe.com>**.
 
 Vi rekommenderar att åtgärdstypen är inställd på att logga initialt så att du kan övervaka trafiken under några timmar eller dagar och se till att den legitima trafiken inte överstiger dessa taxor. Efter några dagar växlar du till blockläge.
 
@@ -211,13 +206,13 @@ Utöver hastighetsbegränsningen för trafikfilterregler rekommenderar vi att du
 kind: "CDN"
 version: "1"
 metadata:
-  envTypes: 
+  envTypes:
     - dev
     - stage
-    - prod  
-data:  
-  experimental_requestTransformations:
-    rules:            
+    - prod
+data:
+  requestTransformations:
+    rules:
       - name: unset-all-query-params-except-those-needed
         when:
           reqProperty: tier
@@ -229,7 +224,7 @@ data:
 
 ## Varningar om trafikfilterregler tas emot {#receiving-alerts}
 
-Om trafikfilterregeln innehåller *experimentell_alert: true* får du en varning när regeln matchas.
+Om trafikfilterregeln innehåller *alert: true* får du en varning när regeln matchas.
 
 ## Åtgärda varningar {#acting-on-alerts}
 
@@ -242,7 +237,7 @@ I det här avsnittet beskrivs metoder för att simulera en DoS-attack, som kan a
 >[!CAUTION]
 >
 > Utför inte dessa steg i en produktionsmiljö. Följande steg är endast avsedda för simulering.
-> 
+>
 >Om du fick ett varningsmeddelande om att trafiken har ökat går du vidare till avsnittet [Analyserar trafikmönster](#analyzing-traffic-patterns).
 
 Verktyg som [Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html), [Apache JMeter](https://jmeter.apache.org/), [Vegeta](https://github.com/tsenart/vegeta) och andra kan användas för att simulera en attack.

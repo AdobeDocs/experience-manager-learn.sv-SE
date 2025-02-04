@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 8795024a7b5e6d10cb2ff2f770dd3d080af85e68
+source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -77,7 +77,7 @@ version: "1"
 metadata:
   envTypes: ["dev", "stage", "prod"]
 data:
-  experimental_redirects:
+  redirects:
     rules:
       - name: redirect-top3-adventures
         when: { reqProperty: path, equals: "/top3" }
