@@ -11,22 +11,22 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 6e08e6830c4e2ab27e813d262f4f51c6aae2909b
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
 # Metadatadrivna behörigheter{#metadata-driven-permissions}
 
-Metadatadrivna behörigheter är en funktion som används för att tillåta åtkomstkontrollsbeslut på AEM Assets Author att baseras på metadataegenskaper för resurser i stället för på mappstrukturen. Med den här funktionen kan du definiera åtkomstkontrollprinciper som utvärderar attribut som resursstatus, typ eller anpassade metadataegenskaper som du definierar.
+Metadatadrivna behörigheter är en funktion som gör att åtkomstkontrollsbeslut i AEM Assets Author kan baseras på objektinnehåll eller metadataegenskaper i stället för på mappstruktur. Med den här funktionen kan du definiera åtkomstkontrollprinciper som utvärderar attribut som resursstatus, typ eller andra anpassade egenskaper som du definierar.
 
-Låt oss se ett exempel. Kreatörerna överför sitt arbete till AEM Assets till den kampanjrelaterade mappen. Det kan vara en pågående resurs som inte har godkänts för användning. Vi vill försäkra oss om att marknadsförarna bara ser godkända mediefiler för den här kampanjen. Vi kan använda metadataegenskaper för att ange att en mediefil har godkänts och kan användas av marknadsförarna.
+Låt oss se ett exempel. Kreatörerna överför sitt arbete till AEM Assets till den kampanjrelaterade mappen. Det kan vara en pågående resurs som inte har godkänts för användning. Vi vill försäkra oss om att marknadsförarna bara ser godkända mediefiler för den här kampanjen. Vi kan använda en metadataegenskap för att ange att en mediefil har godkänts och kan användas av marknadsförarna.
 
 ## Så här fungerar det
 
-Om du aktiverar metadatadrivna behörigheter måste du definiera vilka egenskaper för metadata för resurser som ska leda till åtkomstbegränsningar, till exempel&quot;status&quot; eller&quot;varumärke&quot;. Dessa egenskaper kan sedan användas för att skapa åtkomstkontrollposter som anger vilka användargrupper som har åtkomst till resurser med specifika egenskapsvärden.
+Om du aktiverar metadatadrivna behörigheter måste du definiera vilket resursinnehåll eller metadataegenskaper som styr åtkomstbegränsningar, till exempel&quot;status&quot; eller&quot;varumärke&quot;. Dessa egenskaper kan sedan användas för att skapa åtkomstkontrollposter som anger vilka användargrupper som har åtkomst till resurser med specifika egenskapsvärden.
 
 ## Förutsättningar
 
@@ -34,9 +34,9 @@ Om du aktiverar metadatadrivna behörigheter måste du definiera vilka egenskape
 
 ## OSGi-konfiguration {#configure-permissionable-properties}
 
-För att implementera metadatadrivna behörigheter måste utvecklaren distribuera en OSGi-konfiguration till AEM as a Cloud Service, som möjliggör specifika metadata-egenskaper för resurser för att hantera metadatadrivna behörigheter.
+För att implementera metadatadrivna behörigheter måste utvecklaren distribuera en OSGi-konfiguration till AEM as a Cloud Service, som möjliggör specifikt resursinnehåll eller metadataegenskaper för att hantera metadatadrivna behörigheter.
 
-1. Avgör vilka metadataegenskaper för resurser som ska användas för åtkomstkontroll. Egenskapsnamnen är JCR-egenskapsnamnen på resursens `jcr:content/metadata`-resurs. I vårt fall blir det en egenskap med namnet `status`.
+1. Avgör vilket resursinnehåll eller vilka metadataegenskaper som ska användas för åtkomstkontroll. Egenskapsnamnen är JCR-egenskapsnamnen på resursen `jcr:content` eller `jcr:content/metadata`. I vårt fall blir det en egenskap med namnet `status`.
 1. Skapa en OSGi-konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` i ditt AEM Maven-projekt.
 1. Klistra in följande JSON i den skapade filen:
 
@@ -46,11 +46,12 @@ För att implementera metadatadrivna behörigheter måste utvecklaren distribuer
        "status",
        "brand"
      ],
+     "restrictionContentPropertyNames":[],
      "enabled":true
    }
    ```
 
-1. Ersätt egenskapsnamnen med obligatoriska värden.
+1. Ersätt egenskapsnamnen med obligatoriska värden.  Konfigurationsegenskapen `restrictionContentPropertyNames` används för att aktivera behörigheter för `jcr:content`-resursegenskaper, medan konfigurationsegenskapen `restrictionPropertyNames` aktiverar behörigheter för `jcr:content/metadata`-resursegenskaper för resurser.
 
 ## Återställ behörigheter för basresurs
 
@@ -90,7 +91,7 @@ Exempelmappen innehåller några resurser.
 
 ![Administratörsvy](./assets/metadata-driven-permissions/admin-view.png)
 
-När du har konfigurerat behörigheter och angett metadataegenskaperna för resursen i enlighet med detta kommer användare (marknadsföringsanvändare i vårt fall) endast att se godkända resurser.
+När du har konfigurerat behörigheter och angett metadataegenskaperna för resursen i enlighet med detta, kommer användare (marknadsföringsanvändare i vårt fall) endast att se godkända resurser.
 
 ![Marknadsföringsvy](./assets/metadata-driven-permissions/marketeer-view.png)
 
@@ -100,13 +101,13 @@ Fördelarna med metadatadrivna behörigheter är:
 
 - Detaljerad kontroll över åtkomsten till materialet baserat på specifika attribut.
 - Frikoppling av åtkomstkontrollprinciper från mappstrukturen, vilket ger en mer flexibel resursorganisation.
-- Möjlighet att definiera komplexa åtkomstkontrollsregler baserat på flera metadataegenskaper.
+- Möjlighet att definiera komplexa åtkomstkontrollsregler baserade på flera innehålls- eller metadataegenskaper.
 
 >[!NOTE]
 >
 > Observera:
 > 
-> - Metadataegenskaper utvärderas mot begränsningarna med __Stränglikhet__ (`=`) (andra datatyper eller operatorer stöds ännu inte, för större än (`>`) eller Date-egenskaper)
+> - Egenskaperna utvärderas mot begränsningarna med __Stränglikhet__ (`=`) (andra datatyper eller operatorer stöds ännu inte, för större egenskaper än (`>`) eller Date)
 > - Om du vill tillåta flera värden för en begränsningsegenskap kan du lägga till ytterligare begränsningar i åtkomstkontrollposten genom att välja samma egenskap i listrutan &quot;Välj typ&quot; och ange ett nytt begränsningsvärde (t.ex. `status=approved`, `status=wip`) och klicka på &quot;+&quot; för att lägga till begränsningen i posten
 > ![Tillåt flera värden ](./assets/metadata-driven-permissions/allow-multiple-values.png)
 > - __AND-begränsningar__ stöds, via flera begränsningar i en enda åtkomstkontrollpost med olika egenskapsnamn (t.ex. `status=approved`, `brand=Adobe`) utvärderas som ett AND-villkor, vilket innebär att den valda användargruppen beviljas läsåtkomst till resurser med `status=approved AND brand=Adobe`
