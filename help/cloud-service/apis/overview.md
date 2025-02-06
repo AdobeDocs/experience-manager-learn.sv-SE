@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Låt oss titta närmare på OpenAPI-baserade API:er för AEM och de viktiga begr
 
 I framtida versioner kommer fler OpenAPI-baserade AEM-API:er att läggas till som stöd för fler användningsfall.
 
-## Autentiseringsstöd{#authentication-support}
+### Autentiseringsstöd{#authentication-support}
 
 OpenAPI-baserade AEM-API:er har stöd för följande autentiseringsmetoder:
 
@@ -95,7 +95,7 @@ OpenAPI-baserade AEM-API:er har stöd för följande autentiseringsmetoder:
 | Säkerhetsaspekter | Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. | Användarens autentisering och får en egen temporär åtkomsttoken. Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. |
 | Typ av bidrag | _client_credentials_ | _authentication_code_ |
 
-## Åtkomst till Adobe API:er och relaterade koncept{#accessing-adobe-apis-and-related-concepts}
+### Åtkomst till Adobe API:er och relaterade koncept{#accessing-adobe-apis-and-related-concepts}
 
 Innan du får åtkomst till API:er för Adobe är det viktigt att du förstår dessa viktiga begrepp:
 

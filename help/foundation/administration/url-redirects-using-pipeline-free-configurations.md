@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -236,10 +236,13 @@ När distributionen är klar är URL-omdirigeringarna aktiva och marknadsföring
 
 Låt oss testa URL-omdirigeringarna med webbläsaren eller kommandot `curl`. Gå till URL:en för `/ski/westcoast` och verifiera att den omdirigeras till `/us/en/adventures/tahoe-skiing.html`.
 
-
 ## Sammanfattning
 
 I den här självstudiekursen fick du lära dig att hantera URL-omdirigeringar med hjälp av pipelinefria konfigurationer i AEM as a Cloud Service-miljön.
 
 Marknadsföringsteamet kan hantera URL-omdirigeringar som nyckelvärdepar i en textfil och överföra dem till DAM eller använda ACS Commons - Redirect Map Manager eller Redirect Manager. Dispatcher-konfigurationerna uppdateras för att läsa in URL-omdirigeringarna som en RewriteMap och tillämpa dem på inkommande begäranden.
 
+## Ytterligare resurser
+
+- [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [URL-omdirigeringar](url-redirection.md)
