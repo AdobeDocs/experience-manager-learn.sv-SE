@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -76,14 +76,13 @@ Det finns två tillgängliga funktioner i [ACS AEM Commons](https://adobe-consul
 
 #### Omdirigeringshanteraren
 
-[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan direkt åtkomst till Apache-webbservern eller kräver att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM distribution. Omdirigeringshanteraren är både **AEM as a Cloud Service** (se [Gratis URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) och relaterad [självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-map-manager)) och **AEM 6.x** -kompatibel.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan direkt åtkomst till Apache-webbservern eller kräver att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM distribution. Omdirigeringshanteraren är både **AEM as a Cloud Service** (se [Gratis URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) ) och **AEM 6.x** -kompatibel.
 
 #### Omdirigeringshanteraren
 
 [Med omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) kan användare i AEM enkelt underhålla och publicera omdirigeringar från AEM. Implementeringen baseras på Java™-serverfiltret, vilket är en vanlig JVM-resursförbrukning. Den här funktionen eliminerar också beroendet av AEM utvecklingsteam och AEM driftsättningar. Omdirigeringshanteraren är kompatibel med både **AEM as a Cloud Service** och **AEM 6.x**. Medan den initiala omdirigerade begäran måste trycka på den AEM Publish-tjänsten för att generera cacheminnet 301/302 (mest) för CDN:er 301/302 som standard, så att efterföljande begäranden kan omdirigeras till edge/CDN.
 
-[Omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) har även stöd för [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)-strategier för **AEM as a Cloud Service** genom [att kompilera omdirigeringar till en textfil](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) för [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), vilket gör att omdirigeringar som används på Apache-webbservern kan uppdateras utan att den behöver hämtas direkt eller startas om. Mer information finns i [självstudiekursen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-manager).
-I det här fallet kommer den initiala omdirigeringsbegäran att drabba Apache-webbservern, inte AEM Publish-tjänsten.
+[Omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) har även stöd för [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)-strategier för **AEM as a Cloud Service** genom [att kompilera omdirigeringar till en textfil](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) för [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), vilket gör att omdirigeringar som används på Apache-webbservern kan uppdateras utan att den behöver hämtas direkt eller startas om. I det här fallet kommer den initiala omdirigeringsbegäran att drabba Apache-webbservern, inte AEM Publish-tjänsten.
 
 ### Sidegenskapen `Redirect`
 

@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser om AEM Foundation
 user-guide-description: En samling videor och självstudiekurser om Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '244'
 ht-degree: 11%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 11%
    + [Använd rensning av onlineversioner](./administration/use-online-revision-clean-up.md)
    + [Använda kontrollpanelen för systemöversikt](./administration/use-the-system-overview-dashboard.md)
    + [URL-omdirigeringar](./administration/url-redirection.md)
-   + [URL-omdirigeringar med hjälp av pipelinefria konfigurationer](./administration/url-redirects-using-pipeline-free-configurations.md)
 + Autentisering {#authentication}
    + [OKTA och AEM](authentication/okta-saml-integration.md)
    + [OAuth-scope](authentication/oauth-code-sample-develop.md)
