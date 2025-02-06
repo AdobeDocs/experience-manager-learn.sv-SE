@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla ett block med CSS
 
@@ -90,7 +90,7 @@ Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript
 ```css
 /* /blocks/teaser/teaser.css */
 
-/* Scope each selector in the block with `.block.teaser` to avoid accidental conflicts outside the block */
+/* Scope each selector in the block with `.block.teaser` using CSS nesting (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) to avoid accidental conflicts outside the block */
 .block.teaser {
     animation: teaser-fade-in .6s;
     position: relative;
@@ -99,96 +99,97 @@ Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
-}
 
-/* The image is rendered to the first div in the block */
-.block.teaser picture {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    box-sizing: border-box;
-}
+    /* The image is rendered to the first div in the block */
+    & picture {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        box-sizing: border-box;
 
-.block.teaser picture img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-}
+        & img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
 
-/** 
-The teaser's text is rendered to the second (also the last) div in the block.
+    /** 
+    The teaser's text is rendered to the second (also the last) div in the block.
 
-These styles are scoped to the second (also the last) div in the block (.block.teaser > div:last-child).
+    These styles are scoped to the second (also the last) div in the block (.block.teaser > div:last-child).
 
-This div order can be used to target different styles to the same semantic elements in the block. 
-For example, if the block has two images, we could target the first image with `.block.teaser > div:first-child img`, 
-and the second image with `.block.teaser > div:nth-child(2) img`.
-**/
-.block.teaser > div:last-child {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--background-color);
-    padding: 1.5rem 1.5rem 1rem;
-    width: 80vw;
-    max-width: 1200px;
-}
+    This div order can be used to target different styles to the same semantic elements in the block. 
+    For example, if the block has two images, we could target the first image with `.block.teaser > div:first-child img`, 
+    and the second image with `.block.teaser > div:nth-child(2) img`.
+    **/
+    & > div:last-child {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--background-color);
+        padding: 1.5rem 1.5rem 1rem;
+        width: 80vw;
+        max-width: 1200px;
 
-/** 
-The following elements reside within `.block.teaser > div:last-child` and could be scoped as such, for example:
+        /** 
+        The following elements reside within `.block.teaser > div:last-child` and could be scoped as such, for example:
 
- .block.teaser > div:last-child p { .. }
+        .block.teaser > div:last-child p { .. }
 
-However since these element can only appear in the second/last div per our block's model, it's unnecessary to add this additional scope.
-**/
+        However since these element can only appear in the second/last div per our block's model, it's unnecessary to add this additional scope.
+        **/
 
-/* Regardless of the authored heading level, we only want one style the heading */
-.block.teaser h1,
-.block.teaser h2,
-.block.teaser h3,
-.block.teaser h4,
-.block.teaser h5,
-.block.teaser h6 {
-    font-size: var(--heading-font-size-xl);
-    margin: 0;
-}
+        /* Regardless of the authored heading level, we only want one style the heading */
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6 {
+            font-size: var(--heading-font-size-xl);
+            margin: 0;
+        }
 
-.block.teaser h1::after,
-.block.teaser h2::after,
-.block.teaser h3::after,
-.block.teaser h4::after,
-.block.teaser h5::after,
-.block.teaser h6::after {
-    border-bottom: 0;
-}
+        & h1::after,
+        & h2::after,
+        & h3::after,
+        & h4::after,
+        & h5::after,
+        & h6::after {
+            border-bottom: 0;
+        }
 
-.block.teaser p {
-    font-size: var(--body-font-size-s);
-    margin-bottom: 1rem;
-}
+        & p {
+            font-size: var(--body-font-size-s);
+            margin-bottom: 1rem;
+        }
 
-/* Add underlines to links in the text */
-.block.teaser a:hover {
-    text-decoration: underline;
-}
+        /* Add underlines to links in the text */
+        & a:hover {
+            text-decoration: underline;
+        }
 
-/* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-.block.teaser .button-container {
-    margin: 0;
-    padding: 0;
-}
+        /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
+        & .button-container {
+            margin: 0;
+            padding: 0;
+        }
 
-.block.teaser .button {
-    background-color: var(--primary-color);
-    border-radius: 0;
-    color: var(--dark-color);
-    font-size: var(--body-font-size-xs);
-    font-weight: bold;
-    padding: 1em 2.5em;
-    margin: 0;
-    text-transform: uppercase;
+        & .button {
+            background-color: var(--primary-color);
+            border-radius: 0;
+            color: var(--dark-color);
+            font-size: var(--body-font-size-xs);
+            font-weight: bold;
+            padding: 1em 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+
 }
 
 /** Animations 
@@ -239,4 +240,3 @@ $ git push origin teaser
 Nu kan du förhandsgranska ändringarna i Universal Editor när du lägger till frågeparametern `?ref=teaser`.
 
 ![Teaser in Universal Editor](./assets/7a-block-css/universal-editor-preview.png)
-

@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -292,6 +292,8 @@ Uppdatera slutligen CSS-variablerna `styles/styles.css` så att de använder de 
 Webbteckensnitt påverkar ofta prestandan på grund av sin storlek, vilket kan öka poängen för Cumulative Layout Shift (CLS) och minska de totala poängen för Lightroom. För att säkerställa snabb textvisning när webbteckensnitt läses in används webbläsarbaserade reservteckensnitt i Edge Delivery Services. Det här arbetssättet gör att du får en smidig användarupplevelse medan det önskade teckensnittet används.
 
 Om du vill välja det bästa reservteckensnittet använder du Adobe [Helix Font Fallback Chrome-tillägget](https://www.aem.live/developer/font-fallback) som anger ett teckensnitt som matchar webbläsarna innan det anpassade teckensnittet läses in. De resulterande reservtypsnittsdeklarationerna bör läggas till i filen `styles/styles.css` för att förbättra prestandan och ge användarna en smidig upplevelse.
+
+![Helix Font Fallback Chrome-tillägg](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
 Om du vill använda Chrome-tillägget [Helix Font Fallback](https://www.aem.live/developer/font-fallback) kontrollerar du att webbsidan har webbteckensnitt i samma varianter som används på webbplatsen Edge Delivery Services. I den här självstudien demonstreras tillägget på [wknd.site](http://wknd.site/us/en.html). När du utvecklar en webbplats ska du tillämpa tillägget på den webbplats som du arbetar med i stället för på [wknd.site](http://wknd.site/us/en.html).
 
