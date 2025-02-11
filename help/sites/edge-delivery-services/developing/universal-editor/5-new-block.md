@@ -1,6 +1,6 @@
 ---
 title: Skapa ett block
-description: Bygg ett block för en Edge Delivery Services webbplats som kan redigeras med Universal Editor.
+description: Bygg ett block för en Edge Delivery Services-webbplats som kan redigeras med Universell redigerare.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,16 +10,16 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # Skapa ett nytt block
 
-I det här kapitlet beskrivs hur du skapar ett nytt, redigerbart teaserblock för en Edge Delivery Services webbplats med hjälp av Universellt redigeringsprogram.
+I det här kapitlet beskrivs hur du skapar ett nytt, redigerbart teaserblock för en Edge Delivery Services-webbplats med den universella redigeraren.
 
 ![Nytt teaser-block](./assets//5-new-block/teaser-block.png)
 
@@ -130,7 +130,7 @@ Definiera de fält som krävs för blocket: bild, bildalternativ text, text, CTA
 
 **Den här fliken visar det rätta sättet att modellera teaserblocket.**
 
-Teaser består av två logiska områden: bild och text. För att förenkla koden som behövs för att visa Edge Delivery Servicens HTML som önskad webbupplevelse bör blockmodellen återspegla den här strukturen.
+Teaser består av två logiska områden: bild och text. För att förenkla koden som behövs för att visa Edge Delivery Services HTML som önskad webbupplevelse bör blockmodellen återspegla den här strukturen.
 
 - Gruppera **bilden** och **bilden alt text** med [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
 - Gruppera textinnehållsfälten med [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) och [fältkomprimering för CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
@@ -140,7 +140,7 @@ Om du inte är bekant med [fältkomprimering](https://experienceleague.adobe.com
 I exemplet nedan:
 
 - [Typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) används för att automatiskt skapa ett `<img>` HTML-element från fältet `image`. Fältkomprimering används med fälten `image` och `imageAlt` för att skapa ett `<img>` HTML-element. Attributet `src` är inställt på värdet för fältet `image`, medan attributet `alt` är inställt på värdet för fältet `imageAlt`.
-- `textContent` är ett gruppnamn som används för att kategorisera fält. Den ska vara semantisk, men kan vara allt som är unikt för det här blocket. Detta informerar den universella redigeraren om att återge alla fält med det här prefixet i samma `<div>`-element i den slutliga utdatafilen för HTML.
+- `textContent` är ett gruppnamn som används för att kategorisera fält. Den ska vara semantisk, men kan vara allt som är unikt för det här blocket. Detta informerar den universella redigeraren om att återge alla fält med det här prefixet i samma `<div>`-element i den slutliga HTML-utdatafilen.
 - Komprimering av fält används också i gruppen `textContent` för anropet till åtgärd (CTA). CTA skapas som en `<a>` via [typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference). Fältet `cta` används för att ange attributet `href` för elementet `<a>` och fältet `ctaText` innehåller textinnehållet för länken inuti `<a ...>` -taggarna.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
@@ -194,7 +194,7 @@ I exemplet nedan:
 
 Den här modellen definierar redigeringsindata i Universell redigerare för blocket.
 
-De resulterande Edge Delivery Servicens HTML för det här blocket placerar bilden i den första div-taggen och elementgruppsfälten `textContent` i den andra div-taggen.
+Den resulterande Edge Delivery Services HTML för det här blocket placerar bilden i den första div-taggen och elementgruppsfälten `textContent` i den andra div-taggen.
 
 ```html
 <div>
@@ -276,7 +276,7 @@ Teaser-modellen kan till exempel definieras som **utan**-fältkomprimering eller
 }
 ```
 
-Edge Delivery Servicens HTML för blocket återger varje fälts värde i en separat `div`, vilket komplicerar innehållets förståelse, formatprogrammet och strukturjusteringarna för HTML för att uppnå önskad design.
+Edge Delivery Services HTML för blocket återger varje fälts värde i en separat `div` vilket komplicerar innehållskompetens, formatprogram och HTML strukturjusteringar för att uppnå önskad design.
 
 ```html
 <div>
@@ -322,7 +322,7 @@ Blockdefinitionen registrerar blocket i Universell redigerare. Här är en beskr
 | `definition.plugins.xwalk.page.resourceType` | Definierar Sling-resurstypen för återgivning av komponenten i den universella redigeraren. Använd alltid resurstypen `core/franklin/components/block/v#/block`. |
 | `definition.plugins.xwalk.page.template.name` | Blockets namn. Den ska vara i gemener och avstavad så att den matchar blockets mappnamn. Det här värdet används också för att etikettera blockinstansen i Universella redigerare. |
 | `definition.plugins.xwalk.page.template.model` | Länkar den här definitionen till dess `model`-definition, som styr de redigeringsfält som visas för blocket i den universella redigeraren. Värdet här måste matcha ett `model.id`-värde. |
-| `definition.plugins.xwalk.page.template.classes` | Valfri egenskap, vars värde läggs till i HTML-elementets `class`-attribut. Detta tillåter varianter av samma block. Värdet `classes` kan göras redigerbart genom att [lägga till ett klassfält](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) i blockets [modell](#block-model). |
+| `definition.plugins.xwalk.page.template.classes` | Valfri egenskap, vars värde läggs till i HTML-blockelementets `class`-attribut. Detta tillåter varianter av samma block. Värdet `classes` kan göras redigerbart genom att [lägga till ett klassfält](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) i blockets [modell](#block-model). |
 
 
 Här är ett exempel på JSON för blockdefinitionen:
@@ -379,7 +379,7 @@ Teaser-komponenten är inte ett [behållarblock](https://experienceleague.adobe.
 
 ![Blockfilter](./assets/5-new-block/filters.png)
 
-Butiksfilter i projektets `models`-mapp, till exempel avsnittsblocket, finns i Adobe. Du kan justera genom att leta upp JSON-filen för blocket som tillhandahålls av Adobe (till exempel `/models/_section.json`) och lägga till teaser-ID:t (`teaser`) i filterlistan. Konfigurationen signalerar till Universal Editor att teaser-komponenten kan läggas till i avsnittets behållarblock.
+Adobe-fördefinierade block, som avsnittsblocket, lagrar filter i projektets `models`-mapp. Om du vill justera söker du efter JSON-filen för det Adobe-tillhandahållna blocket (till exempel `/models/_section.json`) och lägger till teaser-ID (`teaser`) i filterlistan. Konfigurationen signalerar till Universal Editor att teaser-komponenten kan läggas till i avsnittets behållarblock.
 
 [!BADGE /models/_section.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
@@ -420,15 +420,11 @@ $ npm run lint:js
 
 ## Bygg projekt-JSON
 
-När du har konfigurerat blockets JSON-filer (`blocks/teaser/_teaser.json`, `models/_section.json`) måste de kompileras till projektets `component-models.json` -, `component-definitions.json` - och `component-filters.json`-filer. Kompileringen görs genom att köra projektets [build JSON](./3-local-development-environment.md#build-json-fragments) npm-skript.
+När blockets JSON-filer (t.ex. `blocks/teaser/_teaser.json`, `models/_section.json`) har konfigurerats kompileras de automatiskt till projektets `component-models.json` -, `component-definitions.json` - och `component-filters.json` -filer. Den här kompileringen hanteras automatiskt av en [Husky](https://typicode.github.io/husky/)-exekveringskrok som ingår i projektmallen [AEM Boilerplate XWalk ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) .
 
-```bash
-# ~/Code/aem-wknd-eds-ue
+Bygger kan också aktiveras manuellt eller programmatiskt med projektets [build JSON](./3-local-development-environment.md#build-json-fragments) NPM-skript.
 
-$ npm run build:json
-```
-
-## Distribuera blockdefinitionen
+## Distribuera blockets JSON
 
 Om du vill göra blocket tillgängligt i Universal Editor måste projektet implementeras och skickas till en GitHub-databasgren, i det här fallet grenen `teaser`.
 
@@ -439,7 +435,8 @@ Det exakta förgreningsnamnet Universal Editor använder kan justeras per använ
 
 $ git add .
 $ git commit -m "Add teaser block JSON files so it is available in Universal Editor"
+# JSON files are compiled automatically and added to the commit via a husky precommit hook
 $ git push origin teaser
 ```
 
-När den universella redigeraren öppnas med frågeparametern `?ref=teaser` visas det nya `teaser`-blocket på blockpaletten. Observera att blocket inte har någon formatering. Blockets fält återges som semantiska HTML, formaterade endast via [global CSS](./4-website-branding.md#global-css).
+När den universella redigeraren öppnas med frågeparametern `?ref=teaser` visas det nya `teaser`-blocket på blockpaletten. Observera att blocket inte har någon formatering. Det återger blockets fält som semantiska HTML, formaterade endast via [global CSS](./4-website-branding.md#global-css).

@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Utveckla ett block med CSS
 
-Block i Edge Delivery Services formateras med CSS. CSS-filen för ett block lagras i blockets katalog och har samma namn som blocket. CSS-filen för ett block med namnet `teaser` finns till exempel på `blocks/teaser/teaser.css`.
+Block i Edge Delivery Services är formaterade med CSS. CSS-filen för ett block lagras i blockets katalog och har samma namn som blocket. CSS-filen för ett block med namnet `teaser` finns till exempel på `blocks/teaser/teaser.css`.
 
 Helst ska ett -block bara behöva CSS för formatering, utan att förlita sig på JavaScript för att ändra DOM eller lägga till CSS-klasser. Behovet av JavaScript beror på blockets [innehållsmodellering](./5-new-block.md#block-model) och dess komplexitet. Om det behövs kan [blockera JavaScript](./7b-block-js-css.md) läggas till.
 
-Om du använder en CSS-baserad metod kommer de (mest) oskarpa HTML-elementen i blocket att användas som mål och formateras.
+Om du bara använder CSS är de (mest) oskarpa HTML-elementen i blocket riktade och formaterade.
 
-## Block HTML
+## Blockera HTML
 
 Om du vill veta hur du formaterar ett block ska du först granska DOM som exponeras av Edge Delivery Services, eftersom det är det som är tillgängligt för formatering. DOM hittas genom att man inspekterar det block som hanteras av AEM CLI:s lokala utvecklingsmiljö. Undvik att använda den universella redigerarens DOM eftersom den skiljer sig något.
 
@@ -35,7 +35,7 @@ Om du vill veta hur du formaterar ett block ska du först granska DOM som expone
 
 Nedan följer det teaser-blockets DOM som är målet för formatering.
 
-Observera att `<p class="button-container">...` som [automatiskt utökas](./4-website-branding.md#inferred-elements) som ett härledt element av Edge Delivery Servicens JavaScript.
+Observera att `<p class="button-container">...` som [automatiskt utökas](./4-website-branding.md#inferred-elements) som ett härledt element av Edge Delivery Services JavaScript.
 
 ```html
 ...
@@ -75,7 +75,7 @@ Observera att `<p class="button-container">...` som [automatiskt utökas](./4-we
 
 Om du vill hitta det DOM som ska formateras öppnar du sidan med det ej formaterade blocket i den lokala utvecklingsmiljön, markerar blocket och kontrollerar DOM.
 
-![Inspect-block DOM](./assets/7a-block-css/inspect-block-dom.png)
+![Inspektera block-DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
@@ -83,7 +83,7 @@ Om du vill hitta det DOM som ska formateras öppnar du sidan med det ej formater
 
 Skapa en ny CSS-fil i blockets mapp med blockets namn som filnamn. För blocket **teaser** finns filen till exempel på `/blocks/teaser/teaser.css`.
 
-Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript upptäcker ett DOM-element på sidan som representerar ett teaser-block.
+Den här CSS-filen läses in automatiskt när Edge Delivery Services JavaScript upptäcker ett DOM-element på sidan som representerar ett teaser-block.
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
@@ -99,15 +99,16 @@ Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The image is rendered to the first div in the block */
-    & picture {
+    picture {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
 
-        & img {
+        img {
             object-fit: cover;
             object-position: center;
             width: 100%;
@@ -143,53 +144,52 @@ Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript
         **/
 
         /* Regardless of the authored heading level, we only want one style the heading */
-        & h1,
-        & h2,
-        & h3,
-        & h4,
-        & h5,
-        & h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & h1::after,
-        & h2::after,
-        & h3::after,
-        & h4::after,
-        & h5::after,
-        & h6::after {
+        h1::after,
+        h2::after,
+        h3::after,
+        h4::after,
+        h5::after,
+        h6::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
-        }
 
-        & .button {
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
+            .button {
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
     }
-
 }
 
 /** Animations 
@@ -211,7 +211,7 @@ Den här CSS-filen läses in automatiskt när Edge Delivery Servicens JavaScript
 
 ## Förhandsgranskning av utveckling
 
-När CSS-koden skrivs i kodprojektet är AEM CLI:s hot reload ändringarna, vilket gör det snabbt och enkelt att förstå hur CSS påverkar blocket.
+När CSS-koden skrivs i kodprojektet är det AEM CLI:s funktion att läsa in ändringarna igen, vilket gör det snabbt och enkelt att förstå hur CSS påverkar blocket.
 
 ![Endast CSS-förhandsgranskning](./assets/7a-block-css/local-development-preview.png)
 

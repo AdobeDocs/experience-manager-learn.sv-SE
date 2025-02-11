@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '585'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 5%
       + [Alt-text för bild](./document-authoring/how-to/image-alt-text.md)
       + [Förhindra indexering av sökmotor](./document-authoring/how-to/no-index.md)
       + [Responsiv navigering](document-authoring/how-to/responsive-navigation.md)
-      + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
+      + [Dynamiska medier](./document-authoring/how-to/using-dynamic-media.md)
       + [Platsmigrering med importverktyget](./document-authoring/how-to/migration-using-importer.md)
       + [Anpassa importeraren](./document-authoring/how-to/customizing-importer.md)
       + [Massimport med importverktyg](./document-authoring/how-to/bulk-importing-using-importer.md)
@@ -91,7 +91,7 @@ ht-degree: 5%
    + [Ökning](./edge-delivery-services/overview.md)
    + Utvecklar{#developing}
       + [Förutsättningar](edge-delivery-services/developing/prerequisites.md)
-      + [AEM](edge-delivery-services/developing/aem-boilerplate.md)
+      + [AEM boilerplate](edge-delivery-services/developing/aem-boilerplate.md)
       + [Innehållsarkiv](edge-delivery-services/developing/content-repository.md)
       + [Förhandsgranska och publicera](edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](edge-delivery-services/developing/sidekick.md)
@@ -101,28 +101,30 @@ ht-degree: 5%
       + Universell redigerare {#universal-editor}
          + [Ökning](./edge-delivery-services/developing/universal-editor/0-overview.md)
          + [Nytt kodprojekt](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
-         + [Ny AEM](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
+         + [Ny AEM-webbplats](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
          + [Lokal utvecklingsmiljö](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
          + [Webbplatsmärkning](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
          + [Nytt block](./edge-delivery-services/developing/universal-editor/5-new-block.md)
          + [Författare till blocket](./edge-delivery-services/developing/universal-editor/6-author-block.md)
          + [Blockera med endast CSS](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [Block med CSS och JS](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
+         + Instruktioner{#how-to}
+            + [Blockalternativ](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
    + Instruktioner{#how-to}
       + [RSS-flöden](edge-delivery-services/how-to/rss.md)
       + [Delning i sociala medier](edge-delivery-services/how-to/social-media-sharing.md)
       + [Tar bort sidor](edge-delivery-services/how-to/delete-page.md)
 + Utveckling {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
-   + [AEM Project Archettype](developing/aem-project-archetype.md)
+   + [AEM Project Archetype](developing/aem-project-archetype.md)
    + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
    + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
-   + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [Komma igång med AEM SPA Editor och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
    + [Bästa praxis för formatsystem](developing/style-organization-style-system-understand-article.md)
-   + [Snabba upp materialets hastighet med AEM](developing/accelerate-content-velocity-aem-style-system.md)
+   + [Snabbare innehåll med AEM-system](developing/accelerate-content-velocity-aem-style-system.md)
    + [Utveckla för sidskillnader](developing/page-diff-technical-video-develop.md)
    + [Implementera enkel sökning](developing/search-tutorial-develop.md)
    + [Delning av sociala medier](developing/social-media-sharing-technical-video-use.md)
@@ -140,8 +142,8 @@ ht-degree: 5%
 + SEO {#seo}
    + [Webbplatskartor](./seo/sitemaps.md)
 + Enkelsidiga program {#spa-editor}
-   + [Använda SPA Editor](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [Använda SPA-redigeraren](spa-editor/spa-editor-framework-feature-video-use.md)
+   + [Komma igång med AEM SPA Editor och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
 + Hantering av flera platser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -170,12 +172,12 @@ ht-degree: 5%
    + Taggar i Adobe Experience Platform {#experience-platform-data-collection-tags}
       + [Ökning](integrations/experience-platform/data-collection/tags/overview.md)
       + [Skapa en taggegenskap](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [Koppla AEM och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [Cloud Servicen Skapa AEM taggar](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [Koppla AEM- och taggegenskap med IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
+      + [Skapa AEM Tags Cloud Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [Felsöka en taggimplementering](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe-klientdatalagret {#adobe-client-data-layer}
-      + [Använda datalagret för klienten Adobe](integrations/adobe-client-data-layer/data-layer-overview.md)
-      + [Anpassa Adobe-klientdatalagret](integrations/adobe-client-data-layer/data-layer-customize.md)
+   + Adobe Client Data Layer {#adobe-client-data-layer}
+      + [Använda Adobe klientdatalager](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [Anpassa Adobe klientdatalager](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyser {#analytics}
       + [Samla in siddata med Adobe Analytics](integrations/analytics/collect-data-analytics.md)
       + [Spåra klickade komponenter med Adobe Analytics](integrations/analytics/track-clicked-component.md)

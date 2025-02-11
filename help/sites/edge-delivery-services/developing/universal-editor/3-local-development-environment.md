@@ -10,22 +10,22 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
 
 # Konfigurera en lokal utvecklingsmiljö
 
-En lokal utvecklingsmiljö är nödvändig för att snabbt utveckla webbplatser som levereras av Edge Delivery Services. Miljön använder lokalt utvecklad kod när innehåll hämtas från Edge Delivery Services, vilket gör att utvecklare kan se kodändringar direkt. En sådan installation stöder snabb, iterativ utveckling och testning.
+En lokal utvecklingsmiljö är nödvändig för att snabbt utveckla webbplatser som levereras av Edge Delivery Services. Miljön använder lokalt utvecklad kod när man hämtar material från Edge Delivery Services, vilket gör att utvecklarna omedelbart kan se kodändringar. En sådan installation stöder snabb, iterativ utveckling och testning.
 
 Utvecklingsverktygen och processerna för ett Edge Delivery Services webbplatsprojekt är utformade för att vara välkända för webbutvecklare och ge en snabb och effektiv utvecklingsupplevelse.
 
 ## Utvecklingstopologi
 
-Den här videon ger en översikt över utvecklingstopologin för ett webbplatsprojekt för Edge Delivery Services som kan redigeras med Universell redigerare.
+I den här videon finns en översikt över utvecklingstopologin för ett Edge Delivery Services-webbplatsprojekt som kan redigeras med Universal Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
 
@@ -36,21 +36,21 @@ Den här videon ger en översikt över utvecklingstopologin för ett webbplatspr
    - **Struktur**: Huvudgrenen **** innehåller produktionsklar kod, medan andra grenar innehåller arbetskod.
    - **Funktionalitet**: Kod från vilken gren som helst kan köras mot miljöerna **production** eller **preview** utan att den aktiva webbplatsen påverkas.
 
-- **AEM Författartjänst**:
+- **AEM Author service**:
    - **Syfte**: Fungerar som databas för kanoniskt innehåll där webbplatsinnehåll redigeras och hanteras.
    - **Funktionalitet**: Innehållet läses och skrivs av **den universella redigeraren**. Redigerat innehåll publiceras till **Edge Delivery Services** i **produktions**- eller **förhandsvisningsmiljöer** .
 
 - **Universell redigerare**:
    - **Syfte**: Tillhandahåller ett WYSIWYG-gränssnitt för redigering av webbplatsinnehåll.
-   - **Funktionalitet**: Läser från och skriver till **AEM författartjänsten**. Kan konfigureras att använda kod från valfri gren i **GitHub-databasen** för att testa och validera ändringar.
+   - **Funktionalitet**: Läser från och skriver till **AEM Author-tjänsten**. Kan konfigureras att använda kod från valfri gren i **GitHub-databasen** för att testa och validera ändringar.
 
 - **Edge Delivery Services**:
    - **Produktionsmiljö**:
       - **Syfte**: Levererar innehåll och kod för den aktiva webbplatsen till slutanvändare.
-      - **Funktionalitet**: Serverar innehåll som publiceras från **AEM författartjänsten** med kod från **huvudgrenen** i **GitHub-databasen**.
+      - **Funktionalitet**: Serverar innehåll som publiceras från **AEM Author-tjänsten** med kod från **huvudgrenen** i **GitHub-databasen**.
    - **Förhandsvisningsmiljö**:
       - **Syfte**: Tillhandahåller en mellanlagringsmiljö för att testa och förhandsgranska innehåll och kod före distributionen.
-      - **Funktionalitet**: Serverar innehåll som publiceras från **AEM författartjänsten** med kod från en gren i **GitHub-databasen**, vilket möjliggör grundlig testning utan att den aktiva webbplatsen påverkas.
+      - **Funktionalitet**: Serverar innehåll som publiceras från **AEM Author-tjänsten** med kod från valfri gren i **GitHub-databasen**, vilket möjliggör grundlig testning utan att den aktiva webbplatsen påverkas.
 
 - **Lokal utvecklarmiljö**:
    - **Syfte**: Låter utvecklare skriva och testa kod (CSS och JavaScript) lokalt.
@@ -71,7 +71,7 @@ Installera följande på datorn innan du påbörjar utvecklingen:
 
 ## Klona GitHub-databasen
 
-Klona [GitHub-databasen som skapades i det nya kodprojektkapitlet ](./1-new-code-project.md) som innehåller kodprojektet AEM Edge Delivery Services till den lokala utvecklingsmiljön.
+Klona [GitHub-databasen som skapats i det nya kodprojektkapitlet ](./1-new-code-project.md) som innehåller AEM Edge Delivery Services-kodprojektet till din lokala utvecklingsmiljö.
 
 ![GitHub-databasklon](./assets/3-local-development-environment/github-clone.png)
 
@@ -84,7 +84,7 @@ En ny `aem-wknd-eds-ue`-mapp skapas i katalogen `Code` som fungerar som projekte
 
 ## Installera projektberoenden
 
-Navigera till projektmappen och installera nödvändiga beroenden med `npm install`. Även om Edge Delivery Services inte använder traditionella Node.js-byggsystem som Webpack eller Vite kräver de ändå flera beroenden för lokal utveckling.
+Navigera till projektmappen och installera nödvändiga beroenden med `npm install`. Även om Edge Delivery Services-projekt inte använder traditionella Node.js-byggsystem som Webpack eller Vite, kräver de ändå flera beroenden för lokal utveckling.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -94,7 +94,7 @@ $ npm install
 
 ## Installera AEM CLI
 
-AEM CLI är ett kommandoradsverktyg för Node.js som har utformats för att effektivisera utvecklingen av Edge Delivery Services-baserade AEM webbplatser, vilket ger en lokal utvecklingsserver för snabb utveckling och testning av er webbplats.
+AEM CLI är ett kommandoradsverktyg för Node.js som har utformats för att effektivisera utvecklingen av Edge Delivery Services-baserade AEM-webbplatser, vilket ger en lokal utvecklingsserver för snabb utveckling och testning av er webbplats.
 
 Installera AEM CLI genom att köra:
 
@@ -106,9 +106,9 @@ $ npm install @adobe/aem-cli
 
 AEM CLI kan också installeras globalt med `npm install --global @adobe/aem-cli`.
 
-## Starta den lokala AEM utvecklingsservern
+## Starta den lokala AEM-utvecklingsservern
 
-Kommandot `aem up` startar den lokala utvecklingsservern och öppnar automatiskt ett webbläsarfönster till serverns URL. Den här Edge Delivery Servicens fungerar som en omvänd proxy till servermiljön och levererar innehåll därifrån samtidigt som den lokala kodbasen används för utveckling.
+Kommandot `aem up` startar den lokala utvecklingsservern och öppnar automatiskt ett webbläsarfönster till serverns URL. Den här servern fungerar som en omvänd proxy till Edge Delivery Services-miljön och levererar innehåll därifrån samtidigt som den lokala kodbasen används för utveckling.
 
 ```bash
 $ cd ~/Code/aem-wknd-eds-ue 
@@ -131,14 +131,17 @@ Om webbplatsen öppnas med en 404-sida är det sannolikt att [fstab.yaml eller p
 
 ## Bygg JSON-fragment
 
-Edge Delivery Services som skapats med mallen [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk) är beroende av JSON-konfigurationer som aktiverar blockredigering i Universell redigerare.
+Edge Delivery Services-projekt som skapats med [AEM-mallen XWalk ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) förlitar sig på JSON-konfigurationer som aktiverar blockredigering i Universell redigerare.
 
 - **JSON-fragment**: Lagrades med tillhörande block och blockmodellerna, definitionerna och filtren definieras.
    - **Modellfragment**: Lagrat på `/blocks/example/_example.json`.
    - **Definitionsfragment**: Lagrat på `/blocks/example/_example.json`.
    - **Filtrera fragment**: Lagrat på `/blocks/example/_example.json`.
 
-NPM-skript kompilerar dessa JSON-fragment och placerar dem på lämplig plats i projektets rot. Om du vill skapa JSON-filer använder du de angivna NPM-skripten. Om du till exempel vill kompilera alla fragment kör du:
+
+[AEM-mallens XWalk-projektmall ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) innehåller en [Husky](https://typicode.github.io/husky/)-förimplementeringsfunktion som identifierar ändringar i JSON-fragment och kompilerar dem till lämpliga `component-*.json`-filer vid `git commit`.
+
+Följande NPM-skript kan köras manuellt via `npm run` för att skapa JSON-filer, men detta är vanligtvis inte nödvändigt eftersom den himiska pre-commit-kroken hanterar den automatiskt.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -159,7 +162,7 @@ npm run build:json
 
 ## Linting
 
-Linting säkerställer kodkvalitet och konsekvens, vilket krävs för Edge Delivery Services och projekt innan ändringarna läggs samman i grenen `main`.
+Linting säkerställer kodkvalitet och konsekvens, vilket krävs för Edge Delivery Services-projekt innan du sammanfogar ändringar i grenen `main`.
 
 NPM-skripten kan köras via `npm run`, till exempel:
 
@@ -185,7 +188,7 @@ Du kan lösa problem med linting automatiskt genom att lägga till följande `sc
 $ npm run lint:fix
 ```
 
-Dessa skript levereras inte förkonfigurerade med AEM XWalk-mallen för standardmallar, men kan läggas till i filen `package.json`:
+Dessa skript levereras inte förkonfigurerade med AEM-mallen XWalk, men kan läggas till i filen `package.json`:
 
 >[!BEGINTABS]
 

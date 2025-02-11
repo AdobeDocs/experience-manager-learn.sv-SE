@@ -1,6 +1,6 @@
 ---
 title: Utveckla ett block med CSS och JS
-description: Utveckla ett block med CSS och JavaScript for Edge Delivery Services, som kan redigeras med den universella redigeraren.
+description: Utveckla ett block med CSS och JavaScript för Edge Delivery Services, som kan redigeras med den universella redigeraren.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -31,15 +31,15 @@ I det här exemplet visas hur du förbättrar ett block på tre sätt:
 
 Den här metoden är särskilt användbar i följande scenarier:
 
-- **Extern CSS-hantering:** När blockets CSS hanteras utanför Edge Delivery Services och inte justeras mot HTML-strukturen.
+- **Extern CSS-hantering:** När blockets CSS hanteras utanför Edge Delivery Services och inte justeras mot dess HTML-struktur.
 - **Ytterligare attribut:** När extra attribut, som [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) för hjälpmedel eller [mikrodata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata), krävs.
 - **JavaScript-förbättringar:** När interaktiva funktioner, som händelseavlyssnare, behövs.
 
 Den här metoden är beroende av webbläsarspecifik JavaScript DOM-manipulering, men du måste vara försiktig när du ändrar DOM, särskilt när du flyttar element. Sådana ändringar kan störa den universella redigerarens redigeringsupplevelse. Helst bör blockets [innehållsmodell](./5-new-block.md#block-model) utformas noggrant för att minimera behovet av omfattande DOM-ändringar.
 
-## Block HTML
+## Blockera HTML
 
-Börja med att granska DOM som exponeras av Edge Delivery Services för att närma dig blockutveckling. Strukturen har förbättrats med JavaScript och formaterats med CSS.
+Börja med att granska DOM som visas av Edge Delivery Services för att komma igång med blockutveckling. Strukturen har förbättrats med JavaScript och formaterats med CSS.
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ Nedan följer det teaser-blockets DOM som är målet att dekorera med JavaScript
 
 Om du vill hitta det DOM som ska dekoreras öppnar du sidan med det odekorerade blocket i den lokala utvecklingsmiljön, markerar blocket och inspekterar DOM.
 
-![Inspect-block DOM](./assets/7a-block-css/inspect-block-dom.png)
+![Inspektera block-DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
@@ -195,27 +195,32 @@ Olika element kan fortfarande formateras direkt eller med de anpassade CSS-klass
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
 
     /* The teaser image */
-    & .image-wrapper {
+    .image-wrapper {
         position: absolute;
         z-index: -1;
         inset: 0;
         box-sizing: border-box;
         overflow: hidden; 
 
-        & .image {
+        .image {
             object-fit: cover;
             object-position: center;
             width: 100%;
             height: 100%;
             transform: scale(1); 
             transition: transform 0.6s ease-in-out;
+
+            .zoom {
+                transform: scale(1.1);
+            }            
         }
     }
 
     /* The teaser text content */
-    & .content {
+    .content {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -225,55 +230,51 @@ Olika element kan fortfarande formateras direkt eller med de anpassade CSS-klass
         width: 80vw;
         max-width: 1200px;
   
-        & .title {
+        .title {
             font-size: var(--heading-font-size-xl);
             margin: 0;
         }
 
-        & .title::after {
+        .title::after {
             border-bottom: 0;
         }
 
-        & p {
+        p {
             font-size: var(--body-font-size-s);
             margin-bottom: 1rem;
             animation: teaser-fade-in .6s;
-        }
-
-        & p.terms-and-conditions {
-            font-size: var(--body-font-size-xs);
-            color: var(--secondary-color);
-            padding: .5rem 1rem;
-            font-style: italic;
-            border: solid var(--light-color);
-            border-width: 0 0 0 10px;
+        
+            &.terms-and-conditions {
+                font-size: var(--body-font-size-xs);
+                color: var(--secondary-color);
+                padding: .5rem 1rem;
+                font-style: italic;
+                border: solid var(--light-color);
+                border-width: 0 0 0 10px;
+            }
         }
 
         /* Add underlines to links in the text */
-        & a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
         /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        & .button-container {
+        .button-container {
             margin: 0;
             padding: 0;
+        
+            .button {   
+                background-color: var(--primary-color);
+                border-radius: 0;
+                color: var(--dark-color);
+                font-size: var(--body-font-size-xs);
+                font-weight: bold;
+                padding: 1em 2.5em;
+                margin: 0;
+                text-transform: uppercase;
+            }
         }
-
-        & .button {   
-            background-color: var(--primary-color);
-            border-radius: 0;
-            color: var(--dark-color);
-            font-size: var(--body-font-size-xs);
-            font-weight: bold;
-            padding: 1em 2.5em;
-            margin: 0;
-            text-transform: uppercase;
-        }
-    }
-
-    & .zoom {
-        transform: scale(1.1);
     }
 }
 
