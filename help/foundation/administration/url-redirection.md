@@ -1,6 +1,6 @@
 ---
 title: URL-omdirigeringar
-description: Läs mer om de olika alternativen för att utföra URL-omdirigering i AEM.
+description: Lär dig mer om de olika alternativen för att utföra URL-omdirigering i AEM.
 version: 6.4, 6.5, Cloud Service
 topic: Development, Administration
 feature: Operations, Dispatcher
@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 515c4020e1c358b5ee044a81affc8d7e1e4ff4eb
+source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -23,22 +23,22 @@ ht-degree: 0%
 
 URL-omdirigering är en vanlig aspekt vid webbplatsåtgärder. Arkitekter och administratörer uppmanas att hitta den bästa lösningen för hur och var de ska hantera URL-omdirigeringar som ger flexibilitet och snabb omdirigeringstid.
 
-Kontrollera att du känner till infrastrukturen [AEM (6.x) som AEM Classic](https://experienceleague.adobe.com/en/docs/experience-manager-learn/dispatcher-tutorial/chapter-2) och [AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/overview/architecture). De viktigaste skillnaderna är:
+Kontrollera att du känner till [AEM (6.x) alias AEM Classic](https://experienceleague.adobe.com/en/docs/experience-manager-learn/dispatcher-tutorial/chapter-2) och [AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/overview/architecture) . De viktigaste skillnaderna är:
 
-1. AEM as a Cloud Service har [inbyggt CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn), men kunder kan tillhandahålla ett CDN (BYOCDN) framför AEM CDN.
-1. AEM 6.x vare sig på plats eller i Adobe Managed Services (AMS) inte innehåller ett AEM-hanterat CDN, och kunderna måste ta med sig sina egna.
+1. AEM as a Cloud Service har [inbyggt CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn), men kunder kan tillhandahålla ett CDN (BYOCDN) framför AEM-hanterat CDN.
+1. AEM 6.x, vare sig det är lokalt eller Adobe Managed Services (AMS), innehåller inte ett CDN som hanteras av AEM, och kunderna måste ta med sig sina egna.
 
-De andra AEM (AEM Author/Publish och Dispatcher) är i övrigt lika konceptuellt mellan AEM 6.x och AEM as a Cloud Service.
+De andra AEM-tjänsterna (AEM Author/Publish och Dispatcher) liknar på andra sätt konceptuellt AEM 6.x och AEM as a Cloud Service.
 
 AEM URL-omdirigeringslösningar:
 
-|                                                   | Hanteras och distribueras som AEM projektkod | Möjlighet att ändra per marknadsförings-/innehållsteam | AEM som Cloud Service-kompatibel | Var körning av omdirigering sker |
+|                                                   | Hanteras och distribueras som AEM-projektkod | Möjlighet att ändra per marknadsförings-/innehållsteam | AEM som Cloud Service-kompatibel | Var körning av omdirigering sker |
 |---------------------------------------------------|:-----------------------:|:---------------------:|:---------------------:| :---------------------:|
-| [På Edge via AEM CDN](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge/CDN (inbyggt) |
+| [På Edge via AEM-hanterad CDN](#at-edge-via-aem-managed-cdn) | ✔ | ✘ | ✔ | Edge/CDN (inbyggt) |
 | [Gå till Edge via ditt eget CDN (BYOCDN)](#at-edge-via-bring-your-own-cdn) | ✘ | ✘ | ✔ | Edge/CDN (BYOCDN) |
 | [Apache `mod_rewrite` regler som Dispatcher config](#apache-mod_rewrite-module) | ✔ | ✘ | ✔ | Dispatcher |
 | [ACS-kommandon - Omdirigeringshanteraren](#redirect-map-manager) | ✘ | ✔ | ✔ | Dispatcher |
-| [ACS-kommandon - Omdirigeringshanteraren](#redirect-manager) | ✘ | ✔ | ✔ | AEM / DISPATCHER |
+| [ACS-kommandon - Omdirigeringshanteraren](#redirect-manager) | ✘ | ✔ | ✔ | AEM/Dispatcher |
 | [Sidegenskapen `Redirect`](#the-redirect-page-property) | ✘ | ✔ | ✔ | AEM |
 
 
@@ -46,11 +46,11 @@ AEM URL-omdirigeringslösningar:
 
 Här följer några alternativ för att komma närmare besökarens webbläsare.
 
-### På Edge via AEM CDN {#at-edge-via-aem-managed-cdn}
+### På Edge via AEM-hanterad CDN {#at-edge-via-aem-managed-cdn}
 
 Det här alternativet är endast tillgängligt för AEM as a Cloud Service-kunder.
 
-Det [AEM hanterade CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) erbjuder en omdirigeringslösning på Edge-nivå och reducerar därmed antalet rundresor till ursprungsläget. Med funktionen [Omdirigering på klientsidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors) kan du konfigurera omdirigeringsreglerna i AEM projektkod och distribuera med [Konfigurera pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager). CDN-konfigurationsfilen (`cdn.yaml`) får inte vara större än 100 kB.
+[CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) som hanteras av AEM tillhandahåller en omdirigeringslösning på Edge-nivå, vilket reducerar antalet rundresor till ursprungsläget. Med funktionen [Omdirigering på klientsidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors) kan du konfigurera omdirigeringsreglerna i AEM-projektkoden och distribuera med [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager). CDN-konfigurationsfilen (`cdn.yaml`) får inte vara större än 100 kB.
 
 Det finns prestandafördelar med att hantera omdirigeringar på Edge- eller CDN-nivå.
 
@@ -65,24 +65,24 @@ Hantering av omdirigeringar på Edge- eller CDN-nivå har prestandafördelar, me
 
 En vanlig lösning använder [Apache Module mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en Dispatcher-projektstruktur för både [AEM 6.x](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.ams#file-structure)- och [AEM as a Cloud Service](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud#file-structure)-projekt. Standardreglerna (ej ändringsbara) och anpassade omskrivningsregler definieras i mappen `conf.d/rewrites` och omskrivningsmotorn aktiveras för `virtualhosts` som avlyssnar port `80` via filen `conf.d/dispatcher_vhost.conf`. Det finns ett exempel på implementering i [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd/tree/main/dispatcher/src/conf.d/rewrites).
 
-I AEM as a Cloud Service hanteras dessa omdirigeringsregler som en del av AEM kod och distribueras via Cloud Manager [Web Tier-konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines) eller [fullständig pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines). Det innebär att den projektspecifika AEM processen är på gång för att hantera, distribuera och spåra omdirigeringsreglerna.
+I AEM as a Cloud Service hanteras dessa omdirigeringsregler som en del av AEM-koden och distribueras via Cloud Manager [konfigurationsflöde för webbnivån](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines) eller [pipeline i full hög](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines). Därför är er projektspecifika AEM-process att spela upp för att hantera, driftsätta och spåra omdirigeringsreglerna.
 
 De flesta CDN-tjänster cachelagrar HTTP 301- och 302-omdirigeringar beroende på deras `Cache-Control`- eller `Expires`-huvuden. Det hjälper till att undvika rundtur efter den initiala omdirigeringen från Apache/Dispatcher.
 
 
 ### ACS AEM Commons
 
-Det finns två tillgängliga funktioner i [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) för att hantera URL-omdirigeringar. Observera att ACS AEM Commons är ett öppen källkodsprojekt som drivs av communityn och inte stöds av Adobe.
+Det finns två tillgängliga funktioner i [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) för att hantera URL-omdirigeringar. Observera att ACS AEM Commons är ett öppen källkodsprojekt som drivs av en community och inte stöds av Adobe.
 
 #### Omdirigeringshanteraren
 
-[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan direkt åtkomst till Apache-webbservern eller kräver att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM distribution. Omdirigeringshanteraren är både **AEM as a Cloud Service** (se [Gratis URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) ) och **AEM 6.x** -kompatibel.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) hjälper AEM-administratörer att enkelt underhålla och publicera [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html) -filer utan att direkt behöva komma åt Apache-webbservern eller kräva att en Apache-webbserver startas om. Med den här funktionen kan behörighetsanvändare skapa, uppdatera och ta bort omdirigeringsregler från en konsol i AEM, utan hjälp av utvecklingsteamet eller en AEM-distribution. Omdirigeringshanteraren är både **AEM as a Cloud Service** (se [Gratis URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) och relaterad [självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects#acs-commons---redirect-map-manager)) och **AEM 6.x** -kompatibel.
 
 #### Omdirigeringshanteraren
 
-[Med omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) kan användare i AEM enkelt underhålla och publicera omdirigeringar från AEM. Implementeringen baseras på Java™-serverfiltret, vilket är en vanlig JVM-resursförbrukning. Den här funktionen eliminerar också beroendet av AEM utvecklingsteam och AEM driftsättningar. Omdirigeringshanteraren är kompatibel med både **AEM as a Cloud Service** och **AEM 6.x**. Medan den initiala omdirigerade begäran måste trycka på den AEM Publish-tjänsten för att generera cacheminnet 301/302 (mest) för CDN:er 301/302 som standard, så att efterföljande begäranden kan omdirigeras till edge/CDN.
+Med [Omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) kan användare i AEM enkelt underhålla och publicera omdirigeringar från AEM. Implementeringen baseras på Java™-serverfiltret, vilket är en vanlig JVM-resursförbrukning. Den här funktionen eliminerar också beroendet av AEM utvecklingsteam och AEM-driftsättningar. Omdirigeringshanteraren är kompatibel med både **AEM as a Cloud Service** och **AEM 6.x**. Medan den initialt omdirigerade begäran måste trycka på AEM Publish-tjänsten för att generera cacheminnet 301/302 (de flesta) för CDN 301/302 som standard, vilket gör att efterföljande begäranden kan omdirigeras till edge/CDN.
 
-[Omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) har även stöd för [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)-strategier för **AEM as a Cloud Service** genom [att kompilera omdirigeringar till en textfil](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) för [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), vilket gör att omdirigeringar som används på Apache-webbservern kan uppdateras utan att den behöver hämtas direkt eller startas om. I det här fallet kommer den initiala omdirigeringsbegäran att drabba Apache-webbservern, inte AEM Publish-tjänsten.
+[Omdirigeringshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) har även stöd för [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)-strategier för **AEM as a Cloud Service** genom [att kompilera omdirigeringar till en textfil](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) för [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), vilket gör att omdirigeringar som används på Apache-webbservern kan uppdateras utan att den behöver hämtas direkt eller startas om. Mer information finns i [självstudiekursen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects#acs-commons---redirect-manager). I det här fallet kommer den initiala omdirigeringsbegäran att drabba Apache-webbservern, inte AEM Publish-tjänsten.
 
 ### Sidegenskapen `Redirect`
 
@@ -92,6 +92,6 @@ Med egenskapen för OTB-sidan `Redirect` som är klar att användas från fliken
 
 Nedan finns några kriterier som avgör vilken lösning som är rätt. Organisationens IT- och marknadsföringsprocess bör också hjälpa er att välja rätt lösning.
 
-1. Gör det möjligt för marknadsföringsteamet eller superanvändare att hantera omdirigeringsregler utan AEM utvecklingsteam och AEM driftsättningar.
+1. Marknadsföringsteamet eller superanvändare kan hantera omdirigeringsregler utan AEM utvecklingsteam och AEM driftsättningar.
 1. Processen för att hantera, verifiera, spåra och återställa ändringar eller riskreducering.
 1. Tillgänglighet för _Subject Matter Expertis_ för **På Edge via CDN Service**-lösning.
