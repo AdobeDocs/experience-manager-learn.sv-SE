@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery Services och Universal Editor, självstudiekurs
-description: Lär dig grunderna i hur du utvecklar en ny webbplats som har skapats i AEM Universal Editor och levereras med Edge Delivery Services.
+title: Edge Delivery Services and Universal Editor developer tutorial
+description: Lär dig grunderna i hur du utvecklar en ny webbplats som skapats i AEM Universal Editor och levererats med Edge Delivery Services.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,22 +10,22 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: 9dd07383a3d46d1bbecd2dc8574e6d06a0535fee
+source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
 
-# Edge Delivery Services och Universal Editor, självstudiekurs
+# Edge Delivery Services and Universal Editor developer tutorial
 
 ![Edge Delivery Services och Universal Editor, självstudiekurs](./assets/0-overview/hero.png)
 
-I den här självstudiekursen får du lära dig grunderna i att skapa en AEM webbplats som kombinerar kraftfull redigering med Universal Editor och blixtsnabb leverans med hjälp av Edge Delivery Services. Slutligen får du grundläggande kunskaper om hur du skapar ett nytt projekt, konfigurerar en lokal utvecklingsmiljö och skapar ett nytt block.
+I den här självstudiekursen får du lära dig grunderna i att skapa en AEM-webbplats som kombinerar kraftfull redigering med Universal Editor och blixtsnabb leverans med Edge Delivery Services. Slutligen får du grundläggande kunskaper om hur du skapar ett nytt projekt, konfigurerar en lokal utvecklingsmiljö och skapar ett nytt block.
 
 ## Projektinställningar
 
-Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as a Cloud Service. Med den här konfigurationen kan du utveckla material smidigt med den universella redigeraren för att skapa innehåll och snabbt leverera innehåll via Edge Delivery Services.
+Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as a Cloud Service. Med den här installationen kan du utveckla material smidigt med Universal Editor och snabbt leverera material via Edge Delivery Services.
 
 <!-- CARDS 
 
@@ -62,8 +62,8 @@ Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as 
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./2-new-aem-site.md" title="Skapa en AEM" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/2-new-aem-site/new-site.png" alt="Skapa en AEM"
+                    <a href="./2-new-aem-site.md" title="Skapa en AEM-webbplats" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="assets/2-new-aem-site/new-site.png" alt="Skapa en AEM-webbplats"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -71,9 +71,9 @@ Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as 
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./2-new-aem-site.md" target="_blank" rel="referrer" title="Skapa en AEM">Skapa en AEM </a>
+                        <a href="./2-new-aem-site.md" target="_blank" rel="referrer" title="Skapa en AEM-webbplats">Skapa en AEM-webbplats</a>
                     </p>
-                    <p class="is-size-6">Skapa en webbplats i AEM Sites för Edge Delivery Services som kan redigeras med den universella redigeraren.</p>
+                    <p class="is-size-6">Skapa en webbplats i AEM Sites för Edge Delivery Services, som kan redigeras med den universella redigeraren.</p>
                 </div>
                 <a href="./2-new-aem-site.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
@@ -86,7 +86,7 @@ Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as 
 
 ## Utvecklingsinställning
 
-Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsutveckling. Med den här konfigurationen kan du skapa webbplatser smidigt med den universella redigeraren och leverera effektivt innehåll via Edge Delivery Services, vilket ger ett smidigt och optimerat utvecklingsarbetsflöde.
+Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsutveckling. Med den här installationen kan du skapa webbplatser smidigt med den universella redigeraren och leverera effektivt material via Edge Delivery Services, vilket ger ett smidigt och optimerat utvecklingsarbetsflöde.
 <!-- CARDS 
 
 * ./3-local-development-environment.md
@@ -100,7 +100,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Konfigurera en lokal utvecklingsmiljö" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="assets/3-local-development-environment/github-clone.png" alt="Konfigurera en lokal utvecklingsmiljö"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1739374885708" alt="Konfigurera en lokal utvecklingsmiljö"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -146,7 +146,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
 
 ## Blockutveckling
 
-Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell och konfigurera exempelinnehåll för testning och utveckling. Upptäck två metoder för återgivning av blocket och förstå hur du strukturerar det för optimala prestanda och flexibilitet i AEM och Edge Delivery Services.
+Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell och konfigurera exempelinnehåll för testning och utveckling. Upptäck två metoder för att rendera blocket och förstå hur du strukturerar det för optimala prestanda och flexibilitet i AEM och Edge Delivery Services.
 
 <!-- CARDS 
 
@@ -173,7 +173,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./5-new-block.md" target="_blank" rel="referrer" title="Skapa ett block">Skapa ett block</a>
                     </p>
-                    <p class="is-size-6">Bygg ett block för en Edge Delivery Services webbplats som kan redigeras med Universal Editor.</p>
+                    <p class="is-size-6">Bygg ett block för en Edge Delivery Services-webbplats som kan redigeras med Universell redigerare.</p>
                 </div>
                 <a href="./5-new-block.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
@@ -196,7 +196,7 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./6-author-block.md" target="_blank" rel="referrer" title="Skapa ett block">Skapa ett block</a>
                     </p>
-                    <p class="is-size-6">Skapa ett block med Edge Delivery Services med Universal Editor.</p>
+                    <p class="is-size-6">Skapa ett Edge Delivery Services-block med Universal Editor.</p>
                 </div>
                 <a href="./6-author-block.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
@@ -242,9 +242,46 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./7b-block-js-css.md" target="_blank" rel="referrer" title="Utveckla ett block med CSS och JS">Utveckla ett block med CSS och JS</a>
                     </p>
-                    <p class="is-size-6">Utveckla ett block med CSS och JavaScript for Edge Delivery Services, som kan redigeras med den universella redigeraren.</p>
+                    <p class="is-size-6">Utveckla ett block med CSS och JavaScript för Edge Delivery Services, som kan redigeras med den universella redigeraren.</p>
                 </div>
                 <a href="./7b-block-js-css.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+## Nästa steg
+
+Nu när du är klar med den här självstudiekursen kan du bygga vidare på det du lärt dig med dessa fokuserade tips. Guiderna innehåller kod och koncept som beskrivs här och beskriver rollspecifika användningsområden, avancerade tekniker och ytterligare tips som förbättrar utvecklingskunskaperna i Edge Delivery Services och Universal Editor.
+
+<!-- CARDS 
+
+* ./how-to/block-options.md
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Block options">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./how-to/block-options.md" title="Blockalternativ" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="how-to/assets/block-options/main.png" alt="Blockalternativ"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="Blockalternativ">Blockalternativ</a>
+                    </p>
+                    <p class="is-size-6">Lär dig hur du skapar ett block med flera visningsalternativ.</p>
+                </div>
+                <a href="./how-to/block-options.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
