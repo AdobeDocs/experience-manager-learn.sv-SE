@@ -12,16 +12,16 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+source-git-commit: b3d053a09dfc8989441a21bf0d8c4771d816106f
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1855'
 ht-degree: 0%
 
 ---
 
 # Anropa OpenAPI-baserade AEM-API:er för server-till-server-autentisering{#invoke-openapi-based-aem-apis}
 
-Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program med hjälp av _OAuth Server-till-Server_-autentisering.
+Lär dig hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service från anpassade program med _OAuth Server-till-Server_ -autentisering.
 
 OAuth Server-till-Server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Den använder tilldelningstypen _client_credentials_ för OAuth 2.0 för att autentisera klientprogrammet.
 
@@ -32,7 +32,7 @@ OAuth Server-till-Server-autentiseringen är idealisk för backend-tjänster som
 I den här självstudiekursen får du lära dig att:
 
 - Aktivera åtkomst till OpenAPI-baserade AEM API:er för din AEM as a Cloud Service-miljö.
-- Skapa och konfigurera ett Adobe Developer Console-projekt (ADC) för att komma åt AEM API:er med _OAuth Server-till-Server-autentisering_.
+- Skapa och konfigurera ett Adobe Developer Console-projekt (ADC) för att få åtkomst till AEM API:er med _OAuth Server-till-Server-autentisering_.
 - Utveckla ett exempel på ett NodeJS-program som anropar Assets Author API för att hämta metadata för en viss resurs.
 
 Innan du börjar bör du kontrollera att du har granskat avsnittet [Åtkomst till Adobe-API:er och relaterade koncept](overview.md#accessing-adobe-apis-and-related-concepts).
@@ -56,13 +56,13 @@ För att kunna genomföra den här självstudiekursen behöver du:
 Utvecklingsstegen på hög nivå är följande:
 
 1. Modernisering av AEM as a Cloud Service-miljön.
-1. Aktivera åtkomst AEM API:er.
+1. Aktivera åtkomst till AEM API:er.
 1. Skapa Adobe Developer Console-projekt (ADC).
 1. Konfigurera ADC-projekt
-   1. Lägg till önskade AEM-API:er
+   1. Lägg till önskade AEM API:er
    1. Konfigurera autentiseringen
    1. Associera produktprofil med autentiseringskonfigurationen
-1. Konfigurera AEM för att aktivera ADC-projektkommunikation
+1. Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation
 1. Utveckla ett exempel på ett NodeJS-program
 1. Verifiera flödet från början till slut
 
@@ -72,24 +72,24 @@ Vi börjar med att modernisera AEM as a Cloud Service-miljön. Det här steget b
 
 Modernisering av AEM as a Cloud Service-miljön är en tvåstegsprocess.
 
-- Uppdatera till den senaste versionen av AEM
+- Uppdatera till den senaste AEM-versionen
 - Lägg till nya produktprofiler i den.
 
-### Uppdatera AEM
+### Uppdatera AEM-instans
 
-Om du vill uppdatera den AEM instansen väljer du _ellipsikonen_ bredvid miljönamnet i Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)s _Environment_ och sedan alternativet **Update** .
+Om du vill uppdatera AEM-instansen väljer du _ellipsikonen_ bredvid miljönamnet i Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)s _Environment_ och sedan alternativet **Update** .
 
-![Uppdatera AEM](assets/update-aem-instance.png)
+![Uppdatera AEM-instans](assets/update-aem-instance.png)
 
 Klicka sedan på knappen **Skicka** och kör den föreslagna helstackspipelinen.
 
-![Välj den senaste AEM versionen](assets/select-latest-aem-release.png)
+![Välj den senaste versionen av AEM](assets/select-latest-aem-release.png)
 
-I det här fallet är namnet på fullständigt stackförlopp _Dev :: Fullstack-Deploy_ och AEM miljönamn är _wknd-program-dev_. Det kan variera i ditt fall.
+I mitt fall är namnet på fullständigt stackförlopp _Dev :: Fullstackdistribuering_ och AEM-miljönamnet är _wknd-program-dev_. Det kan variera i ditt fall.
 
 ### Lägg till nya produktprofiler
 
-Om du vill lägga till nya produktprofiler i AEM-instansen väljer du ikonen _ellips_ bredvid miljönamnet i Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)s _Environment_ och väljer alternativet **Lägg till produktprofiler** .
+Om du vill lägga till nya produktprofiler i AEM-instansen går du till avsnittet _Miljö_ för Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) och markerar ikonen _ellips_ bredvid miljönamnet. Välj sedan alternativet **Lägg till produktprofiler** .
 
 ![Lägg till nya produktprofiler](assets/add-new-product-profiles.png)
 
@@ -101,11 +101,11 @@ Fönstret _Admin Console_ visar de nya produktprofilerna.
 
 Ovanstående steg avslutar moderniseringen av AEM as a Cloud Service-miljön.
 
-## Aktivera åtkomst AEM API:er
+## Aktivera åtkomst till AEM API:er
 
-Nya produktprofiler möjliggör åtkomst till OpenAPI-baserade AEM API i Adobe Developer Console (ADC).
+Nya produktprofiler möjliggör OpenAPI-baserad åtkomst till AEM API i Adobe Developer Console (ADC).
 
-De nya produktprofilerna är kopplade till _tjänsterna_ som representerar AEM användargrupper med fördefinierade åtkomstkontrollistor (ACL). _Tjänsterna_ används för att styra åtkomstnivån för AEM API:er.
+De nya produktprofilerna är kopplade till _tjänsterna_ som representerar AEM-användargrupper med fördefinierade åtkomstkontrollistor (ACL). _Tjänsterna_ används för att styra åtkomstnivån för AEM API:er.
 
 Du kan också markera eller avmarkera de _tjänster_ som är kopplade till produktprofilen för att minska eller öka åtkomstnivån.
 
@@ -113,11 +113,11 @@ Granska associationen genom att klicka på ikonen _Visa detaljer_ bredvid produk
 
 ![Granska tjänster som är kopplade till produktprofilen](assets/review-services-associated-with-product-profile.png)
 
-Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med de nya **AEM administratörerna - författare - Program XXX - Miljö XXX** produktprofil. Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera OAuth Server-till-server-autentiseringen och associera autentiseringskontot med produktprofilen.
+Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med de nya **AEM-administratörerna - författare - Program XXX - Miljö XXX** - Produktprofilen. Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera OAuth Server-till-server-autentiseringen och associera autentiseringskontot med produktprofilen.
 
 ![Koppla AEM Assets API-användartjänst till produktprofil](assets/associate-aem-assets-api-users-service-with-product-profile.png)
 
-Det är viktigt att komma ihåg att det fanns två produktprofiler tillgängliga i AEM Author-instansen innan moderniseringen: **AEM Administrators-XXX** och **AEM Users-XXX**. Det går också att koppla dessa befintliga produktprofiler till de nya tjänsterna.
+Det är viktigt att komma ihåg att det före moderniseringen fanns två produktprofiler tillgängliga i AEM Author: **AEM Administrators-XXX** och **AEM Users-XXX**. Det går också att koppla dessa befintliga produktprofiler till de nya tjänsterna.
 
 ## Skapa Adobe Developer Console-projekt (ADC)
 
@@ -149,7 +149,7 @@ Konfigurera sedan ADC-projektet för att lägga till AEM-API:er, konfigurera aut
 
 1. I dialogrutan _Lägg till API_ filtrerar du efter _Experience Cloud_, markerar **AEM Assets Author API**-kortet och klickar på **Nästa**.
 
-   ![Lägg till AEM-API](assets/add-aem-api.png)
+   ![Lägg till AEM API](assets/add-aem-api.png)
 
 1. I dialogrutan _Konfigurera API_ väljer du autentiseringsalternativet **Server-till-server** och klickar på **Nästa**. Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion.
 
@@ -159,9 +159,14 @@ Konfigurera sedan ADC-projektet för att lägga till AEM-API:er, konfigurera aut
 
    ![Byt namn på autentiseringsuppgifter](assets/rename-credential.png)
 
-1. Välj **AEM Administratörer - författare - Program XXX - Miljö XXX** Produktprofil och klicka på **Spara**. Som du ser kan du bara välja den produktprofil som är kopplad till AEM Assets API-användartjänst.
+1. Välj **AEM-administratörer - författare - Program XXX - Miljö XXX** Produktprofil och klicka på **Spara**. Som du ser kan du bara välja den produktprofil som är kopplad till AEM Assets API-användartjänst.
 
    ![Välj produktprofil](assets/select-product-profile.png)
+
+   >[!CAUTION]
+   >
+   >    Observera att tjänstkontoanvändaren (även kallat tekniskt konto) får fullständig åtkomst eftersom den är kopplad till **AEM-administratörerna - XX - XX** produktprofil.
+
 
 1. Granska AEM API och autentiseringskonfigurationen.
 
@@ -169,14 +174,13 @@ Konfigurera sedan ADC-projektet för att lägga till AEM-API:er, konfigurera aut
 
    ![Autentiseringskonfiguration](assets/authentication-configuration.png)
 
+## Konfigurera AEM-instans för att aktivera ADC-projektkommunikation
 
-## Konfigurera AEM instans för att aktivera ADC-projektkommunikation
+Om du vill att ADC-projektets klient-ID för OAuth Server-till-Server-autentiseringsuppgifter ska kunna kommunicera med AEM-instansen måste du konfigurera AEM-instansen.
 
-Om du vill att ADC-projektets klient-ID för OAuth Server-till-Server-autentiseringsuppgifter ska kunna kommunicera med AEM måste du konfigurera AEM.
+Det görs genom att definiera konfigurationen i filen `config.yaml` i AEM Project. Distribuera sedan filen `config.yaml` med Config Pipeline i Cloud Manager.
 
-Det görs genom att definiera konfigurationen i filen `config.yaml` i AEM. Distribuera sedan filen `config.yaml` med Config Pipeline i Cloud Manager.
-
-1. I AEM Project letar du reda på eller skapar filen `config.yaml` från mappen `config`.
+1. Leta reda på eller skapa filen `config.yaml` från mappen `config` i AEM Project.
 
    ![Hitta konfigurationen YAML](assets/locate-config-yaml.png)
 
@@ -221,15 +225,15 @@ Innan vi utvecklar programmet ska vi granska [den angivna resursens metadata](ht
 GET https://{bucket}.adobeaemcloud.com/adobe/assets/{assetId}/metadata
 ```
 
-Om du vill hämta metadata för en viss resurs behöver du värdena `bucket` och `assetId`. `bucket` är det AEM instansnamnet utan Adobe-domännamnet (.adobeaemcloud.com), till exempel `author-p63947-e1420428`.
+Om du vill hämta metadata för en viss resurs behöver du värdena `bucket` och `assetId`. `bucket` är AEM-instansnamnet utan Adobe-domännamnet (.adobeaemcloud.com), till exempel `author-p63947-e1420428`.
 
 `assetId` är JCR UUID för resursen med prefixet `urn:aaid:aem:`, till exempel `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`. Det finns flera sätt att hämta `assetId`:
 
-- Lägg till tillägget AEM resurssökväg `.json` för att hämta metadata för resursen. Till exempel `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json` och leta efter egenskapen `jcr:uuid`.
+- Lägg till AEM resurssökväg `.json` för att hämta metadata för resursen. Till exempel `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json` och leta efter egenskapen `jcr:uuid`.
 
 - Du kan också hämta `assetId` genom att inspektera resursen i webbläsarens elementkontroll. Leta efter attributet `data-id="urn:aaid:aem:..."`.
 
-  ![Inspect-resurs](assets/inspect-asset.png)
+  ![Inspektera resurs](assets/inspect-asset.png)
 
 ### Anropa API:t med webbläsaren
 
@@ -243,12 +247,12 @@ Innan vi utvecklar programmet måste vi anropa API:t med funktionen **Prova** i 
    ![API-dokumentation](assets/api-documentation.png)
 
 1. Ange följande värden:
-   1. Värdet `bucket` är det AEM instansnamnet utan Adobe-domännamnet (.adobeaemcloud.com), till exempel `author-p63947-e1420428`.
+   1. Värdet `bucket` är AEM-instansnamnet utan Adobe-domännamnet (.adobeaemcloud.com), till exempel `author-p63947-e1420428`.
 
    1. Värdena **Säkerhet** relaterat `Bearer Token` och `X-Api-Key` hämtas från ADC-projektets autentiseringsuppgifter för OAuth Server-till-server. Klicka på **Generera åtkomsttoken** om du vill hämta `Bearer Token`-värdet och använda `ClientID`-värdet som `X-Api-Key`.
       ![Generera åtkomsttoken](assets/generate-access-token.png)
 
-   1. Värdet **Parametrar** för avsnittet relaterat `assetId` är den unika identifieraren för resursen i AEM. `X-Adobe-Accept-Experimental` är inställd på 1.
+   1. Värdet **Parameters** section related `assetId` är den unika identifieraren för resursen i AEM. `X-Adobe-Accept-Experimental` är inställd på 1.
 
       ![Anropa API - indatavärden](assets/invoke-api-input-values.png)
 
@@ -258,7 +262,7 @@ Innan vi utvecklar programmet måste vi anropa API:t med funktionen **Prova** i 
 
    ![Anropa API - svar](assets/invoke-api-response.png)
 
-Stegen ovan bekräftar moderniseringen av AEM as a Cloud Service-miljön och ger åtkomst till AEM API:er. Det bekräftar också den lyckade konfigurationen av ADC-projektet och kommunikationen mellan klient-ID för OAuth Server-till-Server-autentiseringsuppgifter och den AEM författarinstansen.
+Stegen ovan bekräftar moderniseringen av AEM as a Cloud Service-miljön och ger åtkomst till AEM API:er. Det bekräftar också den lyckade konfigurationen av ADC-projektet och kommunikationen mellan OAuth Server-till-Server-autentiseringsuppgifter och ClientID för AEM-författarinstansen.
 
 ### Exempel på NodeJS-program
 
@@ -505,5 +509,5 @@ Huvudpratbubblorna från exemplet NodeJS-programkod är:
 
 ## Sammanfattning
 
-I den här självstudiekursen lärde du dig att anropa OpenAPI-baserade AEM-API:er från anpassade program. Du har aktiverat åtkomst AEM API:er, skapat och konfigurerat ett Adobe Developer Console-projekt (ADC).
-I ADC-projektet lade du till AEM API:er, konfigurerade autentiseringstypen och kopplade till produktprofilen. Du har även konfigurerat AEM för att aktivera ADC-projektkommunikation och utvecklat ett exempel-NodeJS-program som anropar Assets Author API.
+I den här självstudiekursen lärde du dig att anropa OpenAPI-baserade AEM-API:er från anpassade program. Du har aktiverat åtkomst till AEM API:er, skapat och konfigurerat ett Adobe Developer Console-projekt (ADC).
+I ADC-projektet lade du till AEM API:er, konfigurerade autentiseringstypen och kopplade till produktprofilen. Du har även konfigurerat AEM-instansen för att aktivera ADC-projektkommunikation och utvecklat ett exempel-NodeJS-program som anropar Assets Author API.
