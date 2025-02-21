@@ -11,7 +11,7 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
+source-git-commit: 98d67d5b624b386c6a579cd03117372bc9058acb
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 Lär dig **hur du använder** RDE (Rapid Development Environment) i AEM as a Cloud Service. Distribuera kod och innehåll för snabbare utvecklingscykler med kod som nästan är färdig i den integrerade utvecklingsmiljön (IDE).
 
-Med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) får du lära dig hur du distribuerar olika AEM till RDE genom att köra AEM-RDE:s `install`-kommando från din favoritutvecklingsmiljö.
+Med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) får du lära dig hur du distribuerar olika AEM-artefakter till RDE genom att köra AEM-RDE:s `install`-kommando från din favoritutvecklingsmiljö.
 
-- AEM kod och innehållspaket (all, ui.apps)-distribution
+- Driftsättning av AEM-kod och innehållspaket (all, ui.apps)
 - Driftsättning av OSGi-paket och konfigurationsfiler
 - Installation av Apache- och Dispatcher-konfigurationer som zip-filer
 - Enskilda filer som HTML, `.content.xml` (dialogrute-XML)-distribution
@@ -34,24 +34,24 @@ Med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-s
 
 ## Förutsättning
 
-Klona projektet [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) och öppna det i din favoritutvecklingsmiljö för att distribuera de AEM artefakterna till den virtuella utvecklingsmiljön.
+Klona projektet [WKND Sites](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) och öppna det i din favoritutvecklingsmiljö för att distribuera AEM-artefakter till den lokala utvecklingsmiljön.
 
 ```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git
 ```
 
-Sedan kan du bygga och driftsätta den lokalt AEM-SDK genom att köra följande maven-kommando.
+Skapa och distribuera sedan materialet till AEM-SDK genom att köra följande maven-kommando.
 
 ```
 $ cd aem-guides-wknd/
 $ mvn clean package
 ```
 
-## Distribuera AEM med plugin-programmet AEM-RDE
+## Distribuera AEM-felaktigheter med pluginprogrammet AEM-RDE
 
 Kontrollera först att du har den [senaste `aio` CLI-modulen installerad](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
 
-Använd sedan kommandot `aio aem:rde:install` för att distribuera olika AEM artefakter. Nu när du måste
+Använd sedan kommandot `aio aem:rde:install` för att distribuera olika AEM-artefakter. Nu när du måste
 
 ### Distribuera `all`- och `dispatcher`-paket
 
@@ -96,7 +96,7 @@ Låt oss förbättra `Hello World Component` och distribuera den till den lokala
    ...
    ```
 
-1. Verifiera ändringarna i den lokala AEM SDK genom att utföra Maven-bygget eller synkronisera enskilda filer.
+1. Kontrollera ändringarna i AEM SDK genom att skapa eller synkronisera enskilda filer.
 
 1. Distribuera ändringarna till RDE via `ui.apps`-paketet eller genom att distribuera de enskilda Dialog- och HTML-filerna:
 
@@ -126,7 +126,7 @@ I ovanstående exempel på enskilda fildistributionskommandon används flaggorna
 $ aio aem:rde:install --help
 ```
 
-Flaggorna är självförklarande, flaggan `-s` är användbar för att rikta distributionen enbart till författaren eller publiceringstjänsterna. Använd flaggan `-t` när du distribuerar **content-file- eller content-xml**-filer tillsammans med flaggan `-p` för att ange mål-JCR-sökvägen i AEM RDE-miljö.
+Flaggorna är självförklarande, flaggan `-s` är användbar för att rikta distributionen enbart till författaren eller publiceringstjänsterna. Använd flaggan `-t` när du distribuerar **content-file- eller content-xml**-filer tillsammans med flaggan `-p` för att ange mål-JCR-sökvägen i AEM RDE-miljön.
 
 ### Distribuera OSGi-paketet
 
@@ -144,7 +144,7 @@ Om du vill lära dig hur du distribuerar OSGi-paketet kan du förbättra Java™
    ...
    ```
 
-1. Verifiera ändringarna på lokala AEM-SDK genom att distribuera `core`-paketet via kommandot maven
+1. Verifiera ändringarna på lokala AEM-SDK genom att distribuera paketet `core` via kommandot maven
 1. Distribuera ändringarna till RDE genom att köra följande kommando
 
    ```shell
@@ -204,7 +204,7 @@ Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individue
 
 ### Distribuera konfigurationsfiler (YAML)
 
-Konfigurationsfilerna för CDN, underhållsaktiviteter, loggvidarebefordran och AEM API-autentisering kan distribueras till RDE med kommandot `install`. Dessa konfigurationer hanteras som YAML-filer i mappen `config` i AEM projekt. Mer information finns i [Konfigurationer som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
+CDN, underhållsaktiviteter, loggvidarebefordran och konfigurationsfiler för AEM API-autentisering kan distribueras till RDE med kommandot `install`. Dessa konfigurationer hanteras som YAML-filer i mappen `config` i AEM-projektet. Mer information finns i [Konfigurationer som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
 
 Om du vill lära dig hur du distribuerar konfigurationsfilerna kan du förbättra konfigurationsfilen för `cdn` och distribuera den till RDE.
 
@@ -238,7 +238,7 @@ Om du vill lära dig hur du distribuerar konfigurationsfilerna kan du förbättr
 1. Distribuera ändringarna till RDE genom att köra följande kommando
 
    ```shell
-   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   $ aio aem:rde:install -t env-config ./config
    ```
 
 1. Verifiera ändringar i RDE
@@ -246,7 +246,7 @@ Om du vill lära dig hur du distribuerar konfigurationsfilerna kan du förbättr
 
 ## Ytterligare AEM RDE-pluginkommandon
 
-Låt oss granska de extra kommandona för AEM RDE-plugin som du kan hantera och interagera med RDE från din lokala dator.
+Låt oss granska de extra kommandona för AEM RDE-plugin för att hantera och interagera med den lokala datorn.
 
 ```shell
 $ aio aem:rde --help
@@ -277,4 +277,4 @@ Lär dig mer om [livscykeln för utveckling/distribution med RDE](./development-
 
 [Adobe I/O Runtime CLI-plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[AEM projektinställningar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
+[Projektinställningar för AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
