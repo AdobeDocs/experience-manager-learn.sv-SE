@@ -1,6 +1,6 @@
 ---
 title: Anpassat processsteg för att fylla i listvariabler
-description: Anpassat processsteg för att fylla i listvariabler av typen dokument och sträng
+description: Lär dig hur du skapar ett anpassat processsteg för att fylla i listvariabler av typen dokument och sträng i Adobe Experience Manager.
 feature: Workflow
 topic: Development
 version: 6.5
@@ -9,28 +9,29 @@ level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
+
 # Anpassat processsteg
 
+I den här guiden får du hjälp med att skapa ett anpassat steg för att fylla i listvariabler av typen Array List med bilagor och bilagenamn i Adobe Experience Manager. Dessa variabler är viktiga för arbetsflödeskomponenten Skicka e-post.
 
-Ett anpassat processsteg implementerades för att fylla i arbetsflödesvariabler av typen Array List med bilagor och bilagenamn. Den här variabeln används sedan i arbetsflödeskomponenten Skicka e-post. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa OSGi-paket.
+Om du inte är van vid att skapa ett OSGi-paket följer du dessa [instruktioner](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en).
 
-Koden i det anpassade processsteget gör följande
+Koden i det anpassade processsteget utför följande åtgärder:
 
-* Fråga efter alla adaptiva formulärbilagor under nyttolastmappen. Mappnamnet skickas som ett processargument till processsteget.
-
-* Fyll i arbetsflödesvariabeln `listOfDocuments`
-* Fyll i arbetsflödesvariabeln `attachmentNames`
-* Ange värdet för arbetsflödesvariabeln (`no_of_attachments`)
+1. Frågar efter alla adaptiva formulärbilagor under nyttolastmappen. Mappnamnet skickas som ett processargument till steget.
+2. Fyller i arbetsflödesvariabeln `listOfDocuments`.
+3. Fyller i arbetsflödesvariabeln `attachmentNames`.
+4. Anger värdet för arbetsflödesvariabeln `no_of_attachments`.
 
 ```java
- package com.aemforms.formattachments.core;
+package com.aemforms.formattachments.core;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -57,9 +58,8 @@ import com.day.cq.search.result.SearchResult;
 
 @Component(property = {
         Constants.SERVICE_DESCRIPTION + "=PopulateListOfDocuments",
-        "process.label" + "=PopulateListOfDocuments"
+        "process.label=PopulateListOfDocuments"
 })
-
 public class PopulateListOfDocuments implements WorkflowProcess {
 
         private static final Logger log = LoggerFactory.getLogger(PopulateListOfDocuments.class);
@@ -70,7 +70,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
         public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException
         {
                 String payloadPath = workItem.getWorkflowData().getPayload().toString();
-                log.debug("The payload path  is" + payloadPath);
+                log.debug("The payload path is" + payloadPath);
                 MetaDataMap metaDataMap = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
                 Session session = workflowSession.adaptTo(Session.class);
                 Map < String, String > map = new HashMap < String, String > ();
@@ -112,10 +112,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Kontrollera att du har följande variabler definierade i arbetsflödet för att koden ska fungera
-> *listOfDocuments* - variabel av typen ArrayList med dokument
-> *attachmentNames* - variabel av typen ArrayList of String
-> *no_of_attachments* - variabel av typen Double
+> Kontrollera att följande variabler är definierade i arbetsflödet för att koden ska fungera:
+> 
+> - `listOfDocuments`: variabel av typen ArrayList of Documents
+> - `attachmentNames`: variabel av typen ArrayList av String
+> - `no_of_attachments`: variabel av typen Double
 
 ## Nästa steg
 

@@ -10,9 +10,9 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Konfigurera en lokal utvecklingsmiljö" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1739374885708" alt="Konfigurera en lokal utvecklingsmiljö"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1741027443737" alt="Konfigurera en lokal utvecklingsmiljö"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -260,6 +260,7 @@ Nu när du är klar med den här självstudiekursen kan du bygga vidare på det 
 <!-- CARDS 
 
 * ./how-to/block-options.md
+* ./how-to/header-and-footer.md
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -282,6 +283,29 @@ Nu när du är klar med den här självstudiekursen kan du bygga vidare på det 
                     <p class="is-size-6">Lär dig hur du skapar ett block med flera visningsalternativ.</p>
                 </div>
                 <a href="./how-to/block-options.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Header and Footer">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./how-to/header-and-footer.md" title="Sidhuvud och sidfot" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="how-to/assets/header-and-footer/hero.png" alt="Sidhuvud och sidfot"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./how-to/header-and-footer.md" target="_blank" rel="referrer" title="Sidhuvud och sidfot">Sidhuvud och sidfot</a>
+                    </p>
+                    <p class="is-size-6">Läs om hur sidhuvud och sidfot används i Edge Delivery Services och Universell redigerare.</p>
+                </div>
+                <a href="./how-to/header-and-footer.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>

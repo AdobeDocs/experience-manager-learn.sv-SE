@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
@@ -404,7 +404,7 @@ Du kan också lägga till två **Teaser** -block, ett som är inställt på **St
 
 ### Publicera för förhandsgranskning
 
-När Teaser-blocket har lagts till på sidan [publicerar du sidan för förhandsgranskning](../6-author-block.md) med **Hantera publikationer** och AEM Authors Site Admin.
+När Teaser-blocket har lagts till på sidan [publicerar du sidan för förhandsgranskning](../6-author-block.md) med knappen **Publicera** och väljer sedan Publicera för **Förhandsgranska** i Universalredigeraren.
 
 ## Blockera HTML
 

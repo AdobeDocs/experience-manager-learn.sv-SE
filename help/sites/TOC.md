@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '588'
 ht-degree: 5%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 5%
          + [Block med CSS och JS](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
          + Instruktioner{#how-to}
             + [Blockalternativ](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
+            + [Sidhuvud och sidfot](./edge-delivery-services/developing/universal-editor/how-to/header-and-footer.md)
    + Instruktioner{#how-to}
       + [RSS-flöden](edge-delivery-services/how-to/rss.md)
       + [Delning i sociala medier](edge-delivery-services/how-to/social-media-sharing.md)
