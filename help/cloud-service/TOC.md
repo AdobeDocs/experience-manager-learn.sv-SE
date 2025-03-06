@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1387'
 ht-degree: 4%
 
 ---
@@ -309,8 +309,12 @@ ht-degree: 4%
       + [Sammanfoga data med mall](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testa lösningen](./forms/doc-gen-forms-cs/test.md)
       + [Utmaning](./forms/doc-gen-forms-cs/challenge.md)
-   + Använder DocAssurance API{#doc-assurance-api}
-      + [Exempelkodfragment](./forms/doc-assurance-api/using-doc-assurance-api.md)
+   + Använder Forms Document Services API{#forms-document-services-api}
+      + [Introduktion](./forms/forms-document-services/introduction.md)
+      + [Konfigurera OpenAPI](./forms/forms-document-services/using-open-api.md)
+      + [Generera åtkomsttoken](./forms/forms-document-services/generate-access-token.md)
+      + [Använd användningsbehörighet](./forms/forms-document-services/make-api-calls.md)
+      + [Exempelkod](./forms/forms-document-services/sample-project.md)
    + Dokumentgenerering med batch-API:t {#formscs-batch-api}
       + [Introduktion](./forms/formscs-batch-api/introduction.md)
       + [Konfigurera Azure Storage](./forms/formscs-batch-api/configure-azure-storage.md)

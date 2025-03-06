@@ -10,7 +10,7 @@ jira: KT-9685
 exl-id: 07fed661-0995-41ab-90c4-abde35a14a4c
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 286
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
@@ -44,18 +44,11 @@ Kopiera följande kod till functions.js och spara ändringarna.
 /**
 * Get List of County names
 * @name getCountyNamesList Get list of county names
-* @return {OPTIONS} drop down options 
+* @returns {string[]} An array of county names
  */
 function getCountyNamesList()
 {
-    var countyNames= [];
-    countyNames[0] = "Santa Clara";
-    countyNames[1] = "Alameda";
-    countyNames[2] = "Buxor";
-    countyNames[3] = "Contra Costa";
-    countyNames[4] = "Merced";
-
-    return countyNames;
+    return ["Santa Clara", "Alameda", "Buxor", "Contra Costa", "Merced"];
 
 }
 /**
@@ -87,7 +80,7 @@ functions.js
 Raden #base=js anger i vilken katalog JavaScript-filerna finns.
 Raderna nedan anger platsen för JavaScript-filen i förhållande till basplatsen.
 
-Om du har problem med att skapa anpassade funktioner kan du [hämta och installera det här paketet](assets/custom-functions.zip) i AEM.
+Om du har problem med att skapa anpassade funktioner kan du [hämta och installera det här paketet](assets/custom-functions.zip) i din AEM-instans.
 
 ## Använda anpassade funktioner
 
