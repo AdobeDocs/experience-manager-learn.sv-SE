@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
+exl-id: 3b0f5971-38b8-4b9e-b90e-9de7432e0e9d
+source-git-commit: bc4f1d7dd345dbaf7532367425c90fe1a718249c
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
 
 ---
-
 
 # Implementera URL-omdirigeringar som är fria från pipeline
 
@@ -161,8 +161,8 @@ maps:
 RewriteMap skicampaign dbm=sdbm:/tmp/rewrites/skicampaign.map
 
 # Apply the RewriteMap for matching request URIs
-RewriteCond ${skicampaign:%{$1}} !=""
-RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
+RewriteCond ${skicampaign:$1} !=""
+RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ...
 ```
@@ -188,8 +188,8 @@ maps:
 RewriteMap skicampaign dbm=sdbm:/tmp/rewrites/skicampaign.map
 
 # Apply the RewriteMap for matching request URIs
-RewriteCond ${skicampaign:%{$1}} !=""
-RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
+RewriteCond ${skicampaign:$1} !=""
+RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ...
 ```
@@ -215,8 +215,8 @@ maps:
 RewriteMap skicampaign dbm=sdbm:/tmp/rewrites/skicampaign.map
 
 # Apply the RewriteMap for matching request URIs
-RewriteCond ${skicampaign:%{$1}} !=""
-RewriteRule ^(.*)$ ${skicampaign:%{$1}|/} [L,R=301]
+RewriteCond ${skicampaign:$1} !=""
+RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 
 ...
 ```
@@ -250,4 +250,3 @@ Marknadsföringsteamet kan hantera URL-omdirigeringar som nyckelvärdepar i en t
 
 - [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
 - [URL-omdirigeringar](url-redirection.md)
-
