@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 98f1996dbeb6a683f98ae654e8fa13f6c7a2f9b2
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Stegen på hög nivå är:
    - Customer CDN - för att konfigurera kundens CDN och lägga till SSL-certifikat och domäninformation, som AWS CloudFront, Azure CDN eller Akamai.
    - DNS-värdtjänst (Domain Name System) - för att lägga till DNS-poster för din anpassade domän, som Azure DNS eller AWS Route 53.
 - Åtkomst till [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) för att distribuera CDN-regeln för HTTP Header-validering till AEM as a Cloud Service-miljön.
-- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [production program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
+- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
 
 Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
 
@@ -90,7 +90,7 @@ Konfigurera kund-CDN, som AWS CloudFront, Azure CDN eller Akamai, och lägg till
 - Lägg till det anpassade domännamnet i CDN.
 - Konfigurera CDN för att cachelagra innehållet, som bilder, CSS och JavaScript-filer.
 - Lägg till HTTP-huvudet `X-Forwarded-Host` i CDN-inställningarna så att ditt CDN inkluderar den här rubriken i alla begäranden som skickas till AEMCD-startpunkten.
-- Kontrollera att rubrikvärdet `Host` är inställt på AEM as a Cloud Service standarddomän som innehåller program- och miljö-ID och slutar med `adobeaemcloud.com`. HTTP-värdhuvudets värde som skickas från kundens CDN till Adobe CDN måste vara AEM as a Cloud Service standarddomän. Alla andra värden resulterar i ett feltillstånd.
+- Kontrollera att rubrikvärdet `Host` är inställt på AEM as a Cloud Service standarddomän som innehåller program- och miljö-ID och slutar med `adobeaemcloud.com`. HTTP-värdrubrikens värde som skickas från kundens CDN till Adobe CDN måste vara AEM as a Cloud Service standarddomän. Alla andra värden resulterar i ett feltillstånd.
 
 ## Konfigurera DNS-poster
 
@@ -113,7 +113,7 @@ Ett viktigt säkerhetssteg är att distribuera CDN-regeln för HTTP Header-valid
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432565?quality=12&learn=on)
 
-Utan CDN-regeln för validering av HTTP-huvud anges rubrikvärdet `Host` till AEM as a Cloud Service standarddomän som innehåller program- och miljö-ID och slutar med `adobeaemcloud.com`. Adobe CDN omvandlar rubrikvärdet `Host` till värdet för `X-Forwarded-Host` som tagits emot från kundens CDN endast om CDN-regeln för HTTP-huvudvalidering har distribuerats. Annars skickas rubrikvärdet `Host` som det är i AEM as a Cloud Service-miljön och rubriken `X-Forwarded-Host` används inte.
+Utan CDN-regeln för validering av HTTP-huvud anges rubrikvärdet `Host` till AEM as a Cloud Service standarddomän som innehåller program- och miljö-ID och slutar med `adobeaemcloud.com`. Adobe CDN omvandlar rubrikvärdet `Host` till värdet för `X-Forwarded-Host` som tagits emot från kundens CDN endast om CDN-regeln för HTTP Header-validering har distribuerats. Annars skickas rubrikvärdet `Host` som det är i AEM as a Cloud Service-miljön och rubriken `X-Forwarded-Host` används inte.
 
 ### Exempel på serverkod för att skriva ut värdrubrikens värde
 
@@ -201,16 +201,16 @@ Så här konfigurerar och distribuerar du CDN-regeln för HTTP-huvudvalidering:
   kind: "CDN"
   version: "1"
   metadata:
-  envTypes: ["prod"]
+    envTypes: ["prod"]
   data:
-  authentication:
+    authentication:
       authenticators:
-      - name: edge-auth
+        - name: edge-auth
           type: edge
           edgeKey1: ${{CDN_EDGEKEY_080124}}
           edgeKey2: ${{CDN_EDGEKEY_110124}}
       rules:
-      - name: edge-auth-rule
+        - name: edge-auth-rule
           when: { reqProperty: tier, equals: "publish" }
           action:
           type: authenticate
