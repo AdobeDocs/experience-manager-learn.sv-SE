@@ -1,6 +1,6 @@
 ---
 title: Skapa ett block
-description: Skapa ett block med Edge Delivery Services med Universal Editor.
+description: Skapa ett Edge Delivery Services-block med Universal Editor.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,27 +9,27 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
-
 # Skapa ett block
 
-När JSON ](./5-new-block.md) för [teaser-blocket har placerats i `teaser`-förgreningen kan blocket redigeras i AEM Universal Editor.
+När JSON ](./5-new-block.md) för [teaser-blocket har placerats i `teaser`-grenen kan blocket redigeras i AEM Universal Editor.
 
 Det finns flera skäl till att det är viktigt att skapa ett block under utveckling:
 
 1. Den verifierar att blockets definition och modell är korrekta.
 1. Det gör att utvecklare kan granska blockets semantiska HTML, som fungerar som grund för utvecklingen.
-1. Det gör att både innehåll och semantiskt HTML kan distribueras till förhandsvisningsmiljön, vilket ger snabbare blockutveckling.
+1. Det gör det möjligt att använda både innehåll och semantiska HTML i förhandsvisningsmiljön, vilket ger snabbare blockutveckling.
 
 ## Öppna Universal Editor med kod från grenen `teaser`
 
-1. Logga in på AEM författare.
+1. Logga in på AEM Author.
 2. Navigera till **Webbplatser** och markera webbplatsen (WKND (Universal Editor)) som skapades i det [föregående kapitlet](./2-new-aem-site.md).
 
    ![AEM Sites](./assets/6-author-block/open-new-site.png)
@@ -54,11 +54,11 @@ Det finns flera skäl till att det är viktigt att skapa ett block under utveckl
 
    ![Universell redigerare - Författarblock](./assets/6-author-block/author-block.png)
 
-8. När du är klar med redigeringen växlar du till föregående webbläsarflik (AEM Sites Admin), markerar Teaser-sidan, klickar på **Hantera publikationer**, väljer **Förhandsgranska** och publicerar ändringarna i förhandsvisningsmiljön. Ändringarna publiceras sedan till domänen `aem.page` för webbplatsen.
-   ![AEM Sites - Publish eller Preview](./assets/6-author-block/publish-to-preview.png)
+8. När du är klar med redigeringen väljer du knappen **Publicera** längst upp till höger i Universal Editor, väljer Publicera till **Förhandsgranska** och publicerar ändringarna i förhandsvisningsmiljön. Ändringarna publiceras sedan till domänen `aem.page` för webbplatsen.
+   ![AEM Sites - Publicera eller Förhandsgranska](./assets/6-author-block/publish-to-preview.png)
 
 9. Vänta tills ändringarna har publicerats för förhandsgranskning och öppna sedan webbsidan via [AEM CLI](./3-local-development-environment.md#install-the-aem-cli) på [http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser).
 
    ![Lokal plats - uppdatera](./assets/6-author-block/preview.png)
 
-Nu finns det innehåll och semantiska HTML som skapats av det redigerade teaser-blocket på förhandsgranskningswebbplatsen, som är klart för utveckling med AEM CLI i den lokala utvecklingsmiljön.
+Nu finns det material och semantiska HTML som skapats av teaser-blocket på förhandsgranskningswebbplatsen, som är klart för utveckling med AEM CLI i den lokala utvecklingsmiljön.
