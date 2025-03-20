@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 98f1996dbeb6a683f98ae654e8fa13f6c7a2f9b2
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -213,8 +213,8 @@ Så här konfigurerar och distribuerar du CDN-regeln för HTTP-huvudvalidering:
         - name: edge-auth-rule
           when: { reqProperty: tier, equals: "publish" }
           action:
-          type: authenticate
-          authenticator: edge-auth
+            type: authenticate
+            authenticator: edge-auth
   ```
 
 - Skapa miljövariabler av hemlig typ (CDN_EDGEKEY_080124, CDN_EDGEKEY_110124) med Cloud Manager-gränssnittet.

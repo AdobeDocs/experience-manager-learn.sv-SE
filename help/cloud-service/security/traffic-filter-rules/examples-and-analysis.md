@@ -1,6 +1,6 @@
 ---
 title: Exempel och resultatanalys av trafikfilterregler inklusive WAF-regler
-description: Lär dig olika trafikfilterregler inklusive exempel på WAF-regler. Hur man analyserar resultaten med hjälp av AEM as a Cloud Service (AEMCS) CDN-loggar.
+description: Lär dig olika trafikfilterregler, inklusive WAF regelexempel. Hur man analyserar resultaten med hjälp av AEM as a Cloud Service (AEMCS) CDN-loggar.
 version: Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -12,7 +12,7 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 532
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 67091c068634e6c309afaf78942849db626128f6
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -23,17 +23,17 @@ ht-degree: 0%
 
 Lär dig hur du deklarerar olika typer av trafikfilterregler och analyserar resultaten med hjälp av CDN-loggar och kontrollpanelsverktyg i Adobe Experience Manager as a Cloud Service (AEMCS).
 
-I det här avsnittet kommer du att utforska praktiska exempel på trafikfilterregler, inklusive WAF-regler. Du får lära dig hur du loggar, tillåter och blockerar begäranden baserat på URI (eller sökväg), IP-adress, antalet begäranden och olika typer av attacker med hjälp av [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+I det här avsnittet kommer du att utforska praktiska exempel på trafikfilterregler, inklusive WAF regler. Du får lära dig hur du loggar, tillåter och blockerar begäranden baserat på URI (eller sökväg), IP-adress, antalet begäranden och olika typer av attacker med [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
-Dessutom kommer du att upptäcka hur du kan använda kontrollpanelsverktyg som importerar AEMCS CDN-loggar för att visualisera viktiga mätvärden via kontrollpaneler som tillhandahålls av Adobe.
+Dessutom kommer du att upptäcka hur du använder kontrollpanelsverktyg som importerar AEMCS CDN-loggar för att visualisera viktiga mätvärden via Adobe exempelpaneler.
 
-Om du vill anpassa dig efter dina specifika krav kan du förbättra och skapa anpassade instrumentpaneler och på så sätt få djupare insikter och optimera regelkonfigurationerna för dina AEM.
+Om ni vill anpassa er efter era specifika krav kan ni förbättra och skapa anpassade kontrollpaneler och på så sätt få djupare insikter och optimera regelkonfigurationerna för era AEM-webbplatser.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425404?quality=12&learn=on)
 
 ## Exempel
 
-Låt oss utforska olika exempel på trafikfilterregler, inklusive WAF-regler. Kontrollera att du har slutfört den nödvändiga konfigurationsprocessen enligt beskrivningen i det tidigare [kapitlet ](./how-to-setup.md) om hur du konfigurerar och att du har klonat [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+Låt oss utforska olika exempel på trafikfilterregler, inklusive WAF regler. Kontrollera att du har slutfört den nödvändiga konfigurationsprocessen enligt beskrivningen i det tidigare [kapitlet ](./how-to-setup.md) om hur du konfigurerar och att du har klonat [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### Förfrågningar om loggning
 
@@ -71,7 +71,7 @@ data:
 
   ![Cloud Manager Config Pipeline](./assets/cloud-manager-config-pipeline.png)
 
-- Testa regeln genom att logga in och logga ut från programmets WKND-webbplats på Publish-tjänsten (till exempel `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`). Du kan använda `asmith/asmith` som användarnamn och lösenord.
+- Testa regeln genom att logga in och logga ut från programmets WKND-webbplats på Publiceringstjänsten (till exempel `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`). Du kan använda `asmith/asmith` som användarnamn och lösenord.
 
   ![WKND-inloggning](./assets/wknd-login.png)
 
@@ -79,7 +79,7 @@ data:
 
 Låt oss analysera resultatet av regeln `publish-auth-requests` genom att hämta AEMCS CDN-loggarna från Cloud Manager och använda [instrumentpanelsverktyget](how-to-setup.md#analyze-results-using-elk-dashboard-tool) som du konfigurerade i det tidigare kapitlet.
 
-- Hämta CDN-loggarna för AEMCS **Publish**-tjänsten från [Cloud Manager](https://my.cloudmanager.adobe.com/)s **Environment**-kort.
+- Hämta CDN-loggarna för AEMCS **Publish**-tjänsten från [Cloud Manager](https://my.cloudmanager.adobe.com/)s **Environmental**-kort.
 
   ![Cloud Manager CDN-logghämtningar](./assets/cloud-manager-cdn-log-downloads.png)
 
@@ -200,7 +200,7 @@ data:
 - Använd följande [Vegeta](https://github.com/tsenart/vegeta)-kommando för att simulera DoS-attacken.
 
   ```shell
-  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=5s | vegeta report
+  $ echo "GET https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html" | vegeta attack -rate=120 -duration=60s | vegeta report
   ```
 
   Med det här kommandot utförs 120 begäranden i 5 sekunder och en rapport skapas. Som du ser är antalet lyckade försök 32,5 %. En 406 HTTP-svarskod tas emot för resten, vilket visar att trafiken blockerades.
@@ -225,13 +225,13 @@ Mer information om hur du förhindrar DoS- och DDoS-attacker finns i självstudi
 
 Trafikfilterregelexemplen hittills kan konfigureras av alla Sites- och Forms-kunder.
 
-Sedan ska vi utforska upplevelsen för en kund som har köpt en licens för Förbättrad säkerhet eller WAF-DDoS-skydd, som låter dem konfigurera avancerade regler för att skydda webbplatser från mer sofistikerade attacker.
+Sedan ska vi utforska upplevelsen för en kund som har köpt en licens för Förbättrat skydd eller WAF-DDoS-skydd, som låter dem konfigurera avancerade regler för att skydda webbplatser från mer sofistikerade attacker.
 
-Innan du fortsätter aktiverar du WAF-DDoS-skyddet för ditt program enligt beskrivningen i dokumentationen för [installationssteg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup) för trafikfilterregler.
+Aktivera WAF-DDoS-skyddet för ditt program innan du fortsätter, enligt beskrivningen i dokumentationen för [installationsstegen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup) för trafikfilterreglerna.
 
 #### Utan WAFFlags
 
-Låt oss först se upplevelsen även innan WAF-reglerna har deklarerats. När WAF-DDoS är aktiverat i ditt program loggar CDN som standard alla matchningar av skadlig trafik så att du har rätt information att komma fram med rätt regler.
+Låt oss först se upplevelsen även innan WAF Rules har deklarerats. När WAF-DDoS är aktiverat loggar CDN som standard alla matchningar av skadlig trafik, så att du har rätt information för att komma fram till rätt regler.
 
 Låt oss börja med att angripa WKND-webbplatsen utan att lägga till en WAF-regel (eller använda egenskapen `wafFlags`) och analysera resultaten.
 
@@ -253,7 +253,7 @@ Den här gången ska du dock se **Flaggade begäranden** och motsvarande värden
 
 ![ELK Tool Dashboard WAF Flagged Request](./assets/elk-tool-dashboard-waf-flagged.png)
 
-Observera hur panelerna **WAF Flags distribution** och **Top attack** visar ytterligare information, som kan användas för att optimera regelkonfigurationen ytterligare.
+Observera hur panelerna **WAF Flags distribution** och **Top-attacker** visar ytterligare information, som kan användas för att optimera regelkonfigurationen ytterligare.
 
 ![ELK Tool Dashboard WAF Flags Attacks Request](./assets/elk-tool-dashboard-waf-flagged-top-attacks-1.png)
 
@@ -264,7 +264,7 @@ Observera hur panelerna **WAF Flags distribution** och **Top attack** visar ytte
 
 Nu ska vi lägga till en WAF-regel som innehåller egenskapen `wafFlags` som en del av egenskapen `action` och **blockera simulerade attackförfrågningar**.
 
-Ur syntaxperspektiv liknar WAF-reglerna dem som tidigare sågs, men egenskapen `action` refererar till ett eller flera `wafFlags` -värden. Mer information om `wafFlags` finns i avsnittet [WAF-flagglista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list).
+Ur syntaxperspektiv liknar WAF-reglerna dem som tidigare sågs, men egenskapen `action` refererar till ett eller flera `wafFlags`-värden. Mer information om `wafFlags` finns i avsnittet [WAF-flagglista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list).
 
 - Lägg till följande regel i WKND-projektets `/config/cdn.yaml`-fil. Observera att regeln `block-waf-flags` innehåller några av de wafFlags som hade funnits i instrumentpanelsverktyget när den attackerades med simulerad skadlig trafik. Det är god praxis att över tiden analysera loggar för att avgöra vilka nya regler som ska deklareras, allt eftersom hotelselandskapet utvecklas.
 
@@ -323,7 +323,7 @@ Den här gången ska du se poster under **Blockerade begäranden** och motsvaran
 
 ![ELK Tool Dashboard WAF Blocked Request](./assets/elk-tool-dashboard-waf-blocked.png)
 
-Dessutom visar panelerna **WAF-flaggdistribution** och **Top-attacker** ytterligare information.
+På panelerna **WAF Flags distribution** och **Top-attacker** visas även ytterligare information.
 
 ![ELK Tool Dashboard WAF Flags Attacks Request](./assets/elk-tool-dashboard-waf-blocked-top-attacks-1.png)
 
@@ -335,9 +335,9 @@ I de ovanstående _analyserna_ lärde du dig att analysera resultaten av specifi
 
 
 - Analyserade, flaggade och blockerade begäranden
-- WAF Flaggar distributionen över tid
+- Distributionen av WAF Flags över tid
 - Regler för utlöst trafikfilter över tid
-- De vanligaste attackerna av WAF-flagga-ID
+- De vanligaste attackerna av WAF Flag ID
 - Topputlöst trafikfilter
 - De 100 bästa angriparna per klient-IP, land och användaragent
 
